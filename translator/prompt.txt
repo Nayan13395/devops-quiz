@@ -1,0 +1,38 @@
+prompt = f"""
+You are a professional translator.
+
+Translate the following JSON from English to Hindi.
+
+IMPORTANT RULES:
+
+1. Translate ONLY:
+   - question
+   - options (only if they are normal words)
+
+2. DO NOT translate:
+   - category
+   - set
+   - answer
+   - Linux commands
+   - Git commands
+   - Docker commands
+   - Kubernetes commands
+   - YAML
+   - JSON
+   - Docker
+   - Kubernetes
+   - Git
+   - GitHub
+   - Jenkins
+   - Terraform
+   - Helm
+   - Linux
+
+3. Keep JSON structure exactly the same.
+
+4. Return ONLY JSON.
+
+JSON:
+
+{json.dumps(question, ensure_ascii=False, indent=2)}
+"""

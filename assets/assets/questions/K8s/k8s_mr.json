@@ -1,0 +1,695 @@
+[
+    {
+        "category": "Kubernetes",
+        "set": 1,
+        "question": "pods ची यादी (list) कोणत्या कमांडद्वारे मिळते?",
+        "options": ["kubectl get pods", "kubectl pods", "kubectl list", "kubectl show"],
+        "answer": "kubectl get pods"
+    },
+    {
+        "category": "Kubernetes",
+        "set": 1,
+        "question": "स्टेटलेस (stateless) ॲप्लिकेशन्स व्यवस्थापित करण्यासाठी कोणत्या Kubernetes ऑब्जेक्टचा वापर केला जातो?",
+        "options": ["Deployment", "ConfigMap", "Secret", "Namespace"],
+        "answer": "Deployment"
+    },
+    {
+        "category": "Kubernetes",
+        "set": 1,
+        "question": "Kubernetes मध्ये deployment तयार करण्यासाठी कोणत्या कमांडचा वापर केला जातो?",
+        "options": ["kubectl create deployment", "kubectl add deployment", "kubectl run deployment", "kubectl deploy create"],
+        "answer": "kubectl create deployment"
+    },
+    {
+        "category": "Kubernetes",
+        "set": 1,
+        "question": "Kubernetes मधील सर्वात लहान डिप्लॉय करता येणारे युनिट (deployable unit) कोणते आहे?",
+        "options": ["Pod", "Cluster", "Node", "Service"],
+        "answer": "Pod"
+    },
+    {
+        "category": "Kubernetes",
+        "set": 1,
+        "question": "Kubernetes मधील सर्व services दाखवण्यासाठी कोणत्या कमांडचा वापर केला जातो?",
+        "options": ["kubectl get services", "kubectl services", "kubectl list svc", "kubectl show services"],
+        "answer": "kubectl get services"
+    },
+    {
+        "category": "Kubernetes",
+        "set": 1,
+        "question": "nodes वर pods शेड्यूल करण्यासाठी कोणता कंपोनंट जबाबदार असतो?",
+        "options": ["kube-scheduler", "kubelet", "etcd", "kube-proxy"],
+        "answer": "kube-scheduler"
+    },
+    {
+        "category": "Kubernetes",
+        "set": 1,
+        "question": "pod डिलीट करण्यासाठी कोणत्या कमांडचा वापर केला जातो?",
+        "options": ["kubectl delete pod", "kubectl remove pod", "kubectl erase pod", "kubectl destroy pod"],
+        "answer": "kubectl delete pod"
+    },
+    {
+        "category": "Kubernetes",
+        "set": 1,
+        "question": "pods ला नेटवर्क ट्रॅफिकसाठी एक्सपोज करण्यासाठी कोणत्या Kubernetes ऑब्जेक्टचा वापर केला जातो?",
+        "options": ["Service", "Node", "ReplicaSet", "Volume"],
+        "answer": "Service"
+    },
+    {
+        "category": "Kubernetes",
+        "set": 1,
+        "question": "Kubernetes API सर्व्हरचा डिफॉल्ट पोर्ट कोणता आहे?",
+        "options": ["6443", "8080", "379", "050"],
+        "answer": "6443"
+    },
+    {
+        "category": "Kubernetes",
+        "set": 1,
+        "question": "pod बद्दल तपशीलवार माहिती दाखवण्यासाठी कोणत्या कमांडचा वापर केला जातो?",
+        "options": ["kubectl describe pod", "kubectl details pod", "kubectl inspect pod", "kubectl info pod"],
+        "answer": "kubectl describe pod"
+    },
+    {
+        "category": "Kubernetes",
+        "set": 1,
+        "question": "कॉन्फिगरेशन डेटा साठवण्यासाठी कोणत्या Kubernetes रिसोर्सचा वापर केला जातो?",
+        "options": ["ConfigMap", "Deployment", "Ingress", "Node"],
+        "answer": "ConfigMap"
+    },
+    {
+        "category": "Kubernetes",
+        "set": 1,
+        "question": "YAML फाइलमधून कॉन्फिगरेशन बदल लागू (apply) करण्यासाठी कोणत्या कमांडचा वापर केला जातो?",
+        "options": ["kubectl apply -f", "kubectl create yaml", "kubectl update -f", "kubectl deploy -f"],
+        "answer": "kubectl apply -f"
+    },
+    {
+        "category": "Kubernetes",
+        "set": 1,
+        "question": "निर्दिष्ट संख्येने pod replicas चालू आहेत हे सुनिश्चित करण्यासाठी कोणत्या Kubernetes ऑब्जेक्टचा वापर केला जातो?",
+        "options": ["ReplicaSet", "Service", "ConfigMap", "Namespace"],
+        "answer": "ReplicaSet"
+    },
+    {
+        "category": "Kubernetes",
+        "set": 1,
+        "question": "क्लस्टरची माहिती तपासण्यासाठी कोणत्या कमांडचा वापर केला जातो?",
+        "options": ["kubectl cluster-info", "kubectl get cluster", "kubectl show cluster", "kubectl info cluster"],
+        "answer": "kubectl cluster-info"
+    },
+    {
+        "category": "Kubernetes",
+        "set": 1,
+        "question": "pods ला पर्सिस्टंट स्टोरेज (persistent storage) प्रदान करण्यासाठी कोणत्या स्टोरेज ऑब्जेक्टचा वापर केला जातो?",
+        "options": ["PersistentVolume", "ReplicaSet", "Namespace", "Service"],
+        "answer": "PersistentVolume"
+    },
+    {
+        "category": "Kubernetes",
+        "set": 1,
+        "question": "क्लस्टरमधील सर्व nodes ची यादी कोणत्या कमांडद्वारे मिळते?",
+        "options": ["kubectl get nodes", "kubectl nodes", "kubectl list nodes", "kubectl show nodes"],
+        "answer": "kubectl get nodes"
+    },
+    {
+        "category": "Kubernetes",
+        "set": 1,
+        "question": "प्रत्येक node वर कोणता Kubernetes कंपोनंट चालतो?",
+        "options": ["kubelet", "etcd", "kube-apiserver", "controller-manager"],
+        "answer": "kubelet"
+    },
+    {
+        "category": "Kubernetes",
+        "set": 1,
+        "question": "Kubernetes मध्ये services पर्यंत बाह्य प्रवेश (external access) व्यवस्थापित करण्यासाठी कोणाचा वापर केला जातो?",
+        "options": ["Ingress", "Pod", "ReplicaSet", "Secret"],
+        "answer": "Ingress"
+    },
+    {
+        "category": "Kubernetes",
+        "set": 1,
+        "question": "pod चे लॉग्स (logs) दाखवण्यासाठी कोणत्या कमांडचा वापर केला जातो?",
+        "options": ["kubectl logs", "kubectl get logs", "kubectl show logs", "kubectl pod logs"],
+        "answer": "kubectl logs"
+    },
+    {
+        "category": "Kubernetes",
+        "set": 1,
+        "question": "पासवर्डसारखी संवेदनशील माहिती साठवण्यासाठी कोणत्या Kubernetes ऑब्जेक्टचा वापर केला जातो?",
+        "options": ["Secret", "ConfigMap", "Service", "Namespace"],
+        "answer": "Secret"
+    },
+    {
+        "category": "Kubernetes",
+        "set": 1,
+        "question": "चालू असलेल्या pod मध्ये कमांड एक्झिक्युट करण्यासाठी कोणत्या कमांडचा वापर केला जातो?",
+        "options": ["kubectl exec", "kubectl run inside", "kubectl pod exec", "kubectl connect"],
+        "answer": "kubectl exec"
+    },
+    {
+        "category": "Kubernetes",
+        "set": 1,
+        "question": "बॅच जॉब्स (batch jobs) चालवण्यासाठी कोणत्या Kubernetes ऑब्जेक्टचा वापर केला जातो?",
+        "options": ["Job", "Deployment", "Service", "Ingress"],
+        "answer": "Job"
+    },
+    {
+        "category": "Kubernetes",
+        "set": 1,
+        "question": "deployment स्केल करण्यासाठी कोणत्या कमांडचा वापर केला जातो?",
+        "options": ["kubectl scale deployment", "kubectl resize deployment", "kubectl expand deployment", "kubectl increase deployment"],
+        "answer": "kubectl scale deployment"
+    },
+    {
+        "category": "Kubernetes",
+        "set": 1,
+        "question": "Kubernetes क्लस्टरची स्थिती (state) साठवण्यासाठी कोणत्या डेटाबेसचा वापर केला जातो?",
+        "options": ["etcd", "MySQL", "PostgreSQL", "MongoDB"],
+        "answer": "etcd"
+    },
+    {
+        "category": "Kubernetes",
+        "set": 1,
+        "question": "Kubernetes मध्ये namespace तयार करण्यासाठी कोणत्या कमांडचा वापर केला जातो?",
+        "options": ["kubectl create namespace", "kubectl add namespace", "kubectl namespace create", "kubectl new namespace"],
+        "answer": "kubectl create namespace"
+    },
+    {
+        "category": "Kubernetes",
+        "set": 2,
+        "question": "सर्व namespaces ची यादी कोणत्या कमांडद्वारे मिळते?",
+        "options": ["kubectl get namespaces", "kubectl namespaces", "kubectl show namespaces", "kubectl list namespaces"],
+        "answer": "kubectl get namespaces"
+    },
+    {
+        "category": "Kubernetes",
+        "set": 2,
+        "question": "namespace डिलीट करण्यासाठी कोणत्या कमांडचा वापर केला जातो?",
+        "options": ["kubectl delete namespace", "kubectl remove namespace", "kubectl destroy namespace", "kubectl erase namespace"],
+        "answer": "kubectl delete namespace"
+    },
+    {
+        "category": "Kubernetes",
+        "set": 2,
+        "question": "ReplicaSets ची यादी कोणत्या कमांडद्वारे मिळते?",
+        "options": ["kubectl get replicasets", "kubectl replicasets", "kubectl list rs", "kubectl show rs"],
+        "answer": "kubectl get replicasets"
+    },
+    {
+        "category": "Kubernetes",
+        "set": 2,
+        "question": "deployment चे तपशील दाखवण्यासाठी कोणत्या कमांडचा वापर केला जातो?",
+        "options": ["kubectl describe deployment", "kubectl inspect deployment", "kubectl deployment info", "kubectl deployment show"],
+        "answer": "kubectl describe deployment"
+    },
+    {
+        "category": "Kubernetes",
+        "set": 2,
+        "question": "deployment रीस्टार्ट करण्यासाठी कोणत्या कमांडचा वापर केला जातो?",
+        "options": ["kubectl rollout restart deployment", "kubectl restart deployment", "kubectl deployment restart", "kubectl reload deployment"],
+        "answer": "kubectl rollout restart deployment"
+    },
+    {
+        "category": "Kubernetes",
+        "set": 2,
+        "question": "deployment ची rollout स्थिती (status) तपासण्यासाठी कोणत्या कमांडचा वापर केला जातो?",
+        "options": ["kubectl rollout status", "kubectl deployment status", "kubectl rollout check", "kubectl get rollout"],
+        "answer": "kubectl rollout status"
+    },
+    {
+        "category": "Kubernetes",
+        "set": 2,
+        "question": "deployment रोलबॅक (rollback) करण्यासाठी कोणत्या कमांडचा वापर केला जातो?",
+        "options": ["kubectl rollout undo", "kubectl rollback", "kubectl undo deployment", "kubectl deployment rollback"],
+        "answer": "kubectl rollout undo"
+    },
+    {
+        "category": "Kubernetes",
+        "set": 2,
+        "question": "सर्व deployments ची यादी कोणत्या कमांडद्वारे मिळते?",
+        "options": ["kubectl get deployments", "kubectl deployments", "kubectl show deployments", "kubectl list deploy"],
+        "answer": "kubectl get deployments"
+    },
+    {
+        "category": "Kubernetes",
+        "set": 2,
+        "question": "ConfigMaps ची यादी कोणत्या कमांडद्वारे मिळते?",
+        "options": ["kubectl get configmaps", "kubectl configmaps", "kubectl show configmaps", "kubectl list configmaps"],
+        "answer": "kubectl get configmaps"
+    },
+    {
+        "category": "Kubernetes",
+        "set": 2,
+        "question": "Secrets ची यादी कोणत्या कमांडद्वारे मिळते?",
+        "options": ["kubectl get secrets", "kubectl secrets", "kubectl list secrets", "kubectl show secrets"],
+        "answer": "kubectl get secrets"
+    },
+    {
+        "category": "Kubernetes",
+        "set": 2,
+        "question": "फाइलमधून ConfigMap तयार करण्यासाठी कोणत्या कमांडचा वापर केला जातो?",
+        "options": ["kubectl create configmap", "kubectl add configmap", "kubectl configmap create", "kubectl apply configmap"],
+        "answer": "kubectl create configmap"
+    },
+    {
+        "category": "Kubernetes",
+        "set": 2,
+        "question": "Secret तयार करण्यासाठी कोणत्या कमांडचा वापर केला जातो?",
+        "options": ["kubectl create secret", "kubectl add secret", "kubectl secret create", "kubectl apply secret"],
+        "answer": "kubectl create secret"
+    },
+    {
+        "category": "Kubernetes",
+        "set": 2,
+        "question": "बाह्य ट्रॅफिक services कडे रूट करण्यासाठी कोणत्या Kubernetes रिसोर्सचा वापर केला जातो?",
+        "options": ["Ingress", "Pod", "Node", "ReplicaSet"],
+        "answer": "Ingress"
+    },
+    {
+        "category": "Kubernetes",
+        "set": 2,
+        "question": "Ingress रिसोर्सेसची यादी कोणत्या कमांडद्वारे मिळते?",
+        "options": ["kubectl get ingress", "kubectl ingress", "kubectl list ingress", "kubectl show ingress"],
+        "answer": "kubectl get ingress"
+    },
+    {
+        "category": "Kubernetes",
+        "set": 2,
+        "question": "pods ला स्थिर नेटवर्क आयडेंटिटी (stable network identity) प्रदान करण्यासाठी कोणत्या Kubernetes ऑब्जेक्टचा वापर केला जातो?",
+        "options": ["Service", "Pod", "Node", "ConfigMap"],
+        "answer": "Service"
+    },
+    {
+        "category": "Kubernetes",
+        "set": 2,
+        "question": "प्रत्येक node च्या IP वर ॲप्लिकेशन एक्सपोज करण्यासाठी कोणत्या Service type चा वापर केला जातो?",
+        "options": ["NodePort", "ClusterIP", "LoadBalancer", "ExternalName"],
+        "answer": "NodePort"
+    },
+    {
+        "category": "Kubernetes",
+        "set": 2,
+        "question": "Kubernetes मधील डिफॉल्ट Service type कोणता आहे?",
+        "options": ["ClusterIP", "NodePort", "LoadBalancer", "ExternalName"],
+        "answer": "ClusterIP"
+    },
+    {
+        "category": "Kubernetes",
+        "set": 2,
+        "question": "बाह्य लोड बॅलन्सर (external load balancer) प्रोव्हिजन करण्यासाठी कोणत्या Service type चा वापर केला जातो?",
+        "options": ["LoadBalancer", "ClusterIP", "NodePort", "Ingress"],
+        "answer": "LoadBalancer"
+    },
+    {
+        "category": "Kubernetes",
+        "set": 2,
+        "question": "क्लस्टरमधील इव्हेंट्स (events) दाखवण्यासाठी कोणत्या कमांडचा वापर केला जातो?",
+        "options": ["kubectl get events", "kubectl events", "kubectl show events", "kubectl list events"],
+        "answer": "kubectl get events"
+    },
+    {
+        "category": "Kubernetes",
+        "set": 2,
+        "question": "Persistent Volumes ची यादी कोणत्या कमांडद्वारे मिळते?",
+        "options": ["kubectl get pv", "kubectl pv", "kubectl volumes", "kubectl show pv"],
+        "answer": "kubectl get pv"
+    },
+    {
+        "category": "Kubernetes",
+        "set": 2,
+        "question": "Persistent Volume Claims ची यादी कोणत्या कमांडद्वारे मिळते?",
+        "options": ["kubectl get pvc", "kubectl pvc", "kubectl volumes claim", "kubectl show pvc"],
+        "answer": "kubectl get pvc"
+    },
+    {
+        "category": "Kubernetes",
+        "set": 2,
+        "question": "Persistent Volume कडून स्टोरेजची विनंती करण्यासाठी कोणत्या Kubernetes ऑब्जेक्टचा वापर केला जातो?",
+        "options": ["PersistentVolumeClaim", "PersistentVolume", "ConfigMap", "Secret"],
+        "answer": "PersistentVolumeClaim"
+    },
+    {
+        "category": "Kubernetes",
+        "set": 2,
+        "question": "pod चे लॉग्स सतत (continuously) दाखवण्यासाठी कोणत्या कमांडचा वापर केला जातो?",
+        "options": ["kubectl logs -f", "kubectl logs", "kubectl follow logs", "kubectl stream logs"],
+        "answer": "kubectl logs -f"
+    },
+    {
+        "category": "Kubernetes",
+        "set": 2,
+        "question": "एका namespace मधील सर्व रिसोर्सेस दाखवण्यासाठी कोणत्या कमांडचा वापर केला जातो?",
+        "options": ["kubectl get all", "kubectl all", "kubectl resources", "kubectl show all"],
+        "answer": "kubectl get all"
+    },
+    {
+        "category": "Kubernetes",
+        "set": 3,
+        "question": "pods चा रिसोर्स वापर (resource usage) दाखवण्यासाठी कोणत्या कमांडचा वापर केला जातो?",
+        "options": ["kubectl top pods", "kubectl usage pods", "kubectl stats pods", "kubectl monitor pods"],
+        "answer": "kubectl top pods"
+    },
+    {
+        "category": "Kubernetes",
+        "set": 3,
+        "question": "nodes चा रिसोर्स वापर दाखवण्यासाठी कोणत्या कमांडचा वापर केला जातो?",
+        "options": ["kubectl top nodes", "kubectl usage nodes", "kubectl stats nodes", "kubectl monitor nodes"],
+        "answer": "kubectl top nodes"
+    },
+    {
+        "category": "Kubernetes",
+        "set": 3,
+        "question": "स्टेटफुल (stateful) ॲप्लिकेशन्स चालवण्यासाठी कोणत्या Kubernetes ऑब्जेक्टचा वापर केला जातो?",
+        "options": ["StatefulSet", "Deployment", "ReplicaSet", "DaemonSet"],
+        "answer": "StatefulSet"
+    },
+    {
+        "category": "Kubernetes",
+        "set": 3,
+        "question": "प्रत्येक node वर एक pod चालतो हे सुनिश्चित करण्यासाठी कोणत्या Kubernetes ऑब्जेक्टचा वापर केला जातो?",
+        "options": ["DaemonSet", "Deployment", "StatefulSet", "Job"],
+        "answer": "DaemonSet"
+    },
+    {
+        "category": "Kubernetes",
+        "set": 3,
+        "question": "DaemonSets ची यादी कोणत्या कमांडद्वारे मिळते?",
+        "options": ["kubectl get daemonsets", "kubectl daemonsets", "kubectl list daemonsets", "kubectl show daemonsets"],
+        "answer": "kubectl get daemonsets"
+    },
+    {
+        "category": "Kubernetes",
+        "set": 3,
+        "question": "StatefulSets ची यादी कोणत्या कमांडद्वारे मिळते?",
+        "options": ["kubectl get statefulsets", "kubectl statefulsets", "kubectl show statefulsets", "kubectl list statefulsets"],
+        "answer": "kubectl get statefulsets"
+    },
+    {
+        "category": "Kubernetes",
+        "set": 3,
+        "question": "शेड्यूल केलेले जॉब्स (scheduled jobs) चालवण्यासाठी कोणत्या Kubernetes ऑब्जेक्टचा वापर केला जातो?",
+        "options": ["CronJob", "Job", "Deployment", "DaemonSet"],
+        "answer": "CronJob"
+    },
+    {
+        "category": "Kubernetes",
+        "set": 3,
+        "question": "CronJobs ची यादी कोणत्या कमांडद्वारे मिळते?",
+        "options": ["kubectl get cronjobs", "kubectl cronjobs", "kubectl list cronjobs", "kubectl show cronjobs"],
+        "answer": "kubectl get cronjobs"
+    },
+    {
+        "category": "Kubernetes",
+        "set": 3,
+        "question": "Jobs ची यादी कोणत्या कमांडद्वारे मिळते?",
+        "options": ["kubectl get jobs", "kubectl jobs", "kubectl list jobs", "kubectl show jobs"],
+        "answer": "kubectl get jobs"
+    },
+    {
+        "category": "Kubernetes",
+        "set": 3,
+        "question": "deployment डिलीट करण्यासाठी कोणत्या कमांडचा वापर केला जातो?",
+        "options": ["kubectl delete deployment", "kubectl remove deployment", "kubectl destroy deployment", "kubectl erase deployment"],
+        "answer": "kubectl delete deployment"
+    },
+    {
+        "category": "Kubernetes",
+        "set": 3,
+        "question": "deployment ला service म्हणून एक्सपोज करण्यासाठी कोणत्या कमांडचा वापर केला जातो?",
+        "options": ["kubectl expose deployment", "kubectl create service", "kubectl publish deployment", "kubectl share deployment"],
+        "answer": "kubectl expose deployment"
+    },
+    {
+        "category": "Kubernetes",
+        "set": 3,
+        "question": "deployment कॉन्फिगरेशन थेट एडिट करण्यासाठी कोणत्या कमांडचा वापर केला जातो?",
+        "options": ["kubectl edit deployment", "kubectl modify deployment", "kubectl update deployment", "kubectl configure deployment"],
+        "answer": "kubectl edit deployment"
+    },
+    {
+        "category": "Kubernetes",
+        "set": 3,
+        "question": "Kubernetes रिसोर्सला लेबल (label) करण्यासाठी कोणत्या कमांडचा वापर केला जातो?",
+        "options": ["kubectl label", "kubectl tag", "kubectl annotate", "kubectl mark"],
+        "answer": "kubectl label"
+    },
+    {
+        "category": "Kubernetes",
+        "set": 3,
+        "question": "रिसोर्समध्ये annotations जोडण्यासाठी कोणत्या कमांडचा वापर केला जातो?",
+        "options": ["kubectl annotate", "kubectl label", "kubectl note", "kubectl tag"],
+        "answer": "kubectl annotate"
+    },
+    {
+        "category": "Kubernetes",
+        "set": 3,
+        "question": "Kubernetes API रिसोर्सेस दाखवण्यासाठी कोणत्या कमांडचा वापर केला जातो?",
+        "options": ["kubectl api-resources", "kubectl resources", "kubectl api-list", "kubectl show api"],
+        "answer": "kubectl api-resources"
+    },
+    {
+        "category": "Kubernetes",
+        "set": 3,
+        "question": "Kubernetes API व्हर्जन्स दाखवण्यासाठी कोणत्या कमांडचा वापर केला जातो?",
+        "options": ["kubectl api-versions", "kubectl versions", "kubectl api-list", "kubectl version api"],
+        "answer": "kubectl api-versions"
+    },
+    {
+        "category": "Kubernetes",
+        "set": 3,
+        "question": "क्लायंट आणि सर्व्हर Kubernetes व्हर्जन दाखवण्यासाठी कोणत्या कमांडचा वापर केला जातो?",
+        "options": ["kubectl version", "kubectl cluster-info", "kubectl info", "kubectl get version"],
+        "answer": "kubectl version"
+    },
+    {
+        "category": "Kubernetes",
+        "set": 3,
+        "question": "YAML मॅनिफेस्टमधून रिसोर्सेस तयार करण्यासाठी कोणत्या कमांडचा वापर केला जातो?",
+        "options": ["kubectl create -f", "kubectl run -f", "kubectl deploy -f", "kubectl start -f"],
+        "answer": "kubectl create -f"
+    },
+    {
+        "category": "Kubernetes",
+        "set": 3,
+        "question": "YAML फाइलमध्ये परिभाषित केलेले रिसोर्सेस काढून टाकण्यासाठी कोणत्या कमांडचा वापर केला जातो?",
+        "options": ["kubectl delete -f", "kubectl remove -f", "kubectl destroy -f", "kubectl erase -f"],
+        "answer": "kubectl delete -f"
+    },
+    {
+        "category": "Kubernetes",
+        "set": 3,
+        "question": "इमेजमधून pod तयार करण्यासाठी कोणत्या कमांडचा वापर केला जातो?",
+        "options": ["kubectl run", "kubectl create pod", "kubectl start pod", "kubectl deploy pod"],
+        "answer": "kubectl run"
+    },
+    {
+        "category": "Kubernetes",
+        "set": 3,
+        "question": "लोकल पोर्ट pod मध्ये फॉरवर्ड करण्यासाठी कोणत्या कमांडचा वापर केला जातो?",
+        "options": ["kubectl port-forward", "kubectl tunnel", "kubectl expose", "kubectl connect"],
+        "answer": "kubectl port-forward"
+    },
+    {
+        "category": "Kubernetes",
+        "set": 3,
+        "question": "pod मध्ये किंवा pod मधून फाइल्स कॉपी करण्यासाठी कोणत्या कमांडचा वापर केला जातो?",
+        "options": ["kubectl cp", "kubectl copy", "kubectl transfer", "kubectl sync"],
+        "answer": "kubectl cp"
+    },
+    {
+        "category": "Kubernetes",
+        "set": 3,
+        "question": "सध्याचा Kubernetes कॉन्टेक्स्ट (context) दाखवण्यासाठी कोणत्या कमांडचा वापर केला जातो?",
+        "options": ["kubectl config current-context", "kubectl context", "kubectl show context", "kubectl get context"],
+        "answer": "kubectl config current-context"
+    },
+    {
+        "category": "Kubernetes",
+        "set": 3,
+        "question": "कॉन्फिगर केलेल्या सर्व Kubernetes कॉन्टेक्स्ट्सची यादी कोणत्या कमांडद्वारे मिळते?",
+        "options": ["kubectl config get-contexts", "kubectl contexts", "kubectl list contexts", "kubectl show contexts"],
+        "answer": "kubectl config get-contexts"
+    },
+    {
+        "category": "Kubernetes",
+        "set": 3,
+        "question": "Kubernetes कॉन्टेक्स्ट्स दरम्यान स्विच करण्यासाठी कोणत्या कमांडचा वापर केला जातो?",
+        "options": ["kubectl config use-context", "kubectl context switch", "kubectl set-context", "kubectl switch"],
+        "answer": "kubectl config use-context"
+    },
+    {
+        "category": "Kubernetes",
+        "set": 4,
+        "question": "कोणता Kubernetes कंपोनंट कंट्रोल प्लेनचा फ्रंट-एंड म्हणून कार्य करतो?",
+        "options": ["kube-apiserver", "kubelet", "etcd", "kube-proxy"],
+        "answer": "kube-apiserver"
+    },
+    {
+        "category": "Kubernetes",
+        "set": 4,
+        "question": "क्लस्टर डेटा कोणता Kubernetes कंपोनंट साठवतो?",
+        "options": ["etcd", "kubelet", "CoreDNS", "Ingress"],
+        "answer": "etcd"
+    },
+    {
+        "category": "Kubernetes",
+        "set": 4,
+        "question": "nodes वर नेटवर्किंग नियमांचे व्यवस्थापन कोणता कंपोनंट करतो?",
+        "options": ["kube-proxy", "kubelet", "etcd", "Scheduler"],
+        "answer": "kube-proxy"
+    },
+    {
+        "category": "Kubernetes",
+        "set": 4,
+        "question": "node ची तपशीलवार माहिती दाखवण्यासाठी कोणत्या कमांडचा वापर केला जातो?",
+        "options": ["kubectl describe node", "kubectl inspect node", "kubectl info node", "kubectl node show"],
+        "answer": "kubectl describe node"
+    },
+    {
+        "category": "Kubernetes",
+        "set": 4,
+        "question": "एखादा node unschedulable म्हणून मार्क करण्यासाठी कोणत्या कमांडचा वापर केला जातो?",
+        "options": ["kubectl cordon", "kubectl drain", "kubectl taint", "kubectl stop"],
+        "answer": "kubectl cordon"
+    },
+    {
+        "category": "Kubernetes",
+        "set": 4,
+        "question": "node मधून वर्कलोड्स सुरक्षितपणे बाहेर काढण्यासाठी (evict) कोणत्या कमांडचा वापर केला जातो?",
+        "options": ["kubectl drain", "kubectl cordon", "kubectl delete node", "kubectl migrate"],
+        "answer": "kubectl drain"
+    },
+    {
+        "category": "Kubernetes",
+        "set": 4,
+        "question": "node ला पुन्हा schedulable करण्यासाठी कोणत्या कमांडचा वापर केला जातो?",
+        "options": ["kubectl uncordon", "kubectl enable", "kubectl restart", "kubectl activate"],
+        "answer": "kubectl uncordon"
+    },
+    {
+        "category": "Kubernetes",
+        "set": 4,
+        "question": "काही विशिष्ट nodes वर pods शेड्यूल होण्यापासून रोखण्यासाठी कोणत्या फीचरचा वापर केला जातो?",
+        "options": ["Taints", "Labels", "Ingress", "Secrets"],
+        "answer": "Taints"
+    },
+    {
+        "category": "Kubernetes",
+        "set": 4,
+        "question": "tainted nodes वर pods शेड्यूल होण्याची परवानगी देण्यासाठी कोणत्या फीचरचा वापर केला जातो?",
+        "options": ["Tolerations", "Selectors", "Ingress", "Annotations"],
+        "answer": "Tolerations"
+    },
+    {
+        "category": "Kubernetes",
+        "set": 4,
+        "question": "लेबल्सच्या आधारावर nodes निवडण्यासाठी कोणत्या मेकॅनिझमचा वापर केला जातो?",
+        "options": ["Node Selector", "Ingress", "Service", "Namespace"],
+        "answer": "Node Selector"
+    },
+    {
+        "category": "Kubernetes",
+        "set": 4,
+        "question": "डिफॉल्टने कोणत्या Kubernetes DNS सेवेचा वापर सामान्यतः केला जातो?",
+        "options": ["CoreDNS", "Bind", "Route53", "Consul"],
+        "answer": "CoreDNS"
+    },
+    {
+        "category": "Kubernetes",
+        "set": 4,
+        "question": "सर्व namespaces मधील सर्व pods ची यादी कोणत्या कमांडद्वारे मिळते?",
+        "options": ["kubectl get pods -A", "kubectl pods all", "kubectl get all pods", "kubectl list pods"],
+        "answer": "kubectl get pods -A"
+    },
+    {
+        "category": "Kubernetes",
+        "set": 4,
+        "question": "एका namespace मधील सर्व pods डिलीट करण्यासाठी कोणत्या कमांडचा वापर केला जातो?",
+        "options": ["kubectl delete pods --all", "kubectl remove pods", "kubectl clear pods", "kubectl destroy pods"],
+        "answer": "kubectl delete pods --all"
+    },
+    {
+        "category": "Kubernetes",
+        "set": 4,
+        "question": "deployment ला 5 replicas पर्यंत स्केल करण्यासाठी कोणत्या कमांडचा वापर केला जातो?",
+        "options": ["kubectl scale deployment --replicas=5", "kubectl replicas 5", "kubectl expand deployment", "kubectl set replicas"],
+        "answer": "kubectl scale deployment --replicas=5"
+    },
+    {
+        "category": "Kubernetes",
+        "set": 4,
+        "question": "rollout हिस्ट्री दाखवण्यासाठी कोणत्या कमांडचा वापर केला जातो?",
+        "options": ["kubectl rollout history", "kubectl history", "kubectl deployment history", "kubectl show rollout"],
+        "answer": "kubectl rollout history"
+    },
+    {
+        "category": "Kubernetes",
+        "set": 4,
+        "question": "deployment rollout पॉज करण्यासाठी कोणत्या कमांडचा वापर केला जातो?",
+        "options": ["kubectl rollout pause", "kubectl pause deployment", "kubectl stop rollout", "kubectl hold deployment"],
+        "answer": "kubectl rollout pause"
+    },
+    {
+        "category": "Kubernetes",
+        "set": 4,
+        "question": "पॉज केलेले deployment rollout रिझ्युम करण्यासाठी कोणत्या कमांडचा वापर केला जातो?",
+        "options": ["kubectl rollout resume", "kubectl resume deployment", "kubectl continue rollout", "kubectl restart rollout"],
+        "answer": "kubectl rollout resume"
+    },
+    {
+        "category": "Kubernetes",
+        "set": 4,
+        "question": "कंटेनर्ससाठी CPU आणि मेमरी लिमिट्स कोणता ऑब्जेक्ट परिभाषित करतो?",
+        "options": ["Resource Limits", "Ingress", "Service", "Namespace"],
+        "answer": "Resource Limits"
+    },
+    {
+        "category": "Kubernetes",
+        "set": 4,
+        "question": "कंटेनर चालू आहे की नाही हे तपासण्यासाठी कोणत्या प्रोबचा (probe) वापर केला जातो?",
+        "options": ["Liveness Probe", "Readiness Probe", "Startup Probe", "Health Probe"],
+        "answer": "Liveness Probe"
+    },
+    {
+        "category": "Kubernetes",
+        "set": 4,
+        "question": "pod ला ट्रॅफिक मिळू शकतो की नाही हे ठरवण्यासाठी कोणत्या प्रोबचा वापर केला जातो?",
+        "options": ["Readiness Probe", "Liveness Probe", "Startup Probe", "Service Probe"],
+        "answer": "Readiness Probe"
+    },
+    {
+        "category": "Kubernetes",
+        "set": 4,
+        "question": "ॲप्लिकेशन स्टार्टअप दरम्यान कोणत्या प्रोबचा वापर केला जातो?",
+        "options": ["Startup Probe", "Readiness Probe", "Liveness Probe", "Boot Probe"],
+        "answer": "Startup Probe"
+    },
+    {
+        "category": "Kubernetes",
+        "set": 4,
+        "question": "मेट्रिक्सच्या आधारे pod replicas आपोआप ॲडजस्ट करण्यासाठी कोणत्या Kubernetes फीचरचा वापर केला जातो?",
+        "options": ["Horizontal Pod Autoscaler", "Vertical Pod Autoscaler", "ReplicaSet", "StatefulSet"],
+        "answer": "Horizontal Pod Autoscaler"
+    },
+    {
+        "category": "Kubernetes",
+        "set": 4,
+        "question": "Horizontal Pod Autoscalers ची यादी कोणत्या कमांडद्वारे मिळते?",
+        "options": ["kubectl get hpa", "kubectl hpa", "kubectl autoscaler", "kubectl get autoscale"],
+        "answer": "kubectl get hpa"
+    },
+    {
+        "category": "Kubernetes",
+        "set": 4,
+        "question": "रिसोर्सेसना ग्रुप आणि आयसोलेट करण्यासाठी कोणत्या Kubernetes ऑब्जेक्टचा वापर केला जातो?",
+        "options": ["Namespace", "Service", "Pod", "Ingress"],
+        "answer": "Namespace"
+    },
+    {
+        "category": "Kubernetes",
+        "set": 4,
+        "question": "चालू असलेल्या pod ची YAML व्याख्या दाखवण्यासाठी कोणत्या कमांडचा वापर केला जातो?",
+        "options": ["kubectl get pod -o yaml", "kubectl show pod yaml", "kubectl export pod", "kubectl pod yaml"],
+        "answer": "kubectl get pod -o yaml"
+    }
+]

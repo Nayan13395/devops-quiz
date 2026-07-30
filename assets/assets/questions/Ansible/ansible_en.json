@@ -1,0 +1,1205 @@
+[
+{
+    "category": "Ansible",
+    "set": 1,
+    "question": "What is Ansible primarily used for?",
+    "options": [
+        "Configuration Management",
+        "Containerization",
+        "Database Management",
+        "Monitoring"
+    ],
+    "answer": "Configuration Management"
+},
+{
+    "category": "Ansible",
+    "set": 1,
+    "question": "Which language is Ansible written in?",
+    "options": [
+        "Python",
+        "Java",
+        "Go",
+        "Ruby"
+    ],
+    "answer": "Python"
+},
+{
+    "category": "Ansible",
+    "set": 1,
+    "question": "Which file contains managed hosts in Ansible?",
+    "options": [
+        "Inventory File",
+        "Playbook",
+        "Role",
+        "Module"
+    ],
+    "answer": "Inventory File"
+},
+{
+    "category": "Ansible",
+    "set": 1,
+    "question": "What is the default inventory file location?",
+    "options": [
+        "/etc/ansible/hosts",
+        "/etc/hosts",
+        "/ansible/hosts",
+        "/usr/ansible/hosts"
+    ],
+    "answer": "/etc/ansible/hosts"
+},
+{
+    "category": "Ansible",
+    "set": 1,
+    "question": "Which command checks Ansible version?",
+    "options": [
+        "ansible --version",
+        "ansible version",
+        "ansible -v",
+        "ansible check"
+    ],
+    "answer": "ansible --version"
+},
+{
+    "category": "Ansible",
+    "set": 1,
+    "question": "Which protocol does Ansible use by default?",
+    "options": [
+        "SSH",
+        "FTP",
+        "Telnet",
+        "HTTP"
+    ],
+    "answer": "SSH"
+},
+{
+    "category": "Ansible",
+    "set": 1,
+    "question": "What is an Ansible Playbook?",
+    "options": [
+        "YAML file containing automation tasks",
+        "Inventory file",
+        "Python script",
+        "Configuration file"
+    ],
+    "answer": "YAML file containing automation tasks"
+},
+{
+    "category": "Ansible",
+    "set": 1,
+    "question": "Which extension is commonly used for Ansible playbooks?",
+    "options": [
+        ".yml",
+        ".ansible",
+        ".play",
+        ".cfg"
+    ],
+    "answer": ".yml"
+},
+{
+    "category": "Ansible",
+    "set": 1,
+    "question": "Which command runs an Ansible playbook?",
+    "options": [
+        "ansible-playbook",
+        "ansible-run",
+        "ansible-execute",
+        "ansible-start"
+    ],
+    "answer": "ansible-playbook"
+},
+{
+    "category": "Ansible",
+    "set": 1,
+    "question": "Which keyword defines target hosts in a playbook?",
+    "options": [
+        "hosts",
+        "servers",
+        "nodes",
+        "targets"
+    ],
+    "answer": "hosts"
+},
+{
+    "category": "Ansible",
+    "set": 1,
+    "question": "Which keyword defines tasks in a playbook?",
+    "options": [
+        "tasks",
+        "actions",
+        "jobs",
+        "steps"
+    ],
+    "answer": "tasks"
+},
+{
+    "category": "Ansible",
+    "set": 1,
+    "question": "Which module executes shell commands?",
+    "options": [
+        "shell",
+        "service",
+        "copy",
+        "yum"
+    ],
+    "answer": "shell"
+},
+{
+    "category": "Ansible",
+    "set": 1,
+    "question": "Which module executes commands without shell processing?",
+    "options": [
+        "command",
+        "shell",
+        "run",
+        "exec"
+    ],
+    "answer": "command"
+},
+{
+    "category": "Ansible",
+    "set": 1,
+    "question": "Which module copies files to remote hosts?",
+    "options": [
+        "copy",
+        "fetch",
+        "file",
+        "transfer"
+    ],
+    "answer": "copy"
+},
+{
+    "category": "Ansible",
+    "set": 1,
+    "question": "Which module retrieves files from remote hosts?",
+    "options": [
+        "fetch",
+        "copy",
+        "get",
+        "download"
+    ],
+    "answer": "fetch"
+},
+{
+    "category": "Ansible",
+    "set": 1,
+    "question": "Which module manages services?",
+    "options": [
+        "service",
+        "systemctl",
+        "daemon",
+        "process"
+    ],
+    "answer": "service"
+},
+{
+    "category": "Ansible",
+    "set": 1,
+    "question": "Which module installs packages on RHEL systems?",
+    "options": [
+        "yum",
+        "apt",
+        "pkg",
+        "rpm"
+    ],
+    "answer": "yum"
+},
+{
+    "category": "Ansible",
+    "set": 1,
+    "question": "Which module installs packages on Debian systems?",
+    "options": [
+        "apt",
+        "yum",
+        "pkg",
+        "dpkg"
+    ],
+    "answer": "apt"
+},
+{
+    "category": "Ansible",
+    "set": 1,
+    "question": "Which module manages files and permissions?",
+    "options": [
+        "file",
+        "copy",
+        "chmod",
+        "path"
+    ],
+    "answer": "file"
+},
+{
+    "category": "Ansible",
+    "set": 1,
+    "question": "Which module gathers system facts?",
+    "options": [
+        "setup",
+        "facts",
+        "info",
+        "gather"
+    ],
+    "answer": "setup"
+},
+{
+    "category": "Ansible",
+    "set": 1,
+    "question": "Which keyword enables privilege escalation?",
+    "options": [
+        "become",
+        "sudo",
+        "root",
+        "admin"
+    ],
+    "answer": "become"
+},
+{
+    "category": "Ansible",
+    "set": 1,
+    "question": "Which command tests connectivity to all hosts?",
+    "options": [
+        "ansible all -m ping",
+        "ansible ping",
+        "ansible test",
+        "ansible connect"
+    ],
+    "answer": "ansible all -m ping"
+},
+{
+    "category": "Ansible",
+    "set": 1,
+    "question": "Which module is used to verify connectivity?",
+    "options": [
+        "ping",
+        "connect",
+        "ssh",
+        "network"
+    ],
+    "answer": "ping"
+},
+{
+    "category": "Ansible",
+    "set": 1,
+    "question": "What format are Ansible playbooks written in?",
+    "options": [
+        "YAML",
+        "JSON",
+        "XML",
+        "INI"
+    ],
+    "answer": "YAML"
+},
+{
+    "category": "Ansible",
+    "set": 1,
+    "question": "Which file configures Ansible settings?",
+    "options": [
+        "ansible.cfg",
+        "ansible.conf",
+        "config.yml",
+        "ansible.ini"
+    ],
+    "answer": "ansible.cfg"
+},
+
+{
+    "category": "Ansible",
+    "set": 2,
+    "question": "Which keyword is used to define variables in a playbook?",
+    "options": [
+        "vars",
+        "variables",
+        "var",
+        "define"
+    ],
+    "answer": "vars"
+},
+{
+    "category": "Ansible",
+    "set": 2,
+    "question": "Which syntax is used to reference a variable?",
+    "options": [
+        "{{ variable_name }}",
+        "$(variable_name)",
+        "${variable_name}",
+        "[variable_name]"
+    ],
+    "answer": "{{ variable_name }}"
+},
+{
+    "category": "Ansible",
+    "set": 2,
+    "question": "Which module is used to display messages during execution?",
+    "options": [
+        "debug",
+        "print",
+        "echo",
+        "message"
+    ],
+    "answer": "debug"
+},
+{
+    "category": "Ansible",
+    "set": 2,
+    "question": "Which file extension is commonly used for variable files?",
+    "options": [
+        ".yml",
+        ".vars",
+        ".cfg",
+        ".json"
+    ],
+    "answer": ".yml"
+},
+{
+    "category": "Ansible",
+    "set": 2,
+    "question": "Which keyword is used to load external variable files?",
+    "options": [
+        "vars_files",
+        "include_vars",
+        "load_vars",
+        "import_vars"
+    ],
+    "answer": "vars_files"
+},
+{
+    "category": "Ansible",
+    "set": 2,
+    "question": "Which module loads variables from a file during runtime?",
+    "options": [
+        "include_vars",
+        "vars_files",
+        "load_vars",
+        "import_vars"
+    ],
+    "answer": "include_vars"
+},
+{
+    "category": "Ansible",
+    "set": 2,
+    "question": "Which keyword is used for conditional execution?",
+    "options": [
+        "when",
+        "if",
+        "condition",
+        "check"
+    ],
+    "answer": "when"
+},
+{
+    "category": "Ansible",
+    "set": 2,
+    "question": "Which keyword is used to repeat a task?",
+    "options": [
+        "loop",
+        "repeat",
+        "iterate",
+        "for"
+    ],
+    "answer": "loop"
+},
+{
+    "category": "Ansible",
+    "set": 2,
+    "question": "What variable contains the current loop item?",
+    "options": [
+        "item",
+        "loopitem",
+        "current",
+        "value"
+    ],
+    "answer": "item"
+},
+{
+    "category": "Ansible",
+    "set": 2,
+    "question": "Which module creates files from Jinja2 templates?",
+    "options": [
+        "template",
+        "copy",
+        "render",
+        "jinja"
+    ],
+    "answer": "template"
+},
+{
+    "category": "Ansible",
+    "set": 2,
+    "question": "Which templating engine does Ansible use?",
+    "options": [
+        "Jinja2",
+        "Mustache",
+        "Velocity",
+        "Smarty"
+    ],
+    "answer": "Jinja2"
+},
+{
+    "category": "Ansible",
+    "set": 2,
+    "question": "What is the default extension for Jinja2 template files?",
+    "options": [
+        ".j2",
+        ".jinja",
+        ".template",
+        ".tmpl"
+    ],
+    "answer": ".j2"
+},
+{
+    "category": "Ansible",
+    "set": 2,
+    "question": "Which keyword registers task output into a variable?",
+    "options": [
+        "register",
+        "save",
+        "output",
+        "store"
+    ],
+    "answer": "register"
+},
+{
+    "category": "Ansible",
+    "set": 2,
+    "question": "Which keyword ignores task failures?",
+    "options": [
+        "ignore_errors",
+        "skip_errors",
+        "continue",
+        "ignore_failures"
+    ],
+    "answer": "ignore_errors"
+},
+{
+    "category": "Ansible",
+    "set": 2,
+    "question": "Which keyword is used to execute tasks only when notified?",
+    "options": [
+        "handlers",
+        "notify",
+        "trigger",
+        "events"
+    ],
+    "answer": "handlers"
+},
+{
+    "category": "Ansible",
+    "set": 2,
+    "question": "Which keyword triggers a handler?",
+    "options": [
+        "notify",
+        "handler",
+        "alert",
+        "call"
+    ],
+    "answer": "notify"
+},
+{
+    "category": "Ansible",
+    "set": 2,
+    "question": "What is a handler typically used for?",
+    "options": [
+        "Restart services",
+        "Install packages",
+        "Manage users",
+        "Copy files"
+    ],
+    "answer": "Restart services"
+},
+{
+    "category": "Ansible",
+    "set": 2,
+    "question": "Which keyword imports another playbook?",
+    "options": [
+        "import_playbook",
+        "include_playbook",
+        "load_playbook",
+        "playbook"
+    ],
+    "answer": "import_playbook"
+},
+{
+    "category": "Ansible",
+    "set": 2,
+    "question": "Which module manages users?",
+    "options": [
+        "user",
+        "account",
+        "login",
+        "member"
+    ],
+    "answer": "user"
+},
+{
+    "category": "Ansible",
+    "set": 2,
+    "question": "Which module manages groups?",
+    "options": [
+        "group",
+        "groups",
+        "team",
+        "role"
+    ],
+    "answer": "group"
+},
+{
+    "category": "Ansible",
+    "set": 2,
+    "question": "Which module manages cron jobs?",
+    "options": [
+        "cron",
+        "schedule",
+        "crontab",
+        "job"
+    ],
+    "answer": "cron"
+},
+{
+    "category": "Ansible",
+    "set": 2,
+    "question": "Which module manages systemd services?",
+    "options": [
+        "systemd",
+        "service",
+        "daemon",
+        "systemctl"
+    ],
+    "answer": "systemd"
+},
+{
+    "category": "Ansible",
+    "set": 2,
+    "question": "Which keyword tags tasks for selective execution?",
+    "options": [
+        "tags",
+        "labels",
+        "groups",
+        "filter"
+    ],
+    "answer": "tags"
+},
+{
+    "category": "Ansible",
+    "set": 2,
+    "question": "Which option runs only tasks with specific tags?",
+    "options": [
+        "--tags",
+        "--tag",
+        "--filter",
+        "--task"
+    ],
+    "answer": "--tags"
+},
+{
+    "category": "Ansible",
+    "set": 2,
+    "question": "Which option skips tasks with specified tags?",
+    "options": [
+        "--skip-tags",
+        "--exclude-tags",
+        "--ignore-tags",
+        "--remove-tags"
+    ],
+    "answer": "--skip-tags"
+},
+
+{
+    "category": "Ansible",
+    "set": 3,
+    "question": "What is an Ansible Role?",
+    "options": [
+        "A reusable collection of tasks and files",
+        "A user account",
+        "An inventory group",
+        "A playbook variable"
+    ],
+    "answer": "A reusable collection of tasks and files"
+},
+{
+    "category": "Ansible",
+    "set": 3,
+    "question": "Which command creates a new role structure?",
+    "options": [
+        "ansible-galaxy init",
+        "ansible role create",
+        "ansible init role",
+        "ansible-playbook init"
+    ],
+    "answer": "ansible-galaxy init"
+},
+{
+    "category": "Ansible",
+    "set": 3,
+    "question": "Which directory contains role tasks?",
+    "options": [
+        "tasks",
+        "handlers",
+        "files",
+        "vars"
+    ],
+    "answer": "tasks"
+},
+{
+    "category": "Ansible",
+    "set": 3,
+    "question": "Which file is the main task file in a role?",
+    "options": [
+        "tasks/main.yml",
+        "tasks/tasks.yml",
+        "main/tasks.yml",
+        "role.yml"
+    ],
+    "answer": "tasks/main.yml"
+},
+{
+    "category": "Ansible",
+    "set": 3,
+    "question": "Which directory contains role handlers?",
+    "options": [
+        "handlers",
+        "tasks",
+        "events",
+        "notify"
+    ],
+    "answer": "handlers"
+},
+{
+    "category": "Ansible",
+    "set": 3,
+    "question": "Which directory stores Jinja2 templates in a role?",
+    "options": [
+        "templates",
+        "files",
+        "jinja",
+        "render"
+    ],
+    "answer": "templates"
+},
+{
+    "category": "Ansible",
+    "set": 3,
+    "question": "Which directory stores static files in a role?",
+    "options": [
+        "files",
+        "templates",
+        "static",
+        "resources"
+    ],
+    "answer": "files"
+},
+{
+    "category": "Ansible",
+    "set": 3,
+    "question": "Which directory contains role variables?",
+    "options": [
+        "vars",
+        "variables",
+        "config",
+        "settings"
+    ],
+    "answer": "vars"
+},
+{
+    "category": "Ansible",
+    "set": 3,
+    "question": "Which directory contains default variables?",
+    "options": [
+        "defaults",
+        "vars",
+        "config",
+        "settings"
+    ],
+    "answer": "defaults"
+},
+{
+    "category": "Ansible",
+    "set": 3,
+    "question": "Which keyword is used to include roles in a playbook?",
+    "options": [
+        "roles",
+        "include_role",
+        "role",
+        "import_role"
+    ],
+    "answer": "roles"
+},
+{
+    "category": "Ansible",
+    "set": 3,
+    "question": "What is Ansible Galaxy?",
+    "options": [
+        "Repository for Ansible roles and collections",
+        "Monitoring tool",
+        "CI/CD platform",
+        "Inventory manager"
+    ],
+    "answer": "Repository for Ansible roles and collections"
+},
+{
+    "category": "Ansible",
+    "set": 3,
+    "question": "Which command installs a role from Galaxy?",
+    "options": [
+        "ansible-galaxy install",
+        "ansible install role",
+        "ansible role add",
+        "ansible-galaxy add"
+    ],
+    "answer": "ansible-galaxy install"
+},
+{
+    "category": "Ansible",
+    "set": 3,
+    "question": "Which command lists installed Galaxy roles?",
+    "options": [
+        "ansible-galaxy list",
+        "ansible-galaxy roles",
+        "ansible role list",
+        "ansible-galaxy show"
+    ],
+    "answer": "ansible-galaxy list"
+},
+{
+    "category": "Ansible",
+    "set": 3,
+    "question": "What is Ansible Vault used for?",
+    "options": [
+        "Encrypt sensitive data",
+        "Manage inventories",
+        "Run playbooks",
+        "Install roles"
+    ],
+    "answer": "Encrypt sensitive data"
+},
+{
+    "category": "Ansible",
+    "set": 3,
+    "question": "Which command creates an encrypted file?",
+    "options": [
+        "ansible-vault create",
+        "ansible-vault encrypt",
+        "ansible-vault init",
+        "ansible-vault new"
+    ],
+    "answer": "ansible-vault create"
+},
+{
+    "category": "Ansible",
+    "set": 3,
+    "question": "Which command encrypts an existing file?",
+    "options": [
+        "ansible-vault encrypt",
+        "ansible-vault secure",
+        "ansible-vault create",
+        "ansible-vault lock"
+    ],
+    "answer": "ansible-vault encrypt"
+},
+{
+    "category": "Ansible",
+    "set": 3,
+    "question": "Which command decrypts a vault file?",
+    "options": [
+        "ansible-vault decrypt",
+        "ansible-vault unlock",
+        "ansible-vault open",
+        "ansible-vault reveal"
+    ],
+    "answer": "ansible-vault decrypt"
+},
+{
+    "category": "Ansible",
+    "set": 3,
+    "question": "Which command edits an encrypted file?",
+    "options": [
+        "ansible-vault edit",
+        "ansible-vault modify",
+        "ansible-vault update",
+        "ansible-vault open"
+    ],
+    "answer": "ansible-vault edit"
+},
+{
+    "category": "Ansible",
+    "set": 3,
+    "question": "Which command changes a vault password?",
+    "options": [
+        "ansible-vault rekey",
+        "ansible-vault passwd",
+        "ansible-vault reset",
+        "ansible-vault update"
+    ],
+    "answer": "ansible-vault rekey"
+},
+{
+    "category": "Ansible",
+    "set": 3,
+    "question": "Which keyword enables fact gathering?",
+    "options": [
+        "gather_facts",
+        "facts",
+        "setup",
+        "collect_facts"
+    ],
+    "answer": "gather_facts"
+},
+{
+    "category": "Ansible",
+    "set": 3,
+    "question": "Which variable contains the hostname fact?",
+    "options": [
+        "ansible_hostname",
+        "hostname",
+        "host_name",
+        "inventory_hostname"
+    ],
+    "answer": "ansible_hostname"
+},
+{
+    "category": "Ansible",
+    "set": 3,
+    "question": "Which command displays gathered facts?",
+    "options": [
+        "ansible all -m setup",
+        "ansible facts",
+        "ansible gather",
+        "ansible info"
+    ],
+    "answer": "ansible all -m setup"
+},
+{
+    "category": "Ansible",
+    "set": 3,
+    "question": "Which variable contains the operating system family?",
+    "options": [
+        "ansible_os_family",
+        "ansible_os",
+        "os_family",
+        "system_family"
+    ],
+    "answer": "ansible_os_family"
+},
+{
+    "category": "Ansible",
+    "set": 3,
+    "question": "Which built-in variable contains the inventory hostname?",
+    "options": [
+        "inventory_hostname",
+        "ansible_hostname",
+        "host",
+        "hostname"
+    ],
+    "answer": "inventory_hostname"
+},
+{
+    "category": "Ansible",
+    "set": 3,
+    "question": "What are Ansible Collections?",
+    "options": [
+        "Packages containing roles, modules and plugins",
+        "Inventory groups",
+        "Encrypted files",
+        "YAML variables"
+    ],
+    "answer": "Packages containing roles, modules and plugins"
+},
+
+{
+    "category": "Ansible",
+    "set": 4,
+    "question": "What is AWX?",
+    "options": [
+        "Open-source Ansible Automation Platform",
+        "Monitoring Tool",
+        "Container Runtime",
+        "Version Control System"
+    ],
+    "answer": "Open-source Ansible Automation Platform"
+},
+{
+    "category": "Ansible",
+    "set": 4,
+    "question": "Ansible Tower is now known as?",
+    "options": [
+        "Red Hat Ansible Automation Platform",
+        "Ansible Galaxy",
+        "AWX Enterprise",
+        "Automation Hub"
+    ],
+    "answer": "Red Hat Ansible Automation Platform"
+},
+{
+    "category": "Ansible",
+    "set": 4,
+    "question": "What is a Dynamic Inventory?",
+    "options": [
+        "Inventory generated automatically from cloud providers",
+        "Static hosts file",
+        "Encrypted inventory",
+        "Role-based inventory"
+    ],
+    "answer": "Inventory generated automatically from cloud providers"
+},
+{
+    "category": "Ansible",
+    "set": 4,
+    "question": "Which cloud platform commonly uses dynamic inventory plugins?",
+    "options": [
+        "AWS",
+        "Notepad",
+        "Apache",
+        "Jenkins"
+    ],
+    "answer": "AWS"
+},
+{
+    "category": "Ansible",
+    "set": 4,
+    "question": "Which command checks playbook syntax?",
+    "options": [
+        "ansible-playbook --syntax-check",
+        "ansible-playbook --validate",
+        "ansible-playbook check",
+        "ansible validate"
+    ],
+    "answer": "ansible-playbook --syntax-check"
+},
+{
+    "category": "Ansible",
+    "set": 4,
+    "question": "Which option performs a dry run of a playbook?",
+    "options": [
+        "--check",
+        "--dry",
+        "--test",
+        "--simulate"
+    ],
+    "answer": "--check"
+},
+{
+    "category": "Ansible",
+    "set": 4,
+    "question": "Which option shows differences in managed files?",
+    "options": [
+        "--diff",
+        "--compare",
+        "--changes",
+        "--show-diff"
+    ],
+    "answer": "--diff"
+},
+{
+    "category": "Ansible",
+    "set": 4,
+    "question": "Which strategy executes tasks on all hosts simultaneously?",
+    "options": [
+        "free",
+        "linear",
+        "parallel",
+        "fork"
+    ],
+    "answer": "free"
+},
+{
+    "category": "Ansible",
+    "set": 4,
+    "question": "What is the default Ansible execution strategy?",
+    "options": [
+        "linear",
+        "free",
+        "parallel",
+        "serial"
+    ],
+    "answer": "linear"
+},
+{
+    "category": "Ansible",
+    "set": 4,
+    "question": "Which keyword limits execution to a subset of hosts?",
+    "options": [
+        "serial",
+        "hosts",
+        "limit",
+        "group"
+    ],
+    "answer": "serial"
+},
+{
+    "category": "Ansible",
+    "set": 4,
+    "question": "Which option limits playbook execution to selected hosts?",
+    "options": [
+        "--limit",
+        "--hosts",
+        "--target",
+        "--group"
+    ],
+    "answer": "--limit"
+},
+{
+    "category": "Ansible",
+    "set": 4,
+    "question": "Which plugin type controls task execution behavior?",
+    "options": [
+        "Strategy Plugin",
+        "Filter Plugin",
+        "Callback Plugin",
+        "Lookup Plugin"
+    ],
+    "answer": "Strategy Plugin"
+},
+{
+    "category": "Ansible",
+    "set": 4,
+    "question": "Which plugin retrieves data from external sources?",
+    "options": [
+        "Lookup Plugin",
+        "Callback Plugin",
+        "Connection Plugin",
+        "Action Plugin"
+    ],
+    "answer": "Lookup Plugin"
+},
+{
+    "category": "Ansible",
+    "set": 4,
+    "question": "Which plugin modifies variable data?",
+    "options": [
+        "Filter Plugin",
+        "Lookup Plugin",
+        "Action Plugin",
+        "Connection Plugin"
+    ],
+    "answer": "Filter Plugin"
+},
+{
+    "category": "Ansible",
+    "set": 4,
+    "question": "Which plugin displays execution output?",
+    "options": [
+        "Callback Plugin",
+        "Filter Plugin",
+        "Lookup Plugin",
+        "Connection Plugin"
+    ],
+    "answer": "Callback Plugin"
+},
+{
+    "category": "Ansible",
+    "set": 4,
+    "question": "Which module manages Docker containers?",
+    "options": [
+        "docker_container",
+        "docker",
+        "container",
+        "docker_manage"
+    ],
+    "answer": "docker_container"
+},
+{
+    "category": "Ansible",
+    "set": 4,
+    "question": "Which module manages Kubernetes resources?",
+    "options": [
+        "k8s",
+        "kubectl",
+        "kubernetes",
+        "cluster"
+    ],
+    "answer": "k8s"
+},
+{
+    "category": "Ansible",
+    "set": 4,
+    "question": "Which module executes tasks on Windows hosts?",
+    "options": [
+        "win_command",
+        "windows",
+        "win_exec",
+        "powershell"
+    ],
+    "answer": "win_command"
+},
+{
+    "category": "Ansible",
+    "set": 4,
+    "question": "Which protocol is commonly used for Windows management in Ansible?",
+    "options": [
+        "WinRM",
+        "SSH",
+        "FTP",
+        "RDP"
+    ],
+    "answer": "WinRM"
+},
+{
+    "category": "Ansible",
+    "set": 4,
+    "question": "Which feature allows execution of only changed tasks?",
+    "options": [
+        "Idempotency",
+        "Handlers",
+        "Facts",
+        "Loops"
+    ],
+    "answer": "Idempotency"
+},
+{
+    "category": "Ansible",
+    "set": 4,
+    "question": "What is idempotency in Ansible?",
+    "options": [
+        "Running tasks repeatedly without changing desired state",
+        "Encrypting playbooks",
+        "Creating inventories",
+        "Managing roles"
+    ],
+    "answer": "Running tasks repeatedly without changing desired state"
+},
+{
+    "category": "Ansible",
+    "set": 4,
+    "question": "Which file can define inventory groups and variables?",
+    "options": [
+        "inventory",
+        "playbook.yml",
+        "ansible.cfg",
+        "vault.yml"
+    ],
+    "answer": "inventory"
+},
+{
+    "category": "Ansible",
+    "set": 4,
+    "question": "Which command lists all available Ansible modules?",
+    "options": [
+        "ansible-doc -l",
+        "ansible modules",
+        "ansible-list",
+        "ansible-help modules"
+    ],
+    "answer": "ansible-doc -l"
+},
+{
+    "category": "Ansible",
+    "set": 4,
+    "question": "Which command displays documentation for a module?",
+    "options": [
+        "ansible-doc",
+        "ansible-help",
+        "ansible-module",
+        "ansible-info"
+    ],
+    "answer": "ansible-doc"
+},
+{
+    "category": "Ansible",
+    "set": 4,
+    "question": "Which best practice improves playbook reusability?",
+    "options": [
+        "Using Roles",
+        "Using Shell Commands Everywhere",
+        "Hardcoding Values",
+        "Disabling Variables"
+    ],
+    "answer": "Using Roles"
+}
+]

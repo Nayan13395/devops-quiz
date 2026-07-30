@@ -1,0 +1,702 @@
+[
+    {
+        "category": "Ansible",
+        "set": 1,
+        "question": "Ansible चा प्राथमिक वापर कशासाठी केला जातो?",
+        "options": ["Configuration Management", "Containerization", "Database Management", "Monitoring"],
+        "answer": "Configuration Management"
+    },
+    {
+        "category": "Ansible",
+        "set": 1,
+        "question": "Ansible कोणत्या भाषेत लिहिले गेले आहे?",
+        "options": ["Python", "Java", "Go", "Ruby"],
+        "answer": "Python"
+    },
+    {
+        "category": "Ansible",
+        "set": 1,
+        "question": "Ansible मध्ये मॅनेज्ड होस्ट्स कोणत्या फाइलमध्ये असतात?",
+        "options": ["Inventory File", "Playbook", "Role", "Module"],
+        "answer": "Inventory File"
+    },
+    {
+        "category": "Ansible",
+        "set": 1,
+        "question": "डिफॉल्ट इन्व्हेंटरी फाइलचे लोकेशन काय आहे?",
+        "options": ["/etc/ansible/hosts", "/etc/hosts", "/ansible/hosts", "/usr/ansible/hosts"],
+        "answer": "/etc/ansible/hosts"
+    },
+    {
+        "category": "Ansible",
+        "set": 1,
+        "question": "Ansible ची आवृत्ती (version) तपासण्यासाठी कोणत्या कमांडचा वापर केला जातो?",
+        "options": ["ansible --version", "ansible version", "ansible -v", "ansible check"],
+        "answer": "ansible --version"
+    },
+    {
+        "category": "Ansible",
+        "set": 1,
+        "question": "Ansible डिफॉल्टने कोणत्या प्रोटोकॉलचा वापर करतो?",
+        "options": ["SSH", "FTP", "Telnet", "HTTP"],
+        "answer": "SSH"
+    },
+    {
+        "category": "Ansible",
+        "set": 1,
+        "question": "Ansible Playbook म्हणजे काय?",
+        "options": ["ऑटोमेशन टास्क्स असलेली YAML फाइल", "Inventory file", "Python script", "Configuration file"],
+        "answer": "ऑटोमेशन टास्क्स असलेली YAML फाइल"
+    },
+    {
+        "category": "Ansible",
+        "set": 1,
+        "question": "Ansible playbooks साठी सामान्यतः कोणत्या एक्सटेंशनचा वापर केला जातो?",
+        "options": [".yml", ".ansible", ".play", ".cfg"],
+        "answer": ".yml"
+    },
+    {
+        "category": "Ansible",
+        "set": 1,
+        "question": "Ansible playbook रन करण्यासाठी कोणत्या कमांडचा वापर केला जातो?",
+        "options": ["ansible-playbook", "ansible-run", "ansible-execute", "ansible-start"],
+        "answer": "ansible-playbook"
+    },
+    {
+        "category": "Ansible",
+        "set": 1,
+        "question": "playbook मध्ये टार्गेट होस्ट्स परिभाषित करण्यासाठी कोणत्या कीवर्डचा वापर केला जातो?",
+        "options": ["hosts", "servers", "nodes", "targets"],
+        "answer": "hosts"
+    },
+    {
+        "category": "Ansible",
+        "set": 1,
+        "question": "playbook मध्ये टास्क्स परिभाषित करण्यासाठी कोणत्या कीवर्डचा वापर केला जातो?",
+        "options": ["tasks", "actions", "jobs", "steps"],
+        "answer": "tasks"
+    },
+    {
+        "category": "Ansible",
+        "set": 1,
+        "question": "शेल कमांड्स एक्झिक्युट करण्यासाठी कोणत्या मॉड्यूलचा वापर केला जातो?",
+        "options": ["shell", "service", "copy", "yum"],
+        "answer": "shell"
+    },
+    {
+        "category": "Ansible",
+        "set": 1,
+        "question": "शेल प्रोसेसिंगशिवाय कमांड्स एक्झिक्युट करण्यासाठी कोणत्या मॉड्यूलचा वापर केला जातो?",
+        "options": ["command", "shell", "run", "exec"],
+        "answer": "command"
+    },
+    {
+        "category": "Ansible",
+        "set": 1,
+        "question": "रिमोट होस्टवर फाइल्स कॉपी करण्यासाठी कोणत्या मॉड्यूलचा वापर केला जातो?",
+        "options": ["copy", "fetch", "file", "transfer"],
+        "answer": "copy"
+    },
+    {
+        "category": "Ansible",
+        "set": 1,
+        "question": "रिमोट होस्टमधून फाइल्स रिट्रीव्ह करण्यासाठी कोणत्या मॉड्यूलचा वापर केला जातो?",
+        "options": ["fetch", "copy", "get", "download"],
+        "answer": "fetch"
+    },
+    {
+        "category": "Ansible",
+        "set": 1,
+        "question": "सर्व्हिसेस मॅनेज करण्यासाठी कोणत्या मॉड्यूलचा वापर केला जातो?",
+        "options": ["service", "systemctl", "daemon", "process"],
+        "answer": "service"
+    },
+    {
+        "category": "Ansible",
+        "set": 1,
+        "question": "RHEL सिस्टमवर पॅकेजेस इन्स्टॉल करण्यासाठी कोणत्या मॉड्यूलचा वापर केला जातो?",
+        "options": ["yum", "apt", "pkg", "rpm"],
+        "answer": "yum"
+    },
+    {
+        "category": "Ansible",
+        "set": 1,
+        "question": "Debian सिस्टमवर पॅकेजेस इन्स्टॉल करण्यासाठी कोणत्या मॉड्यूलचा वापर केला जातो?",
+        "options": ["apt", "yum", "pkg", "dpkg"],
+        "answer": "apt"
+    },
+    {
+        "category": "Ansible",
+        "set": 1,
+        "question": "फाइल्स आणि परमिशन्स मॅनेज करण्यासाठी कोणत्या मॉड्यूलचा वापर केला जातो?",
+        "options": ["file", "copy", "chmod", "path"],
+        "answer": "file"
+    },
+    {
+        "category": "Ansible",
+        "set": 1,
+        "question": "सिस्टम फॅक्ट्स गोळा करण्यासाठी कोणत्या मॉड्यूलचा वापर केला जातो?",
+        "options": ["setup", "facts", "info", "gather"],
+        "answer": "setup"
+    },
+    {
+        "category": "Ansible",
+        "set": 1,
+        "question": "प्रिव्हिलेज एस्कलेशन सक्षम करण्यासाठी कोणत्या कीवर्डचा वापर केला जातो?",
+        "options": ["become", "sudo", "root", "admin"],
+        "answer": "become"
+    },
+    {
+        "category": "Ansible",
+        "set": 1,
+        "question": "सर्व होस्ट्सशी कनेक्टिव्हिटी तपासण्यासाठी कोणत्या कमांडचा वापर केला जातो?",
+        "options": ["ansible all -m ping", "ansible ping", "ansible test", "ansible connect"],
+        "answer": "ansible all -m ping"
+    },
+    {
+        "category": "Ansible",
+        "set": 1,
+        "question": "कनेक्टिव्हिटी व्हेरिफाय करण्यासाठी कोणत्या मॉड्यूलचा वापर केला जातो?",
+        "options": ["ping", "connect", "ssh", "network"],
+        "answer": "ping"
+    },
+    {
+        "category": "Ansible",
+        "set": 1,
+        "question": "Ansible playbooks कोणत्या फॉरमॅटमध्ये लिहिले जातात?",
+        "options": ["YAML", "JSON", "XML", "INI"],
+        "answer": "YAML"
+    },
+    {
+        "category": "Ansible",
+        "set": 1,
+        "question": "Ansible सेटिंग्स कॉन्फिगर करण्यासाठी कोणत्या फाइलचा वापर केला जातो?",
+        "options": ["ansible.cfg", "ansible.conf", "config.yml", "ansible.ini"],
+        "answer": "ansible.cfg"
+    },
+    {
+        "category": "Ansible",
+        "set": 2,
+        "question": "playbook मध्ये व्हेरिएबल्स परिभाषित करण्यासाठी कोणत्या कीवर्डचा वापर केला जातो?",
+        "options": ["vars", "variables", "var", "define"],
+        "answer": "vars"
+    },
+    {
+        "category": "Ansible",
+        "set": 2,
+        "question": "व्हेरिएबल रेफरन्स करण्यासाठी कोणत्या सिंटॅक्सचा वापर केला जातो?",
+        "options": ["{{ variable_name }}", "$(variable_name)", "${variable_name}", "[variable_name]"],
+        "answer": "{{ variable_name }}"
+    },
+    {
+        "category": "Ansible",
+        "set": 2,
+        "question": "एक्झिक्युशन दरम्यान मेसेजेस दाखवण्यासाठी कोणत्या मॉड्यूलचा वापर केला जातो?",
+        "options": ["debug", "print", "echo", "message"],
+        "answer": "debug"
+    },
+    {
+        "category": "Ansible",
+        "set": 2,
+        "question": "व्हेरिएबल फाइल्ससाठी सामान्यतः कोणत्या फाइल एक्सटेंशनचा वापर केला जातो?",
+        "options": [".yml", ".vars", ".cfg", ".json"],
+        "answer": ".yml"
+    },
+    {
+        "category": "Ansible",
+        "set": 2,
+        "question": "बाह्य व्हेरिएबल फाइल्स लोड करण्यासाठी कोणत्या कीवर्डचा वापर केला जातो?",
+        "options": ["vars_files", "include_vars", "load_vars", "import_vars"],
+        "answer": "vars_files"
+    },
+    {
+        "category": "Ansible",
+        "set": 2,
+        "question": "रनटाइम दरम्यान फाइलमधून व्हेरिएबल्स लोड करण्यासाठी कोणत्या मॉड्यूलचा वापर केला जातो?",
+        "options": ["include_vars", "vars_files", "load_vars", "import_vars"],
+        "answer": "include_vars"
+    },
+    {
+        "category": "Ansible",
+        "set": 2,
+        "question": "कंडिशनल एक्झिक्युशनसाठी कोणत्या कीवर्डचा वापर केला जातो?",
+        "options": ["when", "if", "condition", "check"],
+        "answer": "when"
+    },
+    {
+        "category": "Ansible",
+        "set": 2,
+        "question": "टास्क रिपीट करण्यासाठी कोणत्या कीवर्डचा वापर केला जातो?",
+        "options": ["loop", "repeat", "iterate", "for"],
+        "answer": "loop"
+    },
+    {
+        "category": "Ansible",
+        "set": 2,
+        "question": "सध्याचा लूप आयटम कोणत्या व्हेरिएबलमध्ये असतो?",
+        "options": ["item", "loopitem", "current", "value"],
+        "answer": "item"
+    },
+    {
+        "category": "Ansible",
+        "set": 2,
+        "question": "Jinja2 टेम्पलेट्समधून फाइल्स तयार करण्यासाठी कोणत्या मॉड्यूलचा वापर केला जातो?",
+        "options": ["template", "copy", "render", "jinja"],
+        "answer": "template"
+    },
+    {
+        "category": "Ansible",
+        "set": 2,
+        "question": "Ansible कोणते टेम्पलेटिंग इंजिन वापरतो?",
+        "options": ["Jinja2", "Mustache", "Velocity", "Smarty"],
+        "answer": "Jinja2"
+    },
+    {
+        "category": "Ansible",
+        "set": 2,
+        "question": "Jinja2 टेम्पलेट फाइल्ससाठी डिफॉल्ट एक्सटेंशन काय आहे?",
+        "options": [".j2", ".jinja", ".template", ".tmpl"],
+        "answer": ".j2"
+    },
+    {
+        "category": "Ansible",
+        "set": 2,
+        "question": "टास्क आउटपुट व्हेरिएबलमध्ये रजिस्टर करण्यासाठी कोणत्या कीवर्डचा वापर केला जातो?",
+        "options": ["register", "save", "output", "store"],
+        "answer": "register"
+    },
+    {
+        "category": "Ansible",
+        "set": 2,
+        "question": "टास्क फेल्यूर्जकडे दुर्लक्ष करण्यासाठी कोणत्या कीवर्डचा वापर केला जातो?",
+        "options": ["ignore_errors", "skip_errors", "continue", "ignore_failures"],
+        "answer": "ignore_errors"
+    },
+    {
+        "category": "Ansible",
+        "set": 2,
+        "question": "केवळ नोटिफाय केल्यावरच टास्क्स एक्झिक्युट करण्यासाठी कोणत्या कीवर्डचा वापर केला जातो?",
+        "options": ["handlers", "notify", "trigger", "events"],
+        "answer": "handlers"
+    },
+    {
+        "category": "Ansible",
+        "set": 2,
+        "question": "हँडलर ट्रिगर करण्यासाठी कोणत्या कीवर्डचा वापर केला जातो?",
+        "options": ["notify", "handler", "alert", "call"],
+        "answer": "notify"
+    },
+    {
+        "category": "Ansible",
+        "set": 2,
+        "question": "हँडलरचा सामान्यतः वापर कशासाठी केला जातो?",
+        "options": ["सर्व्हिसेस रीस्टार्ट करणे", "पॅकेजेस इन्स्टॉल करणे", "युझर्स मॅनेज करणे", "फाइल्स कॉपी करणे"],
+        "answer": "सर्व्हिसेस रीस्टार्ट करणे"
+    },
+    {
+        "category": "Ansible",
+        "set": 2,
+        "question": "दुसरे playbook इम्पोर्ट करण्यासाठी कोणत्या कीवर्डचा वापर केला जातो?",
+        "options": ["import_playbook", "include_playbook", "load_playbook", "playbook"],
+        "answer": "import_playbook"
+    },
+    {
+        "category": "Ansible",
+        "set": 2,
+        "question": "युझर्स मॅनेज करण्यासाठी कोणत्या मॉड्यूलचा वापर केला जातो?",
+        "options": ["user", "account", "login", "member"],
+        "answer": "user"
+    },
+    {
+        "category": "Ansible",
+        "set": 2,
+        "question": "ग्रुप्स मॅनेज करण्यासाठी कोणत्या मॉड्यूलचा वापर केला जातो?",
+        "options": ["group", "groups", "team", "role"],
+        "answer": "group"
+    },
+    {
+        "category": "Ansible",
+        "set": 2,
+        "question": "cron जॉब्ज मॅनेज करण्यासाठी कोणत्या मॉड्यूलचा वापर केला जातो?",
+        "options": ["cron", "schedule", "crontab", "job"],
+        "answer": "cron"
+    },
+    {
+        "category": "Ansible",
+        "set": 2,
+        "question": "systemd सर्व्हिसेस मॅनेज करण्यासाठी कोणत्या मॉड्यूलचा वापर केला जातो?",
+        "options": ["systemd", "service", "daemon", "systemctl"],
+        "answer": "systemd"
+    },
+    {
+        "category": "Ansible",
+        "set": 2,
+        "question": "सिलेक्टिव्ह एक्झिक्युशनसाठी टास्क्स टॅग करण्यासाठी कोणत्या कीवर्डचा वापर केला जातो?",
+        "options": ["tags", "labels", "groups", "filter"],
+        "answer": "tags"
+    },
+    {
+        "category": "Ansible",
+        "set": 2,
+        "question": "केवळ विशिष्ट टॅग्ज असलेले टास्क्स रन करण्यासाठी कोणत्या ऑप्शनचा वापर केला जातो?",
+        "options": ["--tags", "--tag", "--filter", "--task"],
+        "answer": "--tags"
+    },
+    {
+        "category": "Ansible",
+        "set": 2,
+        "question": "निर्दिष्ट टॅग्ज असलेले टास्क्स स्किप करण्यासाठी कोणत्या ऑप्शनचा वापर केला जातो?",
+        "options": ["--skip-tags", "--exclude-tags", "--ignore-tags", "--remove-tags"],
+        "answer": "--skip-tags"
+    },
+    {
+        "category": "Ansible",
+        "set": 3,
+        "question": "Ansible Role म्हणजे काय?",
+        "options": ["टास्क्स आणि फाइल्सचा पुनर्वापरयोग्य संग्रह", "एक युझर अकाउंट", "एक इन्व्हेंटरी ग्रुप", "एक playbook व्हेरिएबल"],
+        "answer": "टास्क्स आणि फाइल्सचा पुनर्वापरयोग्य संग्रह"
+    },
+    {
+        "category": "Ansible",
+        "set": 3,
+        "question": "नवीन role स्ट्रक्चर तयार करण्यासाठी कोणत्या कमांडचा वापर केला जातो?",
+        "options": ["ansible-galaxy init", "ansible role create", "ansible init role", "ansible-playbook init"],
+        "answer": "ansible-galaxy init"
+    },
+    {
+        "category": "Ansible",
+        "set": 3,
+        "question": "role चे टास्क्स कोणत्या डायरेक्टरीमध्ये असतात?",
+        "options": ["tasks", "handlers", "files", "vars"],
+        "answer": "tasks"
+    },
+    {
+        "category": "Ansible",
+        "set": 3,
+        "question": "role मधील मुख्य टास्क फाइल कोणती?",
+        "options": ["tasks/main.yml", "tasks/tasks.yml", "main/tasks.yml", "role.yml"],
+        "answer": "tasks/main.yml"
+    },
+    {
+        "category": "Ansible",
+        "set": 3,
+        "question": "role चे हँडलर्स कोणत्या डायरेक्टरीमध्ये असतात?",
+        "options": ["handlers", "tasks", "events", "notify"],
+        "answer": "handlers"
+    },
+    {
+        "category": "Ansible",
+        "set": 3,
+        "question": "role मध्ये Jinja2 टेम्पलेट्स कोणत्या डायरेक्टरीमध्ये साठवले जातात?",
+        "options": ["templates", "files", "jinja", "render"],
+        "answer": "templates"
+    },
+    {
+        "category": "Ansible",
+        "set": 3,
+        "question": "role मध्ये स्टॅटिक फाइल्स कोणत्या डायरेक्टरीमध्ये साठवल्या जातात?",
+        "options": ["files", "templates", "static", "resources"],
+        "answer": "files"
+    },
+    {
+        "category": "Ansible",
+        "set": 3,
+        "question": "role चे व्हेरिएबल्स कोणत्या डायरेक्टरीमध्ये असतात?",
+        "options": ["vars", "variables", "config", "settings"],
+        "answer": "vars"
+    },
+    {
+        "category": "Ansible",
+        "set": 3,
+        "question": "डिफॉल्ट व्हेरिएबल्स कोणत्या डायरेक्टरीमध्ये असतात?",
+        "options": ["defaults", "vars", "config", "settings"],
+        "answer": "defaults"
+    },
+    {
+        "category": "Ansible",
+        "set": 3,
+        "question": "playbook मध्ये roles समाविष्ट करण्यासाठी कोणत्या कीवर्डचा वापर केला जातो?",
+        "options": ["roles", "include_role", "role", "import_role"],
+        "answer": "roles"
+    },
+    {
+        "category": "Ansible",
+        "set": 3,
+        "question": "Ansible Galaxy म्हणजे काय?",
+        "options": ["Ansible roles आणि collections साठी रिपॉझिटरी", "मॉनिटरिंग टूल", "CI/CD प्लॅटफॉर्म", "इन्व्हेंटरी मॅनेजर"],
+        "answer": "Ansible roles आणि collections साठी रिपॉझिटरी"
+    },
+    {
+        "category": "Ansible",
+        "set": 3,
+        "question": "Galaxy मधून role इन्स्टॉल करण्यासाठी कोणत्या कमांडचा वापर केला जातो?",
+        "options": ["ansible-galaxy install", "ansible install role", "ansible role add", "ansible-galaxy add"],
+        "answer": "ansible-galaxy install"
+    },
+    {
+        "category": "Ansible",
+        "set": 3,
+        "question": "इन्स्टॉल केलेल्या Galaxy roles ची यादी दाखवण्यासाठी कोणत्या कमांडचा वापर केला जातो?",
+        "options": ["ansible-galaxy list", "ansible-galaxy roles", "ansible role list", "ansible-galaxy show"],
+        "answer": "ansible-galaxy list"
+    },
+    {
+        "category": "Ansible",
+        "set": 3,
+        "question": "Ansible Vault चा वापर कशासाठी केला जातो?",
+        "options": ["सेन्सिटिव्ह डेटा एनक्रिप्ट करणे", "इन्व्हेंटरीज मॅनेज करणे", "playbooks रन करणे", "roles इन्स्टॉल करणे"],
+        "answer": "सेन्सिटिव्ह डेटा एनक्रिप्ट करणे"
+    },
+    {
+        "category": "Ansible",
+        "set": 3,
+        "question": "एनक्रिप्टेड फाइल तयार करण्यासाठी कोणत्या कमांडचा वापर केला जातो?",
+        "options": ["ansible-vault create", "ansible-vault encrypt", "ansible-vault init", "ansible-vault new"],
+        "answer": "ansible-vault create"
+    },
+    {
+        "category": "Ansible",
+        "set": 3,
+        "question": "विद्यमान फाइल एनक्रिप्ट करण्यासाठी कोणत्या कमांडचा वापर केला जातो?",
+        "options": ["ansible-vault encrypt", "ansible-vault secure", "ansible-vault create", "ansible-vault lock"],
+        "answer": "ansible-vault encrypt"
+    },
+    {
+        "category": "Ansible",
+        "set": 3,
+        "question": "व्हॉल्ट फाइल डिक्रिप्ट करण्यासाठी कोणत्या कमांडचा वापर केला जातो?",
+        "options": ["ansible-vault decrypt", "ansible-vault unlock", "ansible-vault open", "ansible-vault reveal"],
+        "answer": "ansible-vault decrypt"
+    },
+    {
+        "category": "Ansible",
+        "set": 3,
+        "question": "एनक्रिप्टेड फाइल एडिट करण्यासाठी कोणत्या कमांडचा वापर केला जातो?",
+        "options": ["ansible-vault edit", "ansible-vault modify", "ansible-vault update", "ansible-vault open"],
+        "answer": "ansible-vault edit"
+    },
+    {
+        "category": "Ansible",
+        "set": 3,
+        "question": "व्हॉल्टचा पासवर्ड बदलण्यासाठी कोणत्या कमांडचा वापर केला जातो?",
+        "options": ["ansible-vault rekey", "ansible-vault passwd", "ansible-vault reset", "ansible-vault update"],
+        "answer": "ansible-vault rekey"
+    },
+    {
+        "category": "Ansible",
+        "set": 3,
+        "question": "फॅक्ट गॅदरिंग सक्षम करण्यासाठी कोणत्या कीवर्डचा वापर केला जातो?",
+        "options": ["gather_facts", "facts", "setup", "collect_facts"],
+        "answer": "gather_facts"
+    },
+    {
+        "category": "Ansible",
+        "set": 3,
+        "question": "होस्टनेम फॅक्ट कोणत्या व्हेरिएबलमध्ये असतो?",
+        "options": ["ansible_hostname", "hostname", "host_name", "inventory_hostname"],
+        "answer": "ansible_hostname"
+    },
+    {
+        "category": "Ansible",
+        "set": 3,
+        "question": "गोळा केलेले फॅक्ट्स दाखवण्यासाठी कोणत्या कमांडचा वापर केला जातो?",
+        "options": ["ansible all -m setup", "ansible facts", "ansible gather", "ansible info"],
+        "answer": "ansible all -m setup"
+    },
+    {
+        "category": "Ansible",
+        "set": 3,
+        "question": "ऑपरेटिंग सिस्टम फॅमिली कोणत्या व्हेरिएबलमध्ये असते?",
+        "options": ["ansible_os_family", "ansible_os", "os_family", "system_family"],
+        "answer": "ansible_os_family"
+    },
+    {
+        "category": "Ansible",
+        "set": 3,
+        "question": "इन्व्हेंटरी होस्टनेम कोणत्या बिल्ट-इन व्हेरिएबलमध्ये असतो?",
+        "options": ["inventory_hostname", "ansible_hostname", "host", "hostname"],
+        "answer": "inventory_hostname"
+    },
+    {
+        "category": "Ansible",
+        "set": 3,
+        "question": "Ansible Collections म्हणजे काय?",
+        "options": ["roles, modules आणि plugins असलेले पॅकेजेस", "इन्व्हेंटरी ग्रुप्स", "एनक्रिप्टेड फाइल्स", "YAML व्हेरिएबल्स"],
+        "answer": "roles, modules आणि plugins असलेले पॅकेजेस"
+    },
+    {
+        "category": "Ansible",
+        "set": 4,
+        "question": "AWX म्हणजे काय?",
+        "options": ["ओपन-सोर्स Ansible ऑटोमेशन प्लॅटफॉर्म", "मॉनिटरिंग टूल", "कंटेनर रनटाइम", "व्हर्जन कंट्रोल सिस्टम"],
+        "answer": "ओपन-सोर्स Ansible ऑटोमेशन प्लॅटफॉर्म"
+    },
+    {
+        "category": "Ansible",
+        "set": 4,
+        "question": "Ansible Tower आता कोणत्या नावाने ओळखले जाते?",
+        "options": ["Red Hat Ansible Automation Platform", "Ansible Galaxy", "AWX Enterprise", "Automation Hub"],
+        "answer": "Red Hat Ansible Automation Platform"
+    },
+    {
+        "category": "Ansible",
+        "set": 4,
+        "question": "डायनॅमिक इन्व्हेंटरी म्हणजे काय?",
+        "options": ["क्लाउड प्रोव्हायडर्सकडून ऑटोमॅटिकली जनरेट केलेली इन्व्हेंटरी", "स्टॅटिक होस्ट्स फाइल", "एनक्रिप्टेड इन्व्हेंटरी", "रोल-बेस्ड इन्व्हेंटरी"],
+        "answer": "क्लाउड प्रोव्हायडर्सकडून ऑटोमॅटिकली जनरेट केलेली इन्व्हेंटरी"
+    },
+    {
+        "category": "Ansible",
+        "set": 4,
+        "question": "डायनॅमिक इन्व्हेंटरी प्लगइन्स सामान्यतः कोणता क्लाउड प्लॅटफॉर्म वापरतो?",
+        "options": ["AWS", "Notepad", "Apache", "Jenkins"],
+        "answer": "AWS"
+    },
+    {
+        "category": "Ansible",
+        "set": 4,
+        "question": "playbook चे सिंटॅक्स तपासण्यासाठी कोणत्या कमांडचा वापर केला जातो?",
+        "options": ["ansible-playbook --syntax-check", "ansible-playbook --validate", "ansible-playbook check", "ansible validate"],
+        "answer": "ansible-playbook --syntax-check"
+    },
+    {
+        "category": "Ansible",
+        "set": 4,
+        "question": "playbook चा ड्राय रन करण्यासाठी कोणत्या ऑप्शनचा वापर केला जातो?",
+        "options": ["--check", "--dry", "--test", "--simulate"],
+        "answer": "--check"
+    },
+    {
+        "category": "Ansible",
+        "set": 4,
+        "question": "मॅनेज्ड फाइल्समधील फरक दाखवण्यासाठी कोणत्या ऑप्शनचा वापर केला जातो?",
+        "options": ["--diff", "--compare", "--changes", "--show-diff"],
+        "answer": "--diff"
+    },
+    {
+        "category": "Ansible",
+        "set": 4,
+        "question": "सर्व होस्ट्सवर एकाच वेळी टास्क्स एक्झिक्युट करण्यासाठी कोणत्या स्ट्रॅटेजीचा वापर केला जातो?",
+        "options": ["free", "linear", "parallel", "fork"],
+        "answer": "free"
+    },
+    {
+        "category": "Ansible",
+        "set": 4,
+        "question": "Ansible ची डिफॉल्ट एक्झिक्युशन स्ट्रॅटेजी काय आहे?",
+        "options": ["linear", "free", "parallel", "serial"],
+        "answer": "linear"
+    },
+    {
+        "category": "Ansible",
+        "set": 4,
+        "question": "एक्झिक्युशनला होस्ट्सच्या सबसेटपर्यंत मर्यादित करण्यासाठी कोणत्या कीवर्डचा वापर केला जातो?",
+        "options": ["serial", "hosts", "limit", "group"],
+        "answer": "serial"
+    },
+    {
+        "category": "Ansible",
+        "set": 4,
+        "question": "playbook चे एक्झिक्युशन निवडलेल्या होस्ट्सपर्यंत मर्यादित करण्यासाठी कोणत्या ऑप्शनचा वापर केला जातो?",
+        "options": ["--limit", "--hosts", "--target", "--group"],
+        "answer": "--limit"
+    },
+    {
+        "category": "Ansible",
+        "set": 4,
+        "question": "टास्क एक्झिक्युशन वर्तन नियंत्रित करण्यासाठी कोणत्या प्लगइन प्रकारचा वापर केला जातो?",
+        "options": ["Strategy Plugin", "Filter Plugin", "Callback Plugin", "Lookup Plugin"],
+        "answer": "Strategy Plugin"
+    },
+    {
+        "category": "Ansible",
+        "set": 4,
+        "question": "बाह्य स्त्रोतांकडून डेटा रिट्रीव्ह करण्यासाठी कोणत्या प्लगइनचा वापर केला जातो?",
+        "options": ["Lookup Plugin", "Callback Plugin", "Connection Plugin", "Action Plugin"],
+        "answer": "Lookup Plugin"
+    },
+    {
+        "category": "Ansible",
+        "set": 4,
+        "question": "व्हेरिएबल डेटा मॉडिफाय करण्यासाठी कोणत्या प्लगइनचा वापर केला जातो?",
+        "options": ["Filter Plugin", "Lookup Plugin", "Action Plugin", "Connection Plugin"],
+        "answer": "Filter Plugin"
+    },
+    {
+        "category": "Ansible",
+        "set": 4,
+        "question": "एक्झिक्युशन आउटपुट दाखवण्यासाठी कोणत्या प्लगइनचा वापर केला जातो?",
+        "options": ["Callback Plugin", "Filter Plugin", "Lookup Plugin", "Connection Plugin"],
+        "answer": "Callback Plugin"
+    },
+    {
+        "category": "Ansible",
+        "set": 4,
+        "question": "Docker कंटेनर्स मॅनेज करण्यासाठी कोणत्या मॉड्यूलचा वापर केला जातो?",
+        "options": ["docker_container", "docker", "container", "docker_manage"],
+        "answer": "docker_container"
+    },
+    {
+        "category": "Ansible",
+        "set": 4,
+        "question": "Kubernetes रिसोर्सेस मॅनेज करण्यासाठी कोणत्या मॉड्यूलचा वापर केला जातो?",
+        "options": ["k8s", "kubectl", "kubernetes", "cluster"],
+        "answer": "k8s"
+    },
+    {
+        "category": "Ansible",
+        "set": 4,
+        "question": "Windows होस्ट्सवर टास्क्स एक्झिक्युट करण्यासाठी कोणत्या मॉड्यूलचा वापर केला जातो?",
+        "options": ["win_command", "windows", "win_exec", "powershell"],
+        "answer": "win_command"
+    },
+    {
+        "category": "Ansible",
+        "set": 4,
+        "question": "Ansible मध्ये Windows मॅनेजमेंटसाठी सामान्यतः कोणत्या प्रोटोकॉलचा वापर केला जातो?",
+        "options": ["WinRM", "SSH", "FTP", "RDP"],
+        "answer": "WinRM"
+    },
+    {
+        "category": "Ansible",
+        "set": 4,
+        "question": "केवळ बदललेले टास्क्स एक्झिक्युट करण्याची परवानगी कोणती फीचर देते?",
+        "options": ["Idempotency", "Handlers", "Facts", "Loops"],
+        "answer": "Idempotency"
+    },
+    {
+        "category": "Ansible",
+        "set": 4,
+        "question": "Ansible मध्ये इडेम्पोटन्सी (idempotency) म्हणजे काय?",
+        "options": ["इच्छित स्थिती बदल न करता टास्क्स वारंवार चालवणे", "playbooks एनक्रिप्ट करणे", "इन्व्हेंटरीज तयार करणे", "roles मॅनेज करणे"],
+        "answer": "इच्छित स्थिती बदल न करता टास्क्स वारंवार चालवणे"
+    },
+    {
+        "category": "Ansible",
+        "set": 4,
+        "question": "इन्व्हेंटरी ग्रुप्स आणि व्हेरिएबल्स परिभाषित करण्यासाठी कोणत्या फाइलचा वापर केला जाऊ शकतो?",
+        "options": ["inventory", "playbook.yml", "ansible.cfg", "vault.yml"],
+        "answer": "inventory"
+    },
+    {
+        "category": "Ansible",
+        "set": 4,
+        "question": "उपलब्ध असलेल्या सर्व Ansible मॉड्यूल्सची यादी दाखवण्यासाठी कोणत्या कमांडचा वापर केला जातो?",
+        "options": ["ansible-doc -l", "ansible modules", "ansible-list", "ansible-help modules"],
+        "answer": "ansible-doc -l"
+    },
+    {
+        "category": "Ansible",
+        "set": 4,
+        "question": "मॉड्यूलसाठी डॉक्युमेंटेशन दाखवण्यासाठी कोणत्या कमांडचा वापर केला जातो?",
+        "options": ["ansible-doc", "ansible-help", "ansible-module", "ansible-info"],
+        "answer": "ansible-doc"
+    },
+    {
+        "category": "Ansible",
+        "set": 4,
+        "question": "playbook ची रीयुझेबिलिटी सुधारण्यासाठी कोणती बेस्ट प्रॅक्टिस मदत करते?",
+        "options": ["Roles चा वापर करणे", "सर्वत्र शेल कमांड्सचा वापर करणे", "व्हॅल्यूज हार्डकोड करणे", "व्हेरिएबल्स डिसेबल करणे"],
+        "answer": "Roles चा वापर करणे"
+    }
+]
