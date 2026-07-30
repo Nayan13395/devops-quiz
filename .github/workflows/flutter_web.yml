@@ -21,9 +21,19 @@ jobs:
         with:
           channel: stable
 
+      - run: flutter clean
+
       - run: flutter pub get
 
+      - name: Show assets before build
+        run: |
+          find assets -type f
+
       - run: flutter build web --release --base-href /devops-quiz/
+
+      - name: Show generated assets
+        run: |
+          find build/web/assets -type f
 
       - uses: actions/upload-pages-artifact@v3
         with:
