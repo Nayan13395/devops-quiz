@@ -5,6 +5,7 @@ import 'quiz_screen.dart';
 import '../l10n/app_localizations.dart';
 import '../services/update_service.dart';
 import 'cloud_screen.dart';
+import '../widgets/animated_category_icon.dart';
 
 class CategoryScreen extends StatefulWidget {
   const CategoryScreen({super.key});
@@ -57,15 +58,24 @@ class _CategoryScreenState extends State<CategoryScreen>
         margin: const EdgeInsets.symmetric(vertical: 10),
         child: SizedBox(
           height: 80,
-          child: Center(
-            child: Text(
-              "$title $emoji",
-              style: const TextStyle(
-                fontSize: 24,
-                fontWeight: FontWeight.w500,
-              ),
-            ),
-          ),
+child: Row(
+  mainAxisSize: MainAxisSize.min,
+  mainAxisAlignment: MainAxisAlignment.center,
+  children: [
+    Text(
+      title,
+      style: const TextStyle(
+        fontSize: 24,
+        fontWeight: FontWeight.w500,
+      ),
+    ),
+    const SizedBox(width: 12),
+    AnimatedCategoryIcon(
+      category: title,
+      emoji: emoji,
+    ),
+  ],
+),
         ),
       ),
     );
@@ -107,7 +117,7 @@ class _CategoryScreenState extends State<CategoryScreen>
                         height: 80,
                         child: Center(
                           child: Text(
-                            "DevOps 🚀",
+                            "DevOps ♾️",
                             style: TextStyle(
                               fontSize: 24,
                               fontWeight: FontWeight.bold,
@@ -139,7 +149,7 @@ class _CategoryScreenState extends State<CategoryScreen>
       height: 80,
       child: Center(
         child: Text(
-          "Cloud Computing ☁️",
+          "Cloud Computing ⛈️",
           style: TextStyle(
             fontSize: 24,
             fontWeight: FontWeight.w500,
