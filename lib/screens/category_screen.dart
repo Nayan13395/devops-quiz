@@ -6,6 +6,9 @@ import '../l10n/app_localizations.dart';
 import '../services/update_service.dart';
 import 'cloud_screen.dart';
 import '../widgets/animated_category_icon.dart';
+import '../services/streak_service.dart';
+import '../widgets/daily_reward_dialog.dart';
+import '../widgets/streak_card.dart';
 
 class CategoryScreen extends StatefulWidget {
   const CategoryScreen({super.key});
@@ -27,9 +30,18 @@ class _CategoryScreenState extends State<CategoryScreen>
       duration: const Duration(seconds: 1),
     )..repeat(reverse: true);
 
-    WidgetsBinding.instance.addPostFrameCallback((_) {
-      UpdateService.checkForUpdate(context);
-    });
+    WidgetsBinding.instance.addPostFrameCallback((_) async {
+  UpdateService.checkForUpdate(context);
+
+  final result = await StreakService.checkDailyReward();
+
+  if (!mounted) return;
+
+  if (result.showReward) {
+    await showDailyRewardDialog(context, result);
+  }
+}
+    );
   }
 
   @override
@@ -94,6 +106,7 @@ child: Row(
         padding: const EdgeInsets.all(12),
         child: ListView(
           children: [
+            const StreakCard(),
             AnimatedBuilder(
               animation: controller,
               builder: (context, child) {

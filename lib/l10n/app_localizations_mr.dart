@@ -114,7 +114,7 @@ class AppLocalizationsMr extends AppLocalizations {
   String get score => 'गुण';
 
   @override
-  String get points => 'पॉइंट्स';
+  String get points => 'गुण';
 
   @override
   String get percentage => 'टक्केवारी';
@@ -198,6 +198,60 @@ class AppLocalizationsMr extends AppLocalizations {
 
   @override
   String get welcomeToDevOpsQuiz => 'DevOps Quiz मध्ये आपले स्वागत आहे';
+
+  @override
+  String get challengeMode => 'चॅलेंज मोड';
+
+  @override
+  String get challenge => 'चॅलेंज';
+
+  @override
+  String get question => 'प्रश्न';
+
+  @override
+  String get reward => 'बक्षीस';
+
+  @override
+  String get survivalMode => 'सर्व्हायव्हल मोड';
+
+  @override
+  String get speedChallenge => 'स्पीड चॅलेंज';
+
+  @override
+  String get dailyChallenge => 'दैनिक चॅलेंज';
+
+  @override
+  String get ultimateChallenge => 'अल्टिमेट चॅलेंज';
+
+  @override
+  String get timeLeft => 'उर्वरित वेळ';
+
+  @override
+  String get completed => 'पूर्ण';
+
+  @override
+  String get locked => 'लॉक';
+
+  @override
+  String get back => 'मागे';
+
+  @override
+  String get next => 'पुढे';
+
+  @override
+  String get submit => 'सबमिट करा';
+
+  @override
+  String get achievements => 'उपलब्धी';
+
+  @override
+  String get streak => 'Streak';
+
+  @override
+  String get days => 'दिवस';
+
+  @override
+  String get tomorrowsReward => 'उद्याचे बक्षीस';
 
   @override
   String shareMessage(Object score, Object totalQuestions, Object earnedPoints, Object bonusPoints, Object percentage) {

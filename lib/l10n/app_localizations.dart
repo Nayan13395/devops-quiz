@@ -475,6 +475,114 @@ abstract class AppLocalizations {
   /// **'Welcome to DevOps Quiz'**
   String get welcomeToDevOpsQuiz;
 
+  /// No description provided for @challengeMode.
+  ///
+  /// In en, this message translates to:
+  /// **'Challenge Mode'**
+  String get challengeMode;
+
+  /// No description provided for @challenge.
+  ///
+  /// In en, this message translates to:
+  /// **'Challenge'**
+  String get challenge;
+
+  /// No description provided for @question.
+  ///
+  /// In en, this message translates to:
+  /// **'Question'**
+  String get question;
+
+  /// No description provided for @reward.
+  ///
+  /// In en, this message translates to:
+  /// **'Reward'**
+  String get reward;
+
+  /// No description provided for @survivalMode.
+  ///
+  /// In en, this message translates to:
+  /// **'Survival Mode'**
+  String get survivalMode;
+
+  /// No description provided for @speedChallenge.
+  ///
+  /// In en, this message translates to:
+  /// **'Speed Challenge'**
+  String get speedChallenge;
+
+  /// No description provided for @dailyChallenge.
+  ///
+  /// In en, this message translates to:
+  /// **'Daily Challenge'**
+  String get dailyChallenge;
+
+  /// No description provided for @ultimateChallenge.
+  ///
+  /// In en, this message translates to:
+  /// **'Ultimate Challenge'**
+  String get ultimateChallenge;
+
+  /// No description provided for @timeLeft.
+  ///
+  /// In en, this message translates to:
+  /// **'Time Left'**
+  String get timeLeft;
+
+  /// No description provided for @completed.
+  ///
+  /// In en, this message translates to:
+  /// **'Completed'**
+  String get completed;
+
+  /// No description provided for @locked.
+  ///
+  /// In en, this message translates to:
+  /// **'Locked'**
+  String get locked;
+
+  /// No description provided for @back.
+  ///
+  /// In en, this message translates to:
+  /// **'Back'**
+  String get back;
+
+  /// No description provided for @next.
+  ///
+  /// In en, this message translates to:
+  /// **'Next'**
+  String get next;
+
+  /// No description provided for @submit.
+  ///
+  /// In en, this message translates to:
+  /// **'Submit'**
+  String get submit;
+
+  /// No description provided for @achievements.
+  ///
+  /// In en, this message translates to:
+  /// **'Achievements'**
+  String get achievements;
+
+  /// No description provided for @streak.
+  ///
+  /// In en, this message translates to:
+  /// **'Streak'**
+  String get streak;
+
+  /// No description provided for @days.
+  ///
+  /// In en, this message translates to:
+  /// **'Days'**
+  String get days;
+
+  /// No description provided for @tomorrowsReward.
+  ///
+  /// In en, this message translates to:
+  /// **'Tomorrow\'s Reward'**
+  String get tomorrowsReward;
+
   /// No description provided for @shareMessage.
   ///
   /// In en, this message translates to:

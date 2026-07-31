@@ -200,6 +200,60 @@ class AppLocalizationsEn extends AppLocalizations {
   String get welcomeToDevOpsQuiz => 'Welcome to DevOps Quiz';
 
   @override
+  String get challengeMode => 'Challenge Mode';
+
+  @override
+  String get challenge => 'Challenge';
+
+  @override
+  String get question => 'Question';
+
+  @override
+  String get reward => 'Reward';
+
+  @override
+  String get survivalMode => 'Survival Mode';
+
+  @override
+  String get speedChallenge => 'Speed Challenge';
+
+  @override
+  String get dailyChallenge => 'Daily Challenge';
+
+  @override
+  String get ultimateChallenge => 'Ultimate Challenge';
+
+  @override
+  String get timeLeft => 'Time Left';
+
+  @override
+  String get completed => 'Completed';
+
+  @override
+  String get locked => 'Locked';
+
+  @override
+  String get back => 'Back';
+
+  @override
+  String get next => 'Next';
+
+  @override
+  String get submit => 'Submit';
+
+  @override
+  String get achievements => 'Achievements';
+
+  @override
+  String get streak => 'Streak';
+
+  @override
+  String get days => 'Days';
+
+  @override
+  String get tomorrowsReward => 'Tomorrow\'s Reward';
+
+  @override
   String shareMessage(Object score, Object totalQuestions, Object earnedPoints, Object bonusPoints, Object percentage) {
     return '🎯 I scored $score/$totalQuestions in today\'s #DevOps Quiz!\n\n🏆 Points: $earnedPoints\n🔥 Bonus: $bonusPoints\n📊 Percentage: $percentage%\n\nCan you beat my score?\n\nDownload the app:';
   }

@@ -8,6 +8,8 @@ import '../services/daily_quiz_service.dart';
 import 'package:share_plus/share_plus.dart';
 import '../screens/settings_screen.dart';
 import '../l10n/app_localizations.dart';
+import '../screens/achievement_screen.dart';
+import '../screens/challenge_screen.dart';
 
 class AppDrawer extends StatelessWidget {
   const AppDrawer({super.key});
@@ -131,7 +133,36 @@ return;
     );
   },
 ),
+ListTile(
+  leading: const Icon(Icons.bolt),
+  title: Text(AppLocalizations.of(context)!.challengeMode),
+  onTap: () {
+    Navigator.pop(context);
 
+    Navigator.push(
+      context,
+      MaterialPageRoute(
+        builder: (_) =>
+            const ChallengeScreen(),
+      ),
+    );
+  },
+),
+ListTile(
+  leading: const Icon(Icons.emoji_events),
+  title: Text(AppLocalizations.of(context)!.achievements),
+  onTap: () {
+    Navigator.pop(context);
+
+    Navigator.push(
+      context,
+      MaterialPageRoute(
+        builder: (_) =>
+            const AchievementScreen(),
+      ),
+    );
+  },
+),
 ListTile(
   leading: const Icon(Icons.settings),
   title: Text(
