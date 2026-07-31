@@ -478,7 +478,7 @@ abstract class AppLocalizations {
   /// No description provided for @shareMessage.
   ///
   /// In en, this message translates to:
-  /// **'🎯 I scored {score}/{totalQuestions} in today\'s Daily #DevOps Quiz!\n\n🏆 Points: {earnedPoints}\n🔥 Bonus: {bonusPoints}\n📊 Percentage: {percentage}%\n\nCan you beat my score?\n\nDownload the app:'**
+  /// **'🎯 I scored {score}/{totalQuestions} in today\'s #DevOps Quiz!\n\n🏆 Points: {earnedPoints}\n🔥 Bonus: {bonusPoints}\n📊 Percentage: {percentage}%\n\nCan you beat my score?\n\nDownload the app:'**
   String shareMessage(Object score, Object totalQuestions, Object earnedPoints, Object bonusPoints, Object percentage);
 }
 

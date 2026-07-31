@@ -201,6 +201,6 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String shareMessage(Object score, Object totalQuestions, Object earnedPoints, Object bonusPoints, Object percentage) {
-    return '🎯 I scored $score/$totalQuestions in today\'s Daily #DevOps Quiz!\n\n🏆 Points: $earnedPoints\n🔥 Bonus: $bonusPoints\n📊 Percentage: $percentage%\n\nCan you beat my score?\n\nDownload the app:';
+    return '🎯 I scored $score/$totalQuestions in today\'s #DevOps Quiz!\n\n🏆 Points: $earnedPoints\n🔥 Bonus: $bonusPoints\n📊 Percentage: $percentage%\n\nCan you beat my score?\n\nDownload the app:';
   }
 }

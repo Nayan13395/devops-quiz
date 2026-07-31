@@ -45,13 +45,13 @@ class AppLocalizationsMr extends AppLocalizations {
   String get dailyQuiz => 'दैनिक प्रश्नमंजुषा';
 
   @override
-  String get dailyQuizCompleted => 'दैनिक प्रश्नमंजुषा पूर्ण';
+  String get dailyQuizCompleted => 'दैनिक प्रश्नमंजुषा पूर्ण झाली.';
 
   @override
   String get dailyQuizCompletedMessage => 'तुम्ही आजची दैनिक प्रश्नमंजुषा आधीच पूर्ण केली आहे.\n\nउद्या नवीन आव्हानासाठी पुन्हा या!';
 
   @override
-  String get leaderboard => 'लीडरबोर्ड';
+  String get leaderboard => 'गुणफलक';
 
   @override
   String get shareApp => 'ॲप शेअर करा';
@@ -147,7 +147,7 @@ class AppLocalizationsMr extends AppLocalizations {
   String get everyExpertStarted => 'प्रत्येक तज्ञाची सुरुवात नवशिक्या म्हणूनच झाली होती. सराव करा आणि पुन्हा अधिक आत्मविश्वासाने या!';
 
   @override
-  String get quizInstructions => 'क्विझ सूचना';
+  String get quizInstructions => 'क्विझसाठी सूचना';
 
   @override
   String get instruction1 => 'प्रत्येक संचामध्ये 25 प्रश्न आहेत.';

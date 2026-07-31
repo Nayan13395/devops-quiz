@@ -139,7 +139,7 @@ class _CategoryScreenState extends State<CategoryScreen>
       height: 80,
       child: Center(
         child: Text(
-          "☁️ Cloud Computing",
+          "Cloud Computing ☁️",
           style: TextStyle(
             fontSize: 24,
             fontWeight: FontWeight.w500,
