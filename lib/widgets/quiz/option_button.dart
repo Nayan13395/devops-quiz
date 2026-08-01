@@ -18,38 +18,67 @@ class OptionButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final screenWidth =
+        MediaQuery.of(context).size.width;
+
+    final bool isSmallScreen =
+        screenWidth < 400;
+
     return Padding(
-      padding: const EdgeInsets.only(bottom: 15),
+      padding: const EdgeInsets.only(
+        bottom: 10,
+      ),
       child: SizedBox(
         width: double.infinity,
-        height: 60,
         child: ElevatedButton(
-          onPressed: isLocked ? null : onPressed,
+          onPressed:
+              isLocked ? null : onPressed,
           style: ElevatedButton.styleFrom(
-            backgroundColor: backgroundColor,
-            disabledBackgroundColor: backgroundColor,
-            foregroundColor: Colors.black,
+            backgroundColor:
+                backgroundColor,
+            disabledBackgroundColor:
+                backgroundColor,
+            foregroundColor:
+                Colors.black,
             elevation: 4,
-            minimumSize: const Size(double.infinity, 60),
-            shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(15),
+
+            // Minimum height instead of
+            // fixed height.
+            minimumSize: const Size(
+              double.infinity,
+              54,
+            ),
+
+            padding:
+                EdgeInsets.symmetric(
+              horizontal:
+                  isSmallScreen ? 12 : 16,
+              vertical:
+                  isSmallScreen ? 12 : 14,
+            ),
+
+            shape:
+                RoundedRectangleBorder(
+              borderRadius:
+                  BorderRadius.circular(15),
             ),
           ),
-          child: Row(
-            children: [
-              Expanded(
-                child: Text(
-                  text,
-                  textAlign: TextAlign.center,
-                  style: TextStyle(
-                    fontSize: 18,
-                    fontWeight: isCorrectAnswer
-                        ? FontWeight.bold
-                        : FontWeight.w500,
-                  ),
-                ),
-              ),
-            ],
+          child: Text(
+            text,
+            textAlign: TextAlign.center,
+
+            // Allows long answers to wrap.
+            softWrap: true,
+
+            style: TextStyle(
+              fontSize:
+                  isSmallScreen ? 15 : 17,
+              height: 1.2,
+              fontWeight:
+                  isCorrectAnswer
+                      ? FontWeight.bold
+                      : FontWeight.w500,
+            ),
           ),
         ),
       ),

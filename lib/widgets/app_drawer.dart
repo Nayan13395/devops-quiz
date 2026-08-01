@@ -10,6 +10,8 @@ import '../screens/settings_screen.dart';
 import '../l10n/app_localizations.dart';
 import '../screens/achievement_screen.dart';
 import '../screens/challenge_screen.dart';
+import '../screens/refer_earn_screen.dart';
+import '../screens/games_screen.dart';
 
 class AppDrawer extends StatelessWidget {
   const AppDrawer({super.key});
@@ -149,6 +151,25 @@ ListTile(
   },
 ),
 ListTile(
+  leading: const Icon(
+    Icons.sports_esports_outlined,
+  ),
+  title: const Text(
+    'Games',
+  ),
+  onTap: () {
+    Navigator.pop(context);
+
+    Navigator.push(
+      context,
+      MaterialPageRoute(
+        builder: (_) =>
+            const GamesScreen(),
+      ),
+    );
+  },
+),
+ListTile(
   leading: const Icon(Icons.emoji_events),
   title: Text(AppLocalizations.of(context)!.achievements),
   onTap: () {
@@ -182,20 +203,23 @@ ListTile(
   },
 ),
 
+
 ListTile(
-  leading: const Icon(Icons.share),
-  title: Text(
-  AppLocalizations.of(context)!.shareApp,
-),
-
+  leading: const Icon(
+    Icons.card_giftcard,
+  ),
+  title: const Text(
+    "Refer & Earn",
+  ),
   onTap: () {
-
     Navigator.pop(context);
 
-    Share.share(
-      "🚀 Improve your DevOps skills with DevOps Quiz!\n\n"
-      "Download now:\n"
-      "https://play.google.com/store/apps/details?id=com.nayan.devops",
+    Navigator.push(
+      context,
+      MaterialPageRoute(
+        builder: (_) =>
+            const ReferEarnScreen(),
+      ),
     );
   },
 ),

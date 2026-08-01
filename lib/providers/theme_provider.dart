@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-import 'models/app_theme.dart';
-import 'services/theme_service.dart';
+import '../models/app_theme.dart';
+import '../services/theme_service.dart';
 
 class ThemeProvider extends ChangeNotifier {
   AppThemeType _selectedTheme =
@@ -12,31 +12,30 @@ class ThemeProvider extends ChangeNotifier {
   AppThemeType get selectedTheme =>
       _selectedTheme;
 
-  bool get initialized =>
-      _initialized;
+  bool get initialized => _initialized;
 
-  AppThemeInfo get currentTheme =>
-      AppThemes.getTheme(
-        _selectedTheme,
-      );
-
-  bool get isDark =>
-      currentTheme.brightness ==
+  bool get isDarkMode =>
+      AppThemes.getTheme(_selectedTheme)
+          .brightness ==
       Brightness.dark;
 
   ThemeMode get themeMode =>
-      isDark
+      isDarkMode
           ? ThemeMode.dark
           : ThemeMode.light;
 
-  ThemeData get themeData =>
-      _buildTheme(
-        currentTheme,
-      );
+  ThemeData get themeData {
+    final theme =
+        AppThemes.getTheme(
+      _selectedTheme,
+    );
 
-  // =========================================================
+    return _buildTheme(theme);
+  }
+
+  // ==========================================================
   // LOAD SAVED THEME
-  // =========================================================
+  // ==========================================================
 
   Future<void> loadTheme({
     required int totalPoints,
@@ -52,18 +51,16 @@ class ThemeProvider extends ChangeNotifier {
     notifyListeners();
   }
 
-  // =========================================================
-  // SELECT THEME
-  // =========================================================
+  // ==========================================================
+  // CHANGE THEME
+  // ==========================================================
 
   Future<bool> setTheme({
     required AppThemeType theme,
     required int totalPoints,
   }) async {
     final themeInfo =
-        AppThemes.getTheme(
-      theme,
-    );
+        AppThemes.getTheme(theme);
 
     final unlocked =
         ThemeService.isThemeUnlocked(
@@ -86,47 +83,23 @@ class ThemeProvider extends ChangeNotifier {
     return true;
   }
 
-  // =========================================================
-  // LIGHT / DARK COMPATIBILITY
-  // =========================================================
-
-  Future<void> toggleTheme() async {
-    if (isDark) {
-      _selectedTheme =
-          AppThemeType.light;
-    } else {
-      _selectedTheme =
-          AppThemeType.dark;
-    }
-
-    await ThemeService.saveTheme(
-      _selectedTheme,
-    );
-
-    notifyListeners();
-  }
-
-  // =========================================================
+  // ==========================================================
   // BUILD THEME
-  // =========================================================
+  // ==========================================================
 
   ThemeData _buildTheme(
     AppThemeInfo theme,
   ) {
     final bool dark =
         theme.brightness ==
-        Brightness.dark;
+            Brightness.dark;
 
-    final colorScheme =
+    final ColorScheme colorScheme =
         ColorScheme.fromSeed(
-      seedColor:
-          theme.primaryColor,
-      brightness:
-          theme.brightness,
-      primary:
-          theme.primaryColor,
-      secondary:
-          theme.secondaryColor,
+      seedColor: theme.primaryColor,
+      brightness: theme.brightness,
+      primary: theme.primaryColor,
+      secondary: theme.secondaryColor,
     );
 
     return ThemeData(
@@ -140,21 +113,16 @@ class ThemeProvider extends ChangeNotifier {
 
       scaffoldBackgroundColor:
           dark
-              ? const Color(
-                  0xFF121212,
-                )
-              : const Color(
-                  0xFFF5F8F8,
-                ),
+              ? const Color(0xFF121212)
+              : const Color(0xFFF4FAF8),
 
-      // ==============================
+      // ======================================================
       // APP BAR
-      // ==============================
+      // ======================================================
 
-      appBarTheme:
-          AppBarTheme(
+      appBarTheme: AppBarTheme(
         elevation: 0,
-
+        centerTitle: false,
         backgroundColor:
             dark
                 ? const Color(
@@ -175,19 +143,17 @@ class ThemeProvider extends ChangeNotifier {
               FontWeight.w600,
         ),
 
-        iconTheme:
-            IconThemeData(
+        iconTheme: IconThemeData(
           color:
               colorScheme.onSurface,
         ),
       ),
 
-      // ==============================
+      // ======================================================
       // CARDS
-      // ==============================
+      // ======================================================
 
-      cardTheme:
-          CardThemeData(
+      cardTheme: CardThemeData(
         elevation: 4,
 
         color:
@@ -196,6 +162,11 @@ class ThemeProvider extends ChangeNotifier {
                     0xFF1E1E1E,
                   )
                 : colorScheme.surface,
+
+        margin:
+            const EdgeInsets.symmetric(
+          vertical: 8,
+        ),
 
         shape:
             RoundedRectangleBorder(
@@ -206,9 +177,9 @@ class ThemeProvider extends ChangeNotifier {
         ),
       ),
 
-      // ==============================
+      // ======================================================
       // ELEVATED BUTTON
-      // ==============================
+      // ======================================================
 
       elevatedButtonTheme:
           ElevatedButtonThemeData(
@@ -240,9 +211,9 @@ class ThemeProvider extends ChangeNotifier {
         ),
       ),
 
-      // ==============================
+      // ======================================================
       // OUTLINED BUTTON
-      // ==============================
+      // ======================================================
 
       outlinedButtonTheme:
           OutlinedButtonThemeData(
@@ -272,9 +243,9 @@ class ThemeProvider extends ChangeNotifier {
         ),
       ),
 
-      // ==============================
+      // ======================================================
       // TEXT BUTTON
-      // ==============================
+      // ======================================================
 
       textButtonTheme:
           TextButtonThemeData(
@@ -285,9 +256,9 @@ class ThemeProvider extends ChangeNotifier {
         ),
       ),
 
-      // ==============================
-      // FLOATING BUTTON
-      // ==============================
+      // ======================================================
+      // FLOATING ACTION BUTTON
+      // ======================================================
 
       floatingActionButtonTheme:
           FloatingActionButtonThemeData(
@@ -300,9 +271,9 @@ class ThemeProvider extends ChangeNotifier {
         ),
       ),
 
-      // ==============================
-      // PROGRESS
-      // ==============================
+      // ======================================================
+      // PROGRESS INDICATOR
+      // ======================================================
 
       progressIndicatorTheme:
           ProgressIndicatorThemeData(
@@ -316,21 +287,20 @@ class ThemeProvider extends ChangeNotifier {
         ),
       ),
 
-      // ==============================
+      // ======================================================
       // DIVIDER
-      // ==============================
+      // ======================================================
 
       dividerTheme:
           DividerThemeData(
         color:
-            colorScheme
-                .outlineVariant,
+            colorScheme.outlineVariant,
         thickness: 1,
       ),
 
-      // ==============================
+      // ======================================================
       // DIALOG
-      // ==============================
+      // ======================================================
 
       dialogTheme:
           DialogThemeData(
@@ -350,19 +320,27 @@ class ThemeProvider extends ChangeNotifier {
         ),
       ),
 
-      // ==============================
+      // ======================================================
       // LIST TILE
-      // ==============================
+      // ======================================================
 
       listTileTheme:
           ListTileThemeData(
         iconColor:
             theme.primaryColor,
+
+        shape:
+            RoundedRectangleBorder(
+          borderRadius:
+              BorderRadius.circular(
+            14,
+          ),
+        ),
       ),
 
-      // ==============================
+      // ======================================================
       // SWITCH
-      // ==============================
+      // ======================================================
 
       switchTheme:
           SwitchThemeData(
@@ -373,8 +351,7 @@ class ThemeProvider extends ChangeNotifier {
             if (states.contains(
               WidgetState.selected,
             )) {
-              return theme
-                  .primaryColor;
+              return theme.primaryColor;
             }
 
             return null;
@@ -400,9 +377,19 @@ class ThemeProvider extends ChangeNotifier {
         ),
       ),
 
-      // ==============================
+      // ======================================================
+      // ICONS
+      // ======================================================
+
+      iconTheme:
+          IconThemeData(
+        color:
+            colorScheme.onSurface,
+      ),
+
+      // ======================================================
       // SNACKBAR
-      // ==============================
+      // ======================================================
 
       snackBarTheme:
           SnackBarThemeData(
@@ -420,16 +407,17 @@ class ThemeProvider extends ChangeNotifier {
     );
   }
 
+  // ==========================================================
+  // BUTTON TEXT COLOR
+  // ==========================================================
+
   Color _foregroundColor(
     Color background,
   ) {
-    final brightness =
-        ThemeData
-            .estimateBrightnessForColor(
-      background,
-    );
-
-    return brightness ==
+    return ThemeData
+                .estimateBrightnessForColor(
+              background,
+            ) ==
             Brightness.dark
         ? Colors.white
         : Colors.black;

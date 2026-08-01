@@ -1,113 +1,318 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import '../theme_provider.dart';
+
 import '../language_provider.dart';
-import 'package:devops_quiz/l10n/app_localizations.dart';
+import '../theme_provider.dart';
+import '../l10n/app_localizations.dart';
+import 'theme_screen.dart';
 
 class SettingsScreen extends StatelessWidget {
-  const SettingsScreen({super.key});
+  const SettingsScreen({
+    super.key,
+  });
 
   @override
   Widget build(BuildContext context) {
+    final localizations =
+        AppLocalizations.of(context)!;
+
     return Scaffold(
       appBar: AppBar(
         title: Text(
-  AppLocalizations.of(context)!.settings,
-),
+          localizations.settings,
+        ),
       ),
 
       body: ListView(
+        padding: const EdgeInsets.symmetric(
+          vertical: 10,
+        ),
         children: [
+          // ============================================
+          // LANGUAGE
+          // ============================================
 
-          Consumer<ThemeProvider>(
-            builder: (context, themeProvider, child) {
+          Consumer<LanguageProvider>(
+            builder: (
+              context,
+              languageProvider,
+              child,
+            ) {
+              return ListTile(
+                contentPadding:
+                    const EdgeInsets.symmetric(
+                  horizontal: 20,
+                  vertical: 6,
+                ),
 
-              return SwitchListTile(
-                secondary: Icon(
-                  themeProvider.isDark
-                      ? Icons.light_mode
-                      : Icons.dark_mode,
+                leading: const Icon(
+                  Icons.language,
+                  size: 28,
                 ),
 
                 title: Text(
-  themeProvider.isDark
-      ? AppLocalizations.of(context)!.lightMode
-      : AppLocalizations.of(context)!.darkMode,
-),
+                  localizations.language,
+                  style: const TextStyle(
+                    fontSize: 18,
+                    fontWeight: FontWeight.w600,
+                  ),
+                ),
 
-                value: themeProvider.isDark,
+                subtitle: Text(
+                  _getLanguageName(
+                    context,
+                    languageProvider,
+                  ),
+                ),
 
-                onChanged: (value) {
-                  themeProvider.toggleTheme();
+                trailing: const Icon(
+                  Icons.arrow_forward_ios,
+                  size: 18,
+                ),
+
+                onTap: () {
+                  _showLanguageDialog(
+                    context,
+                  );
                 },
               );
             },
           ),
-const Divider(),
 
-ListTile(
-  leading: const Icon(Icons.language),
-  title: Text(
-    AppLocalizations.of(context)!.language,
-  ),
-  subtitle: Consumer<LanguageProvider>(
-    builder: (context, languageProvider, child) {
-      switch (languageProvider.locale.languageCode) {
-        case 'hi':
-          return Text(AppLocalizations.of(context)!.hindi);
-        case 'mr':
-          return Text(AppLocalizations.of(context)!.marathi);
-        default:
-          return Text(AppLocalizations.of(context)!.english);
-      }
-    },
-  ),
-  trailing: const Icon(Icons.arrow_forward_ios, size: 18),
-  onTap: () {
-    showDialog(
-      context: context,
-      builder: (dialogContext) => AlertDialog(
-        title: Text(
-          AppLocalizations.of(context)!.selectLanguage,
-        ),
-        content: Column(
-          mainAxisSize: MainAxisSize.min,
-          children: [
-            ListTile(
-              title: Text(
-                AppLocalizations.of(context)!.english,
-              ),
-              onTap: () {
-                context.read<LanguageProvider>().changeLanguage('en');
-                Navigator.pop(dialogContext);
-              },
-            ),
-            ListTile(
-              title: Text(
-                AppLocalizations.of(context)!.hindi,
-              ),
-              onTap: () {
-                context.read<LanguageProvider>().changeLanguage('hi');
-                Navigator.pop(dialogContext);
-              },
-            ),
-            ListTile(
-              title: Text(
-                AppLocalizations.of(context)!.marathi,
-              ),
-              onTap: () {
-                context.read<LanguageProvider>().changeLanguage('mr');
-                Navigator.pop(dialogContext);
-              },
-            ),
-          ],
-        ),
-      ),
-    );
-  },
-),
+          const Divider(),
+
+          // ============================================
+          // THEMES
+          // ============================================
+
+          Consumer<ThemeProvider>(
+            builder: (
+              context,
+              themeProvider,
+              child,
+            ) {
+              return ListTile(
+                contentPadding:
+                    const EdgeInsets.symmetric(
+                  horizontal: 20,
+                  vertical: 6,
+                ),
+
+                leading: const Icon(
+                  Icons.palette_outlined,
+                  size: 28,
+                ),
+
+                title: const Text(
+                  'Themes',
+                  style: TextStyle(
+                    fontSize: 18,
+                    fontWeight: FontWeight.w600,
+                  ),
+                ),
+
+                // Shows currently selected theme.
+                subtitle: Text(
+                  themeProvider.currentTheme.name,
+                ),
+
+                trailing: const Icon(
+                  Icons.arrow_forward_ios,
+                  size: 18,
+                ),
+
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (_) =>
+                          const ThemeScreen(),
+                    ),
+                  );
+                },
+              );
+            },
+          ),
         ],
       ),
+    );
+  }
+
+  // ================================================
+  // CURRENT LANGUAGE
+  // ================================================
+
+  String _getLanguageName(
+    BuildContext context,
+    LanguageProvider provider,
+  ) {
+    final localizations =
+        AppLocalizations.of(context)!;
+
+    switch (provider.locale.languageCode) {
+      case 'hi':
+        return localizations.hindi;
+
+      case 'mr':
+        return localizations.marathi;
+
+      default:
+        return localizations.english;
+    }
+  }
+
+  // ================================================
+  // LANGUAGE SELECTION DIALOG
+  // ================================================
+
+  void _showLanguageDialog(
+    BuildContext context,
+  ) {
+    final localizations =
+        AppLocalizations.of(context)!;
+
+    final currentLanguage =
+        context
+            .read<LanguageProvider>()
+            .locale
+            .languageCode;
+
+    showDialog<void>(
+      context: context,
+
+      builder: (dialogContext) {
+        return AlertDialog(
+          title: Text(
+            localizations.selectLanguage,
+          ),
+
+          contentPadding:
+              const EdgeInsets.only(
+            top: 12,
+            bottom: 12,
+          ),
+
+          content: Column(
+            mainAxisSize:
+                MainAxisSize.min,
+            children: [
+              // ======================================
+              // ENGLISH
+              // ======================================
+
+              RadioListTile<String>(
+                value: 'en',
+                groupValue:
+                    currentLanguage,
+
+                title: Text(
+                  localizations.english,
+                ),
+
+                secondary: const Text(
+                  '🇬🇧',
+                  style: TextStyle(
+                    fontSize: 24,
+                  ),
+                ),
+
+                onChanged: (value) {
+                  if (value == null) {
+                    return;
+                  }
+
+                  context
+                      .read<
+                          LanguageProvider>()
+                      .changeLanguage(
+                        value,
+                      );
+
+                  Navigator.pop(
+                    dialogContext,
+                  );
+                },
+              ),
+
+              // ======================================
+              // HINDI
+              // ======================================
+
+              RadioListTile<String>(
+                value: 'hi',
+                groupValue:
+                    currentLanguage,
+
+                title: Text(
+                  localizations.hindi,
+                ),
+
+                secondary: const Text(
+                  '🇮🇳',
+                  style: TextStyle(
+                    fontSize: 24,
+                  ),
+                ),
+
+                onChanged: (value) {
+                  if (value == null) {
+                    return;
+                  }
+
+                  context
+                      .read<
+                          LanguageProvider>()
+                      .changeLanguage(
+                        value,
+                      );
+
+                  Navigator.pop(
+                    dialogContext,
+                  );
+                },
+              ),
+
+              // ======================================
+              // MARATHI
+              // ======================================
+
+              RadioListTile<String>(
+                value: 'mr',
+                groupValue:
+                    currentLanguage,
+
+                title: Text(
+                  localizations.marathi,
+                ),
+
+                secondary: const Text(
+                  '🇮🇳',
+                  style: TextStyle(
+                    fontSize: 24,
+                  ),
+                ),
+
+                onChanged: (value) {
+                  if (value == null) {
+                    return;
+                  }
+
+                  context
+                      .read<
+                          LanguageProvider>()
+                      .changeLanguage(
+                        value,
+                      );
+
+                  Navigator.pop(
+                    dialogContext,
+                  );
+                },
+              ),
+            ],
+          ),
+        );
+      },
     );
   }
 }

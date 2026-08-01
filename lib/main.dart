@@ -3,31 +3,68 @@ import 'package:provider/provider.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter/foundation.dart';
+
 import 'screens/welcome_screen.dart';
 import 'theme_provider.dart';
 import 'language_provider.dart';
 import 'services/notification_service.dart';
+import 'services/point_service.dart';
 import 'package:devops_quiz/l10n/app_localizations.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
 
+  // ============================================
+  // NOTIFICATIONS
+  // ============================================
+
   if (!kIsWeb) {
-  await NotificationService.instance.initialize();
-}
+    await NotificationService.instance.initialize();
+  }
+
+  // ============================================
+  // LOAD USER POINTS
+  // Required because themes unlock using points.
+  // ============================================
+
+  final int totalPoints =
+      await PointService.getTotalPoints();
+
+  // ============================================
+  // CREATE + INITIALIZE THEME PROVIDER
+  // ============================================
+
+  final ThemeProvider themeProvider =
+      ThemeProvider();
+
+  await themeProvider.loadTheme(
+    totalPoints: totalPoints,
+  );
+
+  // ============================================
+  // SYSTEM UI
+  // ============================================
 
   SystemChrome.setEnabledSystemUIMode(
     SystemUiMode.edgeToEdge,
   );
 
+  // ============================================
+  // START APP
+  // ============================================
+
   runApp(
     MultiProvider(
       providers: [
-        ChangeNotifierProvider(
-          create: (_) => ThemeProvider(),
+        // IMPORTANT:
+        // ThemeProvider must be above MaterialApp
+        ChangeNotifierProvider<ThemeProvider>.value(
+          value: themeProvider,
         ),
-        ChangeNotifierProvider(
-          create: (_) => LanguageProvider(),
+
+        ChangeNotifierProvider<LanguageProvider>(
+          create: (_) =>
+              LanguageProvider(),
         ),
       ],
       child: const MyApp(),
@@ -35,11 +72,18 @@ Future<void> main() async {
   );
 }
 
+// ============================================================
+// APP
+// ============================================================
+
 class MyApp extends StatefulWidget {
-  const MyApp({super.key});
+  const MyApp({
+    super.key,
+  });
 
   @override
-  State<MyApp> createState() => _MyAppState();
+  State<MyApp> createState() =>
+      _MyAppState();
 }
 
 class _MyAppState extends State<MyApp> {
@@ -47,26 +91,44 @@ class _MyAppState extends State<MyApp> {
   void initState() {
     super.initState();
 
-    WidgetsBinding.instance.addPostFrameCallback((_) async {
-      await NotificationService.instance
-          .scheduleDailyNotifications();
-    });
+    WidgetsBinding.instance
+        .addPostFrameCallback(
+      (_) async {
+        if (!kIsWeb) {
+          await NotificationService.instance
+              .scheduleDailyNotifications();
+        }
+      },
+    );
   }
 
   @override
   Widget build(BuildContext context) {
+    // ============================================
+    // WATCH THEME
+    // ============================================
+
     final themeProvider =
-        Provider.of<ThemeProvider>(context);
+        context.watch<ThemeProvider>();
+
+    // ============================================
+    // WATCH LANGUAGE
+    // ============================================
 
     final languageProvider =
-        Provider.of<LanguageProvider>(context);
+        context.watch<LanguageProvider>();
 
     return MaterialApp(
       debugShowCheckedModeBanner: false,
 
       title: 'DevOps Quiz',
 
-      locale: languageProvider.locale,
+      // ==========================================
+      // LANGUAGE
+      // ==========================================
+
+      locale:
+          languageProvider.locale,
 
       localizationsDelegates: const [
         AppLocalizations.delegate,
@@ -78,25 +140,30 @@ class _MyAppState extends State<MyApp> {
       supportedLocales:
           AppLocalizations.supportedLocales,
 
-      themeMode: themeProvider.themeMode,
+      // ==========================================
+      // THEME
+      // ==========================================
+      //
+      // ThemeProvider now supplies the complete
+      // selected theme.
 
-      theme: ThemeData(
-        useMaterial3: true,
-        colorSchemeSeed: Colors.teal,
-        elevatedButtonTheme:
-            ElevatedButtonThemeData(
-          style: ElevatedButton.styleFrom(
-            backgroundColor: Colors.teal,
-            foregroundColor: Colors.white,
-          ),
-        ),
-      ),
+      theme:
+          themeProvider.themeData,
 
-      darkTheme: ThemeData.dark(
-        useMaterial3: true,
-      ),
+      // We don't need separate hard-coded
+      // lightTheme/darkTheme anymore because
+      // themeData handles Light, Dark, Ocean,
+      // Forest, Cyber, etc.
 
-      home: const WelcomeScreen(),
+      themeMode:
+          ThemeMode.light,
+
+      // ==========================================
+      // HOME
+      // ==========================================
+
+      home:
+          const WelcomeScreen(),
     );
   }
 }

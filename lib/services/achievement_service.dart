@@ -320,7 +320,7 @@ const Achievement(
     const Achievement(
       id: "points_1000",
       title: "1000 Points",
-      description: "Earn 1000 total points.",
+      description: "Earn 1000 total points in Quiz.",
       icon: "⚝",
       reward: 250,
       unlocked: false,
