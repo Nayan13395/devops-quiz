@@ -13,22 +13,26 @@ class DailyLoginBonusService {
   static const String _lastBonusAmountKey =
       'daily_login_bonus_last_amount';
 
-  /// Checks whether today's app-opening bonus
-  /// has already been awarded.
+  // =========================================================
+  // CLAIM DAILY BONUS
+  // =========================================================
+
+  /// Awards today's app-opening bonus.
   ///
   /// Returns:
-  /// - bonus amount (10–1000) when awarded
+  /// - 10, 20, 30 ... 1000 when awarded
   /// - null when already claimed today
   static Future<int?> claimDailyBonus() async {
     final prefs =
         await SharedPreferences.getInstance();
 
-    final now = DateTime.now();
+    final String today =
+        _dateKey(DateTime.now());
 
-    final today = _dateKey(now);
-
-    final lastBonusDate =
-        prefs.getString(_lastBonusDateKey);
+    final String? lastBonusDate =
+        prefs.getString(
+      _lastBonusDateKey,
+    );
 
     // Already received today's bonus.
     if (lastBonusDate == today) {
@@ -36,14 +40,19 @@ class DailyLoginBonusService {
     }
 
     // Generates:
+    //
     // 10, 20, 30 ... 990, 1000
+    //
+    // Exactly 100 possible rewards.
     final int bonus =
         (Random().nextInt(100) + 1) * 10;
 
-    // Add bonus to existing total points.
-    await PointService.addPoints(bonus);
+    // Add reward to total points.
+    await PointService.addPoints(
+      bonus,
+    );
 
-    // Save today's date only after points
+    // Only save the claim after points
     // have successfully been added.
     await prefs.setString(
       _lastBonusDateKey,
@@ -58,19 +67,52 @@ class DailyLoginBonusService {
     return bonus;
   }
 
-  /// Returns true if today's bonus
+  // =========================================================
+  // CHECK IF BONUS IS AVAILABLE
+  // =========================================================
+
+  /// Returns true when the user has NOT
+  /// received today's bonus yet.
+  ///
+  /// IMPORTANT:
+  /// This does NOT award any points.
+  ///
+  /// The notification system can safely call
+  /// this method without accidentally claiming
+  /// the user's reward.
+  static Future<bool>
+      isBonusAvailableToday() async {
+    final bool claimed =
+        await hasClaimedToday();
+
+    return !claimed;
+  }
+
+  // =========================================================
+  // CHECK IF ALREADY CLAIMED
+  // =========================================================
+
+  /// Returns true when today's bonus
   /// has already been awarded.
   static Future<bool>
       hasClaimedToday() async {
     final prefs =
         await SharedPreferences.getInstance();
 
-    final lastBonusDate =
-        prefs.getString(_lastBonusDateKey);
+    final String? lastBonusDate =
+        prefs.getString(
+      _lastBonusDateKey,
+    );
 
     return lastBonusDate ==
-        _dateKey(DateTime.now());
+        _dateKey(
+          DateTime.now(),
+        );
   }
+
+  // =========================================================
+  // GET LAST BONUS
+  // =========================================================
 
   /// Returns the most recently awarded
   /// bonus amount.
@@ -84,25 +126,55 @@ class DailyLoginBonusService {
     );
   }
 
-  /// Converts a date to:
+  // =========================================================
+  // GET LAST CLAIM DATE
+  // =========================================================
+
+  static Future<String?>
+      getLastBonusDate() async {
+    final prefs =
+        await SharedPreferences.getInstance();
+
+    return prefs.getString(
+      _lastBonusDateKey,
+    );
+  }
+
+  // =========================================================
+  // DATE KEY
+  // =========================================================
+
+  /// Converts:
   ///
-  /// 2026-08-01
+  /// DateTime(...)
   ///
-  /// This allows us to compare calendar days
-  /// without comparing hours/minutes/seconds.
-  static String _dateKey(DateTime date) {
-    final year =
+  /// into:
+  ///
+  /// 2026-08-02
+  ///
+  /// Hours, minutes and seconds are deliberately
+  /// ignored because the bonus resets by calendar day.
+  static String _dateKey(
+    DateTime date,
+  ) {
+    final String year =
         date.year.toString();
 
-    final month =
+    final String month =
         date.month
             .toString()
-            .padLeft(2, '0');
+            .padLeft(
+              2,
+              '0',
+            );
 
-    final day =
+    final String day =
         date.day
             .toString()
-            .padLeft(2, '0');
+            .padLeft(
+              2,
+              '0',
+            );
 
     return '$year-$month-$day';
   }

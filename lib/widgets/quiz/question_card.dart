@@ -23,61 +23,131 @@ class QuestionCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final ThemeData theme =
+        Theme.of(context);
+
+    final ColorScheme colorScheme =
+        theme.colorScheme;
+
     return Container(
       width: double.infinity,
       padding: const EdgeInsets.symmetric(
-        horizontal: 20,
-        vertical: 18,
+        horizontal: 22,
+        vertical: 22,
       ),
       decoration: BoxDecoration(
-        color: Theme.of(context).cardColor,
+        // Uses the currently selected theme.
+        color: colorScheme.surfaceContainer,
         borderRadius: BorderRadius.circular(20),
-        boxShadow: const [
+
+        border: Border.all(
+          color: colorScheme.outlineVariant
+              .withValues(
+            alpha: 0.45,
+          ),
+        ),
+
+        boxShadow: [
           BoxShadow(
             blurRadius: 10,
-            offset: Offset(0, 3),
-            color: Colors.black12,
-          ),
-        ],
-      ),
-      child: _buildQuestion(context),
-    );
-  }
-
-  Widget _buildQuestion(BuildContext context) {
-  if (category == "DevOps" || category == "DailyQuiz") {
-    return RichText(
-      textAlign: TextAlign.center,
-      text: TextSpan(
-        style: const TextStyle(
-          fontSize: 20,
-          fontWeight: FontWeight.bold,
-          color: Colors.black,
-          height: 1.3,
-        ),
-        children: [
-          TextSpan(
-            text: "In ${question.category}, ",
-            style: const TextStyle(
-              color: Colors.teal,
+            offset: const Offset(
+              0,
+              3,
+            ),
+            color: colorScheme.shadow
+                .withValues(
+              alpha: 0.10,
             ),
           ),
-          TextSpan(
-            text: question.question,
-          ),
         ],
+      ),
+      child: _buildQuestion(
+        context,
       ),
     );
   }
 
-  return Text(
-    question.question,
-    textAlign: TextAlign.center,
-    style: const TextStyle(
-      fontSize: 20,
-      fontWeight: FontWeight.bold,
-      height: 1.3,
-    ),
-  );
-}
+  // =========================================================
+  // QUESTION
+  // =========================================================
+
+  Widget _buildQuestion(
+    BuildContext context,
+  ) {
+    final ThemeData theme =
+        Theme.of(context);
+
+    final ColorScheme colorScheme =
+        theme.colorScheme;
+
+    final TextStyle questionStyle =
+        theme.textTheme.titleLarge?.copyWith(
+              fontSize: 20,
+              fontWeight: FontWeight.bold,
+
+              // IMPORTANT:
+              // Automatically adapts to every theme.
+              color: colorScheme.onSurface,
+
+              height: 1.35,
+            ) ??
+            TextStyle(
+              fontSize: 20,
+              fontWeight: FontWeight.bold,
+              color: colorScheme.onSurface,
+              height: 1.35,
+            );
+
+    // =======================================================
+    // DEVOPS / DAILY QUIZ
+    // =======================================================
+
+    if (category == 'DevOps' ||
+        category == 'DailyQuiz') {
+      return RichText(
+        textAlign: TextAlign.center,
+        text: TextSpan(
+          style: questionStyle,
+          children: [
+            // ===============================================
+            // CATEGORY PREFIX
+            // ===============================================
+
+            TextSpan(
+              text:
+                  'In ${question.category}, ',
+              style: questionStyle.copyWith(
+                color:
+                    colorScheme.primary,
+                fontWeight:
+                    FontWeight.bold,
+              ),
+            ),
+
+            // ===============================================
+            // QUESTION
+            // ===============================================
+
+            TextSpan(
+              text: question.question,
+              style: questionStyle.copyWith(
+                color:
+                    colorScheme.onSurface,
+              ),
+            ),
+          ],
+        ),
+      );
+    }
+
+    // =======================================================
+    // NORMAL CATEGORY QUESTION
+    // =======================================================
+
+    return Text(
+      question.question,
+      textAlign: TextAlign.center,
+      style: questionStyle,
+    );
+  }
 }

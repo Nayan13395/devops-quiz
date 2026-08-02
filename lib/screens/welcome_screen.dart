@@ -8,6 +8,7 @@ import '../services/daily_login_bonus_service.dart';
 import '../services/notification_service.dart';
 import '../widgets/app_drawer.dart';
 import '../widgets/daily_login_bonus_dialog.dart';
+import '../widgets/notification_button.dart';
 import 'category_screen.dart';
 
 class WelcomeScreen extends StatefulWidget {
@@ -28,7 +29,10 @@ class _WelcomeScreenState
 
     WidgetsBinding.instance.addPostFrameCallback(
       (_) async {
-        // Schedule notifications.
+        // ==========================================
+        // SCHEDULE ANDROID NOTIFICATIONS
+        // ==========================================
+
         if (!kIsWeb) {
           await NotificationService.instance
               .scheduleDailyNotifications();
@@ -36,15 +40,22 @@ class _WelcomeScreenState
 
         if (!mounted) return;
 
-        // Check today's login bonus.
+        // ==========================================
+        // CHECK DAILY LOGIN BONUS
+        // ==========================================
+
         await _checkDailyLoginBonus();
       },
     );
   }
 
+  // =========================================================
+  // DAILY LOGIN BONUS
+  // =========================================================
+
   Future<void> _checkDailyLoginBonus() async {
-    // Prevent accidental duplicate calls
-    // during the same WelcomeScreen lifecycle.
+    // Prevent accidental duplicate calls during
+    // the same WelcomeScreen lifecycle.
     if (_bonusCheckStarted) {
       return;
     }
@@ -58,8 +69,7 @@ class _WelcomeScreenState
 
       if (!mounted) return;
 
-      // null means today's bonus
-      // was already awarded.
+      // null means today's bonus was already awarded.
       if (bonus == null) {
         return;
       }
@@ -75,34 +85,61 @@ class _WelcomeScreenState
     }
   }
 
+  // =========================================================
+  // BUILD
+  // =========================================================
+
   @override
   Widget build(BuildContext context) {
     final logoWidth = math.min(
-      MediaQuery.sizeOf(context).width *
-          0.75,
+      MediaQuery.sizeOf(context).width * 0.75,
       420.0,
     );
 
     return Scaffold(
       drawer: const AppDrawer(),
 
+      // =====================================================
+      // APP BAR
+      // =====================================================
+
       appBar: AppBar(
         title: const Text(
-          "DevOps Quiz",
+          'DevOps Quiz',
         ),
+
+        actions: const [
+          // ================================================
+          // NOTIFICATION BELL
+          // ================================================
+
+          Padding(
+            padding: EdgeInsets.only(
+              right: 14,
+            ),
+            child: Center(
+              child: NotificationButton(),
+            ),
+          ),
+        ],
       ),
+
+      // =====================================================
+      // BODY
+      // =====================================================
 
       body: Center(
         child: SingleChildScrollView(
-          padding:
-              const EdgeInsets.all(24),
+          padding: const EdgeInsets.all(
+            24,
+          ),
           child: Column(
             mainAxisAlignment:
                 MainAxisAlignment.center,
             children: [
-              // ==========================
-              // ANIMATED LOGO
-              // ==========================
+              // =============================================
+              // ANIMATED DEVOPS LOGO
+              // =============================================
 
               _AnimatedDevOpsLogo(
                 width: logoWidth,
@@ -112,14 +149,13 @@ class _WelcomeScreenState
                 height: 25,
               ),
 
-              // ==========================
+              // =============================================
               // APP NAME
-              // ==========================
+              // =============================================
 
               const Text(
-                "DevOps Quiz",
-                textAlign:
-                    TextAlign.center,
+                'DevOps Quiz',
+                textAlign: TextAlign.center,
                 style: TextStyle(
                   fontSize: 40,
                   fontWeight:
@@ -131,9 +167,9 @@ class _WelcomeScreenState
                 height: 20,
               ),
 
-              // ==========================
+              // =============================================
               // WELCOME MESSAGE
-              // ==========================
+              // =============================================
 
               Text(
                 AppLocalizations.of(
@@ -142,8 +178,7 @@ class _WelcomeScreenState
                     .welcomeToDevOpsQuiz,
                 textAlign:
                     TextAlign.center,
-                style:
-                    const TextStyle(
+                style: const TextStyle(
                   fontSize: 22,
                 ),
               ),
@@ -152,9 +187,9 @@ class _WelcomeScreenState
                 height: 35,
               ),
 
-              // ==========================
-              // START QUIZ
-              // ==========================
+              // =============================================
+              // START QUIZ BUTTON
+              // =============================================
 
               SizedBox(
                 width: 220,
@@ -171,16 +206,14 @@ class _WelcomeScreenState
                     );
                   },
                   icon: const Icon(
-                    Icons
-                        .play_arrow_rounded,
+                    Icons.play_arrow_rounded,
                   ),
                   label: Text(
                     AppLocalizations.of(
                       context,
                     )!
                         .startQuiz,
-                    style:
-                        const TextStyle(
+                    style: const TextStyle(
                       fontSize: 18,
                       fontWeight:
                           FontWeight.bold,
@@ -230,6 +263,10 @@ class _AnimatedDevOpsLogoState
   void initState() {
     super.initState();
 
+    // =======================================================
+    // LOGO SCALE ANIMATION
+    // =======================================================
+
     _scaleController =
         AnimationController(
       vsync: this,
@@ -237,8 +274,12 @@ class _AnimatedDevOpsLogoState
         milliseconds: 1800,
       ),
     )..repeat(
-            reverse: true,
-          );
+        reverse: true,
+      );
+
+    // =======================================================
+    // FLOW CONTROLLER
+    // =======================================================
 
     _flowController =
         AnimationController(
@@ -269,16 +310,22 @@ class _AnimatedDevOpsLogoState
     super.dispose();
   }
 
+  // =========================================================
+  // LOGO UI
+  // =========================================================
+
   @override
   Widget build(
     BuildContext context,
   ) {
     return AnimatedBuilder(
       animation:
-          Listenable.merge([
-        _scaleController,
-        _flowController,
-      ]),
+          Listenable.merge(
+        [
+          _scaleController,
+          _flowController,
+        ],
+      ),
       builder: (
         context,
         child,
@@ -294,7 +341,10 @@ class _AnimatedDevOpsLogoState
                 alignment:
                     Alignment.center,
                 children: [
-                  // Glow effect
+                  // =========================================
+                  // GLOW EFFECT
+                  // =========================================
+
                   Container(
                     decoration:
                         BoxDecoration(
@@ -314,8 +364,12 @@ class _AnimatedDevOpsLogoState
                     ),
                   ),
 
+                  // =========================================
+                  // DEVOPS LOGO
+                  // =========================================
+
                   Image.asset(
-                    "assets/images/devops_logo.png",
+                    'assets/images/devops_logo.png',
                     fit:
                         BoxFit.contain,
                   ),

@@ -40,7 +40,7 @@ class _QuizScreenState extends State<QuizScreen> {
       widget.challenge != null;
 
   bool get isSpeedChallenge =>
-      widget.challenge?.id == "speed";
+      widget.challenge?.id == 'speed';
 
   bool get isSurvivalMode =>
       widget.challenge?.survival ?? false;
@@ -59,13 +59,12 @@ class _QuizScreenState extends State<QuizScreen> {
 
   bool answered = false;
 
-  Map<int, String> userAnswers = {};
+  final Map<int, String> userAnswers = {};
 
-  // Stores the exact option order shown
-  // for every question.
-  Map<int, List<String>> displayedOptions = {};
+  final Map<int, List<String>>
+      displayedOptions = {};
 
-  Set<int> timedOutQuestions = {};
+  final Set<int> timedOutQuestions = {};
 
   Timer? timer;
 
@@ -73,10 +72,16 @@ class _QuizScreenState extends State<QuizScreen> {
 
   bool _quizFinished = false;
 
+  bool _exitDialogOpen = false;
+
+  // =========================================================
+  // FINAL POINTS
+  // =========================================================
+
   int getFinalPoints() {
     int finalPoints = points;
 
-    if (widget.category == "DailyQuiz") {
+    if (widget.category == 'DailyQuiz') {
       if (score == questions.length) {
         finalPoints += 500;
       } else {
@@ -86,6 +91,10 @@ class _QuizScreenState extends State<QuizScreen> {
 
     return finalPoints;
   }
+
+  // =========================================================
+  // INIT
+  // =========================================================
 
   @override
   void initState() {
@@ -98,6 +107,10 @@ class _QuizScreenState extends State<QuizScreen> {
     );
   }
 
+  // =========================================================
+  // LOAD QUESTIONS
+  // =========================================================
+
   Future<void> loadQuestions() async {
     try {
       final locale =
@@ -109,10 +122,12 @@ class _QuizScreenState extends State<QuizScreen> {
         widget.category,
       );
 
-      if (widget.category == "DevOps" ||
-          widget.category == "DailyQuiz") {
+      if (!mounted) return;
+
+      if (widget.category == 'DevOps' ||
+          widget.category == 'DailyQuiz') {
         questions = {
-          for (var q in allQuestions)
+          for (final q in allQuestions)
             q.question: q,
         }.values.toList();
 
@@ -147,10 +162,6 @@ class _QuizScreenState extends State<QuizScreen> {
         }
       }
 
-      // Save shuffled option order ONCE.
-      //
-      // The quiz screen and PDF report
-      // will now use exactly the same order.
       displayedOptions.clear();
 
       for (int i = 0;
@@ -168,22 +179,36 @@ class _QuizScreenState extends State<QuizScreen> {
         loading = false;
       });
 
-      startTimer();
+      if (questions.isNotEmpty) {
+        startTimer();
+      }
     } catch (e) {
       debugPrint(
-        "Question loading error: $e",
+        'Question loading error: $e',
       );
+
+      if (!mounted) return;
+
+      setState(() {
+        loading = false;
+      });
     }
   }
+
+  // =========================================================
+  // TIMER
+  // =========================================================
 
   void startTimer() {
     timer?.cancel();
 
-    // ---------------------------------
+    if (_quizFinished) {
+      return;
+    }
+
+    // =======================================================
     // SPEED CHALLENGE
-    // One 60-second timer for the
-    // complete challenge.
-    // ---------------------------------
+    // =======================================================
 
     if (isSpeedChallenge) {
       timeLeft = 60;
@@ -203,7 +228,6 @@ class _QuizScreenState extends State<QuizScreen> {
             });
           } else {
             t.cancel();
-
             finishQuiz();
           }
         },
@@ -212,10 +236,9 @@ class _QuizScreenState extends State<QuizScreen> {
       return;
     }
 
-    // ---------------------------------
-    // NORMAL QUIZ / OTHER CHALLENGES
-    // 15 seconds for each question.
-    // ---------------------------------
+    // =======================================================
+    // NORMAL QUIZ
+    // =======================================================
 
     timeLeft = 15;
 
@@ -234,12 +257,15 @@ class _QuizScreenState extends State<QuizScreen> {
           });
         } else {
           t.cancel();
-
           autoSubmit();
         }
       },
     );
   }
+
+  // =========================================================
+  // AUTO SUBMIT
+  // =========================================================
 
   void autoSubmit() {
     if (_quizFinished) return;
@@ -261,7 +287,6 @@ class _QuizScreenState extends State<QuizScreen> {
       answered = true;
     });
 
-    // Timeout ends Survival Mode.
     if (isSurvivalMode) {
       Future.delayed(
         const Duration(
@@ -317,6 +342,10 @@ class _QuizScreenState extends State<QuizScreen> {
     );
   }
 
+  // =========================================================
+  // FINISH QUIZ
+  // =========================================================
+
   Future<void> finishQuiz() async {
     if (_quizFinished) return;
 
@@ -325,7 +354,7 @@ class _QuizScreenState extends State<QuizScreen> {
     timer?.cancel();
 
     if (widget.category ==
-        "DailyQuiz") {
+        'DailyQuiz') {
       await DailyQuizService
           .markCompleted();
     }
@@ -362,28 +391,21 @@ class _QuizScreenState extends State<QuizScreen> {
       MaterialPageRoute(
         builder: (_) => ResultScreen(
           score: score,
-
           totalQuestions:
               questions.length,
-
           points: finalPoints,
-
           category:
               widget.category,
-
           setNumber:
               widget.setNumber,
-
           questions:
               List<Question>.from(
             questions,
           ),
-
           userAnswers:
               Map<int, String>.from(
             userAnswers,
           ),
-
           displayedOptions:
               displayedOptions.map(
             (key, value) => MapEntry(
@@ -393,7 +415,6 @@ class _QuizScreenState extends State<QuizScreen> {
               ),
             ),
           ),
-
           timedOutQuestions:
               Set<int>.from(
             timedOutQuestions,
@@ -402,6 +423,10 @@ class _QuizScreenState extends State<QuizScreen> {
       ),
     );
   }
+
+  // =========================================================
+  // SELECT ANSWER
+  // =========================================================
 
   Future<void> selectAnswer(
     String text,
@@ -422,8 +447,6 @@ class _QuizScreenState extends State<QuizScreen> {
             questions[currentQuestion]
                 .answer;
 
-    // Speed Challenge timer continues
-    // between questions.
     if (!isSpeedChallenge) {
       timer?.cancel();
     }
@@ -438,15 +461,9 @@ class _QuizScreenState extends State<QuizScreen> {
 
       if (isCorrect) {
         score++;
-
         points += 10;
       }
     });
-
-    // ---------------------------------
-    // SURVIVAL MODE
-    // First wrong answer ends quiz.
-    // ---------------------------------
 
     if (isSurvivalMode &&
         !isCorrect) {
@@ -492,8 +509,6 @@ class _QuizScreenState extends State<QuizScreen> {
                     );
           });
 
-          // Do NOT restart Speed
-          // Challenge timer.
           if (!answered &&
               !isSpeedChallenge) {
             startTimer();
@@ -505,26 +520,36 @@ class _QuizScreenState extends State<QuizScreen> {
     );
   }
 
+  // =========================================================
+  // OPTION COLOR
+  // =========================================================
+
   Color getOptionColor(
     String text,
   ) {
+    final colorScheme =
+        Theme.of(context).colorScheme;
+
     final bool timedOut =
         timedOutQuestions.contains(
       currentQuestion,
     );
 
-    if (!userAnswers.containsKey(
+    final bool locked =
+        userAnswers.containsKey(
           currentQuestion,
-        ) &&
-        !timedOut) {
-      return Theme.of(context)
-          .cardColor;
+        ) ||
+        timedOut;
+
+    if (!locked) {
+      return colorScheme
+          .surfaceContainerHighest;
     }
 
     if (text ==
         questions[currentQuestion]
             .answer) {
-      return Colors.green;
+      return Colors.green.shade600;
     }
 
     if (text ==
@@ -533,12 +558,16 @@ class _QuizScreenState extends State<QuizScreen> {
         text !=
             questions[currentQuestion]
                 .answer) {
-      return Colors.red;
+      return Colors.red.shade600;
     }
 
-    return Theme.of(context)
-        .cardColor;
+    return colorScheme
+        .surfaceContainerHighest;
   }
+
+  // =========================================================
+  // PREVIOUS QUESTION
+  // =========================================================
 
   void goToPreviousQuestion() {
     if (currentQuestion <= 0 ||
@@ -572,6 +601,10 @@ class _QuizScreenState extends State<QuizScreen> {
       startTimer();
     }
   }
+
+  // =========================================================
+  // NEXT QUESTION
+  // =========================================================
 
   Future<void>
       goToNextQuestion() async {
@@ -611,6 +644,171 @@ class _QuizScreenState extends State<QuizScreen> {
     }
   }
 
+  // =========================================================
+  // EXIT CONFIRMATION
+  // =========================================================
+
+  Future<bool>
+      _showExitConfirmation() async {
+    // Quiz has already finished.
+    // Allow normal navigation.
+    if (_quizFinished) {
+      return true;
+    }
+
+    // Prevent multiple dialogs.
+    if (_exitDialogOpen) {
+      return false;
+    }
+
+    _exitDialogOpen = true;
+
+    // Pause normal question timer while
+    // the confirmation popup is visible.
+    //
+    // For speed challenge we keep the timer
+    // running because it is a timed challenge.
+    if (!isSpeedChallenge) {
+      timer?.cancel();
+    }
+
+    final bool? shouldExit =
+        await showDialog<bool>(
+      context: context,
+      barrierDismissible: false,
+      builder: (
+        dialogContext,
+      ) {
+        final colorScheme =
+            Theme.of(
+          dialogContext,
+        ).colorScheme;
+
+        return AlertDialog(
+          icon: Icon(
+            Icons
+                .warning_amber_rounded,
+            size: 46,
+            color:
+                colorScheme.error,
+          ),
+
+          title: const Text(
+            'Exit Quiz?',
+            textAlign:
+                TextAlign.center,
+          ),
+
+          content: const Text(
+            'Are you sure you want to exit the quiz?\n\n'
+            'Your current progress will be lost.',
+            textAlign:
+                TextAlign.center,
+          ),
+
+          actionsAlignment:
+              MainAxisAlignment
+                  .spaceEvenly,
+
+          actions: [
+            // ===============================================
+            // CONTINUE QUIZ
+            // ===============================================
+
+            TextButton(
+              onPressed: () {
+                Navigator.of(
+                  dialogContext,
+                ).pop(
+                  false,
+                );
+              },
+              child: const Text(
+                'Continue Quiz',
+              ),
+            ),
+
+            // ===============================================
+            // EXIT
+            // ===============================================
+
+            FilledButton.icon(
+              onPressed: () {
+                Navigator.of(
+                  dialogContext,
+                ).pop(
+                  true,
+                );
+              },
+              style:
+                  FilledButton.styleFrom(
+                backgroundColor:
+                    colorScheme.error,
+                foregroundColor:
+                    colorScheme.onError,
+              ),
+              icon: const Icon(
+                Icons.exit_to_app_rounded,
+              ),
+              label: const Text(
+                'Exit',
+              ),
+            ),
+          ],
+        );
+      },
+    );
+
+    _exitDialogOpen = false;
+
+    if (!mounted) {
+      return shouldExit ?? false;
+    }
+
+    // User selected Continue Quiz.
+    if (shouldExit != true) {
+      // Restart the timer only for normal quiz.
+      //
+      // This gives the current question a fresh
+      // 15 seconds after closing the dialog.
+      if (!isSpeedChallenge &&
+          !_quizFinished &&
+          !answered) {
+        startTimer();
+      }
+
+      return false;
+    }
+
+    // User selected Exit.
+    timer?.cancel();
+
+    return true;
+  }
+
+  // =========================================================
+  // HANDLE SYSTEM BACK
+  // =========================================================
+
+  Future<void>
+      _handleBackAttempt() async {
+    final bool shouldExit =
+        await _showExitConfirmation();
+
+    if (!mounted ||
+        !shouldExit) {
+      return;
+    }
+
+    timer?.cancel();
+
+    Navigator.of(context).pop();
+  }
+
+  // =========================================================
+  // DISPOSE
+  // =========================================================
+
   @override
   void dispose() {
     timer?.cancel();
@@ -618,22 +816,42 @@ class _QuizScreenState extends State<QuizScreen> {
     super.dispose();
   }
 
+  // =========================================================
+  // BUILD
+  // =========================================================
+
   @override
   Widget build(
     BuildContext context,
   ) {
+    final theme =
+        Theme.of(context);
+
+    final colorScheme =
+        theme.colorScheme;
+
+    // =======================================================
+    // LOADING
+    // =======================================================
+
     if (loading) {
-      return const Scaffold(
-        drawer: AppDrawer(),
+      return Scaffold(
+        drawer:
+            const AppDrawer(),
         body: Center(
           child:
-              CircularProgressIndicator(),
+              CircularProgressIndicator(
+            color:
+                colorScheme.primary,
+          ),
         ),
       );
     }
 
-    // Protect against empty question
-    // data instead of accessing [0].
+    // =======================================================
+    // EMPTY QUESTIONS
+    // =======================================================
+
     if (questions.isEmpty) {
       return Scaffold(
         drawer:
@@ -643,174 +861,222 @@ class _QuizScreenState extends State<QuizScreen> {
             widget.category,
           ),
         ),
-        body: const Center(
+        body: Center(
           child: Text(
-            "No questions available.",
+            'No questions available.',
+            style: theme
+                .textTheme
+                .titleMedium
+                ?.copyWith(
+              color:
+                  colorScheme.onSurface,
+            ),
           ),
         ),
       );
     }
 
-    return Scaffold(
-      drawer:
-          const AppDrawer(),
+    // =======================================================
+    // QUIZ
+    // =======================================================
 
-      appBar: AppBar(
-        title: Text(
-          isChallenge
-              ? widget.challenge!.title
-              : widget.category ==
-                      "DailyQuiz"
-                  ? "📅 ${AppLocalizations.of(context)!.dailyQuiz}"
-                  : widget.category ==
-                          "DevOps"
-                      ? "🚀 ${AppLocalizations.of(context)!.appName}"
-                      : "${widget.category} - Set ${widget.setNumber}",
-        ),
-      ),
+    return PopScope(
+      // Prevent Flutter from immediately leaving.
+      // We decide after showing the confirmation.
+      canPop: _quizFinished,
 
-      body: SafeArea(
-        child: Container(
-          decoration:
-              BoxDecoration(
-            gradient:
-                LinearGradient(
-              begin:
-                  Alignment.topCenter,
-              end:
-                  Alignment.bottomCenter,
-              colors: [
-                Theme.of(context)
-                    .colorScheme
-                    .surface,
-                Theme.of(context)
-                    .scaffoldBackgroundColor,
-              ],
-            ),
+      onPopInvokedWithResult: (
+        bool didPop,
+        Object? result,
+      ) async {
+        if (didPop) {
+          return;
+        }
+
+        await _handleBackAttempt();
+      },
+
+      child: Scaffold(
+        drawer:
+            const AppDrawer(),
+
+        appBar: AppBar(
+          title: Text(
+            isChallenge
+                ? widget.challenge!.title
+                : widget.category ==
+                        'DailyQuiz'
+                    ? '📅 ${AppLocalizations.of(context)!.dailyQuiz}'
+                    : widget.category ==
+                            'DevOps'
+                        ? '🚀 ${AppLocalizations.of(context)!.appName}'
+                        : '${widget.category} - Set ${widget.setNumber}',
           ),
-          child: Padding(
-            padding:
-                const EdgeInsets
-                    .symmetric(
-              horizontal: 20,
-              vertical: 16,
+        ),
+
+        body: SafeArea(
+          child: Container(
+            width: double.infinity,
+            height: double.infinity,
+
+            // ===============================================
+            // THEME-AWARE BACKGROUND
+            // ===============================================
+
+            decoration: BoxDecoration(
+              gradient:
+                  LinearGradient(
+                begin:
+                    Alignment.topCenter,
+                end:
+                    Alignment.bottomCenter,
+                colors: [
+                  colorScheme.surface,
+                  theme
+                      .scaffoldBackgroundColor,
+                ],
+              ),
             ),
-            child: Column(
-              children: [
-                if (isChallenge)
-                  ChallengeBanner(
+
+            child: Padding(
+              padding:
+                  const EdgeInsets
+                      .symmetric(
+                horizontal: 20,
+                vertical: 16,
+              ),
+              child: Column(
+                children: [
+                  // =========================================
+                  // CHALLENGE
+                  // =========================================
+
+                  if (isChallenge)
+                    ChallengeBanner(
+                      challenge:
+                          widget.challenge!,
+                    ),
+
+                  // =========================================
+                  // HEADER
+                  // =========================================
+
+                  QuizHeader(
+                    timeLeft:
+                        timeLeft,
+                    points:
+                        points,
+                    currentQuestion:
+                        currentQuestion +
+                            1,
+                    totalQuestions:
+                        questions.length,
+                  ),
+
+                  const SizedBox(
+                    height: 14,
+                  ),
+
+                  // =========================================
+                  // QUESTION
+                  // =========================================
+
+                  QuestionCard(
+                    question:
+                        questions[
+                            currentQuestion],
+                    currentQuestion:
+                        currentQuestion +
+                            1,
+                    totalQuestions:
+                        questions.length,
+                    category:
+                        widget.category,
+                    isChallenge:
+                        isChallenge,
                     challenge:
-                        widget.challenge!,
+                        widget.challenge,
                   ),
 
-                QuizHeader(
-                  timeLeft:
-                      timeLeft,
-                  points:
-                      points,
-                  currentQuestion:
-                      currentQuestion +
-                          1,
-                  totalQuestions:
-                      questions.length,
-                ),
-
-                const SizedBox(
-                  height: 14,
-                ),
-
-                QuestionCard(
-                  question:
-                      questions[
-                          currentQuestion],
-                  currentQuestion:
-                      currentQuestion +
-                          1,
-                  totalQuestions:
-                      questions.length,
-                  category:
-                      widget.category,
-                  isChallenge:
-                      isChallenge,
-                  challenge:
-                      widget.challenge,
-                ),
-
-                const SizedBox(
-                  height: 14,
-                ),
-
-                Expanded(
-                  child: ListView(
-                    children: [
-                      // IMPORTANT:
-                      // Use the saved options,
-                      // not shuffledOptions.
-                      ...(displayedOptions[
-                                  currentQuestion] ??
-                              <String>[])
-                          .map(
-                        (option) {
-                          final bool
-                              isLocked =
-                              userAnswers
-                                      .containsKey(
-                                    currentQuestion,
-                                  ) ||
-                                  timedOutQuestions
-                                      .contains(
-                                    currentQuestion,
-                                  );
-
-                          return OptionButton(
-                            text:
-                                option,
-                            backgroundColor:
-                                getOptionColor(
-                              option,
-                            ),
-                            isLocked:
-                                isLocked,
-                            isCorrectAnswer:
-                                isLocked &&
-                                    option ==
-                                        questions[
-                                                currentQuestion]
-                                            .answer,
-                            onPressed:
-                                () {
-                              selectAnswer(
-                                option,
-                              );
-                            },
-                          );
-                        },
-                      ),
-                    ],
+                  const SizedBox(
+                    height: 14,
                   ),
-                ),
 
-                const SizedBox(
-                  height: 10,
-                ),
+                  // =========================================
+                  // OPTIONS
+                  // =========================================
 
-                NavigationButtons(
-                  canGoBack:
-                      currentQuestion >
-                          0,
-                  isLastQuestion:
-                      currentQuestion ==
-                          questions
-                                  .length -
-                              1,
-                  onBack:
-                      goToPreviousQuestion,
-                  onNext:
-                      () async {
-                    await goToNextQuestion();
-                  },
-                ),
-              ],
+                  Expanded(
+                    child: ListView(
+                      physics:
+                          const BouncingScrollPhysics(),
+                      children: [
+                        ...(displayedOptions[
+                                    currentQuestion] ??
+                                <String>[])
+                            .map(
+                          (option) {
+                            final bool isLocked =
+                                userAnswers
+                                        .containsKey(
+                                      currentQuestion,
+                                    ) ||
+                                    timedOutQuestions
+                                        .contains(
+                                      currentQuestion,
+                                    );
+
+                            return OptionButton(
+                              text:
+                                  option,
+                              backgroundColor:
+                                  getOptionColor(
+                                option,
+                              ),
+                              isLocked:
+                                  isLocked,
+                              isCorrectAnswer:
+                                  isLocked &&
+                                      option ==
+                                          questions[
+                                                  currentQuestion]
+                                              .answer,
+                              onPressed: () {
+                                selectAnswer(
+                                  option,
+                                );
+                              },
+                            );
+                          },
+                        ),
+                      ],
+                    ),
+                  ),
+
+                  const SizedBox(
+                    height: 10,
+                  ),
+
+                  // =========================================
+                  // NAVIGATION
+                  // =========================================
+
+                  NavigationButtons(
+                    canGoBack:
+                        currentQuestion >
+                            0,
+                    isLastQuestion:
+                        currentQuestion ==
+                            questions.length -
+                                1,
+                    onBack:
+                        goToPreviousQuestion,
+                    onNext: () async {
+                      await goToNextQuestion();
+                    },
+                  ),
+                ],
+              ),
             ),
           ),
         ),
