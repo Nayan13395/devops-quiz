@@ -4,6 +4,7 @@ import 'package:share_plus/share_plus.dart';
 import '../l10n/app_localizations.dart';
 import '../models/question.dart';
 import '../services/quiz_pdf_service.dart';
+import '../services/user_profile_service.dart';
 import '../widgets/app_drawer.dart';
 import 'category_screen.dart';
 import 'quiz_screen.dart';
@@ -33,30 +34,57 @@ class ResultScreen extends StatelessWidget {
     required this.timedOutQuestions,
   });
 
+  // =========================================================
+  // USER
+  // =========================================================
+
+  bool get _isGoogleUser =>
+      UserProfileService.isGoogleUser;
+
+  String get _firstName =>
+      UserProfileService.firstName;
+
+  // =========================================================
+  // EXPERT TITLE
+  // =========================================================
+
   String getExpertTitle() {
     switch (category) {
       case 'Linux':
         return '🐧 Linux expert';
+
       case 'Docker':
         return '🐳 Docker expert';
+
       case 'Kubernetes':
         return '☸️ Kubernetes expert';
+
       case 'Networking':
         return '🌐 Networking expert';
+
       case 'Git':
         return '🌿 Git expert';
+
       case 'Jenkins':
         return '⚙️ Jenkins expert';
+
       case 'AWS':
         return '☁️ AWS expert';
+
       case 'Terraform':
         return '🏗️ Terraform expert';
+
       case 'Ansible':
         return '🤖 Ansible expert';
+
       default:
         return '🚀 DevOps expert';
     }
   }
+
+  // =========================================================
+  // RESULT EMOJI
+  // =========================================================
 
   String _resultEmoji() {
     final percentage =
@@ -83,6 +111,10 @@ class ResultScreen extends StatelessWidget {
     return '📚';
   }
 
+  // =========================================================
+  // RESULT TITLE
+  // =========================================================
+
   String _resultTitle(
     BuildContext context,
   ) {
@@ -91,29 +123,41 @@ class ResultScreen extends StatelessWidget {
             ? 0
             : (score / totalQuestions) * 100;
 
+    String title;
+
     if (percentage >= 80) {
-      return AppLocalizations.of(context)!
-          .outstanding;
+      title =
+          AppLocalizations.of(context)!
+              .outstanding;
+    } else if (percentage >= 60) {
+      title =
+          AppLocalizations.of(context)!
+              .greatJob;
+    } else if (percentage >= 40) {
+      title =
+          AppLocalizations.of(context)!
+              .goodEffort;
+    } else if (percentage >= 20) {
+      title =
+          AppLocalizations.of(context)!
+              .keepPracticing;
+    } else {
+      title =
+          AppLocalizations.of(context)!
+              .dontGiveUp;
     }
 
-    if (percentage >= 60) {
-      return AppLocalizations.of(context)!
-          .greatJob;
+    // Add the Google user's first name.
+    if (_isGoogleUser) {
+      return '$title, $_firstName!';
     }
 
-    if (percentage >= 40) {
-      return AppLocalizations.of(context)!
-          .goodEffort;
-    }
-
-    if (percentage >= 20) {
-      return AppLocalizations.of(context)!
-          .keepPracticing;
-    }
-
-    return AppLocalizations.of(context)!
-        .dontGiveUp;
+    return title;
   }
+
+  // =========================================================
+  // RESULT MESSAGE
+  // =========================================================
 
   String _resultMessage(
     BuildContext context,
@@ -149,6 +193,22 @@ class ResultScreen extends StatelessWidget {
         .everyExpertStarted;
   }
 
+  // =========================================================
+  // SCORECARD MESSAGE
+  // =========================================================
+
+  String get _scorecardMessage {
+    if (_isGoogleUser) {
+      return '$_firstName, your scorecard is ready!';
+    }
+
+    return 'Your scorecard is ready!';
+  }
+
+  // =========================================================
+  // PDF
+  // =========================================================
+
   Future<void> _downloadPdf(
     BuildContext context,
   ) async {
@@ -156,7 +216,8 @@ class ResultScreen extends StatelessWidget {
       await QuizPdfService.generateQuizReport(
         questions: questions,
         userAnswers: userAnswers,
-        displayedOptions: displayedOptions,
+        displayedOptions:
+            displayedOptions,
         timedOutQuestions:
             timedOutQuestions,
         score: score,
@@ -165,7 +226,9 @@ class ResultScreen extends StatelessWidget {
         setNumber: setNumber,
       );
     } catch (e) {
-      if (!context.mounted) return;
+      if (!context.mounted) {
+        return;
+      }
 
       ScaffoldMessenger.of(context)
           .showSnackBar(
@@ -177,6 +240,10 @@ class ResultScreen extends StatelessWidget {
       );
     }
   }
+
+  // =========================================================
+  // RESTART
+  // =========================================================
 
   void _restartQuiz(
     BuildContext context,
@@ -192,6 +259,10 @@ class ResultScreen extends StatelessWidget {
     );
   }
 
+  // =========================================================
+  // BACK TO CATEGORIES
+  // =========================================================
+
   void _backToCategories(
     BuildContext context,
   ) {
@@ -204,6 +275,10 @@ class ResultScreen extends StatelessWidget {
       (route) => false,
     );
   }
+
+  // =========================================================
+  // BUILD
+  // =========================================================
 
   @override
   Widget build(BuildContext context) {
@@ -218,12 +293,13 @@ class ResultScreen extends StatelessWidget {
     int bonus = 0;
 
     if (category == 'DailyQuiz') {
-      bonus = score == totalQuestions
-          ? 500
-          : earnedPoints;
+      bonus =
+          score == totalQuestions
+              ? 500
+              : earnedPoints;
     }
 
-    final colorScheme =
+    final ColorScheme colorScheme =
         Theme.of(context).colorScheme;
 
     return Scaffold(
@@ -251,19 +327,21 @@ class ResultScreen extends StatelessWidget {
               ),
               child: Column(
                 children: [
-                  // ==========================
-                  // ANIMATED RESULT HEADER
-                  // ==========================
+                  // =========================================
+                  // RESULT EMOJI
+                  // =========================================
 
                   TweenAnimationBuilder<double>(
-                    duration: const Duration(
+                    duration:
+                        const Duration(
                       milliseconds: 700,
                     ),
                     tween: Tween(
                       begin: 0,
                       end: 1,
                     ),
-                    curve: Curves.easeOutBack,
+                    curve:
+                        Curves.easeOutBack,
                     builder: (
                       context,
                       value,
@@ -294,8 +372,13 @@ class ResultScreen extends StatelessWidget {
                     height: 8,
                   ),
 
+                  // =========================================
+                  // PERSONALIZED RESULT TITLE
+                  // =========================================
+
                   TweenAnimationBuilder<double>(
-                    duration: const Duration(
+                    duration:
+                        const Duration(
                       milliseconds: 650,
                     ),
                     tween: Tween(
@@ -309,7 +392,8 @@ class ResultScreen extends StatelessWidget {
                     ) {
                       return Opacity(
                         opacity: value,
-                        child: Transform.translate(
+                        child:
+                            Transform.translate(
                           offset: Offset(
                             0,
                             20 *
@@ -338,6 +422,10 @@ class ResultScreen extends StatelessWidget {
                     height: 8,
                   ),
 
+                  // =========================================
+                  // RESULT MESSAGE
+                  // =========================================
+
                   Text(
                     _resultMessage(
                       context,
@@ -346,11 +434,29 @@ class ResultScreen extends StatelessWidget {
                         TextAlign.center,
                     style: TextStyle(
                       fontSize: 16,
-                      color: Theme.of(
-                        context,
-                      )
-                          .colorScheme
+                      color: colorScheme
                           .onSurfaceVariant,
+                    ),
+                  ),
+
+                  const SizedBox(
+                    height: 10,
+                  ),
+
+                  // =========================================
+                  // SCORECARD READY
+                  // =========================================
+
+                  Text(
+                    _scorecardMessage,
+                    textAlign:
+                        TextAlign.center,
+                    style: TextStyle(
+                      fontSize: 15,
+                      fontWeight:
+                          FontWeight.w600,
+                      color:
+                          colorScheme.primary,
                     ),
                   ),
 
@@ -358,12 +464,13 @@ class ResultScreen extends StatelessWidget {
                     height: 26,
                   ),
 
-                  // ==========================
+                  // =========================================
                   // RESULT CARD
-                  // ==========================
+                  // =========================================
 
                   TweenAnimationBuilder<double>(
-                    duration: const Duration(
+                    duration:
+                        const Duration(
                       milliseconds: 800,
                     ),
                     tween: Tween(
@@ -421,7 +528,9 @@ class ResultScreen extends StatelessWidget {
                       ),
                       child: Column(
                         children: [
-                          // Percentage
+                          // =================================
+                          // PERCENTAGE
+                          // =================================
 
                           TweenAnimationBuilder<
                               double>(
@@ -471,10 +580,7 @@ class ResultScreen extends StatelessWidget {
                             style:
                                 TextStyle(
                               fontSize: 14,
-                              color: Theme.of(
-                                context,
-                              )
-                                  .colorScheme
+                              color: colorScheme
                                   .onSurfaceVariant,
                             ),
                           ),
@@ -488,6 +594,10 @@ class ResultScreen extends StatelessWidget {
                           const SizedBox(
                             height: 18,
                           ),
+
+                          // =================================
+                          // SCORE + POINTS
+                          // =================================
 
                           Row(
                             children: [
@@ -510,10 +620,11 @@ class ResultScreen extends StatelessWidget {
                               Container(
                                 width: 1,
                                 height: 55,
-                                color: Theme.of(
+                                color:
+                                    Theme.of(
                                   context,
                                 )
-                                    .dividerColor,
+                                        .dividerColor,
                               ),
 
                               Expanded(
@@ -533,6 +644,10 @@ class ResultScreen extends StatelessWidget {
                               ),
                             ],
                           ),
+
+                          // =================================
+                          // DAILY QUIZ BONUS
+                          // =================================
 
                           if (category ==
                               'DailyQuiz') ...[
@@ -581,9 +696,9 @@ class ResultScreen extends StatelessWidget {
                     ),
                   ),
 
-                  // ==========================
+                  // =========================================
                   // DAILY QUIZ MESSAGE
-                  // ==========================
+                  // =========================================
 
                   if (category ==
                       'DailyQuiz') ...[
@@ -610,9 +725,9 @@ class ResultScreen extends StatelessWidget {
                           18,
                         ),
                       ),
-                      child: const Column(
+                      child: Column(
                         children: [
-                          Row(
+                          const Row(
                             mainAxisAlignment:
                                 MainAxisAlignment
                                     .center,
@@ -622,9 +737,11 @@ class ResultScreen extends StatelessWidget {
                                     .check_circle_outline,
                                 size: 22,
                               ),
+
                               SizedBox(
                                 width: 8,
                               ),
+
                               Flexible(
                                 child: Text(
                                   'Daily Quiz Completed!',
@@ -644,15 +761,16 @@ class ResultScreen extends StatelessWidget {
                             ],
                           ),
 
-                          SizedBox(
+                          const SizedBox(
                             height: 6,
                           ),
 
                           Text(
-                            'Come back tomorrow for a new challenge!',
+                            _isGoogleUser
+                                ? 'Great work, $_firstName! Come back tomorrow for a new challenge!'
+                                : 'Come back tomorrow for a new challenge!',
                             textAlign:
-                                TextAlign
-                                    .center,
+                                TextAlign.center,
                           ),
                         ],
                       ),
@@ -663,9 +781,9 @@ class ResultScreen extends StatelessWidget {
                     height: 24,
                   ),
 
-                  // ==========================
+                  // =========================================
                   // SHARE + PDF
-                  // ==========================
+                  // =========================================
 
                   LayoutBuilder(
                     builder: (
@@ -691,8 +809,7 @@ class ResultScreen extends StatelessWidget {
                               sharePoints =
                               category ==
                                       'DailyQuiz'
-                                  ? score *
-                                      10
+                                  ? score * 10
                                   : points;
 
                           Share.share(
@@ -729,9 +846,11 @@ class ResultScreen extends StatelessWidget {
                         return Column(
                           children: [
                             shareButton,
+
                             const SizedBox(
                               height: 12,
                             ),
+
                             pdfButton,
                           ],
                         );
@@ -743,9 +862,11 @@ class ResultScreen extends StatelessWidget {
                             child:
                                 shareButton,
                           ),
+
                           const SizedBox(
                             width: 12,
                           ),
+
                           Expanded(
                             child:
                                 pdfButton,
@@ -759,9 +880,9 @@ class ResultScreen extends StatelessWidget {
                     height: 14,
                   ),
 
-                  // ==========================
+                  // =========================================
                   // RESTART QUIZ
-                  // ==========================
+                  // =========================================
 
                   SizedBox(
                     width:
@@ -786,8 +907,7 @@ class ResultScreen extends StatelessWidget {
                             const TextStyle(
                           fontSize: 16,
                           fontWeight:
-                              FontWeight
-                                  .bold,
+                              FontWeight.bold,
                         ),
                       ),
                     ),
@@ -797,9 +917,9 @@ class ResultScreen extends StatelessWidget {
                     height: 12,
                   ),
 
-                  // ==========================
+                  // =========================================
                   // BACK TO CATEGORIES
-                  // ==========================
+                  // =========================================
 
                   SizedBox(
                     width:
@@ -824,8 +944,7 @@ class ResultScreen extends StatelessWidget {
                             const TextStyle(
                           fontSize: 16,
                           fontWeight:
-                              FontWeight
-                                  .bold,
+                              FontWeight.bold,
                         ),
                       ),
                     ),
@@ -843,6 +962,10 @@ class ResultScreen extends StatelessWidget {
     );
   }
 }
+
+// ============================================================
+// STAT ITEM
+// ============================================================
 
 class _StatItem extends StatelessWidget {
   final IconData icon;
@@ -900,6 +1023,10 @@ class _StatItem extends StatelessWidget {
     );
   }
 }
+
+// ============================================================
+// ACTION BUTTON
+// ============================================================
 
 class _ActionButton
     extends StatelessWidget {

@@ -103,8 +103,8 @@ class SettingsScreen extends StatelessWidget {
                   size: 28,
                 ),
 
-                title: const Text(
-                  'Themes',
+                title: Text(
+                  AppLocalizations.of(context)!.themes,
                   style: TextStyle(
                     fontSize: 18,
                     fontWeight: FontWeight.w600,

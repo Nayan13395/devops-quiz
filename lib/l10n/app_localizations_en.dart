@@ -66,6 +66,15 @@ class AppLocalizationsEn extends AppLocalizations {
   String get ok => 'OK';
 
   @override
+  String get games => 'Games';
+
+  @override
+  String get referAndEarn => 'Refer & Earn';
+
+  @override
+  String get themes => 'Themes';
+
+  @override
   String get version => 'Version';
 
   @override

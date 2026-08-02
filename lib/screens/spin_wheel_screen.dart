@@ -3,7 +3,7 @@ import 'dart:math';
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
-import '../services/point_service.dart';
+import 'reward_question_screen.dart';
 
 class SpinWheelScreen extends StatefulWidget {
   const SpinWheelScreen({super.key});
@@ -21,7 +21,10 @@ class _SpinWheelScreenState
 
   final Random _random = Random();
 
-  // Rewards on the wheel.
+  // =========================================================
+  // WHEEL REWARDS
+  // =========================================================
+
   final List<int> rewards = [
     10,
     20,
@@ -45,6 +48,10 @@ class _SpinWheelScreenState
   late Animation<double> _rotationAnimation;
 
   double _currentRotation = 0;
+
+  // =========================================================
+  // INIT
+  // =========================================================
 
   @override
   void initState() {
@@ -80,9 +87,13 @@ class _SpinWheelScreenState
     );
 
     final today =
-        _dateKey(DateTime.now());
+        _dateKey(
+      DateTime.now(),
+    );
 
-    if (!mounted) return;
+    if (!mounted) {
+      return;
+    }
 
     setState(() {
       canSpin =
@@ -107,6 +118,10 @@ class _SpinWheelScreenState
       lastReward = null;
     });
 
+    // =======================================================
+    // SELECT RANDOM REWARD
+    // =======================================================
+
     final int selectedIndex =
         _random.nextInt(
       rewards.length,
@@ -116,12 +131,13 @@ class _SpinWheelScreenState
         rewards[selectedIndex];
 
     final double sectionAngle =
-        (2 * pi) / rewards.length;
+        (2 * pi) /
+            rewards.length;
 
     // Pointer is at the top.
     //
-    // Add several complete rotations and then
-    // position the selected segment under it.
+    // Rotate the wheel several times and
+    // stop the selected section under the pointer.
 
     final double targetSegment =
         (2 * pi) -
@@ -160,12 +176,15 @@ class _SpinWheelScreenState
         targetRotation %
             (2 * pi);
 
-    // Add points.
-    await PointService.addPoints(
-      reward,
-    );
+    // =======================================================
+    // SAVE DAILY SPIN
+    //
+    // IMPORTANT:
+    // We mark the spin as used here.
+    // Points are NOT added here.
+    // User must answer the question correctly.
+    // =======================================================
 
-    // Save today's spin.
     final prefs =
         await SharedPreferences.getInstance();
 
@@ -176,7 +195,9 @@ class _SpinWheelScreenState
       ),
     );
 
-    if (!mounted) return;
+    if (!mounted) {
+      return;
+    }
 
     setState(() {
       spinning = false;
@@ -184,19 +205,27 @@ class _SpinWheelScreenState
       lastReward = reward;
     });
 
-    _showRewardDialog(
+    // =======================================================
+    // SHOW REWARD + QUESTION CHALLENGE
+    // =======================================================
+
+    await _showChallengeDialog(
       reward,
     );
   }
 
   // =========================================================
-  // REWARD DIALOG
+  // CHALLENGE DIALOG
   // =========================================================
 
-  void _showRewardDialog(
+  Future<void> _showChallengeDialog(
     int reward,
-  ) {
-    showDialog<void>(
+  ) async {
+    if (!mounted) {
+      return;
+    }
+
+    await showDialog<void>(
       context: context,
       barrierDismissible: false,
       builder: (
@@ -204,14 +233,14 @@ class _SpinWheelScreenState
       ) {
         return AlertDialog(
           icon: const Text(
-            '🎉',
+            '🎡',
             style: TextStyle(
               fontSize: 55,
             ),
           ),
 
           title: const Text(
-            'Congratulations!',
+            'Wheel Stopped!',
             textAlign:
                 TextAlign.center,
           ),
@@ -221,9 +250,9 @@ class _SpinWheelScreenState
                 MainAxisSize.min,
             children: [
               const Text(
-                'You won',
+                'Your reward is',
                 style: TextStyle(
-                  fontSize: 18,
+                  fontSize: 17,
                 ),
               ),
 
@@ -232,16 +261,15 @@ class _SpinWheelScreenState
               ),
 
               Text(
-                '⭐ +$reward',
+                '⭐ $reward',
                 style: TextStyle(
-                  fontSize: 32,
+                  fontSize: 36,
                   fontWeight:
                       FontWeight.bold,
-                  color: Theme.of(
-                    context,
-                  )
-                      .colorScheme
-                      .primary,
+                  color:
+                      Theme.of(context)
+                          .colorScheme
+                          .primary,
                 ),
               ),
 
@@ -252,6 +280,7 @@ class _SpinWheelScreenState
               const Text(
                 'POINTS',
                 style: TextStyle(
+                  fontSize: 15,
                   fontWeight:
                       FontWeight.bold,
                   letterSpacing: 1.5,
@@ -259,29 +288,91 @@ class _SpinWheelScreenState
               ),
 
               const SizedBox(
-                height: 15,
+                height: 20,
               ),
 
-              const Text(
-                'Come back tomorrow for another spin!',
+              Container(
+                width:
+                    double.infinity,
+                padding:
+                    const EdgeInsets.all(
+                  14,
+                ),
+                decoration:
+                    BoxDecoration(
+                  color:
+                      Theme.of(context)
+                          .colorScheme
+                          .primaryContainer,
+                  borderRadius:
+                      BorderRadius.circular(
+                    14,
+                  ),
+                ),
+                child: const Text(
+                  'Answer 1 quiz question correctly to claim this reward.',
+                  textAlign:
+                      TextAlign.center,
+                  style: TextStyle(
+                    fontWeight:
+                        FontWeight.w600,
+                  ),
+                ),
+              ),
+
+              const SizedBox(
+                height: 10,
+              ),
+
+              Text(
+                'Wrong answer = reward lost.',
                 textAlign:
                     TextAlign.center,
+                style: TextStyle(
+                  fontSize: 13,
+                  color:
+                      Theme.of(context)
+                          .colorScheme
+                          .onSurfaceVariant,
+                ),
               ),
             ],
           ),
 
-          actionsAlignment:
-              MainAxisAlignment.center,
-
           actions: [
-            ElevatedButton(
-              onPressed: () {
-                Navigator.pop(
-                  dialogContext,
-                );
-              },
-              child: const Text(
-                'Awesome!',
+            SizedBox(
+              width:
+                  double.infinity,
+              child:
+                  ElevatedButton.icon(
+                onPressed: () {
+                  Navigator.pop(
+                    dialogContext,
+                  );
+
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (_) =>
+                          RewardQuestionScreen(
+                        reward:
+                            reward,
+                        gameName:
+                            'Spin Wheel',
+                      ),
+                    ),
+                  );
+                },
+                icon: const Icon(
+                  Icons.quiz_outlined,
+                ),
+                label: const Text(
+                  'Answer Question',
+                  style: TextStyle(
+                    fontWeight:
+                        FontWeight.bold,
+                  ),
+                ),
               ),
             ),
           ],
@@ -302,9 +393,14 @@ class _SpinWheelScreenState
         '${date.day.toString().padLeft(2, '0')}';
   }
 
+  // =========================================================
+  // DISPOSE
+  // =========================================================
+
   @override
   void dispose() {
     _animationController.dispose();
+
     super.dispose();
   }
 
@@ -337,7 +433,8 @@ class _SpinWheelScreenState
                 ),
 
                 child: Center(
-                  child: ConstrainedBox(
+                  child:
+                      ConstrainedBox(
                     constraints:
                         const BoxConstraints(
                       maxWidth: 500,
@@ -349,9 +446,14 @@ class _SpinWheelScreenState
                           height: 10,
                         ),
 
+                        // =====================================
+                        // TITLE
+                        // =====================================
+
                         const Text(
                           'Daily Spin',
-                          style: TextStyle(
+                          style:
+                              TextStyle(
                             fontSize: 28,
                             fontWeight:
                                 FontWeight
@@ -365,20 +467,22 @@ class _SpinWheelScreenState
 
                         Text(
                           canSpin
-                              ? 'Spin the wheel and win bonus points!'
+                              ? 'Spin the wheel, then answer a question to claim your reward!'
                               : 'You have already used today\'s spin.',
 
                           textAlign:
                               TextAlign
                                   .center,
 
-                          style: TextStyle(
+                          style:
+                              TextStyle(
                             fontSize: 16,
-                            color: Theme.of(
+                            color:
+                                Theme.of(
                               context,
                             )
-                                .colorScheme
-                                .onSurfaceVariant,
+                                    .colorScheme
+                                    .onSurfaceVariant,
                           ),
                         ),
 
@@ -386,19 +490,20 @@ class _SpinWheelScreenState
                           height: 30,
                         ),
 
-                        // =========================
+                        // =====================================
                         // POINTER
-                        // =========================
+                        // =====================================
 
                         Icon(
                           Icons
                               .arrow_drop_down,
                           size: 55,
-                          color: Theme.of(
+                          color:
+                              Theme.of(
                             context,
                           )
-                              .colorScheme
-                              .primary,
+                                  .colorScheme
+                                  .primary,
                         ),
 
                         Transform.translate(
@@ -422,14 +527,12 @@ class _SpinWheelScreenState
                                 angle:
                                     _rotationAnimation
                                         .value,
-
                                 child:
                                     child,
                               );
                             },
 
-                            child:
-                                _Wheel(
+                            child: _Wheel(
                               rewards:
                                   rewards,
                             ),
@@ -440,9 +543,9 @@ class _SpinWheelScreenState
                           height: 20,
                         ),
 
-                        // =========================
+                        // =====================================
                         // SPIN BUTTON
-                        // =========================
+                        // =====================================
 
                         SizedBox(
                           width:
@@ -450,7 +553,8 @@ class _SpinWheelScreenState
                           height: 55,
 
                           child:
-                              ElevatedButton.icon(
+                              ElevatedButton
+                                  .icon(
                             onPressed:
                                 canSpin &&
                                         !spinning
@@ -493,36 +597,256 @@ class _SpinWheelScreenState
                           ),
                         ),
 
+                        // =====================================
+                        // TODAY'S REWARD
+                        // =====================================
+
                         if (lastReward !=
                             null) ...[
                           const SizedBox(
                             height: 20,
                           ),
 
-                          Text(
-                            'Today you won ⭐ $lastReward points!',
-                            textAlign:
-                                TextAlign
-                                    .center,
-                            style:
-                                const TextStyle(
-                              fontSize: 17,
-                              fontWeight:
-                                  FontWeight
-                                      .bold,
+                          Container(
+                            width:
+                                double.infinity,
+                            padding:
+                                const EdgeInsets
+                                    .all(
+                              14,
+                            ),
+                            decoration:
+                                BoxDecoration(
+                              color:
+                                  Theme.of(
+                                context,
+                              )
+                                      .colorScheme
+                                      .primaryContainer,
+                              borderRadius:
+                                  BorderRadius
+                                      .circular(
+                                14,
+                              ),
+                            ),
+                            child: Text(
+                              'Today\'s reward: ⭐ $lastReward points',
+                              textAlign:
+                                  TextAlign
+                                      .center,
+                              style:
+                                  const TextStyle(
+                                fontSize:
+                                    17,
+                                fontWeight:
+                                    FontWeight
+                                        .bold,
+                              ),
                             ),
                           ),
                         ],
 
                         const SizedBox(
+                          height: 24,
+                        ),
+
+                        // =====================================
+                        // HOW TO PLAY
+                        // =====================================
+
+                        Card(
+                          child: Padding(
+                            padding:
+                                const EdgeInsets
+                                    .all(
+                              18,
+                            ),
+                            child: Column(
+                              children: [
+                                const Text(
+                                  '🎯 How to Play',
+                                  style:
+                                      TextStyle(
+                                    fontSize:
+                                        17,
+                                    fontWeight:
+                                        FontWeight
+                                            .bold,
+                                  ),
+                                ),
+
+                                const SizedBox(
+                                  height: 12,
+                                ),
+
+                                Row(
+                                  children: [
+                                    Icon(
+                                      Icons
+                                          .casino_outlined,
+                                      color:
+                                          Theme.of(
+                                        context,
+                                      )
+                                              .colorScheme
+                                              .primary,
+                                    ),
+
+                                    const SizedBox(
+                                      width:
+                                          12,
+                                    ),
+
+                                    const Expanded(
+                                      child:
+                                          Text(
+                                        'Spin the wheel to reveal your reward.',
+                                      ),
+                                    ),
+                                  ],
+                                ),
+
+                                const SizedBox(
+                                  height: 14,
+                                ),
+
+                                Row(
+                                  children: [
+                                    Icon(
+                                      Icons
+                                          .quiz_outlined,
+                                      color:
+                                          Theme.of(
+                                        context,
+                                      )
+                                              .colorScheme
+                                              .primary,
+                                    ),
+
+                                    const SizedBox(
+                                      width:
+                                          12,
+                                    ),
+
+                                    const Expanded(
+                                      child:
+                                          Text(
+                                        'Answer one DevOps question.',
+                                      ),
+                                    ),
+                                  ],
+                                ),
+
+                                const SizedBox(
+                                  height: 14,
+                                ),
+
+                                Row(
+                                  children: [
+                                    Icon(
+                                      Icons
+                                          .stars_outlined,
+                                      color:
+                                          Theme.of(
+                                        context,
+                                      )
+                                              .colorScheme
+                                              .primary,
+                                    ),
+
+                                    const SizedBox(
+                                      width:
+                                          12,
+                                    ),
+
+                                    const Expanded(
+                                      child:
+                                          Text(
+                                        'Correct answer = reward added to your points.',
+                                      ),
+                                    ),
+                                  ],
+                                ),
+
+                                const SizedBox(
+                                  height: 14,
+                                ),
+
+                                Row(
+                                  children: [
+                                    Icon(
+                                      Icons
+                                          .close_rounded,
+                                      color:
+                                          Theme.of(
+                                        context,
+                                      )
+                                              .colorScheme
+                                              .error,
+                                    ),
+
+                                    const SizedBox(
+                                      width:
+                                          12,
+                                    ),
+
+                                    const Expanded(
+                                      child:
+                                          Text(
+                                        'Wrong answer = reward lost. Existing points are safe.',
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              ],
+                            ),
+                          ),
+                        ),
+
+                        const SizedBox(
                           height: 20,
                         ),
 
-                        const Text(
-                          'One free spin every day',
-                          style: TextStyle(
-                            fontSize: 13,
-                          ),
+                        Row(
+                          mainAxisAlignment:
+                              MainAxisAlignment
+                                  .center,
+                          children: [
+                            Icon(
+                              Icons
+                                  .calendar_today_outlined,
+                              size: 16,
+                              color:
+                                  Theme.of(
+                                context,
+                              )
+                                      .colorScheme
+                                      .onSurfaceVariant,
+                            ),
+
+                            const SizedBox(
+                              width: 7,
+                            ),
+
+                            Text(
+                              'One free spin every day',
+                              style:
+                                  TextStyle(
+                                fontSize:
+                                    13,
+                                color:
+                                    Theme.of(
+                                  context,
+                                )
+                                        .colorScheme
+                                        .onSurfaceVariant,
+                              ),
+                            ),
+                          ],
+                        ),
+
+                        const SizedBox(
+                          height: 20,
                         ),
                       ],
                     ),
@@ -598,7 +922,8 @@ class _WheelPainter
     Canvas canvas,
     Size size,
   ) {
-    final center = Offset(
+    final center =
+        Offset(
       size.width / 2,
       size.height / 2,
     );
@@ -623,9 +948,10 @@ class _WheelPainter
           Paint()
             ..style =
                 PaintingStyle.fill
-            ..color = i.isEven
-                ? primaryColor
-                : secondaryColor;
+            ..color =
+                i.isEven
+                    ? primaryColor
+                    : secondaryColor;
 
       final startAngle =
           -pi / 2 +
@@ -640,7 +966,10 @@ class _WheelPainter
         paint,
       );
 
-      // Segment border
+      // =====================================
+      // SEGMENT BORDER
+      // =====================================
+
       final borderPaint =
           Paint()
             ..style =
@@ -657,16 +986,15 @@ class _WheelPainter
         borderPaint,
       );
 
-      // ===============================
+      // =====================================
       // REWARD TEXT
-      // ===============================
+      // =====================================
 
       final textPainter =
           TextPainter(
         text: TextSpan(
           text:
               '${rewards[i]}',
-
           style:
               const TextStyle(
             color:
@@ -676,7 +1004,6 @@ class _WheelPainter
                 FontWeight.bold,
           ),
         ),
-
         textDirection:
             TextDirection.ltr,
       );
@@ -695,7 +1022,6 @@ class _WheelPainter
         center.dx +
             cos(textAngle) *
                 textRadius,
-
         center.dy +
             sin(textAngle) *
                 textRadius,
@@ -725,9 +1051,9 @@ class _WheelPainter
       canvas.restore();
     }
 
-    // ===============================
+    // =====================================
     // CENTER
-    // ===============================
+    // =====================================
 
     canvas.drawCircle(
       center,
@@ -750,7 +1076,8 @@ class _WheelPainter
       text: const TextSpan(
         text: 'SPIN',
         style: TextStyle(
-          color: Colors.white,
+          color:
+              Colors.white,
           fontSize: 14,
           fontWeight:
               FontWeight.bold,
@@ -766,9 +1093,11 @@ class _WheelPainter
       canvas,
       Offset(
         center.dx -
-            centerText.width / 2,
+            centerText.width /
+                2,
         center.dy -
-            centerText.height / 2,
+            centerText.height /
+                2,
       ),
     );
   }

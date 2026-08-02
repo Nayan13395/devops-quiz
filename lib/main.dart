@@ -10,10 +10,18 @@ import 'language_provider.dart';
 import 'services/notification_service.dart';
 import 'services/point_service.dart';
 import 'package:devops_quiz/l10n/app_localizations.dart';
+import 'package:firebase_core/firebase_core.dart';
+import 'firebase_options.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
+// ============================================
+  // FIREBASE
+  // ============================================
 
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+  );
   // ============================================
   // NOTIFICATIONS
   // ============================================

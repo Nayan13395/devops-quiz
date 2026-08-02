@@ -4,19 +4,25 @@ import 'dart:math';
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
-import '../services/point_service.dart';
+import 'reward_question_screen.dart';
 
 class LuckySlotScreen extends StatefulWidget {
-  const LuckySlotScreen({super.key});
+  const LuckySlotScreen({
+    super.key,
+  });
 
   @override
   State<LuckySlotScreen> createState() =>
       _LuckySlotScreenState();
 }
 
-class _LuckySlotScreenState extends State<LuckySlotScreen> {
+class _LuckySlotScreenState
+    extends State<LuckySlotScreen> {
   static const String _lastPlayKey =
       'lucky_slot_last_play_date';
+
+  static const String _lastRewardKey =
+      'lucky_slot_last_reward';
 
   final Random _random = Random();
 
@@ -24,15 +30,27 @@ class _LuckySlotScreenState extends State<LuckySlotScreen> {
   bool canPlay = false;
   bool spinning = false;
 
+  // Each reel contains ONE digit only.
   int reel1 = 7;
   int reel2 = 7;
   int reel3 = 7;
 
+  bool reel1Spinning = false;
+  bool reel2Spinning = false;
+  bool reel3Spinning = false;
+
   int? wonReward;
+
+  Timer? _slotTimer;
+
+  // =========================================================
+  // INIT
+  // =========================================================
 
   @override
   void initState() {
     super.initState();
+
     _checkDailyPlay();
   }
 
@@ -41,37 +59,91 @@ class _LuckySlotScreenState extends State<LuckySlotScreen> {
   // =========================================================
 
   Future<void> _checkDailyPlay() async {
-    final prefs =
+    final SharedPreferences prefs =
         await SharedPreferences.getInstance();
 
     final String? lastPlay =
-        prefs.getString(_lastPlayKey);
+        prefs.getString(
+      _lastPlayKey,
+    );
 
     final String today =
-        _dateKey(DateTime.now());
+        _dateKey(
+      DateTime.now(),
+    );
 
-    if (!mounted) return;
+    final int? savedReward =
+        prefs.getInt(
+      _lastRewardKey,
+    );
+
+    if (!mounted) {
+      return;
+    }
 
     setState(() {
       canPlay = lastPlay != today;
       loading = false;
+
+      // Restore yesterday/today result as
+      // three individual digits.
+      if (!canPlay &&
+          savedReward != null) {
+        wonReward = savedReward;
+
+        final String rewardText =
+            savedReward
+                .toString()
+                .padLeft(
+                  3,
+                  '0',
+                );
+
+        reel1 =
+            int.parse(
+          rewardText[0],
+        );
+
+        reel2 =
+            int.parse(
+          rewardText[1],
+        );
+
+        reel3 =
+            int.parse(
+          rewardText[2],
+        );
+      }
     });
   }
 
   // =========================================================
-  // RANDOM REWARD: 10 - 999
+  // RANDOM DIGIT
+  // 0 - 9
   // =========================================================
 
-  int _generateReward() {
-    return 10 + _random.nextInt(990);
+  int _generateDigit() {
+    return _random.nextInt(10);
   }
 
   // =========================================================
-  // RANDOM DIGIT: 0 - 9
+  // CREATE REWARD FROM 3 REELS
+  //
+  // Example:
+  // 5 | 0 | 1 = 501
+  // 0 | 7 | 5 = 75
+  // 0 | 0 | 9 = 9
+  // 7 | 7 | 7 = 777 JACKPOT
   // =========================================================
 
-  int _randomDigit() {
-    return _random.nextInt(10);
+  int _rewardFromDigits(
+    int first,
+    int second,
+    int third,
+  ) {
+    return (first * 100) +
+        (second * 10) +
+        third;
   }
 
   // =========================================================
@@ -79,210 +151,175 @@ class _LuckySlotScreenState extends State<LuckySlotScreen> {
   // =========================================================
 
   Future<void> _play() async {
-    if (!canPlay || spinning) {
+    if (!canPlay ||
+        spinning) {
+      return;
+    }
+
+    // Decide final digits before spinning.
+    final int finalReel1 =
+        _generateDigit();
+
+    final int finalReel2 =
+        _generateDigit();
+
+    final int finalReel3 =
+        _generateDigit();
+
+    setState(() {
+      spinning = true;
+
+      reel1Spinning = true;
+      reel2Spinning = true;
+      reel3Spinning = true;
+
+      wonReward = null;
+    });
+
+    // =======================================================
+    // START ALL 3 REELS
+    // =======================================================
+
+    _slotTimer?.cancel();
+
+    _slotTimer =
+        Timer.periodic(
+      const Duration(
+        milliseconds: 80,
+      ),
+      (_) {
+        if (!mounted) {
+          return;
+        }
+
+        setState(() {
+          if (reel1Spinning) {
+            reel1 =
+                _generateDigit();
+          }
+
+          if (reel2Spinning) {
+            reel2 =
+                _generateDigit();
+          }
+
+          if (reel3Spinning) {
+            reel3 =
+                _generateDigit();
+          }
+        });
+      },
+    );
+
+    // =======================================================
+    // REEL 1 STOPS
+    // =======================================================
+
+    await Future<void>.delayed(
+      const Duration(
+        milliseconds: 1800,
+      ),
+    );
+
+    if (!mounted) {
       return;
     }
 
     setState(() {
-      spinning = true;
-      wonReward = null;
-    });
-
-    // Generate final reward before animation.
-    final int reward =
-        _generateReward();
-
-    final String rewardText =
-        reward.toString().padLeft(3, '0');
-
-    final int finalReel1 =
-        int.parse(rewardText[0]);
-
-    final int finalReel2 =
-        int.parse(rewardText[1]);
-
-    final int finalReel3 =
-        int.parse(rewardText[2]);
-
-    // =======================================================
-    // STAGE 1
-    // FAST SPIN
-    // =======================================================
-
-    for (int i = 0; i < 18; i++) {
-      if (!mounted) return;
-
-      setState(() {
-        reel1 = _randomDigit();
-        reel2 = _randomDigit();
-        reel3 = _randomDigit();
-      });
-
-      await Future.delayed(
-        const Duration(
-          milliseconds: 65,
-        ),
-      );
-    }
-
-    // =======================================================
-    // STAGE 2
-    // MEDIUM SPEED
-    // =======================================================
-
-    for (int i = 0; i < 9; i++) {
-      if (!mounted) return;
-
-      setState(() {
-        reel1 = _randomDigit();
-        reel2 = _randomDigit();
-        reel3 = _randomDigit();
-      });
-
-      await Future.delayed(
-        const Duration(
-          milliseconds: 125,
-        ),
-      );
-    }
-
-    // =======================================================
-    // STAGE 3
-    // SLOW DOWN
-    // =======================================================
-
-    for (int i = 0; i < 5; i++) {
-      if (!mounted) return;
-
-      setState(() {
-        reel1 = _randomDigit();
-        reel2 = _randomDigit();
-        reel3 = _randomDigit();
-      });
-
-      await Future.delayed(
-        Duration(
-          milliseconds:
-              180 + (i * 45),
-        ),
-      );
-    }
-
-    // =======================================================
-    // FIRST REEL SLOWS AND STOPS
-    // =======================================================
-
-    for (int i = 0; i < 3; i++) {
-      if (!mounted) return;
-
-      setState(() {
-        reel1 = _randomDigit();
-        reel2 = _randomDigit();
-        reel3 = _randomDigit();
-      });
-
-      await Future.delayed(
-        Duration(
-          milliseconds:
-              250 + (i * 60),
-        ),
-      );
-    }
-
-    if (!mounted) return;
-
-    setState(() {
       reel1 = finalReel1;
+      reel1Spinning = false;
     });
 
     // =======================================================
-    // SECOND + THIRD REELS CONTINUE
+    // REEL 2 STOPS
     // =======================================================
 
-    for (int i = 0; i < 4; i++) {
-      if (!mounted) return;
+    await Future<void>.delayed(
+      const Duration(
+        milliseconds: 700,
+      ),
+    );
 
-      setState(() {
-        reel2 = _randomDigit();
-        reel3 = _randomDigit();
-      });
-
-      await Future.delayed(
-        Duration(
-          milliseconds:
-              230 + (i * 55),
-        ),
-      );
+    if (!mounted) {
+      return;
     }
-
-    // =======================================================
-    // SECOND REEL STOPS
-    // =======================================================
-
-    if (!mounted) return;
 
     setState(() {
       reel2 = finalReel2;
+      reel2Spinning = false;
     });
 
     // =======================================================
-    // THIRD REEL CONTINUES SLOWLY
+    // REEL 3 STOPS
     // =======================================================
 
-    for (int i = 0; i < 4; i++) {
-      if (!mounted) return;
+    await Future<void>.delayed(
+      const Duration(
+        milliseconds: 700,
+      ),
+    );
 
-      setState(() {
-        reel3 = _randomDigit();
-      });
-
-      await Future.delayed(
-        Duration(
-          milliseconds:
-              280 + (i * 70),
-        ),
-      );
+    if (!mounted) {
+      return;
     }
-
-    // =======================================================
-    // THIRD REEL STOPS
-    // =======================================================
-
-    if (!mounted) return;
 
     setState(() {
       reel3 = finalReel3;
+      reel3Spinning = false;
+    });
+
+    // Stop animation timer.
+    _slotTimer?.cancel();
+    _slotTimer = null;
+
+    // =======================================================
+    // CALCULATE FINAL REWARD
+    // =======================================================
+
+    final int reward =
+        _rewardFromDigits(
+      finalReel1,
+      finalReel2,
+      finalReel3,
+    );
+
+    setState(() {
       wonReward = reward;
     });
 
-    // Let user see the result before popup.
-    await Future.delayed(
+    // Small pause after last reel stops.
+    await Future<void>.delayed(
       const Duration(
-        milliseconds: 800,
+        milliseconds: 700,
       ),
     );
+
+    if (!mounted) {
+      return;
+    }
 
     // =======================================================
     // SAVE DAILY PLAY
     // =======================================================
 
-    final prefs =
+    final SharedPreferences prefs =
         await SharedPreferences.getInstance();
 
     await prefs.setString(
       _lastPlayKey,
-      _dateKey(DateTime.now()),
+      _dateKey(
+        DateTime.now(),
+      ),
     );
 
-    // =======================================================
-    // ADD EXACT REWARD
-    // =======================================================
-
-    await PointService.addPoints(
+    await prefs.setInt(
+      _lastRewardKey,
       reward,
     );
 
-    if (!mounted) return;
+    if (!mounted) {
+      return;
+    }
 
     setState(() {
       spinning = false;
@@ -290,28 +327,35 @@ class _LuckySlotScreenState extends State<LuckySlotScreen> {
     });
 
     // =======================================================
-    // RESULT DIALOG
+    // SHOW REWARD / QUESTION
     // =======================================================
 
-    await _showWinnerDialog(
+    await _showChallengeDialog(
       reward,
     );
   }
 
   // =========================================================
-  // WINNER DIALOG
+  // CHALLENGE DIALOG
   // =========================================================
 
-  Future<void> _showWinnerDialog(
+  Future<void> _showChallengeDialog(
     int reward,
   ) async {
-    if (!mounted) return;
+    if (!mounted) {
+      return;
+    }
 
     final bool jackpot =
         reward == 777;
 
     final String rewardText =
-        reward.toString().padLeft(3, '0');
+        reward
+            .toString()
+            .padLeft(
+              3,
+              '0',
+            );
 
     await showDialog<void>(
       context: context,
@@ -319,35 +363,76 @@ class _LuckySlotScreenState extends State<LuckySlotScreen> {
       builder: (
         dialogContext,
       ) {
+        final ColorScheme colors =
+            Theme.of(
+          dialogContext,
+        ).colorScheme;
+
         return AlertDialog(
-          icon: Text(
-            jackpot
-                ? '🎰'
-                : '🎉',
-            style: const TextStyle(
-              fontSize: 55,
-            ),
-          ),
-
-          title: Text(
-            jackpot
-                ? 'JACKPOT 777!'
-                : 'Congratulations!',
-            textAlign:
-                TextAlign.center,
-          ),
-
           content: Column(
             mainAxisSize:
                 MainAxisSize.min,
+            crossAxisAlignment:
+                CrossAxisAlignment.center,
             children: [
-              // ===============================================
-              // FINAL SLOT NUMBER
-              // ===============================================
+              // =============================================
+              // CENTERED ICON
+              // =============================================
+
+              SizedBox(
+                width:
+                    double.infinity,
+                child: Text(
+                  jackpot
+                      ? '🎰'
+                      : '🎉',
+                  textAlign:
+                      TextAlign.center,
+                  style:
+                      const TextStyle(
+                    fontSize: 55,
+                  ),
+                ),
+              ),
+
+              const SizedBox(
+                height: 12,
+              ),
+
+              // =============================================
+              // TITLE
+              // =============================================
+
+              SizedBox(
+                width:
+                    double.infinity,
+                child: Text(
+                  jackpot
+                      ? 'JACKPOT 777!'
+                      : 'Reward Revealed!',
+                  textAlign:
+                      TextAlign.center,
+                  style:
+                      const TextStyle(
+                    fontSize: 24,
+                    fontWeight:
+                        FontWeight.bold,
+                  ),
+                ),
+              ),
+
+              const SizedBox(
+                height: 22,
+              ),
+
+              // =============================================
+              // FINAL SLOT DIGITS
+              // =============================================
 
               Row(
                 mainAxisAlignment:
-                    MainAxisAlignment.center,
+                    MainAxisAlignment
+                        .center,
                 children: [
                   _ResultDigit(
                     digit:
@@ -387,10 +472,14 @@ class _LuckySlotScreenState extends State<LuckySlotScreen> {
               Text(
                 jackpot
                     ? 'Lucky 777!'
-                    : 'You won',
+                    : 'Your reward',
+                textAlign:
+                    TextAlign.center,
                 style: TextStyle(
                   fontSize:
-                      jackpot ? 20 : 17,
+                      jackpot
+                          ? 20
+                          : 17,
                   fontWeight:
                       jackpot
                           ? FontWeight.bold
@@ -406,8 +495,14 @@ class _LuckySlotScreenState extends State<LuckySlotScreen> {
                 height: 8,
               ),
 
+              // =============================================
+              // REWARD
+              // =============================================
+
               Text(
-                '⭐ +$reward',
+                '⭐ $reward',
+                textAlign:
+                    TextAlign.center,
                 style: TextStyle(
                   fontSize: 38,
                   fontWeight:
@@ -415,11 +510,7 @@ class _LuckySlotScreenState extends State<LuckySlotScreen> {
                   color:
                       jackpot
                           ? Colors.orange
-                          : Theme.of(
-                              context,
-                            )
-                                .colorScheme
-                                .primary,
+                          : colors.primary,
                 ),
               ),
 
@@ -429,6 +520,8 @@ class _LuckySlotScreenState extends State<LuckySlotScreen> {
 
               const Text(
                 'POINTS',
+                textAlign:
+                    TextAlign.center,
                 style: TextStyle(
                   fontSize: 15,
                   fontWeight:
@@ -438,29 +531,93 @@ class _LuckySlotScreenState extends State<LuckySlotScreen> {
               ),
 
               const SizedBox(
-                height: 18,
+                height: 20,
               ),
 
-              const Text(
-                'Come back tomorrow for another chance to win!',
+              // =============================================
+              // QUESTION REQUIREMENT
+              // =============================================
+
+              Container(
+                width:
+                    double.infinity,
+                padding:
+                    const EdgeInsets.all(
+                  14,
+                ),
+                decoration:
+                    BoxDecoration(
+                  color: colors
+                      .primaryContainer,
+                  borderRadius:
+                      BorderRadius.circular(
+                    14,
+                  ),
+                ),
+                child: Text(
+                  'Answer 1 quiz question correctly to claim this reward.',
+                  textAlign:
+                      TextAlign.center,
+                  style: TextStyle(
+                    fontWeight:
+                        FontWeight.w600,
+                    color: colors
+                        .onPrimaryContainer,
+                  ),
+                ),
+              ),
+
+              const SizedBox(
+                height: 10,
+              ),
+
+              Text(
+                'Wrong answer = reward lost.',
                 textAlign:
                     TextAlign.center,
+                style: TextStyle(
+                  fontSize: 13,
+                  color: colors
+                      .onSurfaceVariant,
+                ),
               ),
             ],
           ),
 
-          actionsAlignment:
-              MainAxisAlignment.center,
-
           actions: [
-            ElevatedButton(
-              onPressed: () {
-                Navigator.pop(
-                  dialogContext,
-                );
-              },
-              child: const Text(
-                'Awesome!',
+            SizedBox(
+              width:
+                  double.infinity,
+              child:
+                  ElevatedButton.icon(
+                onPressed: () {
+                  Navigator.pop(
+                    dialogContext,
+                  );
+
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (_) =>
+                          RewardQuestionScreen(
+                        reward:
+                            reward,
+                        gameName:
+                            'Lucky Slots',
+                      ),
+                    ),
+                  );
+                },
+                icon: const Icon(
+                  Icons.quiz_outlined,
+                ),
+                label: const Text(
+                  'Answer Question',
+                  style: TextStyle(
+                    fontWeight:
+                        FontWeight.bold,
+                  ),
+                ),
               ),
             ),
           ],
@@ -470,7 +627,7 @@ class _LuckySlotScreenState extends State<LuckySlotScreen> {
   }
 
   // =========================================================
-  // DATE KEY
+  // DATE
   // =========================================================
 
   String _dateKey(
@@ -482,6 +639,17 @@ class _LuckySlotScreenState extends State<LuckySlotScreen> {
   }
 
   // =========================================================
+  // DISPOSE
+  // =========================================================
+
+  @override
+  void dispose() {
+    _slotTimer?.cancel();
+
+    super.dispose();
+  }
+
+  // =========================================================
   // UI
   // =========================================================
 
@@ -489,6 +657,9 @@ class _LuckySlotScreenState extends State<LuckySlotScreen> {
   Widget build(
     BuildContext context,
   ) {
+    final ColorScheme colors =
+        Theme.of(context).colorScheme;
+
     return Scaffold(
       appBar: AppBar(
         title: const Text(
@@ -510,7 +681,8 @@ class _LuckySlotScreenState extends State<LuckySlotScreen> {
                 ),
 
                 child: Center(
-                  child: ConstrainedBox(
+                  child:
+                      ConstrainedBox(
                     constraints:
                         const BoxConstraints(
                       maxWidth: 500,
@@ -522,11 +694,16 @@ class _LuckySlotScreenState extends State<LuckySlotScreen> {
                           height: 10,
                         ),
 
+                        // ===================================
+                        // TITLE
+                        // ===================================
+
                         const Text(
                           'Lucky Slots',
                           textAlign:
                               TextAlign.center,
-                          style: TextStyle(
+                          style:
+                              TextStyle(
                             fontSize: 28,
                             fontWeight:
                                 FontWeight.bold,
@@ -539,18 +716,15 @@ class _LuckySlotScreenState extends State<LuckySlotScreen> {
 
                         Text(
                           canPlay
-                              ? 'Roll the slots and win the number shown!'
+                              ? 'Roll the slots, then answer a question to claim the reward!'
                               : 'You have already played today.',
                           textAlign:
                               TextAlign.center,
-                          style: TextStyle(
+                          style:
+                              TextStyle(
                             fontSize: 16,
-                            color:
-                                Theme.of(
-                              context,
-                            )
-                                    .colorScheme
-                                    .onSurfaceVariant,
+                            color: colors
+                                .onSurfaceVariant,
                           ),
                         ),
 
@@ -558,48 +732,34 @@ class _LuckySlotScreenState extends State<LuckySlotScreen> {
                           height: 35,
                         ),
 
-                        // =====================================
+                        // ===================================
                         // SLOT MACHINE
-                        // =====================================
+                        // ===================================
 
                         Container(
                           width:
                               double.infinity,
-
                           padding:
-                              const EdgeInsets
-                                  .all(20),
-
+                              const EdgeInsets.all(
+                            20,
+                          ),
                           decoration:
                               BoxDecoration(
-                            color:
-                                Theme.of(
-                              context,
-                            )
-                                    .colorScheme
-                                    .surfaceContainer,
-
+                            color: colors
+                                .surfaceContainer,
                             borderRadius:
-                                BorderRadius
-                                    .circular(
+                                BorderRadius.circular(
                               24,
                             ),
-
                             border:
                                 Border.all(
-                              color:
-                                  Theme.of(
-                                context,
-                              )
-                                      .colorScheme
-                                      .primary
-                                      .withValues(
-                                        alpha:
-                                            0.35,
-                                      ),
+                              color: colors
+                                  .primary
+                                  .withValues(
+                                alpha: 0.35,
+                              ),
                               width: 2,
                             ),
-
                             boxShadow:
                                 const [
                               BoxShadow(
@@ -615,7 +775,6 @@ class _LuckySlotScreenState extends State<LuckySlotScreen> {
                               ),
                             ],
                           ),
-
                           child: Column(
                             children: [
                               const Text(
@@ -630,9 +789,9 @@ class _LuckySlotScreenState extends State<LuckySlotScreen> {
                                 height: 20,
                               ),
 
-                              // ===============================
-                              // REELS
-                              // ===============================
+                              // =============================
+                              // THREE SINGLE-DIGIT REELS
+                              // =============================
 
                               Row(
                                 children: [
@@ -641,6 +800,8 @@ class _LuckySlotScreenState extends State<LuckySlotScreen> {
                                         _SlotReel(
                                       value:
                                           reel1,
+                                      spinning:
+                                          reel1Spinning,
                                     ),
                                   ),
 
@@ -653,6 +814,8 @@ class _LuckySlotScreenState extends State<LuckySlotScreen> {
                                         _SlotReel(
                                       value:
                                           reel2,
+                                      spinning:
+                                          reel2Spinning,
                                     ),
                                   ),
 
@@ -665,6 +828,8 @@ class _LuckySlotScreenState extends State<LuckySlotScreen> {
                                         _SlotReel(
                                       value:
                                           reel3,
+                                      spinning:
+                                          reel3Spinning,
                                     ),
                                   ),
                                 ],
@@ -675,15 +840,13 @@ class _LuckySlotScreenState extends State<LuckySlotScreen> {
                               ),
 
                               const Text(
-                                'The 3-digit number = your points!',
+                                'The 3 digits together = your potential reward!',
                                 textAlign:
-                                    TextAlign
-                                        .center,
+                                    TextAlign.center,
                                 style:
                                     TextStyle(
                                   fontWeight:
-                                      FontWeight
-                                          .bold,
+                                      FontWeight.bold,
                                 ),
                               ),
                             ],
@@ -694,15 +857,14 @@ class _LuckySlotScreenState extends State<LuckySlotScreen> {
                           height: 30,
                         ),
 
-                        // =====================================
+                        // ===================================
                         // PLAY BUTTON
-                        // =====================================
+                        // ===================================
 
                         SizedBox(
                           width:
                               double.infinity,
                           height: 55,
-
                           child:
                               ElevatedButton.icon(
                             onPressed:
@@ -710,175 +872,161 @@ class _LuckySlotScreenState extends State<LuckySlotScreen> {
                                         !spinning
                                     ? _play
                                     : null,
-
-                            icon:
-                                spinning
-                                    ? const SizedBox(
-                                        width:
-                                            22,
-                                        height:
-                                            22,
-                                        child:
-                                            CircularProgressIndicator(
-                                          strokeWidth:
-                                              2,
-                                        ),
-                                      )
-                                    : const Icon(
-                                        Icons
-                                            .casino_outlined,
-                                      ),
-
+                            icon: spinning
+                                ? const SizedBox(
+                                    width: 22,
+                                    height: 22,
+                                    child:
+                                        CircularProgressIndicator(
+                                      strokeWidth:
+                                          2,
+                                    ),
+                                  )
+                                : const Icon(
+                                    Icons
+                                        .casino_outlined,
+                                  ),
                             label: Text(
                               spinning
                                   ? 'SPINNING...'
                                   : canPlay
-                                      ? 'PLAY NOW'
+                                      ? 'ROLL NOW'
                                       : 'COME BACK TOMORROW',
                               style:
                                   const TextStyle(
-                                fontSize:
-                                    17,
+                                fontSize: 17,
                                 fontWeight:
-                                    FontWeight
-                                        .bold,
+                                    FontWeight.bold,
                               ),
                             ),
                           ),
                         ),
 
-                        // =====================================
-                        // TODAY'S WIN
-                        // =====================================
+                        // ===================================
+                        // TODAY'S REWARD
+                        // ===================================
 
                         if (wonReward !=
                             null) ...[
                           const SizedBox(
-                            height: 22,
+                            height: 20,
                           ),
 
                           Container(
                             width:
                                 double.infinity,
                             padding:
-                                const EdgeInsets
-                                    .all(16),
-
+                                const EdgeInsets.all(
+                              14,
+                            ),
                             decoration:
                                 BoxDecoration(
-                              color:
-                                  Theme.of(
-                                context,
-                              )
-                                      .colorScheme
-                                      .primaryContainer,
-
+                              color: colors
+                                  .primaryContainer,
                               borderRadius:
-                                  BorderRadius
-                                      .circular(
-                                15,
+                                  BorderRadius.circular(
+                                14,
                               ),
                             ),
-
                             child: Text(
                               wonReward == 777
-                                  ? '🎰 JACKPOT! You won 777 points!'
-                                  : '🎉 Today you won $wonReward points!',
+                                  ? '🎰 JACKPOT! 777 points available!'
+                                  : 'Today\'s reward: ⭐ $wonReward points',
                               textAlign:
-                                  TextAlign
-                                      .center,
+                                  TextAlign.center,
                               style:
-                                  const TextStyle(
-                                fontSize:
-                                    17,
+                                  TextStyle(
+                                fontSize: 17,
                                 fontWeight:
-                                    FontWeight
-                                        .bold,
+                                    FontWeight.bold,
+                                color: colors
+                                    .onPrimaryContainer,
                               ),
                             ),
                           ),
                         ],
 
                         const SizedBox(
-                          height: 30,
+                          height: 25,
                         ),
 
-                        // =====================================
-                        // POSSIBLE REWARD
-                        // =====================================
+                        // ===================================
+                        // HOW TO PLAY
+                        // ===================================
 
                         Card(
                           child: Padding(
                             padding:
-                                const EdgeInsets
-                                    .all(20),
-
+                                const EdgeInsets.all(
+                              18,
+                            ),
                             child: Column(
                               children: [
                                 const Text(
-                                  'Possible Reward',
+                                  '🎯 How to Play',
                                   style:
                                       TextStyle(
-                                    fontSize:
-                                        18,
+                                    fontSize: 17,
                                     fontWeight:
-                                        FontWeight
-                                            .bold,
+                                        FontWeight.bold,
                                   ),
                                 ),
 
                                 const SizedBox(
-                                  height: 15,
+                                  height: 14,
                                 ),
 
-                                Text(
-                                  '⭐ 10 - 999 Points',
-                                  style:
-                                      TextStyle(
-                                    fontSize:
-                                        25,
-                                    fontWeight:
-                                        FontWeight
-                                            .bold,
-                                    color:
-                                        Theme.of(
-                                      context,
-                                    )
-                                            .colorScheme
-                                            .primary,
-                                  ),
+                                const _HowToRow(
+                                  icon: Icons
+                                      .casino_outlined,
+                                  text:
+                                      'Each reel contains one digit from 0 to 9.',
                                 ),
 
                                 const SizedBox(
-                                  height: 10,
+                                  height: 14,
                                 ),
 
-                                const Text(
-                                  'Every play wins!',
-                                  style:
-                                      TextStyle(
-                                    fontSize:
-                                        15,
-                                    fontWeight:
-                                        FontWeight
-                                            .bold,
-                                  ),
+                                const _HowToRow(
+                                  icon: Icons
+                                      .stop_circle_outlined,
+                                  text:
+                                      'The reels stop one by one.',
                                 ),
 
                                 const SizedBox(
-                                  height: 8,
+                                  height: 14,
                                 ),
 
-                                const Text(
-                                  '🎰 Get 777 for the special jackpot!',
-                                  textAlign:
-                                      TextAlign
-                                          .center,
-                                  style:
-                                      TextStyle(
-                                    fontSize:
-                                        14,
-                                  ),
+                                const _HowToRow(
+                                  icon: Icons
+                                      .quiz_outlined,
+                                  text:
+                                      'Answer one DevOps question.',
+                                ),
+
+                                const SizedBox(
+                                  height: 14,
+                                ),
+
+                                const _HowToRow(
+                                  icon: Icons
+                                      .stars_outlined,
+                                  text:
+                                      'Correct answer = reward added to your points.',
+                                ),
+
+                                const SizedBox(
+                                  height: 14,
+                                ),
+
+                                const _HowToRow(
+                                  icon: Icons
+                                      .close_rounded,
+                                  text:
+                                      'Wrong answer = reward lost. Existing points are safe.',
+                                  error:
+                                      true,
                                 ),
                               ],
                             ),
@@ -891,19 +1039,14 @@ class _LuckySlotScreenState extends State<LuckySlotScreen> {
 
                         Row(
                           mainAxisAlignment:
-                              MainAxisAlignment
-                                  .center,
+                              MainAxisAlignment.center,
                           children: [
                             Icon(
                               Icons
                                   .calendar_today_outlined,
                               size: 16,
-                              color:
-                                  Theme.of(
-                                context,
-                              )
-                                      .colorScheme
-                                      .onSurfaceVariant,
+                              color: colors
+                                  .onSurfaceVariant,
                             ),
 
                             const SizedBox(
@@ -911,17 +1054,12 @@ class _LuckySlotScreenState extends State<LuckySlotScreen> {
                             ),
 
                             Text(
-                              'One free play every day',
+                              'One Lucky Slots play every day',
                               style:
                                   TextStyle(
-                                fontSize:
-                                    13,
-                                color:
-                                    Theme.of(
-                                  context,
-                                )
-                                        .colorScheme
-                                        .onSurfaceVariant,
+                                fontSize: 13,
+                                color: colors
+                                    .onSurfaceVariant,
                               ),
                             ),
                           ],
@@ -941,140 +1079,105 @@ class _LuckySlotScreenState extends State<LuckySlotScreen> {
 }
 
 // ===========================================================
-// SLOT REEL
+// SINGLE DIGIT SLOT REEL
 // ===========================================================
 
 class _SlotReel extends StatelessWidget {
   final int value;
+  final bool spinning;
 
   const _SlotReel({
     required this.value,
+    required this.spinning,
   });
 
   @override
   Widget build(
     BuildContext context,
   ) {
-    return Container(
-      height: 90,
+    final ColorScheme colors =
+        Theme.of(context).colorScheme;
 
+    return AnimatedContainer(
+      duration:
+          const Duration(
+        milliseconds: 150,
+      ),
+      height: 95,
       alignment:
           Alignment.center,
-
       decoration:
           BoxDecoration(
-        color:
-            Theme.of(context)
-                .colorScheme
-                .surface,
-
+        color: colors
+            .surfaceContainerHighest,
         borderRadius:
             BorderRadius.circular(
-          15,
+          16,
         ),
-
-        border:
-            Border.all(
-          color:
-              Theme.of(context)
-                  .colorScheme
+        border: Border.all(
+          color: spinning
+              ? colors.primary
+              : colors
                   .outlineVariant,
+          width: spinning
+              ? 2
+              : 1,
         ),
-
-        boxShadow:
-            const [
-          BoxShadow(
-            color:
-                Colors.black12,
-            blurRadius: 5,
-            offset:
-                Offset(
-              0,
-              2,
-            ),
-          ),
-        ],
+        boxShadow: spinning
+            ? [
+                BoxShadow(
+                  color: colors
+                      .primary
+                      .withValues(
+                    alpha: 0.20,
+                  ),
+                  blurRadius: 10,
+                ),
+              ]
+            : null,
       ),
 
-      // Clip prevents the moving number from
-      // appearing outside the reel window.
-      child: ClipRRect(
-        borderRadius:
-            BorderRadius.circular(
-          15,
+      // One digit only.
+      child: AnimatedSwitcher(
+        duration:
+            const Duration(
+          milliseconds: 70,
         ),
-
-        child:
-            AnimatedSwitcher(
-          duration:
-              const Duration(
-            milliseconds: 150,
-          ),
-
-          switchInCurve:
-              Curves.easeOut,
-
-          switchOutCurve:
-              Curves.easeIn,
-
-          transitionBuilder: (
-            child,
-            animation,
-          ) {
-            final slide =
-                Tween<Offset>(
+        transitionBuilder: (
+          child,
+          animation,
+        ) {
+          return SlideTransition(
+            position: Tween<Offset>(
               begin:
                   const Offset(
                 0,
-                -1.2,
+                -0.4,
               ),
               end:
                   Offset.zero,
             ).animate(
               animation,
-            );
-
-            return SlideTransition(
-              position: slide,
-              child: FadeTransition(
-                opacity:
-                    animation,
-                child:
-                    child,
-              ),
-            );
-          },
-
-          child: SizedBox(
-            key:
-                ValueKey(
-              value,
             ),
-
-            width:
-                double.infinity,
-            height: 90,
-
             child:
-                Center(
-              child: Text(
-                '$value',
-                style:
-                    TextStyle(
-                  fontSize:
-                      46,
-                  fontWeight:
-                      FontWeight
-                          .bold,
-                  color:
-                      Theme.of(
-                    context,
-                  )
-                          .colorScheme
-                          .primary,
-                ),
-              ),
+                FadeTransition(
+              opacity:
+                  animation,
+              child:
+                  child,
             ),
+          );
+        },
+        child: Text(
+          value.toString(),
+          key: ValueKey<int>(
+            value,
+          ),
+          style:
+              const TextStyle(
+            fontSize: 44,
+            fontWeight:
+                FontWeight.bold,
           ),
         ),
       ),
@@ -1086,7 +1189,8 @@ class _SlotReel extends StatelessWidget {
 // RESULT DIGIT
 // ===========================================================
 
-class _ResultDigit extends StatelessWidget {
+class _ResultDigit
+    extends StatelessWidget {
   final String digit;
   final bool jackpot;
 
@@ -1099,57 +1203,94 @@ class _ResultDigit extends StatelessWidget {
   Widget build(
     BuildContext context,
   ) {
-    return Container(
-      width: 52,
-      height: 60,
+    final ColorScheme colors =
+        Theme.of(context).colorScheme;
 
+    return Container(
+      width: 55,
+      height: 65,
       alignment:
           Alignment.center,
-
       decoration:
           BoxDecoration(
-        color:
-            Theme.of(context)
-                .colorScheme
-                .surfaceContainer,
-
+        color: jackpot
+            ? Colors.orange
+                .withValues(
+                alpha: 0.15,
+              )
+            : colors
+                .primaryContainer,
         borderRadius:
             BorderRadius.circular(
-          10,
+          12,
         ),
-
-        border:
-            Border.all(
-          color:
-              jackpot
-                  ? Colors.orange
-                  : Theme.of(
-                      context,
-                    )
-                        .colorScheme
-                        .outlineVariant,
-          width:
-              jackpot ? 2 : 1,
+        border: Border.all(
+          color: jackpot
+              ? Colors.orange
+              : colors.primary,
+          width: 2,
         ),
       ),
-
       child: Text(
         digit,
-        style:
-            TextStyle(
-          fontSize: 32,
+        style: TextStyle(
+          fontSize: 30,
           fontWeight:
               FontWeight.bold,
-          color:
-              jackpot
-                  ? Colors.orange
-                  : Theme.of(
-                      context,
-                    )
-                        .colorScheme
-                        .primary,
+          color: jackpot
+              ? Colors.orange
+              : colors
+                  .onPrimaryContainer,
         ),
       ),
+    );
+  }
+}
+
+// ===========================================================
+// HOW TO ROW
+// ===========================================================
+
+class _HowToRow
+    extends StatelessWidget {
+  final IconData icon;
+  final String text;
+  final bool error;
+
+  const _HowToRow({
+    required this.icon,
+    required this.text,
+    this.error = false,
+  });
+
+  @override
+  Widget build(
+    BuildContext context,
+  ) {
+    final ColorScheme colors =
+        Theme.of(context).colorScheme;
+
+    return Row(
+      crossAxisAlignment:
+          CrossAxisAlignment.start,
+      children: [
+        Icon(
+          icon,
+          color: error
+              ? colors.error
+              : colors.primary,
+        ),
+
+        const SizedBox(
+          width: 12,
+        ),
+
+        Expanded(
+          child: Text(
+            text,
+          ),
+        ),
+      ],
     );
   }
 }

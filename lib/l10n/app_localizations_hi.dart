@@ -66,6 +66,15 @@ class AppLocalizationsHi extends AppLocalizations {
   String get ok => 'ठीक है';
 
   @override
+  String get games => 'गेम्स';
+
+  @override
+  String get referAndEarn => 'रेफर करें और कमाएँ';
+
+  @override
+  String get themes => 'थीम्स';
+
+  @override
   String get version => 'संस्करण';
 
   @override
@@ -245,7 +254,7 @@ class AppLocalizationsHi extends AppLocalizations {
   String get achievements => 'उपलब्धियाँ';
 
   @override
-  String get streak => 'Streak';
+  String get streak => 'लगातार दिन';
 
   @override
   String get days => 'दिन';

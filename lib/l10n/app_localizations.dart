@@ -211,6 +211,24 @@ abstract class AppLocalizations {
   /// **'OK'**
   String get ok;
 
+  /// No description provided for @games.
+  ///
+  /// In en, this message translates to:
+  /// **'Games'**
+  String get games;
+
+  /// No description provided for @referAndEarn.
+  ///
+  /// In en, this message translates to:
+  /// **'Refer & Earn'**
+  String get referAndEarn;
+
+  /// No description provided for @themes.
+  ///
+  /// In en, this message translates to:
+  /// **'Themes'**
+  String get themes;
+
   /// No description provided for @version.
   ///
   /// In en, this message translates to:

@@ -1,13 +1,14 @@
 import 'dart:math';
 
 import 'package:flutter/material.dart';
-import 'package:scratcher/scratcher.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
-import '../services/point_service.dart';
+import 'reward_question_screen.dart';
 
 class ScratchCardScreen extends StatefulWidget {
-  const ScratchCardScreen({super.key});
+  const ScratchCardScreen({
+    super.key,
+  });
 
   @override
   State<ScratchCardScreen> createState() =>
@@ -17,12 +18,20 @@ class ScratchCardScreen extends StatefulWidget {
 class _ScratchCardScreenState
     extends State<ScratchCardScreen> {
   static const String _lastScratchKey =
-      'scratch_card_last_date';
+      'scratch_card_last_scratch_date';
 
   final Random _random = Random();
 
-  final GlobalKey<ScratcherState> _scratcherKey =
-      GlobalKey<ScratcherState>();
+  final List<int> rewards = [
+    10,
+    20,
+    50,
+    100,
+    200,
+    500,
+    750,
+    1000,
+  ];
 
   bool loading = true;
   bool canScratch = false;
@@ -30,89 +39,92 @@ class _ScratchCardScreenState
 
   int reward = 0;
 
+  final List<Offset> _scratchPoints = [];
+
+  // =========================================================
+  // INIT
+  // =========================================================
+
   @override
   void initState() {
     super.initState();
 
-    _initializeScratchCard();
+    _checkDailyScratch();
   }
 
   // =========================================================
-  // INITIALIZE
+  // CHECK DAILY SCRATCH
   // =========================================================
 
-  Future<void> _initializeScratchCard() async {
-    final prefs =
+  Future<void> _checkDailyScratch() async {
+    final SharedPreferences prefs =
         await SharedPreferences.getInstance();
-
-    final String today =
-        _dateKey(DateTime.now());
 
     final String? lastScratch =
         prefs.getString(
       _lastScratchKey,
     );
 
-    final bool available =
-        lastScratch != today;
+    final String today =
+        _dateKey(
+      DateTime.now(),
+    );
 
-    int generatedReward = 0;
-
-    if (available) {
-      generatedReward =
-          _generateWeightedReward();
+    if (!mounted) {
+      return;
     }
 
-    if (!mounted) return;
-
     setState(() {
-      canScratch = available;
-      reward = generatedReward;
+      canScratch =
+          lastScratch != today;
+
       loading = false;
+
+      if (canScratch) {
+        reward =
+            rewards[
+                _random.nextInt(
+                  rewards.length,
+                )];
+      }
     });
   }
 
   // =========================================================
-  // WEIGHTED REWARD
+  // SCRATCH
   // =========================================================
 
-  int _generateWeightedReward() {
-    final int roll =
-        _random.nextInt(100) + 1;
-
-    if (roll <= 25) {
-      return 10;
+  void _scratch(
+    Offset position,
+  ) {
+    if (!canScratch ||
+        rewardClaimed) {
+      return;
     }
 
-    if (roll <= 45) {
-      return 20;
-    }
+    setState(() {
+      _scratchPoints.add(
+        position,
+      );
+    });
 
-    if (roll <= 63) {
-      return 50;
-    }
+    // Once enough scratch gestures have
+    // been made, reveal the reward.
+    //
+    // This is intentionally simple and
+    // works consistently across mobile/web.
 
-    if (roll <= 78) {
-      return 100;
+    if (_scratchPoints.length >= 45) {
+      _claimReward();
     }
-
-    if (roll <= 88) {
-      return 200;
-    }
-
-    if (roll <= 94) {
-      return 500;
-    }
-
-    if (roll <= 98) {
-      return 750;
-    }
-
-    return 1000;
   }
 
   // =========================================================
-  // CLAIM REWARD
+  // REVEAL REWARD
+  //
+  // IMPORTANT:
+  // Points are NOT added here.
+  // The user must answer a question first.
   // =========================================================
 
   Future<void> _claimReward() async {
@@ -122,16 +134,15 @@ class _ScratchCardScreenState
       return;
     }
 
-    // Prevent another completion callback.
     setState(() {
       rewardClaimed = true;
     });
 
-    await PointService.addPoints(
-      reward,
-    );
+    // =======================================================
+    // CONSUME TODAY'S SCRATCH
+    // =======================================================
 
-    final prefs =
+    final SharedPreferences prefs =
         await SharedPreferences.getInstance();
 
     await prefs.setString(
@@ -141,35 +152,50 @@ class _ScratchCardScreenState
       ),
     );
 
-    if (!mounted) return;
+    if (!mounted) {
+      return;
+    }
 
     setState(() {
       canScratch = false;
     });
 
-    await _showRewardDialog();
+    await _showChallengeDialog();
   }
 
   // =========================================================
-  // REWARD DIALOG
+  // CHALLENGE DIALOG
   // =========================================================
 
-  Future<void> _showRewardDialog() async {
+  Future<void>
+      _showChallengeDialog() async {
+    if (!mounted) {
+      return;
+    }
+
     await showDialog<void>(
       context: context,
       barrierDismissible: false,
-      builder: (dialogContext) {
+      builder: (
+        dialogContext,
+      ) {
+        final ColorScheme colors =
+            Theme.of(
+          dialogContext,
+        ).colorScheme;
+
         return AlertDialog(
           icon: const Text(
-            '🎉',
+            '🎟️',
             style: TextStyle(
               fontSize: 55,
             ),
           ),
 
           title: const Text(
-            'Congratulations!',
-            textAlign: TextAlign.center,
+            'Reward Revealed!',
+            textAlign:
+                TextAlign.center,
           ),
 
           content: Column(
@@ -177,9 +203,9 @@ class _ScratchCardScreenState
                 MainAxisSize.min,
             children: [
               const Text(
-                'You won',
+                'You found',
                 style: TextStyle(
-                  fontSize: 18,
+                  fontSize: 17,
                 ),
               ),
 
@@ -188,14 +214,13 @@ class _ScratchCardScreenState
               ),
 
               Text(
-                '⭐ +$reward',
+                '⭐ $reward',
                 style: TextStyle(
-                  fontSize: 34,
+                  fontSize: 36,
                   fontWeight:
                       FontWeight.bold,
-                  color: Theme.of(context)
-                      .colorScheme
-                      .primary,
+                  color:
+                      colors.primary,
                 ),
               ),
 
@@ -214,29 +239,89 @@ class _ScratchCardScreenState
               ),
 
               const SizedBox(
-                height: 18,
+                height: 20,
               ),
 
-              const Text(
-                'Come back tomorrow for another scratch card!',
+              Container(
+                width:
+                    double.infinity,
+                padding:
+                    const EdgeInsets.all(
+                  14,
+                ),
+                decoration:
+                    BoxDecoration(
+                  color: colors
+                      .primaryContainer,
+                  borderRadius:
+                      BorderRadius.circular(
+                    14,
+                  ),
+                ),
+                child: Text(
+                  'Answer 1 quiz question correctly to claim this reward.',
+                  textAlign:
+                      TextAlign.center,
+                  style: TextStyle(
+                    fontWeight:
+                        FontWeight.w600,
+                    color: colors
+                        .onPrimaryContainer,
+                  ),
+                ),
+              ),
+
+              const SizedBox(
+                height: 10,
+              ),
+
+              Text(
+                'Wrong answer = reward lost.',
                 textAlign:
                     TextAlign.center,
+                style: TextStyle(
+                  fontSize: 13,
+                  color: colors
+                      .onSurfaceVariant,
+                ),
               ),
             ],
           ),
 
-          actionsAlignment:
-              MainAxisAlignment.center,
-
           actions: [
-            ElevatedButton(
-              onPressed: () {
-                Navigator.pop(
-                  dialogContext,
-                );
-              },
-              child: const Text(
-                'Awesome!',
+            SizedBox(
+              width:
+                  double.infinity,
+              child:
+                  ElevatedButton.icon(
+                onPressed: () {
+                  Navigator.pop(
+                    dialogContext,
+                  );
+
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (_) =>
+                          RewardQuestionScreen(
+                        reward:
+                            reward,
+                        gameName:
+                            'Scratch Card',
+                      ),
+                    ),
+                  );
+                },
+                icon: const Icon(
+                  Icons.quiz_outlined,
+                ),
+                label: const Text(
+                  'Answer Question',
+                  style: TextStyle(
+                    fontWeight:
+                        FontWeight.bold,
+                  ),
+                ),
               ),
             ),
           ],
@@ -246,7 +331,7 @@ class _ScratchCardScreenState
   }
 
   // =========================================================
-  // DATE
+  // DATE KEY
   // =========================================================
 
   String _dateKey(
@@ -258,11 +343,16 @@ class _ScratchCardScreenState
   }
 
   // =========================================================
-  // UI
+  // BUILD
   // =========================================================
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(
+    BuildContext context,
+  ) {
+    final ColorScheme colors =
+        Theme.of(context).colorScheme;
+
     return Scaffold(
       appBar: AppBar(
         title: const Text(
@@ -284,7 +374,8 @@ class _ScratchCardScreenState
                 ),
 
                 child: Center(
-                  child: ConstrainedBox(
+                  child:
+                      ConstrainedBox(
                     constraints:
                         const BoxConstraints(
                       maxWidth: 500,
@@ -296,16 +387,21 @@ class _ScratchCardScreenState
                           height: 10,
                         ),
 
-                        // =================================
+                        // =====================================
                         // TITLE
-                        // =================================
+                        // =====================================
 
                         const Text(
                           'Daily Scratch',
-                          style: TextStyle(
+                          textAlign:
+                              TextAlign
+                                  .center,
+                          style:
+                              TextStyle(
                             fontSize: 28,
                             fontWeight:
-                                FontWeight.bold,
+                                FontWeight
+                                    .bold,
                           ),
                         ),
 
@@ -315,150 +411,150 @@ class _ScratchCardScreenState
 
                         Text(
                           canScratch
-                              ? 'Scratch the card and reveal your reward!'
+                              ? 'Scratch the card to reveal today\'s reward!'
                               : 'You have already used today\'s scratch card.',
-
                           textAlign:
-                              TextAlign.center,
-
-                          style: TextStyle(
+                              TextAlign
+                                  .center,
+                          style:
+                              TextStyle(
                             fontSize: 16,
-                            color: Theme.of(
-                              context,
-                            )
-                                .colorScheme
+                            color: colors
                                 .onSurfaceVariant,
                           ),
                         ),
 
                         const SizedBox(
-                          height: 35,
-                        ),
-
-                        // =================================
-                        // SCRATCH CARD
-                        // =================================
-
-                        if (canScratch)
-                          _buildScratchCard(
-                            context,
-                          )
-                        else
-                          _buildCompletedCard(
-                            context,
-                          ),
-
-                        const SizedBox(
                           height: 30,
                         ),
 
-                        // =================================
-                        // INFO
-                        // =================================
+                        // =====================================
+                        // SCRATCH CARD
+                        // =====================================
+
+                        _buildScratchCard(
+                          context,
+                        ),
+
+                        const SizedBox(
+                          height: 24,
+                        ),
+
+                        // =====================================
+                        // STATUS
+                        // =====================================
+
+                        if (!canScratch &&
+                            rewardClaimed)
+                          Container(
+                            width:
+                                double.infinity,
+                            padding:
+                                const EdgeInsets
+                                    .all(
+                              14,
+                            ),
+                            decoration:
+                                BoxDecoration(
+                              color: colors
+                                  .primaryContainer,
+                              borderRadius:
+                                  BorderRadius
+                                      .circular(
+                                14,
+                              ),
+                            ),
+                            child: Text(
+                              'Today\'s reward: ⭐ $reward points',
+                              textAlign:
+                                  TextAlign
+                                      .center,
+                              style:
+                                  TextStyle(
+                                fontSize:
+                                    17,
+                                fontWeight:
+                                    FontWeight
+                                        .bold,
+                                color: colors
+                                    .onPrimaryContainer,
+                              ),
+                            ),
+                          ),
+
+                        const SizedBox(
+                          height: 24,
+                        ),
+
+                        // =====================================
+                        // HOW TO PLAY
+                        // =====================================
 
                         Card(
-                          elevation: 2,
-
                           child: Padding(
                             padding:
                                 const EdgeInsets
-                                    .all(18),
-
+                                    .all(
+                              18,
+                            ),
                             child: Column(
                               children: [
-                                Row(
-                                  children: [
-                                    Icon(
-                                      Icons
-                                          .touch_app_outlined,
-                                      color: Theme.of(
-                                        context,
-                                      )
-                                          .colorScheme
-                                          .primary,
-                                    ),
-
-                                    const SizedBox(
-                                      width: 12,
-                                    ),
-
-                                    const Expanded(
-                                      child: Text(
-                                        'Use your finger to scratch the card.',
-                                        style:
-                                            TextStyle(
-                                          fontSize:
-                                              15,
-                                        ),
-                                      ),
-                                    ),
-                                  ],
+                                const Text(
+                                  '🎯 How to Play',
+                                  style:
+                                      TextStyle(
+                                    fontSize:
+                                        17,
+                                    fontWeight:
+                                        FontWeight
+                                            .bold,
+                                  ),
                                 ),
 
                                 const SizedBox(
-                                  height: 15,
+                                  height: 14,
                                 ),
 
-                                Row(
-                                  children: [
-                                    Icon(
-                                      Icons
-                                          .stars_outlined,
-                                      color: Theme.of(
-                                        context,
-                                      )
-                                          .colorScheme
-                                          .primary,
-                                    ),
-
-                                    const SizedBox(
-                                      width: 12,
-                                    ),
-
-                                    const Expanded(
-                                      child: Text(
-                                        'Win up to 1,000 bonus points.',
-                                        style:
-                                            TextStyle(
-                                          fontSize:
-                                              15,
-                                        ),
-                                      ),
-                                    ),
-                                  ],
+                                _HowToRow(
+                                  icon: Icons
+                                      .touch_app_outlined,
+                                  text:
+                                      'Scratch the card to reveal your reward.',
                                 ),
 
                                 const SizedBox(
-                                  height: 15,
+                                  height: 14,
                                 ),
 
-                                Row(
-                                  children: [
-                                    Icon(
-                                      Icons
-                                          .calendar_today_outlined,
-                                      color: Theme.of(
-                                        context,
-                                      )
-                                          .colorScheme
-                                          .primary,
-                                    ),
+                                _HowToRow(
+                                  icon: Icons
+                                      .quiz_outlined,
+                                  text:
+                                      'Answer one DevOps question.',
+                                ),
 
-                                    const SizedBox(
-                                      width: 12,
-                                    ),
+                                const SizedBox(
+                                  height: 14,
+                                ),
 
-                                    const Expanded(
-                                      child: Text(
-                                        'One scratch card is available every day.',
-                                        style:
-                                            TextStyle(
-                                          fontSize:
-                                              15,
-                                        ),
-                                      ),
-                                    ),
-                                  ],
+                                _HowToRow(
+                                  icon: Icons
+                                      .stars_outlined,
+                                  text:
+                                      'Correct answer = reward added to your points.',
+                                ),
+
+                                const SizedBox(
+                                  height: 14,
+                                ),
+
+                                _HowToRow(
+                                  icon: Icons
+                                      .close_rounded,
+                                  text:
+                                      'Wrong answer = reward lost. Existing points are safe.',
+                                  error:
+                                      true,
                                 ),
                               ],
                             ),
@@ -469,13 +565,38 @@ class _ScratchCardScreenState
                           height: 20,
                         ),
 
-                        const Text(
-                          'Come back every day for another chance to win!',
-                          textAlign:
-                              TextAlign.center,
-                          style: TextStyle(
-                            fontSize: 13,
-                          ),
+                        Row(
+                          mainAxisAlignment:
+                              MainAxisAlignment
+                                  .center,
+                          children: [
+                            Icon(
+                              Icons
+                                  .calendar_today_outlined,
+                              size: 16,
+                              color: colors
+                                  .onSurfaceVariant,
+                            ),
+
+                            const SizedBox(
+                              width: 7,
+                            ),
+
+                            Text(
+                              'One scratch card every day',
+                              style:
+                                  TextStyle(
+                                fontSize:
+                                    13,
+                                color: colors
+                                    .onSurfaceVariant,
+                              ),
+                            ),
+                          ],
+                        ),
+
+                        const SizedBox(
+                          height: 20,
                         ),
                       ],
                     ),
@@ -487,213 +608,442 @@ class _ScratchCardScreenState
   }
 
   // =========================================================
-  // ACTIVE SCRATCH CARD
+  // SCRATCH CARD UI
   // =========================================================
 
   Widget _buildScratchCard(
     BuildContext context,
   ) {
-    final double width =
-        min(
-      MediaQuery.sizeOf(context)
-              .width -
-          40,
-      380,
-    );
+    final ColorScheme colors =
+        Theme.of(context).colorScheme;
 
-    return Container(
-      decoration: BoxDecoration(
-        borderRadius:
-            BorderRadius.circular(22),
-        boxShadow: const [
-          BoxShadow(
-            color: Colors.black12,
-            blurRadius: 12,
-            offset: Offset(
-              0,
-              5,
-            ),
+    // =======================================================
+    // ALREADY USED
+    // =======================================================
+
+    if (!canScratch &&
+        !rewardClaimed) {
+      return Container(
+        width:
+            double.infinity,
+        height: 220,
+        decoration:
+            BoxDecoration(
+          color: colors
+              .surfaceContainerHighest,
+          borderRadius:
+              BorderRadius.circular(
+            24,
           ),
-        ],
+        ),
+        child: Column(
+          mainAxisAlignment:
+              MainAxisAlignment.center,
+          children: [
+            const Text(
+              '🎟️',
+              style: TextStyle(
+                fontSize: 55,
+              ),
+            ),
+
+            const SizedBox(
+              height: 12,
+            ),
+
+            const Text(
+              'Already Scratched',
+              style: TextStyle(
+                fontSize: 21,
+                fontWeight:
+                    FontWeight.bold,
+              ),
+            ),
+
+            const SizedBox(
+              height: 8,
+            ),
+
+            Text(
+              'Come back tomorrow for another reward.',
+              textAlign:
+                  TextAlign.center,
+              style: TextStyle(
+                color: colors
+                    .onSurfaceVariant,
+              ),
+            ),
+          ],
+        ),
+      );
+    }
+
+    // =======================================================
+    // REWARD REVEALED
+    // =======================================================
+
+    if (rewardClaimed) {
+      return Container(
+        width:
+            double.infinity,
+        height: 220,
+        decoration:
+            BoxDecoration(
+          color:
+              colors.primaryContainer,
+          borderRadius:
+              BorderRadius.circular(
+            24,
+          ),
+          border: Border.all(
+            color:
+                colors.primary,
+            width: 2,
+          ),
+        ),
+        child: Column(
+          mainAxisAlignment:
+              MainAxisAlignment.center,
+          children: [
+            const Text(
+              '🎉',
+              style: TextStyle(
+                fontSize: 48,
+              ),
+            ),
+
+            const SizedBox(
+              height: 10,
+            ),
+
+            const Text(
+              'You revealed',
+              style: TextStyle(
+                fontSize: 17,
+              ),
+            ),
+
+            const SizedBox(
+              height: 6,
+            ),
+
+            Text(
+              '⭐ $reward',
+              style: TextStyle(
+                fontSize: 38,
+                fontWeight:
+                    FontWeight.bold,
+                color: colors
+                    .onPrimaryContainer,
+              ),
+            ),
+
+            const SizedBox(
+              height: 4,
+            ),
+
+            Text(
+              'POINTS',
+              style: TextStyle(
+                fontWeight:
+                    FontWeight.bold,
+                color: colors
+                    .onPrimaryContainer,
+              ),
+            ),
+          ],
+        ),
+      );
+    }
+
+    // =======================================================
+    // ACTIVE SCRATCH CARD
+    // =======================================================
+
+    return ClipRRect(
+      borderRadius:
+          BorderRadius.circular(
+        24,
       ),
+      child: SizedBox(
+        width:
+            double.infinity,
+        height: 220,
+        child: LayoutBuilder(
+          builder: (
+            context,
+            constraints,
+          ) {
+            return Stack(
+              fit: StackFit.expand,
+              children: [
+                // ===========================================
+                // REWARD UNDER SCRATCH LAYER
+                // ===========================================
 
-      child: ClipRRect(
-        borderRadius:
-            BorderRadius.circular(22),
+                Container(
+                  color:
+                      colors.primaryContainer,
+                  child: Column(
+                    mainAxisAlignment:
+                        MainAxisAlignment
+                            .center,
+                    children: [
+                      const Text(
+                        '🎁',
+                        style:
+                            TextStyle(
+                          fontSize:
+                              45,
+                        ),
+                      ),
 
-        child: Scratcher(
-          key: _scratcherKey,
+                      const SizedBox(
+                        height:
+                            8,
+                      ),
 
-          brushSize: 45,
+                      Text(
+                        '⭐ $reward',
+                        style:
+                            TextStyle(
+                          fontSize:
+                              38,
+                          fontWeight:
+                              FontWeight
+                                  .bold,
+                          color: colors
+                              .onPrimaryContainer,
+                        ),
+                      ),
 
-          threshold: 55,
+                      const SizedBox(
+                        height:
+                            4,
+                      ),
 
-          color: Colors.grey.shade400,
-
-          onThreshold: () async {
-            await _claimReward();
-          },
-
-          child: SizedBox(
-            width: width,
-            height: 220,
-
-            child: Container(
-              decoration: BoxDecoration(
-                gradient:
-                    LinearGradient(
-                  begin:
-                      Alignment.topLeft,
-                  end:
-                      Alignment.bottomRight,
-                  colors: [
-                    Theme.of(context)
-                        .colorScheme
-                        .primaryContainer,
-
-                    Theme.of(context)
-                        .colorScheme
-                        .secondaryContainer,
-                  ],
+                      Text(
+                        'POINTS',
+                        style:
+                            TextStyle(
+                          fontWeight:
+                              FontWeight
+                                  .bold,
+                          color: colors
+                              .onPrimaryContainer,
+                        ),
+                      ),
+                    ],
+                  ),
                 ),
-              ),
 
-              child: Column(
-                mainAxisAlignment:
-                    MainAxisAlignment
-                        .center,
-                children: [
-                  const Text(
-                    '🎉',
-                    style: TextStyle(
-                      fontSize: 45,
+                // ===========================================
+                // SCRATCH LAYER
+                // ===========================================
+
+                GestureDetector(
+                  behavior:
+                      HitTestBehavior
+                          .opaque,
+
+                  onPanStart: (
+                    details,
+                  ) {
+                    _scratch(
+                      details
+                          .localPosition,
+                    );
+                  },
+
+                  onPanUpdate: (
+                    details,
+                  ) {
+                    _scratch(
+                      details
+                          .localPosition,
+                    );
+                  },
+
+                  child:
+                      CustomPaint(
+                    painter:
+                        _ScratchPainter(
+                      scratchPoints:
+                          _scratchPoints,
+                      coverColor:
+                          colors
+                              .secondaryContainer,
+                      textColor:
+                          colors
+                              .onSecondaryContainer,
                     ),
                   ),
-
-                  const SizedBox(
-                    height: 10,
-                  ),
-
-                  const Text(
-                    'YOU WON',
-                    style: TextStyle(
-                      fontSize: 16,
-                      fontWeight:
-                          FontWeight.bold,
-                      letterSpacing:
-                          1.5,
-                    ),
-                  ),
-
-                  const SizedBox(
-                    height: 8,
-                  ),
-
-                  Text(
-                    '⭐ $reward',
-                    style: TextStyle(
-                      fontSize: 38,
-                      fontWeight:
-                          FontWeight.bold,
-                      color:
-                          Theme.of(context)
-                              .colorScheme
-                              .primary,
-                    ),
-                  ),
-
-                  const Text(
-                    'POINTS',
-                    style: TextStyle(
-                      fontSize: 14,
-                      fontWeight:
-                          FontWeight.bold,
-                      letterSpacing:
-                          2,
-                    ),
-                  ),
-                ],
-              ),
-            ),
-          ),
+                ),
+              ],
+            );
+          },
         ),
       ),
     );
   }
+}
 
-  // =========================================================
-  // COMPLETED CARD
-  // =========================================================
+// ===========================================================
+// SCRATCH PAINTER
+// ===========================================================
 
-  Widget _buildCompletedCard(
+class _ScratchPainter
+    extends CustomPainter {
+  final List<Offset>
+      scratchPoints;
+
+  final Color coverColor;
+  final Color textColor;
+
+  _ScratchPainter({
+    required this.scratchPoints,
+    required this.coverColor,
+    required this.textColor,
+  });
+
+  @override
+  void paint(
+    Canvas canvas,
+    Size size,
+  ) {
+    final Paint coverPaint =
+        Paint()
+          ..color =
+              coverColor;
+
+    canvas.drawRect(
+      Offset.zero &
+          size,
+      coverPaint,
+    );
+
+    // =======================================================
+    // SCRATCH INSTRUCTION
+    // =======================================================
+
+    if (scratchPoints.length <
+        15) {
+      final TextPainter
+          textPainter =
+          TextPainter(
+        text: TextSpan(
+          text:
+              'SCRATCH HERE\n👆',
+          style:
+              TextStyle(
+            color:
+                textColor,
+            fontSize: 22,
+            fontWeight:
+                FontWeight.bold,
+            height: 1.5,
+          ),
+        ),
+        textAlign:
+            TextAlign.center,
+        textDirection:
+            TextDirection.ltr,
+      );
+
+      textPainter.layout(
+        maxWidth:
+            size.width,
+      );
+
+      textPainter.paint(
+        canvas,
+        Offset(
+          (size.width -
+                  textPainter
+                      .width) /
+              2,
+          (size.height -
+                  textPainter
+                      .height) /
+              2,
+        ),
+      );
+    }
+
+    // =======================================================
+    // ERASE SCRATCHED AREAS
+    // =======================================================
+
+    final Paint scratchPaint =
+        Paint()
+          ..blendMode =
+              BlendMode.clear
+          ..style =
+              PaintingStyle.fill;
+
+    for (final Offset point
+        in scratchPoints) {
+      canvas.drawCircle(
+        point,
+        25,
+        scratchPaint,
+      );
+    }
+  }
+
+  @override
+  bool shouldRepaint(
+    covariant _ScratchPainter
+        oldDelegate,
+  ) {
+    return true;
+  }
+}
+
+// ===========================================================
+// HOW TO ROW
+// ===========================================================
+
+class _HowToRow
+    extends StatelessWidget {
+  final IconData icon;
+  final String text;
+  final bool error;
+
+  const _HowToRow({
+    required this.icon,
+    required this.text,
+    this.error = false,
+  });
+
+  @override
+  Widget build(
     BuildContext context,
   ) {
-    return Container(
-      width: double.infinity,
-      constraints:
-          const BoxConstraints(
-        maxWidth: 380,
-      ),
+    final ColorScheme colors =
+        Theme.of(context).colorScheme;
 
-      height: 200,
-
-      decoration: BoxDecoration(
-        color: Theme.of(context)
-            .colorScheme
-            .surfaceContainer,
-
-        borderRadius:
-            BorderRadius.circular(22),
-
-        border: Border.all(
-          color: Theme.of(context)
-              .colorScheme
-              .outlineVariant,
+    return Row(
+      crossAxisAlignment:
+          CrossAxisAlignment.start,
+      children: [
+        Icon(
+          icon,
+          color: error
+              ? colors.error
+              : colors.primary,
         ),
-      ),
 
-      child: Column(
-        mainAxisAlignment:
-            MainAxisAlignment.center,
-        children: [
-          const Text(
-            '⏳',
-            style: TextStyle(
-              fontSize: 45,
-            ),
-          ),
+        const SizedBox(
+          width: 12,
+        ),
 
-          const SizedBox(
-            height: 12,
+        Expanded(
+          child: Text(
+            text,
           ),
-
-          const Text(
-            'Today\'s card is complete',
-            textAlign:
-                TextAlign.center,
-            style: TextStyle(
-              fontSize: 19,
-              fontWeight:
-                  FontWeight.bold,
-            ),
-          ),
-
-          const SizedBox(
-            height: 8,
-          ),
-
-          Text(
-            'New scratch card available tomorrow',
-            textAlign:
-                TextAlign.center,
-            style: TextStyle(
-              color: Theme.of(context)
-                  .colorScheme
-                  .onSurfaceVariant,
-            ),
-          ),
-        ],
-      ),
+        ),
+      ],
     );
   }
 }
