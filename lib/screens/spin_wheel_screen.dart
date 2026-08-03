@@ -2,8 +2,8 @@ import 'dart:math';
 
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-
 import 'reward_question_screen.dart';
+import 'games_screen.dart';
 
 class SpinWheelScreen extends StatefulWidget {
   const SpinWheelScreen({super.key});
@@ -234,6 +234,7 @@ class _SpinWheelScreenState
         return AlertDialog(
           icon: const Text(
             '🎡',
+            textAlign: TextAlign.center,
             style: TextStyle(
               fontSize: 55,
             ),
@@ -647,207 +648,37 @@ class _SpinWheelScreenState
                         ],
 
                         const SizedBox(
-                          height: 24,
-                        ),
+  height: 20,
+),
 
-                        // =====================================
-                        // HOW TO PLAY
-                        // =====================================
+SizedBox(
+  width: double.infinity,
+  height: 52,
+  child: ElevatedButton.icon(
+    onPressed: () {
+      Navigator.pushReplacement(
+        context,
+        MaterialPageRoute(
+          builder: (_) => const GamesScreen(),
+        ),
+      );
+    },
+    icon: const Icon(
+      Icons.sports_esports_outlined,
+    ),
+    label: const Text(
+      'Play More Games',
+      style: TextStyle(
+        fontSize: 16,
+        fontWeight: FontWeight.bold,
+      ),
+    ),
+  ),
+),
 
-                        Card(
-                          child: Padding(
-                            padding:
-                                const EdgeInsets
-                                    .all(
-                              18,
-                            ),
-                            child: Column(
-                              children: [
-                                const Text(
-                                  '🎯 How to Play',
-                                  style:
-                                      TextStyle(
-                                    fontSize:
-                                        17,
-                                    fontWeight:
-                                        FontWeight
-                                            .bold,
-                                  ),
-                                ),
-
-                                const SizedBox(
-                                  height: 12,
-                                ),
-
-                                Row(
-                                  children: [
-                                    Icon(
-                                      Icons
-                                          .casino_outlined,
-                                      color:
-                                          Theme.of(
-                                        context,
-                                      )
-                                              .colorScheme
-                                              .primary,
-                                    ),
-
-                                    const SizedBox(
-                                      width:
-                                          12,
-                                    ),
-
-                                    const Expanded(
-                                      child:
-                                          Text(
-                                        'Spin the wheel to reveal your reward.',
-                                      ),
-                                    ),
-                                  ],
-                                ),
-
-                                const SizedBox(
-                                  height: 14,
-                                ),
-
-                                Row(
-                                  children: [
-                                    Icon(
-                                      Icons
-                                          .quiz_outlined,
-                                      color:
-                                          Theme.of(
-                                        context,
-                                      )
-                                              .colorScheme
-                                              .primary,
-                                    ),
-
-                                    const SizedBox(
-                                      width:
-                                          12,
-                                    ),
-
-                                    const Expanded(
-                                      child:
-                                          Text(
-                                        'Answer one DevOps question.',
-                                      ),
-                                    ),
-                                  ],
-                                ),
-
-                                const SizedBox(
-                                  height: 14,
-                                ),
-
-                                Row(
-                                  children: [
-                                    Icon(
-                                      Icons
-                                          .stars_outlined,
-                                      color:
-                                          Theme.of(
-                                        context,
-                                      )
-                                              .colorScheme
-                                              .primary,
-                                    ),
-
-                                    const SizedBox(
-                                      width:
-                                          12,
-                                    ),
-
-                                    const Expanded(
-                                      child:
-                                          Text(
-                                        'Correct answer = reward added to your points.',
-                                      ),
-                                    ),
-                                  ],
-                                ),
-
-                                const SizedBox(
-                                  height: 14,
-                                ),
-
-                                Row(
-                                  children: [
-                                    Icon(
-                                      Icons
-                                          .close_rounded,
-                                      color:
-                                          Theme.of(
-                                        context,
-                                      )
-                                              .colorScheme
-                                              .error,
-                                    ),
-
-                                    const SizedBox(
-                                      width:
-                                          12,
-                                    ),
-
-                                    const Expanded(
-                                      child:
-                                          Text(
-                                        'Wrong answer = reward lost. Existing points are safe.',
-                                      ),
-                                    ),
-                                  ],
-                                ),
-                              ],
-                            ),
-                          ),
-                        ),
-
-                        const SizedBox(
-                          height: 20,
-                        ),
-
-                        Row(
-                          mainAxisAlignment:
-                              MainAxisAlignment
-                                  .center,
-                          children: [
-                            Icon(
-                              Icons
-                                  .calendar_today_outlined,
-                              size: 16,
-                              color:
-                                  Theme.of(
-                                context,
-                              )
-                                      .colorScheme
-                                      .onSurfaceVariant,
-                            ),
-
-                            const SizedBox(
-                              width: 7,
-                            ),
-
-                            Text(
-                              'One free spin every day',
-                              style:
-                                  TextStyle(
-                                fontSize:
-                                    13,
-                                color:
-                                    Theme.of(
-                                  context,
-                                )
-                                        .colorScheme
-                                        .onSurfaceVariant,
-                              ),
-                            ),
-                          ],
-                        ),
-
-                        const SizedBox(
-                          height: 20,
-                        ),
+const SizedBox(
+  height: 20,
+),
                       ],
                     ),
                   ),

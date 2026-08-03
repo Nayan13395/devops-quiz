@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 import 'reward_question_screen.dart';
+import 'games_screen.dart';
 
 class ScratchCardScreen extends StatefulWidget {
   const ScratchCardScreen({
@@ -187,6 +188,7 @@ class _ScratchCardScreenState
         return AlertDialog(
           icon: const Text(
             '🎟️',
+             textAlign: TextAlign.center,
             style: TextStyle(
               fontSize: 55,
             ),
@@ -357,6 +359,7 @@ class _ScratchCardScreenState
       appBar: AppBar(
         title: const Text(
           '🎟️ Scratch Card',
+              textAlign: TextAlign.center,
         ),
       ),
 
@@ -482,122 +485,42 @@ class _ScratchCardScreenState
                             ),
                           ),
 
-                        const SizedBox(
-                          height: 24,
-                        ),
+const SizedBox(
+  height: 20,
+),
 
-                        // =====================================
-                        // HOW TO PLAY
-                        // =====================================
+// =====================================
+// PLAY MORE GAMES
+// =====================================
 
-                        Card(
-                          child: Padding(
-                            padding:
-                                const EdgeInsets
-                                    .all(
-                              18,
-                            ),
-                            child: Column(
-                              children: [
-                                const Text(
-                                  '🎯 How to Play',
-                                  style:
-                                      TextStyle(
-                                    fontSize:
-                                        17,
-                                    fontWeight:
-                                        FontWeight
-                                            .bold,
-                                  ),
-                                ),
+SizedBox(
+  width: double.infinity,
+  height: 52,
+  child: ElevatedButton.icon(
+    onPressed: () {
+      Navigator.pushReplacement(
+        context,
+        MaterialPageRoute(
+          builder: (_) => const GamesScreen(),
+        ),
+      );
+    },
+    icon: const Icon(
+      Icons.sports_esports_outlined,
+    ),
+    label: const Text(
+      'Play More Games',
+      style: TextStyle(
+        fontSize: 16,
+        fontWeight: FontWeight.bold,
+      ),
+    ),
+  ),
+),
 
-                                const SizedBox(
-                                  height: 14,
-                                ),
-
-                                _HowToRow(
-                                  icon: Icons
-                                      .touch_app_outlined,
-                                  text:
-                                      'Scratch the card to reveal your reward.',
-                                ),
-
-                                const SizedBox(
-                                  height: 14,
-                                ),
-
-                                _HowToRow(
-                                  icon: Icons
-                                      .quiz_outlined,
-                                  text:
-                                      'Answer one DevOps question.',
-                                ),
-
-                                const SizedBox(
-                                  height: 14,
-                                ),
-
-                                _HowToRow(
-                                  icon: Icons
-                                      .stars_outlined,
-                                  text:
-                                      'Correct answer = reward added to your points.',
-                                ),
-
-                                const SizedBox(
-                                  height: 14,
-                                ),
-
-                                _HowToRow(
-                                  icon: Icons
-                                      .close_rounded,
-                                  text:
-                                      'Wrong answer = reward lost. Existing points are safe.',
-                                  error:
-                                      true,
-                                ),
-                              ],
-                            ),
-                          ),
-                        ),
-
-                        const SizedBox(
-                          height: 20,
-                        ),
-
-                        Row(
-                          mainAxisAlignment:
-                              MainAxisAlignment
-                                  .center,
-                          children: [
-                            Icon(
-                              Icons
-                                  .calendar_today_outlined,
-                              size: 16,
-                              color: colors
-                                  .onSurfaceVariant,
-                            ),
-
-                            const SizedBox(
-                              width: 7,
-                            ),
-
-                            Text(
-                              'One scratch card every day',
-                              style:
-                                  TextStyle(
-                                fontSize:
-                                    13,
-                                color: colors
-                                    .onSurfaceVariant,
-                              ),
-                            ),
-                          ],
-                        ),
-
-                        const SizedBox(
-                          height: 20,
-                        ),
+const SizedBox(
+  height: 20,
+),
                       ],
                     ),
                   ),

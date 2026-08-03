@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 import 'reward_question_screen.dart';
+import 'games_screen.dart';
 
 class LuckySlotScreen extends StatefulWidget {
   const LuckySlotScreen({
@@ -340,291 +341,257 @@ class _LuckySlotScreenState
   // =========================================================
 
   Future<void> _showChallengeDialog(
-    int reward,
-  ) async {
-    if (!mounted) {
-      return;
-    }
+  int reward,
+) async {
+  if (!mounted) {
+    return;
+  }
 
-    final bool jackpot =
-        reward == 777;
+  final bool jackpot = reward == 777;
 
-    final String rewardText =
-        reward
-            .toString()
-            .padLeft(
-              3,
-              '0',
-            );
+  final String rewardText =
+      reward.toString().padLeft(3, '0');
 
-    await showDialog<void>(
-      context: context,
-      barrierDismissible: false,
-      builder: (
-        dialogContext,
-      ) {
-        final ColorScheme colors =
-            Theme.of(
-          dialogContext,
-        ).colorScheme;
+  await showDialog<void>(
+    context: context,
+    barrierDismissible: false,
+    builder: (dialogContext) {
+      final ColorScheme colors =
+          Theme.of(dialogContext).colorScheme;
 
-        return AlertDialog(
-          content: Column(
-            mainAxisSize:
-                MainAxisSize.min,
-            crossAxisAlignment:
-                CrossAxisAlignment.center,
-            children: [
-              // =============================================
-              // CENTERED ICON
-              // =============================================
+      final Size screenSize =
+          MediaQuery.sizeOf(dialogContext);
 
-              SizedBox(
-                width:
-                    double.infinity,
-                child: Text(
-                  jackpot
-                      ? '🎰'
-                      : '🎉',
-                  textAlign:
-                      TextAlign.center,
-                  style:
-                      const TextStyle(
+      return Dialog(
+        insetPadding: const EdgeInsets.symmetric(
+          horizontal: 20,
+          vertical: 24,
+        ),
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(28),
+        ),
+        child: ConstrainedBox(
+          constraints: BoxConstraints(
+            maxWidth: 500,
+            maxHeight: screenSize.height * 0.90,
+          ),
+          child: SingleChildScrollView(
+            padding: const EdgeInsets.fromLTRB(
+              24,
+              24,
+              24,
+              20,
+            ),
+            child: Column(
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                // ===========================================
+                // ICON
+                // ===========================================
+
+                Text(
+                  jackpot ? '🎰' : '🎉',
+                  textAlign: TextAlign.center,
+                  style: const TextStyle(
                     fontSize: 55,
                   ),
                 ),
-              ),
 
-              const SizedBox(
-                height: 12,
-              ),
+                const SizedBox(height: 14),
 
-              // =============================================
-              // TITLE
-              // =============================================
+                // ===========================================
+                // TITLE
+                // ===========================================
 
-              SizedBox(
-                width:
-                    double.infinity,
-                child: Text(
+                Text(
                   jackpot
                       ? 'JACKPOT 777!'
                       : 'Reward Revealed!',
-                  textAlign:
-                      TextAlign.center,
-                  style:
-                      const TextStyle(
+                  textAlign: TextAlign.center,
+                  style: const TextStyle(
                     fontSize: 24,
-                    fontWeight:
-                        FontWeight.bold,
+                    fontWeight: FontWeight.bold,
                   ),
                 ),
-              ),
 
-              const SizedBox(
-                height: 22,
-              ),
+                const SizedBox(height: 24),
 
-              // =============================================
-              // FINAL SLOT DIGITS
-              // =============================================
+                // ===========================================
+                // SLOT DIGITS
+                // ===========================================
 
-              Row(
-                mainAxisAlignment:
-                    MainAxisAlignment
-                        .center,
-                children: [
-                  _ResultDigit(
-                    digit:
-                        rewardText[0],
-                    jackpot:
-                        jackpot,
-                  ),
+                Row(
+                  mainAxisAlignment:
+                      MainAxisAlignment.center,
+                  children: [
+                    _ResultDigit(
+                      digit: rewardText[0],
+                      jackpot: jackpot,
+                    ),
 
-                  const SizedBox(
-                    width: 8,
-                  ),
+                    const SizedBox(width: 8),
 
-                  _ResultDigit(
-                    digit:
-                        rewardText[1],
-                    jackpot:
-                        jackpot,
-                  ),
+                    _ResultDigit(
+                      digit: rewardText[1],
+                      jackpot: jackpot,
+                    ),
 
-                  const SizedBox(
-                    width: 8,
-                  ),
+                    const SizedBox(width: 8),
 
-                  _ResultDigit(
-                    digit:
-                        rewardText[2],
-                    jackpot:
-                        jackpot,
-                  ),
-                ],
-              ),
-
-              const SizedBox(
-                height: 22,
-              ),
-
-              Text(
-                jackpot
-                    ? 'Lucky 777!'
-                    : 'Your reward',
-                textAlign:
-                    TextAlign.center,
-                style: TextStyle(
-                  fontSize:
-                      jackpot
-                          ? 20
-                          : 17,
-                  fontWeight:
-                      jackpot
-                          ? FontWeight.bold
-                          : FontWeight.normal,
-                  color:
-                      jackpot
-                          ? Colors.orange
-                          : null,
+                    _ResultDigit(
+                      digit: rewardText[2],
+                      jackpot: jackpot,
+                    ),
+                  ],
                 ),
-              ),
 
-              const SizedBox(
-                height: 8,
-              ),
+                const SizedBox(height: 24),
 
-              // =============================================
-              // REWARD
-              // =============================================
+                // ===========================================
+                // YOUR REWARD
+                // ===========================================
 
-              Text(
-                '⭐ $reward',
-                textAlign:
-                    TextAlign.center,
-                style: TextStyle(
-                  fontSize: 38,
-                  fontWeight:
-                      FontWeight.bold,
-                  color:
-                      jackpot
-                          ? Colors.orange
-                          : colors.primary,
-                ),
-              ),
-
-              const SizedBox(
-                height: 4,
-              ),
-
-              const Text(
-                'POINTS',
-                textAlign:
-                    TextAlign.center,
-                style: TextStyle(
-                  fontSize: 15,
-                  fontWeight:
-                      FontWeight.bold,
-                  letterSpacing: 1.5,
-                ),
-              ),
-
-              const SizedBox(
-                height: 20,
-              ),
-
-              // =============================================
-              // QUESTION REQUIREMENT
-              // =============================================
-
-              Container(
-                width:
-                    double.infinity,
-                padding:
-                    const EdgeInsets.all(
-                  14,
-                ),
-                decoration:
-                    BoxDecoration(
-                  color: colors
-                      .primaryContainer,
-                  borderRadius:
-                      BorderRadius.circular(
-                    14,
-                  ),
-                ),
-                child: Text(
-                  'Answer 1 quiz question correctly to claim this reward.',
-                  textAlign:
-                      TextAlign.center,
+                Text(
+                  jackpot
+                      ? 'Lucky 777!'
+                      : 'Your reward',
+                  textAlign: TextAlign.center,
                   style: TextStyle(
-                    fontWeight:
-                        FontWeight.w600,
-                    color: colors
-                        .onPrimaryContainer,
+                    fontSize: jackpot ? 20 : 17,
+                    fontWeight: jackpot
+                        ? FontWeight.bold
+                        : FontWeight.normal,
+                    color: jackpot
+                        ? Colors.orange
+                        : null,
                   ),
                 ),
-              ),
 
-              const SizedBox(
-                height: 10,
-              ),
+                const SizedBox(height: 8),
 
-              Text(
-                'Wrong answer = reward lost.',
-                textAlign:
-                    TextAlign.center,
-                style: TextStyle(
-                  fontSize: 13,
-                  color: colors
-                      .onSurfaceVariant,
+                Text(
+                  '⭐ $reward',
+                  textAlign: TextAlign.center,
+                  style: TextStyle(
+                    fontSize: 38,
+                    fontWeight: FontWeight.bold,
+                    color: jackpot
+                        ? Colors.orange
+                        : colors.primary,
+                  ),
                 ),
-              ),
-            ],
-          ),
 
-          actions: [
-            SizedBox(
-              width:
-                  double.infinity,
-              child:
-                  ElevatedButton.icon(
-                onPressed: () {
-                  Navigator.pop(
-                    dialogContext,
-                  );
+                const SizedBox(height: 4),
 
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (_) =>
-                          RewardQuestionScreen(
-                        reward:
-                            reward,
-                        gameName:
-                            'Lucky Slots',
+                const Text(
+                  'POINTS',
+                  textAlign: TextAlign.center,
+                  style: TextStyle(
+                    fontSize: 15,
+                    fontWeight: FontWeight.bold,
+                    letterSpacing: 1.5,
+                  ),
+                ),
+
+                const SizedBox(height: 22),
+
+                // ===========================================
+                // QUESTION INFORMATION
+                // ===========================================
+
+                Container(
+                  width: double.infinity,
+                  padding: const EdgeInsets.symmetric(
+                    horizontal: 16,
+                    vertical: 16,
+                  ),
+                  decoration: BoxDecoration(
+                    color: colors.primaryContainer,
+                    borderRadius:
+                        BorderRadius.circular(16),
+                  ),
+                  child: Column(
+                    mainAxisSize: MainAxisSize.min,
+                    children: [
+                      Text(
+                        'Answer 1 quiz question correctly '
+                        'to claim this reward.',
+                        textAlign: TextAlign.center,
+                        style: TextStyle(
+                          fontSize: 15,
+                          fontWeight:
+                              FontWeight.w600,
+                          color: colors
+                              .onPrimaryContainer,
+                        ),
+                      ),
+
+                      const SizedBox(height: 8),
+
+                      Text(
+                        'Wrong answer = reward lost.',
+                        textAlign: TextAlign.center,
+                        style: TextStyle(
+                          fontSize: 13,
+                          color: colors
+                              .onPrimaryContainer
+                              .withValues(
+                                alpha: 0.75,
+                              ),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+
+                const SizedBox(height: 22),
+
+                // ===========================================
+                // ANSWER QUESTION BUTTON
+                // ===========================================
+
+                SizedBox(
+                  width: double.infinity,
+                  height: 52,
+                  child: ElevatedButton.icon(
+                    onPressed: () {
+                      Navigator.pop(
+                        dialogContext,
+                      );
+
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (_) =>
+                              RewardQuestionScreen(
+                            reward: reward,
+                            gameName:
+                                'Lucky Slots',
+                          ),
+                        ),
+                      );
+                    },
+                    icon: const Icon(
+                      Icons.quiz_outlined,
+                    ),
+                    label: const Text(
+                      'Answer Question',
+                      style: TextStyle(
+                        fontSize: 16,
+                        fontWeight:
+                            FontWeight.bold,
                       ),
                     ),
-                  );
-                },
-                icon: const Icon(
-                  Icons.quiz_outlined,
-                ),
-                label: const Text(
-                  'Answer Question',
-                  style: TextStyle(
-                    fontWeight:
-                        FontWeight.bold,
                   ),
                 ),
-              ),
+              ],
             ),
-          ],
-        );
-      },
-    );
-  }
+          ),
+        ),
+      );
+    },
+  );
+}
 
   // =========================================================
   // DATE
@@ -779,6 +746,8 @@ class _LuckySlotScreenState
                             children: [
                               const Text(
                                 '🎰',
+                                            textAlign: TextAlign.center,
+
                                 style:
                                     TextStyle(
                                   fontSize: 55,
@@ -839,16 +808,7 @@ class _LuckySlotScreenState
                                 height: 18,
                               ),
 
-                              const Text(
-                                'The 3 digits together = your potential reward!',
-                                textAlign:
-                                    TextAlign.center,
-                                style:
-                                    TextStyle(
-                                  fontWeight:
-                                      FontWeight.bold,
-                                ),
-                              ),
+                              
                             ],
                           ),
                         ),
@@ -946,128 +906,38 @@ class _LuckySlotScreenState
                           ),
                         ],
 
-                        const SizedBox(
-                          height: 25,
-                        ),
+const SizedBox(
+  height: 20,
+),
 
-                        // ===================================
-                        // HOW TO PLAY
-                        // ===================================
+SizedBox(
+  width: double.infinity,
+  height: 52,
+  child: ElevatedButton.icon(
+    onPressed: () {
+      Navigator.pushReplacement(
+        context,
+        MaterialPageRoute(
+          builder: (_) => const GamesScreen(),
+        ),
+      );
+    },
+    icon: const Icon(
+      Icons.sports_esports_outlined,
+    ),
+    label: const Text(
+      'Play More Games',
+      style: TextStyle(
+        fontSize: 16,
+        fontWeight: FontWeight.bold,
+      ),
+    ),
+  ),
+),
 
-                        Card(
-                          child: Padding(
-                            padding:
-                                const EdgeInsets.all(
-                              18,
-                            ),
-                            child: Column(
-                              children: [
-                                const Text(
-                                  '🎯 How to Play',
-                                  style:
-                                      TextStyle(
-                                    fontSize: 17,
-                                    fontWeight:
-                                        FontWeight.bold,
-                                  ),
-                                ),
-
-                                const SizedBox(
-                                  height: 14,
-                                ),
-
-                                const _HowToRow(
-                                  icon: Icons
-                                      .casino_outlined,
-                                  text:
-                                      'Each reel contains one digit from 0 to 9.',
-                                ),
-
-                                const SizedBox(
-                                  height: 14,
-                                ),
-
-                                const _HowToRow(
-                                  icon: Icons
-                                      .stop_circle_outlined,
-                                  text:
-                                      'The reels stop one by one.',
-                                ),
-
-                                const SizedBox(
-                                  height: 14,
-                                ),
-
-                                const _HowToRow(
-                                  icon: Icons
-                                      .quiz_outlined,
-                                  text:
-                                      'Answer one DevOps question.',
-                                ),
-
-                                const SizedBox(
-                                  height: 14,
-                                ),
-
-                                const _HowToRow(
-                                  icon: Icons
-                                      .stars_outlined,
-                                  text:
-                                      'Correct answer = reward added to your points.',
-                                ),
-
-                                const SizedBox(
-                                  height: 14,
-                                ),
-
-                                const _HowToRow(
-                                  icon: Icons
-                                      .close_rounded,
-                                  text:
-                                      'Wrong answer = reward lost. Existing points are safe.',
-                                  error:
-                                      true,
-                                ),
-                              ],
-                            ),
-                          ),
-                        ),
-
-                        const SizedBox(
-                          height: 20,
-                        ),
-
-                        Row(
-                          mainAxisAlignment:
-                              MainAxisAlignment.center,
-                          children: [
-                            Icon(
-                              Icons
-                                  .calendar_today_outlined,
-                              size: 16,
-                              color: colors
-                                  .onSurfaceVariant,
-                            ),
-
-                            const SizedBox(
-                              width: 7,
-                            ),
-
-                            Text(
-                              'One Lucky Slots play every day',
-                              style:
-                                  TextStyle(
-                                fontSize: 13,
-                                color: colors
-                                    .onSurfaceVariant,
-                              ),
-                            ),
-                          ],
-                        ),
-
-                        const SizedBox(
-                          height: 20,
-                        ),
+const SizedBox(
+  height: 20,
+),
                       ],
                     ),
                   ),

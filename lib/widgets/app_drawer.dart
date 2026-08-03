@@ -103,9 +103,9 @@ class AppDrawer extends StatelessWidget {
             leading: const Icon(
               Icons.home_rounded,
             ),
-            title: const Text(
-              'Home',
-            ),
+title: Text(
+                    AppLocalizations.of(context)!.home
+                  ),
             onTap: () {
               Navigator.of(context)
                   .pushAndRemoveUntil(

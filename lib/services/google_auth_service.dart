@@ -22,50 +22,55 @@ class GoogleAuthService {
   // =========================================================
 
   static Future<void> initialize() async {
-    if (kIsWeb || _initialized) {
-      return;
-    }
-
-    try {
-      debugPrint(
-        '==============================================',
-      );
-      debugPrint(
-        'INITIALIZING GOOGLE SIGN-IN',
-      );
-      debugPrint(
-        '==============================================',
-      );
-
-      await _googleSignIn.initialize();
-
-      _initialized = true;
-
-      debugPrint(
-        'Google Sign-In initialized successfully.',
-      );
-    } catch (e, stackTrace) {
-      lastError =
-          'Google Sign-In could not be initialized. '
-          'Please restart the app and try again.';
-
-      debugPrint(
-        'GOOGLE INITIALIZATION ERROR',
-      );
-      debugPrint(
-        'Type: ${e.runtimeType}',
-      );
-      debugPrint(
-        'Error: $e',
-      );
-
-      debugPrintStack(
-        stackTrace: stackTrace,
-      );
-
-      rethrow;
-    }
+  if (kIsWeb || _initialized) {
+    return;
   }
+
+  try {
+    debugPrint(
+      '==============================================',
+    );
+    debugPrint(
+      'INITIALIZING GOOGLE SIGN-IN',
+    );
+    debugPrint(
+      '==============================================',
+    );
+
+    await _googleSignIn.initialize(
+      serverClientId:
+          '742868981766-ihssmbru2mo0neaiuli6h3od7g9i19po.apps.googleusercontent.com',
+    );
+
+    _initialized = true;
+
+    debugPrint(
+      'Google Sign-In initialized successfully.',
+    );
+  } catch (e, stackTrace) {
+    lastError =
+        'Google Sign-In could not be initialized. '
+        'Please restart the app and try again.';
+
+    debugPrint(
+      'GOOGLE INITIALIZATION ERROR',
+    );
+
+    debugPrint(
+      'Type: ${e.runtimeType}',
+    );
+
+    debugPrint(
+      'Error: $e',
+    );
+
+    debugPrintStack(
+      stackTrace: stackTrace,
+    );
+
+    rethrow;
+  }
+}
 
   // =========================================================
   // SIGN IN
