@@ -7,15 +7,11 @@ class UpdateService {
     // Do not check for updates on Web
     if (kIsWeb) return;
 
-    final newVersion = NewVersionPlus(
-      androidId: 'com.nayan.devops',
-    );
+    final newVersion = NewVersionPlus(androidId: 'com.nayan.devops');
 
     final status = await newVersion.getVersionStatus();
 
-    if (status != null &&
-        status.canUpdate &&
-        context.mounted) {
+    if (status != null && status.canUpdate && context.mounted) {
       newVersion.showUpdateDialog(
         context: context,
         versionStatus: status,

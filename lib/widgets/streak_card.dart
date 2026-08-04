@@ -37,15 +37,10 @@ class _StreakCardState extends State<StreakCard> {
 
     return Card(
       elevation: 8,
-      shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.circular(20),
-      ),
+      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
       margin: const EdgeInsets.only(bottom: 12),
       child: Padding(
-        padding: const EdgeInsets.symmetric(
-          horizontal: 18,
-          vertical: 16,
-        ),
+        padding: const EdgeInsets.symmetric(horizontal: 18, vertical: 16),
         child: Column(
           children: [
             Row(
@@ -55,9 +50,7 @@ class _StreakCardState extends State<StreakCard> {
                     children: [
                       const Text(
                         "🔥 Streak",
-                        style: TextStyle(
-                          fontWeight: FontWeight.bold,
-                        ),
+                        style: TextStyle(fontWeight: FontWeight.bold),
                       ),
                       const SizedBox(height: 8),
                       Text(
@@ -70,19 +63,13 @@ class _StreakCardState extends State<StreakCard> {
                     ],
                   ),
                 ),
-                Container(
-                  width: 1,
-                  height: 60,
-                  color: Colors.grey.shade300,
-                ),
+                Container(width: 1, height: 60, color: Colors.grey.shade300),
                 Expanded(
                   child: Column(
                     children: [
                       const Text(
                         "⭐ Points",
-                        style: TextStyle(
-                          fontWeight: FontWeight.bold,
-                        ),
+                        style: TextStyle(fontWeight: FontWeight.bold),
                       ),
                       const SizedBox(height: 8),
                       Text(
@@ -100,9 +87,7 @@ class _StreakCardState extends State<StreakCard> {
             const Divider(height: 28),
             Text(
               "🎁 Tomorrow's Reward: $nextReward Points",
-              style: const TextStyle(
-                fontWeight: FontWeight.w600,
-              ),
+              style: const TextStyle(fontWeight: FontWeight.w600),
             ),
           ],
         ),

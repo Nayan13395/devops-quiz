@@ -1,10 +1,7 @@
 import 'package:flutter/material.dart';
 import '../models/streak_result.dart';
 
-Future<void> showDailyRewardDialog(
-  BuildContext context,
-  StreakResult result,
-) {
+Future<void> showDailyRewardDialog(BuildContext context, StreakResult result) {
   final bool isBroken = result.streakBroken;
 
   return showDialog(
@@ -12,15 +9,10 @@ Future<void> showDailyRewardDialog(
     barrierDismissible: false,
     builder: (context) {
       return AlertDialog(
-        shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(20),
-        ),
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
         title: Column(
           children: [
-            Text(
-              isBroken ? "😢" : "🎉",
-              style: const TextStyle(fontSize: 50),
-            ),
+            Text(isBroken ? "😢" : "🎉", style: const TextStyle(fontSize: 50)),
             const SizedBox(height: 10),
             Text(
               isBroken ? "Streak Broken" : "Daily Reward",
@@ -54,9 +46,7 @@ Future<void> showDailyRewardDialog(
             const SizedBox(height: 15),
             Text(
               "Total Points: ${result.totalPoints}",
-              style: const TextStyle(
-                fontWeight: FontWeight.bold,
-              ),
+              style: const TextStyle(fontWeight: FontWeight.bold),
             ),
           ],
         ),

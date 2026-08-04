@@ -26,10 +26,7 @@ class NavigationButtons extends StatelessWidget {
               padding: EdgeInsets.symmetric(vertical: 12),
               child: Text(
                 "Back",
-                style: TextStyle(
-                  fontSize: 18,
-                  fontWeight: FontWeight.bold,
-                ),
+                style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
               ),
             ),
             style: ElevatedButton.styleFrom(
@@ -47,16 +44,12 @@ class NavigationButtons extends StatelessWidget {
           child: ElevatedButton.icon(
             onPressed: onNext,
             icon: Icon(
-              isLastQuestion
-                  ? Icons.check_circle
-                  : Icons.arrow_forward,
+              isLastQuestion ? Icons.check_circle : Icons.arrow_forward,
             ),
             label: Padding(
               padding: const EdgeInsets.symmetric(vertical: 12),
               child: Text(
-                isLastQuestion
-                    ? "Submit"
-                    : "Next",
+                isLastQuestion ? "Submit" : "Next",
                 style: const TextStyle(
                   fontSize: 18,
                   fontWeight: FontWeight.bold,

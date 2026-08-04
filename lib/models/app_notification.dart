@@ -112,8 +112,7 @@ class AppNotification {
       'title': title,
       'message': message,
       'type': type.name,
-      'createdAt':
-          createdAt.toIso8601String(),
+      'createdAt': createdAt.toIso8601String(),
       'isRead': isRead,
       'actionText': actionText,
       'actionRoute': actionRoute,
@@ -124,9 +123,7 @@ class AppNotification {
   // CREATE FROM MAP
   // =========================================================
 
-  factory AppNotification.fromMap(
-    Map<String, dynamic> map,
-  ) {
+  factory AppNotification.fromMap(Map<String, dynamic> map) {
     return AppNotification(
       id: map['id'] as String,
 
@@ -134,26 +131,18 @@ class AppNotification {
 
       message: map['message'] as String,
 
-      type:
-          AppNotificationType.values.firstWhere(
-        (type) =>
-            type.name == map['type'],
-        orElse: () =>
-            AppNotificationType.announcement,
+      type: AppNotificationType.values.firstWhere(
+        (type) => type.name == map['type'],
+        orElse: () => AppNotificationType.announcement,
       ),
 
-      createdAt: DateTime.parse(
-        map['createdAt'] as String,
-      ),
+      createdAt: DateTime.parse(map['createdAt'] as String),
 
-      isRead:
-          map['isRead'] as bool? ?? false,
+      isRead: map['isRead'] as bool? ?? false,
 
-      actionText:
-          map['actionText'] as String?,
+      actionText: map['actionText'] as String?,
 
-      actionRoute:
-          map['actionRoute'] as String?,
+      actionRoute: map['actionRoute'] as String?,
     );
   }
 
@@ -169,11 +158,7 @@ class AppNotification {
   // CREATE FROM JSON
   // =========================================================
 
-  factory AppNotification.fromJson(
-    Map<String, dynamic> json,
-  ) {
-    return AppNotification.fromMap(
-      json,
-    );
+  factory AppNotification.fromJson(Map<String, dynamic> json) {
+    return AppNotification.fromMap(json);
   }
 }

@@ -7,32 +7,18 @@ import 'reward_question_screen.dart';
 import 'games_screen.dart';
 
 class ScratchCardScreen extends StatefulWidget {
-  const ScratchCardScreen({
-    super.key,
-  });
+  const ScratchCardScreen({super.key});
 
   @override
-  State<ScratchCardScreen> createState() =>
-      _ScratchCardScreenState();
+  State<ScratchCardScreen> createState() => _ScratchCardScreenState();
 }
 
-class _ScratchCardScreenState
-    extends State<ScratchCardScreen> {
-  static const String _lastScratchKey =
-      'scratch_card_last_scratch_date';
+class _ScratchCardScreenState extends State<ScratchCardScreen> {
+  static const String _lastScratchKey = 'scratch_card_last_scratch_date';
 
   final Random _random = Random();
 
-  final List<int> rewards = [
-    10,
-    20,
-    50,
-    100,
-    200,
-    500,
-    750,
-    1000,
-  ];
+  final List<int> rewards = [10, 20, 50, 100, 200, 500, 750, 1000];
 
   bool loading = true;
   bool canScratch = false;
@@ -58,35 +44,23 @@ class _ScratchCardScreenState
   // =========================================================
 
   Future<void> _checkDailyScratch() async {
-    final SharedPreferences prefs =
-        await SharedPreferences.getInstance();
+    final SharedPreferences prefs = await SharedPreferences.getInstance();
 
-    final String? lastScratch =
-        prefs.getString(
-      _lastScratchKey,
-    );
+    final String? lastScratch = prefs.getString(_lastScratchKey);
 
-    final String today =
-        _dateKey(
-      DateTime.now(),
-    );
+    final String today = _dateKey(DateTime.now());
 
     if (!mounted) {
       return;
     }
 
     setState(() {
-      canScratch =
-          lastScratch != today;
+      canScratch = lastScratch != today;
 
       loading = false;
 
       if (canScratch) {
-        reward =
-            rewards[
-                _random.nextInt(
-                  rewards.length,
-                )];
+        reward = rewards[_random.nextInt(rewards.length)];
       }
     });
   }
@@ -95,18 +69,13 @@ class _ScratchCardScreenState
   // SCRATCH
   // =========================================================
 
-  void _scratch(
-    Offset position,
-  ) {
-    if (!canScratch ||
-        rewardClaimed) {
+  void _scratch(Offset position) {
+    if (!canScratch || rewardClaimed) {
       return;
     }
 
     setState(() {
-      _scratchPoints.add(
-        position,
-      );
+      _scratchPoints.add(position);
     });
 
     // Once enough scratch gestures have
@@ -129,9 +98,7 @@ class _ScratchCardScreenState
   // =========================================================
 
   Future<void> _claimReward() async {
-    if (!canScratch ||
-        rewardClaimed ||
-        reward <= 0) {
+    if (!canScratch || rewardClaimed || reward <= 0) {
       return;
     }
 
@@ -143,15 +110,9 @@ class _ScratchCardScreenState
     // CONSUME TODAY'S SCRATCH
     // =======================================================
 
-    final SharedPreferences prefs =
-        await SharedPreferences.getInstance();
+    final SharedPreferences prefs = await SharedPreferences.getInstance();
 
-    await prefs.setString(
-      _lastScratchKey,
-      _dateKey(
-        DateTime.now(),
-      ),
-    );
+    await prefs.setString(_lastScratchKey, _dateKey(DateTime.now()));
 
     if (!mounted) {
       return;
@@ -168,8 +129,7 @@ class _ScratchCardScreenState
   // CHALLENGE DIALOG
   // =========================================================
 
-  Future<void>
-      _showChallengeDialog() async {
+  Future<void> _showChallengeDialog() async {
     if (!mounted) {
       return;
     }
@@ -177,152 +137,95 @@ class _ScratchCardScreenState
     await showDialog<void>(
       context: context,
       barrierDismissible: false,
-      builder: (
-        dialogContext,
-      ) {
-        final ColorScheme colors =
-            Theme.of(
-          dialogContext,
-        ).colorScheme;
+      builder: (dialogContext) {
+        final ColorScheme colors = Theme.of(dialogContext).colorScheme;
 
         return AlertDialog(
           icon: const Text(
             '🎟️',
-             textAlign: TextAlign.center,
-            style: TextStyle(
-              fontSize: 55,
-            ),
+            textAlign: TextAlign.center,
+            style: TextStyle(fontSize: 55),
           ),
 
-          title: const Text(
-            'Reward Revealed!',
-            textAlign:
-                TextAlign.center,
-          ),
+          title: const Text('Reward Revealed!', textAlign: TextAlign.center),
 
           content: Column(
-            mainAxisSize:
-                MainAxisSize.min,
+            mainAxisSize: MainAxisSize.min,
             children: [
-              const Text(
-                'You found',
-                style: TextStyle(
-                  fontSize: 17,
-                ),
-              ),
+              const Text('You found', style: TextStyle(fontSize: 17)),
 
-              const SizedBox(
-                height: 10,
-              ),
+              const SizedBox(height: 10),
 
               Text(
                 '⭐ $reward',
                 style: TextStyle(
                   fontSize: 36,
-                  fontWeight:
-                      FontWeight.bold,
-                  color:
-                      colors.primary,
+                  fontWeight: FontWeight.bold,
+                  color: colors.primary,
                 ),
               ),
 
-              const SizedBox(
-                height: 5,
-              ),
+              const SizedBox(height: 5),
 
               const Text(
                 'POINTS',
                 style: TextStyle(
                   fontSize: 15,
-                  fontWeight:
-                      FontWeight.bold,
+                  fontWeight: FontWeight.bold,
                   letterSpacing: 1.5,
                 ),
               ),
 
-              const SizedBox(
-                height: 20,
-              ),
+              const SizedBox(height: 20),
 
               Container(
-                width:
-                    double.infinity,
-                padding:
-                    const EdgeInsets.all(
-                  14,
-                ),
-                decoration:
-                    BoxDecoration(
-                  color: colors
-                      .primaryContainer,
-                  borderRadius:
-                      BorderRadius.circular(
-                    14,
-                  ),
+                width: double.infinity,
+                padding: const EdgeInsets.all(14),
+                decoration: BoxDecoration(
+                  color: colors.primaryContainer,
+                  borderRadius: BorderRadius.circular(14),
                 ),
                 child: Text(
                   'Answer 1 quiz question correctly to claim this reward.',
-                  textAlign:
-                      TextAlign.center,
+                  textAlign: TextAlign.center,
                   style: TextStyle(
-                    fontWeight:
-                        FontWeight.w600,
-                    color: colors
-                        .onPrimaryContainer,
+                    fontWeight: FontWeight.w600,
+                    color: colors.onPrimaryContainer,
                   ),
                 ),
               ),
 
-              const SizedBox(
-                height: 10,
-              ),
+              const SizedBox(height: 10),
 
               Text(
                 'Wrong answer = reward lost.',
-                textAlign:
-                    TextAlign.center,
-                style: TextStyle(
-                  fontSize: 13,
-                  color: colors
-                      .onSurfaceVariant,
-                ),
+                textAlign: TextAlign.center,
+                style: TextStyle(fontSize: 13, color: colors.onSurfaceVariant),
               ),
             ],
           ),
 
           actions: [
             SizedBox(
-              width:
-                  double.infinity,
-              child:
-                  ElevatedButton.icon(
+              width: double.infinity,
+              child: ElevatedButton.icon(
                 onPressed: () {
-                  Navigator.pop(
-                    dialogContext,
-                  );
+                  Navigator.pop(dialogContext);
 
                   Navigator.push(
                     context,
                     MaterialPageRoute(
-                      builder: (_) =>
-                          RewardQuestionScreen(
-                        reward:
-                            reward,
-                        gameName:
-                            'Scratch Card',
+                      builder: (_) => RewardQuestionScreen(
+                        reward: reward,
+                        gameName: 'Scratch Card',
                       ),
                     ),
                   );
                 },
-                icon: const Icon(
-                  Icons.quiz_outlined,
-                ),
+                icon: const Icon(Icons.quiz_outlined),
                 label: const Text(
                   'Answer Question',
-                  style: TextStyle(
-                    fontWeight:
-                        FontWeight.bold,
-                  ),
+                  style: TextStyle(fontWeight: FontWeight.bold),
                 ),
               ),
             ),
@@ -336,9 +239,7 @@ class _ScratchCardScreenState
   // DATE KEY
   // =========================================================
 
-  String _dateKey(
-    DateTime date,
-  ) {
+  String _dateKey(DateTime date) {
     return '${date.year}-'
         '${date.month.toString().padLeft(2, '0')}-'
         '${date.day.toString().padLeft(2, '0')}';
@@ -349,178 +250,113 @@ class _ScratchCardScreenState
   // =========================================================
 
   @override
-  Widget build(
-    BuildContext context,
-  ) {
-    final ColorScheme colors =
-        Theme.of(context).colorScheme;
+  Widget build(BuildContext context) {
+    final ColorScheme colors = Theme.of(context).colorScheme;
 
     return Scaffold(
       appBar: AppBar(
-        title: const Text(
-          '🎟️ Scratch Card',
-              textAlign: TextAlign.center,
-        ),
+        title: const Text('🎟️ Scratch Card', textAlign: TextAlign.center),
       ),
 
       body: loading
-          ? const Center(
-              child:
-                  CircularProgressIndicator(),
-            )
+          ? const Center(child: CircularProgressIndicator())
           : SafeArea(
-              child:
-                  SingleChildScrollView(
-                padding:
-                    const EdgeInsets.all(
-                  20,
-                ),
+              child: SingleChildScrollView(
+                padding: const EdgeInsets.all(20),
 
                 child: Center(
-                  child:
-                      ConstrainedBox(
-                    constraints:
-                        const BoxConstraints(
-                      maxWidth: 500,
-                    ),
+                  child: ConstrainedBox(
+                    constraints: const BoxConstraints(maxWidth: 500),
 
                     child: Column(
                       children: [
-                        const SizedBox(
-                          height: 10,
-                        ),
+                        const SizedBox(height: 10),
 
                         // =====================================
                         // TITLE
                         // =====================================
-
                         const Text(
                           'Daily Scratch',
-                          textAlign:
-                              TextAlign
-                                  .center,
-                          style:
-                              TextStyle(
+                          textAlign: TextAlign.center,
+                          style: TextStyle(
                             fontSize: 28,
-                            fontWeight:
-                                FontWeight
-                                    .bold,
+                            fontWeight: FontWeight.bold,
                           ),
                         ),
 
-                        const SizedBox(
-                          height: 8,
-                        ),
+                        const SizedBox(height: 8),
 
                         Text(
                           canScratch
                               ? 'Scratch the card to reveal today\'s reward!'
                               : 'You have already used today\'s scratch card.',
-                          textAlign:
-                              TextAlign
-                                  .center,
-                          style:
-                              TextStyle(
+                          textAlign: TextAlign.center,
+                          style: TextStyle(
                             fontSize: 16,
-                            color: colors
-                                .onSurfaceVariant,
+                            color: colors.onSurfaceVariant,
                           ),
                         ),
 
-                        const SizedBox(
-                          height: 30,
-                        ),
+                        const SizedBox(height: 30),
 
                         // =====================================
                         // SCRATCH CARD
                         // =====================================
+                        _buildScratchCard(context),
 
-                        _buildScratchCard(
-                          context,
-                        ),
-
-                        const SizedBox(
-                          height: 24,
-                        ),
+                        const SizedBox(height: 24),
 
                         // =====================================
                         // STATUS
                         // =====================================
-
-                        if (!canScratch &&
-                            rewardClaimed)
+                        if (!canScratch && rewardClaimed)
                           Container(
-                            width:
-                                double.infinity,
-                            padding:
-                                const EdgeInsets
-                                    .all(
-                              14,
-                            ),
-                            decoration:
-                                BoxDecoration(
-                              color: colors
-                                  .primaryContainer,
-                              borderRadius:
-                                  BorderRadius
-                                      .circular(
-                                14,
-                              ),
+                            width: double.infinity,
+                            padding: const EdgeInsets.all(14),
+                            decoration: BoxDecoration(
+                              color: colors.primaryContainer,
+                              borderRadius: BorderRadius.circular(14),
                             ),
                             child: Text(
                               'Today\'s reward: ⭐ $reward points',
-                              textAlign:
-                                  TextAlign
-                                      .center,
-                              style:
-                                  TextStyle(
-                                fontSize:
-                                    17,
-                                fontWeight:
-                                    FontWeight
-                                        .bold,
-                                color: colors
-                                    .onPrimaryContainer,
+                              textAlign: TextAlign.center,
+                              style: TextStyle(
+                                fontSize: 17,
+                                fontWeight: FontWeight.bold,
+                                color: colors.onPrimaryContainer,
                               ),
                             ),
                           ),
 
-const SizedBox(
-  height: 20,
-),
+                        const SizedBox(height: 20),
 
-// =====================================
-// PLAY MORE GAMES
-// =====================================
+                        // =====================================
+                        // PLAY MORE GAMES
+                        // =====================================
+                        SizedBox(
+                          width: double.infinity,
+                          height: 52,
+                          child: ElevatedButton.icon(
+                            onPressed: () {
+                              Navigator.pushReplacement(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (_) => const GamesScreen(),
+                                ),
+                              );
+                            },
+                            icon: const Icon(Icons.sports_esports_outlined),
+                            label: const Text(
+                              'Play More Games',
+                              style: TextStyle(
+                                fontSize: 16,
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
+                          ),
+                        ),
 
-SizedBox(
-  width: double.infinity,
-  height: 52,
-  child: ElevatedButton.icon(
-    onPressed: () {
-      Navigator.pushReplacement(
-        context,
-        MaterialPageRoute(
-          builder: (_) => const GamesScreen(),
-        ),
-      );
-    },
-    icon: const Icon(
-      Icons.sports_esports_outlined,
-    ),
-    label: const Text(
-      'Play More Games',
-      style: TextStyle(
-        fontSize: 16,
-        fontWeight: FontWeight.bold,
-      ),
-    ),
-  ),
-),
-
-const SizedBox(
-  height: 20,
-),
+                        const SizedBox(height: 20),
                       ],
                     ),
                   ),
@@ -534,67 +370,39 @@ const SizedBox(
   // SCRATCH CARD UI
   // =========================================================
 
-  Widget _buildScratchCard(
-    BuildContext context,
-  ) {
-    final ColorScheme colors =
-        Theme.of(context).colorScheme;
+  Widget _buildScratchCard(BuildContext context) {
+    final ColorScheme colors = Theme.of(context).colorScheme;
 
     // =======================================================
     // ALREADY USED
     // =======================================================
 
-    if (!canScratch &&
-        !rewardClaimed) {
+    if (!canScratch && !rewardClaimed) {
       return Container(
-        width:
-            double.infinity,
+        width: double.infinity,
         height: 220,
-        decoration:
-            BoxDecoration(
-          color: colors
-              .surfaceContainerHighest,
-          borderRadius:
-              BorderRadius.circular(
-            24,
-          ),
+        decoration: BoxDecoration(
+          color: colors.surfaceContainerHighest,
+          borderRadius: BorderRadius.circular(24),
         ),
         child: Column(
-          mainAxisAlignment:
-              MainAxisAlignment.center,
+          mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            const Text(
-              '🎟️',
-              style: TextStyle(
-                fontSize: 55,
-              ),
-            ),
+            const Text('🎟️', style: TextStyle(fontSize: 55)),
 
-            const SizedBox(
-              height: 12,
-            ),
+            const SizedBox(height: 12),
 
             const Text(
               'Already Scratched',
-              style: TextStyle(
-                fontSize: 21,
-                fontWeight:
-                    FontWeight.bold,
-              ),
+              style: TextStyle(fontSize: 21, fontWeight: FontWeight.bold),
             ),
 
-            const SizedBox(
-              height: 8,
-            ),
+            const SizedBox(height: 8),
 
             Text(
               'Come back tomorrow for another reward.',
-              textAlign:
-                  TextAlign.center,
-              style: TextStyle(
-                color: colors
-                    .onSurfaceVariant,
-              ),
+              textAlign: TextAlign.center,
+              style: TextStyle(color: colors.onSurfaceVariant),
             ),
           ],
         ),
@@ -607,71 +415,40 @@ const SizedBox(
 
     if (rewardClaimed) {
       return Container(
-        width:
-            double.infinity,
+        width: double.infinity,
         height: 220,
-        decoration:
-            BoxDecoration(
-          color:
-              colors.primaryContainer,
-          borderRadius:
-              BorderRadius.circular(
-            24,
-          ),
-          border: Border.all(
-            color:
-                colors.primary,
-            width: 2,
-          ),
+        decoration: BoxDecoration(
+          color: colors.primaryContainer,
+          borderRadius: BorderRadius.circular(24),
+          border: Border.all(color: colors.primary, width: 2),
         ),
         child: Column(
-          mainAxisAlignment:
-              MainAxisAlignment.center,
+          mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            const Text(
-              '🎉',
-              style: TextStyle(
-                fontSize: 48,
-              ),
-            ),
+            const Text('🎉', style: TextStyle(fontSize: 48)),
 
-            const SizedBox(
-              height: 10,
-            ),
+            const SizedBox(height: 10),
 
-            const Text(
-              'You revealed',
-              style: TextStyle(
-                fontSize: 17,
-              ),
-            ),
+            const Text('You revealed', style: TextStyle(fontSize: 17)),
 
-            const SizedBox(
-              height: 6,
-            ),
+            const SizedBox(height: 6),
 
             Text(
               '⭐ $reward',
               style: TextStyle(
                 fontSize: 38,
-                fontWeight:
-                    FontWeight.bold,
-                color: colors
-                    .onPrimaryContainer,
+                fontWeight: FontWeight.bold,
+                color: colors.onPrimaryContainer,
               ),
             ),
 
-            const SizedBox(
-              height: 4,
-            ),
+            const SizedBox(height: 4),
 
             Text(
               'POINTS',
               style: TextStyle(
-                fontWeight:
-                    FontWeight.bold,
-                color: colors
-                    .onPrimaryContainer,
+                fontWeight: FontWeight.bold,
+                color: colors.onPrimaryContainer,
               ),
             ),
           ],
@@ -684,76 +461,43 @@ const SizedBox(
     // =======================================================
 
     return ClipRRect(
-      borderRadius:
-          BorderRadius.circular(
-        24,
-      ),
+      borderRadius: BorderRadius.circular(24),
       child: SizedBox(
-        width:
-            double.infinity,
+        width: double.infinity,
         height: 220,
         child: LayoutBuilder(
-          builder: (
-            context,
-            constraints,
-          ) {
+          builder: (context, constraints) {
             return Stack(
               fit: StackFit.expand,
               children: [
                 // ===========================================
                 // REWARD UNDER SCRATCH LAYER
                 // ===========================================
-
                 Container(
-                  color:
-                      colors.primaryContainer,
+                  color: colors.primaryContainer,
                   child: Column(
-                    mainAxisAlignment:
-                        MainAxisAlignment
-                            .center,
+                    mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      const Text(
-                        '🎁',
-                        style:
-                            TextStyle(
-                          fontSize:
-                              45,
-                        ),
-                      ),
+                      const Text('🎁', style: TextStyle(fontSize: 45)),
 
-                      const SizedBox(
-                        height:
-                            8,
-                      ),
+                      const SizedBox(height: 8),
 
                       Text(
                         '⭐ $reward',
-                        style:
-                            TextStyle(
-                          fontSize:
-                              38,
-                          fontWeight:
-                              FontWeight
-                                  .bold,
-                          color: colors
-                              .onPrimaryContainer,
+                        style: TextStyle(
+                          fontSize: 38,
+                          fontWeight: FontWeight.bold,
+                          color: colors.onPrimaryContainer,
                         ),
                       ),
 
-                      const SizedBox(
-                        height:
-                            4,
-                      ),
+                      const SizedBox(height: 4),
 
                       Text(
                         'POINTS',
-                        style:
-                            TextStyle(
-                          fontWeight:
-                              FontWeight
-                                  .bold,
-                          color: colors
-                              .onPrimaryContainer,
+                        style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                          color: colors.onPrimaryContainer,
                         ),
                       ),
                     ],
@@ -763,42 +507,22 @@ const SizedBox(
                 // ===========================================
                 // SCRATCH LAYER
                 // ===========================================
-
                 GestureDetector(
-                  behavior:
-                      HitTestBehavior
-                          .opaque,
+                  behavior: HitTestBehavior.opaque,
 
-                  onPanStart: (
-                    details,
-                  ) {
-                    _scratch(
-                      details
-                          .localPosition,
-                    );
+                  onPanStart: (details) {
+                    _scratch(details.localPosition);
                   },
 
-                  onPanUpdate: (
-                    details,
-                  ) {
-                    _scratch(
-                      details
-                          .localPosition,
-                    );
+                  onPanUpdate: (details) {
+                    _scratch(details.localPosition);
                   },
 
-                  child:
-                      CustomPaint(
-                    painter:
-                        _ScratchPainter(
-                      scratchPoints:
-                          _scratchPoints,
-                      coverColor:
-                          colors
-                              .secondaryContainer,
-                      textColor:
-                          colors
-                              .onSecondaryContainer,
+                  child: CustomPaint(
+                    painter: _ScratchPainter(
+                      scratchPoints: _scratchPoints,
+                      coverColor: colors.secondaryContainer,
+                      textColor: colors.onSecondaryContainer,
                     ),
                   ),
                 ),
@@ -815,10 +539,8 @@ const SizedBox(
 // SCRATCH PAINTER
 // ===========================================================
 
-class _ScratchPainter
-    extends CustomPainter {
-  final List<Offset>
-      scratchPoints;
+class _ScratchPainter extends CustomPainter {
+  final List<Offset> scratchPoints;
 
   final Color coverColor;
   final Color textColor;
@@ -830,65 +552,37 @@ class _ScratchPainter
   });
 
   @override
-  void paint(
-    Canvas canvas,
-    Size size,
-  ) {
-    final Paint coverPaint =
-        Paint()
-          ..color =
-              coverColor;
+  void paint(Canvas canvas, Size size) {
+    final Paint coverPaint = Paint()..color = coverColor;
 
-    canvas.drawRect(
-      Offset.zero &
-          size,
-      coverPaint,
-    );
+    canvas.drawRect(Offset.zero & size, coverPaint);
 
     // =======================================================
     // SCRATCH INSTRUCTION
     // =======================================================
 
-    if (scratchPoints.length <
-        15) {
-      final TextPainter
-          textPainter =
-          TextPainter(
+    if (scratchPoints.length < 15) {
+      final TextPainter textPainter = TextPainter(
         text: TextSpan(
-          text:
-              'SCRATCH HERE\n👆',
-          style:
-              TextStyle(
-            color:
-                textColor,
+          text: 'SCRATCH HERE\n👆',
+          style: TextStyle(
+            color: textColor,
             fontSize: 22,
-            fontWeight:
-                FontWeight.bold,
+            fontWeight: FontWeight.bold,
             height: 1.5,
           ),
         ),
-        textAlign:
-            TextAlign.center,
-        textDirection:
-            TextDirection.ltr,
+        textAlign: TextAlign.center,
+        textDirection: TextDirection.ltr,
       );
 
-      textPainter.layout(
-        maxWidth:
-            size.width,
-      );
+      textPainter.layout(maxWidth: size.width);
 
       textPainter.paint(
         canvas,
         Offset(
-          (size.width -
-                  textPainter
-                      .width) /
-              2,
-          (size.height -
-                  textPainter
-                      .height) /
-              2,
+          (size.width - textPainter.width) / 2,
+          (size.height - textPainter.height) / 2,
         ),
       );
     }
@@ -897,28 +591,17 @@ class _ScratchPainter
     // ERASE SCRATCHED AREAS
     // =======================================================
 
-    final Paint scratchPaint =
-        Paint()
-          ..blendMode =
-              BlendMode.clear
-          ..style =
-              PaintingStyle.fill;
+    final Paint scratchPaint = Paint()
+      ..blendMode = BlendMode.clear
+      ..style = PaintingStyle.fill;
 
-    for (final Offset point
-        in scratchPoints) {
-      canvas.drawCircle(
-        point,
-        25,
-        scratchPaint,
-      );
+    for (final Offset point in scratchPoints) {
+      canvas.drawCircle(point, 25, scratchPaint);
     }
   }
 
   @override
-  bool shouldRepaint(
-    covariant _ScratchPainter
-        oldDelegate,
-  ) {
+  bool shouldRepaint(covariant _ScratchPainter oldDelegate) {
     return true;
   }
 }
@@ -927,45 +610,25 @@ class _ScratchPainter
 // HOW TO ROW
 // ===========================================================
 
-class _HowToRow
-    extends StatelessWidget {
+class _HowToRow extends StatelessWidget {
   final IconData icon;
   final String text;
   final bool error;
 
-  const _HowToRow({
-    required this.icon,
-    required this.text,
-    this.error = false,
-  });
+  const _HowToRow({required this.icon, required this.text, this.error = false});
 
   @override
-  Widget build(
-    BuildContext context,
-  ) {
-    final ColorScheme colors =
-        Theme.of(context).colorScheme;
+  Widget build(BuildContext context) {
+    final ColorScheme colors = Theme.of(context).colorScheme;
 
     return Row(
-      crossAxisAlignment:
-          CrossAxisAlignment.start,
+      crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Icon(
-          icon,
-          color: error
-              ? colors.error
-              : colors.primary,
-        ),
+        Icon(icon, color: error ? colors.error : colors.primary),
 
-        const SizedBox(
-          width: 12,
-        ),
+        const SizedBox(width: 12),
 
-        Expanded(
-          child: Text(
-            text,
-          ),
-        ),
+        Expanded(child: Text(text)),
       ],
     );
   }

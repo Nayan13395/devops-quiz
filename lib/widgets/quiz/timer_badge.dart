@@ -3,10 +3,7 @@ import 'package:flutter/material.dart';
 class TimerBadge extends StatelessWidget {
   final int timeLeft;
 
-  const TimerBadge({
-    super.key,
-    required this.timeLeft,
-  });
+  const TimerBadge({super.key, required this.timeLeft});
 
   @override
   Widget build(BuildContext context) {
@@ -22,10 +19,7 @@ class TimerBadge extends StatelessWidget {
 
     return AnimatedContainer(
       duration: const Duration(milliseconds: 300),
-      padding: const EdgeInsets.symmetric(
-        horizontal: 16,
-        vertical: 12,
-      ),
+      padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
       decoration: BoxDecoration(
         color: badgeColor,
         borderRadius: BorderRadius.circular(15),
@@ -56,10 +50,7 @@ class TimerBadge extends StatelessWidget {
               fontWeight: FontWeight.bold,
               color: timeLeft <= 10
                   ? Colors.white
-                  : Theme.of(context)
-                      .textTheme
-                      .bodyLarge
-                      ?.color,
+                  : Theme.of(context).textTheme.bodyLarge?.color,
             ),
           ),
         ],

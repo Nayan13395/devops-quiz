@@ -27,11 +27,7 @@ class StreakService {
       showReward = true;
     } else {
       final lastOpen = DateTime.parse(lastOpenString);
-      final lastDate = DateTime(
-        lastOpen.year,
-        lastOpen.month,
-        lastOpen.day,
-      );
+      final lastDate = DateTime(lastOpen.year, lastOpen.month, lastOpen.day);
 
       final difference = todayDate.difference(lastDate).inDays;
 
@@ -55,10 +51,7 @@ class StreakService {
     if (showReward) {
       await PointService.addPoints(reward);
 
-      await prefs.setString(
-        _lastOpenKey,
-        todayDate.toIso8601String(),
-      );
+      await prefs.setString(_lastOpenKey, todayDate.toIso8601String());
 
       await prefs.setInt(_streakKey, streak);
     }

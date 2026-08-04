@@ -8,12 +8,10 @@ class ReferEarnScreen extends StatefulWidget {
   const ReferEarnScreen({super.key});
 
   @override
-  State<ReferEarnScreen> createState() =>
-      _ReferEarnScreenState();
+  State<ReferEarnScreen> createState() => _ReferEarnScreenState();
 }
 
-class _ReferEarnScreenState
-    extends State<ReferEarnScreen> {
+class _ReferEarnScreenState extends State<ReferEarnScreen> {
   static const int referralReward = 1000;
 
   static const String playStoreUrl =
@@ -35,8 +33,7 @@ class _ReferEarnScreenState
   // =========================================================
 
   Future<void> _loadReferralCode() async {
-    final code =
-        await ReferralService.getReferralCode();
+    final code = await ReferralService.getReferralCode();
 
     if (!mounted) return;
 
@@ -53,26 +50,16 @@ class _ReferEarnScreenState
   Future<void> _copyReferralCode() async {
     if (referralCode.isEmpty) return;
 
-    await Clipboard.setData(
-      ClipboardData(
-        text: referralCode,
-      ),
-    );
+    await Clipboard.setData(ClipboardData(text: referralCode));
 
     if (!mounted) return;
 
-    ScaffoldMessenger.of(context)
-        .hideCurrentSnackBar();
+    ScaffoldMessenger.of(context).hideCurrentSnackBar();
 
-    ScaffoldMessenger.of(context)
-        .showSnackBar(
+    ScaffoldMessenger.of(context).showSnackBar(
       const SnackBar(
-        content: Text(
-          'Referral code copied!',
-        ),
-        duration: Duration(
-          seconds: 2,
-        ),
+        content: Text('Referral code copied!'),
+        duration: Duration(seconds: 2),
       ),
     );
   }
@@ -84,7 +71,8 @@ class _ReferEarnScreenState
   Future<void> _shareReferral() async {
     if (referralCode.isEmpty) return;
 
-    final message = '''
+    final message =
+        '''
 🚀 Join me on DevOps Quiz!
 
 Learn and test your knowledge of Linux, Docker, Kubernetes, AWS, Networking and more.
@@ -99,11 +87,7 @@ $playStoreUrl
 ''';
 
     await SharePlus.instance.share(
-      ShareParams(
-        text: message,
-        subject:
-            'Join me on DevOps Quiz',
-      ),
+      ShareParams(text: message, subject: 'Join me on DevOps Quiz'),
     );
   }
 
@@ -114,121 +98,85 @@ $playStoreUrl
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text(
-          'Refer & Earn',
-        ),
-      ),
+      appBar: AppBar(title: const Text('Refer & Earn')),
 
       body: SafeArea(
         child: loading
-            ? const Center(
-                child:
-                    CircularProgressIndicator(),
-              )
+            ? const Center(child: CircularProgressIndicator())
             : SingleChildScrollView(
-                padding:
-                    const EdgeInsets.all(20),
+                padding: const EdgeInsets.all(20),
 
                 child: Center(
                   child: ConstrainedBox(
-                    constraints:
-                        const BoxConstraints(
-                      maxWidth: 550,
-                    ),
+                    constraints: const BoxConstraints(maxWidth: 550),
 
                     child: Column(
                       children: [
                         // =================================
                         // GIFT ICON
                         // =================================
-
                         Container(
                           width: 100,
                           height: 100,
 
-                          decoration:
-                              BoxDecoration(
+                          decoration: BoxDecoration(
                             color: Theme.of(
                               context,
-                            )
-                                .colorScheme
-                                .primaryContainer,
+                            ).colorScheme.primaryContainer,
 
-                            shape:
-                                BoxShape.circle,
+                            shape: BoxShape.circle,
                           ),
 
                           child: Icon(
-                            Icons
-                                .card_giftcard,
+                            Icons.card_giftcard,
 
                             size: 55,
 
-                            color: Theme.of(
-                              context,
-                            )
-                                .colorScheme
-                                .primary,
+                            color: Theme.of(context).colorScheme.primary,
                           ),
                         ),
 
-                        const SizedBox(
-                          height: 22,
-                        ),
+                        const SizedBox(height: 22),
 
                         // =================================
                         // TITLE
                         // =================================
-
                         const Text(
                           'Refer & Earn',
-                          textAlign:
-                              TextAlign.center,
+                          textAlign: TextAlign.center,
 
                           style: TextStyle(
                             fontSize: 30,
-                            fontWeight:
-                                FontWeight.bold,
+                            fontWeight: FontWeight.bold,
                           ),
                         ),
 
-                        const SizedBox(
-                          height: 8,
-                        ),
+                        const SizedBox(height: 8),
 
                         Text(
                           'Invite your friends to DevOps Quiz and earn rewards.',
 
-                          textAlign:
-                              TextAlign.center,
+                          textAlign: TextAlign.center,
 
                           style: TextStyle(
                             fontSize: 17,
 
                             color: Theme.of(
                               context,
-                            )
-                                .colorScheme
-                                .onSurfaceVariant,
+                            ).colorScheme.onSurfaceVariant,
                           ),
                         ),
 
-                        const SizedBox(
-                          height: 25,
-                        ),
+                        const SizedBox(height: 25),
 
                         // =================================
                         // REWARD CARD
                         // =================================
-
                         Card(
                           elevation: 5,
 
                           child: Padding(
-                            padding:
-                                const EdgeInsets
-                                    .symmetric(
+                            padding: const EdgeInsets.symmetric(
                               horizontal: 25,
                               vertical: 22,
                             ),
@@ -238,71 +186,46 @@ $playStoreUrl
                                 const Text(
                                   'SUCCESSFUL REFERRAL REWARD',
 
-                                  textAlign:
-                                      TextAlign
-                                          .center,
+                                  textAlign: TextAlign.center,
 
-                                  style:
-                                      TextStyle(
+                                  style: TextStyle(
                                     fontSize: 13,
 
-                                    fontWeight:
-                                        FontWeight
-                                            .bold,
+                                    fontWeight: FontWeight.bold,
 
-                                    letterSpacing:
-                                        1.2,
+                                    letterSpacing: 1.2,
                                   ),
                                 ),
 
-                                const SizedBox(
-                                  height: 12,
-                                ),
+                                const SizedBox(height: 12),
 
-                                const Text(
-                                  '⭐',
-                                  style:
-                                      TextStyle(
-                                    fontSize: 40,
-                                  ),
-                                ),
+                                const Text('⭐', style: TextStyle(fontSize: 40)),
 
-                                const SizedBox(
-                                  height: 5,
-                                ),
+                                const SizedBox(height: 5),
 
                                 Text(
                                   '+$referralReward',
 
-                                  style:
-                                      TextStyle(
+                                  style: TextStyle(
                                     fontSize: 38,
 
-                                    fontWeight:
-                                        FontWeight
-                                            .bold,
+                                    fontWeight: FontWeight.bold,
 
                                     color: Theme.of(
                                       context,
-                                    )
-                                        .colorScheme
-                                        .primary,
+                                    ).colorScheme.primary,
                                   ),
                                 ),
 
                                 const Text(
                                   'POINTS',
 
-                                  style:
-                                      TextStyle(
+                                  style: TextStyle(
                                     fontSize: 15,
 
-                                    fontWeight:
-                                        FontWeight
-                                            .bold,
+                                    fontWeight: FontWeight.bold,
 
-                                    letterSpacing:
-                                        1.5,
+                                    letterSpacing: 1.5,
                                   ),
                                 ),
                               ],
@@ -310,65 +233,45 @@ $playStoreUrl
                           ),
                         ),
 
-                        const SizedBox(
-                          height: 25,
-                        ),
+                        const SizedBox(height: 25),
 
                         // =================================
                         // REFERRAL CODE TITLE
                         // =================================
-
                         const Text(
                           'Your Referral Code',
 
                           style: TextStyle(
                             fontSize: 18,
 
-                            fontWeight:
-                                FontWeight.bold,
+                            fontWeight: FontWeight.bold,
                           ),
                         ),
 
-                        const SizedBox(
-                          height: 12,
-                        ),
+                        const SizedBox(height: 12),
 
                         // =================================
                         // REFERRAL CODE
                         // =================================
-
                         Container(
                           width: double.infinity,
 
-                          padding:
-                              const EdgeInsets
-                                  .symmetric(
+                          padding: const EdgeInsets.symmetric(
                             horizontal: 18,
                             vertical: 18,
                           ),
 
-                          decoration:
-                              BoxDecoration(
+                          decoration: BoxDecoration(
                             color: Theme.of(
                               context,
-                            )
-                                .colorScheme
-                                .primaryContainer,
+                            ).colorScheme.primaryContainer,
 
-                            borderRadius:
-                                BorderRadius
-                                    .circular(16),
+                            borderRadius: BorderRadius.circular(16),
 
-                            border:
-                                Border.all(
+                            border: Border.all(
                               color: Theme.of(
                                 context,
-                              )
-                                  .colorScheme
-                                  .primary
-                                  .withValues(
-                                    alpha: 0.3,
-                                  ),
+                              ).colorScheme.primary.withValues(alpha: 0.3),
                             ),
                           ),
 
@@ -378,117 +281,78 @@ $playStoreUrl
                                 child: Text(
                                   referralCode,
 
-                                  textAlign:
-                                      TextAlign
-                                          .center,
+                                  textAlign: TextAlign.center,
 
-                                  style:
-                                      const TextStyle(
+                                  style: const TextStyle(
                                     fontSize: 24,
 
-                                    fontWeight:
-                                        FontWeight
-                                            .bold,
+                                    fontWeight: FontWeight.bold,
 
-                                    letterSpacing:
-                                        2,
+                                    letterSpacing: 2,
                                   ),
                                 ),
                               ),
 
                               IconButton(
-                                tooltip:
-                                    'Copy Code',
+                                tooltip: 'Copy Code',
 
-                                onPressed:
-                                    _copyReferralCode,
+                                onPressed: _copyReferralCode,
 
-                                icon: const Icon(
-                                  Icons
-                                      .content_copy,
-                                ),
+                                icon: const Icon(Icons.content_copy),
                               ),
                             ],
                           ),
                         ),
 
-                        const SizedBox(
-                          height: 25,
-                        ),
+                        const SizedBox(height: 25),
 
                         // =================================
                         // SHARE BUTTON
                         // =================================
-
                         SizedBox(
                           width: double.infinity,
                           height: 55,
 
-                          child:
-                              ElevatedButton.icon(
-                            onPressed:
-                                _shareReferral,
+                          child: ElevatedButton.icon(
+                            onPressed: _shareReferral,
 
-                            icon: const Icon(
-                              Icons
-                                  .person_add_alt_1,
-                            ),
+                            icon: const Icon(Icons.person_add_alt_1),
 
                             label: const Text(
                               'Refer a Friend',
 
-                              style:
-                                  TextStyle(
+                              style: TextStyle(
                                 fontSize: 18,
 
-                                fontWeight:
-                                    FontWeight
-                                        .bold,
+                                fontWeight: FontWeight.bold,
                               ),
                             ),
                           ),
                         ),
 
-                        const SizedBox(
-                          height: 30,
-                        ),
+                        const SizedBox(height: 30),
 
                         // =================================
                         // HOW IT WORKS
                         // =================================
-
                         Align(
-                          alignment:
-                              Alignment.centerLeft,
+                          alignment: Alignment.centerLeft,
 
                           child: Text(
                             'How it works',
 
-                            style: Theme.of(
-                              context,
-                            )
-                                .textTheme
-                                .titleLarge
-                                ?.copyWith(
-                                  fontWeight:
-                                      FontWeight
-                                          .bold,
-                                ),
+                            style: Theme.of(context).textTheme.titleLarge
+                                ?.copyWith(fontWeight: FontWeight.bold),
                           ),
                         ),
 
-                        const SizedBox(
-                          height: 15,
-                        ),
+                        const SizedBox(height: 15),
 
                         const Card(
                           elevation: 2,
 
                           child: Padding(
-                            padding:
-                                EdgeInsets.all(
-                              18,
-                            ),
+                            padding: EdgeInsets.all(18),
 
                             child: Column(
                               children: [
@@ -498,19 +362,14 @@ $playStoreUrl
                                       'Share your referral code with a friend.',
                                 ),
 
-                                SizedBox(
-                                  height: 16,
-                                ),
+                                SizedBox(height: 16),
 
                                 _InfoRow(
                                   number: '2',
-                                  text:
-                                      'Your friend installs DevOps Quiz.',
+                                  text: 'Your friend installs DevOps Quiz.',
                                 ),
 
-                                SizedBox(
-                                  height: 16,
-                                ),
+                                SizedBox(height: 16),
 
                                 _InfoRow(
                                   number: '3',
@@ -518,54 +377,41 @@ $playStoreUrl
                                       'Your friend enters your referral code.',
                                 ),
 
-                                SizedBox(
-                                  height: 16,
-                                ),
+                                SizedBox(height: 16),
 
                                 _InfoRow(
                                   number: '4',
-                                  text:
-                                      'The referral is verified.',
+                                  text: 'The referral is verified.',
                                 ),
 
-                                SizedBox(
-                                  height: 16,
-                                ),
+                                SizedBox(height: 16),
 
                                 _InfoRow(
                                   number: '5',
-                                  text:
-                                      'You receive 1,000 points.',
+                                  text: 'You receive 1,000 points.',
                                 ),
                               ],
                             ),
                           ),
                         ),
 
-                        const SizedBox(
-                          height: 20,
-                        ),
+                        const SizedBox(height: 20),
 
                         Text(
                           'Points are awarded only after a successful referral.',
 
-                          textAlign:
-                              TextAlign.center,
+                          textAlign: TextAlign.center,
 
                           style: TextStyle(
                             fontSize: 13,
 
                             color: Theme.of(
                               context,
-                            )
-                                .colorScheme
-                                .onSurfaceVariant,
+                            ).colorScheme.onSurfaceVariant,
                           ),
                         ),
 
-                        const SizedBox(
-                          height: 20,
-                        ),
+                        const SizedBox(height: 20),
                       ],
                     ),
                   ),
@@ -584,58 +430,37 @@ class _InfoRow extends StatelessWidget {
   final String number;
   final String text;
 
-  const _InfoRow({
-    required this.number,
-    required this.text,
-  });
+  const _InfoRow({required this.number, required this.text});
 
   @override
   Widget build(BuildContext context) {
     return Row(
-      crossAxisAlignment:
-          CrossAxisAlignment.start,
+      crossAxisAlignment: CrossAxisAlignment.start,
 
       children: [
         CircleAvatar(
           radius: 16,
 
-          backgroundColor:
-              Theme.of(context)
-                  .colorScheme
-                  .primaryContainer,
+          backgroundColor: Theme.of(context).colorScheme.primaryContainer,
 
           child: Text(
             number,
 
             style: TextStyle(
-              fontWeight:
-                  FontWeight.bold,
+              fontWeight: FontWeight.bold,
 
-              color: Theme.of(context)
-                  .colorScheme
-                  .primary,
+              color: Theme.of(context).colorScheme.primary,
             ),
           ),
         ),
 
-        const SizedBox(
-          width: 14,
-        ),
+        const SizedBox(width: 14),
 
         Expanded(
           child: Padding(
-            padding:
-                const EdgeInsets.only(
-              top: 5,
-            ),
+            padding: const EdgeInsets.only(top: 5),
 
-            child: Text(
-              text,
-
-              style: const TextStyle(
-                fontSize: 16,
-              ),
-            ),
+            child: Text(text, style: const TextStyle(fontSize: 16)),
           ),
         ),
       ],

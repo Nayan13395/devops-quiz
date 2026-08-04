@@ -4,17 +4,13 @@ import '../models/achievement.dart';
 import '../services/achievement_service.dart';
 
 class AchievementScreen extends StatefulWidget {
-  const AchievementScreen({
-    super.key,
-  });
+  const AchievementScreen({super.key});
 
   @override
-  State<AchievementScreen> createState() =>
-      _AchievementScreenState();
+  State<AchievementScreen> createState() => _AchievementScreenState();
 }
 
-class _AchievementScreenState
-    extends State<AchievementScreen> {
+class _AchievementScreenState extends State<AchievementScreen> {
   List<Achievement> achievements = [];
 
   bool loading = true;
@@ -27,8 +23,7 @@ class _AchievementScreenState
   }
 
   Future<void> loadAchievements() async {
-    achievements =
-        await AchievementService.getAchievements();
+    achievements = await AchievementService.getAchievements();
 
     if (!mounted) return;
 
@@ -40,16 +35,10 @@ class _AchievementScreenState
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text(
-          "🏆 Achievements",
-        ),
-      ),
+      appBar: AppBar(title: const Text("🏆 Achievements")),
 
       body: loading
-          ? const Center(
-              child: CircularProgressIndicator(),
-            )
+          ? const Center(child: CircularProgressIndicator())
           : SafeArea(
               top: false,
               bottom: true,
@@ -64,39 +53,21 @@ class _AchievementScreenState
                   40,
                 ),
                 itemCount: achievements.length,
-                itemBuilder: (
-                  context,
-                  index,
-                ) {
-                  final achievement =
-                      achievements[index];
+                itemBuilder: (context, index) {
+                  final achievement = achievements[index];
 
                   return Padding(
-                    padding:
-                        const EdgeInsets.only(
-                      bottom: 8,
-                    ),
+                    padding: const EdgeInsets.only(bottom: 8),
                     child: Card(
                       margin: EdgeInsets.zero,
-                      elevation:
-                          achievement.unlocked
-                              ? 8
-                              : 2,
-                      shape:
-                          RoundedRectangleBorder(
-                        borderRadius:
-                            BorderRadius.circular(
-                          18,
-                        ),
+                      elevation: achievement.unlocked ? 8 : 2,
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(18),
                       ),
                       child: Padding(
-                        padding:
-                            const EdgeInsets.symmetric(
-                          vertical: 6,
-                        ),
+                        padding: const EdgeInsets.symmetric(vertical: 6),
                         child: ListTile(
-                          contentPadding:
-                              const EdgeInsets.symmetric(
+                          contentPadding: const EdgeInsets.symmetric(
                             horizontal: 18,
                             vertical: 8,
                           ),
@@ -106,12 +77,8 @@ class _AchievementScreenState
                             child: Center(
                               child: Text(
                                 achievement.icon,
-                                textAlign:
-                                    TextAlign.center,
-                                style:
-                                    const TextStyle(
-                                  fontSize: 34,
-                                ),
+                                textAlign: TextAlign.center,
+                                style: const TextStyle(fontSize: 34),
                               ),
                             ),
                           ),
@@ -119,53 +86,40 @@ class _AchievementScreenState
                           title: Text(
                             achievement.title,
                             maxLines: 2,
-                            overflow:
-                                TextOverflow.visible,
+                            overflow: TextOverflow.visible,
                             style: TextStyle(
                               fontSize: 18,
-                              fontWeight:
-                                  FontWeight.bold,
-                              color: achievement
-                                      .unlocked
+                              fontWeight: FontWeight.bold,
+                              color: achievement.unlocked
                                   ? Colors.green
                                   : Colors.grey,
                             ),
                           ),
 
                           subtitle: Padding(
-                            padding:
-                                const EdgeInsets.only(
-                              top: 4,
-                            ),
+                            padding: const EdgeInsets.only(top: 4),
                             child: Text(
-                              achievement
-                                  .description,
+                              achievement.description,
                               maxLines: 3,
-                              overflow:
-                                  TextOverflow.visible,
-                              style:
-                                  const TextStyle(
+                              overflow: TextOverflow.visible,
+                              style: const TextStyle(
                                 fontSize: 15,
                                 height: 1.25,
                               ),
                             ),
                           ),
 
-                          trailing:
-                              achievement.unlocked
-                                  ? const Icon(
-                                      Icons
-                                          .check_circle,
-                                      color:
-                                          Colors.green,
-                                      size: 28,
-                                    )
-                                  : const Icon(
-                                      Icons.lock,
-                                      color:
-                                          Colors.grey,
-                                      size: 26,
-                                    ),
+                          trailing: achievement.unlocked
+                              ? const Icon(
+                                  Icons.check_circle,
+                                  color: Colors.green,
+                                  size: 28,
+                                )
+                              : const Icon(
+                                  Icons.lock,
+                                  color: Colors.grey,
+                                  size: 26,
+                                ),
                         ),
                       ),
                     ),

@@ -23,47 +23,31 @@ class QuestionCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final ThemeData theme =
-        Theme.of(context);
+    final ThemeData theme = Theme.of(context);
 
-    final ColorScheme colorScheme =
-        theme.colorScheme;
+    final ColorScheme colorScheme = theme.colorScheme;
 
     return Container(
       width: double.infinity,
-      padding: const EdgeInsets.symmetric(
-        horizontal: 22,
-        vertical: 22,
-      ),
+      padding: const EdgeInsets.symmetric(horizontal: 22, vertical: 22),
       decoration: BoxDecoration(
         // Uses the currently selected theme.
         color: colorScheme.surfaceContainer,
         borderRadius: BorderRadius.circular(20),
 
         border: Border.all(
-          color: colorScheme.outlineVariant
-              .withValues(
-            alpha: 0.45,
-          ),
+          color: colorScheme.outlineVariant.withValues(alpha: 0.45),
         ),
 
         boxShadow: [
           BoxShadow(
             blurRadius: 10,
-            offset: const Offset(
-              0,
-              3,
-            ),
-            color: colorScheme.shadow
-                .withValues(
-              alpha: 0.10,
-            ),
+            offset: const Offset(0, 3),
+            color: colorScheme.shadow.withValues(alpha: 0.10),
           ),
         ],
       ),
-      child: _buildQuestion(
-        context,
-      ),
+      child: _buildQuestion(context),
     );
   }
 
@@ -71,39 +55,34 @@ class QuestionCard extends StatelessWidget {
   // QUESTION
   // =========================================================
 
-  Widget _buildQuestion(
-    BuildContext context,
-  ) {
-    final ThemeData theme =
-        Theme.of(context);
+  Widget _buildQuestion(BuildContext context) {
+    final ThemeData theme = Theme.of(context);
 
-    final ColorScheme colorScheme =
-        theme.colorScheme;
+    final ColorScheme colorScheme = theme.colorScheme;
 
     final TextStyle questionStyle =
         theme.textTheme.titleLarge?.copyWith(
-              fontSize: 20,
-              fontWeight: FontWeight.bold,
+          fontSize: 20,
+          fontWeight: FontWeight.bold,
 
-              // IMPORTANT:
-              // Automatically adapts to every theme.
-              color: colorScheme.onSurface,
+          // IMPORTANT:
+          // Automatically adapts to every theme.
+          color: colorScheme.onSurface,
 
-              height: 1.35,
-            ) ??
-            TextStyle(
-              fontSize: 20,
-              fontWeight: FontWeight.bold,
-              color: colorScheme.onSurface,
-              height: 1.35,
-            );
+          height: 1.35,
+        ) ??
+        TextStyle(
+          fontSize: 20,
+          fontWeight: FontWeight.bold,
+          color: colorScheme.onSurface,
+          height: 1.35,
+        );
 
     // =======================================================
     // DEVOPS / DAILY QUIZ
     // =======================================================
 
-    if (category == 'DevOps' ||
-        category == 'DailyQuiz') {
+    if (category == 'DevOps' || category == 'DailyQuiz') {
       return RichText(
         textAlign: TextAlign.center,
         text: TextSpan(
@@ -112,28 +91,20 @@ class QuestionCard extends StatelessWidget {
             // ===============================================
             // CATEGORY PREFIX
             // ===============================================
-
             TextSpan(
-              text:
-                  'In ${question.category}, ',
+              text: 'In ${question.category}, ',
               style: questionStyle.copyWith(
-                color:
-                    colorScheme.primary,
-                fontWeight:
-                    FontWeight.bold,
+                color: colorScheme.primary,
+                fontWeight: FontWeight.bold,
               ),
             ),
 
             // ===============================================
             // QUESTION
             // ===============================================
-
             TextSpan(
               text: question.question,
-              style: questionStyle.copyWith(
-                color:
-                    colorScheme.onSurface,
-              ),
+              style: questionStyle.copyWith(color: colorScheme.onSurface),
             ),
           ],
         ),

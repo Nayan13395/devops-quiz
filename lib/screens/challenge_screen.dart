@@ -11,9 +11,7 @@ class ChallengeScreen extends StatelessWidget {
     final challenges = ChallengeService.getChallenges();
 
     return Scaffold(
-      appBar: AppBar(
-        title: const Text("🏆 Challenge Mode"),
-      ),
+      appBar: AppBar(title: const Text("🏆 Challenge Mode")),
       body: ListView.builder(
         itemCount: challenges.length,
         itemBuilder: (context, index) {

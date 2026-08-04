@@ -15,13 +15,8 @@ class ChallengeCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return Card(
       elevation: 5,
-      margin: const EdgeInsets.symmetric(
-        vertical: 10,
-        horizontal: 16,
-      ),
-      shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.circular(18),
-      ),
+      margin: const EdgeInsets.symmetric(vertical: 10, horizontal: 16),
+      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(18)),
       child: InkWell(
         borderRadius: BorderRadius.circular(18),
         onTap: onTap,
@@ -29,20 +24,13 @@ class ChallengeCard extends StatelessWidget {
           padding: const EdgeInsets.all(18),
           child: Row(
             children: [
-              CircleAvatar(
-                radius: 28,
-                child: Icon(
-                  challenge.icon,
-                  size: 30,
-                ),
-              ),
+              CircleAvatar(radius: 28, child: Icon(challenge.icon, size: 30)),
 
               const SizedBox(width: 18),
 
               Expanded(
                 child: Column(
-                  crossAxisAlignment:
-                      CrossAxisAlignment.start,
+                  crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
                       challenge.title,
@@ -60,11 +48,7 @@ class ChallengeCard extends StatelessWidget {
 
                     Row(
                       children: [
-                        const Icon(
-                          Icons.stars,
-                          size: 18,
-                          color: Colors.amber,
-                        ),
+                        const Icon(Icons.stars, size: 18, color: Colors.amber),
                         const SizedBox(width: 4),
                         Text("${challenge.reward}"),
                       ],

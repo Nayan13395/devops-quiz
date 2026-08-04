@@ -1,26 +1,22 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter_local_notifications/flutter_local_notifications.dart';
+import 'package:flutter_timezone/flutter_timezone.dart';
 import 'package:timezone/data/latest.dart' as tz;
 import 'package:timezone/timezone.dart' as tz;
-import 'package:flutter/foundation.dart';
 
 class NotificationMessage {
   final String title;
   final String body;
 
-  const NotificationMessage({
-    required this.title,
-    required this.body,
-  });
+  const NotificationMessage({required this.title, required this.body});
 }
 
 class NotificationService {
   NotificationService._();
 
-  static final NotificationService instance =
-      NotificationService._();
+  static final NotificationService instance = NotificationService._();
 
-  final FlutterLocalNotificationsPlugin
-      flutterLocalNotificationsPlugin =
+  final FlutterLocalNotificationsPlugin flutterLocalNotificationsPlugin =
       FlutterLocalNotificationsPlugin();
 
   static const List<NotificationMessage> _messages = [
@@ -126,120 +122,239 @@ class NotificationService {
     ),
   ];
 
+  // =========================================================
+  // INITIALIZE
+  // =========================================================
+
   Future<void> initialize() async {
-    if (kIsWeb) return;
+    if (kIsWeb) {
+      return;
+    }
 
-    tz.initializeTimeZones();
+    try {
+      // ===========================================
+      // INITIALIZE TIMEZONE DATABASE
+      // ===========================================
 
-    const AndroidInitializationSettings
-        initializationSettingsAndroid =
-        AndroidInitializationSettings(
-      '@mipmap/ic_launcher',
-    );
+      tz.initializeTimeZones();
 
-    const InitializationSettings
-        initializationSettings =
-        InitializationSettings(
-      android: initializationSettingsAndroid,
-    );
+      // ===========================================
+      // GET DEVICE LOCAL TIMEZONE
+      //
+      // India:
+      // Asia/Kolkata
+      //
+      // New York:
+      // America/New_York
+      //
+      // California:
+      // America/Los_Angeles
+      //
+      // London:
+      // Europe/London
+      // ===========================================
+      try {
+        final TimezoneInfo timezoneInfo =
+            await FlutterTimezone.getLocalTimezone();
 
-    await flutterLocalNotificationsPlugin.initialize(
-      settings: initializationSettings,
-    );
+        String timezoneName = timezoneInfo.identifier;
 
-    final androidPlugin =
-        flutterLocalNotificationsPlugin
-            .resolvePlatformSpecificImplementation<
-                AndroidFlutterLocalNotificationsPlugin>();
+        debugPrint('Detected device timezone: $timezoneName');
 
-    await androidPlugin?.requestNotificationsPermission();
+        // ===========================================
+        // NORMALIZE LEGACY TIMEZONE NAMES
+        // ===========================================
 
-    const AndroidNotificationChannel channel =
-        AndroidNotificationChannel(
-      'daily_quiz_channel',
-      'Daily Quiz Notifications',
-      description:
-          'Daily quiz reminder notifications',
-      importance: Importance.high,
-    );
+        const Map<String, String> timezoneAliases = {
+          'Asia/Calcutta': 'Asia/Kolkata',
+          'Asia/Katmandu': 'Asia/Kathmandu',
+          'Asia/Rangoon': 'Asia/Yangon',
+          'US/Eastern': 'America/New_York',
+          'US/Central': 'America/Chicago',
+          'US/Mountain': 'America/Denver',
+          'US/Pacific': 'America/Los_Angeles',
+        };
 
-    await androidPlugin?.createNotificationChannel(
-      channel,
-    );
+        timezoneName = timezoneAliases[timezoneName] ?? timezoneName;
 
-    await scheduleDailyNotifications();
+        debugPrint('Normalized timezone: $timezoneName');
 
-    final pending =
-        await flutterLocalNotificationsPlugin
+        final tz.Location location = tz.getLocation(timezoneName);
+
+        tz.setLocalLocation(location);
+
+        debugPrint(
+          'Timezone successfully set: '
+          '${tz.local.name}',
+        );
+
+        debugPrint(
+          'Current local time: '
+          '${tz.TZDateTime.now(tz.local)}',
+        );
+      } catch (e) {
+        debugPrint('Unable to detect device timezone: $e');
+
+        debugPrint('Using timezone package default.');
+      }
+      // ===========================================
+      // INITIALIZE NOTIFICATIONS
+      // ===========================================
+
+      const AndroidInitializationSettings initializationSettingsAndroid =
+          AndroidInitializationSettings('@mipmap/ic_launcher');
+
+      const InitializationSettings initializationSettings =
+          InitializationSettings(android: initializationSettingsAndroid);
+
+      await flutterLocalNotificationsPlugin.initialize(
+        settings: initializationSettings,
+      );
+
+      final AndroidFlutterLocalNotificationsPlugin? androidPlugin =
+          flutterLocalNotificationsPlugin
+              .resolvePlatformSpecificImplementation<
+                AndroidFlutterLocalNotificationsPlugin
+              >();
+
+      // ===========================================
+      // REQUEST NOTIFICATION PERMISSION
+      // ===========================================
+
+      try {
+        await androidPlugin?.requestNotificationsPermission();
+      } catch (e) {
+        debugPrint('Notification permission request failed: $e');
+      }
+
+      // ===========================================
+      // CREATE NOTIFICATION CHANNEL
+      // ===========================================
+
+      const AndroidNotificationChannel channel = AndroidNotificationChannel(
+        'daily_quiz_channel',
+        'Daily Quiz Notifications',
+        description: 'Daily quiz reminder notifications',
+        importance: Importance.high,
+      );
+
+      await androidPlugin?.createNotificationChannel(channel);
+
+      // ===========================================
+      // SCHEDULE DAILY NOTIFICATIONS
+      // ===========================================
+
+      try {
+        await scheduleDailyNotifications();
+      } catch (e, stackTrace) {
+        debugPrint('Unable to schedule daily notifications: $e');
+
+        debugPrint('$stackTrace');
+      }
+
+      // ===========================================
+      // DEBUG PENDING NOTIFICATIONS
+      // ===========================================
+
+      try {
+        final pending = await flutterLocalNotificationsPlugin
             .pendingNotificationRequests();
 
-    debugPrint(
-      "Pending Notifications : ${pending.length}",
-    );
+        debugPrint('Pending Notifications: ${pending.length}');
+      } catch (e) {
+        debugPrint('Unable to read pending notifications: $e');
+      }
+    } catch (e, stackTrace) {
+      // Notification failure must never stop
+      // the application from opening.
+
+      debugPrint('NotificationService initialization error: $e');
+
+      debugPrint('$stackTrace');
+    }
   }
 
+  // =========================================================
+  // TEST IMMEDIATE NOTIFICATION
+  // =========================================================
+
   Future<void> showTestNotification() async {
-    if (kIsWeb) return;
+    if (kIsWeb) {
+      return;
+    }
 
-    const AndroidNotificationDetails
-        androidDetails =
+    const AndroidNotificationDetails androidDetails =
         AndroidNotificationDetails(
-      'daily_quiz_channel',
-      'Daily Quiz Notifications',
-      channelDescription:
-          'Daily quiz reminder notifications',
-      importance: Importance.high,
-      priority: Priority.high,
-    );
+          'daily_quiz_channel',
+          'Daily Quiz Notifications',
+          channelDescription: 'Daily quiz reminder notifications',
+          importance: Importance.high,
+          priority: Priority.high,
+        );
 
-    const NotificationDetails details =
-        NotificationDetails(
+    const NotificationDetails details = NotificationDetails(
       android: androidDetails,
     );
 
-    await flutterLocalNotificationsPlugin.show(
-      id: 999,
-      title: 'DevOps Quiz',
-      body: 'Test notification',
-      notificationDetails: details,
-    );
+    try {
+      await flutterLocalNotificationsPlugin.show(
+        id: 999,
+        title: 'DevOps Quiz',
+        body: 'Test notification',
+        notificationDetails: details,
+      );
+    } catch (e) {
+      debugPrint('Test notification failed: $e');
+    }
   }
-    Future<void> testScheduleNotification() async {
-    if (kIsWeb) return;
 
-    await flutterLocalNotificationsPlugin.zonedSchedule(
-      id: 100,
-      title: "Test Notification",
-      body: "This notification should appear after 30 seconds.",
-      scheduledDate: tz.TZDateTime.now(tz.local).add(
-        const Duration(seconds: 30),
-      ),
-      notificationDetails: const NotificationDetails(
-        android: AndroidNotificationDetails(
-          'daily_quiz_channel',
-          'Daily Quiz Notifications',
-          channelDescription:
-              'Daily quiz reminder notifications',
-          importance: Importance.high,
-          priority: Priority.high,
+  // =========================================================
+  // TEST SCHEDULED NOTIFICATION
+  // =========================================================
+
+  Future<void> testScheduleNotification() async {
+    if (kIsWeb) {
+      return;
+    }
+
+    try {
+      final tz.TZDateTime testTime = tz.TZDateTime.now(
+        tz.local,
+      ).add(const Duration(seconds: 30));
+
+      debugPrint('Test notification scheduled for: $testTime');
+
+      await flutterLocalNotificationsPlugin.zonedSchedule(
+        id: 100,
+        title: 'Test Notification',
+        body: 'This notification should appear after 30 seconds.',
+        scheduledDate: testTime,
+        notificationDetails: const NotificationDetails(
+          android: AndroidNotificationDetails(
+            'daily_quiz_channel',
+            'Daily Quiz Notifications',
+            channelDescription: 'Daily quiz reminder notifications',
+            importance: Importance.high,
+            priority: Priority.high,
+          ),
         ),
-      ),
-      androidScheduleMode:
-          AndroidScheduleMode.exactAllowWhileIdle,
-    );
 
-    debugPrint(
-      "30-second test notification scheduled.",
-    );
+        // Does not require exact alarm permission.
+        androidScheduleMode: AndroidScheduleMode.inexactAllowWhileIdle,
+      );
+    } catch (e) {
+      debugPrint('Unable to schedule test notification: $e');
+    }
   }
 
-  tz.TZDateTime _nextInstance(
-    int hour,
-    int minute,
-  ) {
-    final now = tz.TZDateTime.now(tz.local);
+  // =========================================================
+  // GET NEXT LOCAL NOTIFICATION TIME
+  // =========================================================
 
-    var scheduled = tz.TZDateTime(
+  tz.TZDateTime _nextInstance(int hour, int minute) {
+    final tz.TZDateTime now = tz.TZDateTime.now(tz.local);
+
+    tz.TZDateTime scheduled = tz.TZDateTime(
       tz.local,
       now.year,
       now.month,
@@ -248,110 +363,184 @@ class NotificationService {
       minute,
     );
 
-    if (scheduled.isBefore(now)) {
-      scheduled = scheduled.add(
-        const Duration(days: 1),
+    // If today's notification time has already
+    // passed, schedule it for tomorrow.
+
+    if (!scheduled.isAfter(now)) {
+      scheduled = tz.TZDateTime(
+        tz.local,
+        now.year,
+        now.month,
+        now.day + 1,
+        hour,
+        minute,
       );
     }
 
     return scheduled;
   }
 
-  NotificationMessage messageForToday(
-    int offset,
-  ) {
-    final now = DateTime.now();
+  // =========================================================
+  // MESSAGE FOR TODAY
+  // =========================================================
 
-    final dayNumber =
-        now.difference(
-          DateTime(now.year),
-        ).inDays;
+  NotificationMessage messageForToday(int offset) {
+    // Use the timezone-aware local date.
 
-    return _messages[
-        (dayNumber + offset) %
-            _messages.length];
+    final tz.TZDateTime now = tz.TZDateTime.now(tz.local);
+
+    final DateTime startOfYear = DateTime(now.year, 1, 1);
+
+    final DateTime today = DateTime(now.year, now.month, now.day);
+
+    final int dayNumber = today.difference(startOfYear).inDays;
+
+    return _messages[(dayNumber + offset) % _messages.length];
   }
 
+  // =========================================================
+  // DAILY NOTIFICATIONS
+  // =========================================================
+
   Future<void> scheduleDailyNotifications() async {
-    if (kIsWeb) return;
+    if (kIsWeb) {
+      return;
+    }
 
-    const AndroidNotificationDetails
-        androidDetails =
-        AndroidNotificationDetails(
-      'daily_quiz_channel',
-      'Daily Quiz Notifications',
-      channelDescription:
-          'Daily quiz reminder notifications',
-      importance: Importance.high,
-      priority: Priority.high,
-    );
+    try {
+      const AndroidNotificationDetails androidDetails =
+          AndroidNotificationDetails(
+            'daily_quiz_channel',
+            'Daily Quiz Notifications',
+            channelDescription: 'Daily quiz reminder notifications',
+            importance: Importance.high,
+            priority: Priority.high,
+          );
 
-    const NotificationDetails details =
-        NotificationDetails(
-      android: androidDetails,
-    );
-
-    // Remove previous schedules
- await flutterLocalNotificationsPlugin.cancel(id: 1);
-await flutterLocalNotificationsPlugin.cancel(id: 2);
-await flutterLocalNotificationsPlugin.cancel(id: 3);
-    // Pick today's messages
-    final morning = messageForToday(0);
-    final afternoon = messageForToday(1);
-    final evening = messageForToday(2);
-
-    // 9:00 AM
-    await flutterLocalNotificationsPlugin.zonedSchedule(
-      id: 1,
-      title: morning.title,
-      body: morning.body,
-      scheduledDate: _nextInstance(9, 0),
-      notificationDetails: details,
-      androidScheduleMode:
-          AndroidScheduleMode.exactAllowWhileIdle,
-      matchDateTimeComponents:
-          DateTimeComponents.time,
-    );
-
-    // 4:00 PM
-    await flutterLocalNotificationsPlugin.zonedSchedule(
-      id: 2,
-      title: afternoon.title,
-      body: afternoon.body,
-      scheduledDate: _nextInstance(16, 0),
-      notificationDetails: details,
-      androidScheduleMode:
-          AndroidScheduleMode.exactAllowWhileIdle,
-      matchDateTimeComponents:
-          DateTimeComponents.time,
-    );
-
-    // 9:00 PM
-    await flutterLocalNotificationsPlugin.zonedSchedule(
-      id: 3,
-      title: evening.title,
-      body: evening.body,
-      scheduledDate: _nextInstance(21, 0),
-      notificationDetails: details,
-      androidScheduleMode:
-          AndroidScheduleMode.exactAllowWhileIdle,
-      matchDateTimeComponents:
-          DateTimeComponents.time,
-    );
-
-    final pending =
-        await flutterLocalNotificationsPlugin
-            .pendingNotificationRequests();
-
-    debugPrint(
-      "Scheduled Notifications : ${pending.length}",
-    );
-
-    for (final notification in pending) {
-      debugPrint(
-        "ID: ${notification.id}, "
-        "Title: ${notification.title}",
+      const NotificationDetails details = NotificationDetails(
+        android: androidDetails,
       );
+
+      // ===========================================
+      // REMOVE PREVIOUS DAILY SCHEDULES
+      // ===========================================
+
+      await flutterLocalNotificationsPlugin.cancel(id: 1);
+
+      await flutterLocalNotificationsPlugin.cancel(id: 2);
+
+      await flutterLocalNotificationsPlugin.cancel(id: 3);
+
+      // ===========================================
+      // PICK TODAY'S MESSAGES
+      // ===========================================
+
+      final NotificationMessage morning = messageForToday(0);
+
+      final NotificationMessage afternoon = messageForToday(1);
+
+      final NotificationMessage evening = messageForToday(2);
+
+      // ===========================================
+      // CALCULATE LOCAL TIMES
+      // ===========================================
+
+      final tz.TZDateTime morningTime = _nextInstance(9, 0);
+
+      final tz.TZDateTime afternoonTime = _nextInstance(16, 0);
+
+      final tz.TZDateTime eveningTime = _nextInstance(21, 0);
+
+      debugPrint('--------------------------------');
+
+      debugPrint('Device timezone: ${tz.local.name}');
+
+      debugPrint(
+        'Current local time: '
+        '${tz.TZDateTime.now(tz.local)}',
+      );
+
+      debugPrint('Morning notification: $morningTime');
+
+      debugPrint('Afternoon notification: $afternoonTime');
+
+      debugPrint('Evening notification: $eveningTime');
+
+      debugPrint('--------------------------------');
+
+      // ===========================================
+      // 9:00 AM LOCAL TIME
+      // ===========================================
+
+      await flutterLocalNotificationsPlugin.zonedSchedule(
+        id: 1,
+        title: morning.title,
+        body: morning.body,
+        scheduledDate: morningTime,
+        notificationDetails: details,
+
+        // IMPORTANT:
+        // Inexact mode prevents the Vivo
+        // exact_alarms_not_permitted crash.
+        androidScheduleMode: AndroidScheduleMode.inexactAllowWhileIdle,
+
+        matchDateTimeComponents: DateTimeComponents.time,
+      );
+
+      // ===========================================
+      // 4:00 PM LOCAL TIME
+      // ===========================================
+
+      await flutterLocalNotificationsPlugin.zonedSchedule(
+        id: 2,
+        title: afternoon.title,
+        body: afternoon.body,
+        scheduledDate: afternoonTime,
+        notificationDetails: details,
+
+        androidScheduleMode: AndroidScheduleMode.inexactAllowWhileIdle,
+
+        matchDateTimeComponents: DateTimeComponents.time,
+      );
+
+      // ===========================================
+      // 9:00 PM LOCAL TIME
+      // ===========================================
+
+      await flutterLocalNotificationsPlugin.zonedSchedule(
+        id: 3,
+        title: evening.title,
+        body: evening.body,
+        scheduledDate: eveningTime,
+        notificationDetails: details,
+
+        androidScheduleMode: AndroidScheduleMode.inexactAllowWhileIdle,
+
+        matchDateTimeComponents: DateTimeComponents.time,
+      );
+
+      // ===========================================
+      // DEBUG PENDING NOTIFICATIONS
+      // ===========================================
+
+      final pending = await flutterLocalNotificationsPlugin
+          .pendingNotificationRequests();
+
+      debugPrint('Scheduled Notifications: ${pending.length}');
+
+      for (final notification in pending) {
+        debugPrint(
+          'ID: ${notification.id}, '
+          'Title: ${notification.title}',
+        );
+      }
+    } catch (e, stackTrace) {
+      // Notification scheduling must never
+      // crash the application.
+
+      debugPrint('Daily notification scheduling failed: $e');
+
+      debugPrint('$stackTrace');
     }
   }
 }

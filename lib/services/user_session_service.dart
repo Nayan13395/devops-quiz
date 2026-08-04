@@ -3,27 +3,20 @@ import 'package:shared_preferences/shared_preferences.dart';
 class UserSessionService {
   UserSessionService._();
 
-  static const String _loginTypeKey =
-      'user_login_type';
+  static const String _loginTypeKey = 'user_login_type';
 
-  static const String _guestValue =
-      'guest';
+  static const String _guestValue = 'guest';
 
-  static const String _googleValue =
-      'google';
+  static const String _googleValue = 'google';
 
   // =========================================================
   // CONTINUE AS GUEST
   // =========================================================
 
   static Future<void> continueAsGuest() async {
-    final prefs =
-        await SharedPreferences.getInstance();
+    final prefs = await SharedPreferences.getInstance();
 
-    await prefs.setString(
-      _loginTypeKey,
-      _guestValue,
-    );
+    await prefs.setString(_loginTypeKey, _guestValue);
   }
 
   // =========================================================
@@ -31,13 +24,9 @@ class UserSessionService {
   // =========================================================
 
   static Future<void> saveGoogleLogin() async {
-    final prefs =
-        await SharedPreferences.getInstance();
+    final prefs = await SharedPreferences.getInstance();
 
-    await prefs.setString(
-      _loginTypeKey,
-      _googleValue,
-    );
+    await prefs.setString(_loginTypeKey, _googleValue);
   }
 
   // =========================================================
@@ -45,12 +34,9 @@ class UserSessionService {
   // =========================================================
 
   static Future<String?> getLoginType() async {
-    final prefs =
-        await SharedPreferences.getInstance();
+    final prefs = await SharedPreferences.getInstance();
 
-    return prefs.getString(
-      _loginTypeKey,
-    );
+    return prefs.getString(_loginTypeKey);
   }
 
   // =========================================================
@@ -58,8 +44,7 @@ class UserSessionService {
   // =========================================================
 
   static Future<bool> isGuest() async {
-    return await getLoginType() ==
-        _guestValue;
+    return await getLoginType() == _guestValue;
   }
 
   // =========================================================
@@ -67,18 +52,15 @@ class UserSessionService {
   // =========================================================
 
   static Future<bool> isGoogleUser() async {
-    return await getLoginType() ==
-        _googleValue;
+    return await getLoginType() == _googleValue;
   }
 
   // =========================================================
   // HAS SELECTED LOGIN METHOD
   // =========================================================
 
-  static Future<bool>
-      hasSelectedLoginMethod() async {
-    final loginType =
-        await getLoginType();
+  static Future<bool> hasSelectedLoginMethod() async {
+    final loginType = await getLoginType();
 
     return loginType != null;
   }
@@ -88,11 +70,8 @@ class UserSessionService {
   // =========================================================
 
   static Future<void> clearSession() async {
-    final prefs =
-        await SharedPreferences.getInstance();
+    final prefs = await SharedPreferences.getInstance();
 
-    await prefs.remove(
-      _loginTypeKey,
-    );
+    await prefs.remove(_loginTypeKey);
   }
 }

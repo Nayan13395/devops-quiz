@@ -16,17 +16,13 @@ import '../widgets/notification_button.dart';
 import 'category_screen.dart';
 
 class WelcomeScreen extends StatefulWidget {
-  const WelcomeScreen({
-    super.key,
-  });
+  const WelcomeScreen({super.key});
 
   @override
-  State<WelcomeScreen> createState() =>
-      _WelcomeScreenState();
+  State<WelcomeScreen> createState() => _WelcomeScreenState();
 }
 
-class _WelcomeScreenState
-    extends State<WelcomeScreen> {
+class _WelcomeScreenState extends State<WelcomeScreen> {
   bool _bonusCheckStarted = false;
 
   bool _sessionLoading = true;
@@ -45,30 +41,25 @@ class _WelcomeScreenState
   void initState() {
     super.initState();
 
-    WidgetsBinding.instance.addPostFrameCallback(
-      (_) async {
-        await _loadUserSession();
+    WidgetsBinding.instance.addPostFrameCallback((_) async {
+      await _loadUserSession();
 
-        if (!mounted) return;
+      if (!mounted) return;
 
-        if (!kIsWeb) {
-          try {
-            await NotificationService.instance
-                .scheduleDailyNotifications();
-          } catch (e) {
-            debugPrint(
-              'Notification scheduling error: $e',
-            );
-          }
+      if (!kIsWeb) {
+        try {
+          await NotificationService.instance.scheduleDailyNotifications();
+        } catch (e) {
+          debugPrint('Notification scheduling error: $e');
         }
+      }
 
-        if (!mounted) return;
+      if (!mounted) return;
 
-        if (_hasSelectedLoginMethod) {
-          await _checkDailyLoginBonus();
-        }
-      },
-    );
+      if (_hasSelectedLoginMethod) {
+        await _checkDailyLoginBonus();
+      }
+    });
   }
 
   // =========================================================
@@ -77,8 +68,7 @@ class _WelcomeScreenState
 
   Future<void> _loadUserSession() async {
     try {
-      final String? loginType =
-          await UserSessionService.getLoginType();
+      final String? loginType = await UserSessionService.getLoginType();
 
       if (!mounted) {
         return;
@@ -87,19 +77,14 @@ class _WelcomeScreenState
       setState(() {
         _loginType = loginType;
 
-        _hasSelectedLoginMethod =
-            loginType != null;
+        _hasSelectedLoginMethod = loginType != null;
 
         _sessionLoading = false;
       });
     } catch (e, stackTrace) {
-      debugPrint(
-        'User session loading error: $e',
-      );
+      debugPrint('User session loading error: $e');
 
-      debugPrintStack(
-        stackTrace: stackTrace,
-      );
+      debugPrintStack(stackTrace: stackTrace);
 
       if (!mounted) {
         return;
@@ -125,9 +110,7 @@ class _WelcomeScreenState
     _bonusCheckStarted = true;
 
     try {
-      final int? bonus =
-          await DailyLoginBonusService
-              .claimDailyBonus();
+      final int? bonus = await DailyLoginBonusService.claimDailyBonus();
 
       if (!mounted) {
         return;
@@ -137,18 +120,11 @@ class _WelcomeScreenState
         return;
       }
 
-      await showDailyLoginBonusDialog(
-        context,
-        bonus,
-      );
+      await showDailyLoginBonusDialog(context, bonus);
     } catch (e, stackTrace) {
-      debugPrint(
-        'Daily login bonus error: $e',
-      );
+      debugPrint('Daily login bonus error: $e');
 
-      debugPrintStack(
-        stackTrace: stackTrace,
-      );
+      debugPrintStack(stackTrace: stackTrace);
     }
   }
 
@@ -167,38 +143,25 @@ class _WelcomeScreenState
 
     try {
       debugPrint('');
-      debugPrint(
-        '==============================================',
-      );
-      debugPrint(
-        'WELCOME SCREEN: START GOOGLE SIGN-IN',
-      );
-      debugPrint(
-        '==============================================',
-      );
+      debugPrint('==============================================');
+      debugPrint('WELCOME SCREEN: START GOOGLE SIGN-IN');
+      debugPrint('==============================================');
 
-      final User? user =
-          await GoogleAuthService
-              .signInWithGoogle();
+      final User? user = await GoogleAuthService.signInWithGoogle();
 
       if (!mounted) {
         return;
       }
 
       if (user == null) {
-        debugPrint(
-          'WELCOME SCREEN: GoogleAuthService returned NULL user.',
-        );
+        debugPrint('WELCOME SCREEN: GoogleAuthService returned NULL user.');
 
-        ScaffoldMessenger.of(context)
-            .showSnackBar(
+        ScaffoldMessenger.of(context).showSnackBar(
           const SnackBar(
             content: Text(
               'Google Sign-In completed, but no user account was returned.',
             ),
-            duration: Duration(
-              seconds: 8,
-            ),
+            duration: Duration(seconds: 8),
           ),
         );
 
@@ -210,28 +173,16 @@ class _WelcomeScreenState
       // =====================================================
 
       debugPrint('');
-      debugPrint(
-        '==============================================',
-      );
-      debugPrint(
-        'WELCOME SCREEN: GOOGLE LOGIN SUCCESSFUL',
-      );
-      debugPrint(
-        'UID: ${user.uid}',
-      );
-      debugPrint(
-        'Email: ${user.email}',
-      );
-      debugPrint(
-        'Display name: ${user.displayName}',
-      );
+      debugPrint('==============================================');
+      debugPrint('WELCOME SCREEN: GOOGLE LOGIN SUCCESSFUL');
+      debugPrint('UID: ${user.uid}');
+      debugPrint('Email: ${user.email}');
+      debugPrint('Display name: ${user.displayName}');
       debugPrint(
         'Providers: '
         '${user.providerData.map((provider) => provider.providerId).join(", ")}',
       );
-      debugPrint(
-        '==============================================',
-      );
+      debugPrint('==============================================');
 
       setState(() {
         _loginType = 'google';
@@ -248,13 +199,9 @@ class _WelcomeScreenState
       try {
         await _checkDailyLoginBonus();
       } catch (e, stackTrace) {
-        debugPrint(
-          'Daily bonus failed after successful Google login: $e',
-        );
+        debugPrint('Daily bonus failed after successful Google login: $e');
 
-        debugPrintStack(
-          stackTrace: stackTrace,
-        );
+        debugPrintStack(stackTrace: stackTrace);
       }
 
       if (!mounted) {
@@ -265,16 +212,13 @@ class _WelcomeScreenState
       // USER NAME
       // =====================================================
 
-      String firstName =
-          UserProfileService.firstName.trim();
+      String firstName = UserProfileService.firstName.trim();
 
       if (firstName.isEmpty) {
-        final String displayName =
-            user.displayName?.trim() ?? '';
+        final String displayName = user.displayName?.trim() ?? '';
 
         if (displayName.isNotEmpty) {
-          firstName =
-              displayName.split(' ').first;
+          firstName = displayName.split(' ').first;
         } else {
           firstName = 'User';
         }
@@ -284,14 +228,9 @@ class _WelcomeScreenState
       // WELCOME MESSAGE
       // =====================================================
 
-      ScaffoldMessenger.of(context)
-          .showSnackBar(
-        SnackBar(
-          content: Text(
-            'Welcome, $firstName! 👋',
-          ),
-        ),
-      );
+      ScaffoldMessenger.of(
+        context,
+      ).showSnackBar(SnackBar(content: Text('Welcome, $firstName! 👋')));
 
       // =====================================================
       // OPEN CATEGORY SCREEN
@@ -299,41 +238,22 @@ class _WelcomeScreenState
 
       Navigator.push(
         context,
-        MaterialPageRoute(
-          builder: (_) =>
-              const CategoryScreen(),
-        ),
+        MaterialPageRoute(builder: (_) => const CategoryScreen()),
       );
     }
-
     // =======================================================
     // FIREBASE AUTHENTICATION ERROR
     // =======================================================
-
-    on FirebaseAuthException catch ( e, stackTrace) {
+    on FirebaseAuthException catch (e, stackTrace) {
       debugPrint('');
-      debugPrint(
-        '!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!',
-      );
-      debugPrint(
-        'WELCOME SCREEN: FIREBASE AUTH ERROR',
-      );
-      debugPrint(
-        'ERROR TYPE: ${e.runtimeType}',
-      );
-      debugPrint(
-        'ERROR CODE: ${e.code}',
-      );
-      debugPrint(
-        'ERROR MESSAGE: ${e.message}',
-      );
-      debugPrint(
-        '!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!',
-      );
+      debugPrint('!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!');
+      debugPrint('WELCOME SCREEN: FIREBASE AUTH ERROR');
+      debugPrint('ERROR TYPE: ${e.runtimeType}');
+      debugPrint('ERROR CODE: ${e.code}');
+      debugPrint('ERROR MESSAGE: ${e.message}');
+      debugPrint('!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!');
 
-      debugPrintStack(
-        stackTrace: stackTrace,
-      );
+      debugPrintStack(stackTrace: stackTrace);
 
       if (!mounted) {
         return;
@@ -348,8 +268,7 @@ class _WelcomeScreenState
           break;
 
         case 'credential-already-in-use':
-          message =
-              'This Google account is already linked to another account.';
+          message = 'This Google account is already linked to another account.';
           break;
 
         case 'invalid-credential':
@@ -358,13 +277,11 @@ class _WelcomeScreenState
           break;
 
         case 'user-disabled':
-          message =
-              'This account has been disabled.';
+          message = 'This account has been disabled.';
           break;
 
         case 'operation-not-allowed':
-          message =
-              'Google Sign-In is currently not enabled.';
+          message = 'Google Sign-In is currently not enabled.';
           break;
 
         case 'network-request-failed':
@@ -373,8 +290,7 @@ class _WelcomeScreenState
           break;
 
         case 'too-many-requests':
-          message =
-              'Too many sign-in attempts. Please wait and try again.';
+          message = 'Too many sign-in attempts. Please wait and try again.';
           break;
 
         default:
@@ -384,44 +300,22 @@ class _WelcomeScreenState
               '${e.message ?? "No additional error information."}';
       }
 
-      ScaffoldMessenger.of(context)
-          .showSnackBar(
-        SnackBar(
-          content: Text(
-            message,
-          ),
-          duration: const Duration(
-            seconds: 12,
-          ),
-        ),
+      ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(content: Text(message), duration: const Duration(seconds: 12)),
       );
     }
-
     // =======================================================
     // OTHER GOOGLE SIGN-IN ERROR
     // =======================================================
-
     catch (e, stackTrace) {
       debugPrint('');
-      debugPrint(
-        '!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!',
-      );
-      debugPrint(
-        'WELCOME SCREEN: GOOGLE SIGN-IN FAILED',
-      );
-      debugPrint(
-        'ERROR TYPE: ${e.runtimeType}',
-      );
-      debugPrint(
-        'ERROR: $e',
-      );
-      debugPrint(
-        '!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!',
-      );
+      debugPrint('!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!');
+      debugPrint('WELCOME SCREEN: GOOGLE SIGN-IN FAILED');
+      debugPrint('ERROR TYPE: ${e.runtimeType}');
+      debugPrint('ERROR: $e');
+      debugPrint('!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!');
 
-      debugPrintStack(
-        stackTrace: stackTrace,
-      );
+      debugPrintStack(stackTrace: stackTrace);
 
       if (!mounted) {
         return;
@@ -432,15 +326,10 @@ class _WelcomeScreenState
       // Once we identify and fix the problem,
       // this can be changed back to a friendly message.
 
-      ScaffoldMessenger.of(context)
-          .showSnackBar(
+      ScaffoldMessenger.of(context).showSnackBar(
         SnackBar(
-          content: Text(
-            'Google Sign-In error:\n$e',
-          ),
-          duration: const Duration(
-            seconds: 12,
-          ),
+          content: Text('Google Sign-In error:\n$e'),
+          duration: const Duration(seconds: 12),
         ),
       );
     } finally {
@@ -458,8 +347,7 @@ class _WelcomeScreenState
 
   Future<void> _continueAsGuest() async {
     try {
-      await UserSessionService
-          .continueAsGuest();
+      await UserSessionService.continueAsGuest();
 
       if (!mounted) {
         return;
@@ -478,30 +366,20 @@ class _WelcomeScreenState
 
       Navigator.push(
         context,
-        MaterialPageRoute(
-          builder: (_) =>
-              const CategoryScreen(),
-        ),
+        MaterialPageRoute(builder: (_) => const CategoryScreen()),
       );
     } catch (e, stackTrace) {
-      debugPrint(
-        'Continue as guest error: $e',
-      );
+      debugPrint('Continue as guest error: $e');
 
-      debugPrintStack(
-        stackTrace: stackTrace,
-      );
+      debugPrintStack(stackTrace: stackTrace);
 
       if (!mounted) {
         return;
       }
 
-      ScaffoldMessenger.of(context)
-          .showSnackBar(
+      ScaffoldMessenger.of(context).showSnackBar(
         const SnackBar(
-          content: Text(
-            'Unable to continue as guest. Please try again.',
-          ),
+          content: Text('Unable to continue as guest. Please try again.'),
         ),
       );
     }
@@ -514,10 +392,7 @@ class _WelcomeScreenState
   void _startQuiz() {
     Navigator.push(
       context,
-      MaterialPageRoute(
-        builder: (_) =>
-            const CategoryScreen(),
-      ),
+      MaterialPageRoute(builder: (_) => const CategoryScreen()),
     );
   }
 
@@ -525,52 +400,34 @@ class _WelcomeScreenState
   // PERSONALIZED GREETING
   // =========================================================
 
-  Widget _buildGreeting(
-    BuildContext context,
-  ) {
-    final ColorScheme colorScheme =
-        Theme.of(context).colorScheme;
+  Widget _buildGreeting(BuildContext context) {
+    final ColorScheme colorScheme = Theme.of(context).colorScheme;
 
     // =======================================================
     // GOOGLE USER
     // =======================================================
 
-    if (_loginType == 'google' &&
-        UserProfileService.isGoogleUser) {
-      final String firstName =
-          UserProfileService.firstName;
+    if (_loginType == 'google' && UserProfileService.isGoogleUser) {
+      final String firstName = UserProfileService.firstName;
 
       return Column(
         children: [
           Text(
             'Hi $firstName 👋',
-            textAlign:
-                TextAlign.center,
+            textAlign: TextAlign.center,
             style: TextStyle(
               fontSize: 28,
-              fontWeight:
-                  FontWeight.bold,
-              color:
-                  colorScheme.onSurface,
+              fontWeight: FontWeight.bold,
+              color: colorScheme.onSurface,
             ),
           ),
 
-          const SizedBox(
-            height: 8,
-          ),
+          const SizedBox(height: 8),
 
           Text(
-            AppLocalizations.of(
-              context,
-            )!
-                .welcomeToDevOpsQuiz,
-            textAlign:
-                TextAlign.center,
-            style: TextStyle(
-              fontSize: 20,
-              color: colorScheme
-                  .onSurfaceVariant,
-            ),
+            AppLocalizations.of(context)!.welcomeToDevOpsQuiz,
+            textAlign: TextAlign.center,
+            style: TextStyle(fontSize: 20, color: colorScheme.onSurfaceVariant),
           ),
         ],
       );
@@ -585,34 +442,20 @@ class _WelcomeScreenState
         if (_loginType == 'guest')
           Text(
             'Welcome 👋',
-            textAlign:
-                TextAlign.center,
+            textAlign: TextAlign.center,
             style: TextStyle(
               fontSize: 28,
-              fontWeight:
-                  FontWeight.bold,
-              color:
-                  colorScheme.onSurface,
+              fontWeight: FontWeight.bold,
+              color: colorScheme.onSurface,
             ),
           ),
 
-        if (_loginType == 'guest')
-          const SizedBox(
-            height: 8,
-          ),
+        if (_loginType == 'guest') const SizedBox(height: 8),
 
         Text(
-          AppLocalizations.of(
-            context,
-          )!
-              .welcomeToDevOpsQuiz,
-          textAlign:
-              TextAlign.center,
-          style: TextStyle(
-            fontSize: 20,
-            color:
-                colorScheme.onSurfaceVariant,
-          ),
+          AppLocalizations.of(context)!.welcomeToDevOpsQuiz,
+          textAlign: TextAlign.center,
+          style: TextStyle(fontSize: 20, color: colorScheme.onSurfaceVariant),
         ),
       ],
     );
@@ -622,128 +465,79 @@ class _WelcomeScreenState
   // LOGIN OPTIONS
   // =========================================================
 
-  Widget _buildLoginOptions(
-    BuildContext context,
-  ) {
-    final ColorScheme colorScheme =
-        Theme.of(context).colorScheme;
+  Widget _buildLoginOptions(BuildContext context) {
+    final ColorScheme colorScheme = Theme.of(context).colorScheme;
 
     return ConstrainedBox(
-      constraints: const BoxConstraints(
-        maxWidth: 380,
-      ),
+      constraints: const BoxConstraints(maxWidth: 380),
       child: Column(
         children: [
           // =================================================
           // GOOGLE
           // =================================================
-
           SizedBox(
             width: double.infinity,
             height: 56,
             child: OutlinedButton(
-              onPressed:
-                  _googleSignInLoading
-                      ? null
-                      : _continueWithGoogle,
-              style:
-                  OutlinedButton.styleFrom(
-                backgroundColor:
-                    colorScheme.surface,
-                foregroundColor:
-                    colorScheme.onSurface,
-                side: BorderSide(
-                  color: colorScheme
-                      .outlineVariant,
-                ),
-                shape:
-                    RoundedRectangleBorder(
-                  borderRadius:
-                      BorderRadius.circular(
-                    14,
-                  ),
+              onPressed: _googleSignInLoading ? null : _continueWithGoogle,
+              style: OutlinedButton.styleFrom(
+                backgroundColor: colorScheme.surface,
+                foregroundColor: colorScheme.onSurface,
+                side: BorderSide(color: colorScheme.outlineVariant),
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(14),
                 ),
               ),
               child: _googleSignInLoading
                   ? const Row(
-                      mainAxisAlignment:
-                          MainAxisAlignment.center,
+                      mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         SizedBox(
                           width: 22,
                           height: 22,
-                          child:
-                              CircularProgressIndicator(
-                            strokeWidth: 2,
-                          ),
+                          child: CircularProgressIndicator(strokeWidth: 2),
                         ),
-                        SizedBox(
-                          width: 14,
-                        ),
+                        SizedBox(width: 14),
                         Text(
                           'Signing in...',
                           style: TextStyle(
                             fontSize: 16,
-                            fontWeight:
-                                FontWeight.w600,
+                            fontWeight: FontWeight.w600,
                           ),
                         ),
                       ],
                     )
                   : Row(
-                      mainAxisAlignment:
-                          MainAxisAlignment.center,
+                      mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         Container(
                           width: 30,
                           height: 30,
-                          alignment:
-                              Alignment.center,
-                          decoration:
-                              BoxDecoration(
-                            color:
-                                Colors.white,
-                            borderRadius:
-                                BorderRadius.circular(
-                              50,
-                            ),
-                            boxShadow:
-                                const [
-                              BoxShadow(
-                                color:
-                                    Colors.black12,
-                                blurRadius:
-                                    3,
-                              ),
+                          alignment: Alignment.center,
+                          decoration: BoxDecoration(
+                            color: Colors.white,
+                            borderRadius: BorderRadius.circular(50),
+                            boxShadow: const [
+                              BoxShadow(color: Colors.black12, blurRadius: 3),
                             ],
                           ),
-                          child:
-                              const Text(
+                          child: const Text(
                             'G',
-                            style:
-                                TextStyle(
-                              color:
-                                  Colors.blue,
-                              fontSize:
-                                  19,
-                              fontWeight:
-                                  FontWeight.bold,
+                            style: TextStyle(
+                              color: Colors.blue,
+                              fontSize: 19,
+                              fontWeight: FontWeight.bold,
                             ),
                           ),
                         ),
 
-                        const SizedBox(
-                          width: 14,
-                        ),
+                        const SizedBox(width: 14),
 
                         const Text(
                           'Continue with Google',
-                          style:
-                              TextStyle(
-                            fontSize:
-                                16,
-                            fontWeight:
-                                FontWeight.w600,
+                          style: TextStyle(
+                            fontSize: 16,
+                            fontWeight: FontWeight.w600,
                           ),
                         ),
                       ],
@@ -751,104 +545,60 @@ class _WelcomeScreenState
             ),
           ),
 
-          const SizedBox(
-            height: 20,
-          ),
+          const SizedBox(height: 20),
 
           // =================================================
           // OR
           // =================================================
-
           Row(
             children: [
-              Expanded(
-                child: Divider(
-                  color: colorScheme
-                      .outlineVariant,
-                ),
-              ),
+              Expanded(child: Divider(color: colorScheme.outlineVariant)),
 
               Padding(
-                padding:
-                    const EdgeInsets.symmetric(
-                  horizontal: 16,
-                ),
+                padding: const EdgeInsets.symmetric(horizontal: 16),
                 child: Text(
                   'OR',
                   style: TextStyle(
                     fontSize: 12,
-                    fontWeight:
-                        FontWeight.bold,
-                    color: colorScheme
-                        .onSurfaceVariant,
+                    fontWeight: FontWeight.bold,
+                    color: colorScheme.onSurfaceVariant,
                   ),
                 ),
               ),
 
-              Expanded(
-                child: Divider(
-                  color: colorScheme
-                      .outlineVariant,
-                ),
-              ),
+              Expanded(child: Divider(color: colorScheme.outlineVariant)),
             ],
           ),
 
-          const SizedBox(
-            height: 20,
-          ),
+          const SizedBox(height: 20),
 
           // =================================================
           // GUEST
           // =================================================
-
           SizedBox(
             width: double.infinity,
             height: 56,
-            child:
-                ElevatedButton.icon(
-              onPressed:
-                  _googleSignInLoading
-                      ? null
-                      : _continueAsGuest,
-              icon: const Icon(
-                Icons
-                    .person_outline_rounded,
-              ),
+            child: ElevatedButton.icon(
+              onPressed: _googleSignInLoading ? null : _continueAsGuest,
+              icon: const Icon(Icons.person_outline_rounded),
               label: const Text(
                 'Continue as Guest',
-                style: TextStyle(
-                  fontSize: 16,
-                  fontWeight:
-                      FontWeight.bold,
-                ),
+                style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
               ),
-              style:
-                  ElevatedButton.styleFrom(
-                shape:
-                    RoundedRectangleBorder(
-                  borderRadius:
-                      BorderRadius.circular(
-                    14,
-                  ),
+              style: ElevatedButton.styleFrom(
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(14),
                 ),
               ),
             ),
           ),
 
-          const SizedBox(
-            height: 14,
-          ),
+          const SizedBox(height: 14),
 
           Text(
             'You can sign in later from your profile.',
-            textAlign:
-                TextAlign.center,
-            style: TextStyle(
-              fontSize: 12,
-              color: colorScheme
-                  .onSurfaceVariant,
-            ),
+            textAlign: TextAlign.center,
+            style: TextStyle(fontSize: 12, color: colorScheme.onSurfaceVariant),
           ),
         ],
       ),
@@ -859,69 +609,39 @@ class _WelcomeScreenState
   // RETURNING USER
   // =========================================================
 
-  Widget _buildStartQuizButton(
-    BuildContext context,
-  ) {
-    final ColorScheme colorScheme =
-        Theme.of(context).colorScheme;
+  Widget _buildStartQuizButton(BuildContext context) {
+    final ColorScheme colorScheme = Theme.of(context).colorScheme;
 
     final bool googleUser =
-        _loginType == 'google' &&
-            UserProfileService
-                .isGoogleUser;
+        _loginType == 'google' && UserProfileService.isGoogleUser;
 
     return Column(
       children: [
         // ===================================================
         // GOOGLE PROFILE PHOTO
         // ===================================================
-
-        if (googleUser &&
-            UserProfileService.photoUrl !=
-                null) ...[
+        if (googleUser && UserProfileService.photoUrl != null) ...[
           CircleAvatar(
             radius: 32,
-            backgroundColor:
-                colorScheme
-                    .surfaceContainerHighest,
-            backgroundImage:
-                NetworkImage(
-              UserProfileService
-                  .photoUrl!,
-            ),
+            backgroundColor: colorScheme.surfaceContainerHighest,
+            backgroundImage: NetworkImage(UserProfileService.photoUrl!),
           ),
 
-          const SizedBox(
-            height: 16,
-          ),
+          const SizedBox(height: 16),
         ],
 
         // ===================================================
         // START QUIZ
         // ===================================================
-
         SizedBox(
           width: 220,
           height: 55,
-          child:
-              ElevatedButton.icon(
-            onPressed:
-                _startQuiz,
-            icon: const Icon(
-              Icons
-                  .play_arrow_rounded,
-            ),
+          child: ElevatedButton.icon(
+            onPressed: _startQuiz,
+            icon: const Icon(Icons.play_arrow_rounded),
             label: Text(
-              AppLocalizations.of(
-                context,
-              )!
-                  .startQuiz,
-              style:
-                  const TextStyle(
-                fontSize: 18,
-                fontWeight:
-                    FontWeight.bold,
-              ),
+              AppLocalizations.of(context)!.startQuiz,
+              style: const TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
             ),
           ),
         ),
@@ -929,42 +649,25 @@ class _WelcomeScreenState
         // ===================================================
         // GUEST STATUS
         // ===================================================
-
         if (_loginType == 'guest') ...[
-          const SizedBox(
-            height: 14,
-          ),
+          const SizedBox(height: 14),
 
           Text(
             'Playing as Guest',
-            style: TextStyle(
-              fontSize: 12,
-              color: colorScheme
-                  .onSurfaceVariant,
-            ),
+            style: TextStyle(fontSize: 12, color: colorScheme.onSurfaceVariant),
           ),
         ],
 
         // ===================================================
         // GOOGLE EMAIL
         // ===================================================
-
-        if (googleUser &&
-            UserProfileService
-                .email.isNotEmpty) ...[
-          const SizedBox(
-            height: 12,
-          ),
+        if (googleUser && UserProfileService.email.isNotEmpty) ...[
+          const SizedBox(height: 12),
 
           Text(
             UserProfileService.email,
-            textAlign:
-                TextAlign.center,
-            style: TextStyle(
-              fontSize: 12,
-              color: colorScheme
-                  .onSurfaceVariant,
-            ),
+            textAlign: TextAlign.center,
+            style: TextStyle(fontSize: 12, color: colorScheme.onSurfaceVariant),
           ),
         ],
       ],
@@ -976,108 +679,65 @@ class _WelcomeScreenState
   // =========================================================
 
   @override
-  Widget build(
-    BuildContext context,
-  ) {
-    final logoWidth = math.min(
-      MediaQuery.sizeOf(context).width *
-          0.75,
-      420.0,
-    );
+  Widget build(BuildContext context) {
+    final logoWidth = math.min(MediaQuery.sizeOf(context).width * 0.75, 420.0);
 
     return Scaffold(
       drawer: const AppDrawer(),
 
       appBar: AppBar(
-        title: const Text(
-          'DevOps Quiz',
-        ),
+        title: const Text('DevOps Quiz'),
         actions: const [
           Padding(
-            padding: EdgeInsets.only(
-              right: 14,
-            ),
-            child: Center(
-              child:
-                  NotificationButton(),
-            ),
+            padding: EdgeInsets.only(right: 14),
+            child: Center(child: NotificationButton()),
           ),
         ],
       ),
 
       body: Center(
         child: SingleChildScrollView(
-          padding:
-              const EdgeInsets.all(
-            24,
-          ),
+          padding: const EdgeInsets.all(24),
           child: Column(
-            mainAxisAlignment:
-                MainAxisAlignment.center,
+            mainAxisAlignment: MainAxisAlignment.center,
             children: [
               // =============================================
               // LOGO
               // =============================================
+              _AnimatedDevOpsLogo(width: logoWidth),
 
-              _AnimatedDevOpsLogo(
-                width: logoWidth,
-              ),
-
-              const SizedBox(
-                height: 25,
-              ),
+              const SizedBox(height: 25),
 
               // =============================================
               // APP NAME
               // =============================================
-
               const Text(
                 'DevOps Quiz',
-                textAlign:
-                    TextAlign.center,
-                style: TextStyle(
-                  fontSize: 40,
-                  fontWeight:
-                      FontWeight.bold,
-                ),
+                textAlign: TextAlign.center,
+                style: TextStyle(fontSize: 40, fontWeight: FontWeight.bold),
               ),
 
-              const SizedBox(
-                height: 20,
-              ),
+              const SizedBox(height: 20),
 
               // =============================================
               // GREETING
               // =============================================
+              _buildGreeting(context),
 
-              _buildGreeting(
-                context,
-              ),
-
-              const SizedBox(
-                height: 35,
-              ),
+              const SizedBox(height: 35),
 
               // =============================================
               // SESSION
               // =============================================
-
               if (_sessionLoading)
                 const SizedBox(
                   height: 56,
-                  child: Center(
-                    child:
-                        CircularProgressIndicator(),
-                  ),
+                  child: Center(child: CircularProgressIndicator()),
                 )
               else if (!_hasSelectedLoginMethod)
-                _buildLoginOptions(
-                  context,
-                )
+                _buildLoginOptions(context)
               else
-                _buildStartQuizButton(
-                  context,
-                ),
+                _buildStartQuizButton(context),
             ],
           ),
         ),
@@ -1090,64 +750,39 @@ class _WelcomeScreenState
 // ANIMATED DEVOPS LOGO
 // ============================================================
 
-class _AnimatedDevOpsLogo
-    extends StatefulWidget {
-  const _AnimatedDevOpsLogo({
-    required this.width,
-  });
+class _AnimatedDevOpsLogo extends StatefulWidget {
+  const _AnimatedDevOpsLogo({required this.width});
 
   final double width;
 
   @override
-  State<_AnimatedDevOpsLogo>
-      createState() =>
-          _AnimatedDevOpsLogoState();
+  State<_AnimatedDevOpsLogo> createState() => _AnimatedDevOpsLogoState();
 }
 
-class _AnimatedDevOpsLogoState
-    extends State<_AnimatedDevOpsLogo>
+class _AnimatedDevOpsLogoState extends State<_AnimatedDevOpsLogo>
     with TickerProviderStateMixin {
-  late final AnimationController
-      _scaleController;
+  late final AnimationController _scaleController;
 
-  late final AnimationController
-      _flowController;
+  late final AnimationController _flowController;
 
-  late final Animation<double>
-      _scale;
+  late final Animation<double> _scale;
 
   @override
   void initState() {
     super.initState();
 
-    _scaleController =
-        AnimationController(
+    _scaleController = AnimationController(
       vsync: this,
-      duration: const Duration(
-        milliseconds: 1800,
-      ),
-    )..repeat(
-        reverse: true,
-      );
+      duration: const Duration(milliseconds: 1800),
+    )..repeat(reverse: true);
 
-    _flowController =
-        AnimationController(
+    _flowController = AnimationController(
       vsync: this,
-      duration: const Duration(
-        seconds: 7,
-      ),
+      duration: const Duration(seconds: 7),
     )..repeat();
 
-    _scale = Tween<double>(
-      begin: 1.0,
-      end: 1.04,
-    ).animate(
-      CurvedAnimation(
-        parent:
-            _scaleController,
-        curve:
-            Curves.easeInOut,
-      ),
+    _scale = Tween<double>(begin: 1.0, end: 1.04).animate(
+      CurvedAnimation(parent: _scaleController, curve: Curves.easeInOut),
     );
   }
 
@@ -1160,47 +795,26 @@ class _AnimatedDevOpsLogoState
   }
 
   @override
-  Widget build(
-    BuildContext context,
-  ) {
+  Widget build(BuildContext context) {
     return AnimatedBuilder(
-      animation:
-          Listenable.merge(
-        [
-          _scaleController,
-          _flowController,
-        ],
-      ),
-      builder: (
-        context,
-        child,
-      ) {
+      animation: Listenable.merge([_scaleController, _flowController]),
+      builder: (context, child) {
         return Transform.scale(
           scale: _scale.value,
           child: SizedBox(
             width: widget.width,
             child: AspectRatio(
-              aspectRatio:
-                  1383 / 697,
+              aspectRatio: 1383 / 697,
               child: Stack(
-                alignment:
-                    Alignment.center,
+                alignment: Alignment.center,
                 children: [
                   Container(
-                    decoration:
-                        BoxDecoration(
+                    decoration: BoxDecoration(
                       boxShadow: [
                         BoxShadow(
-                          color: Colors
-                              .cyan
-                              .withValues(
-                            alpha:
-                                0.22,
-                          ),
-                          blurRadius:
-                              35,
-                          spreadRadius:
-                              3,
+                          color: Colors.cyan.withValues(alpha: 0.22),
+                          blurRadius: 35,
+                          spreadRadius: 3,
                         ),
                       ],
                     ),
@@ -1208,8 +822,7 @@ class _AnimatedDevOpsLogoState
 
                   Image.asset(
                     'assets/images/devops_logo.png',
-                    fit:
-                        BoxFit.contain,
+                    fit: BoxFit.contain,
                   ),
                 ],
               ),

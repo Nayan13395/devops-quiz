@@ -20,12 +20,12 @@
         "answer": "mkdir"
     },
 
-    {
-        "category": "Linux", "set": 1,
-        "question": "Which command is used to display the current working directory?",
-        "options": ["cd", "pwd", "whoami", "dir"],
-        "answer": "pwd"
-    },
+{
+    "category": "Linux", "set": 1,
+    "question": "Which command is used to create a new Logical Volume (LV) in LVM?",
+    "options": ["lvcreate", "vgcreate", "pvcreate", "lvextend"],
+    "answer": "lvcreate"
+},
 
      {
         "category": "Linux", "set": 1,
@@ -2168,9 +2168,22 @@
         "answer": "kubectl get configmaps"
     },
     {
-        "category": "Kubernetes", "set": 2,        "question": "Which command lists Secrets?",
+"category": "Kubernetes",
+"set": 2,
+"question": "What is the main role of kubelet?",
+"options": [
+"API server",
+"Runs node containers",
+"Pod scheduling",
+"Cluster config"
+],
+"answer": "Runs node containers"
+},
+    {
+        "category": "Kubernetes", "set": 2,        
+        "question": "Which command lists Secrets?",
         "options": [
-            "kubectl get secrets",
+            "",
             "kubectl secrets",
             "kubectl list secrets",
             "kubectl show secrets"
@@ -3533,6 +3546,18 @@
         "Web Server"
     ],
     "answer": "Version Control System"
+},
+{
+"category": "Git",
+"set": 1,
+"question": "Which Git command is used to view commit history?",
+"options": [
+"git log",
+"git add",
+"git commit",
+"git clone"
+],
+"answer": "git log"
 },
 {
     "category": "Git",

@@ -5,35 +5,23 @@ import '../models/app_theme.dart';
 class ThemeService {
   ThemeService._();
 
-  static const String _selectedThemeKey =
-      'selected_app_theme';
+  static const String _selectedThemeKey = 'selected_app_theme';
 
   /// Save the theme selected by the user.
-  static Future<void> saveTheme(
-    AppThemeType theme,
-  ) async {
-    final prefs =
-        await SharedPreferences.getInstance();
+  static Future<void> saveTheme(AppThemeType theme) async {
+    final prefs = await SharedPreferences.getInstance();
 
-    await prefs.setString(
-      _selectedThemeKey,
-      theme.name,
-    );
+    await prefs.setString(_selectedThemeKey, theme.name);
   }
 
   /// Load the previously selected theme.
   ///
   /// If nothing has been selected yet,
   /// Light theme will be used.
-  static Future<AppThemeType>
-      loadTheme() async {
-    final prefs =
-        await SharedPreferences.getInstance();
+  static Future<AppThemeType> loadTheme() async {
+    final prefs = await SharedPreferences.getInstance();
 
-    final savedTheme =
-        prefs.getString(
-      _selectedThemeKey,
-    );
+    final savedTheme = prefs.getString(_selectedThemeKey);
 
     if (savedTheme == null) {
       return AppThemeType.light;
@@ -41,8 +29,7 @@ class ThemeService {
 
     try {
       return AppThemeType.values.firstWhere(
-        (theme) =>
-            theme.name == savedTheme,
+        (theme) => theme.name == savedTheme,
       );
     } catch (_) {
       return AppThemeType.light;
@@ -57,8 +44,7 @@ class ThemeService {
   }) {
     // Light and Dark have 0 required
     // points, so they are always unlocked.
-    return totalPoints >=
-        theme.requiredPoints;
+    return totalPoints >= theme.requiredPoints;
   }
 
   /// Number of points still required
@@ -67,9 +53,7 @@ class ThemeService {
     required AppThemeInfo theme,
     required int totalPoints,
   }) {
-    final remaining =
-        theme.requiredPoints -
-            totalPoints;
+    final remaining = theme.requiredPoints - totalPoints;
 
     if (remaining <= 0) {
       return 0;
@@ -88,14 +72,9 @@ class ThemeService {
       return 1.0;
     }
 
-    final progress =
-        totalPoints /
-            theme.requiredPoints;
+    final progress = totalPoints / theme.requiredPoints;
 
-    return progress.clamp(
-      0.0,
-      1.0,
-    );
+    return progress.clamp(0.0, 1.0);
   }
 
   /// Protect against loading a locked
@@ -106,22 +85,12 @@ class ThemeService {
   /// but if the points system changes later,
   /// this prevents an invalid theme from
   /// being activated.
-  static Future<AppThemeType>
-      loadAvailableTheme(
-    int totalPoints,
-  ) async {
-    final selected =
-        await loadTheme();
+  static Future<AppThemeType> loadAvailableTheme(int totalPoints) async {
+    final selected = await loadTheme();
 
-    final themeInfo =
-        AppThemes.getTheme(
-      selected,
-    );
+    final themeInfo = AppThemes.getTheme(selected);
 
-    if (isThemeUnlocked(
-      theme: themeInfo,
-      totalPoints: totalPoints,
-    )) {
+    if (isThemeUnlocked(theme: themeInfo, totalPoints: totalPoints)) {
       return selected;
     }
 

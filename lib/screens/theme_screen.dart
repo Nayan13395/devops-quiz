@@ -6,17 +6,13 @@ import '../services/point_service.dart';
 import '../services/theme_service.dart';
 
 class ThemeScreen extends StatefulWidget {
-  const ThemeScreen({
-    super.key,
-  });
+  const ThemeScreen({super.key});
 
   @override
-  State<ThemeScreen> createState() =>
-      _ThemeScreenState();
+  State<ThemeScreen> createState() => _ThemeScreenState();
 }
 
-class _ThemeScreenState
-    extends State<ThemeScreen> {
+class _ThemeScreenState extends State<ThemeScreen> {
   int totalPoints = 0;
   bool loading = true;
 
@@ -27,8 +23,7 @@ class _ThemeScreenState
   }
 
   Future<void> _loadPoints() async {
-    final points =
-        await PointService.getTotalPoints();
+    final points = await PointService.getTotalPoints();
 
     if (!mounted) return;
 
@@ -38,11 +33,8 @@ class _ThemeScreenState
     });
   }
 
-  Future<void> _selectTheme(
-    AppThemeInfo theme,
-  ) async {
-    final bool unlocked =
-        ThemeService.isThemeUnlocked(
+  Future<void> _selectTheme(AppThemeInfo theme) async {
+    final bool unlocked = ThemeService.isThemeUnlocked(
       theme: theme,
       totalPoints: totalPoints,
     );
@@ -52,11 +44,9 @@ class _ThemeScreenState
       return;
     }
 
-    final provider =
-        context.read<ThemeProvider>();
+    final provider = context.read<ThemeProvider>();
 
-    final changed =
-        await provider.setTheme(
+    final changed = await provider.setTheme(
       theme: theme.type,
       totalPoints: totalPoints,
     );
@@ -64,33 +54,24 @@ class _ThemeScreenState
     if (!mounted) return;
 
     if (changed) {
-      ScaffoldMessenger.of(context)
-          .hideCurrentSnackBar();
+      ScaffoldMessenger.of(context).hideCurrentSnackBar();
 
-      ScaffoldMessenger.of(context)
-          .showSnackBar(
+      ScaffoldMessenger.of(context).showSnackBar(
         SnackBar(
-          content: Text(
-            '${theme.emoji} ${theme.name} theme applied!',
-          ),
-          duration:
-              const Duration(seconds: 2),
+          content: Text('${theme.emoji} ${theme.name} theme applied!'),
+          duration: const Duration(seconds: 2),
         ),
       );
     }
   }
 
-  void _showLockedDialog(
-    AppThemeInfo theme,
-  ) {
-    final remaining =
-        ThemeService.pointsRemaining(
+  void _showLockedDialog(AppThemeInfo theme) {
+    final remaining = ThemeService.pointsRemaining(
       theme: theme,
       totalPoints: totalPoints,
     );
 
-    final progress =
-        ThemeService.unlockProgress(
+    final progress = ThemeService.unlockProgress(
       theme: theme,
       totalPoints: totalPoints,
     );
@@ -99,10 +80,7 @@ class _ThemeScreenState
       context: context,
       builder: (dialogContext) {
         return AlertDialog(
-          icon: const Icon(
-            Icons.lock_outline,
-            size: 42,
-          ),
+          icon: const Icon(Icons.lock_outline, size: 42),
 
           title: Text(
             '${theme.emoji} ${theme.name}',
@@ -110,13 +88,11 @@ class _ThemeScreenState
           ),
 
           content: Column(
-            mainAxisSize:
-                MainAxisSize.min,
+            mainAxisSize: MainAxisSize.min,
             children: [
               const Text(
                 'This theme is still locked.',
-                textAlign:
-                    TextAlign.center,
+                textAlign: TextAlign.center,
               ),
 
               const SizedBox(height: 16),
@@ -124,13 +100,8 @@ class _ThemeScreenState
               Text(
                 'Unlock at '
                 '${_formatPoints(theme.requiredPoints)} points',
-                textAlign:
-                    TextAlign.center,
-                style:
-                    const TextStyle(
-                  fontWeight:
-                      FontWeight.bold,
-                ),
+                textAlign: TextAlign.center,
+                style: const TextStyle(fontWeight: FontWeight.bold),
               ),
 
               const SizedBox(height: 8),
@@ -138,8 +109,7 @@ class _ThemeScreenState
               Text(
                 'You need '
                 '${_formatPoints(remaining)} more points.',
-                textAlign:
-                    TextAlign.center,
+                textAlign: TextAlign.center,
               ),
 
               const SizedBox(height: 18),
@@ -147,10 +117,7 @@ class _ThemeScreenState
               LinearProgressIndicator(
                 value: progress,
                 minHeight: 8,
-                borderRadius:
-                    BorderRadius.circular(
-                  10,
-                ),
+                borderRadius: BorderRadius.circular(10),
               ),
 
               const SizedBox(height: 8),
@@ -158,24 +125,17 @@ class _ThemeScreenState
               Text(
                 '${_formatPoints(totalPoints)} / '
                 '${_formatPoints(theme.requiredPoints)}',
-                style:
-                    const TextStyle(
-                  fontWeight:
-                      FontWeight.w600,
-                ),
+                style: const TextStyle(fontWeight: FontWeight.w600),
               ),
             ],
           ),
 
-          actionsAlignment:
-              MainAxisAlignment.center,
+          actionsAlignment: MainAxisAlignment.center,
 
           actions: [
             FilledButton(
               onPressed: () {
-                Navigator.pop(
-                  dialogContext,
-                );
+                Navigator.pop(dialogContext);
               },
               child: const Text('OK'),
             ),
@@ -190,11 +150,8 @@ class _ThemeScreenState
 
     final buffer = StringBuffer();
 
-    for (int i = 0;
-        i < text.length;
-        i++) {
-      if (i > 0 &&
-          (text.length - i) % 3 == 0) {
+    for (int i = 0; i < text.length; i++) {
+      if (i > 0 && (text.length - i) % 3 == 0) {
         buffer.write(',');
       }
 
@@ -207,40 +164,26 @@ class _ThemeScreenState
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text(
-          '🎨 Themes',
-        ),
-      ),
+      appBar: AppBar(title: const Text('🎨 Themes')),
 
       body: RefreshIndicator(
         onRefresh: _loadPoints,
         child: loading
-            ? const Center(
-                child:
-                    CircularProgressIndicator(),
-              )
+            ? const Center(child: CircularProgressIndicator())
             : ListView(
-                physics:
-                    const AlwaysScrollableScrollPhysics(),
-                padding:
-                    const EdgeInsets.all(16),
+                physics: const AlwaysScrollableScrollPhysics(),
+                padding: const EdgeInsets.all(16),
                 children: [
                   // ================================
                   // POINTS HEADER
                   // ================================
-
                   _buildPointsHeader(),
 
                   const SizedBox(height: 22),
 
                   const Text(
                     'Choose Your Theme',
-                    style: TextStyle(
-                      fontSize: 22,
-                      fontWeight:
-                          FontWeight.bold,
-                    ),
+                    style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
                   ),
 
                   const SizedBox(height: 5),
@@ -250,38 +193,21 @@ class _ThemeScreenState
                     'to unlock new themes.',
                     style: TextStyle(
                       fontSize: 14,
-                      color: Theme.of(context)
-                          .colorScheme
-                          .onSurfaceVariant,
+                      color: Theme.of(context).colorScheme.onSurfaceVariant,
                     ),
                   ),
 
                   const SizedBox(height: 18),
 
                   Consumer<ThemeProvider>(
-                    builder: (
-                      context,
-                      provider,
-                      child,
-                    ) {
+                    builder: (context, provider, child) {
                       return Column(
-                        children:
-                            AppThemes.all.map(
-                          (theme) {
-                            return Padding(
-                              padding:
-                                  const EdgeInsets
-                                      .only(
-                                bottom: 12,
-                              ),
-                              child:
-                                  _buildThemeCard(
-                                theme,
-                                provider,
-                              ),
-                            );
-                          },
-                        ).toList(),
+                        children: AppThemes.all.map((theme) {
+                          return Padding(
+                            padding: const EdgeInsets.only(bottom: 12),
+                            child: _buildThemeCard(theme, provider),
+                          );
+                        }).toList(),
                       );
                     },
                   ),
@@ -296,11 +222,8 @@ class _ThemeScreenState
       width: double.infinity,
       padding: const EdgeInsets.all(18),
       decoration: BoxDecoration(
-        color: Theme.of(context)
-            .colorScheme
-            .primaryContainer,
-        borderRadius:
-            BorderRadius.circular(20),
+        color: Theme.of(context).colorScheme.primaryContainer,
+        borderRadius: BorderRadius.circular(20),
       ),
       child: Row(
         children: [
@@ -308,16 +231,12 @@ class _ThemeScreenState
             width: 54,
             height: 54,
             decoration: BoxDecoration(
-              color: Theme.of(context)
-                  .colorScheme
-                  .primary,
+              color: Theme.of(context).colorScheme.primary,
               shape: BoxShape.circle,
             ),
             child: Icon(
               Icons.stars_rounded,
-              color: Theme.of(context)
-                  .colorScheme
-                  .onPrimary,
+              color: Theme.of(context).colorScheme.onPrimary,
               size: 30,
             ),
           ),
@@ -326,94 +245,65 @@ class _ThemeScreenState
 
           Expanded(
             child: Column(
-              crossAxisAlignment:
-                  CrossAxisAlignment.start,
+              crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                const Text(
-                  'Your Points',
-                  style: TextStyle(
-                    fontSize: 14,
-                  ),
-                ),
+                const Text('Your Points', style: TextStyle(fontSize: 14)),
 
                 Text(
                   _formatPoints(totalPoints),
-                  style:
-                      const TextStyle(
+                  style: const TextStyle(
                     fontSize: 26,
-                    fontWeight:
-                        FontWeight.bold,
+                    fontWeight: FontWeight.bold,
                   ),
                 ),
               ],
             ),
           ),
 
-          const Text(
-            '🏆',
-            style:
-                TextStyle(fontSize: 34),
-          ),
+          const Text('🏆', style: TextStyle(fontSize: 34)),
         ],
       ),
     );
   }
 
-  Widget _buildThemeCard(
-    AppThemeInfo theme,
-    ThemeProvider provider,
-  ) {
-    final bool unlocked =
-        ThemeService.isThemeUnlocked(
+  Widget _buildThemeCard(AppThemeInfo theme, ThemeProvider provider) {
+    final bool unlocked = ThemeService.isThemeUnlocked(
       theme: theme,
       totalPoints: totalPoints,
     );
 
-    final bool selected =
-        provider.selectedTheme ==
-            theme.type;
+    final bool selected = provider.selectedTheme == theme.type;
 
-    final progress =
-        ThemeService.unlockProgress(
+    final progress = ThemeService.unlockProgress(
       theme: theme,
       totalPoints: totalPoints,
     );
 
-    final remaining =
-        ThemeService.pointsRemaining(
+    final remaining = ThemeService.pointsRemaining(
       theme: theme,
       totalPoints: totalPoints,
     );
 
     return AnimatedContainer(
-      duration:
-          const Duration(milliseconds: 250),
+      duration: const Duration(milliseconds: 250),
       decoration: BoxDecoration(
-        color: Theme.of(context)
-            .colorScheme
-            .surface,
+        color: Theme.of(context).colorScheme.surface,
 
-        borderRadius:
-            BorderRadius.circular(20),
+        borderRadius: BorderRadius.circular(20),
 
         border: Border.all(
           color: selected
-              ? Theme.of(context)
-                  .colorScheme
-                  .primary
-              : Theme.of(context)
-                  .colorScheme
-                  .outlineVariant,
+              ? Theme.of(context).colorScheme.primary
+              : Theme.of(context).colorScheme.outlineVariant,
           width: selected ? 2.5 : 1,
         ),
 
         boxShadow: [
           if (selected)
             BoxShadow(
-              color: Theme.of(context)
-                  .colorScheme
-                  .primary
-                  .withValues(alpha: 0.20),
+              color: Theme.of(
+                context,
+              ).colorScheme.primary.withValues(alpha: 0.20),
               blurRadius: 12,
               spreadRadius: 1,
             ),
@@ -424,16 +314,14 @@ class _ThemeScreenState
         color: Colors.transparent,
 
         child: InkWell(
-          borderRadius:
-              BorderRadius.circular(20),
+          borderRadius: BorderRadius.circular(20),
 
           onTap: () {
             _selectTheme(theme);
           },
 
           child: Padding(
-            padding:
-                const EdgeInsets.all(15),
+            padding: const EdgeInsets.all(15),
 
             child: Column(
               children: [
@@ -442,39 +330,24 @@ class _ThemeScreenState
                     // ======================
                     // COLOR PREVIEW
                     // ======================
-
                     Container(
                       width: 58,
                       height: 58,
-                      alignment:
-                          Alignment.center,
+                      alignment: Alignment.center,
 
-                      decoration:
-                          BoxDecoration(
-                        gradient:
-                            LinearGradient(
-                          begin: Alignment
-                              .topLeft,
-                          end: Alignment
-                              .bottomRight,
-                          colors: [
-                            theme.primaryColor,
-                            theme
-                                .secondaryColor,
-                          ],
+                      decoration: BoxDecoration(
+                        gradient: LinearGradient(
+                          begin: Alignment.topLeft,
+                          end: Alignment.bottomRight,
+                          colors: [theme.primaryColor, theme.secondaryColor],
                         ),
 
-                        borderRadius:
-                            BorderRadius
-                                .circular(16),
+                        borderRadius: BorderRadius.circular(16),
                       ),
 
                       child: Text(
                         theme.emoji,
-                        style:
-                            const TextStyle(
-                          fontSize: 28,
-                        ),
+                        style: const TextStyle(fontSize: 28),
                       ),
                     ),
 
@@ -483,34 +356,22 @@ class _ThemeScreenState
                     // ======================
                     // NAME
                     // ======================
-
                     Expanded(
                       child: Column(
-                        crossAxisAlignment:
-                            CrossAxisAlignment
-                                .start,
+                        crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Text(
                             theme.name,
-                            style:
-                                const TextStyle(
+                            style: const TextStyle(
                               fontSize: 18,
-                              fontWeight:
-                                  FontWeight
-                                      .bold,
+                              fontWeight: FontWeight.bold,
                             ),
                           ),
 
-                          const SizedBox(
-                            height: 5,
-                          ),
+                          const SizedBox(height: 5),
 
-                          if (theme
-                                  .requiredPoints ==
-                              0)
-                            const Text(
-                              'Free Theme',
-                            )
+                          if (theme.requiredPoints == 0)
+                            const Text('Free Theme')
                           else if (unlocked)
                             Text(
                               'Unlocked at '
@@ -520,13 +381,10 @@ class _ThemeScreenState
                             Text(
                               'Requires '
                               '${_formatPoints(theme.requiredPoints)} points',
-                              style:
-                                  TextStyle(
+                              style: TextStyle(
                                 color: Theme.of(
                                   context,
-                                )
-                                    .colorScheme
-                                    .onSurfaceVariant,
+                                ).colorScheme.onSurfaceVariant,
                               ),
                             ),
                         ],
@@ -536,45 +394,28 @@ class _ThemeScreenState
                     // ======================
                     // STATUS
                     // ======================
-
                     if (selected)
                       Icon(
                         Icons.check_circle,
-                        color: Theme.of(
-                          context,
-                        )
-                            .colorScheme
-                            .primary,
+                        color: Theme.of(context).colorScheme.primary,
                         size: 30,
                       )
                     else if (unlocked)
-                      const Icon(
-                        Icons
-                            .lock_open_rounded,
-                      )
+                      const Icon(Icons.lock_open_rounded)
                     else
-                      const Icon(
-                        Icons.lock_rounded,
-                      ),
+                      const Icon(Icons.lock_rounded),
                   ],
                 ),
 
                 // ==========================
                 // LOCK PROGRESS
                 // ==========================
-
-                if (!unlocked &&
-                    theme.requiredPoints >
-                        0) ...[
+                if (!unlocked && theme.requiredPoints > 0) ...[
                   const SizedBox(height: 14),
 
                   ClipRRect(
-                    borderRadius:
-                        BorderRadius.circular(
-                      10,
-                    ),
-                    child:
-                        LinearProgressIndicator(
+                    borderRadius: BorderRadius.circular(10),
+                    child: LinearProgressIndicator(
                       value: progress,
                       minHeight: 7,
                     ),
@@ -583,26 +424,19 @@ class _ThemeScreenState
                   const SizedBox(height: 7),
 
                   Row(
-                    mainAxisAlignment:
-                        MainAxisAlignment
-                            .spaceBetween,
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       Text(
                         '${_formatPoints(totalPoints)} / '
                         '${_formatPoints(theme.requiredPoints)}',
-                        style:
-                            const TextStyle(
-                          fontSize: 12,
-                        ),
+                        style: const TextStyle(fontSize: 12),
                       ),
 
                       Text(
                         '${_formatPoints(remaining)} more',
-                        style:
-                            const TextStyle(
+                        style: const TextStyle(
                           fontSize: 12,
-                          fontWeight:
-                              FontWeight.w600,
+                          fontWeight: FontWeight.w600,
                         ),
                       ),
                     ],

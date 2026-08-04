@@ -22,11 +22,7 @@ class Achievement {
     required this.target,
   });
 
-  Achievement copyWith({
-    bool? unlocked,
-    int? current,
-    int? target,
-  }) {
+  Achievement copyWith({bool? unlocked, int? current, int? target}) {
     return Achievement(
       id: id,
       title: title,
@@ -39,6 +35,5 @@ class Achievement {
     );
   }
 
-  double get progress =>
-      target == 0 ? 0 : current / target;
+  double get progress => target == 0 ? 0 : current / target;
 }

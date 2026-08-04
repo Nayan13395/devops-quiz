@@ -1,5 +1,4 @@
 class Question {
-
   final String category;
   final int set;
   final String question;
@@ -15,24 +14,19 @@ class Question {
     required this.answer,
   });
 
-  factory Question.fromJson(
-    Map<String, dynamic> json,
-  ) {
+  factory Question.fromJson(Map<String, dynamic> json) {
     final q = Question(
-  category: json['category'],
-  set: json['set'],
-  question: json['question'],
-  options:
-      List<String>.from(
-          json['options']),
-  answer: json['answer'],
-);
+      category: json['category'],
+      set: json['set'],
+      question: json['question'],
+      options: List<String>.from(json['options']),
+      answer: json['answer'],
+    );
 
-q.shuffledOptions =
-    List<String>.from(q.options);
+    q.shuffledOptions = List<String>.from(q.options);
 
-q.shuffledOptions.shuffle();
+    q.shuffledOptions.shuffle();
 
-return q;
+    return q;
   }
 }

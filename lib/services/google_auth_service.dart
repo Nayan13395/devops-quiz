@@ -7,11 +7,9 @@ import 'user_session_service.dart';
 class GoogleAuthService {
   GoogleAuthService._();
 
-  static final FirebaseAuth _firebaseAuth =
-      FirebaseAuth.instance;
+  static final FirebaseAuth _firebaseAuth = FirebaseAuth.instance;
 
-  static final GoogleSignIn _googleSignIn =
-      GoogleSignIn.instance;
+  static final GoogleSignIn _googleSignIn = GoogleSignIn.instance;
 
   static bool _initialized = false;
 
@@ -22,55 +20,39 @@ class GoogleAuthService {
   // =========================================================
 
   static Future<void> initialize() async {
-  if (kIsWeb || _initialized) {
-    return;
+    if (kIsWeb || _initialized) {
+      return;
+    }
+
+    try {
+      debugPrint('==============================================');
+      debugPrint('INITIALIZING GOOGLE SIGN-IN');
+      debugPrint('==============================================');
+
+      await _googleSignIn.initialize(
+        serverClientId:
+            '742868981766-ihssmbru2mo0neaiuli6h3od7g9i19po.apps.googleusercontent.com',
+      );
+
+      _initialized = true;
+
+      debugPrint('Google Sign-In initialized successfully.');
+    } catch (e, stackTrace) {
+      lastError =
+          'Google Sign-In could not be initialized. '
+          'Please restart the app and try again.';
+
+      debugPrint('GOOGLE INITIALIZATION ERROR');
+
+      debugPrint('Type: ${e.runtimeType}');
+
+      debugPrint('Error: $e');
+
+      debugPrintStack(stackTrace: stackTrace);
+
+      rethrow;
+    }
   }
-
-  try {
-    debugPrint(
-      '==============================================',
-    );
-    debugPrint(
-      'INITIALIZING GOOGLE SIGN-IN',
-    );
-    debugPrint(
-      '==============================================',
-    );
-
-    await _googleSignIn.initialize(
-      serverClientId:
-          '742868981766-ihssmbru2mo0neaiuli6h3od7g9i19po.apps.googleusercontent.com',
-    );
-
-    _initialized = true;
-
-    debugPrint(
-      'Google Sign-In initialized successfully.',
-    );
-  } catch (e, stackTrace) {
-    lastError =
-        'Google Sign-In could not be initialized. '
-        'Please restart the app and try again.';
-
-    debugPrint(
-      'GOOGLE INITIALIZATION ERROR',
-    );
-
-    debugPrint(
-      'Type: ${e.runtimeType}',
-    );
-
-    debugPrint(
-      'Error: $e',
-    );
-
-    debugPrintStack(
-      stackTrace: stackTrace,
-    );
-
-    rethrow;
-  }
-}
 
   // =========================================================
   // SIGN IN
@@ -80,15 +62,9 @@ class GoogleAuthService {
     lastError = null;
 
     debugPrint('');
-    debugPrint(
-      '==============================================',
-    );
-    debugPrint(
-      'STARTING GOOGLE SIGN-IN',
-    );
-    debugPrint(
-      '==============================================',
-    );
+    debugPrint('==============================================');
+    debugPrint('STARTING GOOGLE SIGN-IN');
+    debugPrint('==============================================');
 
     try {
       final User? user;
@@ -104,107 +80,49 @@ class GoogleAuthService {
             'Google Sign-In did not return a user. '
             'Please try again.';
 
-        debugPrint(
-          '==============================================',
-        );
-        debugPrint(
-          'GOOGLE LOGIN RETURNED NULL',
-        );
-        debugPrint(
-          'Error: $lastError',
-        );
-        debugPrint(
-          '==============================================',
-        );
+        debugPrint('==============================================');
+        debugPrint('GOOGLE LOGIN RETURNED NULL');
+        debugPrint('Error: $lastError');
+        debugPrint('==============================================');
 
         return null;
       }
 
-      debugPrint(
-        '==============================================',
-      );
-      debugPrint(
-        'GOOGLE LOGIN SUCCESSFUL',
-      );
-      debugPrint(
-        'UID: ${user.uid}',
-      );
-      debugPrint(
-        'Email: ${user.email}',
-      );
-      debugPrint(
-        'Name: ${user.displayName}',
-      );
-      debugPrint(
-        '==============================================',
-      );
+      debugPrint('==============================================');
+      debugPrint('GOOGLE LOGIN SUCCESSFUL');
+      debugPrint('UID: ${user.uid}');
+      debugPrint('Email: ${user.email}');
+      debugPrint('Name: ${user.displayName}');
+      debugPrint('==============================================');
 
       return user;
-    } on GoogleSignInException catch (
-      e,
-      stackTrace
-    ) {
-      lastError =
-          _googleErrorMessage(e);
+    } on GoogleSignInException catch (e, stackTrace) {
+      lastError = _googleErrorMessage(e);
 
       debugPrint('');
-      debugPrint(
-        '!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!',
-      );
-      debugPrint(
-        'GOOGLE SIGN-IN EXCEPTION',
-      );
-      debugPrint(
-        'Code: ${e.code}',
-      );
-      debugPrint(
-        'Description: ${e.description}',
-      );
-      debugPrint(
-        'Raw: $e',
-      );
-      debugPrint(
-        'Display error: $lastError',
-      );
-      debugPrint(
-        '!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!',
-      );
+      debugPrint('!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!');
+      debugPrint('GOOGLE SIGN-IN EXCEPTION');
+      debugPrint('Code: ${e.code}');
+      debugPrint('Description: ${e.description}');
+      debugPrint('Raw: $e');
+      debugPrint('Display error: $lastError');
+      debugPrint('!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!');
 
-      debugPrintStack(
-        stackTrace: stackTrace,
-      );
+      debugPrintStack(stackTrace: stackTrace);
 
       return null;
-    } on FirebaseAuthException catch (
-      e,
-      stackTrace
-    ) {
-      lastError =
-          _firebaseErrorMessage(e);
+    } on FirebaseAuthException catch (e, stackTrace) {
+      lastError = _firebaseErrorMessage(e);
 
       debugPrint('');
-      debugPrint(
-        '!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!',
-      );
-      debugPrint(
-        'FIREBASE AUTHENTICATION EXCEPTION',
-      );
-      debugPrint(
-        'Code: ${e.code}',
-      );
-      debugPrint(
-        'Message: ${e.message}',
-      );
-      debugPrint(
-        'Display error: $lastError',
-      );
-      debugPrint(
-        '!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!',
-      );
+      debugPrint('!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!');
+      debugPrint('FIREBASE AUTHENTICATION EXCEPTION');
+      debugPrint('Code: ${e.code}');
+      debugPrint('Message: ${e.message}');
+      debugPrint('Display error: $lastError');
+      debugPrint('!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!');
 
-      debugPrintStack(
-        stackTrace: stackTrace,
-      );
+      debugPrintStack(stackTrace: stackTrace);
 
       return null;
     } catch (e, stackTrace) {
@@ -213,25 +131,13 @@ class GoogleAuthService {
           'Please try again.';
 
       debugPrint('');
-      debugPrint(
-        '!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!',
-      );
-      debugPrint(
-        'UNEXPECTED GOOGLE LOGIN ERROR',
-      );
-      debugPrint(
-        'Type: ${e.runtimeType}',
-      );
-      debugPrint(
-        'Error: $e',
-      );
-      debugPrint(
-        '!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!',
-      );
+      debugPrint('!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!');
+      debugPrint('UNEXPECTED GOOGLE LOGIN ERROR');
+      debugPrint('Type: ${e.runtimeType}');
+      debugPrint('Error: $e');
+      debugPrint('!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!');
 
-      debugPrintStack(
-        stackTrace: stackTrace,
-      );
+      debugPrintStack(stackTrace: stackTrace);
 
       return null;
     }
@@ -241,113 +147,71 @@ class GoogleAuthService {
   // MOBILE LOGIN
   // =========================================================
 
-  static Future<User?>
-      _signInWithGoogleMobile() async {
+  static Future<User?> _signInWithGoogleMobile() async {
     await initialize();
 
-    debugPrint(
-      'Platform: Android/iOS',
-    );
+    debugPrint('Platform: Android/iOS');
 
-    debugPrint(
-      'Opening Google account chooser...',
-    );
+    debugPrint('Opening Google account chooser...');
 
     // =======================================================
     // GOOGLE ACCOUNT
     // =======================================================
 
-    final GoogleSignInAccount googleUser =
-        await _googleSignIn.authenticate();
+    final GoogleSignInAccount googleUser = await _googleSignIn.authenticate();
 
-    debugPrint(
-      '----------------------------------------------',
-    );
-    debugPrint(
-      'GOOGLE ACCOUNT SELECTED',
-    );
-    debugPrint(
-      'ID: ${googleUser.id}',
-    );
-    debugPrint(
-      'Email: ${googleUser.email}',
-    );
-    debugPrint(
-      'Name: ${googleUser.displayName}',
-    );
-    debugPrint(
-      '----------------------------------------------',
-    );
+    debugPrint('----------------------------------------------');
+    debugPrint('GOOGLE ACCOUNT SELECTED');
+    debugPrint('ID: ${googleUser.id}');
+    debugPrint('Email: ${googleUser.email}');
+    debugPrint('Name: ${googleUser.displayName}');
+    debugPrint('----------------------------------------------');
 
     // =======================================================
     // GOOGLE AUTHENTICATION
     // =======================================================
 
-    debugPrint(
-      'Getting Google authentication token...',
-    );
+    debugPrint('Getting Google authentication token...');
 
-    final GoogleSignInAuthentication
-        googleAuth =
-        googleUser.authentication;
+    final GoogleSignInAuthentication googleAuth = googleUser.authentication;
 
-    final String? idToken =
-        googleAuth.idToken;
+    final String? idToken = googleAuth.idToken;
 
-    if (idToken == null ||
-        idToken.trim().isEmpty) {
-      debugPrint(
-        'Google ID token is NULL.',
-      );
+    if (idToken == null || idToken.trim().isEmpty) {
+      debugPrint('Google ID token is NULL.');
 
       throw FirebaseAuthException(
         code: 'missing-google-id-token',
-        message:
-            'Google did not return an ID token.',
+        message: 'Google did not return an ID token.',
       );
     }
 
-    debugPrint(
-      'Google ID token received.',
-    );
+    debugPrint('Google ID token received.');
 
     // =======================================================
     // FIREBASE CREDENTIAL
     // =======================================================
 
-    final OAuthCredential credential =
-        GoogleAuthProvider.credential(
+    final OAuthCredential credential = GoogleAuthProvider.credential(
       idToken: idToken,
     );
 
-    debugPrint(
-      'Firebase credential created.',
-    );
+    debugPrint('Firebase credential created.');
 
     // =======================================================
     // FIREBASE SIGN-IN
     // =======================================================
 
-    debugPrint(
-      'Signing in to Firebase...',
-    );
+    debugPrint('Signing in to Firebase...');
 
-    final UserCredential
-        userCredential =
-        await _firebaseAuth
-            .signInWithCredential(
-      credential,
-    );
+    final UserCredential userCredential = await _firebaseAuth
+        .signInWithCredential(credential);
 
-    debugPrint(
-      'Firebase signInWithCredential completed.',
-    );
+    debugPrint('Firebase signInWithCredential completed.');
 
-    User? firebaseUser =
-        userCredential.user;
+    User? firebaseUser = userCredential.user;
 
-    firebaseUser ??=
-        _firebaseAuth.currentUser;
+    firebaseUser ??= _firebaseAuth.currentUser;
 
     if (firebaseUser == null) {
       throw FirebaseAuthException(
@@ -358,24 +222,13 @@ class GoogleAuthService {
       );
     }
 
-    User authenticatedUser =
-        firebaseUser;
+    User authenticatedUser = firebaseUser;
 
-    debugPrint(
-      '----------------------------------------------',
-    );
-    debugPrint(
-      'FIREBASE USER AUTHENTICATED',
-    );
-    debugPrint(
-      'UID: ${authenticatedUser.uid}',
-    );
-    debugPrint(
-      'Email: ${authenticatedUser.email}',
-    );
-    debugPrint(
-      'Name: ${authenticatedUser.displayName}',
-    );
+    debugPrint('----------------------------------------------');
+    debugPrint('FIREBASE USER AUTHENTICATED');
+    debugPrint('UID: ${authenticatedUser.uid}');
+    debugPrint('Email: ${authenticatedUser.email}');
+    debugPrint('Name: ${authenticatedUser.displayName}');
     debugPrint(
       'New user: '
       '${userCredential.additionalUserInfo?.isNewUser}',
@@ -384,9 +237,7 @@ class GoogleAuthService {
       'Providers: '
       '${authenticatedUser.providerData.map((e) => e.providerId).join(", ")}',
     );
-    debugPrint(
-      '----------------------------------------------',
-    );
+    debugPrint('----------------------------------------------');
 
     // =======================================================
     // RELOAD FIREBASE USER
@@ -395,21 +246,15 @@ class GoogleAuthService {
     try {
       await authenticatedUser.reload();
 
-      final User? refreshedUser =
-          _firebaseAuth.currentUser;
+      final User? refreshedUser = _firebaseAuth.currentUser;
 
       if (refreshedUser != null) {
-        authenticatedUser =
-            refreshedUser;
+        authenticatedUser = refreshedUser;
       }
 
-      debugPrint(
-        'Firebase user reloaded successfully.',
-      );
+      debugPrint('Firebase user reloaded successfully.');
     } catch (e) {
-      debugPrint(
-        'Firebase reload warning: $e',
-      );
+      debugPrint('Firebase reload warning: $e');
     }
 
     // =======================================================
@@ -417,16 +262,11 @@ class GoogleAuthService {
     // =======================================================
 
     try {
-      await authenticatedUser
-          .getIdToken(true);
+      await authenticatedUser.getIdToken(true);
 
-      debugPrint(
-        'Firebase ID token refreshed.',
-      );
+      debugPrint('Firebase ID token refreshed.');
     } catch (e) {
-      debugPrint(
-        'Firebase token refresh warning: $e',
-      );
+      debugPrint('Firebase token refresh warning: $e');
     }
 
     // =======================================================
@@ -434,16 +274,11 @@ class GoogleAuthService {
     // =======================================================
 
     try {
-      await UserSessionService
-          .saveGoogleLogin();
+      await UserSessionService.saveGoogleLogin();
 
-      debugPrint(
-        'Google login saved locally.',
-      );
+      debugPrint('Google login saved locally.');
     } catch (e) {
-      debugPrint(
-        'WARNING: Could not save local Google session: $e',
-      );
+      debugPrint('WARNING: Could not save local Google session: $e');
     }
 
     return authenticatedUser;
@@ -453,46 +288,26 @@ class GoogleAuthService {
   // WEB LOGIN
   // =========================================================
 
-  static Future<User?>
-      _signInWithGoogleWeb() async {
-    debugPrint(
-      'Platform: Web',
-    );
+  static Future<User?> _signInWithGoogleWeb() async {
+    debugPrint('Platform: Web');
 
-    final GoogleAuthProvider
-        googleProvider =
-        GoogleAuthProvider();
+    final GoogleAuthProvider googleProvider = GoogleAuthProvider();
 
-    googleProvider.addScope(
-      'email',
-    );
+    googleProvider.addScope('email');
 
-    googleProvider.addScope(
-      'profile',
-    );
+    googleProvider.addScope('profile');
 
-    googleProvider.setCustomParameters(
-      {
-        'prompt': 'select_account',
-      },
-    );
+    googleProvider.setCustomParameters({'prompt': 'select_account'});
 
-    debugPrint(
-      'Opening Google Firebase popup...',
-    );
+    debugPrint('Opening Google Firebase popup...');
 
-    final UserCredential
-        userCredential =
-        await _firebaseAuth
-            .signInWithPopup(
+    final UserCredential userCredential = await _firebaseAuth.signInWithPopup(
       googleProvider,
     );
 
-    User? firebaseUser =
-        userCredential.user;
+    User? firebaseUser = userCredential.user;
 
-    firebaseUser ??=
-        _firebaseAuth.currentUser;
+    firebaseUser ??= _firebaseAuth.currentUser;
 
     if (firebaseUser == null) {
       throw FirebaseAuthException(
@@ -503,36 +318,22 @@ class GoogleAuthService {
       );
     }
 
-    final User authenticatedUser =
-        firebaseUser;
+    final User authenticatedUser = firebaseUser;
 
-    debugPrint(
-      '----------------------------------------------',
-    );
-    debugPrint(
-      'WEB FIREBASE LOGIN SUCCESSFUL',
-    );
-    debugPrint(
-      'UID: ${authenticatedUser.uid}',
-    );
-    debugPrint(
-      'Email: ${authenticatedUser.email}',
-    );
+    debugPrint('----------------------------------------------');
+    debugPrint('WEB FIREBASE LOGIN SUCCESSFUL');
+    debugPrint('UID: ${authenticatedUser.uid}');
+    debugPrint('Email: ${authenticatedUser.email}');
     debugPrint(
       'New user: '
       '${userCredential.additionalUserInfo?.isNewUser}',
     );
-    debugPrint(
-      '----------------------------------------------',
-    );
+    debugPrint('----------------------------------------------');
 
     try {
-      await UserSessionService
-          .saveGoogleLogin();
+      await UserSessionService.saveGoogleLogin();
     } catch (e) {
-      debugPrint(
-        'WARNING: Could not save local Google session: $e',
-      );
+      debugPrint('WARNING: Could not save local Google session: $e');
     }
 
     return authenticatedUser;
@@ -542,43 +343,24 @@ class GoogleAuthService {
   // GOOGLE ERROR MESSAGE
   // =========================================================
 
-  static String _googleErrorMessage(
-    GoogleSignInException e,
-  ) {
-    final String description =
-        (e.description ?? '')
-            .toLowerCase();
+  static String _googleErrorMessage(GoogleSignInException e) {
+    final String description = (e.description ?? '').toLowerCase();
 
-    final String raw =
-        e.toString().toLowerCase();
+    final String raw = e.toString().toLowerCase();
 
-    if (description.contains(
-          'account reauth failed',
-        ) ||
-        raw.contains(
-          'account reauth failed',
-        ) ||
+    if (description.contains('account reauth failed') ||
+        raw.contains('account reauth failed') ||
         raw.contains('[16]')) {
       return 'Google could not verify this account. '
           'Please try the account again.';
     }
 
-    if (description.contains(
-          'network',
-        ) ||
-        raw.contains(
-          'network',
-        )) {
+    if (description.contains('network') || raw.contains('network')) {
       return 'Unable to connect to Google. '
           'Please check your internet connection.';
     }
 
-    if (raw.contains(
-          'canceled',
-        ) ||
-        raw.contains(
-          'cancelled',
-        )) {
+    if (raw.contains('canceled') || raw.contains('cancelled')) {
       return 'Google Sign-In was cancelled.';
     }
 
@@ -595,9 +377,7 @@ class GoogleAuthService {
   // FIREBASE ERROR MESSAGE
   // =========================================================
 
-  static String _firebaseErrorMessage(
-    FirebaseAuthException e,
-  ) {
+  static String _firebaseErrorMessage(FirebaseAuthException e) {
     switch (e.code) {
       case 'account-exists-with-different-credential':
         return 'An account already exists with this email '
@@ -634,8 +414,7 @@ class GoogleAuthService {
             'Google account. Please try again.';
 
       default:
-        if (kDebugMode &&
-            e.message != null) {
+        if (kDebugMode && e.message != null) {
           return 'Firebase Sign-In failed: '
               '${e.message}';
         }
@@ -649,24 +428,20 @@ class GoogleAuthService {
   // CURRENT USER
   // =========================================================
 
-  static User? get currentUser =>
-      _firebaseAuth.currentUser;
+  static User? get currentUser => _firebaseAuth.currentUser;
 
   // =========================================================
   // LOGIN STATUS
   // =========================================================
 
-  static bool get isSignedIn =>
-      _firebaseAuth.currentUser != null;
+  static bool get isSignedIn => _firebaseAuth.currentUser != null;
 
   // =========================================================
   // REFRESH CURRENT USER
   // =========================================================
 
-  static Future<User?>
-      refreshCurrentUser() async {
-    final User? user =
-        _firebaseAuth.currentUser;
+  static Future<User?> refreshCurrentUser() async {
+    final User? user = _firebaseAuth.currentUser;
 
     if (user == null) {
       return null;
@@ -675,15 +450,11 @@ class GoogleAuthService {
     try {
       await user.reload();
 
-      return _firebaseAuth.currentUser ??
-          user;
+      return _firebaseAuth.currentUser ?? user;
     } catch (e) {
-      debugPrint(
-        'Firebase user refresh warning: $e',
-      );
+      debugPrint('Firebase user refresh warning: $e');
 
-      return _firebaseAuth.currentUser ??
-          user;
+      return _firebaseAuth.currentUser ?? user;
     }
   }
 
@@ -693,22 +464,14 @@ class GoogleAuthService {
 
   static Future<void> signOut() async {
     debugPrint('');
-    debugPrint(
-      '==============================================',
-    );
-    debugPrint(
-      'SIGNING OUT',
-    );
-    debugPrint(
-      '==============================================',
-    );
+    debugPrint('==============================================');
+    debugPrint('SIGNING OUT');
+    debugPrint('==============================================');
 
     try {
       await _firebaseAuth.signOut();
 
-      debugPrint(
-        'Firebase signed out.',
-      );
+      debugPrint('Firebase signed out.');
 
       if (!kIsWeb) {
         try {
@@ -716,40 +479,25 @@ class GoogleAuthService {
 
           await _googleSignIn.signOut();
 
-          debugPrint(
-            'Google Sign-In signed out.',
-          );
+          debugPrint('Google Sign-In signed out.');
         } catch (e) {
-          debugPrint(
-            'Google Sign-Out warning: $e',
-          );
+          debugPrint('Google Sign-Out warning: $e');
         }
       }
     } finally {
       try {
-        await UserSessionService
-            .clearSession();
+        await UserSessionService.clearSession();
 
-        debugPrint(
-          'Local session cleared.',
-        );
+        debugPrint('Local session cleared.');
       } catch (e) {
-        debugPrint(
-          'Local session clear warning: $e',
-        );
+        debugPrint('Local session clear warning: $e');
       }
 
       lastError = null;
     }
 
-    debugPrint(
-      '==============================================',
-    );
-    debugPrint(
-      'SIGN OUT COMPLETE',
-    );
-    debugPrint(
-      '==============================================',
-    );
+    debugPrint('==============================================');
+    debugPrint('SIGN OUT COMPLETE');
+    debugPrint('==============================================');
   }
 }

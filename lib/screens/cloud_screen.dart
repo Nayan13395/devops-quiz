@@ -4,18 +4,12 @@ import '../widgets/animated_category_icon.dart';
 import 'set_screen.dart';
 
 class CloudScreen extends StatelessWidget {
-  const CloudScreen({
-    super.key,
-  });
+  const CloudScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text(
-          "Cloud Computing",
-        ),
-      ),
+      appBar: AppBar(title: const Text("Cloud Computing")),
 
       body: SafeArea(
         top: false,
@@ -32,40 +26,19 @@ class CloudScreen extends StatelessWidget {
             40,
           ),
           children: const [
-            CloudCard(
-              category: "AWS",
-              emoji: "𝐚",
-            ),
+            CloudCard(category: "AWS", emoji: "𝐚"),
 
-            CloudCard(
-              category: "Azure",
-              emoji: "🅰️",
-            ),
+            CloudCard(category: "Azure", emoji: "🅰️"),
 
-            CloudCard(
-              category: "GCP",
-              emoji: "𝐆",
-            ),
+            CloudCard(category: "GCP", emoji: "𝐆"),
 
-            CloudCard(
-              category: "Oracle Cloud",
-              emoji: "⭕",
-            ),
+            CloudCard(category: "Oracle Cloud", emoji: "⭕"),
 
-            CloudCard(
-              category: "IBM Cloud",
-              emoji: "ℐℬℳ",
-            ),
+            CloudCard(category: "IBM Cloud", emoji: "ℐℬℳ"),
 
-            CloudCard(
-              category: "Multi Cloud",
-              emoji: "Ⓜ️©️",
-            ),
+            CloudCard(category: "Multi Cloud", emoji: "Ⓜ️©️"),
 
-            CloudCard(
-              category: "Hybrid Cloud",
-              emoji: "𝓗 ©️",
-            ),
+            CloudCard(category: "Hybrid Cloud", emoji: "𝓗 ©️"),
           ],
         ),
       ),
@@ -77,51 +50,29 @@ class CloudCard extends StatelessWidget {
   final String category;
   final String emoji;
 
-  const CloudCard({
-    super.key,
-    required this.category,
-    required this.emoji,
-  });
+  const CloudCard({super.key, required this.category, required this.emoji});
 
   @override
   Widget build(BuildContext context) {
     return Card(
       elevation: 8,
-      margin: const EdgeInsets.symmetric(
-        vertical: 8,
-      ),
-      shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.circular(
-          20,
-        ),
-      ),
+      margin: const EdgeInsets.symmetric(vertical: 8),
+      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
       clipBehavior: Clip.antiAlias,
       child: InkWell(
         onTap: () {
           Navigator.push(
             context,
-            MaterialPageRoute(
-              builder: (_) => SetScreen(
-                category: category,
-              ),
-            ),
+            MaterialPageRoute(builder: (_) => SetScreen(category: category)),
           );
         },
-        borderRadius: BorderRadius.circular(
-          20,
-        ),
+        borderRadius: BorderRadius.circular(20),
         child: Container(
           width: double.infinity,
-          constraints: const BoxConstraints(
-            minHeight: 80,
-          ),
-          padding: const EdgeInsets.symmetric(
-            horizontal: 16,
-            vertical: 14,
-          ),
+          constraints: const BoxConstraints(minHeight: 80),
+          padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 14),
           child: Row(
-            mainAxisAlignment:
-                MainAxisAlignment.center,
+            mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Flexible(
                 child: Text(
@@ -130,8 +81,7 @@ class CloudCard extends StatelessWidget {
                   softWrap: true,
                   style: const TextStyle(
                     fontSize: 24,
-                    fontWeight:
-                        FontWeight.w500,
+                    fontWeight: FontWeight.w500,
                   ),
                 ),
               ),
@@ -139,10 +89,7 @@ class CloudCard extends StatelessWidget {
               const SizedBox(width: 12),
 
               Flexible(
-                child: AnimatedCategoryIcon(
-                  category: category,
-                  emoji: emoji,
-                ),
+                child: AnimatedCategoryIcon(category: category, emoji: emoji),
               ),
             ],
           ),

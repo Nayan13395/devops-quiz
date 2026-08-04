@@ -15,13 +15,10 @@ class InstructionScreen extends StatefulWidget {
   });
 
   @override
-  State<InstructionScreen> createState() =>
-      _InstructionScreenState();
+  State<InstructionScreen> createState() => _InstructionScreenState();
 }
 
-class _InstructionScreenState
-    extends State<InstructionScreen> {
-
+class _InstructionScreenState extends State<InstructionScreen> {
   @override
   void initState() {
     super.initState();
@@ -36,33 +33,26 @@ class _InstructionScreenState
     return Scaffold(
       drawer: const AppDrawer(),
       appBar: AppBar(
-        title: Text(
-          "${widget.category} - Set ${widget.setNumber}",
-        ),
+        title: Text("${widget.category} - Set ${widget.setNumber}"),
       ),
       body: SafeArea(
         child: LayoutBuilder(
           builder: (context, constraints) {
             return SingleChildScrollView(
               child: ConstrainedBox(
-                constraints: BoxConstraints(
-                  minHeight: constraints.maxHeight,
-                ),
+                constraints: BoxConstraints(minHeight: constraints.maxHeight),
                 child: IntrinsicHeight(
                   child: Padding(
                     padding: const EdgeInsets.all(20),
                     child: Column(
-                      crossAxisAlignment:
-                          CrossAxisAlignment.start,
+                      crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Center(
                           child: Text(
-                            AppLocalizations.of(context)!
-                                .quizInstructions,
+                            AppLocalizations.of(context)!.quizInstructions,
                             style: const TextStyle(
                               fontSize: 28,
-                              fontWeight:
-                                  FontWeight.bold,
+                              fontWeight: FontWeight.bold,
                             ),
                           ),
                         ),
@@ -71,57 +61,43 @@ class _InstructionScreenState
 
                         Text(
                           "📌 ${AppLocalizations.of(context)!.instruction1}",
-                          style: const TextStyle(
-                            fontSize: 18,
-                          ),
+                          style: const TextStyle(fontSize: 18),
                         ),
                         const SizedBox(height: 10),
 
                         Text(
                           "📌 ${AppLocalizations.of(context)!.instruction2}",
-                          style: const TextStyle(
-                            fontSize: 18,
-                          ),
+                          style: const TextStyle(fontSize: 18),
                         ),
                         const SizedBox(height: 10),
 
                         Text(
                           "📌 ${AppLocalizations.of(context)!.instruction3}",
-                          style: const TextStyle(
-                            fontSize: 18,
-                          ),
+                          style: const TextStyle(fontSize: 18),
                         ),
                         const SizedBox(height: 10),
 
                         Text(
                           "📌 ${AppLocalizations.of(context)!.instruction4}",
-                          style: const TextStyle(
-                            fontSize: 18,
-                          ),
+                          style: const TextStyle(fontSize: 18),
                         ),
                         const SizedBox(height: 10),
 
                         Text(
                           "📌 ${AppLocalizations.of(context)!.instruction5}",
-                          style: const TextStyle(
-                            fontSize: 18,
-                          ),
+                          style: const TextStyle(fontSize: 18),
                         ),
                         const SizedBox(height: 10),
 
                         Text(
                           "📌 ${AppLocalizations.of(context)!.instruction6}",
-                          style: const TextStyle(
-                            fontSize: 18,
-                          ),
+                          style: const TextStyle(fontSize: 18),
                         ),
                         const SizedBox(height: 10),
 
                         Text(
                           "📌 ${AppLocalizations.of(context)!.instruction7}",
-                          style: const TextStyle(
-                            fontSize: 18,
-                          ),
+                          style: const TextStyle(fontSize: 18),
                         ),
 
                         const Spacer(),
@@ -136,12 +112,9 @@ class _InstructionScreenState
                                 Navigator.push(
                                   context,
                                   MaterialPageRoute(
-                                    builder: (_) =>
-                                        QuizScreen(
-                                      category:
-                                          widget.category,
-                                      setNumber:
-                                          widget.setNumber,
+                                    builder: (_) => QuizScreen(
+                                      category: widget.category,
+                                      setNumber: widget.setNumber,
                                     ),
                                   ),
                                 );
@@ -150,8 +123,7 @@ class _InstructionScreenState
                                 "🚀 ${AppLocalizations.of(context)!.startQuiz}",
                                 style: const TextStyle(
                                   fontSize: 20,
-                                  fontWeight:
-                                      FontWeight.bold,
+                                  fontWeight: FontWeight.bold,
                                 ),
                               ),
                             ),

@@ -48,7 +48,8 @@ class AppLocalizationsHi extends AppLocalizations {
   String get dailyQuizCompleted => 'दैनिक क्विज़ पूर्ण';
 
   @override
-  String get dailyQuizCompletedMessage => 'आप आज का दैनिक क्विज़ पहले ही पूरा कर चुके हैं।\n\nनए चुनौती के लिए कल फिर आएँ!';
+  String get dailyQuizCompletedMessage =>
+      'आप आज का दैनिक क्विज़ पहले ही पूरा कर चुके हैं।\n\nनए चुनौती के लिए कल फिर आएँ!';
 
   @override
   String get leaderboard => 'लीडरबोर्ड';
@@ -93,7 +94,8 @@ class AppLocalizationsHi extends AppLocalizations {
   String get connectWithMe => 'मुझसे जुड़ें';
 
   @override
-  String get aboutDescription => 'DevOps Quiz शिक्षार्थियों को Linux, Docker, Kubernetes, Networking, Git, Jenkins, Terraform, Ansible और अन्य DevOps तकनीकों पर आधारित हजारों सावधानीपूर्वक चुने गए प्रश्नों के माध्यम से इंटरव्यू और प्रमाणपत्र परीक्षाओं की तैयारी करने में सहायता करता है।';
+  String get aboutDescription =>
+      'DevOps Quiz शिक्षार्थियों को Linux, Docker, Kubernetes, Networking, Git, Jenkins, Terraform, Ansible और अन्य DevOps तकनीकों पर आधारित हजारों सावधानीपूर्वक चुने गए प्रश्नों के माध्यम से इंटरव्यू और प्रमाणपत्र परीक्षाओं की तैयारी करने में सहायता करता है।';
 
   @override
   String get quizResult => 'क्विज़ परिणाम';
@@ -150,13 +152,16 @@ class AppLocalizationsHi extends AppLocalizations {
   String get greatProgress => 'बहुत अच्छा! आप शानदार प्रगति कर रहे हैं।';
 
   @override
-  String get practiceMore => 'अच्छा काम! थोड़ा और अभ्यास करें और बेहतर अंक प्राप्त करें।';
+  String get practiceMore =>
+      'अच्छा काम! थोड़ा और अभ्यास करें और बेहतर अंक प्राप्त करें।';
 
   @override
-  String get keepLearning => 'सीखते रहें और फिर से प्रयास करें। अभ्यास से आप बेहतर बनेंगे।';
+  String get keepLearning =>
+      'सीखते रहें और फिर से प्रयास करें। अभ्यास से आप बेहतर बनेंगे।';
 
   @override
-  String get everyExpertStarted => 'हर विशेषज्ञ कभी न कभी शुरुआती था। अभ्यास करें और फिर से मजबूत होकर लौटें!';
+  String get everyExpertStarted =>
+      'हर विशेषज्ञ कभी न कभी शुरुआती था। अभ्यास करें और फिर से मजबूत होकर लौटें!';
 
   @override
   String get quizInstructions => 'क्विज़ निर्देश';
@@ -266,7 +271,13 @@ class AppLocalizationsHi extends AppLocalizations {
   String get tomorrowsReward => 'कल का पुरस्कार';
 
   @override
-  String shareMessage(Object score, Object totalQuestions, Object earnedPoints, Object bonusPoints, Object percentage) {
+  String shareMessage(
+    Object score,
+    Object totalQuestions,
+    Object earnedPoints,
+    Object bonusPoints,
+    Object percentage,
+  ) {
     return '🎯 मैंने DevOps Quiz में $score/$totalQuestions अंक प्राप्त किए!\n\nक्या आप मेरा स्कोर पार कर सकते हैं?';
   }
 }

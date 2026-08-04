@@ -6,18 +6,13 @@ import '../l10n/app_localizations.dart';
 class SetScreen extends StatelessWidget {
   final String category;
 
-  const SetScreen({
-    super.key,
-    required this.category,
-  });
+  const SetScreen({super.key, required this.category});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       drawer: const AppDrawer(),
-      appBar: AppBar(
-        title: Text(category),
-      ),
+      appBar: AppBar(title: Text(category)),
       body: Padding(
         padding: const EdgeInsets.all(16),
         child: Column(
@@ -26,10 +21,7 @@ class SetScreen extends StatelessWidget {
 
             Text(
               AppLocalizations.of(context)!.selectSet,
-              style: const TextStyle(
-                fontSize: 28,
-                fontWeight: FontWeight.bold,
-              ),
+              style: const TextStyle(fontSize: 28, fontWeight: FontWeight.bold),
             ),
 
             const SizedBox(height: 30),
@@ -47,14 +39,9 @@ class SetScreen extends StatelessWidget {
     );
   }
 
-  Widget setButton(
-    BuildContext context,
-    int setNumber,
-  ) {
+  Widget setButton(BuildContext context, int setNumber) {
     return Padding(
-      padding: const EdgeInsets.only(
-        bottom: 15,
-      ),
+      padding: const EdgeInsets.only(bottom: 15),
       child: SizedBox(
         width: double.infinity,
         height: 70,
@@ -63,18 +50,14 @@ class SetScreen extends StatelessWidget {
             Navigator.push(
               context,
               MaterialPageRoute(
-                builder: (_) => InstructionScreen(
-                  category: category,
-                  setNumber: setNumber,
-                ),
+                builder: (_) =>
+                    InstructionScreen(category: category, setNumber: setNumber),
               ),
             );
           },
           child: Text(
             "${AppLocalizations.of(context)!.set} $setNumber (25 ${AppLocalizations.of(context)!.questions})",
-            style: const TextStyle(
-              fontSize: 22,
-            ),
+            style: const TextStyle(fontSize: 22),
           ),
         ),
       ),

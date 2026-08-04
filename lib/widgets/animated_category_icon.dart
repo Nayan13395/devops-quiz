@@ -12,12 +12,10 @@ class AnimatedCategoryIcon extends StatefulWidget {
   });
 
   @override
-  State<AnimatedCategoryIcon> createState() =>
-      _AnimatedCategoryIconState();
+  State<AnimatedCategoryIcon> createState() => _AnimatedCategoryIconState();
 }
 
-class _AnimatedCategoryIconState
-    extends State<AnimatedCategoryIcon>
+class _AnimatedCategoryIconState extends State<AnimatedCategoryIcon>
     with SingleTickerProviderStateMixin {
   late final AnimationController controller;
 
@@ -42,28 +40,19 @@ class _AnimatedCategoryIconState
     return AnimatedBuilder(
       animation: controller,
       builder: (context, child) {
-        Widget icon = Text(
-          widget.emoji,
-          style: const TextStyle(fontSize: 30),
-        );
+        Widget icon = Text(widget.emoji, style: const TextStyle(fontSize: 30));
 
         switch (widget.category) {
           case "Linux":
             icon = Transform.translate(
-              offset: Offset(
-                sin(controller.value * 2 * pi) * 6,
-                0,
-              ),
+              offset: Offset(sin(controller.value * 2 * pi) * 6, 0),
               child: icon,
             );
             break;
 
           case "Docker":
             icon = Transform.translate(
-              offset: Offset(
-                0,
-                sin(controller.value * 2 * pi) * 5,
-              ),
+              offset: Offset(0, sin(controller.value * 2 * pi) * 5),
               child: icon,
             );
             break;
@@ -84,30 +73,27 @@ class _AnimatedCategoryIconState
               child: icon,
             );
             break;
-          
+
           case "AWS":
-case "Azure":
-case "GCP":
-case "Oracle Cloud":
-case "IBM Cloud":
-case "Hybrid Cloud":
-case "Multi Cloud":
-case "Cloud Computing":
-  icon = Transform.translate(
-    offset: Offset(
-      sin(controller.value * 2 * pi) * 4,
-      sin(controller.value * 2 * pi) * 2,
-    ),
-    child: icon,
-  );
-  break;
+          case "Azure":
+          case "GCP":
+          case "Oracle Cloud":
+          case "IBM Cloud":
+          case "Hybrid Cloud":
+          case "Multi Cloud":
+          case "Cloud Computing":
+            icon = Transform.translate(
+              offset: Offset(
+                sin(controller.value * 2 * pi) * 4,
+                sin(controller.value * 2 * pi) * 2,
+              ),
+              child: icon,
+            );
+            break;
 
           default:
             icon = Transform.translate(
-              offset: Offset(
-                0,
-                sin(controller.value * 2 * pi) * 3,
-              ),
+              offset: Offset(0, sin(controller.value * 2 * pi) * 3),
               child: icon,
             );
         }

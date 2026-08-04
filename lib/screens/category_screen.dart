@@ -31,17 +31,16 @@ class _CategoryScreenState extends State<CategoryScreen>
     )..repeat(reverse: true);
 
     WidgetsBinding.instance.addPostFrameCallback((_) async {
-  UpdateService.checkForUpdate(context);
+      UpdateService.checkForUpdate(context);
 
-  final result = await StreakService.checkDailyReward();
+      final result = await StreakService.checkDailyReward();
 
-  if (!mounted) return;
+      if (!mounted) return;
 
-  if (result.showReward) {
-    await showDailyRewardDialog(context, result);
-  }
-}
-    );
+      if (result.showReward) {
+        await showDailyRewardDialog(context, result);
+      }
+    });
   }
 
   @override
@@ -55,39 +54,30 @@ class _CategoryScreenState extends State<CategoryScreen>
       onTap: () {
         Navigator.push(
           context,
-          MaterialPageRoute(
-            builder: (_) => SetScreen(
-              category: title,
-            ),
-          ),
+          MaterialPageRoute(builder: (_) => SetScreen(category: title)),
         );
       },
       child: Card(
         elevation: 8,
-        shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(20),
-        ),
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
         margin: const EdgeInsets.symmetric(vertical: 10),
         child: SizedBox(
           height: 80,
-child: Row(
-  mainAxisSize: MainAxisSize.min,
-  mainAxisAlignment: MainAxisAlignment.center,
-  children: [
-    Text(
-      title,
-      style: const TextStyle(
-        fontSize: 24,
-        fontWeight: FontWeight.w500,
-      ),
-    ),
-    const SizedBox(width: 12),
-    AnimatedCategoryIcon(
-      category: title,
-      emoji: emoji,
-    ),
-  ],
-),
+          child: Row(
+            mainAxisSize: MainAxisSize.min,
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Text(
+                title,
+                style: const TextStyle(
+                  fontSize: 24,
+                  fontWeight: FontWeight.w500,
+                ),
+              ),
+              const SizedBox(width: 12),
+              AnimatedCategoryIcon(category: title, emoji: emoji),
+            ],
+          ),
         ),
       ),
     );
@@ -97,11 +87,7 @@ child: Row(
   Widget build(BuildContext context) {
     return Scaffold(
       drawer: const AppDrawer(),
-      appBar: AppBar(
-        title: Text(
-          AppLocalizations.of(context)!.selectCategory,
-        ),
-      ),
+      appBar: AppBar(title: Text(AppLocalizations.of(context)!.selectCategory)),
       body: Padding(
         padding: const EdgeInsets.all(12),
         child: ListView(
@@ -117,10 +103,8 @@ child: Row(
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (_) => QuizScreen(
-                            category: "DevOps",
-                            setNumber: 0,
-                          ),
+                          builder: (_) =>
+                              QuizScreen(category: "DevOps", setNumber: 0),
                         ),
                       );
                     },
@@ -144,34 +128,32 @@ child: Row(
               },
             ),
             InkWell(
-  onTap: () {
-    Navigator.push(
-      context,
-      MaterialPageRoute(
-        builder: (_) => const CloudScreen(),
-      ),
-    );
-  },
-  child: Card(
-    elevation: 8,
-    shape: RoundedRectangleBorder(
-      borderRadius: BorderRadius.circular(20),
-    ),
-    margin: const EdgeInsets.symmetric(vertical: 10),
-    child: const SizedBox(
-      height: 80,
-      child: Center(
-        child: Text(
-          "Cloud Computing ⛈️",
-          style: TextStyle(
-            fontSize: 24,
-            fontWeight: FontWeight.w500,
-          ),
-        ),
-      ),
-    ),
-  ),
-),
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (_) => const CloudScreen()),
+                );
+              },
+              child: Card(
+                elevation: 8,
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(20),
+                ),
+                margin: const EdgeInsets.symmetric(vertical: 10),
+                child: const SizedBox(
+                  height: 80,
+                  child: Center(
+                    child: Text(
+                      "Cloud Computing ⛈️",
+                      style: TextStyle(
+                        fontSize: 24,
+                        fontWeight: FontWeight.w500,
+                      ),
+                    ),
+                  ),
+                ),
+              ),
+            ),
             categoryCard("Linux", "🐧"),
             categoryCard("Docker", "🐳"),
             categoryCard("Kubernetes", "⎈"),

@@ -38,11 +38,9 @@ class ResultScreen extends StatelessWidget {
   // USER
   // =========================================================
 
-  bool get _isGoogleUser =>
-      UserProfileService.isGoogleUser;
+  bool get _isGoogleUser => UserProfileService.isGoogleUser;
 
-  String get _firstName =>
-      UserProfileService.firstName;
+  String get _firstName => UserProfileService.firstName;
 
   // =========================================================
   // EXPERT TITLE
@@ -87,10 +85,7 @@ class ResultScreen extends StatelessWidget {
   // =========================================================
 
   String _resultEmoji() {
-    final percentage =
-        totalQuestions == 0
-            ? 0
-            : (score / totalQuestions) * 100;
+    final percentage = totalQuestions == 0 ? 0 : (score / totalQuestions) * 100;
 
     if (percentage >= 80) {
       return '🏆';
@@ -115,36 +110,21 @@ class ResultScreen extends StatelessWidget {
   // RESULT TITLE
   // =========================================================
 
-  String _resultTitle(
-    BuildContext context,
-  ) {
-    final percentage =
-        totalQuestions == 0
-            ? 0
-            : (score / totalQuestions) * 100;
+  String _resultTitle(BuildContext context) {
+    final percentage = totalQuestions == 0 ? 0 : (score / totalQuestions) * 100;
 
     String title;
 
     if (percentage >= 80) {
-      title =
-          AppLocalizations.of(context)!
-              .outstanding;
+      title = AppLocalizations.of(context)!.outstanding;
     } else if (percentage >= 60) {
-      title =
-          AppLocalizations.of(context)!
-              .greatJob;
+      title = AppLocalizations.of(context)!.greatJob;
     } else if (percentage >= 40) {
-      title =
-          AppLocalizations.of(context)!
-              .goodEffort;
+      title = AppLocalizations.of(context)!.goodEffort;
     } else if (percentage >= 20) {
-      title =
-          AppLocalizations.of(context)!
-              .keepPracticing;
+      title = AppLocalizations.of(context)!.keepPracticing;
     } else {
-      title =
-          AppLocalizations.of(context)!
-              .dontGiveUp;
+      title = AppLocalizations.of(context)!.dontGiveUp;
     }
 
     // Add the Google user's first name.
@@ -159,38 +139,28 @@ class ResultScreen extends StatelessWidget {
   // RESULT MESSAGE
   // =========================================================
 
-  String _resultMessage(
-    BuildContext context,
-  ) {
-    final percentage =
-        totalQuestions == 0
-            ? 0
-            : (score / totalQuestions) * 100;
+  String _resultMessage(BuildContext context) {
+    final percentage = totalQuestions == 0 ? 0 : (score / totalQuestions) * 100;
 
     if (percentage >= 80) {
-      return AppLocalizations.of(context)!
-          .excellentPerformance(
-        getExpertTitle(),
-      );
+      return AppLocalizations.of(
+        context,
+      )!.excellentPerformance(getExpertTitle());
     }
 
     if (percentage >= 60) {
-      return AppLocalizations.of(context)!
-          .greatProgress;
+      return AppLocalizations.of(context)!.greatProgress;
     }
 
     if (percentage >= 40) {
-      return AppLocalizations.of(context)!
-          .practiceMore;
+      return AppLocalizations.of(context)!.practiceMore;
     }
 
     if (percentage >= 20) {
-      return AppLocalizations.of(context)!
-          .keepLearning;
+      return AppLocalizations.of(context)!.keepLearning;
     }
 
-    return AppLocalizations.of(context)!
-        .everyExpertStarted;
+    return AppLocalizations.of(context)!.everyExpertStarted;
   }
 
   // =========================================================
@@ -209,17 +179,13 @@ class ResultScreen extends StatelessWidget {
   // PDF
   // =========================================================
 
-  Future<void> _downloadPdf(
-    BuildContext context,
-  ) async {
+  Future<void> _downloadPdf(BuildContext context) async {
     try {
       await QuizPdfService.generateQuizReport(
         questions: questions,
         userAnswers: userAnswers,
-        displayedOptions:
-            displayedOptions,
-        timedOutQuestions:
-            timedOutQuestions,
+        displayedOptions: displayedOptions,
+        timedOutQuestions: timedOutQuestions,
         score: score,
         points: points,
         category: category,
@@ -230,14 +196,9 @@ class ResultScreen extends StatelessWidget {
         return;
       }
 
-      ScaffoldMessenger.of(context)
-          .showSnackBar(
-        SnackBar(
-          content: Text(
-            'Unable to generate PDF: $e',
-          ),
-        ),
-      );
+      ScaffoldMessenger.of(
+        context,
+      ).showSnackBar(SnackBar(content: Text('Unable to generate PDF: $e')));
     }
   }
 
@@ -245,16 +206,11 @@ class ResultScreen extends StatelessWidget {
   // RESTART
   // =========================================================
 
-  void _restartQuiz(
-    BuildContext context,
-  ) {
+  void _restartQuiz(BuildContext context) {
     Navigator.pushReplacement(
       context,
       MaterialPageRoute(
-        builder: (_) => QuizScreen(
-          category: category,
-          setNumber: setNumber,
-        ),
+        builder: (_) => QuizScreen(category: category, setNumber: setNumber),
       ),
     );
   }
@@ -263,15 +219,10 @@ class ResultScreen extends StatelessWidget {
   // BACK TO CATEGORIES
   // =========================================================
 
-  void _backToCategories(
-    BuildContext context,
-  ) {
+  void _backToCategories(BuildContext context) {
     Navigator.pushAndRemoveUntil(
       context,
-      MaterialPageRoute(
-        builder: (_) =>
-            const CategoryScreen(),
-      ),
+      MaterialPageRoute(builder: (_) => const CategoryScreen()),
       (route) => false,
     );
   }
@@ -282,247 +233,140 @@ class ResultScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final double percentage =
-        totalQuestions == 0
-            ? 0
-            : (score / totalQuestions) * 100;
+    final double percentage = totalQuestions == 0
+        ? 0
+        : (score / totalQuestions) * 100;
 
-    final int earnedPoints =
-        score * 10;
+    final int earnedPoints = score * 10;
 
     int bonus = 0;
 
     if (category == 'DailyQuiz') {
-      bonus =
-          score == totalQuestions
-              ? 500
-              : earnedPoints;
+      bonus = score == totalQuestions ? 500 : earnedPoints;
     }
 
-    final ColorScheme colorScheme =
-        Theme.of(context).colorScheme;
+    final ColorScheme colorScheme = Theme.of(context).colorScheme;
 
     return Scaffold(
       drawer: const AppDrawer(),
 
-      appBar: AppBar(
-        title: Text(
-          AppLocalizations.of(context)!
-              .quizResult,
-        ),
-      ),
+      appBar: AppBar(title: Text(AppLocalizations.of(context)!.quizResult)),
 
       body: SafeArea(
         child: SingleChildScrollView(
-          padding:
-              const EdgeInsets.symmetric(
-            horizontal: 16,
-            vertical: 20,
-          ),
+          padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 20),
           child: Center(
             child: ConstrainedBox(
-              constraints:
-                  const BoxConstraints(
-                maxWidth: 620,
-              ),
+              constraints: const BoxConstraints(maxWidth: 620),
               child: Column(
                 children: [
                   // =========================================
                   // RESULT EMOJI
                   // =========================================
-
                   TweenAnimationBuilder<double>(
-                    duration:
-                        const Duration(
-                      milliseconds: 700,
-                    ),
-                    tween: Tween(
-                      begin: 0,
-                      end: 1,
-                    ),
-                    curve:
-                        Curves.easeOutBack,
-                    builder: (
-                      context,
-                      value,
-                      child,
-                    ) {
+                    duration: const Duration(milliseconds: 700),
+                    tween: Tween(begin: 0, end: 1),
+                    curve: Curves.easeOutBack,
+                    builder: (context, value, child) {
                       return Transform.scale(
                         scale: value,
                         child: Opacity(
-                          opacity:
-                              value.clamp(
-                            0.0,
-                            1.0,
-                          ),
+                          opacity: value.clamp(0.0, 1.0),
                           child: child,
                         ),
                       );
                     },
                     child: Text(
                       _resultEmoji(),
-                      style:
-                          const TextStyle(
-                        fontSize: 64,
-                      ),
+                      style: const TextStyle(fontSize: 64),
                     ),
                   ),
 
-                  const SizedBox(
-                    height: 8,
-                  ),
+                  const SizedBox(height: 8),
 
                   // =========================================
                   // PERSONALIZED RESULT TITLE
                   // =========================================
-
                   TweenAnimationBuilder<double>(
-                    duration:
-                        const Duration(
-                      milliseconds: 650,
-                    ),
-                    tween: Tween(
-                      begin: 0,
-                      end: 1,
-                    ),
-                    builder: (
-                      context,
-                      value,
-                      child,
-                    ) {
+                    duration: const Duration(milliseconds: 650),
+                    tween: Tween(begin: 0, end: 1),
+                    builder: (context, value, child) {
                       return Opacity(
                         opacity: value,
-                        child:
-                            Transform.translate(
-                          offset: Offset(
-                            0,
-                            20 *
-                                (1 - value),
-                          ),
+                        child: Transform.translate(
+                          offset: Offset(0, 20 * (1 - value)),
                           child: child,
                         ),
                       );
                     },
                     child: Text(
-                      _resultTitle(
-                        context,
-                      ),
-                      textAlign:
-                          TextAlign.center,
-                      style:
-                          const TextStyle(
+                      _resultTitle(context),
+                      textAlign: TextAlign.center,
+                      style: const TextStyle(
                         fontSize: 30,
-                        fontWeight:
-                            FontWeight.bold,
+                        fontWeight: FontWeight.bold,
                       ),
                     ),
                   ),
 
-                  const SizedBox(
-                    height: 8,
-                  ),
+                  const SizedBox(height: 8),
 
                   // =========================================
                   // RESULT MESSAGE
                   // =========================================
-
                   Text(
-                    _resultMessage(
-                      context,
-                    ),
-                    textAlign:
-                        TextAlign.center,
+                    _resultMessage(context),
+                    textAlign: TextAlign.center,
                     style: TextStyle(
                       fontSize: 16,
-                      color: colorScheme
-                          .onSurfaceVariant,
+                      color: colorScheme.onSurfaceVariant,
                     ),
                   ),
 
-                  const SizedBox(
-                    height: 10,
-                  ),
+                  const SizedBox(height: 10),
 
                   // =========================================
                   // SCORECARD READY
                   // =========================================
-
                   Text(
                     _scorecardMessage,
-                    textAlign:
-                        TextAlign.center,
+                    textAlign: TextAlign.center,
                     style: TextStyle(
                       fontSize: 15,
-                      fontWeight:
-                          FontWeight.w600,
-                      color:
-                          colorScheme.primary,
+                      fontWeight: FontWeight.w600,
+                      color: colorScheme.primary,
                     ),
                   ),
 
-                  const SizedBox(
-                    height: 26,
-                  ),
+                  const SizedBox(height: 26),
 
                   // =========================================
                   // RESULT CARD
                   // =========================================
-
                   TweenAnimationBuilder<double>(
-                    duration:
-                        const Duration(
-                      milliseconds: 800,
-                    ),
-                    tween: Tween(
-                      begin: 0,
-                      end: 1,
-                    ),
-                    curve:
-                        Curves.easeOutCubic,
-                    builder: (
-                      context,
-                      value,
-                      child,
-                    ) {
+                    duration: const Duration(milliseconds: 800),
+                    tween: Tween(begin: 0, end: 1),
+                    curve: Curves.easeOutCubic,
+                    builder: (context, value, child) {
                       return Opacity(
                         opacity: value,
-                        child:
-                            Transform.translate(
-                          offset: Offset(
-                            0,
-                            30 *
-                                (1 - value),
-                          ),
+                        child: Transform.translate(
+                          offset: Offset(0, 30 * (1 - value)),
                           child: child,
                         ),
                       );
                     },
                     child: Container(
-                      width:
-                          double.infinity,
-                      padding:
-                          const EdgeInsets
-                              .all(24),
-                      decoration:
-                          BoxDecoration(
-                        color:
-                            Theme.of(context)
-                                .cardColor,
-                        borderRadius:
-                            BorderRadius
-                                .circular(
-                          24,
-                        ),
+                      width: double.infinity,
+                      padding: const EdgeInsets.all(24),
+                      decoration: BoxDecoration(
+                        color: Theme.of(context).cardColor,
+                        borderRadius: BorderRadius.circular(24),
                         boxShadow: const [
                           BoxShadow(
-                            color:
-                                Colors.black12,
+                            color: Colors.black12,
                             blurRadius: 16,
-                            offset:
-                                Offset(
-                              0,
-                              6,
-                            ),
+                            offset: Offset(0, 6),
                           ),
                         ],
                       ),
@@ -531,115 +375,62 @@ class ResultScreen extends StatelessWidget {
                           // =================================
                           // PERCENTAGE
                           // =================================
-
-                          TweenAnimationBuilder<
-                              double>(
-                            duration:
-                                const Duration(
-                              milliseconds:
-                                  1200,
-                            ),
-                            tween: Tween(
-                              begin: 0,
-                              end:
-                                  percentage,
-                            ),
-                            curve:
-                                Curves.easeOut,
-                            builder: (
-                              context,
-                              value,
-                              child,
-                            ) {
+                          TweenAnimationBuilder<double>(
+                            duration: const Duration(milliseconds: 1200),
+                            tween: Tween(begin: 0, end: percentage),
+                            curve: Curves.easeOut,
+                            builder: (context, value, child) {
                               return Text(
                                 '${value.toStringAsFixed(0)}%',
-                                style:
-                                    TextStyle(
-                                  fontSize:
-                                      44,
-                                  fontWeight:
-                                      FontWeight
-                                          .bold,
-                                  color:
-                                      colorScheme
-                                          .primary,
+                                style: TextStyle(
+                                  fontSize: 44,
+                                  fontWeight: FontWeight.bold,
+                                  color: colorScheme.primary,
                                 ),
                               );
                             },
                           ),
 
-                          const SizedBox(
-                            height: 6,
-                          ),
+                          const SizedBox(height: 6),
 
                           Text(
-                            AppLocalizations.of(
-                              context,
-                            )!
-                                .percentage,
-                            style:
-                                TextStyle(
+                            AppLocalizations.of(context)!.percentage,
+                            style: TextStyle(
                               fontSize: 14,
-                              color: colorScheme
-                                  .onSurfaceVariant,
+                              color: colorScheme.onSurfaceVariant,
                             ),
                           ),
 
-                          const SizedBox(
-                            height: 22,
-                          ),
+                          const SizedBox(height: 22),
 
                           const Divider(),
 
-                          const SizedBox(
-                            height: 18,
-                          ),
+                          const SizedBox(height: 18),
 
                           // =================================
                           // SCORE + POINTS
                           // =================================
-
                           Row(
                             children: [
                               Expanded(
-                                child:
-                                    _StatItem(
-                                  icon:
-                                      Icons
-                                          .quiz_outlined,
-                                  title:
-                                      AppLocalizations.of(
-                                    context,
-                                  )!
-                                          .score,
-                                  value:
-                                      '$score / $totalQuestions',
+                                child: _StatItem(
+                                  icon: Icons.quiz_outlined,
+                                  title: AppLocalizations.of(context)!.score,
+                                  value: '$score / $totalQuestions',
                                 ),
                               ),
 
                               Container(
                                 width: 1,
                                 height: 55,
-                                color:
-                                    Theme.of(
-                                  context,
-                                )
-                                        .dividerColor,
+                                color: Theme.of(context).dividerColor,
                               ),
 
                               Expanded(
-                                child:
-                                    _StatItem(
-                                  icon:
-                                      Icons
-                                          .workspace_premium_outlined,
-                                  title:
-                                      AppLocalizations.of(
-                                    context,
-                                  )!
-                                          .points,
-                                  value:
-                                      '$earnedPoints',
+                                child: _StatItem(
+                                  icon: Icons.workspace_premium_outlined,
+                                  title: AppLocalizations.of(context)!.points,
+                                  value: '$earnedPoints',
                                 ),
                               ),
                             ],
@@ -648,45 +439,25 @@ class ResultScreen extends StatelessWidget {
                           // =================================
                           // DAILY QUIZ BONUS
                           // =================================
-
-                          if (category ==
-                              'DailyQuiz') ...[
-                            const SizedBox(
-                              height: 20,
-                            ),
+                          if (category == 'DailyQuiz') ...[
+                            const SizedBox(height: 20),
 
                             Container(
-                              padding:
-                                  const EdgeInsets
-                                      .symmetric(
-                                horizontal:
-                                    18,
+                              padding: const EdgeInsets.symmetric(
+                                horizontal: 18,
                                 vertical: 10,
                               ),
-                              decoration:
-                                  BoxDecoration(
-                                color:
-                                    colorScheme
-                                        .primaryContainer,
-                                borderRadius:
-                                    BorderRadius
-                                        .circular(
-                                  30,
-                                ),
+                              decoration: BoxDecoration(
+                                color: colorScheme.primaryContainer,
+                                borderRadius: BorderRadius.circular(30),
                               ),
                               child: Text(
-                                score ==
-                                        totalQuestions
+                                score == totalQuestions
                                     ? '🎖 ${AppLocalizations.of(context)!.perfectScoreBonus} +500'
                                     : '🎖 ${AppLocalizations.of(context)!.bonus} +$bonus',
-                                textAlign:
-                                    TextAlign
-                                        .center,
-                                style:
-                                    const TextStyle(
-                                  fontWeight:
-                                      FontWeight
-                                          .bold,
+                                textAlign: TextAlign.center,
+                                style: const TextStyle(
+                                  fontWeight: FontWeight.bold,
                                 ),
                               ),
                             ),
@@ -699,146 +470,83 @@ class ResultScreen extends StatelessWidget {
                   // =========================================
                   // DAILY QUIZ MESSAGE
                   // =========================================
-
-                  if (category ==
-                      'DailyQuiz') ...[
-                    const SizedBox(
-                      height: 18,
-                    ),
+                  if (category == 'DailyQuiz') ...[
+                    const SizedBox(height: 18),
 
                     Container(
-                      width:
-                          double.infinity,
-                      padding:
-                          const EdgeInsets
-                              .symmetric(
+                      width: double.infinity,
+                      padding: const EdgeInsets.symmetric(
                         horizontal: 20,
                         vertical: 16,
                       ),
-                      decoration:
-                          BoxDecoration(
-                        color: colorScheme
-                            .secondaryContainer,
-                        borderRadius:
-                            BorderRadius
-                                .circular(
-                          18,
-                        ),
+                      decoration: BoxDecoration(
+                        color: colorScheme.secondaryContainer,
+                        borderRadius: BorderRadius.circular(18),
                       ),
                       child: Column(
                         children: [
                           const Row(
-                            mainAxisAlignment:
-                                MainAxisAlignment
-                                    .center,
+                            mainAxisAlignment: MainAxisAlignment.center,
                             children: [
-                              Icon(
-                                Icons
-                                    .check_circle_outline,
-                                size: 22,
-                              ),
+                              Icon(Icons.check_circle_outline, size: 22),
 
-                              SizedBox(
-                                width: 8,
-                              ),
+                              SizedBox(width: 8),
 
                               Flexible(
                                 child: Text(
                                   'Daily Quiz Completed!',
-                                  textAlign:
-                                      TextAlign
-                                          .center,
-                                  style:
-                                      TextStyle(
-                                    fontSize:
-                                        17,
-                                    fontWeight:
-                                        FontWeight
-                                            .bold,
+                                  textAlign: TextAlign.center,
+                                  style: TextStyle(
+                                    fontSize: 17,
+                                    fontWeight: FontWeight.bold,
                                   ),
                                 ),
                               ),
                             ],
                           ),
 
-                          const SizedBox(
-                            height: 6,
-                          ),
+                          const SizedBox(height: 6),
 
                           Text(
                             _isGoogleUser
                                 ? 'Great work, $_firstName! Come back tomorrow for a new challenge!'
                                 : 'Come back tomorrow for a new challenge!',
-                            textAlign:
-                                TextAlign.center,
+                            textAlign: TextAlign.center,
                           ),
                         ],
                       ),
                     ),
                   ],
 
-                  const SizedBox(
-                    height: 24,
-                  ),
+                  const SizedBox(height: 24),
 
                   // =========================================
                   // SHARE + PDF
                   // =========================================
-
                   LayoutBuilder(
-                    builder: (
-                      context,
-                      constraints,
-                    ) {
-                      final bool narrow =
-                          constraints
-                                  .maxWidth <
-                              430;
+                    builder: (context, constraints) {
+                      final bool narrow = constraints.maxWidth < 430;
 
-                      final shareButton =
-                          _ActionButton(
-                        icon:
-                            Icons.share,
-                        text:
-                            AppLocalizations.of(
-                          context,
-                        )!
-                                .shareScore,
+                      final shareButton = _ActionButton(
+                        icon: Icons.share,
+                        text: AppLocalizations.of(context)!.shareScore,
                         onPressed: () {
-                          final int
-                              sharePoints =
-                              category ==
-                                      'DailyQuiz'
-                                  ? score * 10
-                                  : points;
+                          final int sharePoints = category == 'DailyQuiz'
+                              ? score * 10
+                              : points;
 
                           Share.share(
-                            '${AppLocalizations.of(context)!.shareMessage(
-                              score,
-                              totalQuestions,
-                              sharePoints,
-                              bonus,
-                              percentage
-                                  .toStringAsFixed(
-                                0,
-                              ),
-                            )}\n'
+                            '${AppLocalizations.of(context)!.shareMessage(score, totalQuestions, sharePoints, bonus, percentage.toStringAsFixed(0))}\n'
                             'https://play.google.com/store/apps/details?id=com.nayan.devops',
                           );
                         },
                       );
 
-                      final pdfButton =
-                          _ActionButton(
-                        icon: Icons
-                            .picture_as_pdf_outlined,
-                        text:
-                            'PDF Report',
-                        onPressed:
-                            () async {
-                          await _downloadPdf(
-                            context,
-                          );
+                      final pdfButton = _ActionButton(
+                        icon: Icons.picture_as_pdf_outlined,
+                        text: 'PDF Report',
+                        onPressed: () async {
+                          await _downloadPdf(context);
                         },
                       );
 
@@ -847,9 +555,7 @@ class ResultScreen extends StatelessWidget {
                           children: [
                             shareButton,
 
-                            const SizedBox(
-                              height: 12,
-                            ),
+                            const SizedBox(height: 12),
 
                             pdfButton,
                           ],
@@ -858,101 +564,63 @@ class ResultScreen extends StatelessWidget {
 
                       return Row(
                         children: [
-                          Expanded(
-                            child:
-                                shareButton,
-                          ),
+                          Expanded(child: shareButton),
 
-                          const SizedBox(
-                            width: 12,
-                          ),
+                          const SizedBox(width: 12),
 
-                          Expanded(
-                            child:
-                                pdfButton,
-                          ),
+                          Expanded(child: pdfButton),
                         ],
                       );
                     },
                   ),
 
-                  const SizedBox(
-                    height: 14,
-                  ),
+                  const SizedBox(height: 14),
 
                   // =========================================
                   // RESTART QUIZ
                   // =========================================
-
                   SizedBox(
-                    width:
-                        double.infinity,
+                    width: double.infinity,
                     height: 52,
-                    child:
-                        OutlinedButton.icon(
+                    child: OutlinedButton.icon(
                       onPressed: () {
-                        _restartQuiz(
-                          context,
-                        );
+                        _restartQuiz(context);
                       },
-                      icon: const Icon(
-                        Icons.refresh,
-                      ),
+                      icon: const Icon(Icons.refresh),
                       label: Text(
-                        AppLocalizations.of(
-                          context,
-                        )!
-                            .restartQuiz,
-                        style:
-                            const TextStyle(
+                        AppLocalizations.of(context)!.restartQuiz,
+                        style: const TextStyle(
                           fontSize: 16,
-                          fontWeight:
-                              FontWeight.bold,
+                          fontWeight: FontWeight.bold,
                         ),
                       ),
                     ),
                   ),
 
-                  const SizedBox(
-                    height: 12,
-                  ),
+                  const SizedBox(height: 12),
 
                   // =========================================
                   // BACK TO CATEGORIES
                   // =========================================
-
                   SizedBox(
-                    width:
-                        double.infinity,
+                    width: double.infinity,
                     height: 54,
-                    child:
-                        ElevatedButton.icon(
+                    child: ElevatedButton.icon(
                       onPressed: () {
-                        _backToCategories(
-                          context,
-                        );
+                        _backToCategories(context);
                       },
-                      icon: const Icon(
-                        Icons.home_outlined,
-                      ),
+                      icon: const Icon(Icons.home_outlined),
                       label: Text(
-                        AppLocalizations.of(
-                          context,
-                        )!
-                            .backToCategories,
-                        style:
-                            const TextStyle(
+                        AppLocalizations.of(context)!.backToCategories,
+                        style: const TextStyle(
                           fontSize: 16,
-                          fontWeight:
-                              FontWeight.bold,
+                          fontWeight: FontWeight.bold,
                         ),
                       ),
                     ),
                   ),
 
-                  const SizedBox(
-                    height: 20,
-                  ),
+                  const SizedBox(height: 20),
                 ],
               ),
             ),
@@ -982,41 +650,23 @@ class _StatItem extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        Icon(
-          icon,
-          size: 27,
-          color: Theme.of(context)
-              .colorScheme
-              .primary,
-        ),
+        Icon(icon, size: 27, color: Theme.of(context).colorScheme.primary),
 
-        const SizedBox(
-          height: 7,
-        ),
+        const SizedBox(height: 7),
 
         Text(
           value,
-          style:
-              const TextStyle(
-            fontSize: 22,
-            fontWeight:
-                FontWeight.bold,
-          ),
+          style: const TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
         ),
 
-        const SizedBox(
-          height: 3,
-        ),
+        const SizedBox(height: 3),
 
         Text(
           title,
-          textAlign:
-              TextAlign.center,
+          textAlign: TextAlign.center,
           style: TextStyle(
             fontSize: 13,
-            color: Theme.of(context)
-                .colorScheme
-                .onSurfaceVariant,
+            color: Theme.of(context).colorScheme.onSurfaceVariant,
           ),
         ),
       ],
@@ -1028,8 +678,7 @@ class _StatItem extends StatelessWidget {
 // ACTION BUTTON
 // ============================================================
 
-class _ActionButton
-    extends StatelessWidget {
+class _ActionButton extends StatelessWidget {
   final IconData icon;
   final String text;
   final VoidCallback onPressed;
@@ -1047,19 +696,11 @@ class _ActionButton
       width: double.infinity,
       child: ElevatedButton.icon(
         onPressed: onPressed,
-        icon: Icon(
-          icon,
-          size: 20,
-        ),
+        icon: Icon(icon, size: 20),
         label: Text(
           text,
-          textAlign:
-              TextAlign.center,
-          style:
-              const TextStyle(
-            fontWeight:
-                FontWeight.w600,
-          ),
+          textAlign: TextAlign.center,
+          style: const TextStyle(fontWeight: FontWeight.w600),
         ),
       ),
     );

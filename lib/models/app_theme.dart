@@ -133,19 +133,11 @@ class AppThemes {
     ),
   ];
 
-  static AppThemeInfo getTheme(
-    AppThemeType type,
-  ) {
-    return all.firstWhere(
-      (theme) => theme.type == type,
-    );
+  static AppThemeInfo getTheme(AppThemeType type) {
+    return all.firstWhere((theme) => theme.type == type);
   }
 
-  static bool isUnlocked(
-    AppThemeInfo theme,
-    int totalPoints,
-  ) {
-    return totalPoints >=
-        theme.requiredPoints;
+  static bool isUnlocked(AppThemeInfo theme, int totalPoints) {
+    return totalPoints >= theme.requiredPoints;
   }
 }

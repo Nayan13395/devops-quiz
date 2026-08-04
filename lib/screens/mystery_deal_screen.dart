@@ -7,17 +7,13 @@ import 'games_screen.dart';
 import 'reward_question_screen.dart';
 
 class MysteryDealScreen extends StatefulWidget {
-  const MysteryDealScreen({
-    super.key,
-  });
+  const MysteryDealScreen({super.key});
 
   @override
-  State<MysteryDealScreen> createState() =>
-      _MysteryDealScreenState();
+  State<MysteryDealScreen> createState() => _MysteryDealScreenState();
 }
 
-class _MysteryDealScreenState
-    extends State<MysteryDealScreen> {
+class _MysteryDealScreenState extends State<MysteryDealScreen> {
   final List<int> _rewardValues = [
     10,
     20,
@@ -63,13 +59,11 @@ class _MysteryDealScreenState
   // =========================================================
 
   void _prepareGame() {
-    final List<int> rewards =
-        List<int>.from(_rewardValues);
+    final List<int> rewards = List<int>.from(_rewardValues);
 
     rewards.shuffle(Random());
 
-    _boxRewards =
-        rewards.take(4).toList();
+    _boxRewards = rewards.take(4).toList();
   }
 
   // =========================================================
@@ -78,21 +72,15 @@ class _MysteryDealScreenState
 
   Future<void> _checkDailyStatus() async {
     try {
-      final bool completed =
-          await MysteryDealService
-              .isCompletedToday();
+      final bool completed = await MysteryDealService.isCompletedToday();
 
       int? lastReward;
       bool? lastWon;
 
       if (completed) {
-        lastReward =
-            await MysteryDealService
-                .getLastReward();
+        lastReward = await MysteryDealService.getLastReward();
 
-        lastWon =
-            await MysteryDealService
-                .didWinLastAttempt();
+        lastWon = await MysteryDealService.didWinLastAttempt();
       }
 
       if (!mounted) {
@@ -114,13 +102,8 @@ class _MysteryDealScreenState
         _checkingDailyStatus = false;
       });
 
-      ScaffoldMessenger.of(context)
-          .showSnackBar(
-        SnackBar(
-          content: Text(
-            'Unable to check Mystery Deal status: $e',
-          ),
-        ),
+      ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(content: Text('Unable to check Mystery Deal status: $e')),
       );
     }
   }
@@ -129,18 +112,14 @@ class _MysteryDealScreenState
   // SELECT BOX
   // =========================================================
 
-  void _selectBox(
-    int index,
-  ) {
-    if (_boxSelected ||
-        _completedToday) {
+  void _selectBox(int index) {
+    if (_boxSelected || _completedToday) {
       return;
     }
 
     setState(() {
       _selectedBox = index;
-      _selectedReward =
-          _boxRewards[index];
+      _selectedReward = _boxRewards[index];
 
       _boxSelected = true;
     });
@@ -153,217 +132,147 @@ class _MysteryDealScreenState
   // =========================================================
 
   Future<void> _showRewardDialog() async {
-    if (_selectedBox == null ||
-        _selectedReward == null) {
+    if (_selectedBox == null || _selectedReward == null) {
       return;
     }
 
     await showDialog<void>(
       context: context,
       barrierDismissible: false,
-      builder: (
-        dialogContext,
-      ) {
-        final ColorScheme colors =
-            Theme.of(dialogContext)
-                .colorScheme;
+      builder: (dialogContext) {
+        final ColorScheme colors = Theme.of(dialogContext).colorScheme;
 
         return AlertDialog(
           // Gift icon is inside content instead of
           // AlertDialog.icon so it stays centered.
-
-          contentPadding:
-              const EdgeInsets.fromLTRB(
-            24,
-            28,
-            24,
-            10,
-          ),
+          contentPadding: const EdgeInsets.fromLTRB(24, 28, 24, 10),
 
           content: SizedBox(
             width: 400,
             child: Column(
-              mainAxisSize:
-                  MainAxisSize.min,
-              crossAxisAlignment:
-                  CrossAxisAlignment.center,
+              mainAxisSize: MainAxisSize.min,
+              crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 // ===========================================
                 // CENTERED GIFT BOX
                 // ===========================================
-
                 const SizedBox(
                   width: double.infinity,
                   child: Center(
                     child: Text(
                       '🎁',
-                      textAlign:
-                          TextAlign.center,
-                      style: TextStyle(
-                        fontSize: 60,
-                      ),
+                      textAlign: TextAlign.center,
+                      style: TextStyle(fontSize: 60),
                     ),
                   ),
                 ),
 
-                const SizedBox(
-                  height: 20,
-                ),
+                const SizedBox(height: 20),
 
                 // ===========================================
                 // BOX NUMBER
                 // ===========================================
-
                 SizedBox(
-                  width:
-                      double.infinity,
+                  width: double.infinity,
                   child: Text(
                     'Box ${_selectedBox! + 1}',
-                    textAlign:
-                        TextAlign.center,
-                    style:
-                        const TextStyle(
+                    textAlign: TextAlign.center,
+                    style: const TextStyle(
                       fontSize: 24,
-                      fontWeight:
-                          FontWeight.w500,
+                      fontWeight: FontWeight.w500,
                     ),
                   ),
                 ),
 
-                const SizedBox(
-                  height: 24,
-                ),
+                const SizedBox(height: 24),
 
                 // ===========================================
                 // YOU FOUND
                 // ===========================================
-
                 Text(
                   'You found',
-                  textAlign:
-                      TextAlign.center,
+                  textAlign: TextAlign.center,
                   style: TextStyle(
                     fontSize: 16,
-                    color:
-                        colors.onSurfaceVariant,
+                    color: colors.onSurfaceVariant,
                   ),
                 ),
 
-                const SizedBox(
-                  height: 8,
-                ),
+                const SizedBox(height: 8),
 
                 // ===========================================
                 // REWARD
                 // ===========================================
-
                 SizedBox(
-                  width:
-                      double.infinity,
+                  width: double.infinity,
                   child: Text(
                     '${_selectedReward!} POINTS',
-                    textAlign:
-                        TextAlign.center,
+                    textAlign: TextAlign.center,
                     style: TextStyle(
                       fontSize: 32,
-                      fontWeight:
-                          FontWeight.bold,
-                      color:
-                          colors.primary,
+                      fontWeight: FontWeight.bold,
+                      color: colors.primary,
                     ),
                   ),
                 ),
 
-                const SizedBox(
-                  height: 22,
-                ),
+                const SizedBox(height: 22),
 
                 // ===========================================
                 // INFORMATION
                 // ===========================================
-
                 Container(
-                  width:
-                      double.infinity,
-                  padding:
-                      const EdgeInsets.symmetric(
+                  width: double.infinity,
+                  padding: const EdgeInsets.symmetric(
                     horizontal: 16,
                     vertical: 16,
                   ),
-                  decoration:
-                      BoxDecoration(
-                    color: colors
-                        .primaryContainer,
-                    borderRadius:
-                        BorderRadius.circular(
-                      16,
-                    ),
+                  decoration: BoxDecoration(
+                    color: colors.primaryContainer,
+                    borderRadius: BorderRadius.circular(16),
                   ),
                   child: Text(
                     'Answer 1 quiz question correctly '
                     'to claim this reward.',
-                    textAlign:
-                        TextAlign.center,
+                    textAlign: TextAlign.center,
                     style: TextStyle(
                       fontSize: 15,
-                      fontWeight:
-                          FontWeight.w600,
-                      color: colors
-                          .onPrimaryContainer,
+                      fontWeight: FontWeight.w600,
+                      color: colors.onPrimaryContainer,
                     ),
                   ),
                 ),
 
-                const SizedBox(
-                  height: 14,
-                ),
+                const SizedBox(height: 14),
 
                 Text(
                   'Wrong answer = reward lost.',
-                  textAlign:
-                      TextAlign.center,
+                  textAlign: TextAlign.center,
                   style: TextStyle(
                     fontSize: 13,
-                    color:
-                        colors.onSurfaceVariant,
+                    color: colors.onSurfaceVariant,
                   ),
                 ),
               ],
             ),
           ),
 
-          actionsPadding:
-              const EdgeInsets.fromLTRB(
-            24,
-            14,
-            24,
-            20,
-          ),
+          actionsPadding: const EdgeInsets.fromLTRB(24, 14, 24, 20),
 
           actions: [
             SizedBox(
-              width:
-                  double.infinity,
+              width: double.infinity,
               height: 50,
-              child:
-                  ElevatedButton.icon(
+              child: ElevatedButton.icon(
                 onPressed: () {
-                  Navigator.pop(
-                    dialogContext,
-                  );
+                  Navigator.pop(dialogContext);
 
                   _openRewardQuestion();
                 },
-                icon: const Icon(
-                  Icons.quiz_outlined,
-                ),
+                icon: const Icon(Icons.quiz_outlined),
                 label: const Text(
                   'Start Question',
-                  style: TextStyle(
-                    fontSize: 16,
-                    fontWeight:
-                        FontWeight.bold,
-                  ),
+                  style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
                 ),
               ),
             ),
@@ -377,13 +286,10 @@ class _MysteryDealScreenState
   // OPEN COMMON REWARD QUESTION SCREEN
   // =========================================================
 
-  Future<void>
-      _openRewardQuestion() async {
-    final int? reward =
-        _selectedReward;
+  Future<void> _openRewardQuestion() async {
+    final int? reward = _selectedReward;
 
-    if (reward == null ||
-        !mounted) {
+    if (reward == null || !mounted) {
       return;
     }
 
@@ -391,11 +297,7 @@ class _MysteryDealScreenState
       context,
       MaterialPageRoute(
         builder: (_) =>
-            RewardQuestionScreen(
-          reward: reward,
-          gameName:
-              'Mystery Deal',
-        ),
+            RewardQuestionScreen(reward: reward, gameName: 'Mystery Deal'),
       ),
     );
 
@@ -411,62 +313,31 @@ class _MysteryDealScreenState
   // =========================================================
 
   @override
-  Widget build(
-    BuildContext context,
-  ) {
-    final ColorScheme colors =
-        Theme.of(context).colorScheme;
+  Widget build(BuildContext context) {
+    final ColorScheme colors = Theme.of(context).colorScheme;
 
     if (_checkingDailyStatus) {
       return Scaffold(
-        appBar: AppBar(
-          title: const Text(
-            '💼 Mystery Deal',
-          ),
-        ),
-        body: const Center(
-          child:
-              CircularProgressIndicator(),
-        ),
+        appBar: AppBar(title: const Text('💼 Mystery Deal')),
+        body: const Center(child: CircularProgressIndicator()),
       );
     }
 
     if (_completedToday) {
-      return _buildCompletedScreen(
-        context,
-        colors,
-      );
+      return _buildCompletedScreen(context, colors);
     }
 
     return Scaffold(
-      appBar: AppBar(
-        title: const Text(
-          '💼 Mystery Deal',
-        ),
-      ),
+      appBar: AppBar(title: const Text('💼 Mystery Deal')),
       body: SafeArea(
         child: LayoutBuilder(
-          builder: (
-            context,
-            constraints,
-          ) {
+          builder: (context, constraints) {
             return Center(
               child: ConstrainedBox(
-                constraints:
-                    const BoxConstraints(
-                  maxWidth: 800,
-                ),
-                child:
-                    SingleChildScrollView(
-                  padding:
-                      const EdgeInsets.all(
-                    16,
-                  ),
-                  child: _buildBoxArea(
-                    context,
-                    constraints,
-                    colors,
-                  ),
+                constraints: const BoxConstraints(maxWidth: 800),
+                child: SingleChildScrollView(
+                  padding: const EdgeInsets.all(16),
+                  child: _buildBoxArea(context, constraints, colors),
                 ),
               ),
             );
@@ -480,139 +351,77 @@ class _MysteryDealScreenState
   // COMPLETED SCREEN
   // =========================================================
 
-  Widget _buildCompletedScreen(
-    BuildContext context,
-    ColorScheme colors,
-  ) {
-    final bool won =
-        _lastWon == true;
+  Widget _buildCompletedScreen(BuildContext context, ColorScheme colors) {
+    final bool won = _lastWon == true;
 
     return Scaffold(
-      appBar: AppBar(
-        title: const Text(
-          '💼 Mystery Deal',
-        ),
-      ),
+      appBar: AppBar(title: const Text('💼 Mystery Deal')),
       body: SafeArea(
         child: Center(
-          child:
-              SingleChildScrollView(
-            padding:
-                const EdgeInsets.all(
-              24,
-            ),
-            child:
-                ConstrainedBox(
-              constraints:
-                  const BoxConstraints(
-                maxWidth: 500,
-              ),
+          child: SingleChildScrollView(
+            padding: const EdgeInsets.all(24),
+            child: ConstrainedBox(
+              constraints: const BoxConstraints(maxWidth: 500),
               child: Column(
-                mainAxisSize:
-                    MainAxisSize.min,
+                mainAxisSize: MainAxisSize.min,
                 children: [
-                  Text(
-                    won
-                        ? '🎉'
-                        : '💼',
-                    style:
-                        const TextStyle(
-                      fontSize: 72,
-                    ),
-                  ),
+                  Text(won ? '🎉' : '💼', style: const TextStyle(fontSize: 72)),
 
-                  const SizedBox(
-                    height: 18,
-                  ),
+                  const SizedBox(height: 18),
 
                   const Text(
                     'Mystery Deal Completed!',
-                    textAlign:
-                        TextAlign.center,
-                    style:
-                        TextStyle(
-                      fontSize: 25,
-                      fontWeight:
-                          FontWeight.bold,
-                    ),
+                    textAlign: TextAlign.center,
+                    style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
                   ),
 
-                  const SizedBox(
-                    height: 10,
-                  ),
+                  const SizedBox(height: 10),
 
                   Text(
                     'You have already played '
                     'Mystery Deal today.',
-                    textAlign:
-                        TextAlign.center,
-                    style:
-                        TextStyle(
+                    textAlign: TextAlign.center,
+                    style: TextStyle(
                       fontSize: 16,
-                      color: colors
-                          .onSurfaceVariant,
+                      color: colors.onSurfaceVariant,
                     ),
                   ),
 
-                  if (_lastReward !=
-                      null) ...[
-                    const SizedBox(
-                      height: 22,
-                    ),
+                  if (_lastReward != null) ...[
+                    const SizedBox(height: 22),
 
                     Container(
-                      width:
-                          double.infinity,
-                      padding:
-                          const EdgeInsets.all(
-                        18,
-                      ),
-                      decoration:
-                          BoxDecoration(
+                      width: double.infinity,
+                      padding: const EdgeInsets.all(18),
+                      decoration: BoxDecoration(
                         color: won
-                            ? colors
-                                .primaryContainer
-                            : colors
-                                .surfaceContainerHighest,
-                        borderRadius:
-                            BorderRadius.circular(
-                          18,
-                        ),
+                            ? colors.primaryContainer
+                            : colors.surfaceContainerHighest,
+                        borderRadius: BorderRadius.circular(18),
                       ),
                       child: Column(
                         children: [
                           Text(
-                            won
-                                ? 'Today you won'
-                                : 'Today\'s reward',
-                            style:
-                                TextStyle(
+                            won ? 'Today you won' : 'Today\'s reward',
+                            style: TextStyle(
                               color: won
-                                  ? colors
-                                      .onPrimaryContainer
-                                  : colors
-                                      .onSurfaceVariant,
+                                  ? colors.onPrimaryContainer
+                                  : colors.onSurfaceVariant,
                             ),
                           ),
 
-                          const SizedBox(
-                            height: 6,
-                          ),
+                          const SizedBox(height: 6),
 
                           Text(
                             won
                                 ? '+$_lastReward POINTS'
                                 : '$_lastReward POINTS LOST',
-                            textAlign:
-                                TextAlign.center,
-                            style:
-                                TextStyle(
+                            textAlign: TextAlign.center,
+                            style: TextStyle(
                               fontSize: 25,
-                              fontWeight:
-                                  FontWeight.bold,
+                              fontWeight: FontWeight.bold,
                               color: won
-                                  ? colors
-                                      .onPrimaryContainer
+                                  ? colors.onPrimaryContainer
                                   : colors.error,
                             ),
                           ),
@@ -621,56 +430,39 @@ class _MysteryDealScreenState
                     ),
                   ],
 
-                  const SizedBox(
-                    height: 22,
-                  ),
+                  const SizedBox(height: 22),
 
                   Text(
                     'Come back tomorrow for '
                     'another mystery box!',
-                    textAlign:
-                        TextAlign.center,
-                    style:
-                        TextStyle(
+                    textAlign: TextAlign.center,
+                    style: TextStyle(
                       fontSize: 15,
-                      fontWeight:
-                          FontWeight.w600,
-                      color:
-                          colors.primary,
+                      fontWeight: FontWeight.w600,
+                      color: colors.primary,
                     ),
                   ),
 
-                  const SizedBox(
-                    height: 26,
-                  ),
+                  const SizedBox(height: 26),
 
                   SizedBox(
-                    width:
-                        double.infinity,
+                    width: double.infinity,
                     height: 52,
-                    child:
-                        ElevatedButton.icon(
+                    child: ElevatedButton.icon(
                       onPressed: () {
-                        Navigator
-                            .pushReplacement(
+                        Navigator.pushReplacement(
                           context,
                           MaterialPageRoute(
-                            builder: (_) =>
-                                const GamesScreen(),
+                            builder: (_) => const GamesScreen(),
                           ),
                         );
                       },
-                      icon: const Icon(
-                        Icons
-                            .sports_esports_outlined,
-                      ),
-                      label:
-                          const Text(
+                      icon: const Icon(Icons.sports_esports_outlined),
+                      label: const Text(
                         'Play More Games',
                         style: TextStyle(
                           fontSize: 16,
-                          fontWeight:
-                              FontWeight.bold,
+                          fontWeight: FontWeight.bold,
                         ),
                       ),
                     ),
@@ -695,8 +487,7 @@ class _MysteryDealScreenState
   ) {
     int columns = 2;
 
-    if (constraints.maxWidth >=
-        700) {
+    if (constraints.maxWidth >= 700) {
       columns = 4;
     }
 
@@ -704,156 +495,88 @@ class _MysteryDealScreenState
       children: [
         const Text(
           'Choose Your Mystery Box',
-          textAlign:
-              TextAlign.center,
-          style: TextStyle(
-            fontSize: 25,
-            fontWeight:
-                FontWeight.bold,
-          ),
+          textAlign: TextAlign.center,
+          style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
         ),
 
-        const SizedBox(
-          height: 8,
-        ),
+        const SizedBox(height: 8),
 
         Text(
           'Each box contains a hidden reward '
           'between 10 and 1000 points.',
-          textAlign:
-              TextAlign.center,
-          style: TextStyle(
-            fontSize: 15,
-            color:
-                colors.onSurfaceVariant,
-          ),
+          textAlign: TextAlign.center,
+          style: TextStyle(fontSize: 15, color: colors.onSurfaceVariant),
         ),
 
-        const SizedBox(
-          height: 8,
-        ),
+        const SizedBox(height: 8),
 
         Text(
           'Pick only one box!',
-          textAlign:
-              TextAlign.center,
+          textAlign: TextAlign.center,
           style: TextStyle(
             fontSize: 14,
-            fontWeight:
-                FontWeight.bold,
-            color:
-                colors.primary,
+            fontWeight: FontWeight.bold,
+            color: colors.primary,
           ),
         ),
 
-        const SizedBox(
-          height: 24,
-        ),
+        const SizedBox(height: 24),
 
         GridView.builder(
           shrinkWrap: true,
-          physics:
-              const NeverScrollableScrollPhysics(),
+          physics: const NeverScrollableScrollPhysics(),
           itemCount: 4,
-          gridDelegate:
-              SliverGridDelegateWithFixedCrossAxisCount(
-            crossAxisCount:
-                columns,
-            crossAxisSpacing:
-                10,
-            mainAxisSpacing:
-                10,
-            childAspectRatio:
-                0.95,
+          gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+            crossAxisCount: columns,
+            crossAxisSpacing: 10,
+            mainAxisSpacing: 10,
+            childAspectRatio: 0.95,
           ),
-          itemBuilder: (
-            context,
-            index,
-          ) {
+          itemBuilder: (context, index) {
             return _MysteryBox(
-              number:
-                  index + 1,
-              selected:
-                  _selectedBox ==
-                      index,
-              disabled:
-                  _boxSelected &&
-                      _selectedBox !=
-                          index,
-              reward:
-                  _selectedBox ==
-                          index
-                      ? _selectedReward
-                      : null,
+              number: index + 1,
+              selected: _selectedBox == index,
+              disabled: _boxSelected && _selectedBox != index,
+              reward: _selectedBox == index ? _selectedReward : null,
               onTap: () {
-                _selectBox(
-                  index,
-                );
+                _selectBox(index);
               },
             );
           },
         ),
 
-        const SizedBox(
-          height: 24,
-        ),
+        const SizedBox(height: 24),
 
         Container(
-          width:
-              double.infinity,
-          padding:
-              const EdgeInsets.all(
-            16,
-          ),
-          decoration:
-              BoxDecoration(
-            color: colors
-                .surfaceContainerHighest,
-            borderRadius:
-                BorderRadius.circular(
-              18,
-            ),
+          width: double.infinity,
+          padding: const EdgeInsets.all(16),
+          decoration: BoxDecoration(
+            color: colors.surfaceContainerHighest,
+            borderRadius: BorderRadius.circular(18),
           ),
         ),
 
-        const SizedBox(
-          height: 24,
-        ),
+        const SizedBox(height: 24),
 
         SizedBox(
-          width:
-              double.infinity,
+          width: double.infinity,
           height: 52,
-          child:
-              ElevatedButton.icon(
+          child: ElevatedButton.icon(
             onPressed: () {
-              Navigator
-                  .pushReplacement(
+              Navigator.pushReplacement(
                 context,
-                MaterialPageRoute(
-                  builder: (_) =>
-                      const GamesScreen(),
-                ),
+                MaterialPageRoute(builder: (_) => const GamesScreen()),
               );
             },
-            icon: const Icon(
-              Icons
-                  .sports_esports_outlined,
-            ),
+            icon: const Icon(Icons.sports_esports_outlined),
             label: const Text(
               'Play More Games',
-              style: TextStyle(
-                fontSize: 16,
-                fontWeight:
-                    FontWeight.bold,
-              ),
+              style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
             ),
           ),
         ),
 
-        const SizedBox(
-          height: 20,
-        ),
+        const SizedBox(height: 20),
       ],
     );
   }
@@ -863,8 +586,7 @@ class _MysteryDealScreenState
 // MYSTERY BOX
 // ============================================================
 
-class _MysteryBox
-    extends StatelessWidget {
+class _MysteryBox extends StatelessWidget {
   final int number;
   final bool selected;
   final bool disabled;
@@ -880,154 +602,81 @@ class _MysteryBox
   });
 
   @override
-  Widget build(
-    BuildContext context,
-  ) {
-    final ColorScheme colors =
-        Theme.of(context).colorScheme;
+  Widget build(BuildContext context) {
+    final ColorScheme colors = Theme.of(context).colorScheme;
 
     Color backgroundColor;
     Color foregroundColor;
 
     if (selected) {
-      backgroundColor =
-          colors.primary;
+      backgroundColor = colors.primary;
 
-      foregroundColor =
-          colors.onPrimary;
+      foregroundColor = colors.onPrimary;
     } else if (disabled) {
-      backgroundColor =
-          colors
-              .surfaceContainerHighest;
+      backgroundColor = colors.surfaceContainerHighest;
 
-      foregroundColor =
-          colors
-              .onSurfaceVariant
-              .withValues(
-            alpha: 0.45,
-          );
+      foregroundColor = colors.onSurfaceVariant.withValues(alpha: 0.45);
     } else {
-      backgroundColor =
-          colors.primaryContainer;
+      backgroundColor = colors.primaryContainer;
 
-      foregroundColor =
-          colors.onPrimaryContainer;
+      foregroundColor = colors.onPrimaryContainer;
     }
 
     return AnimatedOpacity(
-      duration:
-          const Duration(
-        milliseconds: 250,
-      ),
-      opacity:
-          disabled ? 0.45 : 1,
+      duration: const Duration(milliseconds: 250),
+      opacity: disabled ? 0.45 : 1,
       child: Material(
-        color:
-            backgroundColor,
-        borderRadius:
-            BorderRadius.circular(
-          16,
-        ),
+        color: backgroundColor,
+        borderRadius: BorderRadius.circular(16),
         child: InkWell(
-          onTap:
-              disabled || selected
-                  ? null
-                  : onTap,
-          borderRadius:
-              BorderRadius.circular(
-            16,
-          ),
-          child:
-              AnimatedContainer(
-            duration:
-                const Duration(
-              milliseconds: 250,
-            ),
-            padding:
-                const EdgeInsets.all(
-              8,
-            ),
-            decoration:
-                BoxDecoration(
-              borderRadius:
-                  BorderRadius.circular(
-                16,
+          onTap: disabled || selected ? null : onTap,
+          borderRadius: BorderRadius.circular(16),
+          child: AnimatedContainer(
+            duration: const Duration(milliseconds: 250),
+            padding: const EdgeInsets.all(8),
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(16),
+              border: Border.all(
+                color: selected ? colors.secondary : colors.outlineVariant,
+                width: selected ? 3 : 1,
               ),
-              border:
-                  Border.all(
-                color: selected
-                    ? colors.secondary
-                    : colors
-                        .outlineVariant,
-                width:
-                    selected
-                        ? 3
-                        : 1,
-              ),
-              boxShadow:
-                  selected
-                      ? [
-                          BoxShadow(
-                            color: colors
-                                .primary
-                                .withValues(
-                              alpha:
-                                  0.30,
-                            ),
-                            blurRadius:
-                                14,
-                            spreadRadius:
-                                2,
-                          ),
-                        ]
-                      : null,
+              boxShadow: selected
+                  ? [
+                      BoxShadow(
+                        color: colors.primary.withValues(alpha: 0.30),
+                        blurRadius: 14,
+                        spreadRadius: 2,
+                      ),
+                    ]
+                  : null,
             ),
             child: Column(
-              mainAxisAlignment:
-                  MainAxisAlignment.center,
+              mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Text(
-                  selected
-                      ? '🎁'
-                      : '💼',
-                  style:
-                      const TextStyle(
-                    fontSize: 30,
-                  ),
+                  selected ? '🎁' : '💼',
+                  style: const TextStyle(fontSize: 30),
                 ),
 
-                const SizedBox(
-                  height: 5,
-                ),
+                const SizedBox(height: 5),
 
                 if (reward == null)
                   Text(
-                    number
-                        .toString()
-                        .padLeft(
-                          2,
-                          '0',
-                        ),
-                    style:
-                        TextStyle(
+                    number.toString().padLeft(2, '0'),
+                    style: TextStyle(
                       fontSize: 17,
-                      fontWeight:
-                          FontWeight.bold,
-                      color:
-                          foregroundColor,
+                      fontWeight: FontWeight.bold,
+                      color: foregroundColor,
                     ),
                   )
                 else
                   FittedBox(
                     child: Text(
                       '$reward',
-                      style:
-                          TextStyle(
+                      style: TextStyle(
                         fontSize: 16,
-                        fontWeight:
-                            FontWeight.bold,
-                        color:
-                            foregroundColor,
+                        fontWeight: FontWeight.bold,
+                        color: foregroundColor,
                       ),
                     ),
                   ),

@@ -7,48 +7,30 @@ import '../l10n/app_localizations.dart';
 import 'theme_screen.dart';
 
 class SettingsScreen extends StatelessWidget {
-  const SettingsScreen({
-    super.key,
-  });
+  const SettingsScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
-    final localizations =
-        AppLocalizations.of(context)!;
+    final localizations = AppLocalizations.of(context)!;
 
     return Scaffold(
-      appBar: AppBar(
-        title: Text(
-          localizations.settings,
-        ),
-      ),
+      appBar: AppBar(title: Text(localizations.settings)),
 
       body: ListView(
-        padding: const EdgeInsets.symmetric(
-          vertical: 10,
-        ),
+        padding: const EdgeInsets.symmetric(vertical: 10),
         children: [
           // ============================================
           // LANGUAGE
           // ============================================
-
           Consumer<LanguageProvider>(
-            builder: (
-              context,
-              languageProvider,
-              child,
-            ) {
+            builder: (context, languageProvider, child) {
               return ListTile(
-                contentPadding:
-                    const EdgeInsets.symmetric(
+                contentPadding: const EdgeInsets.symmetric(
                   horizontal: 20,
                   vertical: 6,
                 ),
 
-                leading: const Icon(
-                  Icons.language,
-                  size: 28,
-                ),
+                leading: const Icon(Icons.language, size: 28),
 
                 title: Text(
                   localizations.language,
@@ -58,22 +40,12 @@ class SettingsScreen extends StatelessWidget {
                   ),
                 ),
 
-                subtitle: Text(
-                  _getLanguageName(
-                    context,
-                    languageProvider,
-                  ),
-                ),
+                subtitle: Text(_getLanguageName(context, languageProvider)),
 
-                trailing: const Icon(
-                  Icons.arrow_forward_ios,
-                  size: 18,
-                ),
+                trailing: const Icon(Icons.arrow_forward_ios, size: 18),
 
                 onTap: () {
-                  _showLanguageDialog(
-                    context,
-                  );
+                  _showLanguageDialog(context);
                 },
               );
             },
@@ -84,50 +56,30 @@ class SettingsScreen extends StatelessWidget {
           // ============================================
           // THEMES
           // ============================================
-
           Consumer<ThemeProvider>(
-            builder: (
-              context,
-              themeProvider,
-              child,
-            ) {
+            builder: (context, themeProvider, child) {
               return ListTile(
-                contentPadding:
-                    const EdgeInsets.symmetric(
+                contentPadding: const EdgeInsets.symmetric(
                   horizontal: 20,
                   vertical: 6,
                 ),
 
-                leading: const Icon(
-                  Icons.palette_outlined,
-                  size: 28,
-                ),
+                leading: const Icon(Icons.palette_outlined, size: 28),
 
                 title: Text(
                   AppLocalizations.of(context)!.themes,
-                  style: TextStyle(
-                    fontSize: 18,
-                    fontWeight: FontWeight.w600,
-                  ),
+                  style: TextStyle(fontSize: 18, fontWeight: FontWeight.w600),
                 ),
 
                 // Shows currently selected theme.
-                subtitle: Text(
-                  themeProvider.currentTheme.name,
-                ),
+                subtitle: Text(themeProvider.currentTheme.name),
 
-                trailing: const Icon(
-                  Icons.arrow_forward_ios,
-                  size: 18,
-                ),
+                trailing: const Icon(Icons.arrow_forward_ios, size: 18),
 
                 onTap: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(
-                      builder: (_) =>
-                          const ThemeScreen(),
-                    ),
+                    MaterialPageRoute(builder: (_) => const ThemeScreen()),
                   );
                 },
               );
@@ -142,12 +94,8 @@ class SettingsScreen extends StatelessWidget {
   // CURRENT LANGUAGE
   // ================================================
 
-  String _getLanguageName(
-    BuildContext context,
-    LanguageProvider provider,
-  ) {
-    final localizations =
-        AppLocalizations.of(context)!;
+  String _getLanguageName(BuildContext context, LanguageProvider provider) {
+    final localizations = AppLocalizations.of(context)!;
 
     switch (provider.locale.languageCode) {
       case 'hi':
@@ -165,148 +113,89 @@ class SettingsScreen extends StatelessWidget {
   // LANGUAGE SELECTION DIALOG
   // ================================================
 
-  void _showLanguageDialog(
-    BuildContext context,
-  ) {
-    final localizations =
-        AppLocalizations.of(context)!;
+  void _showLanguageDialog(BuildContext context) {
+    final localizations = AppLocalizations.of(context)!;
 
-    final currentLanguage =
-        context
-            .read<LanguageProvider>()
-            .locale
-            .languageCode;
+    final currentLanguage = context
+        .read<LanguageProvider>()
+        .locale
+        .languageCode;
 
     showDialog<void>(
       context: context,
 
       builder: (dialogContext) {
         return AlertDialog(
-          title: Text(
-            localizations.selectLanguage,
-          ),
+          title: Text(localizations.selectLanguage),
 
-          contentPadding:
-              const EdgeInsets.only(
-            top: 12,
-            bottom: 12,
-          ),
+          contentPadding: const EdgeInsets.only(top: 12, bottom: 12),
 
           content: Column(
-            mainAxisSize:
-                MainAxisSize.min,
+            mainAxisSize: MainAxisSize.min,
             children: [
               // ======================================
               // ENGLISH
               // ======================================
-
               RadioListTile<String>(
                 value: 'en',
-                groupValue:
-                    currentLanguage,
+                groupValue: currentLanguage,
 
-                title: Text(
-                  localizations.english,
-                ),
+                title: Text(localizations.english),
 
-                secondary: const Text(
-                  '🇬🇧',
-                  style: TextStyle(
-                    fontSize: 24,
-                  ),
-                ),
+                secondary: const Text('🇬🇧', style: TextStyle(fontSize: 24)),
 
                 onChanged: (value) {
                   if (value == null) {
                     return;
                   }
 
-                  context
-                      .read<
-                          LanguageProvider>()
-                      .changeLanguage(
-                        value,
-                      );
+                  context.read<LanguageProvider>().changeLanguage(value);
 
-                  Navigator.pop(
-                    dialogContext,
-                  );
+                  Navigator.pop(dialogContext);
                 },
               ),
 
               // ======================================
               // HINDI
               // ======================================
-
               RadioListTile<String>(
                 value: 'hi',
-                groupValue:
-                    currentLanguage,
+                groupValue: currentLanguage,
 
-                title: Text(
-                  localizations.hindi,
-                ),
+                title: Text(localizations.hindi),
 
-                secondary: const Text(
-                  '🇮🇳',
-                  style: TextStyle(
-                    fontSize: 24,
-                  ),
-                ),
+                secondary: const Text('🇮🇳', style: TextStyle(fontSize: 24)),
 
                 onChanged: (value) {
                   if (value == null) {
                     return;
                   }
 
-                  context
-                      .read<
-                          LanguageProvider>()
-                      .changeLanguage(
-                        value,
-                      );
+                  context.read<LanguageProvider>().changeLanguage(value);
 
-                  Navigator.pop(
-                    dialogContext,
-                  );
+                  Navigator.pop(dialogContext);
                 },
               ),
 
               // ======================================
               // MARATHI
               // ======================================
-
               RadioListTile<String>(
                 value: 'mr',
-                groupValue:
-                    currentLanguage,
+                groupValue: currentLanguage,
 
-                title: Text(
-                  localizations.marathi,
-                ),
+                title: Text(localizations.marathi),
 
-                secondary: const Text(
-                  '🇮🇳',
-                  style: TextStyle(
-                    fontSize: 24,
-                  ),
-                ),
+                secondary: const Text('🇮🇳', style: TextStyle(fontSize: 24)),
 
                 onChanged: (value) {
                   if (value == null) {
                     return;
                   }
 
-                  context
-                      .read<
-                          LanguageProvider>()
-                      .changeLanguage(
-                        value,
-                      );
+                  context.read<LanguageProvider>().changeLanguage(value);
 
-                  Navigator.pop(
-                    dialogContext,
-                  );
+                  Navigator.pop(dialogContext);
                 },
               ),
             ],

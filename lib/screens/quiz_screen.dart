@@ -31,19 +31,15 @@ class QuizScreen extends StatefulWidget {
   });
 
   @override
-  State<QuizScreen> createState() =>
-      _QuizScreenState();
+  State<QuizScreen> createState() => _QuizScreenState();
 }
 
 class _QuizScreenState extends State<QuizScreen> {
-  bool get isChallenge =>
-      widget.challenge != null;
+  bool get isChallenge => widget.challenge != null;
 
-  bool get isSpeedChallenge =>
-      widget.challenge?.id == 'speed';
+  bool get isSpeedChallenge => widget.challenge?.id == 'speed';
 
-  bool get isSurvivalMode =>
-      widget.challenge?.survival ?? false;
+  bool get isSurvivalMode => widget.challenge?.survival ?? false;
 
   List<Question> questions = [];
 
@@ -61,14 +57,13 @@ class _QuizScreenState extends State<QuizScreen> {
 
   final Map<int, String> userAnswers = {};
 
-  final Map<int, List<String>>
-      displayedOptions = {};
+  final Map<int, List<String>> displayedOptions = {};
 
   final Set<int> timedOutQuestions = {};
 
   Timer? timer;
 
-  int timeLeft = 15;
+  int timeLeft = 30;
 
   bool _quizFinished = false;
 
@@ -100,11 +95,9 @@ class _QuizScreenState extends State<QuizScreen> {
   void initState() {
     super.initState();
 
-    WidgetsBinding.instance.addPostFrameCallback(
-      (_) {
-        loadQuestions();
-      },
-    );
+    WidgetsBinding.instance.addPostFrameCallback((_) {
+      loadQuestions();
+    });
   }
 
   // =========================================================
@@ -113,64 +106,43 @@ class _QuizScreenState extends State<QuizScreen> {
 
   Future<void> loadQuestions() async {
     try {
-      final locale =
-          Localizations.localeOf(context);
+      final locale = Localizations.localeOf(context);
 
-      List<Question> allQuestions =
-          await QuestionService().loadQuestions(
+      List<Question> allQuestions = await QuestionService().loadQuestions(
         locale,
         widget.category,
       );
 
       if (!mounted) return;
 
-      if (widget.category == 'DevOps' ||
-          widget.category == 'DailyQuiz') {
+      if (widget.category == 'DevOps' || widget.category == 'DailyQuiz') {
         questions = {
-          for (final q in allQuestions)
-            q.question: q,
+          for (final q in allQuestions) q.question: q,
         }.values.toList();
 
         questions.shuffle();
 
         if (isChallenge) {
-          questions = questions
-              .take(
-                widget.challenge!.questionCount,
-              )
-              .toList();
+          questions = questions.take(widget.challenge!.questionCount).toList();
         } else {
-          questions =
-              questions.take(25).toList();
+          questions = questions.take(25).toList();
         }
       } else {
         questions = allQuestions
-            .where(
-              (q) =>
-                  q.set == widget.setNumber,
-            )
+            .where((q) => q.set == widget.setNumber)
             .toList();
 
         questions.shuffle();
 
         if (isChallenge) {
-          questions = questions
-              .take(
-                widget.challenge!.questionCount,
-              )
-              .toList();
+          questions = questions.take(widget.challenge!.questionCount).toList();
         }
       }
 
       displayedOptions.clear();
 
-      for (int i = 0;
-          i < questions.length;
-          i++) {
-        displayedOptions[i] =
-            List<String>.from(
-          questions[i].shuffledOptions,
-        );
+      for (int i = 0; i < questions.length; i++) {
+        displayedOptions[i] = List<String>.from(questions[i].shuffledOptions);
       }
 
       if (!mounted) return;
@@ -183,9 +155,7 @@ class _QuizScreenState extends State<QuizScreen> {
         startTimer();
       }
     } catch (e) {
-      debugPrint(
-        'Question loading error: $e',
-      );
+      debugPrint('Question loading error: $e');
 
       if (!mounted) return;
 
@@ -213,40 +183,8 @@ class _QuizScreenState extends State<QuizScreen> {
     if (isSpeedChallenge) {
       timeLeft = 60;
 
-      timer = Timer.periodic(
-        const Duration(seconds: 1),
-        (t) {
-          if (!mounted ||
-              _quizFinished) {
-            t.cancel();
-            return;
-          }
-
-          if (timeLeft > 0) {
-            setState(() {
-              timeLeft--;
-            });
-          } else {
-            t.cancel();
-            finishQuiz();
-          }
-        },
-      );
-
-      return;
-    }
-
-    // =======================================================
-    // NORMAL QUIZ
-    // =======================================================
-
-    timeLeft = 15;
-
-    timer = Timer.periodic(
-      const Duration(seconds: 1),
-      (t) {
-        if (!mounted ||
-            _quizFinished) {
+      timer = Timer.periodic(const Duration(seconds: 1), (t) {
+        if (!mounted || _quizFinished) {
           t.cancel();
           return;
         }
@@ -257,10 +195,34 @@ class _QuizScreenState extends State<QuizScreen> {
           });
         } else {
           t.cancel();
-          autoSubmit();
+          finishQuiz();
         }
-      },
-    );
+      });
+
+      return;
+    }
+
+    // =======================================================
+    // NORMAL QUIZ
+    // =======================================================
+
+    timeLeft = 30;
+
+    timer = Timer.periodic(const Duration(seconds: 1), (t) {
+      if (!mounted || _quizFinished) {
+        t.cancel();
+        return;
+      }
+
+      if (timeLeft > 0) {
+        setState(() {
+          timeLeft--;
+        });
+      } else {
+        t.cancel();
+        autoSubmit();
+      }
+    });
   }
 
   // =========================================================
@@ -270,76 +232,50 @@ class _QuizScreenState extends State<QuizScreen> {
   void autoSubmit() {
     if (_quizFinished) return;
 
-    if (userAnswers.containsKey(
-          currentQuestion,
-        ) ||
-        timedOutQuestions.contains(
-          currentQuestion,
-        )) {
+    if (userAnswers.containsKey(currentQuestion) ||
+        timedOutQuestions.contains(currentQuestion)) {
       return;
     }
 
     setState(() {
-      timedOutQuestions.add(
-        currentQuestion,
-      );
+      timedOutQuestions.add(currentQuestion);
 
       answered = true;
     });
 
     if (isSurvivalMode) {
-      Future.delayed(
-        const Duration(
-          milliseconds: 400,
-        ),
-        () async {
-          if (!mounted) return;
+      Future.delayed(const Duration(milliseconds: 400), () async {
+        if (!mounted) return;
 
-          await finishQuiz();
-        },
-      );
+        await finishQuiz();
+      });
 
       return;
     }
 
-    Future.delayed(
-      const Duration(
-        milliseconds: 400,
-      ),
-      () async {
-        if (!mounted ||
-            _quizFinished) {
-          return;
+    Future.delayed(const Duration(milliseconds: 400), () async {
+      if (!mounted || _quizFinished) {
+        return;
+      }
+
+      if (currentQuestion < questions.length - 1) {
+        setState(() {
+          currentQuestion++;
+
+          selectedAnswer = userAnswers[currentQuestion];
+
+          answered =
+              userAnswers.containsKey(currentQuestion) ||
+              timedOutQuestions.contains(currentQuestion);
+        });
+
+        if (!answered && !isSpeedChallenge) {
+          startTimer();
         }
-
-        if (currentQuestion <
-            questions.length - 1) {
-          setState(() {
-            currentQuestion++;
-
-            selectedAnswer =
-                userAnswers[
-                    currentQuestion];
-
-            answered =
-                userAnswers.containsKey(
-                      currentQuestion,
-                    ) ||
-                    timedOutQuestions
-                        .contains(
-                      currentQuestion,
-                    );
-          });
-
-          if (!answered &&
-              !isSpeedChallenge) {
-            startTimer();
-          }
-        } else {
-          await finishQuiz();
-        }
-      },
-    );
+      } else {
+        await finishQuiz();
+      }
+    });
   }
 
   // =========================================================
@@ -353,35 +289,23 @@ class _QuizScreenState extends State<QuizScreen> {
 
     timer?.cancel();
 
-    if (widget.category ==
-        'DailyQuiz') {
-      await DailyQuizService
-          .markCompleted();
+    if (widget.category == 'DailyQuiz') {
+      await DailyQuizService.markCompleted();
     }
 
-    final int finalPoints =
-        getFinalPoints();
+    final int finalPoints = getFinalPoints();
 
-    await PointService.addPoints(
-      finalPoints,
-    );
+    await PointService.addPoints(finalPoints);
 
-    final achievements =
-        await AchievementService
-            .checkAchievements(
+    final achievements = await AchievementService.checkAchievements(
       score: score,
-      totalQuestions:
-          questions.length,
+      totalQuestions: questions.length,
     );
 
-    for (final achievement
-        in achievements) {
+    for (final achievement in achievements) {
       if (!mounted) return;
 
-      await showAchievementDialog(
-        context,
-        achievement,
-      );
+      await showAchievementDialog(context, achievement);
     }
 
     if (!mounted) return;
@@ -391,34 +315,16 @@ class _QuizScreenState extends State<QuizScreen> {
       MaterialPageRoute(
         builder: (_) => ResultScreen(
           score: score,
-          totalQuestions:
-              questions.length,
+          totalQuestions: questions.length,
           points: finalPoints,
-          category:
-              widget.category,
-          setNumber:
-              widget.setNumber,
-          questions:
-              List<Question>.from(
-            questions,
+          category: widget.category,
+          setNumber: widget.setNumber,
+          questions: List<Question>.from(questions),
+          userAnswers: Map<int, String>.from(userAnswers),
+          displayedOptions: displayedOptions.map(
+            (key, value) => MapEntry(key, List<String>.from(value)),
           ),
-          userAnswers:
-              Map<int, String>.from(
-            userAnswers,
-          ),
-          displayedOptions:
-              displayedOptions.map(
-            (key, value) => MapEntry(
-              key,
-              List<String>.from(
-                value,
-              ),
-            ),
-          ),
-          timedOutQuestions:
-              Set<int>.from(
-            timedOutQuestions,
-          ),
+          timedOutQuestions: Set<int>.from(timedOutQuestions),
         ),
       ),
     );
@@ -428,32 +334,22 @@ class _QuizScreenState extends State<QuizScreen> {
   // SELECT ANSWER
   // =========================================================
 
-  Future<void> selectAnswer(
-    String text,
-  ) async {
+  Future<void> selectAnswer(String text) async {
     if (_quizFinished) return;
 
-    if (userAnswers.containsKey(
-          currentQuestion,
-        ) ||
-        timedOutQuestions.contains(
-          currentQuestion,
-        )) {
+    if (userAnswers.containsKey(currentQuestion) ||
+        timedOutQuestions.contains(currentQuestion)) {
       return;
     }
 
-    final bool isCorrect =
-        text ==
-            questions[currentQuestion]
-                .answer;
+    final bool isCorrect = text == questions[currentQuestion].answer;
 
     if (!isSpeedChallenge) {
       timer?.cancel();
     }
 
     setState(() {
-      userAnswers[currentQuestion] =
-          text;
+      userAnswers[currentQuestion] = text;
 
       selectedAnswer = text;
 
@@ -465,13 +361,8 @@ class _QuizScreenState extends State<QuizScreen> {
       }
     });
 
-    if (isSurvivalMode &&
-        !isCorrect) {
-      await Future.delayed(
-        const Duration(
-          milliseconds: 500,
-        ),
-      );
+    if (isSurvivalMode && !isCorrect) {
+      await Future.delayed(const Duration(milliseconds: 500));
 
       if (!mounted) return;
 
@@ -480,89 +371,56 @@ class _QuizScreenState extends State<QuizScreen> {
       return;
     }
 
-    Future.delayed(
-      const Duration(
-        milliseconds: 200,
-      ),
-      () async {
-        if (!mounted ||
-            _quizFinished) {
-          return;
+    Future.delayed(const Duration(milliseconds: 200), () async {
+      if (!mounted || _quizFinished) {
+        return;
+      }
+
+      if (currentQuestion < questions.length - 1) {
+        setState(() {
+          currentQuestion++;
+
+          selectedAnswer = userAnswers[currentQuestion];
+
+          answered =
+              userAnswers.containsKey(currentQuestion) ||
+              timedOutQuestions.contains(currentQuestion);
+        });
+
+        if (!answered && !isSpeedChallenge) {
+          startTimer();
         }
-
-        if (currentQuestion <
-            questions.length - 1) {
-          setState(() {
-            currentQuestion++;
-
-            selectedAnswer =
-                userAnswers[
-                    currentQuestion];
-
-            answered =
-                userAnswers.containsKey(
-                      currentQuestion,
-                    ) ||
-                    timedOutQuestions
-                        .contains(
-                      currentQuestion,
-                    );
-          });
-
-          if (!answered &&
-              !isSpeedChallenge) {
-            startTimer();
-          }
-        } else {
-          await finishQuiz();
-        }
-      },
-    );
+      } else {
+        await finishQuiz();
+      }
+    });
   }
 
   // =========================================================
   // OPTION COLOR
   // =========================================================
 
-  Color getOptionColor(
-    String text,
-  ) {
-    final colorScheme =
-        Theme.of(context).colorScheme;
+  Color getOptionColor(String text) {
+    final colorScheme = Theme.of(context).colorScheme;
 
-    final bool timedOut =
-        timedOutQuestions.contains(
-      currentQuestion,
-    );
+    final bool timedOut = timedOutQuestions.contains(currentQuestion);
 
-    final bool locked =
-        userAnswers.containsKey(
-          currentQuestion,
-        ) ||
-        timedOut;
+    final bool locked = userAnswers.containsKey(currentQuestion) || timedOut;
 
     if (!locked) {
-      return colorScheme
-          .surfaceContainerHighest;
+      return colorScheme.surfaceContainerHighest;
     }
 
-    if (text ==
-        questions[currentQuestion]
-            .answer) {
+    if (text == questions[currentQuestion].answer) {
       return Colors.green.shade600;
     }
 
-    if (text ==
-            userAnswers[
-                currentQuestion] &&
-        text !=
-            questions[currentQuestion]
-                .answer) {
+    if (text == userAnswers[currentQuestion] &&
+        text != questions[currentQuestion].answer) {
       return Colors.red.shade600;
     }
 
-    return colorScheme
-        .surfaceContainerHighest;
+    return colorScheme.surfaceContainerHighest;
   }
 
   // =========================================================
@@ -570,8 +428,7 @@ class _QuizScreenState extends State<QuizScreen> {
   // =========================================================
 
   void goToPreviousQuestion() {
-    if (currentQuestion <= 0 ||
-        _quizFinished) {
+    if (currentQuestion <= 0 || _quizFinished) {
       return;
     }
 
@@ -582,22 +439,14 @@ class _QuizScreenState extends State<QuizScreen> {
     setState(() {
       currentQuestion--;
 
-      selectedAnswer =
-          userAnswers[
-              currentQuestion];
+      selectedAnswer = userAnswers[currentQuestion];
 
       answered =
-          userAnswers.containsKey(
-                currentQuestion,
-              ) ||
-              timedOutQuestions
-                  .contains(
-                currentQuestion,
-              );
+          userAnswers.containsKey(currentQuestion) ||
+          timedOutQuestions.contains(currentQuestion);
     });
 
-    if (!answered &&
-        !isSpeedChallenge) {
+    if (!answered && !isSpeedChallenge) {
       startTimer();
     }
   }
@@ -606,12 +455,10 @@ class _QuizScreenState extends State<QuizScreen> {
   // NEXT QUESTION
   // =========================================================
 
-  Future<void>
-      goToNextQuestion() async {
+  Future<void> goToNextQuestion() async {
     if (_quizFinished) return;
 
-    if (currentQuestion ==
-        questions.length - 1) {
+    if (currentQuestion == questions.length - 1) {
       await finishQuiz();
 
       return;
@@ -624,22 +471,14 @@ class _QuizScreenState extends State<QuizScreen> {
     setState(() {
       currentQuestion++;
 
-      selectedAnswer =
-          userAnswers[
-              currentQuestion];
+      selectedAnswer = userAnswers[currentQuestion];
 
       answered =
-          userAnswers.containsKey(
-                currentQuestion,
-              ) ||
-              timedOutQuestions
-                  .contains(
-                currentQuestion,
-              );
+          userAnswers.containsKey(currentQuestion) ||
+          timedOutQuestions.contains(currentQuestion);
     });
 
-    if (!answered &&
-        !isSpeedChallenge) {
+    if (!answered && !isSpeedChallenge) {
       startTimer();
     }
   }
@@ -648,8 +487,7 @@ class _QuizScreenState extends State<QuizScreen> {
   // EXIT CONFIRMATION
   // =========================================================
 
-  Future<bool>
-      _showExitConfirmation() async {
+  Future<bool> _showExitConfirmation() async {
     // Quiz has already finished.
     // Allow normal navigation.
     if (_quizFinished) {
@@ -672,87 +510,53 @@ class _QuizScreenState extends State<QuizScreen> {
       timer?.cancel();
     }
 
-    final bool? shouldExit =
-        await showDialog<bool>(
+    final bool? shouldExit = await showDialog<bool>(
       context: context,
       barrierDismissible: false,
-      builder: (
-        dialogContext,
-      ) {
-        final colorScheme =
-            Theme.of(
-          dialogContext,
-        ).colorScheme;
+      builder: (dialogContext) {
+        final colorScheme = Theme.of(dialogContext).colorScheme;
 
         return AlertDialog(
           icon: Icon(
-            Icons
-                .warning_amber_rounded,
+            Icons.warning_amber_rounded,
             size: 46,
-            color:
-                colorScheme.error,
+            color: colorScheme.error,
           ),
 
-          title: const Text(
-            'Exit Quiz?',
-            textAlign:
-                TextAlign.center,
-          ),
+          title: const Text('Exit Quiz?', textAlign: TextAlign.center),
 
           content: const Text(
             'Are you sure you want to exit the quiz?\n\n'
             'Your current progress will be lost.',
-            textAlign:
-                TextAlign.center,
+            textAlign: TextAlign.center,
           ),
 
-          actionsAlignment:
-              MainAxisAlignment
-                  .spaceEvenly,
+          actionsAlignment: MainAxisAlignment.spaceEvenly,
 
           actions: [
             // ===============================================
             // CONTINUE QUIZ
             // ===============================================
-
             TextButton(
               onPressed: () {
-                Navigator.of(
-                  dialogContext,
-                ).pop(
-                  false,
-                );
+                Navigator.of(dialogContext).pop(false);
               },
-              child: const Text(
-                'Continue Quiz',
-              ),
+              child: const Text('Continue Quiz'),
             ),
 
             // ===============================================
             // EXIT
             // ===============================================
-
             FilledButton.icon(
               onPressed: () {
-                Navigator.of(
-                  dialogContext,
-                ).pop(
-                  true,
-                );
+                Navigator.of(dialogContext).pop(true);
               },
-              style:
-                  FilledButton.styleFrom(
-                backgroundColor:
-                    colorScheme.error,
-                foregroundColor:
-                    colorScheme.onError,
+              style: FilledButton.styleFrom(
+                backgroundColor: colorScheme.error,
+                foregroundColor: colorScheme.onError,
               ),
-              icon: const Icon(
-                Icons.exit_to_app_rounded,
-              ),
-              label: const Text(
-                'Exit',
-              ),
+              icon: const Icon(Icons.exit_to_app_rounded),
+              label: const Text('Exit'),
             ),
           ],
         );
@@ -771,9 +575,7 @@ class _QuizScreenState extends State<QuizScreen> {
       //
       // This gives the current question a fresh
       // 15 seconds after closing the dialog.
-      if (!isSpeedChallenge &&
-          !_quizFinished &&
-          !answered) {
+      if (!isSpeedChallenge && !_quizFinished && !answered) {
         startTimer();
       }
 
@@ -790,13 +592,10 @@ class _QuizScreenState extends State<QuizScreen> {
   // HANDLE SYSTEM BACK
   // =========================================================
 
-  Future<void>
-      _handleBackAttempt() async {
-    final bool shouldExit =
-        await _showExitConfirmation();
+  Future<void> _handleBackAttempt() async {
+    final bool shouldExit = await _showExitConfirmation();
 
-    if (!mounted ||
-        !shouldExit) {
+    if (!mounted || !shouldExit) {
       return;
     }
 
@@ -821,14 +620,10 @@ class _QuizScreenState extends State<QuizScreen> {
   // =========================================================
 
   @override
-  Widget build(
-    BuildContext context,
-  ) {
-    final theme =
-        Theme.of(context);
+  Widget build(BuildContext context) {
+    final theme = Theme.of(context);
 
-    final colorScheme =
-        theme.colorScheme;
+    final colorScheme = theme.colorScheme;
 
     // =======================================================
     // LOADING
@@ -836,14 +631,9 @@ class _QuizScreenState extends State<QuizScreen> {
 
     if (loading) {
       return Scaffold(
-        drawer:
-            const AppDrawer(),
+        drawer: const AppDrawer(),
         body: Center(
-          child:
-              CircularProgressIndicator(
-            color:
-                colorScheme.primary,
-          ),
+          child: CircularProgressIndicator(color: colorScheme.primary),
         ),
       );
     }
@@ -854,22 +644,13 @@ class _QuizScreenState extends State<QuizScreen> {
 
     if (questions.isEmpty) {
       return Scaffold(
-        drawer:
-            const AppDrawer(),
-        appBar: AppBar(
-          title: Text(
-            widget.category,
-          ),
-        ),
+        drawer: const AppDrawer(),
+        appBar: AppBar(title: Text(widget.category)),
         body: Center(
           child: Text(
             'No questions available.',
-            style: theme
-                .textTheme
-                .titleMedium
-                ?.copyWith(
-              color:
-                  colorScheme.onSurface,
+            style: theme.textTheme.titleMedium?.copyWith(
+              color: colorScheme.onSurface,
             ),
           ),
         ),
@@ -885,10 +666,7 @@ class _QuizScreenState extends State<QuizScreen> {
       // We decide after showing the confirmation.
       canPop: _quizFinished,
 
-      onPopInvokedWithResult: (
-        bool didPop,
-        Object? result,
-      ) async {
+      onPopInvokedWithResult: (bool didPop, Object? result) async {
         if (didPop) {
           return;
         }
@@ -897,20 +675,17 @@ class _QuizScreenState extends State<QuizScreen> {
       },
 
       child: Scaffold(
-        drawer:
-            const AppDrawer(),
+        drawer: const AppDrawer(),
 
         appBar: AppBar(
           title: Text(
             isChallenge
                 ? widget.challenge!.title
-                : widget.category ==
-                        'DailyQuiz'
-                    ? '📅 ${AppLocalizations.of(context)!.dailyQuiz}'
-                    : widget.category ==
-                            'DevOps'
-                        ? '🚀 ${AppLocalizations.of(context)!.appName}'
-                        : '${widget.category} - Set ${widget.setNumber}',
+                : widget.category == 'DailyQuiz'
+                ? '📅 ${AppLocalizations.of(context)!.dailyQuiz}'
+                : widget.category == 'DevOps'
+                ? '🚀 ${AppLocalizations.of(context)!.appName}'
+                : '${widget.category} - Set ${widget.setNumber}',
           ),
         ),
 
@@ -922,155 +697,88 @@ class _QuizScreenState extends State<QuizScreen> {
             // ===============================================
             // THEME-AWARE BACKGROUND
             // ===============================================
-
             decoration: BoxDecoration(
-              gradient:
-                  LinearGradient(
-                begin:
-                    Alignment.topCenter,
-                end:
-                    Alignment.bottomCenter,
-                colors: [
-                  colorScheme.surface,
-                  theme
-                      .scaffoldBackgroundColor,
-                ],
+              gradient: LinearGradient(
+                begin: Alignment.topCenter,
+                end: Alignment.bottomCenter,
+                colors: [colorScheme.surface, theme.scaffoldBackgroundColor],
               ),
             ),
 
             child: Padding(
-              padding:
-                  const EdgeInsets
-                      .symmetric(
-                horizontal: 20,
-                vertical: 16,
-              ),
+              padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 16),
               child: Column(
                 children: [
                   // =========================================
                   // CHALLENGE
                   // =========================================
-
                   if (isChallenge)
-                    ChallengeBanner(
-                      challenge:
-                          widget.challenge!,
-                    ),
+                    ChallengeBanner(challenge: widget.challenge!),
 
                   // =========================================
                   // HEADER
                   // =========================================
-
                   QuizHeader(
-                    timeLeft:
-                        timeLeft,
-                    points:
-                        points,
-                    currentQuestion:
-                        currentQuestion +
-                            1,
-                    totalQuestions:
-                        questions.length,
+                    timeLeft: timeLeft,
+                    points: points,
+                    currentQuestion: currentQuestion + 1,
+                    totalQuestions: questions.length,
                   ),
 
-                  const SizedBox(
-                    height: 14,
-                  ),
+                  const SizedBox(height: 14),
 
                   // =========================================
                   // QUESTION
                   // =========================================
-
                   QuestionCard(
-                    question:
-                        questions[
-                            currentQuestion],
-                    currentQuestion:
-                        currentQuestion +
-                            1,
-                    totalQuestions:
-                        questions.length,
-                    category:
-                        widget.category,
-                    isChallenge:
-                        isChallenge,
-                    challenge:
-                        widget.challenge,
+                    question: questions[currentQuestion],
+                    currentQuestion: currentQuestion + 1,
+                    totalQuestions: questions.length,
+                    category: widget.category,
+                    isChallenge: isChallenge,
+                    challenge: widget.challenge,
                   ),
 
-                  const SizedBox(
-                    height: 14,
-                  ),
+                  const SizedBox(height: 14),
 
                   // =========================================
                   // OPTIONS
                   // =========================================
-
                   Expanded(
                     child: ListView(
-                      physics:
-                          const BouncingScrollPhysics(),
+                      physics: const BouncingScrollPhysics(),
                       children: [
-                        ...(displayedOptions[
-                                    currentQuestion] ??
-                                <String>[])
-                            .map(
-                          (option) {
-                            final bool isLocked =
-                                userAnswers
-                                        .containsKey(
-                                      currentQuestion,
-                                    ) ||
-                                    timedOutQuestions
-                                        .contains(
-                                      currentQuestion,
-                                    );
+                        ...(displayedOptions[currentQuestion] ?? <String>[])
+                            .map((option) {
+                              final bool isLocked =
+                                  userAnswers.containsKey(currentQuestion) ||
+                                  timedOutQuestions.contains(currentQuestion);
 
-                            return OptionButton(
-                              text:
-                                  option,
-                              backgroundColor:
-                                  getOptionColor(
-                                option,
-                              ),
-                              isLocked:
-                                  isLocked,
-                              isCorrectAnswer:
-                                  isLocked &&
-                                      option ==
-                                          questions[
-                                                  currentQuestion]
-                                              .answer,
-                              onPressed: () {
-                                selectAnswer(
-                                  option,
-                                );
-                              },
-                            );
-                          },
-                        ),
+                              return OptionButton(
+                                text: option,
+                                backgroundColor: getOptionColor(option),
+                                isLocked: isLocked,
+                                isCorrectAnswer:
+                                    isLocked &&
+                                    option == questions[currentQuestion].answer,
+                                onPressed: () {
+                                  selectAnswer(option);
+                                },
+                              );
+                            }),
                       ],
                     ),
                   ),
 
-                  const SizedBox(
-                    height: 10,
-                  ),
+                  const SizedBox(height: 10),
 
                   // =========================================
                   // NAVIGATION
                   // =========================================
-
                   NavigationButtons(
-                    canGoBack:
-                        currentQuestion >
-                            0,
-                    isLastQuestion:
-                        currentQuestion ==
-                            questions.length -
-                                1,
-                    onBack:
-                        goToPreviousQuestion,
+                    canGoBack: currentQuestion > 0,
+                    isLastQuestion: currentQuestion == questions.length - 1,
+                    onBack: goToPreviousQuestion,
                     onNext: () async {
                       await goToNextQuestion();
                     },

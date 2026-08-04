@@ -18,112 +18,75 @@ class OptionButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final ThemeData theme =
-        Theme.of(context);
+    final ThemeData theme = Theme.of(context);
 
-    final ColorScheme colorScheme =
-        theme.colorScheme;
+    final ColorScheme colorScheme = theme.colorScheme;
 
-    final double screenWidth =
-        MediaQuery.sizeOf(context).width;
+    final double screenWidth = MediaQuery.sizeOf(context).width;
 
-    final bool isSmallScreen =
-        screenWidth < 400;
+    final bool isSmallScreen = screenWidth < 400;
 
     // =======================================================
     // DETERMINE TEXT COLOR
     // =======================================================
 
-    final Color foregroundColor =
-        _getForegroundColor(
-      colorScheme,
-    );
+    final Color foregroundColor = _getForegroundColor(colorScheme);
 
     return Padding(
-      padding: const EdgeInsets.only(
-        bottom: 10,
-      ),
+      padding: const EdgeInsets.only(bottom: 10),
       child: SizedBox(
         width: double.infinity,
         child: ElevatedButton(
-          onPressed:
-              isLocked ? null : onPressed,
+          onPressed: isLocked ? null : onPressed,
 
           style: ElevatedButton.styleFrom(
             // ===============================================
             // BACKGROUND
             // ===============================================
+            backgroundColor: backgroundColor,
 
-            backgroundColor:
-                backgroundColor,
-
-            disabledBackgroundColor:
-                backgroundColor,
+            disabledBackgroundColor: backgroundColor,
 
             // ===============================================
             // TEXT / ICON COLOR
             // ===============================================
+            foregroundColor: foregroundColor,
 
-            foregroundColor:
-                foregroundColor,
-
-            disabledForegroundColor:
-                foregroundColor,
+            disabledForegroundColor: foregroundColor,
 
             elevation: 3,
 
-            shadowColor:
-                colorScheme.shadow.withValues(
-              alpha: 0.20,
-            ),
+            shadowColor: colorScheme.shadow.withValues(alpha: 0.20),
 
-            minimumSize: const Size(
-              double.infinity,
-              56,
-            ),
+            minimumSize: const Size(double.infinity, 56),
 
             padding: EdgeInsets.symmetric(
-              horizontal:
-                  isSmallScreen ? 12 : 18,
-              vertical:
-                  isSmallScreen ? 12 : 15,
+              horizontal: isSmallScreen ? 12 : 18,
+              vertical: isSmallScreen ? 12 : 15,
             ),
 
             shape: RoundedRectangleBorder(
-              borderRadius:
-                  BorderRadius.circular(
-                15,
-              ),
+              borderRadius: BorderRadius.circular(15),
               side: BorderSide(
-                color: colorScheme
-                    .outlineVariant
-                    .withValues(
-                  alpha: 0.35,
-                ),
+                color: colorScheme.outlineVariant.withValues(alpha: 0.35),
               ),
             ),
           ),
 
           child: Text(
             text,
-            textAlign:
-                TextAlign.center,
+            textAlign: TextAlign.center,
             softWrap: true,
 
             style: TextStyle(
-              fontSize:
-                  isSmallScreen ? 15 : 17,
+              fontSize: isSmallScreen ? 15 : 17,
               height: 1.25,
 
-              fontWeight:
-                  isCorrectAnswer
-                      ? FontWeight.bold
-                      : FontWeight.w500,
+              fontWeight: isCorrectAnswer ? FontWeight.bold : FontWeight.w500,
 
               // Explicitly apply our
               // theme-aware foreground.
-              color:
-                  foregroundColor,
+              color: foregroundColor,
             ),
           ),
         ),
@@ -135,9 +98,7 @@ class OptionButton extends StatelessWidget {
   // FOREGROUND COLOR
   // =========================================================
 
-  Color _getForegroundColor(
-    ColorScheme colorScheme,
-  ) {
+  Color _getForegroundColor(ColorScheme colorScheme) {
     // Correct answer.
     //
     // quiz_screen.dart currently uses green.shade600
@@ -150,16 +111,11 @@ class OptionButton extends StatelessWidget {
     // Check if this is one of our answer-result colors.
     // -------------------------------------------------------
 
-    final HSLColor hsl =
-        HSLColor.fromColor(
-      backgroundColor,
-    );
+    final HSLColor hsl = HSLColor.fromColor(backgroundColor);
 
     // Strong red/green answer-result backgrounds generally
     // need white text for good contrast.
-    if (isLocked &&
-        hsl.saturation > 0.35 &&
-        hsl.lightness < 0.65) {
+    if (isLocked && hsl.saturation > 0.35 && hsl.lightness < 0.65) {
       return Colors.white;
     }
 
