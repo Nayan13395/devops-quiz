@@ -13,6 +13,7 @@ import '../services/user_session_service.dart';
 import '../widgets/app_drawer.dart';
 import '../widgets/daily_login_bonus_dialog.dart';
 import '../widgets/notification_button.dart';
+import '../widgets/play_store_badge.dart'; // <-- NEW IMPORT
 import 'category_screen.dart';
 
 class WelcomeScreen extends StatefulWidget {
@@ -680,8 +681,6 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
 
   @override
   Widget build(BuildContext context) {
-    final logoWidth = math.min(MediaQuery.sizeOf(context).width * 0.75, 420.0);
-
     return Scaffold(
       drawer: const AppDrawer(),
 
@@ -695,52 +694,184 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
         ],
       ),
 
-      body: Center(
-        child: SingleChildScrollView(
+      body: LayoutBuilder(
+        builder: (context, constraints) {
+          // Only show side panels on Web when window is wide enough
+          final bool isWide = kIsWeb && constraints.maxWidth >= 1100;
+
+          if (!isWide) {
+            return Center(
+              child: SingleChildScrollView(
+                padding: const EdgeInsets.all(24),
+                child: _buildCenterColumn(context),
+              ),
+            );
+          }
+
+          // Wide web layout with 3 columns
+          return Row(
+            crossAxisAlignment: CrossAxisAlignment.stretch,
+            children: [
+              Expanded(child: _buildFeaturesPanel(context)),
+              Expanded(
+                flex: 2,
+                child: Center(
+                  child: SingleChildScrollView(
+                    padding: const EdgeInsets.all(24),
+                    child: _buildCenterColumn(context),
+                  ),
+                ),
+              ),
+              Expanded(child: _buildPlayStorePanel(context)),
+            ],
+          );
+        },
+      ),
+    );
+  }
+
+  // =========================================================
+  // CENTER COLUMN (Your original content)
+  // =========================================================
+
+  Widget _buildCenterColumn(BuildContext context) {
+    final logoWidth = math.min(MediaQuery.sizeOf(context).width * 0.75, 420.0);
+
+    return ConstrainedBox(
+      constraints: const BoxConstraints(maxWidth: 460),
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          // =============================================
+          // LOGO
+          // =============================================
+          _AnimatedDevOpsLogo(width: logoWidth),
+
+          const SizedBox(height: 25),
+
+          // =============================================
+          // APP NAME
+          // =============================================
+          const Text(
+            'DevOps Quiz',
+            textAlign: TextAlign.center,
+            style: TextStyle(fontSize: 40, fontWeight: FontWeight.bold),
+          ),
+
+          const SizedBox(height: 20),
+
+          // =============================================
+          // GREETING
+          // =============================================
+          _buildGreeting(context),
+
+          const SizedBox(height: 35),
+
+          // =============================================
+          // SESSION
+          // =============================================
+          if (_sessionLoading)
+            const SizedBox(
+              height: 56,
+              child: Center(child: CircularProgressIndicator()),
+            )
+          else if (!_hasSelectedLoginMethod)
+            _buildLoginOptions(context)
+          else
+            _buildStartQuizButton(context),
+        ],
+      ),
+    );
+  }
+
+  // =========================================================
+  // LEFT PANEL (Features)
+  // =========================================================
+
+  Widget _buildFeaturesPanel(BuildContext context) {
+    return Padding(
+      padding: const EdgeInsets.all(32),
+      child: Card(
+        elevation: 4,
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
+        child: Padding(
           padding: const EdgeInsets.all(24),
           child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              // =============================================
-              // LOGO
-              // =============================================
-              _AnimatedDevOpsLogo(width: logoWidth),
-
-              const SizedBox(height: 25),
-
-              // =============================================
-              // APP NAME
-              // =============================================
-              const Text(
-                'DevOps Quiz',
-                textAlign: TextAlign.center,
-                style: TextStyle(fontSize: 40, fontWeight: FontWeight.bold),
-              ),
-
-              const SizedBox(height: 20),
-
-              // =============================================
-              // GREETING
-              // =============================================
-              _buildGreeting(context),
-
-              const SizedBox(height: 35),
-
-              // =============================================
-              // SESSION
-              // =============================================
-              if (_sessionLoading)
-                const SizedBox(
-                  height: 56,
-                  child: Center(child: CircularProgressIndicator()),
-                )
-              else if (!_hasSelectedLoginMethod)
-                _buildLoginOptions(context)
-              else
-                _buildStartQuizButton(context),
+            mainAxisSize: MainAxisSize.min,
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: const [
+              Text('Why DevOps Quiz?',
+                  style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold)),
+              SizedBox(height: 16),
+              _FeatureRow(icon: Icons.quiz_rounded, text: '2000+ practice questions'),
+              _FeatureRow(icon: Icons.translate_rounded, text: 'Multi-language support'),
+              _FeatureRow(icon: Icons.local_fire_department_rounded, text: 'Streaks & Leaderboards'),
+              _FeatureRow(icon: Icons.emoji_events_rounded, text: 'Games & Challenges'),
+              _FeatureRow(icon: Icons.cloud_rounded, text: 'Cloud & DevOps'),
+              _FeatureRow(icon: Icons.star_rounded, text: 'Bonus & Rewards'),
             ],
           ),
         ),
+      ),
+    );
+  }
+
+  // =========================================================
+  // RIGHT PANEL (Play Store Promo)
+  // =========================================================
+
+  Widget _buildPlayStorePanel(BuildContext context) {
+    return Padding(
+      padding: const EdgeInsets.all(32),
+      child: Card(
+        elevation: 4,
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
+        child: Padding(
+          padding: const EdgeInsets.all(24),
+          child: Column(
+            mainAxisSize: MainAxisSize.min,
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Icon(Icons.phone_android_rounded, size: 56, color: Theme.of(context).colorScheme.primary),
+              const SizedBox(height: 12),
+              const Text('Practice on the go',
+                  style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold)),
+              const SizedBox(height: 8),
+              Text(
+                'Install the Android app and learn offline, anywhere.',
+                textAlign: TextAlign.center,
+                style: TextStyle(color: Theme.of(context).colorScheme.onSurfaceVariant),
+              ),
+              const SizedBox(height: 24),
+              const PlayStoreBadge(),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+// ============================================================
+// FEATURE ROW HELPER
+// ============================================================
+
+class _FeatureRow extends StatelessWidget {
+  final IconData icon;
+  final String text;
+
+  const _FeatureRow({required this.icon, required this.text});
+
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: const EdgeInsets.symmetric(vertical: 8),
+      child: Row(
+        children: [
+          Icon(icon, size: 22, color: Theme.of(context).colorScheme.primary),
+          const SizedBox(width: 12),
+          Expanded(child: Text(text, style: const TextStyle(fontSize: 16))),
+        ],
       ),
     );
   }

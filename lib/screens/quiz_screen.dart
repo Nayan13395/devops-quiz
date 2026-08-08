@@ -333,68 +333,97 @@ class _QuizScreenState extends State<QuizScreen> {
   // =========================================================
   // SELECT ANSWER
   // =========================================================
+// =========================================================
+// SELECT ANSWER
+// =========================================================
 
-  Future<void> selectAnswer(String text) async {
-    if (_quizFinished) return;
+Future<void> selectAnswer(String text) async {
+  if (_quizFinished) return;
 
-    if (userAnswers.containsKey(currentQuestion) ||
-        timedOutQuestions.contains(currentQuestion)) {
-      return;
-    }
-
-    final bool isCorrect = text == questions[currentQuestion].answer;
-
-    if (!isSpeedChallenge) {
-      timer?.cancel();
-    }
-
-    setState(() {
-      userAnswers[currentQuestion] = text;
-
-      selectedAnswer = text;
-
-      answered = true;
-
-      if (isCorrect) {
-        score++;
-        points += 10;
-      }
-    });
-
-    if (isSurvivalMode && !isCorrect) {
-      await Future.delayed(const Duration(milliseconds: 500));
-
-      if (!mounted) return;
-
-      await finishQuiz();
-
-      return;
-    }
-
-    Future.delayed(const Duration(milliseconds: 200), () async {
-      if (!mounted || _quizFinished) {
-        return;
-      }
-
-      if (currentQuestion < questions.length - 1) {
-        setState(() {
-          currentQuestion++;
-
-          selectedAnswer = userAnswers[currentQuestion];
-
-          answered =
-              userAnswers.containsKey(currentQuestion) ||
-              timedOutQuestions.contains(currentQuestion);
-        });
-
-        if (!answered && !isSpeedChallenge) {
-          startTimer();
-        }
-      } else {
-        await finishQuiz();
-      }
-    });
+  if (userAnswers.containsKey(currentQuestion) ||
+      timedOutQuestions.contains(currentQuestion)) {
+    return;
   }
+
+  final bool isCorrect = text == questions[currentQuestion].answer;
+
+  if (!isSpeedChallenge) {
+    timer?.cancel();
+  }
+
+  setState(() {
+    userAnswers[currentQuestion] = text;
+
+    selectedAnswer = text;
+
+    answered = true;
+
+    if (isCorrect) {
+      score++;
+      points += 10;
+    }
+  });
+
+  // =======================================================
+  // SURVIVAL MODE - WRONG ANSWER
+  // Wait 3 seconds so the user can see:
+  // Red   = selected wrong answer
+  // Green = correct answer
+  // =======================================================
+
+  if (isSurvivalMode && !isCorrect) {
+    await Future.delayed(
+      const Duration(seconds: 3),
+    );
+
+    if (!mounted || _quizFinished) {
+      return;
+    }
+
+    await finishQuiz();
+
+    return;
+  }
+
+  // =======================================================
+  // ANSWER DISPLAY DELAY
+  //
+  // Correct answer = current fast behaviour (200 ms)
+  // Wrong answer   = 3 seconds
+  // =======================================================
+
+  final Duration answerDelay = isCorrect
+      ? const Duration(milliseconds: 200)
+      : const Duration(seconds: 3);
+
+  await Future.delayed(answerDelay);
+
+  if (!mounted || _quizFinished) {
+    return;
+  }
+
+  // =======================================================
+  // NEXT QUESTION
+  // =======================================================
+
+  if (currentQuestion < questions.length - 1) {
+    setState(() {
+      currentQuestion++;
+
+      selectedAnswer = userAnswers[currentQuestion];
+
+      answered =
+          userAnswers.containsKey(currentQuestion) ||
+          timedOutQuestions.contains(currentQuestion);
+    });
+
+    if (!answered && !isSpeedChallenge) {
+      startTimer();
+    }
+  } else {
+    await finishQuiz();
+  }
+}
 
   // =========================================================
   // OPTION COLOR

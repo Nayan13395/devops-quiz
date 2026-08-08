@@ -196,18 +196,19 @@ class AppDrawer extends StatelessWidget {
                           // GIFT ICON
                           // ===============================
                           Container(
-                            width: 42,
-                            height: 42,
-                            alignment: Alignment.center,
-                            decoration: BoxDecoration(
-                              color: colorScheme.primary,
-                              borderRadius: BorderRadius.circular(12),
-                            ),
-                            child: const Text(
-                              '🎁',
-                              style: TextStyle(fontSize: 24),
-                            ),
-                          ),
+  width: 32,
+  height: 32,
+  alignment: Alignment.center,
+  decoration: BoxDecoration(
+    color: colorScheme.primary,
+    borderRadius: BorderRadius.circular(12),
+  ),
+  child: Icon(
+    Icons.calendar_month_rounded, // 📅 Calendar icon
+    color: colorScheme.onPrimary,
+    size: 24,
+  ),
+),
 
                           const SizedBox(width: 14),
 

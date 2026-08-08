@@ -1,29 +1,23 @@
 import 'dart:convert';
-
 import 'package:flutter/services.dart';
 import 'package:flutter/widgets.dart';
-
 import '../models/question.dart';
 
 class QuestionService {
   Future<List<Question>> loadQuestions(Locale locale, String category) async {
-    // Determine language
     String language;
 
     switch (locale.languageCode) {
       case "hi":
         language = "hi";
         break;
-
       case "mr":
         language = "mr";
         break;
-
       default:
         language = "en";
     }
 
-    // Category configuration
     final Map<String, Map<String, String>> categoryMap = {
       "AWS": {"folder": "AWS", "file": "aws"},
       "Azure": {"folder": "Azure", "file": "azure"},
@@ -40,24 +34,30 @@ class QuestionService {
       "Jenkins": {"folder": "Jenkins", "file": "jenkins"},
       "Terraform": {"folder": "Terraform", "file": "terraform"},
       "Ansible": {"folder": "Ansible", "file": "ansible"},
+      
+      // --- SCRIPTING CATEGORIES ---
+      "Bash": {"folder": "BASH", "file": "bash"},
+      "Python": {"folder": "Python", "file": "python"},
+      "Perl": {"folder": "Perl", "file": "perl"},
+      "PowerShell": {"folder": "PowerShell", "file": "powershell"},
+      "JavaScript": {"folder": "JavaScript", "file": "javascript"},
+      "Ruby": {"folder": "Ruby", "file": "ruby"},
     };
 
     String fileName;
 
     if (categoryMap.containsKey(category)) {
       final config = categoryMap[category]!;
-
-      fileName =
-          "assets/questions/${config["folder"]}/${config["file"]}_$language.json";
+      // Loads the single file (e.g., assets/questions/BASH/bash_en.json)
+      fileName = "assets/questions/${config["folder"]}/${config["file"]}_$language.json";
     } else {
-      // Default = Mixed DevOps questions
       fileName = "assets/questions_$language.json";
     }
 
     final jsonString = await rootBundle.loadString(fileName);
-
     final List<dynamic> data = json.decode(jsonString);
 
+    // Returns ALL questions. QuizScreen will filter by 'set' number automatically!
     return data.map((e) => Question.fromJson(e)).toList();
   }
 }

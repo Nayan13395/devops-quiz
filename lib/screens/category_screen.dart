@@ -9,6 +9,8 @@ import '../widgets/animated_category_icon.dart';
 import '../services/streak_service.dart';
 import '../widgets/daily_reward_dialog.dart';
 import '../widgets/streak_card.dart';
+import '../widgets/play_store_badge.dart'; // <-- NEW IMPORT
+import 'scripting_screen.dart';
 
 class CategoryScreen extends StatefulWidget {
   const CategoryScreen({super.key});
@@ -54,12 +56,16 @@ class _CategoryScreenState extends State<CategoryScreen>
       onTap: () {
         Navigator.push(
           context,
-          MaterialPageRoute(builder: (_) => SetScreen(category: title)),
+          MaterialPageRoute(
+            builder: (_) => SetScreen(category: title),
+          ),
         );
       },
       child: Card(
         elevation: 8,
-        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(20),
+        ),
         margin: const EdgeInsets.symmetric(vertical: 10),
         child: SizedBox(
           height: 80,
@@ -75,7 +81,51 @@ class _CategoryScreenState extends State<CategoryScreen>
                 ),
               ),
               const SizedBox(width: 12),
-              AnimatedCategoryIcon(category: title, emoji: emoji),
+              AnimatedCategoryIcon(
+                category: title,
+                emoji: emoji,
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+
+  Widget scriptingCategoryCard(String title, String emoji) {
+    return InkWell(
+      onTap: () {
+        Navigator.push(
+          context,
+          MaterialPageRoute(
+            builder: (_) => const ScriptingScreen(),
+          ),
+        );
+      },
+      child: Card(
+        elevation: 8,
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(20),
+        ),
+        margin: const EdgeInsets.symmetric(vertical: 10),
+        child: SizedBox(
+          height: 80,
+          child: Row(
+            mainAxisSize: MainAxisSize.min,
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Text(
+                title,
+                style: const TextStyle(
+                  fontSize: 24,
+                  fontWeight: FontWeight.w500,
+                ),
+              ),
+              const SizedBox(width: 12),
+              AnimatedCategoryIcon(
+                category: title,
+                emoji: emoji,
+              ),
             ],
           ),
         ),
@@ -87,12 +137,29 @@ class _CategoryScreenState extends State<CategoryScreen>
   Widget build(BuildContext context) {
     return Scaffold(
       drawer: const AppDrawer(),
-      appBar: AppBar(title: Text(AppLocalizations.of(context)!.selectCategory)),
+
+      appBar: AppBar(
+        title: Text(AppLocalizations.of(context)!.selectCategory),
+
+        // ===================================================
+        // GOOGLE PLAY BADGE (TOP RIGHT - WEB ONLY)
+        // ===================================================
+        actions: const [
+          Padding(
+            padding: EdgeInsets.only(right: 14),
+            child: Center(
+              child: PlayStoreBadge(height: 36),
+            ),
+          ),
+        ],
+      ),
+
       body: Padding(
         padding: const EdgeInsets.all(12),
         child: ListView(
           children: [
             const StreakCard(),
+
             AnimatedBuilder(
               animation: controller,
               builder: (context, child) {
@@ -103,8 +170,10 @@ class _CategoryScreenState extends State<CategoryScreen>
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (_) =>
-                              QuizScreen(category: "DevOps", setNumber: 0),
+                          builder: (_) => QuizScreen(
+                            category: "DevOps",
+                            setNumber: 0,
+                          ),
                         ),
                       );
                     },
@@ -127,11 +196,14 @@ class _CategoryScreenState extends State<CategoryScreen>
                 );
               },
             ),
+
             InkWell(
               onTap: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (_) => const CloudScreen()),
+                  MaterialPageRoute(
+                    builder: (_) => const CloudScreen(),
+                  ),
                 );
               },
               child: Card(
@@ -154,6 +226,8 @@ class _CategoryScreenState extends State<CategoryScreen>
                 ),
               ),
             ),
+
+            scriptingCategoryCard("Scripting", "📜"),
             categoryCard("Linux", "🐧"),
             categoryCard("Docker", "🐳"),
             categoryCard("Kubernetes", "⎈"),

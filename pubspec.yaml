@@ -3,7 +3,7 @@ description: "A new Flutter project."
 
 publish_to: 'none' # Remove this line if you wish to publish to pub.dev
 
-version: 1.8.1+8
+version: 1.10.0+10
 
 environment:
   sdk: ^3.12.2
@@ -40,6 +40,7 @@ dev_dependencies:
   
   flutter_launcher_icons: ^0.14.3
   flutter_lints: ^6.0.0
+  msix: ^3.18.0
 
 flutter_launcher_icons:
   android: true
@@ -52,6 +53,7 @@ flutter:
   
   assets:
     - assets/images/devops_logo.png
+    - assets/images/google_play_badge.png
     - assets/icon/app_icon.png
     - assets/questions/
     - assets/questions_en.json
@@ -73,4 +75,19 @@ flutter:
     - assets/questions/Networking/
     - assets/questions/Oracle/
     - assets/questions/GCP/
+    - assets/questions/BASH/
+    - assets/questions/Python/
+    - assets/questions/Perl/
+    - assets/questions/Powershell/
+    - assets/questions/Ruby/
+    - assets/questions/Javascript/
     
+msix_config:
+  display_name: DevOps Quiz
+  publisher_display_name: Quiz App
+  identity_name: QuizApp.DevOpsQuiz
+  publisher: CN=05D1FB3F-4B18-4457-9A20-54F48541F84B
+  msix_version: 1.9.0.0
+  logo_path: assets/icon/app_icon.png
+  capabilities: internetClient
+  store: true
