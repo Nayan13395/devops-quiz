@@ -71,7 +71,7 @@ class _ConnectFourScreenState extends State<ConnectFourScreen> {
 
   Future<void> _awardWin() async {
     try {
-      await PointService.addPoints(20);
+      await PointService.addLocalPoints(20);
       if (mounted) {
         ScaffoldMessenger.of(context).showSnackBar(
           const SnackBar(content: Text('Connect Four win: 20 points!')),

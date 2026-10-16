@@ -13,9 +13,60 @@ import 'port_master_screen.dart';
 import 'tic_tac_toe_screen.dart';
 import 'connect_four_screen.dart';
 import 'ludo_game_screen.dart';
+import 'chess_screen.dart';
+import 'snake_ladders_screen.dart';
 
-class GamesScreen extends StatelessWidget {
+class GamesScreen extends StatefulWidget {
   const GamesScreen({super.key});
+
+  @override
+  State<GamesScreen> createState() => _GamesScreenState();
+}
+
+class _GamesScreenState extends State<GamesScreen> {
+  final TextEditingController _searchController = TextEditingController();
+  String _query = '';
+
+  static const List<(String, String)> _searchableGames = [
+    ('Spin Wheel', 'Spin and win bonus points'),
+    ('Scratch Card', 'Scratch to reveal a reward'),
+    ('Lucky Slots', 'Roll the slots and win points'),
+    ('Mystery Deal', 'Pick a mystery box and answer'),
+    ('Memory Match', 'Match DevOps pairs'),
+    ('Word Guess', 'Guess DevOps words through levels'),
+    ('High or Low', 'Build a streak'),
+    ('True or False Blitz', 'Quick answer quiz'),
+    ('Command Match', 'Match commands to meanings'),
+    ('Port Master', 'Guess default ports'),
+    ('Tic-Tac-Toe', 'O X noughts and crosses computer'),
+    ('Connect Four', 'Drop four discs'),
+    ('Ludo', 'Race against bots'),
+    ('Chess', 'Chess board legal moves two players'),
+    ('Snake and Ladders', 'Dice board snakes ladders two players'),
+  ];
+
+  bool _matchesSearch(String title, String description) {
+    final query = _query.trim().toLowerCase();
+    return query.isEmpty ||
+        title.toLowerCase().contains(query) ||
+        description.toLowerCase().contains(query);
+  }
+
+  bool get _hasSearchResults {
+    final query = _query.trim().toLowerCase();
+    return query.isEmpty ||
+        _searchableGames.any(
+          (game) =>
+              game.$1.toLowerCase().contains(query) ||
+              game.$2.toLowerCase().contains(query),
+        );
+  }
+
+  @override
+  void dispose() {
+    _searchController.dispose();
+    super.dispose();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -80,7 +131,35 @@ class GamesScreen extends StatelessWidget {
                               ),
                             ),
 
-                            const SizedBox(height: 22),
+                            const SizedBox(height: 14),
+                            TextField(
+                              key: const ValueKey('games-search'),
+                              controller: _searchController,
+                              onChanged: (value) =>
+                                  setState(() => _query = value),
+                              textInputAction: TextInputAction.search,
+                              decoration: InputDecoration(
+                                hintText: 'Search games',
+                                prefixIcon: const Icon(Icons.search_rounded),
+                                suffixIcon: _query.isEmpty
+                                    ? null
+                                    : IconButton(
+                                        tooltip: 'Clear search',
+                                        onPressed: () {
+                                          _searchController.clear();
+                                          setState(() => _query = '');
+                                        },
+                                        icon: const Icon(Icons.close_rounded),
+                                      ),
+                                isDense: true,
+                                filled: true,
+                                border: OutlineInputBorder(
+                                  borderRadius: BorderRadius.circular(14),
+                                  borderSide: BorderSide.none,
+                                ),
+                              ),
+                            ),
+                            const SizedBox(height: 16),
                           ],
                         ),
                       ),
@@ -89,6 +168,19 @@ class GamesScreen extends StatelessWidget {
                     // =======================================
                     // GAME GRID
                     // =======================================
+                    if (!_hasSearchResults)
+                      SliverFillRemaining(
+                        hasScrollBody: false,
+                        child: Center(
+                          child: Text(
+                            'No games match "${_query.trim()}"',
+                            textAlign: TextAlign.center,
+                            style: TextStyle(
+                              color: colorScheme.onSurfaceVariant,
+                            ),
+                          ),
+                        ),
+                      ),
                     SliverPadding(
                       padding: const EdgeInsets.fromLTRB(16, 0, 16, 24),
                       sliver: SliverGrid(
@@ -109,224 +201,312 @@ class GamesScreen extends StatelessWidget {
                           // =================================
                           // SPIN WHEEL
                           // =================================
-                          _GameTile(
-                            icon: '🎡',
-                            title: 'Spin Wheel',
-                            description: 'Spin & win bonus points.',
-                            onTap: () {
-                              Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                  builder: (_) => const SpinWheelScreen(),
-                                ),
-                              );
-                            },
-                          ),
+                          if (_matchesSearch(
+                            'Spin Wheel',
+                            'Spin & win bonus points.',
+                          ))
+                            _GameTile(
+                              icon: '🎡',
+                              title: 'Spin Wheel',
+                              description: 'Spin & win bonus points.',
+                              onTap: () {
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                    builder: (_) => const SpinWheelScreen(),
+                                  ),
+                                );
+                              },
+                            ),
 
                           // =================================
                           // SCRATCH CARD
                           // =================================
-                          _GameTile(
-                            icon: '🎟️',
-                            title: 'Scratch Card',
-                            description: 'Scratch to reveal your reward.',
-                            onTap: () {
-                              Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                  builder: (_) => const ScratchCardScreen(),
-                                ),
-                              );
-                            },
-                          ),
+                          if (_matchesSearch(
+                            'Scratch Card',
+                            'Scratch to reveal your reward.',
+                          ))
+                            _GameTile(
+                              icon: '🎟️',
+                              title: 'Scratch Card',
+                              description: 'Scratch to reveal your reward.',
+                              onTap: () {
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                    builder: (_) => const ScratchCardScreen(),
+                                  ),
+                                );
+                              },
+                            ),
 
                           // =================================
                           // LUCKY SLOTS
                           // =================================
-                          _GameTile(
-                            icon: '🎰',
-                            title: 'Lucky Slots',
-                            description: 'Roll the slots & win points.',
-                            onTap: () {
-                              Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                  builder: (_) => const LuckySlotScreen(),
-                                ),
-                              );
-                            },
-                          ),
+                          if (_matchesSearch(
+                            'Lucky Slots',
+                            'Roll the slots & win points.',
+                          ))
+                            _GameTile(
+                              icon: '🎰',
+                              title: 'Lucky Slots',
+                              description: 'Roll the slots & win points.',
+                              onTap: () {
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                    builder: (_) => const LuckySlotScreen(),
+                                  ),
+                                );
+                              },
+                            ),
 
                           // =================================
                           // MYSTERY DEAL
                           // =================================
-                          _GameTile(
-                            icon: '💼',
-                            title: 'Mystery Deal',
-                            description:
-                                'Pick a mystery box and answer correctly to win points.',
-                            onTap: () {
-                              Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                  builder: (_) => const MysteryDealScreen(),
-                                ),
-                              );
-                            },
-                          ),
+                          if (_matchesSearch(
+                            'Mystery Deal',
+                            'Pick a mystery box and answer correctly to win points.',
+                          ))
+                            _GameTile(
+                              icon: '💼',
+                              title: 'Mystery Deal',
+                              description:
+                                  'Pick a mystery box and answer correctly to win points.',
+                              onTap: () {
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                    builder: (_) => const MysteryDealScreen(),
+                                  ),
+                                );
+                              },
+                            ),
 
                           // =================================
                           // MEMORY MATCH (NEW)
                           // =================================
-                          _GameTile(
-                            icon: '🧠',
-                            title: 'Memory Match',
-                            description: 'Match DevOps pairs to earn points.',
-                            onTap: () {
-                              Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                  builder: (_) => const MemoryMatchScreen(),
-                                ),
-                              );
-                            },
-                          ),
+                          if (_matchesSearch(
+                            'Memory Match',
+                            'Match DevOps pairs to earn points.',
+                          ))
+                            _GameTile(
+                              icon: '🧠',
+                              title: 'Memory Match',
+                              description: 'Match DevOps pairs to earn points.',
+                              onTap: () {
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                    builder: (_) => const MemoryMatchScreen(),
+                                  ),
+                                );
+                              },
+                            ),
 
                           // =================================
                           // WORD GUESS (NEW)
                           // =================================
-                          _GameTile(
-                            icon: '🔤',
-                            title: 'Word Guess',
-                            description: 'Guess the DevOps term in 6 tries.',
-                            onTap: () {
-                              Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                  builder: (_) => const WordGuessLevelsScreen(),
-                                ),
-                              );
-                            },
-                          ),
+                          if (_matchesSearch(
+                            'Word Guess',
+                            'Guess the DevOps term in 6 tries.',
+                          ))
+                            _GameTile(
+                              icon: '🔤',
+                              title: 'Word Guess',
+                              description: 'Guess the DevOps term in 6 tries.',
+                              onTap: () {
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                    builder: (_) =>
+                                        const WordGuessLevelsScreen(),
+                                  ),
+                                );
+                              },
+                            ),
 
                           // =================================
                           // HIGHER OR LOWER (NEW)
                           // =================================
-                          _GameTile(
-                            icon: '📈',
-                            title: 'High or Low',
-                            description: 'Build a streak and bank your points.',
-                            onTap: () {
-                              Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                  builder: (_) => const HigherLowerScreen(),
-                                ),
-                              );
-                            },
-                          ),
+                          if (_matchesSearch(
+                            'High or Low',
+                            'Build a streak and bank your points.',
+                          ))
+                            _GameTile(
+                              icon: '📈',
+                              title: 'High or Low',
+                              description:
+                                  'Build a streak and bank your points.',
+                              onTap: () {
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                    builder: (_) => const HigherLowerScreen(),
+                                  ),
+                                );
+                              },
+                            ),
 
                           // =================================
                           // TRUE OR FALSE BLITZ (NEW)
                           // =================================
-                          _GameTile(
-                            icon: '⚡',
-                            title: 'True or False Blitz 🆕',
-                            description: 'Beat the clock with quick answers.',
-                            onTap: () {
-                              Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                  builder: (_) => const TrueFalseBlitzScreen(),
-                                ),
-                              );
-                            },
-                          ),
+                          if (_matchesSearch(
+                            'True or False Blitz',
+                            'Beat the clock with quick answers.',
+                          ))
+                            _GameTile(
+                              icon: '⚡',
+                              title: 'True or False Blitz 🆕',
+                              description: 'Beat the clock with quick answers.',
+                              onTap: () {
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                    builder: (_) =>
+                                        const TrueFalseBlitzScreen(),
+                                  ),
+                                );
+                              },
+                            ),
 
                           // =================================
                           // COMMAND MATCH (NEW)
                           // =================================
-                          _GameTile(
-                            icon: '🔗',
-                            title: 'Command Match 🆕',
-                            description: 'Match commands to what they do.',
-                            onTap: () {
-                              Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                  builder: (_) => const CommandMatchScreen(),
-                                ),
-                              );
-                            },
-                          ),
+                          if (_matchesSearch(
+                            'Command Match',
+                            'Match commands to what they do.',
+                          ))
+                            _GameTile(
+                              icon: '🔗',
+                              title: 'Command Match 🆕',
+                              description: 'Match commands to what they do.',
+                              onTap: () {
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                    builder: (_) => const CommandMatchScreen(),
+                                  ),
+                                );
+                              },
+                            ),
 
                           // =================================
                           // PORT MASTER (NEW)
                           // =================================
-                          _GameTile(
-                            icon: '🔌',
-                            title: 'Port Master 🆕',
-                            description: 'Guess default ports with 3 lives.',
-                            onTap: () {
-                              Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                  builder: (_) => const PortMasterScreen(),
-                                ),
-                              );
-                            },
-                          ),
+                          if (_matchesSearch(
+                            'Port Master',
+                            'Guess default ports with 3 lives.',
+                          ))
+                            _GameTile(
+                              icon: '🔌',
+                              title: 'Port Master 🆕',
+                              description: 'Guess default ports with 3 lives.',
+                              onTap: () {
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                    builder: (_) => const PortMasterScreen(),
+                                  ),
+                                );
+                              },
+                            ),
 
                           // =================================
                           // TIC-TAC-TOE
                           // =================================
-                          _GameTile(
-                            icon: '⭕',
-                            title: 'Tic-Tac-Toe',
-                            description: 'Play O/X against the computer.',
-                            onTap: () {
-                              Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                  builder: (_) => const TicTacToeScreen(),
-                                ),
-                              );
-                            },
-                          ),
+                          if (_matchesSearch(
+                            'Tic-Tac-Toe',
+                            'Play O/X against the computer.',
+                          ))
+                            _GameTile(
+                              icon: '⭕',
+                              title: 'Tic-Tac-Toe',
+                              description: 'Play O/X against the computer.',
+                              onTap: () {
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                    builder: (_) => const TicTacToeScreen(),
+                                  ),
+                                );
+                              },
+                            ),
 
                           // =================================
                           // CONNECT FOUR
                           // =================================
-                          _GameTile(
-                            icon: '🔴',
-                            title: 'Connect Four',
-                            description: 'Drop four discs in a row to win.',
-                            onTap: () {
-                              Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                  builder: (_) => const ConnectFourScreen(),
-                                ),
-                              );
-                            },
-                          ),
+                          if (_matchesSearch(
+                            'Connect Four',
+                            'Drop four discs in a row to win.',
+                          ))
+                            _GameTile(
+                              icon: '🔴',
+                              title: 'Connect Four',
+                              description: 'Drop four discs in a row to win.',
+                              onTap: () {
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                    builder: (_) => const ConnectFourScreen(),
+                                  ),
+                                );
+                              },
+                            ),
 
                           // =================================
                           // LUDO
                           // =================================
-                          _GameTile(
-                            icon: '🎲',
-                            title: 'Ludo',
-                            description: 'Race your pieces against three bots.',
-                            onTap: () {
-                              Navigator.push(
+                          if (_matchesSearch(
+                            'Ludo',
+                            'Race your pieces against three bots.',
+                          ))
+                            _GameTile(
+                              icon: '🎲',
+                              title: 'Ludo',
+                              description:
+                                  'Race your pieces against three bots.',
+                              onTap: () {
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                    builder: (_) => const LudoGameScreen(),
+                                  ),
+                                );
+                              },
+                            ),
+                          if (_matchesSearch(
+                            'Chess',
+                            'Local two-player chess with legal moves.',
+                          ))
+                            _GameTile(
+                              icon: '♟️',
+                              title: 'Chess',
+                              description:
+                                  'Play a legal two-player chess match.',
+                              onTap: () => Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                  builder: (_) => const LudoGameScreen(),
+                                  builder: (_) => const ChessScreen(),
                                 ),
-                              );
-                            },
-                          ),
+                              ),
+                            ),
+                          if (_matchesSearch(
+                            'Snake and Ladders',
+                            'Two-player dice board game.',
+                          ))
+                            _GameTile(
+                              icon: '🪜',
+                              title: 'Snake and Ladders',
+                              description:
+                                  'Race to 100. Climb ladders and dodge snakes.',
+                              onTap: () => Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (_) => const SnakeLaddersScreen(),
+                                ),
+                              ),
+                            ),
                         ]),
                       ),
                     ),

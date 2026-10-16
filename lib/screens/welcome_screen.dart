@@ -105,7 +105,9 @@ class _WelcomeScreenState extends State<WelcomeScreen>
 
   @override
   void didChangeAppLifecycleState(AppLifecycleState state) {
-    if (state == AppLifecycleState.resumed) _refreshFestival();
+    if (state == AppLifecycleState.resumed) {
+      _refreshFestival();
+    }
   }
 
   @override

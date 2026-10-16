@@ -7,6 +7,7 @@ import '../l10n/app_localizations.dart';
 import '../services/update_service.dart';
 import 'cloud_screen.dart';
 import '../services/streak_service.dart';
+import '../services/notification_service.dart';
 import '../services/question_service.dart';
 import '../widgets/daily_reward_dialog.dart';
 import '../widgets/streak_card.dart';
@@ -31,6 +32,7 @@ class _CategoryScreenState extends State<CategoryScreen> {
 
     WidgetsBinding.instance.addPostFrameCallback((_) async {
       final result = await StreakService.checkDailyReward();
+      await NotificationService.instance.scheduleStreakSaveReminder();
 
       if (!mounted) return;
 

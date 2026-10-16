@@ -39,6 +39,15 @@ class PointService {
     );
   }
 
+  static Future<void> addLocalPoints(int points) async {
+    if (points <= 0) return;
+
+    final prefs = await SharedPreferences.getInstance();
+    final total = (prefs.getInt(_pointsKey) ?? 0) + points;
+    await prefs.setInt(_pointsKey, total);
+    await LeaderboardService().saveScore(points);
+  }
+
   static Future<void> applyLeaderboardReward(String date, int points) async {
     if (date.isEmpty || points <= 0) return;
 

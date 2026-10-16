@@ -112,7 +112,7 @@ class _TicTacToeScreenState extends State<TicTacToeScreen> {
 
   Future<void> _awardWin() async {
     try {
-      await PointService.addPoints(10);
+      await PointService.addLocalPoints(10);
       if (mounted) {
         ScaffoldMessenger.of(
           context,

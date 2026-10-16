@@ -71,4 +71,22 @@ class StreakService {
     final prefs = await SharedPreferences.getInstance();
     return prefs.getInt(_streakKey) ?? 0;
   }
+
+  static Future<bool> hasStreakToSave({DateTime? date}) async {
+    final prefs = await SharedPreferences.getInstance();
+    if ((prefs.getInt(_streakKey) ?? 0) <= 0) return false;
+
+    final lastOpenString = prefs.getString(_lastOpenKey);
+    if (lastOpenString == null) return false;
+
+    final lastOpen = DateTime.tryParse(lastOpenString);
+    if (lastOpen == null) return false;
+
+    final now = date ?? DateTime.now();
+    final today = DateTime(now.year, now.month, now.day);
+    final lastDate = DateTime(lastOpen.year, lastOpen.month, lastOpen.day);
+    final daysSinceOpen = today.difference(lastDate).inDays;
+
+    return daysSinceOpen == 0 || daysSinceOpen == 1;
+  }
 }

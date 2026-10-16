@@ -46,7 +46,7 @@ class _LudoGameScreenState extends State<LudoGameScreen> {
 
   Future<void> _awardWin() async {
     try {
-      await PointService.addPoints(50);
+      await PointService.addLocalPoints(50);
       if (mounted) {
         ScaffoldMessenger.of(context).showSnackBar(
           const SnackBar(content: Text('Ludo champion! You earned 50 points.')),

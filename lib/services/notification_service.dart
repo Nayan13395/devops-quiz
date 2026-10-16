@@ -1,8 +1,13 @@
+import 'dart:async';
+
 import 'package:flutter/foundation.dart';
+import 'package:flutter/widgets.dart';
 import 'package:flutter_local_notifications/flutter_local_notifications.dart';
 import 'package:flutter_timezone/flutter_timezone.dart';
 import 'package:timezone/data/latest.dart' as tz;
 import 'package:timezone/timezone.dart' as tz;
+
+import 'streak_service.dart';
 
 class NotificationMessage {
   final String title;
@@ -11,13 +16,16 @@ class NotificationMessage {
   const NotificationMessage({required this.title, required this.body});
 }
 
-class NotificationService {
+class NotificationService extends WidgetsBindingObserver {
   NotificationService._();
 
   static final NotificationService instance = NotificationService._();
 
   final FlutterLocalNotificationsPlugin flutterLocalNotificationsPlugin =
       FlutterLocalNotificationsPlugin();
+
+  Timer? _streakReminderRefreshTimer;
+  bool _lifecycleObserverAttached = false;
 
   static const List<NotificationMessage> _messages = [
     NotificationMessage(
@@ -122,6 +130,8 @@ class NotificationService {
     ),
   ];
 
+  static const int _streakReminderNotificationId = 4;
+
   // =========================================================
   // INITIALIZE
   // =========================================================
@@ -129,6 +139,11 @@ class NotificationService {
   Future<void> initialize() async {
     if (kIsWeb) {
       return;
+    }
+
+    if (!_lifecycleObserverAttached) {
+      WidgetsBinding.instance.addObserver(this);
+      _lifecycleObserverAttached = true;
     }
 
     try {
@@ -564,6 +579,8 @@ class NotificationService {
           'Title: ${notification.title}',
         );
       }
+
+      await scheduleStreakSaveReminder();
     } catch (e, stackTrace) {
       // Notification scheduling must never
       // crash the application.
@@ -571,6 +588,77 @@ class NotificationService {
       debugPrint('Daily notification scheduling failed: $e');
 
       debugPrint('$stackTrace');
+    }
+  }
+
+  Future<void> scheduleStreakSaveReminder() async {
+    if (kIsWeb) return;
+
+    try {
+      await flutterLocalNotificationsPlugin.cancel(
+        id: _streakReminderNotificationId,
+      );
+
+      if (await StreakService.hasStreakToSave()) {
+        final now = tz.TZDateTime.now(tz.local);
+        final reminderTime = tz.TZDateTime(
+          tz.local,
+          now.year,
+          now.month,
+          now.day + 1,
+          23,
+          50,
+        );
+
+        await flutterLocalNotificationsPlugin.zonedSchedule(
+          id: _streakReminderNotificationId,
+          title: '🔥 Your streak is at risk',
+          body:
+              'Open DevOps Quiz before the day ends to keep your streak alive.',
+          scheduledDate: reminderTime,
+          notificationDetails: const NotificationDetails(
+            android: AndroidNotificationDetails(
+              'daily_quiz_channel',
+              'Daily Quiz Notifications',
+              channelDescription: 'Daily quiz and streak reminders',
+              importance: Importance.high,
+              priority: Priority.high,
+            ),
+          ),
+          androidScheduleMode: AndroidScheduleMode.inexactAllowWhileIdle,
+        );
+      }
+    } catch (error, stackTrace) {
+      debugPrint('Streak reminder scheduling failed: $error');
+      debugPrint('$stackTrace');
+    } finally {
+      _scheduleStreakReminderRefresh();
+    }
+  }
+
+  void _scheduleStreakReminderRefresh() {
+    _streakReminderRefreshTimer?.cancel();
+    if (kIsWeb) return;
+
+    final now = tz.TZDateTime.now(tz.local);
+    final nextMidnight = tz.TZDateTime(
+      tz.local,
+      now.year,
+      now.month,
+      now.day + 1,
+      0,
+      1,
+    );
+    _streakReminderRefreshTimer = Timer(
+      nextMidnight.difference(now),
+      scheduleStreakSaveReminder,
+    );
+  }
+
+  @override
+  void didChangeAppLifecycleState(AppLifecycleState state) {
+    if (state == AppLifecycleState.resumed) {
+      scheduleStreakSaveReminder();
     }
   }
 }

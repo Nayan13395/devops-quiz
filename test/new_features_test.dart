@@ -3,8 +3,10 @@ import 'dart:convert';
 import 'package:devops_quiz/l10n/app_localizations.dart';
 import 'package:devops_quiz/language_provider.dart';
 import 'package:devops_quiz/models/app_theme.dart';
+import 'package:devops_quiz/screens/ask_ai_screen.dart';
 import 'package:devops_quiz/screens/certificates_screen.dart';
 import 'package:devops_quiz/screens/arrow_puzzle_screen.dart';
+import 'package:devops_quiz/screens/chess_screen.dart';
 import 'package:devops_quiz/screens/connect_four_screen.dart';
 import 'package:devops_quiz/screens/command_match_screen.dart';
 import 'package:devops_quiz/screens/games_screen.dart';
@@ -12,8 +14,10 @@ import 'package:devops_quiz/screens/ludo_game_screen.dart';
 import 'package:devops_quiz/screens/port_master_screen.dart';
 import 'package:devops_quiz/screens/tic_tac_toe_screen.dart';
 import 'package:devops_quiz/screens/true_false_blitz_screen.dart';
+import 'package:devops_quiz/screens/snake_ladders_screen.dart';
 import 'package:devops_quiz/screens/word_guess_levels_screen.dart';
 import 'package:devops_quiz/services/achievement_service.dart';
+import 'package:devops_quiz/services/ask_ai_service.dart';
 import 'package:devops_quiz/services/arrow_puzzle_service.dart';
 import 'package:devops_quiz/services/certificate_service.dart';
 import 'package:devops_quiz/services/daily_login_bonus_service.dart';
@@ -22,6 +26,7 @@ import 'package:devops_quiz/services/in_app_notification_service.dart';
 import 'package:devops_quiz/services/question_service.dart';
 import 'package:devops_quiz/services/rate_prompt_service.dart';
 import 'package:devops_quiz/services/point_service.dart';
+import 'package:devops_quiz/services/streak_service.dart';
 import 'package:devops_quiz/services/whats_new_service.dart';
 import 'package:devops_quiz/services/word_guess_level_service.dart';
 import 'package:devops_quiz/widgets/festival_celebration.dart';
@@ -694,6 +699,38 @@ void main() {
     );
   });
 
+  test('streak reminder eligibility excludes already-broken streaks', () async {
+    final today = DateTime(2026, 10, 16);
+
+    SharedPreferences.setMockInitialValues({
+      'current_streak': 5,
+      'last_open_date': today.toIso8601String(),
+    });
+    expect(await StreakService.hasStreakToSave(date: today), isTrue);
+
+    SharedPreferences.setMockInitialValues({
+      'current_streak': 5,
+      'last_open_date': today
+          .subtract(const Duration(days: 1))
+          .toIso8601String(),
+    });
+    expect(await StreakService.hasStreakToSave(date: today), isTrue);
+
+    SharedPreferences.setMockInitialValues({
+      'current_streak': 5,
+      'last_open_date': today
+          .subtract(const Duration(days: 2))
+          .toIso8601String(),
+    });
+    expect(await StreakService.hasStreakToSave(date: today), isFalse);
+
+    SharedPreferences.setMockInitialValues({
+      'current_streak': 0,
+      'last_open_date': today.toIso8601String(),
+    });
+    expect(await StreakService.hasStreakToSave(date: today), isFalse);
+  });
+
   test(
     'festival windows follow the Indian calendar and expire on schedule',
     () {
@@ -876,6 +913,65 @@ void main() {
     }
   });
 
+  testWidgets('Ask AI sends a question and displays the technical answer', (
+    tester,
+  ) async {
+    String? asked;
+    await tester.pumpWidget(
+      gameApp(
+        AskAiScreen(
+          onAsk: (question) async {
+            asked = question;
+            return const TechQuestionReply(
+              answer: 'A pod is Kubernetes\' smallest deployable unit.',
+              isTechnologyRelated: true,
+            );
+          },
+        ),
+      ),
+    );
+
+    await tester.enterText(
+      find.byKey(const ValueKey('ask-ai-input')),
+      'What is a Kubernetes pod?',
+    );
+    await tester.tap(find.byKey(const ValueKey('ask-ai-send')));
+    await tester.pumpAndSettle();
+
+    expect(asked, 'What is a Kubernetes pod?');
+    expect(
+      find.text('A pod is Kubernetes\' smallest deployable unit.'),
+      findsOneWidget,
+    );
+    expect(tester.takeException(), isNull);
+  });
+
+  testWidgets('Ask AI can display an out-of-scope refusal', (tester) async {
+    await tester.pumpWidget(
+      gameApp(
+        AskAiScreen(
+          onAsk: (_) async => const TechQuestionReply(
+            answer: 'I can only help with technology questions.',
+            isTechnologyRelated: false,
+          ),
+        ),
+      ),
+    );
+
+    await tester.enterText(
+      find.byKey(const ValueKey('ask-ai-input')),
+      'Who should I vote for?',
+    );
+    await tester.tap(find.byKey(const ValueKey('ask-ai-send')));
+    await tester.pumpAndSettle();
+
+    expect(
+      find.text('I can only help with technology questions.'),
+      findsOneWidget,
+    );
+    expect(tester.takeException(), isNull);
+  });
+
   // ==========================================================
   // NEW GAMES
   // ==========================================================
@@ -891,6 +987,8 @@ void main() {
     ('tic-tac-toe', const TicTacToeScreen(), 'Your turn'),
     ('connect four', const ConnectFourScreen(), 'Red to move'),
     ('ludo', const LudoGameScreen(), 'Ludo'),
+    ('chess', const ChessScreen(), 'White to move'),
+    ('snake and ladders', const SnakeLaddersScreen(), 'Player 1 rolls first'),
   ];
 
   final dailyLimitedGames = <Widget>[
@@ -939,6 +1037,8 @@ void main() {
       'Tic-Tac-Toe',
       'Connect Four',
       'Ludo',
+      'Chess',
+      'Snake and Ladders',
     ]) {
       await tester.scrollUntilVisible(
         find.text(title),
@@ -948,6 +1048,57 @@ void main() {
       expect(find.text(title), findsOneWidget);
     }
     expect(find.text('Tap Away Arrows: 100 Levels 🆕'), findsNothing);
+    expect(tester.takeException(), isNull);
+  });
+
+  testWidgets('games search filters names and descriptions', (tester) async {
+    tester.view.devicePixelRatio = 1;
+    tester.view.physicalSize = const Size(1280, 900);
+    addTearDown(tester.view.resetPhysicalSize);
+    addTearDown(tester.view.resetDevicePixelRatio);
+
+    await tester.pumpWidget(gameApp(const GamesScreen(), textScale: 1));
+    await tester.pumpAndSettle();
+    await tester.enterText(find.byKey(const ValueKey('games-search')), 'snake');
+    await tester.pumpAndSettle();
+
+    expect(find.text('Snake and Ladders'), findsOneWidget);
+    expect(find.text('Chess'), findsNothing);
+
+    await tester.enterText(
+      find.byKey(const ValueKey('games-search')),
+      'no such game',
+    );
+    await tester.pumpAndSettle();
+    expect(find.textContaining('No games match'), findsOneWidget);
+    expect(tester.takeException(), isNull);
+  });
+
+  testWidgets('chess board accepts a legal opening move', (tester) async {
+    await tester.pumpWidget(gameApp(const ChessScreen(), textScale: 1));
+    await tester.pumpAndSettle();
+
+    await tester.tap(find.byKey(const ValueKey('chess-square-e2')));
+    await tester.tap(find.byKey(const ValueKey('chess-square-e4')));
+    await tester.pumpAndSettle();
+
+    expect(find.text('Black to move'), findsOneWidget);
+    expect(find.textContaining('e4'), findsOneWidget);
+    expect(tester.takeException(), isNull);
+  });
+
+  testWidgets('Snake and Ladders applies ladder jumps', (tester) async {
+    await tester.pumpWidget(
+      gameApp(SnakeLaddersScreen(diceRoller: () => 4), textScale: 1),
+    );
+    await tester.pumpAndSettle();
+    await tester.ensureVisible(find.byKey(const ValueKey('snake-ladder-roll')));
+    await tester.pumpAndSettle();
+    await tester.tap(find.byKey(const ValueKey('snake-ladder-roll')));
+    await tester.pumpAndSettle();
+
+    expect(find.text('P1: 25'), findsOneWidget);
+    expect(find.textContaining('climbed a ladder to 25'), findsOneWidget);
     expect(tester.takeException(), isNull);
   });
 
