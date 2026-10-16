@@ -516,5 +516,75 @@
     "question": "Which chmod value gives read-only permission to owner, group and others?",
     "options": ["chmod 222", "chmod 444", "chmod 777", "chmod 111"],
     "answer": "chmod 444"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "Which command sets the default permission mask for newly created files and directories?",
+    "options": ["umask", "chmod", "chattr", "setfacl"],
+    "answer": "umask"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "Which command queries the systemd journal for messages from the current boot?",
+    "options": ["journalctl -b", "dmesg --boot", "systemctl --logs", "logger -b"],
+    "answer": "journalctl -b"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "Which file defines filesystems that should be mounted automatically during boot?",
+    "options": ["/etc/fstab", "/etc/mounts.conf", "/var/filesystems", "/boot/mounts"],
+    "answer": "/etc/fstab"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "Which option to ls displays inode numbers for directory entries?",
+    "options": ["-i", "-n", "-I", "-inode"],
+    "answer": "-i"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "What happens to the group ownership of new files in a directory with the setgid bit set?",
+    "options": ["They inherit the directory's group", "They always belong to root", "They inherit the creator's primary group", "They have no group owner"],
+    "answer": "They inherit the directory's group"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "Which command can show the process listening on TCP port 8080?",
+    "options": ["ss -ltnp 'sport = :8080'", "ip route 8080", "ping -p 8080", "dig -p 8080"],
+    "answer": "ss -ltnp 'sport = :8080'"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "Which command queries the system name-service configuration for a user's account entry?",
+    "options": ["getent passwd alice", "userctl show alice", "passwd --query alice", "id --database alice"],
+    "answer": "getent passwd alice"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "Which file lists the login shells considered valid on a Linux system?",
+    "options": ["/etc/shells", "/etc/profile", "/var/shells", "/usr/bin/shells"],
+    "answer": "/etc/shells"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "Which Bash setting makes a pipeline fail when any command in it fails?",
+    "options": ["set -o pipefail", "set -o errexit-pipe", "shopt -s pipecheck", "trap ERR PIPE"],
+    "answer": "set -o pipefail"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "Which command refreshes the local APT package indexes without upgrading installed packages?",
+    "options": ["apt update", "apt upgrade", "apt install --refresh", "dpkg --configure"],
+    "answer": "apt update"
   }
 ]

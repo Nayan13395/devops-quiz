@@ -405,7 +405,7 @@ class _MemoryMatchScreenState extends State<MemoryMatchScreen> {
                                 ? Colors.green.shade600
                                 : showEmoji
                                 ? colorScheme.surfaceContainerHighest
-                                : colorScheme.primary,
+                                : colorScheme.surface,
                             borderRadius: BorderRadius.circular(14),
                             boxShadow: [
                               BoxShadow(
@@ -423,12 +423,13 @@ class _MemoryMatchScreenState extends State<MemoryMatchScreen> {
                                     _cards[index],
                                     style: const TextStyle(fontSize: 36),
                                   )
-                                : Icon(
-                                    Icons.help_outline_rounded,
-                                    color: colorScheme.onPrimary.withValues(
-                                      alpha: 0.8,
+                                : Padding(
+                                    padding: const EdgeInsets.all(7),
+                                    child: Image.asset(
+                                      'assets/images/devops_logo.png',
+                                      fit: BoxFit.contain,
+                                      semanticLabel: 'DevOps Quiz logo',
                                     ),
-                                    size: 32,
                                   ),
                           ),
                         ),

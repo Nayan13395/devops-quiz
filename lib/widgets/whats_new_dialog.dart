@@ -41,10 +41,10 @@ final List<_Highlight> _highlights = [
     'All 21 categories now have a fifth set of fresh questions.',
   ),
   _Highlight(
-    '🎮',
-    'Tap Away Arrows: 100 levels',
-    'Clear arrows with an open path to the edge. Save your hearts, earn '
-        '100 points per level and keep playing at your own pace.',
+    '🎲',
+    'Classic board games',
+    'Play Tic-Tac-Toe against the computer, Connect Four with a friend, or '
+        'Ludo against three bots.',
     actionLabel: 'Play now',
     featureId: WhatsNewService.games,
     destination: (_) => const GamesScreen(),

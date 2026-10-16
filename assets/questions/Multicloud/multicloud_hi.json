@@ -1,702 +1,1502 @@
 [
-    {
-        "category": "Multi Cloud",
-        "set": 1,
-        "question": "कौन सी क्लाउड रणनीति दो या अधिक पब्लिक क्लाउड प्रदाताओं की सेवाओं का उपयोग करती है?",
-        "options": ["Multi-Cloud", "Terraform", "Docker", "Kubernetes"],
-        "answer": "Multi-Cloud"
-    },
-    {
-        "category": "Multi Cloud",
-        "set": 1,
-        "question": "कौन सी क्लाउड रणनीति पब्लिक और प्राइवेट क्लाउड को मिलाती है?",
-        "options": ["Terraform", "Docker", "Kubernetes", "Hybrid Cloud"],
-        "answer": "Hybrid Cloud"
-    },
-    {
-        "category": "Multi Cloud",
-        "set": 1,
-        "question": "मल्टी-क्लाउड इंफ्रास्ट्रक्चर एज़ कोड (Infrastructure as Code) के लिए आमतौर पर किस टूल का उपयोग किया जाता है?",
-        "options": ["Kubernetes", "Prometheus", "Terraform", "Docker"],
-        "answer": "Terraform"
-    },
-    {
-        "category": "Multi Cloud",
-        "set": 1,
-        "question": "कौन सा CNCF प्रोजेक्ट क्लाउड के बीच कंटेनरों को ऑर्केस्ट्रेट करने के लिए व्यापक रूप से उपयोग किया जाता है?",
-        "options": ["Prometheus", "Kubernetes", "Terraform", "Docker"],
-        "answer": "Kubernetes"
-    },
-    {
-        "category": "Multi Cloud",
-        "set": 1,
-        "question": "क्लाउड APIs को एक्सपोज़ करने के लिए आमतौर पर किस प्रोटोकॉल का उपयोग किया जाता है?",
-        "options": ["REST", "Terraform", "Docker", "Kubernetes"],
-        "answer": "REST"
-    },
-    {
-        "category": "Multi Cloud",
-        "set": 1,
-        "question": "वेंडर लॉक-इन (vendor lock-in) से बचने में कौन सी प्रथा मदद करती है?",
-        "options": ["Terraform", "Docker", "Kubernetes", "Using open standards"],
-        "answer": "Using open standards"
-    },
-    {
-        "category": "Multi Cloud",
-        "set": 1,
-        "question": "क्लाउड प्रदाताओं के बीच कंटेनराइज़ेशन के लिए किस टूल का व्यापक रूप से उपयोग किया जाता है?",
-        "options": ["Kubernetes", "Prometheus", "Docker", "Terraform"],
-        "answer": "Docker"
-    },
-    {
-        "category": "Multi Cloud",
-        "set": 1,
-        "question": "कौन सा प्रोटोकॉल क्लाउड के बीच संघीय पहचान (federated identity) को सक्षम करता है?",
-        "options": ["Kubernetes", "SAML", "Terraform", "Docker"],
-        "answer": "SAML"
-    },
-    {
-        "category": "Multi Cloud",
-        "set": 1,
-        "question": "क्लाउड APIs के लिए आमतौर पर किस प्रमाणीकरण मानक (authentication standard) का उपयोग किया जाता है?",
-        "options": ["OAuth 2.0", "Terraform", "Docker", "Kubernetes"],
-        "answer": "OAuth 2.0"
-    },
-    {
-        "category": "Multi Cloud",
-        "set": 1,
-        "question": "कौन सा क्लाउड सेवा मॉडल वर्चुअल मशीन प्रदान करता है?",
-        "options": ["Terraform", "Docker", "Kubernetes", "IaaS"],
-        "answer": "IaaS"
-    },
-    {
-        "category": "Multi Cloud",
-        "set": 1,
-        "question": "कौन सा क्लाउड सेवा मॉडल प्रबंधित एप्लिकेशन प्लेटफ़ॉर्म प्रदान करता है?",
-        "options": ["Docker", "Kubernetes", "PaaS", "Terraform"],
-        "answer": "PaaS"
-    },
-    {
-        "category": "Multi Cloud",
-        "set": 1,
-        "question": "कौन सा क्लाउड सेवा मॉडल इंटरनेट पर सॉफ़्टवेयर वितरित करता है?",
-        "options": ["Kubernetes", "SaaS", "Terraform", "Docker"],
-        "answer": "SaaS"
-    },
-    {
-        "category": "Multi Cloud",
-        "set": 1,
-        "question": "कौन सा मॉनिटरिंग दृष्टिकोण कई क्लाउड प्रदाताओं से मेट्रिक्स एकत्र करता है?",
-        "options": ["Centralized Monitoring", "Terraform", "Docker", "Kubernetes"],
-        "answer": "Centralized Monitoring"
-    },
-    {
-        "category": "Multi Cloud",
-        "set": 1,
-        "question": "कौन सा लॉगिंग दृष्टिकोण सभी क्लाउड प्रदाताओं से लॉग्स को एकत्रित करता है?",
-        "options": ["Terraform", "Docker", "Kubernetes", "Centralized Logging"],
-        "answer": "Centralized Logging"
-    },
-    {
-        "category": "Multi Cloud",
-        "set": 1,
-        "question": "कौन सी नेटवर्किंग तकनीक कई क्लाउड वातावरणों को सुरक्षित रूप से जोड़ती है?",
-        "options": ["Docker", "Kubernetes", "VPN", "Terraform"],
-        "answer": "VPN"
-    },
-    {
-        "category": "Multi Cloud",
-        "set": 1,
-        "question": "कौन सी नेटवर्किंग सेवा क्लाउड के बीच समर्पित कनेक्टिविटी प्रदान करती है?",
-        "options": ["Kubernetes", "Direct Connect/ExpressRoute/Interconnect", "Terraform", "Docker"],
-        "answer": "Direct Connect/ExpressRoute/Interconnect"
-    },
-    {
-        "category": "Multi Cloud",
-        "set": 1,
-        "question": "Kubernetes में सर्विस डिस्कवरी के लिए आमतौर पर किस तकनीक का उपयोग किया जाता है?",
-        "options": ["DNS", "Terraform", "Docker", "Kubernetes"],
-        "answer": "DNS"
-    },
-    {
-        "category": "Multi Cloud",
-        "set": 1,
-        "question": "कई क्लाउड के बीच CI/CD के लिए किस टूल का व्यापक रूप से उपयोग किया जाता है?",
-        "options": ["Terraform", "Docker", "Kubernetes", "Jenkins"],
-        "answer": "Jenkins"
-    },
-    {
-        "category": "Multi Cloud",
-        "set": 1,
-        "question": "कौन सा ओपन-सोर्स मॉनिटरिंग प्लेटफ़ॉर्म मल्टी-क्लाउड वातावरण का समर्थन करता है?",
-        "options": ["Docker", "Kubernetes", "Prometheus", "Terraform"],
-        "answer": "Prometheus"
-    },
-    {
-        "category": "Multi Cloud",
-        "set": 1,
-        "question": "कौन सा विज़ुअलाइज़ेशन प्लेटफ़ॉर्म आमतौर पर Prometheus के साथ काम करता है?",
-        "options": ["Kubernetes", "Grafana", "Terraform", "Docker"],
-        "answer": "Grafana"
-    },
-    {
-        "category": "Multi Cloud",
-        "set": 1,
-        "question": "कौन सा सुरक्षा सिद्धांत केवल आवश्यक अनुमतियाँ प्रदान करता है?",
-        "options": ["Least Privilege", "Terraform", "Docker", "Kubernetes"],
-        "answer": "Least Privilege"
-    },
-    {
-        "category": "Multi Cloud",
-        "set": 1,
-        "question": "कौन सी प्रथा डेटा को रेस्ट (at rest) और ट्रांजिट (in transit) दोनों में एन्क्रिप्ट करती है?",
-        "options": ["Terraform", "Docker", "Kubernetes", "Encryption"],
-        "answer": "Encryption"
-    },
-    {
-        "category": "Multi Cloud",
-        "set": 1,
-        "question": "कौन सा क्लाउड आर्किटेक्चर प्रदाताओं के बीच उपलब्धता (availability) में सुधार करता है?",
-        "options": ["Docker", "Kubernetes", "Redundancy", "Terraform"],
-        "answer": "Redundancy"
-    },
-    {
-        "category": "Multi Cloud",
-        "set": 1,
-        "question": "कौन सा डिप्लॉयमेंट दृष्टिकोण वर्कलोड को कई क्लाउड में वितरित करता है?",
-        "options": ["Kubernetes", "Active-Active", "Terraform", "Docker"],
-        "answer": "Active-Active"
-    },
-    {
-        "category": "Multi Cloud",
-        "set": 1,
-        "question": "कौन सा डिज़ाइन सिद्धांत क्लाउड प्रदाताओं के बीच पोर्टेबिलिटी (portability) में सुधार करता है?",
-        "options": ["Cloud-agnostic architecture", "Terraform", "Docker", "Kubernetes"],
-        "answer": "Cloud-agnostic architecture"
-    },
-    {
-        "category": "Multi Cloud",
-        "set": 2,
-        "question": "कौन सा मल्टी-क्लाउड कॉन्सेप्ट Multi-Cloud से संबंधित है?",
-        "options": ["Terraform", "Docker", "Kubernetes", "Multi-Cloud"],
-        "answer": "Multi-Cloud"
-    },
-    {
-        "category": "Multi Cloud",
-        "set": 2,
-        "question": "कौन सा मल्टी-क्लाउड कॉन्सेप्ट Hybrid Cloud से संबंधित है?",
-        "options": ["Docker", "Kubernetes", "Hybrid Cloud", "Terraform"],
-        "answer": "Hybrid Cloud"
-    },
-    {
-        "category": "Multi Cloud",
-        "set": 2,
-        "question": "कौन सा मल्टी-क्लाउड कॉन्सेप्ट Terraform से संबंधित है?",
-        "options": ["Prometheus", "Terraform", "Docker", "Kubernetes"],
-        "answer": "Terraform"
-    },
-    {
-        "category": "Multi Cloud",
-        "set": 2,
-        "question": "कौन सा मल्टी-क्लाउड कॉन्सेप्ट Kubernetes से संबंधित है?",
-        "options": ["Kubernetes", "Terraform", "Docker", "Prometheus"],
-        "answer": "Kubernetes"
-    },
-    {
-        "category": "Multi Cloud",
-        "set": 2,
-        "question": "कौन सा मल्टी-क्लाउड कॉन्सेप्ट REST से संबंधित है?",
-        "options": ["Terraform", "Docker", "Kubernetes", "REST"],
-        "answer": "REST"
-    },
-    {
-        "category": "Multi Cloud",
-        "set": 2,
-        "question": "कौन सा मल्टी-क्लाउड कॉन्सेप्ट Using open standards से संबंधित है?",
-        "options": ["Docker", "Kubernetes", "Using open standards", "Terraform"],
-        "answer": "Using open standards"
-    },
-    {
-        "category": "Multi Cloud",
-        "set": 2,
-        "question": "कौन सा मल्टी-क्लाउड कॉन्सेप्ट Docker से संबंधित है?",
-        "options": ["Prometheus", "Docker", "Terraform", "Kubernetes"],
-        "answer": "Docker"
-    },
-    {
-        "category": "Multi Cloud",
-        "set": 2,
-        "question": "कौन सा मल्टी-क्लाउड कॉन्सेप्ट SAML से संबंधित है?",
-        "options": ["SAML", "Terraform", "Docker", "Kubernetes"],
-        "answer": "SAML"
-    },
-    {
-        "category": "Multi Cloud",
-        "set": 2,
-        "question": "कौन सा मल्टी-क्लाउड कॉन्सेप्ट OAuth 2.0 से संबंधित है?",
-        "options": ["Terraform", "Docker", "Kubernetes", "OAuth 2.0"],
-        "answer": "OAuth 2.0"
-    },
-    {
-        "category": "Multi Cloud",
-        "set": 2,
-        "question": "कौन सा मल्टी-क्लाउड कॉन्सेप्ट IaaS से संबंधित है?",
-        "options": ["Docker", "Kubernetes", "IaaS", "Terraform"],
-        "answer": "IaaS"
-    },
-    {
-        "category": "Multi Cloud",
-        "set": 2,
-        "question": "कौन सा मल्टी-क्लाउड कॉन्सेप्ट PaaS से संबंधित है?",
-        "options": ["Kubernetes", "PaaS", "Terraform", "Docker"],
-        "answer": "PaaS"
-    },
-    {
-        "category": "Multi Cloud",
-        "set": 2,
-        "question": "कौन सा मल्टी-क्लाउड कॉन्सेप्ट SaaS से संबंधित है?",
-        "options": ["SaaS", "Terraform", "Docker", "Kubernetes"],
-        "answer": "SaaS"
-    },
-    {
-        "category": "Multi Cloud",
-        "set": 2,
-        "question": "कौन सा मल्टी-क्लाउड कॉन्सेप्ट Centralized Monitoring से संबंधित है?",
-        "options": ["Terraform", "Docker", "Kubernetes", "Centralized Monitoring"],
-        "answer": "Centralized Monitoring"
-    },
-    {
-        "category": "Multi Cloud",
-        "set": 2,
-        "question": "कौन सा मल्टी-क्लाउड कॉन्सेप्ट Centralized Logging से संबंधित है?",
-        "options": ["Docker", "Kubernetes", "Centralized Logging", "Terraform"],
-        "answer": "Centralized Logging"
-    },
-    {
-        "category": "Multi Cloud",
-        "set": 2,
-        "question": "कौन सा मल्टी-क्लाउड कॉन्सेप्ट VPN से संबंधित है?",
-        "options": ["Kubernetes", "VPN", "Terraform", "Docker"],
-        "answer": "VPN"
-    },
-    {
-        "category": "Multi Cloud",
-        "set": 2,
-        "question": "कौन सा मल्टी-क्लाउड कॉन्सेप्ट Direct Connect/ExpressRoute/Interconnect से संबंधित है?",
-        "options": ["Direct Connect/ExpressRoute/Interconnect", "Terraform", "Docker", "Kubernetes"],
-        "answer": "Direct Connect/ExpressRoute/Interconnect"
-    },
-    {
-        "category": "Multi Cloud",
-        "set": 2,
-        "question": "कौन सा मल्टी-क्लाउड कॉन्सेप्ट DNS से संबंधित है?",
-        "options": ["Terraform", "Docker", "Kubernetes", "DNS"],
-        "answer": "DNS"
-    },
-    {
-        "category": "Multi Cloud",
-        "set": 2,
-        "question": "कौन सा मल्टी-क्लाउड कॉन्सेप्ट Jenkins से संबंधित है?",
-        "options": ["Docker", "Kubernetes", "Jenkins", "Terraform"],
-        "answer": "Jenkins"
-    },
-    {
-        "category": "Multi Cloud",
-        "set": 2,
-        "question": "कौन सा मल्टी-क्लाउड कॉन्सेप्ट Prometheus से संबंधित है?",
-        "options": ["Kubernetes", "Prometheus", "Terraform", "Docker"],
-        "answer": "Prometheus"
-    },
-    {
-        "category": "Multi Cloud",
-        "set": 2,
-        "question": "कौन सा मल्टी-क्लाउड कॉन्सेप्ट Grafana से संबंधित है?",
-        "options": ["Grafana", "Terraform", "Docker", "Kubernetes"],
-        "answer": "Grafana"
-    },
-    {
-        "category": "Multi Cloud",
-        "set": 2,
-        "question": "कौन सा मल्टी-क्लाउड कॉन्सेप्ट Least Privilege से संबंधित है?",
-        "options": ["Terraform", "Docker", "Kubernetes", "Least Privilege"],
-        "answer": "Least Privilege"
-    },
-    {
-        "category": "Multi Cloud",
-        "set": 2,
-        "question": "कौन सा मल्टी-क्लाउड कॉन्सेप्ट Encryption से संबंधित है?",
-        "options": ["Docker", "Kubernetes", "Encryption", "Terraform"],
-        "answer": "Encryption"
-    },
-    {
-        "category": "Multi Cloud",
-        "set": 2,
-        "question": "कौन सा मल्टी-क्लाउड कॉन्सेप्ट Redundancy से संबंधित है?",
-        "options": ["Kubernetes", "Redundancy", "Terraform", "Docker"],
-        "answer": "Redundancy"
-    },
-    {
-        "category": "Multi Cloud",
-        "set": 2,
-        "question": "कौन सा मल्टी-क्लाउड कॉन्सेप्ट Active-Active से संबंधित है?",
-        "options": ["Active-Active", "Terraform", "Docker", "Kubernetes"],
-        "answer": "Active-Active"
-    },
-    {
-        "category": "Multi Cloud",
-        "set": 2,
-        "question": "कौन सा मल्टी-क्लाउड कॉन्सेप्ट Cloud-agnostic architecture से संबंधित है?",
-        "options": ["Terraform", "Docker", "Kubernetes", "Cloud-agnostic architecture"],
-        "answer": "Cloud-agnostic architecture"
-    },
-    {
-        "category": "Multi Cloud",
-        "set": 3,
-        "question": "Multi-Cloud के लिए सबसे अच्छी तकनीक चुनें?",
-        "options": ["Docker", "Kubernetes", "Multi-Cloud", "Terraform"],
-        "answer": "Multi-Cloud"
-    },
-    {
-        "category": "Multi Cloud",
-        "set": 3,
-        "question": "Hybrid Cloud के लिए सबसे अच्छी तकनीक चुनें?",
-        "options": ["Kubernetes", "Hybrid Cloud", "Terraform", "Docker"],
-        "answer": "Hybrid Cloud"
-    },
-    {
-        "category": "Multi Cloud",
-        "set": 3,
-        "question": "Terraform के लिए सबसे अच्छी तकनीक चुनें?",
-        "options": ["Terraform", "Docker", "Kubernetes", "Prometheus"],
-        "answer": "Terraform"
-    },
-    {
-        "category": "Multi Cloud",
-        "set": 3,
-        "question": "Kubernetes के लिए सबसे अच्छी तकनीक चुनें?",
-        "options": ["Terraform", "Docker", "Prometheus", "Kubernetes"],
-        "answer": "Kubernetes"
-    },
-    {
-        "category": "Multi Cloud",
-        "set": 3,
-        "question": "REST के लिए सबसे अच्छी तकनीक चुनें?",
-        "options": ["Docker", "Kubernetes", "REST", "Terraform"],
-        "answer": "REST"
-    },
-    {
-        "category": "Multi Cloud",
-        "set": 3,
-        "question": "Using open standards के लिए सबसे अच्छी तकनीक चुनें?",
-        "options": ["Kubernetes", "Using open standards", "Terraform", "Docker"],
-        "answer": "Using open standards"
-    },
-    {
-        "category": "Multi Cloud",
-        "set": 3,
-        "question": "Docker के लिए सबसे अच्छी तकनीक चुनें?",
-        "options": ["Docker", "Terraform", "Kubernetes", "Prometheus"],
-        "answer": "Docker"
-    },
-    {
-        "category": "Multi Cloud",
-        "set": 3,
-        "question": "SAML के लिए सबसे अच्छी तकनीक चुनें?",
-        "options": ["Terraform", "Docker", "Kubernetes", "SAML"],
-        "answer": "SAML"
-    },
-    {
-        "category": "Multi Cloud",
-        "set": 3,
-        "question": "OAuth 2.0 के लिए सबसे अच्छी तकनीक चुनें?",
-        "options": ["Docker", "Kubernetes", "OAuth 2.0", "Terraform"],
-        "answer": "OAuth 2.0"
-    },
-    {
-        "category": "Multi Cloud",
-        "set": 3,
-        "question": "IaaS के लिए सबसे अच्छी तकनीक चुनें?",
-        "options": ["Kubernetes", "IaaS", "Terraform", "Docker"],
-        "answer": "IaaS"
-    },
-    {
-        "category": "Multi Cloud",
-        "set": 3,
-        "question": "PaaS के लिए सबसे अच्छी तकनीक चुनें?",
-        "options": ["PaaS", "Terraform", "Docker", "Kubernetes"],
-        "answer": "PaaS"
-    },
-    {
-        "category": "Multi Cloud",
-        "set": 3,
-        "question": "SaaS के लिए सबसे अच्छी तकनीक चुनें?",
-        "options": ["Terraform", "Docker", "Kubernetes", "SaaS"],
-        "answer": "SaaS"
-    },
-    {
-        "category": "Multi Cloud",
-        "set": 3,
-        "question": "Centralized Monitoring के लिए सबसे अच्छी तकनीक चुनें?",
-        "options": ["Docker", "Kubernetes", "Centralized Monitoring", "Terraform"],
-        "answer": "Centralized Monitoring"
-    },
-    {
-        "category": "Multi Cloud",
-        "set": 3,
-        "question": "Centralized Logging के लिए सबसे अच्छी तकनीक चुनें?",
-        "options": ["Kubernetes", "Centralized Logging", "Terraform", "Docker"],
-        "answer": "Centralized Logging"
-    },
-    {
-        "category": "Multi Cloud",
-        "set": 3,
-        "question": "VPN के लिए सबसे अच्छी तकनीक चुनें?",
-        "options": ["VPN", "Terraform", "Docker", "Kubernetes"],
-        "answer": "VPN"
-    },
-    {
-        "category": "Multi Cloud",
-        "set": 3,
-        "question": "Direct Connect/ExpressRoute/Interconnect के लिए सबसे अच्छी तकनीक चुनें?",
-        "options": ["Terraform", "Docker", "Kubernetes", "Direct Connect/ExpressRoute/Interconnect"],
-        "answer": "Direct Connect/ExpressRoute/Interconnect"
-    },
-    {
-        "category": "Multi Cloud",
-        "set": 3,
-        "question": "DNS के लिए सबसे अच्छी तकनीक चुनें?",
-        "options": ["Docker", "Kubernetes", "DNS", "Terraform"],
-        "answer": "DNS"
-    },
-    {
-        "category": "Multi Cloud",
-        "set": 3,
-        "question": "Jenkins के लिए सबसे अच्छी तकनीक चुनें?",
-        "options": ["Kubernetes", "Jenkins", "Terraform", "Docker"],
-        "answer": "Jenkins"
-    },
-    {
-        "category": "Multi Cloud",
-        "set": 3,
-        "question": "Prometheus के लिए सबसे अच्छी तकनीक चुनें?",
-        "options": ["Prometheus", "Terraform", "Docker", "Kubernetes"],
-        "answer": "Prometheus"
-    },
-    {
-        "category": "Multi Cloud",
-        "set": 3,
-        "question": "Grafana के लिए सबसे अच्छी तकनीक चुनें?",
-        "options": ["Terraform", "Docker", "Kubernetes", "Grafana"],
-        "answer": "Grafana"
-    },
-    {
-        "category": "Multi Cloud",
-        "set": 3,
-        "question": "Least Privilege के लिए सबसे अच्छी तकनीक चुनें?",
-        "options": ["Docker", "Kubernetes", "Least Privilege", "Terraform"],
-        "answer": "Least Privilege"
-    },
-    {
-        "category": "Multi Cloud",
-        "set": 3,
-        "question": "Encryption के लिए सबसे अच्छी तकनीक चुनें?",
-        "options": ["Kubernetes", "Encryption", "Terraform", "Docker"],
-        "answer": "Encryption"
-    },
-    {
-        "category": "Multi Cloud",
-        "set": 3,
-        "question": "Redundancy के लिए सबसे अच्छी तकनीक चुनें?",
-        "options": ["Redundancy", "Terraform", "Docker", "Kubernetes"],
-        "answer": "Redundancy"
-    },
-    {
-        "category": "Multi Cloud",
-        "set": 3,
-        "question": "Active-Active के लिए सबसे अच्छी तकनीक चुनें?",
-        "options": ["Terraform", "Docker", "Kubernetes", "Active-Active"],
-        "answer": "Active-Active"
-    },
-    {
-        "category": "Multi Cloud",
-        "set": 3,
-        "question": "Cloud-agnostic architecture के लिए सबसे अच्छी तकनीक चुनें?",
-        "options": ["Docker", "Kubernetes", "Cloud-agnostic architecture", "Terraform"],
-        "answer": "Cloud-agnostic architecture"
-    },
-    {
-        "category": "Multi Cloud",
-        "set": 4,
-        "question": "Multi-Cloud के लिए सही समाधान की पहचान करें?",
-        "options": ["Kubernetes", "Multi-Cloud", "Terraform", "Docker"],
-        "answer": "Multi-Cloud"
-    },
-    {
-        "category": "Multi Cloud",
-        "set": 4,
-        "question": "Hybrid Cloud के लिए सही समाधान की पहचान करें?",
-        "options": ["Hybrid Cloud", "Terraform", "Docker", "Kubernetes"],
-        "answer": "Hybrid Cloud"
-    },
-    {
-        "category": "Multi Cloud",
-        "set": 4,
-        "question": "Terraform के लिए सही समाधान की पहचान करें?",
-        "options": ["Docker", "Kubernetes", "Prometheus", "Terraform"],
-        "answer": "Terraform"
-    },
-    {
-        "category": "Multi Cloud",
-        "set": 4,
-        "question": "Kubernetes के लिए सही समाधान की पहचान करें?",
-        "options": ["Docker", "Prometheus", "Kubernetes", "Terraform"],
-        "answer": "Kubernetes"
-    },
-    {
-        "category": "Multi Cloud",
-        "set": 4,
-        "question": "REST के लिए सही समाधान की पहचान करें?",
-        "options": ["Kubernetes", "REST", "Terraform", "Docker"],
-        "answer": "REST"
-    },
-    {
-        "category": "Multi Cloud",
-        "set": 4,
-        "question": "Using open standards के लिए सही समाधान की पहचान करें?",
-        "options": ["Using open standards", "Terraform", "Docker", "Kubernetes"],
-        "answer": "Using open standards"
-    },
-    {
-        "category": "Multi Cloud",
-        "set": 4,
-        "question": "Docker के लिए सही समाधान की पहचान करें?",
-        "options": ["Terraform", "Kubernetes", "Prometheus", "Docker"],
-        "answer": "Docker"
-    },
-    {
-        "category": "Multi Cloud",
-        "set": 4,
-        "question": "SAML के लिए सही समाधान की पहचान करें?",
-        "options": ["Docker", "Kubernetes", "SAML", "Terraform"],
-        "answer": "SAML"
-    },
-    {
-        "category": "Multi Cloud",
-        "set": 4,
-        "question": "OAuth 2.0 के लिए सही समाधान की पहचान करें?",
-        "options": ["Kubernetes", "OAuth 2.0", "Terraform", "Docker"],
-        "answer": "OAuth 2.0"
-    },
-    {
-        "category": "Multi Cloud",
-        "set": 4,
-        "question": "IaaS के लिए सही समाधान की पहचान करें?",
-        "options": ["IaaS", "Terraform", "Docker", "Kubernetes"],
-        "answer": "IaaS"
-    },
-    {
-        "category": "Multi Cloud",
-        "set": 4,
-        "question": "PaaS के लिए सही समाधान की पहचान करें?",
-        "options": ["Terraform", "Docker", "Kubernetes", "PaaS"],
-        "answer": "PaaS"
-    },
-    {
-        "category": "Multi Cloud",
-        "set": 4,
-        "question": "SaaS के लिए सही समाधान की पहचान करें?",
-        "options": ["Docker", "Kubernetes", "SaaS", "Terraform"],
-        "answer": "SaaS"
-    },
-    {
-        "category": "Multi Cloud",
-        "set": 4,
-        "question": "Centralized Monitoring के लिए सही समाधान की पहचान करें?",
-        "options": ["Kubernetes", "Centralized Monitoring", "Terraform", "Docker"],
-        "answer": "Centralized Monitoring"
-    },
-    {
-        "category": "Multi Cloud",
-        "set": 4,
-        "question": "Centralized Logging के लिए सही समाधान की पहचान करें?",
-        "options": ["Centralized Logging", "Terraform", "Docker", "Kubernetes"],
-        "answer": "Centralized Logging"
-    },
-    {
-        "category": "Multi Cloud",
-        "set": 4,
-        "question": "VPN के लिए सही समाधान की पहचान करें?",
-        "options": ["Terraform", "Docker", "Kubernetes", "VPN"],
-        "answer": "VPN"
-    },
-    {
-        "category": "Multi Cloud",
-        "set": 4,
-        "question": "Direct Connect/ExpressRoute/Interconnect के लिए सही समाधान की पहचान करें?",
-        "options": ["Docker", "Kubernetes", "Direct Connect/ExpressRoute/Interconnect", "Terraform"],
-        "answer": "Direct Connect/ExpressRoute/Interconnect"
-    },
-    {
-        "category": "Multi Cloud",
-        "set": 4,
-        "question": "DNS के लिए सही समाधान की पहचान करें?",
-        "options": ["Kubernetes", "DNS", "Terraform", "Docker"],
-        "answer": "DNS"
-    },
-    {
-        "category": "Multi Cloud",
-        "set": 4,
-        "question": "Jenkins के लिए सही समाधान की पहचान करें?",
-        "options": ["Jenkins", "Terraform", "Docker", "Kubernetes"],
-        "answer": "Jenkins"
-    },
-    {
-        "category": "Multi Cloud",
-        "set": 4,
-        "question": "Prometheus के लिए सही समाधान की पहचान करें?",
-        "options": ["Terraform", "Docker", "Kubernetes", "Prometheus"],
-        "answer": "Prometheus"
-    },
-    {
-        "category": "Multi Cloud",
-        "set": 4,
-        "question": "Grafana के लिए सही समाधान की पहचान करें?",
-        "options": ["Docker", "Kubernetes", "Grafana", "Terraform"],
-        "answer": "Grafana"
-    },
-    {
-        "category": "Multi Cloud",
-        "set": 4,
-        "question": "Least Privilege के लिए सही समाधान की पहचान करें?",
-        "options": ["Kubernetes", "Least Privilege", "Terraform", "Docker"],
-        "answer": "Least Privilege"
-    },
-    {
-        "category": "Multi Cloud",
-        "set": 4,
-        "question": "Encryption के लिए सही समाधान की पहचान करें?",
-        "options": ["Encryption", "Terraform", "Docker", "Kubernetes"],
-        "answer": "Encryption"
-    },
-    {
-        "category": "Multi Cloud",
-        "set": 4,
-        "question": "Redundancy के लिए सही समाधान की पहचान करें?",
-        "options": ["Terraform", "Docker", "Kubernetes", "Redundancy"],
-        "answer": "Redundancy"
-    },
-    {
-        "category": "Multi Cloud",
-        "set": 4,
-        "question": "Active-Active के लिए सही समाधान की पहचान करें?",
-        "options": ["Docker", "Kubernetes", "Active-Active", "Terraform"],
-        "answer": "Active-Active"
-    },
-    {
-        "category": "Multi Cloud",
-        "set": 4,
-        "question": "Cloud-agnostic architecture के लिए सही समाधान की पहचान करें?",
-        "options": ["Kubernetes", "Cloud-agnostic architecture", "Terraform", "Docker"],
-        "answer": "Cloud-agnostic architecture"
-    }
+  {
+    "category": "Multi Cloud",
+    "set": 1,
+    "question": "कौन सी क्लाउड रणनीति दो या अधिक पब्लिक क्लाउड प्रदाताओं की सेवाओं का उपयोग करती है?",
+    "options": [
+      "Multi-Cloud",
+      "Terraform",
+      "Docker",
+      "Kubernetes"
+    ],
+    "answer": "Multi-Cloud"
+  },
+  {
+    "category": "Multi Cloud",
+    "set": 1,
+    "question": "कौन सी क्लाउड रणनीति पब्लिक और प्राइवेट क्लाउड को मिलाती है?",
+    "options": [
+      "Terraform",
+      "Docker",
+      "Kubernetes",
+      "Hybrid Cloud"
+    ],
+    "answer": "Hybrid Cloud"
+  },
+  {
+    "category": "Multi Cloud",
+    "set": 1,
+    "question": "मल्टी-क्लाउड इंफ्रास्ट्रक्चर एज़ कोड (Infrastructure as Code) के लिए आमतौर पर किस टूल का उपयोग किया जाता है?",
+    "options": [
+      "Kubernetes",
+      "Prometheus",
+      "Terraform",
+      "Docker"
+    ],
+    "answer": "Terraform"
+  },
+  {
+    "category": "Multi Cloud",
+    "set": 1,
+    "question": "कौन सा CNCF प्रोजेक्ट क्लाउड के बीच कंटेनरों को ऑर्केस्ट्रेट करने के लिए व्यापक रूप से उपयोग किया जाता है?",
+    "options": [
+      "Prometheus",
+      "Kubernetes",
+      "Terraform",
+      "Docker"
+    ],
+    "answer": "Kubernetes"
+  },
+  {
+    "category": "Multi Cloud",
+    "set": 1,
+    "question": "क्लाउड APIs को एक्सपोज़ करने के लिए आमतौर पर किस प्रोटोकॉल का उपयोग किया जाता है?",
+    "options": [
+      "REST",
+      "Terraform",
+      "Docker",
+      "Kubernetes"
+    ],
+    "answer": "REST"
+  },
+  {
+    "category": "Multi Cloud",
+    "set": 1,
+    "question": "वेंडर लॉक-इन (vendor lock-in) से बचने में कौन सी प्रथा मदद करती है?",
+    "options": [
+      "Terraform",
+      "Docker",
+      "Kubernetes",
+      "Using open standards"
+    ],
+    "answer": "Using open standards"
+  },
+  {
+    "category": "Multi Cloud",
+    "set": 1,
+    "question": "क्लाउड प्रदाताओं के बीच कंटेनराइज़ेशन के लिए किस टूल का व्यापक रूप से उपयोग किया जाता है?",
+    "options": [
+      "Kubernetes",
+      "Prometheus",
+      "Docker",
+      "Terraform"
+    ],
+    "answer": "Docker"
+  },
+  {
+    "category": "Multi Cloud",
+    "set": 1,
+    "question": "कौन सा प्रोटोकॉल क्लाउड के बीच संघीय पहचान (federated identity) को सक्षम करता है?",
+    "options": [
+      "Kubernetes",
+      "SAML",
+      "Terraform",
+      "Docker"
+    ],
+    "answer": "SAML"
+  },
+  {
+    "category": "Multi Cloud",
+    "set": 1,
+    "question": "क्लाउड APIs के लिए आमतौर पर किस प्रमाणीकरण मानक (authentication standard) का उपयोग किया जाता है?",
+    "options": [
+      "OAuth 2.0",
+      "Terraform",
+      "Docker",
+      "Kubernetes"
+    ],
+    "answer": "OAuth 2.0"
+  },
+  {
+    "category": "Multi Cloud",
+    "set": 1,
+    "question": "कौन सा क्लाउड सेवा मॉडल वर्चुअल मशीन प्रदान करता है?",
+    "options": [
+      "Terraform",
+      "Docker",
+      "Kubernetes",
+      "IaaS"
+    ],
+    "answer": "IaaS"
+  },
+  {
+    "category": "Multi Cloud",
+    "set": 1,
+    "question": "कौन सा क्लाउड सेवा मॉडल प्रबंधित एप्लिकेशन प्लेटफ़ॉर्म प्रदान करता है?",
+    "options": [
+      "Docker",
+      "Kubernetes",
+      "PaaS",
+      "Terraform"
+    ],
+    "answer": "PaaS"
+  },
+  {
+    "category": "Multi Cloud",
+    "set": 1,
+    "question": "कौन सा क्लाउड सेवा मॉडल इंटरनेट पर सॉफ़्टवेयर वितरित करता है?",
+    "options": [
+      "Kubernetes",
+      "SaaS",
+      "Terraform",
+      "Docker"
+    ],
+    "answer": "SaaS"
+  },
+  {
+    "category": "Multi Cloud",
+    "set": 1,
+    "question": "कौन सा मॉनिटरिंग दृष्टिकोण कई क्लाउड प्रदाताओं से मेट्रिक्स एकत्र करता है?",
+    "options": [
+      "Centralized Monitoring",
+      "Terraform",
+      "Docker",
+      "Kubernetes"
+    ],
+    "answer": "Centralized Monitoring"
+  },
+  {
+    "category": "Multi Cloud",
+    "set": 1,
+    "question": "कौन सा लॉगिंग दृष्टिकोण सभी क्लाउड प्रदाताओं से लॉग्स को एकत्रित करता है?",
+    "options": [
+      "Terraform",
+      "Docker",
+      "Kubernetes",
+      "Centralized Logging"
+    ],
+    "answer": "Centralized Logging"
+  },
+  {
+    "category": "Multi Cloud",
+    "set": 1,
+    "question": "कौन सी नेटवर्किंग तकनीक कई क्लाउड वातावरणों को सुरक्षित रूप से जोड़ती है?",
+    "options": [
+      "Docker",
+      "Kubernetes",
+      "VPN",
+      "Terraform"
+    ],
+    "answer": "VPN"
+  },
+  {
+    "category": "Multi Cloud",
+    "set": 1,
+    "question": "कौन सी नेटवर्किंग सेवा क्लाउड के बीच समर्पित कनेक्टिविटी प्रदान करती है?",
+    "options": [
+      "Kubernetes",
+      "Direct Connect/ExpressRoute/Interconnect",
+      "Terraform",
+      "Docker"
+    ],
+    "answer": "Direct Connect/ExpressRoute/Interconnect"
+  },
+  {
+    "category": "Multi Cloud",
+    "set": 1,
+    "question": "Kubernetes में सर्विस डिस्कवरी के लिए आमतौर पर किस तकनीक का उपयोग किया जाता है?",
+    "options": [
+      "DNS",
+      "Terraform",
+      "Docker",
+      "Kubernetes"
+    ],
+    "answer": "DNS"
+  },
+  {
+    "category": "Multi Cloud",
+    "set": 1,
+    "question": "कई क्लाउड के बीच CI/CD के लिए किस टूल का व्यापक रूप से उपयोग किया जाता है?",
+    "options": [
+      "Terraform",
+      "Docker",
+      "Kubernetes",
+      "Jenkins"
+    ],
+    "answer": "Jenkins"
+  },
+  {
+    "category": "Multi Cloud",
+    "set": 1,
+    "question": "कौन सा ओपन-सोर्स मॉनिटरिंग प्लेटफ़ॉर्म मल्टी-क्लाउड वातावरण का समर्थन करता है?",
+    "options": [
+      "Docker",
+      "Kubernetes",
+      "Prometheus",
+      "Terraform"
+    ],
+    "answer": "Prometheus"
+  },
+  {
+    "category": "Multi Cloud",
+    "set": 1,
+    "question": "कौन सा विज़ुअलाइज़ेशन प्लेटफ़ॉर्म आमतौर पर Prometheus के साथ काम करता है?",
+    "options": [
+      "Kubernetes",
+      "Grafana",
+      "Terraform",
+      "Docker"
+    ],
+    "answer": "Grafana"
+  },
+  {
+    "category": "Multi Cloud",
+    "set": 1,
+    "question": "कौन सा सुरक्षा सिद्धांत केवल आवश्यक अनुमतियाँ प्रदान करता है?",
+    "options": [
+      "Least Privilege",
+      "Terraform",
+      "Docker",
+      "Kubernetes"
+    ],
+    "answer": "Least Privilege"
+  },
+  {
+    "category": "Multi Cloud",
+    "set": 1,
+    "question": "कौन सी प्रथा डेटा को रेस्ट (at rest) और ट्रांजिट (in transit) दोनों में एन्क्रिप्ट करती है?",
+    "options": [
+      "Terraform",
+      "Docker",
+      "Kubernetes",
+      "Encryption"
+    ],
+    "answer": "Encryption"
+  },
+  {
+    "category": "Multi Cloud",
+    "set": 1,
+    "question": "कौन सा क्लाउड आर्किटेक्चर प्रदाताओं के बीच उपलब्धता (availability) में सुधार करता है?",
+    "options": [
+      "Docker",
+      "Kubernetes",
+      "Redundancy",
+      "Terraform"
+    ],
+    "answer": "Redundancy"
+  },
+  {
+    "category": "Multi Cloud",
+    "set": 1,
+    "question": "कौन सा डिप्लॉयमेंट दृष्टिकोण वर्कलोड को कई क्लाउड में वितरित करता है?",
+    "options": [
+      "Kubernetes",
+      "Active-Active",
+      "Terraform",
+      "Docker"
+    ],
+    "answer": "Active-Active"
+  },
+  {
+    "category": "Multi Cloud",
+    "set": 1,
+    "question": "कौन सा डिज़ाइन सिद्धांत क्लाउड प्रदाताओं के बीच पोर्टेबिलिटी (portability) में सुधार करता है?",
+    "options": [
+      "Cloud-agnostic architecture",
+      "Terraform",
+      "Docker",
+      "Kubernetes"
+    ],
+    "answer": "Cloud-agnostic architecture"
+  },
+  {
+    "category": "Multi Cloud",
+    "set": 2,
+    "question": "कौन सा मल्टी-क्लाउड कॉन्सेप्ट Multi-Cloud से संबंधित है?",
+    "options": [
+      "Terraform",
+      "Docker",
+      "Kubernetes",
+      "Multi-Cloud"
+    ],
+    "answer": "Multi-Cloud"
+  },
+  {
+    "category": "Multi Cloud",
+    "set": 2,
+    "question": "कौन सा मल्टी-क्लाउड कॉन्सेप्ट Hybrid Cloud से संबंधित है?",
+    "options": [
+      "Docker",
+      "Kubernetes",
+      "Hybrid Cloud",
+      "Terraform"
+    ],
+    "answer": "Hybrid Cloud"
+  },
+  {
+    "category": "Multi Cloud",
+    "set": 2,
+    "question": "कौन सा मल्टी-क्लाउड कॉन्सेप्ट Terraform से संबंधित है?",
+    "options": [
+      "Prometheus",
+      "Terraform",
+      "Docker",
+      "Kubernetes"
+    ],
+    "answer": "Terraform"
+  },
+  {
+    "category": "Multi Cloud",
+    "set": 2,
+    "question": "कौन सा मल्टी-क्लाउड कॉन्सेप्ट Kubernetes से संबंधित है?",
+    "options": [
+      "Kubernetes",
+      "Terraform",
+      "Docker",
+      "Prometheus"
+    ],
+    "answer": "Kubernetes"
+  },
+  {
+    "category": "Multi Cloud",
+    "set": 2,
+    "question": "कौन सा मल्टी-क्लाउड कॉन्सेप्ट REST से संबंधित है?",
+    "options": [
+      "Terraform",
+      "Docker",
+      "Kubernetes",
+      "REST"
+    ],
+    "answer": "REST"
+  },
+  {
+    "category": "Multi Cloud",
+    "set": 2,
+    "question": "कौन सा मल्टी-क्लाउड कॉन्सेप्ट Using open standards से संबंधित है?",
+    "options": [
+      "Docker",
+      "Kubernetes",
+      "Using open standards",
+      "Terraform"
+    ],
+    "answer": "Using open standards"
+  },
+  {
+    "category": "Multi Cloud",
+    "set": 2,
+    "question": "कौन सा मल्टी-क्लाउड कॉन्सेप्ट Docker से संबंधित है?",
+    "options": [
+      "Prometheus",
+      "Docker",
+      "Terraform",
+      "Kubernetes"
+    ],
+    "answer": "Docker"
+  },
+  {
+    "category": "Multi Cloud",
+    "set": 2,
+    "question": "कौन सा मल्टी-क्लाउड कॉन्सेप्ट SAML से संबंधित है?",
+    "options": [
+      "SAML",
+      "Terraform",
+      "Docker",
+      "Kubernetes"
+    ],
+    "answer": "SAML"
+  },
+  {
+    "category": "Multi Cloud",
+    "set": 2,
+    "question": "कौन सा मल्टी-क्लाउड कॉन्सेप्ट OAuth 2.0 से संबंधित है?",
+    "options": [
+      "Terraform",
+      "Docker",
+      "Kubernetes",
+      "OAuth 2.0"
+    ],
+    "answer": "OAuth 2.0"
+  },
+  {
+    "category": "Multi Cloud",
+    "set": 2,
+    "question": "कौन सा मल्टी-क्लाउड कॉन्सेप्ट IaaS से संबंधित है?",
+    "options": [
+      "Docker",
+      "Kubernetes",
+      "IaaS",
+      "Terraform"
+    ],
+    "answer": "IaaS"
+  },
+  {
+    "category": "Multi Cloud",
+    "set": 2,
+    "question": "कौन सा मल्टी-क्लाउड कॉन्सेप्ट PaaS से संबंधित है?",
+    "options": [
+      "Kubernetes",
+      "PaaS",
+      "Terraform",
+      "Docker"
+    ],
+    "answer": "PaaS"
+  },
+  {
+    "category": "Multi Cloud",
+    "set": 2,
+    "question": "कौन सा मल्टी-क्लाउड कॉन्सेप्ट SaaS से संबंधित है?",
+    "options": [
+      "SaaS",
+      "Terraform",
+      "Docker",
+      "Kubernetes"
+    ],
+    "answer": "SaaS"
+  },
+  {
+    "category": "Multi Cloud",
+    "set": 2,
+    "question": "कौन सा मल्टी-क्लाउड कॉन्सेप्ट Centralized Monitoring से संबंधित है?",
+    "options": [
+      "Terraform",
+      "Docker",
+      "Kubernetes",
+      "Centralized Monitoring"
+    ],
+    "answer": "Centralized Monitoring"
+  },
+  {
+    "category": "Multi Cloud",
+    "set": 2,
+    "question": "कौन सा मल्टी-क्लाउड कॉन्सेप्ट Centralized Logging से संबंधित है?",
+    "options": [
+      "Docker",
+      "Kubernetes",
+      "Centralized Logging",
+      "Terraform"
+    ],
+    "answer": "Centralized Logging"
+  },
+  {
+    "category": "Multi Cloud",
+    "set": 2,
+    "question": "कौन सा मल्टी-क्लाउड कॉन्सेप्ट VPN से संबंधित है?",
+    "options": [
+      "Kubernetes",
+      "VPN",
+      "Terraform",
+      "Docker"
+    ],
+    "answer": "VPN"
+  },
+  {
+    "category": "Multi Cloud",
+    "set": 2,
+    "question": "कौन सा मल्टी-क्लाउड कॉन्सेप्ट Direct Connect/ExpressRoute/Interconnect से संबंधित है?",
+    "options": [
+      "Direct Connect/ExpressRoute/Interconnect",
+      "Terraform",
+      "Docker",
+      "Kubernetes"
+    ],
+    "answer": "Direct Connect/ExpressRoute/Interconnect"
+  },
+  {
+    "category": "Multi Cloud",
+    "set": 2,
+    "question": "कौन सा मल्टी-क्लाउड कॉन्सेप्ट DNS से संबंधित है?",
+    "options": [
+      "Terraform",
+      "Docker",
+      "Kubernetes",
+      "DNS"
+    ],
+    "answer": "DNS"
+  },
+  {
+    "category": "Multi Cloud",
+    "set": 2,
+    "question": "कौन सा मल्टी-क्लाउड कॉन्सेप्ट Jenkins से संबंधित है?",
+    "options": [
+      "Docker",
+      "Kubernetes",
+      "Jenkins",
+      "Terraform"
+    ],
+    "answer": "Jenkins"
+  },
+  {
+    "category": "Multi Cloud",
+    "set": 2,
+    "question": "कौन सा मल्टी-क्लाउड कॉन्सेप्ट Prometheus से संबंधित है?",
+    "options": [
+      "Kubernetes",
+      "Prometheus",
+      "Terraform",
+      "Docker"
+    ],
+    "answer": "Prometheus"
+  },
+  {
+    "category": "Multi Cloud",
+    "set": 2,
+    "question": "कौन सा मल्टी-क्लाउड कॉन्सेप्ट Grafana से संबंधित है?",
+    "options": [
+      "Grafana",
+      "Terraform",
+      "Docker",
+      "Kubernetes"
+    ],
+    "answer": "Grafana"
+  },
+  {
+    "category": "Multi Cloud",
+    "set": 2,
+    "question": "कौन सा मल्टी-क्लाउड कॉन्सेप्ट Least Privilege से संबंधित है?",
+    "options": [
+      "Terraform",
+      "Docker",
+      "Kubernetes",
+      "Least Privilege"
+    ],
+    "answer": "Least Privilege"
+  },
+  {
+    "category": "Multi Cloud",
+    "set": 2,
+    "question": "कौन सा मल्टी-क्लाउड कॉन्सेप्ट Encryption से संबंधित है?",
+    "options": [
+      "Docker",
+      "Kubernetes",
+      "Encryption",
+      "Terraform"
+    ],
+    "answer": "Encryption"
+  },
+  {
+    "category": "Multi Cloud",
+    "set": 2,
+    "question": "कौन सा मल्टी-क्लाउड कॉन्सेप्ट Redundancy से संबंधित है?",
+    "options": [
+      "Kubernetes",
+      "Redundancy",
+      "Terraform",
+      "Docker"
+    ],
+    "answer": "Redundancy"
+  },
+  {
+    "category": "Multi Cloud",
+    "set": 2,
+    "question": "कौन सा मल्टी-क्लाउड कॉन्सेप्ट Active-Active से संबंधित है?",
+    "options": [
+      "Active-Active",
+      "Terraform",
+      "Docker",
+      "Kubernetes"
+    ],
+    "answer": "Active-Active"
+  },
+  {
+    "category": "Multi Cloud",
+    "set": 2,
+    "question": "कौन सा मल्टी-क्लाउड कॉन्सेप्ट Cloud-agnostic architecture से संबंधित है?",
+    "options": [
+      "Terraform",
+      "Docker",
+      "Kubernetes",
+      "Cloud-agnostic architecture"
+    ],
+    "answer": "Cloud-agnostic architecture"
+  },
+  {
+    "category": "Multi Cloud",
+    "set": 3,
+    "question": "Multi-Cloud के लिए सबसे अच्छी तकनीक चुनें?",
+    "options": [
+      "Docker",
+      "Kubernetes",
+      "Multi-Cloud",
+      "Terraform"
+    ],
+    "answer": "Multi-Cloud"
+  },
+  {
+    "category": "Multi Cloud",
+    "set": 3,
+    "question": "Hybrid Cloud के लिए सबसे अच्छी तकनीक चुनें?",
+    "options": [
+      "Kubernetes",
+      "Hybrid Cloud",
+      "Terraform",
+      "Docker"
+    ],
+    "answer": "Hybrid Cloud"
+  },
+  {
+    "category": "Multi Cloud",
+    "set": 3,
+    "question": "Terraform के लिए सबसे अच्छी तकनीक चुनें?",
+    "options": [
+      "Terraform",
+      "Docker",
+      "Kubernetes",
+      "Prometheus"
+    ],
+    "answer": "Terraform"
+  },
+  {
+    "category": "Multi Cloud",
+    "set": 3,
+    "question": "Kubernetes के लिए सबसे अच्छी तकनीक चुनें?",
+    "options": [
+      "Terraform",
+      "Docker",
+      "Prometheus",
+      "Kubernetes"
+    ],
+    "answer": "Kubernetes"
+  },
+  {
+    "category": "Multi Cloud",
+    "set": 3,
+    "question": "REST के लिए सबसे अच्छी तकनीक चुनें?",
+    "options": [
+      "Docker",
+      "Kubernetes",
+      "REST",
+      "Terraform"
+    ],
+    "answer": "REST"
+  },
+  {
+    "category": "Multi Cloud",
+    "set": 3,
+    "question": "Using open standards के लिए सबसे अच्छी तकनीक चुनें?",
+    "options": [
+      "Kubernetes",
+      "Using open standards",
+      "Terraform",
+      "Docker"
+    ],
+    "answer": "Using open standards"
+  },
+  {
+    "category": "Multi Cloud",
+    "set": 3,
+    "question": "Docker के लिए सबसे अच्छी तकनीक चुनें?",
+    "options": [
+      "Docker",
+      "Terraform",
+      "Kubernetes",
+      "Prometheus"
+    ],
+    "answer": "Docker"
+  },
+  {
+    "category": "Multi Cloud",
+    "set": 3,
+    "question": "SAML के लिए सबसे अच्छी तकनीक चुनें?",
+    "options": [
+      "Terraform",
+      "Docker",
+      "Kubernetes",
+      "SAML"
+    ],
+    "answer": "SAML"
+  },
+  {
+    "category": "Multi Cloud",
+    "set": 3,
+    "question": "OAuth 2.0 के लिए सबसे अच्छी तकनीक चुनें?",
+    "options": [
+      "Docker",
+      "Kubernetes",
+      "OAuth 2.0",
+      "Terraform"
+    ],
+    "answer": "OAuth 2.0"
+  },
+  {
+    "category": "Multi Cloud",
+    "set": 3,
+    "question": "IaaS के लिए सबसे अच्छी तकनीक चुनें?",
+    "options": [
+      "Kubernetes",
+      "IaaS",
+      "Terraform",
+      "Docker"
+    ],
+    "answer": "IaaS"
+  },
+  {
+    "category": "Multi Cloud",
+    "set": 3,
+    "question": "PaaS के लिए सबसे अच्छी तकनीक चुनें?",
+    "options": [
+      "PaaS",
+      "Terraform",
+      "Docker",
+      "Kubernetes"
+    ],
+    "answer": "PaaS"
+  },
+  {
+    "category": "Multi Cloud",
+    "set": 3,
+    "question": "SaaS के लिए सबसे अच्छी तकनीक चुनें?",
+    "options": [
+      "Terraform",
+      "Docker",
+      "Kubernetes",
+      "SaaS"
+    ],
+    "answer": "SaaS"
+  },
+  {
+    "category": "Multi Cloud",
+    "set": 3,
+    "question": "Centralized Monitoring के लिए सबसे अच्छी तकनीक चुनें?",
+    "options": [
+      "Docker",
+      "Kubernetes",
+      "Centralized Monitoring",
+      "Terraform"
+    ],
+    "answer": "Centralized Monitoring"
+  },
+  {
+    "category": "Multi Cloud",
+    "set": 3,
+    "question": "Centralized Logging के लिए सबसे अच्छी तकनीक चुनें?",
+    "options": [
+      "Kubernetes",
+      "Centralized Logging",
+      "Terraform",
+      "Docker"
+    ],
+    "answer": "Centralized Logging"
+  },
+  {
+    "category": "Multi Cloud",
+    "set": 3,
+    "question": "VPN के लिए सबसे अच्छी तकनीक चुनें?",
+    "options": [
+      "VPN",
+      "Terraform",
+      "Docker",
+      "Kubernetes"
+    ],
+    "answer": "VPN"
+  },
+  {
+    "category": "Multi Cloud",
+    "set": 3,
+    "question": "Direct Connect/ExpressRoute/Interconnect के लिए सबसे अच्छी तकनीक चुनें?",
+    "options": [
+      "Terraform",
+      "Docker",
+      "Kubernetes",
+      "Direct Connect/ExpressRoute/Interconnect"
+    ],
+    "answer": "Direct Connect/ExpressRoute/Interconnect"
+  },
+  {
+    "category": "Multi Cloud",
+    "set": 3,
+    "question": "DNS के लिए सबसे अच्छी तकनीक चुनें?",
+    "options": [
+      "Docker",
+      "Kubernetes",
+      "DNS",
+      "Terraform"
+    ],
+    "answer": "DNS"
+  },
+  {
+    "category": "Multi Cloud",
+    "set": 3,
+    "question": "Jenkins के लिए सबसे अच्छी तकनीक चुनें?",
+    "options": [
+      "Kubernetes",
+      "Jenkins",
+      "Terraform",
+      "Docker"
+    ],
+    "answer": "Jenkins"
+  },
+  {
+    "category": "Multi Cloud",
+    "set": 3,
+    "question": "Prometheus के लिए सबसे अच्छी तकनीक चुनें?",
+    "options": [
+      "Prometheus",
+      "Terraform",
+      "Docker",
+      "Kubernetes"
+    ],
+    "answer": "Prometheus"
+  },
+  {
+    "category": "Multi Cloud",
+    "set": 3,
+    "question": "Grafana के लिए सबसे अच्छी तकनीक चुनें?",
+    "options": [
+      "Terraform",
+      "Docker",
+      "Kubernetes",
+      "Grafana"
+    ],
+    "answer": "Grafana"
+  },
+  {
+    "category": "Multi Cloud",
+    "set": 3,
+    "question": "Least Privilege के लिए सबसे अच्छी तकनीक चुनें?",
+    "options": [
+      "Docker",
+      "Kubernetes",
+      "Least Privilege",
+      "Terraform"
+    ],
+    "answer": "Least Privilege"
+  },
+  {
+    "category": "Multi Cloud",
+    "set": 3,
+    "question": "Encryption के लिए सबसे अच्छी तकनीक चुनें?",
+    "options": [
+      "Kubernetes",
+      "Encryption",
+      "Terraform",
+      "Docker"
+    ],
+    "answer": "Encryption"
+  },
+  {
+    "category": "Multi Cloud",
+    "set": 3,
+    "question": "Redundancy के लिए सबसे अच्छी तकनीक चुनें?",
+    "options": [
+      "Redundancy",
+      "Terraform",
+      "Docker",
+      "Kubernetes"
+    ],
+    "answer": "Redundancy"
+  },
+  {
+    "category": "Multi Cloud",
+    "set": 3,
+    "question": "Active-Active के लिए सबसे अच्छी तकनीक चुनें?",
+    "options": [
+      "Terraform",
+      "Docker",
+      "Kubernetes",
+      "Active-Active"
+    ],
+    "answer": "Active-Active"
+  },
+  {
+    "category": "Multi Cloud",
+    "set": 3,
+    "question": "Cloud-agnostic architecture के लिए सबसे अच्छी तकनीक चुनें?",
+    "options": [
+      "Docker",
+      "Kubernetes",
+      "Cloud-agnostic architecture",
+      "Terraform"
+    ],
+    "answer": "Cloud-agnostic architecture"
+  },
+  {
+    "category": "Multi Cloud",
+    "set": 4,
+    "question": "Multi-Cloud के लिए सही समाधान की पहचान करें?",
+    "options": [
+      "Kubernetes",
+      "Multi-Cloud",
+      "Terraform",
+      "Docker"
+    ],
+    "answer": "Multi-Cloud"
+  },
+  {
+    "category": "Multi Cloud",
+    "set": 4,
+    "question": "Hybrid Cloud के लिए सही समाधान की पहचान करें?",
+    "options": [
+      "Hybrid Cloud",
+      "Terraform",
+      "Docker",
+      "Kubernetes"
+    ],
+    "answer": "Hybrid Cloud"
+  },
+  {
+    "category": "Multi Cloud",
+    "set": 4,
+    "question": "Terraform के लिए सही समाधान की पहचान करें?",
+    "options": [
+      "Docker",
+      "Kubernetes",
+      "Prometheus",
+      "Terraform"
+    ],
+    "answer": "Terraform"
+  },
+  {
+    "category": "Multi Cloud",
+    "set": 4,
+    "question": "Kubernetes के लिए सही समाधान की पहचान करें?",
+    "options": [
+      "Docker",
+      "Prometheus",
+      "Kubernetes",
+      "Terraform"
+    ],
+    "answer": "Kubernetes"
+  },
+  {
+    "category": "Multi Cloud",
+    "set": 4,
+    "question": "REST के लिए सही समाधान की पहचान करें?",
+    "options": [
+      "Kubernetes",
+      "REST",
+      "Terraform",
+      "Docker"
+    ],
+    "answer": "REST"
+  },
+  {
+    "category": "Multi Cloud",
+    "set": 4,
+    "question": "Using open standards के लिए सही समाधान की पहचान करें?",
+    "options": [
+      "Using open standards",
+      "Terraform",
+      "Docker",
+      "Kubernetes"
+    ],
+    "answer": "Using open standards"
+  },
+  {
+    "category": "Multi Cloud",
+    "set": 4,
+    "question": "Docker के लिए सही समाधान की पहचान करें?",
+    "options": [
+      "Terraform",
+      "Kubernetes",
+      "Prometheus",
+      "Docker"
+    ],
+    "answer": "Docker"
+  },
+  {
+    "category": "Multi Cloud",
+    "set": 4,
+    "question": "SAML के लिए सही समाधान की पहचान करें?",
+    "options": [
+      "Docker",
+      "Kubernetes",
+      "SAML",
+      "Terraform"
+    ],
+    "answer": "SAML"
+  },
+  {
+    "category": "Multi Cloud",
+    "set": 4,
+    "question": "OAuth 2.0 के लिए सही समाधान की पहचान करें?",
+    "options": [
+      "Kubernetes",
+      "OAuth 2.0",
+      "Terraform",
+      "Docker"
+    ],
+    "answer": "OAuth 2.0"
+  },
+  {
+    "category": "Multi Cloud",
+    "set": 4,
+    "question": "IaaS के लिए सही समाधान की पहचान करें?",
+    "options": [
+      "IaaS",
+      "Terraform",
+      "Docker",
+      "Kubernetes"
+    ],
+    "answer": "IaaS"
+  },
+  {
+    "category": "Multi Cloud",
+    "set": 4,
+    "question": "PaaS के लिए सही समाधान की पहचान करें?",
+    "options": [
+      "Terraform",
+      "Docker",
+      "Kubernetes",
+      "PaaS"
+    ],
+    "answer": "PaaS"
+  },
+  {
+    "category": "Multi Cloud",
+    "set": 4,
+    "question": "SaaS के लिए सही समाधान की पहचान करें?",
+    "options": [
+      "Docker",
+      "Kubernetes",
+      "SaaS",
+      "Terraform"
+    ],
+    "answer": "SaaS"
+  },
+  {
+    "category": "Multi Cloud",
+    "set": 4,
+    "question": "Centralized Monitoring के लिए सही समाधान की पहचान करें?",
+    "options": [
+      "Kubernetes",
+      "Centralized Monitoring",
+      "Terraform",
+      "Docker"
+    ],
+    "answer": "Centralized Monitoring"
+  },
+  {
+    "category": "Multi Cloud",
+    "set": 4,
+    "question": "Centralized Logging के लिए सही समाधान की पहचान करें?",
+    "options": [
+      "Centralized Logging",
+      "Terraform",
+      "Docker",
+      "Kubernetes"
+    ],
+    "answer": "Centralized Logging"
+  },
+  {
+    "category": "Multi Cloud",
+    "set": 4,
+    "question": "VPN के लिए सही समाधान की पहचान करें?",
+    "options": [
+      "Terraform",
+      "Docker",
+      "Kubernetes",
+      "VPN"
+    ],
+    "answer": "VPN"
+  },
+  {
+    "category": "Multi Cloud",
+    "set": 4,
+    "question": "Direct Connect/ExpressRoute/Interconnect के लिए सही समाधान की पहचान करें?",
+    "options": [
+      "Docker",
+      "Kubernetes",
+      "Direct Connect/ExpressRoute/Interconnect",
+      "Terraform"
+    ],
+    "answer": "Direct Connect/ExpressRoute/Interconnect"
+  },
+  {
+    "category": "Multi Cloud",
+    "set": 4,
+    "question": "DNS के लिए सही समाधान की पहचान करें?",
+    "options": [
+      "Kubernetes",
+      "DNS",
+      "Terraform",
+      "Docker"
+    ],
+    "answer": "DNS"
+  },
+  {
+    "category": "Multi Cloud",
+    "set": 4,
+    "question": "Jenkins के लिए सही समाधान की पहचान करें?",
+    "options": [
+      "Jenkins",
+      "Terraform",
+      "Docker",
+      "Kubernetes"
+    ],
+    "answer": "Jenkins"
+  },
+  {
+    "category": "Multi Cloud",
+    "set": 4,
+    "question": "Prometheus के लिए सही समाधान की पहचान करें?",
+    "options": [
+      "Terraform",
+      "Docker",
+      "Kubernetes",
+      "Prometheus"
+    ],
+    "answer": "Prometheus"
+  },
+  {
+    "category": "Multi Cloud",
+    "set": 4,
+    "question": "Grafana के लिए सही समाधान की पहचान करें?",
+    "options": [
+      "Docker",
+      "Kubernetes",
+      "Grafana",
+      "Terraform"
+    ],
+    "answer": "Grafana"
+  },
+  {
+    "category": "Multi Cloud",
+    "set": 4,
+    "question": "Least Privilege के लिए सही समाधान की पहचान करें?",
+    "options": [
+      "Kubernetes",
+      "Least Privilege",
+      "Terraform",
+      "Docker"
+    ],
+    "answer": "Least Privilege"
+  },
+  {
+    "category": "Multi Cloud",
+    "set": 4,
+    "question": "Encryption के लिए सही समाधान की पहचान करें?",
+    "options": [
+      "Encryption",
+      "Terraform",
+      "Docker",
+      "Kubernetes"
+    ],
+    "answer": "Encryption"
+  },
+  {
+    "category": "Multi Cloud",
+    "set": 4,
+    "question": "Redundancy के लिए सही समाधान की पहचान करें?",
+    "options": [
+      "Terraform",
+      "Docker",
+      "Kubernetes",
+      "Redundancy"
+    ],
+    "answer": "Redundancy"
+  },
+  {
+    "category": "Multi Cloud",
+    "set": 4,
+    "question": "Active-Active के लिए सही समाधान की पहचान करें?",
+    "options": [
+      "Docker",
+      "Kubernetes",
+      "Active-Active",
+      "Terraform"
+    ],
+    "answer": "Active-Active"
+  },
+  {
+    "category": "Multi Cloud",
+    "set": 4,
+    "question": "Cloud-agnostic architecture के लिए सही समाधान की पहचान करें?",
+    "options": [
+      "Kubernetes",
+      "Cloud-agnostic architecture",
+      "Terraform",
+      "Docker"
+    ],
+    "answer": "Cloud-agnostic architecture"
+  },
+  {
+    "category": "Multi Cloud",
+    "set": 5,
+    "question": "मल्टी-क्लाउड रणनीति क्या है?",
+    "options": [
+      "Using only on-premises servers",
+      "Using services from more than one cloud provider",
+      "Using one data center",
+      "Using only one public cloud"
+    ],
+    "answer": "Using services from more than one cloud provider"
+  },
+  {
+    "category": "Multi Cloud",
+    "set": 5,
+    "question": "मल्टी-क्लाउड का प्रमुख लाभ क्या है?",
+    "options": [
+      "No need for security",
+      "Reduced vendor lock-in",
+      "Automatic zero cost",
+      "A single bill with no limits"
+    ],
+    "answer": "Reduced vendor lock-in"
+  },
+  {
+    "category": "Multi Cloud",
+    "set": 5,
+    "question": "कौन सा टूल एक वर्कफ़्लो के साथ कई क्लाउडों पर बुनियादी ढांचे का प्रावधान करता है?",
+    "options": [
+      "Excel",
+      "Terraform",
+      "Wireshark",
+      "Notepad"
+    ],
+    "answer": "Terraform"
+  },
+  {
+    "category": "Multi Cloud",
+    "set": 5,
+    "question": "मल्टी-क्लाउड डिज़ाइन में कुबेरनेट्स क्यों उपयोगी है?",
+    "options": [
+      "It only runs on one provider",
+      "It removes networking",
+      "It replaces all cloud providers",
+      "It provides a portable container platform"
+    ],
+    "answer": "It provides a portable container platform"
+  },
+  {
+    "category": "Multi Cloud",
+    "set": 5,
+    "question": "वेंडर लॉक-इन क्या है?",
+    "options": [
+      "Dependence on one provider that makes switching difficult",
+      "A backup method",
+      "A license key",
+      "A type of firewall"
+    ],
+    "answer": "Dependence on one provider that makes switching difficult"
+  },
+  {
+    "category": "Multi Cloud",
+    "set": 5,
+    "question": "बादलों के बीच डेटा ले जाने पर कौन सी लागत बढ़ सकती है?",
+    "options": [
+      "Printer cost",
+      "Keyboard cost",
+      "Data egress charges",
+      "Domain renewal only"
+    ],
+    "answer": "Data egress charges"
+  },
+  {
+    "category": "Multi Cloud",
+    "set": 5,
+    "question": "डेटा ग्रेविटी क्या है?",
+    "options": [
+      "A storage protocol",
+      "Large data sets attract applications and services toward them",
+      "Data physically weighs more",
+      "Encryption strength"
+    ],
+    "answer": "Large data sets attract applications and services toward them"
+  },
+  {
+    "category": "Multi Cloud",
+    "set": 5,
+    "question": "कौन सा दृष्टिकोण कई बादलों पर एकल साइन-ऑन देता है?",
+    "options": [
+      "Centralized identity federation",
+      "Separate passwords everywhere",
+      "Shared admin accounts",
+      "Local user files"
+    ],
+    "answer": "Centralized identity federation"
+  },
+  {
+    "category": "Multi Cloud",
+    "set": 5,
+    "question": "फिनऑप्स किस पर ध्यान केंद्रित करता है?",
+    "options": [
+      "Designing logos",
+      "Managing and optimizing cloud costs",
+      "Printing reports",
+      "Writing firmware"
+    ],
+    "answer": "Managing and optimizing cloud costs"
+  },
+  {
+    "category": "Multi Cloud",
+    "set": 5,
+    "question": "कोड के रूप में नीति क्या है?",
+    "options": [
+      "Defining compliance rules in machine-readable files",
+      "A hardware appliance",
+      "Writing emails",
+      "Printing policies on paper"
+    ],
+    "answer": "Defining compliance rules in machine-readable files"
+  },
+  {
+    "category": "Multi Cloud",
+    "set": 5,
+    "question": "कौन सा सर्विस-मेश लाभ मल्टी-क्लाउड में मदद करता है?",
+    "options": [
+      "Faster monitors",
+      "Consistent traffic control and security between services",
+      "Cheaper keyboards",
+      "Offline backups only"
+    ],
+    "answer": "Consistent traffic control and security between services"
+  },
+  {
+    "category": "Multi Cloud",
+    "set": 5,
+    "question": "कौन सा प्रोजेक्ट आपको सभी प्रदाताओं में कुबेरनेट्स एपीआई के माध्यम से क्लाउड संसाधनों का प्रबंधन करने देता है?",
+    "options": [
+      "Nginx",
+      "Wireshark",
+      "Redis",
+      "Crossplane"
+    ],
+    "answer": "Crossplane"
+  },
+  {
+    "category": "Multi Cloud",
+    "set": 5,
+    "question": "क्लाउड-अज्ञेयवादी डिज़ाइन क्या है?",
+    "options": [
+      "Using a single vendor tool",
+      "Avoiding the internet",
+      "Using only VMs",
+      "Building applications that can run on any provider"
+    ],
+    "answer": "Building applications that can run on any provider"
+  },
+  {
+    "category": "Multi Cloud",
+    "set": 5,
+    "question": "मल्टी-क्लाउड में केंद्रीकृत अवलोकनशीलता क्यों महत्वपूर्ण है?",
+    "options": [
+      "It removes the need for alerts",
+      "It encrypts passwords",
+      "It deletes old data",
+      "It gives one view of logs, metrics and traces"
+    ],
+    "answer": "It gives one view of logs, metrics and traces"
+  },
+  {
+    "category": "Multi Cloud",
+    "set": 5,
+    "question": "मल्टी-क्लाउड सेटअप में GitOps क्या है?",
+    "options": [
+      "Using Git as the source of truth for deployments",
+      "Storing only photos in Git",
+      "Replacing Linux",
+      "Manually deploying with SSH"
+    ],
+    "answer": "Using Git as the source of truth for deployments"
+  },
+  {
+    "category": "Multi Cloud",
+    "set": 5,
+    "question": "कौन सा कारक डेटा संप्रभुता के लिए मल्टी-क्लाउड विकल्प को प्रेरित कर सकता है?",
+    "options": [
+      "Using a bigger monitor",
+      "Keeping data in specific countries or regions",
+      "Choosing the cheapest keyboard",
+      "Using more passwords"
+    ],
+    "answer": "Keeping data in specific countries or regions"
+  },
+  {
+    "category": "Multi Cloud",
+    "set": 5,
+    "question": "मल्टी-क्लाउड आपदा से उबरने में कैसे मदद करता है?",
+    "options": [
+      "It guarantees no outages ever",
+      "Workloads can fail over to another provider",
+      "It replaces monitoring",
+      "It removes the need for backups"
+    ],
+    "answer": "Workloads can fail over to another provider"
+  },
+  {
+    "category": "Multi Cloud",
+    "set": 5,
+    "question": "मल्टी-क्लाउड की चुनौती क्या है?",
+    "options": [
+      "Increased operational complexity",
+      "Fewer providers to learn",
+      "Lower skill needs",
+      "No need for networking"
+    ],
+    "answer": "Increased operational complexity"
+  },
+  {
+    "category": "Multi Cloud",
+    "set": 5,
+    "question": "मल्टी-क्लाउड में एक अमूर्त परत क्या है?",
+    "options": [
+      "A layer hiding provider differences from applications",
+      "A hard drive",
+      "A backup tape",
+      "A physical cable"
+    ],
+    "answer": "A layer hiding provider differences from applications"
+  },
+  {
+    "category": "Multi Cloud",
+    "set": 5,
+    "question": "एप्लिकेशन को पैकेज करने के लिए किस टूल का उपयोग किया जाता है ताकि वे किसी भी क्लाउड पर समान रूप से चल सकें?",
+    "options": [
+      "Floppy disks",
+      "Containers",
+      "Printers",
+      "Spreadsheets"
+    ],
+    "answer": "Containers"
+  },
+  {
+    "category": "Multi Cloud",
+    "set": 5,
+    "question": "बादलों के पार एपीआई गेटवे का उपयोग क्यों करें?",
+    "options": [
+      "To expose and secure APIs consistently",
+      "To print logs",
+      "To store files only",
+      "To replace DNS"
+    ],
+    "answer": "To expose and secure APIs consistently"
+  },
+  {
+    "category": "Multi Cloud",
+    "set": 5,
+    "question": "बादल फटना क्या है?",
+    "options": [
+      "A deleted cluster",
+      "A billing error",
+      "Overflowing workload to another cloud during peak demand",
+      "A hardware failure"
+    ],
+    "answer": "Overflowing workload to another cloud during peak demand"
+  },
+  {
+    "category": "Multi Cloud",
+    "set": 5,
+    "question": "कौन सी टीम प्रैक्टिस प्रदाताओं के बीच तैनाती को मानकीकृत करने में मदद करती है?",
+    "options": [
+      "Emailing scripts",
+      "Infrastructure as Code",
+      "Manual clicking only",
+      "Verbal instructions"
+    ],
+    "answer": "Infrastructure as Code"
+  },
+  {
+    "category": "Multi Cloud",
+    "set": 5,
+    "question": "कौन सा मीट्रिक प्रदाताओं के बीच लागतों की निष्पक्ष तुलना करने में मदद करता है?",
+    "options": [
+      "Keyboard layout",
+      "Screen resolution",
+      "Mouse speed",
+      "Total cost of ownership"
+    ],
+    "answer": "Total cost of ownership"
+  },
+  {
+    "category": "Multi Cloud",
+    "set": 5,
+    "question": "कौन सा डिज़ाइन सिद्धांत एकल प्रदाता आउटेज के प्रभाव को कम करता है?",
+    "options": [
+      "Disabling backups",
+      "Using one region only",
+      "Using one account only",
+      "Avoiding single points of failure"
+    ],
+    "answer": "Avoiding single points of failure"
+  }
 ]

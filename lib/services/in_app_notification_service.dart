@@ -290,12 +290,12 @@ class InAppNotificationService {
       ),
 
       AppNotification(
-        id: 'games_v2',
-        title: 'Tap Away Arrows: 100 New Levels! 🎮',
+        id: 'board_games_v1',
+        title: 'Classic Board Games Are Here! 🎲',
         message:
-            'Clear arrows with an open path to the edge. You get three hearts and earn 100 points for each level cleared.',
+            'Play Tic-Tac-Toe against the computer, challenge a friend in Connect Four, or race three bots in Ludo.',
         type: AppNotificationType.newGame,
-        createdAt: DateTime(2026, 10, 9, 11, 30),
+        createdAt: DateTime(2026, 10, 16, 12, 0),
         actionText: 'Play Now',
         actionRoute: 'games',
       ),

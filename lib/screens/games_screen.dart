@@ -5,12 +5,14 @@ import 'scratch_card_screen.dart';
 import 'spin_wheel_screen.dart';
 import 'mystery_deal_screen.dart';
 import 'memory_match_screen.dart';
-import 'word_guess_screen.dart';
+import 'word_guess_levels_screen.dart';
 import 'higher_lower_screen.dart';
 import 'true_false_blitz_screen.dart';
 import 'command_match_screen.dart';
 import 'port_master_screen.dart';
-import 'arrow_puzzle_screen.dart';
+import 'tic_tac_toe_screen.dart';
+import 'connect_four_screen.dart';
+import 'ludo_game_screen.dart';
 
 class GamesScreen extends StatelessWidget {
   const GamesScreen({super.key});
@@ -201,7 +203,7 @@ class GamesScreen extends StatelessWidget {
                               Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                  builder: (_) => const WordGuessScreen(),
+                                  builder: (_) => const WordGuessLevelsScreen(),
                                 ),
                               );
                             },
@@ -276,18 +278,51 @@ class GamesScreen extends StatelessWidget {
                           ),
 
                           // =================================
-                          // TAP AWAY ARROWS (100 LEVELS)
+                          // TIC-TAC-TOE
                           // =================================
                           _GameTile(
-                            icon: '↗️',
-                            title: 'Tap Away Arrows: 100 Levels 🆕',
-                            description:
-                                'Clear the board. Earn 100 points per level.',
+                            icon: '⭕',
+                            title: 'Tic-Tac-Toe',
+                            description: 'Play O/X against the computer.',
                             onTap: () {
                               Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                  builder: (_) => const ArrowPuzzleScreen(),
+                                  builder: (_) => const TicTacToeScreen(),
+                                ),
+                              );
+                            },
+                          ),
+
+                          // =================================
+                          // CONNECT FOUR
+                          // =================================
+                          _GameTile(
+                            icon: '🔴',
+                            title: 'Connect Four',
+                            description: 'Drop four discs in a row to win.',
+                            onTap: () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (_) => const ConnectFourScreen(),
+                                ),
+                              );
+                            },
+                          ),
+
+                          // =================================
+                          // LUDO
+                          // =================================
+                          _GameTile(
+                            icon: '🎲',
+                            title: 'Ludo',
+                            description: 'Race your pieces against three bots.',
+                            onTap: () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (_) => const LudoGameScreen(),
                                 ),
                               );
                             },
@@ -314,15 +349,13 @@ class _GameTile extends StatelessWidget {
   final String icon;
   final String title;
   final String description;
-  final VoidCallback? onTap;
-  final bool locked;
+  final VoidCallback onTap;
 
   const _GameTile({
     required this.icon,
     required this.title,
     required this.description,
-    this.onTap,
-    this.locked = false,
+    required this.onTap,
   });
 
   @override
@@ -331,11 +364,11 @@ class _GameTile extends StatelessWidget {
     final ColorScheme colorScheme = theme.colorScheme;
 
     return Card(
-      elevation: locked ? 1 : 4,
+      elevation: 4,
       clipBehavior: Clip.antiAlias, // ✅ CRITICAL: Clips content to card bounds
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
       child: InkWell(
-        onTap: locked ? null : onTap,
+        onTap: onTap,
         borderRadius: BorderRadius.circular(20),
         child: LayoutBuilder(
           builder: (context, constraints) {
@@ -402,41 +435,11 @@ class _GameTile extends StatelessWidget {
               child: Column(
                 children: [
                   // =============================================
-                  // LOCK BADGE
+                  // Keep game icons and titles aligned in the card grid.
                   // =============================================
                   Align(
                     alignment: Alignment.topRight,
-                    child: locked
-                        ? Container(
-                            padding: const EdgeInsets.symmetric(
-                              horizontal: 8,
-                              vertical: 4,
-                            ),
-                            decoration: BoxDecoration(
-                              color: colorScheme.surfaceContainerHighest,
-                              borderRadius: BorderRadius.circular(20),
-                            ),
-                            child: Row(
-                              mainAxisSize: MainAxisSize.min,
-                              children: [
-                                Icon(
-                                  Icons.lock_outline,
-                                  size: 13,
-                                  color: colorScheme.onSurfaceVariant,
-                                ),
-                                const SizedBox(width: 3),
-                                Text(
-                                  'Soon',
-                                  style: TextStyle(
-                                    fontSize: 10,
-                                    fontWeight: FontWeight.bold,
-                                    color: colorScheme.onSurfaceVariant,
-                                  ),
-                                ),
-                              ],
-                            ),
-                          )
-                        : const SizedBox(height: 22),
+                    child: const SizedBox(height: 22),
                   ),
 
                   const Spacer(),
@@ -491,33 +494,19 @@ class _GameTile extends StatelessWidget {
                   const Spacer(),
 
                   // =============================================
-                  // PLAY / COMING SOON
+                  // PLAY
                   // =============================================
                   SizedBox(
                     width: double.infinity,
                     height: 38,
-                    child: locked
-                        ? OutlinedButton.icon(
-                            onPressed: null,
-                            icon: const Icon(Icons.lock_outline, size: 17),
-                            label: const Text(
-                              'Coming Soon',
-                              maxLines: 1,
-                              overflow: TextOverflow.ellipsis,
-                              style: TextStyle(fontSize: 12),
-                            ),
-                          )
-                        : ElevatedButton.icon(
-                            onPressed: onTap,
-                            icon: const Icon(
-                              Icons.play_arrow_rounded,
-                              size: 20,
-                            ),
-                            label: const Text(
-                              'Play',
-                              style: TextStyle(fontWeight: FontWeight.bold),
-                            ),
-                          ),
+                    child: ElevatedButton.icon(
+                      onPressed: onTap,
+                      icon: const Icon(Icons.play_arrow_rounded, size: 20),
+                      label: const Text(
+                        'Play',
+                        style: TextStyle(fontWeight: FontWeight.bold),
+                      ),
+                    ),
                   ),
                 ],
               ),

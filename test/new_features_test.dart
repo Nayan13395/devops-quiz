@@ -5,10 +5,14 @@ import 'package:devops_quiz/language_provider.dart';
 import 'package:devops_quiz/models/app_theme.dart';
 import 'package:devops_quiz/screens/certificates_screen.dart';
 import 'package:devops_quiz/screens/arrow_puzzle_screen.dart';
+import 'package:devops_quiz/screens/connect_four_screen.dart';
 import 'package:devops_quiz/screens/command_match_screen.dart';
 import 'package:devops_quiz/screens/games_screen.dart';
+import 'package:devops_quiz/screens/ludo_game_screen.dart';
 import 'package:devops_quiz/screens/port_master_screen.dart';
+import 'package:devops_quiz/screens/tic_tac_toe_screen.dart';
 import 'package:devops_quiz/screens/true_false_blitz_screen.dart';
+import 'package:devops_quiz/screens/word_guess_levels_screen.dart';
 import 'package:devops_quiz/services/achievement_service.dart';
 import 'package:devops_quiz/services/arrow_puzzle_service.dart';
 import 'package:devops_quiz/services/certificate_service.dart';
@@ -19,6 +23,7 @@ import 'package:devops_quiz/services/question_service.dart';
 import 'package:devops_quiz/services/rate_prompt_service.dart';
 import 'package:devops_quiz/services/point_service.dart';
 import 'package:devops_quiz/services/whats_new_service.dart';
+import 'package:devops_quiz/services/word_guess_level_service.dart';
 import 'package:devops_quiz/widgets/festival_celebration.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -88,6 +93,95 @@ void main() {
       }
     }
   });
+
+  test('Word Guess levels are unique and ordered from easy to hard', () {
+    final levels = WordGuessLevelService.levels;
+    final words = levels.map((level) => level.word).toSet();
+
+    expect(levels, hasLength(100));
+    expect(words, hasLength(100));
+    expect(levels.first.word, 'GIT');
+    expect(levels[1].word, 'AWS');
+    expect(levels.last.word, 'KUBERNETES');
+    expect(levels.first.difficulty, WordGuessDifficulty.easy);
+    expect(levels[33].difficulty, WordGuessDifficulty.easy);
+    expect(levels[34].difficulty, WordGuessDifficulty.medium);
+    expect(levels[65].difficulty, WordGuessDifficulty.medium);
+    expect(levels[66].difficulty, WordGuessDifficulty.medium);
+    expect(levels[67].difficulty, WordGuessDifficulty.hard);
+    expect(levels.last.difficulty, WordGuessDifficulty.hard);
+    expect(levels.every((level) => level.hint.isNotEmpty), isTrue);
+  });
+
+  testWidgets('Word Guess advances and awards 100 points without hints', (
+    tester,
+  ) async {
+    SharedPreferences.setMockInitialValues({});
+    await tester.pumpWidget(
+      gameApp(const WordGuessLevelsScreen(), textScale: 1),
+    );
+    await tester.pumpAndSettle();
+
+    expect(find.text('Level 1/100'), findsOneWidget);
+    await tester.tap(find.byKey(const ValueKey('word-guess-key-I')));
+    await tester.tap(find.byKey(const ValueKey('word-guess-enter')));
+    await tester.pumpAndSettle();
+
+    expect(find.text('Level 1 Complete!'), findsOneWidget);
+    expect(await PointService.getTotalPoints(), 100);
+    await tester.tap(find.text('Next Level'));
+    await tester.pumpAndSettle();
+    expect(find.text('Level 2/100'), findsOneWidget);
+  });
+
+  testWidgets('Word Guess hint reveals a letter and deducts 20 points', (
+    tester,
+  ) async {
+    SharedPreferences.setMockInitialValues({});
+    await tester.pumpWidget(
+      gameApp(const WordGuessLevelsScreen(), textScale: 1),
+    );
+    await tester.pumpAndSettle();
+
+    await tester.tap(find.byKey(const ValueKey('word-guess-hint')));
+    await tester.tap(find.byKey(const ValueKey('word-guess-enter')));
+    await tester.pumpAndSettle();
+
+    expect(find.text('Level 1 Complete!'), findsOneWidget);
+    expect(
+      find.textContaining('You earned 80 points after 1 hint.'),
+      findsOneWidget,
+    );
+    expect(await PointService.getTotalPoints(), 80);
+  });
+
+  test(
+    'Linux Set 5 has 25 unique questions not repeated in earlier sets',
+    () async {
+      final data =
+          jsonDecode(
+                await rootBundle.loadString(
+                  'assets/questions/Linux/linux_en.json',
+                ),
+              )
+              as List;
+      final questions = data.cast<Map<String, dynamic>>();
+      String normalize(String question) =>
+          question.trim().replaceAll(RegExp(r'\s+'), ' ').toLowerCase();
+      final setFive = questions.where((question) => question['set'] == 5);
+      final setFiveQuestions = setFive
+          .map((question) => normalize(question['question'] as String))
+          .toSet();
+      final earlierQuestions = questions
+          .where((question) => question['set'] != 5)
+          .map((question) => normalize(question['question'] as String))
+          .toSet();
+
+      expect(setFive, hasLength(25));
+      expect(setFiveQuestions, hasLength(25));
+      expect(setFiveQuestions.intersection(earlierQuestions), isEmpty);
+    },
+  );
 
   test('Tap Away generates 100 unique levels that can all be cleared', () {
     final levels = ArrowPuzzleService.levels;
@@ -526,7 +620,7 @@ void main() {
           'certificate_Ansible',
           'certificates_v1',
           'new_sets_v1',
-          'games_v2',
+          'board_games_v1',
           'themes_v2',
           'languages_v1',
           'milestones_v1',
@@ -794,6 +888,15 @@ void main() {
       'Tap a command, then tap its meaning.',
     ),
     ('port master', const PortMasterScreen(), 'Default port of'),
+    ('tic-tac-toe', const TicTacToeScreen(), 'Your turn'),
+    ('connect four', const ConnectFourScreen(), 'Red to move'),
+    ('ludo', const LudoGameScreen(), 'Ludo'),
+  ];
+
+  final dailyLimitedGames = <Widget>[
+    const TrueFalseBlitzScreen(),
+    const CommandMatchScreen(),
+    const PortMasterScreen(),
   ];
 
   for (final size in [
@@ -819,7 +922,7 @@ void main() {
     });
   }
 
-  testWidgets('games hub lists the three new games', (tester) async {
+  testWidgets('games hub lists board games and omits Tap Away', (tester) async {
     tester.view.devicePixelRatio = 1;
     tester.view.physicalSize = const Size(1280, 900);
     addTearDown(tester.view.resetPhysicalSize);
@@ -833,7 +936,9 @@ void main() {
       'True or False Blitz 🆕',
       'Command Match 🆕',
       'Port Master 🆕',
-      'Tap Away Arrows: 100 Levels 🆕',
+      'Tic-Tac-Toe',
+      'Connect Four',
+      'Ludo',
     ]) {
       await tester.scrollUntilVisible(
         find.text(title),
@@ -842,6 +947,34 @@ void main() {
       );
       expect(find.text(title), findsOneWidget);
     }
+    expect(find.text('Tap Away Arrows: 100 Levels 🆕'), findsNothing);
+    expect(tester.takeException(), isNull);
+  });
+
+  testWidgets('Tic-Tac-Toe responds with a computer move', (tester) async {
+    SharedPreferences.setMockInitialValues({});
+    await tester.pumpWidget(gameApp(const TicTacToeScreen(), textScale: 1));
+    await tester.pumpAndSettle();
+
+    await tester.tap(find.byKey(const ValueKey('tic-tac-toe-cell-0')));
+    await tester.pump();
+
+    expect(find.text('O'), findsOneWidget);
+    expect(find.text('Your turn'), findsOneWidget);
+    expect(tester.takeException(), isNull);
+  });
+
+  testWidgets('Connect Four detects a vertical four-disc win', (tester) async {
+    SharedPreferences.setMockInitialValues({});
+    await tester.pumpWidget(gameApp(const ConnectFourScreen(), textScale: 1));
+    await tester.pumpAndSettle();
+
+    for (final column in [0, 1, 0, 1, 0, 1, 0]) {
+      await tester.tap(find.byKey(ValueKey('connect-four-cell-$column')));
+      await tester.pump();
+    }
+
+    expect(find.text('Red wins!'), findsOneWidget);
     expect(tester.takeException(), isNull);
   });
 
@@ -854,7 +987,7 @@ void main() {
       'port_master_last_played': today,
     });
 
-    for (final (_, screen, _) in newGames) {
+    for (final screen in dailyLimitedGames) {
       await tester.pumpWidget(gameApp(screen));
       await tester.pumpAndSettle();
 

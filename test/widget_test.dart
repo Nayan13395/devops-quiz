@@ -10,7 +10,7 @@ import 'package:devops_quiz/screens/mystery_deal_screen.dart';
 import 'package:devops_quiz/screens/notification_screen.dart';
 import 'package:devops_quiz/screens/scratch_card_screen.dart';
 import 'package:devops_quiz/screens/spin_wheel_screen.dart';
-import 'package:devops_quiz/screens/word_guess_screen.dart';
+import 'package:devops_quiz/screens/word_guess_levels_screen.dart';
 import 'package:devops_quiz/services/daily_login_bonus_service.dart';
 import 'package:devops_quiz/services/in_app_notification_service.dart';
 import 'package:devops_quiz/widgets/category_button.dart';
@@ -98,6 +98,22 @@ void main() {
     expect(tester.takeException(), isNull);
 
     await tester.pumpWidget(const SizedBox.shrink());
+  });
+
+  testWidgets('memory match uses the DevOps logo on every card back', (
+    tester,
+  ) async {
+    SharedPreferences.setMockInitialValues({});
+    await tester.pumpWidget(responsiveGameApp(const MemoryMatchScreen()));
+    await tester.pump();
+
+    for (var second = 0; second < 5; second++) {
+      await tester.pump(const Duration(seconds: 1));
+    }
+
+    expect(find.byType(Image), findsNWidgets(8));
+    expect(find.byIcon(Icons.help_outline_rounded), findsNothing);
+    expect(tester.takeException(), isNull);
   });
 
   test(
@@ -318,7 +334,7 @@ void main() {
     ('lucky slots', const LuckySlotScreen()),
     ('mystery deal', const MysteryDealScreen()),
     ('memory match', const MemoryMatchScreen()),
-    ('word guess', const WordGuessScreen()),
+    ('word guess', const WordGuessLevelsScreen()),
     ('higher or lower', const HigherLowerScreen()),
   ];
 
@@ -408,6 +424,12 @@ void main() {
     await tester.pumpWidget(const MaterialApp(home: NotificationScreen()));
     await tester.pumpAndSettle();
 
+    await tester.scrollUntilVisible(
+      find.text('Claim Reward'),
+      240,
+      scrollable: find.byType(Scrollable).first,
+    );
+    await tester.pumpAndSettle();
     await tester.tap(find.text('Claim Reward'));
     await tester.pumpAndSettle();
 
