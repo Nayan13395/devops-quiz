@@ -9,6 +9,12 @@ class AppLocalizationsEn extends AppLocalizations {
   AppLocalizationsEn([String locale = 'en']) : super(locale);
 
   @override
+  String get certificates => 'Certificates';
+
+  @override
+  String get whatsNew => 'What\'s New';
+
+  @override
   String get settings => 'Settings';
 
   @override
@@ -86,6 +92,9 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get contact => 'Contact';
+
+  @override
+  String get learning => 'Learning';
 
   @override
   String get linkedIn => 'LinkedIn';

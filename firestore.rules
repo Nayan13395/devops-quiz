@@ -1,0 +1,19 @@
+rules_version = '2';
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+    match /dailyLeaderboards/{date}/players/{uid} {
+      allow read: if request.auth != null;
+      allow write: if false;
+    }
+
+    match /users/{uid}/leaderboardRewards/{date} {
+      allow read: if request.auth != null && request.auth.uid == uid;
+      allow write: if false;
+    }
+
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
+}

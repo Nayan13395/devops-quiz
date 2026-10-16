@@ -3,10 +3,14 @@ import 'package:share_plus/share_plus.dart';
 
 import '../l10n/app_localizations.dart';
 import '../models/question.dart';
+import '../services/certificate_service.dart';
+import '../services/question_service.dart';
 import '../services/quiz_pdf_service.dart';
+import '../services/rate_prompt_service.dart';
 import '../services/user_profile_service.dart';
 import '../widgets/app_drawer.dart';
 import 'category_screen.dart';
+import 'certificates_screen.dart';
 import 'quiz_screen.dart';
 
 class ResultScreen extends StatelessWidget {
@@ -21,6 +25,9 @@ class ResultScreen extends StatelessWidget {
   final Map<int, List<String>> displayedOptions;
   final Set<int> timedOutQuestions;
 
+  /// Set when this quiz completed the last missing set of a category.
+  final CertificateInfo? newCertificate;
+
   const ResultScreen({
     super.key,
     required this.score,
@@ -32,6 +39,7 @@ class ResultScreen extends StatelessWidget {
     required this.userAnswers,
     required this.displayedOptions,
     required this.timedOutQuestions,
+    this.newCertificate,
   });
 
   // =========================================================
@@ -260,6 +268,14 @@ class ResultScreen extends StatelessWidget {
               constraints: const BoxConstraints(maxWidth: 620),
               child: Column(
                 children: [
+                  // =========================================
+                  // CERTIFICATE / RATING PROMPTS
+                  // =========================================
+                  _ResultEffects(
+                    newCertificate: newCertificate,
+                    category: category,
+                  ),
+
                   // =========================================
                   // RESULT EMOJI
                   // =========================================
@@ -577,6 +593,49 @@ class ResultScreen extends StatelessWidget {
                   const SizedBox(height: 14),
 
                   // =========================================
+                  // CERTIFICATE EARNED
+                  // =========================================
+                  if (newCertificate != null) ...[
+                    _CertificateBanner(info: newCertificate!),
+
+                    const SizedBox(height: 14),
+                  ],
+
+                  // =========================================
+                  // NEXT SET
+                  // =========================================
+                  if (QuestionService.categoryFiles.containsKey(category) &&
+                      setNumber < QuestionService.setsPerCategory) ...[
+                    SizedBox(
+                      width: double.infinity,
+                      height: 52,
+                      child: FilledButton.icon(
+                        onPressed: () {
+                          Navigator.pushReplacement(
+                            context,
+                            MaterialPageRoute(
+                              builder: (_) => QuizScreen(
+                                category: category,
+                                setNumber: setNumber + 1,
+                              ),
+                            ),
+                          );
+                        },
+                        icon: const Icon(Icons.skip_next_rounded),
+                        label: Text(
+                          'Next: Set ${setNumber + 1}',
+                          style: const TextStyle(
+                            fontSize: 16,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                      ),
+                    ),
+
+                    const SizedBox(height: 12),
+                  ],
+
+                  // =========================================
                   // RESTART QUIZ
                   // =========================================
                   SizedBox(
@@ -626,6 +685,136 @@ class ResultScreen extends StatelessWidget {
             ),
           ),
         ),
+      ),
+    );
+  }
+}
+
+// ============================================================
+// POST-RESULT PROMPTS (certificate dialog, then rating request)
+// ============================================================
+
+class _ResultEffects extends StatefulWidget {
+  final CertificateInfo? newCertificate;
+  final String category;
+
+  const _ResultEffects({required this.newCertificate, required this.category});
+
+  @override
+  State<_ResultEffects> createState() => _ResultEffectsState();
+}
+
+class _ResultEffectsState extends State<_ResultEffects> {
+  @override
+  void initState() {
+    super.initState();
+
+    WidgetsBinding.instance.addPostFrameCallback((_) => _run());
+  }
+
+  Future<void> _run() async {
+    // Let the user see the score before anything pops up.
+    await Future<void>.delayed(const Duration(milliseconds: 1500));
+
+    if (!mounted) return;
+
+    final CertificateInfo? certificate = widget.newCertificate;
+
+    if (certificate != null) {
+      final bool? view = await showDialog<bool>(
+        context: context,
+        builder: (dialogContext) => AlertDialog(
+          icon: const Text('🎓', style: TextStyle(fontSize: 48)),
+          title: const Text('Certificate earned!', textAlign: TextAlign.center),
+          content: Text(
+            'You completed all ${CertificateService.setsRequired} sets of '
+            '${certificate.category}. Your certificate is ready!',
+            textAlign: TextAlign.center,
+          ),
+          actionsAlignment: MainAxisAlignment.center,
+          actions: [
+            TextButton(
+              onPressed: () => Navigator.pop(dialogContext, false),
+              child: const Text('Later'),
+            ),
+            FilledButton(
+              onPressed: () => Navigator.pop(dialogContext, true),
+              child: const Text('View certificate'),
+            ),
+          ],
+        ),
+      );
+
+      if (!mounted) return;
+
+      if (view == true) {
+        final String? name = await resolveCertificateHolderName(context);
+
+        if (name == null || !mounted) return;
+
+        await Navigator.push(
+          context,
+          MaterialPageRoute(
+            builder: (_) =>
+                CertificateDetailScreen(info: certificate, holderName: name),
+          ),
+        );
+
+        return;
+      }
+    }
+
+    if (!mounted) return;
+
+    await RatePromptService.maybePrompt(context);
+  }
+
+  @override
+  Widget build(BuildContext context) => const SizedBox.shrink();
+}
+
+class _CertificateBanner extends StatelessWidget {
+  final CertificateInfo info;
+
+  const _CertificateBanner({required this.info});
+
+  @override
+  Widget build(BuildContext context) {
+    final ColorScheme colors = Theme.of(context).colorScheme;
+
+    return Container(
+      width: double.infinity,
+      padding: const EdgeInsets.all(16),
+      decoration: BoxDecoration(
+        color: colors.tertiaryContainer,
+        borderRadius: BorderRadius.circular(18),
+      ),
+      child: Column(
+        children: [
+          Text(
+            '🎓 ${info.category} certificate unlocked!',
+            textAlign: TextAlign.center,
+            style: const TextStyle(fontSize: 17, fontWeight: FontWeight.bold),
+          ),
+          const SizedBox(height: 10),
+          FilledButton.icon(
+            onPressed: () async {
+              final String? name = await resolveCertificateHolderName(context);
+
+              if (name == null || !context.mounted) return;
+
+              await Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (_) =>
+                      CertificateDetailScreen(info: info, holderName: name),
+                ),
+              );
+            },
+            icon: const Icon(Icons.workspace_premium),
+            label: const Text('View certificate'),
+          ),
+        ],
       ),
     );
   }

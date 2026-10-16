@@ -9,6 +9,12 @@ class AppLocalizationsHi extends AppLocalizations {
   AppLocalizationsHi([String locale = 'hi']) : super(locale);
 
   @override
+  String get certificates => 'प्रमाणपत्र';
+
+  @override
+  String get whatsNew => 'नया क्या है';
+
+  @override
   String get settings => 'सेटिंग्स';
 
   @override
@@ -86,6 +92,9 @@ class AppLocalizationsHi extends AppLocalizations {
 
   @override
   String get contact => 'संपर्क';
+
+  @override
+  String get learning => 'सीखें';
 
   @override
   String get linkedIn => 'लिंक्डइन';

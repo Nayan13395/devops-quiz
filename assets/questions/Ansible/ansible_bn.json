@@ -1,0 +1,902 @@
+[
+  {
+    "category": "Ansible",
+    "set": 1,
+    "question": "Ansible প্রাথমিকভাবে কি জন্য ব্যবহৃত হয়?",
+    "options": [
+      "Configuration Management",
+      "Containerization",
+      "Database Management",
+      "Monitoring"
+    ],
+    "answer": "Configuration Management"
+  },
+  {
+    "category": "Ansible",
+    "set": 1,
+    "question": "Ansible কোন ভাষায় লেখা হয়?",
+    "options": [
+      "Python",
+      "Java",
+      "Go",
+      "Ruby"
+    ],
+    "answer": "Python"
+  },
+  {
+    "category": "Ansible",
+    "set": 1,
+    "question": "কোন ফাইলে Ansible-এ পরিচালিত হোস্ট রয়েছে?",
+    "options": [
+      "Inventory File",
+      "Playbook",
+      "Role",
+      "Module"
+    ],
+    "answer": "Inventory File"
+  },
+  {
+    "category": "Ansible",
+    "set": 1,
+    "question": "ডিফল্ট ইনভেন্টরি ফাইল অবস্থান কি?",
+    "options": [
+      "/etc/ansible/hosts",
+      "/etc/hosts",
+      "/ansible/hosts",
+      "/usr/ansible/hosts"
+    ],
+    "answer": "/etc/ansible/hosts"
+  },
+  {
+    "category": "Ansible",
+    "set": 1,
+    "question": "কোন কমান্ড উত্তরযোগ্য সংস্করণ পরীক্ষা করে?",
+    "options": [
+      "ansible --version",
+      "ansible version",
+      "ansible -v",
+      "ansible check"
+    ],
+    "answer": "ansible --version"
+  },
+  {
+    "category": "Ansible",
+    "set": 1,
+    "question": "Ansible ডিফল্টরূপে কোন প্রোটোকল ব্যবহার করে?",
+    "options": [
+      "SSH",
+      "FTP",
+      "Telnet",
+      "HTTP"
+    ],
+    "answer": "SSH"
+  },
+  {
+    "category": "Ansible",
+    "set": 1,
+    "question": "একটি উত্তরযোগ্য প্লেবুক কি?",
+    "options": [
+      "YAML file containing automation tasks",
+      "Inventory file",
+      "Python script",
+      "Configuration file"
+    ],
+    "answer": "YAML file containing automation tasks"
+  },
+  {
+    "category": "Ansible",
+    "set": 1,
+    "question": "কোন কমান্ড একটি উত্তরযোগ্য প্লেবুক চালায়?",
+    "options": [
+      "ansible-playbook",
+      "ansible-run",
+      "ansible-execute",
+      "ansible-start"
+    ],
+    "answer": "ansible-playbook"
+  },
+  {
+    "category": "Ansible",
+    "set": 1,
+    "question": "কোন কীওয়ার্ড একটি প্লেবুকে লক্ষ্য হোস্ট সংজ্ঞায়িত করে?",
+    "options": [
+      "hosts",
+      "servers",
+      "nodes",
+      "targets"
+    ],
+    "answer": "hosts"
+  },
+  {
+    "category": "Ansible",
+    "set": 1,
+    "question": "কোন কীওয়ার্ড একটি প্লেবুকের কাজ সংজ্ঞায়িত করে?",
+    "options": [
+      "tasks",
+      "actions",
+      "jobs",
+      "steps"
+    ],
+    "answer": "tasks"
+  },
+  {
+    "category": "Ansible",
+    "set": 1,
+    "question": "কোন মডিউল রিমোট হোস্টে ফাইল কপি করে?",
+    "options": [
+      "copy",
+      "fetch",
+      "file",
+      "transfer"
+    ],
+    "answer": "copy"
+  },
+  {
+    "category": "Ansible",
+    "set": 1,
+    "question": "কোন মডিউল পরিষেবাগুলি পরিচালনা করে?",
+    "options": [
+      "service",
+      "systemctl",
+      "daemon",
+      "process"
+    ],
+    "answer": "service"
+  },
+  {
+    "category": "Ansible",
+    "set": 1,
+    "question": "কোন কমান্ডটি সমস্ত হোস্টের সাথে সংযোগ পরীক্ষা করে?",
+    "options": [
+      "ansible all -m ping",
+      "ansible ping",
+      "ansible test",
+      "ansible connect"
+    ],
+    "answer": "ansible all -m ping"
+  },
+  {
+    "category": "Ansible",
+    "set": 1,
+    "question": "উত্তরযোগ্য প্লেবুকগুলি কোন বিন্যাসে লেখা হয়?",
+    "options": [
+      "YAML",
+      "JSON",
+      "XML",
+      "INI"
+    ],
+    "answer": "YAML"
+  },
+  {
+    "category": "Ansible",
+    "set": 1,
+    "question": "কোন ফাইলটি উত্তরযোগ্য সেটিংস কনফিগার করে?",
+    "options": [
+      "ansible.cfg",
+      "ansible.conf",
+      "config.yml",
+      "ansible.ini"
+    ],
+    "answer": "ansible.cfg"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "প্লেবুকে ভেরিয়েবল সংজ্ঞায়িত করতে কোন কীওয়ার্ড ব্যবহার করা হয়?",
+    "options": [
+      "vars",
+      "variables",
+      "var",
+      "define"
+    ],
+    "answer": "vars"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "কোন সিনট্যাক্স একটি পরিবর্তনশীল উল্লেখ করতে ব্যবহৃত হয়?",
+    "options": [
+      "{{ variable_name }}",
+      "$(variable_name)",
+      "${variable_name}",
+      "[variable_name]"
+    ],
+    "answer": "{{ variable_name }}"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "নির্বাহের সময় বার্তা প্রদর্শন করতে কোন মডিউল ব্যবহার করা হয়?",
+    "options": [
+      "debug",
+      "print",
+      "echo",
+      "message"
+    ],
+    "answer": "debug"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "কন্ডিশনাল এক্সিকিউশনের জন্য কোন কীওয়ার্ড ব্যবহার করা হয়?",
+    "options": [
+      "when",
+      "if",
+      "condition",
+      "check"
+    ],
+    "answer": "when"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "কোন টাস্ক রিপিট করার জন্য কোন কীওয়ার্ড ব্যবহার করা হয়?",
+    "options": [
+      "loop",
+      "repeat",
+      "iterate",
+      "for"
+    ],
+    "answer": "loop"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "কোন পরিবর্তনশীল বর্তমান লুপ আইটেম ধারণ করে?",
+    "options": [
+      "item",
+      "loopitem",
+      "current",
+      "value"
+    ],
+    "answer": "item"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "কোন মডিউল Jinja2 টেমপ্লেট থেকে ফাইল তৈরি করে?",
+    "options": [
+      "template",
+      "copy",
+      "render",
+      "jinja"
+    ],
+    "answer": "template"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "Ansible কোন টেমপ্লেটিং ইঞ্জিন ব্যবহার করে?",
+    "options": [
+      "Jinja2",
+      "Mustache",
+      "Velocity",
+      "Smarty"
+    ],
+    "answer": "Jinja2"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "কোন কীওয়ার্ড একটি ভেরিয়েবলে টাস্ক আউটপুট নিবন্ধন করে?",
+    "options": [
+      "register",
+      "save",
+      "output",
+      "store"
+    ],
+    "answer": "register"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "কোন কীওয়ার্ড টাস্ক ব্যর্থতা উপেক্ষা করে?",
+    "options": [
+      "ignore_errors",
+      "skip_errors",
+      "continue",
+      "ignore_failures"
+    ],
+    "answer": "ignore_errors"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "কোন কীওয়ার্ড শুধুমাত্র বিজ্ঞপ্তির সময় কাজগুলি সম্পাদন করতে ব্যবহৃত হয়?",
+    "options": [
+      "handlers",
+      "notify",
+      "trigger",
+      "events"
+    ],
+    "answer": "handlers"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "কোন কীওয়ার্ড একজন হ্যান্ডলারকে ট্রিগার করে?",
+    "options": [
+      "notify",
+      "handler",
+      "alert",
+      "call"
+    ],
+    "answer": "notify"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "কোন কীওয়ার্ড অন্য প্লেবুক আমদানি করে?",
+    "options": [
+      "import_playbook",
+      "include_playbook",
+      "load_playbook",
+      "playbook"
+    ],
+    "answer": "import_playbook"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "সিলেক্টিভ এক্সিকিউশনের জন্য কোন কীওয়ার্ড ট্যাগ কাজ করে?",
+    "options": [
+      "tags",
+      "labels",
+      "groups",
+      "filter"
+    ],
+    "answer": "tags"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "কোন বিকল্পটি শুধুমাত্র নির্দিষ্ট ট্যাগের সাথে কাজ চালায়?",
+    "options": [
+      "--tags",
+      "--tag",
+      "--filter",
+      "--task"
+    ],
+    "answer": "--tags"
+  },
+  {
+    "category": "Ansible",
+    "set": 3,
+    "question": "একটি উত্তরযোগ্য ভূমিকা কি?",
+    "options": [
+      "A reusable collection of tasks and files",
+      "A user account",
+      "An inventory group",
+      "A playbook variable"
+    ],
+    "answer": "A reusable collection of tasks and files"
+  },
+  {
+    "category": "Ansible",
+    "set": 3,
+    "question": "কোন কমান্ড একটি নতুন ভূমিকা গঠন তৈরি করে?",
+    "options": [
+      "ansible-galaxy init",
+      "ansible role create",
+      "ansible init role",
+      "ansible-playbook init"
+    ],
+    "answer": "ansible-galaxy init"
+  },
+  {
+    "category": "Ansible",
+    "set": 3,
+    "question": "কোন ডিরেক্টরি ভূমিকা কাজ ধারণ করে?",
+    "options": [
+      "tasks",
+      "handlers",
+      "files",
+      "vars"
+    ],
+    "answer": "tasks"
+  },
+  {
+    "category": "Ansible",
+    "set": 3,
+    "question": "কোন ফাইল একটি ভূমিকা প্রধান টাস্ক ফাইল?",
+    "options": [
+      "tasks/main.yml",
+      "tasks/tasks.yml",
+      "main/tasks.yml",
+      "role.yml"
+    ],
+    "answer": "tasks/main.yml"
+  },
+  {
+    "category": "Ansible",
+    "set": 3,
+    "question": "কোন ডিরেক্টরিতে ভূমিকা হ্যান্ডলার রয়েছে?",
+    "options": [
+      "handlers",
+      "tasks",
+      "events",
+      "notify"
+    ],
+    "answer": "handlers"
+  },
+  {
+    "category": "Ansible",
+    "set": 3,
+    "question": "কোন ডিরেক্টরিটি জিনজা 2 টেমপ্লেট একটি ভূমিকায় সংরক্ষণ করে?",
+    "options": [
+      "templates",
+      "files",
+      "jinja",
+      "render"
+    ],
+    "answer": "templates"
+  },
+  {
+    "category": "Ansible",
+    "set": 3,
+    "question": "কোন ডিরেক্টরি একটি ভূমিকায় স্ট্যাটিক ফাইল সংরক্ষণ করে?",
+    "options": [
+      "files",
+      "templates",
+      "static",
+      "resources"
+    ],
+    "answer": "files"
+  },
+  {
+    "category": "Ansible",
+    "set": 3,
+    "question": "কোন ডিরেক্টরিতে ভূমিকা ভেরিয়েবল রয়েছে?",
+    "options": [
+      "vars",
+      "variables",
+      "config",
+      "settings"
+    ],
+    "answer": "vars"
+  },
+  {
+    "category": "Ansible",
+    "set": 3,
+    "question": "কোন ডিরেক্টরিতে ডিফল্ট ভেরিয়েবল থাকে?",
+    "options": [
+      "defaults",
+      "vars",
+      "config",
+      "settings"
+    ],
+    "answer": "defaults"
+  },
+  {
+    "category": "Ansible",
+    "set": 3,
+    "question": "একটি প্লেবুকে ভূমিকা অন্তর্ভুক্ত করতে কোন কীওয়ার্ড ব্যবহার করা হয়?",
+    "options": [
+      "roles",
+      "include_role",
+      "role",
+      "import_role"
+    ],
+    "answer": "roles"
+  },
+  {
+    "category": "Ansible",
+    "set": 3,
+    "question": "Ansible গ্যালাক্সি কি?",
+    "options": [
+      "Repository for Ansible roles and collections",
+      "Monitoring tool",
+      "CI/CD platform",
+      "Inventory manager"
+    ],
+    "answer": "Repository for Ansible roles and collections"
+  },
+  {
+    "category": "Ansible",
+    "set": 3,
+    "question": "কোন কমান্ড গ্যালাক্সি থেকে একটি ভূমিকা ইনস্টল করে?",
+    "options": [
+      "ansible-galaxy install",
+      "ansible install role",
+      "ansible role add",
+      "ansible-galaxy add"
+    ],
+    "answer": "ansible-galaxy install"
+  },
+  {
+    "category": "Ansible",
+    "set": 3,
+    "question": "Ansible ভল্ট কি জন্য ব্যবহার করা হয়?",
+    "options": [
+      "Encrypt sensitive data",
+      "Manage inventories",
+      "Run playbooks",
+      "Install roles"
+    ],
+    "answer": "Encrypt sensitive data"
+  },
+  {
+    "category": "Ansible",
+    "set": 3,
+    "question": "কোন কমান্ড একটি বিদ্যমান ফাইল এনক্রিপ্ট করে?",
+    "options": [
+      "ansible-vault encrypt",
+      "ansible-vault secure",
+      "ansible-vault create",
+      "ansible-vault lock"
+    ],
+    "answer": "ansible-vault encrypt"
+  },
+  {
+    "category": "Ansible",
+    "set": 3,
+    "question": "উত্তরযোগ্য সংগ্রহ কি?",
+    "options": [
+      "Packages containing roles, modules and plugins",
+      "Inventory groups",
+      "Encrypted files",
+      "YAML variables"
+    ],
+    "answer": "Packages containing roles, modules and plugins"
+  },
+  {
+    "category": "Ansible",
+    "set": 4,
+    "question": "AWX কি?",
+    "options": [
+      "Open-source Ansible Automation Platform",
+      "Monitoring Tool",
+      "Container Runtime",
+      "Version Control System"
+    ],
+    "answer": "Open-source Ansible Automation Platform"
+  },
+  {
+    "category": "Ansible",
+    "set": 4,
+    "question": "উত্তরীয় টাওয়ার এখন কি নামে পরিচিত?",
+    "options": [
+      "Red Hat Ansible Automation Platform",
+      "Ansible Galaxy",
+      "AWX Enterprise",
+      "Automation Hub"
+    ],
+    "answer": "Red Hat Ansible Automation Platform"
+  },
+  {
+    "category": "Ansible",
+    "set": 4,
+    "question": "একটি ডাইনামিক ইনভেন্টরি কি?",
+    "options": [
+      "Inventory generated automatically from cloud providers",
+      "Static hosts file",
+      "Encrypted inventory",
+      "Role-based inventory"
+    ],
+    "answer": "Inventory generated automatically from cloud providers"
+  },
+  {
+    "category": "Ansible",
+    "set": 4,
+    "question": "কোন কমান্ড প্লেবুক সিনট্যাক্স পরীক্ষা করে?",
+    "options": [
+      "ansible-playbook --syntax-check",
+      "ansible-playbook --validate",
+      "ansible-playbook check",
+      "ansible validate"
+    ],
+    "answer": "ansible-playbook --syntax-check"
+  },
+  {
+    "category": "Ansible",
+    "set": 4,
+    "question": "কোন বিকল্প একটি প্লেবুক একটি শুষ্ক রান সঞ্চালিত?",
+    "options": [
+      "--check",
+      "--dry",
+      "--test",
+      "--simulate"
+    ],
+    "answer": "--check"
+  },
+  {
+    "category": "Ansible",
+    "set": 4,
+    "question": "কোন বিকল্পটি পরিচালিত ফাইলের মধ্যে পার্থক্য দেখায়?",
+    "options": [
+      "--diff",
+      "--compare",
+      "--changes",
+      "--show-diff"
+    ],
+    "answer": "--diff"
+  },
+  {
+    "category": "Ansible",
+    "set": 4,
+    "question": "ডিফল্ট উত্তরযোগ্য মৃত্যুদন্ড কার্যকর করার কৌশল কি?",
+    "options": [
+      "linear",
+      "free",
+      "parallel",
+      "serial"
+    ],
+    "answer": "linear"
+  },
+  {
+    "category": "Ansible",
+    "set": 4,
+    "question": "কোন বিকল্পটি নির্বাচিত হোস্টে প্লেবুক সম্পাদনকে সীমাবদ্ধ করে?",
+    "options": [
+      "--limit",
+      "--hosts",
+      "--target",
+      "--group"
+    ],
+    "answer": "--limit"
+  },
+  {
+    "category": "Ansible",
+    "set": 4,
+    "question": "কোন প্লাগইন প্রকার টাস্ক এক্সিকিউশন আচরণ নিয়ন্ত্রণ করে?",
+    "options": [
+      "Strategy Plugin",
+      "Filter Plugin",
+      "Callback Plugin",
+      "Lookup Plugin"
+    ],
+    "answer": "Strategy Plugin"
+  },
+  {
+    "category": "Ansible",
+    "set": 4,
+    "question": "কোন প্লাগইন বহিরাগত উত্স থেকে তথ্য পুনরুদ্ধার করে?",
+    "options": [
+      "Lookup Plugin",
+      "Callback Plugin",
+      "Connection Plugin",
+      "Action Plugin"
+    ],
+    "answer": "Lookup Plugin"
+  },
+  {
+    "category": "Ansible",
+    "set": 4,
+    "question": "কোন প্লাগইন পরিবর্তনশীল ডেটা পরিবর্তন করে?",
+    "options": [
+      "Filter Plugin",
+      "Lookup Plugin",
+      "Action Plugin",
+      "Connection Plugin"
+    ],
+    "answer": "Filter Plugin"
+  },
+  {
+    "category": "Ansible",
+    "set": 4,
+    "question": "কোন মডিউল ডকার পাত্রে পরিচালনা করে?",
+    "options": [
+      "docker_container",
+      "docker",
+      "container",
+      "docker_manage"
+    ],
+    "answer": "docker_container"
+  },
+  {
+    "category": "Ansible",
+    "set": 4,
+    "question": "কোন মডিউল Kubernetes সম্পদ পরিচালনা করে?",
+    "options": [
+      "k8s",
+      "kubectl",
+      "kubernetes",
+      "cluster"
+    ],
+    "answer": "k8s"
+  },
+  {
+    "category": "Ansible",
+    "set": 4,
+    "question": "Ansible মধ্যে idempotency কি?",
+    "options": [
+      "Running tasks repeatedly without changing desired state",
+      "Encrypting playbooks",
+      "Creating inventories",
+      "Managing roles"
+    ],
+    "answer": "Running tasks repeatedly without changing desired state"
+  },
+  {
+    "category": "Ansible",
+    "set": 4,
+    "question": "কোন কমান্ড সমস্ত উপলব্ধ উত্তরযোগ্য মডিউল তালিকাভুক্ত করে?",
+    "options": [
+      "ansible-doc -l",
+      "ansible modules",
+      "ansible-list",
+      "ansible-help modules"
+    ],
+    "answer": "ansible-doc -l"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "উত্তরযোগ্য প্লেবুকগুলি কোন বিন্যাসে লেখা হয়?",
+    "options": [
+      "INI",
+      "YAML",
+      "XML",
+      "CSV"
+    ],
+    "answer": "YAML"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "কোন কমান্ডটি একটি অ্যাড-হক কমান্ড সহ ইনভেন্টরির সমস্ত হোস্টকে পিং করে?",
+    "options": [
+      "ansible-playbook ping",
+      "ansible-ping all",
+      "ansible all -m ping",
+      "ansible --ping-all"
+    ],
+    "answer": "ansible all -m ping"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "হোস্ট Ansible পরিচালনা করে কি তালিকা?",
+    "options": [
+      "Role",
+      "Playbook",
+      "Inventory",
+      "Vault"
+    ],
+    "answer": "Inventory"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "কোন টুল Ansible মধ্যে সংবেদনশীল তথ্য এনক্রিপ্ট করে?",
+    "options": [
+      "Ansible Lint",
+      "Ansible Galaxy",
+      "Ansible Doc",
+      "Ansible Vault"
+    ],
+    "answer": "Ansible Vault"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "হ্যান্ডলার কি জন্য ব্যবহার করা হয়?",
+    "options": [
+      "Creating inventories",
+      "Connecting through SSH",
+      "Defining variables",
+      "Tasks that run only when notified"
+    ],
+    "answer": "Tasks that run only when notified"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "আধুনিক উত্তরযোগ্য তালিকায় কোন কীওয়ার্ড পুনরাবৃত্তি করে?",
+    "options": [
+      "iterate",
+      "loop",
+      "foreach",
+      "repeat"
+    ],
+    "answer": "loop"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "কোন মডিউল ডেবিয়ান-ভিত্তিক সিস্টেমে প্যাকেজ ইনস্টল করে?",
+    "options": [
+      "apt",
+      "dnf",
+      "pacman",
+      "yum"
+    ],
+    "answer": "apt"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "কিভাবে Ansible সাধারণত লিনাক্স হোস্টের সাথে সংযোগ করে?",
+    "options": [
+      "SSH",
+      "SNMP",
+      "RDP",
+      "A custom agent"
+    ],
+    "answer": "SSH"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "কোন কমান্ড প্লেবুকের সিনট্যাক্স পরীক্ষা করে?",
+    "options": [
+      "ansible-playbook --syntax-check",
+      "ansible-playbook --validate",
+      "ansible-check play.yml",
+      "ansible-lint --run"
+    ],
+    "answer": "ansible-playbook --syntax-check"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "Ansible-এ idempotency বলতে কী বোঝায়?",
+    "options": [
+      "Running tasks in parallel",
+      "Encrypting variables",
+      "Gathering facts",
+      "Running a task repeatedly gives the same result"
+    ],
+    "answer": "Running a task repeatedly gives the same result"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "কোন কাঠামো প্যাকেজ পুনরায় ব্যবহারযোগ্য অটোমেশন সামগ্রী?",
+    "options": [
+      "Role",
+      "Callback",
+      "Inventory",
+      "Fact"
+    ],
+    "answer": "Role"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "কোন মডিউল কন্ট্রোল নোড থেকে রিমোট হোস্টে একটি ফাইল কপি করে?",
+    "options": [
+      "fetch",
+      "copy",
+      "debug",
+      "shell"
+    ],
+    "answer": "copy"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "কোন কীওয়ার্ড উন্নত বিশেষাধিকার সহ একটি টাস্ক চালায়?",
+    "options": [
+      "become",
+      "sudo_all",
+      "elevate",
+      "root"
+    ],
+    "answer": "become"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "কোন টুল সম্প্রদায়ের ভূমিকা এবং সংগ্রহ ডাউনলোড করে?",
+    "options": [
+      "ansible-pull",
+      "ansible-doc",
+      "ansible-galaxy",
+      "ansible-vault"
+    ],
+    "answer": "ansible-galaxy"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "কোন বিকল্পটি নির্বাচিত হোস্টে রানকে সীমাবদ্ধ করে?",
+    "options": [
+      "--limit",
+      "--only",
+      "--target",
+      "--hosts-only"
+    ],
+    "answer": "--limit"
+  }
+]

@@ -411,5 +411,103 @@
     "question": "Which Dockerfile instruction sets environment variables?",
     "options": ["ENV", "SET", "VAR", "EXPORT"],
     "answer": "ENV"
+  },
+  {
+    "category": "Docker",
+    "set": 5,
+    "question": "Which command shows live CPU and memory usage of running containers?",
+    "options": ["docker inspect -r", "docker stats", "docker usage", "docker top -m"],
+    "answer": "docker stats"
+  },
+  {
+    "category": "Docker",
+    "set": 5,
+    "question": "Which Dockerfile instruction provides a default command that can be overridden at run time?",
+    "options": ["COPY", "CMD", "LABEL", "RUN"],
+    "answer": "CMD"
+  },
+  {
+    "category": "Docker",
+    "set": 5,
+    "question": "Which Dockerfile instruction configures the container to run as an executable?",
+    "options": ["USER", "ENTRYPOINT", "EXPOSE", "ARG"],
+    "answer": "ENTRYPOINT"
+  },
+  {
+    "category": "Docker",
+    "set": 5,
+    "question": "Which Dockerfile instruction sets the working directory for later instructions?",
+    "options": ["HOME", "CD", "WORKDIR", "PATH"],
+    "answer": "WORKDIR"
+  },
+  {
+    "category": "Docker",
+    "set": 5,
+    "question": "Which command builds an image tagged myapp from the Dockerfile in the current directory?",
+    "options": ["docker build -t myapp .", "docker compile myapp", "docker make myapp", "docker create myapp ."],
+    "answer": "docker build -t myapp ."
+  },
+  {
+    "category": "Docker",
+    "set": 5,
+    "question": "What does docker compose up -d do?",
+    "options": ["Deletes all volumes", "Builds without starting", "Starts services in the background", "Stops all services"],
+    "answer": "Starts services in the background"
+  },
+  {
+    "category": "Docker",
+    "set": 5,
+    "question": "Which storage option is created and managed by Docker itself?",
+    "options": ["Bind mount", "Named volume", "tmpfs mount", "Host directory"],
+    "answer": "Named volume"
+  },
+  {
+    "category": "Docker",
+    "set": 5,
+    "question": "Which command prints the output logs of a container?",
+    "options": ["docker history", "docker diff", "docker events", "docker logs"],
+    "answer": "docker logs"
+  },
+  {
+    "category": "Docker",
+    "set": 5,
+    "question": "Which network driver is used by default for standalone containers?",
+    "options": ["macvlan", "bridge", "host", "overlay"],
+    "answer": "bridge"
+  },
+  {
+    "category": "Docker",
+    "set": 5,
+    "question": "Which Dockerfile instruction defines a build-time variable?",
+    "options": ["ARG", "VOLUME", "ENV", "SHELL"],
+    "answer": "ARG"
+  },
+  {
+    "category": "Docker",
+    "set": 5,
+    "question": "What is the main benefit of a multi-stage build?",
+    "options": ["Encrypting layers", "Scheduling jobs", "Running many containers", "Smaller final images"],
+    "answer": "Smaller final images"
+  },
+  {
+    "category": "Docker",
+    "set": 5,
+    "question": "Which command shows the layers that make up an image?",
+    "options": ["docker tree", "docker history", "docker ps -l", "docker layers"],
+    "answer": "docker history"
+  },
+  {
+    "category": "Docker",
+    "set": 5,
+    "question": "Which file excludes files from the Docker build context?",
+    "options": ["Dockerfile.skip", ".gitignore", ".buildignore", ".dockerignore"],
+    "answer": ".dockerignore"
+  },
+  {
+    "category": "Docker",
+    "set": 5,
+    "question": "Which command shows low-level details of a container or image as JSON?",
+    "options": ["docker details", "docker describe", "docker show", "docker inspect"],
+    "answer": "docker inspect"
   }
 ]

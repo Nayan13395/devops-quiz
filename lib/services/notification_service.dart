@@ -275,6 +275,36 @@ class NotificationService {
   }
 
   // =========================================================
+  // UPDATE AVAILABLE
+  // =========================================================
+
+  Future<void> showUpdateAvailable(String version) async {
+    if (kIsWeb) {
+      return;
+    }
+
+    const AndroidNotificationDetails androidDetails =
+        AndroidNotificationDetails(
+          'daily_quiz_channel',
+          'Daily Quiz Notifications',
+          channelDescription: 'Daily quiz reminder notifications',
+          importance: Importance.high,
+          priority: Priority.high,
+        );
+
+    try {
+      await flutterLocalNotificationsPlugin.show(
+        id: 998,
+        title: '🚀 Update available',
+        body: 'DevOps Quiz $version is ready on Google Play. Update now!',
+        notificationDetails: const NotificationDetails(android: androidDetails),
+      );
+    } catch (e) {
+      debugPrint('Update notification failed: $e');
+    }
+  }
+
+  // =========================================================
   // TEST IMMEDIATE NOTIFICATION
   // =========================================================
 

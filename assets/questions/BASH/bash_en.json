@@ -698,5 +698,180 @@
     "question": "Which command lists currently defined shell functions?",
     "options": ["declare -f", "declare -A", "functions", "listfunc"],
     "answer": "declare -f"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 5,
+    "question": "Which line at the top of a script tells the system to run it with Bash?",
+    "options": ["//bash", "#!/bin/bash", "<?bash", "#include bash"],
+    "answer": "#!/bin/bash"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 5,
+    "question": "Which command makes a script file executable?",
+    "options": ["run +x script.sh", "chown +x script.sh", "chmod +x script.sh", "exec script.sh"],
+    "answer": "chmod +x script.sh"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 5,
+    "question": "How do you assign the value 5 to the variable count in Bash?",
+    "options": ["set count 5", "$count=5", "count=5", "count = 5"],
+    "answer": "count=5"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 5,
+    "question": "Which symbol is used to read the value of a variable named name?",
+    "options": ["%name", "$name", "&name", "#name"],
+    "answer": "$name"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 5,
+    "question": "Which variable holds the number of arguments passed to a script?",
+    "options": ["$?", "$#", "$@", "$$"],
+    "answer": "$#"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 5,
+    "question": "Which variable holds the exit status of the last command?",
+    "options": ["$?", "$0", "$#", "$!"],
+    "answer": "$?"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 5,
+    "question": "Which operator runs the second command only if the first succeeds?",
+    "options": ["|", "||", ";", "&&"],
+    "answer": "&&"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 5,
+    "question": "Which operator appends output to a file?",
+    "options": ["<<", ">>", "|&", ">"],
+    "answer": ">>"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 5,
+    "question": "Which keyword begins a conditional block in Bash?",
+    "options": ["check", "case-if", "if", "when"],
+    "answer": "if"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 5,
+    "question": "Which keyword ends an if block in Bash?",
+    "options": ["endif", "fi", "done", "end"],
+    "answer": "fi"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 5,
+    "question": "Which loop iterates over a list of items?",
+    "options": ["foreach item list", "for item in list; do", "each item in list", "loop item in list"],
+    "answer": "for item in list; do"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 5,
+    "question": "Which command prints text to the terminal?",
+    "options": ["print", "echo", "say", "out"],
+    "answer": "echo"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 5,
+    "question": "Which test checks whether a regular file exists?",
+    "options": ["[ -e file ]", "[ -r file ]", "[ -d file ]", "[ -f file ]"],
+    "answer": "[ -f file ]"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 5,
+    "question": "Which test checks whether a string is empty?",
+    "options": ["[ -s \"$str\" ]", "[ -e \"$str\" ]", "[ -n \"$str\" ]", "[ -z \"$str\" ]"],
+    "answer": "[ -z \"$str\" ]"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 5,
+    "question": "Which command reads a line of input into a variable?",
+    "options": ["read", "input", "scan", "get"],
+    "answer": "read"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 5,
+    "question": "Which syntax captures the output of a command into a variable?",
+    "options": ["var=$(date)", "var=[date]", "var={date}", "var=<date>"],
+    "answer": "var=$(date)"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 5,
+    "question": "Which option makes a script exit immediately when a command fails?",
+    "options": ["set -x", "set -v", "set -n", "set -e"],
+    "answer": "set -e"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 5,
+    "question": "Which option prints each command before it is executed?",
+    "options": ["set -f", "set -u", "set -x", "set -e"],
+    "answer": "set -x"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 5,
+    "question": "Which variable holds the name of the script being run?",
+    "options": ["$*", "$1", "$0", "$#"],
+    "answer": "$0"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 5,
+    "question": "How do you define a function named greet in Bash?",
+    "options": ["fn greet { echo hi }", "function greet: echo hi", "def greet(): echo hi", "greet() { echo hi; }"],
+    "answer": "greet() { echo hi; }"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 5,
+    "question": "Which command sources a file in the current shell?",
+    "options": ["run file.sh", "import file.sh", "source file.sh", "call file.sh"],
+    "answer": "source file.sh"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 5,
+    "question": "Which wildcard matches any number of characters in filenames?",
+    "options": ["?", "~", "*", "#"],
+    "answer": "*"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 5,
+    "question": "Which keyword is used to choose among many patterns in Bash?",
+    "options": ["select-when", "match", "case", "switch"],
+    "answer": "case"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 5,
+    "question": "Which command prints the first lines of a file?",
+    "options": ["cat -f", "head", "less -h", "tail"],
+    "answer": "head"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 5,
+    "question": "Which operator redirects standard error to a file?",
+    "options": ["0<", "^>", "2>", "1>"],
+    "answer": "2>"
   }
 ]

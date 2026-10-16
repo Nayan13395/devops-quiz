@@ -6,6 +6,7 @@ import '../l10n/app_localizations.dart';
 import '../models/challenge.dart';
 import '../models/question.dart';
 import '../services/achievement_service.dart';
+import '../services/certificate_service.dart';
 import '../services/daily_quiz_service.dart';
 import '../services/point_service.dart';
 import '../services/question_service.dart';
@@ -115,7 +116,10 @@ class _QuizScreenState extends State<QuizScreen> {
 
       if (!mounted) return;
 
-      if (widget.category == 'DevOps' || widget.category == 'DailyQuiz') {
+      if (widget.category == 'DailyQuiz') {
+        // One balanced set drawn from every category.
+        questions = QuestionService.buildDailyQuiz(allQuestions);
+      } else if (widget.category == 'DevOps') {
         questions = {
           for (final q in allQuestions) q.question: q,
         }.values.toList();
@@ -297,6 +301,16 @@ class _QuizScreenState extends State<QuizScreen> {
 
     await PointService.addPoints(finalPoints);
 
+    // Finished sets count towards the category certificate.
+    final CertificateInfo? newCertificate = isChallenge
+        ? null
+        : await CertificateService.recordSetCompletion(
+            category: widget.category,
+            setNumber: widget.setNumber,
+            score: score,
+            totalQuestions: questions.length,
+          );
+
     final achievements = await AchievementService.checkAchievements(
       score: score,
       totalQuestions: questions.length,
@@ -325,6 +339,7 @@ class _QuizScreenState extends State<QuizScreen> {
             (key, value) => MapEntry(key, List<String>.from(value)),
           ),
           timedOutQuestions: Set<int>.from(timedOutQuestions),
+          newCertificate: newCertificate,
         ),
       ),
     );
@@ -333,97 +348,95 @@ class _QuizScreenState extends State<QuizScreen> {
   // =========================================================
   // SELECT ANSWER
   // =========================================================
-// =========================================================
-// SELECT ANSWER
-// =========================================================
+  // =========================================================
+  // SELECT ANSWER
+  // =========================================================
 
-Future<void> selectAnswer(String text) async {
-  if (_quizFinished) return;
+  Future<void> selectAnswer(String text) async {
+    if (_quizFinished) return;
 
-  if (userAnswers.containsKey(currentQuestion) ||
-      timedOutQuestions.contains(currentQuestion)) {
-    return;
-  }
-
-  final bool isCorrect = text == questions[currentQuestion].answer;
-
-  if (!isSpeedChallenge) {
-    timer?.cancel();
-  }
-
-  setState(() {
-    userAnswers[currentQuestion] = text;
-
-    selectedAnswer = text;
-
-    answered = true;
-
-    if (isCorrect) {
-      score++;
-      points += 10;
+    if (userAnswers.containsKey(currentQuestion) ||
+        timedOutQuestions.contains(currentQuestion)) {
+      return;
     }
-  });
 
-  // =======================================================
-  // SURVIVAL MODE - WRONG ANSWER
-  // Wait 3 seconds so the user can see:
-  // Red   = selected wrong answer
-  // Green = correct answer
-  // =======================================================
+    final bool isCorrect = text == questions[currentQuestion].answer;
 
-  if (isSurvivalMode && !isCorrect) {
-    await Future.delayed(
-      const Duration(seconds: 3),
-    );
+    if (!isSpeedChallenge) {
+      timer?.cancel();
+    }
+
+    setState(() {
+      userAnswers[currentQuestion] = text;
+
+      selectedAnswer = text;
+
+      answered = true;
+
+      if (isCorrect) {
+        score++;
+        points += 10;
+      }
+    });
+
+    // =======================================================
+    // SURVIVAL MODE - WRONG ANSWER
+    // Wait 3 seconds so the user can see:
+    // Red   = selected wrong answer
+    // Green = correct answer
+    // =======================================================
+
+    if (isSurvivalMode && !isCorrect) {
+      await Future.delayed(const Duration(seconds: 3));
+
+      if (!mounted || _quizFinished) {
+        return;
+      }
+
+      await finishQuiz();
+
+      return;
+    }
+
+    // =======================================================
+    // ANSWER DISPLAY DELAY
+    //
+    // Correct answer = current fast behaviour (200 ms)
+    // Wrong answer   = 3 seconds
+    // =======================================================
+
+    final Duration answerDelay = isCorrect
+        ? const Duration(milliseconds: 200)
+        : const Duration(seconds: 3);
+
+    await Future.delayed(answerDelay);
 
     if (!mounted || _quizFinished) {
       return;
     }
 
-    await finishQuiz();
+    // =======================================================
+    // NEXT QUESTION
+    // =======================================================
 
-    return;
-  }
+    if (currentQuestion < questions.length - 1) {
+      setState(() {
+        currentQuestion++;
 
-  // =======================================================
-  // ANSWER DISPLAY DELAY
-  //
-  // Correct answer = current fast behaviour (200 ms)
-  // Wrong answer   = 3 seconds
-  // =======================================================
+        selectedAnswer = userAnswers[currentQuestion];
 
-  final Duration answerDelay = isCorrect
-      ? const Duration(milliseconds: 200)
-      : const Duration(seconds: 3);
+        answered =
+            userAnswers.containsKey(currentQuestion) ||
+            timedOutQuestions.contains(currentQuestion);
+      });
 
-  await Future.delayed(answerDelay);
-
-  if (!mounted || _quizFinished) {
-    return;
-  }
-
-  // =======================================================
-  // NEXT QUESTION
-  // =======================================================
-
-  if (currentQuestion < questions.length - 1) {
-    setState(() {
-      currentQuestion++;
-
-      selectedAnswer = userAnswers[currentQuestion];
-
-      answered =
-          userAnswers.containsKey(currentQuestion) ||
-          timedOutQuestions.contains(currentQuestion);
-    });
-
-    if (!answered && !isSpeedChallenge) {
-      startTimer();
+      if (!answered && !isSpeedChallenge) {
+        startTimer();
+      }
+    } else {
+      await finishQuiz();
     }
-  } else {
-    await finishQuiz();
   }
-}
 
   // =========================================================
   // OPTION COLOR

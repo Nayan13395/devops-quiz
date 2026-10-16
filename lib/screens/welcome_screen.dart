@@ -1,3 +1,4 @@
+import 'dart:async';
 import 'dart:math' as math;
 
 import 'package:firebase_auth/firebase_auth.dart';
@@ -6,12 +7,14 @@ import 'package:flutter/material.dart';
 
 import '../l10n/app_localizations.dart';
 import '../services/daily_login_bonus_service.dart';
+import '../services/festival_calendar_service.dart';
 import '../services/google_auth_service.dart';
 import '../services/notification_service.dart';
 import '../services/user_profile_service.dart';
 import '../services/user_session_service.dart';
 import '../widgets/app_drawer.dart';
 import '../widgets/daily_login_bonus_dialog.dart';
+import '../widgets/festival_celebration.dart';
 import '../widgets/notification_button.dart';
 import '../widgets/play_store_badge.dart'; // <-- NEW IMPORT
 import 'category_screen.dart';
@@ -23,7 +26,8 @@ class WelcomeScreen extends StatefulWidget {
   State<WelcomeScreen> createState() => _WelcomeScreenState();
 }
 
-class _WelcomeScreenState extends State<WelcomeScreen> {
+class _WelcomeScreenState extends State<WelcomeScreen>
+    with WidgetsBindingObserver {
   bool _bonusCheckStarted = false;
 
   bool _sessionLoading = true;
@@ -34,6 +38,10 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
 
   String? _loginType;
 
+  FestivalWindow? _activeFestival;
+
+  Timer? _festivalRefreshTimer;
+
   // =========================================================
   // INIT
   // =========================================================
@@ -41,6 +49,9 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
   @override
   void initState() {
     super.initState();
+    WidgetsBinding.instance.addObserver(this);
+    _activeFestival = FestivalCalendarService.activeNow();
+    _scheduleFestivalRefresh();
 
     WidgetsBinding.instance.addPostFrameCallback((_) async {
       await _loadUserSession();
@@ -61,6 +72,47 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
         await _checkDailyLoginBonus();
       }
     });
+  }
+
+  void _scheduleFestivalRefresh() {
+    _festivalRefreshTimer?.cancel();
+    final nowUtc = DateTime.now().toUtc();
+    const indiaOffset = Duration(hours: 5, minutes: 30);
+    final indiaNow = nowUtc.add(indiaOffset);
+    final nextIndiaMidnight = DateTime.utc(
+      indiaNow.year,
+      indiaNow.month,
+      indiaNow.day + 1,
+    ).subtract(indiaOffset);
+    final delay = nextIndiaMidnight.difference(nowUtc);
+
+    _festivalRefreshTimer = Timer(
+      delay.isNegative ? Duration.zero : delay + const Duration(seconds: 1),
+      _refreshFestival,
+    );
+  }
+
+  void _refreshFestival() {
+    if (!mounted) return;
+
+    final festival = FestivalCalendarService.activeNow();
+    if (festival?.kind != _activeFestival?.kind ||
+        festival?.startsOn != _activeFestival?.startsOn) {
+      setState(() => _activeFestival = festival);
+    }
+    _scheduleFestivalRefresh();
+  }
+
+  @override
+  void didChangeAppLifecycleState(AppLifecycleState state) {
+    if (state == AppLifecycleState.resumed) _refreshFestival();
+  }
+
+  @override
+  void dispose() {
+    WidgetsBinding.instance.removeObserver(this);
+    _festivalRefreshTimer?.cancel();
+    super.dispose();
   }
 
   // =========================================================
@@ -168,10 +220,6 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
 
         return;
       }
-
-      // =====================================================
-      // GOOGLE/FIREBASE LOGIN SUCCESSFUL
-      // =====================================================
 
       debugPrint('');
       debugPrint('==============================================');
@@ -694,38 +742,46 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
         ],
       ),
 
-      body: LayoutBuilder(
-        builder: (context, constraints) {
-          // Only show side panels on Web when window is wide enough
-          final bool isWide = kIsWeb && constraints.maxWidth >= 1100;
+      body: Stack(
+        children: [
+          if (_activeFestival != null)
+            Positioned.fill(
+              child: FestivalCelebration(window: _activeFestival!),
+            ),
+          LayoutBuilder(
+            builder: (context, constraints) {
+              // Only show side panels on Web when window is wide enough
+              final bool isWide = kIsWeb && constraints.maxWidth >= 1100;
 
-          if (!isWide) {
-            return Center(
-              child: SingleChildScrollView(
-                padding: const EdgeInsets.all(24),
-                child: _buildCenterColumn(context),
-              ),
-            );
-          }
-
-          // Wide web layout with 3 columns
-          return Row(
-            crossAxisAlignment: CrossAxisAlignment.stretch,
-            children: [
-              Expanded(child: _buildFeaturesPanel(context)),
-              Expanded(
-                flex: 2,
-                child: Center(
+              if (!isWide) {
+                return Center(
                   child: SingleChildScrollView(
                     padding: const EdgeInsets.all(24),
                     child: _buildCenterColumn(context),
                   ),
-                ),
-              ),
-              Expanded(child: _buildPlayStorePanel(context)),
-            ],
-          );
-        },
+                );
+              }
+
+              // Wide web layout with 3 columns
+              return Row(
+                crossAxisAlignment: CrossAxisAlignment.stretch,
+                children: [
+                  Expanded(child: _buildFeaturesPanel(context)),
+                  Expanded(
+                    flex: 2,
+                    child: Center(
+                      child: SingleChildScrollView(
+                        padding: const EdgeInsets.all(24),
+                        child: _buildCenterColumn(context),
+                      ),
+                    ),
+                  ),
+                  Expanded(child: _buildPlayStorePanel(context)),
+                ],
+              );
+            },
+          ),
+        ],
       ),
     );
   }
@@ -800,13 +856,27 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
             mainAxisSize: MainAxisSize.min,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: const [
-              Text('Why DevOps Quiz?',
-                  style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold)),
+              Text(
+                'Why DevOps Quiz?',
+                style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
+              ),
               SizedBox(height: 16),
-              _FeatureRow(icon: Icons.quiz_rounded, text: '2000+ practice questions'),
-              _FeatureRow(icon: Icons.translate_rounded, text: 'Multi-language support'),
-              _FeatureRow(icon: Icons.local_fire_department_rounded, text: 'Streaks & Leaderboards'),
-              _FeatureRow(icon: Icons.emoji_events_rounded, text: 'Games & Challenges'),
+              _FeatureRow(
+                icon: Icons.quiz_rounded,
+                text: '2000+ practice questions',
+              ),
+              _FeatureRow(
+                icon: Icons.translate_rounded,
+                text: 'Multi-language support',
+              ),
+              _FeatureRow(
+                icon: Icons.local_fire_department_rounded,
+                text: 'Streaks & Leaderboards',
+              ),
+              _FeatureRow(
+                icon: Icons.emoji_events_rounded,
+                text: 'Games & Challenges',
+              ),
               _FeatureRow(icon: Icons.cloud_rounded, text: 'Cloud & DevOps'),
               _FeatureRow(icon: Icons.star_rounded, text: 'Bonus & Rewards'),
             ],
@@ -832,15 +902,23 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
             mainAxisSize: MainAxisSize.min,
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Icon(Icons.phone_android_rounded, size: 56, color: Theme.of(context).colorScheme.primary),
+              Icon(
+                Icons.phone_android_rounded,
+                size: 56,
+                color: Theme.of(context).colorScheme.primary,
+              ),
               const SizedBox(height: 12),
-              const Text('Practice on the go',
-                  style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold)),
+              const Text(
+                'Practice on the go',
+                style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
+              ),
               const SizedBox(height: 8),
               Text(
                 'Install the Android app and learn offline, anywhere.',
                 textAlign: TextAlign.center,
-                style: TextStyle(color: Theme.of(context).colorScheme.onSurfaceVariant),
+                style: TextStyle(
+                  color: Theme.of(context).colorScheme.onSurfaceVariant,
+                ),
               ),
               const SizedBox(height: 24),
               const PlayStoreBadge(),
@@ -891,11 +969,8 @@ class _AnimatedDevOpsLogo extends StatefulWidget {
 }
 
 class _AnimatedDevOpsLogoState extends State<_AnimatedDevOpsLogo>
-    with TickerProviderStateMixin {
+    with SingleTickerProviderStateMixin {
   late final AnimationController _scaleController;
-
-  late final AnimationController _flowController;
-
   late final Animation<double> _scale;
 
   @override
@@ -904,15 +979,10 @@ class _AnimatedDevOpsLogoState extends State<_AnimatedDevOpsLogo>
 
     _scaleController = AnimationController(
       vsync: this,
-      duration: const Duration(milliseconds: 1800),
+      duration: const Duration(milliseconds: 2200),
     )..repeat(reverse: true);
 
-    _flowController = AnimationController(
-      vsync: this,
-      duration: const Duration(seconds: 7),
-    )..repeat();
-
-    _scale = Tween<double>(begin: 1.0, end: 1.04).animate(
+    _scale = Tween<double>(begin: 1.0, end: 1.02).animate(
       CurvedAnimation(parent: _scaleController, curve: Curves.easeInOut),
     );
   }
@@ -920,47 +990,23 @@ class _AnimatedDevOpsLogoState extends State<_AnimatedDevOpsLogo>
   @override
   void dispose() {
     _scaleController.dispose();
-    _flowController.dispose();
-
     super.dispose();
   }
 
   @override
   Widget build(BuildContext context) {
-    return AnimatedBuilder(
-      animation: Listenable.merge([_scaleController, _flowController]),
-      builder: (context, child) {
-        return Transform.scale(
-          scale: _scale.value,
-          child: SizedBox(
-            width: widget.width,
-            child: AspectRatio(
-              aspectRatio: 1383 / 697,
-              child: Stack(
-                alignment: Alignment.center,
-                children: [
-                  Container(
-                    decoration: BoxDecoration(
-                      boxShadow: [
-                        BoxShadow(
-                          color: Colors.cyan.withValues(alpha: 0.22),
-                          blurRadius: 35,
-                          spreadRadius: 3,
-                        ),
-                      ],
-                    ),
-                  ),
-
-                  Image.asset(
-                    'assets/images/devops_logo.png',
-                    fit: BoxFit.contain,
-                  ),
-                ],
-              ),
-            ),
+    return ScaleTransition(
+      scale: _scale,
+      child: SizedBox(
+        width: widget.width,
+        child: AspectRatio(
+          aspectRatio: 1765 / 900,
+          child: Image.asset(
+            'assets/images/devops_logo.png',
+            fit: BoxFit.contain,
           ),
-        );
-      },
+        ),
+      ),
     );
   }
 }

@@ -1,15 +1,17 @@
 import 'package:flutter/material.dart';
 import '../widgets/app_drawer.dart';
+import '../widgets/category_button.dart';
 import 'set_screen.dart';
 import 'quiz_screen.dart';
 import '../l10n/app_localizations.dart';
 import '../services/update_service.dart';
 import 'cloud_screen.dart';
-import '../widgets/animated_category_icon.dart';
 import '../services/streak_service.dart';
+import '../services/question_service.dart';
 import '../widgets/daily_reward_dialog.dart';
 import '../widgets/streak_card.dart';
 import '../widgets/play_store_badge.dart'; // <-- NEW IMPORT
+import '../widgets/whats_new_dialog.dart';
 import 'scripting_screen.dart';
 
 class CategoryScreen extends StatefulWidget {
@@ -19,22 +21,15 @@ class CategoryScreen extends StatefulWidget {
   State<CategoryScreen> createState() => _CategoryScreenState();
 }
 
-class _CategoryScreenState extends State<CategoryScreen>
-    with SingleTickerProviderStateMixin {
-  late AnimationController controller;
+class _CategoryScreenState extends State<CategoryScreen> {
+  final TextEditingController _searchController = TextEditingController();
+  String _categoryQuery = '';
 
   @override
   void initState() {
     super.initState();
 
-    controller = AnimationController(
-      vsync: this,
-      duration: const Duration(seconds: 1),
-    )..repeat(reverse: true);
-
     WidgetsBinding.instance.addPostFrameCallback((_) async {
-      UpdateService.checkForUpdate(context);
-
       final result = await StreakService.checkDailyReward();
 
       if (!mounted) return;
@@ -42,95 +37,32 @@ class _CategoryScreenState extends State<CategoryScreen>
       if (result.showReward) {
         await showDailyRewardDialog(context, result);
       }
+
+      if (!mounted) return;
+
+      await showWhatsNewIfNeeded(context);
+
+      if (!mounted) return;
+
+      await UpdateService.checkForUpdate(context);
     });
   }
 
   @override
   void dispose() {
-    controller.dispose();
+    _searchController.dispose();
     super.dispose();
   }
 
-  Widget categoryCard(String title, String emoji) {
-    return InkWell(
-      onTap: () {
-        Navigator.push(
-          context,
-          MaterialPageRoute(
-            builder: (_) => SetScreen(category: title),
-          ),
-        );
-      },
-      child: Card(
-        elevation: 8,
-        shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(20),
-        ),
-        margin: const EdgeInsets.symmetric(vertical: 10),
-        child: SizedBox(
-          height: 80,
-          child: Row(
-            mainAxisSize: MainAxisSize.min,
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Text(
-                title,
-                style: const TextStyle(
-                  fontSize: 24,
-                  fontWeight: FontWeight.w500,
-                ),
-              ),
-              const SizedBox(width: 12),
-              AnimatedCategoryIcon(
-                category: title,
-                emoji: emoji,
-              ),
-            ],
-          ),
-        ),
-      ),
+  void _openCategory(String title) {
+    Navigator.push(
+      context,
+      MaterialPageRoute(builder: (_) => SetScreen(category: title)),
     );
   }
 
-  Widget scriptingCategoryCard(String title, String emoji) {
-    return InkWell(
-      onTap: () {
-        Navigator.push(
-          context,
-          MaterialPageRoute(
-            builder: (_) => const ScriptingScreen(),
-          ),
-        );
-      },
-      child: Card(
-        elevation: 8,
-        shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(20),
-        ),
-        margin: const EdgeInsets.symmetric(vertical: 10),
-        child: SizedBox(
-          height: 80,
-          child: Row(
-            mainAxisSize: MainAxisSize.min,
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Text(
-                title,
-                style: const TextStyle(
-                  fontSize: 24,
-                  fontWeight: FontWeight.w500,
-                ),
-              ),
-              const SizedBox(width: 12),
-              AnimatedCategoryIcon(
-                category: title,
-                emoji: emoji,
-              ),
-            ],
-          ),
-        ),
-      ),
-    );
+  Widget categoryButton(String title) {
+    return CategoryButton(title: title, onTap: () => _openCategory(title));
   }
 
   @override
@@ -147,98 +79,125 @@ class _CategoryScreenState extends State<CategoryScreen>
         actions: const [
           Padding(
             padding: EdgeInsets.only(right: 14),
-            child: Center(
-              child: PlayStoreBadge(height: 36),
-            ),
+            child: Center(child: PlayStoreBadge(height: 36)),
           ),
         ],
       ),
 
       body: Padding(
-        padding: const EdgeInsets.all(12),
-        child: ListView(
+        padding: const EdgeInsets.symmetric(horizontal: 12),
+        child: Column(
           children: [
-            const StreakCard(),
-
-            AnimatedBuilder(
-              animation: controller,
-              builder: (context, child) {
-                return Transform.scale(
-                  scale: 1 + (controller.value * 0.1),
-                  child: InkWell(
-                    onTap: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                          builder: (_) => QuizScreen(
-                            category: "DevOps",
-                            setNumber: 0,
-                          ),
+            Padding(
+              padding: const EdgeInsets.only(top: 12, bottom: 4),
+              child: TextField(
+                controller: _searchController,
+                textInputAction: TextInputAction.search,
+                decoration: InputDecoration(
+                  hintText: 'Search all 21 categories',
+                  prefixIcon: const Icon(Icons.search_rounded),
+                  suffixIcon: _categoryQuery.isEmpty
+                      ? null
+                      : IconButton(
+                          tooltip: 'Clear search',
+                          onPressed: () {
+                            _searchController.clear();
+                          },
+                          icon: const Icon(Icons.close_rounded),
                         ),
-                      );
-                    },
-                    child: Card(
-                      elevation: 8,
-                      child: SizedBox(
-                        height: 80,
-                        child: Center(
-                          child: Text(
-                            "DevOps ♾️",
-                            style: TextStyle(
-                              fontSize: 24,
-                              fontWeight: FontWeight.bold,
+                  border: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(14),
+                  ),
+                  filled: true,
+                ),
+                onChanged: (value) => setState(() => _categoryQuery = value),
+              ),
+            ),
+            Expanded(
+              child: ListView(
+                keyboardDismissBehavior:
+                    ScrollViewKeyboardDismissBehavior.onDrag,
+                children: _categoryQuery.trim().isEmpty
+                    ? [
+                        const StreakCard(),
+
+                        CategoryButton(
+                          title: 'DevOps',
+                          onTap: () => Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (_) =>
+                                  QuizScreen(category: 'DevOps', setNumber: 0),
                             ),
                           ),
                         ),
-                      ),
-                    ),
-                  ),
-                );
-              },
-            ),
 
-            InkWell(
-              onTap: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (_) => const CloudScreen(),
-                  ),
-                );
-              },
-              child: Card(
-                elevation: 8,
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(20),
-                ),
-                margin: const EdgeInsets.symmetric(vertical: 10),
-                child: const SizedBox(
-                  height: 80,
-                  child: Center(
-                    child: Text(
-                      "Cloud Computing ⛈️",
-                      style: TextStyle(
-                        fontSize: 24,
-                        fontWeight: FontWeight.w500,
-                      ),
-                    ),
-                  ),
-                ),
+                        CategoryButton(
+                          title: 'Cloud Computing',
+                          onTap: () => Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (_) => const CloudScreen(),
+                            ),
+                          ),
+                        ),
+
+                        CategoryButton(
+                          title: 'Scripting',
+                          onTap: () => Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (_) => const ScriptingScreen(),
+                            ),
+                          ),
+                        ),
+                        for (final category in [
+                          'Linux',
+                          'Docker',
+                          'Kubernetes',
+                          'Networking',
+                          'Git',
+                          'Jenkins',
+                          'Terraform',
+                          'Ansible',
+                        ])
+                          categoryButton(category),
+                      ]
+                    : _buildSearchResults(),
               ),
             ),
-
-            scriptingCategoryCard("Scripting", "📜"),
-            categoryCard("Linux", "🐧"),
-            categoryCard("Docker", "🐳"),
-            categoryCard("Kubernetes", "⎈"),
-            categoryCard("Networking", "🌐"),
-            categoryCard("Git", "🌿"),
-            categoryCard("Jenkins", "⚙️"),
-            categoryCard("Terraform", "🏗️"),
-            categoryCard("Ansible", "🤖"),
           ],
         ),
       ),
     );
+  }
+
+  List<Widget> _buildSearchResults() {
+    final query = _categoryQuery.trim().toLowerCase();
+    final matches = QuestionService.categories
+        .where((category) => category.toLowerCase().contains(query))
+        .toList();
+
+    if (matches.isEmpty) {
+      return [
+        const SizedBox(height: 64),
+        const Icon(Icons.search_off_rounded, size: 48),
+        const SizedBox(height: 12),
+        const Center(child: Text('No matching categories')),
+      ];
+    }
+
+    return [
+      Padding(
+        padding: const EdgeInsets.fromLTRB(4, 12, 4, 4),
+        child: Text(
+          '${matches.length} ${matches.length == 1 ? 'category' : 'categories'}',
+          style: TextStyle(
+            color: Theme.of(context).colorScheme.onSurfaceVariant,
+          ),
+        ),
+      ),
+      for (final category in matches) categoryButton(category),
+    ];
   }
 }

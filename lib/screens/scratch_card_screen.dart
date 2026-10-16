@@ -4,7 +4,6 @@ import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 import 'reward_question_screen.dart';
-import 'games_screen.dart';
 
 class ScratchCardScreen extends StatefulWidget {
   const ScratchCardScreen({super.key});
@@ -141,6 +140,7 @@ class _ScratchCardScreenState extends State<ScratchCardScreen> {
         final ColorScheme colors = Theme.of(dialogContext).colorScheme;
 
         return AlertDialog(
+          scrollable: true,
           icon: const Text(
             '🎟️',
             textAlign: TextAlign.center,
@@ -331,23 +331,19 @@ class _ScratchCardScreenState extends State<ScratchCardScreen> {
                         const SizedBox(height: 20),
 
                         // =====================================
-                        // PLAY MORE GAMES
+                        // BACK TO GAMES BUTTON (FIXED)
                         // =====================================
                         SizedBox(
                           width: double.infinity,
                           height: 52,
                           child: ElevatedButton.icon(
+                            // ✅ Simply pop the current screen to return to GamesScreen
                             onPressed: () {
-                              Navigator.pushReplacement(
-                                context,
-                                MaterialPageRoute(
-                                  builder: (_) => const GamesScreen(),
-                                ),
-                              );
+                              Navigator.pop(context);
                             },
-                            icon: const Icon(Icons.sports_esports_outlined),
+                            icon: const Icon(Icons.arrow_back_rounded),
                             label: const Text(
-                              'Play More Games',
+                              'Back to Games',
                               style: TextStyle(
                                 fontSize: 16,
                                 fontWeight: FontWeight.bold,
@@ -615,7 +611,7 @@ class _HowToRow extends StatelessWidget {
   final String text;
   final bool error;
 
-  const _HowToRow({required this.icon, required this.text, this.error = false});
+  const _HowToRow({required this.icon, required this.text}) : error = false;
 
   @override
   Widget build(BuildContext context) {

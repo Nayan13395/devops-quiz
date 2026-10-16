@@ -3,7 +3,6 @@ import 'dart:math';
 import 'package:flutter/material.dart';
 
 import '../services/mystery_deal_service.dart';
-import 'games_screen.dart';
 import 'reward_question_screen.dart';
 
 class MysteryDealScreen extends StatefulWidget {
@@ -143,6 +142,7 @@ class _MysteryDealScreenState extends State<MysteryDealScreen> {
         final ColorScheme colors = Theme.of(dialogContext).colorScheme;
 
         return AlertDialog(
+          scrollable: true,
           // Gift icon is inside content instead of
           // AlertDialog.icon so it stays centered.
           contentPadding: const EdgeInsets.fromLTRB(24, 28, 24, 10),
@@ -449,17 +449,13 @@ class _MysteryDealScreenState extends State<MysteryDealScreen> {
                     width: double.infinity,
                     height: 52,
                     child: ElevatedButton.icon(
+                      // ✅ Simply pop the current screen to return to GamesScreen
                       onPressed: () {
-                        Navigator.pushReplacement(
-                          context,
-                          MaterialPageRoute(
-                            builder: (_) => const GamesScreen(),
-                          ),
-                        );
+                        Navigator.pop(context);
                       },
-                      icon: const Icon(Icons.sports_esports_outlined),
+                      icon: const Icon(Icons.arrow_back_rounded),
                       label: const Text(
-                        'Play More Games',
+                        'Back to Games',
                         style: TextStyle(
                           fontSize: 16,
                           fontWeight: FontWeight.bold,
@@ -562,15 +558,13 @@ class _MysteryDealScreenState extends State<MysteryDealScreen> {
           width: double.infinity,
           height: 52,
           child: ElevatedButton.icon(
+            // ✅ Simply pop the current screen to return to GamesScreen
             onPressed: () {
-              Navigator.pushReplacement(
-                context,
-                MaterialPageRoute(builder: (_) => const GamesScreen()),
-              );
+              Navigator.pop(context);
             },
-            icon: const Icon(Icons.sports_esports_outlined),
+            icon: const Icon(Icons.arrow_back_rounded),
             label: const Text(
-              'Play More Games',
+              'Back to Games',
               style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
             ),
           ),

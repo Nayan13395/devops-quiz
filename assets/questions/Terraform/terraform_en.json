@@ -411,5 +411,110 @@
     "question": "Which command displays providers used by the configuration?",
     "options": ["terraform providers", "terraform provider list", "terraform show providers", "terraform plugin list"],
     "answer": "terraform providers"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "Which command initializes a Terraform working directory?",
+    "options": ["terraform load", "terraform setup", "terraform start", "terraform init"],
+    "answer": "terraform init"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "Which command previews the changes Terraform will make?",
+    "options": ["terraform show-plan", "terraform plan", "terraform preview", "terraform diff"],
+    "answer": "terraform plan"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "What is the default name of the Terraform state file?",
+    "options": ["terraform.tfstate", "main.tfstate.json", "state.tf", "terraform.lock"],
+    "answer": "terraform.tfstate"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "Which block declares an input variable?",
+    "options": ["input", "param", "variable", "argument"],
+    "answer": "variable"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "Which command destroys all managed infrastructure?",
+    "options": ["terraform destroy", "terraform remove", "terraform clean", "terraform erase"],
+    "answer": "terraform destroy"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "Which file records the selected provider versions?",
+    "options": ["versions.tfstate", "providers.lock", ".terraform.lock.hcl", "terraform.lock.json"],
+    "answer": ".terraform.lock.hcl"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "Which command rewrites configuration files to the canonical style?",
+    "options": ["terraform style", "terraform fmt", "terraform tidy", "terraform lint"],
+    "answer": "terraform fmt"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "What does terraform validate do?",
+    "options": ["Imports resources", "Applies changes", "Checks configuration syntax and consistency", "Upgrades providers"],
+    "answer": "Checks configuration syntax and consistency"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "What is a Terraform module?",
+    "options": ["A container for resources that are used together", "A state backup", "A provider binary", "A cloud region"],
+    "answer": "A container for resources that are used together"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "Which meta-argument creates multiple instances of a resource from a number?",
+    "options": ["provider", "count", "lifecycle", "source"],
+    "answer": "count"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "Which block reads information about existing infrastructure?",
+    "options": ["data", "locals", "resource", "output"],
+    "answer": "data"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "Which command brings an existing resource under Terraform management?",
+    "options": ["terraform attach", "terraform import", "terraform adopt", "terraform sync"],
+    "answer": "terraform import"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "Which feature prevents two users from changing the state at the same time?",
+    "options": ["State locking", "Workspaces", "Outputs", "Provisioners"],
+    "answer": "State locking"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "Which command lists the resources tracked in the state?",
+    "options": ["terraform state list", "terraform show-resources", "terraform list state", "terraform resources"],
+    "answer": "terraform state list"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "Which block exposes values after apply?",
+    "options": ["publish", "return", "export", "output"],
+    "answer": "output"
   }
 ]

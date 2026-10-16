@@ -411,5 +411,110 @@
     "question": "Which command displays the YAML definition of a running pod?",
     "options": ["kubectl get pod -o yaml", "kubectl show pod yaml", "kubectl export pod", "kubectl pod yaml"],
     "answer": "kubectl get pod -o yaml"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "Which object makes sure a specified number of pod replicas is running?",
+    "options": ["ReplicaSet", "Service", "Ingress", "ConfigMap"],
+    "answer": "ReplicaSet"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "Which resource stores non-confidential configuration data as key-value pairs?",
+    "options": ["Namespace", "ConfigMap", "Secret", "PersistentVolume"],
+    "answer": "ConfigMap"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "Which controller runs one pod on every node?",
+    "options": ["StatefulSet", "DaemonSet", "Deployment", "Job"],
+    "answer": "DaemonSet"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "Which service type exposes an application on a static port of every node?",
+    "options": ["ClusterIP", "ExternalName", "NodePort", "Headless"],
+    "answer": "NodePort"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "Which command creates or updates resources from a manifest file?",
+    "options": ["kubectl apply -f", "kubectl run -f", "kubectl load -f", "kubectl push -f"],
+    "answer": "kubectl apply -f"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "Which command shows detailed information and recent events of a pod?",
+    "options": ["kubectl describe pod", "kubectl status pod", "kubectl events-only pod", "kubectl info pod"],
+    "answer": "kubectl describe pod"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "Which component stores the entire cluster state?",
+    "options": ["kube-scheduler", "kube-proxy", "kubelet", "etcd"],
+    "answer": "etcd"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "Which workload runs a task until completion?",
+    "options": ["DaemonSet", "Service", "Job", "Ingress"],
+    "answer": "Job"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "Which probe tells Kubernetes to restart an unhealthy container?",
+    "options": ["Liveness probe", "Health route", "Startup gate", "Readiness probe"],
+    "answer": "Liveness probe"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "Which command scales the deployment web to 5 replicas?",
+    "options": ["kubectl expand deployment web 5", "kubectl replicas web=5", "kubectl scale deployment web --replicas=5", "kubectl resize web --to=5"],
+    "answer": "kubectl scale deployment web --replicas=5"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "Which workload gives pods stable network identities and storage?",
+    "options": ["DaemonSet", "Deployment", "ReplicaSet", "StatefulSet"],
+    "answer": "StatefulSet"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "Which tool is commonly called the package manager for Kubernetes?",
+    "options": ["kubelet", "kubeadm", "kubectl", "Helm"],
+    "answer": "Helm"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "Which command deletes the pod named web?",
+    "options": ["kubectl delete pod web", "kubectl stop pod web", "kubectl remove pod web", "kubectl kill pod web"],
+    "answer": "kubectl delete pod web"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "Which object routes external HTTP traffic to services inside the cluster?",
+    "options": ["Volume", "Namespace", "Ingress", "ConfigMap"],
+    "answer": "Ingress"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "Which kubectl command prints the logs of a pod?",
+    "options": ["kubectl log-show", "kubectl tail-pod", "kubectl logs", "kubectl output"],
+    "answer": "kubectl logs"
   }
 ]

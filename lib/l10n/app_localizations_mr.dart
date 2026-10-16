@@ -9,6 +9,12 @@ class AppLocalizationsMr extends AppLocalizations {
   AppLocalizationsMr([String locale = 'mr']) : super(locale);
 
   @override
+  String get certificates => 'प्रमाणपत्रे';
+
+  @override
+  String get whatsNew => 'नवीन काय आहे';
+
+  @override
   String get settings => 'सेटिंग्ज';
 
   @override
@@ -86,6 +92,9 @@ class AppLocalizationsMr extends AppLocalizations {
 
   @override
   String get contact => 'संपर्क';
+
+  @override
+  String get learning => 'शिका';
 
   @override
   String get linkedIn => 'लिंक्डइन';

@@ -2,8 +2,8 @@ import 'dart:math';
 
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+
 import 'reward_question_screen.dart';
-import 'games_screen.dart';
 
 class SpinWheelScreen extends StatefulWidget {
   const SpinWheelScreen({super.key});
@@ -171,6 +171,7 @@ class _SpinWheelScreenState extends State<SpinWheelScreen>
       barrierDismissible: false,
       builder: (dialogContext) {
         return AlertDialog(
+          scrollable: true,
           icon: const Text(
             '🎡',
             textAlign: TextAlign.center,
@@ -342,27 +343,35 @@ class _SpinWheelScreenState extends State<SpinWheelScreen>
                         // =====================================
                         // POINTER
                         // =====================================
-                        Icon(
-                          Icons.arrow_drop_down,
-                          size: 55,
-                          color: Theme.of(context).colorScheme.primary,
-                        ),
-
-                        Transform.translate(
-                          offset: const Offset(0, -15),
-
-                          child: AnimatedBuilder(
-                            animation: _animationController,
-
-                            builder: (context, child) {
-                              return Transform.rotate(
-                                angle: _rotationAnimation.value,
-                                child: child,
-                              );
-                            },
-
-                            child: _Wheel(rewards: rewards),
-                          ),
+                        LayoutBuilder(
+                          builder: (context, constraints) {
+                            final wheelSize = min(300.0, constraints.maxWidth);
+                            return Column(
+                              mainAxisSize: MainAxisSize.min,
+                              children: [
+                                Icon(
+                                  Icons.arrow_drop_down,
+                                  size: min(55.0, wheelSize * 0.18),
+                                  color: Theme.of(context).colorScheme.primary,
+                                ),
+                                Transform.translate(
+                                  offset: Offset(0, -wheelSize * 0.05),
+                                  child: AnimatedBuilder(
+                                    animation: _animationController,
+                                    builder: (context, child) =>
+                                        Transform.rotate(
+                                          angle: _rotationAnimation.value,
+                                          child: child,
+                                        ),
+                                    child: _Wheel(
+                                      rewards: rewards,
+                                      size: wheelSize,
+                                    ),
+                                  ),
+                                ),
+                              ],
+                            );
+                          },
                         ),
 
                         const SizedBox(height: 20),
@@ -430,21 +439,20 @@ class _SpinWheelScreenState extends State<SpinWheelScreen>
 
                         const SizedBox(height: 20),
 
+                        // =====================================
+                        // BACK TO GAMES BUTTON (FIXED)
+                        // =====================================
                         SizedBox(
                           width: double.infinity,
                           height: 52,
                           child: ElevatedButton.icon(
+                            // ✅ Simply pop the current screen to return to GamesScreen
                             onPressed: () {
-                              Navigator.pushReplacement(
-                                context,
-                                MaterialPageRoute(
-                                  builder: (_) => const GamesScreen(),
-                                ),
-                              );
+                              Navigator.pop(context);
                             },
-                            icon: const Icon(Icons.sports_esports_outlined),
+                            icon: const Icon(Icons.arrow_back_rounded),
                             label: const Text(
-                              'Play More Games',
+                              'Back to Games',
                               style: TextStyle(
                                 fontSize: 16,
                                 fontWeight: FontWeight.bold,
@@ -470,14 +478,15 @@ class _SpinWheelScreenState extends State<SpinWheelScreen>
 
 class _Wheel extends StatelessWidget {
   final List<int> rewards;
+  final double size;
 
-  const _Wheel({required this.rewards});
+  const _Wheel({required this.rewards, required this.size});
 
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      width: 300,
-      height: 300,
+      width: size,
+      height: size,
 
       child: CustomPaint(
         painter: _WheelPainter(

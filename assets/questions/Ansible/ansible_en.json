@@ -418,5 +418,110 @@
     "question": "Which command lists all available Ansible modules?",
     "options": ["ansible-doc -l", "ansible modules", "ansible-list", "ansible-help modules"],
     "answer": "ansible-doc -l"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "In which format are Ansible playbooks written?",
+    "options": ["INI", "YAML", "XML", "CSV"],
+    "answer": "YAML"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "Which command pings all hosts in the inventory with an ad-hoc command?",
+    "options": ["ansible-playbook ping", "ansible-ping all", "ansible all -m ping", "ansible --ping-all"],
+    "answer": "ansible all -m ping"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "What lists the hosts Ansible manages?",
+    "options": ["Role", "Playbook", "Inventory", "Vault"],
+    "answer": "Inventory"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "Which tool encrypts sensitive data in Ansible?",
+    "options": ["Ansible Lint", "Ansible Galaxy", "Ansible Doc", "Ansible Vault"],
+    "answer": "Ansible Vault"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "What are handlers used for?",
+    "options": ["Creating inventories", "Connecting through SSH", "Defining variables", "Tasks that run only when notified"],
+    "answer": "Tasks that run only when notified"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "Which keyword iterates over a list in modern Ansible?",
+    "options": ["iterate", "loop", "foreach", "repeat"],
+    "answer": "loop"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "Which module installs packages on Debian-based systems?",
+    "options": ["apt", "dnf", "pacman", "yum"],
+    "answer": "apt"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "How does Ansible usually connect to Linux hosts?",
+    "options": ["SSH", "SNMP", "RDP", "A custom agent"],
+    "answer": "SSH"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "Which command checks the syntax of a playbook?",
+    "options": ["ansible-playbook --syntax-check", "ansible-playbook --validate", "ansible-check play.yml", "ansible-lint --run"],
+    "answer": "ansible-playbook --syntax-check"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "What does idempotency mean in Ansible?",
+    "options": ["Running tasks in parallel", "Encrypting variables", "Gathering facts", "Running a task repeatedly gives the same result"],
+    "answer": "Running a task repeatedly gives the same result"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "Which structure packages reusable automation content?",
+    "options": ["Role", "Callback", "Inventory", "Fact"],
+    "answer": "Role"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "Which module copies a file from the control node to a remote host?",
+    "options": ["fetch", "copy", "debug", "shell"],
+    "answer": "copy"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "Which keyword runs a task with elevated privileges?",
+    "options": ["become", "sudo_all", "elevate", "root"],
+    "answer": "become"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "Which tool downloads community roles and collections?",
+    "options": ["ansible-pull", "ansible-doc", "ansible-galaxy", "ansible-vault"],
+    "answer": "ansible-galaxy"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "Which option restricts a run to selected hosts?",
+    "options": ["--limit", "--only", "--target", "--hosts-only"],
+    "answer": "--limit"
   }
 ]

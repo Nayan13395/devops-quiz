@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:url_launcher/url_launcher.dart';
 
 import '../l10n/app_localizations.dart';
 import '../screens/about_screen.dart';
+import '../screens/certificates_screen.dart';
+import '../services/rate_prompt_service.dart';
+import '../services/whats_new_service.dart';
+import 'new_feature_badge.dart';
 import '../screens/achievement_screen.dart';
 import '../screens/category_screen.dart';
 import '../screens/challenge_screen.dart';
@@ -11,6 +14,7 @@ import '../screens/leaderboard_screen.dart';
 import '../screens/quiz_screen.dart';
 import '../screens/refer_earn_screen.dart';
 import '../screens/settings_screen.dart';
+import '../screens/learning_screen.dart';
 import '../screens/welcome_screen.dart';
 import '../services/daily_quiz_service.dart';
 import '../services/user_profile_service.dart';
@@ -43,8 +47,7 @@ class AppDrawer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Drawer(
-      child: ListView(
-        padding: EdgeInsets.zero,
+      child: Column(
         children: [
           // =================================================
           // PROFILE
@@ -82,301 +85,398 @@ class AppDrawer extends StatelessWidget {
             ),
           ),
 
-          // =================================================
-          // HOME
-          // =================================================
-          ListTile(
-            leading: const Icon(Icons.home_rounded),
-            title: Text(AppLocalizations.of(context)!.home),
-            onTap: () {
-              Navigator.of(context).pushAndRemoveUntil(
-                MaterialPageRoute(builder: (_) => const WelcomeScreen()),
-                (route) => false,
-              );
-            },
-          ),
-
-          // =================================================
-          // SWITCH CATEGORY
-          // =================================================
-          ListTile(
-            leading: const Icon(Icons.swap_horiz),
-            title: Text(AppLocalizations.of(context)!.switchCategory),
-            onTap: () {
-              Navigator.pop(context);
-
-              Navigator.pushAndRemoveUntil(
-                context,
-                MaterialPageRoute(builder: (_) => const CategoryScreen()),
-                (route) => false,
-              );
-            },
-          ),
-
-          // =================================================
-          // DAILY QUIZ
-          // =================================================
-          FutureBuilder<bool>(
-            future: DailyQuizService.isCompletedToday(),
-            builder: (context, snapshot) {
-              final bool completed = snapshot.data ?? false;
-
-              // =============================================
-              // COMPLETED TODAY
-              // =============================================
-
-              if (completed) {
-                return ListTile(
-                  leading: const Icon(Icons.calendar_today),
-                  title: Text(AppLocalizations.of(context)!.dailyQuiz),
-                  onTap: () async {
-                    Navigator.pop(context);
-
-                    await showDialog(
-                      context: context,
-                      builder: (dialogContext) {
-                        return AlertDialog(
-                          title: Text(
-                            AppLocalizations.of(context)!.dailyQuizCompleted,
-                          ),
-                          content: Text(
-                            AppLocalizations.of(
-                              context,
-                            )!.dailyQuizCompletedMessage,
-                          ),
-                          actions: [
-                            TextButton(
-                              onPressed: () {
-                                Navigator.pop(dialogContext);
-                              },
-                              child: Text(AppLocalizations.of(context)!.ok),
-                            ),
-                          ],
-                        );
-                      },
+          Expanded(
+            child: ListView(
+              padding: EdgeInsets.zero,
+              children: [
+                // =================================================
+                // HOME
+                // =================================================
+                ListTile(
+                  leading: const Icon(Icons.home_rounded),
+                  title: Text(AppLocalizations.of(context)!.home),
+                  onTap: () {
+                    Navigator.of(context).pushAndRemoveUntil(
+                      MaterialPageRoute(builder: (_) => const WelcomeScreen()),
+                      (route) => false,
                     );
                   },
-                );
-              }
+                ),
 
-              // =============================================
-              // NOT COMPLETED
-              // =============================================
+                // =================================================
+                // SWITCH CATEGORY
+                // =================================================
+                ListTile(
+                  leading: const Icon(Icons.swap_horiz),
+                  title: Text(AppLocalizations.of(context)!.switchCategory),
+                  onTap: () {
+                    Navigator.pop(context);
 
-              final ColorScheme colorScheme = Theme.of(context).colorScheme;
+                    Navigator.pushAndRemoveUntil(
+                      context,
+                      MaterialPageRoute(builder: (_) => const CategoryScreen()),
+                      (route) => false,
+                    );
+                  },
+                ),
 
-              return Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 3),
-                child: Material(
-                  color: colorScheme.primaryContainer.withValues(alpha: 0.65),
-                  borderRadius: BorderRadius.circular(14),
-                  child: InkWell(
-                    borderRadius: BorderRadius.circular(14),
-                    onTap: () {
-                      Navigator.pop(context);
+                // =================================================
+                // DAILY QUIZ
+                // =================================================
+                FutureBuilder<bool>(
+                  future: DailyQuizService.isCompletedToday(),
+                  builder: (context, snapshot) {
+                    final bool completed = snapshot.data ?? false;
 
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                          builder: (_) => const QuizScreen(
-                            category: 'DailyQuiz',
-                            setNumber: 0,
+                    // =============================================
+                    // COMPLETED TODAY
+                    // =============================================
+
+                    if (completed) {
+                      return ListTile(
+                        leading: const Icon(Icons.calendar_today),
+                        title: Text(AppLocalizations.of(context)!.dailyQuiz),
+                        onTap: () async {
+                          Navigator.pop(context);
+
+                          await showDialog(
+                            context: context,
+                            builder: (dialogContext) {
+                              return AlertDialog(
+                                title: Text(
+                                  AppLocalizations.of(
+                                    context,
+                                  )!.dailyQuizCompleted,
+                                ),
+                                content: Text(
+                                  AppLocalizations.of(
+                                    context,
+                                  )!.dailyQuizCompletedMessage,
+                                ),
+                                actions: [
+                                  TextButton(
+                                    onPressed: () {
+                                      Navigator.pop(dialogContext);
+                                    },
+                                    child: Text(
+                                      AppLocalizations.of(context)!.ok,
+                                    ),
+                                  ),
+                                ],
+                              );
+                            },
+                          );
+                        },
+                      );
+                    }
+
+                    // =============================================
+                    // NOT COMPLETED
+                    // =============================================
+
+                    final ColorScheme colorScheme = Theme.of(
+                      context,
+                    ).colorScheme;
+
+                    return Padding(
+                      padding: const EdgeInsets.symmetric(
+                        horizontal: 8,
+                        vertical: 3,
+                      ),
+                      child: Material(
+                        color: colorScheme.primaryContainer.withValues(
+                          alpha: 0.65,
+                        ),
+                        borderRadius: BorderRadius.circular(14),
+                        child: InkWell(
+                          borderRadius: BorderRadius.circular(14),
+                          onTap: () {
+                            Navigator.pop(context);
+
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (_) => const QuizScreen(
+                                  category: 'DailyQuiz',
+                                  setNumber: 0,
+                                ),
+                              ),
+                            );
+                          },
+                          child: Padding(
+                            padding: const EdgeInsets.symmetric(
+                              horizontal: 16,
+                              vertical: 12,
+                            ),
+                            child: Row(
+                              children: [
+                                // ===============================
+                                // GIFT ICON
+                                // ===============================
+                                Container(
+                                  width: 32,
+                                  height: 32,
+                                  alignment: Alignment.center,
+                                  decoration: BoxDecoration(
+                                    color: colorScheme.primary,
+                                    borderRadius: BorderRadius.circular(12),
+                                  ),
+                                  child: Icon(
+                                    Icons
+                                        .calendar_month_rounded, // 📅 Calendar icon
+                                    color: colorScheme.onPrimary,
+                                    size: 24,
+                                  ),
+                                ),
+
+                                const SizedBox(width: 14),
+
+                                // ===============================
+                                // DAILY QUIZ
+                                // ===============================
+                                Expanded(
+                                  child: Text(
+                                    AppLocalizations.of(context)!.dailyQuiz,
+                                    style: TextStyle(
+                                      fontSize: 16,
+                                      fontWeight: FontWeight.bold,
+                                      color: colorScheme.onPrimaryContainer,
+                                    ),
+                                  ),
+                                ),
+
+                                // ===============================
+                                // NEW
+                                // ===============================
+                                Container(
+                                  padding: const EdgeInsets.symmetric(
+                                    horizontal: 8,
+                                    vertical: 5,
+                                  ),
+                                  decoration: BoxDecoration(
+                                    color: colorScheme.secondaryContainer,
+                                    borderRadius: BorderRadius.circular(9),
+                                    border: Border.all(
+                                      color: colorScheme.secondary.withValues(
+                                        alpha: 0.25,
+                                      ),
+                                    ),
+                                  ),
+                                  child: Row(
+                                    mainAxisSize: MainAxisSize.min,
+                                    children: [
+                                      Icon(
+                                        Icons.auto_awesome_rounded,
+                                        size: 13,
+                                        color: colorScheme.onSecondaryContainer,
+                                      ),
+                                      const SizedBox(width: 4),
+                                      Text(
+                                        'NEW',
+                                        style: TextStyle(
+                                          fontSize: 10,
+                                          fontWeight: FontWeight.w800,
+                                          color:
+                                              colorScheme.onSecondaryContainer,
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                              ],
+                            ),
                           ),
                         ),
-                      );
-                    },
-                    child: Padding(
-                      padding: const EdgeInsets.symmetric(
-                        horizontal: 16,
-                        vertical: 12,
                       ),
-                      child: Row(
-                        children: [
-                          // ===============================
-                          // GIFT ICON
-                          // ===============================
-                          Container(
-  width: 32,
-  height: 32,
-  alignment: Alignment.center,
-  decoration: BoxDecoration(
-    color: colorScheme.primary,
-    borderRadius: BorderRadius.circular(12),
-  ),
-  child: Icon(
-    Icons.calendar_month_rounded, // 📅 Calendar icon
-    color: colorScheme.onPrimary,
-    size: 24,
-  ),
-),
-
-                          const SizedBox(width: 14),
-
-                          // ===============================
-                          // DAILY QUIZ
-                          // ===============================
-                          Expanded(
-                            child: Text(
-                              AppLocalizations.of(context)!.dailyQuiz,
-                              style: TextStyle(
-                                fontSize: 16,
-                                fontWeight: FontWeight.bold,
-                                color: colorScheme.onPrimaryContainer,
-                              ),
-                            ),
-                          ),
-
-                          // ===============================
-                          // NEW
-                          // ===============================
-                          Container(
-                            padding: const EdgeInsets.symmetric(
-                              horizontal: 9,
-                              vertical: 4,
-                            ),
-                            decoration: BoxDecoration(
-                              color: colorScheme.primary,
-                              borderRadius: BorderRadius.circular(20),
-                            ),
-                            child: Text(
-                              'NEW ✨',
-                              style: TextStyle(
-                                fontSize: 11,
-                                fontWeight: FontWeight.bold,
-                                color: colorScheme.onPrimary,
-                              ),
-                            ),
-                          ),
-                        ],
-                      ),
-                    ),
-                  ),
+                    );
+                  },
                 ),
-              );
-            },
+                ListTile(
+                  leading: const Icon(Icons.school_outlined, size: 28),
+                  title: Text(AppLocalizations.of(context)!.learning),
+
+                  onTap: () {
+                    Navigator.pop(context); // Close drawer
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (_) => const LearningScreen()),
+                    );
+                  },
+                ),
+                // =================================================
+                // LEADERBOARD
+                // =================================================
+                ListTile(
+                  leading: const Icon(Icons.leaderboard),
+                  title: Text(AppLocalizations.of(context)!.leaderboard),
+                  onTap: () {
+                    Navigator.pop(context);
+
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (_) => const LeaderboardScreen(),
+                      ),
+                    );
+                  },
+                ),
+
+                // =================================================
+                // CHALLENGE MODE
+                // =================================================
+                ListTile(
+                  leading: const Icon(Icons.bolt),
+                  title: Text(AppLocalizations.of(context)!.challengeMode),
+                  onTap: () {
+                    Navigator.pop(context);
+
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (_) => const ChallengeScreen(),
+                      ),
+                    );
+                  },
+                ),
+
+                // =================================================
+                // GAMES
+                // =================================================
+                ListTile(
+                  leading: const Icon(Icons.sports_esports_outlined),
+                  title: Text(AppLocalizations.of(context)!.games),
+                  trailing: const NewFeatureBadge(
+                    featureId: WhatsNewService.games,
+                  ),
+                  onTap: () {
+                    WhatsNewService.markFeatureSeen(WhatsNewService.games);
+
+                    Navigator.pop(context);
+
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (_) => const GamesScreen()),
+                    );
+                  },
+                ),
+
+                // =================================================
+                // ACHIEVEMENTS
+                // =================================================
+                ListTile(
+                  leading: const Icon(Icons.emoji_events),
+                  title: Text(AppLocalizations.of(context)!.achievements),
+                  trailing: const NewFeatureBadge(
+                    featureId: WhatsNewService.achievements,
+                  ),
+                  onTap: () {
+                    WhatsNewService.markFeatureSeen(
+                      WhatsNewService.achievements,
+                    );
+
+                    Navigator.pop(context);
+
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (_) => const AchievementScreen(),
+                      ),
+                    );
+                  },
+                ),
+
+                // =================================================
+                // CERTIFICATES
+                // =================================================
+                ListTile(
+                  leading: const Icon(Icons.workspace_premium),
+                  title: Text(AppLocalizations.of(context)!.certificates),
+                  trailing: const NewFeatureBadge(
+                    featureId: WhatsNewService.certificates,
+                  ),
+                  onTap: () {
+                    Navigator.pop(context);
+
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (_) => const CertificatesScreen(),
+                      ),
+                    );
+                  },
+                ),
+
+                // =================================================
+                // SETTINGS
+                // =================================================
+                ListTile(
+                  leading: const Icon(Icons.settings),
+                  title: Text(AppLocalizations.of(context)!.settings),
+                  trailing: const NewFeatureBadge(
+                    featureId: WhatsNewService.settings,
+                  ),
+                  onTap: () {
+                    WhatsNewService.markFeatureSeen(WhatsNewService.settings);
+
+                    Navigator.pop(context);
+
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (_) => const SettingsScreen()),
+                    );
+                  },
+                ),
+
+                // =================================================
+                // REFER AND EARN
+                // =================================================
+                ListTile(
+                  leading: const Icon(Icons.card_giftcard),
+                  title: Text(AppLocalizations.of(context)!.referAndEarn),
+                  onTap: () {
+                    Navigator.pop(context);
+
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (_) => const ReferEarnScreen(),
+                      ),
+                    );
+                  },
+                ),
+              ],
+            ),
           ),
 
-          // =================================================
-          // LEADERBOARD
-          // =================================================
-          ListTile(
-            leading: const Icon(Icons.leaderboard),
-            title: Text(AppLocalizations.of(context)!.leaderboard),
-            onTap: () {
-              Navigator.pop(context);
+          const Divider(height: 1),
 
-              Navigator.push(
-                context,
-                MaterialPageRoute(builder: (_) => const LeaderboardScreen()),
-              );
-            },
-          ),
+          // Keep Rate App and About above the system nav bar on phones.
+          SafeArea(
+            top: false,
+            child: Column(
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                ListTile(
+                  leading: const Icon(Icons.star),
+                  title: Text(AppLocalizations.of(context)!.rateApp),
+                  onTap: () {
+                    rateApp();
+                  },
+                ),
+                ListTile(
+                  leading: const Icon(Icons.info),
+                  title: Text(AppLocalizations.of(context)!.about),
+                  onTap: () {
+                    Navigator.pop(context);
 
-          // =================================================
-          // CHALLENGE MODE
-          // =================================================
-          ListTile(
-            leading: const Icon(Icons.bolt),
-            title: Text(AppLocalizations.of(context)!.challengeMode),
-            onTap: () {
-              Navigator.pop(context);
-
-              Navigator.push(
-                context,
-                MaterialPageRoute(builder: (_) => const ChallengeScreen()),
-              );
-            },
-          ),
-
-          // =================================================
-          // GAMES
-          // =================================================
-          ListTile(
-            leading: const Icon(Icons.sports_esports_outlined),
-            title: Text(AppLocalizations.of(context)!.games),
-            onTap: () {
-              Navigator.pop(context);
-
-              Navigator.push(
-                context,
-                MaterialPageRoute(builder: (_) => const GamesScreen()),
-              );
-            },
-          ),
-
-          // =================================================
-          // ACHIEVEMENTS
-          // =================================================
-          ListTile(
-            leading: const Icon(Icons.emoji_events),
-            title: Text(AppLocalizations.of(context)!.achievements),
-            onTap: () {
-              Navigator.pop(context);
-
-              Navigator.push(
-                context,
-                MaterialPageRoute(builder: (_) => const AchievementScreen()),
-              );
-            },
-          ),
-
-          // =================================================
-          // SETTINGS
-          // =================================================
-          ListTile(
-            leading: const Icon(Icons.settings),
-            title: Text(AppLocalizations.of(context)!.settings),
-            onTap: () {
-              Navigator.pop(context);
-
-              Navigator.push(
-                context,
-                MaterialPageRoute(builder: (_) => const SettingsScreen()),
-              );
-            },
-          ),
-
-          // =================================================
-          // REFER AND EARN
-          // =================================================
-          ListTile(
-            leading: const Icon(Icons.card_giftcard),
-            title: Text(AppLocalizations.of(context)!.referAndEarn),
-            onTap: () {
-              Navigator.pop(context);
-
-              Navigator.push(
-                context,
-                MaterialPageRoute(builder: (_) => const ReferEarnScreen()),
-              );
-            },
-          ),
-
-          // =================================================
-          // RATE APP
-          // =================================================
-          ListTile(
-            leading: const Icon(Icons.star),
-            title: Text(AppLocalizations.of(context)!.rateApp),
-            onTap: () {
-              rateApp();
-            },
-          ),
-
-          // =================================================
-          // ABOUT
-          // =================================================
-          ListTile(
-            leading: const Icon(Icons.info),
-            title: Text(AppLocalizations.of(context)!.about),
-            onTap: () {
-              Navigator.pop(context);
-
-              Navigator.push(
-                context,
-                MaterialPageRoute(builder: (_) => const AboutScreen()),
-              );
-            },
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (_) => const AboutScreen()),
+                    );
+                  },
+                ),
+              ],
+            ),
           ),
         ],
       ),
@@ -568,12 +668,6 @@ class _UserProfileAvatarState extends State<_UserProfileAvatar> {
 // ============================================================
 
 Future<void> rateApp() async {
-  const String url =
-      'https://play.google.com/store/apps/details?id=com.nayan.devops';
-
-  final Uri uri = Uri.parse(url);
-
-  if (await canLaunchUrl(uri)) {
-    await launchUrl(uri, mode: LaunchMode.externalApplication);
-  }
+  await RatePromptService.markRated();
+  await RatePromptService.openStore();
 }

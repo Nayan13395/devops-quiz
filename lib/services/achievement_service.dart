@@ -3,6 +3,8 @@ import 'dart:convert';
 import 'package:shared_preferences/shared_preferences.dart';
 
 import '../models/achievement.dart';
+import 'certificate_service.dart';
+import 'daily_quiz_service.dart';
 import 'point_service.dart';
 import 'streak_service.dart';
 
@@ -337,7 +339,93 @@ class AchievementService {
       current: 0,
       target: 1,
     ),
+
+    // Quiz count milestones
+    ..._milestones('quiz', '🧠', [
+      (25, 'Quiz Enthusiast', 'Complete 25 quizzes.', 750),
+      (50, 'Quiz Master', 'Complete 50 quizzes.', 1500),
+      (100, 'Century Club', 'Complete 100 quizzes.', 3000),
+      (250, 'Quiz Legend', 'Complete 250 quizzes.', 7500),
+    ]),
+
+    // Point milestones
+    ..._milestones('points', '⭐', [
+      (5000, '5,000 Points', 'Earn 5,000 total points.', 500),
+      (10000, '10,000 Points', 'Earn 10,000 total points.', 1000),
+      (50000, '50,000 Points', 'Earn 50,000 total points.', 3000),
+      (100000, '100,000 Points', 'Earn 100,000 total points.', 6000),
+    ]),
+
+    // Daily quiz milestones
+    ..._milestones('daily', '📅', [
+      (1, 'Daily Starter', 'Complete your first Daily Quiz.', 200),
+      (7, 'Daily Habit', 'Complete 7 Daily Quizzes.', 1000),
+      (30, 'Daily Champion', 'Complete 30 Daily Quizzes.', 5000),
+    ]),
+
+    // Finished set milestones
+    ..._milestones('sets', '🧩', [
+      (5, 'Set Starter', 'Finish 5 quiz sets.', 300),
+      (25, 'Set Collector', 'Finish 25 quiz sets.', 1500),
+      (50, 'Set Master', 'Finish 50 quiz sets.', 4000),
+      (100, 'Set Legend', 'Finish 100 quiz sets.', 10000),
+    ]),
+
+    // Certificate milestones
+    ..._milestones('cert', '🎓', [
+      (1, 'First Certificate', 'Earn your first category certificate.', 1000),
+      (5, 'Certified Pro', 'Earn 5 category certificates.', 5000),
+      (
+        21,
+        'Fully Certified',
+        'Earn a certificate in all 21 categories.',
+        25000,
+      ),
+    ]),
   ];
+
+  static List<Achievement> _milestones(
+    String prefix,
+    String icon,
+    List<(int, String, String, int)> items,
+  ) {
+    return [
+      for (final (target, title, description, reward) in items)
+        Achievement(
+          id: '${prefix}_$target',
+          title: title,
+          description: description,
+          icon: icon,
+          reward: reward,
+          unlocked: false,
+          current: 0,
+          target: target,
+        ),
+    ];
+  }
+
+  /// Which progress counter an achievement id is measured against.
+  static String? _metricFor(String id) {
+    if (id == 'first_quiz' || id.startsWith('quiz_')) return 'quiz';
+    if (id.startsWith('streak_')) return 'streak';
+    if (id.startsWith('points_')) return 'points';
+    if (id.startsWith('daily_')) return 'daily';
+    if (id.startsWith('sets_')) return 'sets';
+    if (id.startsWith('cert_')) return 'cert';
+
+    return null;
+  }
+
+  static Future<Map<String, int>> _metrics({required int quizCount}) async {
+    return {
+      'quiz': quizCount,
+      'streak': await StreakService.getCurrentStreak(),
+      'points': await PointService.getTotalPoints(),
+      'daily': await DailyQuizService.totalCompleted(),
+      'sets': await CertificateService.totalSetsCompleted(),
+      'cert': await CertificateService.certificateCount(),
+    };
+  }
 
   static Future<List<String>> _getUnlockedIds() async {
     final prefs = await SharedPreferences.getInstance();
@@ -380,9 +468,7 @@ class AchievementService {
 
     final quizCount = await incrementQuizCount();
 
-    final streak = await StreakService.getCurrentStreak();
-
-    final totalPoints = await PointService.getTotalPoints();
+    final metrics = await _metrics(quizCount: quizCount);
 
     List<Achievement> newlyUnlocked = [];
 
@@ -391,26 +477,14 @@ class AchievementService {
 
       bool shouldUnlock = false;
 
-      switch (achievement.id) {
-        case "first_quiz":
-          shouldUnlock = quizCount >= 1;
-          break;
+      if (achievement.id == "perfect_score") {
+        shouldUnlock = score == totalQuestions;
+      } else {
+        final metric = _metricFor(achievement.id);
 
-        case "quiz_10":
-          shouldUnlock = quizCount >= 10;
-          break;
-
-        case "streak_7":
-          shouldUnlock = streak >= 7;
-          break;
-
-        case "points_1000":
-          shouldUnlock = totalPoints >= 1000;
-          break;
-
-        case "perfect_score":
-          shouldUnlock = score == totalQuestions;
-          break;
+        if (metric != null) {
+          shouldUnlock = metrics[metric]! >= achievement.target;
+        }
       }
 
       if (shouldUnlock) {
@@ -434,33 +508,19 @@ class AchievementService {
 
     final quizCount = await getQuizCount();
 
-    final streak = await StreakService.getCurrentStreak();
-
-    final totalPoints = await PointService.getTotalPoints();
+    final metrics = await _metrics(quizCount: quizCount);
 
     return _allAchievements.map((achievement) {
       int current = 0;
 
-      switch (achievement.id) {
-        case "first_quiz":
-          current = quizCount.clamp(0, achievement.target);
-          break;
+      if (achievement.id == "perfect_score") {
+        current = unlocked.contains("perfect_score") ? 1 : 0;
+      } else {
+        final metric = _metricFor(achievement.id);
 
-        case "quiz_10":
-          current = quizCount.clamp(0, achievement.target);
-          break;
-
-        case "streak_7":
-          current = streak.clamp(0, achievement.target);
-          break;
-
-        case "points_1000":
-          current = totalPoints.clamp(0, achievement.target);
-          break;
-
-        case "perfect_score":
-          current = unlocked.contains("perfect_score") ? 1 : 0;
-          break;
+        if (metric != null) {
+          current = metrics[metric]!.clamp(0, achievement.target);
+        }
       }
 
       return achievement.copyWith(

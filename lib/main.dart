@@ -10,6 +10,7 @@ import 'theme_provider.dart';
 import 'language_provider.dart';
 import 'services/notification_service.dart';
 import 'services/point_service.dart';
+import 'services/update_service.dart';
 import 'package:devops_quiz/l10n/app_localizations.dart';
 import 'firebase_options.dart';
 
@@ -76,6 +77,14 @@ Future<void> main() async {
       child: const MyApp(),
     ),
   );
+
+  // ============================================
+  // PLAY STORE UPDATE CHECK (does not block start-up)
+  // ============================================
+
+  if (!kIsWeb) {
+    UpdateService.checkInBackground();
+  }
 }
 
 // ============================================================

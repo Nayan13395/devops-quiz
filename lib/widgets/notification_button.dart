@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-import '../screens/notification_screen.dart';
 import '../services/in_app_notification_service.dart';
+import '../screens/notification_screen.dart';
 
 class NotificationButton extends StatefulWidget {
   const NotificationButton({super.key});
@@ -12,171 +12,75 @@ class NotificationButton extends StatefulWidget {
 
 class _NotificationButtonState extends State<NotificationButton> {
   int _unreadCount = 0;
-  bool _loading = true;
 
   @override
   void initState() {
     super.initState();
-
     _loadUnreadCount();
   }
 
   Future<void> _loadUnreadCount() async {
     final count = await InAppNotificationService.getUnreadCount();
-
-    if (!mounted) return;
-
-    setState(() {
-      _unreadCount = count;
-      _loading = false;
-    });
-  }
-
-  Future<void> _openNotifications() async {
-    await Navigator.push(
-      context,
-      MaterialPageRoute(builder: (_) => const NotificationScreen()),
-    );
-
-    await _loadUnreadCount();
+    if (mounted) {
+      setState(() {
+        _unreadCount = count;
+      });
+    }
   }
 
   @override
   Widget build(BuildContext context) {
-    final colorScheme = Theme.of(context).colorScheme;
+    return Stack(
+      clipBehavior: Clip.none,
+      children: [
+        IconButton(
+          icon: const Icon(Icons.notifications_rounded),
+          onPressed: () async {
+            await _loadUnreadCount();
+            if (!context.mounted) return;
 
-    final double screenWidth = MediaQuery.sizeOf(context).width;
-
-    // ===========================================
-    // RESPONSIVE SIZE
-    // ===========================================
-
-    final double buttonSize;
-
-    final double iconSize;
-
-    final double badgeSize;
-
-    final double badgeFontSize;
-
-    if (screenWidth < 360) {
-      // Small phones
-      buttonSize = 34;
-      iconSize = 19;
-      badgeSize = 17;
-      badgeFontSize = 8;
-    } else if (screenWidth < 600) {
-      // Normal phones
-      buttonSize = 40;
-      iconSize = 22;
-      badgeSize = 18;
-      badgeFontSize = 9;
-    } else {
-      // Tablets / large screens
-      buttonSize = 44;
-      iconSize = 24;
-      badgeSize = 20;
-      badgeFontSize = 10;
-    }
-
-    return Tooltip(
-      message: 'Notifications',
-
-      child: InkWell(
-        borderRadius: BorderRadius.circular(buttonSize * 0.30),
-
-        onTap: _loading ? null : _openNotifications,
-
-        child: Stack(
-          clipBehavior: Clip.none,
-
-          children: [
-            Container(
-              width: buttonSize,
-              height: buttonSize,
-
+            await Navigator.push(
+              context,
+              MaterialPageRoute(builder: (_) => const NotificationScreen()),
+            );
+            await _loadUnreadCount();
+          },
+          tooltip: 'Notifications',
+          padding: EdgeInsets.zero, // Remove default padding
+          constraints: const BoxConstraints(minWidth: 48, minHeight: 48),
+        ),
+        // ✅ BADGE POPUP - Better positioned
+        if (_unreadCount > 0)
+          Positioned(
+            right: 4, // Adjusted from 8 to 4 for better alignment
+            top: 4, // Adjusted from 8 to 4 for better alignment
+            child: Container(
+              padding: const EdgeInsets.symmetric(horizontal: 4, vertical: 2),
               decoration: BoxDecoration(
-                color: colorScheme.primaryContainer,
-
-                borderRadius: BorderRadius.circular(buttonSize * 0.30),
-
-                border: Border.all(
-                  color: colorScheme.primary.withValues(alpha: 0.20),
-                ),
-
+                color: Colors.red,
+                borderRadius: BorderRadius.circular(10),
+                border: Border.all(color: Colors.white, width: 1.5),
                 boxShadow: [
                   BoxShadow(
-                    color: Colors.black.withValues(alpha: 0.08),
-                    blurRadius: 6,
+                    color: Colors.black.withValues(alpha: 0.2),
+                    blurRadius: 4,
                     offset: const Offset(0, 2),
                   ),
                 ],
               ),
-
-              child: Icon(
-                _unreadCount > 0
-                    ? Icons.notifications_active_rounded
-                    : Icons.notifications_none_rounded,
-
-                size: iconSize,
-
-                color: colorScheme.primary,
+              constraints: const BoxConstraints(minWidth: 18, minHeight: 18),
+              child: Text(
+                _unreadCount > 99 ? '99+' : '$_unreadCount',
+                style: const TextStyle(
+                  color: Colors.white,
+                  fontSize: 10,
+                  fontWeight: FontWeight.bold,
+                ),
+                textAlign: TextAlign.center,
               ),
             ),
-
-            // =====================================
-            // UNREAD BADGE
-            // =====================================
-            if (_unreadCount > 0)
-              Positioned(
-                top: -5,
-                right: -5,
-
-                child: Container(
-                  constraints: BoxConstraints(
-                    minWidth: badgeSize,
-                    minHeight: badgeSize,
-                  ),
-
-                  padding: const EdgeInsets.symmetric(
-                    horizontal: 4,
-                    vertical: 1,
-                  ),
-
-                  decoration: BoxDecoration(
-                    color: Colors.red,
-
-                    borderRadius: BorderRadius.circular(20),
-
-                    border: Border.all(
-                      color: Theme.of(context).scaffoldBackgroundColor,
-                      width: 1.5,
-                    ),
-
-                    boxShadow: [
-                      BoxShadow(
-                        color: Colors.black.withValues(alpha: 0.15),
-                        blurRadius: 3,
-                      ),
-                    ],
-                  ),
-
-                  alignment: Alignment.center,
-
-                  child: Text(
-                    _unreadCount > 99 ? '99+' : '$_unreadCount',
-
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontSize: badgeFontSize,
-                      fontWeight: FontWeight.bold,
-                    ),
-                  ),
-                ),
-              ),
-          ],
-        ),
-      ),
+          ),
+      ],
     );
   }
 }

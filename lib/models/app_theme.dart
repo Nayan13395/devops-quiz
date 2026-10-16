@@ -3,8 +3,13 @@ import 'package:flutter/material.dart';
 enum AppThemeType {
   light,
   dark,
+  sakura,
+  sunset,
+  coffee,
   ocean,
   forest,
+  aurora,
+  matrix,
   cyberPurple,
   inferno,
   midnight,
@@ -55,6 +60,39 @@ class AppThemes {
       brightness: Brightness.dark,
     ),
 
+    // 5,000 POINTS
+    AppThemeInfo(
+      type: AppThemeType.sakura,
+      name: 'Sakura',
+      emoji: '🌸',
+      requiredPoints: 5000,
+      primaryColor: Color(0xFFD81B60),
+      secondaryColor: Color(0xFFF8BBD0),
+      brightness: Brightness.light,
+    ),
+
+    // 10,000 POINTS
+    AppThemeInfo(
+      type: AppThemeType.sunset,
+      name: 'Sunset',
+      emoji: '🌅',
+      requiredPoints: 10000,
+      primaryColor: Color(0xFFF4511E),
+      secondaryColor: Color(0xFFFFAB91),
+      brightness: Brightness.light,
+    ),
+
+    // 20,000 POINTS
+    AppThemeInfo(
+      type: AppThemeType.coffee,
+      name: 'Coffee',
+      emoji: '☕',
+      requiredPoints: 20000,
+      primaryColor: Color(0xFF6D4C41),
+      secondaryColor: Color(0xFFBCAAA4),
+      brightness: Brightness.light,
+    ),
+
     // 10,000 POINTS
     AppThemeInfo(
       type: AppThemeType.ocean,
@@ -75,6 +113,28 @@ class AppThemes {
       primaryColor: Color(0xFF2E7D32),
       secondaryColor: Color(0xFF81C784),
       brightness: Brightness.light,
+    ),
+
+    // 150,000 POINTS
+    AppThemeInfo(
+      type: AppThemeType.aurora,
+      name: 'Aurora',
+      emoji: '🌌',
+      requiredPoints: 150000,
+      primaryColor: Color(0xFF1DE9B6),
+      secondaryColor: Color(0xFF7C4DFF),
+      brightness: Brightness.dark,
+    ),
+
+    // 200,000 POINTS
+    AppThemeInfo(
+      type: AppThemeType.matrix,
+      name: 'Matrix',
+      emoji: '💻',
+      requiredPoints: 200000,
+      primaryColor: Color(0xFF00E676),
+      secondaryColor: Color(0xFF1B5E20),
+      brightness: Brightness.dark,
     ),
 
     // 30,000 POINTS
