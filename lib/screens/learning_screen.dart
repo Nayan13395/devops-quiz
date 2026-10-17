@@ -65,8 +65,9 @@ class _LearningScreenState extends State<LearningScreen> {
     if (_changingPage ||
         !_pageController.hasClients ||
         target < 0 ||
-        target >= _visibleCards.length)
+        target >= _visibleCards.length) {
       return;
+    }
     _changingPage = true;
     try {
       await _pageController.animateToPage(

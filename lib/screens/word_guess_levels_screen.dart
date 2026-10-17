@@ -18,11 +18,15 @@ class _WordGuessLevelsScreenState extends State<WordGuessLevelsScreen> {
   static const int _levelReward = 100;
   static const int _hintPenalty = 20;
   static const String _progressKey = 'word_guess_completed_levels_v2';
-  static const List<String> _keyRows = ['QWERTYUIOP', 'ASDFGHJKL', 'ZXCVBNM'];
+  static const String _alphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
 
   final Map<String, int> _keyStates = {};
+  final Set<int> _usedLetterTiles = {};
+  final Set<int> _removedLetterTiles = {};
   late String _word;
   late List<String?> _inputLetters;
+  late List<int?> _inputTileIndexes;
+  late List<String> _letterBank;
   final List<String> _guesses = [];
   Set<int> _revealedPositions = {};
   int _completedLevels = 0;
@@ -38,6 +42,11 @@ class _WordGuessLevelsScreenState extends State<WordGuessLevelsScreen> {
       math.max(0, _levelReward - _hintsUsed * _hintPenalty);
   int get _enteredCount => _inputLetters.whereType<String>().length;
   int get _requiredInputs => _word.length - _revealedPositions.length;
+  String get _chapter => switch (_levelNumber) {
+    <= 34 => 'Chapter 1 · Restore the build pipeline',
+    <= 67 => 'Chapter 2 · Scale the cloud platform',
+    _ => 'Chapter 3 · Protect production',
+  };
 
   @override
   void initState() {
@@ -64,8 +73,11 @@ class _WordGuessLevelsScreenState extends State<WordGuessLevelsScreen> {
   void _startLevel() {
     _word = _level.word;
     _inputLetters = List<String?>.filled(_word.length, null);
+    _inputTileIndexes = List<int?>.filled(_word.length, null);
     _guesses.clear();
     _keyStates.clear();
+    _usedLetterTiles.clear();
+    _removedLetterTiles.clear();
     _hintsUsed = 0;
     _finished = false;
     _won = false;
@@ -75,6 +87,27 @@ class _WordGuessLevelsScreenState extends State<WordGuessLevelsScreen> {
       for (var index = 0; index < revealCount; index++)
         (index * (_word.length - 1) / math.max(1, revealCount - 1)).round(),
     };
+    _buildLetterBank();
+  }
+
+  void _buildLetterBank() {
+    final lettersNeeded = [
+      for (var index = 0; index < _word.length; index++)
+        if (!_revealedPositions.contains(index)) _word[index],
+    ];
+    final decoyCount = switch (_level.difficulty) {
+      WordGuessDifficulty.easy => 2,
+      WordGuessDifficulty.medium => 4,
+      WordGuessDifficulty.hard => 6,
+    };
+    final decoys = _alphabet
+        .split('')
+        .where((letter) => !_word.contains(letter))
+        .toList()
+      ..shuffle(math.Random(_levelNumber * 37 + _hintsUsed));
+
+    _letterBank = [...lettersNeeded, ...decoys.take(decoyCount)]
+      ..shuffle(math.Random(_levelNumber * 7919 + _hintsUsed));
   }
 
   String _currentGuess() => List.generate(_word.length, (index) {
@@ -106,22 +139,36 @@ class _WordGuessLevelsScreenState extends State<WordGuessLevelsScreen> {
     return states;
   }
 
-  void _enterLetter(String letter) {
-    if (_finished || _enteredCount >= _requiredInputs) return;
+  void _enterLetter(int tileIndex) {
+    if (_finished ||
+        _enteredCount >= _requiredInputs ||
+        _usedLetterTiles.contains(tileIndex) ||
+        _removedLetterTiles.contains(tileIndex)) {
+      return;
+    }
     final position = List<int>.generate(_word.length, (index) => index)
         .firstWhere(
           (index) =>
               !_revealedPositions.contains(index) &&
               _inputLetters[index] == null,
         );
-    setState(() => _inputLetters[position] = letter);
+    setState(() {
+      _inputLetters[position] = _letterBank[tileIndex];
+      _inputTileIndexes[position] = tileIndex;
+      _usedLetterTiles.add(tileIndex);
+    });
   }
 
   void _deleteLetter() {
     if (_finished) return;
     for (var index = _word.length - 1; index >= 0; index--) {
       if (!_revealedPositions.contains(index) && _inputLetters[index] != null) {
-        setState(() => _inputLetters[index] = null);
+        setState(() {
+          _inputLetters[index] = null;
+          final tileIndex = _inputTileIndexes[index];
+          if (tileIndex != null) _usedLetterTiles.remove(tileIndex);
+          _inputTileIndexes[index] = null;
+        });
         return;
       }
     }
@@ -135,7 +182,20 @@ class _WordGuessLevelsScreenState extends State<WordGuessLevelsScreen> {
     ).firstWhere((index) => !_revealedPositions.contains(index));
     setState(() {
       _revealedPositions = {..._revealedPositions, position};
+      final selectedTile = _inputTileIndexes[position];
+      if (selectedTile != null) _usedLetterTiles.remove(selectedTile);
+      var revealedTile = -1;
+      for (int index = 0; index < _letterBank.length; index++) {
+        if (_letterBank[index] == _word[position] &&
+            !_usedLetterTiles.contains(index) &&
+            !_removedLetterTiles.contains(index)) {
+          revealedTile = index;
+          break;
+        }
+      }
+      if (revealedTile >= 0) _removedLetterTiles.add(revealedTile);
       _inputLetters[position] = null;
+      _inputTileIndexes[position] = null;
       _hintsUsed++;
     });
   }
@@ -144,7 +204,9 @@ class _WordGuessLevelsScreenState extends State<WordGuessLevelsScreen> {
     if (_finished) return;
     if (_enteredCount != _requiredInputs) {
       ScaffoldMessenger.of(context).showSnackBar(
-        SnackBar(content: Text('Fill all ${_word.length} letters to submit.')),
+        SnackBar(
+          content: Text('Use all $_requiredInputs remaining letters to submit.'),
+        ),
       );
       return;
     }
@@ -161,6 +223,8 @@ class _WordGuessLevelsScreenState extends State<WordGuessLevelsScreen> {
       _won = states.every((state) => state == 2);
       _finished = _won || _guesses.length == _maxAttempts;
       _inputLetters = List<String?>.filled(_word.length, null);
+      _inputTileIndexes = List<int?>.filled(_word.length, null);
+      _usedLetterTiles.clear();
     });
 
     if (_finished) _finishLevel();
@@ -246,10 +310,11 @@ class _WordGuessLevelsScreenState extends State<WordGuessLevelsScreen> {
   Widget _buildRow(int row, ColorScheme colors) {
     var guess = '';
     List<int>? states;
+    final isCurrentRow = row == _guesses.length && !_finished;
     if (row < _guesses.length) {
       guess = _guesses[row];
       states = _evaluate(guess);
-    } else if (row == _guesses.length && !_finished) {
+    } else if (isCurrentRow) {
       guess = _currentGuess();
     }
 
@@ -259,9 +324,7 @@ class _WordGuessLevelsScreenState extends State<WordGuessLevelsScreen> {
         children: List.generate(_word.length, (column) {
           final letter = column < guess.length ? guess[column] : '';
           final isRevealed =
-              row == _guesses.length &&
-              !_finished &&
-              _revealedPositions.contains(column);
+              isCurrentRow && _revealedPositions.contains(column);
           final state = states != null && column < states.length
               ? states[column]
               : isRevealed
@@ -276,20 +339,25 @@ class _WordGuessLevelsScreenState extends State<WordGuessLevelsScreen> {
           return Expanded(
             child: Padding(
               padding: const EdgeInsets.symmetric(horizontal: 2),
-              child: AspectRatio(
-                aspectRatio: 0.92,
+              child: SizedBox(
+                height: _word.length > 10 ? 38 : 46,
                 child: AnimatedContainer(
                   duration: const Duration(milliseconds: 130),
                   alignment: Alignment.center,
                   decoration: BoxDecoration(
-                    color: state >= 0 ? _stateColor(state) : colors.surface,
-                    border: Border.all(
-                      color: state < 0
-                          ? colors.outlineVariant
-                          : Colors.transparent,
-                      width: 1.4,
-                    ),
-                    borderRadius: BorderRadius.circular(7),
+                    color: state < 0
+                        ? Colors.transparent
+                        : _stateColor(state).withValues(alpha: 0.14),
+                    border: row < _guesses.length || isCurrentRow
+                        ? Border(
+                            bottom: BorderSide(
+                              color: state < 0
+                                  ? colors.outlineVariant
+                                  : _stateColor(state),
+                              width: state < 0 ? 1.5 : 3,
+                            ),
+                          )
+                        : null,
                   ),
                   child: FittedBox(
                     fit: BoxFit.scaleDown,
@@ -310,8 +378,22 @@ class _WordGuessLevelsScreenState extends State<WordGuessLevelsScreen> {
     );
   }
 
-  Widget _keyButton(String letter, ColorScheme colors) {
+  String _letterTileKey(int tileIndex) {
+    final letter = _letterBank[tileIndex];
+    final duplicateNumber = _letterBank
+        .take(tileIndex)
+        .where((candidate) => candidate == letter)
+        .length;
+    return duplicateNumber == 0
+        ? 'word-guess-key-$letter'
+        : 'word-guess-key-$letter-${duplicateNumber + 1}';
+  }
+
+  Widget _keyButton(int tileIndex, ColorScheme colors) {
+    final letter = _letterBank[tileIndex];
     final state = _keyStates[letter];
+    final isUsed = _usedLetterTiles.contains(tileIndex);
+    final isRemoved = _removedLetterTiles.contains(tileIndex);
     Color background = colors.surfaceContainerHighest;
     Color foreground = colors.onSurface;
     if (state == 2) {
@@ -324,14 +406,20 @@ class _WordGuessLevelsScreenState extends State<WordGuessLevelsScreen> {
       background = colors.surfaceContainerHighest.withValues(alpha: 0.4);
       foreground = colors.onSurface.withValues(alpha: 0.4);
     }
+    if (isUsed || isRemoved) {
+      background = colors.surfaceContainerHighest.withValues(alpha: 0.35);
+      foreground = colors.onSurface.withValues(alpha: 0.35);
+    }
 
     return Material(
-      key: ValueKey('word-guess-key-$letter'),
+      key: ValueKey(_letterTileKey(tileIndex)),
       color: background,
       borderRadius: BorderRadius.circular(7),
       child: InkWell(
         borderRadius: BorderRadius.circular(7),
-        onTap: _finished ? null : () => _enterLetter(letter),
+        onTap: _finished || isUsed || isRemoved
+            ? null
+            : () => _enterLetter(tileIndex),
         child: Center(
           child: Text(
             letter,
@@ -352,10 +440,10 @@ class _WordGuessLevelsScreenState extends State<WordGuessLevelsScreen> {
       builder: (dialogContext) => AlertDialog(
         title: const Text('How to Play'),
         content: const Text(
-          'Each level has one DevOps word. One or two letters are shown for free. '
-          'Type the remaining letters and press Enter. Use a hint to reveal the '
-          'next letter; each hint reduces the level reward by 20 points. A win '
-          'earns up to 100 points.',
+          'Each level gives you a technical clue and a rack of letters. Tap '
+          'letters to build the answer, then press Enter. One or two letters '
+          'are shown for free. Hints reveal another letter and reduce the reward '
+          'by 20 points.',
         ),
         actions: [
           FilledButton(
@@ -455,6 +543,14 @@ class _WordGuessLevelsScreenState extends State<WordGuessLevelsScreen> {
                     ],
                   ),
                   Text(
+                    _chapter,
+                    textAlign: TextAlign.center,
+                    style: Theme.of(context).textTheme.labelMedium?.copyWith(
+                      color: colors.primary,
+                      fontWeight: FontWeight.w700,
+                    ),
+                  ),
+                  Text(
                     _level.hint,
                     textAlign: TextAlign.center,
                     style: Theme.of(context).textTheme.bodyMedium,
@@ -507,27 +603,20 @@ class _WordGuessLevelsScreenState extends State<WordGuessLevelsScreen> {
                     icon: const Icon(Icons.lightbulb_outline_rounded),
                     label: const Text('Hint · −20 pts'),
                   ),
-                  ..._keyRows.map(
-                    (row) => Padding(
-                      padding: const EdgeInsets.symmetric(vertical: 3),
-                      child: Row(
-                        children: row
-                            .split('')
-                            .map(
-                              (letter) => Expanded(
-                                child: Padding(
-                                  padding: const EdgeInsets.symmetric(
-                                    horizontal: 2,
-                                  ),
-                                  child: SizedBox(
-                                    height: isCompact ? 34 : 44,
-                                    child: _keyButton(letter, colors),
-                                  ),
-                                ),
-                              ),
-                            )
-                            .toList(),
-                      ),
+                  Padding(
+                    padding: const EdgeInsets.symmetric(vertical: 4),
+                    child: Wrap(
+                      alignment: WrapAlignment.center,
+                      spacing: 5,
+                      runSpacing: 5,
+                      children: [
+                        for (int index = 0; index < _letterBank.length; index++)
+                          SizedBox(
+                            width: isCompact ? 32 : 38,
+                            height: isCompact ? 34 : 42,
+                            child: _keyButton(index, colors),
+                          ),
+                      ],
                     ),
                   ),
                   Padding(

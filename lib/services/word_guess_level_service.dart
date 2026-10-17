@@ -97,8 +97,8 @@ class WordGuessLevelService {
       difficulty: WordGuessDifficulty.easy,
     ),
     WordGuessLevel(
-      word: 'GITLAB',
-      hint: 'A DevOps platform with Git repositories and CI/CD.',
+      word: 'BGP',
+      hint: 'Routing protocol that exchanges routes between autonomous systems.',
       difficulty: WordGuessDifficulty.easy,
     ),
     WordGuessLevel(
@@ -127,13 +127,13 @@ class WordGuessLevelService {
       difficulty: WordGuessDifficulty.easy,
     ),
     WordGuessLevel(
-      word: 'CURL',
-      hint: 'Command-line tool for transferring data by URL.',
+      word: 'BICEP',
+      hint: 'Azure\'s declarative language for infrastructure as code.',
       difficulty: WordGuessDifficulty.easy,
     ),
     WordGuessLevel(
-      word: 'WGET',
-      hint: 'Command-line utility for downloading files.',
+      word: 'APIGEE',
+      hint: 'Google Cloud platform for centralized API management.',
       difficulty: WordGuessDifficulty.easy,
     ),
     WordGuessLevel(
@@ -277,8 +277,8 @@ class WordGuessLevelService {
       difficulty: WordGuessDifficulty.medium,
     ),
     WordGuessLevel(
-      word: 'SSHKEY',
-      hint: 'Credential pair used for key-based SSH login.',
+      word: 'ALLOYDB',
+      hint: 'Google Cloud managed PostgreSQL-compatible database.',
       difficulty: WordGuessDifficulty.medium,
     ),
     WordGuessLevel(
@@ -332,18 +332,18 @@ class WordGuessLevelService {
       difficulty: WordGuessDifficulty.medium,
     ),
     WordGuessLevel(
-      word: 'OPENSSH',
-      hint: 'Suite that provides secure remote login tools.',
+      word: 'ANTHOS',
+      hint: 'Google Cloud platform for managing clusters across environments.',
       difficulty: WordGuessDifficulty.medium,
     ),
     WordGuessLevel(
-      word: 'TERRAFORMSTATE',
-      hint: 'File that records infrastructure managed by Terraform.',
+      word: 'BIGQUERY',
+      hint: 'Google Cloud service for large-scale data analytics.',
       difficulty: WordGuessDifficulty.medium,
     ),
     WordGuessLevel(
-      word: 'DOCKERCOMPOSE',
-      hint: 'Tool for defining and running multi-container applications.',
+      word: 'BIGTABLE',
+      hint: 'Google Cloud wide-column NoSQL database for analytics.',
       difficulty: WordGuessDifficulty.medium,
     ),
     WordGuessLevel(
@@ -362,13 +362,13 @@ class WordGuessLevelService {
       difficulty: WordGuessDifficulty.hard,
     ),
     WordGuessLevel(
-      word: 'OPENTELEMETRY',
-      hint: 'Open standard for traces, metrics, and logs instrumentation.',
+      word: 'CLOUDANT',
+      hint: 'IBM Cloud managed NoSQL JSON document database.',
       difficulty: WordGuessDifficulty.hard,
     ),
     WordGuessLevel(
-      word: 'KUBECONFIG',
-      hint: 'File that configures kubectl cluster access.',
+      word: 'CLOUDTRAIL',
+      hint: 'AWS service that records API activity for auditing.',
       difficulty: WordGuessDifficulty.hard,
     ),
     WordGuessLevel(
@@ -407,13 +407,13 @@ class WordGuessLevelService {
       difficulty: WordGuessDifficulty.hard,
     ),
     WordGuessLevel(
-      word: 'HIGHAVAILABILITY',
-      hint: 'Design goal of keeping a service accessible despite failures.',
+      word: 'COREDNS',
+      hint: 'DNS server commonly used inside Kubernetes clusters.',
       difficulty: WordGuessDifficulty.hard,
     ),
     WordGuessLevel(
-      word: 'AUTOSCALING',
-      hint: 'Automatically adjusts capacity as demand changes.',
+      word: 'CROSSPLANE',
+      hint: 'Project for managing cloud resources through Kubernetes APIs.',
       difficulty: WordGuessDifficulty.hard,
     ),
     WordGuessLevel(
@@ -428,8 +428,8 @@ class WordGuessLevelService {
       difficulty: WordGuessDifficulty.hard,
     ),
     WordGuessLevel(
-      word: 'IMMUTABILITY',
-      hint: 'Property of an object that cannot be changed after creation.',
+      word: 'DATAFLOW',
+      hint: 'Google Cloud service for stream and batch data processing.',
       difficulty: WordGuessDifficulty.hard,
     ),
     WordGuessLevel(
@@ -438,8 +438,8 @@ class WordGuessLevelService {
       difficulty: WordGuessDifficulty.hard,
     ),
     WordGuessLevel(
-      word: 'MICROSERVICE',
-      hint: 'Small independently deployable service in a larger system.',
+      word: 'DATAPLEX',
+      hint: 'Google Cloud service for discovering and governing enterprise data.',
       difficulty: WordGuessDifficulty.hard,
     ),
     WordGuessLevel(
@@ -454,13 +454,13 @@ class WordGuessLevelService {
       difficulty: WordGuessDifficulty.hard,
     ),
     WordGuessLevel(
-      word: 'CONSENSUS',
-      hint: 'Agreement reached by nodes in a distributed system.',
+      word: 'DATAPROC',
+      hint: 'Google Cloud managed Apache Spark and Hadoop environment.',
       difficulty: WordGuessDifficulty.hard,
     ),
     WordGuessLevel(
-      word: 'RECONCILIATION',
-      hint: 'Process of making actual state match declared desired state.',
+      word: 'DYNAMODB',
+      hint: 'AWS NoSQL database often used for Terraform state locking.',
       difficulty: WordGuessDifficulty.hard,
     ),
     WordGuessLevel(
@@ -469,13 +469,13 @@ class WordGuessLevelService {
       difficulty: WordGuessDifficulty.hard,
     ),
     WordGuessLevel(
-      word: 'KUSTOMIZE',
-      hint: 'Kubernetes configuration customization tool.',
+      word: 'ELASTICSEARCH',
+      hint: 'Search engine commonly used for centralized logging.',
       difficulty: WordGuessDifficulty.hard,
     ),
     WordGuessLevel(
-      word: 'VIRTUALIZATION',
-      hint: 'Technique for running virtual machines on shared hardware.',
+      word: 'ETCD',
+      hint: 'Key-value store that holds Kubernetes cluster state.',
       difficulty: WordGuessDifficulty.hard,
     ),
     WordGuessLevel(
@@ -489,8 +489,8 @@ class WordGuessLevelService {
       difficulty: WordGuessDifficulty.hard,
     ),
     WordGuessLevel(
-      word: 'MULTITENANCY',
-      hint: 'Architecture where multiple customers share one application.',
+      word: 'EXPRESSROUTE',
+      hint: 'Azure service for dedicated private connectivity to data centers.',
       difficulty: WordGuessDifficulty.hard,
     ),
     WordGuessLevel(
@@ -504,8 +504,8 @@ class WordGuessLevelService {
       difficulty: WordGuessDifficulty.hard,
     ),
     WordGuessLevel(
-      word: 'TROUBLESHOOTING',
-      hint: 'Systematic process of finding and resolving a problem.',
+      word: 'FASTCONNECT',
+      hint: 'Oracle Cloud service for dedicated private network connections.',
       difficulty: WordGuessDifficulty.hard,
     ),
     WordGuessLevel(

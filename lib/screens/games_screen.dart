@@ -5,6 +5,7 @@ import 'scratch_card_screen.dart';
 import 'spin_wheel_screen.dart';
 import 'mystery_deal_screen.dart';
 import 'memory_match_screen.dart';
+import 'find_words_screen.dart';
 import 'word_guess_levels_screen.dart';
 import 'higher_lower_screen.dart';
 import 'true_false_blitz_screen.dart';
@@ -34,6 +35,7 @@ class _GamesScreenState extends State<GamesScreen> {
     ('Mystery Deal', 'Pick a mystery box and answer'),
     ('Memory Match', 'Match DevOps pairs'),
     ('Word Guess', 'Guess DevOps words through levels'),
+    ('Find Words', 'Search a grid for hidden DevOps terms'),
     ('High or Low', 'Build a streak'),
     ('True or False Blitz', 'Quick answer quiz'),
     ('Command Match', 'Match commands to meanings'),
@@ -321,6 +323,28 @@ class _GamesScreenState extends State<GamesScreen> {
                                   MaterialPageRoute(
                                     builder: (_) =>
                                         const WordGuessLevelsScreen(),
+                                  ),
+                                );
+                              },
+                            ),
+
+                          // =================================
+                          // FIND WORDS
+                          // =================================
+                          if (_matchesSearch(
+                            'Find Words',
+                            'Search a grid for hidden DevOps terms.',
+                          ))
+                            _GameTile(
+                              icon: '🔎',
+                              title: 'Find Words',
+                              description:
+                                  'Swipe to find DevOps words in 100 levels.',
+                              onTap: () {
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                    builder: (_) => const FindWordsScreen(),
                                   ),
                                 );
                               },
