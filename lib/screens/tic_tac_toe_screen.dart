@@ -19,6 +19,7 @@ class _TicTacToeScreenState extends State<TicTacToeScreen> {
   List<String?> _board = List<String?>.filled(9, null);
   _TicTacToeMode _mode = _TicTacToeMode.computer;
   String _turn = 'X';
+  bool _computerStartsNext = true;
   String? _winner;
   bool _draw = false;
   int _xWins = 0;
@@ -38,6 +39,7 @@ class _TicTacToeScreenState extends State<TicTacToeScreen> {
 
   void _play(int index) {
     if (_board[index] != null || _winner != null || _draw) return;
+    if (_mode == _TicTacToeMode.computer && _turn != 'X') return;
 
     final marker = _mode == _TicTacToeMode.computer ? 'X' : _turn;
     setState(() {
@@ -49,15 +51,21 @@ class _TicTacToeScreenState extends State<TicTacToeScreen> {
       unawaited(_awardWin());
     }
 
-    if (_mode == _TicTacToeMode.computer && _winner == null && !_draw) {
-      final computerMove = _chooseComputerMove();
-      if (computerMove != null) {
-        setState(() {
-          _board[computerMove] = 'O';
-          _resolveMove('O');
-        });
-      }
+    if (_mode == _TicTacToeMode.computer && _turn == 'O') {
+      _playComputerTurn();
     }
+  }
+
+  void _playComputerTurn() {
+    if (_winner != null || _draw || _turn != 'O') return;
+
+    final computerMove = _chooseComputerMove();
+    if (computerMove == null) return;
+
+    setState(() {
+      _board[computerMove] = 'O';
+      _resolveMove('O');
+    });
   }
 
   void _resolveMove(String marker) {
@@ -124,18 +132,28 @@ class _TicTacToeScreenState extends State<TicTacToeScreen> {
   }
 
   void _resetBoard() {
+    final computerStarts =
+        _mode == _TicTacToeMode.computer && _computerStartsNext;
+    if (_mode == _TicTacToeMode.computer) {
+      _computerStartsNext = !_computerStartsNext;
+    }
+
     setState(() {
       _board = List<String?>.filled(9, null);
-      _turn = 'X';
+      _turn = computerStarts ? 'O' : 'X';
       _winner = null;
       _draw = false;
     });
+
+    if (computerStarts) _playComputerTurn();
   }
 
   String get _status {
     if (_winner != null) {
       return _winner == 'X'
-          ? 'X wins!'
+          ? _mode == _TicTacToeMode.computer
+                ? 'You win!'
+                : 'X wins!'
           : _mode == _TicTacToeMode.computer
           ? 'Computer wins'
           : 'O wins!';
@@ -195,7 +213,11 @@ class _TicTacToeScreenState extends State<TicTacToeScreen> {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      _Score(label: 'X', score: _xWins, color: colors.primary),
+                      _Score(
+                        label: _mode == _TicTacToeMode.computer ? 'You' : 'X',
+                        score: _xWins,
+                        color: colors.primary,
+                      ),
                       const SizedBox(width: 28),
                       _Score(
                         label: 'Draws',

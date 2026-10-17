@@ -4,6 +4,17 @@ import 'package:flutter/material.dart';
 
 import '../services/point_service.dart';
 
+const List<Color> _snakeColors = [
+  Color(0xFFE85D3F),
+  Color(0xFF8E5AC7),
+  Color(0xFF168C83),
+  Color(0xFFD14F8B),
+  Color(0xFFB77818),
+  Color(0xFF3974C5),
+  Color(0xFF5F8733),
+  Color(0xFFB34237),
+];
+
 class SnakeLaddersScreen extends StatefulWidget {
   const SnakeLaddersScreen({super.key, this.diceRoller});
 
@@ -117,6 +128,13 @@ class _SnakeLaddersScreenState extends State<SnakeLaddersScreen> {
     return rowFromBottom * 10 + offset + 1;
   }
 
+  int? _snakeHeadForSquare(int square) {
+    for (final snake in _snakes.entries) {
+      if (snake.key == square || snake.value == square) return snake.key;
+    }
+    return null;
+  }
+
   @override
   Widget build(BuildContext context) {
     final colors = Theme.of(context).colorScheme;
@@ -164,102 +182,121 @@ class _SnakeLaddersScreenState extends State<SnakeLaddersScreen> {
                             border: Border.all(color: colors.outline, width: 2),
                             borderRadius: BorderRadius.circular(8),
                           ),
-                          child: GridView.builder(
-                            physics: const NeverScrollableScrollPhysics(),
-                            itemCount: 100,
-                            gridDelegate:
-                                const SliverGridDelegateWithFixedCrossAxisCount(
-                                  crossAxisCount: 10,
+                          child: Stack(
+                            fit: StackFit.expand,
+                            children: [
+                              IgnorePointer(
+                                child: CustomPaint(
+                                  painter: _SnakePathPainter(snakes: _snakes),
                                 ),
-                            itemBuilder: (context, index) {
-                              final number = _squareAt(index ~/ 10, index % 10);
-                              final isLadderStart = _ladders.containsKey(
-                                number,
-                              );
-                              final isLadderEnd = _ladders.containsValue(
-                                number,
-                              );
-                              final isSnakeHead = _snakes.containsKey(number);
-                              final isSnakeTail = _snakes.containsValue(number);
-                              final color = (index ~/ 10 + index % 10).isEven
-                                  ? colors.surfaceContainerHighest
-                                  : colors.surface;
+                              ),
+                              GridView.builder(
+                                physics: const NeverScrollableScrollPhysics(),
+                                itemCount: 100,
+                                gridDelegate:
+                                    const SliverGridDelegateWithFixedCrossAxisCount(
+                                      crossAxisCount: 10,
+                                    ),
+                                itemBuilder: (context, index) {
+                                  final number = _squareAt(
+                                    index ~/ 10,
+                                    index % 10,
+                                  );
+                                  final isLadderStart = _ladders.containsKey(
+                                    number,
+                                  );
+                                  final isLadderEnd = _ladders.containsValue(
+                                    number,
+                                  );
+                                  final snakeHead = _snakeHeadForSquare(number);
+                                  final snakeColor = snakeHead == null
+                                      ? null
+                                      : _snakeColors[_snakes.keys
+                                            .toList()
+                                            .indexOf(snakeHead)];
+                                  final color =
+                                      (index ~/ 10 + index % 10).isEven
+                                      ? colors.surfaceContainerHighest
+                                      : colors.surface;
 
-                              return Container(
-                                key: ValueKey('snake-ladder-square-$number'),
-                                decoration: BoxDecoration(
-                                  color: color,
-                                  border: Border.all(
-                                    color: colors.outlineVariant.withValues(
-                                      alpha: 0.35,
+                                  return Container(
+                                    key: ValueKey(
+                                      'snake-ladder-square-$number',
                                     ),
-                                    width: 0.5,
-                                  ),
-                                ),
-                                child: Stack(
-                                  fit: StackFit.expand,
-                                  children: [
-                                    Align(
-                                      alignment: Alignment.topLeft,
-                                      child: Padding(
-                                        padding: const EdgeInsets.only(
-                                          left: 2,
-                                          top: 1,
-                                        ),
-                                        child: Text(
-                                          '$number',
-                                          style: TextStyle(
-                                            fontSize: boardSize < 360 ? 7 : 9,
-                                            color: colors.onSurfaceVariant,
-                                          ),
-                                        ),
+                                    decoration: BoxDecoration(
+                                      color: color.withValues(alpha: 0.62),
+                                      border: Border.all(
+                                        color:
+                                            snakeColor ??
+                                            colors.outlineVariant.withValues(
+                                              alpha: 0.35,
+                                            ),
+                                        width: snakeColor == null ? 0.5 : 1.8,
                                       ),
                                     ),
-                                    if (isLadderStart || isLadderEnd)
-                                      Icon(
-                                        Icons.stairs_rounded,
-                                        size: boardSize < 360 ? 11 : 16,
-                                        color: Colors.green.withValues(
-                                          alpha: 0.72,
-                                        ),
-                                      ),
-                                    if (isSnakeHead || isSnakeTail)
-                                      Icon(
-                                        Icons.storm_rounded,
-                                        size: boardSize < 360 ? 11 : 16,
-                                        color: Colors.deepOrange.withValues(
-                                          alpha: 0.72,
-                                        ),
-                                      ),
-                                    if (_positions[0] == number ||
-                                        _positions[1] == number)
-                                      Align(
-                                        alignment:
-                                            _positions[0] == number &&
-                                                _positions[1] == number
-                                            ? Alignment.center
-                                            : _positions[0] == number
-                                            ? const Alignment(-0.45, 0.35)
-                                            : const Alignment(0.45, 0.35),
-                                        child: Container(
-                                          width: boardSize < 360 ? 9 : 15,
-                                          height: boardSize < 360 ? 9 : 15,
-                                          decoration: BoxDecoration(
-                                            color: _positions[0] == number
-                                                ? Colors.red.shade600
-                                                : Colors.indigo.shade600,
-                                            shape: BoxShape.circle,
-                                            border: Border.all(
-                                              color: Colors.white,
-                                              width: 1,
+                                    child: Stack(
+                                      fit: StackFit.expand,
+                                      children: [
+                                        Align(
+                                          alignment: Alignment.topLeft,
+                                          child: Padding(
+                                            padding: const EdgeInsets.only(
+                                              left: 2,
+                                              top: 1,
+                                            ),
+                                            child: Text(
+                                              '$number',
+                                              style: TextStyle(
+                                                fontSize: boardSize < 360
+                                                    ? 7
+                                                    : 9,
+                                                fontWeight: snakeColor == null
+                                                    ? FontWeight.normal
+                                                    : FontWeight.w800,
+                                                color: colors.onSurface,
+                                              ),
                                             ),
                                           ),
                                         ),
-                                      ),
-                                  ],
-                                ),
-                              );
-                            },
+                                        if (isLadderStart || isLadderEnd)
+                                          Icon(
+                                            Icons.stairs_rounded,
+                                            size: boardSize < 360 ? 11 : 16,
+                                            color: Colors.green.withValues(
+                                              alpha: 0.72,
+                                            ),
+                                          ),
+                                        if (_positions[0] == number ||
+                                            _positions[1] == number)
+                                          Align(
+                                            alignment:
+                                                _positions[0] == number &&
+                                                    _positions[1] == number
+                                                ? Alignment.center
+                                                : _positions[0] == number
+                                                ? const Alignment(-0.45, 0.35)
+                                                : const Alignment(0.45, 0.35),
+                                            child: Container(
+                                              width: boardSize < 360 ? 9 : 15,
+                                              height: boardSize < 360 ? 9 : 15,
+                                              decoration: BoxDecoration(
+                                                color: _positions[0] == number
+                                                    ? Colors.red.shade600
+                                                    : Colors.indigo.shade600,
+                                                shape: BoxShape.circle,
+                                                border: Border.all(
+                                                  color: Colors.white,
+                                                  width: 1,
+                                                ),
+                                              ),
+                                            ),
+                                          ),
+                                      ],
+                                    ),
+                                  );
+                                },
+                              ),
+                            ],
                           ),
                         ),
                       ),
@@ -313,6 +350,149 @@ class _SnakeLaddersScreenState extends State<SnakeLaddersScreen> {
       ),
     );
   }
+}
+
+class _SnakePathPainter extends CustomPainter {
+  const _SnakePathPainter({required this.snakes});
+
+  final Map<int, int> snakes;
+
+  Offset _centerOf(int square, Size size) {
+    final rowFromBottom = (square - 1) ~/ 10;
+    final offset = (square - 1) % 10;
+    final column = rowFromBottom.isEven ? offset : 9 - offset;
+    final row = 9 - rowFromBottom;
+    final cellSize = size.width / 10;
+    return Offset((column + 0.5) * cellSize, (row + 0.5) * cellSize);
+  }
+
+  @override
+  void paint(Canvas canvas, Size size) {
+    final cellSize = size.width / 10;
+    var colorIndex = 0;
+
+    for (final snake in snakes.entries) {
+      final color = _snakeColors[colorIndex++ % _snakeColors.length];
+      final head = _centerOf(snake.key, size);
+      final tail = _centerOf(snake.value, size);
+      final delta = tail - head;
+      final distance = delta.distance;
+      if (distance == 0) continue;
+
+      final axis = delta / distance;
+      final normal = Offset(-axis.dy, axis.dx);
+      final bend = min(cellSize * 0.9, distance * 0.16);
+      final path = Path()
+        ..moveTo(head.dx, head.dy)
+        ..cubicTo(
+          head.dx + delta.dx * 0.32 + normal.dx * bend,
+          head.dy + delta.dy * 0.32 + normal.dy * bend,
+          head.dx + delta.dx * 0.68 - normal.dx * bend,
+          head.dy + delta.dy * 0.68 - normal.dy * bend,
+          tail.dx,
+          tail.dy,
+        );
+
+      canvas.drawPath(
+        path,
+        Paint()
+          ..color = Colors.black.withValues(alpha: 0.45)
+          ..style = PaintingStyle.stroke
+          ..strokeWidth = cellSize * 0.5
+          ..strokeCap = StrokeCap.round
+          ..strokeJoin = StrokeJoin.round,
+      );
+      canvas.drawPath(
+        path,
+        Paint()
+          ..color = color.withValues(alpha: 0.92)
+          ..style = PaintingStyle.stroke
+          ..strokeWidth = cellSize * 0.38
+          ..strokeCap = StrokeCap.round
+          ..strokeJoin = StrokeJoin.round,
+      );
+      _drawBodyStripe(canvas, path, cellSize);
+      _drawHead(canvas, head, axis, normal, color, cellSize);
+      _drawTail(canvas, tail, axis, normal, color, cellSize);
+    }
+  }
+
+  void _drawBodyStripe(Canvas canvas, Path path, double cellSize) {
+    final paint = Paint()
+      ..color = Colors.white.withValues(alpha: 0.75)
+      ..style = PaintingStyle.stroke
+      ..strokeWidth = max(1.2, cellSize * 0.045)
+      ..strokeCap = StrokeCap.round;
+
+    for (final metric in path.computeMetrics()) {
+      var distance = cellSize * 0.08;
+      while (distance < metric.length) {
+        final end = min(distance + cellSize * 0.12, metric.length);
+        canvas.drawPath(metric.extractPath(distance, end), paint);
+        distance += cellSize * 0.26;
+      }
+    }
+  }
+
+  void _drawHead(
+    Canvas canvas,
+    Offset center,
+    Offset axis,
+    Offset normal,
+    Color color,
+    double cellSize,
+  ) {
+    final radius = cellSize * 0.25;
+    canvas.drawCircle(center, radius, Paint()..color = color);
+    canvas.drawCircle(
+      center,
+      radius,
+      Paint()
+        ..color = Colors.white
+        ..style = PaintingStyle.stroke
+        ..strokeWidth = max(1.2, cellSize * 0.05),
+    );
+
+    final eyeOffset = axis * (cellSize * 0.04);
+    for (final side in [-1.0, 1.0]) {
+      final eye = center + eyeOffset + normal * (cellSize * 0.1 * side);
+      canvas.drawCircle(eye, cellSize * 0.065, Paint()..color = Colors.white);
+      canvas.drawCircle(
+        eye + axis * (cellSize * 0.025),
+        cellSize * 0.032,
+        Paint()..color = Colors.black87,
+      );
+    }
+  }
+
+  void _drawTail(
+    Canvas canvas,
+    Offset center,
+    Offset axis,
+    Offset normal,
+    Color color,
+    double cellSize,
+  ) {
+    final base = center - axis * (cellSize * 0.28);
+    final halfWidth = cellSize * 0.16;
+    final tail = Path()
+      ..moveTo(center.dx, center.dy)
+      ..lineTo(base.dx + normal.dx * halfWidth, base.dy + normal.dy * halfWidth)
+      ..lineTo(base.dx - normal.dx * halfWidth, base.dy - normal.dy * halfWidth)
+      ..close();
+    canvas.drawPath(tail, Paint()..color = color);
+    canvas.drawPath(
+      tail,
+      Paint()
+        ..color = Colors.white
+        ..style = PaintingStyle.stroke
+        ..strokeWidth = max(1.0, cellSize * 0.04),
+    );
+  }
+
+  @override
+  bool shouldRepaint(covariant _SnakePathPainter oldDelegate) =>
+      oldDelegate.snakes != snakes;
 }
 
 class _PlayerPosition extends StatelessWidget {

@@ -43,6 +43,7 @@ class CertificateService {
   static const String _nameKey = 'certificate_holder_name';
 
   static const int setsRequired = QuestionService.setsPerCategory;
+  static const int minimumPassingPercent = 65;
 
   // =========================================================
   // PROGRESS
@@ -61,8 +62,9 @@ class CertificateService {
     return all.values.fold<int>(0, (sum, sets) => sum + sets.length);
   }
 
-  /// Records a finished set. Returns the certificate when this finish
-  /// completed the category for the first time, otherwise null.
+  /// Records a set only when it reaches [minimumPassingPercent]. Returns the
+  /// certificate when this passing score completes the category for the first
+  /// time, otherwise null.
   static Future<CertificateInfo?> recordSetCompletion({
     required String category,
     required int setNumber,
@@ -72,7 +74,10 @@ class CertificateService {
     if (!QuestionService.categoryFiles.containsKey(category) ||
         setNumber < 1 ||
         setNumber > setsRequired ||
-        totalQuestions <= 0) {
+        totalQuestions <= 0 ||
+        score < 0 ||
+        score > totalQuestions ||
+        score * 100 < totalQuestions * minimumPassingPercent) {
       return null;
     }
 
@@ -161,14 +166,21 @@ class CertificateService {
     try {
       final decoded = jsonDecode(raw) as Map<String, dynamic>;
 
-      return decoded.map(
-        (category, sets) => MapEntry(
-          category,
-          (sets as Map<String, dynamic>).map(
-            (set, percent) => MapEntry(int.parse(set), percent as int),
-          ),
-        ),
-      );
+      final progress = <String, Map<int, int>>{};
+      for (final entry in decoded.entries) {
+        final sets = entry.value as Map<String, dynamic>;
+        final qualifiedSets = <int, int>{};
+        for (final set in sets.entries) {
+          final percent = set.value as int;
+          if (percent >= minimumPassingPercent) {
+            qualifiedSets[int.parse(set.key)] = percent;
+          }
+        }
+        if (qualifiedSets.isNotEmpty) {
+          progress[entry.key] = qualifiedSets;
+        }
+      }
+      return progress;
     } catch (_) {
       return {};
     }
@@ -194,12 +206,28 @@ class CertificateService {
     try {
       final decoded = jsonDecode(raw) as Map<String, dynamic>;
 
-      return decoded.map(
+      final stored = decoded.map(
         (category, json) => MapEntry(
           category,
           CertificateInfo.fromJson(category, json as Map<String, dynamic>),
         ),
       );
+
+      final progress = await _loadProgress();
+      final eligible = <String, CertificateInfo>{};
+      for (final entry in stored.entries) {
+        final sets = progress[entry.key];
+        if (sets?.length == setsRequired &&
+            sets!.values.every((percent) => percent >= minimumPassingPercent)) {
+          eligible[entry.key] = entry.value;
+        }
+      }
+
+      if (eligible.length != stored.length) {
+        await _saveCertificates(eligible);
+      }
+
+      return eligible;
     } catch (_) {
       return {};
     }

@@ -14,7 +14,12 @@ class MemoryMatchScreen extends StatefulWidget {
 }
 
 class _MemoryMatchScreenState extends State<MemoryMatchScreen> {
-  // All DevOps category emojis (Web-Safe Only)
+  static const int totalLevels = 100;
+  static const String _highestUnlockedLevelKey =
+      'memory_match_highest_unlocked_level_v1';
+  static const String _allLevelsCompletedKey =
+      'memory_match_all_levels_done_v1';
+
   static const List<String> _allEmojis = [
     '🐳',
     '☁️',
@@ -23,20 +28,18 @@ class _MemoryMatchScreenState extends State<MemoryMatchScreen> {
     '⚙️',
     '🤖',
     '📜',
-    '️A',
+    '🅰️',
     '🌐',
     '🐍',
     '🐚',
     '💻',
     '🟨',
     '💎',
-    'Z',
+    '🆉',
     '📦',
     '🚀',
     '🛡️',
   ];
-
-  static const String _lastPlayedKey = 'memory_match_last_played';
 
   late List<String> _emojis;
   List<String> _cards = [];
@@ -52,15 +55,17 @@ class _MemoryMatchScreenState extends State<MemoryMatchScreen> {
   int _previewSeconds = 5;
   Timer? _previewTimer;
 
-  // Daily play tracking
-  bool _hasPlayedToday = false;
   bool _isLoading = true;
-  DateTime? _lastPlayedDate;
+  bool _allLevelsCompleted = false;
+  int _level = 1;
+  int _highestUnlockedLevel = 1;
+
+  int get _pairCount => min(4 + ((_level - 1) ~/ 7), _allEmojis.length);
 
   @override
   void initState() {
     super.initState();
-    _checkDailyPlay();
+    _loadProgress();
   }
 
   @override
@@ -70,51 +75,82 @@ class _MemoryMatchScreenState extends State<MemoryMatchScreen> {
   }
 
   // =========================================================
-  // DAILY PLAY CHECK
+  // LEVEL PROGRESSION
   // =========================================================
 
-  Future<void> _checkDailyPlay() async {
+  Future<void> _loadProgress() async {
     final prefs = await SharedPreferences.getInstance();
-    final String? lastPlayedStr = prefs.getString(_lastPlayedKey);
-
-    if (lastPlayedStr != null) {
-      _lastPlayedDate = DateTime.parse(lastPlayedStr);
-      final now = DateTime.now();
-      final lastPlayed = _lastPlayedDate!;
-
-      // Check if it's the same day (year, month, day)
-      if (lastPlayed.year == now.year &&
-          lastPlayed.month == now.month &&
-          lastPlayed.day == now.day) {
-        setState(() {
-          _hasPlayedToday = true;
-          _isLoading = false;
-        });
-        return;
-      }
-    }
-
-    // Can play - initialize game
-    _selectDailyEmojis();
-    _newGame();
+    final savedLevel = prefs.getInt(_highestUnlockedLevelKey) ?? 1;
+    final allLevelsCompleted = prefs.getBool(_allLevelsCompletedKey) ?? false;
 
     setState(() {
+      _highestUnlockedLevel = savedLevel.clamp(1, totalLevels);
+      _allLevelsCompleted = allLevelsCompleted;
+      _level = allLevelsCompleted ? totalLevels : _highestUnlockedLevel;
+      if (!allLevelsCompleted) {
+        _selectLevelEmojis();
+        _newGame();
+      }
       _isLoading = false;
     });
   }
 
-  Future<void> _markAsPlayed() async {
-    final prefs = await SharedPreferences.getInstance();
-    final now = DateTime.now();
-    await prefs.setString(_lastPlayedKey, now.toIso8601String());
+  void _selectLevelEmojis() {
+    final random = Random(7919 * _level);
+    final shuffled = List<String>.from(_allEmojis)..shuffle(random);
+    _emojis = shuffled.take(_pairCount).toList();
   }
 
-  void _selectDailyEmojis() {
-    final now = DateTime.now();
-    final daySeed = now.year * 10000 + now.month * 100 + now.day;
-    final random = Random(daySeed);
-    final shuffled = List<String>.from(_allEmojis)..shuffle(random);
-    _emojis = shuffled.take(4).toList();
+  void _startLevel(int level) {
+    if (level < 1 || level > _highestUnlockedLevel || level > totalLevels) {
+      return;
+    }
+
+    setState(() {
+      _level = level;
+      _selectLevelEmojis();
+      _newGame();
+    });
+  }
+
+  Future<void> _chooseLevel() async {
+    final selectedLevel = await showDialog<int>(
+      context: context,
+      builder: (dialogContext) => AlertDialog(
+        title: const Text('Choose level'),
+        content: SizedBox(
+          width: 360,
+          height: 420,
+          child: GridView.builder(
+            itemCount: totalLevels,
+            gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+              crossAxisCount: 5,
+              crossAxisSpacing: 8,
+              mainAxisSpacing: 8,
+            ),
+            itemBuilder: (context, index) {
+              final level = index + 1;
+              final unlocked = level <= _highestUnlockedLevel;
+              return FilledButton.tonal(
+                key: ValueKey('memory-match-level-$level'),
+                onPressed: unlocked
+                    ? () => Navigator.pop(dialogContext, level)
+                    : null,
+                child: Text('$level'),
+              );
+            },
+          ),
+        ),
+        actions: [
+          TextButton(
+            onPressed: () => Navigator.pop(dialogContext),
+            child: const Text('Close'),
+          ),
+        ],
+      ),
+    );
+
+    if (selectedLevel != null && mounted) _startLevel(selectedLevel);
   }
 
   void _newGame() {
@@ -149,9 +185,10 @@ class _MemoryMatchScreenState extends State<MemoryMatchScreen> {
   }
 
   int _pointsForMoves() {
-    if (_moves <= 6) return 100;
-    if (_moves <= 8) return 60;
-    if (_moves <= 10) return 30;
+    final parMoves = _pairCount + 2;
+    if (_moves <= parMoves) return 100;
+    if (_moves <= parMoves + 2) return 60;
+    if (_moves <= parMoves + 4) return 30;
     return 15;
   }
 
@@ -194,8 +231,21 @@ class _MemoryMatchScreenState extends State<MemoryMatchScreen> {
     setState(() => _finished = true);
 
     final points = _pointsForMoves();
-    await PointService.addPoints(points);
-    await _markAsPlayed(); // Mark as played after winning
+    final completedLevel = _level;
+    final isFirstClear =
+        !_allLevelsCompleted && completedLevel == _highestUnlockedLevel;
+
+    if (isFirstClear) {
+      await PointService.addPoints(points);
+      final prefs = await SharedPreferences.getInstance();
+      if (completedLevel == totalLevels) {
+        _allLevelsCompleted = true;
+        await prefs.setBool(_allLevelsCompletedKey, true);
+      } else {
+        _highestUnlockedLevel = completedLevel + 1;
+        await prefs.setInt(_highestUnlockedLevelKey, _highestUnlockedLevel);
+      }
+    }
 
     if (!mounted) return;
 
@@ -205,20 +255,36 @@ class _MemoryMatchScreenState extends State<MemoryMatchScreen> {
       builder: (dialogContext) => AlertDialog(
         scrollable: true,
         icon: const Icon(Icons.emoji_events_rounded, size: 46),
-        title: const Text('You Won!', textAlign: TextAlign.center),
+        title: Text(
+          completedLevel == totalLevels
+              ? 'All $totalLevels levels complete!'
+              : 'Level $completedLevel complete!',
+          textAlign: TextAlign.center,
+        ),
         content: Text(
-          'Completed in $_moves moves.\nYou earned $points points!\n\nCome back tomorrow for a new challenge!',
+          isFirstClear
+              ? 'Completed in $_moves moves.\nYou earned $points points!'
+              : 'Completed in $_moves moves.\nThis level was already cleared.',
           textAlign: TextAlign.center,
         ),
         actions: [
-          // "Play Again" is intentionally removed to enforce the daily limit
-          FilledButton(
-            onPressed: () {
-              Navigator.pop(dialogContext);
-              Navigator.pop(context);
-            },
-            child: const Text('Done'),
-          ),
+          if (completedLevel < totalLevels)
+            FilledButton.icon(
+              onPressed: () {
+                Navigator.pop(dialogContext);
+                _startLevel(completedLevel + 1);
+              },
+              icon: const Icon(Icons.arrow_forward_rounded),
+              label: const Text('Next level'),
+            )
+          else
+            FilledButton(
+              onPressed: () {
+                Navigator.pop(dialogContext);
+                Navigator.pop(context);
+              },
+              child: const Text('Done'),
+            ),
         ],
       ),
     );
@@ -240,8 +306,7 @@ class _MemoryMatchScreenState extends State<MemoryMatchScreen> {
       );
     }
 
-    // 2. Already played today state
-    if (_hasPlayedToday) {
+    if (_allLevelsCompleted) {
       return Scaffold(
         appBar: AppBar(title: const Text('Memory Match 🧠')),
         body: Center(
@@ -264,7 +329,7 @@ class _MemoryMatchScreenState extends State<MemoryMatchScreen> {
                     ),
                     const SizedBox(height: 24),
                     const Text(
-                      'Already Played Today!',
+                      'All 100 levels complete!',
                       style: TextStyle(
                         fontSize: 24,
                         fontWeight: FontWeight.bold,
@@ -273,9 +338,7 @@ class _MemoryMatchScreenState extends State<MemoryMatchScreen> {
                     ),
                     const SizedBox(height: 16),
                     Text(
-                      _lastPlayedDate != null
-                          ? 'You played on ${_lastPlayedDate!.day}/${_lastPlayedDate!.month}/${_lastPlayedDate!.year}.\n\nCome back tomorrow for a new set of cards!'
-                          : 'You have already played today.\n\nCome back tomorrow for a new challenge!',
+                      'You completed every Memory Match level. Well played!',
                       textAlign: TextAlign.center,
                       style: TextStyle(
                         fontSize: 16,
@@ -297,11 +360,16 @@ class _MemoryMatchScreenState extends State<MemoryMatchScreen> {
       );
     }
 
-    // 3. Active Game state
+    // Active game state
     return Scaffold(
       appBar: AppBar(
         title: const Text('Memory Match 🧠'),
         actions: [
+          IconButton(
+            tooltip: 'Choose level',
+            onPressed: _chooseLevel,
+            icon: const Icon(Icons.grid_view_rounded),
+          ),
           if (!_isPreviewing)
             Center(
               child: Padding(
@@ -324,13 +392,32 @@ class _MemoryMatchScreenState extends State<MemoryMatchScreen> {
             padding: const EdgeInsets.all(20),
             child: Column(
               children: [
+                Row(
+                  children: [
+                    Expanded(
+                      child: Text(
+                        'Level $_level of $totalLevels',
+                        style: Theme.of(context).textTheme.titleMedium
+                            ?.copyWith(fontWeight: FontWeight.w700),
+                      ),
+                    ),
+                    Text('$_pairCount pairs'),
+                  ],
+                ),
+                const SizedBox(height: 6),
+                LinearProgressIndicator(
+                  value: _level / totalLevels,
+                  minHeight: 5,
+                  borderRadius: BorderRadius.circular(3),
+                ),
+                const SizedBox(height: 14),
                 if (_isPreviewing)
                   Padding(
                     padding: const EdgeInsets.only(bottom: 16),
                     child: Column(
                       children: [
-                        const Text(
-                          'Memorize the cards!',
+                        Text(
+                          'Memorize Level $_level',
                           style: TextStyle(
                             fontSize: 18,
                             fontWeight: FontWeight.bold,
@@ -360,23 +447,10 @@ class _MemoryMatchScreenState extends State<MemoryMatchScreen> {
                 else
                   Padding(
                     padding: const EdgeInsets.only(bottom: 16),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        const Text(
-                          "Today's Cards: ",
-                          style: TextStyle(fontSize: 16),
-                        ),
-                        ..._emojis.map(
-                          (emoji) => Padding(
-                            padding: const EdgeInsets.symmetric(horizontal: 4),
-                            child: Text(
-                              emoji,
-                              style: const TextStyle(fontSize: 20),
-                            ),
-                          ),
-                        ),
-                      ],
+                    child: Text(
+                      'Find $_pairCount matching pairs',
+                      textAlign: TextAlign.center,
+                      style: const TextStyle(fontSize: 16),
                     ),
                   ),
 
@@ -396,6 +470,7 @@ class _MemoryMatchScreenState extends State<MemoryMatchScreen> {
                       final showEmoji = _isPreviewing || isMatched || isFlipped;
 
                       return InkWell(
+                        key: ValueKey('memory-match-card-$index'),
                         onTap: () => _tapCard(index),
                         borderRadius: BorderRadius.circular(14),
                         child: AnimatedContainer(
@@ -426,7 +501,7 @@ class _MemoryMatchScreenState extends State<MemoryMatchScreen> {
                                 : Padding(
                                     padding: const EdgeInsets.all(7),
                                     child: Image.asset(
-                                      'assets/images/devops_logo.png',
+                                      'assets/icon/app_icon.png',
                                       fit: BoxFit.contain,
                                       semanticLabel: 'DevOps Quiz logo',
                                     ),

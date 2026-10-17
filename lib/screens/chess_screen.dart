@@ -1,3 +1,6 @@
+import 'dart:async';
+import 'dart:math';
+
 import 'package:chess/chess.dart' as chess;
 import 'package:flutter/material.dart';
 
@@ -9,17 +12,30 @@ class ChessScreen extends StatefulWidget {
 }
 
 class _ChessScreenState extends State<ChessScreen> {
+  final Random _random = Random();
   chess.Chess _game = chess.Chess();
+  bool _userIsWhite = true;
+  bool _botStartsNext = true;
+  int _gameGeneration = 0;
+  Timer? _botMoveTimer;
   int? _selectedSquare;
   int? _lastFrom;
   int? _lastTo;
   final List<String> _moves = [];
 
-  String _coordinate(int index) =>
-      '${String.fromCharCode(97 + index % 8)}${8 - index ~/ 8}';
+  chess.Color get _userColor =>
+      _userIsWhite ? chess.Color.WHITE : chess.Color.BLACK;
 
-  int _squareIndex(String coordinate) =>
-      (8 - int.parse(coordinate[1])) * 8 + coordinate.codeUnitAt(0) - 97;
+  String _coordinate(int screenIndex) {
+    final boardIndex = _userIsWhite ? screenIndex : 63 - screenIndex;
+    return '${String.fromCharCode(97 + boardIndex % 8)}${8 - boardIndex ~/ 8}';
+  }
+
+  int _squareIndex(String coordinate) {
+    final boardIndex =
+        (8 - int.parse(coordinate[1])) * 8 + coordinate.codeUnitAt(0) - 97;
+    return _userIsWhite ? boardIndex : 63 - boardIndex;
+  }
 
   Set<int> get _legalDestinations {
     final selected = _selectedSquare;
@@ -29,26 +45,25 @@ class _ChessScreenState extends State<ChessScreen> {
       'square': _coordinate(selected),
       'verbose': true,
     });
-    return moves
-        .map((move) => _squareIndex(move['to'] as String))
-        .toSet();
+    return moves.map((move) => _squareIndex(move['to'] as String)).toSet();
   }
 
   String get _status {
     if (_game.in_checkmate) {
-      return _game.turn == chess.Color.BLACK
-          ? 'White wins by checkmate'
-          : 'Black wins by checkmate';
+      return _game.turn == _userColor
+          ? 'Computer wins by checkmate'
+          : 'You win by checkmate';
     }
     if (_game.in_stalemate) return 'Draw by stalemate';
     if (_game.in_draw) return 'Draw';
 
     final side = _game.turn == chess.Color.WHITE ? 'White' : 'Black';
-    return _game.in_check ? '$side to move · Check' : '$side to move';
+    final turn = '$side to move';
+    return _game.in_check ? '$turn · Check' : turn;
   }
 
   void _tapSquare(int index) {
-    if (_game.game_over) return;
+    if (_game.game_over || _game.turn != _userColor) return;
 
     final target = _coordinate(index);
     final selected = _selectedSquare;
@@ -60,24 +75,58 @@ class _ChessScreenState extends State<ChessScreen> {
               .toList();
 
     if (legalMoves.isNotEmpty) {
-      final san = legalMoves.first['san'] as String;
+      final move = legalMoves.first;
+      final san = move['san'] as String;
+      var moved = false;
       setState(() {
         if (_game.move(san)) {
-          _lastFrom = selected;
-          _lastTo = index;
+          _lastFrom = _squareIndex(move['from'] as String);
+          _lastTo = _squareIndex(move['to'] as String);
           _moves.add(san);
           _selectedSquare = null;
+          moved = true;
         }
       });
+      if (moved) _playComputerMove();
       return;
     }
 
     final square = chess.Chess.SQUARES[target] as int;
     final piece = _game.board[square];
     setState(() {
-      _selectedSquare = piece != null && piece.color == _game.turn
+      _selectedSquare = piece != null && piece.color == _userColor
           ? index
           : null;
+    });
+  }
+
+  void _playComputerMove() {
+    if (_game.game_over || _game.turn == _userColor) return;
+
+    final generation = _gameGeneration;
+    _botMoveTimer?.cancel();
+    _botMoveTimer = Timer(const Duration(milliseconds: 1200), () {
+      _botMoveTimer = null;
+      if (!mounted ||
+          generation != _gameGeneration ||
+          _game.game_over ||
+          _game.turn == _userColor) {
+        return;
+      }
+
+      final legalMoves = _game.moves({'verbose': true});
+      if (legalMoves.isEmpty) return;
+
+      final move = legalMoves[_random.nextInt(legalMoves.length)];
+      final san = move['san'] as String;
+      setState(() {
+        if (_game.move(san)) {
+          _lastFrom = _squareIndex(move['from'] as String);
+          _lastTo = _squareIndex(move['to'] as String);
+          _moves.add(san);
+        }
+        _selectedSquare = null;
+      });
     });
   }
 
@@ -89,13 +138,28 @@ class _ChessScreenState extends State<ChessScreen> {
   }
 
   void _reset() {
+    final botStarts = _botStartsNext;
+    _botStartsNext = !_botStartsNext;
+    _gameGeneration++;
+    _botMoveTimer?.cancel();
+    _botMoveTimer = null;
+
     setState(() {
       _game = chess.Chess();
+      _userIsWhite = !botStarts;
       _selectedSquare = null;
       _lastFrom = null;
       _lastTo = null;
       _moves.clear();
     });
+
+    if (botStarts) _playComputerMove();
+  }
+
+  @override
+  void dispose() {
+    _botMoveTimer?.cancel();
+    super.dispose();
   }
 
   @override
@@ -131,7 +195,10 @@ class _ChessScreenState extends State<ChessScreen> {
                   ),
                   const SizedBox(height: 4),
                   Text(
-                    'Two players · White moves first',
+                    _userIsWhite
+                        ? 'You are White · Computer is Black'
+                        : 'You are Black · Computer is White',
+                    key: const ValueKey('chess-player-colors'),
                     style: Theme.of(context).textTheme.bodySmall?.copyWith(
                       color: colors.onSurfaceVariant,
                     ),
@@ -206,14 +273,15 @@ class _ChessScreenState extends State<ChessScreen> {
                                             _pieceGlyph(piece),
                                             style: TextStyle(
                                               fontSize: 42,
-                                              color: piece.color == chess.Color.WHITE
+                                              color:
+                                                  piece.color ==
+                                                      chess.Color.WHITE
                                                   ? const Color(0xFFFCFCF7)
                                                   : const Color(0xFF20252B),
                                               shadows: [
                                                 Shadow(
-                                                  color: Colors.black.withValues(
-                                                    alpha: 0.55,
-                                                  ),
+                                                  color: Colors.black
+                                                      .withValues(alpha: 0.55),
                                                   blurRadius: 2,
                                                 ),
                                               ],
@@ -235,6 +303,7 @@ class _ChessScreenState extends State<ChessScreen> {
                     _moves.isEmpty
                         ? 'Tap a piece, then a highlighted square.'
                         : _moves.join('  '),
+                    key: const ValueKey('chess-move-list'),
                     maxLines: 3,
                     overflow: TextOverflow.ellipsis,
                     textAlign: TextAlign.center,

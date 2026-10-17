@@ -157,8 +157,10 @@ class _CertificatesScreenState extends State<CertificatesScreen> {
                               ),
                               const SizedBox(height: 6),
                               Text(
-                                'Complete all ${CertificateService.setsRequired} '
-                                'sets of a category to earn its certificate.',
+                                'Score at least '
+                                '${CertificateService.minimumPassingPercent}% '
+                                'in each of all ${CertificateService.setsRequired} '
+                                'sets to earn a certificate.',
                                 style: TextStyle(
                                   color: colors.onPrimaryContainer,
                                 ),
