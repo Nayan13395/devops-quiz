@@ -153,9 +153,12 @@ class QuestionService {
   ) async {
     final supplementData = await (_questionSupplements ??=
         _loadQuestionSupplements());
-    final counts = {
+    final questionsBySet = {
       for (int set = 1; set <= setsPerCategory; set++)
-        set: questions.where((question) => question.set == set).length,
+        set: questions.where((question) => question.set == set).toList(),
+    };
+    final supplementsBySet = {
+      for (int set = 1; set <= setsPerCategory; set++) set: <Question>[],
     };
 
     for (final group in supplementData) {
@@ -180,9 +183,12 @@ class QuestionService {
         final answerIndex = item['answerIndex'] as int;
 
         for (final set in sets) {
-          if ((counts[set] ?? 0) >= 25) continue;
+          final setQuestions = questionsBySet[set];
+          final setSupplements = supplementsBySet[set];
+          if (setQuestions == null || setSupplements == null) continue;
+          if (setQuestions.length + setSupplements.length >= 25) continue;
 
-          questions.add(
+          setSupplements.add(
             Question(
               category: category,
               set: set,
@@ -191,12 +197,16 @@ class QuestionService {
               answer: options[answerIndex],
             ),
           );
-          counts[set] = (counts[set] ?? 0) + 1;
         }
       }
     }
 
-    return questions;
+    return [
+      for (int set = 1; set <= setsPerCategory; set++) ...[
+        ...questionsBySet[set]!,
+        ...supplementsBySet[set]!,
+      ],
+    ];
   }
 
   static Future<List<dynamic>> _loadQuestionSupplements() async {

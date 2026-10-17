@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 
 import '../l10n/app_localizations.dart';
 import '../screens/about_screen.dart';
-import '../screens/ask_ai_screen.dart';
 import '../screens/certificates_screen.dart';
 import '../services/rate_prompt_service.dart';
 import '../services/whats_new_service.dart';
@@ -301,18 +300,6 @@ class AppDrawer extends StatelessWidget {
                     Navigator.push(
                       context,
                       MaterialPageRoute(builder: (_) => const LearningScreen()),
-                    );
-                  },
-                ),
-                ListTile(
-                  leading: const Icon(Icons.auto_awesome_rounded),
-                  title: const Text('Ask AI'),
-                  subtitle: const Text('Technology questions'),
-                  onTap: () {
-                    Navigator.pop(context);
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(builder: (_) => const AskAiScreen()),
                     );
                   },
                 ),

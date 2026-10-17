@@ -4,7 +4,6 @@ import 'package:devops_quiz/l10n/app_localizations.dart';
 import 'package:devops_quiz/language_provider.dart';
 import 'package:devops_quiz/models/app_theme.dart';
 import 'package:devops_quiz/models/question.dart';
-import 'package:devops_quiz/screens/ask_ai_screen.dart';
 import 'package:devops_quiz/screens/certificates_screen.dart';
 import 'package:devops_quiz/screens/arrow_puzzle_screen.dart';
 import 'package:devops_quiz/screens/chess_screen.dart';
@@ -18,7 +17,6 @@ import 'package:devops_quiz/screens/true_false_blitz_screen.dart';
 import 'package:devops_quiz/screens/snake_ladders_screen.dart';
 import 'package:devops_quiz/screens/word_guess_levels_screen.dart';
 import 'package:devops_quiz/services/achievement_service.dart';
-import 'package:devops_quiz/services/ask_ai_service.dart';
 import 'package:devops_quiz/services/arrow_puzzle_service.dart';
 import 'package:devops_quiz/services/certificate_service.dart';
 import 'package:devops_quiz/services/daily_login_bonus_service.dart';
@@ -946,65 +944,6 @@ void main() {
         expect(strings.dailyQuiz, isNot(english.dailyQuiz), reason: code);
       }
     }
-  });
-
-  testWidgets('Ask AI sends a question and displays the technical answer', (
-    tester,
-  ) async {
-    String? asked;
-    await tester.pumpWidget(
-      gameApp(
-        AskAiScreen(
-          onAsk: (question) async {
-            asked = question;
-            return const TechQuestionReply(
-              answer: 'A pod is Kubernetes\' smallest deployable unit.',
-              isTechnologyRelated: true,
-            );
-          },
-        ),
-      ),
-    );
-
-    await tester.enterText(
-      find.byKey(const ValueKey('ask-ai-input')),
-      'What is a Kubernetes pod?',
-    );
-    await tester.tap(find.byKey(const ValueKey('ask-ai-send')));
-    await tester.pumpAndSettle();
-
-    expect(asked, 'What is a Kubernetes pod?');
-    expect(
-      find.text('A pod is Kubernetes\' smallest deployable unit.'),
-      findsOneWidget,
-    );
-    expect(tester.takeException(), isNull);
-  });
-
-  testWidgets('Ask AI can display an out-of-scope refusal', (tester) async {
-    await tester.pumpWidget(
-      gameApp(
-        AskAiScreen(
-          onAsk: (_) async => const TechQuestionReply(
-            answer: 'I can only help with technology questions.',
-            isTechnologyRelated: false,
-          ),
-        ),
-      ),
-    );
-
-    await tester.enterText(
-      find.byKey(const ValueKey('ask-ai-input')),
-      'Who should I vote for?',
-    );
-    await tester.tap(find.byKey(const ValueKey('ask-ai-send')));
-    await tester.pumpAndSettle();
-
-    expect(
-      find.text('I can only help with technology questions.'),
-      findsOneWidget,
-    );
-    expect(tester.takeException(), isNull);
   });
 
   // ==========================================================

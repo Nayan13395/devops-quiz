@@ -865,7 +865,7 @@ class _WelcomeScreenState extends State<WelcomeScreen>
               SizedBox(height: 16),
               _FeatureRow(
                 icon: Icons.quiz_rounded,
-                text: '2000+ practice questions',
+                text: '3000+ practice questions',
               ),
               _FeatureRow(
                 icon: Icons.translate_rounded,
