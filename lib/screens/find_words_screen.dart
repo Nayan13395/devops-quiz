@@ -376,7 +376,7 @@ class _FindWordsScreenState extends State<FindWordsScreen> {
               Icon(Icons.emoji_events_rounded, size: 64, color: colors.primary),
               const SizedBox(height: 16),
               const Text(
-                'All 100 levels complete!',
+                'All 500 levels complete!',
                 style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
               ),
               const SizedBox(height: 16),

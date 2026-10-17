@@ -82,32 +82,40 @@ class _WordGuessLevelsScreenState extends State<WordGuessLevelsScreen> {
     _finished = false;
     _won = false;
 
-    final revealCount = _word.length <= 4 ? 2 : 1;
-    _revealedPositions = {
-      for (var index = 0; index < revealCount; index++)
-        (index * (_word.length - 1) / math.max(1, revealCount - 1)).round(),
-    };
+    if (_word.length < 5) {
+      _revealedPositions = {0, _word.length - 1};
+    } else {
+      _revealedPositions = {
+        math.Random(_levelNumber * 104729).nextInt(_word.length),
+      };
+    }
     _buildLetterBank();
   }
 
   void _buildLetterBank() {
-    final lettersNeeded = [
-      for (var index = 0; index < _word.length; index++)
-        if (!_revealedPositions.contains(index)) _word[index],
-    ];
     final decoyCount = switch (_level.difficulty) {
       WordGuessDifficulty.easy => 2,
       WordGuessDifficulty.medium => 4,
       WordGuessDifficulty.hard => 6,
     };
-    final decoys = _alphabet
-        .split('')
-        .where((letter) => !_word.contains(letter))
-        .toList()
-      ..shuffle(math.Random(_levelNumber * 37 + _hintsUsed));
+    final decoys =
+        _alphabet.split('').where((letter) => !_word.contains(letter)).toList()
+          ..shuffle(math.Random(_levelNumber * 37 + _hintsUsed));
 
-    _letterBank = [...lettersNeeded, ...decoys.take(decoyCount)]
+    _letterBank = [..._word.split(''), ...decoys.take(decoyCount)]
       ..shuffle(math.Random(_levelNumber * 7919 + _hintsUsed));
+
+    final matchedTileIndexes = <int>{};
+    for (final position in _revealedPositions) {
+      for (int tileIndex = 0; tileIndex < _word.length; tileIndex++) {
+        if (!matchedTileIndexes.contains(tileIndex) &&
+            _letterBank[tileIndex] == _word[position]) {
+          matchedTileIndexes.add(tileIndex);
+          _removedLetterTiles.add(tileIndex);
+          break;
+        }
+      }
+    }
   }
 
   String _currentGuess() => List.generate(_word.length, (index) {
@@ -205,7 +213,9 @@ class _WordGuessLevelsScreenState extends State<WordGuessLevelsScreen> {
     if (_enteredCount != _requiredInputs) {
       ScaffoldMessenger.of(context).showSnackBar(
         SnackBar(
-          content: Text('Use all $_requiredInputs remaining letters to submit.'),
+          content: Text(
+            'Use all $_requiredInputs remaining letters to submit.',
+          ),
         ),
       );
       return;
@@ -308,21 +318,27 @@ class _WordGuessLevelsScreenState extends State<WordGuessLevelsScreen> {
   }
 
   Widget _buildRow(int row, ColorScheme colors) {
-    var guess = '';
+    late final List<String> letters;
     List<int>? states;
     final isCurrentRow = row == _guesses.length && !_finished;
     if (row < _guesses.length) {
-      guess = _guesses[row];
+      final guess = _guesses[row];
+      letters = guess.split('');
       states = _evaluate(guess);
     } else if (isCurrentRow) {
-      guess = _currentGuess();
+      letters = List.generate(_word.length, (index) {
+        if (_revealedPositions.contains(index)) return _word[index];
+        return _inputLetters[index] ?? '';
+      });
+    } else {
+      letters = List<String>.filled(_word.length, '');
     }
 
     return Padding(
       padding: const EdgeInsets.symmetric(vertical: 3),
       child: Row(
         children: List.generate(_word.length, (column) {
-          final letter = column < guess.length ? guess[column] : '';
+          final letter = letters[column];
           final isRevealed =
               isCurrentRow && _revealedPositions.contains(column);
           final state = states != null && column < states.length
@@ -340,6 +356,7 @@ class _WordGuessLevelsScreenState extends State<WordGuessLevelsScreen> {
             child: Padding(
               padding: const EdgeInsets.symmetric(horizontal: 2),
               child: SizedBox(
+                key: ValueKey('word-guess-slot-$row-$column'),
                 height: _word.length > 10 ? 38 : 46,
                 child: AnimatedContainer(
                   duration: const Duration(milliseconds: 130),
@@ -440,10 +457,10 @@ class _WordGuessLevelsScreenState extends State<WordGuessLevelsScreen> {
       builder: (dialogContext) => AlertDialog(
         title: const Text('How to Play'),
         content: const Text(
-          'Each level gives you a technical clue and a rack of letters. Tap '
-          'letters to build the answer, then press Enter. One or two letters '
-          'are shown for free. Hints reveal another letter and reduce the reward '
-          'by 20 points.',
+          'Each level has one DevOps word. Words shorter than five letters start '
+          'with no free letters; longer words start with one. Use the letter rack '
+          'to build the answer and press Enter. Hints reveal another letter and '
+          'reduce the reward by 20 points.',
         ),
         actions: [
           FilledButton(

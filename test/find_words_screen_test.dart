@@ -12,7 +12,7 @@ void main() {
     await tester.pumpWidget(const MaterialApp(home: FindWordsScreen()));
     await tester.pumpAndSettle();
 
-    expect(find.text('Level 1/100'), findsOneWidget);
+    expect(find.text('Level 1/500'), findsOneWidget);
     final puzzle = FindWordsLevelService.create(1);
     final word = puzzle.words.first;
     final path = puzzle.wordPaths[word]!;
@@ -45,7 +45,7 @@ void main() {
       await tester.pumpWidget(const MaterialApp(home: FindWordsScreen()));
       await tester.pumpAndSettle();
 
-      expect(find.text('Level 1/100'), findsOneWidget, reason: '$size');
+      expect(find.text('Level 1/500'), findsOneWidget, reason: '$size');
       expect(tester.takeException(), isNull, reason: '$size');
       await tester.pumpWidget(const SizedBox.shrink());
     }

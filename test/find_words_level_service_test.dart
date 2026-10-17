@@ -2,7 +2,7 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:devops_quiz/services/find_words_level_service.dart';
 
 void main() {
-  test('all 100 generated levels contain discoverable unique words', () {
+  test('all 500 generated levels contain discoverable unique words', () {
     for (int level = 1; level <= FindWordsLevelService.totalLevels; level++) {
       final puzzle = FindWordsLevelService.create(level);
 

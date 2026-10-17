@@ -67,7 +67,7 @@ class FindWordsPuzzle {
 class FindWordsLevelService {
   FindWordsLevelService._();
 
-  static const int totalLevels = 100;
+  static const int totalLevels = 500;
   static const int minimumGridSize = 8;
   static const int maximumGridSize = 16;
 
@@ -94,11 +94,12 @@ class FindWordsLevelService {
       throw RangeError.range(level, 1, totalLevels, 'level');
     }
 
-    final baseGridSize = math.min(
-      maximumGridSize,
-      minimumGridSize + (level - 1) ~/ 12,
-    );
-    final wordCount = math.min(10, 3 + (level - 1) ~/ 14);
+    final levelProgress = level - 1;
+    final progressRange = totalLevels - 1;
+    final baseGridSize =
+        minimumGridSize +
+        (levelProgress * (maximumGridSize - minimumGridSize) ~/ progressRange);
+    final wordCount = 3 + (levelProgress * 7 ~/ progressRange);
     final wordBank = WordGuessLevelService.levels
         .map((level) => level.word)
         .toList(growable: false);
@@ -124,9 +125,9 @@ class FindWordsLevelService {
       baseGridSize,
       words.map((word) => word.length).reduce(math.max),
     );
-    final directions = level <= 25
+    final directions = level <= 125
         ? _easyDirections
-        : level <= 60
+        : level <= 300
         ? _mediumDirections
         : _hardDirections;
 

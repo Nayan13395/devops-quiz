@@ -161,7 +161,9 @@ void main() {
     await tester.pumpAndSettle();
 
     expect(find.text('Level 1/100'), findsOneWidget);
+    await tester.tap(find.byKey(const ValueKey('word-guess-key-G')));
     await tester.tap(find.byKey(const ValueKey('word-guess-key-I')));
+    await tester.tap(find.byKey(const ValueKey('word-guess-key-T')));
     await tester.tap(find.byKey(const ValueKey('word-guess-enter')));
     await tester.pumpAndSettle();
 
@@ -182,6 +184,8 @@ void main() {
     await tester.pumpAndSettle();
 
     await tester.tap(find.byKey(const ValueKey('word-guess-hint')));
+    await tester.tap(find.byKey(const ValueKey('word-guess-key-I')));
+    await tester.tap(find.byKey(const ValueKey('word-guess-key-T')));
     await tester.tap(find.byKey(const ValueKey('word-guess-enter')));
     await tester.pumpAndSettle();
 

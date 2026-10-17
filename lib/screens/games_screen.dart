@@ -339,7 +339,7 @@ class _GamesScreenState extends State<GamesScreen> {
                               icon: '🔎',
                               title: 'Find Words',
                               description:
-                                  'Swipe to find DevOps words in 100 levels.',
+                                  'Swipe to find DevOps words in 500 levels.',
                               onTap: () {
                                 Navigator.push(
                                   context,
