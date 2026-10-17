@@ -53,6 +53,11 @@ class AskAiService {
       if (error.code == 'failed-precondition') {
         throw StateError('Ask AI is not configured on this project yet.');
       }
+      if (error.code == 'not-found') {
+        throw StateError(
+          'Ask AI is not deployed in this Firebase project yet. Deploy the askTechnologyQuestion function to enable it.',
+        );
+      }
       throw StateError(error.message ?? 'Ask AI could not answer right now.');
     }
   }
