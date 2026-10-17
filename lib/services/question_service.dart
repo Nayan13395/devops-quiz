@@ -11,6 +11,7 @@ class QuestionService {
 
   /// Number of question sets every category offers.
   static const int setsPerCategory = 5;
+  static Future<List<dynamic>>? _questionSupplements;
 
   static const Set<String> supportedQuestionLanguages = {
     'en',
@@ -121,27 +122,88 @@ class QuestionService {
     String path(String lang) =>
         'assets/questions/${config['folder']}/${config['file']}_$lang.json';
 
-    if (language == 'en') {
-      return _loadFile(path('en'));
-    }
-
     final List<Question> english = await _loadFile(path('en'));
-    List<Question> questions;
+    List<Question> questions = english;
 
-    try {
-      questions = await _loadFile(path(language));
-    } catch (_) {
-      // Until this locale's translation is generated, keep the quiz usable.
-      return english;
+    if (language != 'en') {
+      try {
+        questions = await _loadFile(path(language));
+      } catch (_) {
+        // Until this locale's translation is generated, keep the quiz usable.
+      }
+
+      final Set<int> translatedSets = questions.map((q) => q.set).toSet();
+      questions = [
+        ...questions,
+        ...english.where((q) => !translatedSets.contains(q.set)),
+      ];
     }
 
-    // Sets without a translation are served in English.
-    final Set<int> translatedSets = questions.map((q) => q.set).toSet();
+    return _appendQuestionSupplements(
+      questions,
+      english.first.category,
+      language,
+    );
+  }
 
-    return [
-      ...questions,
-      ...english.where((q) => !translatedSets.contains(q.set)),
-    ];
+  Future<List<Question>> _appendQuestionSupplements(
+    List<Question> questions,
+    String category,
+    String language,
+  ) async {
+    final supplementData = await (_questionSupplements ??=
+        _loadQuestionSupplements());
+    final counts = {
+      for (int set = 1; set <= setsPerCategory; set++)
+        set: questions.where((question) => question.set == set).length,
+    };
+
+    for (final group in supplementData) {
+      if (group['category'] != category) continue;
+
+      final sets = List<int>.from(group['sets'] as List);
+      for (final item in group['items'] as List) {
+        final translations = Map<String, dynamic>.from(item['question'] as Map);
+        final localizedQuestion =
+            translations[language] as String? ?? translations['en'] as String;
+        final rawOptions = item['options'];
+        final List<String> options;
+        if (rawOptions is Map) {
+          final optionTranslations = Map<String, dynamic>.from(rawOptions);
+          options = List<String>.from(
+            optionTranslations[language] as List? ??
+                optionTranslations['en'] as List,
+          );
+        } else {
+          options = List<String>.from(rawOptions as List);
+        }
+        final answerIndex = item['answerIndex'] as int;
+
+        for (final set in sets) {
+          if ((counts[set] ?? 0) >= 25) continue;
+
+          questions.add(
+            Question(
+              category: category,
+              set: set,
+              question: localizedQuestion,
+              options: options,
+              answer: options[answerIndex],
+            ),
+          );
+          counts[set] = (counts[set] ?? 0) + 1;
+        }
+      }
+    }
+
+    return questions;
+  }
+
+  static Future<List<dynamic>> _loadQuestionSupplements() async {
+    final jsonString = await rootBundle.loadString(
+      'assets/questions/question_supplements.json',
+    );
+    return json.decode(jsonString) as List<dynamic>;
   }
 
   Future<List<Question>> _loadFile(String fileName) async {

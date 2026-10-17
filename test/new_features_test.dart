@@ -3,6 +3,7 @@ import 'dart:convert';
 import 'package:devops_quiz/l10n/app_localizations.dart';
 import 'package:devops_quiz/language_provider.dart';
 import 'package:devops_quiz/models/app_theme.dart';
+import 'package:devops_quiz/models/question.dart';
 import 'package:devops_quiz/screens/ask_ai_screen.dart';
 import 'package:devops_quiz/screens/certificates_screen.dart';
 import 'package:devops_quiz/screens/arrow_puzzle_screen.dart';
@@ -54,50 +55,84 @@ void main() {
   // QUESTION DATA
   // ==========================================================
 
-  test('every category has 5 valid sets in English', () async {
-    for (final entry in QuestionService.categoryFiles.entries) {
-      final path =
-          'assets/questions/${entry.value['folder']}/${entry.value['file']}_en.json';
-      final data = jsonDecode(await rootBundle.loadString(path)) as List;
+  test(
+    'every set has 25 unique aligned questions in English, Hindi, and Marathi',
+    () async {
+      final service = QuestionService();
+      final banks = <String, Map<String, List<Question>>>{};
 
-      final bySet = <int, int>{};
-      final seen = <String>{};
+      for (final language in ['en', 'hi', 'mr']) {
+        final categories = <String, List<Question>>{};
+        for (final category in QuestionService.categoryFiles.keys) {
+          final questions = await service.loadQuestions(
+            Locale(language),
+            category,
+          );
+          categories[category] = questions;
 
-      for (final item in data) {
-        final question = item as Map<String, dynamic>;
+          for (int set = 1; set <= QuestionService.setsPerCategory; set++) {
+            final setQuestions = questions
+                .where((question) => question.set == set)
+                .toList();
+            expect(
+              setQuestions,
+              hasLength(25),
+              reason: '$language $category set $set',
+            );
 
-        // Older sets contain a few legacy quirks; validate the new Set 5.
-        if (question['set'] != QuestionService.setsPerCategory) {
-          bySet[question['set'] as int] = (bySet[question['set']] ?? 0) + 1;
-          continue;
+            final normalized = setQuestions
+                .map(
+                  (question) => question.question
+                      .trim()
+                      .replaceAll(RegExp(r'\s+'), ' ')
+                      .toLowerCase(),
+                )
+                .toSet();
+            expect(
+              normalized,
+              hasLength(25),
+              reason: '$language $category set $set has duplicate questions',
+            );
+
+            for (final question in setQuestions) {
+              expect(
+                question.options,
+                hasLength(4),
+                reason: '$language $category set $set',
+              );
+              expect(
+                question.options,
+                contains(question.answer),
+                reason: '$language $category set $set',
+              );
+            }
+          }
         }
+        banks[language] = categories;
+      }
 
-        final options = List<String>.from(question['options'] as List);
+      for (final category in QuestionService.categoryFiles.keys) {
+        final english = banks['en']![category]!;
+        final hindi = banks['hi']![category]!;
+        final marathi = banks['mr']![category]!;
 
-        expect(options, hasLength(4), reason: '${entry.key}: $question');
-        expect(options.toSet(), hasLength(4), reason: '${entry.key}: options');
-        expect(options, contains(question['answer']), reason: entry.key);
-        // Older IBM sets repeat a few questions; Set 5 must not.
-        if (question['set'] == QuestionService.setsPerCategory) {
+        for (int index = 0; index < english.length; index++) {
+          expect(hindi[index].category, english[index].category);
+          expect(hindi[index].set, english[index].set);
+          expect(marathi[index].category, english[index].category);
+          expect(marathi[index].set, english[index].set);
           expect(
-            seen.add(question['question'] as String),
-            isTrue,
-            reason: path,
+            hindi[index].options.indexOf(hindi[index].answer),
+            english[index].options.indexOf(english[index].answer),
+          );
+          expect(
+            marathi[index].options.indexOf(marathi[index].answer),
+            english[index].options.indexOf(english[index].answer),
           );
         }
-
-        bySet[question['set'] as int] = (bySet[question['set']] ?? 0) + 1;
       }
-
-      for (int set = 1; set <= QuestionService.setsPerCategory; set++) {
-        expect(
-          bySet[set] ?? 0,
-          greaterThanOrEqualTo(14),
-          reason: '${entry.key} set $set',
-        );
-      }
-    }
-  });
+    },
+  );
 
   test('Word Guess levels are unique and ordered from easy to hard', () {
     final levels = WordGuessLevelService.levels;

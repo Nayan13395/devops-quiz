@@ -1,0 +1,179 @@
+[
+  {
+    "category": "Ansible",
+    "sets": [1, 2, 3, 4, 5],
+    "items": [
+      {"question": {"en": "Which keyword enables privilege escalation for an Ansible task?", "hi": "Ansible task के लिए privilege escalation कौन-सा keyword सक्षम करता है?", "mr": "Ansible task साठी privilege escalation कोणता keyword सक्षम करतो?"}, "options": ["become: true", "delegate_to", "run_once", "check_mode"], "answerIndex": 0},
+      {"question": {"en": "Which keyword runs an Ansible task only when a condition is true?", "hi": "कौन-सा keyword किसी शर्त के सही होने पर ही Ansible task चलाता है?", "mr": "कोणता keyword अट खरी असतानाच Ansible task चालवतो?"}, "options": ["when", "until", "notify", "tags"], "answerIndex": 0},
+      {"question": {"en": "Which built-in module gathers facts from managed hosts?", "hi": "managed hosts से facts इकट्ठा करने वाला built-in module कौन-सा है?", "mr": "managed hosts कडून facts गोळा करणारे built-in module कोणते?"}, "options": ["ansible.builtin.setup", "ansible.builtin.copy", "ansible.builtin.command", "ansible.builtin.debug"], "answerIndex": 0},
+      {"question": {"en": "Which keyword repeats a task for every item in a list?", "hi": "किस keyword से किसी list के हर item के लिए task दोहराया जाता है?", "mr": "कोणत्या keyword मुळे list मधील प्रत्येक item साठी task पुन्हा चालतो?"}, "options": ["loop", "serial", "block", "role"], "answerIndex": 0},
+      {"question": {"en": "Which keyword saves a task result into a variable?", "hi": "कौन-सा keyword task का result किसी variable में सहेजता है?", "mr": "कोणता keyword task चा result variable मध्ये साठवतो?"}, "options": ["register", "vars", "facts", "include"], "answerIndex": 0},
+      {"question": {"en": "Which keyword makes a task notify a handler after a change?", "hi": "किस keyword से बदलाव के बाद task किसी handler को notify करता है?", "mr": "बदल झाल्यानंतर task कोणत्या keyword ने handler ला सूचित करतो?"}, "options": ["notify", "listen", "changed_when", "rescue"], "answerIndex": 0},
+      {"question": {"en": "Which command-line option limits a playbook run to selected hosts?", "hi": "कौन-सा command-line option playbook को चुने हुए hosts तक सीमित करता है?", "mr": "कोणता command-line option playbook ची अंमलबजावणी निवडलेल्या hosts पर्यंत मर्यादित करतो?"}, "options": ["--limit", "--list-hosts", "--syntax-check", "--flush-cache"], "answerIndex": 0},
+      {"question": {"en": "Which Ansible tool encrypts sensitive variables and files?", "hi": "संवेदनशील variables और files को encrypt करने वाला Ansible tool कौन-सा है?", "mr": "संवेदनशील variables आणि files encrypt करणारे Ansible tool कोणते?"}, "options": ["ansible-vault", "ansible-galaxy", "ansible-doc", "ansible-inventory"], "answerIndex": 0},
+      {"question": {"en": "Which option checks a playbook's proposed changes without applying them?", "hi": "कौन-सा option playbook के प्रस्तावित बदलाव लागू किए बिना जाँचता है?", "mr": "कोणता option playbook मधील प्रस्तावित बदल लागू न करता तपासतो?"}, "options": ["--check", "--diff-only", "--force", "--step"], "answerIndex": 0},
+      {"question": {"en": "Which keyword runs a task once for the current batch of hosts?", "hi": "मौजूदा hosts batch के लिए task को केवल एक बार चलाने वाला keyword कौन-सा है?", "mr": "सध्याच्या hosts batch साठी task फक्त एकदाच चालवणारा keyword कोणता?"}, "options": ["run_once: true", "serial: 1", "throttle: 1", "any_errors_fatal: true"], "answerIndex": 0}
+    ]
+  },
+  {
+    "category": "Docker",
+    "sets": [1, 2, 3, 4, 5],
+    "items": [
+      {"question": {"en": "Which file excludes paths from a Docker build context?", "hi": "Docker build context से paths को बाहर रखने वाली file कौन-सी है?", "mr": "Docker build context मधून paths वगळणारी file कोणती?"}, "options": [".dockerignore", ".gitignore", "Dockerfile.lock", "docker.exclude"], "answerIndex": 0},
+      {"question": {"en": "Which command runs a new process inside an already running container?", "hi": "पहले से चल रहे container के अंदर नया process चलाने वाला command कौन-सा है?", "mr": "आधीपासून चालू असलेल्या container मध्ये नवीन process चालवणारा command कोणता?"}, "options": ["docker exec", "docker attach", "docker build", "docker commit"], "answerIndex": 0},
+      {"question": {"en": "Which Dockerfile instruction selects the user for subsequent build steps and container execution?", "hi": "अगले build steps और container execution के लिए user चुनने वाला Dockerfile instruction कौन-सा है?", "mr": "पुढील build steps आणि container execution साठी user निवडणारा Dockerfile instruction कोणता?"}, "options": ["USER", "OWNER", "RUNAS", "LOGIN"], "answerIndex": 0},
+      {"question": {"en": "Which command copies files between a container and the local filesystem?", "hi": "container और local filesystem के बीच files copy करने वाला command कौन-सा है?", "mr": "container आणि local filesystem दरम्यान files copy करणारा command कोणता?"}, "options": ["docker cp", "docker save", "docker export", "docker pull"], "answerIndex": 0},
+      {"question": {"en": "Which command displays detailed metadata for a Docker object?", "hi": "Docker object का विस्तृत metadata दिखाने वाला command कौन-सा है?", "mr": "Docker object चे तपशीलवार metadata दाखवणारा command कोणता?"}, "options": ["docker inspect", "docker top", "docker diff", "docker pause"], "answerIndex": 0},
+      {"question": {"en": "Which command continuously streams a container's log output?", "hi": "कौन-सा command container के log output को लगातार दिखाता है?", "mr": "कोणता command container चे log output सतत दाखवतो?"}, "options": ["docker logs -f", "docker events --once", "docker stats --no-stream", "docker history"], "answerIndex": 0},
+      {"question": {"en": "Which docker run option removes a container automatically after it exits?", "hi": "container बंद होने के बाद उसे अपने-आप हटाने वाला docker run option कौन-सा है?", "mr": "container बंद झाल्यावर तो आपोआप काढून टाकणारा docker run option कोणता?"}, "options": ["--rm", "--pull", "--init", "--detach"], "answerIndex": 0},
+      {"question": {"en": "What is the main purpose of a multi-stage Docker build?", "hi": "multi-stage Docker build का मुख्य उद्देश्य क्या है?", "mr": "multi-stage Docker build चा मुख्य उद्देश काय आहे?"}, "options": {"en": ["Copy build artifacts into a smaller final image", "Run every stage as a container", "Keep all build tools in the final image", "Replace Docker volumes with layers"], "hi": ["build artifacts को छोटी final image में copy करना", "हर stage को container के रूप में चलाना", "सभी build tools को final image में रखना", "Docker volumes को layers से बदलना"], "mr": ["build artifacts लहान final image मध्ये copy करणे", "प्रत्येक stage container म्हणून चालवणे", "सर्व build tools final image मध्ये ठेवणे", "Docker volumes च्या जागी layers वापरणे"]}, "answerIndex": 0},
+      {"question": {"en": "Which docker build option selects a named stage as the build target?", "hi": "named stage को build target चुनने वाला docker build option कौन-सा है?", "mr": "named stage ला build target म्हणून निवडणारा docker build option कोणता?"}, "options": ["--target", "--stage", "--from", "--platform"], "answerIndex": 0},
+      {"question": {"en": "Which Dockerfile instruction defines a container health check?", "hi": "container का health check तय करने वाला Dockerfile instruction कौन-सा है?", "mr": "container चा health check ठरवणारा Dockerfile instruction कोणता?"}, "options": ["HEALTHCHECK", "HEALTH", "STATUS", "ONFAILURE"], "answerIndex": 0}
+    ]
+  },
+  {
+    "category": "Docker",
+    "sets": [2, 5],
+    "items": [
+      {"question": {"en": "Which docker run option explicitly mounts a host path or named volume in a container?", "hi": "कौन-सा docker run option container में host path या named volume को स्पष्ट रूप से mount करता है?", "mr": "कोणता docker run option container मध्ये host path किंवा named volume स्पष्टपणे mount करतो?"}, "options": ["--mount", "--publish", "--network", "--restart"], "answerIndex": 0}
+    ]
+  },
+  {
+    "category": "Git",
+    "sets": [1, 2, 3, 4, 5],
+    "items": [
+      {"question": {"en": "Which command shows where branch and HEAD references recently moved?", "hi": "branch और HEAD references हाल में कहाँ बदले, यह दिखाने वाला command कौन-सा है?", "mr": "branch आणि HEAD references अलीकडे कुठे हलले हे दाखवणारा command कोणता?"}, "options": ["git reflog", "git log --stat", "git show-ref", "git remote -v"], "answerIndex": 0},
+      {"question": {"en": "Which command uses binary search to find the commit that introduced a bug?", "hi": "bug लाने वाला commit खोजने के लिए binary search करने वाला command कौन-सा है?", "mr": "bug आणणारा commit शोधण्यासाठी binary search करणारा command कोणता?"}, "options": ["git bisect", "git blame", "git grep", "git cherry-pick"], "answerIndex": 0},
+      {"question": {"en": "Which command applies an existing commit to the current branch?", "hi": "किस command से किसी मौजूदा commit को current branch पर लागू किया जाता है?", "mr": "कोणत्या command ने विद्यमान commit current branch वर लागू केला जातो?"}, "options": ["git cherry-pick", "git revert", "git tag", "git clean"], "answerIndex": 0},
+      {"question": {"en": "Which command records a new commit that reverses an earlier commit?", "hi": "पहले के commit को उलटने वाला नया commit बनाने का command कौन-सा है?", "mr": "आधीचा commit उलटवणारा नवीन commit तयार करणारा command कोणता?"}, "options": ["git revert", "git reset --hard", "git restore", "git prune"], "answerIndex": 0},
+      {"question": {"en": "Which command initializes and fetches the submodules recorded by a repository?", "hi": "repository में दर्ज submodules को initialize और fetch करने वाला command कौन-सा है?", "mr": "repository मध्ये नोंदवलेले submodules initialize आणि fetch करणारा command कोणता?"}, "options": ["git submodule update --init --recursive", "git clone --recurse-submodules", "git submodule sync", "git submodule status"], "answerIndex": 0},
+      {"question": {"en": "Which command interactively stages selected portions of a file?", "hi": "किस command से file के चुने हुए हिस्से interactively stage किए जाते हैं?", "mr": "कोणत्या command ने file चे निवडक भाग interactively stage केले जातात?"}, "options": ["git add -p", "git add -A", "git commit -a", "git restore --staged"], "answerIndex": 0},
+      {"question": {"en": "Which command displays changes that are staged for the next commit?", "hi": "अगले commit के लिए staged बदलाव दिखाने वाला command कौन-सा है?", "mr": "पुढील commit साठी stage केलेले बदल दाखवणारा command कोणता?"}, "options": ["git diff --cached", "git diff HEAD~1", "git show --name-only", "git status --short"], "answerIndex": 0},
+      {"question": {"en": "Which command saves tracked working-tree changes on a temporary stack?", "hi": "tracked working-tree बदलावों को अस्थायी stack में सहेजने वाला command कौन-सा है?", "mr": "tracked working-tree बदल तात्पुरत्या stack मध्ये साठवणारा command कोणता?"}, "options": ["git stash push", "git archive", "git bundle", "git notes add"], "answerIndex": 0},
+      {"question": {"en": "Which command opens a sequence of commits for interactive editing?", "hi": "किस command से commits की श्रृंखला interactive रूप से edit की जाती है?", "mr": "कोणत्या command ने commits ची मालिका interactive पद्धतीने edit करता येते?"}, "options": ["git rebase -i", "git merge --squash", "git commit --amend", "git apply --index"], "answerIndex": 0},
+      {"question": {"en": "Which command creates an annotated Git tag with a message?", "hi": "message के साथ annotated Git tag बनाने वाला command कौन-सा है?", "mr": "message सह annotated Git tag तयार करणारा command कोणता?"}, "options": ["git tag -a", "git tag -d", "git describe", "git notes add"], "answerIndex": 0}
+    ]
+  },
+  {
+    "category": "Git",
+    "sets": [2],
+    "items": [
+      {"question": {"en": "Which command creates an additional working directory linked to another branch?", "hi": "दूसरी branch से जुड़ी अतिरिक्त working directory बनाने वाला command कौन-सा है?", "mr": "दुसऱ्या branch शी जोडलेली अतिरिक्त working directory तयार करणारा command कोणता?"}, "options": ["git worktree add", "git branch --copy", "git clone --shared", "git switch --orphan"], "answerIndex": 0}
+    ]
+  },
+  {
+    "category": "Jenkins",
+    "sets": [1, 2, 3, 4, 5],
+    "items": [
+      {"question": {"en": "Which file conventionally stores a Jenkins Pipeline definition in source control?", "hi": "source control में Jenkins Pipeline definition रखने की प्रचलित file कौन-सी है?", "mr": "source control मध्ये Jenkins Pipeline definition ठेवण्यासाठी प्रचलित file कोणती?"}, "options": ["Jenkinsfile", "pipeline.xml", "build.yaml", "job.properties"], "answerIndex": 0},
+      {"question": {"en": "Which mechanism shares reusable pipeline steps across Jenkins jobs?", "hi": "Jenkins jobs के बीच reusable pipeline steps साझा करने का mechanism कौन-सा है?", "mr": "Jenkins jobs मध्ये reusable pipeline steps सामायिक करण्याची यंत्रणा कोणती?"}, "options": ["Shared Library", "Node Label", "Build Cause", "Workspace Browser"], "answerIndex": 0},
+      {"question": {"en": "Which Declarative Pipeline section runs steps after the main stages finish?", "hi": "मुख्य stages पूरे होने के बाद steps चलाने वाला Declarative Pipeline section कौन-सा है?", "mr": "मुख्य stages पूर्ण झाल्यानंतर steps चालवणारा Declarative Pipeline section कोणता?"}, "options": ["post", "options", "environment", "parameters"], "answerIndex": 0},
+      {"question": {"en": "Which pair of Pipeline steps transfers files between stages on the same run?", "hi": "एक ही run के stages के बीच files भेजने वाले Pipeline steps की जोड़ी कौन-सी है?", "mr": "एकाच run मधील stages दरम्यान files नेणाऱ्या Pipeline steps ची जोडी कोणती?"}, "options": ["stash and unstash", "archive and delete", "save and load", "push and pull"], "answerIndex": 0},
+      {"question": {"en": "Which Declarative Pipeline directive selects where a pipeline or stage runs?", "hi": "pipeline या stage कहाँ चलेगा, यह चुनने वाला Declarative Pipeline directive कौन-सा है?", "mr": "pipeline किंवा stage कुठे चालेल हे निवडणारा Declarative Pipeline directive कोणता?"}, "options": ["agent", "steps", "triggers", "tools"], "answerIndex": 0},
+      {"question": {"en": "Which Declarative Pipeline directive conditionally skips a stage?", "hi": "किस Declarative Pipeline directive से condition के आधार पर stage छोड़ा जा सकता है?", "mr": "कोणत्या Declarative Pipeline directive ने अटीवर आधारित stage वगळता येतो?"}, "options": ["when", "input", "post", "options"], "answerIndex": 0},
+      {"question": {"en": "Which Pipeline step binds stored credentials to environment variables for a block?", "hi": "किस Pipeline step से stored credentials किसी block के लिए environment variables से जोड़े जाते हैं?", "mr": "कोणत्या Pipeline step ने stored credentials एखाद्या block साठी environment variables शी जोडले जातात?"}, "options": ["withCredentials", "withEnv", "credentialsId", "maskPasswords"], "answerIndex": 0},
+      {"question": {"en": "Which Declarative Pipeline stage section runs independent stages concurrently?", "hi": "कौन-सा Declarative Pipeline stage section स्वतंत्र stages को साथ-साथ चलाता है?", "mr": "कोणता Declarative Pipeline stage section स्वतंत्र stages एकाच वेळी चालवतो?"}, "options": ["parallel", "matrix", "sequential", "post"], "answerIndex": 0},
+      {"question": {"en": "Which Pipeline step archives build output so it can be downloaded later?", "hi": "बाद में download करने के लिए build output सहेजने वाला Pipeline step कौन-सा है?", "mr": "नंतर download करण्यासाठी build output जतन करणारा Pipeline step कोणता?"}, "options": ["archiveArtifacts", "stash", "fingerprint", "junit"], "answerIndex": 0},
+      {"question": {"en": "Which workspace-cleanup step is commonly used at the end of a Jenkins build?", "hi": "Jenkins build के अंत में workspace साफ़ करने के लिए आम तौर पर कौन-सा step उपयोग होता है?", "mr": "Jenkins build च्या शेवटी workspace स्वच्छ करण्यासाठी सहसा कोणता step वापरला जातो?"}, "options": ["cleanWs", "deleteDirContents", "wipeWorkspace", "cleanNode"], "answerIndex": 0}
+    ]
+  },
+  {
+    "category": "Jenkins",
+    "sets": [2, 4],
+    "items": [
+      {"question": {"en": "Which Pipeline step pauses execution until a user confirms or supplies input?", "hi": "किस Pipeline step से user की पुष्टि या input मिलने तक execution रुका रहता है?", "mr": "user ची पुष्टी किंवा input मिळेपर्यंत execution थांबवणारा Pipeline step कोणता?"}, "options": ["input", "sleep", "timeout", "milestone"], "answerIndex": 0}
+    ]
+  },
+  {
+    "category": "Kubernetes",
+    "sets": [1, 2, 3, 4, 5],
+    "items": [
+      {"question": {"en": "Which probe determines whether a Pod should receive Service traffic?", "hi": "Pod को Service traffic मिलना चाहिए या नहीं, यह तय करने वाली probe कौन-सी है?", "mr": "Pod ला Service traffic मिळावा की नाही हे ठरवणारी probe कोणती?"}, "options": ["readinessProbe", "livenessProbe", "startupProbe", "execProbe"], "answerIndex": 0},
+      {"question": {"en": "Which probe gives a slow-starting container extra time before liveness checks begin?", "hi": "धीरे शुरू होने वाले container को liveness checks से पहले अतिरिक्त समय देने वाली probe कौन-सी है?", "mr": "हळू सुरू होणाऱ्या container ला liveness checks आधी अतिरिक्त वेळ देणारी probe कोणती?"}, "options": ["startupProbe", "readinessProbe", "tcpProbe", "httpProbe"], "answerIndex": 0},
+      {"question": {"en": "Which Kubernetes resource adjusts replica count based on observed metrics?", "hi": "observed metrics के आधार पर replicas की संख्या बदलने वाला Kubernetes resource कौन-सा है?", "mr": "observed metrics नुसार replicas ची संख्या बदलणारा Kubernetes resource कोणता?"}, "options": ["HorizontalPodAutoscaler", "PodDisruptionBudget", "ResourceQuota", "LimitRange"], "answerIndex": 0},
+      {"question": {"en": "Which resource limits voluntary disruptions to maintain a minimum number of available Pods?", "hi": "कम-से-कम उपलब्ध Pods बनाए रखने के लिए voluntary disruptions सीमित करने वाला resource कौन-सा है?", "mr": "किमान Pods उपलब्ध ठेवण्यासाठी voluntary disruptions मर्यादित करणारा resource कोणता?"}, "options": ["PodDisruptionBudget", "HorizontalPodAutoscaler", "NetworkPolicy", "ResourceQuota"], "answerIndex": 0},
+      {"question": {"en": "Which resource stores non-sensitive configuration as key-value data for Pods?", "hi": "Pods के लिए non-sensitive configuration को key-value data में रखने वाला resource कौन-सा है?", "mr": "Pods साठी non-sensitive configuration key-value data म्हणून साठवणारा resource कोणता?"}, "options": ["ConfigMap", "Secret", "Lease", "EndpointSlice"], "answerIndex": 0},
+      {"question": {"en": "Which Kubernetes resource can restrict network traffic to and from selected Pods?", "hi": "चुने हुए Pods के आने-जाने वाले network traffic को सीमित करने वाला resource कौन-सा है?", "mr": "निवडलेल्या Pods कडे येणारी आणि जाणारी network traffic मर्यादित करणारा resource कोणता?"}, "options": ["NetworkPolicy", "Ingress", "ServiceAccount", "PriorityClass"], "answerIndex": 0},
+      {"question": {"en": "Which container runs to completion before the main containers in a Pod start?", "hi": "Pod के मुख्य containers शुरू होने से पहले पूरा होने तक चलने वाला container कौन-सा है?", "mr": "Pod मधील मुख्य containers सुरू होण्यापूर्वी पूर्ण होईपर्यंत चालणारा container कोणता?"}, "options": ["initContainer", "sidecar", "ephemeralContainer", "pauseContainer"], "answerIndex": 0},
+      {"question": {"en": "Which Pod scheduling setting allows placement onto a node with a matching taint?", "hi": "matching taint वाले node पर Pod schedule करने की अनुमति देने वाली setting कौन-सी है?", "mr": "matching taint असलेल्या node वर Pod schedule करण्याची परवानगी देणारी setting कोणती?"}, "options": ["toleration", "taint", "nodeSelector", "topologySpreadConstraints"], "answerIndex": 0},
+      {"question": {"en": "Which kubectl command restores a Deployment to its previous rollout revision?", "hi": "Deployment को पिछले rollout revision पर लौटाने वाला kubectl command कौन-सा है?", "mr": "Deployment ला मागील rollout revision वर परत नेणारा kubectl command कोणता?"}, "options": ["kubectl rollout undo", "kubectl rollout pause", "kubectl scale", "kubectl replace"], "answerIndex": 0},
+      {"question": {"en": "Which kubectl command forwards a local port to a port on a Pod?", "hi": "local port को Pod के port तक forward करने वाला kubectl command कौन-सा है?", "mr": "local port Pod च्या port पर्यंत forward करणारा kubectl command कोणता?"}, "options": ["kubectl port-forward", "kubectl proxy", "kubectl expose", "kubectl attach"], "answerIndex": 0}
+    ]
+  },
+  {
+    "category": "Kubernetes",
+    "sets": [2],
+    "items": [
+      {"question": {"en": "Which Kubernetes resource creates Jobs on a recurring time-based schedule?", "hi": "समय-आधारित schedule पर बार-बार Jobs बनाने वाला Kubernetes resource कौन-सा है?", "mr": "वेळापत्रकानुसार पुन्हा पुन्हा Jobs तयार करणारा Kubernetes resource कोणता?"}, "options": ["CronJob", "DaemonSet", "ReplicaSet", "StatefulSet"], "answerIndex": 0}
+    ]
+  },
+  {
+    "category": "Linux",
+    "sets": [1, 2, 3, 4],
+    "items": [
+      {"question": {"en": "Which command copies standard input to both a file and standard output?", "hi": "standard input को file और standard output दोनों में copy करने वाला command कौन-सा है?", "mr": "standard input ची प्रत file आणि standard output दोन्हीकडे करणारा command कोणता?"}, "options": ["tee", "cut", "paste", "join"], "answerIndex": 0},
+      {"question": {"en": "Which command extracts selected character fields from each line?", "hi": "हर line से चुने हुए character fields निकालने वाला command कौन-सा है?", "mr": "प्रत्येक line मधून निवडलेली character fields काढणारा command कोणता?"}, "options": ["cut", "sort", "fmt", "fold"], "answerIndex": 0},
+      {"question": {"en": "Which sort option removes duplicate lines from sorted output?", "hi": "sorted output से duplicate lines हटाने वाला sort option कौन-सा है?", "mr": "sorted output मधील duplicate lines काढणारा sort option कोणता?"}, "options": ["sort -u", "sort -r", "sort -n", "sort -k"], "answerIndex": 0},
+      {"question": {"en": "Which command counts adjacent repeated lines in input?", "hi": "input में साथ-साथ दोहराई गई lines की गिनती करने वाला command कौन-सा है?", "mr": "input मधील सलग पुन्हा आलेल्या lines मोजणारा command कोणता?"}, "options": ["uniq -c", "wc -l", "comm -3", "diff -u"], "answerIndex": 0},
+      {"question": {"en": "Which command translates or deletes individual characters in a stream?", "hi": "stream में अलग-अलग characters को बदलने या हटाने वाला command कौन-सा है?", "mr": "stream मधील स्वतंत्र characters बदलणारा किंवा काढणारा command कोणता?"}, "options": ["tr", "sed", "awk", "xargs"], "answerIndex": 0},
+      {"question": {"en": "Which command displays systemd journal entries for a specific unit?", "hi": "किसी खास systemd unit की journal entries दिखाने वाला command कौन-सा है?", "mr": "विशिष्ट systemd unit च्या journal entries दाखवणारा command कोणता?"}, "options": ["journalctl -u", "systemctl show", "dmesg -T", "logger -t"], "answerIndex": 0},
+      {"question": {"en": "Which command runs a program while holding an advisory lock on a file?", "hi": "किसी file पर advisory lock रखते हुए program चलाने वाला command कौन-सा है?", "mr": "file वर advisory lock ठेवून program चालवणारा command कोणता?"}, "options": ["flock", "nohup", "setsid", "chroot"], "answerIndex": 0},
+      {"question": {"en": "Which command-line tool passes null-delimited input safely to another command?", "hi": "null-delimited input को सुरक्षित रूप से दूसरे command तक पहुँचाने वाला tool कौन-सा है?", "mr": "null-delimited input सुरक्षितपणे दुसऱ्या command कडे देणारे tool कोणते?"}, "options": ["xargs -0", "xargs -n", "parallel --pipe", "env -0"], "answerIndex": 0},
+      {"question": {"en": "Which command reports how long each systemd service took during boot?", "hi": "boot के दौरान हर systemd service को लगा समय बताने वाला command कौन-सा है?", "mr": "boot दरम्यान प्रत्येक systemd service ला लागलेला वेळ सांगणारा command कोणता?"}, "options": ["systemd-analyze blame", "systemctl list-units", "journalctl --boot", "uptime -p"], "answerIndex": 0},
+      {"question": {"en": "Which command stops a process if it exceeds a specified duration?", "hi": "निर्धारित समय से अधिक चलने पर process रोकने वाला command कौन-सा है?", "mr": "ठरावीक वेळेपेक्षा जास्त चालल्यास process थांबवणारा command कोणता?"}, "options": ["timeout", "watch", "time", "wait"], "answerIndex": 0}
+    ]
+  },
+  {
+    "category": "Linux",
+    "sets": [2],
+    "items": [
+      {"question": {"en": "Which command starts a process with a modified scheduling priority?", "hi": "बदली हुई scheduling priority के साथ process शुरू करने वाला command कौन-सा है?", "mr": "बदललेल्या scheduling priority सह process सुरू करणारा command कोणता?"}, "options": ["nice", "renice", "ionice", "taskset"], "answerIndex": 0}
+    ]
+  },
+  {
+    "category": "Networking",
+    "sets": [1, 2, 3, 4, 5],
+    "items": [
+      {"question": {"en": "What is the order of messages in the TCP three-way handshake?", "hi": "TCP three-way handshake में messages का क्रम क्या है?", "mr": "TCP three-way handshake मधील messages चा क्रम काय आहे?"}, "options": ["SYN, SYN-ACK, ACK", "SYN, ACK, FIN", "ACK, SYN, RST", "FIN, FIN-ACK, ACK"], "answerIndex": 0},
+      {"question": {"en": "What does the Maximum Transmission Unit (MTU) limit describe?", "hi": "Maximum Transmission Unit (MTU) की सीमा क्या बताती है?", "mr": "Maximum Transmission Unit (MTU) ची मर्यादा काय दर्शवते?"}, "options": {"en": ["Largest packet size a link can carry without fragmentation", "Maximum number of routes", "Smallest TCP port", "Maximum DNS cache time"], "hi": ["एक link पर fragmentation के बिना भेजे जा सकने वाले packet का अधिकतम आकार", "routes की अधिकतम संख्या", "सबसे छोटा TCP port", "DNS cache का अधिकतम समय"], "mr": ["fragmentation शिवाय link वर पाठवता येणाऱ्या packet चा कमाल आकार", "routes ची कमाल संख्या", "सर्वात लहान TCP port", "DNS cache चा कमाल वेळ"]}, "answerIndex": 0},
+      {"question": {"en": "Which routing protocol exchanges reachability information between autonomous systems?", "hi": "autonomous systems के बीच reachability जानकारी का आदान-प्रदान कौन-सा routing protocol करता है?", "mr": "autonomous systems दरम्यान reachability माहितीची देवाणघेवाण कोणता routing protocol करतो?"}, "options": ["BGP", "OSPF", "RIP", "LLDP"], "answerIndex": 0},
+      {"question": {"en": "Which interior gateway protocol builds routes using link-state information?", "hi": "link-state जानकारी से routes बनाने वाला interior gateway protocol कौन-सा है?", "mr": "link-state माहिती वापरून routes तयार करणारा interior gateway protocol कोणता?"}, "options": ["OSPF", "BGP", "ARP", "SMTP"], "answerIndex": 0},
+      {"question": {"en": "Which TLS extension lets a client specify the hostname during the handshake?", "hi": "handshake के दौरान client को hostname बताने देने वाला TLS extension कौन-सा है?", "mr": "handshake दरम्यान client ला hostname सांगू देणारा TLS extension कोणता?"}, "options": ["SNI", "ALPN", "HSTS", "OCSP"], "answerIndex": 0},
+      {"question": {"en": "Which DHCP exchange sequence is commonly abbreviated DORA?", "hi": "कौन-सा DHCP exchange क्रम आम तौर पर DORA कहलाता है?", "mr": "DHCP मधील कोणता exchange क्रम सामान्यतः DORA म्हणून ओळखला जातो?"}, "options": ["Discover, Offer, Request, Acknowledge", "Discover, Observe, Relay, Assign", "Delegate, Offer, Renew, Accept", "Detect, Open, Route, Advertise"], "answerIndex": 0},
+      {"question": {"en": "What does a TCP zero-window advertisement ask the sender to do?", "hi": "TCP zero-window advertisement sender से क्या करने को कहता है?", "mr": "TCP zero-window advertisement sender ला काय करण्यास सांगते?"}, "options": {"en": ["Temporarily stop sending data", "Immediately retransmit all data", "Close the connection", "Switch to UDP"], "hi": ["कुछ समय के लिए data भेजना रोकना", "सारा data तुरंत फिर से भेजना", "connection बंद करना", "UDP पर स्विच करना"], "mr": ["काही काळ data पाठवणे थांबवणे", "सर्व data त्वरित पुन्हा पाठवणे", "connection बंद करणे", "UDP कडे switch करणे"]}, "answerIndex": 0},
+      {"question": {"en": "Which utility captures packets from a network interface and can write a pcap file?", "hi": "network interface से packets capture करके pcap file लिख सकने वाली utility कौन-सी है?", "mr": "network interface वरील packets capture करून pcap file लिहू शकणारी utility कोणती?"}, "options": ["tcpdump", "netstat", "dig", "ncdu"], "answerIndex": 0},
+      {"question": {"en": "What is the main purpose of Path MTU Discovery?", "hi": "Path MTU Discovery का मुख्य उद्देश्य क्या है?", "mr": "Path MTU Discovery चा मुख्य उद्देश काय आहे?"}, "options": {"en": ["Find the smallest MTU along a network path", "Choose the shortest DNS name", "Measure TCP connection count", "Select a router's default gateway"], "hi": ["network path पर सबसे छोटा MTU ढूँढ़ना", "सबसे छोटा DNS नाम चुनना", "TCP connections की संख्या मापना", "router का default gateway चुनना"], "mr": ["network path वरील सर्वात लहान MTU शोधणे", "सर्वात लहान DNS नाव निवडणे", "TCP connections ची संख्या मोजणे", "router चे default gateway निवडणे"]}, "answerIndex": 0},
+      {"question": {"en": "Which TCP mechanism reduces the sending rate when congestion is detected?", "hi": "congestion मिलने पर sending rate कम करने वाला TCP mechanism कौन-सा है?", "mr": "congestion आढळल्यावर sending rate कमी करणारी TCP यंत्रणा कोणती?"}, "options": ["Congestion control", "Name resolution", "Address translation", "Port forwarding"], "answerIndex": 0}
+    ]
+  },
+  {
+    "category": "Networking",
+    "sets": [2],
+    "items": [
+      {"question": {"en": "Which HTTP method establishes a tunnel through a proxy, commonly for HTTPS?", "hi": "proxy के माध्यम से tunnel बनाने वाला HTTP method कौन-सा है, जिसका उपयोग अक्सर HTTPS के लिए होता है?", "mr": "proxy मधून tunnel तयार करणारी HTTP method कोणती, जी सहसा HTTPS साठी वापरली जाते?"}, "options": ["CONNECT", "TRACE", "PATCH", "OPTIONS"], "answerIndex": 0}
+    ]
+  },
+  {
+    "category": "Terraform",
+    "sets": [1, 2, 3, 4, 5],
+    "items": [
+      {"question": {"en": "Which lifecycle setting prevents Terraform from destroying a resource?", "hi": "कौन-सी lifecycle setting Terraform को resource नष्ट करने से रोकती है?", "mr": "कोणती lifecycle setting Terraform ला resource नष्ट करण्यापासून रोखते?"}, "options": ["prevent_destroy", "create_before_destroy", "ignore_changes", "replace_triggered_by"], "answerIndex": 0},
+      {"question": {"en": "Which argument marks a variable's value as sensitive in Terraform output?", "hi": "Terraform output में variable की value को sensitive चिह्नित करने वाला argument कौन-सा है?", "mr": "Terraform output मध्ये variable चे value sensitive म्हणून दर्शवणारा argument कोणता?"}, "options": ["sensitive = true", "private = true", "hidden = true", "secret = true"], "answerIndex": 0},
+      {"question": {"en": "Which provider argument selects an aliased provider configuration for a resource?", "hi": "resource के लिए aliased provider configuration चुनने वाला argument कौन-सा है?", "mr": "resource साठी aliased provider configuration निवडणारा argument कोणता?"}, "options": ["provider", "backend", "source", "required_providers"], "answerIndex": 0},
+      {"question": {"en": "Which block records a resource address change without recreating the object?", "hi": "object को दोबारा बनाए बिना resource address का बदलाव दर्ज करने वाला block कौन-सा है?", "mr": "object पुन्हा तयार न करता resource address मधील बदल नोंदवणारा block कोणता?"}, "options": ["moved", "import", "check", "output"], "answerIndex": 0},
+      {"question": {"en": "Which command switches the active Terraform workspace?", "hi": "active Terraform workspace बदलने वाला command कौन-सा है?", "mr": "सक्रिय Terraform workspace बदलणारा command कोणता?"}, "options": ["terraform workspace select", "terraform workspace new", "terraform init", "terraform providers lock"], "answerIndex": 0},
+      {"question": {"en": "Which command prints all root-module outputs as machine-readable JSON?", "hi": "root module के सभी outputs machine-readable JSON में दिखाने वाला command कौन-सा है?", "mr": "root module चे सर्व outputs machine-readable JSON मध्ये दाखवणारा command कोणता?"}, "options": ["terraform output -json", "terraform show -json", "terraform state list -json", "terraform plan -json"], "answerIndex": 0},
+      {"question": {"en": "Which lifecycle rule tells Terraform to create a replacement before destroying the old resource?", "hi": "पुराना resource नष्ट करने से पहले replacement बनाने वाला lifecycle rule कौन-सा है?", "mr": "जुना resource नष्ट करण्यापूर्वी replacement तयार करणारा lifecycle rule कोणता?"}, "options": ["create_before_destroy", "prevent_destroy", "ignore_changes", "destroy_before_create"], "answerIndex": 0},
+      {"question": {"en": "Which lifecycle argument tells Terraform to disregard changes to selected resource attributes?", "hi": "चुने हुए resource attributes के बदलावों को अनदेखा करने वाला lifecycle argument कौन-सा है?", "mr": "निवडलेल्या resource attributes मधील बदल दुर्लक्षित करणारा lifecycle argument कोणता?"}, "options": ["ignore_changes", "prevent_destroy", "create_before_destroy", "replace_triggered_by"], "answerIndex": 0},
+      {"question": {"en": "Which Terraform block can declare an assertion about managed infrastructure?", "hi": "managed infrastructure के बारे में assertion घोषित करने वाला Terraform block कौन-सा है?", "mr": "managed infrastructure बद्दल assertion घोषित करणारा Terraform block कोणता?"}, "options": ["check", "locals", "terraform", "provider"], "answerIndex": 0},
+      {"question": {"en": "Which command shows the values of outputs defined by the root module?", "hi": "root module में परिभाषित outputs की values दिखाने वाला command कौन-सा है?", "mr": "root module मध्ये परिभाषित outputs ची values दाखवणारा command कोणता?"}, "options": ["terraform output", "terraform console", "terraform show", "terraform validate"], "answerIndex": 0}
+    ]
+  },
+  {
+    "category": "Terraform",
+    "sets": [2],
+    "items": [
+      {"question": {"en": "Which block removes a resource from Terraform state without destroying the real object?", "hi": "वास्तविक object नष्ट किए बिना resource को Terraform state से हटाने वाला block कौन-सा है?", "mr": "वास्तविक object नष्ट न करता resource ला Terraform state मधून काढणारा block कोणता?"}, "options": ["removed", "moved", "import", "data"], "answerIndex": 0}
+    ]
+  }
+]
