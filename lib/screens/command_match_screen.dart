@@ -150,7 +150,8 @@ class _MatchGameState extends State<_MatchGame> {
 
     await DailyGameGate.markPlayed(CommandMatchScreen.gameKey);
 
-    if (_points > 0) await PointService.addPoints(_points);
+    if (_points > 0)
+      await PointService.addPoints(_points, source: PointSource.game);
 
     if (!mounted) return;
 

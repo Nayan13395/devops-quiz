@@ -1,7 +1,9 @@
 import 'dart:async';
+import 'dart:convert';
 import 'dart:math';
 
 import 'package:flutter/material.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 import '../services/point_service.dart';
 
@@ -14,7 +16,9 @@ class TicTacToeScreen extends StatefulWidget {
   State<TicTacToeScreen> createState() => _TicTacToeScreenState();
 }
 
-class _TicTacToeScreenState extends State<TicTacToeScreen> {
+class _TicTacToeScreenState extends State<TicTacToeScreen>
+    with WidgetsBindingObserver {
+  static const _saveKey = 'tic_tac_toe_saved_game_v1';
   final Random _random = Random();
   List<String?> _board = List<String?>.filled(9, null);
   _TicTacToeMode _mode = _TicTacToeMode.computer;
@@ -25,6 +29,88 @@ class _TicTacToeScreenState extends State<TicTacToeScreen> {
   int _xWins = 0;
   int _oWins = 0;
   int _draws = 0;
+  bool _loading = true;
+
+  @override
+  void initState() {
+    super.initState();
+    WidgetsBinding.instance.addObserver(this);
+    _loadProgress();
+  }
+
+  Future<void> _loadProgress() async {
+    try {
+      final prefs = await SharedPreferences.getInstance();
+      final raw = prefs.getString(_saveKey);
+      if (!mounted) return;
+      if (raw != null) {
+        final data = Map<String, dynamic>.from(jsonDecode(raw) as Map);
+        final board = List<String?>.from(data['board'] as List);
+        final mode = _TicTacToeMode.values.byName(data['mode'] as String);
+        final turn = data['turn'] as String;
+        final computerStartsNext = data['computerStartsNext'] as bool;
+        final xWins = data['xWins'] as int;
+        final oWins = data['oWins'] as int;
+        final draws = data['draws'] as int;
+        if (board.length != 9 ||
+            board.any((cell) => cell != null && cell != 'X' && cell != 'O') ||
+            (turn != 'X' && turn != 'O') ||
+            xWins < 0 ||
+            oWins < 0 ||
+            draws < 0) {
+          throw const FormatException('Invalid saved Tic-Tac-Toe game');
+        }
+        _board = board;
+        _mode = mode;
+        _turn = turn;
+        _computerStartsNext = computerStartsNext;
+        _xWins = xWins;
+        _oWins = oWins;
+        _draws = draws;
+        _winner = _findWinner(board);
+        _draw = _winner == null && board.every((cell) => cell != null);
+      }
+    } catch (error) {
+      debugPrint('Tic-Tac-Toe restore failed: $error');
+    }
+    if (!mounted) return;
+    setState(() => _loading = false);
+    if (_mode == _TicTacToeMode.computer && _turn == 'O') {
+      _playComputerTurn();
+    }
+  }
+
+  Future<void> _saveProgress() async {
+    final snapshot = jsonEncode({
+      'board': _board,
+      'mode': _mode.name,
+      'turn': _turn,
+      'computerStartsNext': _computerStartsNext,
+      'xWins': _xWins,
+      'oWins': _oWins,
+      'draws': _draws,
+    });
+    try {
+      final prefs = await SharedPreferences.getInstance();
+      await prefs.setString(_saveKey, snapshot);
+    } catch (error) {
+      debugPrint('Tic-Tac-Toe save failed: $error');
+    }
+  }
+
+  @override
+  void didChangeAppLifecycleState(AppLifecycleState state) {
+    if (!_loading && state != AppLifecycleState.resumed) {
+      unawaited(_saveProgress());
+    }
+  }
+
+  @override
+  void dispose() {
+    WidgetsBinding.instance.removeObserver(this);
+    if (!_loading) unawaited(_saveProgress());
+    super.dispose();
+  }
 
   static const List<List<int>> _lines = [
     [0, 1, 2],
@@ -38,6 +124,7 @@ class _TicTacToeScreenState extends State<TicTacToeScreen> {
   ];
 
   void _play(int index) {
+    if (_loading) return;
     if (_board[index] != null || _winner != null || _draw) return;
     if (_mode == _TicTacToeMode.computer && _turn != 'X') return;
 
@@ -46,6 +133,7 @@ class _TicTacToeScreenState extends State<TicTacToeScreen> {
       _board[index] = marker;
       _resolveMove(marker);
     });
+    unawaited(_saveProgress());
 
     if (_winner == 'X' && _mode == _TicTacToeMode.computer) {
       unawaited(_awardWin());
@@ -66,6 +154,7 @@ class _TicTacToeScreenState extends State<TicTacToeScreen> {
       _board[computerMove] = 'O';
       _resolveMove('O');
     });
+    unawaited(_saveProgress());
   }
 
   void _resolveMove(String marker) {
@@ -120,7 +209,7 @@ class _TicTacToeScreenState extends State<TicTacToeScreen> {
 
   Future<void> _awardWin() async {
     try {
-      await PointService.addLocalPoints(10);
+      await PointService.addPoints(10, source: PointSource.game);
       if (mounted) {
         ScaffoldMessenger.of(
           context,
@@ -144,6 +233,7 @@ class _TicTacToeScreenState extends State<TicTacToeScreen> {
       _winner = null;
       _draw = false;
     });
+    unawaited(_saveProgress());
 
     if (computerStarts) _playComputerTurn();
   }
@@ -177,135 +267,142 @@ class _TicTacToeScreenState extends State<TicTacToeScreen> {
         actions: [
           IconButton(
             tooltip: 'New round',
-            onPressed: _resetBoard,
+            onPressed: _loading ? null : _resetBoard,
             icon: const Icon(Icons.refresh_rounded),
           ),
         ],
       ),
-      body: SafeArea(
-        child: Center(
-          child: SingleChildScrollView(
-            padding: const EdgeInsets.all(20),
-            child: ConstrainedBox(
-              constraints: const BoxConstraints(maxWidth: 440),
-              child: Column(
-                children: [
-                  SegmentedButton<_TicTacToeMode>(
-                    segments: const [
-                      ButtonSegment(
-                        value: _TicTacToeMode.computer,
-                        label: Text('Vs computer'),
-                        icon: Icon(Icons.smart_toy_outlined),
-                      ),
-                      ButtonSegment(
-                        value: _TicTacToeMode.local,
-                        label: Text('2 players'),
-                        icon: Icon(Icons.people_outline_rounded),
-                      ),
-                    ],
-                    selected: {_mode},
-                    onSelectionChanged: (selection) {
-                      setState(() => _mode = selection.first);
-                      _resetBoard();
-                    },
-                  ),
-                  const SizedBox(height: 22),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      _Score(
-                        label: _mode == _TicTacToeMode.computer ? 'You' : 'X',
-                        score: _xWins,
-                        color: colors.primary,
-                      ),
-                      const SizedBox(width: 28),
-                      _Score(
-                        label: 'Draws',
-                        score: _draws,
-                        color: colors.onSurfaceVariant,
-                      ),
-                      const SizedBox(width: 28),
-                      _Score(
-                        label: _mode == _TicTacToeMode.computer ? 'CPU' : 'O',
-                        score: _oWins,
-                        color: colors.tertiary,
-                      ),
-                    ],
-                  ),
-                  const SizedBox(height: 24),
-                  AnimatedSwitcher(
-                    duration: const Duration(milliseconds: 180),
-                    child: Text(
-                      _status,
-                      key: ValueKey(_status),
-                      style: Theme.of(context).textTheme.titleLarge?.copyWith(
-                        fontWeight: FontWeight.w700,
-                      ),
-                    ),
-                  ),
-                  const SizedBox(height: 16),
-                  AspectRatio(
-                    aspectRatio: 1,
-                    child: GridView.builder(
-                      physics: const NeverScrollableScrollPhysics(),
-                      itemCount: 9,
-                      gridDelegate:
-                          const SliverGridDelegateWithFixedCrossAxisCount(
-                            crossAxisCount: 3,
-                            crossAxisSpacing: 8,
-                            mainAxisSpacing: 8,
+      body: _loading
+          ? const Center(child: CircularProgressIndicator())
+          : SafeArea(
+              child: Center(
+                child: SingleChildScrollView(
+                  padding: const EdgeInsets.all(20),
+                  child: ConstrainedBox(
+                    constraints: const BoxConstraints(maxWidth: 440),
+                    child: Column(
+                      children: [
+                        SegmentedButton<_TicTacToeMode>(
+                          segments: const [
+                            ButtonSegment(
+                              value: _TicTacToeMode.computer,
+                              label: Text('Vs computer'),
+                              icon: Icon(Icons.smart_toy_outlined),
+                            ),
+                            ButtonSegment(
+                              value: _TicTacToeMode.local,
+                              label: Text('2 players'),
+                              icon: Icon(Icons.people_outline_rounded),
+                            ),
+                          ],
+                          selected: {_mode},
+                          onSelectionChanged: (selection) {
+                            setState(() => _mode = selection.first);
+                            _resetBoard();
+                          },
+                        ),
+                        const SizedBox(height: 22),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            _Score(
+                              label: _mode == _TicTacToeMode.computer
+                                  ? 'You'
+                                  : 'X',
+                              score: _xWins,
+                              color: colors.primary,
+                            ),
+                            const SizedBox(width: 28),
+                            _Score(
+                              label: 'Draws',
+                              score: _draws,
+                              color: colors.onSurfaceVariant,
+                            ),
+                            const SizedBox(width: 28),
+                            _Score(
+                              label: _mode == _TicTacToeMode.computer
+                                  ? 'CPU'
+                                  : 'O',
+                              score: _oWins,
+                              color: colors.tertiary,
+                            ),
+                          ],
+                        ),
+                        const SizedBox(height: 24),
+                        AnimatedSwitcher(
+                          duration: const Duration(milliseconds: 180),
+                          child: Text(
+                            _status,
+                            key: ValueKey(_status),
+                            style: Theme.of(context).textTheme.titleLarge
+                                ?.copyWith(fontWeight: FontWeight.w700),
                           ),
-                      itemBuilder: (context, index) {
-                        final marker = _board[index];
-                        return Semantics(
-                          button: true,
-                          label:
-                              'Cell ${index + 1}${marker == null ? '' : ': $marker'}',
-                          child: Material(
-                            color: marker == null
-                                ? colors.surfaceContainerHighest
-                                : marker == 'X'
-                                ? colors.primaryContainer
-                                : colors.tertiaryContainer,
-                            borderRadius: BorderRadius.circular(16),
-                            child: InkWell(
-                              key: ValueKey('tic-tac-toe-cell-$index'),
-                              borderRadius: BorderRadius.circular(16),
-                              onTap: finished ? null : () => _play(index),
-                              child: Center(
-                                child: AnimatedSwitcher(
-                                  duration: const Duration(milliseconds: 140),
-                                  child: Text(
-                                    marker ?? '',
-                                    key: ValueKey(marker),
-                                    style: TextStyle(
-                                      fontSize: 44,
-                                      fontWeight: FontWeight.w800,
-                                      color: marker == 'X'
-                                          ? colors.primary
-                                          : colors.tertiary,
+                        ),
+                        const SizedBox(height: 16),
+                        AspectRatio(
+                          aspectRatio: 1,
+                          child: GridView.builder(
+                            physics: const NeverScrollableScrollPhysics(),
+                            itemCount: 9,
+                            gridDelegate:
+                                const SliverGridDelegateWithFixedCrossAxisCount(
+                                  crossAxisCount: 3,
+                                  crossAxisSpacing: 8,
+                                  mainAxisSpacing: 8,
+                                ),
+                            itemBuilder: (context, index) {
+                              final marker = _board[index];
+                              return Semantics(
+                                button: true,
+                                label:
+                                    'Cell ${index + 1}${marker == null ? '' : ': $marker'}',
+                                child: Material(
+                                  color: marker == null
+                                      ? colors.surfaceContainerHighest
+                                      : marker == 'X'
+                                      ? colors.primaryContainer
+                                      : colors.tertiaryContainer,
+                                  borderRadius: BorderRadius.circular(16),
+                                  child: InkWell(
+                                    key: ValueKey('tic-tac-toe-cell-$index'),
+                                    borderRadius: BorderRadius.circular(16),
+                                    onTap: finished ? null : () => _play(index),
+                                    child: Center(
+                                      child: AnimatedSwitcher(
+                                        duration: const Duration(
+                                          milliseconds: 140,
+                                        ),
+                                        child: Text(
+                                          marker ?? '',
+                                          key: ValueKey(marker),
+                                          style: TextStyle(
+                                            fontSize: 44,
+                                            fontWeight: FontWeight.w800,
+                                            color: marker == 'X'
+                                                ? colors.primary
+                                                : colors.tertiary,
+                                          ),
+                                        ),
+                                      ),
                                     ),
                                   ),
                                 ),
-                              ),
-                            ),
+                              );
+                            },
                           ),
-                        );
-                      },
+                        ),
+                        const SizedBox(height: 20),
+                        FilledButton.icon(
+                          onPressed: _resetBoard,
+                          icon: const Icon(Icons.replay_rounded),
+                          label: const Text('Play again'),
+                        ),
+                      ],
                     ),
                   ),
-                  const SizedBox(height: 20),
-                  FilledButton.icon(
-                    onPressed: _resetBoard,
-                    icon: const Icon(Icons.replay_rounded),
-                    label: const Text('Play again'),
-                  ),
-                ],
+                ),
               ),
             ),
-          ),
-        ),
-      ),
     );
   }
 }

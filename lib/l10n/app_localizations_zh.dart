@@ -102,8 +102,7 @@ class AppLocalizationsZh extends AppLocalizations {
   String get connectWithMe => '与我联系';
 
   @override
-  String get aboutDescription =>
-      'DevOps Quiz 通过数千道精选题目帮助学习者准备面试和认证，涵盖 Linux、Docker、Kubernetes、网络、Git、Jenkins、Terraform、Ansible 等 DevOps 技术。';
+  String get aboutDescription => 'DevOps Quiz 通过数千道精选题目帮助学习者准备面试和认证，涵盖 Linux、Docker、Kubernetes、网络、Git、Jenkins、Terraform、Ansible 等 DevOps 技术。';
 
   @override
   String get quizResult => '测验结果';
@@ -276,13 +275,7 @@ class AppLocalizationsZh extends AppLocalizations {
   String get tomorrowsReward => '明日奖励';
 
   @override
-  String shareMessage(
-    Object score,
-    Object totalQuestions,
-    Object earnedPoints,
-    Object bonusPoints,
-    Object percentage,
-  ) {
+  String shareMessage(Object score, Object totalQuestions, Object earnedPoints, Object bonusPoints, Object percentage) {
     return '🎯 我在今天的 #DevOps 测验中得了 $score/$totalQuestions！\n\n🏆 积分：$earnedPoints\n🔥 奖励：$bonusPoints\n📊 百分比：$percentage%\n\n你能超过我的成绩吗？\n\n下载应用：';
   }
 }

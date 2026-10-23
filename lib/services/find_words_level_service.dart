@@ -69,7 +69,51 @@ class FindWordsLevelService {
 
   static const int totalLevels = 500;
   static const int minimumGridSize = 8;
-  static const int maximumGridSize = 16;
+  static const int maximumGridSize = 12;
+  static const int easyLastLevel = 125;
+  static const int mediumLastLevel = 300;
+
+  static final List<List<String>> _levelWords = _buildLevelWords();
+
+  static List<List<String>> _buildLevelWords() {
+    final wordBank = WordGuessLevelService.levels
+        .map((entry) => entry.word)
+        .toSet();
+    final signatures = <String>{};
+    return List.generate(totalLevels, (index) {
+      final level = index + 1;
+      final minimumLength = level <= easyLastLevel ? 3 : 6;
+      final maximumLength = level <= easyLastLevel
+          ? 6
+          : level <= mediumLastLevel
+          ? 10
+          : maximumGridSize;
+      final candidates = wordBank
+          .where(
+            (word) =>
+                word.length >= minimumLength && word.length <= maximumLength,
+          )
+          .toList();
+      final wordCount = level <= easyLastLevel
+          ? 4 + index * 2 ~/ easyLastLevel
+          : level <= mediumLastLevel
+          ? 6 +
+                (level - easyLastLevel - 1) *
+                    2 ~/
+                    (mediumLastLevel - easyLastLevel)
+          : 8;
+      if (candidates.length < wordCount) {
+        throw StateError('Not enough eligible words for level $level.');
+      }
+      for (int attempt = 0; attempt < 1000; attempt++) {
+        candidates.shuffle(math.Random(level * 7919 + attempt * 104729));
+        final words = candidates.take(wordCount).toList();
+        final sorted = List<String>.from(words)..sort();
+        if (signatures.add(sorted.join(','))) return List.unmodifiable(words);
+      }
+      throw StateError('Could not choose a unique word set for level $level.');
+    });
+  }
 
   static const List<(int, int)> _easyDirections = [(0, 1), (1, 0)];
   static const List<(int, int)> _mediumDirections = [
@@ -99,35 +143,15 @@ class FindWordsLevelService {
     final baseGridSize =
         minimumGridSize +
         (levelProgress * (maximumGridSize - minimumGridSize) ~/ progressRange);
-    final wordCount = 3 + (levelProgress * 7 ~/ progressRange);
-    final wordBank = WordGuessLevelService.levels
-        .map((level) => level.word)
-        .toList(growable: false);
-    final words = <String>[];
-    final start = (level - 1) * 3 % wordBank.length;
-
-    for (
-      int offset = 0;
-      offset < wordBank.length && words.length < wordCount;
-      offset++
-    ) {
-      final candidate = wordBank[(start + offset) % wordBank.length];
-      if (candidate.length <= maximumGridSize && !words.contains(candidate)) {
-        words.add(candidate);
-      }
-    }
-
-    if (words.length != wordCount) {
-      throw StateError('Could not choose enough words for level $level.');
-    }
+    final words = _levelWords[level - 1];
 
     final gridSize = math.max(
       baseGridSize,
       words.map((word) => word.length).reduce(math.max),
     );
-    final directions = level <= 125
+    final directions = level <= easyLastLevel
         ? _easyDirections
-        : level <= 300
+        : level <= mediumLastLevel
         ? _mediumDirections
         : _hardDirections;
 

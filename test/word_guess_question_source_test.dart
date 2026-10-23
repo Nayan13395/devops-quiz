@@ -8,7 +8,7 @@ import 'package:flutter_test/flutter_test.dart';
 void main() {
   TestWidgetsFlutterBinding.ensureInitialized();
 
-  test('100 unique Word Guess targets come from English quiz content', () async {
+  test('500 unique Word Guess targets come from English quiz content', () async {
     final corpusWords = <String>{};
     final tokenPattern = RegExp(r'[A-Za-z]{3,}');
 
@@ -36,8 +36,15 @@ void main() {
     }
 
     final levels = WordGuessLevelService.levels;
-    expect(levels, hasLength(100));
-    expect(levels.map((level) => level.word).toSet(), hasLength(100));
+    expect(levels, hasLength(500));
+    expect(levels.map((level) => level.word).toSet(), hasLength(500));
+    expect(levels.first.word, 'GIT');
+    expect(levels[99].word, 'KUBERNETES');
+    expect(
+      levels.every((level) => RegExp(r'^[A-Z]{3,14}$').hasMatch(level.word)),
+      isTrue,
+    );
+    expect(levels.every((level) => level.hint.trim().isNotEmpty), isTrue);
     expect(levels.where((level) => !corpusWords.contains(level.word)), isEmpty);
   });
 }

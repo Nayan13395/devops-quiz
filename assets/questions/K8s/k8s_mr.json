@@ -902,50 +902,30 @@
       {
           "category":  "Kubernetes",
           "set":  2,
-          "question":  "Pod à¤²à¤¾ Service traffic à¤®à¤¿à¤³à¤¾à¤µà¤¾ à¤•à¥€ à¤¨à¤¾à¤¹à¥€ à¤¹à¥‡ à¤ à¤°à¤µà¤£à¤¾à¤°à¥€ probe à¤•à¥‹à¤£à¤¤à¥€?",
-          "options":  [
-                          "readinessProbe",
-                          "livenessProbe",
-                          "startupProbe",
-                          "execProbe"
-                      ],
-          "answer":  "readinessProbe"
+          "question":  "Kubernetes service stable virtual address",
+          "options":  ["Service", "LoadBalancer", "namespaced resources", "non-sensitive configuration values"],
+          "answer":  "Service"
       },
       {
           "category":  "Kubernetes",
           "set":  3,
-          "question":  "Pod à¤²à¤¾ Service traffic à¤®à¤¿à¤³à¤¾à¤µà¤¾ à¤•à¥€ à¤¨à¤¾à¤¹à¥€ à¤¹à¥‡ à¤ à¤°à¤µà¤£à¤¾à¤°à¥€ probe à¤•à¥‹à¤£à¤¤à¥€?",
-          "options":  [
-                          "readinessProbe",
-                          "livenessProbe",
-                          "startupProbe",
-                          "execProbe"
-                      ],
-          "answer":  "readinessProbe"
+          "question":  "Kubernetes replica count update command",
+          "options":  ["kubectl scale deployment/name --replicas=N", "Service", "LoadBalancer", "namespaced resources"],
+          "answer":  "kubectl scale deployment/name --replicas=N"
       },
       {
           "category":  "Kubernetes",
           "set":  4,
-          "question":  "Pod à¤²à¤¾ Service traffic à¤®à¤¿à¤³à¤¾à¤µà¤¾ à¤•à¥€ à¤¨à¤¾à¤¹à¥€ à¤¹à¥‡ à¤ à¤°à¤µà¤£à¤¾à¤°à¥€ probe à¤•à¥‹à¤£à¤¤à¥€?",
-          "options":  [
-                          "readinessProbe",
-                          "livenessProbe",
-                          "startupProbe",
-                          "execProbe"
-                      ],
-          "answer":  "readinessProbe"
+          "question":  "Kubernetes persistent volume claim role",
+          "options":  ["request for storage by a workload", "Service", "LoadBalancer", "namespaced resources"],
+          "answer":  "request for storage by a workload"
       },
       {
           "category":  "Kubernetes",
           "set":  5,
-          "question":  "Pod à¤²à¤¾ Service traffic à¤®à¤¿à¤³à¤¾à¤µà¤¾ à¤•à¥€ à¤¨à¤¾à¤¹à¥€ à¤¹à¥‡ à¤ à¤°à¤µà¤£à¤¾à¤°à¥€ probe à¤•à¥‹à¤£à¤¤à¥€?",
-          "options":  [
-                          "readinessProbe",
-                          "livenessProbe",
-                          "startupProbe",
-                          "execProbe"
-                      ],
-          "answer":  "readinessProbe"
+          "question":  "Kubernetes ephemeral container purpose",
+          "options":  ["temporary debugging container", "Service", "LoadBalancer", "namespaced resources"],
+          "answer":  "temporary debugging container"
       },
       {
           "category":  "Kubernetes",
@@ -962,50 +942,30 @@
       {
           "category":  "Kubernetes",
           "set":  2,
-          "question":  "à¤¹à¤³à¥‚ à¤¸à¥à¤°à¥‚ à¤¹à¥‹à¤£à¤¾à¤±à¥à¤¯à¤¾ container à¤²à¤¾ liveness checks à¤†à¤§à¥€ à¤…à¤¤à¤¿à¤°à¤¿à¤•à¥à¤¤ à¤µà¥‡à¤³ à¤¦à¥‡à¤£à¤¾à¤°à¥€ probe à¤•à¥‹à¤£à¤¤à¥€?",
-          "options":  [
-                          "startupProbe",
-                          "readinessProbe",
-                          "tcpProbe",
-                          "httpProbe"
-                      ],
-          "answer":  "startupProbe"
+          "question":  "Kubernetes service external cloud endpoint",
+          "options":  ["LoadBalancer", "Service", "namespaced resources", "non-sensitive configuration values"],
+          "answer":  "LoadBalancer"
       },
       {
           "category":  "Kubernetes",
           "set":  3,
-          "question":  "à¤¹à¤³à¥‚ à¤¸à¥à¤°à¥‚ à¤¹à¥‹à¤£à¤¾à¤±à¥à¤¯à¤¾ container à¤²à¤¾ liveness checks à¤†à¤§à¥€ à¤…à¤¤à¤¿à¤°à¤¿à¤•à¥à¤¤ à¤µà¥‡à¤³ à¤¦à¥‡à¤£à¤¾à¤°à¥€ probe à¤•à¥‹à¤£à¤¤à¥€?",
-          "options":  [
-                          "startupProbe",
-                          "readinessProbe",
-                          "tcpProbe",
-                          "httpProbe"
-                      ],
-          "answer":  "startupProbe"
+          "question":  "Kubernetes pod log previous container flag",
+          "options":  ["--previous", "Service", "LoadBalancer", "namespaced resources"],
+          "answer":  "--previous"
       },
       {
           "category":  "Kubernetes",
           "set":  4,
-          "question":  "à¤¹à¤³à¥‚ à¤¸à¥à¤°à¥‚ à¤¹à¥‹à¤£à¤¾à¤±à¥à¤¯à¤¾ container à¤²à¤¾ liveness checks à¤†à¤§à¥€ à¤…à¤¤à¤¿à¤°à¤¿à¤•à¥à¤¤ à¤µà¥‡à¤³ à¤¦à¥‡à¤£à¤¾à¤°à¥€ probe à¤•à¥‹à¤£à¤¤à¥€?",
-          "options":  [
-                          "startupProbe",
-                          "readinessProbe",
-                          "tcpProbe",
-                          "httpProbe"
-                      ],
-          "answer":  "startupProbe"
+          "question":  "Kubernetes storage class role",
+          "options":  ["provisions volumes with a policy", "Service", "LoadBalancer", "namespaced resources"],
+          "answer":  "provisions volumes with a policy"
       },
       {
           "category":  "Kubernetes",
           "set":  5,
-          "question":  "à¤¹à¤³à¥‚ à¤¸à¥à¤°à¥‚ à¤¹à¥‹à¤£à¤¾à¤±à¥à¤¯à¤¾ container à¤²à¤¾ liveness checks à¤†à¤§à¥€ à¤…à¤¤à¤¿à¤°à¤¿à¤•à¥à¤¤ à¤µà¥‡à¤³ à¤¦à¥‡à¤£à¤¾à¤°à¥€ probe à¤•à¥‹à¤£à¤¤à¥€?",
-          "options":  [
-                          "startupProbe",
-                          "readinessProbe",
-                          "tcpProbe",
-                          "httpProbe"
-                      ],
-          "answer":  "startupProbe"
+          "question":  "Kubernetes pod disruption budget purpose",
+          "options":  ["maintain availability during voluntary disruptions", "Service", "LoadBalancer", "namespaced resources"],
+          "answer":  "maintain availability during voluntary disruptions"
       },
       {
           "category":  "Kubernetes",
@@ -1022,50 +982,30 @@
       {
           "category":  "Kubernetes",
           "set":  2,
-          "question":  "observed metrics à¤¨à¥à¤¸à¤¾à¤° replicas à¤šà¥€ à¤¸à¤‚à¤–à¥à¤¯à¤¾ à¤¬à¤¦à¤²à¤£à¤¾à¤°à¤¾ Kubernetes resource à¤•à¥‹à¤£à¤¤à¤¾?",
-          "options":  [
-                          "HorizontalPodAutoscaler",
-                          "PodDisruptionBudget",
-                          "ResourceQuota",
-                          "LimitRange"
-                      ],
-          "answer":  "HorizontalPodAutoscaler"
+          "question":  "Kubernetes namespace scope",
+          "options":  ["namespaced resources", "Service", "LoadBalancer", "non-sensitive configuration values"],
+          "answer":  "namespaced resources"
       },
       {
           "category":  "Kubernetes",
           "set":  3,
-          "question":  "observed metrics à¤¨à¥à¤¸à¤¾à¤° replicas à¤šà¥€ à¤¸à¤‚à¤–à¥à¤¯à¤¾ à¤¬à¤¦à¤²à¤£à¤¾à¤°à¤¾ Kubernetes resource à¤•à¥‹à¤£à¤¤à¤¾?",
-          "options":  [
-                          "HorizontalPodAutoscaler",
-                          "PodDisruptionBudget",
-                          "ResourceQuota",
-                          "LimitRange"
-                      ],
-          "answer":  "HorizontalPodAutoscaler"
+          "question":  "Kubernetes pod shell command",
+          "options":  ["kubectl exec -it pod -- sh", "Service", "LoadBalancer", "namespaced resources"],
+          "answer":  "kubectl exec -it pod -- sh"
       },
       {
           "category":  "Kubernetes",
           "set":  4,
-          "question":  "observed metrics à¤¨à¥à¤¸à¤¾à¤° replicas à¤šà¥€ à¤¸à¤‚à¤–à¥à¤¯à¤¾ à¤¬à¤¦à¤²à¤£à¤¾à¤°à¤¾ Kubernetes resource à¤•à¥‹à¤£à¤¤à¤¾?",
-          "options":  [
-                          "HorizontalPodAutoscaler",
-                          "PodDisruptionBudget",
-                          "ResourceQuota",
-                          "LimitRange"
-                      ],
-          "answer":  "HorizontalPodAutoscaler"
+          "question":  "Kubernetes service account role",
+          "options":  ["identity for processes in a pod", "Service", "LoadBalancer", "namespaced resources"],
+          "answer":  "identity for processes in a pod"
       },
       {
           "category":  "Kubernetes",
           "set":  5,
-          "question":  "observed metrics à¤¨à¥à¤¸à¤¾à¤° replicas à¤šà¥€ à¤¸à¤‚à¤–à¥à¤¯à¤¾ à¤¬à¤¦à¤²à¤£à¤¾à¤°à¤¾ Kubernetes resource à¤•à¥‹à¤£à¤¤à¤¾?",
-          "options":  [
-                          "HorizontalPodAutoscaler",
-                          "PodDisruptionBudget",
-                          "ResourceQuota",
-                          "LimitRange"
-                      ],
-          "answer":  "HorizontalPodAutoscaler"
+          "question":  "Kubernetes HPA metric source",
+          "options":  ["resource metrics or custom metrics", "Service", "LoadBalancer", "namespaced resources"],
+          "answer":  "resource metrics or custom metrics"
       },
       {
           "category":  "Kubernetes",
@@ -1082,50 +1022,30 @@
       {
           "category":  "Kubernetes",
           "set":  2,
-          "question":  "à¤•à¤¿à¤®à¤¾à¤¨ Pods à¤‰à¤ªà¤²à¤¬à¥à¤§ à¤ à¥‡à¤µà¤£à¥à¤¯à¤¾à¤¸à¤¾à¤ à¥€ voluntary disruptions à¤®à¤°à¥à¤¯à¤¾à¤¦à¤¿à¤¤ à¤•à¤°à¤£à¤¾à¤°à¤¾ resource à¤•à¥‹à¤£à¤¤à¤¾?",
-          "options":  [
-                          "PodDisruptionBudget",
-                          "HorizontalPodAutoscaler",
-                          "NetworkPolicy",
-                          "ResourceQuota"
-                      ],
-          "answer":  "PodDisruptionBudget"
+          "question":  "Kubernetes ConfigMap data purpose",
+          "options":  ["non-sensitive configuration values", "Service", "LoadBalancer", "namespaced resources"],
+          "answer":  "non-sensitive configuration values"
       },
       {
           "category":  "Kubernetes",
           "set":  3,
-          "question":  "à¤•à¤¿à¤®à¤¾à¤¨ Pods à¤‰à¤ªà¤²à¤¬à¥à¤§ à¤ à¥‡à¤µà¤£à¥à¤¯à¤¾à¤¸à¤¾à¤ à¥€ voluntary disruptions à¤®à¤°à¥à¤¯à¤¾à¤¦à¤¿à¤¤ à¤•à¤°à¤£à¤¾à¤°à¤¾ resource à¤•à¥‹à¤£à¤¤à¤¾?",
-          "options":  [
-                          "PodDisruptionBudget",
-                          "HorizontalPodAutoscaler",
-                          "NetworkPolicy",
-                          "ResourceQuota"
-                      ],
-          "answer":  "PodDisruptionBudget"
+          "question":  "Kubernetes resource request meaning",
+          "options":  ["minimum expected CPU or memory", "Service", "LoadBalancer", "namespaced resources"],
+          "answer":  "minimum expected CPU or memory"
       },
       {
           "category":  "Kubernetes",
           "set":  4,
-          "question":  "à¤•à¤¿à¤®à¤¾à¤¨ Pods à¤‰à¤ªà¤²à¤¬à¥à¤§ à¤ à¥‡à¤µà¤£à¥à¤¯à¤¾à¤¸à¤¾à¤ à¥€ voluntary disruptions à¤®à¤°à¥à¤¯à¤¾à¤¦à¤¿à¤¤ à¤•à¤°à¤£à¤¾à¤°à¤¾ resource à¤•à¥‹à¤£à¤¤à¤¾?",
-          "options":  [
-                          "PodDisruptionBudget",
-                          "HorizontalPodAutoscaler",
-                          "NetworkPolicy",
-                          "ResourceQuota"
-                      ],
-          "answer":  "PodDisruptionBudget"
+          "question":  "Kubernetes RBAC role binding",
+          "options":  ["grants a role to a subject", "Service", "LoadBalancer", "namespaced resources"],
+          "answer":  "grants a role to a subject"
       },
       {
           "category":  "Kubernetes",
           "set":  5,
-          "question":  "à¤•à¤¿à¤®à¤¾à¤¨ Pods à¤‰à¤ªà¤²à¤¬à¥à¤§ à¤ à¥‡à¤µà¤£à¥à¤¯à¤¾à¤¸à¤¾à¤ à¥€ voluntary disruptions à¤®à¤°à¥à¤¯à¤¾à¤¦à¤¿à¤¤ à¤•à¤°à¤£à¤¾à¤°à¤¾ resource à¤•à¥‹à¤£à¤¤à¤¾?",
-          "options":  [
-                          "PodDisruptionBudget",
-                          "HorizontalPodAutoscaler",
-                          "NetworkPolicy",
-                          "ResourceQuota"
-                      ],
-          "answer":  "PodDisruptionBudget"
+          "question":  "Kubernetes rollout pause command",
+          "options":  ["kubectl rollout pause deployment/name", "Service", "LoadBalancer", "namespaced resources"],
+          "answer":  "kubectl rollout pause deployment/name"
       },
       {
           "category":  "Kubernetes",
@@ -1142,50 +1062,30 @@
       {
           "category":  "Kubernetes",
           "set":  2,
-          "question":  "Pods à¤¸à¤¾à¤ à¥€ non-sensitive configuration key-value data à¤®à¥à¤¹à¤£à¥‚à¤¨ à¤¸à¤¾à¤ à¤µà¤£à¤¾à¤°à¤¾ resource à¤•à¥‹à¤£à¤¤à¤¾?",
-          "options":  [
-                          "ConfigMap",
-                          "Secret",
-                          "Lease",
-                          "EndpointSlice"
-                      ],
-          "answer":  "ConfigMap"
+          "question":  "Kubernetes Secret data purpose",
+          "options":  ["sensitive configuration values", "Service", "LoadBalancer", "namespaced resources"],
+          "answer":  "sensitive configuration values"
       },
       {
           "category":  "Kubernetes",
           "set":  3,
-          "question":  "Pods à¤¸à¤¾à¤ à¥€ non-sensitive configuration key-value data à¤®à¥à¤¹à¤£à¥‚à¤¨ à¤¸à¤¾à¤ à¤µà¤£à¤¾à¤°à¤¾ resource à¤•à¥‹à¤£à¤¤à¤¾?",
-          "options":  [
-                          "ConfigMap",
-                          "Secret",
-                          "Lease",
-                          "EndpointSlice"
-                      ],
-          "answer":  "ConfigMap"
+          "question":  "Kubernetes resource limit meaning",
+          "options":  ["maximum allowed CPU or memory", "Service", "LoadBalancer", "namespaced resources"],
+          "answer":  "maximum allowed CPU or memory"
       },
       {
           "category":  "Kubernetes",
           "set":  4,
-          "question":  "Pods à¤¸à¤¾à¤ à¥€ non-sensitive configuration key-value data à¤®à¥à¤¹à¤£à¥‚à¤¨ à¤¸à¤¾à¤ à¤µà¤£à¤¾à¤°à¤¾ resource à¤•à¥‹à¤£à¤¤à¤¾?",
-          "options":  [
-                          "ConfigMap",
-                          "Secret",
-                          "Lease",
-                          "EndpointSlice"
-                      ],
-          "answer":  "ConfigMap"
+          "question":  "Kubernetes cluster role scope",
+          "options":  ["permissions across cluster resources", "Service", "LoadBalancer", "namespaced resources"],
+          "answer":  "permissions across cluster resources"
       },
       {
           "category":  "Kubernetes",
           "set":  5,
-          "question":  "Pods à¤¸à¤¾à¤ à¥€ non-sensitive configuration key-value data à¤®à¥à¤¹à¤£à¥‚à¤¨ à¤¸à¤¾à¤ à¤µà¤£à¤¾à¤°à¤¾ resource à¤•à¥‹à¤£à¤¤à¤¾?",
-          "options":  [
-                          "ConfigMap",
-                          "Secret",
-                          "Lease",
-                          "EndpointSlice"
-                      ],
-          "answer":  "ConfigMap"
+          "question":  "Kubernetes rollout resume command",
+          "options":  ["kubectl rollout resume deployment/name", "Service", "LoadBalancer", "namespaced resources"],
+          "answer":  "kubectl rollout resume deployment/name"
       },
       {
           "category":  "Kubernetes",
@@ -1202,50 +1102,30 @@
       {
           "category":  "Kubernetes",
           "set":  2,
-          "question":  "à¤¨à¤¿à¤µà¤¡à¤²à¥‡à¤²à¥à¤¯à¤¾ Pods à¤•à¤¡à¥‡ à¤¯à¥‡à¤£à¤¾à¤°à¥€ à¤†à¤£à¤¿ à¤œà¤¾à¤£à¤¾à¤°à¥€ network traffic à¤®à¤°à¥à¤¯à¤¾à¤¦à¤¿à¤¤ à¤•à¤°à¤£à¤¾à¤°à¤¾ resource à¤•à¥‹à¤£à¤¤à¤¾?",
-          "options":  [
-                          "NetworkPolicy",
-                          "Ingress",
-                          "ServiceAccount",
-                          "PriorityClass"
-                      ],
-          "answer":  "NetworkPolicy"
+          "question":  "Kubernetes readiness probe effect",
+          "options":  ["removes pod from service endpoints", "Service", "LoadBalancer", "namespaced resources"],
+          "answer":  "removes pod from service endpoints"
       },
       {
           "category":  "Kubernetes",
           "set":  3,
-          "question":  "à¤¨à¤¿à¤µà¤¡à¤²à¥‡à¤²à¥à¤¯à¤¾ Pods à¤•à¤¡à¥‡ à¤¯à¥‡à¤£à¤¾à¤°à¥€ à¤†à¤£à¤¿ à¤œà¤¾à¤£à¤¾à¤°à¥€ network traffic à¤®à¤°à¥à¤¯à¤¾à¤¦à¤¿à¤¤ à¤•à¤°à¤£à¤¾à¤°à¤¾ resource à¤•à¥‹à¤£à¤¤à¤¾?",
-          "options":  [
-                          "NetworkPolicy",
-                          "Ingress",
-                          "ServiceAccount",
-                          "PriorityClass"
-                      ],
-          "answer":  "NetworkPolicy"
+          "question":  "Kubernetes node taint effect",
+          "options":  ["repel pods without matching tolerations", "Service", "LoadBalancer", "namespaced resources"],
+          "answer":  "repel pods without matching tolerations"
       },
       {
           "category":  "Kubernetes",
           "set":  4,
-          "question":  "à¤¨à¤¿à¤µà¤¡à¤²à¥‡à¤²à¥à¤¯à¤¾ Pods à¤•à¤¡à¥‡ à¤¯à¥‡à¤£à¤¾à¤°à¥€ à¤†à¤£à¤¿ à¤œà¤¾à¤£à¤¾à¤°à¥€ network traffic à¤®à¤°à¥à¤¯à¤¾à¤¦à¤¿à¤¤ à¤•à¤°à¤£à¤¾à¤°à¤¾ resource à¤•à¥‹à¤£à¤¤à¤¾?",
-          "options":  [
-                          "NetworkPolicy",
-                          "Ingress",
-                          "ServiceAccount",
-                          "PriorityClass"
-                      ],
-          "answer":  "NetworkPolicy"
+          "question":  "Kubernetes cron job schedule field",
+          "options":  ["schedule in cron format", "Service", "LoadBalancer", "namespaced resources"],
+          "answer":  "schedule in cron format"
       },
       {
           "category":  "Kubernetes",
           "set":  5,
-          "question":  "à¤¨à¤¿à¤µà¤¡à¤²à¥‡à¤²à¥à¤¯à¤¾ Pods à¤•à¤¡à¥‡ à¤¯à¥‡à¤£à¤¾à¤°à¥€ à¤†à¤£à¤¿ à¤œà¤¾à¤£à¤¾à¤°à¥€ network traffic à¤®à¤°à¥à¤¯à¤¾à¤¦à¤¿à¤¤ à¤•à¤°à¤£à¤¾à¤°à¤¾ resource à¤•à¥‹à¤£à¤¤à¤¾?",
-          "options":  [
-                          "NetworkPolicy",
-                          "Ingress",
-                          "ServiceAccount",
-                          "PriorityClass"
-                      ],
-          "answer":  "NetworkPolicy"
+          "question":  "Kubernetes secret encryption at rest",
+          "options":  ["encrypt stored Secret data in etcd", "Service", "LoadBalancer", "namespaced resources"],
+          "answer":  "encrypt stored Secret data in etcd"
       },
       {
           "category":  "Kubernetes",
@@ -1262,50 +1142,30 @@
       {
           "category":  "Kubernetes",
           "set":  2,
-          "question":  "Pod à¤®à¤§à¥€à¤² à¤®à¥à¤–à¥à¤¯ containers à¤¸à¥à¤°à¥‚ à¤¹à¥‹à¤£à¥à¤¯à¤¾à¤ªà¥‚à¤°à¥à¤µà¥€ à¤ªà¥‚à¤°à¥à¤£ à¤¹à¥‹à¤ˆà¤ªà¤°à¥à¤¯à¤‚à¤¤ à¤šà¤¾à¤²à¤£à¤¾à¤°à¤¾ container à¤•à¥‹à¤£à¤¤à¤¾?",
-          "options":  [
-                          "initContainer",
-                          "sidecar",
-                          "ephemeralContainer",
-                          "pauseContainer"
-                      ],
-          "answer":  "initContainer"
+          "question":  "Kubernetes liveness probe effect",
+          "options":  ["restarts an unhealthy container", "Service", "LoadBalancer", "namespaced resources"],
+          "answer":  "restarts an unhealthy container"
       },
       {
           "category":  "Kubernetes",
           "set":  3,
-          "question":  "Pod à¤®à¤§à¥€à¤² à¤®à¥à¤–à¥à¤¯ containers à¤¸à¥à¤°à¥‚ à¤¹à¥‹à¤£à¥à¤¯à¤¾à¤ªà¥‚à¤°à¥à¤µà¥€ à¤ªà¥‚à¤°à¥à¤£ à¤¹à¥‹à¤ˆà¤ªà¤°à¥à¤¯à¤‚à¤¤ à¤šà¤¾à¤²à¤£à¤¾à¤°à¤¾ container à¤•à¥‹à¤£à¤¤à¤¾?",
-          "options":  [
-                          "initContainer",
-                          "sidecar",
-                          "ephemeralContainer",
-                          "pauseContainer"
-                      ],
-          "answer":  "initContainer"
+          "question":  "Kubernetes pod toleration effect",
+          "options":  ["allow scheduling onto a tainted node", "Service", "LoadBalancer", "namespaced resources"],
+          "answer":  "allow scheduling onto a tainted node"
       },
       {
           "category":  "Kubernetes",
           "set":  4,
-          "question":  "Pod à¤®à¤§à¥€à¤² à¤®à¥à¤–à¥à¤¯ containers à¤¸à¥à¤°à¥‚ à¤¹à¥‹à¤£à¥à¤¯à¤¾à¤ªà¥‚à¤°à¥à¤µà¥€ à¤ªà¥‚à¤°à¥à¤£ à¤¹à¥‹à¤ˆà¤ªà¤°à¥à¤¯à¤‚à¤¤ à¤šà¤¾à¤²à¤£à¤¾à¤°à¤¾ container à¤•à¥‹à¤£à¤¤à¤¾?",
-          "options":  [
-                          "initContainer",
-                          "sidecar",
-                          "ephemeralContainer",
-                          "pauseContainer"
-                      ],
-          "answer":  "initContainer"
+          "question":  "Kubernetes job completion setting",
+          "options":  ["number of successful completions", "Service", "LoadBalancer", "namespaced resources"],
+          "answer":  "number of successful completions"
       },
       {
           "category":  "Kubernetes",
           "set":  5,
-          "question":  "Pod à¤®à¤§à¥€à¤² à¤®à¥à¤–à¥à¤¯ containers à¤¸à¥à¤°à¥‚ à¤¹à¥‹à¤£à¥à¤¯à¤¾à¤ªà¥‚à¤°à¥à¤µà¥€ à¤ªà¥‚à¤°à¥à¤£ à¤¹à¥‹à¤ˆà¤ªà¤°à¥à¤¯à¤‚à¤¤ à¤šà¤¾à¤²à¤£à¤¾à¤°à¤¾ container à¤•à¥‹à¤£à¤¤à¤¾?",
-          "options":  [
-                          "initContainer",
-                          "sidecar",
-                          "ephemeralContainer",
-                          "pauseContainer"
-                      ],
-          "answer":  "initContainer"
+          "question":  "Kubernetes API server role",
+          "options":  ["validates and stores cluster API objects", "Service", "LoadBalancer", "namespaced resources"],
+          "answer":  "validates and stores cluster API objects"
       },
       {
           "category":  "Kubernetes",
@@ -1322,50 +1182,30 @@
       {
           "category":  "Kubernetes",
           "set":  2,
-          "question":  "matching taint à¤…à¤¸à¤²à¥‡à¤²à¥à¤¯à¤¾ node à¤µà¤° Pod schedule à¤•à¤°à¤£à¥à¤¯à¤¾à¤šà¥€ à¤ªà¤°à¤µà¤¾à¤¨à¤—à¥€ à¤¦à¥‡à¤£à¤¾à¤°à¥€ setting à¤•à¥‹à¤£à¤¤à¥€?",
-          "options":  [
-                          "toleration",
-                          "taint",
-                          "nodeSelector",
-                          "topologySpreadConstraints"
-                      ],
-          "answer":  "toleration"
+          "question":  "Kubernetes startup probe effect",
+          "options":  ["delays other probes during slow startup", "Service", "LoadBalancer", "namespaced resources"],
+          "answer":  "delays other probes during slow startup"
       },
       {
           "category":  "Kubernetes",
           "set":  3,
-          "question":  "matching taint à¤…à¤¸à¤²à¥‡à¤²à¥à¤¯à¤¾ node à¤µà¤° Pod schedule à¤•à¤°à¤£à¥à¤¯à¤¾à¤šà¥€ à¤ªà¤°à¤µà¤¾à¤¨à¤—à¥€ à¤¦à¥‡à¤£à¤¾à¤°à¥€ setting à¤•à¥‹à¤£à¤¤à¥€?",
-          "options":  [
-                          "toleration",
-                          "taint",
-                          "nodeSelector",
-                          "topologySpreadConstraints"
-                      ],
-          "answer":  "toleration"
+          "question":  "Kubernetes node selector purpose",
+          "options":  ["place pod on nodes with matching labels", "Service", "LoadBalancer", "namespaced resources"],
+          "answer":  "place pod on nodes with matching labels"
       },
       {
           "category":  "Kubernetes",
           "set":  4,
-          "question":  "matching taint à¤…à¤¸à¤²à¥‡à¤²à¥à¤¯à¤¾ node à¤µà¤° Pod schedule à¤•à¤°à¤£à¥à¤¯à¤¾à¤šà¥€ à¤ªà¤°à¤µà¤¾à¤¨à¤—à¥€ à¤¦à¥‡à¤£à¤¾à¤°à¥€ setting à¤•à¥‹à¤£à¤¤à¥€?",
-          "options":  [
-                          "toleration",
-                          "taint",
-                          "nodeSelector",
-                          "topologySpreadConstraints"
-                      ],
-          "answer":  "toleration"
+          "question":  "Kubernetes daemon set placement",
+          "options":  ["runs a pod on each eligible node", "Service", "LoadBalancer", "namespaced resources"],
+          "answer":  "runs a pod on each eligible node"
       },
       {
           "category":  "Kubernetes",
           "set":  5,
-          "question":  "matching taint à¤…à¤¸à¤²à¥‡à¤²à¥à¤¯à¤¾ node à¤µà¤° Pod schedule à¤•à¤°à¤£à¥à¤¯à¤¾à¤šà¥€ à¤ªà¤°à¤µà¤¾à¤¨à¤—à¥€ à¤¦à¥‡à¤£à¤¾à¤°à¥€ setting à¤•à¥‹à¤£à¤¤à¥€?",
-          "options":  [
-                          "toleration",
-                          "taint",
-                          "nodeSelector",
-                          "topologySpreadConstraints"
-                      ],
-          "answer":  "toleration"
+          "question":  "Kubernetes kubelet responsibility",
+          "options":  ["runs on each node and manages pods", "Service", "LoadBalancer", "namespaced resources"],
+          "answer":  "runs on each node and manages pods"
       },
       {
           "category":  "Kubernetes",
@@ -1382,50 +1222,30 @@
       {
           "category":  "Kubernetes",
           "set":  2,
-          "question":  "Deployment à¤²à¤¾ à¤®à¤¾à¤—à¥€à¤² rollout revision à¤µà¤° à¤ªà¤°à¤¤ à¤¨à¥‡à¤£à¤¾à¤°à¤¾ kubectl command à¤•à¥‹à¤£à¤¤à¤¾?",
-          "options":  [
-                          "kubectl rollout undo",
-                          "kubectl rollout pause",
-                          "kubectl scale",
-                          "kubectl replace"
-                      ],
-          "answer":  "kubectl rollout undo"
+          "question":  "Kubernetes deployment rollback command",
+          "options":  ["kubectl rollout undo deployment/name", "Service", "LoadBalancer", "namespaced resources"],
+          "answer":  "kubectl rollout undo deployment/name"
       },
       {
           "category":  "Kubernetes",
           "set":  3,
-          "question":  "Deployment à¤²à¤¾ à¤®à¤¾à¤—à¥€à¤² rollout revision à¤µà¤° à¤ªà¤°à¤¤ à¤¨à¥‡à¤£à¤¾à¤°à¤¾ kubectl command à¤•à¥‹à¤£à¤¤à¤¾?",
-          "options":  [
-                          "kubectl rollout undo",
-                          "kubectl rollout pause",
-                          "kubectl scale",
-                          "kubectl replace"
-                      ],
-          "answer":  "kubectl rollout undo"
+          "question":  "Kubernetes affinity purpose",
+          "options":  ["express preferred or required placement rules", "Service", "LoadBalancer", "namespaced resources"],
+          "answer":  "express preferred or required placement rules"
       },
       {
           "category":  "Kubernetes",
           "set":  4,
-          "question":  "Deployment à¤²à¤¾ à¤®à¤¾à¤—à¥€à¤² rollout revision à¤µà¤° à¤ªà¤°à¤¤ à¤¨à¥‡à¤£à¤¾à¤°à¤¾ kubectl command à¤•à¥‹à¤£à¤¤à¤¾?",
-          "options":  [
-                          "kubectl rollout undo",
-                          "kubectl rollout pause",
-                          "kubectl scale",
-                          "kubectl replace"
-                      ],
-          "answer":  "kubectl rollout undo"
+          "question":  "Kubernetes stateful set identity",
+          "options":  ["stable network identity and storage", "Service", "LoadBalancer", "namespaced resources"],
+          "answer":  "stable network identity and storage"
       },
       {
           "category":  "Kubernetes",
           "set":  5,
-          "question":  "Deployment à¤²à¤¾ à¤®à¤¾à¤—à¥€à¤² rollout revision à¤µà¤° à¤ªà¤°à¤¤ à¤¨à¥‡à¤£à¤¾à¤°à¤¾ kubectl command à¤•à¥‹à¤£à¤¤à¤¾?",
-          "options":  [
-                          "kubectl rollout undo",
-                          "kubectl rollout pause",
-                          "kubectl scale",
-                          "kubectl replace"
-                      ],
-          "answer":  "kubectl rollout undo"
+          "question":  "Kubernetes CoreDNS role",
+          "options":  ["resolves service DNS names", "Service", "LoadBalancer", "namespaced resources"],
+          "answer":  "resolves service DNS names"
       },
       {
           "category":  "Kubernetes",
@@ -1442,50 +1262,30 @@
       {
           "category":  "Kubernetes",
           "set":  2,
-          "question":  "local port Pod à¤šà¥à¤¯à¤¾ port à¤ªà¤°à¥à¤¯à¤‚à¤¤ forward à¤•à¤°à¤£à¤¾à¤°à¤¾ kubectl command à¤•à¥‹à¤£à¤¤à¤¾?",
-          "options":  [
-                          "kubectl port-forward",
-                          "kubectl proxy",
-                          "kubectl expose",
-                          "kubectl attach"
-                      ],
-          "answer":  "kubectl port-forward"
+          "question":  "Kubernetes rollout status command",
+          "options":  ["kubectl rollout status deployment/name", "Service", "LoadBalancer", "namespaced resources"],
+          "answer":  "kubectl rollout status deployment/name"
       },
       {
           "category":  "Kubernetes",
           "set":  3,
-          "question":  "local port Pod à¤šà¥à¤¯à¤¾ port à¤ªà¤°à¥à¤¯à¤‚à¤¤ forward à¤•à¤°à¤£à¤¾à¤°à¤¾ kubectl command à¤•à¥‹à¤£à¤¤à¤¾?",
-          "options":  [
-                          "kubectl port-forward",
-                          "kubectl proxy",
-                          "kubectl expose",
-                          "kubectl attach"
-                      ],
-          "answer":  "kubectl port-forward"
+          "question":  "Kubernetes ingress controller role",
+          "options":  ["routes HTTP traffic to services", "Service", "LoadBalancer", "namespaced resources"],
+          "answer":  "routes HTTP traffic to services"
       },
       {
           "category":  "Kubernetes",
           "set":  4,
-          "question":  "local port Pod à¤šà¥à¤¯à¤¾ port à¤ªà¤°à¥à¤¯à¤‚à¤¤ forward à¤•à¤°à¤£à¤¾à¤°à¤¾ kubectl command à¤•à¥‹à¤£à¤¤à¤¾?",
-          "options":  [
-                          "kubectl port-forward",
-                          "kubectl proxy",
-                          "kubectl expose",
-                          "kubectl attach"
-                      ],
-          "answer":  "kubectl port-forward"
+          "question":  "Kubernetes init container purpose",
+          "options":  ["complete setup before app containers start", "Service", "LoadBalancer", "namespaced resources"],
+          "answer":  "complete setup before app containers start"
       },
       {
           "category":  "Kubernetes",
           "set":  5,
-          "question":  "local port Pod à¤šà¥à¤¯à¤¾ port à¤ªà¤°à¥à¤¯à¤‚à¤¤ forward à¤•à¤°à¤£à¤¾à¤°à¤¾ kubectl command à¤•à¥‹à¤£à¤¤à¤¾?",
-          "options":  [
-                          "kubectl port-forward",
-                          "kubectl proxy",
-                          "kubectl expose",
-                          "kubectl attach"
-                      ],
-          "answer":  "kubectl port-forward"
+          "question":  "Kubernetes finalizer purpose",
+          "options":  ["delays deletion until cleanup completes", "Service", "LoadBalancer", "namespaced resources"],
+          "answer":  "delays deletion until cleanup completes"
       },
       {
           "category":  "Kubernetes",

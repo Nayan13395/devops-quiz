@@ -2,6 +2,7 @@ import 'dart:async';
 import 'dart:math';
 
 import 'package:flutter/material.dart';
+import '../widgets/level_picker_dialog.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 import '../services/point_service.dart';
@@ -116,37 +117,11 @@ class _MemoryMatchScreenState extends State<MemoryMatchScreen> {
   Future<void> _chooseLevel() async {
     final selectedLevel = await showDialog<int>(
       context: context,
-      builder: (dialogContext) => AlertDialog(
-        title: const Text('Choose level'),
-        content: SizedBox(
-          width: 360,
-          height: 420,
-          child: GridView.builder(
-            itemCount: totalLevels,
-            gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-              crossAxisCount: 5,
-              crossAxisSpacing: 8,
-              mainAxisSpacing: 8,
-            ),
-            itemBuilder: (context, index) {
-              final level = index + 1;
-              final unlocked = level <= _highestUnlockedLevel;
-              return FilledButton.tonal(
-                key: ValueKey('memory-match-level-$level'),
-                onPressed: unlocked
-                    ? () => Navigator.pop(dialogContext, level)
-                    : null,
-                child: Text('$level'),
-              );
-            },
-          ),
-        ),
-        actions: [
-          TextButton(
-            onPressed: () => Navigator.pop(dialogContext),
-            child: const Text('Close'),
-          ),
-        ],
+      builder: (_) => LevelPickerDialog(
+        levelCount: totalLevels,
+        isUnlocked: (level) => level <= _highestUnlockedLevel,
+        currentLevel: _level,
+        levelKeyPrefix: 'memory-match',
       ),
     );
 
@@ -236,7 +211,7 @@ class _MemoryMatchScreenState extends State<MemoryMatchScreen> {
         !_allLevelsCompleted && completedLevel == _highestUnlockedLevel;
 
     if (isFirstClear) {
-      await PointService.addPoints(points);
+      await PointService.addPoints(points, source: PointSource.game);
       final prefs = await SharedPreferences.getInstance();
       if (completedLevel == totalLevels) {
         _allLevelsCompleted = true;

@@ -248,7 +248,7 @@ class _WordGuessLevelsScreenState extends State<WordGuessLevelsScreen> {
     final completedNumber = _levelNumber;
 
     if (didWin) {
-      await PointService.addPoints(points);
+      await PointService.addPoints(points, source: PointSource.game);
       final prefs = await SharedPreferences.getInstance();
       await prefs.setInt(_progressKey, completedNumber);
       if (!mounted) return;
@@ -498,9 +498,12 @@ class _WordGuessLevelsScreenState extends State<WordGuessLevelsScreen> {
                   color: colors.primary,
                 ),
                 const SizedBox(height: 16),
-                const Text(
-                  'All 100 Levels Complete!',
-                  style: TextStyle(fontSize: 23, fontWeight: FontWeight.bold),
+                Text(
+                  'All ${WordGuessLevelService.levels.length} Levels Complete!',
+                  style: const TextStyle(
+                    fontSize: 23,
+                    fontWeight: FontWeight.bold,
+                  ),
                 ),
                 const SizedBox(height: 20),
                 FilledButton.icon(

@@ -104,7 +104,8 @@ class _BlitzGame extends StatefulWidget {
 }
 
 class _BlitzGameState extends State<_BlitzGame> {
-  static const int _seconds = 45;
+  static const int _defaultSeconds = 45;
+  static const int _maxSeconds = 180;
   static const int _pointsPerAnswer = 10;
   static const int _wrongPenalty = 3;
 
@@ -118,7 +119,8 @@ class _BlitzGameState extends State<_BlitzGame> {
   int _correct = 0;
   int _streak = 0;
   int _best = 0;
-  int _timeLeft = _seconds;
+  int _roundSeconds = _defaultSeconds;
+  int _timeLeft = _defaultSeconds;
   Color? _flash;
 
   @override
@@ -128,7 +130,11 @@ class _BlitzGameState extends State<_BlitzGame> {
   }
 
   void _start() {
-    setState(() => _started = true);
+    if (_started || _finished) return;
+    setState(() {
+      _timeLeft = _roundSeconds;
+      _started = true;
+    });
 
     _timer = Timer.periodic(const Duration(seconds: 1), (timer) {
       if (!mounted) return;
@@ -153,7 +159,7 @@ class _BlitzGameState extends State<_BlitzGame> {
         if (_streak > _best) _best = _streak;
       } else {
         _streak = 0;
-        _timeLeft = (_timeLeft - _wrongPenalty).clamp(0, _seconds);
+        _timeLeft = (_timeLeft - _wrongPenalty).clamp(0, _roundSeconds);
       }
 
       _flash = right ? Colors.green : Colors.red;
@@ -179,7 +185,8 @@ class _BlitzGameState extends State<_BlitzGame> {
 
     await DailyGameGate.markPlayed(TrueFalseBlitzScreen.gameKey);
 
-    if (points > 0) await PointService.addPoints(points);
+    if (points > 0)
+      await PointService.addPoints(points, source: PointSource.game);
 
     if (!mounted) return;
 
@@ -231,13 +238,35 @@ class _BlitzGameState extends State<_BlitzGame> {
         ),
         const SizedBox(height: 12),
         Text(
-          'You have $_seconds seconds. Each correct answer earns '
+          'You have $_roundSeconds seconds. Each correct answer earns '
           '$_pointsPerAnswer points. A wrong answer costs $_wrongPenalty '
           'seconds. Reach a streak of 5 for a +20 bonus.',
           textAlign: TextAlign.center,
           style: TextStyle(fontSize: 15, color: colors.onSurfaceVariant),
         ),
         const SizedBox(height: 24),
+        Row(
+          children: [
+            const Icon(Icons.timer_outlined),
+            const SizedBox(width: 8),
+            const Expanded(child: Text('Round timer')),
+            Text(
+              '${_roundSeconds ~/ 60}:${(_roundSeconds % 60).toString().padLeft(2, '0')}',
+              key: const ValueKey('blitz-timer-duration'),
+              style: const TextStyle(fontWeight: FontWeight.w700),
+            ),
+          ],
+        ),
+        Slider(
+          key: const ValueKey('blitz-timer-slider'),
+          min: 15,
+          max: _maxSeconds.toDouble(),
+          divisions: 11,
+          value: _roundSeconds.toDouble(),
+          label: '$_roundSeconds seconds',
+          onChanged: (value) => setState(() => _roundSeconds = value.round()),
+        ),
+        const SizedBox(height: 12),
         FilledButton.icon(
           onPressed: _start,
           icon: const Icon(Icons.play_arrow_rounded),
@@ -264,7 +293,7 @@ class _BlitzGameState extends State<_BlitzGame> {
         ),
         const SizedBox(height: 8),
         LinearProgressIndicator(
-          value: _timeLeft / _seconds,
+          value: _timeLeft / _roundSeconds,
           minHeight: 8,
           borderRadius: BorderRadius.circular(8),
         ),

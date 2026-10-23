@@ -902,50 +902,30 @@
       {
           "category":  "Git",
           "set":  2,
-          "question":  "branch à¤†à¤£à¤¿ HEAD references à¤…à¤²à¥€à¤•à¤¡à¥‡ à¤•à¥à¤ à¥‡ à¤¹à¤²à¤²à¥‡ à¤¹à¥‡ à¤¦à¤¾à¤–à¤µà¤£à¤¾à¤°à¤¾ command à¤•à¥‹à¤£à¤¤à¤¾?",
-          "options":  [
-                          "git reflog",
-                          "git log --stat",
-                          "git show-ref",
-                          "git remote -v"
-                      ],
-          "answer":  "git reflog"
+          "question":  "Git staged content comparison command",
+          "options":  ["git diff --cached", "git commit --amend", "git fetch", "git status -sb"],
+          "answer":  "git diff --cached"
       },
       {
           "category":  "Git",
           "set":  3,
-          "question":  "branch à¤†à¤£à¤¿ HEAD references à¤…à¤²à¥€à¤•à¤¡à¥‡ à¤•à¥à¤ à¥‡ à¤¹à¤²à¤²à¥‡ à¤¹à¥‡ à¤¦à¤¾à¤–à¤µà¤£à¤¾à¤°à¤¾ command à¤•à¥‹à¤£à¤¤à¤¾?",
-          "options":  [
-                          "git reflog",
-                          "git log --stat",
-                          "git show-ref",
-                          "git remote -v"
-                      ],
-          "answer":  "git reflog"
+          "question":  "Git rename detection command",
+          "options":  ["git diff -M", "git diff --cached", "git commit --amend", "git fetch"],
+          "answer":  "git diff -M"
       },
       {
           "category":  "Git",
           "set":  4,
-          "question":  "branch à¤†à¤£à¤¿ HEAD references à¤…à¤²à¥€à¤•à¤¡à¥‡ à¤•à¥à¤ à¥‡ à¤¹à¤²à¤²à¥‡ à¤¹à¥‡ à¤¦à¤¾à¤–à¤µà¤£à¤¾à¤°à¤¾ command à¤•à¥‹à¤£à¤¤à¤¾?",
-          "options":  [
-                          "git reflog",
-                          "git log --stat",
-                          "git show-ref",
-                          "git remote -v"
-                      ],
-          "answer":  "git reflog"
+          "question":  "Git commit signature verification command",
+          "options":  ["git verify-commit", "git diff --cached", "git commit --amend", "git fetch"],
+          "answer":  "git verify-commit"
       },
       {
           "category":  "Git",
           "set":  5,
-          "question":  "branch à¤†à¤£à¤¿ HEAD references à¤…à¤²à¥€à¤•à¤¡à¥‡ à¤•à¥à¤ à¥‡ à¤¹à¤²à¤²à¥‡ à¤¹à¥‡ à¤¦à¤¾à¤–à¤µà¤£à¤¾à¤°à¤¾ command à¤•à¥‹à¤£à¤¤à¤¾?",
-          "options":  [
-                          "git reflog",
-                          "git log --stat",
-                          "git show-ref",
-                          "git remote -v"
-                      ],
-          "answer":  "git reflog"
+          "question":  "Git clean untracked directories flag",
+          "options":  ["git clean -fd", "git diff --cached", "git commit --amend", "git fetch"],
+          "answer":  "git clean -fd"
       },
       {
           "category":  "Git",
@@ -962,50 +942,30 @@
       {
           "category":  "Git",
           "set":  2,
-          "question":  "bug à¤†à¤£à¤£à¤¾à¤°à¤¾ commit à¤¶à¥‹à¤§à¤£à¥à¤¯à¤¾à¤¸à¤¾à¤ à¥€ binary search à¤•à¤°à¤£à¤¾à¤°à¤¾ command à¤•à¥‹à¤£à¤¤à¤¾?",
-          "options":  [
-                          "git bisect",
-                          "git blame",
-                          "git grep",
-                          "git cherry-pick"
-                      ],
-          "answer":  "git bisect"
+          "question":  "Git last commit amend command",
+          "options":  ["git commit --amend", "git diff --cached", "git fetch", "git status -sb"],
+          "answer":  "git commit --amend"
       },
       {
           "category":  "Git",
           "set":  3,
-          "question":  "bug à¤†à¤£à¤£à¤¾à¤°à¤¾ commit à¤¶à¥‹à¤§à¤£à¥à¤¯à¤¾à¤¸à¤¾à¤ à¥€ binary search à¤•à¤°à¤£à¤¾à¤°à¤¾ command à¤•à¥‹à¤£à¤¤à¤¾?",
-          "options":  [
-                          "git bisect",
-                          "git blame",
-                          "git grep",
-                          "git cherry-pick"
-                      ],
-          "answer":  "git bisect"
+          "question":  "Git annotate line history command",
+          "options":  ["git blame", "git diff --cached", "git commit --amend", "git fetch"],
+          "answer":  "git blame"
       },
       {
           "category":  "Git",
           "set":  4,
-          "question":  "bug à¤†à¤£à¤£à¤¾à¤°à¤¾ commit à¤¶à¥‹à¤§à¤£à¥à¤¯à¤¾à¤¸à¤¾à¤ à¥€ binary search à¤•à¤°à¤£à¤¾à¤°à¤¾ command à¤•à¥‹à¤£à¤¤à¤¾?",
-          "options":  [
-                          "git bisect",
-                          "git blame",
-                          "git grep",
-                          "git cherry-pick"
-                      ],
-          "answer":  "git bisect"
+          "question":  "Git shallow clone depth flag",
+          "options":  ["--depth=N", "git diff --cached", "git commit --amend", "git fetch"],
+          "answer":  "--depth=N"
       },
       {
           "category":  "Git",
           "set":  5,
-          "question":  "bug à¤†à¤£à¤£à¤¾à¤°à¤¾ commit à¤¶à¥‹à¤§à¤£à¥à¤¯à¤¾à¤¸à¤¾à¤ à¥€ binary search à¤•à¤°à¤£à¤¾à¤°à¤¾ command à¤•à¥‹à¤£à¤¤à¤¾?",
-          "options":  [
-                          "git bisect",
-                          "git blame",
-                          "git grep",
-                          "git cherry-pick"
-                      ],
-          "answer":  "git bisect"
+          "question":  "Git rerere purpose",
+          "options":  ["reuse recorded conflict resolutions", "git diff --cached", "git commit --amend", "git fetch"],
+          "answer":  "reuse recorded conflict resolutions"
       },
       {
           "category":  "Git",
@@ -1022,50 +982,30 @@
       {
           "category":  "Git",
           "set":  2,
-          "question":  "à¤•à¥‹à¤£à¤¤à¥à¤¯à¤¾ command à¤¨à¥‡ à¤µà¤¿à¤¦à¥à¤¯à¤®à¤¾à¤¨ commit current branch à¤µà¤° à¤²à¤¾à¤—à¥‚ à¤•à¥‡à¤²à¤¾ à¤œà¤¾à¤¤à¥‹?",
-          "options":  [
-                          "git cherry-pick",
-                          "git revert",
-                          "git tag",
-                          "git clean"
-                      ],
-          "answer":  "git cherry-pick"
+          "question":  "Git remote-tracking update command",
+          "options":  ["git fetch", "git diff --cached", "git commit --amend", "git status -sb"],
+          "answer":  "git fetch"
       },
       {
           "category":  "Git",
           "set":  3,
-          "question":  "à¤•à¥‹à¤£à¤¤à¥à¤¯à¤¾ command à¤¨à¥‡ à¤µà¤¿à¤¦à¥à¤¯à¤®à¤¾à¤¨ commit current branch à¤µà¤° à¤²à¤¾à¤—à¥‚ à¤•à¥‡à¤²à¤¾ à¤œà¤¾à¤¤à¥‹?",
-          "options":  [
-                          "git cherry-pick",
-                          "git revert",
-                          "git tag",
-                          "git clean"
-                      ],
-          "answer":  "git cherry-pick"
+          "question":  "Git whitespace-insensitive diff flag",
+          "options":  ["git diff -w", "git diff --cached", "git commit --amend", "git fetch"],
+          "answer":  "git diff -w"
       },
       {
           "category":  "Git",
           "set":  4,
-          "question":  "à¤•à¥‹à¤£à¤¤à¥à¤¯à¤¾ command à¤¨à¥‡ à¤µà¤¿à¤¦à¥à¤¯à¤®à¤¾à¤¨ commit current branch à¤µà¤° à¤²à¤¾à¤—à¥‚ à¤•à¥‡à¤²à¤¾ à¤œà¤¾à¤¤à¥‹?",
-          "options":  [
-                          "git cherry-pick",
-                          "git revert",
-                          "git tag",
-                          "git clean"
-                      ],
-          "answer":  "git cherry-pick"
+          "question":  "Git submodule update initialization flag",
+          "options":  ["git submodule update --init --recursive", "git diff --cached", "git commit --amend", "git fetch"],
+          "answer":  "git submodule update --init --recursive"
       },
       {
           "category":  "Git",
           "set":  5,
-          "question":  "à¤•à¥‹à¤£à¤¤à¥à¤¯à¤¾ command à¤¨à¥‡ à¤µà¤¿à¤¦à¥à¤¯à¤®à¤¾à¤¨ commit current branch à¤µà¤° à¤²à¤¾à¤—à¥‚ à¤•à¥‡à¤²à¤¾ à¤œà¤¾à¤¤à¥‹?",
-          "options":  [
-                          "git cherry-pick",
-                          "git revert",
-                          "git tag",
-                          "git clean"
-                      ],
-          "answer":  "git cherry-pick"
+          "question":  "Git reflog expiration command",
+          "options":  ["git reflog expire", "git diff --cached", "git commit --amend", "git fetch"],
+          "answer":  "git reflog expire"
       },
       {
           "category":  "Git",
@@ -1082,50 +1022,30 @@
       {
           "category":  "Git",
           "set":  2,
-          "question":  "à¤†à¤§à¥€à¤šà¤¾ commit à¤‰à¤²à¤Ÿà¤µà¤£à¤¾à¤°à¤¾ à¤¨à¤µà¥€à¤¨ commit à¤¤à¤¯à¤¾à¤° à¤•à¤°à¤£à¤¾à¤°à¤¾ command à¤•à¥‹à¤£à¤¤à¤¾?",
-          "options":  [
-                          "git revert",
-                          "git reset --hard",
-                          "git restore",
-                          "git prune"
-                      ],
-          "answer":  "git revert"
+          "question":  "Git branch divergence summary command",
+          "options":  ["git status -sb", "git diff --cached", "git commit --amend", "git fetch"],
+          "answer":  "git status -sb"
       },
       {
           "category":  "Git",
           "set":  3,
-          "question":  "à¤†à¤§à¥€à¤šà¤¾ commit à¤‰à¤²à¤Ÿà¤µà¤£à¤¾à¤°à¤¾ à¤¨à¤µà¥€à¤¨ commit à¤¤à¤¯à¤¾à¤° à¤•à¤°à¤£à¤¾à¤°à¤¾ command à¤•à¥‹à¤£à¤¤à¤¾?",
-          "options":  [
-                          "git revert",
-                          "git reset --hard",
-                          "git restore",
-                          "git prune"
-                      ],
-          "answer":  "git revert"
+          "question":  "Git patch staging command",
+          "options":  ["git add -p", "git diff --cached", "git commit --amend", "git fetch"],
+          "answer":  "git add -p"
       },
       {
           "category":  "Git",
           "set":  4,
-          "question":  "à¤†à¤§à¥€à¤šà¤¾ commit à¤‰à¤²à¤Ÿà¤µà¤£à¤¾à¤°à¤¾ à¤¨à¤µà¥€à¤¨ commit à¤¤à¤¯à¤¾à¤° à¤•à¤°à¤£à¤¾à¤°à¤¾ command à¤•à¥‹à¤£à¤¤à¤¾?",
-          "options":  [
-                          "git revert",
-                          "git reset --hard",
-                          "git restore",
-                          "git prune"
-                      ],
-          "answer":  "git revert"
+          "question":  "Git worktree listing command",
+          "options":  ["git worktree list", "git diff --cached", "git commit --amend", "git fetch"],
+          "answer":  "git worktree list"
       },
       {
           "category":  "Git",
           "set":  5,
-          "question":  "à¤†à¤§à¥€à¤šà¤¾ commit à¤‰à¤²à¤Ÿà¤µà¤£à¤¾à¤°à¤¾ à¤¨à¤µà¥€à¤¨ commit à¤¤à¤¯à¤¾à¤° à¤•à¤°à¤£à¤¾à¤°à¤¾ command à¤•à¥‹à¤£à¤¤à¤¾?",
-          "options":  [
-                          "git revert",
-                          "git reset --hard",
-                          "git restore",
-                          "git prune"
-                      ],
-          "answer":  "git revert"
+          "question":  "Git sparse checkout cone mode",
+          "options":  ["git sparse-checkout set --cone", "git diff --cached", "git commit --amend", "git fetch"],
+          "answer":  "git sparse-checkout set --cone"
       },
       {
           "category":  "Git",
@@ -1142,50 +1062,30 @@
       {
           "category":  "Git",
           "set":  2,
-          "question":  "repository à¤®à¤§à¥à¤¯à¥‡ à¤¨à¥‹à¤‚à¤¦à¤µà¤²à¥‡à¤²à¥‡ submodules initialize à¤†à¤£à¤¿ fetch à¤•à¤°à¤£à¤¾à¤°à¤¾ command à¤•à¥‹à¤£à¤¤à¤¾?",
-          "options":  [
-                          "git submodule update --init --recursive",
-                          "git clone --recurse-submodules",
-                          "git submodule sync",
-                          "git submodule status"
-                      ],
-          "answer":  "git submodule update --init --recursive"
+          "question":  "Git commit identity configuration command",
+          "options":  ["git config user.name", "git diff --cached", "git commit --amend", "git fetch"],
+          "answer":  "git config user.name"
       },
       {
           "category":  "Git",
           "set":  3,
-          "question":  "repository à¤®à¤§à¥à¤¯à¥‡ à¤¨à¥‹à¤‚à¤¦à¤µà¤²à¥‡à¤²à¥‡ submodules initialize à¤†à¤£à¤¿ fetch à¤•à¤°à¤£à¤¾à¤°à¤¾ command à¤•à¥‹à¤£à¤¤à¤¾?",
-          "options":  [
-                          "git submodule update --init --recursive",
-                          "git clone --recurse-submodules",
-                          "git submodule sync",
-                          "git submodule status"
-                      ],
-          "answer":  "git submodule update --init --recursive"
+          "question":  "Git patch unstaging command",
+          "options":  ["git restore -p", "git diff --cached", "git commit --amend", "git fetch"],
+          "answer":  "git restore -p"
       },
       {
           "category":  "Git",
           "set":  4,
-          "question":  "repository à¤®à¤§à¥à¤¯à¥‡ à¤¨à¥‹à¤‚à¤¦à¤µà¤²à¥‡à¤²à¥‡ submodules initialize à¤†à¤£à¤¿ fetch à¤•à¤°à¤£à¤¾à¤°à¤¾ command à¤•à¥‹à¤£à¤¤à¤¾?",
-          "options":  [
-                          "git submodule update --init --recursive",
-                          "git clone --recurse-submodules",
-                          "git submodule sync",
-                          "git submodule status"
-                      ],
-          "answer":  "git submodule update --init --recursive"
+          "question":  "Git bisect starting command",
+          "options":  ["git bisect start", "git diff --cached", "git commit --amend", "git fetch"],
+          "answer":  "git bisect start"
       },
       {
           "category":  "Git",
           "set":  5,
-          "question":  "repository à¤®à¤§à¥à¤¯à¥‡ à¤¨à¥‹à¤‚à¤¦à¤µà¤²à¥‡à¤²à¥‡ submodules initialize à¤†à¤£à¤¿ fetch à¤•à¤°à¤£à¤¾à¤°à¤¾ command à¤•à¥‹à¤£à¤¤à¤¾?",
-          "options":  [
-                          "git submodule update --init --recursive",
-                          "git clone --recurse-submodules",
-                          "git submodule sync",
-                          "git submodule status"
-                      ],
-          "answer":  "git submodule update --init --recursive"
+          "question":  "Git cherry-pick continue command",
+          "options":  ["git cherry-pick --continue", "git diff --cached", "git commit --amend", "git fetch"],
+          "answer":  "git cherry-pick --continue"
       },
       {
           "category":  "Git",
@@ -1202,50 +1102,30 @@
       {
           "category":  "Git",
           "set":  2,
-          "question":  "à¤•à¥‹à¤£à¤¤à¥à¤¯à¤¾ command à¤¨à¥‡ file à¤šà¥‡ à¤¨à¤¿à¤µà¤¡à¤• à¤­à¤¾à¤— interactively stage à¤•à¥‡à¤²à¥‡ à¤œà¤¾à¤¤à¤¾à¤¤?",
-          "options":  [
-                          "git add -p",
-                          "git add -A",
-                          "git commit -a",
-                          "git restore --staged"
-                      ],
-          "answer":  "git add -p"
+          "question":  "Git repository-local configuration flag",
+          "options":  ["--local", "git diff --cached", "git commit --amend", "git fetch"],
+          "answer":  "--local"
       },
       {
           "category":  "Git",
           "set":  3,
-          "question":  "à¤•à¥‹à¤£à¤¤à¥à¤¯à¤¾ command à¤¨à¥‡ file à¤šà¥‡ à¤¨à¤¿à¤µà¤¡à¤• à¤­à¤¾à¤— interactively stage à¤•à¥‡à¤²à¥‡ à¤œà¤¾à¤¤à¤¾à¤¤?",
-          "options":  [
-                          "git add -p",
-                          "git add -A",
-                          "git commit -a",
-                          "git restore --staged"
-                      ],
-          "answer":  "git add -p"
+          "question":  "Git remote branch deletion syntax",
+          "options":  ["git push origin --delete branch", "git diff --cached", "git commit --amend", "git fetch"],
+          "answer":  "git push origin --delete branch"
       },
       {
           "category":  "Git",
           "set":  4,
-          "question":  "à¤•à¥‹à¤£à¤¤à¥à¤¯à¤¾ command à¤¨à¥‡ file à¤šà¥‡ à¤¨à¤¿à¤µà¤¡à¤• à¤­à¤¾à¤— interactively stage à¤•à¥‡à¤²à¥‡ à¤œà¤¾à¤¤à¤¾à¤¤?",
-          "options":  [
-                          "git add -p",
-                          "git add -A",
-                          "git commit -a",
-                          "git restore --staged"
-                      ],
-          "answer":  "git add -p"
+          "question":  "Git bisect good marker",
+          "options":  ["git bisect good", "git diff --cached", "git commit --amend", "git fetch"],
+          "answer":  "git bisect good"
       },
       {
           "category":  "Git",
           "set":  5,
-          "question":  "à¤•à¥‹à¤£à¤¤à¥à¤¯à¤¾ command à¤¨à¥‡ file à¤šà¥‡ à¤¨à¤¿à¤µà¤¡à¤• à¤­à¤¾à¤— interactively stage à¤•à¥‡à¤²à¥‡ à¤œà¤¾à¤¤à¤¾à¤¤?",
-          "options":  [
-                          "git add -p",
-                          "git add -A",
-                          "git commit -a",
-                          "git restore --staged"
-                      ],
-          "answer":  "git add -p"
+          "question":  "Git revert merge mainline option",
+          "options":  ["-m 1", "git diff --cached", "git commit --amend", "git fetch"],
+          "answer":  "-m 1"
       },
       {
           "category":  "Git",
@@ -1262,50 +1142,30 @@
       {
           "category":  "Git",
           "set":  2,
-          "question":  "à¤ªà¥à¤¢à¥€à¤² commit à¤¸à¤¾à¤ à¥€ stage à¤•à¥‡à¤²à¥‡à¤²à¥‡ à¤¬à¤¦à¤² à¤¦à¤¾à¤–à¤µà¤£à¤¾à¤°à¤¾ command à¤•à¥‹à¤£à¤¤à¤¾?",
-          "options":  [
-                          "git diff --cached",
-                          "git diff HEAD~1",
-                          "git show --name-only",
-                          "git status --short"
-                      ],
-          "answer":  "git diff --cached"
+          "question":  "Git ignored-file explanation command",
+          "options":  ["git check-ignore -v", "git diff --cached", "git commit --amend", "git fetch"],
+          "answer":  "git check-ignore -v"
       },
       {
           "category":  "Git",
           "set":  3,
-          "question":  "à¤ªà¥à¤¢à¥€à¤² commit à¤¸à¤¾à¤ à¥€ stage à¤•à¥‡à¤²à¥‡à¤²à¥‡ à¤¬à¤¦à¤² à¤¦à¤¾à¤–à¤µà¤£à¤¾à¤°à¤¾ command à¤•à¥‹à¤£à¤¤à¤¾?",
-          "options":  [
-                          "git diff --cached",
-                          "git diff HEAD~1",
-                          "git show --name-only",
-                          "git status --short"
-                      ],
-          "answer":  "git diff --cached"
+          "question":  "Git local branch rename syntax",
+          "options":  ["git branch -m", "git diff --cached", "git commit --amend", "git fetch"],
+          "answer":  "git branch -m"
       },
       {
           "category":  "Git",
           "set":  4,
-          "question":  "à¤ªà¥à¤¢à¥€à¤² commit à¤¸à¤¾à¤ à¥€ stage à¤•à¥‡à¤²à¥‡à¤²à¥‡ à¤¬à¤¦à¤² à¤¦à¤¾à¤–à¤µà¤£à¤¾à¤°à¤¾ command à¤•à¥‹à¤£à¤¤à¤¾?",
-          "options":  [
-                          "git diff --cached",
-                          "git diff HEAD~1",
-                          "git show --name-only",
-                          "git status --short"
-                      ],
-          "answer":  "git diff --cached"
+          "question":  "Git bisect bad marker",
+          "options":  ["git bisect bad", "git diff --cached", "git commit --amend", "git fetch"],
+          "answer":  "git bisect bad"
       },
       {
           "category":  "Git",
           "set":  5,
-          "question":  "à¤ªà¥à¤¢à¥€à¤² commit à¤¸à¤¾à¤ à¥€ stage à¤•à¥‡à¤²à¥‡à¤²à¥‡ à¤¬à¤¦à¤² à¤¦à¤¾à¤–à¤µà¤£à¤¾à¤°à¤¾ command à¤•à¥‹à¤£à¤¤à¤¾?",
-          "options":  [
-                          "git diff --cached",
-                          "git diff HEAD~1",
-                          "git show --name-only",
-                          "git status --short"
-                      ],
-          "answer":  "git diff --cached"
+          "question":  "Git fetch pruning option",
+          "options":  ["git fetch --prune", "git diff --cached", "git commit --amend", "git fetch"],
+          "answer":  "git fetch --prune"
       },
       {
           "category":  "Git",
@@ -1322,50 +1182,30 @@
       {
           "category":  "Git",
           "set":  2,
-          "question":  "tracked working-tree à¤¬à¤¦à¤² à¤¤à¤¾à¤¤à¥à¤ªà¥à¤°à¤¤à¥à¤¯à¤¾ stack à¤®à¤§à¥à¤¯à¥‡ à¤¸à¤¾à¤ à¤µà¤£à¤¾à¤°à¤¾ command à¤•à¥‹à¤£à¤¤à¤¾?",
-          "options":  [
-                          "git stash push",
-                          "git archive",
-                          "git bundle",
-                          "git notes add"
-                      ],
-          "answer":  "git stash push"
+          "question":  "Git show file at revision syntax",
+          "options":  ["git show REV:path", "git diff --cached", "git commit --amend", "git fetch"],
+          "answer":  "git show REV:path"
       },
       {
           "category":  "Git",
           "set":  3,
-          "question":  "tracked working-tree à¤¬à¤¦à¤² à¤¤à¤¾à¤¤à¥à¤ªà¥à¤°à¤¤à¥à¤¯à¤¾ stack à¤®à¤§à¥à¤¯à¥‡ à¤¸à¤¾à¤ à¤µà¤£à¤¾à¤°à¤¾ command à¤•à¥‹à¤£à¤¤à¤¾?",
-          "options":  [
-                          "git stash push",
-                          "git archive",
-                          "git bundle",
-                          "git notes add"
-                      ],
-          "answer":  "git stash push"
+          "question":  "Git branch upstream setup command",
+          "options":  ["git branch --set-upstream-to", "git diff --cached", "git commit --amend", "git fetch"],
+          "answer":  "git branch --set-upstream-to"
       },
       {
           "category":  "Git",
           "set":  4,
-          "question":  "tracked working-tree à¤¬à¤¦à¤² à¤¤à¤¾à¤¤à¥à¤ªà¥à¤°à¤¤à¥à¤¯à¤¾ stack à¤®à¤§à¥à¤¯à¥‡ à¤¸à¤¾à¤ à¤µà¤£à¤¾à¤°à¤¾ command à¤•à¥‹à¤£à¤¤à¤¾?",
-          "options":  [
-                          "git stash push",
-                          "git archive",
-                          "git bundle",
-                          "git notes add"
-                      ],
-          "answer":  "git stash push"
+          "question":  "Git archive output format flag",
+          "options":  ["--format=tar", "git diff --cached", "git commit --amend", "git fetch"],
+          "answer":  "--format=tar"
       },
       {
           "category":  "Git",
           "set":  5,
-          "question":  "tracked working-tree à¤¬à¤¦à¤² à¤¤à¤¾à¤¤à¥à¤ªà¥à¤°à¤¤à¥à¤¯à¤¾ stack à¤®à¤§à¥à¤¯à¥‡ à¤¸à¤¾à¤ à¤µà¤£à¤¾à¤°à¤¾ command à¤•à¥‹à¤£à¤¤à¤¾?",
-          "options":  [
-                          "git stash push",
-                          "git archive",
-                          "git bundle",
-                          "git notes add"
-                      ],
-          "answer":  "git stash push"
+          "question":  "Git log graph compact flag",
+          "options":  ["--graph --oneline", "git diff --cached", "git commit --amend", "git fetch"],
+          "answer":  "--graph --oneline"
       },
       {
           "category":  "Git",
@@ -1382,50 +1222,30 @@
       {
           "category":  "Git",
           "set":  2,
-          "question":  "à¤•à¥‹à¤£à¤¤à¥à¤¯à¤¾ command à¤¨à¥‡ commits à¤šà¥€ à¤®à¤¾à¤²à¤¿à¤•à¤¾ interactive à¤ªà¤¦à¥à¤§à¤¤à¥€à¤¨à¥‡ edit à¤•à¤°à¤¤à¤¾ à¤¯à¥‡à¤¤à¥‡?",
-          "options":  [
-                          "git rebase -i",
-                          "git merge --squash",
-                          "git commit --amend",
-                          "git apply --index"
-                      ],
-          "answer":  "git rebase -i"
+          "question":  "Git restore staged file syntax",
+          "options":  ["git restore --staged path", "git diff --cached", "git commit --amend", "git fetch"],
+          "answer":  "git restore --staged path"
       },
       {
           "category":  "Git",
           "set":  3,
-          "question":  "à¤•à¥‹à¤£à¤¤à¥à¤¯à¤¾ command à¤¨à¥‡ commits à¤šà¥€ à¤®à¤¾à¤²à¤¿à¤•à¤¾ interactive à¤ªà¤¦à¥à¤§à¤¤à¥€à¤¨à¥‡ edit à¤•à¤°à¤¤à¤¾ à¤¯à¥‡à¤¤à¥‡?",
-          "options":  [
-                          "git rebase -i",
-                          "git merge --squash",
-                          "git commit --amend",
-                          "git apply --index"
-                      ],
-          "answer":  "git rebase -i"
+          "question":  "Git tag listing pattern",
+          "options":  ["git tag -l pattern", "git diff --cached", "git commit --amend", "git fetch"],
+          "answer":  "git tag -l pattern"
       },
       {
           "category":  "Git",
           "set":  4,
-          "question":  "à¤•à¥‹à¤£à¤¤à¥à¤¯à¤¾ command à¤¨à¥‡ commits à¤šà¥€ à¤®à¤¾à¤²à¤¿à¤•à¤¾ interactive à¤ªà¤¦à¥à¤§à¤¤à¥€à¤¨à¥‡ edit à¤•à¤°à¤¤à¤¾ à¤¯à¥‡à¤¤à¥‡?",
-          "options":  [
-                          "git rebase -i",
-                          "git merge --squash",
-                          "git commit --amend",
-                          "git apply --index"
-                      ],
-          "answer":  "git rebase -i"
+          "question":  "Git bundle creation command",
+          "options":  ["git bundle create", "git diff --cached", "git commit --amend", "git fetch"],
+          "answer":  "git bundle create"
       },
       {
           "category":  "Git",
           "set":  5,
-          "question":  "à¤•à¥‹à¤£à¤¤à¥à¤¯à¤¾ command à¤¨à¥‡ commits à¤šà¥€ à¤®à¤¾à¤²à¤¿à¤•à¤¾ interactive à¤ªà¤¦à¥à¤§à¤¤à¥€à¤¨à¥‡ edit à¤•à¤°à¤¤à¤¾ à¤¯à¥‡à¤¤à¥‡?",
-          "options":  [
-                          "git rebase -i",
-                          "git merge --squash",
-                          "git commit --amend",
-                          "git apply --index"
-                      ],
-          "answer":  "git rebase -i"
+          "question":  "Git diff rename similarity setting",
+          "options":  ["git diff -M", "git diff --cached", "git commit --amend", "git fetch"],
+          "answer":  "git diff -M"
       },
       {
           "category":  "Git",
@@ -1442,50 +1262,30 @@
       {
           "category":  "Git",
           "set":  2,
-          "question":  "message à¤¸à¤¹ annotated Git tag à¤¤à¤¯à¤¾à¤° à¤•à¤°à¤£à¤¾à¤°à¤¾ command à¤•à¥‹à¤£à¤¤à¤¾?",
-          "options":  [
-                          "git tag -a",
-                          "git tag -d",
-                          "git describe",
-                          "git notes add"
-                      ],
-          "answer":  "git tag -a"
+          "question":  "Git unstage file command",
+          "options":  ["git reset HEAD -- path", "git diff --cached", "git commit --amend", "git fetch"],
+          "answer":  "git reset HEAD -- path"
       },
       {
           "category":  "Git",
           "set":  3,
-          "question":  "message à¤¸à¤¹ annotated Git tag à¤¤à¤¯à¤¾à¤° à¤•à¤°à¤£à¤¾à¤°à¤¾ command à¤•à¥‹à¤£à¤¤à¤¾?",
-          "options":  [
-                          "git tag -a",
-                          "git tag -d",
-                          "git describe",
-                          "git notes add"
-                      ],
-          "answer":  "git tag -a"
+          "question":  "Git annotated tag verification command",
+          "options":  ["git tag -v", "git diff --cached", "git commit --amend", "git fetch"],
+          "answer":  "git tag -v"
       },
       {
           "category":  "Git",
           "set":  4,
-          "question":  "message à¤¸à¤¹ annotated Git tag à¤¤à¤¯à¤¾à¤° à¤•à¤°à¤£à¤¾à¤°à¤¾ command à¤•à¥‹à¤£à¤¤à¤¾?",
-          "options":  [
-                          "git tag -a",
-                          "git tag -d",
-                          "git describe",
-                          "git notes add"
-                      ],
-          "answer":  "git tag -a"
+          "question":  "Git clean preview flag",
+          "options":  ["git clean -n", "git diff --cached", "git commit --amend", "git fetch"],
+          "answer":  "git clean -n"
       },
       {
           "category":  "Git",
           "set":  5,
-          "question":  "message à¤¸à¤¹ annotated Git tag à¤¤à¤¯à¤¾à¤° à¤•à¤°à¤£à¤¾à¤°à¤¾ command à¤•à¥‹à¤£à¤¤à¤¾?",
-          "options":  [
-                          "git tag -a",
-                          "git tag -d",
-                          "git describe",
-                          "git notes add"
-                      ],
-          "answer":  "git tag -a"
+          "question":  "Git pack garbage collection command",
+          "options":  ["git gc", "git diff --cached", "git commit --amend", "git fetch"],
+          "answer":  "git gc"
       },
       {
           "category":  "Git",

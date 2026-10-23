@@ -525,230 +525,150 @@
       {
           "category":  "Docker",
           "set":  2,
-          "question":  "Which file excludes paths from a Docker build context?",
+          "question":  "Docker image content digest reference",
+          "options":  ["sha256 digest", "copy only final artifacts into a smaller image", "a changed prior layer rebuilds following layers", ".dockerignore"],
+          "answer":  "sha256 digest"
+      },
+      {
+          "category":  "Docker",
+          "set":  3,
+          "question":  "Docker container restart policy",
+          "options":  ["restart policy", "sha256 digest", "copy only final artifacts into a smaller image", "a changed prior layer rebuilds following layers"],
+          "answer":  "restart policy"
+      },
+      {
+          "category":  "Docker",
+          "set":  4,
+          "question":  "Docker container read-only root",
+          "options":  ["read-only root filesystem", "sha256 digest", "copy only final artifacts into a smaller image", "a changed prior layer rebuilds following layers"],
+          "answer":  "read-only root filesystem"
+      },
+      {
+          "category":  "Docker",
+          "set":  5,
+          "question":  "Docker image load counterpart",
+          "options":  ["docker load", "sha256 digest", "copy only final artifacts into a smaller image", "a changed prior layer rebuilds following layers"],
+          "answer":  "docker load"
+      },
+      {
+          "category":  "Docker",
+          "set":  1,
+          "question":  "Which command runs a new process inside an already running container?",
           "options":  [
-                          ".dockerignore",
-                          ".gitignore",
-                          "Dockerfile.lock",
-                          "docker.exclude"
+                          "docker exec",
+                          "docker attach",
+                          "docker build",
+                          "docker commit"
                       ],
+          "answer":  "docker exec"
+      },
+      {
+          "category":  "Docker",
+          "set":  2,
+          "question":  "Docker multi-stage build purpose",
+          "options":  ["copy only final artifacts into a smaller image", "sha256 digest", "a changed prior layer rebuilds following layers", ".dockerignore"],
+          "answer":  "copy only final artifacts into a smaller image"
+      },
+      {
+          "category":  "Docker",
+          "set":  3,
+          "question":  "Docker image layer reuse",
+          "options":  ["identical layers are shared", "sha256 digest", "copy only final artifacts into a smaller image", "a changed prior layer rebuilds following layers"],
+          "answer":  "identical layers are shared"
+      },
+      {
+          "category":  "Docker",
+          "set":  4,
+          "question":  "Docker resource memory limit flag",
+          "options":  ["--memory", "sha256 digest", "copy only final artifacts into a smaller image", "a changed prior layer rebuilds following layers"],
+          "answer":  "--memory"
+      },
+      {
+          "category":  "Docker",
+          "set":  5,
+          "question":  "Docker container export result",
+          "options":  ["a filesystem tar archive", "sha256 digest", "copy only final artifacts into a smaller image", "a changed prior layer rebuilds following layers"],
+          "answer":  "a filesystem tar archive"
+      },
+      {
+          "category":  "Docker",
+          "set":  1,
+          "question":  "Which Dockerfile instruction selects the user for subsequent build steps and container execution?",
+          "options":  [
+                          "USER",
+                          "OWNER",
+                          "RUNAS",
+                          "LOGIN"
+                      ],
+          "answer":  "USER"
+      },
+      {
+          "category":  "Docker",
+          "set":  2,
+          "question":  "Docker build cache invalidation",
+          "options":  ["a changed prior layer rebuilds following layers", "sha256 digest", "copy only final artifacts into a smaller image", ".dockerignore"],
+          "answer":  "a changed prior layer rebuilds following layers"
+      },
+      {
+          "category":  "Docker",
+          "set":  3,
+          "question":  "Docker image cleanup command",
+          "options":  ["docker image prune", "sha256 digest", "copy only final artifacts into a smaller image", "a changed prior layer rebuilds following layers"],
+          "answer":  "docker image prune"
+      },
+      {
+          "category":  "Docker",
+          "set":  4,
+          "question":  "Docker CPU quota flag",
+          "options":  ["--cpus", "sha256 digest", "copy only final artifacts into a smaller image", "a changed prior layer rebuilds following layers"],
+          "answer":  "--cpus"
+      },
+      {
+          "category":  "Docker",
+          "set":  5,
+          "question":  "Docker image import command",
+          "options":  ["docker import", "sha256 digest", "copy only final artifacts into a smaller image", "a changed prior layer rebuilds following layers"],
+          "answer":  "docker import"
+      },
+      {
+          "category":  "Docker",
+          "set":  1,
+          "question":  "Which command copies files between a container and the local filesystem?",
+          "options":  [
+                          "docker cp",
+                          "docker save",
+                          "docker export",
+                          "docker pull"
+                      ],
+          "answer":  "docker cp"
+      },
+      {
+          "category":  "Docker",
+          "set":  2,
+          "question":  "Docker build context exclusion file",
+          "options":  [".dockerignore", "sha256 digest", "copy only final artifacts into a smaller image", "a changed prior layer rebuilds following layers"],
           "answer":  ".dockerignore"
       },
       {
           "category":  "Docker",
           "set":  3,
-          "question":  "Which file excludes paths from a Docker build context?",
-          "options":  [
-                          ".dockerignore",
-                          ".gitignore",
-                          "Dockerfile.lock",
-                          "docker.exclude"
-                      ],
-          "answer":  ".dockerignore"
+          "question":  "Docker container log command",
+          "options":  ["docker logs", "sha256 digest", "copy only final artifacts into a smaller image", "a changed prior layer rebuilds following layers"],
+          "answer":  "docker logs"
       },
       {
           "category":  "Docker",
           "set":  4,
-          "question":  "Which file excludes paths from a Docker build context?",
-          "options":  [
-                          ".dockerignore",
-                          ".gitignore",
-                          "Dockerfile.lock",
-                          "docker.exclude"
-                      ],
-          "answer":  ".dockerignore"
+          "question":  "Docker Compose service dependency",
+          "options":  ["depends_on", "sha256 digest", "copy only final artifacts into a smaller image", "a changed prior layer rebuilds following layers"],
+          "answer":  "depends_on"
       },
       {
           "category":  "Docker",
           "set":  5,
-          "question":  "Which file excludes paths from a Docker build context?",
-          "options":  [
-                          ".dockerignore",
-                          ".gitignore",
-                          "Dockerfile.lock",
-                          "docker.exclude"
-                      ],
-          "answer":  ".dockerignore"
-      },
-      {
-          "category":  "Docker",
-          "set":  1,
-          "question":  "Which command runs a new process inside an already running container?",
-          "options":  [
-                          "docker exec",
-                          "docker attach",
-                          "docker build",
-                          "docker commit"
-                      ],
-          "answer":  "docker exec"
-      },
-      {
-          "category":  "Docker",
-          "set":  2,
-          "question":  "Which command runs a new process inside an already running container?",
-          "options":  [
-                          "docker exec",
-                          "docker attach",
-                          "docker build",
-                          "docker commit"
-                      ],
-          "answer":  "docker exec"
-      },
-      {
-          "category":  "Docker",
-          "set":  3,
-          "question":  "Which command runs a new process inside an already running container?",
-          "options":  [
-                          "docker exec",
-                          "docker attach",
-                          "docker build",
-                          "docker commit"
-                      ],
-          "answer":  "docker exec"
-      },
-      {
-          "category":  "Docker",
-          "set":  4,
-          "question":  "Which command runs a new process inside an already running container?",
-          "options":  [
-                          "docker exec",
-                          "docker attach",
-                          "docker build",
-                          "docker commit"
-                      ],
-          "answer":  "docker exec"
-      },
-      {
-          "category":  "Docker",
-          "set":  5,
-          "question":  "Which command runs a new process inside an already running container?",
-          "options":  [
-                          "docker exec",
-                          "docker attach",
-                          "docker build",
-                          "docker commit"
-                      ],
-          "answer":  "docker exec"
-      },
-      {
-          "category":  "Docker",
-          "set":  1,
-          "question":  "Which Dockerfile instruction selects the user for subsequent build steps and container execution?",
-          "options":  [
-                          "USER",
-                          "OWNER",
-                          "RUNAS",
-                          "LOGIN"
-                      ],
-          "answer":  "USER"
-      },
-      {
-          "category":  "Docker",
-          "set":  2,
-          "question":  "Which Dockerfile instruction selects the user for subsequent build steps and container execution?",
-          "options":  [
-                          "USER",
-                          "OWNER",
-                          "RUNAS",
-                          "LOGIN"
-                      ],
-          "answer":  "USER"
-      },
-      {
-          "category":  "Docker",
-          "set":  3,
-          "question":  "Which Dockerfile instruction selects the user for subsequent build steps and container execution?",
-          "options":  [
-                          "USER",
-                          "OWNER",
-                          "RUNAS",
-                          "LOGIN"
-                      ],
-          "answer":  "USER"
-      },
-      {
-          "category":  "Docker",
-          "set":  4,
-          "question":  "Which Dockerfile instruction selects the user for subsequent build steps and container execution?",
-          "options":  [
-                          "USER",
-                          "OWNER",
-                          "RUNAS",
-                          "LOGIN"
-                      ],
-          "answer":  "USER"
-      },
-      {
-          "category":  "Docker",
-          "set":  5,
-          "question":  "Which Dockerfile instruction selects the user for subsequent build steps and container execution?",
-          "options":  [
-                          "USER",
-                          "OWNER",
-                          "RUNAS",
-                          "LOGIN"
-                      ],
-          "answer":  "USER"
-      },
-      {
-          "category":  "Docker",
-          "set":  1,
-          "question":  "Which command copies files between a container and the local filesystem?",
-          "options":  [
-                          "docker cp",
-                          "docker save",
-                          "docker export",
-                          "docker pull"
-                      ],
-          "answer":  "docker cp"
-      },
-      {
-          "category":  "Docker",
-          "set":  2,
-          "question":  "Which command copies files between a container and the local filesystem?",
-          "options":  [
-                          "docker cp",
-                          "docker save",
-                          "docker export",
-                          "docker pull"
-                      ],
-          "answer":  "docker cp"
-      },
-      {
-          "category":  "Docker",
-          "set":  3,
-          "question":  "Which command copies files between a container and the local filesystem?",
-          "options":  [
-                          "docker cp",
-                          "docker save",
-                          "docker export",
-                          "docker pull"
-                      ],
-          "answer":  "docker cp"
-      },
-      {
-          "category":  "Docker",
-          "set":  4,
-          "question":  "Which command copies files between a container and the local filesystem?",
-          "options":  [
-                          "docker cp",
-                          "docker save",
-                          "docker export",
-                          "docker pull"
-                      ],
-          "answer":  "docker cp"
-      },
-      {
-          "category":  "Docker",
-          "set":  5,
-          "question":  "Which command copies files between a container and the local filesystem?",
-          "options":  [
-                          "docker cp",
-                          "docker save",
-                          "docker export",
-                          "docker pull"
-                      ],
-          "answer":  "docker cp"
+          "question":  "Docker prune volume option",
+          "options":  ["docker volume prune", "sha256 digest", "copy only final artifacts into a smaller image", "a changed prior layer rebuilds following layers"],
+          "answer":  "docker volume prune"
       },
       {
           "category":  "Docker",
@@ -765,50 +685,30 @@
       {
           "category":  "Docker",
           "set":  2,
-          "question":  "Which command displays detailed metadata for a Docker object?",
-          "options":  [
-                          "docker inspect",
-                          "docker top",
-                          "docker diff",
-                          "docker pause"
-                      ],
-          "answer":  "docker inspect"
+          "question":  "Docker container health probe",
+          "options":  ["HEALTHCHECK", "sha256 digest", "copy only final artifacts into a smaller image", "a changed prior layer rebuilds following layers"],
+          "answer":  "HEALTHCHECK"
       },
       {
           "category":  "Docker",
           "set":  3,
-          "question":  "Which command displays detailed metadata for a Docker object?",
-          "options":  [
-                          "docker inspect",
-                          "docker top",
-                          "docker diff",
-                          "docker pause"
-                      ],
+          "question":  "Docker container inspect command",
+          "options":  ["docker inspect", "sha256 digest", "copy only final artifacts into a smaller image", "a changed prior layer rebuilds following layers"],
           "answer":  "docker inspect"
       },
       {
           "category":  "Docker",
           "set":  4,
-          "question":  "Which command displays detailed metadata for a Docker object?",
-          "options":  [
-                          "docker inspect",
-                          "docker top",
-                          "docker diff",
-                          "docker pause"
-                      ],
-          "answer":  "docker inspect"
+          "question":  "Docker Compose environment file",
+          "options":  [".env", "sha256 digest", "copy only final artifacts into a smaller image", "a changed prior layer rebuilds following layers"],
+          "answer":  ".env"
       },
       {
           "category":  "Docker",
           "set":  5,
-          "question":  "Which command displays detailed metadata for a Docker object?",
-          "options":  [
-                          "docker inspect",
-                          "docker top",
-                          "docker diff",
-                          "docker pause"
-                      ],
-          "answer":  "docker inspect"
+          "question":  "Docker container init process flag",
+          "options":  ["--init", "sha256 digest", "copy only final artifacts into a smaller image", "a changed prior layer rebuilds following layers"],
+          "answer":  "--init"
       },
       {
           "category":  "Docker",
@@ -825,50 +725,30 @@
       {
           "category":  "Docker",
           "set":  2,
-          "question":  "Which command continuously streams a container\u0027s log output?",
-          "options":  [
-                          "docker logs -f",
-                          "docker events --once",
-                          "docker stats --no-stream",
-                          "docker history"
-                      ],
-          "answer":  "docker logs -f"
+          "question":  "Docker named volume lifecycle",
+          "options":  ["persists independently of a container", "sha256 digest", "copy only final artifacts into a smaller image", "a changed prior layer rebuilds following layers"],
+          "answer":  "persists independently of a container"
       },
       {
           "category":  "Docker",
           "set":  3,
-          "question":  "Which command continuously streams a container\u0027s log output?",
-          "options":  [
-                          "docker logs -f",
-                          "docker events --once",
-                          "docker stats --no-stream",
-                          "docker history"
-                      ],
-          "answer":  "docker logs -f"
+          "question":  "Docker process list command",
+          "options":  ["docker top", "sha256 digest", "copy only final artifacts into a smaller image", "a changed prior layer rebuilds following layers"],
+          "answer":  "docker top"
       },
       {
           "category":  "Docker",
           "set":  4,
-          "question":  "Which command continuously streams a container\u0027s log output?",
-          "options":  [
-                          "docker logs -f",
-                          "docker events --once",
-                          "docker stats --no-stream",
-                          "docker history"
-                      ],
-          "answer":  "docker logs -f"
+          "question":  "Docker Compose detached launch",
+          "options":  ["docker compose up -d", "sha256 digest", "copy only final artifacts into a smaller image", "a changed prior layer rebuilds following layers"],
+          "answer":  "docker compose up -d"
       },
       {
           "category":  "Docker",
           "set":  5,
-          "question":  "Which command continuously streams a container\u0027s log output?",
-          "options":  [
-                          "docker logs -f",
-                          "docker events --once",
-                          "docker stats --no-stream",
-                          "docker history"
-                      ],
-          "answer":  "docker logs -f"
+          "question":  "Docker user namespace purpose",
+          "options":  ["map container users to unprivileged host users", "sha256 digest", "copy only final artifacts into a smaller image", "a changed prior layer rebuilds following layers"],
+          "answer":  "map container users to unprivileged host users"
       },
       {
           "category":  "Docker",
@@ -885,50 +765,30 @@
       {
           "category":  "Docker",
           "set":  2,
-          "question":  "Which docker run option removes a container automatically after it exits?",
-          "options":  [
-                          "--rm",
-                          "--pull",
-                          "--init",
-                          "--detach"
-                      ],
-          "answer":  "--rm"
+          "question":  "Docker bind mount source",
+          "options":  ["host filesystem path", "sha256 digest", "copy only final artifacts into a smaller image", "a changed prior layer rebuilds following layers"],
+          "answer":  "host filesystem path"
       },
       {
           "category":  "Docker",
           "set":  3,
-          "question":  "Which docker run option removes a container automatically after it exits?",
-          "options":  [
-                          "--rm",
-                          "--pull",
-                          "--init",
-                          "--detach"
-                      ],
-          "answer":  "--rm"
+          "question":  "Docker image history command",
+          "options":  ["docker history", "sha256 digest", "copy only final artifacts into a smaller image", "a changed prior layer rebuilds following layers"],
+          "answer":  "docker history"
       },
       {
           "category":  "Docker",
           "set":  4,
-          "question":  "Which docker run option removes a container automatically after it exits?",
-          "options":  [
-                          "--rm",
-                          "--pull",
-                          "--init",
-                          "--detach"
-                      ],
-          "answer":  "--rm"
+          "question":  "Docker Compose stop behavior",
+          "options":  ["stops services without removing them", "sha256 digest", "copy only final artifacts into a smaller image", "a changed prior layer rebuilds following layers"],
+          "answer":  "stops services without removing them"
       },
       {
           "category":  "Docker",
           "set":  5,
-          "question":  "Which docker run option removes a container automatically after it exits?",
-          "options":  [
-                          "--rm",
-                          "--pull",
-                          "--init",
-                          "--detach"
-                      ],
-          "answer":  "--rm"
+          "question":  "Docker secrets storage purpose",
+          "options":  ["sensitive values mounted to services", "sha256 digest", "copy only final artifacts into a smaller image", "a changed prior layer rebuilds following layers"],
+          "answer":  "sensitive values mounted to services"
       },
       {
           "category":  "Docker",
@@ -945,50 +805,30 @@
       {
           "category":  "Docker",
           "set":  2,
-          "question":  "What is the main purpose of a multi-stage Docker build?",
-          "options":  [
-                          "Copy build artifacts into a smaller final image",
-                          "Run every stage as a container",
-                          "Keep all build tools in the final image",
-                          "Replace Docker volumes with layers"
-                      ],
-          "answer":  "Copy build artifacts into a smaller final image"
+          "question":  "Docker bridge network behavior",
+          "options":  ["connects containers on a virtual subnet", "sha256 digest", "copy only final artifacts into a smaller image", "a changed prior layer rebuilds following layers"],
+          "answer":  "connects containers on a virtual subnet"
       },
       {
           "category":  "Docker",
           "set":  3,
-          "question":  "What is the main purpose of a multi-stage Docker build?",
-          "options":  [
-                          "Copy build artifacts into a smaller final image",
-                          "Run every stage as a container",
-                          "Keep all build tools in the final image",
-                          "Replace Docker volumes with layers"
-                      ],
-          "answer":  "Copy build artifacts into a smaller final image"
+          "question":  "Docker image registry login command",
+          "options":  ["docker login", "sha256 digest", "copy only final artifacts into a smaller image", "a changed prior layer rebuilds following layers"],
+          "answer":  "docker login"
       },
       {
           "category":  "Docker",
           "set":  4,
-          "question":  "What is the main purpose of a multi-stage Docker build?",
-          "options":  [
-                          "Copy build artifacts into a smaller final image",
-                          "Run every stage as a container",
-                          "Keep all build tools in the final image",
-                          "Replace Docker volumes with layers"
-                      ],
-          "answer":  "Copy build artifacts into a smaller final image"
+          "question":  "Docker container exec command",
+          "options":  ["docker exec", "sha256 digest", "copy only final artifacts into a smaller image", "a changed prior layer rebuilds following layers"],
+          "answer":  "docker exec"
       },
       {
           "category":  "Docker",
           "set":  5,
-          "question":  "What is the main purpose of a multi-stage Docker build?",
-          "options":  [
-                          "Copy build artifacts into a smaller final image",
-                          "Run every stage as a container",
-                          "Keep all build tools in the final image",
-                          "Replace Docker volumes with layers"
-                      ],
-          "answer":  "Copy build artifacts into a smaller final image"
+          "question":  "Docker health status values",
+          "options":  ["starting, healthy, unhealthy", "sha256 digest", "copy only final artifacts into a smaller image", "a changed prior layer rebuilds following layers"],
+          "answer":  "starting, healthy, unhealthy"
       },
       {
           "category":  "Docker",
@@ -1005,50 +845,30 @@
       {
           "category":  "Docker",
           "set":  2,
-          "question":  "Which docker build option selects a named stage as the build target?",
-          "options":  [
-                          "--target",
-                          "--stage",
-                          "--from",
-                          "--platform"
-                      ],
-          "answer":  "--target"
+          "question":  "Docker host network behavior",
+          "options":  ["shares the host network namespace", "sha256 digest", "copy only final artifacts into a smaller image", "a changed prior layer rebuilds following layers"],
+          "answer":  "shares the host network namespace"
       },
       {
           "category":  "Docker",
           "set":  3,
-          "question":  "Which docker build option selects a named stage as the build target?",
-          "options":  [
-                          "--target",
-                          "--stage",
-                          "--from",
-                          "--platform"
-                      ],
+          "question":  "Docker build target stage flag",
+          "options":  ["--target", "sha256 digest", "copy only final artifacts into a smaller image", "a changed prior layer rebuilds following layers"],
           "answer":  "--target"
       },
       {
           "category":  "Docker",
           "set":  4,
-          "question":  "Which docker build option selects a named stage as the build target?",
-          "options":  [
-                          "--target",
-                          "--stage",
-                          "--from",
-                          "--platform"
-                      ],
-          "answer":  "--target"
+          "question":  "Docker container copy command",
+          "options":  ["docker cp", "sha256 digest", "copy only final artifacts into a smaller image", "a changed prior layer rebuilds following layers"],
+          "answer":  "docker cp"
       },
       {
           "category":  "Docker",
           "set":  5,
-          "question":  "Which docker build option selects a named stage as the build target?",
-          "options":  [
-                          "--target",
-                          "--stage",
-                          "--from",
-                          "--platform"
-                      ],
-          "answer":  "--target"
+          "question":  "Docker daemon socket risk",
+          "options":  ["host-level administrative access", "sha256 digest", "copy only final artifacts into a smaller image", "a changed prior layer rebuilds following layers"],
+          "answer":  "host-level administrative access"
       },
       {
           "category":  "Docker",
@@ -1065,50 +885,30 @@
       {
           "category":  "Docker",
           "set":  2,
-          "question":  "Which Dockerfile instruction defines a container health check?",
-          "options":  [
-                          "HEALTHCHECK",
-                          "HEALTH",
-                          "STATUS",
-                          "ONFAILURE"
-                      ],
-          "answer":  "HEALTHCHECK"
+          "question":  "Docker port publishing flag",
+          "options":  ["-p", "sha256 digest", "copy only final artifacts into a smaller image", "a changed prior layer rebuilds following layers"],
+          "answer":  "-p"
       },
       {
           "category":  "Docker",
           "set":  3,
-          "question":  "Which Dockerfile instruction defines a container health check?",
-          "options":  [
-                          "HEALTHCHECK",
-                          "HEALTH",
-                          "STATUS",
-                          "ONFAILURE"
-                      ],
-          "answer":  "HEALTHCHECK"
+          "question":  "Docker build platform option",
+          "options":  ["--platform", "sha256 digest", "copy only final artifacts into a smaller image", "a changed prior layer rebuilds following layers"],
+          "answer":  "--platform"
       },
       {
           "category":  "Docker",
           "set":  4,
-          "question":  "Which Dockerfile instruction defines a container health check?",
-          "options":  [
-                          "HEALTHCHECK",
-                          "HEALTH",
-                          "STATUS",
-                          "ONFAILURE"
-                      ],
-          "answer":  "HEALTHCHECK"
+          "question":  "Docker image save format command",
+          "options":  ["docker save", "sha256 digest", "copy only final artifacts into a smaller image", "a changed prior layer rebuilds following layers"],
+          "answer":  "docker save"
       },
       {
           "category":  "Docker",
           "set":  5,
-          "question":  "Which Dockerfile instruction defines a container health check?",
-          "options":  [
-                          "HEALTHCHECK",
-                          "HEALTH",
-                          "STATUS",
-                          "ONFAILURE"
-                      ],
-          "answer":  "HEALTHCHECK"
+          "question":  "Dockerfile cache mount feature",
+          "options":  ["BuildKit RUN --mount=type=cache", "sha256 digest", "copy only final artifacts into a smaller image", "a changed prior layer rebuilds following layers"],
+          "answer":  "BuildKit RUN --mount=type=cache"
       },
       {
           "category":  "Docker",
@@ -1125,13 +925,8 @@
       {
           "category":  "Docker",
           "set":  5,
-          "question":  "Which docker run option explicitly mounts a host path or named volume in a container?",
-          "options":  [
-                          "--mount",
-                          "--publish",
-                          "--network",
-                          "--restart"
-                      ],
-          "answer":  "--mount"
+          "question":  "Docker build metadata inspection",
+          "options":  ["docker buildx imagetools inspect", "sha256 digest", "copy only final artifacts into a smaller image", "a changed prior layer rebuilds following layers"],
+          "answer":  "docker buildx imagetools inspect"
       }
 ]

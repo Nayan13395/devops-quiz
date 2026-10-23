@@ -14,7 +14,7 @@ void main() {
     await tester.pumpWidget(const MaterialApp(home: WordGuessLevelsScreen()));
     await tester.pumpAndSettle();
 
-    expect(find.text('Level 1/100'), findsOneWidget);
+    expect(find.text('Level 1/500'), findsOneWidget);
     expect(_slotLetter(tester, 0), 'G');
     expect(_slotLetter(tester, 1), '');
     expect(_slotLetter(tester, 2), 'T');
@@ -67,6 +67,40 @@ void main() {
 
       await tester.pumpWidget(const SizedBox.shrink());
     }
+  });
+
+  testWidgets('saved progress continues beyond the original 100 levels', (
+    tester,
+  ) async {
+    SharedPreferences.setMockInitialValues({
+      'word_guess_completed_levels_v2': 100,
+    });
+    await tester.pumpWidget(const MaterialApp(home: WordGuessLevelsScreen()));
+    await tester.pumpAndSettle();
+    expect(find.text('Level 101/500'), findsOneWidget);
+    expect(find.text('All 500 Levels Complete!'), findsNothing);
+  });
+
+  testWidgets('level 500 can be solved and completes the expanded game', (
+    tester,
+  ) async {
+    SharedPreferences.setMockInitialValues({
+      'word_guess_completed_levels_v2': 499,
+    });
+    await tester.pumpWidget(const MaterialApp(home: WordGuessLevelsScreen()));
+    await tester.pumpAndSettle();
+    expect(find.text('Level 500/500'), findsOneWidget);
+    final word = WordGuessLevelService.levels.last.word;
+    for (int position = 0; position < word.length; position++) {
+      if (_slotLetter(tester, position).isNotEmpty) continue;
+      await _tapLetter(tester, word, word[position]);
+      await tester.pump();
+    }
+    await tester.tap(find.byKey(const ValueKey('word-guess-enter')));
+    await tester.pumpAndSettle();
+    final prefs = await SharedPreferences.getInstance();
+    expect(prefs.getInt('word_guess_completed_levels_v2'), 500);
+    expect(find.text('All 500 Levels Complete!'), findsOneWidget);
   });
 }
 

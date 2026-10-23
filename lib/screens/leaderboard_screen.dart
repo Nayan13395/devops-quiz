@@ -1,6 +1,9 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
 import '../services/point_service.dart';
 import '../services/leaderboard_service.dart';
+import '../services/referral_service.dart';
 import '../l10n/app_localizations.dart';
 
 class LeaderboardScreen extends StatefulWidget {
@@ -11,26 +14,40 @@ class LeaderboardScreen extends StatefulWidget {
 }
 
 class _LeaderboardScreenState extends State<LeaderboardScreen> {
+  static const bool _universalEnabled = false;
   final LeaderboardService _leaderboardService = LeaderboardService();
   late final Stream<List<Map<String, dynamic>>> _dailyLeaderboard;
   late Future<Map<String, int>> _personalProgress;
+  bool _syncingReferrals = false;
 
   @override
   void initState() {
     super.initState();
     _personalProgress = _loadPersonalProgress();
-    _dailyLeaderboard = _leaderboardService.watchDailyLeaderboard();
+    _dailyLeaderboard = _universalEnabled
+        ? _leaderboardService.watchDailyLeaderboard()
+        : Stream.value(const []);
+    unawaited(_syncReferralRewards());
+  }
+
+  Future<void> _syncReferralRewards() async {
+    if (_syncingReferrals) return;
+    _syncingReferrals = true;
+    try {
+      await ReferralService().syncRewards();
+      if (mounted) {
+        setState(() {
+          _personalProgress = _loadPersonalProgress();
+        });
+      }
+    } catch (error) {
+      debugPrint('Referral rewards could not be refreshed: $error');
+    } finally {
+      _syncingReferrals = false;
+    }
   }
 
   Future<Map<String, int>> _loadPersonalProgress() async {
-    final rewards = await _leaderboardService.getMyDailyRewards();
-    for (final reward in rewards) {
-      await PointService.applyLeaderboardReward(
-        reward['date'] as String? ?? '',
-        (reward['points'] as num?)?.toInt() ?? 0,
-      );
-    }
-
     final history = await _leaderboardService.getLeaderboard();
     final now = DateTime.now();
     final today = '${now.day}-${now.month}-${now.year}';
@@ -41,7 +58,13 @@ class _LeaderboardScreenState extends State<LeaderboardScreen> {
           (sum, entry) => sum + ((entry['points'] as num?)?.toInt() ?? 0),
         );
 
-    return {'total': await PointService.getTotalPoints(), 'today': todayPoints};
+    final earned = await PointService.getEarnedPoints();
+    return {
+      'total': await PointService.getTotalPoints(),
+      'today': todayPoints,
+      'quiz': earned[PointSource.quiz]!,
+      'game': earned[PointSource.game]!,
+    };
   }
 
   @override
@@ -49,14 +72,14 @@ class _LeaderboardScreenState extends State<LeaderboardScreen> {
     final l10n = AppLocalizations.of(context)!;
 
     return DefaultTabController(
-      length: 2,
+      length: _universalEnabled ? 2 : 1,
       child: Scaffold(
         appBar: AppBar(
           title: Text('🏆 ${l10n.leaderboard}'),
           bottom: const TabBar(
             tabs: [
               Tab(text: 'My Progress'),
-              Tab(text: 'Universal'),
+              if (_universalEnabled) Tab(text: 'Universal'),
             ],
           ),
           actions: [
@@ -64,6 +87,7 @@ class _LeaderboardScreenState extends State<LeaderboardScreen> {
               tooltip: 'Refresh progress',
               onPressed: () => setState(() {
                 _personalProgress = _loadPersonalProgress();
+                unawaited(_syncReferralRewards());
               }),
               icon: const Icon(Icons.refresh),
             ),
@@ -72,7 +96,7 @@ class _LeaderboardScreenState extends State<LeaderboardScreen> {
         body: TabBarView(
           children: [
             _buildPersonalProgress(),
-            _buildUniversalLeaderboard(l10n),
+            if (_universalEnabled) _buildUniversalLeaderboard(l10n),
           ],
         ),
       ),
@@ -117,16 +141,24 @@ class _LeaderboardScreenState extends State<LeaderboardScreen> {
               ],
             ),
             const SizedBox(height: 20),
-            Text(
-              'Daily universal prizes',
-              style: Theme.of(context).textTheme.titleMedium,
-            ),
-            const SizedBox(height: 8),
-            const Text('Top 5: 5,000 · 4,000 · 3,000 · 2,000 · 1,000 points'),
-            const SizedBox(height: 4),
-            Text(
-              'Tied players receive the same rank reward.',
-              style: Theme.of(context).textTheme.bodySmall,
+            Row(
+              children: [
+                Expanded(
+                  child: _ProgressMetric(
+                    label: 'Quiz points',
+                    value: progress['quiz'] ?? 0,
+                    icon: Icons.quiz_outlined,
+                  ),
+                ),
+                const SizedBox(width: 12),
+                Expanded(
+                  child: _ProgressMetric(
+                    label: 'Game points',
+                    value: progress['game'] ?? 0,
+                    icon: Icons.sports_esports_outlined,
+                  ),
+                ),
+              ],
             ),
           ],
         );
@@ -169,9 +201,6 @@ class _LeaderboardScreenState extends State<LeaderboardScreen> {
             final score = scores[index];
             final points = (score['points'] as num?)?.toInt() ?? 0;
             final rank = _rankAt(scores, index);
-            final prize = rank <= 5
-                ? [5000, 4000, 3000, 2000, 1000][rank - 1]
-                : 0;
             final name = (score['displayName'] as String?)?.trim();
             final photoUrl = score['photoUrl'] as String?;
 
@@ -186,9 +215,6 @@ class _LeaderboardScreenState extends State<LeaderboardScreen> {
                     : null,
               ),
               title: Text(name == null || name.isEmpty ? 'Player' : name),
-              subtitle: prize > 0
-                  ? Text('Daily prize: $prize ${l10n.pointsShort}')
-                  : null,
               trailing: Text(
                 '$points ${l10n.pointsShort}',
                 style: Theme.of(context).textTheme.titleMedium,
@@ -222,17 +248,18 @@ class _ProgressMetric extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 132,
+      constraints: const BoxConstraints(minHeight: 132),
       padding: const EdgeInsets.all(16),
       decoration: BoxDecoration(
         color: Theme.of(context).colorScheme.surfaceContainerHighest,
         borderRadius: BorderRadius.circular(8),
       ),
       child: Column(
+        mainAxisSize: MainAxisSize.min,
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Icon(icon),
-          const Spacer(),
+          const SizedBox(height: 16),
           Text('$value', style: Theme.of(context).textTheme.headlineSmall),
           Text(label, style: Theme.of(context).textTheme.bodySmall),
         ],

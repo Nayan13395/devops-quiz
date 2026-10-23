@@ -54,8 +54,7 @@ class AppLocalizationsJa extends AppLocalizations {
   String get dailyQuizCompleted => 'デイリークイズ完了';
 
   @override
-  String get dailyQuizCompletedMessage =>
-      '今日のデイリークイズはすでに完了しています。\n\n明日また新しい挑戦をお待ちしています！';
+  String get dailyQuizCompletedMessage => '今日のデイリークイズはすでに完了しています。\n\n明日また新しい挑戦をお待ちしています！';
 
   @override
   String get leaderboard => 'ランキング';
@@ -103,8 +102,7 @@ class AppLocalizationsJa extends AppLocalizations {
   String get connectWithMe => 'つながりましょう';
 
   @override
-  String get aboutDescription =>
-      'DevOps Quiz は、Linux、Docker、Kubernetes、ネットワーク、Git、Jenkins、Terraform、Ansible などの DevOps 技術に関する厳選された数千の問題で、面接や資格試験の準備をサポートします。';
+  String get aboutDescription => 'DevOps Quiz は、Linux、Docker、Kubernetes、ネットワーク、Git、Jenkins、Terraform、Ansible などの DevOps 技術に関する厳選された数千の問題で、面接や資格試験の準備をサポートします。';
 
   @override
   String get quizResult => 'クイズ結果';
@@ -277,13 +275,7 @@ class AppLocalizationsJa extends AppLocalizations {
   String get tomorrowsReward => '明日の報酬';
 
   @override
-  String shareMessage(
-    Object score,
-    Object totalQuestions,
-    Object earnedPoints,
-    Object bonusPoints,
-    Object percentage,
-  ) {
+  String shareMessage(Object score, Object totalQuestions, Object earnedPoints, Object bonusPoints, Object percentage) {
     return '🎯 今日の #DevOps クイズで $score/$totalQuestions でした！\n\n🏆 ポイント: $earnedPoints\n🔥 ボーナス: $bonusPoints\n📊 正答率: $percentage%\n\n私のスコアを超えられますか？\n\nアプリをダウンロード:';
   }
 }

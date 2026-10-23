@@ -27,64 +27,60 @@ class _Highlight {
 
 final List<_Highlight> _highlights = [
   _Highlight(
-    '🎓',
-    'Certificates',
-    'Finish all 5 sets of a category to earn a certificate you can '
-        'download and share.',
-    actionLabel: 'View certificates',
-    featureId: WhatsNewService.certificates,
-    destination: (_) => const CertificatesScreen(),
-  ),
-  const _Highlight(
-    '📚',
-    'A new Set 5 in every category',
-    'All 21 categories now have a fifth set of fresh questions.',
-  ),
-  _Highlight(
-    '🎲',
-    'Classic board games',
-    'Play Tic-Tac-Toe against the computer, Connect Four with a friend, or '
-        'Ludo against three bots.',
-    actionLabel: 'Play now',
+    '🧩',
+    'Jigsaw and Arrow Puzzle',
+    'Solve 100 illustrated jigsaw puzzles and clear 100 arrow boards.',
+    actionLabel: 'Play games',
     featureId: WhatsNewService.games,
     destination: (_) => const GamesScreen(),
   ),
-  const _Highlight(
-    '📅',
-    'Daily Quiz from every category',
-    'Each day\'s quiz now mixes questions from all 21 categories.',
-  ),
   _Highlight(
-    '🎨',
-    '5 new themes',
-    'Sakura, Sunset, Coffee, Aurora and Matrix are ready to unlock.',
+    '🦸',
+    'More themes, plus theme search',
+    'Browse Army, Spider-Man, Krrish, Avengers, DC, Rainbow and seasonal '
+        'themes. Search the catalog to find a palette quickly.',
     actionLabel: 'Browse themes',
     featureId: WhatsNewService.themes,
     destination: (_) => const ThemeScreen(),
   ),
   _Highlight(
     '🌍',
-    '10 new languages',
-    'Spanish, French, German, Portuguese, Arabic, Indonesian, Russian, '
-        'Japanese, Chinese and Bengali.',
+    '32 interface languages',
+    'Choose from the existing languages and all 22 scheduled Indian '
+        'languages.',
     actionLabel: 'Change language',
     featureId: WhatsNewService.settings,
     destination: (_) => const SettingsScreen(),
   ),
+  const _Highlight(
+    '📝',
+    'More distinct quiz questions',
+    'Repeated questions were replaced across eight categories while keeping '
+        '25 questions per set. Some new Hindi and Marathi prompts currently '
+        'appear in English.',
+  ),
+  _Highlight(
+    '🎓',
+    'Course completion certificates',
+    'Save a category-named course completion certificate as a PDF.',
+    actionLabel: 'View certificates',
+    featureId: WhatsNewService.certificates,
+    destination: (_) => const CertificatesScreen(),
+  ),
+  const _Highlight(
+    '🎂',
+    'Developer birthday',
+    'On March 13, the welcome screen celebrates developer Nayan Chaudhari '
+        'and links to his LinkedIn profile.',
+  ),
   _Highlight(
     '🏅',
-    'New milestones',
-    'More achievements for quizzes, points, daily quizzes, sets and '
+    'More milestones',
+    'Achievements now cover quizzes, points, daily quizzes, sets and '
         'certificates.',
     actionLabel: 'See milestones',
     featureId: WhatsNewService.achievements,
     destination: (_) => const AchievementScreen(),
-  ),
-  const _Highlight(
-    '🔔',
-    'Smarter notifications',
-    'Get alerts when an update is available on Google Play and new '
-        'features in your notification centre.',
   ),
 ];
 

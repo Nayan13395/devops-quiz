@@ -24,8 +24,11 @@ class ThemeProvider extends ChangeNotifier {
   // LOAD SAVED THEME
   // =========================================================
 
-  Future<void> loadTheme({required int totalPoints}) async {
-    _selectedTheme = await ThemeService.loadAvailableTheme(totalPoints);
+  Future<void> loadTheme({required int totalPoints, DateTime? now}) async {
+    _selectedTheme = await ThemeService.loadAvailableTheme(
+      totalPoints,
+      now: now,
+    );
 
     _initialized = true;
 
@@ -39,12 +42,14 @@ class ThemeProvider extends ChangeNotifier {
   Future<bool> setTheme({
     required AppThemeType theme,
     required int totalPoints,
+    DateTime? now,
   }) async {
     final themeInfo = AppThemes.getTheme(theme);
 
     final unlocked = ThemeService.isThemeUnlocked(
       theme: themeInfo,
       totalPoints: totalPoints,
+      now: now,
     );
 
     if (!unlocked) {
@@ -88,6 +93,7 @@ class ThemeProvider extends ChangeNotifier {
       brightness: theme.brightness,
       primary: theme.primaryColor,
       secondary: theme.secondaryColor,
+      tertiary: theme.tertiaryColor,
     );
 
     return ThemeData(

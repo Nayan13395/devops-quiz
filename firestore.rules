@@ -2,6 +2,96 @@ rules_version = '2';
 
 service cloud.firestore {
   match /databases/{database}/documents {
+    function referralUser() {
+      return request.auth != null
+        && request.auth.token.email_verified == true
+        && request.auth.token.firebase.sign_in_provider == 'google.com';
+    }
+
+    function accountPath(uid) {
+      return /databases/$(database)/documents/referralAccounts/$(uid);
+    }
+
+    function claimPath(uid) {
+      return /databases/$(database)/documents/referralClaims/$(uid);
+    }
+
+    function codePath(code) {
+      return /databases/$(database)/documents/referralCodes/$(code);
+    }
+
+    function validNewClaim(claim, referrer) {
+      let uid = request.auth.uid;
+      let before = get(accountPath(uid)).data;
+      let after = getAfter(accountPath(uid)).data;
+      return !exists(claimPath(uid))
+        && claim.keys().hasOnly(['referrerUid', 'code', 'points', 'createdAt'])
+        && claim.referrerUid == referrer
+        && referrer != uid
+        && claim.points == 1000
+        && claim.createdAt == request.time
+        && before.referredBy == null
+        && after.referredBy == referrer
+        && after.redeemedCode == claim.code
+        && get(codePath(claim.code)).data.ownerUid == referrer;
+    }
+
+    function referrerCredited(referrer) {
+      let before = get(accountPath(referrer)).data;
+      let after = getAfter(accountPath(referrer)).data;
+      return after.referralCount == before.referralCount + 1
+        && after.rewardPoints == before.rewardPoints + 1000;
+    }
+
+    match /referralCodes/{code} {
+      allow get: if referralUser();
+      allow list: if false;
+      allow create: if referralUser()
+        && code.matches('^DEV-[ABCDEFGHJKLMNPQRSTUVWXYZ23456789]{6,12}$')
+        && request.resource.data.keys().hasOnly(['ownerUid', 'createdAt'])
+        && request.resource.data.ownerUid == request.auth.uid
+        && request.resource.data.createdAt == request.time
+        && !exists(accountPath(request.auth.uid))
+        && getAfter(accountPath(request.auth.uid)).data.code == code;
+      allow update, delete: if false;
+    }
+
+    match /referralAccounts/{uid} {
+      allow get: if referralUser() && request.auth.uid == uid;
+      allow list: if false;
+      allow create: if referralUser() && request.auth.uid == uid
+        && request.resource.data.keys().hasOnly(['code', 'referralCount', 'rewardPoints', 'referredBy', 'redeemedCode', 'createdAt'])
+        && request.resource.data.code.matches('^DEV-[ABCDEFGHJKLMNPQRSTUVWXYZ23456789]{6,12}$')
+        && request.resource.data.referralCount == 0
+        && request.resource.data.rewardPoints == 0
+        && request.resource.data.referredBy == null
+        && request.resource.data.redeemedCode == null
+        && request.resource.data.createdAt == request.time
+        && !exists(codePath(request.resource.data.code))
+        && getAfter(codePath(request.resource.data.code)).data.ownerUid == uid;
+      allow update: if referralUser() && (
+        (request.auth.uid == uid
+          && request.resource.data.diff(resource.data).affectedKeys().hasOnly(['referredBy', 'redeemedCode'])
+          && validNewClaim(getAfter(claimPath(uid)).data, request.resource.data.referredBy)
+          && referrerCredited(request.resource.data.referredBy))
+        || (request.auth.uid != uid
+          && request.resource.data.diff(resource.data).affectedKeys().hasOnly(['referralCount', 'rewardPoints'])
+          && request.resource.data.referralCount == resource.data.referralCount + 1
+          && request.resource.data.rewardPoints == resource.data.rewardPoints + 1000
+          && validNewClaim(getAfter(claimPath(request.auth.uid)).data, uid))
+      );
+      allow delete: if false;
+    }
+
+    match /referralClaims/{uid} {
+      allow get: if referralUser() && request.auth.uid == uid;
+      allow list: if false;
+      allow create: if referralUser() && request.auth.uid == uid
+        && validNewClaim(request.resource.data, request.resource.data.referrerUid)
+        && referrerCredited(request.resource.data.referrerUid);
+      allow update, delete: if false;
+    }
+
     match /dailyLeaderboards/{date}/players/{uid} {
       allow read: if request.auth != null;
       allow write: if false;

@@ -890,230 +890,150 @@
       {
           "category":  "Docker",
           "set":  2,
-          "question":  "Docker build context à¤®à¤§à¥‚à¤¨ paths à¤µà¤—à¤³à¤£à¤¾à¤°à¥€ file à¤•à¥‹à¤£à¤¤à¥€?",
+          "question":  "Docker image content digest reference",
+          "options":  ["sha256 digest", "copy only final artifacts into a smaller image", "a changed prior layer rebuilds following layers", ".dockerignore"],
+          "answer":  "sha256 digest"
+      },
+      {
+          "category":  "Docker",
+          "set":  3,
+          "question":  "Docker container restart policy",
+          "options":  ["restart policy", "sha256 digest", "copy only final artifacts into a smaller image", "a changed prior layer rebuilds following layers"],
+          "answer":  "restart policy"
+      },
+      {
+          "category":  "Docker",
+          "set":  4,
+          "question":  "Docker container read-only root",
+          "options":  ["read-only root filesystem", "sha256 digest", "copy only final artifacts into a smaller image", "a changed prior layer rebuilds following layers"],
+          "answer":  "read-only root filesystem"
+      },
+      {
+          "category":  "Docker",
+          "set":  5,
+          "question":  "Docker image load counterpart",
+          "options":  ["docker load", "sha256 digest", "copy only final artifacts into a smaller image", "a changed prior layer rebuilds following layers"],
+          "answer":  "docker load"
+      },
+      {
+          "category":  "Docker",
+          "set":  1,
+          "question":  "à¤†à¤§à¥€à¤ªà¤¾à¤¸à¥‚à¤¨ à¤šà¤¾à¤²à¥‚ à¤…à¤¸à¤²à¥‡à¤²à¥à¤¯à¤¾ container à¤®à¤§à¥à¤¯à¥‡ à¤¨à¤µà¥€à¤¨ process à¤šà¤¾à¤²à¤µà¤£à¤¾à¤°à¤¾ command à¤•à¥‹à¤£à¤¤à¤¾?",
           "options":  [
-                          ".dockerignore",
-                          ".gitignore",
-                          "Dockerfile.lock",
-                          "docker.exclude"
+                          "docker exec",
+                          "docker attach",
+                          "docker build",
+                          "docker commit"
                       ],
+          "answer":  "docker exec"
+      },
+      {
+          "category":  "Docker",
+          "set":  2,
+          "question":  "Docker multi-stage build purpose",
+          "options":  ["copy only final artifacts into a smaller image", "sha256 digest", "a changed prior layer rebuilds following layers", ".dockerignore"],
+          "answer":  "copy only final artifacts into a smaller image"
+      },
+      {
+          "category":  "Docker",
+          "set":  3,
+          "question":  "Docker image layer reuse",
+          "options":  ["identical layers are shared", "sha256 digest", "copy only final artifacts into a smaller image", "a changed prior layer rebuilds following layers"],
+          "answer":  "identical layers are shared"
+      },
+      {
+          "category":  "Docker",
+          "set":  4,
+          "question":  "Docker resource memory limit flag",
+          "options":  ["--memory", "sha256 digest", "copy only final artifacts into a smaller image", "a changed prior layer rebuilds following layers"],
+          "answer":  "--memory"
+      },
+      {
+          "category":  "Docker",
+          "set":  5,
+          "question":  "Docker container export result",
+          "options":  ["a filesystem tar archive", "sha256 digest", "copy only final artifacts into a smaller image", "a changed prior layer rebuilds following layers"],
+          "answer":  "a filesystem tar archive"
+      },
+      {
+          "category":  "Docker",
+          "set":  1,
+          "question":  "à¤ªà¥à¤¢à¥€à¤² build steps à¤†à¤£à¤¿ container execution à¤¸à¤¾à¤ à¥€ user à¤¨à¤¿à¤µà¤¡à¤£à¤¾à¤°à¤¾ Dockerfile instruction à¤•à¥‹à¤£à¤¤à¤¾?",
+          "options":  [
+                          "USER",
+                          "OWNER",
+                          "RUNAS",
+                          "LOGIN"
+                      ],
+          "answer":  "USER"
+      },
+      {
+          "category":  "Docker",
+          "set":  2,
+          "question":  "Docker build cache invalidation",
+          "options":  ["a changed prior layer rebuilds following layers", "sha256 digest", "copy only final artifacts into a smaller image", ".dockerignore"],
+          "answer":  "a changed prior layer rebuilds following layers"
+      },
+      {
+          "category":  "Docker",
+          "set":  3,
+          "question":  "Docker image cleanup command",
+          "options":  ["docker image prune", "sha256 digest", "copy only final artifacts into a smaller image", "a changed prior layer rebuilds following layers"],
+          "answer":  "docker image prune"
+      },
+      {
+          "category":  "Docker",
+          "set":  4,
+          "question":  "Docker CPU quota flag",
+          "options":  ["--cpus", "sha256 digest", "copy only final artifacts into a smaller image", "a changed prior layer rebuilds following layers"],
+          "answer":  "--cpus"
+      },
+      {
+          "category":  "Docker",
+          "set":  5,
+          "question":  "Docker image import command",
+          "options":  ["docker import", "sha256 digest", "copy only final artifacts into a smaller image", "a changed prior layer rebuilds following layers"],
+          "answer":  "docker import"
+      },
+      {
+          "category":  "Docker",
+          "set":  1,
+          "question":  "container à¤†à¤£à¤¿ local filesystem à¤¦à¤°à¤®à¥à¤¯à¤¾à¤¨ files copy à¤•à¤°à¤£à¤¾à¤°à¤¾ command à¤•à¥‹à¤£à¤¤à¤¾?",
+          "options":  [
+                          "docker cp",
+                          "docker save",
+                          "docker export",
+                          "docker pull"
+                      ],
+          "answer":  "docker cp"
+      },
+      {
+          "category":  "Docker",
+          "set":  2,
+          "question":  "Docker build context exclusion file",
+          "options":  [".dockerignore", "sha256 digest", "copy only final artifacts into a smaller image", "a changed prior layer rebuilds following layers"],
           "answer":  ".dockerignore"
       },
       {
           "category":  "Docker",
           "set":  3,
-          "question":  "Docker build context à¤®à¤§à¥‚à¤¨ paths à¤µà¤—à¤³à¤£à¤¾à¤°à¥€ file à¤•à¥‹à¤£à¤¤à¥€?",
-          "options":  [
-                          ".dockerignore",
-                          ".gitignore",
-                          "Dockerfile.lock",
-                          "docker.exclude"
-                      ],
-          "answer":  ".dockerignore"
+          "question":  "Docker container log command",
+          "options":  ["docker logs", "sha256 digest", "copy only final artifacts into a smaller image", "a changed prior layer rebuilds following layers"],
+          "answer":  "docker logs"
       },
       {
           "category":  "Docker",
           "set":  4,
-          "question":  "Docker build context à¤®à¤§à¥‚à¤¨ paths à¤µà¤—à¤³à¤£à¤¾à¤°à¥€ file à¤•à¥‹à¤£à¤¤à¥€?",
-          "options":  [
-                          ".dockerignore",
-                          ".gitignore",
-                          "Dockerfile.lock",
-                          "docker.exclude"
-                      ],
-          "answer":  ".dockerignore"
+          "question":  "Docker Compose service dependency",
+          "options":  ["depends_on", "sha256 digest", "copy only final artifacts into a smaller image", "a changed prior layer rebuilds following layers"],
+          "answer":  "depends_on"
       },
       {
           "category":  "Docker",
           "set":  5,
-          "question":  "Docker build context à¤®à¤§à¥‚à¤¨ paths à¤µà¤—à¤³à¤£à¤¾à¤°à¥€ file à¤•à¥‹à¤£à¤¤à¥€?",
-          "options":  [
-                          ".dockerignore",
-                          ".gitignore",
-                          "Dockerfile.lock",
-                          "docker.exclude"
-                      ],
-          "answer":  ".dockerignore"
-      },
-      {
-          "category":  "Docker",
-          "set":  1,
-          "question":  "à¤†à¤§à¥€à¤ªà¤¾à¤¸à¥‚à¤¨ à¤šà¤¾à¤²à¥‚ à¤…à¤¸à¤²à¥‡à¤²à¥à¤¯à¤¾ container à¤®à¤§à¥à¤¯à¥‡ à¤¨à¤µà¥€à¤¨ process à¤šà¤¾à¤²à¤µà¤£à¤¾à¤°à¤¾ command à¤•à¥‹à¤£à¤¤à¤¾?",
-          "options":  [
-                          "docker exec",
-                          "docker attach",
-                          "docker build",
-                          "docker commit"
-                      ],
-          "answer":  "docker exec"
-      },
-      {
-          "category":  "Docker",
-          "set":  2,
-          "question":  "à¤†à¤§à¥€à¤ªà¤¾à¤¸à¥‚à¤¨ à¤šà¤¾à¤²à¥‚ à¤…à¤¸à¤²à¥‡à¤²à¥à¤¯à¤¾ container à¤®à¤§à¥à¤¯à¥‡ à¤¨à¤µà¥€à¤¨ process à¤šà¤¾à¤²à¤µà¤£à¤¾à¤°à¤¾ command à¤•à¥‹à¤£à¤¤à¤¾?",
-          "options":  [
-                          "docker exec",
-                          "docker attach",
-                          "docker build",
-                          "docker commit"
-                      ],
-          "answer":  "docker exec"
-      },
-      {
-          "category":  "Docker",
-          "set":  3,
-          "question":  "à¤†à¤§à¥€à¤ªà¤¾à¤¸à¥‚à¤¨ à¤šà¤¾à¤²à¥‚ à¤…à¤¸à¤²à¥‡à¤²à¥à¤¯à¤¾ container à¤®à¤§à¥à¤¯à¥‡ à¤¨à¤µà¥€à¤¨ process à¤šà¤¾à¤²à¤µà¤£à¤¾à¤°à¤¾ command à¤•à¥‹à¤£à¤¤à¤¾?",
-          "options":  [
-                          "docker exec",
-                          "docker attach",
-                          "docker build",
-                          "docker commit"
-                      ],
-          "answer":  "docker exec"
-      },
-      {
-          "category":  "Docker",
-          "set":  4,
-          "question":  "à¤†à¤§à¥€à¤ªà¤¾à¤¸à¥‚à¤¨ à¤šà¤¾à¤²à¥‚ à¤…à¤¸à¤²à¥‡à¤²à¥à¤¯à¤¾ container à¤®à¤§à¥à¤¯à¥‡ à¤¨à¤µà¥€à¤¨ process à¤šà¤¾à¤²à¤µà¤£à¤¾à¤°à¤¾ command à¤•à¥‹à¤£à¤¤à¤¾?",
-          "options":  [
-                          "docker exec",
-                          "docker attach",
-                          "docker build",
-                          "docker commit"
-                      ],
-          "answer":  "docker exec"
-      },
-      {
-          "category":  "Docker",
-          "set":  5,
-          "question":  "à¤†à¤§à¥€à¤ªà¤¾à¤¸à¥‚à¤¨ à¤šà¤¾à¤²à¥‚ à¤…à¤¸à¤²à¥‡à¤²à¥à¤¯à¤¾ container à¤®à¤§à¥à¤¯à¥‡ à¤¨à¤µà¥€à¤¨ process à¤šà¤¾à¤²à¤µà¤£à¤¾à¤°à¤¾ command à¤•à¥‹à¤£à¤¤à¤¾?",
-          "options":  [
-                          "docker exec",
-                          "docker attach",
-                          "docker build",
-                          "docker commit"
-                      ],
-          "answer":  "docker exec"
-      },
-      {
-          "category":  "Docker",
-          "set":  1,
-          "question":  "à¤ªà¥à¤¢à¥€à¤² build steps à¤†à¤£à¤¿ container execution à¤¸à¤¾à¤ à¥€ user à¤¨à¤¿à¤µà¤¡à¤£à¤¾à¤°à¤¾ Dockerfile instruction à¤•à¥‹à¤£à¤¤à¤¾?",
-          "options":  [
-                          "USER",
-                          "OWNER",
-                          "RUNAS",
-                          "LOGIN"
-                      ],
-          "answer":  "USER"
-      },
-      {
-          "category":  "Docker",
-          "set":  2,
-          "question":  "à¤ªà¥à¤¢à¥€à¤² build steps à¤†à¤£à¤¿ container execution à¤¸à¤¾à¤ à¥€ user à¤¨à¤¿à¤µà¤¡à¤£à¤¾à¤°à¤¾ Dockerfile instruction à¤•à¥‹à¤£à¤¤à¤¾?",
-          "options":  [
-                          "USER",
-                          "OWNER",
-                          "RUNAS",
-                          "LOGIN"
-                      ],
-          "answer":  "USER"
-      },
-      {
-          "category":  "Docker",
-          "set":  3,
-          "question":  "à¤ªà¥à¤¢à¥€à¤² build steps à¤†à¤£à¤¿ container execution à¤¸à¤¾à¤ à¥€ user à¤¨à¤¿à¤µà¤¡à¤£à¤¾à¤°à¤¾ Dockerfile instruction à¤•à¥‹à¤£à¤¤à¤¾?",
-          "options":  [
-                          "USER",
-                          "OWNER",
-                          "RUNAS",
-                          "LOGIN"
-                      ],
-          "answer":  "USER"
-      },
-      {
-          "category":  "Docker",
-          "set":  4,
-          "question":  "à¤ªà¥à¤¢à¥€à¤² build steps à¤†à¤£à¤¿ container execution à¤¸à¤¾à¤ à¥€ user à¤¨à¤¿à¤µà¤¡à¤£à¤¾à¤°à¤¾ Dockerfile instruction à¤•à¥‹à¤£à¤¤à¤¾?",
-          "options":  [
-                          "USER",
-                          "OWNER",
-                          "RUNAS",
-                          "LOGIN"
-                      ],
-          "answer":  "USER"
-      },
-      {
-          "category":  "Docker",
-          "set":  5,
-          "question":  "à¤ªà¥à¤¢à¥€à¤² build steps à¤†à¤£à¤¿ container execution à¤¸à¤¾à¤ à¥€ user à¤¨à¤¿à¤µà¤¡à¤£à¤¾à¤°à¤¾ Dockerfile instruction à¤•à¥‹à¤£à¤¤à¤¾?",
-          "options":  [
-                          "USER",
-                          "OWNER",
-                          "RUNAS",
-                          "LOGIN"
-                      ],
-          "answer":  "USER"
-      },
-      {
-          "category":  "Docker",
-          "set":  1,
-          "question":  "container à¤†à¤£à¤¿ local filesystem à¤¦à¤°à¤®à¥à¤¯à¤¾à¤¨ files copy à¤•à¤°à¤£à¤¾à¤°à¤¾ command à¤•à¥‹à¤£à¤¤à¤¾?",
-          "options":  [
-                          "docker cp",
-                          "docker save",
-                          "docker export",
-                          "docker pull"
-                      ],
-          "answer":  "docker cp"
-      },
-      {
-          "category":  "Docker",
-          "set":  2,
-          "question":  "container à¤†à¤£à¤¿ local filesystem à¤¦à¤°à¤®à¥à¤¯à¤¾à¤¨ files copy à¤•à¤°à¤£à¤¾à¤°à¤¾ command à¤•à¥‹à¤£à¤¤à¤¾?",
-          "options":  [
-                          "docker cp",
-                          "docker save",
-                          "docker export",
-                          "docker pull"
-                      ],
-          "answer":  "docker cp"
-      },
-      {
-          "category":  "Docker",
-          "set":  3,
-          "question":  "container à¤†à¤£à¤¿ local filesystem à¤¦à¤°à¤®à¥à¤¯à¤¾à¤¨ files copy à¤•à¤°à¤£à¤¾à¤°à¤¾ command à¤•à¥‹à¤£à¤¤à¤¾?",
-          "options":  [
-                          "docker cp",
-                          "docker save",
-                          "docker export",
-                          "docker pull"
-                      ],
-          "answer":  "docker cp"
-      },
-      {
-          "category":  "Docker",
-          "set":  4,
-          "question":  "container à¤†à¤£à¤¿ local filesystem à¤¦à¤°à¤®à¥à¤¯à¤¾à¤¨ files copy à¤•à¤°à¤£à¤¾à¤°à¤¾ command à¤•à¥‹à¤£à¤¤à¤¾?",
-          "options":  [
-                          "docker cp",
-                          "docker save",
-                          "docker export",
-                          "docker pull"
-                      ],
-          "answer":  "docker cp"
-      },
-      {
-          "category":  "Docker",
-          "set":  5,
-          "question":  "container à¤†à¤£à¤¿ local filesystem à¤¦à¤°à¤®à¥à¤¯à¤¾à¤¨ files copy à¤•à¤°à¤£à¤¾à¤°à¤¾ command à¤•à¥‹à¤£à¤¤à¤¾?",
-          "options":  [
-                          "docker cp",
-                          "docker save",
-                          "docker export",
-                          "docker pull"
-                      ],
-          "answer":  "docker cp"
+          "question":  "Docker prune volume option",
+          "options":  ["docker volume prune", "sha256 digest", "copy only final artifacts into a smaller image", "a changed prior layer rebuilds following layers"],
+          "answer":  "docker volume prune"
       },
       {
           "category":  "Docker",
@@ -1130,50 +1050,30 @@
       {
           "category":  "Docker",
           "set":  2,
-          "question":  "Docker object à¤šà¥‡ à¤¤à¤ªà¤¶à¥€à¤²à¤µà¤¾à¤° metadata à¤¦à¤¾à¤–à¤µà¤£à¤¾à¤°à¤¾ command à¤•à¥‹à¤£à¤¤à¤¾?",
-          "options":  [
-                          "docker inspect",
-                          "docker top",
-                          "docker diff",
-                          "docker pause"
-                      ],
-          "answer":  "docker inspect"
+          "question":  "Docker container health probe",
+          "options":  ["HEALTHCHECK", "sha256 digest", "copy only final artifacts into a smaller image", "a changed prior layer rebuilds following layers"],
+          "answer":  "HEALTHCHECK"
       },
       {
           "category":  "Docker",
           "set":  3,
-          "question":  "Docker object à¤šà¥‡ à¤¤à¤ªà¤¶à¥€à¤²à¤µà¤¾à¤° metadata à¤¦à¤¾à¤–à¤µà¤£à¤¾à¤°à¤¾ command à¤•à¥‹à¤£à¤¤à¤¾?",
-          "options":  [
-                          "docker inspect",
-                          "docker top",
-                          "docker diff",
-                          "docker pause"
-                      ],
+          "question":  "Docker container inspect command",
+          "options":  ["docker inspect", "sha256 digest", "copy only final artifacts into a smaller image", "a changed prior layer rebuilds following layers"],
           "answer":  "docker inspect"
       },
       {
           "category":  "Docker",
           "set":  4,
-          "question":  "Docker object à¤šà¥‡ à¤¤à¤ªà¤¶à¥€à¤²à¤µà¤¾à¤° metadata à¤¦à¤¾à¤–à¤µà¤£à¤¾à¤°à¤¾ command à¤•à¥‹à¤£à¤¤à¤¾?",
-          "options":  [
-                          "docker inspect",
-                          "docker top",
-                          "docker diff",
-                          "docker pause"
-                      ],
-          "answer":  "docker inspect"
+          "question":  "Docker Compose environment file",
+          "options":  [".env", "sha256 digest", "copy only final artifacts into a smaller image", "a changed prior layer rebuilds following layers"],
+          "answer":  ".env"
       },
       {
           "category":  "Docker",
           "set":  5,
-          "question":  "Docker object à¤šà¥‡ à¤¤à¤ªà¤¶à¥€à¤²à¤µà¤¾à¤° metadata à¤¦à¤¾à¤–à¤µà¤£à¤¾à¤°à¤¾ command à¤•à¥‹à¤£à¤¤à¤¾?",
-          "options":  [
-                          "docker inspect",
-                          "docker top",
-                          "docker diff",
-                          "docker pause"
-                      ],
-          "answer":  "docker inspect"
+          "question":  "Docker container init process flag",
+          "options":  ["--init", "sha256 digest", "copy only final artifacts into a smaller image", "a changed prior layer rebuilds following layers"],
+          "answer":  "--init"
       },
       {
           "category":  "Docker",
@@ -1190,50 +1090,30 @@
       {
           "category":  "Docker",
           "set":  2,
-          "question":  "à¤•à¥‹à¤£à¤¤à¤¾ command container à¤šà¥‡ log output à¤¸à¤¤à¤¤ à¤¦à¤¾à¤–à¤µà¤¤à¥‹?",
-          "options":  [
-                          "docker logs -f",
-                          "docker events --once",
-                          "docker stats --no-stream",
-                          "docker history"
-                      ],
-          "answer":  "docker logs -f"
+          "question":  "Docker named volume lifecycle",
+          "options":  ["persists independently of a container", "sha256 digest", "copy only final artifacts into a smaller image", "a changed prior layer rebuilds following layers"],
+          "answer":  "persists independently of a container"
       },
       {
           "category":  "Docker",
           "set":  3,
-          "question":  "à¤•à¥‹à¤£à¤¤à¤¾ command container à¤šà¥‡ log output à¤¸à¤¤à¤¤ à¤¦à¤¾à¤–à¤µà¤¤à¥‹?",
-          "options":  [
-                          "docker logs -f",
-                          "docker events --once",
-                          "docker stats --no-stream",
-                          "docker history"
-                      ],
-          "answer":  "docker logs -f"
+          "question":  "Docker process list command",
+          "options":  ["docker top", "sha256 digest", "copy only final artifacts into a smaller image", "a changed prior layer rebuilds following layers"],
+          "answer":  "docker top"
       },
       {
           "category":  "Docker",
           "set":  4,
-          "question":  "à¤•à¥‹à¤£à¤¤à¤¾ command container à¤šà¥‡ log output à¤¸à¤¤à¤¤ à¤¦à¤¾à¤–à¤µà¤¤à¥‹?",
-          "options":  [
-                          "docker logs -f",
-                          "docker events --once",
-                          "docker stats --no-stream",
-                          "docker history"
-                      ],
-          "answer":  "docker logs -f"
+          "question":  "Docker Compose detached launch",
+          "options":  ["docker compose up -d", "sha256 digest", "copy only final artifacts into a smaller image", "a changed prior layer rebuilds following layers"],
+          "answer":  "docker compose up -d"
       },
       {
           "category":  "Docker",
           "set":  5,
-          "question":  "à¤•à¥‹à¤£à¤¤à¤¾ command container à¤šà¥‡ log output à¤¸à¤¤à¤¤ à¤¦à¤¾à¤–à¤µà¤¤à¥‹?",
-          "options":  [
-                          "docker logs -f",
-                          "docker events --once",
-                          "docker stats --no-stream",
-                          "docker history"
-                      ],
-          "answer":  "docker logs -f"
+          "question":  "Docker user namespace purpose",
+          "options":  ["map container users to unprivileged host users", "sha256 digest", "copy only final artifacts into a smaller image", "a changed prior layer rebuilds following layers"],
+          "answer":  "map container users to unprivileged host users"
       },
       {
           "category":  "Docker",
@@ -1250,50 +1130,30 @@
       {
           "category":  "Docker",
           "set":  2,
-          "question":  "container à¤¬à¤‚à¤¦ à¤à¤¾à¤²à¥à¤¯à¤¾à¤µà¤° à¤¤à¥‹ à¤†à¤ªà¥‹à¤†à¤ª à¤•à¤¾à¤¢à¥‚à¤¨ à¤Ÿà¤¾à¤•à¤£à¤¾à¤°à¤¾ docker run option à¤•à¥‹à¤£à¤¤à¤¾?",
-          "options":  [
-                          "--rm",
-                          "--pull",
-                          "--init",
-                          "--detach"
-                      ],
-          "answer":  "--rm"
+          "question":  "Docker bind mount source",
+          "options":  ["host filesystem path", "sha256 digest", "copy only final artifacts into a smaller image", "a changed prior layer rebuilds following layers"],
+          "answer":  "host filesystem path"
       },
       {
           "category":  "Docker",
           "set":  3,
-          "question":  "container à¤¬à¤‚à¤¦ à¤à¤¾à¤²à¥à¤¯à¤¾à¤µà¤° à¤¤à¥‹ à¤†à¤ªà¥‹à¤†à¤ª à¤•à¤¾à¤¢à¥‚à¤¨ à¤Ÿà¤¾à¤•à¤£à¤¾à¤°à¤¾ docker run option à¤•à¥‹à¤£à¤¤à¤¾?",
-          "options":  [
-                          "--rm",
-                          "--pull",
-                          "--init",
-                          "--detach"
-                      ],
-          "answer":  "--rm"
+          "question":  "Docker image history command",
+          "options":  ["docker history", "sha256 digest", "copy only final artifacts into a smaller image", "a changed prior layer rebuilds following layers"],
+          "answer":  "docker history"
       },
       {
           "category":  "Docker",
           "set":  4,
-          "question":  "container à¤¬à¤‚à¤¦ à¤à¤¾à¤²à¥à¤¯à¤¾à¤µà¤° à¤¤à¥‹ à¤†à¤ªà¥‹à¤†à¤ª à¤•à¤¾à¤¢à¥‚à¤¨ à¤Ÿà¤¾à¤•à¤£à¤¾à¤°à¤¾ docker run option à¤•à¥‹à¤£à¤¤à¤¾?",
-          "options":  [
-                          "--rm",
-                          "--pull",
-                          "--init",
-                          "--detach"
-                      ],
-          "answer":  "--rm"
+          "question":  "Docker Compose stop behavior",
+          "options":  ["stops services without removing them", "sha256 digest", "copy only final artifacts into a smaller image", "a changed prior layer rebuilds following layers"],
+          "answer":  "stops services without removing them"
       },
       {
           "category":  "Docker",
           "set":  5,
-          "question":  "container à¤¬à¤‚à¤¦ à¤à¤¾à¤²à¥à¤¯à¤¾à¤µà¤° à¤¤à¥‹ à¤†à¤ªà¥‹à¤†à¤ª à¤•à¤¾à¤¢à¥‚à¤¨ à¤Ÿà¤¾à¤•à¤£à¤¾à¤°à¤¾ docker run option à¤•à¥‹à¤£à¤¤à¤¾?",
-          "options":  [
-                          "--rm",
-                          "--pull",
-                          "--init",
-                          "--detach"
-                      ],
-          "answer":  "--rm"
+          "question":  "Docker secrets storage purpose",
+          "options":  ["sensitive values mounted to services", "sha256 digest", "copy only final artifacts into a smaller image", "a changed prior layer rebuilds following layers"],
+          "answer":  "sensitive values mounted to services"
       },
       {
           "category":  "Docker",
@@ -1310,50 +1170,30 @@
       {
           "category":  "Docker",
           "set":  2,
-          "question":  "multi-stage Docker build à¤šà¤¾ à¤®à¥à¤–à¥à¤¯ à¤‰à¤¦à¥à¤¦à¥‡à¤¶ à¤•à¤¾à¤¯ à¤†à¤¹à¥‡?",
-          "options":  [
-                          "build artifacts à¤²à¤¹à¤¾à¤¨ final image à¤®à¤§à¥à¤¯à¥‡ copy à¤•à¤°à¤£à¥‡",
-                          "à¤ªà¥à¤°à¤¤à¥à¤¯à¥‡à¤• stage container à¤®à¥à¤¹à¤£à¥‚à¤¨ à¤šà¤¾à¤²à¤µà¤£à¥‡",
-                          "à¤¸à¤°à¥à¤µ build tools final image à¤®à¤§à¥à¤¯à¥‡ à¤ à¥‡à¤µà¤£à¥‡",
-                          "Docker volumes à¤šà¥à¤¯à¤¾ à¤œà¤¾à¤—à¥€ layers à¤µà¤¾à¤ªà¤°à¤£à¥‡"
-                      ],
-          "answer":  "build artifacts à¤²à¤¹à¤¾à¤¨ final image à¤®à¤§à¥à¤¯à¥‡ copy à¤•à¤°à¤£à¥‡"
+          "question":  "Docker bridge network behavior",
+          "options":  ["connects containers on a virtual subnet", "sha256 digest", "copy only final artifacts into a smaller image", "a changed prior layer rebuilds following layers"],
+          "answer":  "connects containers on a virtual subnet"
       },
       {
           "category":  "Docker",
           "set":  3,
-          "question":  "multi-stage Docker build à¤šà¤¾ à¤®à¥à¤–à¥à¤¯ à¤‰à¤¦à¥à¤¦à¥‡à¤¶ à¤•à¤¾à¤¯ à¤†à¤¹à¥‡?",
-          "options":  [
-                          "build artifacts à¤²à¤¹à¤¾à¤¨ final image à¤®à¤§à¥à¤¯à¥‡ copy à¤•à¤°à¤£à¥‡",
-                          "à¤ªà¥à¤°à¤¤à¥à¤¯à¥‡à¤• stage container à¤®à¥à¤¹à¤£à¥‚à¤¨ à¤šà¤¾à¤²à¤µà¤£à¥‡",
-                          "à¤¸à¤°à¥à¤µ build tools final image à¤®à¤§à¥à¤¯à¥‡ à¤ à¥‡à¤µà¤£à¥‡",
-                          "Docker volumes à¤šà¥à¤¯à¤¾ à¤œà¤¾à¤—à¥€ layers à¤µà¤¾à¤ªà¤°à¤£à¥‡"
-                      ],
-          "answer":  "build artifacts à¤²à¤¹à¤¾à¤¨ final image à¤®à¤§à¥à¤¯à¥‡ copy à¤•à¤°à¤£à¥‡"
+          "question":  "Docker image registry login command",
+          "options":  ["docker login", "sha256 digest", "copy only final artifacts into a smaller image", "a changed prior layer rebuilds following layers"],
+          "answer":  "docker login"
       },
       {
           "category":  "Docker",
           "set":  4,
-          "question":  "multi-stage Docker build à¤šà¤¾ à¤®à¥à¤–à¥à¤¯ à¤‰à¤¦à¥à¤¦à¥‡à¤¶ à¤•à¤¾à¤¯ à¤†à¤¹à¥‡?",
-          "options":  [
-                          "build artifacts à¤²à¤¹à¤¾à¤¨ final image à¤®à¤§à¥à¤¯à¥‡ copy à¤•à¤°à¤£à¥‡",
-                          "à¤ªà¥à¤°à¤¤à¥à¤¯à¥‡à¤• stage container à¤®à¥à¤¹à¤£à¥‚à¤¨ à¤šà¤¾à¤²à¤µà¤£à¥‡",
-                          "à¤¸à¤°à¥à¤µ build tools final image à¤®à¤§à¥à¤¯à¥‡ à¤ à¥‡à¤µà¤£à¥‡",
-                          "Docker volumes à¤šà¥à¤¯à¤¾ à¤œà¤¾à¤—à¥€ layers à¤µà¤¾à¤ªà¤°à¤£à¥‡"
-                      ],
-          "answer":  "build artifacts à¤²à¤¹à¤¾à¤¨ final image à¤®à¤§à¥à¤¯à¥‡ copy à¤•à¤°à¤£à¥‡"
+          "question":  "Docker container exec command",
+          "options":  ["docker exec", "sha256 digest", "copy only final artifacts into a smaller image", "a changed prior layer rebuilds following layers"],
+          "answer":  "docker exec"
       },
       {
           "category":  "Docker",
           "set":  5,
-          "question":  "multi-stage Docker build à¤šà¤¾ à¤®à¥à¤–à¥à¤¯ à¤‰à¤¦à¥à¤¦à¥‡à¤¶ à¤•à¤¾à¤¯ à¤†à¤¹à¥‡?",
-          "options":  [
-                          "build artifacts à¤²à¤¹à¤¾à¤¨ final image à¤®à¤§à¥à¤¯à¥‡ copy à¤•à¤°à¤£à¥‡",
-                          "à¤ªà¥à¤°à¤¤à¥à¤¯à¥‡à¤• stage container à¤®à¥à¤¹à¤£à¥‚à¤¨ à¤šà¤¾à¤²à¤µà¤£à¥‡",
-                          "à¤¸à¤°à¥à¤µ build tools final image à¤®à¤§à¥à¤¯à¥‡ à¤ à¥‡à¤µà¤£à¥‡",
-                          "Docker volumes à¤šà¥à¤¯à¤¾ à¤œà¤¾à¤—à¥€ layers à¤µà¤¾à¤ªà¤°à¤£à¥‡"
-                      ],
-          "answer":  "build artifacts à¤²à¤¹à¤¾à¤¨ final image à¤®à¤§à¥à¤¯à¥‡ copy à¤•à¤°à¤£à¥‡"
+          "question":  "Docker health status values",
+          "options":  ["starting, healthy, unhealthy", "sha256 digest", "copy only final artifacts into a smaller image", "a changed prior layer rebuilds following layers"],
+          "answer":  "starting, healthy, unhealthy"
       },
       {
           "category":  "Docker",
@@ -1370,50 +1210,30 @@
       {
           "category":  "Docker",
           "set":  2,
-          "question":  "named stage à¤²à¤¾ build target à¤®à¥à¤¹à¤£à¥‚à¤¨ à¤¨à¤¿à¤µà¤¡à¤£à¤¾à¤°à¤¾ docker build option à¤•à¥‹à¤£à¤¤à¤¾?",
-          "options":  [
-                          "--target",
-                          "--stage",
-                          "--from",
-                          "--platform"
-                      ],
-          "answer":  "--target"
+          "question":  "Docker host network behavior",
+          "options":  ["shares the host network namespace", "sha256 digest", "copy only final artifacts into a smaller image", "a changed prior layer rebuilds following layers"],
+          "answer":  "shares the host network namespace"
       },
       {
           "category":  "Docker",
           "set":  3,
-          "question":  "named stage à¤²à¤¾ build target à¤®à¥à¤¹à¤£à¥‚à¤¨ à¤¨à¤¿à¤µà¤¡à¤£à¤¾à¤°à¤¾ docker build option à¤•à¥‹à¤£à¤¤à¤¾?",
-          "options":  [
-                          "--target",
-                          "--stage",
-                          "--from",
-                          "--platform"
-                      ],
+          "question":  "Docker build target stage flag",
+          "options":  ["--target", "sha256 digest", "copy only final artifacts into a smaller image", "a changed prior layer rebuilds following layers"],
           "answer":  "--target"
       },
       {
           "category":  "Docker",
           "set":  4,
-          "question":  "named stage à¤²à¤¾ build target à¤®à¥à¤¹à¤£à¥‚à¤¨ à¤¨à¤¿à¤µà¤¡à¤£à¤¾à¤°à¤¾ docker build option à¤•à¥‹à¤£à¤¤à¤¾?",
-          "options":  [
-                          "--target",
-                          "--stage",
-                          "--from",
-                          "--platform"
-                      ],
-          "answer":  "--target"
+          "question":  "Docker container copy command",
+          "options":  ["docker cp", "sha256 digest", "copy only final artifacts into a smaller image", "a changed prior layer rebuilds following layers"],
+          "answer":  "docker cp"
       },
       {
           "category":  "Docker",
           "set":  5,
-          "question":  "named stage à¤²à¤¾ build target à¤®à¥à¤¹à¤£à¥‚à¤¨ à¤¨à¤¿à¤µà¤¡à¤£à¤¾à¤°à¤¾ docker build option à¤•à¥‹à¤£à¤¤à¤¾?",
-          "options":  [
-                          "--target",
-                          "--stage",
-                          "--from",
-                          "--platform"
-                      ],
-          "answer":  "--target"
+          "question":  "Docker daemon socket risk",
+          "options":  ["host-level administrative access", "sha256 digest", "copy only final artifacts into a smaller image", "a changed prior layer rebuilds following layers"],
+          "answer":  "host-level administrative access"
       },
       {
           "category":  "Docker",
@@ -1430,50 +1250,30 @@
       {
           "category":  "Docker",
           "set":  2,
-          "question":  "container à¤šà¤¾ health check à¤ à¤°à¤µà¤£à¤¾à¤°à¤¾ Dockerfile instruction à¤•à¥‹à¤£à¤¤à¤¾?",
-          "options":  [
-                          "HEALTHCHECK",
-                          "HEALTH",
-                          "STATUS",
-                          "ONFAILURE"
-                      ],
-          "answer":  "HEALTHCHECK"
+          "question":  "Docker port publishing flag",
+          "options":  ["-p", "sha256 digest", "copy only final artifacts into a smaller image", "a changed prior layer rebuilds following layers"],
+          "answer":  "-p"
       },
       {
           "category":  "Docker",
           "set":  3,
-          "question":  "container à¤šà¤¾ health check à¤ à¤°à¤µà¤£à¤¾à¤°à¤¾ Dockerfile instruction à¤•à¥‹à¤£à¤¤à¤¾?",
-          "options":  [
-                          "HEALTHCHECK",
-                          "HEALTH",
-                          "STATUS",
-                          "ONFAILURE"
-                      ],
-          "answer":  "HEALTHCHECK"
+          "question":  "Docker build platform option",
+          "options":  ["--platform", "sha256 digest", "copy only final artifacts into a smaller image", "a changed prior layer rebuilds following layers"],
+          "answer":  "--platform"
       },
       {
           "category":  "Docker",
           "set":  4,
-          "question":  "container à¤šà¤¾ health check à¤ à¤°à¤µà¤£à¤¾à¤°à¤¾ Dockerfile instruction à¤•à¥‹à¤£à¤¤à¤¾?",
-          "options":  [
-                          "HEALTHCHECK",
-                          "HEALTH",
-                          "STATUS",
-                          "ONFAILURE"
-                      ],
-          "answer":  "HEALTHCHECK"
+          "question":  "Docker image save format command",
+          "options":  ["docker save", "sha256 digest", "copy only final artifacts into a smaller image", "a changed prior layer rebuilds following layers"],
+          "answer":  "docker save"
       },
       {
           "category":  "Docker",
           "set":  5,
-          "question":  "container à¤šà¤¾ health check à¤ à¤°à¤µà¤£à¤¾à¤°à¤¾ Dockerfile instruction à¤•à¥‹à¤£à¤¤à¤¾?",
-          "options":  [
-                          "HEALTHCHECK",
-                          "HEALTH",
-                          "STATUS",
-                          "ONFAILURE"
-                      ],
-          "answer":  "HEALTHCHECK"
+          "question":  "Dockerfile cache mount feature",
+          "options":  ["BuildKit RUN --mount=type=cache", "sha256 digest", "copy only final artifacts into a smaller image", "a changed prior layer rebuilds following layers"],
+          "answer":  "BuildKit RUN --mount=type=cache"
       },
       {
           "category":  "Docker",
@@ -1490,13 +1290,8 @@
       {
           "category":  "Docker",
           "set":  5,
-          "question":  "à¤•à¥‹à¤£à¤¤à¤¾ docker run option container à¤®à¤§à¥à¤¯à¥‡ host path à¤•à¤¿à¤‚à¤µà¤¾ named volume à¤¸à¥à¤ªà¤·à¥à¤Ÿà¤ªà¤£à¥‡ mount à¤•à¤°à¤¤à¥‹?",
-          "options":  [
-                          "--mount",
-                          "--publish",
-                          "--network",
-                          "--restart"
-                      ],
-          "answer":  "--mount"
+          "question":  "Docker build metadata inspection",
+          "options":  ["docker buildx imagetools inspect", "sha256 digest", "copy only final artifacts into a smaller image", "a changed prior layer rebuilds following layers"],
+          "answer":  "docker buildx imagetools inspect"
       }
 ]

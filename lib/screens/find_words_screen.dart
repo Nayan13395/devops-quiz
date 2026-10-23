@@ -2,6 +2,7 @@ import 'dart:async';
 import 'dart:math' as math;
 
 import 'package:flutter/material.dart';
+import '../widgets/level_picker_dialog.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 import '../services/find_words_level_service.dart';
@@ -102,34 +103,12 @@ class _FindWordsScreenState extends State<FindWordsScreen> {
     );
     final selected = await showDialog<int>(
       context: context,
-      builder: (dialogContext) => AlertDialog(
-        title: const Text('Choose level'),
-        content: SizedBox(
-          width: 360,
-          height: 420,
-          child: GridView.builder(
-            itemCount: maxUnlocked,
-            gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-              crossAxisCount: 5,
-              crossAxisSpacing: 8,
-              mainAxisSpacing: 8,
-            ),
-            itemBuilder: (context, index) {
-              final level = index + 1;
-              return FilledButton.tonal(
-                key: ValueKey('find-words-level-$level'),
-                onPressed: () => Navigator.pop(dialogContext, level),
-                child: Text('$level'),
-              );
-            },
-          ),
-        ),
-        actions: [
-          TextButton(
-            onPressed: () => Navigator.pop(dialogContext),
-            child: const Text('Close'),
-          ),
-        ],
+      builder: (_) => LevelPickerDialog(
+        levelCount: maxUnlocked,
+        isUnlocked: (_) => true,
+        isCompleted: (level) => level <= _completedLevels,
+        currentLevel: _level,
+        levelKeyPrefix: 'find-words',
       ),
     );
     if (selected != null && mounted) _startLevel(selected);
@@ -216,7 +195,7 @@ class _FindWordsScreenState extends State<FindWordsScreen> {
     final points = _reward;
 
     if (firstClear) {
-      await PointService.addLocalPoints(points);
+      await PointService.addPoints(points, source: PointSource.game);
       final prefs = await SharedPreferences.getInstance();
       await prefs.setInt(_progressKey, completedLevel);
       if (!mounted) return;
@@ -391,9 +370,9 @@ class _FindWordsScreenState extends State<FindWordsScreen> {
       );
     }
 
-    final difficulty = _level <= 25
+    final difficulty = _level <= FindWordsLevelService.easyLastLevel
         ? 'Easy'
-        : _level <= 60
+        : _level <= FindWordsLevelService.mediumLastLevel
         ? 'Medium'
         : 'Hard';
 

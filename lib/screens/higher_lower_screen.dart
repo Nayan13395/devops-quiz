@@ -99,7 +99,8 @@ class _HigherLowerScreenState extends State<HigherLowerScreen> {
     });
 
     if (!correct) {
-      if (_runPoints > 0) await PointService.addPoints(_runPoints);
+      if (_runPoints > 0)
+        await PointService.addPoints(_runPoints, source: PointSource.game);
       await _markAsPlayed(); // Mark as played after game over
 
       if (!mounted) return;

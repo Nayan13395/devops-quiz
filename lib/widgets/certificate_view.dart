@@ -73,10 +73,11 @@ class CertificateView extends StatelessWidget {
                       const Text('🎓', style: TextStyle(fontSize: 54)),
                       const SizedBox(height: 4),
                       _fit(
-                        const Text(
-                          'CERTIFICATE OF COMPLETION',
+                        Text(
+                          '${info.category.toUpperCase()} - '
+                          'COURSE COMPLETION CERTIFICATE',
                           style: TextStyle(
-                            fontSize: 40,
+                            fontSize: 34,
                             fontWeight: FontWeight.bold,
                             letterSpacing: 3,
                             color: gold,

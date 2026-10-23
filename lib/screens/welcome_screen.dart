@@ -4,17 +4,22 @@ import 'dart:math' as math;
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 import '../l10n/app_localizations.dart';
 import '../services/daily_login_bonus_service.dart';
+import '../services/developer_celebration_service.dart';
 import '../services/festival_calendar_service.dart';
 import '../services/google_auth_service.dart';
 import '../services/notification_service.dart';
+import '../services/national_day_service.dart';
 import '../services/user_profile_service.dart';
 import '../services/user_session_service.dart';
 import '../widgets/app_drawer.dart';
 import '../widgets/daily_login_bonus_dialog.dart';
+import '../widgets/developer_birthday_dialog.dart';
 import '../widgets/festival_celebration.dart';
+import '../widgets/celebration_country_picker.dart';
 import '../widgets/notification_button.dart';
 import '../widgets/play_store_badge.dart'; // <-- NEW IMPORT
 import 'category_screen.dart';
@@ -38,7 +43,9 @@ class _WelcomeScreenState extends State<WelcomeScreen>
 
   String? _loginType;
 
-  FestivalWindow? _activeFestival;
+  List<FestivalWindow> _activeFestivals = [];
+  String? _countryCode;
+  List<CelebrationCountry> _countries = const [];
 
   Timer? _festivalRefreshTimer;
 
@@ -50,7 +57,8 @@ class _WelcomeScreenState extends State<WelcomeScreen>
   void initState() {
     super.initState();
     WidgetsBinding.instance.addObserver(this);
-    _activeFestival = FestivalCalendarService.activeNow();
+    _activeFestivals = FestivalCalendarService.activeWindowsNow();
+    _loadCelebrationCountry();
     _scheduleFestivalRefresh();
 
     WidgetsBinding.instance.addPostFrameCallback((_) async {
@@ -71,20 +79,41 @@ class _WelcomeScreenState extends State<WelcomeScreen>
       if (_hasSelectedLoginMethod) {
         await _checkDailyLoginBonus();
       }
+
+      await _checkDeveloperBirthday();
     });
+  }
+
+  Future<void> _checkDeveloperBirthday() async {
+    try {
+      final shouldShow = await DeveloperCelebrationService.claimBirthdayPopup(
+        DateTime.now(),
+      );
+      if (!mounted || !shouldShow) return;
+
+      await showDialog<void>(
+        context: context,
+        builder: (_) =>
+            DeveloperBirthdayDialog(onOpenProfile: _openDeveloperProfile),
+      );
+    } catch (error) {
+      debugPrint('Developer birthday celebration could not be shown: $error');
+    }
+  }
+
+  Future<void> _openDeveloperProfile() async {
+    final uri = Uri.parse(DeveloperCelebrationService.linkedInProfileUrl);
+    try {
+      await launchUrl(uri, mode: LaunchMode.externalApplication);
+    } catch (error) {
+      debugPrint('Developer LinkedIn profile could not be opened: $error');
+    }
   }
 
   void _scheduleFestivalRefresh() {
     _festivalRefreshTimer?.cancel();
-    final nowUtc = DateTime.now().toUtc();
-    const indiaOffset = Duration(hours: 5, minutes: 30);
-    final indiaNow = nowUtc.add(indiaOffset);
-    final nextIndiaMidnight = DateTime.utc(
-      indiaNow.year,
-      indiaNow.month,
-      indiaNow.day + 1,
-    ).subtract(indiaOffset);
-    final delay = nextIndiaMidnight.difference(nowUtc);
+    final now = DateTime.now();
+    final delay = DateTime(now.year, now.month, now.day + 1).difference(now);
 
     _festivalRefreshTimer = Timer(
       delay.isNegative ? Duration.zero : delay + const Duration(seconds: 1),
@@ -95,12 +124,42 @@ class _WelcomeScreenState extends State<WelcomeScreen>
   void _refreshFestival() {
     if (!mounted) return;
 
-    final festival = FestivalCalendarService.activeNow();
-    if (festival?.kind != _activeFestival?.kind ||
-        festival?.startsOn != _activeFestival?.startsOn) {
-      setState(() => _activeFestival = festival);
-    }
+    final festivals = FestivalCalendarService.activeWindowsNow(
+      countryCode: _countryCode,
+    );
+    setState(() => _activeFestivals = festivals);
     _scheduleFestivalRefresh();
+  }
+
+  Future<void> _loadCelebrationCountry() async {
+    try {
+      final countries = await NationalDayService.load();
+      final code = await NationalDayService.selectedCountry();
+      if (!mounted) return;
+      setState(() {
+        _countries = countries;
+        _countryCode = code;
+      });
+      _refreshFestival();
+    } catch (error) {
+      debugPrint('Celebration country could not be loaded: $error');
+    }
+  }
+
+  Future<void> _chooseCelebrationCountry() async {
+    final selected = await showDialog<String>(
+      context: context,
+      builder: (_) => CelebrationCountryPicker(
+        countries: _countries,
+        selectedCode: _countryCode,
+      ),
+    );
+    if (selected == null) return;
+    final code = selected.isEmpty ? null : selected;
+    await NationalDayService.selectCountry(code);
+    if (!mounted) return;
+    setState(() => _countryCode = code);
+    _refreshFestival();
   }
 
   @override
@@ -281,7 +340,7 @@ class _WelcomeScreenState extends State<WelcomeScreen>
 
       ScaffoldMessenger.of(
         context,
-      ).showSnackBar(SnackBar(content: Text('Welcome, $firstName! 👋')));
+      ).showSnackBar(SnackBar(content: Text('Welcome, $firstName!')));
 
       // =====================================================
       // OPEN CATEGORY SCREEN
@@ -464,7 +523,7 @@ class _WelcomeScreenState extends State<WelcomeScreen>
       return Column(
         children: [
           Text(
-            'Hi $firstName 👋',
+            'Hi $firstName',
             textAlign: TextAlign.center,
             style: TextStyle(
               fontSize: 28,
@@ -492,7 +551,7 @@ class _WelcomeScreenState extends State<WelcomeScreen>
       children: [
         if (_loginType == 'guest')
           Text(
-            'Welcome 👋',
+            'Welcome',
             textAlign: TextAlign.center,
             style: TextStyle(
               fontSize: 28,
@@ -736,8 +795,14 @@ class _WelcomeScreenState extends State<WelcomeScreen>
 
       appBar: AppBar(
         title: const Text('DevOps Quiz'),
-        actions: const [
-          Padding(
+        actions: [
+          IconButton(
+            tooltip:
+                'Country / region${_countryCode == null ? '' : ': $_countryCode'}',
+            onPressed: _countries.isEmpty ? null : _chooseCelebrationCountry,
+            icon: const Icon(Icons.public_rounded),
+          ),
+          const Padding(
             padding: EdgeInsets.only(right: 14),
             child: Center(child: NotificationButton()),
           ),
@@ -746,9 +811,14 @@ class _WelcomeScreenState extends State<WelcomeScreen>
 
       body: Stack(
         children: [
-          if (_activeFestival != null)
+          for (final festival in _activeFestivals)
             Positioned.fill(
-              child: FestivalCelebration(window: _activeFestival!),
+              child: FestivalCelebration(
+                key: ValueKey(
+                  '${festival.kind}-${festival.label}-${festival.countryCode}',
+                ),
+                window: festival,
+              ),
             ),
           LayoutBuilder(
             builder: (context, constraints) {

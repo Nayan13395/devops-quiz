@@ -4,6 +4,7 @@ import 'package:url_launcher/url_launcher.dart';
 import 'package:package_info_plus/package_info_plus.dart';
 import 'package:share_plus/share_plus.dart';
 import '../l10n/app_localizations.dart';
+import '../services/developer_celebration_service.dart';
 
 class AboutScreen extends StatefulWidget {
   const AboutScreen({super.key});
@@ -101,7 +102,7 @@ class _AboutScreenState extends State<AboutScreen> {
 
                   onTap: () async {
                     final uri = Uri.parse(
-                      "https://www.linkedin.com/in/nayan-chaudhari-200b31241",
+                      DeveloperCelebrationService.linkedInProfileUrl,
                     );
 
                     await launchUrl(uri, mode: LaunchMode.externalApplication);

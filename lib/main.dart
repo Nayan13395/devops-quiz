@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:flutter/services.dart';
-import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter/foundation.dart';
 import 'package:firebase_core/firebase_core.dart';
 
 import 'screens/welcome_screen.dart';
 import 'theme_provider.dart';
 import 'language_provider.dart';
+import 'app_localization_delegates.dart';
 import 'services/notification_service.dart';
 import 'services/point_service.dart';
 import 'services/update_service.dart';
@@ -118,12 +118,7 @@ class MyApp extends StatelessWidget {
       // ==========================================
       locale: languageProvider.locale,
 
-      localizationsDelegates: const [
-        AppLocalizations.delegate,
-        GlobalMaterialLocalizations.delegate,
-        GlobalWidgetsLocalizations.delegate,
-        GlobalCupertinoLocalizations.delegate,
-      ],
+      localizationsDelegates: appLocalizationDelegates,
 
       supportedLocales: AppLocalizations.supportedLocales,
 

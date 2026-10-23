@@ -2,6 +2,7 @@ import 'dart:async';
 import 'dart:math' show max;
 
 import 'package:flutter/material.dart';
+import '../widgets/level_picker_dialog.dart';
 
 import '../services/arrow_puzzle_service.dart';
 
@@ -235,67 +236,15 @@ class _ArrowPuzzleScreenState extends State<ArrowPuzzleScreen> {
   }
 
   Future<void> _showLevelPicker() async {
-    final ColorScheme colors = Theme.of(context).colorScheme;
     final int? selected = await showDialog<int>(
       context: context,
-      builder: (dialogContext) => AlertDialog(
-        title: const Text('Choose a level'),
-        content: SizedBox(
-          width: 420,
-          height: 360,
-          child: GridView.builder(
-            itemCount: ArrowPuzzleService.levelCount,
-            gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-              crossAxisCount: 5,
-              mainAxisSpacing: 8,
-              crossAxisSpacing: 8,
-              childAspectRatio: 1.25,
-            ),
-            itemBuilder: (context, index) {
-              final int number = index + 1;
-              final bool unlocked = ArrowPuzzleService.isUnlocked(
-                number,
-                _solvedLevels,
-              );
-              final bool solved = _solvedLevels.contains(number);
-
-              return Tooltip(
-                message: solved
-                    ? 'Level $number completed'
-                    : unlocked
-                    ? 'Play level $number'
-                    : 'Complete level ${number - 1} to unlock',
-                child: OutlinedButton(
-                  onPressed: unlocked
-                      ? () => Navigator.pop(dialogContext, number)
-                      : null,
-                  style: OutlinedButton.styleFrom(
-                    padding: EdgeInsets.zero,
-                    backgroundColor: solved ? colors.primaryContainer : null,
-                  ),
-                  child: FittedBox(
-                    fit: BoxFit.scaleDown,
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        if (solved) const Icon(Icons.check_rounded, size: 15),
-                        if (!unlocked)
-                          const Icon(Icons.lock_outline_rounded, size: 15),
-                        Text(' $number'),
-                      ],
-                    ),
-                  ),
-                ),
-              );
-            },
-          ),
-        ),
-        actions: [
-          TextButton(
-            onPressed: () => Navigator.pop(dialogContext),
-            child: const Text('Close'),
-          ),
-        ],
+      builder: (_) => LevelPickerDialog(
+        levelCount: ArrowPuzzleService.levelCount,
+        isUnlocked: (level) =>
+            ArrowPuzzleService.isUnlocked(level, _solvedLevels),
+        isCompleted: _solvedLevels.contains,
+        currentLevel: _levelNumber,
+        levelKeyPrefix: 'arrow-puzzle',
       ),
     );
 
@@ -351,7 +300,7 @@ class _ArrowPuzzleScreenState extends State<ArrowPuzzleScreen> {
 
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Tap Away Arrows'),
+        title: const Text('Arrow Puzzle'),
         actions: [
           IconButton(
             tooltip: 'Game settings',

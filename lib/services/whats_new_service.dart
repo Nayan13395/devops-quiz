@@ -5,7 +5,7 @@ class WhatsNewService {
   WhatsNewService._();
 
   /// Change this whenever a release should show the "What's New" sheet again.
-  static const String releaseId = '1.10.2';
+  static const String releaseId = '1.10.3';
 
   static const String _seenReleaseKey = 'whats_new_seen_release';
   static const String _seenFeaturesKey = 'new_features_seen';

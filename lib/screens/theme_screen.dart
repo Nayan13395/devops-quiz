@@ -15,11 +15,26 @@ class ThemeScreen extends StatefulWidget {
 class _ThemeScreenState extends State<ThemeScreen> {
   int totalPoints = 0;
   bool loading = true;
+  bool _searchOpen = false;
+  final TextEditingController _searchController = TextEditingController();
 
   @override
   void initState() {
     super.initState();
     _loadPoints();
+  }
+
+  @override
+  void dispose() {
+    _searchController.dispose();
+    super.dispose();
+  }
+
+  void _toggleSearch() {
+    setState(() {
+      _searchOpen = !_searchOpen;
+      if (!_searchOpen) _searchController.clear();
+    });
   }
 
   Future<void> _loadPoints() async {
@@ -34,9 +49,11 @@ class _ThemeScreenState extends State<ThemeScreen> {
   }
 
   Future<void> _selectTheme(AppThemeInfo theme) async {
+    final now = DateTime.now();
     final bool unlocked = ThemeService.isThemeUnlocked(
       theme: theme,
       totalPoints: totalPoints,
+      now: now,
     );
 
     if (!unlocked) {
@@ -49,6 +66,7 @@ class _ThemeScreenState extends State<ThemeScreen> {
     final changed = await provider.setTheme(
       theme: theme.type,
       totalPoints: totalPoints,
+      now: now,
     );
 
     if (!mounted) return;
@@ -164,7 +182,19 @@ class _ThemeScreenState extends State<ThemeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('🎨 Themes')),
+      appBar: AppBar(
+        title: const Text('🎨 Themes'),
+        actions: [
+          IconButton(
+            key: const ValueKey('theme-search-toggle'),
+            tooltip: _searchOpen ? 'Close theme search' : 'Search themes',
+            onPressed: _toggleSearch,
+            icon: Icon(
+              _searchOpen ? Icons.close_rounded : Icons.search_rounded,
+            ),
+          ),
+        ],
+      ),
 
       body: RefreshIndicator(
         onRefresh: _loadPoints,
@@ -199,10 +229,48 @@ class _ThemeScreenState extends State<ThemeScreen> {
 
                   const SizedBox(height: 18),
 
+                  if (_searchOpen) ...[
+                    TextField(
+                      key: const ValueKey('theme-search-field'),
+                      controller: _searchController,
+                      autofocus: true,
+                      onChanged: (_) => setState(() {}),
+                      decoration: InputDecoration(
+                        hintText: 'Search themes',
+                        prefixIcon: const Icon(Icons.search_rounded),
+                        suffixIcon: _searchController.text.isEmpty
+                            ? null
+                            : IconButton(
+                                tooltip: 'Clear search',
+                                onPressed: () {
+                                  _searchController.clear();
+                                  setState(() {});
+                                },
+                                icon: const Icon(Icons.clear_rounded),
+                              ),
+                        border: const OutlineInputBorder(),
+                      ),
+                    ),
+                    const SizedBox(height: 16),
+                  ],
+
                   Consumer<ThemeProvider>(
                     builder: (context, provider, child) {
+                      final query = _searchController.text.trim().toLowerCase();
+                      final themes = AppThemes.all
+                          .where(
+                            (theme) => theme.name.toLowerCase().contains(query),
+                          )
+                          .toList();
+                      if (themes.isEmpty) {
+                        return const Padding(
+                          padding: EdgeInsets.symmetric(vertical: 28),
+                          child: Center(child: Text('No themes found')),
+                        );
+                      }
+
                       return Column(
-                        children: AppThemes.all.map((theme) {
+                        children: themes.map((theme) {
                           return Padding(
                             padding: const EdgeInsets.only(bottom: 12),
                             child: _buildThemeCard(theme, provider),
@@ -267,6 +335,8 @@ class _ThemeScreenState extends State<ThemeScreen> {
   }
 
   Widget _buildThemeCard(AppThemeInfo theme, ThemeProvider provider) {
+    final freePeriod = AppThemes.freePeriodLabel(theme);
+    final freeNow = AppThemes.isFreeNow(theme);
     final bool unlocked = ThemeService.isThemeUnlocked(
       theme: theme,
       totalPoints: totalPoints,
@@ -339,7 +409,23 @@ class _ThemeScreenState extends State<ThemeScreen> {
                         gradient: LinearGradient(
                           begin: Alignment.topLeft,
                           end: Alignment.bottomRight,
-                          colors: [theme.primaryColor, theme.secondaryColor],
+                          colors:
+                              theme.type == AppThemeType.dqSpecial ||
+                                  theme.type == AppThemeType.rainbow
+                              ? const [
+                                  Color(0xFFE53935),
+                                  Color(0xFFFF9800),
+                                  Color(0xFFFDD835),
+                                  Color(0xFF43A047),
+                                  Color(0xFF039BE5),
+                                  Color(0xFF8E24AA),
+                                ]
+                              : [
+                                  theme.primaryColor,
+                                  theme.secondaryColor,
+                                  if (theme.tertiaryColor != null)
+                                    theme.tertiaryColor!,
+                                ],
                         ),
 
                         borderRadius: BorderRadius.circular(16),
@@ -370,7 +456,9 @@ class _ThemeScreenState extends State<ThemeScreen> {
 
                           const SizedBox(height: 5),
 
-                          if (theme.requiredPoints == 0)
+                          if (freeNow)
+                            const Text('Free this week')
+                          else if (theme.requiredPoints == 0)
                             const Text('Free Theme')
                           else if (unlocked)
                             Text(
@@ -387,6 +475,17 @@ class _ThemeScreenState extends State<ThemeScreen> {
                                 ).colorScheme.onSurfaceVariant,
                               ),
                             ),
+                          if (freePeriod != null && !freeNow) ...[
+                            const SizedBox(height: 4),
+                            Text(
+                              freePeriod,
+                              style: TextStyle(
+                                color: Theme.of(
+                                  context,
+                                ).colorScheme.onSurfaceVariant,
+                              ),
+                            ),
+                          ],
                         ],
                       ),
                     ),

@@ -41,10 +41,9 @@ class ThemeService {
   static bool isThemeUnlocked({
     required AppThemeInfo theme,
     required int totalPoints,
+    DateTime? now,
   }) {
-    // Light and Dark have 0 required
-    // points, so they are always unlocked.
-    return totalPoints >= theme.requiredPoints;
+    return AppThemes.isUnlocked(theme, totalPoints, now: now);
   }
 
   /// Number of points still required
@@ -85,12 +84,15 @@ class ThemeService {
   /// but if the points system changes later,
   /// this prevents an invalid theme from
   /// being activated.
-  static Future<AppThemeType> loadAvailableTheme(int totalPoints) async {
+  static Future<AppThemeType> loadAvailableTheme(
+    int totalPoints, {
+    DateTime? now,
+  }) async {
     final selected = await loadTheme();
 
     final themeInfo = AppThemes.getTheme(selected);
 
-    if (isThemeUnlocked(theme: themeInfo, totalPoints: totalPoints)) {
+    if (isThemeUnlocked(theme: themeInfo, totalPoints: totalPoints, now: now)) {
       return selected;
     }
 

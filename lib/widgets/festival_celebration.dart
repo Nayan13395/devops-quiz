@@ -27,6 +27,16 @@ class _FestivalCelebrationState extends State<FestivalCelebration>
   }
 
   @override
+  void didChangeDependencies() {
+    super.didChangeDependencies();
+    if (MediaQuery.disableAnimationsOf(context)) {
+      _animation.stop();
+    } else if (!_animation.isAnimating) {
+      _animation.repeat();
+    }
+  }
+
+  @override
   void dispose() {
     _animation.dispose();
     super.dispose();
@@ -35,20 +45,25 @@ class _FestivalCelebrationState extends State<FestivalCelebration>
   @override
   Widget build(BuildContext context) {
     return IgnorePointer(
-      child: CustomPaint(
-        painter: _FestivalPainter(widget.window.kind, _animation),
-        size: Size.infinite,
+      child: Semantics(
+        label: widget.window.label,
+        image: true,
+        child: CustomPaint(
+          painter: _FestivalPainter(widget.window, _animation),
+          size: Size.infinite,
+        ),
       ),
     );
   }
 }
 
 class _FestivalPainter extends CustomPainter {
-  _FestivalPainter(this.kind, Animation<double> animation)
+  _FestivalPainter(this.window, Animation<double> animation)
     : _animation = animation,
       super(repaint: animation);
 
-  final FestivalKind kind;
+  final FestivalWindow window;
+  FestivalKind get kind => window.kind;
   final Animation<double> _animation;
 
   double get _phase => _animation.value;
@@ -68,6 +83,202 @@ class _FestivalPainter extends CustomPainter {
         _paintFlowers(canvas, size);
       case FestivalKind.christmas:
         _paintChristmas(canvas, size);
+      case FestivalKind.halloween:
+        _paintHalloween(canvas, size);
+      case FestivalKind.peace:
+        _paintPeace(canvas, size);
+      case FestivalKind.sports:
+        _paintWorldDay(canvas, size, Icons.sports_soccer_rounded, Colors.teal);
+      case FestivalKind.animals:
+        _paintWorldDay(canvas, size, Icons.pets_rounded, Colors.green);
+      case FestivalKind.nationalDay:
+        if (window.countryCode == 'IN') {
+          _paintIndianFlag(canvas, size);
+        } else {
+          _paintNationalDay(canvas, size);
+        }
+    }
+  }
+
+  void _paintHalloween(Canvas canvas, Size size) {
+    final bob = math.sin(_phase * math.pi * 2) * 4;
+    for (final fraction in [0.1, 0.9]) {
+      canvas.save();
+      canvas.translate(size.width * fraction, size.height - 42 + bob);
+      canvas.drawOval(
+        const Rect.fromLTWH(-23, -19, 46, 36),
+        Paint()..color = const Color(0xC9F28A28),
+      );
+      canvas.drawOval(
+        const Rect.fromLTWH(-12, -19, 24, 36),
+        Paint()
+          ..color = const Color(0xFFEFA128)
+          ..style = PaintingStyle.stroke
+          ..strokeWidth = 2,
+      );
+      canvas.drawLine(
+        const Offset(0, -18),
+        const Offset(4, -27),
+        Paint()
+          ..color = Colors.green.shade800
+          ..strokeWidth = 5,
+      );
+      for (final direction in [-1.0, 1.0]) {
+        final eye = Path()
+          ..moveTo(direction * 12, -9)
+          ..lineTo(direction * 4, -9)
+          ..lineTo(direction * 8, -2)
+          ..close();
+        canvas.drawPath(eye, Paint()..color = const Color(0xFF54341F));
+      }
+      canvas.drawArc(
+        const Rect.fromLTWH(-10, -4, 20, 15),
+        0,
+        math.pi,
+        false,
+        Paint()
+          ..color = const Color(0xFF54341F)
+          ..style = PaintingStyle.stroke
+          ..strokeWidth = 2.5,
+      );
+      canvas.restore();
+    }
+  }
+
+  void _paintPeace(Canvas canvas, Size size) {
+    final bob = math.sin(_phase * math.pi * 2) * 4;
+    for (final fraction in [0.1, 0.9]) {
+      final center = Offset(size.width * fraction, size.height - 45 + bob);
+      final paint = Paint()
+        ..color = Colors.teal.withValues(alpha: 0.65)
+        ..style = PaintingStyle.stroke
+        ..strokeWidth = 2;
+      canvas.drawCircle(center, 17, paint);
+      canvas.drawLine(
+        center + const Offset(0, -17),
+        center + const Offset(0, 17),
+        paint,
+      );
+      canvas.drawLine(center, center + const Offset(-12, 12), paint);
+      canvas.drawLine(center, center + const Offset(12, 12), paint);
+      for (int leaf = 0; leaf < 5; leaf++) {
+        canvas.drawOval(
+          Rect.fromCenter(
+            center: center + Offset(-22 + leaf * 3, 24 - leaf * 4),
+            width: 8,
+            height: 4,
+          ),
+          Paint()..color = Colors.green.withValues(alpha: 0.55),
+        );
+      }
+    }
+  }
+
+  void _paintWorldDay(Canvas canvas, Size size, IconData icon, Color colour) {
+    for (int index = 0; index < 4; index++) {
+      final position = Offset(
+        size.width * (index.isEven ? 0.06 : 0.94) - 14,
+        size.height * (0.2 + index * 0.2) +
+            math.sin((_phase + index * 0.2) * math.pi * 2) * 8,
+      );
+      final text = TextPainter(
+        textDirection: TextDirection.ltr,
+        text: TextSpan(
+          text: String.fromCharCode(icon.codePoint),
+          style: TextStyle(
+            fontFamily: icon.fontFamily,
+            fontSize: 28,
+            color: colour.withValues(alpha: 0.38),
+          ),
+        ),
+      )..layout();
+      text.paint(canvas, position);
+    }
+  }
+
+  void _paintIndianFlag(Canvas canvas, Size size) {
+    final width = math.min(120.0, size.width * 0.27);
+    final height = width * 2 / 3;
+    final origin = Offset(size.width * 0.05, size.height - height - 32);
+    canvas.drawLine(
+      origin + const Offset(0, -8),
+      origin + Offset(0, height + 24),
+      Paint()
+        ..color = const Color(0xFF68737D)
+        ..strokeWidth = 2,
+    );
+    final colours = [
+      const Color(0xFFFF9933),
+      Colors.white,
+      const Color(0xFF138808),
+    ];
+    for (int band = 0; band < 3; band++) {
+      final path = Path();
+      for (int index = 0; index <= 30; index++) {
+        final progress = index / 30;
+        final wave =
+            math.sin(progress * math.pi * 2 - _phase * math.pi * 4) *
+            4 *
+            progress;
+        final point =
+            origin + Offset(progress * width, band * height / 3 + wave);
+        if (index == 0) {
+          path.moveTo(point.dx, point.dy);
+        } else {
+          path.lineTo(point.dx, point.dy);
+        }
+      }
+      for (int index = 30; index >= 0; index--) {
+        final progress = index / 30;
+        final wave =
+            math.sin(progress * math.pi * 2 - _phase * math.pi * 4) *
+            4 *
+            progress;
+        final point =
+            origin + Offset(progress * width, (band + 1) * height / 3 + wave);
+        path.lineTo(point.dx, point.dy);
+      }
+      canvas.drawPath(path..close(), Paint()..color = colours[band]);
+    }
+    final wheel =
+        origin +
+        Offset(
+          width / 2,
+          height / 2 + math.sin(math.pi - _phase * math.pi * 4) * 2,
+        );
+    final radius = height * 0.13;
+    final chakra = Paint()
+      ..color = const Color(0xFF000080)
+      ..style = PaintingStyle.stroke
+      ..strokeWidth = 1.2;
+    canvas.drawCircle(wheel, radius, chakra);
+    canvas.drawCircle(wheel, 1.3, Paint()..color = const Color(0xFF000080));
+    for (int spoke = 0; spoke < 24; spoke++) {
+      final angle = spoke * math.pi * 2 / 24;
+      canvas.drawLine(
+        wheel,
+        wheel + Offset(math.cos(angle), math.sin(angle)) * radius,
+        chakra,
+      );
+    }
+  }
+
+  void _paintNationalDay(Canvas canvas, Size size) {
+    const colours = [Colors.red, Colors.blue, Colors.green, Colors.amber];
+    for (int index = 0; index < 18; index++) {
+      final progress = (_phase + index / 18) % 1;
+      final x =
+          size.width * (index.isEven ? 0.05 : 0.95) +
+          math.sin(progress * math.pi * 2 + index) * 9;
+      canvas.drawRect(
+        Rect.fromCenter(
+          center: Offset(x, size.height * progress),
+          width: 4,
+          height: 7,
+        ),
+        Paint()
+          ..color = colours[index % colours.length].withValues(alpha: 0.45),
+      );
     }
   }
 

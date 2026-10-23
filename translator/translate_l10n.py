@@ -117,7 +117,7 @@ def translate_language(language):
 
     output = {"@@locale": language}
     output.update(translated)
-    output.update({key: value for key, value in source.items() if key.startswith("@")})
+    output.update({key: value for key, value in source.items() if key.startswith("@") and key != "@@locale"})
 
     output_path = L10N_DIR / f"app_{language}.arb"
     temporary_output = output_path.with_suffix(".arb.tmp")

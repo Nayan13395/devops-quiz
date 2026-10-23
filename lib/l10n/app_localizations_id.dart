@@ -54,8 +54,7 @@ class AppLocalizationsId extends AppLocalizations {
   String get dailyQuizCompleted => 'Kuis harian selesai';
 
   @override
-  String get dailyQuizCompletedMessage =>
-      'Kamu sudah menyelesaikan kuis harian hari ini.\n\nKembali besok untuk tantangan baru!';
+  String get dailyQuizCompletedMessage => 'Kamu sudah menyelesaikan kuis harian hari ini.\n\nKembali besok untuk tantangan baru!';
 
   @override
   String get leaderboard => 'Papan peringkat';
@@ -103,8 +102,7 @@ class AppLocalizationsId extends AppLocalizations {
   String get connectWithMe => 'Terhubung dengan saya';
 
   @override
-  String get aboutDescription =>
-      'DevOps Quiz membantu pelajar mempersiapkan wawancara dan sertifikasi melalui ribuan pertanyaan pilihan tentang Linux, Docker, Kubernetes, jaringan, Git, Jenkins, Terraform, Ansible, dan teknologi DevOps lainnya.';
+  String get aboutDescription => 'DevOps Quiz membantu pelajar mempersiapkan wawancara dan sertifikasi melalui ribuan pertanyaan pilihan tentang Linux, Docker, Kubernetes, jaringan, Git, Jenkins, Terraform, Ansible, dan teknologi DevOps lainnya.';
 
   @override
   String get quizResult => 'Hasil kuis';
@@ -161,16 +159,13 @@ class AppLocalizationsId extends AppLocalizations {
   String get greatProgress => 'Bagus! Kemajuanmu sangat baik.';
 
   @override
-  String get practiceMore =>
-      'Kerja bagus! Sedikit latihan lagi dan skormu akan lebih tinggi.';
+  String get practiceMore => 'Kerja bagus! Sedikit latihan lagi dan skormu akan lebih tinggi.';
 
   @override
-  String get keepLearning =>
-      'Teruslah belajar dan coba lagi. Kamu akan membaik dengan latihan.';
+  String get keepLearning => 'Teruslah belajar dan coba lagi. Kamu akan membaik dengan latihan.';
 
   @override
-  String get everyExpertStarted =>
-      'Setiap ahli dulunya pemula. Berlatihlah dan kembali lebih kuat!';
+  String get everyExpertStarted => 'Setiap ahli dulunya pemula. Berlatihlah dan kembali lebih kuat!';
 
   @override
   String get quizInstructions => 'Petunjuk kuis';
@@ -280,13 +275,7 @@ class AppLocalizationsId extends AppLocalizations {
   String get tomorrowsReward => 'Hadiah besok';
 
   @override
-  String shareMessage(
-    Object score,
-    Object totalQuestions,
-    Object earnedPoints,
-    Object bonusPoints,
-    Object percentage,
-  ) {
+  String shareMessage(Object score, Object totalQuestions, Object earnedPoints, Object bonusPoints, Object percentage) {
     return '🎯 Aku mendapat $score/$totalQuestions di kuis #DevOps hari ini!\n\n🏆 Poin: $earnedPoints\n🔥 Bonus: $bonusPoints\n📊 Persentase: $percentage%\n\nBisakah kamu mengalahkan skorku?\n\nUnduh aplikasinya:';
   }
 }

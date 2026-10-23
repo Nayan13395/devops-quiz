@@ -539,50 +539,30 @@
       {
           "category":  "Ansible",
           "set":  2,
-          "question":  "Which keyword enables privilege escalation for an Ansible task?",
-          "options":  [
-                          "become: true",
-                          "delegate_to",
-                          "run_once",
-                          "check_mode"
-                      ],
-          "answer":  "become: true"
+          "question":  "Ansible playbook host-selection pattern",
+          "options":  ["--limit", "loop_var", "register", "defaults"],
+          "answer":  "--limit"
       },
       {
           "category":  "Ansible",
           "set":  3,
-          "question":  "Which keyword enables privilege escalation for an Ansible task?",
-          "options":  [
-                          "become: true",
-                          "delegate_to",
-                          "run_once",
-                          "check_mode"
-                      ],
-          "answer":  "become: true"
+          "question":  "Ansible free strategy behavior",
+          "options":  ["free", "--limit", "loop_var", "register"],
+          "answer":  "free"
       },
       {
           "category":  "Ansible",
           "set":  4,
-          "question":  "Which keyword enables privilege escalation for an Ansible task?",
-          "options":  [
-                          "become: true",
-                          "delegate_to",
-                          "run_once",
-                          "check_mode"
-                      ],
-          "answer":  "become: true"
+          "question":  "Ansible fact gathering switch",
+          "options":  ["gather_facts", "--limit", "loop_var", "register"],
+          "answer":  "gather_facts"
       },
       {
           "category":  "Ansible",
           "set":  5,
-          "question":  "Which keyword enables privilege escalation for an Ansible task?",
-          "options":  [
-                          "become: true",
-                          "delegate_to",
-                          "run_once",
-                          "check_mode"
-                      ],
-          "answer":  "become: true"
+          "question":  "Ansible forks setting",
+          "options":  ["forks", "--limit", "loop_var", "register"],
+          "answer":  "forks"
       },
       {
           "category":  "Ansible",
@@ -599,50 +579,30 @@
       {
           "category":  "Ansible",
           "set":  2,
-          "question":  "Which keyword runs an Ansible task only when a condition is true?",
-          "options":  [
-                          "when",
-                          "until",
-                          "notify",
-                          "tags"
-                      ],
-          "answer":  "when"
+          "question":  "Ansible loop item variable",
+          "options":  ["loop_var", "--limit", "register", "defaults"],
+          "answer":  "loop_var"
       },
       {
           "category":  "Ansible",
           "set":  3,
-          "question":  "Which keyword runs an Ansible task only when a condition is true?",
-          "options":  [
-                          "when",
-                          "until",
-                          "notify",
-                          "tags"
-                      ],
-          "answer":  "when"
+          "question":  "Ansible linear strategy behavior",
+          "options":  ["linear", "--limit", "loop_var", "register"],
+          "answer":  "linear"
       },
       {
           "category":  "Ansible",
           "set":  4,
-          "question":  "Which keyword runs an Ansible task only when a condition is true?",
-          "options":  [
-                          "when",
-                          "until",
-                          "notify",
-                          "tags"
-                      ],
-          "answer":  "when"
+          "question":  "Ansible fact cache purpose",
+          "options":  ["reuse gathered facts", "--limit", "loop_var", "register"],
+          "answer":  "reuse gathered facts"
       },
       {
           "category":  "Ansible",
           "set":  5,
-          "question":  "Which keyword runs an Ansible task only when a condition is true?",
-          "options":  [
-                          "when",
-                          "until",
-                          "notify",
-                          "tags"
-                      ],
-          "answer":  "when"
+          "question":  "Ansible check-mode behavior",
+          "options":  ["predict changes without applying", "--limit", "loop_var", "register"],
+          "answer":  "predict changes without applying"
       },
       {
           "category":  "Ansible",
@@ -659,50 +619,30 @@
       {
           "category":  "Ansible",
           "set":  2,
-          "question":  "Which built-in module gathers facts from managed hosts?",
-          "options":  [
-                          "ansible.builtin.setup",
-                          "ansible.builtin.copy",
-                          "ansible.builtin.command",
-                          "ansible.builtin.debug"
-                      ],
-          "answer":  "ansible.builtin.setup"
+          "question":  "Ansible task result registration",
+          "options":  ["register", "--limit", "loop_var", "defaults"],
+          "answer":  "register"
       },
       {
           "category":  "Ansible",
           "set":  3,
-          "question":  "Which built-in module gathers facts from managed hosts?",
-          "options":  [
-                          "ansible.builtin.setup",
-                          "ansible.builtin.copy",
-                          "ansible.builtin.command",
-                          "ansible.builtin.debug"
-                      ],
-          "answer":  "ansible.builtin.setup"
+          "question":  "Ansible rolling batch setting",
+          "options":  ["serial", "--limit", "loop_var", "register"],
+          "answer":  "serial"
       },
       {
           "category":  "Ansible",
           "set":  4,
-          "question":  "Which built-in module gathers facts from managed hosts?",
-          "options":  [
-                          "ansible.builtin.setup",
-                          "ansible.builtin.copy",
-                          "ansible.builtin.command",
-                          "ansible.builtin.debug"
-                      ],
-          "answer":  "ansible.builtin.setup"
+          "question":  "Ansible connection delegation",
+          "options":  ["delegate_to", "--limit", "loop_var", "register"],
+          "answer":  "delegate_to"
       },
       {
           "category":  "Ansible",
           "set":  5,
-          "question":  "Which built-in module gathers facts from managed hosts?",
-          "options":  [
-                          "ansible.builtin.setup",
-                          "ansible.builtin.copy",
-                          "ansible.builtin.command",
-                          "ansible.builtin.debug"
-                      ],
-          "answer":  "ansible.builtin.setup"
+          "question":  "Ansible template module output",
+          "options":  ["render a Jinja2 template", "--limit", "loop_var", "register"],
+          "answer":  "render a Jinja2 template"
       },
       {
           "category":  "Ansible",
@@ -719,50 +659,30 @@
       {
           "category":  "Ansible",
           "set":  2,
-          "question":  "Which keyword repeats a task for every item in a list?",
-          "options":  [
-                          "loop",
-                          "serial",
-                          "block",
-                          "role"
-                      ],
-          "answer":  "loop"
+          "question":  "Ansible role defaults precedence",
+          "options":  ["defaults", "--limit", "loop_var", "register"],
+          "answer":  "defaults"
       },
       {
           "category":  "Ansible",
           "set":  3,
-          "question":  "Which keyword repeats a task for every item in a list?",
-          "options":  [
-                          "loop",
-                          "serial",
-                          "block",
-                          "role"
-                      ],
-          "answer":  "loop"
+          "question":  "Ansible task async polling",
+          "options":  ["async with poll", "--limit", "loop_var", "register"],
+          "answer":  "async with poll"
       },
       {
           "category":  "Ansible",
           "set":  4,
-          "question":  "Which keyword repeats a task for every item in a list?",
-          "options":  [
-                          "loop",
-                          "serial",
-                          "block",
-                          "role"
-                      ],
-          "answer":  "loop"
+          "question":  "Ansible local connection mode",
+          "options":  ["connection: local", "--limit", "loop_var", "register"],
+          "answer":  "connection: local"
       },
       {
           "category":  "Ansible",
           "set":  5,
-          "question":  "Which keyword repeats a task for every item in a list?",
-          "options":  [
-                          "loop",
-                          "serial",
-                          "block",
-                          "role"
-                      ],
-          "answer":  "loop"
+          "question":  "Ansible copy module purpose",
+          "options":  ["copy a controller file to hosts", "--limit", "loop_var", "register"],
+          "answer":  "copy a controller file to hosts"
       },
       {
           "category":  "Ansible",
@@ -779,50 +699,30 @@
       {
           "category":  "Ansible",
           "set":  2,
-          "question":  "Which keyword saves a task result into a variable?",
-          "options":  [
-                          "register",
-                          "vars",
-                          "facts",
-                          "include"
-                      ],
-          "answer":  "register"
+          "question":  "Ansible role vars precedence",
+          "options":  ["vars", "--limit", "loop_var", "register"],
+          "answer":  "vars"
       },
       {
           "category":  "Ansible",
           "set":  3,
-          "question":  "Which keyword saves a task result into a variable?",
-          "options":  [
-                          "register",
-                          "vars",
-                          "facts",
-                          "include"
-                      ],
-          "answer":  "register"
+          "question":  "Ansible inventory child groups",
+          "options":  ["children", "--limit", "loop_var", "register"],
+          "answer":  "children"
       },
       {
           "category":  "Ansible",
           "set":  4,
-          "question":  "Which keyword saves a task result into a variable?",
-          "options":  [
-                          "register",
-                          "vars",
-                          "facts",
-                          "include"
-                      ],
-          "answer":  "register"
+          "question":  "Ansible privilege target user",
+          "options":  ["become_user", "--limit", "loop_var", "register"],
+          "answer":  "become_user"
       },
       {
           "category":  "Ansible",
           "set":  5,
-          "question":  "Which keyword saves a task result into a variable?",
-          "options":  [
-                          "register",
-                          "vars",
-                          "facts",
-                          "include"
-                      ],
-          "answer":  "register"
+          "question":  "Ansible fetch module direction",
+          "options":  ["copy a remote file to controller", "--limit", "loop_var", "register"],
+          "answer":  "copy a remote file to controller"
       },
       {
           "category":  "Ansible",
@@ -839,50 +739,30 @@
       {
           "category":  "Ansible",
           "set":  2,
-          "question":  "Which keyword makes a task notify a handler after a change?",
-          "options":  [
-                          "notify",
-                          "listen",
-                          "changed_when",
-                          "rescue"
-                      ],
-          "answer":  "notify"
+          "question":  "Ansible dynamic role inclusion",
+          "options":  ["include_role", "--limit", "loop_var", "register"],
+          "answer":  "include_role"
       },
       {
           "category":  "Ansible",
           "set":  3,
-          "question":  "Which keyword makes a task notify a handler after a change?",
-          "options":  [
-                          "notify",
-                          "listen",
-                          "changed_when",
-                          "rescue"
-                      ],
-          "answer":  "notify"
+          "question":  "Ansible inventory host variable file",
+          "options":  ["host_vars", "--limit", "loop_var", "register"],
+          "answer":  "host_vars"
       },
       {
           "category":  "Ansible",
           "set":  4,
-          "question":  "Which keyword makes a task notify a handler after a change?",
-          "options":  [
-                          "notify",
-                          "listen",
-                          "changed_when",
-                          "rescue"
-                      ],
-          "answer":  "notify"
+          "question":  "Ansible task tag selection",
+          "options":  ["--tags", "--limit", "loop_var", "register"],
+          "answer":  "--tags"
       },
       {
           "category":  "Ansible",
           "set":  5,
-          "question":  "Which keyword makes a task notify a handler after a change?",
-          "options":  [
-                          "notify",
-                          "listen",
-                          "changed_when",
-                          "rescue"
-                      ],
-          "answer":  "notify"
+          "question":  "Ansible synchronize transport",
+          "options":  ["rsync over SSH", "--limit", "loop_var", "register"],
+          "answer":  "rsync over SSH"
       },
       {
           "category":  "Ansible",
@@ -899,50 +779,30 @@
       {
           "category":  "Ansible",
           "set":  2,
-          "question":  "Which command-line option limits a playbook run to selected hosts?",
-          "options":  [
-                          "--limit",
-                          "--list-hosts",
-                          "--syntax-check",
-                          "--flush-cache"
-                      ],
-          "answer":  "--limit"
+          "question":  "Ansible static role import",
+          "options":  ["import_role", "--limit", "loop_var", "register"],
+          "answer":  "import_role"
       },
       {
           "category":  "Ansible",
           "set":  3,
-          "question":  "Which command-line option limits a playbook run to selected hosts?",
-          "options":  [
-                          "--limit",
-                          "--list-hosts",
-                          "--syntax-check",
-                          "--flush-cache"
-                      ],
-          "answer":  "--limit"
+          "question":  "Ansible inventory group variable file",
+          "options":  ["group_vars", "--limit", "loop_var", "register"],
+          "answer":  "group_vars"
       },
       {
           "category":  "Ansible",
           "set":  4,
-          "question":  "Which command-line option limits a playbook run to selected hosts?",
-          "options":  [
-                          "--limit",
-                          "--list-hosts",
-                          "--syntax-check",
-                          "--flush-cache"
-                      ],
-          "answer":  "--limit"
+          "question":  "Ansible skip-tag option",
+          "options":  ["--skip-tags", "--limit", "loop_var", "register"],
+          "answer":  "--skip-tags"
       },
       {
           "category":  "Ansible",
           "set":  5,
-          "question":  "Which command-line option limits a playbook run to selected hosts?",
-          "options":  [
-                          "--limit",
-                          "--list-hosts",
-                          "--syntax-check",
-                          "--flush-cache"
-                      ],
-          "answer":  "--limit"
+          "question":  "Ansible block error recovery",
+          "options":  ["recover from a failed block", "--limit", "loop_var", "register"],
+          "answer":  "recover from a failed block"
       },
       {
           "category":  "Ansible",
@@ -959,50 +819,30 @@
       {
           "category":  "Ansible",
           "set":  2,
-          "question":  "Which Ansible tool encrypts sensitive variables and files?",
-          "options":  [
-                          "ansible-vault",
-                          "ansible-galaxy",
-                          "ansible-doc",
-                          "ansible-inventory"
-                      ],
-          "answer":  "ansible-vault"
+          "question":  "Ansible handler flush command",
+          "options":  ["meta: flush_handlers", "--limit", "loop_var", "register"],
+          "answer":  "meta: flush_handlers"
       },
       {
           "category":  "Ansible",
           "set":  3,
-          "question":  "Which Ansible tool encrypts sensitive variables and files?",
-          "options":  [
-                          "ansible-vault",
-                          "ansible-galaxy",
-                          "ansible-doc",
-                          "ansible-inventory"
-                      ],
-          "answer":  "ansible-vault"
+          "question":  "Ansible playbook syntax validation",
+          "options":  ["ansible-playbook --syntax-check", "--limit", "loop_var", "register"],
+          "answer":  "ansible-playbook --syntax-check"
       },
       {
           "category":  "Ansible",
           "set":  4,
-          "question":  "Which Ansible tool encrypts sensitive variables and files?",
-          "options":  [
-                          "ansible-vault",
-                          "ansible-galaxy",
-                          "ansible-doc",
-                          "ansible-inventory"
-                      ],
-          "answer":  "ansible-vault"
+          "question":  "Ansible collection namespace format",
+          "options":  ["namespace.collection", "--limit", "loop_var", "register"],
+          "answer":  "namespace.collection"
       },
       {
           "category":  "Ansible",
           "set":  5,
-          "question":  "Which Ansible tool encrypts sensitive variables and files?",
-          "options":  [
-                          "ansible-vault",
-                          "ansible-galaxy",
-                          "ansible-doc",
-                          "ansible-inventory"
-                      ],
-          "answer":  "ansible-vault"
+          "question":  "Ansible always section behavior",
+          "options":  ["run regardless of block result", "--limit", "loop_var", "register"],
+          "answer":  "run regardless of block result"
       },
       {
           "category":  "Ansible",
@@ -1019,50 +859,30 @@
       {
           "category":  "Ansible",
           "set":  2,
-          "question":  "Which option checks a playbook\u0027s proposed changes without applying them?",
-          "options":  [
-                          "--check",
-                          "--diff-only",
-                          "--force",
-                          "--step"
-                      ],
-          "answer":  "--check"
+          "question":  "Ansible task failure override",
+          "options":  ["ignore_errors", "--limit", "loop_var", "register"],
+          "answer":  "ignore_errors"
       },
       {
           "category":  "Ansible",
           "set":  3,
-          "question":  "Which option checks a playbook\u0027s proposed changes without applying them?",
-          "options":  [
-                          "--check",
-                          "--diff-only",
-                          "--force",
-                          "--step"
-                      ],
-          "answer":  "--check"
+          "question":  "Ansible encrypted variable tool",
+          "options":  ["ansible-vault", "--limit", "loop_var", "register"],
+          "answer":  "ansible-vault"
       },
       {
           "category":  "Ansible",
           "set":  4,
-          "question":  "Which option checks a playbook\u0027s proposed changes without applying them?",
-          "options":  [
-                          "--check",
-                          "--diff-only",
-                          "--force",
-                          "--step"
-                      ],
-          "answer":  "--check"
+          "question":  "Ansible module documentation command",
+          "options":  ["ansible-doc", "--limit", "loop_var", "register"],
+          "answer":  "ansible-doc"
       },
       {
           "category":  "Ansible",
           "set":  5,
-          "question":  "Which option checks a playbook\u0027s proposed changes without applying them?",
-          "options":  [
-                          "--check",
-                          "--diff-only",
-                          "--force",
-                          "--step"
-                      ],
-          "answer":  "--check"
+          "question":  "Ansible rescue section behavior",
+          "options":  ["run only after block failure", "--limit", "loop_var", "register"],
+          "answer":  "run only after block failure"
       },
       {
           "category":  "Ansible",
@@ -1079,49 +899,29 @@
       {
           "category":  "Ansible",
           "set":  2,
-          "question":  "Which keyword runs a task once for the current batch of hosts?",
-          "options":  [
-                          "run_once: true",
-                          "serial: 1",
-                          "throttle: 1",
-                          "any_errors_fatal: true"
-                      ],
-          "answer":  "run_once: true"
+          "question":  "Ansible task change override",
+          "options":  ["changed_when", "--limit", "loop_var", "register"],
+          "answer":  "changed_when"
       },
       {
           "category":  "Ansible",
           "set":  3,
-          "question":  "Which keyword runs a task once for the current batch of hosts?",
-          "options":  [
-                          "run_once: true",
-                          "serial: 1",
-                          "throttle: 1",
-                          "any_errors_fatal: true"
-                      ],
-          "answer":  "run_once: true"
+          "question":  "Ansible vault password identifier",
+          "options":  ["--vault-id", "--limit", "loop_var", "register"],
+          "answer":  "--vault-id"
       },
       {
           "category":  "Ansible",
           "set":  4,
-          "question":  "Which keyword runs a task once for the current batch of hosts?",
-          "options":  [
-                          "run_once: true",
-                          "serial: 1",
-                          "throttle: 1",
-                          "any_errors_fatal: true"
-                      ],
-          "answer":  "run_once: true"
+          "question":  "Ansible configuration file name",
+          "options":  ["ansible.cfg", "--limit", "loop_var", "register"],
+          "answer":  "ansible.cfg"
       },
       {
           "category":  "Ansible",
           "set":  5,
-          "question":  "Which keyword runs a task once for the current batch of hosts?",
-          "options":  [
-                          "run_once: true",
-                          "serial: 1",
-                          "throttle: 1",
-                          "any_errors_fatal: true"
-                      ],
-          "answer":  "run_once: true"
+          "question":  "Ansible idempotence meaning",
+          "options":  ["safe repeated application", "--limit", "loop_var", "register"],
+          "answer":  "safe repeated application"
       }
 ]

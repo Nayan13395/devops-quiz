@@ -3,9 +3,9 @@ import 'dart:ui' as ui;
 
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
+import 'package:file_saver/file_saver.dart';
 import 'package:pdf/pdf.dart';
 import 'package:pdf/widgets.dart' as pw;
-import 'package:printing/printing.dart';
 
 import '../services/certificate_service.dart';
 import '../services/question_service.dart';
@@ -315,9 +315,18 @@ class _CertificateDetailScreenState extends State<CertificateDetailScreen> {
         '_',
       );
 
-      await Printing.sharePdf(
-        bytes: await pdf.save(),
-        filename: 'DevOps_Quiz_${safe}_Certificate.pdf',
+      final filename = '${safe}_Course_Completion_Certificate';
+        final pdfBytes = await pdf.save();
+      final savedPath = await FileSaver.instance.saveAs(
+        name: filename,
+          bytes: pdfBytes,
+        fileExtension: 'pdf',
+        mimeType: MimeType.pdf,
+      );
+      if (savedPath == null || !mounted) return;
+
+      ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(content: Text('Certificate saved as $filename.pdf')),
       );
     } catch (e) {
       if (!mounted) return;
@@ -333,7 +342,9 @@ class _CertificateDetailScreenState extends State<CertificateDetailScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text('${widget.info.category} Certificate')),
+      appBar: AppBar(
+        title: Text('${widget.info.category} - Course Completion Certificate'),
+      ),
       body: SafeArea(
         child: SingleChildScrollView(
           padding: const EdgeInsets.all(16),

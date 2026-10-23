@@ -30,11 +30,12 @@ class _NotificationButtonState extends State<NotificationButton> {
 
   @override
   Widget build(BuildContext context) {
+    final colors = Theme.of(context).colorScheme;
     return Stack(
       clipBehavior: Clip.none,
       children: [
         IconButton(
-          icon: const Icon(Icons.notifications_rounded),
+          icon: Icon(Icons.notifications_rounded, color: colors.primary),
           onPressed: () async {
             await _loadUnreadCount();
             if (!context.mounted) return;
@@ -57,9 +58,9 @@ class _NotificationButtonState extends State<NotificationButton> {
             child: Container(
               padding: const EdgeInsets.symmetric(horizontal: 4, vertical: 2),
               decoration: BoxDecoration(
-                color: Colors.red,
+                color: colors.primary,
                 borderRadius: BorderRadius.circular(10),
-                border: Border.all(color: Colors.white, width: 1.5),
+                border: Border.all(color: colors.surface, width: 1.5),
                 boxShadow: [
                   BoxShadow(
                     color: Colors.black.withValues(alpha: 0.2),
@@ -71,8 +72,8 @@ class _NotificationButtonState extends State<NotificationButton> {
               constraints: const BoxConstraints(minWidth: 18, minHeight: 18),
               child: Text(
                 _unreadCount > 99 ? '99+' : '$_unreadCount',
-                style: const TextStyle(
-                  color: Colors.white,
+                style: TextStyle(
+                  color: colors.onPrimary,
                   fontSize: 10,
                   fontWeight: FontWeight.bold,
                 ),

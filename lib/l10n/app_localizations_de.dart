@@ -54,8 +54,7 @@ class AppLocalizationsDe extends AppLocalizations {
   String get dailyQuizCompleted => 'Tägliches Quiz abgeschlossen';
 
   @override
-  String get dailyQuizCompletedMessage =>
-      'Du hast das heutige tägliche Quiz bereits abgeschlossen.\n\nKomm morgen für eine neue Herausforderung wieder!';
+  String get dailyQuizCompletedMessage => 'Du hast das heutige tägliche Quiz bereits abgeschlossen.\n\nKomm morgen für eine neue Herausforderung wieder!';
 
   @override
   String get leaderboard => 'Bestenliste';
@@ -103,8 +102,7 @@ class AppLocalizationsDe extends AppLocalizations {
   String get connectWithMe => 'Vernetze dich mit mir';
 
   @override
-  String get aboutDescription =>
-      'DevOps Quiz hilft Lernenden, sich mit Tausenden sorgfältig ausgewählten Fragen zu Linux, Docker, Kubernetes, Netzwerken, Git, Jenkins, Terraform, Ansible und weiteren DevOps-Technologien auf Vorstellungsgespräche und Zertifizierungen vorzubereiten.';
+  String get aboutDescription => 'DevOps Quiz hilft Lernenden, sich mit Tausenden sorgfältig ausgewählten Fragen zu Linux, Docker, Kubernetes, Netzwerken, Git, Jenkins, Terraform, Ansible und weiteren DevOps-Technologien auf Vorstellungsgespräche und Zertifizierungen vorzubereiten.';
 
   @override
   String get quizResult => 'Quizergebnis';
@@ -161,16 +159,13 @@ class AppLocalizationsDe extends AppLocalizations {
   String get greatProgress => 'Gut gemacht! Du machst große Fortschritte.';
 
   @override
-  String get practiceMore =>
-      'Gute Arbeit! Mit etwas mehr Übung erreichst du noch mehr Punkte.';
+  String get practiceMore => 'Gute Arbeit! Mit etwas mehr Übung erreichst du noch mehr Punkte.';
 
   @override
-  String get keepLearning =>
-      'Lerne weiter und versuche es erneut. Mit Übung wirst du besser.';
+  String get keepLearning => 'Lerne weiter und versuche es erneut. Mit Übung wirst du besser.';
 
   @override
-  String get everyExpertStarted =>
-      'Jeder Experte war einmal Anfänger. Übe und komm stärker zurück!';
+  String get everyExpertStarted => 'Jeder Experte war einmal Anfänger. Übe und komm stärker zurück!';
 
   @override
   String get quizInstructions => 'Quiz-Anleitung';
@@ -280,13 +275,7 @@ class AppLocalizationsDe extends AppLocalizations {
   String get tomorrowsReward => 'Belohnung für morgen';
 
   @override
-  String shareMessage(
-    Object score,
-    Object totalQuestions,
-    Object earnedPoints,
-    Object bonusPoints,
-    Object percentage,
-  ) {
+  String shareMessage(Object score, Object totalQuestions, Object earnedPoints, Object bonusPoints, Object percentage) {
     return '🎯 Ich habe $score/$totalQuestions im heutigen #DevOps-Quiz erreicht!\n\n🏆 Punkte: $earnedPoints\n🔥 Bonus: $bonusPoints\n📊 Prozent: $percentage%\n\nKannst du mein Ergebnis schlagen?\n\nLade die App herunter:';
   }
 }

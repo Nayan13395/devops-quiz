@@ -144,7 +144,8 @@ class _PortGameState extends State<_PortGame> {
   Future<void> _finish() async {
     await DailyGameGate.markPlayed(PortMasterScreen.gameKey);
 
-    if (_points > 0) await PointService.addPoints(_points);
+    if (_points > 0)
+      await PointService.addPoints(_points, source: PointSource.game);
 
     if (!mounted) return;
 

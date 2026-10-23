@@ -109,7 +109,7 @@ class _RewardQuestionScreenState extends State<RewardQuestionScreen> {
     // =======================================================
 
     if (correct && !_pointsAdded) {
-      await PointService.addPoints(widget.reward);
+      await PointService.addPoints(widget.reward, source: PointSource.game);
 
       _pointsAdded = true;
     }

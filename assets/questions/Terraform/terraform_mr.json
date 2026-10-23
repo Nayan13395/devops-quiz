@@ -902,50 +902,30 @@
       {
           "category":  "Terraform",
           "set":  2,
-          "question":  "à¤•à¥‹à¤£à¤¤à¥€ lifecycle setting Terraform à¤²à¤¾ resource à¤¨à¤·à¥à¤Ÿ à¤•à¤°à¤£à¥à¤¯à¤¾à¤ªà¤¾à¤¸à¥‚à¤¨ à¤°à¥‹à¤–à¤¤à¥‡?",
-          "options":  [
-                          "prevent_destroy",
-                          "create_before_destroy",
-                          "ignore_changes",
-                          "replace_triggered_by"
-                      ],
-          "answer":  "prevent_destroy"
+          "question":  "Terraform dependency lock file name",
+          "options":  [".terraform.lock.hcl", "store and retrieve state snapshots", "prevent concurrent state writes", "variable validation"],
+          "answer":  ".terraform.lock.hcl"
       },
       {
           "category":  "Terraform",
           "set":  3,
-          "question":  "à¤•à¥‹à¤£à¤¤à¥€ lifecycle setting Terraform à¤²à¤¾ resource à¤¨à¤·à¥à¤Ÿ à¤•à¤°à¤£à¥à¤¯à¤¾à¤ªà¤¾à¤¸à¥‚à¤¨ à¤°à¥‹à¤–à¤¤à¥‡?",
-          "options":  [
-                          "prevent_destroy",
-                          "create_before_destroy",
-                          "ignore_changes",
-                          "replace_triggered_by"
-                      ],
-          "answer":  "prevent_destroy"
+          "question":  "Terraform count index value",
+          "options":  ["zero-based numeric instance index", ".terraform.lock.hcl", "store and retrieve state snapshots", "prevent concurrent state writes"],
+          "answer":  "zero-based numeric instance index"
       },
       {
           "category":  "Terraform",
           "set":  4,
-          "question":  "à¤•à¥‹à¤£à¤¤à¥€ lifecycle setting Terraform à¤²à¤¾ resource à¤¨à¤·à¥à¤Ÿ à¤•à¤°à¤£à¥à¤¯à¤¾à¤ªà¤¾à¤¸à¥‚à¤¨ à¤°à¥‹à¤–à¤¤à¥‡?",
-          "options":  [
-                          "prevent_destroy",
-                          "create_before_destroy",
-                          "ignore_changes",
-                          "replace_triggered_by"
-                      ],
-          "answer":  "prevent_destroy"
+          "question":  "Terraform workspace select command",
+          "options":  ["terraform workspace select name", ".terraform.lock.hcl", "store and retrieve state snapshots", "prevent concurrent state writes"],
+          "answer":  "terraform workspace select name"
       },
       {
           "category":  "Terraform",
           "set":  5,
-          "question":  "à¤•à¥‹à¤£à¤¤à¥€ lifecycle setting Terraform à¤²à¤¾ resource à¤¨à¤·à¥à¤Ÿ à¤•à¤°à¤£à¥à¤¯à¤¾à¤ªà¤¾à¤¸à¥‚à¤¨ à¤°à¥‹à¤–à¤¤à¥‡?",
-          "options":  [
-                          "prevent_destroy",
-                          "create_before_destroy",
-                          "ignore_changes",
-                          "replace_triggered_by"
-                      ],
-          "answer":  "prevent_destroy"
+          "question":  "Terraform fmt recursive flag",
+          "options":  ["terraform fmt -recursive", ".terraform.lock.hcl", "store and retrieve state snapshots", "prevent concurrent state writes"],
+          "answer":  "terraform fmt -recursive"
       },
       {
           "category":  "Terraform",
@@ -962,290 +942,190 @@
       {
           "category":  "Terraform",
           "set":  2,
-          "question":  "Terraform output à¤®à¤§à¥à¤¯à¥‡ variable à¤šà¥‡ value sensitive à¤®à¥à¤¹à¤£à¥‚à¤¨ à¤¦à¤°à¥à¤¶à¤µà¤£à¤¾à¤°à¤¾ argument à¤•à¥‹à¤£à¤¤à¤¾?",
+          "question":  "Terraform state backend purpose",
+          "options":  ["store and retrieve state snapshots", ".terraform.lock.hcl", "prevent concurrent state writes", "variable validation"],
+          "answer":  "store and retrieve state snapshots"
+      },
+      {
+          "category":  "Terraform",
+          "set":  3,
+          "question":  "Terraform lifecycle create before destroy",
+          "options":  ["create replacement before deleting old object", ".terraform.lock.hcl", "store and retrieve state snapshots", "prevent concurrent state writes"],
+          "answer":  "create replacement before deleting old object"
+      },
+      {
+          "category":  "Terraform",
+          "set":  4,
+          "question":  "Terraform workspace isolation limitation",
+          "options":  ["it does not isolate credentials or backends automatically", ".terraform.lock.hcl", "store and retrieve state snapshots", "prevent concurrent state writes"],
+          "answer":  "it does not isolate credentials or backends automatically"
+      },
+      {
+          "category":  "Terraform",
+          "set":  5,
+          "question":  "Terraform validate initialization requirement",
+          "options":  ["terraform init", ".terraform.lock.hcl", "store and retrieve state snapshots", "prevent concurrent state writes"],
+          "answer":  "terraform init"
+      },
+      {
+          "category":  "Terraform",
+          "set":  1,
+          "question":  "resource à¤¸à¤¾à¤ à¥€ aliased provider configuration à¤¨à¤¿à¤µà¤¡à¤£à¤¾à¤°à¤¾ argument à¤•à¥‹à¤£à¤¤à¤¾?",
           "options":  [
-                          "sensitive = true",
-                          "private = true",
-                          "hidden = true",
-                          "secret = true"
+                          "provider",
+                          "backend",
+                          "source",
+                          "required_providers"
                       ],
+          "answer":  "provider"
+      },
+      {
+          "category":  "Terraform",
+          "set":  2,
+          "question":  "Terraform state locking purpose",
+          "options":  ["prevent concurrent state writes", ".terraform.lock.hcl", "store and retrieve state snapshots", "variable validation"],
+          "answer":  "prevent concurrent state writes"
+      },
+      {
+          "category":  "Terraform",
+          "set":  3,
+          "question":  "Terraform lifecycle ignore changes",
+          "options":  ["ignore selected attribute diffs", ".terraform.lock.hcl", "store and retrieve state snapshots", "prevent concurrent state writes"],
+          "answer":  "ignore selected attribute diffs"
+      },
+      {
+          "category":  "Terraform",
+          "set":  4,
+          "question":  "Terraform provider alias purpose",
+          "options":  ["select a secondary configuration for one resource", ".terraform.lock.hcl", "store and retrieve state snapshots", "prevent concurrent state writes"],
+          "answer":  "select a secondary configuration for one resource"
+      },
+      {
+          "category":  "Terraform",
+          "set":  5,
+          "question":  "Terraform init upgrade flag",
+          "options":  ["terraform init -upgrade", ".terraform.lock.hcl", "store and retrieve state snapshots", "prevent concurrent state writes"],
+          "answer":  "terraform init -upgrade"
+      },
+      {
+          "category":  "Terraform",
+          "set":  1,
+          "question":  "object à¤ªà¥à¤¨à¥à¤¹à¤¾ à¤¤à¤¯à¤¾à¤° à¤¨ à¤•à¤°à¤¤à¤¾ resource address à¤®à¤§à¥€à¤² à¤¬à¤¦à¤² à¤¨à¥‹à¤‚à¤¦à¤µà¤£à¤¾à¤°à¤¾ block à¤•à¥‹à¤£à¤¤à¤¾?",
+          "options":  [
+                          "moved",
+                          "import",
+                          "check",
+                          "output"
+                      ],
+          "answer":  "moved"
+      },
+      {
+          "category":  "Terraform",
+          "set":  2,
+          "question":  "Terraform variable validation block",
+          "options":  ["variable validation", ".terraform.lock.hcl", "store and retrieve state snapshots", "prevent concurrent state writes"],
+          "answer":  "variable validation"
+      },
+      {
+          "category":  "Terraform",
+          "set":  3,
+          "question":  "Terraform import existing resource command",
+          "options":  ["terraform import address id", ".terraform.lock.hcl", "store and retrieve state snapshots", "prevent concurrent state writes"],
+          "answer":  "terraform import address id"
+      },
+      {
+          "category":  "Terraform",
+          "set":  4,
+          "question":  "Terraform provider required version block",
+          "options":  ["required_providers block", ".terraform.lock.hcl", "store and retrieve state snapshots", "prevent concurrent state writes"],
+          "answer":  "required_providers block"
+      },
+      {
+          "category":  "Terraform",
+          "set":  5,
+          "question":  "Terraform init backend migration flag",
+          "options":  ["migrate backend state", ".terraform.lock.hcl", "store and retrieve state snapshots", "prevent concurrent state writes"],
+          "answer":  "migrate backend state"
+      },
+      {
+          "category":  "Terraform",
+          "set":  1,
+          "question":  "à¤¸à¤•à¥à¤°à¤¿à¤¯ Terraform workspace à¤¬à¤¦à¤²à¤£à¤¾à¤°à¤¾ command à¤•à¥‹à¤£à¤¤à¤¾?",
+          "options":  [
+                          "terraform workspace select",
+                          "terraform workspace new",
+                          "terraform init",
+                          "terraform providers lock"
+                      ],
+          "answer":  "terraform workspace select"
+      },
+      {
+          "category":  "Terraform",
+          "set":  2,
+          "question":  "Terraform sensitive variable effect",
+          "options":  ["redacts value in CLI output and state display", ".terraform.lock.hcl", "store and retrieve state snapshots", "prevent concurrent state writes"],
+          "answer":  "redacts value in CLI output and state display"
+      },
+      {
+          "category":  "Terraform",
+          "set":  3,
+          "question":  "Terraform state list command",
+          "options":  ["terraform state list", ".terraform.lock.hcl", "store and retrieve state snapshots", "prevent concurrent state writes"],
+          "answer":  "terraform state list"
+      },
+      {
+          "category":  "Terraform",
+          "set":  4,
+          "question":  "Terraform data source purpose",
+          "options":  ["read existing infrastructure without managing it", ".terraform.lock.hcl", "store and retrieve state snapshots", "prevent concurrent state writes"],
+          "answer":  "read existing infrastructure without managing it"
+      },
+      {
+          "category":  "Terraform",
+          "set":  5,
+          "question":  "Terraform taint replacement alternative",
+          "options":  ["use a replace trigger instead of taint", ".terraform.lock.hcl", "store and retrieve state snapshots", "prevent concurrent state writes"],
+          "answer":  "use a replace trigger instead of taint"
+      },
+      {
+          "category":  "Terraform",
+          "set":  1,
+          "question":  "root module à¤šà¥‡ à¤¸à¤°à¥à¤µ outputs machine-readable JSON à¤®à¤§à¥à¤¯à¥‡ à¤¦à¤¾à¤–à¤µà¤£à¤¾à¤°à¤¾ command à¤•à¥‹à¤£à¤¤à¤¾?",
+          "options":  [
+                          "terraform output -json",
+                          "terraform show -json",
+                          "terraform state list -json",
+                          "terraform plan -json"
+                      ],
+          "answer":  "terraform output -json"
+      },
+      {
+          "category":  "Terraform",
+          "set":  2,
+          "question":  "Terraform output sensitivity flag",
+          "options":  ["sensitive = true", ".terraform.lock.hcl", "store and retrieve state snapshots", "prevent concurrent state writes"],
           "answer":  "sensitive = true"
       },
       {
           "category":  "Terraform",
           "set":  3,
-          "question":  "Terraform output à¤®à¤§à¥à¤¯à¥‡ variable à¤šà¥‡ value sensitive à¤®à¥à¤¹à¤£à¥‚à¤¨ à¤¦à¤°à¥à¤¶à¤µà¤£à¤¾à¤°à¤¾ argument à¤•à¥‹à¤£à¤¤à¤¾?",
-          "options":  [
-                          "sensitive = true",
-                          "private = true",
-                          "hidden = true",
-                          "secret = true"
-                      ],
-          "answer":  "sensitive = true"
+          "question":  "Terraform state show command",
+          "options":  ["terraform state show address", ".terraform.lock.hcl", "store and retrieve state snapshots", "prevent concurrent state writes"],
+          "answer":  "terraform state show address"
       },
       {
           "category":  "Terraform",
           "set":  4,
-          "question":  "Terraform output à¤®à¤§à¥à¤¯à¥‡ variable à¤šà¥‡ value sensitive à¤®à¥à¤¹à¤£à¥‚à¤¨ à¤¦à¤°à¥à¤¶à¤µà¤£à¤¾à¤°à¤¾ argument à¤•à¥‹à¤£à¤¤à¤¾?",
-          "options":  [
-                          "sensitive = true",
-                          "private = true",
-                          "hidden = true",
-                          "secret = true"
-                      ],
-          "answer":  "sensitive = true"
+          "question":  "Terraform moved block purpose",
+          "options":  ["record an address change without recreation", ".terraform.lock.hcl", "store and retrieve state snapshots", "prevent concurrent state writes"],
+          "answer":  "record an address change without recreation"
       },
       {
           "category":  "Terraform",
           "set":  5,
-          "question":  "Terraform output à¤®à¤§à¥à¤¯à¥‡ variable à¤šà¥‡ value sensitive à¤®à¥à¤¹à¤£à¥‚à¤¨ à¤¦à¤°à¥à¤¶à¤µà¤£à¤¾à¤°à¤¾ argument à¤•à¥‹à¤£à¤¤à¤¾?",
-          "options":  [
-                          "sensitive = true",
-                          "private = true",
-                          "hidden = true",
-                          "secret = true"
-                      ],
-          "answer":  "sensitive = true"
-      },
-      {
-          "category":  "Terraform",
-          "set":  1,
-          "question":  "resource à¤¸à¤¾à¤ à¥€ aliased provider configuration à¤¨à¤¿à¤µà¤¡à¤£à¤¾à¤°à¤¾ argument à¤•à¥‹à¤£à¤¤à¤¾?",
-          "options":  [
-                          "provider",
-                          "backend",
-                          "source",
-                          "required_providers"
-                      ],
-          "answer":  "provider"
-      },
-      {
-          "category":  "Terraform",
-          "set":  2,
-          "question":  "resource à¤¸à¤¾à¤ à¥€ aliased provider configuration à¤¨à¤¿à¤µà¤¡à¤£à¤¾à¤°à¤¾ argument à¤•à¥‹à¤£à¤¤à¤¾?",
-          "options":  [
-                          "provider",
-                          "backend",
-                          "source",
-                          "required_providers"
-                      ],
-          "answer":  "provider"
-      },
-      {
-          "category":  "Terraform",
-          "set":  3,
-          "question":  "resource à¤¸à¤¾à¤ à¥€ aliased provider configuration à¤¨à¤¿à¤µà¤¡à¤£à¤¾à¤°à¤¾ argument à¤•à¥‹à¤£à¤¤à¤¾?",
-          "options":  [
-                          "provider",
-                          "backend",
-                          "source",
-                          "required_providers"
-                      ],
-          "answer":  "provider"
-      },
-      {
-          "category":  "Terraform",
-          "set":  4,
-          "question":  "resource à¤¸à¤¾à¤ à¥€ aliased provider configuration à¤¨à¤¿à¤µà¤¡à¤£à¤¾à¤°à¤¾ argument à¤•à¥‹à¤£à¤¤à¤¾?",
-          "options":  [
-                          "provider",
-                          "backend",
-                          "source",
-                          "required_providers"
-                      ],
-          "answer":  "provider"
-      },
-      {
-          "category":  "Terraform",
-          "set":  5,
-          "question":  "resource à¤¸à¤¾à¤ à¥€ aliased provider configuration à¤¨à¤¿à¤µà¤¡à¤£à¤¾à¤°à¤¾ argument à¤•à¥‹à¤£à¤¤à¤¾?",
-          "options":  [
-                          "provider",
-                          "backend",
-                          "source",
-                          "required_providers"
-                      ],
-          "answer":  "provider"
-      },
-      {
-          "category":  "Terraform",
-          "set":  1,
-          "question":  "object à¤ªà¥à¤¨à¥à¤¹à¤¾ à¤¤à¤¯à¤¾à¤° à¤¨ à¤•à¤°à¤¤à¤¾ resource address à¤®à¤§à¥€à¤² à¤¬à¤¦à¤² à¤¨à¥‹à¤‚à¤¦à¤µà¤£à¤¾à¤°à¤¾ block à¤•à¥‹à¤£à¤¤à¤¾?",
-          "options":  [
-                          "moved",
-                          "import",
-                          "check",
-                          "output"
-                      ],
-          "answer":  "moved"
-      },
-      {
-          "category":  "Terraform",
-          "set":  2,
-          "question":  "object à¤ªà¥à¤¨à¥à¤¹à¤¾ à¤¤à¤¯à¤¾à¤° à¤¨ à¤•à¤°à¤¤à¤¾ resource address à¤®à¤§à¥€à¤² à¤¬à¤¦à¤² à¤¨à¥‹à¤‚à¤¦à¤µà¤£à¤¾à¤°à¤¾ block à¤•à¥‹à¤£à¤¤à¤¾?",
-          "options":  [
-                          "moved",
-                          "import",
-                          "check",
-                          "output"
-                      ],
-          "answer":  "moved"
-      },
-      {
-          "category":  "Terraform",
-          "set":  3,
-          "question":  "object à¤ªà¥à¤¨à¥à¤¹à¤¾ à¤¤à¤¯à¤¾à¤° à¤¨ à¤•à¤°à¤¤à¤¾ resource address à¤®à¤§à¥€à¤² à¤¬à¤¦à¤² à¤¨à¥‹à¤‚à¤¦à¤µà¤£à¤¾à¤°à¤¾ block à¤•à¥‹à¤£à¤¤à¤¾?",
-          "options":  [
-                          "moved",
-                          "import",
-                          "check",
-                          "output"
-                      ],
-          "answer":  "moved"
-      },
-      {
-          "category":  "Terraform",
-          "set":  4,
-          "question":  "object à¤ªà¥à¤¨à¥à¤¹à¤¾ à¤¤à¤¯à¤¾à¤° à¤¨ à¤•à¤°à¤¤à¤¾ resource address à¤®à¤§à¥€à¤² à¤¬à¤¦à¤² à¤¨à¥‹à¤‚à¤¦à¤µà¤£à¤¾à¤°à¤¾ block à¤•à¥‹à¤£à¤¤à¤¾?",
-          "options":  [
-                          "moved",
-                          "import",
-                          "check",
-                          "output"
-                      ],
-          "answer":  "moved"
-      },
-      {
-          "category":  "Terraform",
-          "set":  5,
-          "question":  "object à¤ªà¥à¤¨à¥à¤¹à¤¾ à¤¤à¤¯à¤¾à¤° à¤¨ à¤•à¤°à¤¤à¤¾ resource address à¤®à¤§à¥€à¤² à¤¬à¤¦à¤² à¤¨à¥‹à¤‚à¤¦à¤µà¤£à¤¾à¤°à¤¾ block à¤•à¥‹à¤£à¤¤à¤¾?",
-          "options":  [
-                          "moved",
-                          "import",
-                          "check",
-                          "output"
-                      ],
-          "answer":  "moved"
-      },
-      {
-          "category":  "Terraform",
-          "set":  1,
-          "question":  "à¤¸à¤•à¥à¤°à¤¿à¤¯ Terraform workspace à¤¬à¤¦à¤²à¤£à¤¾à¤°à¤¾ command à¤•à¥‹à¤£à¤¤à¤¾?",
-          "options":  [
-                          "terraform workspace select",
-                          "terraform workspace new",
-                          "terraform init",
-                          "terraform providers lock"
-                      ],
-          "answer":  "terraform workspace select"
-      },
-      {
-          "category":  "Terraform",
-          "set":  2,
-          "question":  "à¤¸à¤•à¥à¤°à¤¿à¤¯ Terraform workspace à¤¬à¤¦à¤²à¤£à¤¾à¤°à¤¾ command à¤•à¥‹à¤£à¤¤à¤¾?",
-          "options":  [
-                          "terraform workspace select",
-                          "terraform workspace new",
-                          "terraform init",
-                          "terraform providers lock"
-                      ],
-          "answer":  "terraform workspace select"
-      },
-      {
-          "category":  "Terraform",
-          "set":  3,
-          "question":  "à¤¸à¤•à¥à¤°à¤¿à¤¯ Terraform workspace à¤¬à¤¦à¤²à¤£à¤¾à¤°à¤¾ command à¤•à¥‹à¤£à¤¤à¤¾?",
-          "options":  [
-                          "terraform workspace select",
-                          "terraform workspace new",
-                          "terraform init",
-                          "terraform providers lock"
-                      ],
-          "answer":  "terraform workspace select"
-      },
-      {
-          "category":  "Terraform",
-          "set":  4,
-          "question":  "à¤¸à¤•à¥à¤°à¤¿à¤¯ Terraform workspace à¤¬à¤¦à¤²à¤£à¤¾à¤°à¤¾ command à¤•à¥‹à¤£à¤¤à¤¾?",
-          "options":  [
-                          "terraform workspace select",
-                          "terraform workspace new",
-                          "terraform init",
-                          "terraform providers lock"
-                      ],
-          "answer":  "terraform workspace select"
-      },
-      {
-          "category":  "Terraform",
-          "set":  5,
-          "question":  "à¤¸à¤•à¥à¤°à¤¿à¤¯ Terraform workspace à¤¬à¤¦à¤²à¤£à¤¾à¤°à¤¾ command à¤•à¥‹à¤£à¤¤à¤¾?",
-          "options":  [
-                          "terraform workspace select",
-                          "terraform workspace new",
-                          "terraform init",
-                          "terraform providers lock"
-                      ],
-          "answer":  "terraform workspace select"
-      },
-      {
-          "category":  "Terraform",
-          "set":  1,
-          "question":  "root module à¤šà¥‡ à¤¸à¤°à¥à¤µ outputs machine-readable JSON à¤®à¤§à¥à¤¯à¥‡ à¤¦à¤¾à¤–à¤µà¤£à¤¾à¤°à¤¾ command à¤•à¥‹à¤£à¤¤à¤¾?",
-          "options":  [
-                          "terraform output -json",
-                          "terraform show -json",
-                          "terraform state list -json",
-                          "terraform plan -json"
-                      ],
-          "answer":  "terraform output -json"
-      },
-      {
-          "category":  "Terraform",
-          "set":  2,
-          "question":  "root module à¤šà¥‡ à¤¸à¤°à¥à¤µ outputs machine-readable JSON à¤®à¤§à¥à¤¯à¥‡ à¤¦à¤¾à¤–à¤µà¤£à¤¾à¤°à¤¾ command à¤•à¥‹à¤£à¤¤à¤¾?",
-          "options":  [
-                          "terraform output -json",
-                          "terraform show -json",
-                          "terraform state list -json",
-                          "terraform plan -json"
-                      ],
-          "answer":  "terraform output -json"
-      },
-      {
-          "category":  "Terraform",
-          "set":  3,
-          "question":  "root module à¤šà¥‡ à¤¸à¤°à¥à¤µ outputs machine-readable JSON à¤®à¤§à¥à¤¯à¥‡ à¤¦à¤¾à¤–à¤µà¤£à¤¾à¤°à¤¾ command à¤•à¥‹à¤£à¤¤à¤¾?",
-          "options":  [
-                          "terraform output -json",
-                          "terraform show -json",
-                          "terraform state list -json",
-                          "terraform plan -json"
-                      ],
-          "answer":  "terraform output -json"
-      },
-      {
-          "category":  "Terraform",
-          "set":  4,
-          "question":  "root module à¤šà¥‡ à¤¸à¤°à¥à¤µ outputs machine-readable JSON à¤®à¤§à¥à¤¯à¥‡ à¤¦à¤¾à¤–à¤µà¤£à¤¾à¤°à¤¾ command à¤•à¥‹à¤£à¤¤à¤¾?",
-          "options":  [
-                          "terraform output -json",
-                          "terraform show -json",
-                          "terraform state list -json",
-                          "terraform plan -json"
-                      ],
-          "answer":  "terraform output -json"
-      },
-      {
-          "category":  "Terraform",
-          "set":  5,
-          "question":  "root module à¤šà¥‡ à¤¸à¤°à¥à¤µ outputs machine-readable JSON à¤®à¤§à¥à¤¯à¥‡ à¤¦à¤¾à¤–à¤µà¤£à¤¾à¤°à¤¾ command à¤•à¥‹à¤£à¤¤à¤¾?",
-          "options":  [
-                          "terraform output -json",
-                          "terraform show -json",
-                          "terraform state list -json",
-                          "terraform plan -json"
-                      ],
-          "answer":  "terraform output -json"
+          "question":  "Terraform replace resource command",
+          "options":  ["terraform apply -replace=address", ".terraform.lock.hcl", "store and retrieve state snapshots", "prevent concurrent state writes"],
+          "answer":  "terraform apply -replace=address"
       },
       {
           "category":  "Terraform",
@@ -1262,50 +1142,30 @@
       {
           "category":  "Terraform",
           "set":  2,
-          "question":  "à¤œà¥à¤¨à¤¾ resource à¤¨à¤·à¥à¤Ÿ à¤•à¤°à¤£à¥à¤¯à¤¾à¤ªà¥‚à¤°à¥à¤µà¥€ replacement à¤¤à¤¯à¤¾à¤° à¤•à¤°à¤£à¤¾à¤°à¤¾ lifecycle rule à¤•à¥‹à¤£à¤¤à¤¾?",
-          "options":  [
-                          "create_before_destroy",
-                          "prevent_destroy",
-                          "ignore_changes",
-                          "destroy_before_create"
-                      ],
-          "answer":  "create_before_destroy"
+          "question":  "Terraform local value purpose",
+          "options":  ["name an expression for reuse in a module", ".terraform.lock.hcl", "store and retrieve state snapshots", "prevent concurrent state writes"],
+          "answer":  "name an expression for reuse in a module"
       },
       {
           "category":  "Terraform",
           "set":  3,
-          "question":  "à¤œà¥à¤¨à¤¾ resource à¤¨à¤·à¥à¤Ÿ à¤•à¤°à¤£à¥à¤¯à¤¾à¤ªà¥‚à¤°à¥à¤µà¥€ replacement à¤¤à¤¯à¤¾à¤° à¤•à¤°à¤£à¤¾à¤°à¤¾ lifecycle rule à¤•à¥‹à¤£à¤¤à¤¾?",
-          "options":  [
-                          "create_before_destroy",
-                          "prevent_destroy",
-                          "ignore_changes",
-                          "destroy_before_create"
-                      ],
-          "answer":  "create_before_destroy"
+          "question":  "Terraform output JSON command",
+          "options":  ["terraform output -json", ".terraform.lock.hcl", "store and retrieve state snapshots", "prevent concurrent state writes"],
+          "answer":  "terraform output -json"
       },
       {
           "category":  "Terraform",
           "set":  4,
-          "question":  "à¤œà¥à¤¨à¤¾ resource à¤¨à¤·à¥à¤Ÿ à¤•à¤°à¤£à¥à¤¯à¤¾à¤ªà¥‚à¤°à¥à¤µà¥€ replacement à¤¤à¤¯à¤¾à¤° à¤•à¤°à¤£à¤¾à¤°à¤¾ lifecycle rule à¤•à¥‹à¤£à¤¤à¤¾?",
-          "options":  [
-                          "create_before_destroy",
-                          "prevent_destroy",
-                          "ignore_changes",
-                          "destroy_before_create"
-                      ],
-          "answer":  "create_before_destroy"
+          "question":  "Terraform removed block purpose",
+          "options":  ["remove from state without destroying the object", ".terraform.lock.hcl", "store and retrieve state snapshots", "prevent concurrent state writes"],
+          "answer":  "remove from state without destroying the object"
       },
       {
           "category":  "Terraform",
           "set":  5,
-          "question":  "à¤œà¥à¤¨à¤¾ resource à¤¨à¤·à¥à¤Ÿ à¤•à¤°à¤£à¥à¤¯à¤¾à¤ªà¥‚à¤°à¥à¤µà¥€ replacement à¤¤à¤¯à¤¾à¤° à¤•à¤°à¤£à¤¾à¤°à¤¾ lifecycle rule à¤•à¥‹à¤£à¤¤à¤¾?",
-          "options":  [
-                          "create_before_destroy",
-                          "prevent_destroy",
-                          "ignore_changes",
-                          "destroy_before_create"
-                      ],
-          "answer":  "create_before_destroy"
+          "question":  "Terraform refresh-only plan mode",
+          "options":  ["plan without changing state", ".terraform.lock.hcl", "store and retrieve state snapshots", "prevent concurrent state writes"],
+          "answer":  "plan without changing state"
       },
       {
           "category":  "Terraform",
@@ -1322,50 +1182,30 @@
       {
           "category":  "Terraform",
           "set":  2,
-          "question":  "à¤¨à¤¿à¤µà¤¡à¤²à¥‡à¤²à¥à¤¯à¤¾ resource attributes à¤®à¤§à¥€à¤² à¤¬à¤¦à¤² à¤¦à¥à¤°à¥à¤²à¤•à¥à¤·à¤¿à¤¤ à¤•à¤°à¤£à¤¾à¤°à¤¾ lifecycle argument à¤•à¥‹à¤£à¤¤à¤¾?",
-          "options":  [
-                          "ignore_changes",
-                          "prevent_destroy",
-                          "create_before_destroy",
-                          "replace_triggered_by"
-                      ],
-          "answer":  "ignore_changes"
+          "question":  "Terraform module source purpose",
+          "options":  ["reuse and encapsulate configuration", ".terraform.lock.hcl", "store and retrieve state snapshots", "prevent concurrent state writes"],
+          "answer":  "reuse and encapsulate configuration"
       },
       {
           "category":  "Terraform",
           "set":  3,
-          "question":  "à¤¨à¤¿à¤µà¤¡à¤²à¥‡à¤²à¥à¤¯à¤¾ resource attributes à¤®à¤§à¥€à¤² à¤¬à¤¦à¤² à¤¦à¥à¤°à¥à¤²à¤•à¥à¤·à¤¿à¤¤ à¤•à¤°à¤£à¤¾à¤°à¤¾ lifecycle argument à¤•à¥‹à¤£à¤¤à¤¾?",
-          "options":  [
-                          "ignore_changes",
-                          "prevent_destroy",
-                          "create_before_destroy",
-                          "replace_triggered_by"
-                      ],
-          "answer":  "ignore_changes"
+          "question":  "Terraform plan output file flag",
+          "options":  ["-out=plan.tfplan", ".terraform.lock.hcl", "store and retrieve state snapshots", "prevent concurrent state writes"],
+          "answer":  "-out=plan.tfplan"
       },
       {
           "category":  "Terraform",
           "set":  4,
-          "question":  "à¤¨à¤¿à¤µà¤¡à¤²à¥‡à¤²à¥à¤¯à¤¾ resource attributes à¤®à¤§à¥€à¤² à¤¬à¤¦à¤² à¤¦à¥à¤°à¥à¤²à¤•à¥à¤·à¤¿à¤¤ à¤•à¤°à¤£à¤¾à¤°à¤¾ lifecycle argument à¤•à¥‹à¤£à¤¤à¤¾?",
-          "options":  [
-                          "ignore_changes",
-                          "prevent_destroy",
-                          "create_before_destroy",
-                          "replace_triggered_by"
-                      ],
-          "answer":  "ignore_changes"
+          "question":  "Terraform check block purpose",
+          "options":  ["assert conditions about managed infrastructure", ".terraform.lock.hcl", "store and retrieve state snapshots", "prevent concurrent state writes"],
+          "answer":  "assert conditions about managed infrastructure"
       },
       {
           "category":  "Terraform",
           "set":  5,
-          "question":  "à¤¨à¤¿à¤µà¤¡à¤²à¥‡à¤²à¥à¤¯à¤¾ resource attributes à¤®à¤§à¥€à¤² à¤¬à¤¦à¤² à¤¦à¥à¤°à¥à¤²à¤•à¥à¤·à¤¿à¤¤ à¤•à¤°à¤£à¤¾à¤°à¤¾ lifecycle argument à¤•à¥‹à¤£à¤¤à¤¾?",
-          "options":  [
-                          "ignore_changes",
-                          "prevent_destroy",
-                          "create_before_destroy",
-                          "replace_triggered_by"
-                      ],
-          "answer":  "ignore_changes"
+          "question":  "Terraform console expression evaluator",
+          "options":  ["evaluate expressions interactively", ".terraform.lock.hcl", "store and retrieve state snapshots", "prevent concurrent state writes"],
+          "answer":  "evaluate expressions interactively"
       },
       {
           "category":  "Terraform",
@@ -1382,50 +1222,30 @@
       {
           "category":  "Terraform",
           "set":  2,
-          "question":  "managed infrastructure à¤¬à¤¦à¥à¤¦à¤² assertion à¤˜à¥‹à¤·à¤¿à¤¤ à¤•à¤°à¤£à¤¾à¤°à¤¾ Terraform block à¤•à¥‹à¤£à¤¤à¤¾?",
-          "options":  [
-                          "check",
-                          "locals",
-                          "terraform",
-                          "provider"
-                      ],
-          "answer":  "check"
+          "question":  "Terraform module version constraint",
+          "options":  ["version = constraint", ".terraform.lock.hcl", "store and retrieve state snapshots", "prevent concurrent state writes"],
+          "answer":  "version = constraint"
       },
       {
           "category":  "Terraform",
           "set":  3,
-          "question":  "managed infrastructure à¤¬à¤¦à¥à¤¦à¤² assertion à¤˜à¥‹à¤·à¤¿à¤¤ à¤•à¤°à¤£à¤¾à¤°à¤¾ Terraform block à¤•à¥‹à¤£à¤¤à¤¾?",
-          "options":  [
-                          "check",
-                          "locals",
-                          "terraform",
-                          "provider"
-                      ],
-          "answer":  "check"
+          "question":  "Terraform apply saved plan behavior",
+          "options":  ["applies the exact saved plan", ".terraform.lock.hcl", "store and retrieve state snapshots", "prevent concurrent state writes"],
+          "answer":  "applies the exact saved plan"
       },
       {
           "category":  "Terraform",
           "set":  4,
-          "question":  "managed infrastructure à¤¬à¤¦à¥à¤¦à¤² assertion à¤˜à¥‹à¤·à¤¿à¤¤ à¤•à¤°à¤£à¤¾à¤°à¤¾ Terraform block à¤•à¥‹à¤£à¤¤à¤¾?",
-          "options":  [
-                          "check",
-                          "locals",
-                          "terraform",
-                          "provider"
-                      ],
-          "answer":  "check"
+          "question":  "Terraform precondition evaluation phase",
+          "options":  ["before the resource operation", ".terraform.lock.hcl", "store and retrieve state snapshots", "prevent concurrent state writes"],
+          "answer":  "before the resource operation"
       },
       {
           "category":  "Terraform",
           "set":  5,
-          "question":  "managed infrastructure à¤¬à¤¦à¥à¤¦à¤² assertion à¤˜à¥‹à¤·à¤¿à¤¤ à¤•à¤°à¤£à¤¾à¤°à¤¾ Terraform block à¤•à¥‹à¤£à¤¤à¤¾?",
-          "options":  [
-                          "check",
-                          "locals",
-                          "terraform",
-                          "provider"
-                      ],
-          "answer":  "check"
+          "question":  "Terraform dynamic block purpose",
+          "options":  ["generate repeated nested configuration", ".terraform.lock.hcl", "store and retrieve state snapshots", "prevent concurrent state writes"],
+          "answer":  "generate repeated nested configuration"
       },
       {
           "category":  "Terraform",
@@ -1442,50 +1262,30 @@
       {
           "category":  "Terraform",
           "set":  2,
-          "question":  "root module à¤®à¤§à¥à¤¯à¥‡ à¤ªà¤°à¤¿à¤­à¤¾à¤·à¤¿à¤¤ outputs à¤šà¥€ values à¤¦à¤¾à¤–à¤µà¤£à¤¾à¤°à¤¾ command à¤•à¥‹à¤£à¤¤à¤¾?",
-          "options":  [
-                          "terraform output",
-                          "terraform console",
-                          "terraform show",
-                          "terraform validate"
-                      ],
-          "answer":  "terraform output"
+          "question":  "Terraform for_each key requirement",
+          "options":  ["stable unique map keys", ".terraform.lock.hcl", "store and retrieve state snapshots", "prevent concurrent state writes"],
+          "answer":  "stable unique map keys"
       },
       {
           "category":  "Terraform",
           "set":  3,
-          "question":  "root module à¤®à¤§à¥à¤¯à¥‡ à¤ªà¤°à¤¿à¤­à¤¾à¤·à¤¿à¤¤ outputs à¤šà¥€ values à¤¦à¤¾à¤–à¤µà¤£à¤¾à¤°à¤¾ command à¤•à¥‹à¤£à¤¤à¤¾?",
-          "options":  [
-                          "terraform output",
-                          "terraform console",
-                          "terraform show",
-                          "terraform validate"
-                      ],
-          "answer":  "terraform output"
+          "question":  "Terraform destroy target option",
+          "options":  ["terraform destroy -target=address", ".terraform.lock.hcl", "store and retrieve state snapshots", "prevent concurrent state writes"],
+          "answer":  "terraform destroy -target=address"
       },
       {
           "category":  "Terraform",
           "set":  4,
-          "question":  "root module à¤®à¤§à¥à¤¯à¥‡ à¤ªà¤°à¤¿à¤­à¤¾à¤·à¤¿à¤¤ outputs à¤šà¥€ values à¤¦à¤¾à¤–à¤µà¤£à¤¾à¤°à¤¾ command à¤•à¥‹à¤£à¤¤à¤¾?",
-          "options":  [
-                          "terraform output",
-                          "terraform console",
-                          "terraform show",
-                          "terraform validate"
-                      ],
-          "answer":  "terraform output"
+          "question":  "Terraform postcondition evaluation phase",
+          "options":  ["after the resource operation", ".terraform.lock.hcl", "store and retrieve state snapshots", "prevent concurrent state writes"],
+          "answer":  "after the resource operation"
       },
       {
           "category":  "Terraform",
           "set":  5,
-          "question":  "root module à¤®à¤§à¥à¤¯à¥‡ à¤ªà¤°à¤¿à¤­à¤¾à¤·à¤¿à¤¤ outputs à¤šà¥€ values à¤¦à¤¾à¤–à¤µà¤£à¤¾à¤°à¤¾ command à¤•à¥‹à¤£à¤¤à¤¾?",
-          "options":  [
-                          "terraform output",
-                          "terraform console",
-                          "terraform show",
-                          "terraform validate"
-                      ],
-          "answer":  "terraform output"
+          "question":  "Terraform null resource replacement",
+          "options":  ["replacement is triggered by a changed trigger", ".terraform.lock.hcl", "store and retrieve state snapshots", "prevent concurrent state writes"],
+          "answer":  "replacement is triggered by a changed trigger"
       },
       {
           "category":  "Terraform",

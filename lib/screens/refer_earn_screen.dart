@@ -1,21 +1,34 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:firebase_core/firebase_core.dart';
 import 'package:share_plus/share_plus.dart';
 
+import '../services/google_auth_service.dart';
 import '../services/referral_service.dart';
 
 class ReferEarnScreen extends StatefulWidget {
-  const ReferEarnScreen({super.key});
+  const ReferEarnScreen({super.key, this.referralService});
+
+  final ReferralService? referralService;
 
   @override
   State<ReferEarnScreen> createState() => _ReferEarnScreenState();
 }
 
-class _ReferEarnScreenState extends State<ReferEarnScreen> {
-  static const int referralReward = 1000;
-
-  static const String playStoreUrl =
-      'https://play.google.com/store/apps/details?id=com.nayan.devops';
+class _ReferEarnScreenState extends State<ReferEarnScreen>
+    with WidgetsBindingObserver {
+  static const int referralReward = ReferralService.rewardPoints;
+  late final ReferralService _referrals =
+      widget.referralService ?? ReferralService();
+  final TextEditingController _codeInput = TextEditingController();
+  ReferralProfile? _profile;
+  String? _error;
+  bool _refreshing = false;
+  bool _redeeming = false;
+  bool _sharing = false;
+  bool _signingIn = false;
 
   String referralCode = '';
 
@@ -24,8 +37,78 @@ class _ReferEarnScreenState extends State<ReferEarnScreen> {
   @override
   void initState() {
     super.initState();
-
+    WidgetsBinding.instance.addObserver(this);
     _loadReferralCode();
+  }
+
+  @override
+  void dispose() {
+    WidgetsBinding.instance.removeObserver(this);
+    _codeInput.dispose();
+    super.dispose();
+  }
+
+  @override
+  void didChangeAppLifecycleState(AppLifecycleState state) {
+    if (state == AppLifecycleState.resumed &&
+        !_redeeming &&
+        !_signingIn &&
+        !_sharing) {
+      unawaited(_loadReferralCode());
+    }
+  }
+
+  String _messageFor(Object error) {
+    if (error is FormatException) return error.message;
+    if (error is FirebaseException && error.code == 'permission-denied') {
+      return 'Referral verification is not enabled on the server yet. Please try again later.';
+    }
+    if (error is FirebaseException && error.code == 'requires-google-sign-in') {
+      return 'Sign in with Google to use referrals.';
+    }
+    return 'Unable to connect to referral verification. Check your connection and retry.';
+  }
+
+  Future<void> _signIn() async {
+    if (_signingIn) return;
+    setState(() => _signingIn = true);
+    try {
+      final user = await GoogleAuthService.signInWithGoogle();
+      if (!mounted) return;
+      if (user == null) {
+        setState(
+          () =>
+              _error = GoogleAuthService.lastError ?? 'Sign-in was cancelled.',
+        );
+      } else {
+        await _loadReferralCode();
+      }
+    } finally {
+      if (mounted) setState(() => _signingIn = false);
+    }
+  }
+
+  Future<void> _redeem() async {
+    if (_redeeming || _profile == null || _profile!.referredBy != null) return;
+    setState(() {
+      _redeeming = true;
+      _error = null;
+    });
+    try {
+      final profile = await _referrals.redeem(_codeInput.text);
+      if (!mounted) return;
+      setState(() => _profile = profile);
+      _codeInput.clear();
+      ScaffoldMessenger.of(context).showSnackBar(
+        const SnackBar(
+          content: Text('Code redeemed. Your inviter earned 1,000 points.'),
+        ),
+      );
+    } catch (error) {
+      if (mounted) setState(() => _error = _messageFor(error));
+    } finally {
+      if (mounted) setState(() => _redeeming = false);
+    }
   }
 
   // =========================================================
@@ -33,14 +116,37 @@ class _ReferEarnScreenState extends State<ReferEarnScreen> {
   // =========================================================
 
   Future<void> _loadReferralCode() async {
-    final code = await ReferralService.getReferralCode();
-
-    if (!mounted) return;
-
-    setState(() {
-      referralCode = code;
-      loading = false;
-    });
+    if (_refreshing) return;
+    _refreshing = true;
+    try {
+      if (!_referrals.isSignedIn) {
+        if (mounted)
+          setState(() {
+            loading = false;
+            _profile = null;
+            referralCode = '';
+          });
+        return;
+      }
+      final profile = await _referrals.getProfile();
+      if (!mounted) return;
+      setState(() {
+        referralCode = profile.code;
+        _profile = profile;
+        _error = null;
+        loading = false;
+      });
+      await _referrals.syncRewards();
+    } catch (error) {
+      if (mounted)
+        setState(() {
+          _error = _messageFor(error);
+          loading = false;
+        });
+    } finally {
+      _refreshing = false;
+      if (mounted) setState(() {});
+    }
   }
 
   // =========================================================
@@ -50,7 +156,15 @@ class _ReferEarnScreenState extends State<ReferEarnScreen> {
   Future<void> _copyReferralCode() async {
     if (referralCode.isEmpty) return;
 
-    await Clipboard.setData(ClipboardData(text: referralCode));
+    try {
+      await Clipboard.setData(ClipboardData(text: referralCode));
+    } catch (_) {
+      if (mounted)
+        setState(
+          () => _error = 'Unable to copy. Select and copy your referral code.',
+        );
+      return;
+    }
 
     if (!mounted) return;
 
@@ -69,26 +183,48 @@ class _ReferEarnScreenState extends State<ReferEarnScreen> {
   // =========================================================
 
   Future<void> _shareReferral() async {
-    if (referralCode.isEmpty) return;
-
-    final message =
-        '''
-🚀 Join me on DevOps Quiz!
-
-Learn and test your knowledge of Linux, Docker, Kubernetes, AWS, Networking and more.
-
-🎁 My referral code:
-$referralCode
-
-Enter this code in DevOps Quiz after installing the app.
-
-Download DevOps Quiz:
-$playStoreUrl
-''';
-
-    await SharePlus.instance.share(
-      ShareParams(text: message, subject: 'Join me on DevOps Quiz'),
-    );
+    if (referralCode.isEmpty || _sharing) return;
+    setState(() => _sharing = true);
+    final message = ReferralService.shareMessage(referralCode);
+    try {
+      final box = context.findRenderObject();
+      final result = await SharePlus.instance.share(
+        ShareParams(
+          text: message,
+          subject: 'Join me on DevOps Quiz',
+          sharePositionOrigin: box is RenderBox
+              ? box.localToGlobal(Offset.zero) & box.size
+              : null,
+        ),
+      );
+      if (result.status == ShareResultStatus.unavailable) {
+        await Clipboard.setData(ClipboardData(text: message));
+        if (mounted)
+          ScaffoldMessenger.of(context).showSnackBar(
+            const SnackBar(
+              content: Text('Invite copied. Share it with your friend.'),
+            ),
+          );
+      }
+    } catch (_) {
+      try {
+        await Clipboard.setData(ClipboardData(text: message));
+        if (mounted)
+          ScaffoldMessenger.of(context).showSnackBar(
+            const SnackBar(
+              content: Text('Invite copied. Share it with your friend.'),
+            ),
+          );
+      } catch (_) {
+        if (mounted)
+          setState(
+            () => _error =
+                'Sharing is unavailable. Copy your referral code instead.',
+          );
+      }
+    } finally {
+      if (mounted) setState(() => _sharing = false);
+    }
   }
 
   // =========================================================
@@ -98,7 +234,16 @@ $playStoreUrl
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('Refer & Earn')),
+      appBar: AppBar(
+        title: const Text('Refer & Earn'),
+        actions: [
+          IconButton(
+            tooltip: 'Refresh referrals',
+            onPressed: _refreshing ? null : _loadReferralCode,
+            icon: const Icon(Icons.refresh_rounded),
+          ),
+        ],
+      ),
 
       body: SafeArea(
         child: loading
@@ -112,6 +257,39 @@ $playStoreUrl
 
                     child: Column(
                       children: [
+                        if (!_referrals.isSignedIn) ...[
+                          const Text(
+                            'Sign in with Google to create a verified referral code or redeem an invitation.',
+                            textAlign: TextAlign.center,
+                          ),
+                          const SizedBox(height: 12),
+                          FilledButton.icon(
+                            onPressed: _signingIn ? null : _signIn,
+                            icon: const Icon(Icons.login_rounded),
+                            label: Text(
+                              _signingIn
+                                  ? 'Signing in...'
+                                  : 'Sign in with Google',
+                            ),
+                          ),
+                          const SizedBox(height: 20),
+                        ],
+                        if (_error != null) ...[
+                          Text(
+                            _error!,
+                            key: const ValueKey('referral-error'),
+                            textAlign: TextAlign.center,
+                            style: TextStyle(
+                              color: Theme.of(context).colorScheme.error,
+                            ),
+                          ),
+                          TextButton.icon(
+                            onPressed: _refreshing ? null : _loadReferralCode,
+                            icon: const Icon(Icons.refresh_rounded),
+                            label: const Text('Retry'),
+                          ),
+                          const SizedBox(height: 16),
+                        ],
                         // =================================
                         // GIFT ICON
                         // =================================
@@ -278,17 +456,22 @@ $playStoreUrl
                           child: Row(
                             children: [
                               Expanded(
-                                child: Text(
-                                  referralCode,
+                                child: FittedBox(
+                                  fit: BoxFit.scaleDown,
+                                  child: SelectableText(
+                                    referralCode.isEmpty
+                                        ? 'No verified code yet'
+                                        : referralCode,
 
-                                  textAlign: TextAlign.center,
+                                    textAlign: TextAlign.center,
 
-                                  style: const TextStyle(
-                                    fontSize: 24,
+                                    style: const TextStyle(
+                                      fontSize: 24,
 
-                                    fontWeight: FontWeight.bold,
+                                      fontWeight: FontWeight.bold,
 
-                                    letterSpacing: 2,
+                                      letterSpacing: 2,
+                                    ),
                                   ),
                                 ),
                               ),
@@ -296,7 +479,9 @@ $playStoreUrl
                               IconButton(
                                 tooltip: 'Copy Code',
 
-                                onPressed: _copyReferralCode,
+                                onPressed: referralCode.isEmpty
+                                    ? null
+                                    : _copyReferralCode,
 
                                 icon: const Icon(Icons.content_copy),
                               ),
@@ -314,7 +499,9 @@ $playStoreUrl
                           height: 55,
 
                           child: ElevatedButton.icon(
-                            onPressed: _shareReferral,
+                            onPressed: referralCode.isEmpty || _sharing
+                                ? null
+                                : _shareReferral,
 
                             icon: const Icon(Icons.person_add_alt_1),
 
@@ -331,6 +518,50 @@ $playStoreUrl
                         ),
 
                         const SizedBox(height: 30),
+
+                        if (_profile != null) ...[
+                          Text(
+                            'Successful referrals: ${_profile!.referralCount}',
+                            key: const ValueKey('referral-count'),
+                          ),
+                          const SizedBox(height: 4),
+                          Text(
+                            'Referral points: ${_profile!.rewardPoints}',
+                            key: const ValueKey('referral-points'),
+                          ),
+                          const SizedBox(height: 20),
+                          if (_profile!.referredBy != null)
+                            Text(
+                              'Redeemed code: ${_profile!.redeemedCode}',
+                              key: const ValueKey('referral-redeemed'),
+                            )
+                          else ...[
+                            TextField(
+                              key: const ValueKey('referral-code-input'),
+                              controller: _codeInput,
+                              enabled: !_redeeming,
+                              maxLength: 20,
+                              autocorrect: false,
+                              textCapitalization: TextCapitalization.characters,
+                              decoration: const InputDecoration(
+                                labelText: 'Friend\'s referral code',
+                                hintText: 'DEV-XXXXXXXX',
+                                border: OutlineInputBorder(),
+                              ),
+                              onSubmitted: (_) => _redeem(),
+                            ),
+                            const SizedBox(height: 8),
+                            FilledButton.icon(
+                              key: const ValueKey('referral-redeem'),
+                              onPressed: _redeeming ? null : _redeem,
+                              icon: const Icon(Icons.verified_outlined),
+                              label: Text(
+                                _redeeming ? 'Verifying...' : 'Redeem code',
+                              ),
+                            ),
+                          ],
+                          const SizedBox(height: 24),
+                        ],
 
                         // =================================
                         // HOW IT WORKS
@@ -366,7 +597,8 @@ $playStoreUrl
 
                                 _InfoRow(
                                   number: '2',
-                                  text: 'Your friend installs DevOps Quiz.',
+                                  text:
+                                      'Your friend opens DevOps Quiz and signs in with Google.',
                                 ),
 
                                 SizedBox(height: 16),
@@ -381,7 +613,8 @@ $playStoreUrl
 
                                 _InfoRow(
                                   number: '4',
-                                  text: 'The referral is verified.',
+                                  text:
+                                      'The code is verified once per Google account.',
                                 ),
 
                                 SizedBox(height: 16),

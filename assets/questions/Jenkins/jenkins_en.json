@@ -525,50 +525,30 @@
       {
           "category":  "Jenkins",
           "set":  2,
-          "question":  "Which file conventionally stores a Jenkins Pipeline definition in source control?",
-          "options":  [
-                          "Jenkinsfile",
-                          "pipeline.xml",
-                          "build.yaml",
-                          "job.properties"
-                      ],
-          "answer":  "Jenkinsfile"
+          "question":  "Jenkins credential binding step",
+          "options":  ["withCredentials", "agent", "stages", "environment"],
+          "answer":  "withCredentials"
       },
       {
           "category":  "Jenkins",
           "set":  3,
-          "question":  "Which file conventionally stores a Jenkins Pipeline definition in source control?",
-          "options":  [
-                          "Jenkinsfile",
-                          "pipeline.xml",
-                          "build.yaml",
-                          "job.properties"
-                      ],
-          "answer":  "Jenkinsfile"
+          "question":  "Jenkins stash pipeline purpose",
+          "options":  ["preserve files between stages in one run", "withCredentials", "agent", "stages"],
+          "answer":  "preserve files between stages in one run"
       },
       {
           "category":  "Jenkins",
           "set":  4,
-          "question":  "Which file conventionally stores a Jenkins Pipeline definition in source control?",
-          "options":  [
-                          "Jenkinsfile",
-                          "pipeline.xml",
-                          "build.yaml",
-                          "job.properties"
-                      ],
-          "answer":  "Jenkinsfile"
+          "question":  "Jenkins label expression purpose",
+          "options":  ["select matching agents", "withCredentials", "agent", "stages"],
+          "answer":  "select matching agents"
       },
       {
           "category":  "Jenkins",
           "set":  5,
-          "question":  "Which file conventionally stores a Jenkins Pipeline definition in source control?",
-          "options":  [
-                          "Jenkinsfile",
-                          "pipeline.xml",
-                          "build.yaml",
-                          "job.properties"
-                      ],
-          "answer":  "Jenkinsfile"
+          "question":  "Jenkins throttle builds purpose",
+          "options":  ["limit concurrent builds", "withCredentials", "agent", "stages"],
+          "answer":  "limit concurrent builds"
       },
       {
           "category":  "Jenkins",
@@ -585,50 +565,30 @@
       {
           "category":  "Jenkins",
           "set":  2,
-          "question":  "Which mechanism shares reusable pipeline steps across Jenkins jobs?",
-          "options":  [
-                          "Shared Library",
-                          "Node Label",
-                          "Build Cause",
-                          "Workspace Browser"
-                      ],
-          "answer":  "Shared Library"
+          "question":  "Jenkins pipeline agent directive",
+          "options":  ["agent", "withCredentials", "stages", "environment"],
+          "answer":  "agent"
       },
       {
           "category":  "Jenkins",
           "set":  3,
-          "question":  "Which mechanism shares reusable pipeline steps across Jenkins jobs?",
-          "options":  [
-                          "Shared Library",
-                          "Node Label",
-                          "Build Cause",
-                          "Workspace Browser"
-                      ],
-          "answer":  "Shared Library"
+          "question":  "Jenkins unstash pipeline purpose",
+          "options":  ["restore stashed files", "withCredentials", "agent", "stages"],
+          "answer":  "restore stashed files"
       },
       {
           "category":  "Jenkins",
           "set":  4,
-          "question":  "Which mechanism shares reusable pipeline steps across Jenkins jobs?",
-          "options":  [
-                          "Shared Library",
-                          "Node Label",
-                          "Build Cause",
-                          "Workspace Browser"
-                      ],
-          "answer":  "Shared Library"
+          "question":  "Jenkins workspace purpose",
+          "options":  ["directory for a job checkout and build", "withCredentials", "agent", "stages"],
+          "answer":  "directory for a job checkout and build"
       },
       {
           "category":  "Jenkins",
           "set":  5,
-          "question":  "Which mechanism shares reusable pipeline steps across Jenkins jobs?",
-          "options":  [
-                          "Shared Library",
-                          "Node Label",
-                          "Build Cause",
-                          "Workspace Browser"
-                      ],
-          "answer":  "Shared Library"
+          "question":  "Jenkins script approval purpose",
+          "options":  ["approve restricted Groovy signatures", "withCredentials", "agent", "stages"],
+          "answer":  "approve restricted Groovy signatures"
       },
       {
           "category":  "Jenkins",
@@ -645,50 +605,30 @@
       {
           "category":  "Jenkins",
           "set":  2,
-          "question":  "Which Declarative Pipeline section runs steps after the main stages finish?",
-          "options":  [
-                          "post",
-                          "options",
-                          "environment",
-                          "parameters"
-                      ],
-          "answer":  "post"
+          "question":  "Jenkins Declarative stage section",
+          "options":  ["stages", "withCredentials", "agent", "environment"],
+          "answer":  "stages"
       },
       {
           "category":  "Jenkins",
           "set":  3,
-          "question":  "Which Declarative Pipeline section runs steps after the main stages finish?",
-          "options":  [
-                          "post",
-                          "options",
-                          "environment",
-                          "parameters"
-                      ],
-          "answer":  "post"
+          "question":  "Jenkins shared library directory",
+          "options":  ["vars directory", "withCredentials", "agent", "stages"],
+          "answer":  "vars directory"
       },
       {
           "category":  "Jenkins",
           "set":  4,
-          "question":  "Which Declarative Pipeline section runs steps after the main stages finish?",
-          "options":  [
-                          "post",
-                          "options",
-                          "environment",
-                          "parameters"
-                      ],
-          "answer":  "post"
+          "question":  "Jenkins build queue purpose",
+          "options":  ["waiting builds", "withCredentials", "agent", "stages"],
+          "answer":  "waiting builds"
       },
       {
           "category":  "Jenkins",
           "set":  5,
-          "question":  "Which Declarative Pipeline section runs steps after the main stages finish?",
-          "options":  [
-                          "post",
-                          "options",
-                          "environment",
-                          "parameters"
-                      ],
-          "answer":  "post"
+          "question":  "Jenkins plugin update center",
+          "options":  ["install and manage plugins", "withCredentials", "agent", "stages"],
+          "answer":  "install and manage plugins"
       },
       {
           "category":  "Jenkins",
@@ -705,50 +645,30 @@
       {
           "category":  "Jenkins",
           "set":  2,
-          "question":  "Which pair of Pipeline steps transfers files between stages on the same run?",
-          "options":  [
-                          "stash and unstash",
-                          "archive and delete",
-                          "save and load",
-                          "push and pull"
-                      ],
-          "answer":  "stash and unstash"
+          "question":  "Jenkins pipeline environment block",
+          "options":  ["environment", "withCredentials", "agent", "stages"],
+          "answer":  "environment"
       },
       {
           "category":  "Jenkins",
           "set":  3,
-          "question":  "Which pair of Pipeline steps transfers files between stages on the same run?",
-          "options":  [
-                          "stash and unstash",
-                          "archive and delete",
-                          "save and load",
-                          "push and pull"
-                      ],
-          "answer":  "stash and unstash"
+          "question":  "Jenkins multibranch pipeline source",
+          "options":  ["discover branches containing a Jenkinsfile", "withCredentials", "agent", "stages"],
+          "answer":  "discover branches containing a Jenkinsfile"
       },
       {
           "category":  "Jenkins",
           "set":  4,
-          "question":  "Which pair of Pipeline steps transfers files between stages on the same run?",
-          "options":  [
-                          "stash and unstash",
-                          "archive and delete",
-                          "save and load",
-                          "push and pull"
-                      ],
-          "answer":  "stash and unstash"
+          "question":  "Jenkins fingerprint artifact purpose",
+          "options":  ["trace artifact usage", "withCredentials", "agent", "stages"],
+          "answer":  "trace artifact usage"
       },
       {
           "category":  "Jenkins",
           "set":  5,
-          "question":  "Which pair of Pipeline steps transfers files between stages on the same run?",
-          "options":  [
-                          "stash and unstash",
-                          "archive and delete",
-                          "save and load",
-                          "push and pull"
-                      ],
-          "answer":  "stash and unstash"
+          "question":  "Jenkins configuration as code file",
+          "options":  ["jenkins.yaml", "withCredentials", "agent", "stages"],
+          "answer":  "jenkins.yaml"
       },
       {
           "category":  "Jenkins",
@@ -765,50 +685,30 @@
       {
           "category":  "Jenkins",
           "set":  2,
-          "question":  "Which Declarative Pipeline directive selects where a pipeline or stage runs?",
-          "options":  [
-                          "agent",
-                          "steps",
-                          "triggers",
-                          "tools"
-                      ],
-          "answer":  "agent"
+          "question":  "Jenkins input approval step",
+          "options":  ["input", "withCredentials", "agent", "stages"],
+          "answer":  "input"
       },
       {
           "category":  "Jenkins",
           "set":  3,
-          "question":  "Which Declarative Pipeline directive selects where a pipeline or stage runs?",
-          "options":  [
-                          "agent",
-                          "steps",
-                          "triggers",
-                          "tools"
-                      ],
-          "answer":  "agent"
+          "question":  "Jenkins webhook trigger purpose",
+          "options":  ["notify Jenkins of a repository change", "withCredentials", "agent", "stages"],
+          "answer":  "notify Jenkins of a repository change"
       },
       {
           "category":  "Jenkins",
           "set":  4,
-          "question":  "Which Declarative Pipeline directive selects where a pipeline or stage runs?",
-          "options":  [
-                          "agent",
-                          "steps",
-                          "triggers",
-                          "tools"
-                      ],
-          "answer":  "agent"
+          "question":  "Jenkins artifact retention setting",
+          "options":  ["discard old builds and artifacts", "withCredentials", "agent", "stages"],
+          "answer":  "discard old builds and artifacts"
       },
       {
           "category":  "Jenkins",
           "set":  5,
-          "question":  "Which Declarative Pipeline directive selects where a pipeline or stage runs?",
-          "options":  [
-                          "agent",
-                          "steps",
-                          "triggers",
-                          "tools"
-                      ],
-          "answer":  "agent"
+          "question":  "Jenkins credentials masking limit",
+          "options":  ["logs may still expose transformed secrets", "withCredentials", "agent", "stages"],
+          "answer":  "logs may still expose transformed secrets"
       },
       {
           "category":  "Jenkins",
@@ -825,50 +725,30 @@
       {
           "category":  "Jenkins",
           "set":  2,
-          "question":  "Which Declarative Pipeline directive conditionally skips a stage?",
-          "options":  [
-                          "when",
-                          "input",
-                          "post",
-                          "options"
-                      ],
-          "answer":  "when"
+          "question":  "Jenkins timeout pipeline option",
+          "options":  ["timeout", "withCredentials", "agent", "stages"],
+          "answer":  "timeout"
       },
       {
           "category":  "Jenkins",
           "set":  3,
-          "question":  "Which Declarative Pipeline directive conditionally skips a stage?",
-          "options":  [
-                          "when",
-                          "input",
-                          "post",
-                          "options"
-                      ],
-          "answer":  "when"
+          "question":  "Jenkins build parameter declaration",
+          "options":  ["parameters", "withCredentials", "agent", "stages"],
+          "answer":  "parameters"
       },
       {
           "category":  "Jenkins",
           "set":  4,
-          "question":  "Which Declarative Pipeline directive conditionally skips a stage?",
-          "options":  [
-                          "when",
-                          "input",
-                          "post",
-                          "options"
-                      ],
-          "answer":  "when"
+          "question":  "Jenkins pipeline parallel stages",
+          "options":  ["execute stages concurrently", "withCredentials", "agent", "stages"],
+          "answer":  "execute stages concurrently"
       },
       {
           "category":  "Jenkins",
           "set":  5,
-          "question":  "Which Declarative Pipeline directive conditionally skips a stage?",
-          "options":  [
-                          "when",
-                          "input",
-                          "post",
-                          "options"
-                      ],
-          "answer":  "when"
+          "question":  "Jenkins pipeline post cleanup condition",
+          "options":  ["cleanup", "withCredentials", "agent", "stages"],
+          "answer":  "cleanup"
       },
       {
           "category":  "Jenkins",
@@ -885,50 +765,30 @@
       {
           "category":  "Jenkins",
           "set":  2,
-          "question":  "Which Pipeline step binds stored credentials to environment variables for a block?",
-          "options":  [
-                          "withCredentials",
-                          "withEnv",
-                          "credentialsId",
-                          "maskPasswords"
-                      ],
-          "answer":  "withCredentials"
+          "question":  "Jenkins retry pipeline option",
+          "options":  ["retry", "withCredentials", "agent", "stages"],
+          "answer":  "retry"
       },
       {
           "category":  "Jenkins",
           "set":  3,
-          "question":  "Which Pipeline step binds stored credentials to environment variables for a block?",
-          "options":  [
-                          "withCredentials",
-                          "withEnv",
-                          "credentialsId",
-                          "maskPasswords"
-                      ],
-          "answer":  "withCredentials"
+          "question":  "Jenkins secret text credential kind",
+          "options":  ["Secret text", "withCredentials", "agent", "stages"],
+          "answer":  "Secret text"
       },
       {
           "category":  "Jenkins",
           "set":  4,
-          "question":  "Which Pipeline step binds stored credentials to environment variables for a block?",
-          "options":  [
-                          "withCredentials",
-                          "withEnv",
-                          "credentialsId",
-                          "maskPasswords"
-                      ],
-          "answer":  "withCredentials"
+          "question":  "Jenkins matrix axis purpose",
+          "options":  ["generate combinations of axis values", "withCredentials", "agent", "stages"],
+          "answer":  "generate combinations of axis values"
       },
       {
           "category":  "Jenkins",
           "set":  5,
-          "question":  "Which Pipeline step binds stored credentials to environment variables for a block?",
-          "options":  [
-                          "withCredentials",
-                          "withEnv",
-                          "credentialsId",
-                          "maskPasswords"
-                      ],
-          "answer":  "withCredentials"
+          "question":  "Jenkins replay pipeline purpose",
+          "options":  ["re-run a build with modified pipeline code", "withCredentials", "agent", "stages"],
+          "answer":  "re-run a build with modified pipeline code"
       },
       {
           "category":  "Jenkins",
@@ -945,50 +805,30 @@
       {
           "category":  "Jenkins",
           "set":  2,
-          "question":  "Which Declarative Pipeline stage section runs independent stages concurrently?",
-          "options":  [
-                          "parallel",
-                          "matrix",
-                          "sequential",
-                          "post"
-                      ],
-          "answer":  "parallel"
+          "question":  "Jenkins post always condition",
+          "options":  ["always", "withCredentials", "agent", "stages"],
+          "answer":  "always"
       },
       {
           "category":  "Jenkins",
           "set":  3,
-          "question":  "Which Declarative Pipeline stage section runs independent stages concurrently?",
-          "options":  [
-                          "parallel",
-                          "matrix",
-                          "sequential",
-                          "post"
-                      ],
-          "answer":  "parallel"
+          "question":  "Jenkins credential scope purpose",
+          "options":  ["limit credential visibility", "withCredentials", "agent", "stages"],
+          "answer":  "limit credential visibility"
       },
       {
           "category":  "Jenkins",
           "set":  4,
-          "question":  "Which Declarative Pipeline stage section runs independent stages concurrently?",
-          "options":  [
-                          "parallel",
-                          "matrix",
-                          "sequential",
-                          "post"
-                      ],
-          "answer":  "parallel"
+          "question":  "Jenkins when branch condition",
+          "options":  ["when { branch 'main' }", "withCredentials", "agent", "stages"],
+          "answer":  "when { branch 'main' }"
       },
       {
           "category":  "Jenkins",
           "set":  5,
-          "question":  "Which Declarative Pipeline stage section runs independent stages concurrently?",
-          "options":  [
-                          "parallel",
-                          "matrix",
-                          "sequential",
-                          "post"
-                      ],
-          "answer":  "parallel"
+          "question":  "Jenkins restart from stage support",
+          "options":  ["continue after a controller restart", "withCredentials", "agent", "stages"],
+          "answer":  "continue after a controller restart"
       },
       {
           "category":  "Jenkins",
@@ -1005,50 +845,30 @@
       {
           "category":  "Jenkins",
           "set":  2,
-          "question":  "Which Pipeline step archives build output so it can be downloaded later?",
-          "options":  [
-                          "archiveArtifacts",
-                          "stash",
-                          "fingerprint",
-                          "junit"
-                      ],
+          "question":  "Jenkins archive build output step",
+          "options":  ["archiveArtifacts", "withCredentials", "agent", "stages"],
           "answer":  "archiveArtifacts"
       },
       {
           "category":  "Jenkins",
           "set":  3,
-          "question":  "Which Pipeline step archives build output so it can be downloaded later?",
-          "options":  [
-                          "archiveArtifacts",
-                          "stash",
-                          "fingerprint",
-                          "junit"
-                      ],
-          "answer":  "archiveArtifacts"
+          "question":  "Jenkins controller responsibilities",
+          "options":  ["schedule jobs and manage agents", "withCredentials", "agent", "stages"],
+          "answer":  "schedule jobs and manage agents"
       },
       {
           "category":  "Jenkins",
           "set":  4,
-          "question":  "Which Pipeline step archives build output so it can be downloaded later?",
-          "options":  [
-                          "archiveArtifacts",
-                          "stash",
-                          "fingerprint",
-                          "junit"
-                      ],
-          "answer":  "archiveArtifacts"
+          "question":  "Jenkins fail build step",
+          "options":  ["error", "withCredentials", "agent", "stages"],
+          "answer":  "error"
       },
       {
           "category":  "Jenkins",
           "set":  5,
-          "question":  "Which Pipeline step archives build output so it can be downloaded later?",
-          "options":  [
-                          "archiveArtifacts",
-                          "stash",
-                          "fingerprint",
-                          "junit"
-                      ],
-          "answer":  "archiveArtifacts"
+          "question":  "Jenkins build cause inspection",
+          "options":  ["currentBuild.getBuildCauses()", "withCredentials", "agent", "stages"],
+          "answer":  "currentBuild.getBuildCauses()"
       },
       {
           "category":  "Jenkins",
@@ -1065,50 +885,30 @@
       {
           "category":  "Jenkins",
           "set":  2,
-          "question":  "Which workspace-cleanup step is commonly used at the end of a Jenkins build?",
-          "options":  [
-                          "cleanWs",
-                          "deleteDirContents",
-                          "wipeWorkspace",
-                          "cleanNode"
-                      ],
-          "answer":  "cleanWs"
+          "question":  "Jenkins JUnit report step",
+          "options":  ["junit", "withCredentials", "agent", "stages"],
+          "answer":  "junit"
       },
       {
           "category":  "Jenkins",
           "set":  3,
-          "question":  "Which workspace-cleanup step is commonly used at the end of a Jenkins build?",
-          "options":  [
-                          "cleanWs",
-                          "deleteDirContents",
-                          "wipeWorkspace",
-                          "cleanNode"
-                      ],
-          "answer":  "cleanWs"
+          "question":  "Jenkins agent executor meaning",
+          "options":  ["a parallel worker slot", "withCredentials", "agent", "stages"],
+          "answer":  "a parallel worker slot"
       },
       {
           "category":  "Jenkins",
           "set":  4,
-          "question":  "Which workspace-cleanup step is commonly used at the end of a Jenkins build?",
-          "options":  [
-                          "cleanWs",
-                          "deleteDirContents",
-                          "wipeWorkspace",
-                          "cleanNode"
-                      ],
-          "answer":  "cleanWs"
+          "question":  "Jenkins unstable build result",
+          "options":  ["UNSTABLE", "withCredentials", "agent", "stages"],
+          "answer":  "UNSTABLE"
       },
       {
           "category":  "Jenkins",
           "set":  5,
-          "question":  "Which workspace-cleanup step is commonly used at the end of a Jenkins build?",
-          "options":  [
-                          "cleanWs",
-                          "deleteDirContents",
-                          "wipeWorkspace",
-                          "cleanNode"
-                      ],
-          "answer":  "cleanWs"
+          "question":  "Jenkins queued work during agent outage",
+          "options":  ["waits for a matching online agent", "withCredentials", "agent", "stages"],
+          "answer":  "waits for a matching online agent"
       },
       {
           "category":  "Jenkins",
@@ -1125,13 +925,8 @@
       {
           "category":  "Jenkins",
           "set":  4,
-          "question":  "Which Pipeline step pauses execution until a user confirms or supplies input?",
-          "options":  [
-                          "input",
-                          "sleep",
-                          "timeout",
-                          "milestone"
-                      ],
-          "answer":  "input"
+          "question":  "Jenkins quiet period purpose",
+          "options":  ["delay before a queued build starts", "withCredentials", "agent", "stages"],
+          "answer":  "delay before a queued build starts"
       }
 ]

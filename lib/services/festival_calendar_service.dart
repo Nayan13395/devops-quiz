@@ -1,6 +1,8 @@
 import 'package:tithi_engine/data/india.dart';
 import 'package:tithi_engine/tithi_engine.dart';
 
+import 'national_day_service.dart';
+
 enum FestivalKind {
   diwali,
   makarSankranti,
@@ -8,6 +10,11 @@ enum FestivalKind {
   ganapati,
   navratri,
   christmas,
+  halloween,
+  peace,
+  sports,
+  animals,
+  nationalDay,
 }
 
 class FestivalWindow {
@@ -15,11 +22,15 @@ class FestivalWindow {
     required this.kind,
     required this.startsOn,
     required this.endsOn,
+    this.countryCode,
+    this.label,
   });
 
   final FestivalKind kind;
   final DateTime startsOn;
   final DateTime endsOn;
+  final String? countryCode;
+  final String? label;
 
   bool contains(DateTime indianDate) {
     final date = DateTime.utc(
@@ -57,6 +68,46 @@ class FestivalCalendarService {
     }
 
     return null;
+  }
+
+  static List<FestivalWindow> activeWindowsNow({
+    DateTime? instant,
+    String? countryCode,
+  }) => activeWindowsOn(
+    (instant ?? DateTime.now()).toLocal(),
+    countryCode: countryCode,
+  );
+
+  static List<FestivalWindow> activeWindowsOn(
+    DateTime date, {
+    String? countryCode,
+  }) {
+    final windows = <FestivalWindow>[
+      for (final year in [date.year - 1, date.year, date.year + 1])
+        ...windowsForYear(year).where((window) => window.contains(date)),
+    ];
+    if (countryCode != null) {
+      for (final country in NationalDayService.countries.where(
+        (country) => country.code == countryCode.toUpperCase(),
+      )) {
+        for (final day in country.days) {
+          if (day.month != date.month ||
+              day.day != date.day ||
+              (day.year != null && day.year != date.year))
+            continue;
+          windows.add(
+            FestivalWindow(
+              kind: FestivalKind.nationalDay,
+              startsOn: DateTime.utc(date.year, day.month, day.day),
+              endsOn: DateTime.utc(date.year, day.month, day.day),
+              countryCode: country.code,
+              label: '${country.name}: ${day.name}',
+            ),
+          );
+        }
+      }
+    }
+    return List.unmodifiable(windows);
   }
 
   static List<FestivalWindow> windowsForYear(int year) {
@@ -106,6 +157,56 @@ class FestivalCalendarService {
         FestivalKind.navratri,
         daysAfter: 8,
       );
+
+      final buddhaDate = _panchang
+          .dateFor(
+            const FestivalDef(
+              id: 'buddha_purnima',
+              name: 'Buddha Purnima',
+              month: LunarMonth.vaishakha,
+              paksha: Paksha.shukla,
+              tithiInPaksha: 15,
+              muhurta: MuhurtaRule.sunrise,
+            ),
+            year,
+            City.ujjain,
+          )
+          ?.date;
+      if (buddhaDate != null) {
+        final date = DateTime.utc(
+          buddhaDate.year,
+          buddhaDate.month,
+          buddhaDate.day,
+        );
+        windows.add(
+          FestivalWindow(
+            kind: FestivalKind.peace,
+            startsOn: date,
+            endsOn: date,
+            label: 'Buddha Purnima',
+          ),
+        );
+      }
+      for (final (month, day, kind, label) in [
+        (10, 31, FestivalKind.halloween, 'Halloween'),
+        (10, 2, FestivalKind.peace, 'Gandhi Jayanti'),
+        (9, 21, FestivalKind.peace, 'International Day of Peace'),
+        (4, 6, FestivalKind.sports, 'International Day of Sport'),
+        (5, 25, FestivalKind.sports, 'World Football Day'),
+        (12, 21, FestivalKind.sports, 'World Basketball Day'),
+        (10, 4, FestivalKind.animals, 'World Animal Day'),
+        (3, 3, FestivalKind.animals, 'World Wildlife Day'),
+      ]) {
+        final date = DateTime.utc(year, month, day);
+        windows.add(
+          FestivalWindow(
+            kind: kind,
+            startsOn: date,
+            endsOn: date,
+            label: label,
+          ),
+        );
+      }
 
       windows.add(
         FestivalWindow(

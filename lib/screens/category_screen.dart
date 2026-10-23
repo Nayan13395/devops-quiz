@@ -96,7 +96,7 @@ class _CategoryScreenState extends State<CategoryScreen> {
                 controller: _searchController,
                 textInputAction: TextInputAction.search,
                 decoration: InputDecoration(
-                  hintText: 'Search all 21 categories',
+                  hintText: 'Search categories',
                   prefixIcon: const Icon(Icons.search_rounded),
                   suffixIcon: _categoryQuery.isEmpty
                       ? null

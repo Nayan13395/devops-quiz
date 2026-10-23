@@ -299,7 +299,7 @@ class _QuizScreenState extends State<QuizScreen> {
 
     final int finalPoints = getFinalPoints();
 
-    await PointService.addPoints(finalPoints);
+    await PointService.addPoints(finalPoints, source: PointSource.quiz);
 
     // Finished sets count towards the category certificate.
     final CertificateInfo? newCertificate = isChallenge

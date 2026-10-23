@@ -193,7 +193,7 @@ class ArrowPuzzleService {
       _solvedKey,
       (solved.toList()..sort()).map((level) => level.toString()).toList(),
     );
-    await PointService.addPoints(rewardPerLevel);
+    await PointService.addPoints(rewardPerLevel, source: PointSource.game);
 
     return true;
   }
