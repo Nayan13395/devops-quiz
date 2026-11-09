@@ -1,0 +1,877 @@
+[
+  {
+    "category": "Ansible",
+    "set": 1,
+    "question": "Per cosa viene utilizzato principalmente Ansible?",
+    "options": ["Gestione della configurazione", "Containerizzazione", "Gestione dei database", "Monitoraggio"],
+    "answer": "Gestione della configurazione"
+  },
+  {
+    "category": "Ansible",
+    "set": 1,
+    "question": "In quale linguaggio è scritto Ansible?",
+    "options": ["Python", "Java", "Go", "Ruby"],
+    "answer": "Python"
+  },
+  {
+    "category": "Ansible",
+    "set": 1,
+    "question": "Quale file contiene gli host gestiti in Ansible?",
+    "options": ["File di inventario", "Playbook", "Ruolo", "Modulo"],
+    "answer": "File di inventario"
+  },
+  {
+    "category": "Ansible",
+    "set": 1,
+    "question": "Qual è il percorso predefinito del file di inventario?",
+    "options": ["/etc/ansible/hosts", "/etc/hosts", "/ansible/hosts", "/usr/ansible/hosts"],
+    "answer": "/etc/ansible/hosts"
+  },
+  {
+    "category": "Ansible",
+    "set": 1,
+    "question": "Quale comando controlla la versione di Ansible?",
+    "options": ["ansible --version", "ansible version", "ansible -v", "ansible check"],
+    "answer": "ansible --version"
+  },
+  {
+    "category": "Ansible",
+    "set": 1,
+    "question": "Quale protocollo usa Ansible per impostazione predefinita?",
+    "options": ["SSH", "FTP", "Telnet", "HTTP"],
+    "answer": "SSH"
+  },
+  {
+    "category": "Ansible",
+    "set": 1,
+    "question": "Che cos'è un Playbook Ansible?",
+    "options": ["File YAML contenente attività di automazione", "File di inventario", "Script Python", "File di configurazione"],
+    "answer": "File YAML contenente attività di automazione"
+  },
+  {
+    "category": "Ansible",
+    "set": 1,
+    "question": "Quale comando esegue un playbook Ansible?",
+    "options": ["ansible-playbook", "ansible-run", "ansible-execute", "ansible-start"],
+    "answer": "ansible-playbook"
+  },
+  {
+    "category": "Ansible",
+    "set": 1,
+    "question": "Quale parola chiave definisce gli host di destinazione in un playbook?",
+    "options": ["hosts", "servers", "nodes", "targets"],
+    "answer": "hosts"
+  },
+  {
+    "category": "Ansible",
+    "set": 1,
+    "question": "Quale parola chiave definisce le attività in un playbook?",
+    "options": ["tasks", "actions", "jobs", "steps"],
+    "answer": "tasks"
+  },
+  {
+    "category": "Ansible",
+    "set": 1,
+    "question": "Quale modulo copia i file sugli host remoti?",
+    "options": ["copy", "fetch", "file", "transfer"],
+    "answer": "copy"
+  },
+  {
+    "category": "Ansible",
+    "set": 1,
+    "question": "Quale modulo gestisce i servizi?",
+    "options": ["service", "systemctl", "daemon", "process"],
+    "answer": "service"
+  },
+  {
+    "category": "Ansible",
+    "set": 1,
+    "question": "Quale comando verifica la connettività a tutti gli host?",
+    "options": ["ansible all -m ping", "ansible ping", "ansible test", "ansible connect"],
+    "answer": "ansible all -m ping"
+  },
+  {
+    "category": "Ansible",
+    "set": 1,
+    "question": "In quale formato sono scritti i playbook Ansible?",
+    "options": ["YAML", "JSON", "XML", "INI"],
+    "answer": "YAML"
+  },
+  {
+    "category": "Ansible",
+    "set": 1,
+    "question": "Quale file configura le impostazioni di Ansible?",
+    "options": ["ansible.cfg", "ansible.conf", "config.yml", "ansible.ini"],
+    "answer": "ansible.cfg"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "Quale parola chiave si usa per definire le variabili in un playbook?",
+    "options": ["vars", "variables", "var", "define"],
+    "answer": "vars"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "Quale sintassi si usa per fare riferimento a una variabile?",
+    "options": ["{{ variable_name }}", "$(variable_name)", "${variable_name}", "[variable_name]"],
+    "answer": "{{ variable_name }}"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "Quale modulo si usa per mostrare messaggi durante l'esecuzione?",
+    "options": ["debug", "print", "echo", "message"],
+    "answer": "debug"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "Quale parola chiave si usa per l'esecuzione condizionale?",
+    "options": ["when", "if", "condition", "check"],
+    "answer": "when"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "Quale parola chiave si usa per ripetere un'attività?",
+    "options": ["loop", "repeat", "iterate", "for"],
+    "answer": "loop"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "Quale variabile contiene l'elemento corrente del ciclo?",
+    "options": ["item", "loopitem", "current", "value"],
+    "answer": "item"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "Quale modulo crea file a partire da template Jinja2?",
+    "options": ["template", "copy", "render", "jinja"],
+    "answer": "template"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "Quale motore di template usa Ansible?",
+    "options": ["Jinja2", "Mustache", "Velocity", "Smarty"],
+    "answer": "Jinja2"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "Quale parola chiave registra l'output di un'attività in una variabile?",
+    "options": ["register", "save", "output", "store"],
+    "answer": "register"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "Quale parola chiave ignora i fallimenti delle attività?",
+    "options": ["ignore_errors", "skip_errors", "continue", "ignore_failures"],
+    "answer": "ignore_errors"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "Quale parola chiave si usa per eseguire attività solo quando vengono notificate?",
+    "options": ["handlers", "notify", "trigger", "events"],
+    "answer": "handlers"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "Quale parola chiave attiva un handler?",
+    "options": ["notify", "handler", "alert", "call"],
+    "answer": "notify"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "Quale parola chiave importa un altro playbook?",
+    "options": ["import_playbook", "include_playbook", "load_playbook", "playbook"],
+    "answer": "import_playbook"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "Quale parola chiave assegna tag alle attività per l'esecuzione selettiva?",
+    "options": ["tags", "labels", "groups", "filter"],
+    "answer": "tags"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "Quale opzione esegue solo le attività con tag specifici?",
+    "options": ["--tags", "--tag", "--filter", "--task"],
+    "answer": "--tags"
+  },
+  {
+    "category": "Ansible",
+    "set": 3,
+    "question": "Che cos'è un Ruolo Ansible?",
+    "options": ["Una raccolta riutilizzabile di attività e file", "Un account utente", "Un gruppo di inventario", "Una variabile di playbook"],
+    "answer": "Una raccolta riutilizzabile di attività e file"
+  },
+  {
+    "category": "Ansible",
+    "set": 3,
+    "question": "Quale comando crea una nuova struttura di ruolo?",
+    "options": ["ansible-galaxy init", "ansible role create", "ansible init role", "ansible-playbook init"],
+    "answer": "ansible-galaxy init"
+  },
+  {
+    "category": "Ansible",
+    "set": 3,
+    "question": "Quale directory contiene le attività del ruolo?",
+    "options": ["tasks", "handlers", "files", "vars"],
+    "answer": "tasks"
+  },
+  {
+    "category": "Ansible",
+    "set": 3,
+    "question": "Quale file è il file principale delle attività in un ruolo?",
+    "options": ["tasks/main.yml", "tasks/tasks.yml", "main/tasks.yml", "role.yml"],
+    "answer": "tasks/main.yml"
+  },
+  {
+    "category": "Ansible",
+    "set": 3,
+    "question": "Quale directory contiene gli handler del ruolo?",
+    "options": ["handlers", "tasks", "events", "notify"],
+    "answer": "handlers"
+  },
+  {
+    "category": "Ansible",
+    "set": 3,
+    "question": "Quale directory contiene i template Jinja2 in un ruolo?",
+    "options": ["templates", "files", "jinja", "render"],
+    "answer": "templates"
+  },
+  {
+    "category": "Ansible",
+    "set": 3,
+    "question": "Quale directory contiene i file statici in un ruolo?",
+    "options": ["files", "templates", "static", "resources"],
+    "answer": "files"
+  },
+  {
+    "category": "Ansible",
+    "set": 3,
+    "question": "Quale directory contiene le variabili del ruolo?",
+    "options": ["vars", "variables", "config", "settings"],
+    "answer": "vars"
+  },
+  {
+    "category": "Ansible",
+    "set": 3,
+    "question": "Quale directory contiene le variabili predefinite?",
+    "options": ["defaults", "vars", "config", "settings"],
+    "answer": "defaults"
+  },
+  {
+    "category": "Ansible",
+    "set": 3,
+    "question": "Quale parola chiave si usa per includere ruoli in un playbook?",
+    "options": ["roles", "include_role", "role", "import_role"],
+    "answer": "roles"
+  },
+  {
+    "category": "Ansible",
+    "set": 3,
+    "question": "Che cos'è Ansible Galaxy?",
+    "options": ["Repository per ruoli e collezioni Ansible", "Strumento di monitoraggio", "Piattaforma CI/CD", "Gestore di inventari"],
+    "answer": "Repository per ruoli e collezioni Ansible"
+  },
+  {
+    "category": "Ansible",
+    "set": 3,
+    "question": "Quale comando installa un ruolo da Galaxy?",
+    "options": ["ansible-galaxy install", "ansible install role", "ansible role add", "ansible-galaxy add"],
+    "answer": "ansible-galaxy install"
+  },
+  {
+    "category": "Ansible",
+    "set": 3,
+    "question": "A cosa serve Ansible Vault?",
+    "options": ["Crittografare dati sensibili", "Gestire gli inventari", "Eseguire i playbook", "Installare i ruoli"],
+    "answer": "Crittografare dati sensibili"
+  },
+  {
+    "category": "Ansible",
+    "set": 3,
+    "question": "Quale comando crittografa un file esistente?",
+    "options": ["ansible-vault encrypt", "ansible-vault secure", "ansible-vault create", "ansible-vault lock"],
+    "answer": "ansible-vault encrypt"
+  },
+  {
+    "category": "Ansible",
+    "set": 3,
+    "question": "Che cosa sono le Collezioni Ansible?",
+    "options": ["Pacchetti contenenti ruoli, moduli e plugin", "Gruppi di inventario", "File crittografati", "Variabili YAML"],
+    "answer": "Pacchetti contenenti ruoli, moduli e plugin"
+  },
+  {
+    "category": "Ansible",
+    "set": 4,
+    "question": "Che cos'è AWX?",
+    "options": ["Ansible Automation Platform open source", "Strumento di monitoraggio", "Runtime per container", "Sistema di controllo versione"],
+    "answer": "Ansible Automation Platform open source"
+  },
+  {
+    "category": "Ansible",
+    "set": 4,
+    "question": "Come è ora chiamato Ansible Tower?",
+    "options": ["Red Hat Ansible Automation Platform", "Ansible Galaxy", "AWX Enterprise", "Automation Hub"],
+    "answer": "Red Hat Ansible Automation Platform"
+  },
+  {
+    "category": "Ansible",
+    "set": 4,
+    "question": "Che cos'è un inventario dinamico?",
+    "options": ["Inventario generato automaticamente dai provider cloud", "File hosts statico", "Inventario crittografato", "Inventario basato sui ruoli"],
+    "answer": "Inventario generato automaticamente dai provider cloud"
+  },
+  {
+    "category": "Ansible",
+    "set": 4,
+    "question": "Quale comando controlla la sintassi del playbook?",
+    "options": ["ansible-playbook --syntax-check", "ansible-playbook --validate", "ansible-playbook check", "ansible validate"],
+    "answer": "ansible-playbook --syntax-check"
+  },
+  {
+    "category": "Ansible",
+    "set": 4,
+    "question": "Quale opzione esegue una simulazione (dry run) di un playbook?",
+    "options": ["--check", "--dry", "--test", "--simulate"],
+    "answer": "--check"
+  },
+  {
+    "category": "Ansible",
+    "set": 4,
+    "question": "Quale opzione mostra le differenze nei file gestiti?",
+    "options": ["--diff", "--compare", "--changes", "--show-diff"],
+    "answer": "--diff"
+  },
+  {
+    "category": "Ansible",
+    "set": 4,
+    "question": "Qual è la strategia di esecuzione predefinita di Ansible?",
+    "options": ["linear", "free", "parallel", "serial"],
+    "answer": "linear"
+  },
+  {
+    "category": "Ansible",
+    "set": 4,
+    "question": "Quale opzione limita l'esecuzione del playbook agli host selezionati?",
+    "options": ["--limit", "--hosts", "--target", "--group"],
+    "answer": "--limit"
+  },
+  {
+    "category": "Ansible",
+    "set": 4,
+    "question": "Quale tipo di plugin controlla il comportamento di esecuzione delle attività?",
+    "options": ["Strategy Plugin", "Filter Plugin", "Callback Plugin", "Lookup Plugin"],
+    "answer": "Strategy Plugin"
+  },
+  {
+    "category": "Ansible",
+    "set": 4,
+    "question": "Quale plugin recupera dati da fonti esterne?",
+    "options": ["Lookup Plugin", "Callback Plugin", "Connection Plugin", "Action Plugin"],
+    "answer": "Lookup Plugin"
+  },
+  {
+    "category": "Ansible",
+    "set": 4,
+    "question": "Quale plugin modifica i dati delle variabili?",
+    "options": ["Filter Plugin", "Lookup Plugin", "Action Plugin", "Connection Plugin"],
+    "answer": "Filter Plugin"
+  },
+  {
+    "category": "Ansible",
+    "set": 4,
+    "question": "Quale modulo gestisce i container Docker?",
+    "options": ["docker_container", "docker", "container", "docker_manage"],
+    "answer": "docker_container"
+  },
+  {
+    "category": "Ansible",
+    "set": 4,
+    "question": "Quale modulo gestisce le risorse Kubernetes?",
+    "options": ["k8s", "kubectl", "kubernetes", "cluster"],
+    "answer": "k8s"
+  },
+  {
+    "category": "Ansible",
+    "set": 4,
+    "question": "Che cos'è l'idempotenza in Ansible?",
+    "options": ["Eseguire le attività ripetutamente senza modificare lo stato desiderato", "Crittografare i playbook", "Creare inventari", "Gestire i ruoli"],
+    "answer": "Eseguire le attività ripetutamente senza modificare lo stato desiderato"
+  },
+  {
+    "category": "Ansible",
+    "set": 4,
+    "question": "Quale comando elenca tutti i moduli Ansible disponibili?",
+    "options": ["ansible-doc -l", "ansible modules", "ansible-list", "ansible-help modules"],
+    "answer": "ansible-doc -l"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "Quale sottocomando di ansible-vault cambia la password di un file già crittografato?",
+    "options": ["rekey", "decrypt", "view", "create"],
+    "answer": "rekey"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "Quale comando esegue il ping di tutti gli host dell'inventario con un comando ad-hoc?",
+    "options": ["ansible-playbook ping", "ansible-ping all", "ansible all -m ping", "ansible --ping-all"],
+    "answer": "ansible all -m ping"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "Che cosa elenca gli host gestiti da Ansible?",
+    "options": ["Ruolo", "Playbook", "Inventario", "Vault"],
+    "answer": "Inventario"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "Quale strumento crittografa i dati sensibili in Ansible?",
+    "options": ["Ansible Lint", "Ansible Galaxy", "Ansible Doc", "Ansible Vault"],
+    "answer": "Ansible Vault"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "A cosa servono gli handler?",
+    "options": ["Creare inventari", "Connettersi tramite SSH", "Definire variabili", "Attività eseguite solo quando vengono notificate"],
+    "answer": "Attività eseguite solo quando vengono notificate"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "Quale parola chiave itera su una lista in Ansible moderno?",
+    "options": ["iterate", "loop", "foreach", "repeat"],
+    "answer": "loop"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "Quale modulo installa pacchetti sui sistemi basati su Debian?",
+    "options": ["apt", "dnf", "pacman", "yum"],
+    "answer": "apt"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "Come si connette di solito Ansible agli host Linux?",
+    "options": ["SSH", "SNMP", "RDP", "Un agente personalizzato"],
+    "answer": "SSH"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "Quale comando controlla la sintassi di un playbook?",
+    "options": ["ansible-playbook --syntax-check", "ansible-playbook --validate", "ansible-check play.yml", "ansible-lint --run"],
+    "answer": "ansible-playbook --syntax-check"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "Che cosa significa idempotenza in Ansible?",
+    "options": ["Eseguire le attività in parallelo", "Crittografare le variabili", "Raccogliere i fact", "Eseguire ripetutamente un'attività produce lo stesso risultato"],
+    "answer": "Eseguire ripetutamente un'attività produce lo stesso risultato"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "Quale struttura raccoglie in pacchetto contenuti di automazione riutilizzabili?",
+    "options": ["Ruolo", "Callback", "Inventario", "Fact"],
+    "answer": "Ruolo"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "Quale modulo copia un file dal nodo di controllo a un host remoto?",
+    "options": ["fetch", "copy", "debug", "shell"],
+    "answer": "copy"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "Quale parola chiave esegue un'attività con privilegi elevati?",
+    "options": ["become", "sudo_all", "elevate", "root"],
+    "answer": "become"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "Quale strumento scarica ruoli e collezioni della community?",
+    "options": ["ansible-pull", "ansible-doc", "ansible-galaxy", "ansible-vault"],
+    "answer": "ansible-galaxy"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "Quale opzione limita un'esecuzione agli host selezionati?",
+    "options": ["--limit", "--only", "--target", "--hosts-only"],
+    "answer": "--limit"
+  },
+  {
+    "category": "Ansible",
+    "set": 1,
+    "question": "Quale parola chiave abilita l'escalation dei privilegi per un'attività Ansible?",
+    "options": ["become: true", "delegate_to", "run_once", "check_mode"],
+    "answer": "become: true"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "Pattern di selezione degli host nei playbook Ansible",
+    "options": ["--limit", "loop_var", "register", "defaults"],
+    "answer": "--limit"
+  },
+  {
+    "category": "Ansible",
+    "set": 3,
+    "question": "Comportamento della strategia free di Ansible",
+    "options": ["free", "--limit", "loop_var", "register"],
+    "answer": "free"
+  },
+  {
+    "category": "Ansible",
+    "set": 4,
+    "question": "Opzione per la raccolta dei fact in Ansible",
+    "options": ["gather_facts", "--limit", "loop_var", "register"],
+    "answer": "gather_facts"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "Impostazione forks di Ansible",
+    "options": ["forks", "--limit", "loop_var", "register"],
+    "answer": "forks"
+  },
+  {
+    "category": "Ansible",
+    "set": 1,
+    "question": "Quale parola chiave esegue un'attività Ansible solo quando una condizione è vera?",
+    "options": ["when", "until", "notify", "tags"],
+    "answer": "when"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "Variabile dell'elemento di ciclo in Ansible",
+    "options": ["loop_var", "--limit", "register", "defaults"],
+    "answer": "loop_var"
+  },
+  {
+    "category": "Ansible",
+    "set": 3,
+    "question": "Comportamento della strategia linear di Ansible",
+    "options": ["linear", "--limit", "loop_var", "register"],
+    "answer": "linear"
+  },
+  {
+    "category": "Ansible",
+    "set": 4,
+    "question": "Scopo della cache dei fact di Ansible",
+    "options": ["riutilizzare i fact raccolti", "--limit", "loop_var", "register"],
+    "answer": "riutilizzare i fact raccolti"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "Comportamento della modalità check di Ansible",
+    "options": ["prevedere le modifiche senza applicarle", "--limit", "loop_var", "register"],
+    "answer": "prevedere le modifiche senza applicarle"
+  },
+  {
+    "category": "Ansible",
+    "set": 1,
+    "question": "Quale modulo integrato raccoglie i fact dagli host gestiti?",
+    "options": ["ansible.builtin.setup", "ansible.builtin.copy", "ansible.builtin.command", "ansible.builtin.debug"],
+    "answer": "ansible.builtin.setup"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "Registrazione del risultato di un'attività in Ansible",
+    "options": ["register", "--limit", "loop_var", "defaults"],
+    "answer": "register"
+  },
+  {
+    "category": "Ansible",
+    "set": 3,
+    "question": "Impostazione dei batch progressivi in Ansible",
+    "options": ["serial", "--limit", "loop_var", "register"],
+    "answer": "serial"
+  },
+  {
+    "category": "Ansible",
+    "set": 4,
+    "question": "Delega della connessione in Ansible",
+    "options": ["delegate_to", "--limit", "loop_var", "register"],
+    "answer": "delegate_to"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "Output del modulo template di Ansible",
+    "options": ["generare un template Jinja2", "--limit", "loop_var", "register"],
+    "answer": "generare un template Jinja2"
+  },
+  {
+    "category": "Ansible",
+    "set": 1,
+    "question": "Quale parola chiave ripete un'attività per ogni elemento di una lista?",
+    "options": ["loop", "serial", "block", "role"],
+    "answer": "loop"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "Precedenza dei defaults di un ruolo Ansible",
+    "options": ["defaults", "--limit", "loop_var", "register"],
+    "answer": "defaults"
+  },
+  {
+    "category": "Ansible",
+    "set": 3,
+    "question": "Polling asincrono delle attività Ansible",
+    "options": ["async con poll", "--limit", "loop_var", "register"],
+    "answer": "async con poll"
+  },
+  {
+    "category": "Ansible",
+    "set": 4,
+    "question": "Modalità di connessione locale di Ansible",
+    "options": ["connection: local", "--limit", "loop_var", "register"],
+    "answer": "connection: local"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "Scopo del modulo copy di Ansible",
+    "options": ["copiare un file del controller sugli host", "--limit", "loop_var", "register"],
+    "answer": "copiare un file del controller sugli host"
+  },
+  {
+    "category": "Ansible",
+    "set": 1,
+    "question": "Quale parola chiave salva il risultato di un'attività in una variabile?",
+    "options": ["register", "vars", "facts", "include"],
+    "answer": "register"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "Precedenza delle vars di un ruolo Ansible",
+    "options": ["vars", "--limit", "loop_var", "register"],
+    "answer": "vars"
+  },
+  {
+    "category": "Ansible",
+    "set": 3,
+    "question": "Gruppi figli dell'inventario Ansible",
+    "options": ["children", "--limit", "loop_var", "register"],
+    "answer": "children"
+  },
+  {
+    "category": "Ansible",
+    "set": 4,
+    "question": "Utente di destinazione per l'escalation dei privilegi in Ansible",
+    "options": ["become_user", "--limit", "loop_var", "register"],
+    "answer": "become_user"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "Direzione del modulo fetch di Ansible",
+    "options": ["copiare un file remoto sul controller", "--limit", "loop_var", "register"],
+    "answer": "copiare un file remoto sul controller"
+  },
+  {
+    "category": "Ansible",
+    "set": 1,
+    "question": "Quale parola chiave fa sì che un'attività notifichi un handler dopo una modifica?",
+    "options": ["notify", "listen", "changed_when", "rescue"],
+    "answer": "notify"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "Inclusione dinamica di un ruolo in Ansible",
+    "options": ["include_role", "--limit", "loop_var", "register"],
+    "answer": "include_role"
+  },
+  {
+    "category": "Ansible",
+    "set": 3,
+    "question": "File delle variabili host dell'inventario Ansible",
+    "options": ["host_vars", "--limit", "loop_var", "register"],
+    "answer": "host_vars"
+  },
+  {
+    "category": "Ansible",
+    "set": 4,
+    "question": "Selezione delle attività tramite tag in Ansible",
+    "options": ["--tags", "--limit", "loop_var", "register"],
+    "answer": "--tags"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "Trasporto di synchronize in Ansible",
+    "options": ["rsync su SSH", "--limit", "loop_var", "register"],
+    "answer": "rsync su SSH"
+  },
+  {
+    "category": "Ansible",
+    "set": 1,
+    "question": "Quale opzione della riga di comando limita l'esecuzione di un playbook agli host selezionati?",
+    "options": ["--limit", "--list-hosts", "--syntax-check", "--flush-cache"],
+    "answer": "--limit"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "Importazione statica di un ruolo in Ansible",
+    "options": ["import_role", "--limit", "loop_var", "register"],
+    "answer": "import_role"
+  },
+  {
+    "category": "Ansible",
+    "set": 3,
+    "question": "File delle variabili di gruppo dell'inventario Ansible",
+    "options": ["group_vars", "--limit", "loop_var", "register"],
+    "answer": "group_vars"
+  },
+  {
+    "category": "Ansible",
+    "set": 4,
+    "question": "Opzione per saltare i tag in Ansible",
+    "options": ["--skip-tags", "--limit", "loop_var", "register"],
+    "answer": "--skip-tags"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "Ripristino dagli errori di un blocco in Ansible",
+    "options": ["ripristinare dopo un blocco fallito", "--limit", "loop_var", "register"],
+    "answer": "ripristinare dopo un blocco fallito"
+  },
+  {
+    "category": "Ansible",
+    "set": 1,
+    "question": "Quale strumento Ansible crittografa variabili e file sensibili?",
+    "options": ["ansible-vault", "ansible-galaxy", "ansible-doc", "ansible-inventory"],
+    "answer": "ansible-vault"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "Comando di flush degli handler in Ansible",
+    "options": ["meta: flush_handlers", "--limit", "loop_var", "register"],
+    "answer": "meta: flush_handlers"
+  },
+  {
+    "category": "Ansible",
+    "set": 3,
+    "question": "Validazione della sintassi di un playbook Ansible",
+    "options": ["ansible-playbook --syntax-check", "--limit", "loop_var", "register"],
+    "answer": "ansible-playbook --syntax-check"
+  },
+  {
+    "category": "Ansible",
+    "set": 4,
+    "question": "Formato del namespace di una collezione Ansible",
+    "options": ["namespace.collection", "--limit", "loop_var", "register"],
+    "answer": "namespace.collection"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "Comportamento della sezione always di Ansible",
+    "options": ["eseguire indipendentemente dal risultato del blocco", "--limit", "loop_var", "register"],
+    "answer": "eseguire indipendentemente dal risultato del blocco"
+  },
+  {
+    "category": "Ansible",
+    "set": 1,
+    "question": "Quale opzione verifica le modifiche proposte da un playbook senza applicarle?",
+    "options": ["--check", "--diff-only", "--force", "--step"],
+    "answer": "--check"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "Override del fallimento di un'attività in Ansible",
+    "options": ["ignore_errors", "--limit", "loop_var", "register"],
+    "answer": "ignore_errors"
+  },
+  {
+    "category": "Ansible",
+    "set": 3,
+    "question": "Strumento per le variabili crittografate di Ansible",
+    "options": ["ansible-vault", "--limit", "loop_var", "register"],
+    "answer": "ansible-vault"
+  },
+  {
+    "category": "Ansible",
+    "set": 4,
+    "question": "Comando per la documentazione dei moduli Ansible",
+    "options": ["ansible-doc", "--limit", "loop_var", "register"],
+    "answer": "ansible-doc"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "Comportamento della sezione rescue di Ansible",
+    "options": ["eseguire solo dopo il fallimento del blocco", "--limit", "loop_var", "register"],
+    "answer": "eseguire solo dopo il fallimento del blocco"
+  },
+  {
+    "category": "Ansible",
+    "set": 1,
+    "question": "Quale parola chiave esegue un'attività una sola volta per il batch corrente di host?",
+    "options": ["run_once: true", "serial: 1", "throttle: 1", "any_errors_fatal: true"],
+    "answer": "run_once: true"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "Override del cambiamento di un'attività in Ansible",
+    "options": ["changed_when", "--limit", "loop_var", "register"],
+    "answer": "changed_when"
+  },
+  {
+    "category": "Ansible",
+    "set": 3,
+    "question": "Identificatore della password di vault in Ansible",
+    "options": ["--vault-id", "--limit", "loop_var", "register"],
+    "answer": "--vault-id"
+  },
+  {
+    "category": "Ansible",
+    "set": 4,
+    "question": "Nome del file di configurazione di Ansible",
+    "options": ["ansible.cfg", "--limit", "loop_var", "register"],
+    "answer": "ansible.cfg"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "Significato di idempotenza in Ansible",
+    "options": ["applicazione ripetuta in sicurezza", "--limit", "loop_var", "register"],
+    "answer": "applicazione ripetuta in sicurezza"
+  }
+]

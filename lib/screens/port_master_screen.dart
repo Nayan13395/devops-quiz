@@ -1,7 +1,9 @@
+import 'dart:async';
 import 'dart:math';
 
 import 'package:flutter/material.dart';
 
+import '../services/game_sound_service.dart';
 import '../services/point_service.dart';
 import '../widgets/daily_game_gate.dart';
 
@@ -109,6 +111,11 @@ class _PortGameState extends State<_PortGame> {
     if (_locked) return;
 
     final bool right = port == _deck[_index].port;
+    unawaited(
+      GameSoundService.play(
+        right ? GameSoundEffect.correct : GameSoundEffect.incorrect,
+      ),
+    );
 
     setState(() {
       _locked = true;

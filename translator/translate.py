@@ -1,11 +1,12 @@
 import json
-import re
 import sys
+import time
 from pathlib import Path
+from urllib.error import HTTPError, URLError
+from urllib.parse import urlencode
+from urllib.request import Request, urlopen
 
-import ollama
-
-from config import BASE_DIR, CATEGORY, MODEL, TEMPERATURE
+from config import BASE_DIR, CATEGORY
 
 
 LANGUAGES = {
@@ -23,11 +24,9 @@ LANGUAGES = {
     "zh": "Simplified Chinese",
     "bn": "Bengali",
     "as": "Assamese",
-    "brx": "Bodo",
     "doi": "Dogri",
     "gu": "Gujarati",
     "kn": "Kannada",
-    "ks": "Kashmiri",
     "gom": "Konkani",
     "mai": "Maithili",
     "ml": "Malayalam",
@@ -43,6 +42,81 @@ LANGUAGES = {
     "ur": "Urdu",
 }
 BATCH_SIZE = 4
+TRANSLATE_URL = "https://translate.googleapis.com/translate_a/single"
+TARGET_LANGUAGE_CODES = {"mni": "mni-Mtei"}
+UNSUPPORTED_LANGUAGES = {}
+PROTECTED_TERMS = sorted(
+    {
+        "Microsoft Entra ID",
+        "Azure Virtual Machines",
+        "Azure Blob Storage",
+        "Azure SQL Database",
+        "Azure Cosmos DB",
+        "Azure Kubernetes Service",
+        "Application Insights",
+        "Azure Disk Storage",
+        "Azure Queue Storage",
+        "Azure Front Door",
+        "Azure Load Balancer",
+        "Azure Virtual Network",
+        "Azure ExpressRoute",
+        "Azure VPN Gateway",
+        "Azure Files",
+        "Azure Functions",
+        "Azure Monitor",
+        "Azure Firewall",
+        "Azure Bastion",
+        "Azure Backup",
+        "Azure Policy",
+        "Azure DevOps",
+        "Azure Arc",
+        "Microsoft Azure",
+        "Application Gateway",
+        "Kubernetes",
+        "PowerShell",
+        "JavaScript",
+        "PostgreSQL",
+        "Elasticsearch",
+        "Prometheus",
+        "Terraform",
+        "Ansible",
+        "Docker",
+        "Jenkins",
+        "GitHub",
+        "GitLab",
+        "Linux",
+        "Python",
+        "Ruby",
+        "Perl",
+        "Helm",
+        "Azure",
+        "Microsoft",
+        "AKS",
+        "CLI",
+        "HTTP",
+        "HTTPS",
+        "DNS",
+        "TCP",
+        "UDP",
+        "SSH",
+        "TLS",
+        "SSL",
+        "JSON",
+        "YAML",
+        "XML",
+        "SQL",
+        "NoSQL",
+        "IPv4",
+        "IPv6",
+        "RBAC",
+        "API",
+        "VM",
+        "VNet",
+        "CI/CD",
+    },
+    key=len,
+    reverse=True,
+)
 QUESTIONS_DIR = BASE_DIR / "assets" / "questions"
 
 
@@ -82,56 +156,105 @@ def target_file(source, language):
 
 
 def translate_batch(questions, language):
-    source = [
-        {"question": q["question"], "options": q["options"]}
-        for q in questions
-    ]
-    prompt = f"""
-You are a professional technical translator. Translate the JSON array below
-from English to {LANGUAGES[language]}.
+    if language in UNSUPPORTED_LANGUAGES:
+        raise ValueError(f"{language}: {UNSUPPORTED_LANGUAGES[language]}")
 
-Return ONLY a valid JSON array with exactly one object per input object.
-Each output object must contain only these keys: "question", "options".
-Translate the question and every human-readable answer option. Keep the same
-four-option order. Preserve command lines, code, product names, protocols,
-acronyms and technical identifiers when translating them would be incorrect.
-Do not add explanations, markdown, or extra keys.
+    fields = []
+    protected_values = {}
+    next_protected_id = 0
+    lines = []
+    for question_index, question in enumerate(questions):
+        values = [("question", question["question"])]
+        values.extend((f"option_{index}", option) for index, option in enumerate(question["options"]))
+        for field_name, original_text in values:
+            text = original_text
+            for term in PROTECTED_TERMS:
+                if term.casefold() not in text.casefold():
+                    continue
+                token = f"QXTERM{next_protected_id:04d}XZ"
+                next_protected_id += 1
+                start = text.casefold().find(term.casefold())
+                while start >= 0:
+                    end = start + len(term)
+                    protected_values[token] = text[start:end]
+                    text = text[:start] + token + text[end:]
+                    start = text.casefold().find(term.casefold(), start + len(token))
 
-Input:
-{json.dumps(source, ensure_ascii=False)}
-"""
+            marker = f"QZ{len(fields):04d}ZQ"
+            fields.append((question_index, field_name, marker))
+            lines.append(marker + text)
 
-    for attempt in range(3):
+    text = "\n".join(lines)
+    target_code = TARGET_LANGUAGE_CODES.get(language, language)
+    query = urlencode(
+        {
+            "client": "gtx",
+            "sl": "en",
+            "tl": target_code,
+            "dt": "t",
+            "q": text,
+        }
+    )
+    request = Request(
+        f"{TRANSLATE_URL}?{query}",
+        headers={"User-Agent": "DevOpsQuizQuestionTranslator/1.0"},
+    )
+
+    for attempt in range(5):
         try:
-            response = ollama.chat(
-                model=MODEL,
-                options={"temperature": TEMPERATURE},
-                messages=[{"role": "user", "content": prompt}],
+            with urlopen(request, timeout=45) as response:
+                payload = json.loads(response.read().decode("utf-8"))
+            translated_text = "".join(
+                segment[0]
+                for segment in payload[0]
+                if isinstance(segment, list) and segment and segment[0]
             )
-            content = response["message"]["content"]
-            content = re.sub(r"^```(?:json)?\s*|\s*```$", "", content.strip())
-            translated = json.loads(content)
+            positions = []
+            for question_index, field_name, marker in fields:
+                position = translated_text.find(marker)
+                if position < 0:
+                    raise ValueError(f"Translation response lost marker {marker}.")
+                positions.append((position, question_index, field_name, marker))
+            positions.sort()
 
-            if not isinstance(translated, list) or len(translated) != len(questions):
-                raise ValueError("Model returned the wrong number of questions.")
+            result = [
+                {"question": "", "options": ["", "", "", ""]}
+                for _ in questions
+            ]
+            for index, (position, question_index, field_name, marker) in enumerate(positions):
+                start = position + len(marker)
+                end = positions[index + 1][0] if index + 1 < len(positions) else len(translated_text)
+                value = translated_text[start:end].strip()
+                for token, original in protected_values.items():
+                    value = value.replace(token, original)
+                if not value:
+                    raise ValueError(f"Translation response is empty for {marker}.")
+                if field_name == "question":
+                    result[question_index]["question"] = value
+                else:
+                    option_index = int(field_name.removeprefix("option_"))
+                    result[question_index]["options"][option_index] = value
 
-            for item in translated:
-                if not isinstance(item.get("question"), str):
-                    raise ValueError("Translated question is missing.")
-                options = item.get("options")
-                if (
-                    not isinstance(options, list)
-                    or len(options) != 4
-                    or not all(isinstance(option, str) for option in options)
-                    or len(set(options)) != 4
-                ):
-                    raise ValueError("Translated options must be four distinct strings.")
-
-            return translated
-        except Exception as error:
-            print(f"Retry {attempt + 1}/3: {error}")
-
-    raise RuntimeError("Translation failed after three attempts.")
+            for item in result:
+                if not item["question"] or len(item["options"]) != 4 or any(not option for option in item["options"]):
+                    raise ValueError("Translation response is missing question fields.")
+            return result
+        except HTTPError as error:
+            if error.code == 400:
+                raise ValueError(
+                    f"Translation endpoint does not support locale {language} ({target_code})."
+                ) from error
+            if attempt == 4:
+                raise
+            delay = min(2 ** attempt, 30)
+            print(f"HTTP {error.code}; retrying in {delay}s")
+            time.sleep(delay)
+        except (URLError, TimeoutError, json.JSONDecodeError, ValueError) as error:
+            if attempt == 4:
+                raise RuntimeError(f"Translation failed after five attempts: {error}") from error
+            delay = min(2 ** attempt, 30)
+            print(f"Retry {attempt + 1}/5 in {delay}s: {error}")
+            time.sleep(delay)
 
 
 def save_questions(path, questions):
@@ -149,7 +272,7 @@ def translate_file(source, language):
     output_path = target_file(source, language)
     translated = []
 
-    if output_path.exists():
+    if output_path.exists() and output_path.stat().st_size > 0:
         try:
             with output_path.open("r", encoding="utf-8") as output_file:
                 translated = json.load(output_file)

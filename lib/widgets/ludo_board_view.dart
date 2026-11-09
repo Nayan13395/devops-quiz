@@ -4,17 +4,27 @@ import 'package:flutter/material.dart';
 import 'package:flutter_ludo/flutter_ludo.dart';
 
 const ludoPlayerColours = [
-  Color(0xFFA72638),
-  Color(0xFF2056A0),
-  Color(0xFF137044),
-  Color(0xFF9C7200),
+  Color(0xFFE53935),
+  Color(0xFF43A047),
+  Color(0xFFFDD835),
+  Color(0xFF1E88E5),
 ];
-const ludoColourNames = ['Ruby', 'Blue', 'Emerald', 'Gold'];
+const ludoColourNames = ['Red', 'Green', 'Yellow', 'Blue'];
+const ludoInactiveSeatName = '__ludo_reserved_seat__';
 
 class LudoBoardView extends StatelessWidget {
   const LudoBoardView({super.key, required this.controller});
 
   final LudoController controller;
+
+  List<Color> _displaySeatColors(List<LudoPlayer> players) {
+    final colors = List<Color>.filled(4, const Color(0xFF424C4B));
+    for (int player = 0; player < players.length; player++) {
+      if (players[player].name == ludoInactiveSeatName) continue;
+      colors[player] = players[player].color;
+    }
+    return colors;
+  }
 
   @override
   Widget build(BuildContext context) => ListenableBuilder(
@@ -22,112 +32,159 @@ class LudoBoardView extends StatelessWidget {
     builder: (context, _) {
       final state = controller.state;
       return LayoutBuilder(
-        builder: (context, constraints) => SingleChildScrollView(
-          padding: const EdgeInsets.all(12),
-          child: Center(
-            child: ConstrainedBox(
-              constraints: const BoxConstraints(maxWidth: 560),
-              child: Column(
-                children: [
-                  Wrap(
-                    alignment: WrapAlignment.center,
-                    spacing: 12,
-                    runSpacing: 8,
+        builder: (context, constraints) {
+          final activeSeats = [
+            for (int player = 0; player < state.players.length; player++)
+              if (state.players[player].name != ludoInactiveSeatName) player,
+          ];
+          final seatOrder = [
+            for (final player in activeSeats) (player, player),
+          ];
+          final winner = state.isFinished
+              ? state.winners.firstWhere(
+                  (player) =>
+                      state.players[player].name != ludoInactiveSeatName,
+                  orElse: () => state.winners.first,
+                )
+              : null;
+          return SingleChildScrollView(
+            padding: const EdgeInsets.all(12),
+            child: Center(
+              child: ConstrainedBox(
+                constraints: BoxConstraints(
+                  maxWidth: 560,
+                  minHeight: math.max(0, constraints.maxHeight - 24),
+                ),
+                child: IntrinsicHeight(
+                  child: Column(
                     children: [
-                      for (int seat = 0; seat < state.players.length; seat++)
-                        Row(
-                          mainAxisSize: MainAxisSize.min,
-                          children: [
-                            Icon(
-                              Icons.favorite,
-                              color: state.players[seat].color,
-                              size: 18,
+                      Wrap(
+                        alignment: WrapAlignment.center,
+                        spacing: 12,
+                        runSpacing: 8,
+                        children: [
+                          for (final player in activeSeats)
+                            Row(
+                              mainAxisSize: MainAxisSize.min,
+                              children: [
+                                Icon(
+                                  Icons.favorite,
+                                  color: state.players[player].color,
+                                  size: 18,
+                                ),
+                                const SizedBox(width: 4),
+                                Text(
+                                  '${state.players[player].name} · ${state.finishedCountOf(player)}/4',
+                                  style: TextStyle(
+                                    fontWeight:
+                                        player == state.currentPlayerIndex
+                                        ? FontWeight.bold
+                                        : FontWeight.normal,
+                                  ),
+                                ),
+                              ],
                             ),
-                            const SizedBox(width: 4),
-                            Text(
-                              '${state.players[seat].name} · ${state.finishedCountOf(seat)}/4',
-                              style: TextStyle(
-                                fontWeight: seat == state.currentPlayerIndex
-                                    ? FontWeight.bold
-                                    : FontWeight.normal,
-                              ),
-                            ),
-                          ],
-                        ),
-                    ],
-                  ),
-                  const SizedBox(height: 12),
-                  AspectRatio(
-                    aspectRatio: 1,
-                    child: RotatedBox(
-                      key: const ValueKey('ludo-bottom-left-orientation'),
-                      quarterTurns: 3,
-                      child: LayoutBuilder(
-                        builder: (context, constraints) =>
-                            _board(constraints.maxWidth),
+                        ],
                       ),
-                    ),
-                  ),
-                  const SizedBox(height: 16),
-                  Text(
-                    state.isFinished
-                        ? '${state.players[state.winners.first].name} wins!'
-                        : '${state.currentPlayer.name}${controller.isCurrentPlayerBot
-                              ? ' is thinking'
-                              : controller.canSelectPiece
-                              ? ': choose a piece'
-                              : ': roll the dice'}',
-                    textAlign: TextAlign.center,
-                    style: Theme.of(context).textTheme.titleMedium,
-                  ),
-                  const SizedBox(height: 12),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Semantics(
-                        label: 'Dice ${state.lastRoll ?? 1}',
-                        child: SizedBox.square(
-                          dimension: 56,
-                          child: CustomPaint(
-                            key: const ValueKey('ludo-white-dice'),
-                            painter: _DicePainter(state.lastRoll ?? 1),
+                      const SizedBox(height: 8),
+                      AspectRatio(
+                        aspectRatio: 1,
+                        child: RotatedBox(
+                          key: const ValueKey('ludo-bottom-left-orientation'),
+                          quarterTurns: 3,
+                          child: LayoutBuilder(
+                            builder: (context, constraints) =>
+                                _board(constraints.maxWidth, state),
                           ),
                         ),
                       ),
-                      const SizedBox(width: 16),
-                      Flexible(
-                        child: FilledButton.icon(
-                          key: const ValueKey('ludo-roll'),
-                          onPressed: controller.canRoll
-                              ? controller.rollDice
-                              : null,
-                          icon: const Icon(Icons.casino_outlined),
-                          label: const Text('Roll dice'),
-                        ),
+                      const Spacer(),
+                      Text(
+                        state.isFinished
+                            ? '${state.players[winner!].name} wins!'
+                            : '${state.currentPlayer.name}${controller.isCurrentPlayerBot
+                                  ? ' is thinking'
+                                  : controller.canSelectPiece
+                                  ? ': choose a piece'
+                                  : ': roll the dice'}',
+                        textAlign: TextAlign.center,
+                        style: Theme.of(context).textTheme.titleMedium,
+                      ),
+                      const SizedBox(height: 6),
+                      Wrap(
+                        alignment: WrapAlignment.center,
+                        spacing: 16,
+                        runSpacing: 6,
+                        children: [
+                          for (final assignment in seatOrder)
+                            Row(
+                              mainAxisSize: MainAxisSize.min,
+                              children: [
+                                CircleAvatar(
+                                  radius: 7,
+                                  backgroundColor:
+                                      state.players[assignment.$2].color,
+                                ),
+                                const SizedBox(width: 5),
+                                Text(
+                                  '${state.players[assignment.$2].name} · '
+                                  '${state.finishedCountOf(assignment.$2)}/4',
+                                ),
+                              ],
+                            ),
+                        ],
+                      ),
+                      const SizedBox(height: 8),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Semantics(
+                            label: 'Dice ${state.lastRoll ?? 1}',
+                            child: SizedBox.square(
+                              dimension: 52,
+                              child: CustomPaint(
+                                key: const ValueKey('ludo-white-dice'),
+                                painter: _DicePainter(state.lastRoll ?? 1),
+                              ),
+                            ),
+                          ),
+                          const SizedBox(width: 12),
+                          Flexible(
+                            child: FilledButton.icon(
+                              key: const ValueKey('ludo-roll'),
+                              onPressed: controller.canRoll
+                                  ? controller.rollDice
+                                  : null,
+                              icon: const Icon(Icons.casino_outlined),
+                              label: const Text('Roll dice'),
+                            ),
+                          ),
+                        ],
                       ),
                     ],
                   ),
-                ],
+                ),
               ),
             ),
-          ),
-        ),
+          );
+        },
       );
     },
   );
 
-  Widget _board(double size) {
-    final state = controller.state;
+  Widget _board(double size, LudoGameState state) {
     final cell = size / kBoardGridSize;
+    final seatColors = _displaySeatColors(state.players);
     final legal = controller.canSelectPiece
         ? state.legalMoves.map((move) => move.pieceId).toSet()
         : <int>{};
     final pieces = [
       for (final piece in state.pieces)
-        controller.animatingPiece?.id == piece.id
-            ? controller.animatingPiece!
-            : piece,
-    ];
+        if (state.players[piece.playerIndex].name != ludoInactiveSeatName)
+          controller.animatingPiece?.id == piece.id
+              ? controller.animatingPiece!
+              : piece,
+    ].whereType<LudoPiece>().toList();
     pieces.sort(
       (first, second) => (first.playerIndex == state.currentPlayerIndex ? 1 : 0)
           .compareTo(second.playerIndex == state.currentPlayerIndex ? 1 : 0),
@@ -135,28 +192,30 @@ class LudoBoardView extends StatelessWidget {
     return Stack(
       children: [
         Positioned.fill(
-          child: CustomPaint(painter: _LudoBoardPainter(state.players)),
+          child: CustomPaint(painter: _LudoBoardPainter(seatColors)),
         ),
-        for (int seat = 0; seat < state.players.length; seat++)
-          Positioned(
-            left: (kHomeBaseOrigins[seat][1] + 0.4) * cell,
-            top: (kHomeBaseOrigins[seat][0] + 2.4) * cell,
-            width: 5.2 * cell,
-            height: 1.2 * cell,
-            child: RotatedBox(
-              quarterTurns: 1,
-              child: FittedBox(
-                fit: BoxFit.scaleDown,
-                child: Text(
-                  state.players[seat].name,
-                  style: const TextStyle(
-                    color: Colors.white,
-                    fontWeight: FontWeight.w700,
+        for (int player = 0; player < state.players.length; player++)
+          if (state.players[player].name != ludoInactiveSeatName)
+            Positioned(
+              key: ValueKey('ludo-seat-label-$player'),
+              left: (kHomeBaseOrigins[player][1] + 0.4) * cell,
+              top: (kHomeBaseOrigins[player][0] + 2.4) * cell,
+              width: 5.2 * cell,
+              height: 1.2 * cell,
+              child: RotatedBox(
+                quarterTurns: 1,
+                child: FittedBox(
+                  fit: BoxFit.scaleDown,
+                  child: Text(
+                    state.players[player].name,
+                    style: const TextStyle(
+                      color: Colors.white,
+                      fontWeight: FontWeight.w700,
+                    ),
                   ),
                 ),
               ),
             ),
-          ),
         for (final safe in kSafeIndices)
           Positioned(
             left: kPathCells[safe][1] * cell,
@@ -170,18 +229,16 @@ class LudoBoardView extends StatelessWidget {
                   Icons.favorite,
                   key: ValueKey('ludo-heart-$safe'),
                   size: cell * 0.65,
-                  color: state
-                      .players[(safe ~/ 13).clamp(0, state.players.length - 1)]
-                      .color,
+                  color: seatColors[(safe ~/ 13).clamp(0, 3)],
                 ),
               ),
             ),
           ),
         Positioned(
-          left: cell * 6.7,
-          top: cell * 6.7,
-          width: cell * 1.6,
-          height: cell * 1.6,
+          left: cell * 6,
+          top: cell * 6,
+          width: cell * 3,
+          height: cell * 3,
           child: IgnorePointer(
             child: RotatedBox(
               quarterTurns: 1,
@@ -190,7 +247,7 @@ class LudoBoardView extends StatelessWidget {
                 child: Image.asset(
                   'assets/icon/app_icon.png',
                   key: const ValueKey('ludo-finish-icon'),
-                  fit: BoxFit.cover,
+                  fit: BoxFit.fill,
                 ),
               ),
             ),
@@ -202,23 +259,20 @@ class LudoBoardView extends StatelessWidget {
   }
 
   Offset _cellOf(LudoPiece piece) {
+    final seat = piece.playerIndex;
     if (piece.isHome) {
-      final base = kHomeBaseOrigins[piece.playerIndex];
+      final base = kHomeBaseOrigins[seat];
       final slot = kHomeYardSlots[piece.id % 4];
       return Offset(base[1] + slot[1] + 0.5, base[0] + slot[0] + 0.5);
     }
     if (piece.isFinished) {
-      final corner = const [
-        Offset(-0.95, -0.95),
-        Offset(0.95, -0.95),
-        Offset(0.95, 0.95),
-        Offset(-0.95, 0.95),
-      ][piece.playerIndex];
-      return const Offset(7.5, 7.5) +
-          corner +
-          Offset((piece.id % 4 - 1.5) * 0.1, 0);
+      final finishSlot = seat * 4 + piece.id % 4;
+      return Offset(
+        6.375 + (finishSlot % 4) * 0.75,
+        6.375 + (finishSlot ~/ 4) * 0.75,
+      );
     }
-    final grid = gridCellFor(piece.playerIndex, piece.trackPosition)!;
+    final grid = gridCellFor(seat, piece.trackPosition)!;
     return Offset(grid[1] + 0.5, grid[0] + 0.5);
   }
 
@@ -238,13 +292,14 @@ class LudoBoardView extends StatelessWidget {
         : Offset(math.cos(angle), math.sin(angle)) * 0.2;
     final active = legal.contains(piece.id);
     final colour = controller.state.players[piece.playerIndex].color;
+    final pieceScale = piece.isFinished ? 0.68 : 0.76;
     return AnimatedPositioned(
       key: ValueKey('ludo-piece-${piece.id}'),
-      duration: const Duration(milliseconds: 130),
-      left: (center.dx + offset.dx - 0.38) * cell,
-      top: (center.dy + offset.dy - 0.38) * cell,
-      width: cell * 0.76,
-      height: cell * 0.76,
+      duration: const Duration(milliseconds: 90),
+      left: (center.dx + offset.dx - pieceScale / 2) * cell,
+      top: (center.dy + offset.dy - pieceScale / 2) * cell,
+      width: cell * pieceScale,
+      height: cell * pieceScale,
       child: Semantics(
         label:
             '${controller.state.players[piece.playerIndex].name} piece ${piece.id % 4 + 1}',
@@ -300,8 +355,8 @@ class LudoBoardView extends StatelessWidget {
 }
 
 class _LudoBoardPainter extends CustomPainter {
-  const _LudoBoardPainter(this.players);
-  final List<LudoPlayer> players;
+  const _LudoBoardPainter(this.seatColors);
+  final List<Color> seatColors;
 
   @override
   void paint(Canvas canvas, Size size) {
@@ -312,9 +367,7 @@ class _LudoBoardPainter extends CustomPainter {
     );
     for (int seat = 0; seat < 4; seat++) {
       final base = kHomeBaseOrigins[seat];
-      final colour = seat < players.length
-          ? players[seat].color
-          : const Color(0xFF424C4B);
+      final colour = seatColors[seat];
       canvas.drawRect(
         Rect.fromLTWH(base[1] * cell, base[0] * cell, cell * 6, cell * 6),
         Paint()..color = colour,
@@ -368,7 +421,7 @@ class _LudoBoardPainter extends CustomPainter {
 
   @override
   bool shouldRepaint(covariant _LudoBoardPainter oldDelegate) =>
-      oldDelegate.players != players;
+      oldDelegate.seatColors != seatColors;
 }
 
 class _DicePainter extends CustomPainter {

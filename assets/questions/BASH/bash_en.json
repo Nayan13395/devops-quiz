@@ -135,9 +135,9 @@
   {
     "category": "Bash Scripting",
     "set": 1,
-    "question": "Which operator redirects standard output and appends to a file?",
-    "options": [">>", ">", "<", "2>"],
-    "answer": ">>"
+    "question": "Which command prints the current working directory?",
+    "options": ["pwd", "cwd", "whereami", "dirname"],
+    "answer": "pwd"
   },
   {
     "category": "Bash Scripting",
@@ -191,9 +191,9 @@
   {
     "category": "Bash Scripting",
     "set": 2,
-    "question": "Which special parameter represents the first positional argument?",
-    "options": ["$1", "$0", "$*", "$?"],
-    "answer": "$1"
+    "question": "Which special parameter expands to the process ID of the most recent background command?",
+    "options": ["$!", "$$", "$?", "$#"],
+    "answer": "$!"
   },
   {
     "category": "Bash Scripting",
@@ -212,9 +212,9 @@
   {
     "category": "Bash Scripting",
     "set": 2,
-    "question": "Which special parameter expands all positional arguments as a single word?",
-    "options": ["$*", "$@", "$#", "$$"],
-    "answer": "$*"
+    "question": "Which Bash builtin discards the first positional parameter and shifts the rest down by one?",
+    "options": ["shift", "unshift", "pop", "rotate"],
+    "answer": "shift"
   },
   {
     "category": "Bash Scripting",
@@ -240,9 +240,9 @@
   {
     "category": "Bash Scripting",
     "set": 2,
-    "question": "Which expansion assigns a default value to var if it is unset or empty?",
-    "options": ["${var:=default}", "${var:-default}", "${var:+default}", "${var%default}"],
-    "answer": "${var:=default}"
+    "question": "Which expansion extracts 3 characters from var starting at offset 2?",
+    "options": ["${var:2:3}", "${var:3:2}", "${var[2,3]}", "${var#2:3}"],
+    "answer": "${var:2:3}"
   },
   {
     "category": "Bash Scripting",
@@ -261,9 +261,9 @@
   {
     "category": "Bash Scripting",
     "set": 2,
-    "question": "Which expansion converts the value of var to lowercase?",
-    "options": ["${var,,}", "${var^^}", "${var%%}", "${var//}"],
-    "answer": "${var,,}"
+    "question": "Which expansion removes the longest matching prefix pattern from var?",
+    "options": ["${var##pattern}", "${var#pattern}", "${var%%pattern}", "${var%pattern}"],
+    "answer": "${var##pattern}"
   },
   {
     "category": "Bash Scripting",
@@ -275,9 +275,9 @@
   {
     "category": "Bash Scripting",
     "set": 2,
-    "question": "Which expansion replaces every match of pattern in var?",
-    "options": ["${var//pattern/replacement}", "${var/pattern/replacement}", "${var##pattern}", "${var%%pattern}"],
-    "answer": "${var//pattern/replacement}"
+    "question": "Which expansion prints an error message and aborts a non-interactive script if var is unset or empty?",
+    "options": ["${var:?message}", "${var:-message}", "${var:+message}", "${var:=message}"],
+    "answer": "${var:?message}"
   },
   {
     "category": "Bash Scripting",
@@ -338,16 +338,16 @@
   {
     "category": "Bash Scripting",
     "set": 2,
-    "question": "Which special parameter expands to the last argument of the previous command?",
-    "options": ["$!", "$?", "$@", "$#"],
-    "answer": "$!"
+    "question": "Which Bash variable holds the number of seconds since the shell started?",
+    "options": ["$SECONDS", "$RANDOM", "$LINENO", "$UID"],
+    "answer": "$SECONDS"
   },
   {
     "category": "Bash Scripting",
     "set": 2,
-    "question": "Which expansion removes the shortest matching suffix from var?",
-    "options": ["${var%pattern}", "${var#pattern}", "${var##pattern}", "${var%%pattern}"],
-    "answer": "${var%pattern}"
+    "question": "Which Bash expansion substitutes alt only if var is set and non-empty?",
+    "options": ["${var:+alt}", "${var:-alt}", "${var:=alt}", "${var:?alt}"],
+    "answer": "${var:+alt}"
   },
   {
     "category": "Bash Scripting",
@@ -513,9 +513,9 @@
   {
     "category": "Bash Scripting",
     "set": 3,
-    "question": "Which symbols terminate a command list in a case pattern?",
-    "options": [";;", ";;", "&&", "||"],
-    "answer": ";;"
+    "question": "Which keyword closes a case statement in Bash?",
+    "options": ["esac", "end", "fi", "done"],
+    "answer": "esac"
   },
   {
     "category": "Bash Scripting",
@@ -591,7 +591,7 @@
     "category": "Bash Scripting",
     "set": 4,
     "question": "Which expansion returns all elements of arr?",
-    "options": ["${arr[@]}", "${arr[*]}", "${arr[all]}", "${arr}"],
+    "options": ["${arr[@]}", "${arr[0]}", "${arr[all]}", "${arr}"],
     "answer": "${arr[@]}"
   },
   {
@@ -709,9 +709,9 @@
   {
     "category": "Bash Scripting",
     "set": 5,
-    "question": "Which command makes a script file executable?",
-    "options": ["run +x script.sh", "chown +x script.sh", "chmod +x script.sh", "exec script.sh"],
-    "answer": "chmod +x script.sh"
+    "question": "Which command creates a directory along with any missing parent directories?",
+    "options": ["mkdir -p", "mkdir -r", "mkdir -m", "mkdir -v"],
+    "answer": "mkdir -p"
   },
   {
     "category": "Bash Scripting",
@@ -814,9 +814,9 @@
   {
     "category": "Bash Scripting",
     "set": 5,
-    "question": "Which option makes a script exit immediately when a command fails?",
-    "options": ["set -x", "set -v", "set -n", "set -e"],
-    "answer": "set -e"
+    "question": "Which command counts the lines in a file named data.txt in a Bash shell?",
+    "options": ["wc -l data.txt", "ls -l data.txt", "sort -l data.txt", "cut -l data.txt"],
+    "answer": "wc -l data.txt"
   },
   {
     "category": "Bash Scripting",

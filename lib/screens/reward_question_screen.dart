@@ -1,8 +1,10 @@
+import 'dart:async';
 import 'dart:math';
 
 import 'package:flutter/material.dart';
 
 import '../models/question.dart';
+import '../services/game_sound_service.dart';
 import '../services/point_service.dart';
 import '../services/question_service.dart';
 import '../services/mystery_deal_service.dart';
@@ -97,6 +99,11 @@ class _RewardQuestionScreenState extends State<RewardQuestionScreen> {
     }
 
     final bool correct = answer == _question!.answer;
+    unawaited(
+      GameSoundService.play(
+        correct ? GameSoundEffect.correct : GameSoundEffect.incorrect,
+      ),
+    );
 
     setState(() {
       _selectedAnswer = answer;

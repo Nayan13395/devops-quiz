@@ -1,0 +1,877 @@
+[
+  {
+    "category": "Kubernetes",
+    "set": 1,
+    "question": "कुन कमाण्डले pods सूचीबद्ध गर्छ?",
+    "options": ["kubectl get pods", "kubectl pods", "kubectl list", "kubectl show"],
+    "answer": "kubectl get pods"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 1,
+    "question": "कुन कमाण्डले सबै namespaces का pods सूचीबद्ध गर्छ?",
+    "options": ["kubectl get pods -A", "kubectl get pods --all", "kubectl pods all", "kubectl list pods"],
+    "answer": "kubectl get pods -A"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 1,
+    "question": "कुन कमाण्डले pod को विवरण देखाउँछ?",
+    "options": ["kubectl describe pod", "kubectl details pod", "kubectl inspect pod", "kubectl info pod"],
+    "answer": "kubectl describe pod"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 1,
+    "question": "कुन कमाण्डले pod को logs देखाउँछ?",
+    "options": ["kubectl logs", "kubectl get logs", "kubectl show logs", "kubectl pod logs"],
+    "answer": "kubectl logs"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 1,
+    "question": "कुन कमाण्डले pod को logs निरन्तर देखाउँछ?",
+    "options": ["kubectl logs -f", "kubectl logs --follow", "kubectl follow logs", "kubectl stream logs"],
+    "answer": "kubectl logs -f"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 1,
+    "question": "कुन कमाण्डले pod मेटाउँछ?",
+    "options": ["kubectl delete pod", "kubectl remove pod", "kubectl erase pod", "kubectl destroy pod"],
+    "answer": "kubectl delete pod"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 1,
+    "question": "कुन कमाण्डले deployment बनाउँछ?",
+    "options": ["kubectl create deployment", "kubectl add deployment", "kubectl run deployment", "kubectl deploy create"],
+    "answer": "kubectl create deployment"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 1,
+    "question": "कुन कमाण्डले deployments सूचीबद्ध गर्छ?",
+    "options": ["kubectl get deployments", "kubectl deployments", "kubectl show deployments", "kubectl list deploy"],
+    "answer": "kubectl get deployments"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 1,
+    "question": "कुन कमाण्डले services सूचीबद्ध गर्छ?",
+    "options": ["kubectl get services", "kubectl services", "kubectl list svc", "kubectl show services"],
+    "answer": "kubectl get services"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 1,
+    "question": "कुन कमाण्डले nodes सूचीबद्ध गर्छ?",
+    "options": ["kubectl get nodes", "kubectl nodes", "kubectl list nodes", "kubectl show nodes"],
+    "answer": "kubectl get nodes"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 1,
+    "question": "कुन कमाण्डले cluster को जानकारी देखाउँछ?",
+    "options": ["kubectl cluster-info", "kubectl get cluster", "kubectl show cluster", "kubectl info cluster"],
+    "answer": "kubectl cluster-info"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 1,
+    "question": "कुन कमाण्डले YAML फाइलबाट configuration लागू गर्छ?",
+    "options": ["kubectl apply -f", "kubectl create yaml", "kubectl update -f", "kubectl deploy -f"],
+    "answer": "kubectl apply -f"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 1,
+    "question": "कुन कमाण्डले YAML फाइलबाट resources बनाउँछ?",
+    "options": ["kubectl create -f", "kubectl run -f", "kubectl deploy -f", "kubectl start -f"],
+    "answer": "kubectl create -f"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 1,
+    "question": "कुन कमाण्डले YAML फाइलमा परिभाषित resources मेटाउँछ?",
+    "options": ["kubectl delete -f", "kubectl remove -f", "kubectl destroy -f", "kubectl erase -f"],
+    "answer": "kubectl delete -f"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 1,
+    "question": "कुन कमाण्डले चलिरहेको pod भित्र कमाण्ड चलाउँछ?",
+    "options": ["kubectl exec", "kubectl run inside", "kubectl pod exec", "kubectl connect"],
+    "answer": "kubectl exec"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 2,
+    "question": "कुन कमाण्डले namespaces सूचीबद्ध गर्छ?",
+    "options": ["kubectl get namespaces", "kubectl namespaces", "kubectl show namespaces", "kubectl list namespaces"],
+    "answer": "kubectl get namespaces"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 2,
+    "question": "कुन कमाण्डले namespace बनाउँछ?",
+    "options": ["kubectl create namespace", "kubectl add namespace", "kubectl namespace create", "kubectl new namespace"],
+    "answer": "kubectl create namespace"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 2,
+    "question": "कुन कमाण्डले namespace मेटाउँछ?",
+    "options": ["kubectl delete namespace", "kubectl remove namespace", "kubectl destroy namespace", "kubectl erase namespace"],
+    "answer": "kubectl delete namespace"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 2,
+    "question": "कुन कमाण्डले ReplicaSets सूचीबद्ध गर्छ?",
+    "options": ["kubectl get replicasets", "kubectl replicasets", "kubectl list rs", "kubectl show rs"],
+    "answer": "kubectl get replicasets"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 2,
+    "question": "कुन कमाण्डले ConfigMaps सूचीबद्ध गर्छ?",
+    "options": ["kubectl get configmaps", "kubectl configmaps", "kubectl show configmaps", "kubectl list configmaps"],
+    "answer": "kubectl get configmaps"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 2,
+    "question": "कुन कमाण्डले Secrets सूचीबद्ध गर्छ?",
+    "options": ["kubectl get secrets", "kubectl secrets", "kubectl list secrets", "kubectl show secrets"],
+    "answer": "kubectl get secrets"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 2,
+    "question": "कुन कमाण्डले Ingress resources सूचीबद्ध गर्छ?",
+    "options": ["kubectl get ingress", "kubectl ingress", "kubectl list ingress", "kubectl show ingress"],
+    "answer": "kubectl get ingress"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 2,
+    "question": "कुन कमाण्डले Persistent Volumes सूचीबद्ध गर्छ?",
+    "options": ["kubectl get pv", "kubectl pv", "kubectl volumes", "kubectl show pv"],
+    "answer": "kubectl get pv"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 2,
+    "question": "कुन कमाण्डले Persistent Volume Claims सूचीबद्ध गर्छ?",
+    "options": ["kubectl get pvc", "kubectl pvc", "kubectl volumes claim", "kubectl show pvc"],
+    "answer": "kubectl get pvc"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 2,
+    "question": "कुन कमाण्डले cluster मा भएका events देखाउँछ?",
+    "options": ["kubectl get events", "kubectl events", "kubectl show events", "kubectl list events"],
+    "answer": "kubectl get events"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 2,
+    "question": "कुन कमाण्डले namespace का सबै resources देखाउँछ?",
+    "options": ["kubectl get all", "kubectl all", "kubectl resources", "kubectl show all"],
+    "answer": "kubectl get all"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 2,
+    "question": "कुन कमाण्डले pods को resource प्रयोग देखाउँछ?",
+    "options": ["kubectl top pods", "kubectl usage pods", "kubectl stats pods", "kubectl monitor pods"],
+    "answer": "kubectl top pods"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 2,
+    "question": "कुन कमाण्डले nodes को resource प्रयोग देखाउँछ?",
+    "options": ["kubectl top nodes", "kubectl usage nodes", "kubectl stats nodes", "kubectl monitor nodes"],
+    "answer": "kubectl top nodes"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 2,
+    "question": "कुन कमाण्डले DaemonSets सूचीबद्ध गर्छ?",
+    "options": ["kubectl get daemonsets", "kubectl daemonsets", "kubectl list daemonsets", "kubectl show daemonsets"],
+    "answer": "kubectl get daemonsets"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "कुन component ले nodes मा pods schedule गर्छ?",
+    "options": ["kube-scheduler", "kubelet", "etcd", "kube-proxy"],
+    "answer": "kube-scheduler"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "कुन component हरेक node मा चल्छ?",
+    "options": ["kubelet", "etcd", "kube-apiserver", "controller-manager"],
+    "answer": "kubelet"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "कुन component ले control plane को front-end को रूपमा काम गर्छ?",
+    "options": ["kube-apiserver", "kubelet", "etcd", "kube-proxy"],
+    "answer": "kube-apiserver"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "कुन component ले cluster को अवस्था (state) भण्डारण गर्छ?",
+    "options": ["etcd", "kubelet", "CoreDNS", "Ingress"],
+    "answer": "etcd"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "कुन component ले nodes मा networking नियमहरू व्यवस्थापन गर्छ?",
+    "options": ["kube-proxy", "kubelet", "etcd", "Scheduler"],
+    "answer": "kube-proxy"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "Kubernetes मा सामान्यतया कुन DNS सेवा प्रयोग गरिन्छ?",
+    "options": ["CoreDNS", "Bind", "Route53", "Consul"],
+    "answer": "CoreDNS"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "Kubernetes मा सबैभन्दा सानो deploy गर्न मिल्ने इकाई कुन object हो?",
+    "options": ["Pod", "Cluster", "Node", "Service"],
+    "answer": "Pod"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "कुन object ले stateless एपहरू व्यवस्थापन गर्छ?",
+    "options": ["Deployment", "ConfigMap", "Secret", "Namespace"],
+    "answer": "Deployment"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "कुन object ले stateful एपहरू व्यवस्थापन गर्छ?",
+    "options": ["StatefulSet", "Deployment", "ReplicaSet", "DaemonSet"],
+    "answer": "StatefulSet"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "कुन object ले तोकिएको संख्यामा pod replicas चलिरहेको सुनिश्चित गर्छ?",
+    "options": ["ReplicaSet", "Service", "ConfigMap", "Namespace"],
+    "answer": "ReplicaSet"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "कुन object ले pods लाई network traffic को लागि खुला गर्छ?",
+    "options": ["Service", "Node", "ReplicaSet", "Volume"],
+    "answer": "Service"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "कुन object ले services मा बाहिरी पहुँच व्यवस्थापन गर्छ?",
+    "options": ["Ingress", "Pod", "ReplicaSet", "Secret"],
+    "answer": "Ingress"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "कुन object ले configuration डाटा भण्डारण गर्छ?",
+    "options": ["ConfigMap", "Deployment", "Ingress", "Node"],
+    "answer": "ConfigMap"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "कुन object ले पासवर्ड जस्ता संवेदनशील जानकारी भण्डारण गर्छ?",
+    "options": ["Secret", "ConfigMap", "Service", "Namespace"],
+    "answer": "Secret"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "कुन object ले pods लाई स्थायी भण्डारण (persistent storage) प्रदान गर्छ?",
+    "options": ["PersistentVolume", "ReplicaSet", "Namespace", "Service"],
+    "answer": "PersistentVolume"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 4,
+    "question": "कुन कमाण्डले deployment scale गर्छ?",
+    "options": ["kubectl scale deployment", "kubectl resize deployment", "kubectl expand deployment", "kubectl increase deployment"],
+    "answer": "kubectl scale deployment"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 4,
+    "question": "कुन कमाण्डले deployment लाई 5 replicas मा scale गर्छ?",
+    "options": ["kubectl scale deployment --replicas=5", "kubectl replicas 5", "kubectl expand deployment", "kubectl set replicas"],
+    "answer": "kubectl scale deployment --replicas=5"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 4,
+    "question": "कुन कमाण्डले deployment restart गर्छ?",
+    "options": ["kubectl rollout restart deployment", "kubectl restart deployment", "kubectl deployment restart", "kubectl reload deployment"],
+    "answer": "kubectl rollout restart deployment"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 4,
+    "question": "कुन कमाण्डले deployment को rollout status जाँच गर्छ?",
+    "options": ["kubectl rollout status", "kubectl deployment status", "kubectl rollout check", "kubectl get rollout"],
+    "answer": "kubectl rollout status"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 4,
+    "question": "कुन कमाण्डले deployment लाई rollback गर्छ?",
+    "options": ["kubectl rollout undo", "kubectl rollback", "kubectl undo deployment", "kubectl deployment rollback"],
+    "answer": "kubectl rollout undo"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 4,
+    "question": "कुन कमाण्डले rollout history देखाउँछ?",
+    "options": ["kubectl rollout history", "kubectl history", "kubectl deployment history", "kubectl show rollout"],
+    "answer": "kubectl rollout history"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 4,
+    "question": "कुन कमाण्डले deployment rollout लाई pause गर्छ?",
+    "options": ["kubectl rollout pause", "kubectl pause deployment", "kubectl stop rollout", "kubectl hold deployment"],
+    "answer": "kubectl rollout pause"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 4,
+    "question": "कुन कमाण्डले pause गरिएको deployment rollout लाई पुनः सुरु गर्छ?",
+    "options": ["kubectl rollout resume", "kubectl resume deployment", "kubectl continue rollout", "kubectl restart rollout"],
+    "answer": "kubectl rollout resume"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 4,
+    "question": "कुन कमाण्डले node लाई unschedulable चिन्ह लगाउँछ?",
+    "options": ["kubectl cordon", "kubectl drain", "kubectl taint", "kubectl stop"],
+    "answer": "kubectl cordon"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 4,
+    "question": "कुन कमाण्डले node बाट workloads सुरक्षित रूपमा हटाउँछ (evict गर्छ)?",
+    "options": ["kubectl drain", "kubectl cordon", "kubectl delete node", "kubectl migrate"],
+    "answer": "kubectl drain"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 4,
+    "question": "कुन कमाण्डले node लाई फेरि schedulable बनाउँछ?",
+    "options": ["kubectl uncordon", "kubectl enable", "kubectl restart", "kubectl activate"],
+    "answer": "kubectl uncordon"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 4,
+    "question": "कुन कमाण्डले node को विस्तृत जानकारी देखाउँछ?",
+    "options": ["kubectl describe node", "kubectl inspect node", "kubectl info node", "kubectl node show"],
+    "answer": "kubectl describe node"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 4,
+    "question": "कुन कमाण्डले local port लाई pod मा forward गर्छ?",
+    "options": ["kubectl port-forward", "kubectl tunnel", "kubectl expose", "kubectl connect"],
+    "answer": "kubectl port-forward"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 4,
+    "question": "कुन कमाण्डले pod मा वा pod बाट फाइलहरू copy गर्छ?",
+    "options": ["kubectl cp", "kubectl copy", "kubectl transfer", "kubectl sync"],
+    "answer": "kubectl cp"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 4,
+    "question": "कुन कमाण्डले चलिरहेको pod को YAML परिभाषा देखाउँछ?",
+    "options": ["kubectl get pod -o yaml", "kubectl show pod yaml", "kubectl export pod", "kubectl pod yaml"],
+    "answer": "kubectl get pod -o yaml"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "Kubernetes ReplicaSet को spec मा कुन field ले त्यसले व्यवस्थापन गर्ने Pods पहिचान गर्न प्रयोग हुने labels परिभाषित गर्छ?",
+    "options": ["spec.selector", "spec.nodeName", "spec.serviceName", "spec.restartPolicy"],
+    "answer": "spec.selector"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "कुन resource ले गोप्य नरहेको configuration डाटालाई key-value जोडीको रूपमा भण्डारण गर्छ?",
+    "options": ["Namespace", "ConfigMap", "Secret", "PersistentVolume"],
+    "answer": "ConfigMap"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "कुन controller ले हरेक node मा एउटा pod चलाउँछ?",
+    "options": ["StatefulSet", "DaemonSet", "Deployment", "Job"],
+    "answer": "DaemonSet"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "कुन service type ले एपलाई हरेक node को स्थिर port मा खुला गर्छ?",
+    "options": ["ClusterIP", "ExternalName", "NodePort", "Headless"],
+    "answer": "NodePort"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "कुन कमाण्डले manifest फाइलबाट resources बनाउँछ वा अपडेट गर्छ?",
+    "options": ["kubectl apply -f", "kubectl run -f", "kubectl load -f", "kubectl push -f"],
+    "answer": "kubectl apply -f"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "कुन कमाण्डले pod को विस्तृत जानकारी र हालका events देखाउँछ?",
+    "options": ["kubectl describe pod", "kubectl status pod", "kubectl events-only pod", "kubectl info pod"],
+    "answer": "kubectl describe pod"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "कुन कमाण्डले Kubernetes cluster को etcd डाटाबेसको backup snapshot बनाउँछ?",
+    "options": ["etcdctl snapshot save", "kubectl backup etcd", "kubeadm etcd dump", "kubectl cp etcd"],
+    "answer": "etcdctl snapshot save"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "कुन workload ले कुनै कार्यलाई पूरा नभएसम्म चलाउँछ?",
+    "options": ["DaemonSet", "Service", "Job", "Ingress"],
+    "answer": "Job"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "कुन probe ले Kubernetes लाई अस्वस्थ container restart गर्न भन्छ?",
+    "options": ["Liveness probe", "Health route", "Startup gate", "Readiness probe"],
+    "answer": "Liveness probe"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "कुन कमाण्डले web deployment लाई 5 replicas मा scale गर्छ?",
+    "options": ["kubectl expand deployment web 5", "kubectl replicas web=5", "kubectl scale deployment web --replicas=5", "kubectl resize web --to=5"],
+    "answer": "kubectl scale deployment web --replicas=5"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "कुन workload ले pods लाई स्थिर network पहिचान र भण्डारण दिन्छ?",
+    "options": ["DaemonSet", "Deployment", "ReplicaSet", "StatefulSet"],
+    "answer": "StatefulSet"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "कुन टुललाई सामान्यतया Kubernetes को package manager भनिन्छ?",
+    "options": ["kubelet", "kubeadm", "kubectl", "Helm"],
+    "answer": "Helm"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "कुन कमाण्डले web नामको pod मेटाउँछ?",
+    "options": ["kubectl delete pod web", "kubectl stop pod web", "kubectl remove pod web", "kubectl kill pod web"],
+    "answer": "kubectl delete pod web"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "कुन object ले बाहिरी HTTP traffic लाई cluster भित्रका services मा पठाउँछ?",
+    "options": ["Volume", "Namespace", "Ingress", "ConfigMap"],
+    "answer": "Ingress"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "कुन kubectl कमाण्डले pod को logs प्रिन्ट गर्छ?",
+    "options": ["kubectl log-show", "kubectl tail-pod", "kubectl logs", "kubectl output"],
+    "answer": "kubectl logs"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 1,
+    "question": "कुन probe ले Pod ले Service traffic प्राप्त गर्ने कि नगर्ने निर्धारण गर्छ?",
+    "options": ["readinessProbe", "livenessProbe", "startupProbe", "execProbe"],
+    "answer": "readinessProbe"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 2,
+    "question": "Kubernetes service को स्थिर भर्चुअल ठेगाना",
+    "options": ["Service", "LoadBalancer", "namespace भित्रका resources", "गोप्य नरहेका configuration मानहरू"],
+    "answer": "Service"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "Kubernetes मा replica संख्या अपडेट गर्ने कमाण्ड",
+    "options": ["kubectl scale deployment/name --replicas=N", "Service", "LoadBalancer", "namespace भित्रका resources"],
+    "answer": "kubectl scale deployment/name --replicas=N"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 4,
+    "question": "Kubernetes persistent volume claim को भूमिका",
+    "options": ["workload ले गरेको भण्डारणको अनुरोध", "Service", "LoadBalancer", "namespace भित्रका resources"],
+    "answer": "workload ले गरेको भण्डारणको अनुरोध"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "Kubernetes ephemeral container को उद्देश्य",
+    "options": ["अस्थायी debugging container", "Service", "LoadBalancer", "namespace भित्रका resources"],
+    "answer": "अस्थायी debugging container"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 1,
+    "question": "कुन probe ले ढिलो सुरु हुने container लाई liveness जाँच सुरु हुनु अघि थप समय दिन्छ?",
+    "options": ["startupProbe", "readinessProbe", "tcpProbe", "httpProbe"],
+    "answer": "startupProbe"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 2,
+    "question": "Kubernetes service को बाहिरी cloud endpoint",
+    "options": ["LoadBalancer", "Service", "namespace भित्रका resources", "गोप्य नरहेका configuration मानहरू"],
+    "answer": "LoadBalancer"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "Kubernetes pod को अघिल्लो container को log हेर्ने flag",
+    "options": ["--previous", "Service", "LoadBalancer", "namespace भित्रका resources"],
+    "answer": "--previous"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 4,
+    "question": "Kubernetes storage class को भूमिका",
+    "options": ["नीति (policy) सहित volumes प्रदान गर्छ", "Service", "LoadBalancer", "namespace भित्रका resources"],
+    "answer": "नीति (policy) सहित volumes प्रदान गर्छ"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "Kubernetes pod disruption budget को उद्देश्य",
+    "options": ["स्वैच्छिक अवरोधहरूका बेला उपलब्धता कायम राख्नु", "Service", "LoadBalancer", "namespace भित्रका resources"],
+    "answer": "स्वैच्छिक अवरोधहरूका बेला उपलब्धता कायम राख्नु"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 1,
+    "question": "कुन Kubernetes resource ले अवलोकन गरिएका metrics का आधारमा replica संख्या समायोजन गर्छ?",
+    "options": ["HorizontalPodAutoscaler", "PodDisruptionBudget", "ResourceQuota", "LimitRange"],
+    "answer": "HorizontalPodAutoscaler"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 2,
+    "question": "Kubernetes namespace को दायरा",
+    "options": ["namespace भित्रका resources", "Service", "LoadBalancer", "गोप्य नरहेका configuration मानहरू"],
+    "answer": "namespace भित्रका resources"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "Kubernetes pod मा shell खोल्ने कमाण्ड",
+    "options": ["kubectl exec -it pod -- sh", "Service", "LoadBalancer", "namespace भित्रका resources"],
+    "answer": "kubectl exec -it pod -- sh"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 4,
+    "question": "Kubernetes service account को भूमिका",
+    "options": ["pod भित्रका प्रक्रियाहरूको पहिचान", "Service", "LoadBalancer", "namespace भित्रका resources"],
+    "answer": "pod भित्रका प्रक्रियाहरूको पहिचान"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "Kubernetes HPA को metric स्रोत",
+    "options": ["resource metrics वा custom metrics", "Service", "LoadBalancer", "namespace भित्रका resources"],
+    "answer": "resource metrics वा custom metrics"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 1,
+    "question": "न्यूनतम संख्यामा उपलब्ध Pods कायम राख्न कुन resource ले स्वैच्छिक अवरोधहरूलाई सीमित गर्छ?",
+    "options": ["PodDisruptionBudget", "HorizontalPodAutoscaler", "NetworkPolicy", "ResourceQuota"],
+    "answer": "PodDisruptionBudget"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 2,
+    "question": "Kubernetes ConfigMap डाटाको उद्देश्य",
+    "options": ["गोप्य नरहेका configuration मानहरू", "Service", "LoadBalancer", "namespace भित्रका resources"],
+    "answer": "गोप्य नरहेका configuration मानहरू"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "Kubernetes resource request को अर्थ",
+    "options": ["अपेक्षित न्यूनतम CPU वा memory", "Service", "LoadBalancer", "namespace भित्रका resources"],
+    "answer": "अपेक्षित न्यूनतम CPU वा memory"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 4,
+    "question": "Kubernetes RBAC role binding को भूमिका",
+    "options": ["subject लाई role प्रदान गर्छ", "Service", "LoadBalancer", "namespace भित्रका resources"],
+    "answer": "subject लाई role प्रदान गर्छ"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "Kubernetes rollout pause कमाण्ड",
+    "options": ["kubectl rollout pause deployment/name", "Service", "LoadBalancer", "namespace भित्रका resources"],
+    "answer": "kubectl rollout pause deployment/name"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 1,
+    "question": "कुन resource ले Pods का लागि गोप्य नरहेको configuration लाई key-value डाटाको रूपमा भण्डारण गर्छ?",
+    "options": ["ConfigMap", "Secret", "Lease", "EndpointSlice"],
+    "answer": "ConfigMap"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 2,
+    "question": "Kubernetes Secret डाटाको उद्देश्य",
+    "options": ["संवेदनशील configuration मानहरू", "Service", "LoadBalancer", "namespace भित्रका resources"],
+    "answer": "संवेदनशील configuration मानहरू"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "Kubernetes resource limit को अर्थ",
+    "options": ["अनुमति दिइएको अधिकतम CPU वा memory", "Service", "LoadBalancer", "namespace भित्रका resources"],
+    "answer": "अनुमति दिइएको अधिकतम CPU वा memory"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 4,
+    "question": "Kubernetes cluster role को दायरा",
+    "options": ["cluster का resources भरि अनुमतिहरू", "Service", "LoadBalancer", "namespace भित्रका resources"],
+    "answer": "cluster का resources भरि अनुमतिहरू"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "Kubernetes rollout resume कमाण्ड",
+    "options": ["kubectl rollout resume deployment/name", "Service", "LoadBalancer", "namespace भित्रका resources"],
+    "answer": "kubectl rollout resume deployment/name"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 1,
+    "question": "कुन Kubernetes resource ले चयन गरिएका Pods मा आउने र जाने network traffic प्रतिबन्धित गर्न सक्छ?",
+    "options": ["NetworkPolicy", "Ingress", "ServiceAccount", "PriorityClass"],
+    "answer": "NetworkPolicy"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 2,
+    "question": "Kubernetes readiness probe को प्रभाव",
+    "options": ["pod लाई service endpoints बाट हटाउँछ", "Service", "LoadBalancer", "namespace भित्रका resources"],
+    "answer": "pod लाई service endpoints बाट हटाउँछ"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "Kubernetes node taint को प्रभाव",
+    "options": ["मिल्दो toleration नभएका pods लाई टाढा राख्छ", "Service", "LoadBalancer", "namespace भित्रका resources"],
+    "answer": "मिल्दो toleration नभएका pods लाई टाढा राख्छ"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 4,
+    "question": "Kubernetes cron job को schedule field",
+    "options": ["cron ढाँचामा schedule", "Service", "LoadBalancer", "namespace भित्रका resources"],
+    "answer": "cron ढाँचामा schedule"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "Kubernetes secret को encryption at rest",
+    "options": ["etcd मा भण्डारण गरिएको Secret डाटा encrypt गर्नु", "Service", "LoadBalancer", "namespace भित्रका resources"],
+    "answer": "etcd मा भण्डारण गरिएको Secret डाटा encrypt गर्नु"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 1,
+    "question": "Pod मा मुख्य containers सुरु हुनु अघि कुन container पूरा नहुँदासम्म चल्छ?",
+    "options": ["initContainer", "sidecar", "ephemeralContainer", "pauseContainer"],
+    "answer": "initContainer"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 2,
+    "question": "Kubernetes liveness probe को प्रभाव",
+    "options": ["अस्वस्थ container restart गर्छ", "Service", "LoadBalancer", "namespace भित्रका resources"],
+    "answer": "अस्वस्थ container restart गर्छ"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "Kubernetes pod toleration को प्रभाव",
+    "options": ["taint गरिएको node मा schedule हुन अनुमति दिन्छ", "Service", "LoadBalancer", "namespace भित्रका resources"],
+    "answer": "taint गरिएको node मा schedule हुन अनुमति दिन्छ"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 4,
+    "question": "Kubernetes job completion सेटिङ",
+    "options": ["सफल completions को संख्या", "Service", "LoadBalancer", "namespace भित्रका resources"],
+    "answer": "सफल completions को संख्या"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "Kubernetes API server को भूमिका",
+    "options": ["cluster API objects को वैधता जाँच गर्छ र भण्डारण गर्छ", "Service", "LoadBalancer", "namespace भित्रका resources"],
+    "answer": "cluster API objects को वैधता जाँच गर्छ र भण्डारण गर्छ"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 1,
+    "question": "कुन Pod scheduling सेटिङले मिल्दो taint भएको node मा placement को अनुमति दिन्छ?",
+    "options": ["toleration", "taint", "nodeSelector", "topologySpreadConstraints"],
+    "answer": "toleration"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 2,
+    "question": "Kubernetes startup probe को प्रभाव",
+    "options": ["ढिलो सुरुवातका बेला अन्य probes स्थगित गर्छ", "Service", "LoadBalancer", "namespace भित्रका resources"],
+    "answer": "ढिलो सुरुवातका बेला अन्य probes स्थगित गर्छ"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "Kubernetes node selector को उद्देश्य",
+    "options": ["मिल्दो labels भएका nodes मा pod राख्नु", "Service", "LoadBalancer", "namespace भित्रका resources"],
+    "answer": "मिल्दो labels भएका nodes मा pod राख्नु"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 4,
+    "question": "Kubernetes daemon set को placement",
+    "options": ["हरेक योग्य node मा एउटा pod चलाउँछ", "Service", "LoadBalancer", "namespace भित्रका resources"],
+    "answer": "हरेक योग्य node मा एउटा pod चलाउँछ"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "Kubernetes kubelet को जिम्मेवारी",
+    "options": ["हरेक node मा चल्छ र pods व्यवस्थापन गर्छ", "Service", "LoadBalancer", "namespace भित्रका resources"],
+    "answer": "हरेक node मा चल्छ र pods व्यवस्थापन गर्छ"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 1,
+    "question": "कुन kubectl कमाण्डले Deployment लाई अघिल्लो rollout revision मा फर्काउँछ?",
+    "options": ["kubectl rollout undo", "kubectl rollout pause", "kubectl scale", "kubectl replace"],
+    "answer": "kubectl rollout undo"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 2,
+    "question": "Kubernetes deployment rollback कमाण्ड",
+    "options": ["kubectl rollout undo deployment/name", "Service", "LoadBalancer", "namespace भित्रका resources"],
+    "answer": "kubectl rollout undo deployment/name"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "Kubernetes affinity को उद्देश्य",
+    "options": ["रुचाइएका वा अनिवार्य placement नियमहरू व्यक्त गर्नु", "Service", "LoadBalancer", "namespace भित्रका resources"],
+    "answer": "रुचाइएका वा अनिवार्य placement नियमहरू व्यक्त गर्नु"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 4,
+    "question": "Kubernetes stateful set को पहिचान",
+    "options": ["स्थिर network पहिचान र भण्डारण", "Service", "LoadBalancer", "namespace भित्रका resources"],
+    "answer": "स्थिर network पहिचान र भण्डारण"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "Kubernetes CoreDNS को भूमिका",
+    "options": ["service DNS नामहरू resolve गर्छ", "Service", "LoadBalancer", "namespace भित्रका resources"],
+    "answer": "service DNS नामहरू resolve गर्छ"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 1,
+    "question": "कुन kubectl कमाण्डले local port लाई Pod को port मा forward गर्छ?",
+    "options": ["kubectl port-forward", "kubectl proxy", "kubectl expose", "kubectl attach"],
+    "answer": "kubectl port-forward"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 2,
+    "question": "Kubernetes rollout status कमाण्ड",
+    "options": ["kubectl rollout status deployment/name", "Service", "LoadBalancer", "namespace भित्रका resources"],
+    "answer": "kubectl rollout status deployment/name"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "Kubernetes ingress controller को भूमिका",
+    "options": ["HTTP traffic लाई services मा पठाउँछ", "Service", "LoadBalancer", "namespace भित्रका resources"],
+    "answer": "HTTP traffic लाई services मा पठाउँछ"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 4,
+    "question": "Kubernetes init container को उद्देश्य",
+    "options": ["app containers सुरु हुनु अघि सेटअप पूरा गर्नु", "Service", "LoadBalancer", "namespace भित्रका resources"],
+    "answer": "app containers सुरु हुनु अघि सेटअप पूरा गर्नु"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "Kubernetes finalizer को उद्देश्य",
+    "options": ["सफाइ पूरा नहुँदासम्म मेटाउने कार्य ढिलो गराउँछ", "Service", "LoadBalancer", "namespace भित्रका resources"],
+    "answer": "सफाइ पूरा नहुँदासम्म मेटाउने कार्य ढिलो गराउँछ"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 2,
+    "question": "कुन Kubernetes resource ले समयमा आधारित आवर्ती तालिका अनुसार Jobs बनाउँछ?",
+    "options": ["CronJob", "DaemonSet", "ReplicaSet", "StatefulSet"],
+    "answer": "CronJob"
+  }
+]

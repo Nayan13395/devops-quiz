@@ -57,7 +57,6 @@ class _WelcomeScreenState extends State<WelcomeScreen>
   void initState() {
     super.initState();
     WidgetsBinding.instance.addObserver(this);
-    _activeFestivals = FestivalCalendarService.activeWindowsNow();
     _loadCelebrationCountry();
     _scheduleFestivalRefresh();
 
@@ -608,11 +607,15 @@ class _WelcomeScreenState extends State<WelcomeScreen>
                           child: CircularProgressIndicator(strokeWidth: 2),
                         ),
                         SizedBox(width: 14),
-                        Text(
-                          'Signing in...',
-                          style: TextStyle(
-                            fontSize: 16,
-                            fontWeight: FontWeight.w600,
+                        Flexible(
+                          child: Text(
+                            'Signing in...',
+                            maxLines: 1,
+                            overflow: TextOverflow.ellipsis,
+                            style: TextStyle(
+                              fontSize: 16,
+                              fontWeight: FontWeight.w600,
+                            ),
                           ),
                         ),
                       ],
@@ -643,11 +646,15 @@ class _WelcomeScreenState extends State<WelcomeScreen>
 
                         const SizedBox(width: 14),
 
-                        const Text(
-                          'Continue with Google',
-                          style: TextStyle(
-                            fontSize: 16,
-                            fontWeight: FontWeight.w600,
+                        const Flexible(
+                          child: Text(
+                            'Continue with Google',
+                            maxLines: 1,
+                            overflow: TextOverflow.ellipsis,
+                            style: TextStyle(
+                              fontSize: 16,
+                              fontWeight: FontWeight.w600,
+                            ),
                           ),
                         ),
                       ],
@@ -813,11 +820,16 @@ class _WelcomeScreenState extends State<WelcomeScreen>
         children: [
           for (final festival in _activeFestivals)
             Positioned.fill(
-              child: FestivalCelebration(
-                key: ValueKey(
-                  '${festival.kind}-${festival.label}-${festival.countryCode}',
+              child: SafeArea(
+                top: false,
+                left: false,
+                right: false,
+                child: FestivalCelebration(
+                  key: ValueKey(
+                    '${festival.kind}-${festival.label}-${festival.countryCode}',
+                  ),
+                  window: festival,
                 ),
-                window: festival,
               ),
             ),
           LayoutBuilder(

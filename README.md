@@ -18,14 +18,14 @@ samples, guidance on mobile development, and a full API reference.
 
 ## Indian App Languages
 
-The language picker includes all 22 scheduled Indian languages: Assamese,
-Bengali, Bodo, Dogri, Gujarati, Hindi, Kannada, Kashmiri, Konkani, Maithili,
+The language picker includes 20 scheduled Indian languages: Assamese,
+Bengali, Dogri, Gujarati, Hindi, Kannada, Konkani, Maithili,
 Malayalam, Manipuri (Meitei Mayek), Marathi, Nepali, Odia, Punjabi, Sanskrit,
 Santali (Ol Chiki), Sindhi, Tamil, Telugu and Urdu. Selected languages persist
 between launches. The existing international languages remain available.
 
 All 89 existing app-localization messages have entries in these bundles. The
-19 newly added translations are offline drafts and require native-speaker
+17 newly added translations are offline drafts and require native-speaker
 review before claiming production linguistic quality. This does not translate
 hardcoded text in screens that do not yet use the localization API. Quiz
 questions use their separate language assets and fall back to English when a
@@ -33,7 +33,7 @@ translation is unavailable.
 
 Flutter's own controls use native framework translations where supported.
 Unsupported control locales fall back to English, or Urdu for right-to-left
-scripts. Kashmiri, Sindhi and Urdu retain right-to-left layout. Font/glyph
+scripts. Sindhi and Urdu retain right-to-left layout. Font/glyph
 coverage depends on the platform; verify Meitei Mayek and Ol Chiki on release
 devices.
 

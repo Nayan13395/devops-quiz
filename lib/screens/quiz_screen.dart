@@ -8,6 +8,7 @@ import '../models/question.dart';
 import '../services/achievement_service.dart';
 import '../services/certificate_service.dart';
 import '../services/daily_quiz_service.dart';
+import '../services/game_sound_service.dart';
 import '../services/point_service.dart';
 import '../services/question_service.dart';
 import '../widgets/achievement_dialog.dart';
@@ -361,6 +362,11 @@ class _QuizScreenState extends State<QuizScreen> {
     }
 
     final bool isCorrect = text == questions[currentQuestion].answer;
+    unawaited(
+      GameSoundService.play(
+        isCorrect ? GameSoundEffect.correct : GameSoundEffect.incorrect,
+      ),
+    );
 
     if (!isSpeedChallenge) {
       timer?.cancel();

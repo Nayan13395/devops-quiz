@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 import '../widgets/level_picker_dialog.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
+import '../services/game_sound_service.dart';
 import '../services/point_service.dart';
 
 class MemoryMatchScreen extends StatefulWidget {
@@ -184,6 +185,13 @@ class _MemoryMatchScreenState extends State<MemoryMatchScreen> {
     final second = _flipped[1];
 
     if (_cards[first] == _cards[second]) {
+      unawaited(
+        GameSoundService.play(
+          _matched.length + 2 == _cards.length
+              ? GameSoundEffect.win
+              : GameSoundEffect.correct,
+        ),
+      );
       await Future.delayed(const Duration(milliseconds: 300));
       if (!mounted) return;
       setState(() {
@@ -193,6 +201,7 @@ class _MemoryMatchScreenState extends State<MemoryMatchScreen> {
       });
       if (_matched.length == _cards.length) await _finish();
     } else {
+      unawaited(GameSoundService.play(GameSoundEffect.incorrect));
       await Future.delayed(const Duration(milliseconds: 800));
       if (!mounted) return;
       setState(() {

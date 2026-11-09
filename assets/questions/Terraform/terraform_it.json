@@ -1,0 +1,877 @@
+[
+  {
+    "category": "Terraform",
+    "set": 1,
+    "question": "Che cos'è Terraform?",
+    "options": ["Strumento di Infrastructure as Code", "Container runtime", "Strumento di monitoraggio", "Database"],
+    "answer": "Strumento di Infrastructure as Code"
+  },
+  {
+    "category": "Terraform",
+    "set": 1,
+    "question": "Chi ha sviluppato Terraform?",
+    "options": ["HashiCorp", "Google", "Microsoft", "Docker"],
+    "answer": "HashiCorp"
+  },
+  {
+    "category": "Terraform",
+    "set": 1,
+    "question": "Quale comando inizializza un progetto Terraform?",
+    "options": ["terraform init", "terraform start", "terraform create", "terraform build"],
+    "answer": "terraform init"
+  },
+  {
+    "category": "Terraform",
+    "set": 1,
+    "question": "Quale comando mostra l'anteprima delle modifiche all'infrastruttura?",
+    "options": ["terraform plan", "terraform apply", "terraform show", "terraform output"],
+    "answer": "terraform plan"
+  },
+  {
+    "category": "Terraform",
+    "set": 1,
+    "question": "Quale comando applica le modifiche all'infrastruttura?",
+    "options": ["terraform apply", "terraform deploy", "terraform execute", "terraform create"],
+    "answer": "terraform apply"
+  },
+  {
+    "category": "Terraform",
+    "set": 1,
+    "question": "Quale comando distrugge l'infrastruttura?",
+    "options": ["terraform destroy", "terraform delete", "terraform remove", "terraform clean"],
+    "answer": "terraform destroy"
+  },
+  {
+    "category": "Terraform",
+    "set": 1,
+    "question": "Quale linguaggio è utilizzato da Terraform?",
+    "options": ["HCL", "YAML", "JSON", "XML"],
+    "answer": "HCL"
+  },
+  {
+    "category": "Terraform",
+    "set": 1,
+    "question": "Quale estensione di file è comunemente usata per i file Terraform?",
+    "options": [".tf", ".yaml", ".json", ".cfg"],
+    "answer": ".tf"
+  },
+  {
+    "category": "Terraform",
+    "set": 1,
+    "question": "Quale blocco definisce le risorse cloud?",
+    "options": ["resource", "provider", "variable", "output"],
+    "answer": "resource"
+  },
+  {
+    "category": "Terraform",
+    "set": 1,
+    "question": "Quale blocco configura un provider cloud?",
+    "options": ["provider", "resource", "module", "data"],
+    "answer": "provider"
+  },
+  {
+    "category": "Terraform",
+    "set": 1,
+    "question": "Quale comando convalida la configurazione di Terraform?",
+    "options": ["terraform validate", "terraform check", "terraform verify", "terraform test"],
+    "answer": "terraform validate"
+  },
+  {
+    "category": "Terraform",
+    "set": 1,
+    "question": "Quale comando formatta i file Terraform?",
+    "options": ["terraform fmt", "terraform format", "terraform clean", "terraform style"],
+    "answer": "terraform fmt"
+  },
+  {
+    "category": "Terraform",
+    "set": 1,
+    "question": "Quale file memorizza localmente lo stato di Terraform?",
+    "options": ["terraform.tfstate", "terraform.state", "state.tf", "terraform.db"],
+    "answer": "terraform.tfstate"
+  },
+  {
+    "category": "Terraform",
+    "set": 1,
+    "question": "Quale comando mostra la versione di Terraform?",
+    "options": ["terraform version", "terraform release", "terraform info", "terraform status"],
+    "answer": "terraform version"
+  },
+  {
+    "category": "Terraform",
+    "set": 1,
+    "question": "Quale approccio segue Terraform?",
+    "options": ["Dichiarativo", "Imperativo", "Procedurale", "Manuale"],
+    "answer": "Dichiarativo"
+  },
+  {
+    "category": "Terraform",
+    "set": 2,
+    "question": "Quale blocco si usa per definire le variabili di input in Terraform?",
+    "options": ["variable", "input", "vars", "parameter"],
+    "answer": "variable"
+  },
+  {
+    "category": "Terraform",
+    "set": 2,
+    "question": "Quale blocco si usa per definire i valori locali?",
+    "options": ["locals", "local", "values", "variables"],
+    "answer": "locals"
+  },
+  {
+    "category": "Terraform",
+    "set": 2,
+    "question": "Quale blocco si usa per recuperare informazioni sull'infrastruttura esistente?",
+    "options": ["data", "resource", "provider", "output"],
+    "answer": "data"
+  },
+  {
+    "category": "Terraform",
+    "set": 2,
+    "question": "Quale meta-argomento crea più risorse identiche?",
+    "options": ["count", "lifecycle", "repeat", "loop"],
+    "answer": "count"
+  },
+  {
+    "category": "Terraform",
+    "set": 2,
+    "question": "Quale meta-argomento crea risorse a partire da map o set?",
+    "options": ["for_each", "count", "each", "loop"],
+    "answer": "for_each"
+  },
+  {
+    "category": "Terraform",
+    "set": 2,
+    "question": "Quale operatore si usa per le espressioni condizionali?",
+    "options": ["? :", "if", "switch", "case"],
+    "answer": "? :"
+  },
+  {
+    "category": "Terraform",
+    "set": 2,
+    "question": "Quale funzione restituisce la lunghezza di una lista?",
+    "options": ["length()", "count()", "size()", "len()"],
+    "answer": "length()"
+  },
+  {
+    "category": "Terraform",
+    "set": 2,
+    "question": "Quale funzione di Terraform rimuove gli spazi iniziali e finali da una stringa?",
+    "options": ["trimspace()", "strip()", "cleanup()", "rstrip()"],
+    "answer": "trimspace()"
+  },
+  {
+    "category": "Terraform",
+    "set": 2,
+    "question": "Quale funzione di Terraform restituisce il numero più grande tra i suoi argomenti?",
+        "options": ["max()", "highest()", "largest()", "top()"],
+        "answer": "max()"
+  },
+  {
+    "category": "Terraform",
+    "set": 2,
+    "question": "Quale funzione combina più liste?",
+    "options": ["concat()", "join()", "merge()", "flatten()"],
+    "answer": "concat()"
+  },
+  {
+    "category": "Terraform",
+    "set": 2,
+    "question": "Che cos'è una dipendenza implicita in Terraform?",
+    "options": ["Dipendenza rilevata automaticamente", "Dipendenza manuale", "Dipendenza del provider", "Dipendenza dello stato"],
+    "answer": "Dipendenza rilevata automaticamente"
+  },
+  {
+    "category": "Terraform",
+    "set": 2,
+    "question": "Quale argomento crea una dipendenza esplicita?",
+    "options": ["depends_on", "dependency", "require", "depends"],
+    "answer": "depends_on"
+  },
+  {
+    "category": "Terraform",
+    "set": 2,
+    "question": "Quale comando elenca le risorse nel file di stato?",
+    "options": ["terraform state list", "terraform state show", "terraform show", "terraform state resources"],
+    "answer": "terraform state list"
+  },
+  {
+    "category": "Terraform",
+    "set": 2,
+    "question": "Quale comando importa l'infrastruttura esistente nello stato di Terraform?",
+    "options": ["terraform import", "terraform load", "terraform sync", "terraform attach"],
+    "answer": "terraform import"
+  },
+  {
+    "category": "Terraform",
+    "set": 3,
+    "question": "Quale funzionalità di Terraform consente componenti di infrastruttura riutilizzabili?",
+    "options": ["Moduli", "Provider", "Variabili", "Output"],
+    "answer": "Moduli"
+  },
+  {
+    "category": "Terraform",
+    "set": 3,
+    "question": "Quale blocco si usa per richiamare un modulo?",
+    "options": ["module", "import", "resource", "provider"],
+    "answer": "module"
+  },
+  {
+    "category": "Terraform",
+    "set": 3,
+    "question": "Quale argomento specifica la posizione di origine di un modulo?",
+    "options": ["source", "path", "location", "module_source"],
+    "answer": "source"
+  },
+  {
+    "category": "Terraform",
+    "set": 3,
+    "question": "Quale registry di Terraform ospita i moduli pubblici?",
+    "options": ["Terraform Registry", "Docker Hub", "GitHub Packages", "AWS Marketplace"],
+    "answer": "Terraform Registry"
+  },
+  {
+    "category": "Terraform",
+    "set": 3,
+    "question": "Quale backend memorizza lo stato di Terraform in Amazon S3?",
+    "options": ["s3", "aws", "bucket", "remote"],
+    "answer": "s3"
+  },
+  {
+    "category": "Terraform",
+    "set": 3,
+    "question": "Quale servizio AWS è comunemente usato per il blocco dello stato di Terraform?",
+    "options": ["DynamoDB", "RDS", "EFS", "Lambda"],
+    "answer": "DynamoDB"
+  },
+  {
+    "category": "Terraform",
+    "set": 3,
+    "question": "Quale blocco annidato all'interno del blocco terraform configura HCP Terraform (Terraform Cloud) per lo stato e le esecuzioni?",
+        "options": ["cloud", "provider", "required_providers", "module"],
+        "answer": "cloud"
+  },
+  {
+    "category": "Terraform",
+    "set": 3,
+    "question": "Qual è lo scopo del blocco dello stato (state locking)?",
+    "options": ["Impedire modifiche concorrenti", "Crittografare il file di stato", "Eseguire il backup dello stato", "Comprimere lo stato"],
+    "answer": "Impedire modifiche concorrenti"
+  },
+  {
+    "category": "Terraform",
+    "set": 3,
+    "question": "Quale comando scarica lo stato remoto sulla macchina locale?",
+    "options": ["terraform state pull", "terraform pull", "terraform get-state", "terraform state download"],
+    "answer": "terraform state pull"
+  },
+  {
+    "category": "Terraform",
+    "set": 3,
+    "question": "Quale comando invia lo stato a un backend?",
+    "options": ["terraform state push", "terraform push", "terraform upload", "terraform state upload"],
+    "answer": "terraform state push"
+  },
+  {
+    "category": "Terraform",
+    "set": 3,
+    "question": "Quale tipo di backend memorizza lo stato sul disco locale?",
+    "options": ["local", "file", "disk", "host"],
+    "answer": "local"
+  },
+  {
+    "category": "Terraform",
+    "set": 3,
+    "question": "Quale comando rimuove una risorsa dallo stato senza eliminarla?",
+    "options": ["terraform state rm", "terraform rm", "terraform destroy", "terraform remove"],
+    "answer": "terraform state rm"
+  },
+  {
+    "category": "Terraform",
+    "set": 3,
+    "question": "Quale comando sposta le risorse all'interno dello stato?",
+    "options": ["terraform state mv", "terraform move", "terraform mv", "terraform state move"],
+    "answer": "terraform state mv"
+  },
+  {
+    "category": "Terraform",
+    "set": 3,
+    "question": "Quale data source legge gli output di un altro file di stato?",
+    "options": ["terraform_remote_state", "remote_state", "state_data", "terraform_state"],
+    "answer": "terraform_remote_state"
+  },
+  {
+    "category": "Terraform",
+    "set": 3,
+    "question": "Quale file blocca le versioni dei provider?",
+    "options": [".terraform.lock.hcl", "terraform.lock", "providers.lock", "terraform.providers"],
+    "answer": ".terraform.lock.hcl"
+  },
+  {
+    "category": "Terraform",
+    "set": 4,
+    "question": "Quale comando controlla la formattazione della configurazione di Terraform?",
+    "options": ["terraform fmt", "terraform validate", "terraform check", "terraform lint"],
+    "answer": "terraform fmt"
+  },
+  {
+    "category": "Terraform",
+    "set": 4,
+    "question": "Quale flag di terraform apply salta la richiesta di approvazione interattiva?",
+        "options": ["-auto-approve", "-force", "-yes", "-skip-approval"],
+        "answer": "-auto-approve"
+  },
+  {
+    "category": "Terraform",
+    "set": 4,
+    "question": "Quale comando genera un grafo visivo delle dipendenze?",
+    "options": ["terraform graph", "terraform map", "terraform diagram", "terraform tree"],
+    "answer": "terraform graph"
+  },
+  {
+    "category": "Terraform",
+    "set": 4,
+    "question": "Quale funzionalità di Terraform aiuta a rilevare il drift di configurazione?",
+    "options": ["terraform plan", "terraform fmt", "terraform output", "terraform console"],
+    "answer": "terraform plan"
+  },
+  {
+    "category": "Terraform",
+    "set": 4,
+    "question": "Quale comando apre una console interattiva di Terraform?",
+    "options": ["terraform console", "terraform shell", "terraform repl", "terraform interactive"],
+    "answer": "terraform console"
+  },
+  {
+    "category": "Terraform",
+    "set": 4,
+    "question": "Quale comando aggiorna lo stato dall'infrastruttura reale?",
+    "options": ["terraform refresh", "terraform sync", "terraform update", "terraform pull"],
+    "answer": "terraform refresh"
+  },
+  {
+    "category": "Terraform",
+    "set": 4,
+    "question": "Quale estensione di file è usata per le definizioni delle variabili di Terraform?",
+    "options": [".tfvars", ".vars", ".tfvar", ".terraform"],
+    "answer": ".tfvars"
+  },
+  {
+    "category": "Terraform",
+    "set": 4,
+    "question": "Quale comando applica i valori di un file tfvars specifico?",
+    "options": ["terraform apply -var-file", "terraform apply -vars", "terraform apply -tfvars", "terraform apply -file"],
+    "answer": "terraform apply -var-file"
+  },
+  {
+    "category": "Terraform",
+    "set": 4,
+    "question": "Quale funzionalità di Terraform aiuta a creare blocchi dinamici?",
+    "options": ["dynamic", "foreach", "loop", "template"],
+    "answer": "dynamic"
+  },
+  {
+    "category": "Terraform",
+    "set": 4,
+    "question": "Quale funzione di Terraform legge il contenuto di un file locale come stringa?",
+        "options": ["file()", "read()", "readfile()", "open()"],
+        "answer": "file()"
+  },
+  {
+    "category": "Terraform",
+    "set": 4,
+    "question": "Quale funzione unisce più map?",
+    "options": ["merge", "concat", "combine", "append"],
+    "answer": "merge"
+  },
+  {
+    "category": "Terraform",
+    "set": 4,
+    "question": "Quale funzionalità di Terraform consente la creazione condizionale di risorse?",
+    "options": ["count", "depends_on", "provider", "workspace"],
+    "answer": "count"
+  },
+  {
+    "category": "Terraform",
+    "set": 4,
+    "question": "Quale comando mostra lo stato corrente di Terraform?",
+    "options": ["terraform show", "terraform state list", "terraform state show", "terraform output"],
+    "answer": "terraform show"
+  },
+  {
+    "category": "Terraform",
+    "set": 4,
+    "question": "Quale funzionalità di Terraform garantisce che le risorse vengano create nell'ordine corretto?",
+    "options": ["Grafo delle dipendenze", "Count", "Workspace", "Output"],
+    "answer": "Grafo delle dipendenze"
+  },
+  {
+    "category": "Terraform",
+    "set": 4,
+    "question": "Quale comando mostra i provider usati dalla configurazione?",
+    "options": ["terraform providers", "terraform provider list", "terraform show providers", "terraform plugin list"],
+    "answer": "terraform providers"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "Quale comando inizializza una directory di lavoro di Terraform?",
+    "options": ["terraform load", "terraform setup", "terraform start", "terraform init"],
+    "answer": "terraform init"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "Quale comando mostra l'anteprima delle modifiche che Terraform apporterà?",
+    "options": ["terraform show-plan", "terraform plan", "terraform preview", "terraform diff"],
+    "answer": "terraform plan"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "Qual è il nome predefinito del file di stato di Terraform?",
+    "options": ["terraform.tfstate", "main.tfstate.json", "state.tf", "terraform.lock"],
+    "answer": "terraform.tfstate"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "Quale blocco dichiara una variabile di input?",
+    "options": ["input", "param", "variable", "argument"],
+    "answer": "variable"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "Quale argomento all'interno del blocco terraform limita la versione consentita della CLI di Terraform?",
+        "options": ["required_version", "cli_version", "version", "min_version"],
+        "answer": "required_version"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "Quale file registra le versioni dei provider selezionate?",
+    "options": ["versions.tfstate", "providers.lock", ".terraform.lock.hcl", "terraform.lock.json"],
+    "answer": ".terraform.lock.hcl"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "Quale comando riscrive i file di configurazione nello stile canonico?",
+    "options": ["terraform style", "terraform fmt", "terraform tidy", "terraform lint"],
+    "answer": "terraform fmt"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "Che cosa fa terraform validate?",
+    "options": ["Importa le risorse", "Applica le modifiche", "Controlla la sintassi e la coerenza della configurazione", "Aggiorna i provider"],
+    "answer": "Controlla la sintassi e la coerenza della configurazione"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "Che cos'è un modulo Terraform?",
+    "options": ["Un contenitore di risorse usate insieme", "Un backup dello stato", "Un binario del provider", "Una regione cloud"],
+    "answer": "Un contenitore di risorse usate insieme"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "Quale meta-argomento crea più istanze di una risorsa a partire da un numero?",
+    "options": ["provider", "count", "lifecycle", "source"],
+    "answer": "count"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "Quale blocco legge informazioni sull'infrastruttura esistente?",
+    "options": ["data", "locals", "resource", "output"],
+    "answer": "data"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "Quale comando porta una risorsa esistente sotto la gestione di Terraform?",
+    "options": ["terraform attach", "terraform import", "terraform adopt", "terraform sync"],
+    "answer": "terraform import"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "Quale funzionalità impedisce a due utenti di modificare lo stato contemporaneamente?",
+    "options": ["Blocco dello stato", "Workspace", "Output", "Provisioner"],
+    "answer": "Blocco dello stato"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "Quale comando elenca le risorse tracciate nello stato?",
+    "options": ["terraform state list", "terraform show-resources", "terraform list state", "terraform resources"],
+    "answer": "terraform state list"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "Quale blocco espone i valori dopo l'apply?",
+    "options": ["publish", "return", "export", "output"],
+    "answer": "output"
+  },
+  {
+    "category": "Terraform",
+    "set": 1,
+    "question": "Quale impostazione lifecycle impedisce a Terraform di distruggere una risorsa?",
+    "options": ["prevent_destroy", "create_before_destroy", "ignore_changes", "replace_triggered_by"],
+    "answer": "prevent_destroy"
+  },
+  {
+    "category": "Terraform",
+    "set": 2,
+    "question": "Nome del file di lock delle dipendenze di Terraform",
+    "options": [".terraform.lock.hcl", "archiviare e recuperare gli snapshot dello stato", "impedire scritture concorrenti dello stato", "validazione delle variabili"],
+    "answer": ".terraform.lock.hcl"
+  },
+  {
+    "category": "Terraform",
+    "set": 3,
+    "question": "Valore di count index in Terraform",
+    "options": ["indice numerico dell'istanza a base zero", ".terraform.lock.hcl", "archiviare e recuperare gli snapshot dello stato", "impedire scritture concorrenti dello stato"],
+    "answer": "indice numerico dell'istanza a base zero"
+  },
+  {
+    "category": "Terraform",
+    "set": 4,
+    "question": "Comando di selezione del workspace di Terraform",
+    "options": ["terraform workspace select name", ".terraform.lock.hcl", "archiviare e recuperare gli snapshot dello stato", "impedire scritture concorrenti dello stato"],
+    "answer": "terraform workspace select name"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "Flag ricorsivo di Terraform fmt",
+    "options": ["terraform fmt -recursive", ".terraform.lock.hcl", "archiviare e recuperare gli snapshot dello stato", "impedire scritture concorrenti dello stato"],
+    "answer": "terraform fmt -recursive"
+  },
+  {
+    "category": "Terraform",
+    "set": 1,
+    "question": "Quale argomento contrassegna il valore di una variabile come sensibile nell'output di Terraform?",
+    "options": ["sensitive = true", "private = true", "hidden = true", "secret = true"],
+    "answer": "sensitive = true"
+  },
+  {
+    "category": "Terraform",
+    "set": 2,
+    "question": "Scopo del backend di stato di Terraform",
+    "options": ["archiviare e recuperare gli snapshot dello stato", ".terraform.lock.hcl", "impedire scritture concorrenti dello stato", "validazione delle variabili"],
+    "answer": "archiviare e recuperare gli snapshot dello stato"
+  },
+  {
+    "category": "Terraform",
+    "set": 3,
+    "question": "Lifecycle create before destroy di Terraform",
+    "options": ["creare la sostituzione prima di eliminare il vecchio oggetto", ".terraform.lock.hcl", "archiviare e recuperare gli snapshot dello stato", "impedire scritture concorrenti dello stato"],
+    "answer": "creare la sostituzione prima di eliminare il vecchio oggetto"
+  },
+  {
+    "category": "Terraform",
+    "set": 4,
+    "question": "Limite di isolamento dei workspace di Terraform",
+    "options": ["non isola automaticamente le credenziali o i backend", ".terraform.lock.hcl", "archiviare e recuperare gli snapshot dello stato", "impedire scritture concorrenti dello stato"],
+    "answer": "non isola automaticamente le credenziali o i backend"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "Requisito di inizializzazione per Terraform validate",
+    "options": ["terraform init", ".terraform.lock.hcl", "archiviare e recuperare gli snapshot dello stato", "impedire scritture concorrenti dello stato"],
+    "answer": "terraform init"
+  },
+  {
+    "category": "Terraform",
+    "set": 1,
+    "question": "Quale argomento del provider seleziona una configurazione di provider con alias per una risorsa?",
+    "options": ["provider", "backend", "source", "required_providers"],
+    "answer": "provider"
+  },
+  {
+    "category": "Terraform",
+    "set": 2,
+    "question": "Quale funzione di Terraform restituisce il primo argomento che non è null né una stringa vuota?",
+    "options": ["coalesce()", "first()", "lookup()", "default()"],
+    "answer": "coalesce()"
+  },
+  {
+    "category": "Terraform",
+    "set": 3,
+    "question": "Lifecycle ignore changes di Terraform",
+    "options": ["ignorare le differenze negli attributi selezionati", ".terraform.lock.hcl", "archiviare e recuperare gli snapshot dello stato", "impedire scritture concorrenti dello stato"],
+    "answer": "ignorare le differenze negli attributi selezionati"
+  },
+  {
+    "category": "Terraform",
+    "set": 4,
+    "question": "Scopo dell'alias del provider di Terraform",
+    "options": ["selezionare una configurazione secondaria per una risorsa", ".terraform.lock.hcl", "archiviare e recuperare gli snapshot dello stato", "impedire scritture concorrenti dello stato"],
+    "answer": "selezionare una configurazione secondaria per una risorsa"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "Flag di upgrade di Terraform init",
+    "options": ["terraform init -upgrade", ".terraform.lock.hcl", "archiviare e recuperare gli snapshot dello stato", "impedire scritture concorrenti dello stato"],
+    "answer": "terraform init -upgrade"
+  },
+  {
+    "category": "Terraform",
+    "set": 1,
+    "question": "Quale blocco registra la modifica dell'indirizzo di una risorsa senza ricreare l'oggetto?",
+    "options": ["moved", "import", "check", "output"],
+    "answer": "moved"
+  },
+  {
+    "category": "Terraform",
+    "set": 2,
+    "question": "Blocco di validazione delle variabili di Terraform",
+    "options": ["validazione delle variabili", ".terraform.lock.hcl", "archiviare e recuperare gli snapshot dello stato", "impedire scritture concorrenti dello stato"],
+    "answer": "validazione delle variabili"
+  },
+  {
+    "category": "Terraform",
+    "set": 3,
+    "question": "Comando di Terraform per importare una risorsa esistente",
+    "options": ["terraform import address id", ".terraform.lock.hcl", "archiviare e recuperare gli snapshot dello stato", "impedire scritture concorrenti dello stato"],
+    "answer": "terraform import address id"
+  },
+  {
+    "category": "Terraform",
+    "set": 4,
+    "question": "Blocco della versione richiesta del provider di Terraform",
+    "options": ["blocco required_providers", ".terraform.lock.hcl", "archiviare e recuperare gli snapshot dello stato", "impedire scritture concorrenti dello stato"],
+    "answer": "blocco required_providers"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "Flag di migrazione del backend di Terraform init",
+    "options": ["migrare lo stato del backend", ".terraform.lock.hcl", "archiviare e recuperare gli snapshot dello stato", "impedire scritture concorrenti dello stato"],
+    "answer": "migrare lo stato del backend"
+  },
+  {
+    "category": "Terraform",
+    "set": 1,
+    "question": "Quale comando cambia il workspace Terraform attivo?",
+    "options": ["terraform workspace select", "terraform workspace new", "terraform init", "terraform providers lock"],
+    "answer": "terraform workspace select"
+  },
+  {
+    "category": "Terraform",
+    "set": 2,
+    "question": "Effetto di una variabile sensibile in Terraform",
+    "options": ["oscura il valore nell'output della CLI e nella visualizzazione dello stato", ".terraform.lock.hcl", "archiviare e recuperare gli snapshot dello stato", "impedire scritture concorrenti dello stato"],
+    "answer": "oscura il valore nell'output della CLI e nella visualizzazione dello stato"
+  },
+  {
+    "category": "Terraform",
+    "set": 3,
+    "question": "Comando state list di Terraform",
+    "options": ["terraform state list", ".terraform.lock.hcl", "archiviare e recuperare gli snapshot dello stato", "impedire scritture concorrenti dello stato"],
+    "answer": "terraform state list"
+  },
+  {
+    "category": "Terraform",
+    "set": 4,
+    "question": "Scopo del data source di Terraform",
+    "options": ["leggere l'infrastruttura esistente senza gestirla", ".terraform.lock.hcl", "archiviare e recuperare gli snapshot dello stato", "impedire scritture concorrenti dello stato"],
+    "answer": "leggere l'infrastruttura esistente senza gestirla"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "Alternativa a taint in Terraform per la sostituzione",
+    "options": ["usare un replace trigger al posto di taint", ".terraform.lock.hcl", "archiviare e recuperare gli snapshot dello stato", "impedire scritture concorrenti dello stato"],
+    "answer": "usare un replace trigger al posto di taint"
+  },
+  {
+    "category": "Terraform",
+    "set": 1,
+    "question": "Quale comando stampa tutti gli output del modulo root come JSON leggibile da macchina?",
+    "options": ["terraform output -json", "terraform show -json", "terraform state list -json", "terraform plan -json"],
+    "answer": "terraform output -json"
+  },
+  {
+    "category": "Terraform",
+    "set": 2,
+    "question": "Flag di sensibilità dell'output di Terraform",
+    "options": ["sensitive = true", ".terraform.lock.hcl", "archiviare e recuperare gli snapshot dello stato", "impedire scritture concorrenti dello stato"],
+    "answer": "sensitive = true"
+  },
+  {
+    "category": "Terraform",
+    "set": 3,
+    "question": "Comando state show di Terraform",
+    "options": ["terraform state show address", ".terraform.lock.hcl", "archiviare e recuperare gli snapshot dello stato", "impedire scritture concorrenti dello stato"],
+    "answer": "terraform state show address"
+  },
+  {
+    "category": "Terraform",
+    "set": 4,
+    "question": "Scopo del blocco moved di Terraform",
+    "options": ["registrare la modifica di un indirizzo senza ricreazione", ".terraform.lock.hcl", "archiviare e recuperare gli snapshot dello stato", "impedire scritture concorrenti dello stato"],
+    "answer": "registrare la modifica di un indirizzo senza ricreazione"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "Comando di Terraform per sostituire una risorsa",
+    "options": ["terraform apply -replace=address", ".terraform.lock.hcl", "archiviare e recuperare gli snapshot dello stato", "impedire scritture concorrenti dello stato"],
+    "answer": "terraform apply -replace=address"
+  },
+  {
+    "category": "Terraform",
+    "set": 1,
+    "question": "Quale regola lifecycle indica a Terraform di creare una sostituzione prima di distruggere la vecchia risorsa?",
+    "options": ["create_before_destroy", "prevent_destroy", "ignore_changes", "destroy_before_create"],
+    "answer": "create_before_destroy"
+  },
+  {
+    "category": "Terraform",
+    "set": 2,
+    "question": "Scopo del valore locale di Terraform",
+    "options": ["dare un nome a un'espressione per riutilizzarla in un modulo", ".terraform.lock.hcl", "archiviare e recuperare gli snapshot dello stato", "impedire scritture concorrenti dello stato"],
+    "answer": "dare un nome a un'espressione per riutilizzarla in un modulo"
+  },
+  {
+    "category": "Terraform",
+    "set": 3,
+    "question": "Comando output JSON di Terraform",
+    "options": ["terraform output -json", ".terraform.lock.hcl", "archiviare e recuperare gli snapshot dello stato", "impedire scritture concorrenti dello stato"],
+    "answer": "terraform output -json"
+  },
+  {
+    "category": "Terraform",
+    "set": 4,
+    "question": "Scopo del blocco removed di Terraform",
+    "options": ["rimuovere dallo stato senza distruggere l'oggetto", ".terraform.lock.hcl", "archiviare e recuperare gli snapshot dello stato", "impedire scritture concorrenti dello stato"],
+    "answer": "rimuovere dallo stato senza distruggere l'oggetto"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "Modalità plan refresh-only di Terraform",
+    "options": ["pianificare senza modificare lo stato", ".terraform.lock.hcl", "archiviare e recuperare gli snapshot dello stato", "impedire scritture concorrenti dello stato"],
+    "answer": "pianificare senza modificare lo stato"
+  },
+  {
+    "category": "Terraform",
+    "set": 1,
+    "question": "Quale argomento lifecycle indica a Terraform di ignorare le modifiche ad attributi selezionati della risorsa?",
+    "options": ["ignore_changes", "prevent_destroy", "create_before_destroy", "replace_triggered_by"],
+    "answer": "ignore_changes"
+  },
+  {
+    "category": "Terraform",
+    "set": 2,
+    "question": "Scopo del source del modulo di Terraform",
+    "options": ["riutilizzare e incapsulare la configurazione", ".terraform.lock.hcl", "archiviare e recuperare gli snapshot dello stato", "impedire scritture concorrenti dello stato"],
+    "answer": "riutilizzare e incapsulare la configurazione"
+  },
+  {
+    "category": "Terraform",
+    "set": 3,
+    "question": "Flag del file di output di Terraform plan",
+    "options": ["-out=plan.tfplan", ".terraform.lock.hcl", "archiviare e recuperare gli snapshot dello stato", "impedire scritture concorrenti dello stato"],
+    "answer": "-out=plan.tfplan"
+  },
+  {
+    "category": "Terraform",
+    "set": 4,
+    "question": "Scopo del blocco check di Terraform",
+    "options": ["verificare condizioni sull'infrastruttura gestita", ".terraform.lock.hcl", "archiviare e recuperare gli snapshot dello stato", "impedire scritture concorrenti dello stato"],
+    "answer": "verificare condizioni sull'infrastruttura gestita"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "Valutatore di espressioni della console di Terraform",
+    "options": ["valutare espressioni in modo interattivo", ".terraform.lock.hcl", "archiviare e recuperare gli snapshot dello stato", "impedire scritture concorrenti dello stato"],
+    "answer": "valutare espressioni in modo interattivo"
+  },
+  {
+    "category": "Terraform",
+    "set": 1,
+    "question": "Quale blocco Terraform può dichiarare un'asserzione sull'infrastruttura gestita?",
+    "options": ["check", "locals", "terraform", "provider"],
+    "answer": "check"
+  },
+  {
+    "category": "Terraform",
+    "set": 2,
+    "question": "Vincolo di versione del modulo di Terraform",
+    "options": ["version = constraint", ".terraform.lock.hcl", "archiviare e recuperare gli snapshot dello stato", "impedire scritture concorrenti dello stato"],
+    "answer": "version = constraint"
+  },
+  {
+    "category": "Terraform",
+    "set": 3,
+    "question": "Comportamento di apply con un piano salvato in Terraform",
+    "options": ["applica esattamente il piano salvato", ".terraform.lock.hcl", "archiviare e recuperare gli snapshot dello stato", "impedire scritture concorrenti dello stato"],
+    "answer": "applica esattamente il piano salvato"
+  },
+  {
+    "category": "Terraform",
+    "set": 4,
+    "question": "Fase di valutazione della precondition di Terraform",
+    "options": ["prima dell'operazione sulla risorsa", ".terraform.lock.hcl", "archiviare e recuperare gli snapshot dello stato", "impedire scritture concorrenti dello stato"],
+    "answer": "prima dell'operazione sulla risorsa"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "Scopo del blocco dynamic di Terraform",
+    "options": ["generare configurazione annidata ripetuta", ".terraform.lock.hcl", "archiviare e recuperare gli snapshot dello stato", "impedire scritture concorrenti dello stato"],
+    "answer": "generare configurazione annidata ripetuta"
+  },
+  {
+    "category": "Terraform",
+    "set": 1,
+    "question": "Quale comando mostra i valori degli output definiti dal modulo root?",
+    "options": ["terraform output", "terraform console", "terraform show", "terraform validate"],
+    "answer": "terraform output"
+  },
+  {
+    "category": "Terraform",
+    "set": 2,
+    "question": "Requisito delle chiavi di for_each in Terraform",
+    "options": ["chiavi di map stabili e univoche", ".terraform.lock.hcl", "archiviare e recuperare gli snapshot dello stato", "impedire scritture concorrenti dello stato"],
+    "answer": "chiavi di map stabili e univoche"
+  },
+  {
+    "category": "Terraform",
+    "set": 3,
+    "question": "Opzione target di Terraform destroy",
+    "options": ["terraform destroy -target=address", ".terraform.lock.hcl", "archiviare e recuperare gli snapshot dello stato", "impedire scritture concorrenti dello stato"],
+    "answer": "terraform destroy -target=address"
+  },
+  {
+    "category": "Terraform",
+    "set": 4,
+    "question": "Fase di valutazione della postcondition di Terraform",
+    "options": ["dopo l'operazione sulla risorsa", ".terraform.lock.hcl", "archiviare e recuperare gli snapshot dello stato", "impedire scritture concorrenti dello stato"],
+    "answer": "dopo l'operazione sulla risorsa"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "Sostituzione della null resource di Terraform",
+    "options": ["la sostituzione è attivata da una modifica del trigger", ".terraform.lock.hcl", "archiviare e recuperare gli snapshot dello stato", "impedire scritture concorrenti dello stato"],
+    "answer": "la sostituzione è attivata da una modifica del trigger"
+  },
+  {
+    "category": "Terraform",
+    "set": 2,
+    "question": "Quale blocco rimuove una risorsa dallo stato di Terraform senza distruggere l'oggetto reale?",
+    "options": ["removed", "moved", "import", "data"],
+    "answer": "removed"
+  }
+]

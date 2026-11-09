@@ -1,7 +1,9 @@
+import 'dart:async';
 import 'dart:math';
 
 import 'package:flutter/material.dart';
 
+import '../services/game_sound_service.dart';
 import '../services/mystery_deal_service.dart';
 import 'reward_question_screen.dart';
 
@@ -122,6 +124,7 @@ class _MysteryDealScreenState extends State<MysteryDealScreen> {
 
       _boxSelected = true;
     });
+    unawaited(GameSoundService.play(GameSoundEffect.click));
 
     _showRewardDialog();
   }

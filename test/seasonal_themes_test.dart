@@ -7,50 +7,23 @@ void main() {
   TestWidgetsFlutterBinding.ensureInitialized();
 
   group('special themes', () {
-    test('special theme cards appear after their character palettes', () {
-      final types = AppThemes.all.map((theme) => theme.type).toList();
-      expect(types[types.indexOf(AppThemeType.coffee) + 1], AppThemeType.tea);
-      final avengersCharacters = [
-        AppThemeType.spiderMan,
-        AppThemeType.ironMan,
-        AppThemeType.captainAmerica,
-        AppThemeType.thor,
-        AppThemeType.hulk,
-        AppThemeType.blackWidow,
-        AppThemeType.hawkeye,
-        AppThemeType.blackPanther,
-        AppThemeType.scarletWitch,
-        AppThemeType.vision,
-        AppThemeType.antMan,
-        AppThemeType.captainMarvel,
-        AppThemeType.doctorStrange,
-      ];
-      final dcCharacters = [
-        AppThemeType.batman,
-        AppThemeType.superman,
-        AppThemeType.wonderWoman,
-        AppThemeType.flash,
-        AppThemeType.aquaman,
-        AppThemeType.greenLantern,
-        AppThemeType.cyborg,
-        AppThemeType.supergirl,
-      ];
-      expect(
-        avengersCharacters.every(
-          (type) => types.indexOf(AppThemeType.avengers) > types.indexOf(type),
-        ),
-        isTrue,
-      );
-      expect(
-        dcCharacters.every(
-          (type) => types.indexOf(AppThemeType.dc) > types.indexOf(type),
-        ),
-        isTrue,
-      );
-      expect(types.sublist(types.length - 2), [
-        AppThemeType.diamond,
-        AppThemeType.legendary,
+    test('theme catalog is ordered by unlock points with stable ties', () {
+      final ordered = AppThemes.sortedByUnlock;
+      expect(ordered.take(2).map((theme) => theme.type), [
+        AppThemeType.light,
+        AppThemeType.dark,
       ]);
+      for (int index = 1; index < ordered.length; index++) {
+        expect(
+          ordered[index - 1].requiredPoints,
+          lessThanOrEqualTo(ordered[index].requiredPoints),
+        );
+      }
+      final types = ordered.map((theme) => theme.type).toList();
+      expect(
+        types.indexOf(AppThemeType.valentineDay),
+        lessThan(types.indexOf(AppThemeType.ocean)),
+      );
       expect(AppThemes.getTheme(AppThemeType.barbee).primaryColor, isNotNull);
       expect(
         AppThemes.getTheme(AppThemeType.dqSpecial).tertiaryColor,

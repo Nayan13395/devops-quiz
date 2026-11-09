@@ -10,11 +10,9 @@ from config import BASE_DIR, MODEL, TEMPERATURE
 
 LANGUAGES = {
     "as": "Assamese",
-    "brx": "Bodo",
     "doi": "Dogri",
     "gu": "Gujarati",
     "kn": "Kannada",
-    "ks": "Kashmiri",
     "gom": "Konkani",
     "mai": "Maithili",
     "ml": "Malayalam",

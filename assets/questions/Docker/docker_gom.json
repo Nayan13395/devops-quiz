@@ -1,0 +1,882 @@
+[
+  {
+    "category": "Docker",
+    "set": 1,
+    "question": "Docker इमेज बिल्ड करपी कमांड कोणती?",
+    "options": ["docker build", "docker run", "docker ps", "docker pull"],
+    "answer": "docker build"
+  },
+  {
+    "category": "Docker",
+    "set": 1,
+    "question": "कंटेनर डिटॅच्ड मोडांत चालू करपी कमांड कोणती?",
+    "options": ["docker run -d", "docker run -b", "docker run --bg", "docker run --background"],
+    "answer": "docker run -d"
+  },
+  {
+    "category": "Docker",
+    "set": 1,
+    "question": "कंटेनर इंटरॅक्टिव्ह मोडांत चालू करपी कमांड कोणती?",
+    "options": ["docker run -it", "docker run -i", "docker run -t", "docker run --interactive"],
+    "answer": "docker run -it"
+  },
+  {
+    "category": "Docker",
+    "set": 1,
+    "question": "मध्यंतरी इमेजींसकट सगळ्यो इमेजीं दाखोवपी कमांड कोणती?",
+    "options": ["docker images -a", "docker images --filter", "docker images -l", "docker images -q"],
+    "answer": "docker images -a"
+  },
+  {
+    "category": "Docker",
+    "set": 1,
+    "question": "सगळे थांबयिल्ले कंटेनर्स काडून उडोवपी कमांड कोणती?",
+    "options": ["docker container prune", "docker rm -a", "docker rm --all", "docker clean"],
+    "answer": "docker container prune"
+  },
+  {
+    "category": "Docker",
+    "set": 1,
+    "question": "सगळ्यो वापर नाशिल्ल्यो इमेजीं काडून उडोवपी कमांड कोणती?",
+    "options": ["docker image prune", "docker rmi -a", "docker images --clean", "docker image clean"],
+    "answer": "docker image prune"
+  },
+  {
+    "category": "Docker",
+    "set": 1,
+    "question": "कंटेनराचो रिसोर्स वापर दाखोवपी कमांड कोणती?",
+    "options": ["docker stats", "docker top", "docker monitor", "docker usage"],
+    "answer": "docker stats"
+  },
+  {
+    "category": "Docker",
+    "set": 1,
+    "question": "कंटेनराभितर चालत आशिल्ले प्रोसेसेस दाखोवपी कमांड कोणती?",
+    "options": ["docker top", "docker ps", "docker stats", "docker inspect"],
+    "answer": "docker top"
+  },
+  {
+    "category": "Docker",
+    "set": 1,
+    "question": "कंटेनर लॉग्स दाखोवपी कमांड कोणती?",
+    "options": ["docker logs", "docker events", "docker output", "docker inspect"],
+    "answer": "docker logs"
+  },
+  {
+    "category": "Docker",
+    "set": 1,
+    "question": "कंटेनर वा इमेज तपासपी कमांड कोणती?",
+    "options": ["docker inspect", "docker details", "docker info", "docker config"],
+    "answer": "docker inspect"
+  },
+  {
+    "category": "Docker",
+    "set": 1,
+    "question": "Docker नेटवर्क तयार करपी कमांड कोणती?",
+    "options": ["docker network create", "docker create network", "docker net add", "docker network build"],
+    "answer": "docker network create"
+  },
+  {
+    "category": "Docker",
+    "set": 1,
+    "question": "Docker नेटवर्क्सची यादी दाखोवपी कमांड कोणती?",
+    "options": ["docker network ls", "docker networks", "docker net list", "docker show networks"],
+    "answer": "docker network ls"
+  },
+  {
+    "category": "Docker",
+    "set": 1,
+    "question": "Docker व्हॉल्यूम तयार करपी कमांड कोणती?",
+    "options": ["docker volume create", "docker storage create", "docker volume add", "docker create volume"],
+    "answer": "docker volume create"
+  },
+  {
+    "category": "Docker",
+    "set": 1,
+    "question": "Docker व्हॉल्यूम्सची यादी दाखोवपी कमांड कोणती?",
+    "options": ["docker volume ls", "docker volumes", "docker volume show", "docker storage ls"],
+    "answer": "docker volume ls"
+  },
+  {
+    "category": "Docker",
+    "set": 1,
+    "question": "Docker सिस्टीमची म्हायती दाखोवपी कमांड कोणती?",
+    "options": ["docker info", "docker version", "docker status", "docker config"],
+    "answer": "docker info"
+  },
+  {
+    "category": "Docker",
+    "set": 2,
+    "question": "Docker ची आवृत्ती दिवपी कमांड कोणती?",
+    "options": ["docker --version", "docker run", "docker ps", "docker pull"],
+    "answer": "docker --version"
+  },
+  {
+    "category": "Docker",
+    "set": 2,
+    "question": "Docker ची आवृत्ती JSON फॉरमॅटांत दाखोवपी कमांड कोणती?",
+    "options": ["docker version --format json", "docker version -j", "docker version --json", "docker info --json"],
+    "answer": "docker version --format json"
+  },
+  {
+    "category": "Docker",
+    "set": 2,
+    "question": "फक्त कंटेनर IDs दाखोवपी कमांड कोणती?",
+    "options": ["docker ps -q", "docker ps --ids", "docker ps -i", "docker ps -s"],
+    "answer": "docker ps -q"
+  },
+  {
+    "category": "Docker",
+    "set": 2,
+    "question": "थांबयिल्ल्यांसकट सगळे कंटेनर्स दाखोवपी कमांड कोणती?",
+    "options": ["docker ps -a", "docker ps -l", "docker containers", "docker list"],
+    "answer": "docker ps -a"
+  },
+  {
+    "category": "Docker",
+    "set": 2,
+    "question": "कंटेनर सुरू ना करता तयार करपी कमांड कोणती?",
+    "options": ["docker create", "docker run", "docker build", "docker start"],
+    "answer": "docker create"
+  },
+  {
+    "category": "Docker",
+    "set": 2,
+    "question": "आसपी थांबयिल्लो कंटेनर सुरू करपी कमांड कोणती?",
+    "options": ["docker start", "docker run", "docker create", "docker exec"],
+    "answer": "docker start"
+  },
+  {
+    "category": "Docker",
+    "set": 2,
+    "question": "चालू आशिल्लो कंटेनर हळुवारपणान थांबोवपी कमांड कोणती?",
+    "options": ["docker stop", "docker kill", "docker pause", "docker halt"],
+    "answer": "docker stop"
+  },
+  {
+    "category": "Docker",
+    "set": 2,
+    "question": "कंटेनर जबरदस्तीन बंद करपी कमांड कोणती?",
+    "options": ["docker kill", "docker stop", "docker terminate", "docker end"],
+    "answer": "docker kill"
+  },
+  {
+    "category": "Docker",
+    "set": 2,
+    "question": "कंटेनर परत सुरू करपी कमांड कोणती?",
+    "options": ["docker restart", "docker reset", "docker reload", "docker rerun"],
+    "answer": "docker restart"
+  },
+  {
+    "category": "Docker",
+    "set": 2,
+    "question": "चालू आशिल्लो कंटेनर तात्पुरतो थांबोवपी कमांड कोणती?",
+    "options": ["docker pause", "docker stop", "docker hold", "docker freeze"],
+    "answer": "docker pause"
+  },
+  {
+    "category": "Docker",
+    "set": 2,
+    "question": "तात्पुरतो थांबयिल्लो कंटेनर परत चालू करपी कमांड कोणती?",
+    "options": ["docker unpause", "docker resume", "docker start", "docker restart"],
+    "answer": "docker unpause"
+  },
+  {
+    "category": "Docker",
+    "set": 2,
+    "question": "कंटेनर काडून उडोवपी कमांड कोणती?",
+    "options": ["docker rm", "docker stop", "docker delete", "docker clear"],
+    "answer": "docker rm"
+  },
+  {
+    "category": "Docker",
+    "set": 2,
+    "question": "Docker इमेज काडून उडोवपी कमांड कोणती?",
+    "options": ["docker rmi", "docker rm", "docker erase", "docker clean"],
+    "answer": "docker rmi"
+  },
+  {
+    "category": "Docker",
+    "set": 2,
+    "question": "इमेजीचो इतिहास दाखोवपी कमांड कोणती?",
+    "options": ["docker history", "docker layers", "docker image show", "docker inspect"],
+    "answer": "docker history"
+  },
+  {
+    "category": "Docker",
+    "set": 3,
+    "question": "चालू आशिल्ले कंटेनर्स दाखोवपी कमांड कोणती?",
+    "options": ["docker ps", "docker images", "docker start", "docker build"],
+    "answer": "docker ps"
+  },
+  {
+    "category": "Docker",
+    "set": 3,
+    "question": "चालू आशिल्ल्या कंटेनराभितर कमांड चालयपी कमांड कोणती?",
+    "options": ["docker exec", "docker enter", "docker shell", "docker login"],
+    "answer": "docker exec"
+  },
+  {
+    "category": "Docker",
+    "set": 3,
+    "question": "चालू आशिल्ल्या कंटेनराक जोडपी कमांड कोणती?",
+    "options": ["docker attach", "docker connect", "docker exec", "docker join"],
+    "answer": "docker attach"
+  },
+  {
+    "category": "Docker",
+    "set": 3,
+    "question": "कंटेनर आनी होस्ट मदीं फायली कॉपी करपी कमांड कोणती?",
+    "options": ["docker cp", "docker copy", "docker transfer", "docker sync"],
+    "answer": "docker cp"
+  },
+  {
+    "category": "Docker",
+    "set": 3,
+    "question": "रिअल-टायम Docker इव्हेंट्स दाखोवपी कमांड कोणती?",
+    "options": ["docker events", "docker logs", "docker monitor", "docker watch"],
+    "answer": "docker events"
+  },
+  {
+    "category": "Docker",
+    "set": 3,
+    "question": "इमेज tar आर्काइव्हांत सेव्ह करपी कमांड कोणती?",
+    "options": ["docker save", "docker export", "docker backup", "docker archive"],
+    "answer": "docker save"
+  },
+  {
+    "category": "Docker",
+    "set": 3,
+    "question": "tar आर्काइव्हांतल्यान इमेज लोड करपी कमांड कोणती?",
+    "options": ["docker load", "docker import", "docker restore", "docker pull"],
+    "answer": "docker load"
+  },
+  {
+    "category": "Docker",
+    "set": 3,
+    "question": "कंटेनराची फायलसिस्टीम tar आर्काइव्ह म्हूण एक्स्पोर्ट करपी कमांड कोणती?",
+    "options": ["docker export", "docker save", "docker backup", "docker archive"],
+    "answer": "docker export"
+  },
+  {
+    "category": "Docker",
+    "set": 3,
+    "question": "tarball इमेज म्हूण इंपोर्ट करपी कमांड कोणती?",
+    "options": ["docker import", "docker load", "docker pull", "docker build"],
+    "answer": "docker import"
+  },
+  {
+    "category": "Docker",
+    "set": 3,
+    "question": "कंटेनराच्या बदलांतल्यान इमेज तयार करपी कमांड कोणती?",
+    "options": ["docker commit", "docker build", "docker save", "docker tag"],
+    "answer": "docker commit"
+  },
+  {
+    "category": "Docker",
+    "set": 3,
+    "question": "Docker इमेजीक टॅग दिवपी कमांड कोणती?",
+    "options": ["docker tag", "docker name", "docker commit", "docker label"],
+    "answer": "docker tag"
+  },
+  {
+    "category": "Docker",
+    "set": 3,
+    "question": "इमेज रेजिस्ट्रींत धाडपी कमांड कोणती?",
+    "options": ["docker push", "docker upload", "docker publish", "docker send"],
+    "answer": "docker push"
+  },
+  {
+    "category": "Docker",
+    "set": 3,
+    "question": "Docker रेजिस्ट्रींत लॉगिन करपी कमांड कोणती?",
+    "options": ["docker login", "docker auth", "docker connect", "docker signin"],
+    "answer": "docker login"
+  },
+  {
+    "category": "Docker",
+    "set": 3,
+    "question": "वापर नाशिल्ले Docker ऑब्जेक्ट्स काडून उडोवपी कमांड कोणती?",
+    "options": ["docker system prune", "docker clean", "docker prune", "docker remove"],
+    "answer": "docker system prune"
+  },
+  {
+    "category": "Docker",
+    "set": 3,
+    "question": "Docker डिस्क वापर दाखोवपी कमांड कोणती?",
+    "options": ["docker system df", "docker disk", "docker usage", "docker info"],
+    "answer": "docker system df"
+  },
+  {
+    "category": "Docker",
+    "set": 4,
+    "question": "Docker Hub वयल्यान इमेज डाउनलोड करपी कमांड कोणती?",
+    "options": ["docker pull", "docker fetch", "docker copy", "docker get"],
+    "answer": "docker pull"
+  },
+  {
+    "category": "Docker",
+    "set": 4,
+    "question": "विशिष्ट इमेज टॅग डाउनलोड करपी कमांड कोणती?",
+    "options": ["docker pull image:tag", "docker pull --tag tag", "docker pull -t tag", "docker get image:tag"],
+    "answer": "docker pull image:tag"
+  },
+  {
+    "category": "Docker",
+    "set": 4,
+    "question": "इमेज पुल ना करता रेजिस्ट्रींतलो इमेज मॅनिफेस्ट दाखोवपी कमांड कोणती?",
+    "options": ["docker manifest inspect", "docker pull --manifest", "docker image manifest", "docker show manifest"],
+    "answer": "docker manifest inspect"
+  },
+  {
+    "category": "Docker",
+    "set": 4,
+    "question": "इमेज डायजेस्ट्सची यादी दाखोवपी कमांड कोणती?",
+    "options": ["docker images --digests", "docker digest", "docker image digest", "docker inspect digest"],
+    "answer": "docker images --digests"
+  },
+  {
+    "category": "Docker",
+    "set": 4,
+    "question": "सगळे वापर नाशिल्ले व्हॉल्यूम्स काडून उडोवपी कमांड कोणती?",
+    "options": ["docker volume prune", "docker volume clean", "docker prune volumes", "docker rm volume"],
+    "answer": "docker volume prune"
+  },
+  {
+    "category": "Docker",
+    "set": 4,
+    "question": "सगळे वापर नाशिल्ले नेटवर्क्स काडून उडोवपी कमांड कोणती?",
+    "options": ["docker network prune", "docker prune network", "docker clean network", "docker rm network"],
+    "answer": "docker network prune"
+  },
+  {
+    "category": "Docker",
+    "set": 4,
+    "question": "बिल्ड कॅश वापर दाखोवपी कमांड कोणती?",
+    "options": ["docker builder du", "docker build cache", "docker cache usage", "docker builder stats"],
+    "answer": "docker builder du"
+  },
+  {
+    "category": "Docker",
+    "set": 4,
+    "question": "वापर नाशिल्लो बिल्ड कॅश काडून उडोवपी कमांड कोणती?",
+    "options": ["docker builder prune", "docker build clean", "docker cache prune", "docker prune build"],
+    "answer": "docker builder prune"
+  },
+  {
+    "category": "Docker",
+    "set": 4,
+    "question": "Buildx वापरून मल्टी-प्लॅटफॉर्म इमेज बिल्ड करपी कमांड कोणती?",
+    "options": ["docker buildx build", "docker build multi", "docker build platform", "docker image buildx"],
+    "answer": "docker buildx build"
+  },
+  {
+    "category": "Docker",
+    "set": 4,
+    "question": "उपलब्ध Buildx बिल्डर्सची यादी दाखोवपी कमांड कोणती?",
+    "options": ["docker buildx ls", "docker buildx show", "docker builder ls", "docker buildx list"],
+    "answer": "docker buildx ls"
+  },
+  {
+    "category": "Docker",
+    "set": 4,
+    "question": "सगळे Docker कॉन्टेक्स्ट्स दाखोवपी कमांड कोणती?",
+    "options": ["docker context ls", "docker contexts", "docker context show", "docker list context"],
+    "answer": "docker context ls"
+  },
+  {
+    "category": "Docker",
+    "set": 4,
+    "question": "वेगळ्या Docker कॉन्टेक्स्टाक बदलपी कमांड कोणती?",
+    "options": ["docker context use", "docker context switch", "docker use context", "docker context select"],
+    "answer": "docker context use"
+  },
+  {
+    "category": "Docker",
+    "set": 4,
+    "question": "Docker कॉन्टेक्स्ट काडून उडोवपी कमांड कोणती?",
+    "options": ["docker context rm", "docker context delete", "docker remove context", "docker context erase"],
+    "answer": "docker context rm"
+  },
+  {
+    "category": "Docker",
+    "set": 4,
+    "question": "बेस इमेज निश्चित करपी Dockerfile इन्स्ट्रक्शन कोणतें?",
+    "options": ["FROM", "BASE", "IMAGE", "START"],
+    "answer": "FROM"
+  },
+  {
+    "category": "Docker",
+    "set": 4,
+    "question": "एन्व्हायर्नमेंट व्हेरिएबल्स सेट करपी Dockerfile इन्स्ट्रक्शन कोणतें?",
+    "options": ["ENV", "SET", "VAR", "EXPORT"],
+    "answer": "ENV"
+  },
+  {
+    "category": "Docker",
+    "set": 5,
+    "question": "चालू आशिल्ल्या कंटेनर्सचो लायव्ह CPU आनी मेमरी वापर दाखोवपी कमांड कोणती?",
+    "options": ["docker inspect -r", "docker stats", "docker usage", "docker top -m"],
+    "answer": "docker stats"
+  },
+  {
+    "category": "Docker",
+    "set": 5,
+    "question": "रन टायमाक ओव्हरराइड करूं येवपी डिफॉल्ट कमांड दिवपी Dockerfile इन्स्ट्रक्शन कोणतें?",
+    "options": ["COPY", "CMD", "LABEL", "RUN"],
+    "answer": "CMD"
+  },
+  {
+    "category": "Docker",
+    "set": 5,
+    "question": "कंटेनर एक्झिक्युटेबल म्हूण चालपाक कॉन्फिगर करपी Dockerfile इन्स्ट्रक्शन कोणतें?",
+    "options": ["USER", "ENTRYPOINT", "EXPOSE", "ARG"],
+    "answer": "ENTRYPOINT"
+  },
+  {
+    "category": "Docker",
+    "set": 5,
+    "question": "फुडल्या इन्स्ट्रक्शन्सखातीर वर्किंग डिरेक्टरी सेट करपी Dockerfile इन्स्ट्रक्शन कोणतें?",
+    "options": ["HOME", "CD", "WORKDIR", "PATH"],
+    "answer": "WORKDIR"
+  },
+  {
+    "category": "Docker",
+    "set": 5,
+    "question": "सद्याच्या डिरेक्टरींतल्या Dockerfile वयल्यान myapp टॅग आशिल्ली इमेज बिल्ड करपी कमांड कोणती?",
+    "options": ["docker build -t myapp .", "docker compile myapp", "docker make myapp", "docker create myapp ."],
+    "answer": "docker build -t myapp ."
+  },
+  {
+    "category": "Docker",
+    "set": 5,
+    "question": "docker compose up -d कितें करता?",
+    "options": ["सगळे व्हॉल्यूम्स काडून उडयता", "सुरू ना करता बिल्ड करता", "सर्विसेस बॅकग्राउंडांत सुरू करता", "सगळ्यो सर्विसेस थांबयता"],
+    "answer": "सर्विसेस बॅकग्राउंडांत सुरू करता"
+  },
+  {
+    "category": "Docker",
+    "set": 5,
+    "question": "Docker स्वता तयार करता आनी व्यवस्थापन करता तो स्टोरेज पर्याय कोणतो?",
+    "options": ["Bind mount", "नेम्ड व्हॉल्यूम", "tmpfs mount", "होस्ट डिरेक्टरी"],
+    "answer": "नेम्ड व्हॉल्यूम"
+  },
+  {
+    "category": "Docker",
+    "set": 5,
+    "question": "कंटेनराचे आऊटपुट लॉग्स छापपी कमांड कोणती?",
+    "options": ["docker history", "docker diff", "docker events", "docker logs"],
+    "answer": "docker logs"
+  },
+  {
+    "category": "Docker",
+    "set": 5,
+    "question": "स्टँडअलोन कंटेनर्सखातीर डिफॉल्ट म्हूण कोणतो नेटवर्क ड्रायव्हर वापरतात?",
+    "options": ["macvlan", "bridge", "host", "overlay"],
+    "answer": "bridge"
+  },
+  {
+    "category": "Docker",
+    "set": 5,
+    "question": "बिल्ड-टायम व्हेरिएबल निश्चित करपी Dockerfile इन्स्ट्रक्शन कोणतें?",
+    "options": ["ARG", "VOLUME", "ENV", "SHELL"],
+    "answer": "ARG"
+  },
+  {
+    "category": "Docker",
+    "set": 5,
+    "question": "मल्टी-स्टेज बिल्डाचो मुखेल फायदो कितें?",
+    "options": ["लेयर्स एन्क्रिप्ट करप", "जॉब्स शेड्युल करप", "जायते कंटेनर्स चालोवप", "ल्हान अंतिम इमेजीं"],
+    "answer": "ल्हान अंतिम इमेजीं"
+  },
+  {
+    "category": "Docker",
+    "set": 5,
+    "question": "इमेज जाल्ली त्या लेयर्सची यादी दाखोवपी कमांड कोणती?",
+    "options": ["docker tree", "docker history", "docker ps -l", "docker layers"],
+    "answer": "docker history"
+  },
+  {
+    "category": "Docker",
+    "set": 5,
+    "question": "Docker बिल्ड कॉन्टेक्स्टांतल्यान फायली वगळपी फायल कोणती?",
+    "options": ["Dockerfile.skip", ".gitignore", ".buildignore", ".dockerignore"],
+    "answer": ".dockerignore"
+  },
+  {
+    "category": "Docker",
+    "set": 5,
+    "question": "कंटेनर वा इमेजीचे लो-लेव्हल तपशील JSON म्हूण दाखोवपी कमांड कोणती?",
+    "options": ["docker details", "docker describe", "docker show", "docker inspect"],
+    "answer": "docker inspect"
+  },
+  {
+    "category": "Docker",
+    "set": 1,
+    "question": "कंटेनराची रिस्टार्ट पॉलिसी निश्चित करपी docker run पर्याय कोणतो?",
+    "options": ["--restart", "--detach", "--privileged", "--hostname"],
+    "answer": "--restart"
+  },
+  {
+    "category": "Docker",
+    "set": 2,
+    "question": "Docker इमेज कन्टेंट डायजेस्ट रेफरन्स",
+    "options": ["sha256 डायजेस्ट", "फक्त अंतिम आर्टिफॅक्ट्स ल्हान इमेजींत कॉपी करप", "बदल जाल्लो आदलो लेयर फुडले लेयर्स परत बिल्ड करता", ".dockerignore"],
+    "answer": "sha256 डायजेस्ट"
+  },
+  {
+    "category": "Docker",
+    "set": 3,
+    "question": "Docker कंटेनर रिस्टार्ट पॉलिसी",
+    "options": ["रिस्टार्ट पॉलिसी", "sha256 डायजेस्ट", "फक्त अंतिम आर्टिफॅक्ट्स ल्हान इमेजींत कॉपी करप", "बदल जाल्लो आदलो लेयर फुडले लेयर्स परत बिल्ड करता"],
+    "answer": "रिस्टार्ट पॉलिसी"
+  },
+  {
+    "category": "Docker",
+    "set": 4,
+    "question": "Docker कंटेनर रीड-ओन्ली रूट",
+    "options": ["रीड-ओन्ली रूट फायलसिस्टीम", "sha256 डायजेस्ट", "फक्त अंतिम आर्टिफॅक्ट्स ल्हान इमेजींत कॉपी करप", "बदल जाल्लो आदलो लेयर फुडले लेयर्स परत बिल्ड करता"],
+    "answer": "रीड-ओन्ली रूट फायलसिस्टीम"
+  },
+  {
+    "category": "Docker",
+    "set": 5,
+    "question": "Docker इमेज लोडाची जोडीदार कमांड",
+    "options": ["docker load", "sha256 डायजेस्ट", "फक्त अंतिम आर्टिफॅक्ट्स ल्हान इमेजींत कॉपी करप", "बदल जाल्लो आदलो लेयर फुडले लेयर्स परत बिल्ड करता"],
+    "answer": "docker load"
+  },
+  {
+    "category": "Docker",
+    "set": 1,
+    "question": "आदींच चालू आशिल्ल्या कंटेनराभितर नवी प्रोसेस चालयपी कमांड कोणती?",
+    "options": ["docker exec", "docker attach", "docker build", "docker commit"],
+    "answer": "docker exec"
+  },
+  {
+    "category": "Docker",
+    "set": 2,
+    "question": "Docker मल्टी-स्टेज बिल्डाचो उद्देश",
+    "options": ["फक्त अंतिम आर्टिफॅक्ट्स ल्हान इमेजींत कॉपी करप", "sha256 डायजेस्ट", "बदल जाल्लो आदलो लेयर फुडले लेयर्स परत बिल्ड करता", ".dockerignore"],
+    "answer": "फक्त अंतिम आर्टिफॅक्ट्स ल्हान इमेजींत कॉपी करप"
+  },
+  {
+    "category": "Docker",
+    "set": 3,
+    "question": "Docker इमेज लेयर पुनर्वापर",
+    "options": ["सारके लेयर्स वांटून घेतात", "sha256 डायजेस्ट", "फक्त अंतिम आर्टिफॅक्ट्स ल्हान इमेजींत कॉपी करप", "बदल जाल्लो आदलो लेयर फुडले लेयर्स परत बिल्ड करता"],
+    "answer": "सारके लेयर्स वांटून घेतात"
+  },
+  {
+    "category": "Docker",
+    "set": 4,
+    "question": "Docker रिसोर्स मेमरी मर्यादा फ्लॅग",
+    "options": ["--memory", "sha256 डायजेस्ट", "फक्त अंतिम आर्टिफॅक्ट्स ल्हान इमेजींत कॉपी करप", "बदल जाल्लो आदलो लेयर फुडले लेयर्स परत बिल्ड करता"],
+    "answer": "--memory"
+  },
+  {
+    "category": "Docker",
+    "set": 5,
+    "question": "Docker कंटेनर एक्स्पोर्टाचो निकाल",
+    "options": ["फायलसिस्टीम tar आर्काइव्ह", "sha256 डायजेस्ट", "फक्त अंतिम आर्टिफॅक्ट्स ल्हान इमेजींत कॉपी करप", "बदल जाल्लो आदलो लेयर फुडले लेयर्स परत बिल्ड करता"],
+    "answer": "फायलसिस्टीम tar आर्काइव्ह"
+  },
+  {
+    "category": "Docker",
+    "set": 1,
+    "question": "फुडल्या बिल्ड स्टेप्स आनी कंटेनर एक्झिक्युशनाखातीर युजर निवडपी Dockerfile इन्स्ट्रक्शन कोणतें?",
+    "options": ["USER", "OWNER", "RUNAS", "LOGIN"],
+    "answer": "USER"
+  },
+  {
+    "category": "Docker",
+    "set": 2,
+    "question": "Docker बिल्ड कॅश इन्व्हॅलिडेशन",
+    "options": ["बदल जाल्लो आदलो लेयर फुडले लेयर्स परत बिल्ड करता", "sha256 डायजेस्ट", "फक्त अंतिम आर्टिफॅक्ट्स ल्हान इमेजींत कॉपी करप", ".dockerignore"],
+    "answer": "बदल जाल्लो आदलो लेयर फुडले लेयर्स परत बिल्ड करता"
+  },
+  {
+    "category": "Docker",
+    "set": 3,
+    "question": "Docker इमेज क्लीनअप कमांड",
+    "options": ["docker image prune", "sha256 डायजेस्ट", "फक्त अंतिम आर्टिफॅक्ट्स ल्हान इमेजींत कॉपी करप", "बदल जाल्लो आदलो लेयर फुडले लेयर्स परत बिल्ड करता"],
+    "answer": "docker image prune"
+  },
+  {
+    "category": "Docker",
+    "set": 4,
+    "question": "Docker CPU कोटा फ्लॅग",
+    "options": ["--cpus", "sha256 डायजेस्ट", "फक्त अंतिम आर्टिफॅक्ट्स ल्हान इमेजींत कॉपी करप", "बदल जाल्लो आदलो लेयर फुडले लेयर्स परत बिल्ड करता"],
+    "answer": "--cpus"
+  },
+  {
+    "category": "Docker",
+    "set": 5,
+    "question": "Docker इमेज इंपोर्ट कमांड",
+    "options": ["docker import", "sha256 डायजेस्ट", "फक्त अंतिम आर्टिफॅक्ट्स ल्हान इमेजींत कॉपी करप", "बदल जाल्लो आदलो लेयर फुडले लेयर्स परत बिल्ड करता"],
+    "answer": "docker import"
+  },
+  {
+    "category": "Docker",
+    "set": 1,
+    "question": "कंटेनर कोणत्या पोर्टार आयकता तें दस्तऐवजांत दवरपी Dockerfile इन्स्ट्रक्शन कोणतें?",
+    "options": ["EXPOSE", "PORT", "PUBLISH", "LISTEN"],
+    "answer": "EXPOSE"
+  },
+  {
+    "category": "Docker",
+    "set": 2,
+    "question": "Docker बिल्ड कॉन्टेक्स्ट वगळपी फायल",
+    "options": [".dockerignore", "sha256 डायजेस्ट", "फक्त अंतिम आर्टिफॅक्ट्स ल्हान इमेजींत कॉपी करप", "बदल जाल्लो आदलो लेयर फुडले लेयर्स परत बिल्ड करता"],
+    "answer": ".dockerignore"
+  },
+  {
+    "category": "Docker",
+    "set": 3,
+    "question": "Docker कंटेनर लॉग कमांड",
+    "options": ["docker logs", "sha256 डायजेस्ट", "फक्त अंतिम आर्टिफॅक्ट्स ल्हान इमेजींत कॉपी करप", "बदल जाल्लो आदलो लेयर फुडले लेयर्स परत बिल्ड करता"],
+    "answer": "docker logs"
+  },
+  {
+    "category": "Docker",
+    "set": 4,
+    "question": "Docker Compose सर्विस अवलंबित्व",
+    "options": ["depends_on", "sha256 डायजेस्ट", "फक्त अंतिम आर्टिफॅक्ट्स ल्हान इमेजींत कॉपी करप", "बदल जाल्लो आदलो लेयर फुडले लेयर्स परत बिल्ड करता"],
+    "answer": "depends_on"
+  },
+  {
+    "category": "Docker",
+    "set": 5,
+    "question": "Docker व्हॉल्यूम prune पर्याय",
+    "options": ["docker volume prune", "sha256 डायजेस्ट", "फक्त अंतिम आर्टिफॅक्ट्स ल्हान इमेजींत कॉपी करप", "बदल जाल्लो आदलो लेयर फुडले लेयर्स परत बिल्ड करता"],
+    "answer": "docker volume prune"
+  },
+  {
+    "category": "Docker",
+    "set": 1,
+    "question": "Docker ऑब्जेक्टाचो तपशीलवार मेटाडेटा दाखोवपी कमांड कोणती?",
+    "options": ["docker inspect", "docker top", "docker diff", "docker pause"],
+    "answer": "docker inspect"
+  },
+  {
+    "category": "Docker",
+    "set": 2,
+    "question": "Docker कंटेनर हेल्थ प्रोब",
+    "options": ["HEALTHCHECK", "sha256 डायजेस्ट", "फक्त अंतिम आर्टिफॅक्ट्स ल्हान इमेजींत कॉपी करप", "बदल जाल्लो आदलो लेयर फुडले लेयर्स परत बिल्ड करता"],
+    "answer": "HEALTHCHECK"
+  },
+  {
+    "category": "Docker",
+    "set": 3,
+    "question": "Docker कंटेनर inspect कमांड",
+    "options": ["docker inspect", "sha256 डायजेस्ट", "फक्त अंतिम आर्टिफॅक्ट्स ल्हान इमेजींत कॉपी करप", "बदल जाल्लो आदलो लेयर फुडले लेयर्स परत बिल्ड करता"],
+    "answer": "docker inspect"
+  },
+  {
+    "category": "Docker",
+    "set": 4,
+    "question": "Docker Compose एन्व्हायर्नमेंट फायल",
+    "options": [".env", "sha256 डायजेस्ट", "फक्त अंतिम आर्टिफॅक्ट्स ल्हान इमेजींत कॉपी करप", "बदल जाल्लो आदलो लेयर फुडले लेयर्स परत बिल्ड करता"],
+    "answer": ".env"
+  },
+  {
+    "category": "Docker",
+    "set": 5,
+    "question": "Docker कंटेनर init प्रोसेस फ्लॅग",
+    "options": ["--init", "sha256 डायजेस्ट", "फक्त अंतिम आर्टिफॅक्ट्स ल्हान इमेजींत कॉपी करप", "बदल जाल्लो आदलो लेयर फुडले लेयर्स परत बिल्ड करता"],
+    "answer": "--init"
+  },
+  {
+    "category": "Docker",
+    "set": 1,
+    "question": "कंटेनराचो लॉग आऊटपुट सतत स्ट्रीम करपी कमांड कोणती?",
+    "options": ["docker logs -f", "docker events --once", "docker stats --no-stream", "docker history"],
+    "answer": "docker logs -f"
+  },
+  {
+    "category": "Docker",
+    "set": 2,
+    "question": "Docker नेम्ड व्हॉल्यूमाचें जीवनचक्र",
+    "options": ["कंटेनरा परस वेगळें टिकून रावता", "sha256 डायजेस्ट", "फक्त अंतिम आर्टिफॅक्ट्स ल्हान इमेजींत कॉपी करप", "बदल जाल्लो आदलो लेयर फुडले लेयर्स परत बिल्ड करता"],
+    "answer": "कंटेनरा परस वेगळें टिकून रावता"
+  },
+  {
+    "category": "Docker",
+    "set": 3,
+    "question": "Docker प्रोसेस यादी कमांड",
+    "options": ["docker top", "sha256 डायजेस्ट", "फक्त अंतिम आर्टिफॅक्ट्स ल्हान इमेजींत कॉपी करप", "बदल जाल्लो आदलो लेयर फुडले लेयर्स परत बिल्ड करता"],
+    "answer": "docker top"
+  },
+  {
+    "category": "Docker",
+    "set": 4,
+    "question": "Docker Compose डिटॅच्ड लॉन्च",
+    "options": ["docker compose up -d", "sha256 डायजेस्ट", "फक्त अंतिम आर्टिफॅक्ट्स ल्हान इमेजींत कॉपी करप", "बदल जाल्लो आदलो लेयर फुडले लेयर्स परत बिल्ड करता"],
+    "answer": "docker compose up -d"
+  },
+  {
+    "category": "Docker",
+    "set": 5,
+    "question": "Docker युजर नेमस्पेसाचो उद्देश",
+    "options": ["कंटेनर युजर्स विशेषाधिकार नाशिल्ल्या होस्ट युजर्सक मॅप करप", "sha256 डायजेस्ट", "फक्त अंतिम आर्टिफॅक्ट्स ल्हान इमेजींत कॉपी करप", "बदल जाल्लो आदलो लेयर फुडले लेयर्स परत बिल्ड करता"],
+    "answer": "कंटेनर युजर्स विशेषाधिकार नाशिल्ल्या होस्ट युजर्सक मॅप करप"
+  },
+  {
+    "category": "Docker",
+    "set": 1,
+    "question": "कंटेनर भायर सरल्यार तो आपोआप काडून उडोवपी docker run पर्याय कोणतो?",
+    "options": ["--rm", "--pull", "--init", "--detach"],
+    "answer": "--rm"
+  },
+  {
+    "category": "Docker",
+    "set": 2,
+    "question": "Docker bind mount स्रोत",
+    "options": ["होस्ट फायलसिस्टीम पाथ", "sha256 डायजेस्ट", "फक्त अंतिम आर्टिफॅक्ट्स ल्हान इमेजींत कॉपी करप", "बदल जाल्लो आदलो लेयर फुडले लेयर्स परत बिल्ड करता"],
+    "answer": "होस्ट फायलसिस्टीम पाथ"
+  },
+  {
+    "category": "Docker",
+    "set": 3,
+    "question": "Docker इमेज हिस्टरी कमांड",
+    "options": ["docker history", "sha256 डायजेस्ट", "फक्त अंतिम आर्टिफॅक्ट्स ल्हान इमेजींत कॉपी करप", "बदल जाल्लो आदलो लेयर फुडले लेयर्स परत बिल्ड करता"],
+    "answer": "docker history"
+  },
+  {
+    "category": "Docker",
+    "set": 4,
+    "question": "Docker Compose स्टॉप वागणूक",
+    "options": ["सर्विसेस काडून ना उडयतना थांबयता", "sha256 डायजेस्ट", "फक्त अंतिम आर्टिफॅक्ट्स ल्हान इमेजींत कॉपी करप", "बदल जाल्लो आदलो लेयर फुडले लेयर्स परत बिल्ड करता"],
+    "answer": "सर्विसेस काडून ना उडयतना थांबयता"
+  },
+  {
+    "category": "Docker",
+    "set": 5,
+    "question": "Docker सिक्रेट्स स्टोरेजाचो उद्देश",
+    "options": ["संवेदनशील मोलां सर्विसेसाक माउंट करप", "sha256 डायजेस्ट", "फक्त अंतिम आर्टिफॅक्ट्स ल्हान इमेजींत कॉपी करप", "बदल जाल्लो आदलो लेयर फुडले लेयर्स परत बिल्ड करता"],
+    "answer": "संवेदनशील मोलां सर्विसेसाक माउंट करप"
+  },
+  {
+    "category": "Docker",
+    "set": 1,
+    "question": "मल्टी-स्टेज Docker बिल्डाचो मुखेल उद्देश कितें?",
+    "options": [
+      "बिल्ड आर्टिफॅक्ट्स ल्हान अंतिम इमेजींत कॉपी करप",
+      "दरेक स्टेज कंटेनर म्हूण चालोवप",
+      "सगळीं बिल्ड साधनां अंतिम इमेजींत दवरप",
+      "Docker व्हॉल्यूम्सा बदला लेयर्स वापरप"
+    ],
+    "answer": "बिल्ड आर्टिफॅक्ट्स ल्हान अंतिम इमेजींत कॉपी करप"
+  },
+  {
+    "category": "Docker",
+    "set": 2,
+    "question": "Docker bridge नेटवर्क वागणूक",
+    "options": ["कंटेनर्सक व्हर्च्युअल सबनेटांतल्यान जोडटा", "sha256 डायजेस्ट", "फक्त अंतिम आर्टिफॅक्ट्स ल्हान इमेजींत कॉपी करप", "बदल जाल्लो आदलो लेयर फुडले लेयर्स परत बिल्ड करता"],
+    "answer": "कंटेनर्सक व्हर्च्युअल सबनेटांतल्यान जोडटा"
+  },
+  {
+    "category": "Docker",
+    "set": 3,
+    "question": "Docker इमेज रेजिस्ट्री लॉगिन कमांड",
+    "options": ["docker login", "sha256 डायजेस्ट", "फक्त अंतिम आर्टिफॅक्ट्स ल्हान इमेजींत कॉपी करप", "बदल जाल्लो आदलो लेयर फुडले लेयर्स परत बिल्ड करता"],
+    "answer": "docker login"
+  },
+  {
+    "category": "Docker",
+    "set": 4,
+    "question": "Docker कंटेनर exec कमांड",
+    "options": ["docker exec", "sha256 डायजेस्ट", "फक्त अंतिम आर्टिफॅक्ट्स ल्हान इमेजींत कॉपी करप", "बदल जाल्लो आदलो लेयर फुडले लेयर्स परत बिल्ड करता"],
+    "answer": "docker exec"
+  },
+  {
+    "category": "Docker",
+    "set": 5,
+    "question": "Docker हेल्थ स्टेटस मोलां",
+    "options": ["starting, healthy, unhealthy", "sha256 डायजेस्ट", "फक्त अंतिम आर्टिफॅक्ट्स ल्हान इमेजींत कॉपी करप", "बदल जाल्लो आदलो लेयर फुडले लेयर्स परत बिल्ड करता"],
+    "answer": "starting, healthy, unhealthy"
+  },
+  {
+    "category": "Docker",
+    "set": 1,
+    "question": "नांव दिल्लो स्टेज बिल्ड टार्गेट म्हूण निवडपी docker build पर्याय कोणतो?",
+    "options": ["--target", "--stage", "--from", "--platform"],
+    "answer": "--target"
+  },
+  {
+    "category": "Docker",
+    "set": 2,
+    "question": "Docker होस्ट नेटवर्क वागणूक",
+    "options": ["होस्ट नेटवर्क नेमस्पेस वांटून घेता", "sha256 डायजेस्ट", "फक्त अंतिम आर्टिफॅक्ट्स ल्हान इमेजींत कॉपी करप", "बदल जाल्लो आदलो लेयर फुडले लेयर्स परत बिल्ड करता"],
+    "answer": "होस्ट नेटवर्क नेमस्पेस वांटून घेता"
+  },
+  {
+    "category": "Docker",
+    "set": 3,
+    "question": "Docker बिल्ड टार्गेट स्टेज फ्लॅग",
+    "options": ["--target", "sha256 डायजेस्ट", "फक्त अंतिम आर्टिफॅक्ट्स ल्हान इमेजींत कॉपी करप", "बदल जाल्लो आदलो लेयर फुडले लेयर्स परत बिल्ड करता"],
+    "answer": "--target"
+  },
+  {
+    "category": "Docker",
+    "set": 4,
+    "question": "Docker कंटेनर कॉपी कमांड",
+    "options": ["docker cp", "sha256 डायजेस्ट", "फक्त अंतिम आर्टिफॅक्ट्स ल्हान इमेजींत कॉपी करप", "बदल जाल्लो आदलो लेयर फुडले लेयर्स परत बिल्ड करता"],
+    "answer": "docker cp"
+  },
+  {
+    "category": "Docker",
+    "set": 5,
+    "question": "Docker डेमन सॉकेट धोको",
+    "options": ["होस्ट-स्तरावयलो प्रशासकीय प्रवेश", "sha256 डायजेस्ट", "फक्त अंतिम आर्टिफॅक्ट्स ल्हान इमेजींत कॉपी करप", "बदल जाल्लो आदलो लेयर फुडले लेयर्स परत बिल्ड करता"],
+    "answer": "होस्ट-स्तरावयलो प्रशासकीय प्रवेश"
+  },
+  {
+    "category": "Docker",
+    "set": 1,
+    "question": "कंटेनर हेल्थ चेक निश्चित करपी Dockerfile इन्स्ट्रक्शन कोणतें?",
+    "options": ["HEALTHCHECK", "HEALTH", "STATUS", "ONFAILURE"],
+    "answer": "HEALTHCHECK"
+  },
+  {
+    "category": "Docker",
+    "set": 2,
+    "question": "Docker पोर्ट पब्लिश फ्लॅग",
+    "options": ["-p", "sha256 डायजेस्ट", "फक्त अंतिम आर्टिफॅक्ट्स ल्हान इमेजींत कॉपी करप", "बदल जाल्लो आदलो लेयर फुडले लेयर्स परत बिल्ड करता"],
+    "answer": "-p"
+  },
+  {
+    "category": "Docker",
+    "set": 3,
+    "question": "Docker बिल्ड प्लॅटफॉर्म पर्याय",
+    "options": ["--platform", "sha256 डायजेस्ट", "फक्त अंतिम आर्टिफॅक्ट्स ल्हान इमेजींत कॉपी करप", "बदल जाल्लो आदलो लेयर फुडले लेयर्स परत बिल्ड करता"],
+    "answer": "--platform"
+  },
+  {
+    "category": "Docker",
+    "set": 4,
+    "question": "Docker इमेज सेव्ह फॉरमॅट कमांड",
+    "options": ["docker save", "sha256 डायजेस्ट", "फक्त अंतिम आर्टिफॅक्ट्स ल्हान इमेजींत कॉपी करप", "बदल जाल्लो आदलो लेयर फुडले लेयर्स परत बिल्ड करता"],
+    "answer": "docker save"
+  },
+  {
+    "category": "Docker",
+    "set": 5,
+    "question": "Dockerfile कॅश माउंट सुविधा",
+    "options": ["BuildKit RUN --mount=type=cache", "sha256 डायजेस्ट", "फक्त अंतिम आर्टिफॅक्ट्स ल्हान इमेजींत कॉपी करप", "बदल जाल्लो आदलो लेयर फुडले लेयर्स परत बिल्ड करता"],
+    "answer": "BuildKit RUN --mount=type=cache"
+  },
+  {
+    "category": "Docker",
+    "set": 2,
+    "question": "कंटेनरांत होस्ट पाथ वा नेम्ड व्हॉल्यूम स्पष्टपणान माउंट करपी docker run पर्याय कोणतो?",
+    "options": ["--mount", "--publish", "--network", "--restart"],
+    "answer": "--mount"
+  },
+  {
+    "category": "Docker",
+    "set": 5,
+    "question": "Docker बिल्ड मेटाडेटा तपासणी",
+    "options": ["docker buildx imagetools inspect", "sha256 डायजेस्ट", "फक्त अंतिम आर्टिफॅक्ट्स ल्हान इमेजींत कॉपी करप", "बदल जाल्लो आदलो लेयर फुडले लेयर्स परत बिल्ड करता"],
+    "answer": "docker buildx imagetools inspect"
+  }
+]

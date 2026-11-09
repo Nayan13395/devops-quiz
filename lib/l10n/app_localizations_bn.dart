@@ -123,13 +123,13 @@ class AppLocalizationsBn extends AppLocalizations {
   String get dontGiveUp => 'হাল ছাড়বেন না!';
 
   @override
-  String get shareMessage1 => 'I scored';
+  String get shareMessage1 => 'আমার স্কোর';
 
   @override
-  String get shareMessage2 => 'in the DevOps Quiz!';
+  String get shareMessage2 => 'DevOps কুইজে!';
 
   @override
-  String get downloadApp => 'Download the app:';
+  String get downloadApp => 'অ্যাপ ডাউনলোড করুন:';
 
   @override
   String get score => 'স্কোর';

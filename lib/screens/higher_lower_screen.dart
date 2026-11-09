@@ -1,8 +1,10 @@
+import 'dart:async';
 import 'dart:math';
 
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
+import '../services/game_sound_service.dart';
 import '../services/point_service.dart';
 
 class HigherLowerScreen extends StatefulWidget {
@@ -85,6 +87,11 @@ class _HigherLowerScreenState extends State<HigherLowerScreen> {
     }
 
     final correct = higher ? next > _current : next < _current;
+    unawaited(
+      GameSoundService.play(
+        correct ? GameSoundEffect.correct : GameSoundEffect.incorrect,
+      ),
+    );
 
     setState(() {
       _lastNext = next;

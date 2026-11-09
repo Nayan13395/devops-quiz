@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 
-import '../screens/achievement_screen.dart';
-import '../screens/certificates_screen.dart';
 import '../screens/games_screen.dart';
 import '../screens/settings_screen.dart';
 import '../screens/theme_screen.dart';
@@ -27,60 +25,52 @@ class _Highlight {
 
 final List<_Highlight> _highlights = [
   _Highlight(
-    '🧩',
-    'Jigsaw and Arrow Puzzle',
-    'Solve 100 illustrated jigsaw puzzles and clear 100 arrow boards.',
+    '🔎',
+    'Spot the Difference',
+    'Find five changes in original illustrated scenes across 10 levels.',
     actionLabel: 'Play games',
     featureId: WhatsNewService.games,
     destination: (_) => const GamesScreen(),
   ),
   _Highlight(
-    '🦸',
-    'More themes, plus theme search',
-    'Browse Army, Spider-Man, Krrish, Avengers, DC, Rainbow and seasonal '
-        'themes. Search the catalog to find a palette quickly.',
+    '🎮',
+    'More ways to play',
+    'Connect Four now has bot and local modes, Snake and Ladders has 20 '
+        'selectable levels, and Ludo has clearer, faster moves.',
+    actionLabel: 'Play games',
+    featureId: WhatsNewService.games,
+    destination: (_) => const GamesScreen(),
+  ),
+  _Highlight(
+    '🌞',
+    'Daily Auto Themes',
+    'Unlock Solar Flare at 75,000 points or enable Auto to rotate through '
+        'your unlocked themes each day.',
     actionLabel: 'Browse themes',
     featureId: WhatsNewService.themes,
     destination: (_) => const ThemeScreen(),
   ),
   _Highlight(
-    '🌍',
-    '32 interface languages',
-    'Choose from the existing languages and all 22 scheduled Indian '
-        'languages.',
-    actionLabel: 'Change language',
+    '🔊',
+    'Game sound effects',
+    'Hear feedback for game actions and answers, or turn sounds off in Settings.',
+    actionLabel: 'Open settings',
     featureId: WhatsNewService.settings,
     destination: (_) => const SettingsScreen(),
   ),
-  const _Highlight(
-    '📝',
-    'More distinct quiz questions',
-    'Repeated questions were replaced across eight categories while keeping '
-        '25 questions per set. Some new Hindi and Marathi prompts currently '
-        'appear in English.',
+  _Highlight(
+    '🪔',
+    'Celebrations by country',
+    'Choose a country on Welcome to see its seasonal festivals. Diwali now '
+        'features a detailed akash kandil and diyas.',
   ),
   _Highlight(
-    '🎓',
-    'Course completion certificates',
-    'Save a category-named course completion certificate as a PDF.',
-    actionLabel: 'View certificates',
-    featureId: WhatsNewService.certificates,
-    destination: (_) => const CertificatesScreen(),
-  ),
-  const _Highlight(
-    '🎂',
-    'Developer birthday',
-    'On March 13, the welcome screen celebrates developer Nayan Chaudhari '
-        'and links to his LinkedIn profile.',
-  ),
-  _Highlight(
-    '🏅',
-    'More milestones',
-    'Achievements now cover quizzes, points, daily quizzes, sets and '
-        'certificates.',
-    actionLabel: 'See milestones',
-    featureId: WhatsNewService.achievements,
-    destination: (_) => const AchievementScreen(),
+    '🎟️',
+    'Scratch Card refresh',
+    'The scratch surface now features the DevOps Quiz app icon.',
+    actionLabel: 'Play games',
+    featureId: WhatsNewService.games,
+    destination: (_) => const GamesScreen(),
   ),
 ];
 

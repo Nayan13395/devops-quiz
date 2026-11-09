@@ -4,6 +4,8 @@ import 'dart:math';
 import 'package:flutter/material.dart';
 
 import '../services/point_service.dart';
+import '../services/game_player_names.dart';
+import '../services/game_sound_service.dart';
 import '../services/snake_ladders_service.dart';
 
 const List<Color> _snakeColors = [
@@ -46,11 +48,14 @@ class _SnakeLaddersScreenState extends State<SnakeLaddersScreen> {
   int get _currentPlayer => _game.currentPlayer;
   int? get _lastRoll => _game.lastRoll;
   bool get _finished => _game.finished;
+  String _playerName(int player) =>
+      player == 0 ? GamePlayerNames.playerOne() : _game.playerName(player);
+
   String get _status => _finished
-      ? '${_game.playerName(_currentPlayer)} wins!'
+      ? '${_playerName(_currentPlayer)} wins!'
       : _lastRoll == null
-      ? 'Player 1 rolls first'
-      : '${_game.playerName(_currentPlayer)}${_lastRoll == 6 ? ' rolls again' : ' to roll'}';
+      ? '${_playerName(0)} rolls first'
+      : '${_playerName(_currentPlayer)}${_lastRoll == 6 ? ' rolls again' : ' to roll'}';
 
   @override
   void initState() {
@@ -91,6 +96,7 @@ class _SnakeLaddersScreenState extends State<SnakeLaddersScreen> {
     if (roll < 1 || roll > 6) {
       throw RangeError.range(roll, 1, 6, 'diceRoller result');
     }
+    unawaited(GameSoundService.play(GameSoundEffect.diceRoll));
 
     setState(() {
       _busy = true;
@@ -123,7 +129,7 @@ class _SnakeLaddersScreenState extends State<SnakeLaddersScreen> {
   Future<void> _reset() async {
     _botTimer?.cancel();
     setState(() {
-      _game = SnakeLaddersGame.create(mode: _game.mode);
+      _game = SnakeLaddersGame.create(mode: _game.mode, level: _game.level);
       _busy = true;
     });
     await SnakeLaddersService.save(_game);
@@ -154,7 +160,38 @@ class _SnakeLaddersScreenState extends State<SnakeLaddersScreen> {
     }
     _botTimer?.cancel();
     setState(() {
-      _game = SnakeLaddersGame.create(mode: mode);
+      _game = SnakeLaddersGame.create(mode: mode, level: _game.level);
+      _busy = true;
+    });
+    await SnakeLaddersService.save(_game);
+    if (mounted) setState(() => _busy = false);
+  }
+
+  Future<void> _chooseLevel(int? level) async {
+    if (level == null || level == _game.level || _busy) return;
+    if (_positions.any((position) => position != 0) && !_finished) {
+      final restart = await showDialog<bool>(
+        context: context,
+        builder: (context) => AlertDialog(
+          title: const Text('Start a new level?'),
+          content: const Text('Changing levels replaces the saved game.'),
+          actions: [
+            TextButton(
+              onPressed: () => Navigator.pop(context, false),
+              child: const Text('Cancel'),
+            ),
+            FilledButton(
+              onPressed: () => Navigator.pop(context, true),
+              child: const Text('Change level'),
+            ),
+          ],
+        ),
+      );
+      if (restart != true || !mounted) return;
+    }
+    _botTimer?.cancel();
+    setState(() {
+      _game = SnakeLaddersGame.create(mode: _game.mode, level: level);
       _busy = true;
     });
     await SnakeLaddersService.save(_game);
@@ -226,6 +263,32 @@ class _SnakeLaddersScreenState extends State<SnakeLaddersScreen> {
                                 ),
                               ],
                             ),
+                            const SizedBox(height: 8),
+                            DropdownButtonFormField<int>(
+                              key: ValueKey(
+                                'snake-ladder-level-${_game.level}',
+                              ),
+                              isExpanded: true,
+                              initialValue: _game.level,
+                              decoration: const InputDecoration(
+                                labelText: 'Level',
+                                prefixIcon: Icon(Icons.flag_outlined),
+                                border: OutlineInputBorder(),
+                                isDense: true,
+                              ),
+                              onChanged: _busy ? null : _chooseLevel,
+                              items: [
+                                for (
+                                  int level = 1;
+                                  level <= snakeLaddersLevelCount;
+                                  level++
+                                )
+                                  DropdownMenuItem(
+                                    value: level,
+                                    child: Text('Level $level'),
+                                  ),
+                              ],
+                            ),
                             const SizedBox(height: 12),
                             Text(
                               _status,
@@ -235,7 +298,8 @@ class _SnakeLaddersScreenState extends State<SnakeLaddersScreen> {
                             ),
                             const SizedBox(height: 4),
                             Text(
-                              '${_positions.length} players · Weekly board ${_game.week}',
+                              '${_positions.length} players · Level ${_game.level} / '
+                              '$snakeLaddersLevelCount',
                               textAlign: TextAlign.center,
                               style: Theme.of(context).textTheme.bodySmall
                                   ?.copyWith(color: colors.onSurfaceVariant),
@@ -379,6 +443,9 @@ class _SnakeLaddersScreenState extends State<SnakeLaddersScreen> {
                                   _PlayerPosition(
                                     player: player + 1,
                                     position: _positions[player],
+                                    name: player == 0
+                                        ? GamePlayerNames.signedInFirstName
+                                        : null,
                                     bot:
                                         _game.mode == SnakeLaddersMode.bot &&
                                         player == 1,
@@ -415,7 +482,7 @@ class _SnakeLaddersScreenState extends State<SnakeLaddersScreen> {
                                         : _rollDice,
                                     icon: const Icon(Icons.casino_rounded),
                                     label: Text(
-                                      '${_game.playerName(_currentPlayer)} · Roll',
+                                      '${_playerName(_currentPlayer)} · Roll',
                                     ),
                                   ),
                                 ),
@@ -446,7 +513,7 @@ class _SnakeLaddersScreenState extends State<SnakeLaddersScreen> {
       left: center.dx + shift.dx - diameter / 2,
       top: center.dy + shift.dy - diameter / 2,
       child: Semantics(
-        label: '${_game.playerName(player)} on ${_positions[player]}',
+        label: '${_playerName(player)} on ${_positions[player]}',
         child: Container(
           key: ValueKey('snake-ladder-token-$player'),
           width: diameter,
@@ -510,12 +577,12 @@ class _SnakePathPainter extends CustomPainter {
 
       final axis = delta / distance;
       final normal = Offset(-axis.dy, axis.dx);
-      final bend = min(cellSize * 0.9, distance * 0.16);
-      final centers = List<Offset>.generate(65, (index) {
-        final progress = index / 64;
+      final bend = min(cellSize * 0.12, distance * 0.04);
+      final centers = List<Offset>.generate(49, (index) {
+        final progress = index / 48;
         return head +
             delta * progress +
-            normal * (sin(progress * pi * 4) * sin(progress * pi) * bend);
+            normal * (sin(progress * pi * 2) * sin(progress * pi) * bend);
       });
       final path = Path()..moveTo(head.dx, head.dy);
       final body = Path();
@@ -523,9 +590,9 @@ class _SnakePathPainter extends CustomPainter {
       final right = <Offset>[];
       for (int index = 0; index < centers.length; index++) {
         final tangent =
-            centers[min(index + 1, 64)] - centers[max(index - 1, 0)];
+            centers[min(index + 1, 48)] - centers[max(index - 1, 0)];
         final side = Offset(-tangent.dy, tangent.dx) / tangent.distance;
-        final radius = cellSize * (0.18 * (1 - index / 64) + 0.012);
+        final radius = cellSize * (0.12 * (1 - index / 48) + 0.008);
         left.add(centers[index] + side * radius);
         right.add(centers[index] - side * radius);
         path.lineTo(centers[index].dx, centers[index].dy);
@@ -570,13 +637,13 @@ class _SnakePathPainter extends CustomPainter {
     canvas.save();
     canvas.translate(start.dx, start.dy);
     canvas.rotate(atan2(delta.dy, delta.dx));
-    final halfWidth = cellSize * 0.20;
+    final halfWidth = cellSize * 0.14;
     final length = delta.distance;
     final rails = Path()
-      ..moveTo(-cellSize * 0.12, -halfWidth)
-      ..lineTo(length + cellSize * 0.12, -halfWidth)
-      ..moveTo(-cellSize * 0.12, halfWidth)
-      ..lineTo(length + cellSize * 0.12, halfWidth);
+      ..moveTo(-cellSize * 0.06, -halfWidth)
+      ..lineTo(length + cellSize * 0.06, -halfWidth)
+      ..moveTo(-cellSize * 0.06, halfWidth)
+      ..lineTo(length + cellSize * 0.06, halfWidth);
     final rungs = Path();
     final count = max(2, (length / (cellSize * 0.45)).round());
     for (int rung = 0; rung <= count; rung++) {
@@ -590,7 +657,7 @@ class _SnakePathPainter extends CustomPainter {
         Paint()
           ..color = Colors.black54
           ..style = PaintingStyle.stroke
-          ..strokeWidth = cellSize * 0.12
+          ..strokeWidth = cellSize * 0.085
           ..strokeCap = StrokeCap.round,
       );
       canvas.drawPath(
@@ -598,7 +665,7 @@ class _SnakePathPainter extends CustomPainter {
         Paint()
           ..color = const Color(0xFF795018)
           ..style = PaintingStyle.stroke
-          ..strokeWidth = cellSize * 0.11
+          ..strokeWidth = cellSize * 0.075
           ..strokeCap = StrokeCap.round,
       );
       canvas.drawPath(
@@ -606,7 +673,7 @@ class _SnakePathPainter extends CustomPainter {
         Paint()
           ..color = const Color(0xFFF2C96B)
           ..style = PaintingStyle.stroke
-          ..strokeWidth = cellSize * 0.055
+          ..strokeWidth = cellSize * 0.035
           ..strokeCap = StrokeCap.round,
       );
     }
@@ -663,8 +730,8 @@ class _SnakePathPainter extends CustomPainter {
     );
     final headRect = Rect.fromCenter(
       center: Offset.zero,
-      width: cellSize * 0.62,
-      height: cellSize * 0.44,
+      width: cellSize * 0.46,
+      height: cellSize * 0.34,
     );
     canvas.drawOval(
       headRect.shift(const Offset(1, 2)),
@@ -716,11 +783,13 @@ class _PlayerPosition extends StatelessWidget {
     required this.player,
     required this.position,
     this.bot = false,
+    this.name,
   });
 
   final int player;
   final int position;
   final bool bot;
+  final String? name;
 
   @override
   Widget build(BuildContext context) {
@@ -730,7 +799,7 @@ class _PlayerPosition extends StatelessWidget {
       children: [
         CircleAvatar(radius: 7, backgroundColor: color),
         const SizedBox(width: 6),
-        Text('${bot ? 'Bot' : 'P$player'}: $position'),
+        Text('${name ?? (bot ? 'Bot' : 'P$player')}: $position'),
       ],
     );
   }

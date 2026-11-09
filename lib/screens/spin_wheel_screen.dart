@@ -1,8 +1,10 @@
+import 'dart:async';
 import 'dart:math';
 
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
+import '../services/game_sound_service.dart';
 import 'reward_question_screen.dart';
 
 class SpinWheelScreen extends StatefulWidget {
@@ -89,6 +91,7 @@ class _SpinWheelScreenState extends State<SpinWheelScreen>
       spinning = true;
       lastReward = null;
     });
+    unawaited(GameSoundService.play(GameSoundEffect.click));
 
     // =======================================================
     // SELECT RANDOM REWARD

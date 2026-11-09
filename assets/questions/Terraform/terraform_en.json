@@ -94,7 +94,7 @@
     "category": "Terraform",
     "set": 1,
     "question": "Which command displays Terraform version?",
-    "options": ["terraform version", "terraform --version", "terraform info", "terraform status"],
+    "options": ["terraform version", "terraform release", "terraform info", "terraform status"],
     "answer": "terraform version"
   },
   {
@@ -129,7 +129,7 @@
     "category": "Terraform",
     "set": 2,
     "question": "Which meta-argument creates multiple identical resources?",
-    "options": ["count", "for_each", "repeat", "loop"],
+    "options": ["count", "lifecycle", "repeat", "loop"],
     "answer": "count"
   },
   {
@@ -156,16 +156,16 @@
   {
     "category": "Terraform",
     "set": 2,
-    "question": "Which function converts a string to uppercase?",
-    "options": ["upper()", "toupper()", "capitalize()", "upcase()"],
-    "answer": "upper()"
+    "question": "Which Terraform function removes leading and trailing whitespace from a string?",
+    "options": ["trimspace()", "strip()", "cleanup()", "rstrip()"],
+    "answer": "trimspace()"
   },
   {
     "category": "Terraform",
     "set": 2,
-    "question": "Which function joins list elements into a string?",
-    "options": ["join()", "concat()", "merge()", "append()"],
-    "answer": "join()"
+    "question": "Which Terraform function returns the largest number from its arguments?",
+    "options": ["max()", "highest()", "largest()", "top()"],
+    "answer": "max()"
   },
   {
     "category": "Terraform",
@@ -247,9 +247,9 @@
   {
     "category": "Terraform",
     "set": 3,
-    "question": "Which backend stores state in Terraform Cloud?",
-    "options": ["remote", "cloud", "terraform", "tfc"],
-    "answer": "remote"
+    "question": "Which nested block inside the terraform block configures HCP Terraform (Terraform Cloud) for state and runs?",
+    "options": ["cloud", "provider", "required_providers", "module"],
+    "answer": "cloud"
   },
   {
     "category": "Terraform",
@@ -317,9 +317,9 @@
   {
     "category": "Terraform",
     "set": 4,
-    "question": "Which command validates Terraform configuration syntax?",
-    "options": ["terraform validate", "terraform plan", "terraform check", "terraform verify"],
-    "answer": "terraform validate"
+    "question": "Which terraform apply flag skips the interactive approval prompt?",
+    "options": ["-auto-approve", "-force", "-yes", "-skip-approval"],
+    "answer": "-auto-approve"
   },
   {
     "category": "Terraform",
@@ -373,9 +373,9 @@
   {
     "category": "Terraform",
     "set": 4,
-    "question": "Which function splits a string into a list?",
-    "options": ["split", "join", "slice", "parse"],
-    "answer": "split"
+    "question": "Which Terraform function reads the contents of a local file as a string?",
+    "options": ["file()", "read()", "readfile()", "open()"],
+    "answer": "file()"
   },
   {
     "category": "Terraform",
@@ -443,9 +443,9 @@
   {
     "category": "Terraform",
     "set": 5,
-    "question": "Which command destroys all managed infrastructure?",
-    "options": ["terraform destroy", "terraform remove", "terraform clean", "terraform erase"],
-    "answer": "terraform destroy"
+    "question": "Which argument inside the terraform block constrains the allowed Terraform CLI version?",
+    "options": ["required_version", "cli_version", "version", "min_version"],
+    "answer": "required_version"
   },
   {
     "category": "Terraform",
@@ -612,9 +612,9 @@
       {
           "category":  "Terraform",
           "set":  2,
-          "question":  "Terraform state locking purpose",
-          "options":  ["prevent concurrent state writes", ".terraform.lock.hcl", "store and retrieve state snapshots", "variable validation"],
-          "answer":  "prevent concurrent state writes"
+          "question":  "Which Terraform function returns the first argument that is not null or an empty string?",
+          "options":  ["coalesce()", "first()", "lookup()", "default()"],
+          "answer":  "coalesce()"
       },
       {
           "category":  "Terraform",

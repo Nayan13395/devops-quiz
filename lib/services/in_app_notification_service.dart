@@ -268,6 +268,76 @@ class InAppNotificationService {
       ),
 
       AppNotification(
+        id: 'spot_difference_v1',
+        title: 'New Game: Spot the Difference! 🔎',
+        message:
+            'Find five changes in original illustrated scenes across 10 '
+            'levels. Clear a level to unlock the next one.',
+        type: AppNotificationType.newGame,
+        createdAt: DateTime(2026, 11, 6, 12, 0),
+        actionText: 'Play Now',
+        actionRoute: 'games',
+      ),
+
+      AppNotification(
+        id: 'whats_new_v1104',
+        title: 'What’s New in DevOps Quiz 1.10.3 ✨',
+        message:
+            'See the latest games, daily Auto themes, sound settings, and '
+            'country-aware celebrations.',
+        type: AppNotificationType.newFeature,
+        createdAt: DateTime(2026, 11, 6, 12, 10),
+        actionText: 'See What’s New',
+        actionRoute: 'whats_new',
+      ),
+
+      AppNotification(
+        id: 'auto_themes_v1',
+        title: 'Daily Auto Themes Are Here! 🎨',
+        message:
+            'Unlock Solar Flare at 75,000 points or turn on Auto to rotate '
+            'through your unlocked themes every day.',
+        type: AppNotificationType.newFeature,
+        createdAt: DateTime(2026, 11, 6, 11, 50),
+        actionText: 'Explore Themes',
+        actionRoute: 'themes',
+      ),
+
+      AppNotification(
+        id: 'game_sounds_v1',
+        title: 'Game Sound Effects 🔊',
+        message:
+            'Games now give audio feedback for actions and answers. Manage '
+            'the global sound switch in Settings.',
+        type: AppNotificationType.newFeature,
+        createdAt: DateTime(2026, 11, 6, 11, 40),
+        actionText: 'Open Settings',
+        actionRoute: 'settings',
+      ),
+
+      AppNotification(
+        id: 'regional_festivals_v1',
+        title: 'Welcome Celebrations Follow Your Region 🌍',
+        message:
+            'Choose a country on Welcome to see regional festivals, including '
+            'a refreshed Diwali kandil and diyas.',
+        type: AppNotificationType.newFeature,
+        createdAt: DateTime(2026, 11, 6, 11, 30),
+      ),
+
+      AppNotification(
+        id: 'board_games_v2',
+        title: 'New Modes and Levels for Board Games 🎲',
+        message:
+            'Connect Four now offers bot and two-player modes. Snake and '
+            'Ladders now has 20 selectable levels, and Ludo moves are clearer.',
+        type: AppNotificationType.newGame,
+        createdAt: DateTime(2026, 11, 6, 11, 20),
+        actionText: 'Play Games',
+        actionRoute: 'games',
+      ),
+
+      AppNotification(
         id: 'certificates_v1',
         title: 'Earn Certificates! 🎓',
         message:

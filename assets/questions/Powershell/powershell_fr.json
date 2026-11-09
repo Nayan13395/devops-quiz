@@ -1,0 +1,877 @@
+[
+  {
+    "category": "PowerShell",
+    "set": 1,
+    "question": "Quelle cmdlet affiche l'emplacement actuel ?",
+    "options": ["Get-Location", "Get-ChildItem", "Set-Location", "Get-Item"],
+    "answer": "Get-Location"
+  },
+  {
+    "category": "PowerShell",
+    "set": 1,
+    "question": "Quelle cmdlet liste les fichiers et les répertoires ?",
+    "options": ["Get-ChildItem", "Get-Item", "Get-Content", "Get-Location"],
+    "answer": "Get-ChildItem"
+  },
+  {
+    "category": "PowerShell",
+    "set": 1,
+    "question": "Quelle cmdlet change le répertoire courant ?",
+    "options": ["Set-Location", "Get-Location", "Get-PSDrive", "Join-Path"],
+    "answer": "Set-Location"
+  },
+  {
+    "category": "PowerShell",
+    "set": 1,
+    "question": "Quelle cmdlet affiche le contenu d'un fichier ?",
+    "options": ["Get-Content", "Get-Item", "Get-ChildItem", "Out-File"],
+    "answer": "Get-Content"
+  },
+  {
+    "category": "PowerShell",
+    "set": 1,
+    "question": "Quelle cmdlet crée un nouveau fichier ou répertoire ?",
+    "options": ["New-Item", "Set-Item", "Add-Content", "Copy-Item"],
+    "answer": "New-Item"
+  },
+  {
+    "category": "PowerShell",
+    "set": 1,
+    "question": "Quelle cmdlet copie des fichiers et des répertoires ?",
+    "options": ["Copy-Item", "Move-Item", "Export-Clixml", "Rename-Item"],
+    "answer": "Copy-Item"
+  },
+  {
+    "category": "PowerShell",
+    "set": 1,
+    "question": "Quelle cmdlet déplace des fichiers et des répertoires ?",
+    "options": ["Move-Item", "Copy-Item", "Push-Location", "New-Item"],
+    "answer": "Move-Item"
+  },
+  {
+    "category": "PowerShell",
+    "set": 1,
+    "question": "Quelle cmdlet supprime des fichiers et des répertoires ?",
+    "options": ["Remove-Item", "Clear-Item", "Delete-Item", "Remove-Object"],
+    "answer": "Remove-Item"
+  },
+  {
+    "category": "PowerShell",
+    "set": 1,
+    "question": "Quelle cmdlet renomme un fichier ?",
+    "options": ["Rename-Item", "Copy-Item", "Set-Item", "Update-Item"],
+    "answer": "Rename-Item"
+  },
+  {
+    "category": "PowerShell",
+    "set": 1,
+    "question": "Quel symbole débute un commentaire sur une seule ligne en PowerShell ?",
+    "options": ["#", "//", "<!--", "--"],
+    "answer": "#"
+  },
+  {
+    "category": "PowerShell",
+    "set": 1,
+    "question": "Quelle cmdlet PowerShell ajoute du texte à la fin d'un fichier ?",
+    "options": ["Add-Content", "Set-Content", "Out-Null", "Clear-Content"],
+    "answer": "Add-Content"
+  },
+  {
+    "category": "PowerShell",
+    "set": 1,
+    "question": "Quel symbole est utilisé devant un nom de variable ?",
+    "options": ["$", "@", "%", "&"],
+    "answer": "$"
+  },
+  {
+    "category": "PowerShell",
+    "set": 1,
+    "question": "Quelle cmdlet affiche l'historique des commandes ?",
+    "options": ["Get-History", "Get-Command", "Get-Session", "Get-Log"],
+    "answer": "Get-History"
+  },
+  {
+    "category": "PowerShell",
+    "set": 1,
+    "question": "Quelle cmdlet efface l'écran de la console ?",
+    "options": ["Clear-Host", "Clear-Console", "Clear-Screen", "Reset-Host"],
+    "answer": "Clear-Host"
+  },
+  {
+    "category": "PowerShell",
+    "set": 1,
+    "question": "Quelle cmdlet affiche les informations d'aide ?",
+    "options": ["Get-Help", "Get-Info", "Help-Command", "Show-Help"],
+    "answer": "Get-Help"
+  },
+  {
+    "category": "PowerShell",
+    "set": 1,
+    "question": "Quelle cmdlet met à jour les fichiers d'aide locaux ?",
+    "options": ["Update-Help", "Save-Help", "Get-Help", "Install-Help"],
+    "answer": "Update-Help"
+  },
+  {
+    "category": "PowerShell",
+    "set": 1,
+    "question": "Quelle cmdlet liste les commandes disponibles ?",
+    "options": ["Get-Command", "Get-Help", "Get-Member", "Get-Module"],
+    "answer": "Get-Command"
+  },
+  {
+    "category": "PowerShell",
+    "set": 1,
+    "question": "Quelle cmdlet affiche les propriétés et les méthodes d'un objet ?",
+    "options": ["Get-Member", "Get-Property", "Get-Object", "Show-Member"],
+    "answer": "Get-Member"
+  },
+  {
+    "category": "PowerShell",
+    "set": 1,
+    "question": "Quelle variable automatique contient les informations détaillées sur la version de PowerShell ?",
+    "options": ["$PSVersionTable", "$Version", "$PSVersionInfo", "$PowerShellVersion"],
+    "answer": "$PSVersionTable"
+  },
+  {
+    "category": "PowerShell",
+    "set": 1,
+    "question": "Quelle cmdlet liste les alias ?",
+    "options": ["Get-Alias", "Get-Command", "Get-Member", "Get-Help"],
+    "answer": "Get-Alias"
+  },
+  {
+    "category": "PowerShell",
+    "set": 1,
+    "question": "Quelle cmdlet affiche la stratégie d'exécution actuelle ?",
+    "options": ["Get-ExecutionPolicy", "Set-ExecutionPolicy", "Test-ExecutionPolicy", "Show-ExecutionPolicy"],
+    "answer": "Get-ExecutionPolicy"
+  },
+  {
+    "category": "PowerShell",
+    "set": 1,
+    "question": "Quelle cmdlet modifie la stratégie d'exécution ?",
+    "options": ["Set-ExecutionPolicy", "Get-ExecutionPolicy", "Update-ExecutionPolicy", "Enable-ExecutionPolicy"],
+    "answer": "Set-ExecutionPolicy"
+  },
+  {
+    "category": "PowerShell",
+    "set": 1,
+    "question": "Quelle stratégie d'exécution bloque par défaut l'exécution des scripts ?",
+    "options": ["Restricted", "RemoteSigned", "Unrestricted", "Bypass"],
+    "answer": "Restricted"
+  },
+  {
+    "category": "PowerShell",
+    "set": 1,
+    "question": "Quelle stratégie d'exécution autorise l'exécution des scripts créés localement ?",
+    "options": ["RemoteSigned", "Restricted", "AllSigned", "Undefined"],
+    "answer": "RemoteSigned"
+  },
+  {
+    "category": "PowerShell",
+    "set": 1,
+    "question": "Quelle valeur de -ItemType crée un dossier ?",
+    "options": ["Directory", "Folder", "Dir", "Path"],
+    "answer": "Directory"
+  },
+  {
+    "category": "PowerShell",
+    "set": 2,
+    "question": "Quel symbole envoie la sortie du pipeline à une autre commande ?",
+    "options": ["|", ">", ">>", "&"],
+    "answer": "|"
+  },
+  {
+    "category": "PowerShell",
+    "set": 2,
+    "question": "Quelle cmdlet sélectionne les propriétés d'un objet ?",
+    "options": ["Select-Object", "Where-Object", "Sort-Object", "Group-Object"],
+    "answer": "Select-Object"
+  },
+  {
+    "category": "PowerShell",
+    "set": 2,
+    "question": "Quelle cmdlet filtre les objets selon des conditions ?",
+    "options": ["Where-Object", "Select-Object", "Sort-Object", "Measure-Object"],
+    "answer": "Where-Object"
+  },
+  {
+    "category": "PowerShell",
+    "set": 2,
+    "question": "Quelle cmdlet trie les objets ?",
+    "options": ["Sort-Object", "Order-Object", "Arrange-Object", "Group-Object"],
+    "answer": "Sort-Object"
+  },
+  {
+    "category": "PowerShell",
+    "set": 2,
+    "question": "Quelle cmdlet regroupe les objets par propriété ?",
+    "options": ["Group-Object", "Sort-Object", "Measure-Object", "Select-Object"],
+    "answer": "Group-Object"
+  },
+  {
+    "category": "PowerShell",
+    "set": 2,
+    "question": "Quelle cmdlet calcule des statistiques sur les objets ?",
+    "options": ["Measure-Object", "Count-Object", "Stats-Object", "Group-Object"],
+    "answer": "Measure-Object"
+  },
+  {
+    "category": "PowerShell",
+    "set": 2,
+    "question": "Quel paramètre de Select-Object renvoie les premiers objets ?",
+    "options": ["-First", "-Top", "-Start", "-Begin"],
+    "answer": "-First"
+  },
+  {
+    "category": "PowerShell",
+    "set": 2,
+    "question": "Quel paramètre de Select-Object développe les valeurs d'une propriété ?",
+    "options": ["-ExpandProperty", "-Property", "-Expand", "-Value"],
+    "answer": "-ExpandProperty"
+  },
+  {
+    "category": "PowerShell",
+    "set": 2,
+    "question": "Quelle cmdlet exporte des objets au format CSV ?",
+    "options": ["Export-Csv", "ConvertTo-Csv", "Out-Csv", "Save-Csv"],
+    "answer": "Export-Csv"
+  },
+  {
+    "category": "PowerShell",
+    "set": 2,
+    "question": "Quelle cmdlet importe des données CSV ?",
+    "options": ["Import-Csv", "ConvertFrom-Csv", "Read-Csv", "Get-Csv"],
+    "answer": "Import-Csv"
+  },
+  {
+    "category": "PowerShell",
+    "set": 2,
+    "question": "Quelle cmdlet convertit des objets en JSON ?",
+    "options": ["ConvertTo-Json", "Export-Json", "Out-Json", "Write-Json"],
+    "answer": "ConvertTo-Json"
+  },
+  {
+    "category": "PowerShell",
+    "set": 2,
+    "question": "Quelle cmdlet convertit du JSON en objets ?",
+    "options": ["ConvertFrom-Json", "Import-Json", "Read-Json", "Parse-Json"],
+    "answer": "ConvertFrom-Json"
+  },
+  {
+    "category": "PowerShell",
+    "set": 2,
+    "question": "Quelle cmdlet convertit des objets en XML ?",
+    "options": ["ConvertTo-Xml", "Export-Xml", "Out-Xml", "Write-Xml"],
+    "answer": "ConvertTo-Xml"
+  },
+  {
+    "category": "PowerShell",
+    "set": 2,
+    "question": "Quelle cmdlet exporte des objets au format CLI XML ?",
+    "options": ["Export-Clixml", "Export-Xml", "ConvertTo-Clixml", "Save-Clixml"],
+    "answer": "Export-Clixml"
+  },
+  {
+    "category": "PowerShell",
+    "set": 2,
+    "question": "Quelle cmdlet importe du CLI XML ?",
+    "options": ["Import-Clixml", "ConvertFrom-Clixml", "Read-Clixml", "Get-Clixml"],
+    "answer": "Import-Clixml"
+  },
+  {
+    "category": "PowerShell",
+    "set": 2,
+    "question": "Quelle cmdlet liste les processus en cours d'exécution ?",
+    "options": ["Get-Process", "Get-Service", "Get-Task", "Get-Application"],
+    "answer": "Get-Process"
+  },
+  {
+    "category": "PowerShell",
+    "set": 2,
+    "question": "Quelle cmdlet arrête un processus ?",
+    "options": ["Stop-Process", "Kill-Process", "End-Process", "Close-Process"],
+    "answer": "Stop-Process"
+  },
+  {
+    "category": "PowerShell",
+    "set": 2,
+    "question": "Quelle cmdlet démarre un processus ?",
+    "options": ["Start-Process", "Run-Process", "Invoke-Process", "Open-Process"],
+    "answer": "Start-Process"
+  },
+  {
+    "category": "PowerShell",
+    "set": 2,
+    "question": "En PowerShell, quelle cmdlet liste les services ?",
+    "options": ["Get-Service", "Get-Process", "Get-WmiObject", "Get-Item"],
+    "answer": "Get-Service"
+  },
+  {
+    "category": "PowerShell",
+    "set": 2,
+    "question": "Quelle cmdlet démarre un service ?",
+    "options": ["Start-Service", "Start-Process", "Enable-Service", "Run-Service"],
+    "answer": "Start-Service"
+  },
+  {
+    "category": "PowerShell",
+    "set": 2,
+    "question": "Quelle cmdlet arrête un service ?",
+    "options": ["Stop-Service", "Stop-Process", "Disable-Service", "Halt-Service"],
+    "answer": "Stop-Service"
+  },
+  {
+    "category": "PowerShell",
+    "set": 2,
+    "question": "Quelle cmdlet redémarre un service ?",
+    "options": ["Restart-Service", "Refresh-Service", "Reload-Service", "Reset-Service"],
+    "answer": "Restart-Service"
+  },
+  {
+    "category": "PowerShell",
+    "set": 2,
+    "question": "Quelle propriété indique l'état actuel d'un service ?",
+    "options": ["Status", "State", "Health", "Mode"],
+    "answer": "Status"
+  },
+  {
+    "category": "PowerShell",
+    "set": 2,
+    "question": "Quelle cmdlet teste si un port TCP spécifique d'un hôte distant est accessible ?",
+    "options": ["Test-NetConnection", "Resolve-DnsName", "Get-NetAdapter", "Get-NetIPAddress"],
+    "answer": "Test-NetConnection"
+  },
+  {
+    "category": "PowerShell",
+    "set": 2,
+    "question": "Quelle cmdlet résout les noms DNS ?",
+    "options": ["Resolve-DnsName", "Get-DnsName", "Test-DnsName", "Find-DnsName"],
+    "answer": "Resolve-DnsName"
+  },
+  {
+    "category": "PowerShell",
+    "set": 3,
+    "question": "Quel attribut de paramètre PowerShell restreint un argument à une liste fixe de valeurs autorisées ?",
+    "options": ["[ValidateSet()]", "[AllowNull()]", "[Alias()]", "[OutputType()]"],
+    "answer": "[ValidateSet()]"
+  },
+  {
+    "category": "PowerShell",
+    "set": 3,
+    "question": "Quel bloc s'exécute une seule fois au début d'une fonction avancée ?",
+    "options": ["begin", "start", "init", "open"],
+    "answer": "begin"
+  },
+  {
+    "category": "PowerShell",
+    "set": 3,
+    "question": "Quel bloc traite chaque objet d'entrée du pipeline ?",
+    "options": ["process", "loop", "foreach", "handle"],
+    "answer": "process"
+  },
+  {
+    "category": "PowerShell",
+    "set": 3,
+    "question": "Quel bloc s'exécute une seule fois à la fin d'une fonction avancée ?",
+    "options": ["end", "finish", "final", "complete"],
+    "answer": "end"
+  },
+  {
+    "category": "PowerShell",
+    "set": 3,
+    "question": "Quelle variable automatique représente l'objet courant du pipeline ?",
+    "options": ["$_", "$this", "$item", "$current"],
+    "answer": "$_"
+  },
+  {
+    "category": "PowerShell",
+    "set": 3,
+    "question": "Quelle variable automatique contient toutes les entrées du pipeline ?",
+    "options": ["$input", "$args", "$pipeline", "$objects"],
+    "answer": "$input"
+  },
+  {
+    "category": "PowerShell",
+    "set": 3,
+    "question": "Quelle variable automatique contient les arguments de fonction non spécifiés ?",
+    "options": ["$args", "$params", "$arguments", "$values"],
+    "answer": "$args"
+  },
+  {
+    "category": "PowerShell",
+    "set": 3,
+    "question": "Quel attribut active les fonctionnalités avancées d'une fonction ?",
+    "options": ["[CmdletBinding()]", "[Function()]", "[Advanced()]", "[Parameter()]"],
+    "answer": "[CmdletBinding()]"
+  },
+  {
+    "category": "PowerShell",
+    "set": 3,
+    "question": "Quel attribut de paramètre rend un paramètre obligatoire ?",
+    "options": ["Mandatory=$true", "Required=$true", "Must=$true", "Force=$true"],
+    "answer": "Mandatory=$true"
+  },
+  {
+    "category": "PowerShell",
+    "set": 3,
+    "question": "Quelle convention de nommage est recommandée pour les cmdlets PowerShell ?",
+    "options": ["Verb-Noun", "Noun-Verb", "Verb_Noun", "VerbNoun"],
+    "answer": "Verb-Noun"
+  },
+  {
+    "category": "PowerShell",
+    "set": 3,
+    "question": "Quelle extension de fichier est utilisée pour un script PowerShell ?",
+    "options": [".ps1", ".psm1", ".psd1", ".bat"],
+    "answer": ".ps1"
+  },
+  {
+    "category": "PowerShell",
+    "set": 3,
+    "question": "Quelle extension de fichier est utilisée pour un module PowerShell ?",
+    "options": [".psm1", ".ps1", ".psd1", ".json"],
+    "answer": ".psm1"
+  },
+  {
+    "category": "PowerShell",
+    "set": 3,
+    "question": "Quelle extension de fichier est utilisée pour un manifeste de module ?",
+    "options": [".psd1", ".psm1", ".ps1", ".xml"],
+    "answer": ".psd1"
+  },
+  {
+    "category": "PowerShell",
+    "set": 3,
+    "question": "Quel paramètre de Get-Module liste les modules qui ne sont pas actuellement chargés ?",
+    "options": ["-ListAvailable", "-All", "-Loaded", "-Complete"],
+    "answer": "-ListAvailable"
+  },
+  {
+    "category": "PowerShell",
+    "set": 3,
+    "question": "Quelle cmdlet charge un module dans la session actuelle ?",
+    "options": ["Import-Module", "Install-Module", "Add-Module", "Load-Module"],
+    "answer": "Import-Module"
+  },
+  {
+    "category": "PowerShell",
+    "set": 3,
+    "question": "Quelle cmdlet supprime un module de la session actuelle ?",
+    "options": ["Remove-Module", "Uninstall-Module", "Delete-Module", "Clear-Module"],
+    "answer": "Remove-Module"
+  },
+  {
+    "category": "PowerShell",
+    "set": 3,
+    "question": "Quel paramètre de Get-Command filtre les commandes par module ?",
+    "options": ["-Module", "-FromModule", "-ModuleName", "-Source"],
+    "answer": "-Module"
+  },
+  {
+    "category": "PowerShell",
+    "set": 3,
+    "question": "Quelle cmdlet démarre une session distante interactive ?",
+    "options": ["Enter-PSSession", "New-PSSession", "Invoke-Command", "Connect-Computer"],
+    "answer": "Enter-PSSession"
+  },
+  {
+    "category": "PowerShell",
+    "set": 3,
+    "question": "Quelle cmdlet exécute des commandes sur des ordinateurs distants ?",
+    "options": ["Invoke-Command", "Enter-PSSession", "Remote-Command", "Execute-Command"],
+    "answer": "Invoke-Command"
+  },
+  {
+    "category": "PowerShell",
+    "set": 3,
+    "question": "Quelle cmdlet crée une session distante persistante ?",
+    "options": ["New-PSSession", "Enter-PSSession", "Start-Session", "Open-PSSession"],
+    "answer": "New-PSSession"
+  },
+  {
+    "category": "PowerShell",
+    "set": 3,
+    "question": "Quelle cmdlet supprime une session distante ?",
+    "options": ["Remove-PSSession", "Delete-PSSession", "Close-PSSession", "End-PSSession"],
+    "answer": "Remove-PSSession"
+  },
+  {
+    "category": "PowerShell",
+    "set": 3,
+    "question": "Quel protocole est couramment utilisé pour la communication à distance PowerShell ?",
+    "options": ["WinRM", "SSH", "HTTP", "FTP"],
+    "answer": "WinRM"
+  },
+  {
+    "category": "PowerShell",
+    "set": 3,
+    "question": "Quelle cmdlet active la communication à distance PowerShell ?",
+    "options": ["Enable-PSRemoting", "Start-PSRemoting", "Enable-Remoting", "Configure-Remoting"],
+    "answer": "Enable-PSRemoting"
+  },
+  {
+    "category": "PowerShell",
+    "set": 3,
+    "question": "Quelle cmdlet désactive la communication à distance PowerShell ?",
+    "options": ["Disable-PSRemoting", "Stop-PSRemoting", "Disable-Remoting", "Remove-Remoting"],
+    "answer": "Disable-PSRemoting"
+  },
+  {
+    "category": "PowerShell",
+    "set": 3,
+    "question": "Quelle cmdlet obtient des instances CIM ?",
+    "options": ["Get-CimInstance", "Get-WmiObject", "Get-CimObject", "Query-Cim"],
+    "answer": "Get-CimInstance"
+  },
+  {
+    "category": "PowerShell",
+    "set": 4,
+    "question": "Quel mot-clé gère les erreurs d'arrêt ?",
+    "options": ["catch", "error", "exception", "handle"],
+    "answer": "catch"
+  },
+  {
+    "category": "PowerShell",
+    "set": 4,
+    "question": "Quel mot-clé exécute du code après try/catch, quelles que soient les erreurs ?",
+    "options": ["finally", "always", "end", "complete"],
+    "answer": "finally"
+  },
+  {
+    "category": "PowerShell",
+    "set": 4,
+    "question": "Quelle variable automatique stocke les erreurs récentes ?",
+    "options": ["$Error", "$Errors", "$Exception", "$LastError"],
+    "answer": "$Error"
+  },
+  {
+    "category": "PowerShell",
+    "set": 4,
+    "question": "Quel paramètre commun modifie le comportement de gestion des erreurs ?",
+    "options": ["-ErrorAction", "-ErrorMode", "-OnException", "-Catch"],
+    "answer": "-ErrorAction"
+  },
+  {
+    "category": "PowerShell",
+    "set": 4,
+    "question": "Quelle valeur de ErrorAction supprime les erreurs sans les ajouter à $Error ?",
+    "options": ["Ignore", "SilentlyContinue", "Continue", "Stop"],
+    "answer": "Ignore"
+  },
+  {
+    "category": "PowerShell",
+    "set": 4,
+    "question": "Quelle variable stocke le code de sortie de la dernière commande native ?",
+    "options": ["$LASTEXITCODE", "$EXITCODE", "$ErrorCode", "$NativeExit"],
+    "answer": "$LASTEXITCODE"
+  },
+  {
+    "category": "PowerShell",
+    "set": 4,
+    "question": "Quelle variable indique si la dernière commande a réussi ?",
+    "options": ["$?", "$OK", "$Success", "$Result"],
+    "answer": "$?"
+  },
+  {
+    "category": "PowerShell",
+    "set": 4,
+    "question": "Quelle cmdlet démarre une tâche en arrière-plan ?",
+    "options": ["Start-Job", "Invoke-Job", "New-Job", "Run-Job"],
+    "answer": "Start-Job"
+  },
+  {
+    "category": "PowerShell",
+    "set": 4,
+    "question": "Quelle cmdlet liste les tâches en arrière-plan ?",
+    "options": ["Get-Job", "Show-Job", "List-Job", "View-Job"],
+    "answer": "Get-Job"
+  },
+  {
+    "category": "PowerShell",
+    "set": 4,
+    "question": "Quelle cmdlet récupère la sortie d'une tâche ?",
+    "options": ["Receive-Job", "Get-JobOutput", "Read-Job", "Fetch-Job"],
+    "answer": "Receive-Job"
+  },
+  {
+    "category": "PowerShell",
+    "set": 4,
+    "question": "Quelle cmdlet arrête une tâche en arrière-plan ?",
+    "options": ["Stop-Job", "Kill-Job", "End-Job", "Cancel-Job"],
+    "answer": "Stop-Job"
+  },
+  {
+    "category": "PowerShell",
+    "set": 4,
+    "question": "Quelle cmdlet supprime une tâche en arrière-plan ?",
+    "options": ["Remove-Job", "Delete-Job", "Clear-Job", "Close-Job"],
+    "answer": "Remove-Job"
+  },
+  {
+    "category": "PowerShell",
+    "set": 4,
+    "question": "Quelle syntaxe crée un bloc de script ?",
+    "options": ["{ }", "( )", "[ ]", "< >"],
+    "answer": "{ }"
+  },
+  {
+    "category": "PowerShell",
+    "set": 4,
+    "question": "Quel opérateur invoque une commande ou un bloc de script ?",
+    "options": ["&", "|", "$", "@"],
+    "answer": "&"
+  },
+  {
+    "category": "PowerShell",
+    "set": 4,
+    "question": "Quel opérateur exécute un script par dot-sourcing dans la portée actuelle ?",
+    "options": [".", "::", "->", "#"],
+    "answer": "."
+  },
+  {
+    "category": "PowerShell",
+    "set": 4,
+    "question": "Quel opérateur effectue une correspondance par expression régulière ?",
+    "options": ["-match", "-like", "-eq", "-contains"],
+    "answer": "-match"
+  },
+  {
+    "category": "PowerShell",
+    "set": 4,
+    "question": "Quel opérateur effectue une comparaison d'égalité sensible à la casse ?",
+    "options": ["-ceq", "-eq", "-ieq", "-caseeq"],
+    "answer": "-ceq"
+  },
+  {
+    "category": "PowerShell",
+    "set": 4,
+    "question": "Quel opérateur vérifie si une collection contient une valeur ?",
+    "options": ["-contains", "-in", "-has", "-includes"],
+    "answer": "-contains"
+  },
+  {
+    "category": "PowerShell",
+    "set": 4,
+    "question": "Quel opérateur vérifie si une collection ne contient pas une valeur ?",
+    "options": ["-notcontains", "-notin", "-excludes", "-without"],
+    "answer": "-notcontains"
+  },
+  {
+    "category": "PowerShell",
+    "set": 4,
+    "question": "Quel littéral crée une table de hachage vide ?",
+    "options": ["@{}", "[]", "@()", "{}"],
+    "answer": "@{}"
+  },
+  {
+    "category": "PowerShell",
+    "set": 4,
+    "question": "Quel type PowerShell stocke des paires clé-valeur ?",
+    "options": ["Hashtable", "Array", "String", "PSCustomObject"],
+    "answer": "Hashtable"
+  },
+  {
+    "category": "PowerShell",
+    "set": 4,
+    "question": "Quelle syntaxe accède de façon fiable à la valeur de la clé 'Name' dans $hash ?",
+    "options": ["$hash['Name']", "$hash{Name}", "$hash->Name", "$hash(Name)"],
+    "answer": "$hash['Name']"
+  },
+  {
+    "category": "PowerShell",
+    "set": 4,
+    "question": "Quelle variable stocke le nom de l'utilisateur actuel ?",
+    "options": ["$env:USERNAME", "$env:USER", "$USERNAME", "$currentUser"],
+    "answer": "$env:USERNAME"
+  },
+  {
+    "category": "PowerShell",
+    "set": 4,
+    "question": "Quel lecteur PowerShell expose les variables d'environnement ?",
+    "options": ["Env:", "Environment:", "Variables:", "System:"],
+    "answer": "Env:"
+  },
+  {
+    "category": "PowerShell",
+    "set": 4,
+    "question": "Quelle variable automatique stocke le chemin du profil de l'utilisateur actuel ?",
+    "options": ["$PROFILE", "$PROFILEPATH", "$PSProfile", "$CurrentUserProfile"],
+    "answer": "$PROFILE"
+  },
+  {
+    "category": "PowerShell",
+    "set": 5,
+    "question": "Quel est le modèle de nommage des cmdlets PowerShell ?",
+    "options": ["verbNoun", "Verb-Noun", "verb_noun", "Noun-Verb"],
+    "answer": "Verb-Noun"
+  },
+  {
+    "category": "PowerShell",
+    "set": 5,
+    "question": "Quelle cmdlet liste les fichiers et les dossiers ?",
+    "options": ["Get-ChildItem", "List-Dir", "Show-Files", "Get-Folders"],
+    "answer": "Get-ChildItem"
+  },
+  {
+    "category": "PowerShell",
+    "set": 5,
+    "question": "Quelle cmdlet affiche l'aide d'une commande ?",
+    "options": ["Help-Me", "Get-Help", "Find-Help", "Show-Help"],
+    "answer": "Get-Help"
+  },
+  {
+    "category": "PowerShell",
+    "set": 5,
+    "question": "Quelle cmdlet trouve d'autres cmdlets par leur nom ?",
+    "options": ["Search-Command", "Show-Command-List", "Find-Cmd", "Get-Command"],
+    "answer": "Get-Command"
+  },
+  {
+    "category": "PowerShell",
+    "set": 5,
+    "question": "Quelle cmdlet PowerShell envoie des objets vers le flux de sortie de réussite afin de pouvoir les transmettre par le pipeline ?",
+    "options": ["Write-Output", "Write-Host", "Write-Progress", "Write-Warning"],
+    "answer": "Write-Output"
+  },
+  {
+    "category": "PowerShell",
+    "set": 5,
+    "question": "Quel opérateur transmet des objets d'une commande à l'autre par le pipeline ?",
+    "options": ["&", ";", ">", "|"],
+    "answer": "|"
+  },
+  {
+    "category": "PowerShell",
+    "set": 5,
+    "question": "Quelle cmdlet filtre les objets dans un pipeline ?",
+    "options": ["Find-Object", "Where-Object", "Filter-Item", "Select-Where"],
+    "answer": "Where-Object"
+  },
+  {
+    "category": "PowerShell",
+    "set": 5,
+    "question": "Quelle cmdlet sélectionne des propriétés spécifiques d'objets ?",
+    "options": ["Get-Property", "Select-Object", "Choose-Item", "Pick-Object"],
+    "answer": "Select-Object"
+  },
+  {
+    "category": "PowerShell",
+    "set": 5,
+    "question": "Quelle cmdlet exécute une action sur chaque objet du pipeline ?",
+    "options": ["Each-Item", "Run-Each", "ForEach-Object", "Loop-Object"],
+    "answer": "ForEach-Object"
+  },
+  {
+    "category": "PowerShell",
+    "set": 5,
+    "question": "Quelle cmdlet PowerShell suspend un script pendant une durée spécifiée ?",
+    "options": ["Start-Sleep", "Wait-Process", "Suspend-Service", "Pause-Script"],
+    "answer": "Start-Sleep"
+  },
+  {
+    "category": "PowerShell",
+    "set": 5,
+    "question": "Quelle cmdlet écrit la sortie dans l'hôte de la console ?",
+    "options": ["Write-Host", "Show-Text", "Print-Line", "Echo-Out"],
+    "answer": "Write-Host"
+  },
+  {
+    "category": "PowerShell",
+    "set": 5,
+    "question": "Quelle cmdlet gère les services Windows ?",
+    "options": ["Show-Service-All", "Get-Service", "List-Svc", "Get-Daemon"],
+    "answer": "Get-Service"
+  },
+  {
+    "category": "PowerShell",
+    "set": 5,
+    "question": "Quel paramètre contrôle si les scripts peuvent s'exécuter ?",
+    "options": ["Mode script", "Indicateur de sécurité", "Stratégie d'exécution", "Niveau d'exécution"],
+    "answer": "Stratégie d'exécution"
+  },
+  {
+    "category": "PowerShell",
+    "set": 5,
+    "question": "Quelle cmdlet PowerShell calcule le hachage d'un fichier ?",
+    "options": ["Get-FileHash", "Get-Hash", "New-Checksum", "Measure-Hash"],
+    "answer": "Get-FileHash"
+  },
+  {
+    "category": "PowerShell",
+    "set": 5,
+    "question": "Quel caractère introduit un commentaire en PowerShell ?",
+    "options": ["//", "#", "--", "'"],
+    "answer": "#"
+  },
+  {
+    "category": "PowerShell",
+    "set": 5,
+    "question": "Quelle cmdlet PowerShell affiche les objets de sortie sous forme de tableau ?",
+    "options": ["Format-Table", "Format-List", "Out-String", "Select-String"],
+    "answer": "Format-Table"
+  },
+  {
+    "category": "PowerShell",
+    "set": 5,
+    "question": "Quelle cmdlet envoie une requête HTTP à un service web ?",
+    "options": ["Send-Http", "Get-Web", "Invoke-RestMethod", "Call-Api"],
+    "answer": "Invoke-RestMethod"
+  },
+  {
+    "category": "PowerShell",
+    "set": 5,
+    "question": "Quelle cmdlet PowerShell recherche un motif d'expression régulière dans du texte ou des fichiers ?",
+    "options": ["Select-String", "Find-String", "Search-Text", "Get-Match"],
+    "answer": "Select-String"
+  },
+  {
+    "category": "PowerShell",
+    "set": 5,
+    "question": "Quelle cmdlet crée un nouveau répertoire ?",
+    "options": ["Add-Directory", "Make-Dir", "Create-Folder", "New-Item -ItemType Directory"],
+    "answer": "New-Item -ItemType Directory"
+  },
+  {
+    "category": "PowerShell",
+    "set": 5,
+    "question": "Quel opérateur vérifie l'égalité en PowerShell ?",
+    "options": ["===", "==", "-eq", "="],
+    "answer": "-eq"
+  },
+  {
+    "category": "PowerShell",
+    "set": 5,
+    "question": "Quelle cmdlet supprime un fichier ?",
+    "options": ["Erase-Item", "Remove-Item", "Delete-File", "Clear-File"],
+    "answer": "Remove-Item"
+  },
+  {
+    "category": "PowerShell",
+    "set": 5,
+    "question": "Quelle cmdlet copie un fichier ou un dossier ?",
+    "options": ["Copy-Item", "Clone-Item", "Move-Copy", "Duplicate-File"],
+    "answer": "Copy-Item"
+  },
+  {
+    "category": "PowerShell",
+    "set": 5,
+    "question": "Quelle cmdlet déplace un fichier ou un dossier ?",
+    "options": ["Shift-Item", "Move-Item", "Relocate-File", "Cut-Item"],
+    "answer": "Move-Item"
+  },
+  {
+    "category": "PowerShell",
+    "set": 5,
+    "question": "Quelle cmdlet teste si un chemin existe ?",
+    "options": ["Check-Path", "Find-Path", "Test-Path", "Exists-Path"],
+    "answer": "Test-Path"
+  },
+  {
+    "category": "PowerShell",
+    "set": 5,
+    "question": "Quelle cmdlet renvoie la date et l'heure actuelles ?",
+    "options": ["Get-Date", "Read-Clock", "Now-Time", "Show-Date"],
+    "answer": "Get-Date"
+  }
+]

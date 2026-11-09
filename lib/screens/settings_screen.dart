@@ -6,6 +6,7 @@ import 'package:shared_preferences/shared_preferences.dart';
 import '../language_provider.dart';
 import '../theme_provider.dart';
 import '../l10n/app_localizations.dart';
+import '../services/game_sound_service.dart';
 import '../services/google_auth_service.dart';
 import '../services/user_profile_service.dart';
 import '../services/user_session_service.dart';
@@ -21,6 +22,7 @@ class SettingsScreen extends StatefulWidget {
 
 class _SettingsScreenState extends State<SettingsScreen> {
   bool _isLoading = true;
+  bool _soundEnabled = true;
   String? _loginType;
   String _userName = 'User';
   String _userEmail = '';
@@ -30,6 +32,17 @@ class _SettingsScreenState extends State<SettingsScreen> {
   void initState() {
     super.initState();
     _loadUserData();
+    _loadSoundSetting();
+  }
+
+  Future<void> _loadSoundSetting() async {
+    final enabled = await GameSoundService.isEnabled();
+    if (mounted) setState(() => _soundEnabled = enabled);
+  }
+
+  Future<void> _setSoundEnabled(bool enabled) async {
+    setState(() => _soundEnabled = enabled);
+    await GameSoundService.setEnabled(enabled);
   }
 
   Future<void> _loadUserData() async {
@@ -402,6 +415,22 @@ class _SettingsScreenState extends State<SettingsScreen> {
                       },
                     );
                   },
+                ),
+                const Divider(height: 1),
+                SwitchListTile.adaptive(
+                  key: const ValueKey('settings-game-sounds'),
+                  contentPadding: const EdgeInsets.symmetric(
+                    horizontal: 20,
+                    vertical: 6,
+                  ),
+                  secondary: const Icon(Icons.volume_up_outlined, size: 28),
+                  title: const Text(
+                    'Game sounds',
+                    style: TextStyle(fontSize: 18, fontWeight: FontWeight.w600),
+                  ),
+                  subtitle: const Text('Sound effects for game actions'),
+                  value: _soundEnabled,
+                  onChanged: _setSoundEnabled,
                 ),
               ],
             ),

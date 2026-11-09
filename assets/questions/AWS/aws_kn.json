@@ -674,7 +674,7 @@
   {
     "category": "AWS",
     "set": 3,
-    "question": "ಹಲವಾರು AWS ಸೇವೆಗಳಿಂದ ಭದ್ರತಾ ಕಂಡುಬಂದಿಕೆಗಳನ್ನು ಕೇಂದ್ರವಾಗಿ ಯಾವ AWS ಸೇವೆ ಒದಗಿಸುತ್ತದೆ?",
+    "question": "ಹಲವಾರು AWS ಸೇವೆಗಳಿಂದ ಭದ್ರತಾ ಪತ್ತೆಗಳನ್ನು (findings) ಕೇಂದ್ರೀಕೃತವಾಗಿ ಯಾವ AWS ಸೇವೆ ಒದಗಿಸುತ್ತದೆ?",
     "options": [
       "AWS Security Hub",
       "AWS Shield",
@@ -1142,7 +1142,7 @@
   {
     "category": "AWS",
     "set": 4,
-    "question": "ಬ್ರೌಸರ್‌ನಿಂದ ನೇರವಾಗಿ Linux EC2 ಇನ್‌ಸ್ಟಾನ್ಸ್‌ಗಳಿಗೆ ಸುರಕ್ಷಿತ shell access ಅನ್ನು ಯಾವ AWS ಸೇವೆ ಒದಗಿಸುತ್ತದೆ?",
+    "question": "ಬ್ರೌಸರ್‌ನಿಂದ ನೇರವಾಗಿ Linux EC2 ಇನ್‌ಸ್ಟಾನ್ಸ್‌ಗಳಿಗೆ ಸುರಕ್ಷಿತ ಶೆಲ್ ಪ್ರವೇಶವನ್ನು ಯಾವ AWS ಸೇವೆ ಒದಗಿಸುತ್ತದೆ?",
     "options": [
       "EC2 Instance Connect",
       "AWS Direct Connect",
@@ -1226,14 +1226,14 @@
   {
     "category": "AWS",
     "set": 5,
-    "question": "ನಿರ್ವಹಿತ ರಿಲೇಶನಲ್ ಡೇಟಾಬೇಸ್ ಸೇವೆ ಯಾವ AWS ಸೇವೆ?",
+    "question": "ಸ್ವಯಂಚಾಲಿತ ಫೇಲ್‌ಓವರ್‌ಗಾಗಿ ಮತ್ತೊಂದು Availability Zoneನಲ್ಲಿ ಸಿಂಕ್ರೊನಸ್ ಸ್ಟ್ಯಾಂಡ್‌ಬೈ ರೆಪ್ಲಿಕಾವನ್ನು ನಿರ್ವಹಿಸುವ Amazon RDS ವೈಶಿಷ್ಟ್ಯ ಯಾವುದು?",
     "options": [
-      "Amazon RDS",
-      "Amazon S3",
-      "Amazon DynamoDB",
-      "Amazon CloudFront"
+      "Multi-AZ deployment",
+      "Read replica",
+      "Manual snapshot",
+      "Parameter group"
     ],
-    "answer": "Amazon RDS"
+    "answer": "Multi-AZ deployment"
   },
   {
     "category": "AWS",
@@ -1262,14 +1262,14 @@
   {
     "category": "AWS",
     "set": 5,
-    "question": "ಕಂಟೆಂಟ್ ಡೆಲಿವರಿ ನೆಟ್‌ವರ್ಕ್ ಆಗಿರುವ AWS ಸೇವೆ ಯಾವುದು?",
+    "question": "S3 ಮೂಲವನ್ನು ಡಿಸ್ಟ್ರಿಬ್ಯೂಷನ್ ಮೂಲಕ ಮಾತ್ರ ಓದಬಹುದು, ನೇರವಾಗಿ ಓದಲಾಗದು ಎಂಬುದನ್ನು ಖಚಿತಪಡಿಸುವ Amazon CloudFront ವೈಶಿಷ್ಟ್ಯ ಯಾವುದು?",
     "options": [
-      "Amazon SNS",
-      "Amazon Route 53",
-      "Amazon CloudFront",
-      "AWS Snowball"
+      "Origin Access Control",
+      "S3 Transfer Acceleration",
+      "Route 53 alias record",
+      "Lambda@Edge"
     ],
-    "answer": "Amazon CloudFront"
+    "answer": "Origin Access Control"
   },
   {
     "category": "AWS",
@@ -1310,14 +1310,14 @@
   {
     "category": "AWS",
     "set": 5,
-    "question": "ನಿರ್ವಹಿತ ಮೆಸೇಜ್ ಕ್ಯೂ ಅನ್ನು ಯಾವ AWS ಸೇವೆ ಒದಗಿಸುತ್ತದೆ?",
+    "question": "ಕಟ್ಟುನಿಟ್ಟಾದ ಸಂದೇಶ ಕ್ರಮವನ್ನು ಕಾಪಾಡುವ ಮತ್ತು ಒಮ್ಮೆ ಮಾತ್ರ ಸಂಸ್ಕರಣೆಯನ್ನು (exactly-once processing) ಬೆಂಬಲಿಸುವ Amazon SQS ಕ್ಯೂ ಪ್ರಕಾರ ಯಾವುದು?",
     "options": [
-      "Amazon SES",
-      "Amazon SQS",
-      "AWS KMS",
-      "Amazon EFS"
+      "Standard queue",
+      "FIFO queue",
+      "Delay queue",
+      "Dead-letter queue"
     ],
-    "answer": "Amazon SQS"
+    "answer": "FIFO queue"
   },
   {
     "category": "AWS",
@@ -1430,14 +1430,14 @@
   {
     "category": "AWS",
     "set": 5,
-    "question": "ಪೆಟಾಬೈಟ್-ಮಟ್ಟದ ಡೇಟಾ ವೇರ್‌ಹೌಸ್ ಆಗಿರುವ AWS ಸೇವೆ ಯಾವುದು?",
+    "question": "Amazon Redshiftನಲ್ಲಿ ಟೇಬಲ್‌ನ ಡಿಸ್ಟ್ರಿಬ್ಯೂಷನ್ ಕೀ ಏನನ್ನು ನಿಯಂತ್ರಿಸುತ್ತದೆ?",
     "options": [
-      "Amazon DynamoDB",
-      "Amazon ElastiCache",
-      "Amazon Redshift",
-      "Amazon SQS"
+      "ಸಾಲುಗಳನ್ನು ಕಂಪ್ಯೂಟ್ ನೋಡ್‌ಗಳಾದ್ಯಂತ ಹೇಗೆ ಹಂಚಲಾಗುತ್ತದೆ",
+      "COPY ಕಮಾಂಡ್ ಅನ್ನು ಯಾವ IAM ರೋಲ್ ಚಲಾಯಿಸುತ್ತದೆ",
+      "ಸ್ವಯಂಚಾಲಿತ ಬ್ಯಾಕಪ್‌ಗಳನ್ನು ಎಷ್ಟು ಕಾಲ ಉಳಿಸಿಕೊಳ್ಳಲಾಗುತ್ತದೆ",
+      "ಕ್ಲಸ್ಟರ್ ಅನ್ನು ಯಾವ KMS ಕೀ ಎನ್‌ಕ್ರಿಪ್ಟ್ ಮಾಡುತ್ತದೆ"
     ],
-    "answer": "Amazon Redshift"
+    "answer": "ಸಾಲುಗಳನ್ನು ಕಂಪ್ಯೂಟ್ ನೋಡ್‌ಗಳಾದ್ಯಂತ ಹೇಗೆ ಹಂಚಲಾಗುತ್ತದೆ"
   },
   {
     "category": "AWS",
@@ -1490,13 +1490,13 @@
   {
     "category": "AWS",
     "set": 5,
-    "question": "ನಿರ್ವಹಿತ Apache Kafka ಅನ್ನು ಯಾವ AWS ಸೇವೆ ಒದಗಿಸುತ್ತದೆ?",
+    "question": "Amazon MSK ಕ್ಲಸ್ಟರ್‌ನಲ್ಲಿ, ಯಾವ ನೋಡ್‌ಗಳು ಟಾಪಿಕ್ ಪಾರ್ಟಿಷನ್‌ಗಳನ್ನು ಸಂಗ್ರಹಿಸಿ Kafka ಪ್ರೊಡ್ಯೂಸರ್‌ಗಳು ಮತ್ತು ಕನ್ಸ್ಯೂಮರ್‌ಗಳಿಗೆ ಸೇವೆ ನೀಡುತ್ತವೆ?",
     "options": [
-      "Amazon S3",
-      "Amazon EBS",
-      "AWS KMS",
-      "Amazon MSK"
+      "Broker nodes",
+      "NAT gateways",
+      "Bastion hosts",
+      "Glue crawlers"
     ],
-    "answer": "Amazon MSK"
+    "answer": "Broker nodes"
   }
 ]

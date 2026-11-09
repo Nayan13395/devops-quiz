@@ -14,7 +14,7 @@
   {
     "category": "AWS",
     "set": 1,
-    "question": "अव्जेक्ट स्टोरेजका लागि कुन AWS स्टोरेज सेवा डिजाइन गरिएको हो?",
+    "question": "अब्जेक्ट स्टोरेजका लागि कुन AWS स्टोरेज सेवा डिजाइन गरिएको हो?",
     "options": [
       "Amazon EBS",
       "Amazon S3",
@@ -1226,14 +1226,14 @@
   {
     "category": "AWS",
     "set": 5,
-    "question": "व्यवस्थापन गरिएको रिलेसनल डाटाबेस सेवा कुन AWS सेवा हो?",
+    "question": "अर्को Availability Zone मा स्वचालित फेलओभरका लागि सिङ्क्रोनस स्ट्यान्डबाई रेप्लिका राख्ने Amazon RDS सुविधा कुन हो?",
     "options": [
-      "Amazon RDS",
-      "Amazon S3",
-      "Amazon DynamoDB",
-      "Amazon CloudFront"
+      "Multi-AZ deployment",
+      "Read replica",
+      "Manual snapshot",
+      "Parameter group"
     ],
-    "answer": "Amazon RDS"
+    "answer": "Multi-AZ deployment"
   },
   {
     "category": "AWS",
@@ -1262,14 +1262,14 @@
   {
     "category": "AWS",
     "set": 5,
-    "question": "कन्टेन्ट डेलिभरी नेटवर्क कुन AWS सेवा हो?",
+    "question": "S3 origin लाई distribution मार्फत मात्र पढ्न मिल्ने र सीधै पढ्न नमिल्ने बनाउने Amazon CloudFront सुविधा कुन हो?",
     "options": [
-      "Amazon SNS",
-      "Amazon Route 53",
-      "Amazon CloudFront",
-      "AWS Snowball"
+      "Origin Access Control",
+      "S3 Transfer Acceleration",
+      "Route 53 alias record",
+      "Lambda@Edge"
     ],
-    "answer": "Amazon CloudFront"
+    "answer": "Origin Access Control"
   },
   {
     "category": "AWS",
@@ -1310,14 +1310,14 @@
   {
     "category": "AWS",
     "set": 5,
-    "question": "व्यवस्थापन गरिएको मेसेज क्यु कुन AWS सेवाले प्रदान गर्छ?",
+    "question": "कडा मेसेज क्रम कायम राख्ने र exactly-once प्रशोधन समर्थन गर्ने Amazon SQS क्यु प्रकार कुन हो?",
     "options": [
-      "Amazon SES",
-      "Amazon SQS",
-      "AWS KMS",
-      "Amazon EFS"
+      "Standard queue",
+      "FIFO queue",
+      "Delay queue",
+      "Dead-letter queue"
     ],
-    "answer": "Amazon SQS"
+    "answer": "FIFO queue"
   },
   {
     "category": "AWS",
@@ -1430,14 +1430,14 @@
   {
     "category": "AWS",
     "set": 5,
-    "question": "पेटाबाइट-स्केल डाटा वेयरहाउस कुन AWS सेवा हो?",
+    "question": "Amazon Redshift मा तालिकाको distribution key ले के नियन्त्रण गर्छ?",
     "options": [
-      "Amazon DynamoDB",
-      "Amazon ElastiCache",
-      "Amazon Redshift",
-      "Amazon SQS"
+      "पङ्क्तिहरू compute node हरूमा कसरी वितरण गरिन्छ",
+      "COPY command कुन IAM role ले चलाउँछ",
+      "स्वचालित ब्याकअप कति समयसम्म राखिन्छ",
+      "क्लस्टरलाई कुन KMS key ले इन्क्रिप्ट गर्छ"
     ],
-    "answer": "Amazon Redshift"
+    "answer": "पङ्क्तिहरू compute node हरूमा कसरी वितरण गरिन्छ"
   },
   {
     "category": "AWS",
@@ -1490,13 +1490,13 @@
   {
     "category": "AWS",
     "set": 5,
-    "question": "व्यवस्थापन गरिएको Apache Kafka कुन AWS सेवाले प्रदान गर्छ?",
+    "question": "Amazon MSK क्लस्टरमा कुन नोडहरूले topic partition भण्डारण गर्छन् र Kafka producer तथा consumer लाई सेवा दिन्छन्?",
     "options": [
-      "Amazon S3",
-      "Amazon EBS",
-      "AWS KMS",
-      "Amazon MSK"
+      "Broker nodes",
+      "NAT gateways",
+      "Bastion hosts",
+      "Glue crawlers"
     ],
-    "answer": "Amazon MSK"
+    "answer": "Broker nodes"
   }
 ]

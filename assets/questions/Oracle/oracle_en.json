@@ -163,9 +163,9 @@
             "Compute",
             "Object Storage",
             "Load Balancer",
-            "Oracle Kubernetes Engine (OKE)"
+            "Container Engine for Kubernetes (OKE)"
         ],
-        "answer": "Oracle Kubernetes Engine (OKE)"
+        "answer": "Container Engine for Kubernetes (OKE)"
     },
     {
         "category": "Oracle Cloud",
@@ -314,14 +314,14 @@
     {
         "category": "Oracle Cloud",
         "set": 2,
-        "question": "Which OCI feature is associated with: Object Storage?",
+        "question": "Which OCI Object Storage tier is intended for long-term retention of rarely accessed data at the lowest cost?",
         "options": [
-            "Load Balancer",
-            "Monitoring",
-            "Object Storage",
-            "Compute"
+            "Archive tier",
+            "Standard tier",
+            "Boot volume backup",
+            "Block volume clone"
         ],
-        "answer": "Object Storage"
+        "answer": "Archive tier"
     },
     {
         "category": "Oracle Cloud",
@@ -338,14 +338,14 @@
     {
         "category": "Oracle Cloud",
         "set": 2,
-        "question": "Which OCI feature is associated with: File Storage?",
+        "question": "In OCI File Storage, which resource provides the private IP endpoint that instances use to mount a file system?",
         "options": [
-            "File Storage",
-            "Compute",
-            "Object Storage",
-            "Load Balancer"
+            "Mount target",
+            "Bucket",
+            "Boot volume",
+            "Service gateway"
         ],
-        "answer": "File Storage"
+        "answer": "Mount target"
     },
     {
         "category": "Oracle Cloud",
@@ -398,14 +398,14 @@
     {
         "category": "Oracle Cloud",
         "set": 2,
-        "question": "Which OCI feature is associated with: Load Balancer?",
+        "question": "In an OCI Load Balancer, what is a backend set?",
         "options": [
-            "Compute",
-            "Object Storage",
-            "Monitoring",
-            "Load Balancer"
+            "A logical group of backend servers with a load balancing policy and health check",
+            "A set of IAM policies for the load balancer",
+            "A collection of Object Storage buckets",
+            "A group of users allowed to manage the load balancer"
         ],
-        "answer": "Load Balancer"
+        "answer": "A logical group of backend servers with a load balancing policy and health check"
     },
     {
         "category": "Oracle Cloud",
@@ -458,14 +458,14 @@
     {
         "category": "Oracle Cloud",
         "set": 2,
-        "question": "Which OCI feature is associated with: Oracle Kubernetes Engine (OKE)?",
+        "question": "Which OCI feature is associated with: Container Engine for Kubernetes (OKE)?",
         "options": [
             "Object Storage",
             "Load Balancer",
-            "Oracle Kubernetes Engine (OKE)",
+            "Container Engine for Kubernetes (OKE)",
             "Compute"
         ],
-        "answer": "Oracle Kubernetes Engine (OKE)"
+        "answer": "Container Engine for Kubernetes (OKE)"
     },
     {
         "category": "Oracle Cloud",
@@ -518,14 +518,14 @@
     {
         "category": "Oracle Cloud",
         "set": 2,
-        "question": "Which OCI feature is associated with: Monitoring?",
+        "question": "In OCI Monitoring, which resource notifies you when a metric crosses a defined threshold?",
         "options": [
-            "Load Balancer",
-            "Monitoring",
-            "Compute",
-            "Object Storage"
+            "Alarm",
+            "Bucket",
+            "Tag namespace",
+            "Mount target"
         ],
-        "answer": "Monitoring"
+        "answer": "Alarm"
     },
     {
         "category": "Oracle Cloud",
@@ -614,14 +614,14 @@
     {
         "category": "Oracle Cloud",
         "set": 3,
-        "question": "In Oracle Cloud Infrastructure, which service is associated with: Object Storage?",
+        "question": "Which OCI Object Storage feature provides a time-limited URL for accessing a bucket or object without credentials?",
         "options": [
-            "Monitoring",
-            "Object Storage",
-            "Compute",
-            "Load Balancer"
+            "Pre-authenticated request",
+            "Instance principal",
+            "Security list",
+            "Customer-managed key"
         ],
-        "answer": "Object Storage"
+        "answer": "Pre-authenticated request"
     },
     {
         "category": "Oracle Cloud",
@@ -650,26 +650,26 @@
     {
         "category": "Oracle Cloud",
         "set": 3,
-        "question": "In Oracle Cloud Infrastructure, which service is associated with: Virtual Cloud Network (VCN)?",
+        "question": "Which OCI VCN gateway gives private access to Oracle services such as Object Storage without traversing the internet?",
         "options": [
-            "Object Storage",
-            "Load Balancer",
-            "Virtual Cloud Network (VCN)",
-            "Compute"
+            "Service Gateway",
+            "Internet Gateway",
+            "Local Peering Gateway",
+            "Dynamic Routing Gateway"
         ],
-        "answer": "Virtual Cloud Network (VCN)"
+        "answer": "Service Gateway"
     },
     {
         "category": "Oracle Cloud",
         "set": 3,
-        "question": "In Oracle Cloud Infrastructure, which service is associated with: Identity and Access Management (IAM)?",
+        "question": "In OCI IAM policy statements, which verb grants the broadest permissions, including creating and deleting resources?",
         "options": [
-            "Load Balancer",
-            "Identity and Access Management (IAM)",
-            "Compute",
-            "Object Storage"
+            "inspect",
+            "read",
+            "use",
+            "manage"
         ],
-        "answer": "Identity and Access Management (IAM)"
+        "answer": "manage"
     },
     {
         "category": "Oracle Cloud",
@@ -698,14 +698,14 @@
     {
         "category": "Oracle Cloud",
         "set": 3,
-        "question": "In Oracle Cloud Infrastructure, which service is associated with: Load Balancer?",
+        "question": "Which OCI Load Balancer policy sends each new request to the backend server with the fewest active connections?",
         "options": [
-            "Object Storage",
-            "Monitoring",
-            "Load Balancer",
-            "Compute"
+            "Weighted Round Robin",
+            "Least Connections",
+            "IP Hash",
+            "Random"
         ],
-        "answer": "Load Balancer"
+        "answer": "Least Connections"
     },
     {
         "category": "Oracle Cloud",
@@ -734,14 +734,14 @@
     {
         "category": "Oracle Cloud",
         "set": 3,
-        "question": "In Oracle Cloud Infrastructure, which service is associated with: Dynamic Routing Gateway (DRG)?",
+        "question": "In OCI networking, what resource is used to connect a VCN to a Dynamic Routing Gateway (DRG)?",
         "options": [
-            "Compute",
-            "Object Storage",
-            "Load Balancer",
-            "Dynamic Routing Gateway (DRG)"
+            "DRG attachment",
+            "Bucket",
+            "Mount target",
+            "Instance pool"
         ],
-        "answer": "Dynamic Routing Gateway (DRG)"
+        "answer": "DRG attachment"
     },
     {
         "category": "Oracle Cloud",
@@ -758,14 +758,14 @@
     {
         "category": "Oracle Cloud",
         "set": 3,
-        "question": "In Oracle Cloud Infrastructure, which service is associated with: Oracle Kubernetes Engine (OKE)?",
+        "question": "Which OKE node type removes the need to manage worker node infrastructure, providing a serverless Kubernetes experience?",
         "options": [
-            "Load Balancer",
-            "Oracle Kubernetes Engine (OKE)",
-            "Compute",
-            "Object Storage"
+            "Virtual nodes",
+            "Managed nodes",
+            "Self-managed nodes",
+            "Bastion nodes"
         ],
-        "answer": "Oracle Kubernetes Engine (OKE)"
+        "answer": "Virtual nodes"
     },
     {
         "category": "Oracle Cloud",
@@ -818,14 +818,14 @@
     {
         "category": "Oracle Cloud",
         "set": 3,
-        "question": "In Oracle Cloud Infrastructure, which service is associated with: Monitoring?",
+        "question": "Which OCI service provides application performance tracing and real user monitoring?",
         "options": [
-            "Monitoring",
-            "Compute",
-            "Object Storage",
-            "Load Balancer"
+            "Application Performance Monitoring",
+            "Cloud Guard",
+            "Vault",
+            "Resource Manager"
         ],
-        "answer": "Monitoring"
+        "answer": "Application Performance Monitoring"
     },
     {
         "category": "Oracle Cloud",
@@ -902,302 +902,302 @@
     {
         "category": "Oracle Cloud",
         "set": 4,
-        "question": "Choose the OCI service is associated with: Compute?",
+        "question": "In OCI Compute, what is a shape?",
         "options": [
-            "Monitoring",
-            "Compute",
-            "Object Storage",
-            "Load Balancer"
+            "A template that defines the OCPUs and memory of an instance",
+            "A network route table",
+            "An IAM policy statement",
+            "A storage replication rule"
         ],
-        "answer": "Compute"
+        "answer": "A template that defines the OCPUs and memory of an instance"
     },
     {
         "category": "Oracle Cloud",
         "set": 4,
-        "question": "Choose the OCI service is associated with: Object Storage?",
+        "question": "Which OCI Object Storage feature automatically archives or deletes objects after a specified time?",
         "options": [
-            "Object Storage",
-            "Compute",
-            "Load Balancer",
-            "Monitoring"
+            "Lifecycle policy rules",
+            "Pre-authenticated requests",
+            "Multipart upload",
+            "Bucket tagging"
         ],
-        "answer": "Object Storage"
+        "answer": "Lifecycle policy rules"
     },
     {
         "category": "Oracle Cloud",
         "set": 4,
-        "question": "Choose the OCI service is associated with: Block Volumes?",
+        "question": "In OCI Block Volume, which setting determines the performance level such as Balanced or Higher Performance?",
         "options": [
-            "Compute",
-            "Object Storage",
-            "Load Balancer",
-            "Block Volumes"
+            "Volume Performance Units (VPUs) per GB",
+            "Number of OCPUs",
+            "Bucket tier",
+            "Subnet CIDR size"
         ],
-        "answer": "Block Volumes"
+        "answer": "Volume Performance Units (VPUs) per GB"
     },
     {
         "category": "Oracle Cloud",
         "set": 4,
-        "question": "Choose the OCI service is associated with: File Storage?",
+        "question": "Which OCI File Storage feature creates point-in-time read-only copies of a file system?",
         "options": [
-            "Object Storage",
-            "Load Balancer",
-            "File Storage",
-            "Compute"
+            "Snapshots",
+            "Pre-authenticated requests",
+            "Boot volumes",
+            "Node pools"
         ],
-        "answer": "File Storage"
+        "answer": "Snapshots"
     },
     {
         "category": "Oracle Cloud",
         "set": 4,
-        "question": "Choose the OCI service is associated with: Virtual Cloud Network (VCN)?",
+        "question": "Which OCI VCN component controls where traffic leaving a subnet is routed?",
         "options": [
-            "Load Balancer",
-            "Virtual Cloud Network (VCN)",
-            "Compute",
-            "Object Storage"
+            "Route table",
+            "Security list",
+            "DHCP options",
+            "Load balancer"
         ],
-        "answer": "Virtual Cloud Network (VCN)"
+        "answer": "Route table"
     },
     {
         "category": "Oracle Cloud",
         "set": 4,
-        "question": "Choose the OCI service is associated with: Identity and Access Management (IAM)?",
+        "question": "In OCI IAM, what is a dynamic group?",
         "options": [
-            "Identity and Access Management (IAM)",
-            "Compute",
-            "Object Storage",
-            "Load Balancer"
+            "A group of compute instances matched by rules so they can call OCI APIs",
+            "A group of users federated from an identity provider",
+            "A group that automatically resizes instance pools",
+            "A collection of Object Storage buckets"
         ],
-        "answer": "Identity and Access Management (IAM)"
+        "answer": "A group of compute instances matched by rules so they can call OCI APIs"
     },
     {
         "category": "Oracle Cloud",
         "set": 4,
-        "question": "Choose the OCI service is associated with: Compartments?",
+        "question": "How many levels of nested compartments does OCI support beneath the root compartment?",
         "options": [
-            "Compute",
-            "Object Storage",
-            "Load Balancer",
-            "Compartments"
+            "2",
+            "4",
+            "6",
+            "10"
         ],
-        "answer": "Compartments"
+        "answer": "6"
     },
     {
         "category": "Oracle Cloud",
         "set": 4,
-        "question": "Choose the OCI service is associated with: Policies?",
+        "question": "Which OCI IAM policy statement lets the group Developers read objects in the compartment Dev?",
         "options": [
-            "Object Storage",
-            "Load Balancer",
-            "Policies",
-            "Compute"
+            "Allow group Developers to read objects in compartment Dev",
+            "Grant group Developers read on compartment Dev",
+            "Permit Developers: read objects in Dev",
+            "Allow Developers to read-object compartment Dev"
         ],
-        "answer": "Policies"
+        "answer": "Allow group Developers to read objects in compartment Dev"
     },
     {
         "category": "Oracle Cloud",
         "set": 4,
-        "question": "Choose the OCI service is associated with: Load Balancer?",
+        "question": "Which OCI Load Balancer feature keeps a client's requests going to the same backend server?",
         "options": [
-            "Monitoring",
-            "Load Balancer",
-            "Compute",
-            "Object Storage"
+            "Session persistence",
+            "Volume backups",
+            "Object versioning",
+            "DNS zone transfer"
         ],
-        "answer": "Load Balancer"
+        "answer": "Session persistence"
     },
     {
         "category": "Oracle Cloud",
         "set": 4,
-        "question": "Choose the OCI service is associated with: FastConnect?",
+        "question": "Which OCI FastConnect virtual circuit type provides access to the private IP addresses in a VCN?",
         "options": [
-            "FastConnect",
-            "Compute",
-            "Object Storage",
-            "Load Balancer"
+            "Private virtual circuit",
+            "Public virtual circuit",
+            "Bastion session",
+            "Service gateway circuit"
         ],
-        "answer": "FastConnect"
+        "answer": "Private virtual circuit"
     },
     {
         "category": "Oracle Cloud",
         "set": 4,
-        "question": "Choose the OCI service is associated with: Site-to-Site VPN?",
+        "question": "In OCI Site-to-Site VPN, which resource represents your on-premises VPN device?",
         "options": [
-            "Compute",
-            "Object Storage",
-            "Load Balancer",
-            "Site-to-Site VPN"
-        ],
-        "answer": "Site-to-Site VPN"
-    },
-    {
-        "category": "Oracle Cloud",
-        "set": 4,
-        "question": "Choose the OCI service is associated with: Dynamic Routing Gateway (DRG)?",
-        "options": [
-            "Object Storage",
-            "Load Balancer",
+            "Customer-Premises Equipment (CPE)",
             "Dynamic Routing Gateway (DRG)",
-            "Compute"
+            "Local Peering Gateway (LPG)",
+            "NAT Gateway"
         ],
-        "answer": "Dynamic Routing Gateway (DRG)"
+        "answer": "Customer-Premises Equipment (CPE)"
     },
     {
         "category": "Oracle Cloud",
         "set": 4,
-        "question": "Choose the OCI service is associated with: Autonomous Database?",
+        "question": "Which dynamic routing protocol does an OCI DRG use with FastConnect virtual circuits?",
         "options": [
-            "Load Balancer",
-            "Autonomous Database",
-            "Compute",
-            "Object Storage"
+            "BGP",
+            "OSPF",
+            "RIP",
+            "EIGRP"
         ],
-        "answer": "Autonomous Database"
+        "answer": "BGP"
     },
     {
         "category": "Oracle Cloud",
         "set": 4,
-        "question": "Choose the OCI service is associated with: Oracle Kubernetes Engine (OKE)?",
+        "question": "Which Oracle Autonomous Database workload type is optimized for analytics and data warehousing?",
         "options": [
-            "Oracle Kubernetes Engine (OKE)",
-            "Compute",
-            "Object Storage",
-            "Load Balancer"
+            "Autonomous Data Warehouse",
+            "Autonomous Transaction Processing",
+            "Autonomous JSON Database",
+            "APEX Application Development"
         ],
-        "answer": "Oracle Kubernetes Engine (OKE)"
+        "answer": "Autonomous Data Warehouse"
     },
     {
         "category": "Oracle Cloud",
         "set": 4,
-        "question": "Choose the OCI service is associated with: Functions?",
+        "question": "Which OCI CLI command generates a kubeconfig file for an OKE cluster?",
         "options": [
-            "Compute",
-            "Object Storage",
-            "Load Balancer",
-            "Functions"
+            "oci ce cluster create-kubeconfig",
+            "oci oke cluster get-config",
+            "oci kubernetes kubeconfig create",
+            "oci ce node-pool get-config"
         ],
-        "answer": "Functions"
+        "answer": "oci ce cluster create-kubeconfig"
     },
     {
         "category": "Oracle Cloud",
         "set": 4,
-        "question": "Choose the OCI service is associated with: API Gateway?",
+        "question": "Which open-source project is OCI Functions based on?",
         "options": [
-            "Object Storage",
-            "Load Balancer",
-            "API Gateway",
-            "Compute"
+            "Fn Project",
+            "Knative",
+            "OpenFaaS",
+            "Apache OpenWhisk"
         ],
-        "answer": "API Gateway"
+        "answer": "Fn Project"
     },
     {
         "category": "Oracle Cloud",
         "set": 4,
-        "question": "Choose the OCI service is associated with: DevOps?",
+        "question": "In OCI API Gateway, which resource defines a set of routes published under a common path prefix?",
         "options": [
-            "Load Balancer",
-            "DevOps",
-            "Compute",
-            "Object Storage"
+            "API deployment",
+            "Backend set",
+            "Bucket",
+            "Alarm"
         ],
-        "answer": "DevOps"
+        "answer": "API deployment"
     },
     {
         "category": "Oracle Cloud",
         "set": 4,
-        "question": "Choose the OCI service is associated with: Resource Manager?",
+        "question": "Which file defines the build steps of an OCI DevOps managed build stage by default?",
         "options": [
+            "build_spec.yaml",
+            "Jenkinsfile",
+            "buildspec.json",
+            "pom.xml"
+        ],
+        "answer": "build_spec.yaml"
+    },
+    {
+        "category": "Oracle Cloud",
+        "set": 4,
+        "question": "In OCI Resource Manager, what is a stack?",
+        "options": [
+            "A Terraform configuration and state used to manage a set of OCI resources",
+            "A stacked set of block volumes",
+            "A group of IAM users",
+            "A pool of compute instances"
+        ],
+        "answer": "A Terraform configuration and state used to manage a set of OCI resources"
+    },
+    {
+        "category": "Oracle Cloud",
+        "set": 4,
+        "question": "Which query language is used to define metric queries and alarms in OCI Monitoring?",
+        "options": [
+            "Monitoring Query Language (MQL)",
+            "SQL*Plus",
+            "PromQL",
+            "Kusto Query Language (KQL)"
+        ],
+        "answer": "Monitoring Query Language (MQL)"
+    },
+    {
+        "category": "Oracle Cloud",
+        "set": 4,
+        "question": "Which OCI service can route logs from the Logging service to Object Storage or Streaming?",
+        "options": [
+            "Service Connector Hub",
             "Resource Manager",
-            "Compute",
-            "Object Storage",
-            "Load Balancer"
+            "Bastion",
+            "Cloud Guard"
         ],
-        "answer": "Resource Manager"
+        "answer": "Service Connector Hub"
     },
     {
         "category": "Oracle Cloud",
         "set": 4,
-        "question": "Choose the OCI service is associated with: Monitoring?",
+        "question": "In OCI Notifications, which resource do subscriptions attach to in order to receive published messages?",
         "options": [
-            "Compute",
-            "Object Storage",
-            "Load Balancer",
-            "Monitoring"
+            "Topic",
+            "Bucket",
+            "Stack",
+            "Compartment quota"
         ],
-        "answer": "Monitoring"
+        "answer": "Topic"
     },
     {
         "category": "Oracle Cloud",
         "set": 4,
-        "question": "Choose the OCI service is associated with: Logging?",
+        "question": "In OCI Events, what defines which resource state changes trigger an action?",
         "options": [
-            "Object Storage",
-            "Load Balancer",
-            "Logging",
-            "Compute"
+            "A rule",
+            "A route table",
+            "A shape",
+            "A mount target"
         ],
-        "answer": "Logging"
+        "answer": "A rule"
     },
     {
         "category": "Oracle Cloud",
         "set": 4,
-        "question": "Choose the OCI service is associated with: Notifications?",
+        "question": "OCI Vault protects HSM-backed keys using which FIPS 140-2 security level?",
         "options": [
-            "Load Balancer",
-            "Notifications",
-            "Compute",
-            "Object Storage"
+            "Level 1",
+            "Level 2",
+            "Level 3",
+            "Level 4"
         ],
-        "answer": "Notifications"
+        "answer": "Level 3"
     },
     {
         "category": "Oracle Cloud",
         "set": 4,
-        "question": "Choose the OCI service is associated with: Events?",
+        "question": "Which Cloud Guard component applies predefined remediation actions to detected problems?",
         "options": [
-            "Events",
-            "Compute",
-            "Object Storage",
-            "Load Balancer"
+            "Responder recipe",
+            "Detector recipe",
+            "Target",
+            "Compartment quota"
         ],
-        "answer": "Events"
+        "answer": "Responder recipe"
     },
     {
         "category": "Oracle Cloud",
         "set": 4,
-        "question": "Choose the OCI service is associated with: Vault?",
+        "question": "In OCI Security Zones, which resource defines the security policies enforced on a compartment?",
         "options": [
-            "Compute",
-            "Object Storage",
-            "Load Balancer",
-            "Vault"
+            "Security zone recipe",
+            "Detector recipe",
+            "Bucket policy",
+            "Route table"
         ],
-        "answer": "Vault"
-    },
-    {
-        "category": "Oracle Cloud",
-        "set": 4,
-        "question": "Choose the OCI service is associated with: Cloud Guard?",
-        "options": [
-            "Object Storage",
-            "Load Balancer",
-            "Cloud Guard",
-            "Compute"
-        ],
-        "answer": "Cloud Guard"
-    },
-    {
-        "category": "Oracle Cloud",
-        "set": 4,
-        "question": "Choose the OCI service is associated with: Security Zones?",
-        "options": [
-            "Load Balancer",
-            "Security Zones",
-            "Compute",
-            "Object Storage"
-        ],
-        "answer": "Security Zones"
+        "answer": "Security zone recipe"
     },
   {
     "category": "Oracle Cloud",
@@ -1272,9 +1272,9 @@
   {
     "category": "Oracle Cloud",
     "set": 5,
-    "question": "Which OCI service provides managed Terraform deployments?",
-    "options": ["Notifications", "Events", "Vault", "Resource Manager"],
-    "answer": "Resource Manager"
+    "question": "Which OCI Resource Manager feature detects when deployed resources differ from the Terraform configuration?",
+    "options": ["Drift detection", "Events", "Notifications", "Vault"],
+    "answer": "Drift detection"
   },
   {
     "category": "Oracle Cloud",

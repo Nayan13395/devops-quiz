@@ -242,7 +242,7 @@
   {
     "category": "AWS",
     "set": 1,
-    "question": "নির্দিষ্ট নেটওয়ার্ক সংযোগ ব্যবহার করে হাইব্রিড ক্লাউড সংযোগ কোন AWS পরিষেবা সক্ষম করে?",
+    "question": "ডেডিকেটেড নেটওয়ার্ক সংযোগ ব্যবহার করে হাইব্রিড ক্লাউড সংযোগ কোন AWS পরিষেবা সক্ষম করে?",
     "options": [
       "VPN Gateway",
       "AWS Direct Connect",
@@ -1226,14 +1226,14 @@
   {
     "category": "AWS",
     "set": 5,
-    "question": "পরিচালিত রিলেশনাল ডেটাবেস পরিষেবা কোন AWS পরিষেবা?",
+    "question": "Amazon RDS-এর কোন বৈশিষ্ট্য স্বয়ংক্রিয় ফেইলওভারের জন্য অন্য একটি Availability Zone-এ সিঙ্ক্রোনাস স্ট্যান্ডবাই রেপ্লিকা বজায় রাখে?",
     "options": [
-      "Amazon RDS",
-      "Amazon S3",
-      "Amazon DynamoDB",
-      "Amazon CloudFront"
+      "Multi-AZ deployment",
+      "Read replica",
+      "Manual snapshot",
+      "Parameter group"
     ],
-    "answer": "Amazon RDS"
+    "answer": "Multi-AZ deployment"
   },
   {
     "category": "AWS",
@@ -1262,14 +1262,14 @@
   {
     "category": "AWS",
     "set": 5,
-    "question": "কনটেন্ট ডেলিভারি নেটওয়ার্ক কোন AWS পরিষেবা?",
+    "question": "Amazon CloudFront-এর কোন বৈশিষ্ট্য নিশ্চিত করে যে একটি S3 origin শুধুমাত্র ডিস্ট্রিবিউশনের মাধ্যমে পড়া যাবে, সরাসরি নয়?",
     "options": [
-      "Amazon SNS",
-      "Amazon Route 53",
-      "Amazon CloudFront",
-      "AWS Snowball"
+      "Origin Access Control",
+      "S3 Transfer Acceleration",
+      "Route 53 alias record",
+      "Lambda@Edge"
     ],
-    "answer": "Amazon CloudFront"
+    "answer": "Origin Access Control"
   },
   {
     "category": "AWS",
@@ -1310,14 +1310,14 @@
   {
     "category": "AWS",
     "set": 5,
-    "question": "পরিচালিত মেসেজ কিউ কোন AWS পরিষেবা প্রদান করে?",
+    "question": "Amazon SQS-এর কোন কিউ ধরন কঠোরভাবে মেসেজের ক্রম বজায় রাখে এবং exactly-once প্রসেসিং সমর্থন করে?",
     "options": [
-      "Amazon SES",
-      "Amazon SQS",
-      "AWS KMS",
-      "Amazon EFS"
+      "Standard queue",
+      "FIFO queue",
+      "Delay queue",
+      "Dead-letter queue"
     ],
-    "answer": "Amazon SQS"
+    "answer": "FIFO queue"
   },
   {
     "category": "AWS",
@@ -1430,14 +1430,14 @@
   {
     "category": "AWS",
     "set": 5,
-    "question": "পেটাবাইট-স্কেল ডেটা ওয়্যারহাউস কোন AWS পরিষেবা?",
+    "question": "Amazon Redshift-এ একটি টেবিলের distribution key কী নিয়ন্ত্রণ করে?",
     "options": [
-      "Amazon DynamoDB",
-      "Amazon ElastiCache",
-      "Amazon Redshift",
-      "Amazon SQS"
+      "সারিগুলো কম্পিউট নোডগুলোর মধ্যে কীভাবে বিতরণ করা হয়",
+      "কোন IAM role COPY কমান্ড চালায়",
+      "স্বয়ংক্রিয় ব্যাকআপ কতদিন সংরক্ষিত থাকে",
+      "কোন KMS key ক্লাস্টারকে এনক্রিপ্ট করে"
     ],
-    "answer": "Amazon Redshift"
+    "answer": "সারিগুলো কম্পিউট নোডগুলোর মধ্যে কীভাবে বিতরণ করা হয়"
   },
   {
     "category": "AWS",
@@ -1478,7 +1478,7 @@
   {
     "category": "AWS",
     "set": 5,
-    "question": "ডেটাবেস পাসওয়ার্ডের মতো গোপন তথ্য কোন AWS পরিষেবা সংরক্ষণ ও ঘোরায়?",
+    "question": "ডেটাবেস পাসওয়ার্ডের মতো গোপন তথ্য কোন AWS পরিষেবা সংরক্ষণ ও রোটেট করে?",
     "options": [
       "AWS CloudTrail",
       "AWS Secrets Manager",
@@ -1490,13 +1490,13 @@
   {
     "category": "AWS",
     "set": 5,
-    "question": "পরিচালিত Apache Kafka কোন AWS পরিষেবা প্রদান করে?",
+    "question": "একটি Amazon MSK ক্লাস্টারে কোন নোডগুলো topic partition সংরক্ষণ করে এবং Kafka producer ও consumer-দের সেবা দেয়?",
     "options": [
-      "Amazon S3",
-      "Amazon EBS",
-      "AWS KMS",
-      "Amazon MSK"
+      "Broker nodes",
+      "NAT gateways",
+      "Bastion hosts",
+      "Glue crawlers"
     ],
-    "answer": "Amazon MSK"
+    "answer": "Broker nodes"
   }
 ]

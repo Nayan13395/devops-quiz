@@ -1,0 +1,877 @@
+[
+  {
+    "category": "Ansible",
+    "set": 1,
+    "question": "ما الاستخدام الأساسي لـ Ansible؟",
+    "options": ["إدارة التكوين", "الحاويات", "إدارة قواعد البيانات", "المراقبة"],
+    "answer": "إدارة التكوين"
+  },
+  {
+    "category": "Ansible",
+    "set": 1,
+    "question": "بأي لغة كُتب Ansible؟",
+    "options": ["Python", "Java", "Go", "Ruby"],
+    "answer": "Python"
+  },
+  {
+    "category": "Ansible",
+    "set": 1,
+    "question": "أي ملف يحتوي على المضيفين المُدارين في Ansible؟",
+    "options": ["ملف Inventory", "Playbook", "Role", "Module"],
+    "answer": "ملف Inventory"
+  },
+  {
+    "category": "Ansible",
+    "set": 1,
+    "question": "ما المسار الافتراضي لملف Inventory؟",
+    "options": ["/etc/ansible/hosts", "/etc/hosts", "/ansible/hosts", "/usr/ansible/hosts"],
+    "answer": "/etc/ansible/hosts"
+  },
+  {
+    "category": "Ansible",
+    "set": 1,
+    "question": "أي أمر يتحقق من إصدار Ansible؟",
+    "options": ["ansible --version", "ansible version", "ansible -v", "ansible check"],
+    "answer": "ansible --version"
+  },
+  {
+    "category": "Ansible",
+    "set": 1,
+    "question": "أي بروتوكول يستخدمه Ansible افتراضيًا؟",
+    "options": ["SSH", "FTP", "Telnet", "HTTP"],
+    "answer": "SSH"
+  },
+  {
+    "category": "Ansible",
+    "set": 1,
+    "question": "ما هو Ansible Playbook؟",
+    "options": ["ملف YAML يحتوي على مهام الأتمتة", "ملف Inventory", "سكريبت Python", "ملف تكوين"],
+    "answer": "ملف YAML يحتوي على مهام الأتمتة"
+  },
+  {
+    "category": "Ansible",
+    "set": 1,
+    "question": "أي أمر يشغّل Ansible playbook؟",
+    "options": ["ansible-playbook", "ansible-run", "ansible-execute", "ansible-start"],
+    "answer": "ansible-playbook"
+  },
+  {
+    "category": "Ansible",
+    "set": 1,
+    "question": "أي كلمة مفتاحية تحدد المضيفين المستهدفين في playbook؟",
+    "options": ["hosts", "servers", "nodes", "targets"],
+    "answer": "hosts"
+  },
+  {
+    "category": "Ansible",
+    "set": 1,
+    "question": "أي كلمة مفتاحية تحدد المهام في playbook؟",
+    "options": ["tasks", "actions", "jobs", "steps"],
+    "answer": "tasks"
+  },
+  {
+    "category": "Ansible",
+    "set": 1,
+    "question": "أي وحدة (module) تنسخ الملفات إلى المضيفين البعيدين؟",
+    "options": ["copy", "fetch", "file", "transfer"],
+    "answer": "copy"
+  },
+  {
+    "category": "Ansible",
+    "set": 1,
+    "question": "أي وحدة (module) تدير الخدمات؟",
+    "options": ["service", "systemctl", "daemon", "process"],
+    "answer": "service"
+  },
+  {
+    "category": "Ansible",
+    "set": 1,
+    "question": "أي أمر يختبر الاتصال بجميع المضيفين؟",
+    "options": ["ansible all -m ping", "ansible ping", "ansible test", "ansible connect"],
+    "answer": "ansible all -m ping"
+  },
+  {
+    "category": "Ansible",
+    "set": 1,
+    "question": "بأي صيغة تُكتب Ansible playbooks؟",
+    "options": ["YAML", "JSON", "XML", "INI"],
+    "answer": "YAML"
+  },
+  {
+    "category": "Ansible",
+    "set": 1,
+    "question": "أي ملف يضبط إعدادات Ansible؟",
+    "options": ["ansible.cfg", "ansible.conf", "config.yml", "ansible.ini"],
+    "answer": "ansible.cfg"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "أي كلمة مفتاحية تُستخدم لتعريف المتغيرات في playbook؟",
+    "options": ["vars", "variables", "var", "define"],
+    "answer": "vars"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "ما الصيغة المستخدمة للإشارة إلى متغير؟",
+    "options": ["{{ variable_name }}", "$(variable_name)", "${variable_name}", "[variable_name]"],
+    "answer": "{{ variable_name }}"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "أي وحدة (module) تُستخدم لعرض الرسائل أثناء التنفيذ؟",
+    "options": ["debug", "print", "echo", "message"],
+    "answer": "debug"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "أي كلمة مفتاحية تُستخدم للتنفيذ المشروط؟",
+    "options": ["when", "if", "condition", "check"],
+    "answer": "when"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "أي كلمة مفتاحية تُستخدم لتكرار مهمة؟",
+    "options": ["loop", "repeat", "iterate", "for"],
+    "answer": "loop"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "أي متغير يحتوي على عنصر الحلقة الحالي؟",
+    "options": ["item", "loopitem", "current", "value"],
+    "answer": "item"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "أي وحدة (module) تنشئ ملفات من قوالب Jinja2؟",
+    "options": ["template", "copy", "render", "jinja"],
+    "answer": "template"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "أي محرك قوالب يستخدمه Ansible؟",
+    "options": ["Jinja2", "Mustache", "Velocity", "Smarty"],
+    "answer": "Jinja2"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "أي كلمة مفتاحية تسجل مخرجات المهمة في متغير؟",
+    "options": ["register", "save", "output", "store"],
+    "answer": "register"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "أي كلمة مفتاحية تتجاهل إخفاقات المهام؟",
+    "options": ["ignore_errors", "skip_errors", "continue", "ignore_failures"],
+    "answer": "ignore_errors"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "أي كلمة مفتاحية تُستخدم لتنفيذ المهام فقط عند الإشعار؟",
+    "options": ["handlers", "notify", "trigger", "events"],
+    "answer": "handlers"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "أي كلمة مفتاحية تُشغّل handler؟",
+    "options": ["notify", "handler", "alert", "call"],
+    "answer": "notify"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "أي كلمة مفتاحية تستورد playbook آخر؟",
+    "options": ["import_playbook", "include_playbook", "load_playbook", "playbook"],
+    "answer": "import_playbook"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "أي كلمة مفتاحية تضع وسومًا على المهام للتنفيذ الانتقائي؟",
+    "options": ["tags", "labels", "groups", "filter"],
+    "answer": "tags"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "أي خيار يشغّل المهام ذات وسوم محددة فقط؟",
+    "options": ["--tags", "--tag", "--filter", "--task"],
+    "answer": "--tags"
+  },
+  {
+    "category": "Ansible",
+    "set": 3,
+    "question": "ما هو Ansible Role؟",
+    "options": ["مجموعة قابلة لإعادة الاستخدام من المهام والملفات", "حساب مستخدم", "مجموعة في Inventory", "متغير في playbook"],
+    "answer": "مجموعة قابلة لإعادة الاستخدام من المهام والملفات"
+  },
+  {
+    "category": "Ansible",
+    "set": 3,
+    "question": "أي أمر ينشئ هيكل role جديدًا؟",
+    "options": ["ansible-galaxy init", "ansible role create", "ansible init role", "ansible-playbook init"],
+    "answer": "ansible-galaxy init"
+  },
+  {
+    "category": "Ansible",
+    "set": 3,
+    "question": "أي مجلد يحتوي على مهام role؟",
+    "options": ["tasks", "handlers", "files", "vars"],
+    "answer": "tasks"
+  },
+  {
+    "category": "Ansible",
+    "set": 3,
+    "question": "أي ملف هو ملف المهام الرئيسي في role؟",
+    "options": ["tasks/main.yml", "tasks/tasks.yml", "main/tasks.yml", "role.yml"],
+    "answer": "tasks/main.yml"
+  },
+  {
+    "category": "Ansible",
+    "set": 3,
+    "question": "أي مجلد يحتوي على handlers الخاصة بـ role؟",
+    "options": ["handlers", "tasks", "events", "notify"],
+    "answer": "handlers"
+  },
+  {
+    "category": "Ansible",
+    "set": 3,
+    "question": "أي مجلد يخزن قوالب Jinja2 في role؟",
+    "options": ["templates", "files", "jinja", "render"],
+    "answer": "templates"
+  },
+  {
+    "category": "Ansible",
+    "set": 3,
+    "question": "أي مجلد يخزن الملفات الثابتة في role؟",
+    "options": ["files", "templates", "static", "resources"],
+    "answer": "files"
+  },
+  {
+    "category": "Ansible",
+    "set": 3,
+    "question": "أي مجلد يحتوي على متغيرات role؟",
+    "options": ["vars", "variables", "config", "settings"],
+    "answer": "vars"
+  },
+  {
+    "category": "Ansible",
+    "set": 3,
+    "question": "أي مجلد يحتوي على المتغيرات الافتراضية؟",
+    "options": ["defaults", "vars", "config", "settings"],
+    "answer": "defaults"
+  },
+  {
+    "category": "Ansible",
+    "set": 3,
+    "question": "أي كلمة مفتاحية تُستخدم لتضمين roles في playbook؟",
+    "options": ["roles", "include_role", "role", "import_role"],
+    "answer": "roles"
+  },
+  {
+    "category": "Ansible",
+    "set": 3,
+    "question": "ما هو Ansible Galaxy؟",
+    "options": ["مستودع لـ roles و collections الخاصة بـ Ansible", "أداة مراقبة", "منصة CI/CD", "مدير Inventory"],
+    "answer": "مستودع لـ roles و collections الخاصة بـ Ansible"
+  },
+  {
+    "category": "Ansible",
+    "set": 3,
+    "question": "أي أمر يثبّت role من Galaxy؟",
+    "options": ["ansible-galaxy install", "ansible install role", "ansible role add", "ansible-galaxy add"],
+    "answer": "ansible-galaxy install"
+  },
+  {
+    "category": "Ansible",
+    "set": 3,
+    "question": "فيمَ يُستخدم Ansible Vault؟",
+    "options": ["تشفير البيانات الحساسة", "إدارة Inventories", "تشغيل playbooks", "تثبيت roles"],
+    "answer": "تشفير البيانات الحساسة"
+  },
+  {
+    "category": "Ansible",
+    "set": 3,
+    "question": "أي أمر يشفّر ملفًا موجودًا؟",
+    "options": ["ansible-vault encrypt", "ansible-vault secure", "ansible-vault create", "ansible-vault lock"],
+    "answer": "ansible-vault encrypt"
+  },
+  {
+    "category": "Ansible",
+    "set": 3,
+    "question": "ما هي Ansible Collections؟",
+    "options": ["حزم تحتوي على roles و modules و plugins", "مجموعات Inventory", "ملفات مشفرة", "متغيرات YAML"],
+    "answer": "حزم تحتوي على roles و modules و plugins"
+  },
+  {
+    "category": "Ansible",
+    "set": 4,
+    "question": "ما هو AWX؟",
+    "options": ["منصة Ansible Automation مفتوحة المصدر", "أداة مراقبة", "بيئة تشغيل حاويات", "نظام التحكم في الإصدارات"],
+    "answer": "منصة Ansible Automation مفتوحة المصدر"
+  },
+  {
+    "category": "Ansible",
+    "set": 4,
+    "question": "ما الاسم الحالي لـ Ansible Tower؟",
+    "options": ["Red Hat Ansible Automation Platform", "Ansible Galaxy", "AWX Enterprise", "Automation Hub"],
+    "answer": "Red Hat Ansible Automation Platform"
+  },
+  {
+    "category": "Ansible",
+    "set": 4,
+    "question": "ما هو Dynamic Inventory؟",
+    "options": ["Inventory يُنشأ تلقائيًا من مزودي الخدمات السحابية", "ملف مضيفين ثابت", "Inventory مشفر", "Inventory قائم على الأدوار"],
+    "answer": "Inventory يُنشأ تلقائيًا من مزودي الخدمات السحابية"
+  },
+  {
+    "category": "Ansible",
+    "set": 4,
+    "question": "أي أمر يتحقق من صياغة playbook؟",
+    "options": ["ansible-playbook --syntax-check", "ansible-playbook --validate", "ansible-playbook check", "ansible validate"],
+    "answer": "ansible-playbook --syntax-check"
+  },
+  {
+    "category": "Ansible",
+    "set": 4,
+    "question": "أي خيار ينفذ تشغيلًا تجريبيًا لـ playbook؟",
+    "options": ["--check", "--dry", "--test", "--simulate"],
+    "answer": "--check"
+  },
+  {
+    "category": "Ansible",
+    "set": 4,
+    "question": "أي خيار يعرض الفروقات في الملفات المُدارة؟",
+    "options": ["--diff", "--compare", "--changes", "--show-diff"],
+    "answer": "--diff"
+  },
+  {
+    "category": "Ansible",
+    "set": 4,
+    "question": "ما استراتيجية التنفيذ الافتراضية في Ansible؟",
+    "options": ["linear", "free", "parallel", "serial"],
+    "answer": "linear"
+  },
+  {
+    "category": "Ansible",
+    "set": 4,
+    "question": "أي خيار يقصر تنفيذ playbook على مضيفين محددين؟",
+    "options": ["--limit", "--hosts", "--target", "--group"],
+    "answer": "--limit"
+  },
+  {
+    "category": "Ansible",
+    "set": 4,
+    "question": "أي نوع من plugins يتحكم في سلوك تنفيذ المهام؟",
+    "options": ["Strategy Plugin", "Filter Plugin", "Callback Plugin", "Lookup Plugin"],
+    "answer": "Strategy Plugin"
+  },
+  {
+    "category": "Ansible",
+    "set": 4,
+    "question": "أي plugin يجلب البيانات من مصادر خارجية؟",
+    "options": ["Lookup Plugin", "Callback Plugin", "Connection Plugin", "Action Plugin"],
+    "answer": "Lookup Plugin"
+  },
+  {
+    "category": "Ansible",
+    "set": 4,
+    "question": "أي plugin يعدّل بيانات المتغيرات؟",
+    "options": ["Filter Plugin", "Lookup Plugin", "Action Plugin", "Connection Plugin"],
+    "answer": "Filter Plugin"
+  },
+  {
+    "category": "Ansible",
+    "set": 4,
+    "question": "أي وحدة (module) تدير حاويات Docker؟",
+    "options": ["docker_container", "docker", "container", "docker_manage"],
+    "answer": "docker_container"
+  },
+  {
+    "category": "Ansible",
+    "set": 4,
+    "question": "أي وحدة (module) تدير موارد Kubernetes؟",
+    "options": ["k8s", "kubectl", "kubernetes", "cluster"],
+    "answer": "k8s"
+  },
+  {
+    "category": "Ansible",
+    "set": 4,
+    "question": "ما هو مفهوم idempotency في Ansible؟",
+    "options": ["تشغيل المهام مرارًا دون تغيير الحالة المطلوبة", "تشفير playbooks", "إنشاء Inventories", "إدارة roles"],
+    "answer": "تشغيل المهام مرارًا دون تغيير الحالة المطلوبة"
+  },
+  {
+    "category": "Ansible",
+    "set": 4,
+    "question": "أي أمر يعرض جميع وحدات Ansible المتاحة؟",
+    "options": ["ansible-doc -l", "ansible modules", "ansible-list", "ansible-help modules"],
+    "answer": "ansible-doc -l"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "أي أمر فرعي في ansible-vault يغيّر كلمة مرور ملف مشفّر بالفعل؟",
+    "options": ["rekey", "decrypt", "view", "create"],
+    "answer": "rekey"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "أي أمر يرسل ping إلى جميع المضيفين في Inventory باستخدام أمر ad-hoc؟",
+    "options": ["ansible-playbook ping", "ansible-ping all", "ansible all -m ping", "ansible --ping-all"],
+    "answer": "ansible all -m ping"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "ما الذي يسرد المضيفين الذين يديرهم Ansible؟",
+    "options": ["Role", "Playbook", "Inventory", "Vault"],
+    "answer": "Inventory"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "أي أداة تشفّر البيانات الحساسة في Ansible؟",
+    "options": ["Ansible Lint", "Ansible Galaxy", "Ansible Doc", "Ansible Vault"],
+    "answer": "Ansible Vault"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "فيمَ تُستخدم handlers؟",
+    "options": ["إنشاء Inventories", "الاتصال عبر SSH", "تعريف المتغيرات", "مهام تعمل فقط عند الإشعار"],
+    "answer": "مهام تعمل فقط عند الإشعار"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "أي كلمة مفتاحية تكرر على قائمة في Ansible الحديث؟",
+    "options": ["iterate", "loop", "foreach", "repeat"],
+    "answer": "loop"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "أي وحدة (module) تثبّت الحزم على الأنظمة المبنية على Debian؟",
+    "options": ["apt", "dnf", "pacman", "yum"],
+    "answer": "apt"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "كيف يتصل Ansible عادةً بمضيفي Linux؟",
+    "options": ["SSH", "SNMP", "RDP", "وكيل (agent) مخصص"],
+    "answer": "SSH"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "أي أمر يفحص الصياغة النحوية لـ playbook؟",
+    "options": ["ansible-playbook --syntax-check", "ansible-playbook --validate", "ansible-check play.yml", "ansible-lint --run"],
+    "answer": "ansible-playbook --syntax-check"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "ماذا تعني idempotency في Ansible؟",
+    "options": ["تشغيل المهام بالتوازي", "تشفير المتغيرات", "جمع الحقائق (facts)", "تشغيل مهمة مرارًا يعطي النتيجة نفسها"],
+    "answer": "تشغيل مهمة مرارًا يعطي النتيجة نفسها"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "أي بنية تحزّم محتوى الأتمتة القابل لإعادة الاستخدام؟",
+    "options": ["Role", "Callback", "Inventory", "Fact"],
+    "answer": "Role"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "أي وحدة (module) تنسخ ملفًا من عقدة التحكم إلى مضيف بعيد؟",
+    "options": ["fetch", "copy", "debug", "shell"],
+    "answer": "copy"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "أي كلمة مفتاحية تشغّل مهمة بصلاحيات مرتفعة؟",
+    "options": ["become", "sudo_all", "elevate", "root"],
+    "answer": "become"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "أي أداة تنزّل roles و collections المجتمعية؟",
+    "options": ["ansible-pull", "ansible-doc", "ansible-galaxy", "ansible-vault"],
+    "answer": "ansible-galaxy"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "أي خيار يقصر التشغيل على مضيفين محددين؟",
+    "options": ["--limit", "--only", "--target", "--hosts-only"],
+    "answer": "--limit"
+  },
+  {
+    "category": "Ansible",
+    "set": 1,
+    "question": "أي كلمة مفتاحية تفعّل رفع الصلاحيات لمهمة Ansible؟",
+    "options": ["become: true", "delegate_to", "run_once", "check_mode"],
+    "answer": "become: true"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "نمط اختيار المضيفين في Ansible playbook",
+    "options": ["--limit", "loop_var", "register", "defaults"],
+    "answer": "--limit"
+  },
+  {
+    "category": "Ansible",
+    "set": 3,
+    "question": "سلوك استراتيجية free في Ansible",
+    "options": ["free", "--limit", "loop_var", "register"],
+    "answer": "free"
+  },
+  {
+    "category": "Ansible",
+    "set": 4,
+    "question": "مفتاح جمع الحقائق في Ansible",
+    "options": ["gather_facts", "--limit", "loop_var", "register"],
+    "answer": "gather_facts"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "إعداد forks في Ansible",
+    "options": ["forks", "--limit", "loop_var", "register"],
+    "answer": "forks"
+  },
+  {
+    "category": "Ansible",
+    "set": 1,
+    "question": "أي كلمة مفتاحية تشغّل مهمة Ansible فقط عندما يكون الشرط صحيحًا؟",
+    "options": ["when", "until", "notify", "tags"],
+    "answer": "when"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "متغير عنصر الحلقة في Ansible",
+    "options": ["loop_var", "--limit", "register", "defaults"],
+    "answer": "loop_var"
+  },
+  {
+    "category": "Ansible",
+    "set": 3,
+    "question": "سلوك استراتيجية linear في Ansible",
+    "options": ["linear", "--limit", "loop_var", "register"],
+    "answer": "linear"
+  },
+  {
+    "category": "Ansible",
+    "set": 4,
+    "question": "غرض ذاكرة التخزين المؤقت للحقائق (fact cache) في Ansible",
+    "options": ["إعادة استخدام الحقائق التي تم جمعها", "--limit", "loop_var", "register"],
+    "answer": "إعادة استخدام الحقائق التي تم جمعها"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "سلوك وضع الفحص (check-mode) في Ansible",
+    "options": ["التنبؤ بالتغييرات دون تطبيقها", "--limit", "loop_var", "register"],
+    "answer": "التنبؤ بالتغييرات دون تطبيقها"
+  },
+  {
+    "category": "Ansible",
+    "set": 1,
+    "question": "أي وحدة مدمجة تجمع الحقائق من المضيفين المُدارين؟",
+    "options": ["ansible.builtin.setup", "ansible.builtin.copy", "ansible.builtin.command", "ansible.builtin.debug"],
+    "answer": "ansible.builtin.setup"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "تسجيل نتيجة المهمة في Ansible",
+    "options": ["register", "--limit", "loop_var", "defaults"],
+    "answer": "register"
+  },
+  {
+    "category": "Ansible",
+    "set": 3,
+    "question": "إعداد الدفعات المتدرجة في Ansible",
+    "options": ["serial", "--limit", "loop_var", "register"],
+    "answer": "serial"
+  },
+  {
+    "category": "Ansible",
+    "set": 4,
+    "question": "تفويض الاتصال في Ansible",
+    "options": ["delegate_to", "--limit", "loop_var", "register"],
+    "answer": "delegate_to"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "مخرجات وحدة template في Ansible",
+    "options": ["توليد قالب Jinja2", "--limit", "loop_var", "register"],
+    "answer": "توليد قالب Jinja2"
+  },
+  {
+    "category": "Ansible",
+    "set": 1,
+    "question": "أي كلمة مفتاحية تكرر مهمة لكل عنصر في قائمة؟",
+    "options": ["loop", "serial", "block", "role"],
+    "answer": "loop"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "أسبقية defaults في role بـ Ansible",
+    "options": ["defaults", "--limit", "loop_var", "register"],
+    "answer": "defaults"
+  },
+  {
+    "category": "Ansible",
+    "set": 3,
+    "question": "الاستعلام الدوري للمهمة غير المتزامنة في Ansible",
+    "options": ["async مع poll", "--limit", "loop_var", "register"],
+    "answer": "async مع poll"
+  },
+  {
+    "category": "Ansible",
+    "set": 4,
+    "question": "وضع الاتصال المحلي في Ansible",
+    "options": ["connection: local", "--limit", "loop_var", "register"],
+    "answer": "connection: local"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "غرض وحدة copy في Ansible",
+    "options": ["نسخ ملف من المتحكم إلى المضيفين", "--limit", "loop_var", "register"],
+    "answer": "نسخ ملف من المتحكم إلى المضيفين"
+  },
+  {
+    "category": "Ansible",
+    "set": 1,
+    "question": "أي كلمة مفتاحية تحفظ نتيجة المهمة في متغير؟",
+    "options": ["register", "vars", "facts", "include"],
+    "answer": "register"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "أسبقية vars في role بـ Ansible",
+    "options": ["vars", "--limit", "loop_var", "register"],
+    "answer": "vars"
+  },
+  {
+    "category": "Ansible",
+    "set": 3,
+    "question": "المجموعات الفرعية في Inventory بـ Ansible",
+    "options": ["children", "--limit", "loop_var", "register"],
+    "answer": "children"
+  },
+  {
+    "category": "Ansible",
+    "set": 4,
+    "question": "المستخدم المستهدف لرفع الصلاحيات في Ansible",
+    "options": ["become_user", "--limit", "loop_var", "register"],
+    "answer": "become_user"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "اتجاه عمل وحدة fetch في Ansible",
+    "options": ["نسخ ملف بعيد إلى المتحكم", "--limit", "loop_var", "register"],
+    "answer": "نسخ ملف بعيد إلى المتحكم"
+  },
+  {
+    "category": "Ansible",
+    "set": 1,
+    "question": "أي كلمة مفتاحية تجعل المهمة تُشعر handler بعد حدوث تغيير؟",
+    "options": ["notify", "listen", "changed_when", "rescue"],
+    "answer": "notify"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "التضمين الديناميكي لـ role في Ansible",
+    "options": ["include_role", "--limit", "loop_var", "register"],
+    "answer": "include_role"
+  },
+  {
+    "category": "Ansible",
+    "set": 3,
+    "question": "ملف متغيرات المضيف في Inventory بـ Ansible",
+    "options": ["host_vars", "--limit", "loop_var", "register"],
+    "answer": "host_vars"
+  },
+  {
+    "category": "Ansible",
+    "set": 4,
+    "question": "اختيار وسوم المهام في Ansible",
+    "options": ["--tags", "--limit", "loop_var", "register"],
+    "answer": "--tags"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "وسيلة نقل وحدة synchronize في Ansible",
+    "options": ["rsync عبر SSH", "--limit", "loop_var", "register"],
+    "answer": "rsync عبر SSH"
+  },
+  {
+    "category": "Ansible",
+    "set": 1,
+    "question": "أي خيار في سطر الأوامر يقصر تشغيل playbook على مضيفين محددين؟",
+    "options": ["--limit", "--list-hosts", "--syntax-check", "--flush-cache"],
+    "answer": "--limit"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "الاستيراد الثابت لـ role في Ansible",
+    "options": ["import_role", "--limit", "loop_var", "register"],
+    "answer": "import_role"
+  },
+  {
+    "category": "Ansible",
+    "set": 3,
+    "question": "ملف متغيرات المجموعة في Inventory بـ Ansible",
+    "options": ["group_vars", "--limit", "loop_var", "register"],
+    "answer": "group_vars"
+  },
+  {
+    "category": "Ansible",
+    "set": 4,
+    "question": "خيار تخطي الوسوم في Ansible",
+    "options": ["--skip-tags", "--limit", "loop_var", "register"],
+    "answer": "--skip-tags"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "التعافي من أخطاء block في Ansible",
+    "options": ["التعافي من block فاشل", "--limit", "loop_var", "register"],
+    "answer": "التعافي من block فاشل"
+  },
+  {
+    "category": "Ansible",
+    "set": 1,
+    "question": "أي أداة Ansible تشفّر المتغيرات والملفات الحساسة؟",
+    "options": ["ansible-vault", "ansible-galaxy", "ansible-doc", "ansible-inventory"],
+    "answer": "ansible-vault"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "أمر تفريغ handlers في Ansible",
+    "options": ["meta: flush_handlers", "--limit", "loop_var", "register"],
+    "answer": "meta: flush_handlers"
+  },
+  {
+    "category": "Ansible",
+    "set": 3,
+    "question": "التحقق من صياغة Ansible playbook",
+    "options": ["ansible-playbook --syntax-check", "--limit", "loop_var", "register"],
+    "answer": "ansible-playbook --syntax-check"
+  },
+  {
+    "category": "Ansible",
+    "set": 4,
+    "question": "صيغة مساحة اسم collection في Ansible",
+    "options": ["namespace.collection", "--limit", "loop_var", "register"],
+    "answer": "namespace.collection"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "سلوك قسم always في Ansible",
+    "options": ["التشغيل بغض النظر عن نتيجة block", "--limit", "loop_var", "register"],
+    "answer": "التشغيل بغض النظر عن نتيجة block"
+  },
+  {
+    "category": "Ansible",
+    "set": 1,
+    "question": "أي خيار يفحص التغييرات المقترحة لـ playbook دون تطبيقها؟",
+    "options": ["--check", "--diff-only", "--force", "--step"],
+    "answer": "--check"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "تجاوز فشل المهمة في Ansible",
+    "options": ["ignore_errors", "--limit", "loop_var", "register"],
+    "answer": "ignore_errors"
+  },
+  {
+    "category": "Ansible",
+    "set": 3,
+    "question": "أداة المتغيرات المشفرة في Ansible",
+    "options": ["ansible-vault", "--limit", "loop_var", "register"],
+    "answer": "ansible-vault"
+  },
+  {
+    "category": "Ansible",
+    "set": 4,
+    "question": "أمر توثيق وحدات Ansible",
+    "options": ["ansible-doc", "--limit", "loop_var", "register"],
+    "answer": "ansible-doc"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "سلوك قسم rescue في Ansible",
+    "options": ["التشغيل فقط بعد فشل block", "--limit", "loop_var", "register"],
+    "answer": "التشغيل فقط بعد فشل block"
+  },
+  {
+    "category": "Ansible",
+    "set": 1,
+    "question": "أي كلمة مفتاحية تشغّل مهمة مرة واحدة للدفعة الحالية من المضيفين؟",
+    "options": ["run_once: true", "serial: 1", "throttle: 1", "any_errors_fatal: true"],
+    "answer": "run_once: true"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "تجاوز حالة التغيير للمهمة في Ansible",
+    "options": ["changed_when", "--limit", "loop_var", "register"],
+    "answer": "changed_when"
+  },
+  {
+    "category": "Ansible",
+    "set": 3,
+    "question": "معرّف كلمة مرور vault في Ansible",
+    "options": ["--vault-id", "--limit", "loop_var", "register"],
+    "answer": "--vault-id"
+  },
+  {
+    "category": "Ansible",
+    "set": 4,
+    "question": "اسم ملف تكوين Ansible",
+    "options": ["ansible.cfg", "--limit", "loop_var", "register"],
+    "answer": "ansible.cfg"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "معنى idempotence في Ansible",
+    "options": ["التطبيق المتكرر الآمن", "--limit", "loop_var", "register"],
+    "answer": "التطبيق المتكرر الآمن"
+  }
+]

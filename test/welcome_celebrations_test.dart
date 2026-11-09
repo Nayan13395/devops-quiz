@@ -7,6 +7,8 @@ import 'package:devops_quiz/widgets/celebration_country_picker.dart';
 import 'package:devops_quiz/widgets/festival_celebration.dart';
 import 'package:devops_quiz/services/festival_calendar_service.dart';
 import 'package:devops_quiz/services/national_day_service.dart';
+import 'package:devops_quiz/l10n/app_localizations.dart';
+import 'package:devops_quiz/screens/welcome_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter_test/flutter_test.dart';
@@ -198,6 +200,58 @@ void main() {
     },
   );
 
+  test('selected country shows its local festivals and shared observances', () {
+    final windows = FestivalCalendarService.windowsForYear(2026);
+    final diwali = windows.singleWhere(
+      (window) => window.kind == FestivalKind.diwali,
+    );
+    final diwaliDate = diwali.startsOn;
+    final halloweenDate = DateTime.utc(2026, 10, 31);
+
+    expect(
+      FestivalCalendarService.activeWindowsOn(
+        diwaliDate,
+        countryCode: 'IN',
+      ).any((window) => window.kind == FestivalKind.diwali),
+      isTrue,
+    );
+    expect(
+      FestivalCalendarService.activeWindowsOn(
+        diwaliDate,
+        countryCode: 'US',
+      ).any((window) => window.kind == FestivalKind.diwali),
+      isFalse,
+    );
+    expect(
+      FestivalCalendarService.activeWindowsOn(
+        halloweenDate,
+        countryCode: 'US',
+      ).any((window) => window.kind == FestivalKind.halloween),
+      isTrue,
+    );
+    expect(
+      FestivalCalendarService.activeWindowsOn(
+        halloweenDate,
+        countryCode: 'IN',
+      ).any((window) => window.kind == FestivalKind.halloween),
+      isFalse,
+    );
+    expect(
+      FestivalCalendarService.activeWindowsOn(
+        halloweenDate,
+        countryCode: 'US',
+      ).any((window) => window.label == 'World Animal Day'),
+      isFalse,
+    );
+    expect(
+      FestivalCalendarService.activeWindowsOn(
+        DateTime.utc(2026, 10, 4),
+        countryCode: 'US',
+      ).any((window) => window.kind == FestivalKind.animals),
+      isTrue,
+    );
+  });
+
   testWidgets('country picker can find and select India on a narrow phone', (
     tester,
   ) async {
@@ -276,6 +330,151 @@ void main() {
       expect(tapped, isTrue);
       expect(tester.takeException(), isNull);
       await tester.pumpWidget(const SizedBox.shrink());
+    }
+  });
+
+  testWidgets('Diwali lamps and kandils stay within compact welcome canvases', (
+    tester,
+  ) async {
+    final diwali = FestivalCalendarService.windowsForYear(
+      2026,
+    ).singleWhere((window) => window.kind == FestivalKind.diwali);
+    addTearDown(tester.view.resetPhysicalSize);
+    addTearDown(tester.view.resetDevicePixelRatio);
+    tester.view.devicePixelRatio = 1;
+
+    for (final viewport in [
+      const Size(320, 568),
+      const Size(844, 390),
+      const Size(1280, 800),
+    ]) {
+      tester.view.physicalSize = viewport;
+      final boundaryKey = GlobalKey();
+      await tester.pumpWidget(
+        MaterialApp(
+          home: Scaffold(
+            body: RepaintBoundary(
+              key: boundaryKey,
+              child: ColoredBox(
+                color: Colors.white,
+                child: Stack(
+                  children: [
+                    Positioned.fill(child: FestivalCelebration(window: diwali)),
+                    const Center(child: Text('Welcome controls')),
+                  ],
+                ),
+              ),
+            ),
+          ),
+        ),
+      );
+      await tester.pump(const Duration(milliseconds: 200));
+
+      final canvas = tester.getSize(find.byType(CustomPaint).first);
+      expect(canvas.width, lessThanOrEqualTo(viewport.width));
+      expect(canvas.height, lessThanOrEqualTo(viewport.height));
+      expect(find.text('Welcome controls'), findsOneWidget);
+      expect(tester.takeException(), isNull, reason: '$viewport');
+
+      final pixels = (await tester.runAsync(() async {
+        final boundary =
+            boundaryKey.currentContext!.findRenderObject()!
+                as RenderRepaintBoundary;
+        final image = await boundary.toImage();
+        try {
+          final rgba = (await image.toByteData(
+            format: ui.ImageByteFormat.rawRgba,
+          ))!;
+          final png = (await image.toByteData(format: ui.ImageByteFormat.png))!;
+          final output = File(
+            'build/diwali-festive-multicolor-${viewport.width.toInt()}.png',
+          );
+          await output.parent.create(recursive: true);
+          await output.writeAsBytes(png.buffer.asUint8List());
+          return rgba;
+        } finally {
+          image.dispose();
+        }
+      }))!;
+      final colorCounts = <int, int>{};
+      for (int offset = 0; offset < pixels.lengthInBytes; offset += 4) {
+        final rgb =
+            (pixels.getUint8(offset) << 16) |
+            (pixels.getUint8(offset + 1) << 8) |
+            pixels.getUint8(offset + 2);
+        colorCounts.update(rgb, (count) => count + 1, ifAbsent: () => 1);
+      }
+      for (final panel in [0xB43770, 0x268B84]) {
+        expect(
+          colorCounts[panel] ?? 0,
+          greaterThan(40),
+          reason: 'Panel at $viewport',
+        );
+      }
+      for (final fringe in [0xDB3A54, 0xF0A941, 0x6D9B46]) {
+        expect(
+          colorCounts[fringe] ?? 0,
+          greaterThan(8),
+          reason: 'Fringe at $viewport',
+        );
+      }
+      for (final leftEdge in [0, viewport.width.toInt() - 18]) {
+        for (int band = 0; band < 3; band++) {
+          final edgeColors = <int, int>{};
+          final top = (viewport.height * (0.2 + band * 0.2)).floor();
+          final bottom = (top + viewport.height * 0.15).floor();
+          for (int row = top; row < bottom; row++) {
+            for (int column = leftEdge; column < leftEdge + 18; column++) {
+              final offset = (row * viewport.width.toInt() + column) * 4;
+              final rgb =
+                  (pixels.getUint8(offset) << 16) |
+                  (pixels.getUint8(offset + 1) << 8) |
+                  pixels.getUint8(offset + 2);
+              edgeColors.update(rgb, (count) => count + 1, ifAbsent: () => 1);
+            }
+          }
+          for (final marigold in [0xF28C18, 0xFFD447]) {
+            expect(
+              edgeColors[marigold] ?? 0,
+              greaterThan(10),
+              reason: 'Side garland at $leftEdge, band $band, $viewport',
+            );
+          }
+        }
+      }
+      await tester.pumpWidget(const SizedBox.shrink());
+    }
+  });
+
+  testWidgets('Welcome screen fits compact phone and landscape layouts', (
+    tester,
+  ) async {
+    SharedPreferences.setMockInitialValues({});
+    addTearDown(tester.view.resetPhysicalSize);
+    addTearDown(tester.view.resetDevicePixelRatio);
+    tester.view.devicePixelRatio = 1;
+
+    for (final viewport in [const Size(320, 568), const Size(844, 390)]) {
+      tester.view.physicalSize = viewport;
+      await tester.pumpWidget(
+        MaterialApp(
+          localizationsDelegates: AppLocalizations.localizationsDelegates,
+          supportedLocales: AppLocalizations.supportedLocales,
+          home: const WelcomeScreen(),
+        ),
+      );
+      for (
+        int attempt = 0;
+        attempt < 30 && find.text('Continue as Guest').evaluate().isEmpty;
+        attempt++
+      ) {
+        await tester.pump(const Duration(milliseconds: 100));
+      }
+
+      expect(find.text('Continue as Guest'), findsOneWidget);
+      expect(tester.takeException(), isNull, reason: '$viewport');
+      await tester.pumpWidget(const SizedBox.shrink());
+      await tester.pump();
     }
   });
 

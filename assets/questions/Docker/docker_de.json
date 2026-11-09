@@ -1,0 +1,882 @@
+[
+  {
+    "category": "Docker",
+    "set": 1,
+    "question": "Welcher Befehl erstellt ein Docker-Image?",
+    "options": ["docker build", "docker run", "docker ps", "docker pull"],
+    "answer": "docker build"
+  },
+  {
+    "category": "Docker",
+    "set": 1,
+    "question": "Welcher Befehl startet einen Container im Detached-Modus?",
+    "options": ["docker run -d", "docker run -b", "docker run --bg", "docker run --background"],
+    "answer": "docker run -d"
+  },
+  {
+    "category": "Docker",
+    "set": 1,
+    "question": "Welcher Befehl startet einen Container im interaktiven Modus?",
+    "options": ["docker run -it", "docker run -i", "docker run -t", "docker run --interactive"],
+    "answer": "docker run -it"
+  },
+  {
+    "category": "Docker",
+    "set": 1,
+    "question": "Welcher Befehl listet alle Images einschließlich der Zwischen-Images auf?",
+    "options": ["docker images -a", "docker images --filter", "docker images -l", "docker images -q"],
+    "answer": "docker images -a"
+  },
+  {
+    "category": "Docker",
+    "set": 1,
+    "question": "Welcher Befehl entfernt alle gestoppten Container?",
+    "options": ["docker container prune", "docker rm -a", "docker rm --all", "docker clean"],
+    "answer": "docker container prune"
+  },
+  {
+    "category": "Docker",
+    "set": 1,
+    "question": "Welcher Befehl entfernt alle ungenutzten Images?",
+    "options": ["docker image prune", "docker rmi -a", "docker images --clean", "docker image clean"],
+    "answer": "docker image prune"
+  },
+  {
+    "category": "Docker",
+    "set": 1,
+    "question": "Welcher Befehl zeigt die Ressourcennutzung von Containern an?",
+    "options": ["docker stats", "docker top", "docker monitor", "docker usage"],
+    "answer": "docker stats"
+  },
+  {
+    "category": "Docker",
+    "set": 1,
+    "question": "Welcher Befehl zeigt die in einem Container laufenden Prozesse an?",
+    "options": ["docker top", "docker ps", "docker stats", "docker inspect"],
+    "answer": "docker top"
+  },
+  {
+    "category": "Docker",
+    "set": 1,
+    "question": "Welcher Befehl zeigt die Container-Logs an?",
+    "options": ["docker logs", "docker events", "docker output", "docker inspect"],
+    "answer": "docker logs"
+  },
+  {
+    "category": "Docker",
+    "set": 1,
+    "question": "Welcher Befehl untersucht einen Container oder ein Image?",
+    "options": ["docker inspect", "docker details", "docker info", "docker config"],
+    "answer": "docker inspect"
+  },
+  {
+    "category": "Docker",
+    "set": 1,
+    "question": "Welcher Befehl erstellt ein Docker-Netzwerk?",
+    "options": ["docker network create", "docker create network", "docker net add", "docker network build"],
+    "answer": "docker network create"
+  },
+  {
+    "category": "Docker",
+    "set": 1,
+    "question": "Welcher Befehl listet Docker-Netzwerke auf?",
+    "options": ["docker network ls", "docker networks", "docker net list", "docker show networks"],
+    "answer": "docker network ls"
+  },
+  {
+    "category": "Docker",
+    "set": 1,
+    "question": "Welcher Befehl erstellt ein Docker-Volume?",
+    "options": ["docker volume create", "docker storage create", "docker volume add", "docker create volume"],
+    "answer": "docker volume create"
+  },
+  {
+    "category": "Docker",
+    "set": 1,
+    "question": "Welcher Befehl listet Docker-Volumes auf?",
+    "options": ["docker volume ls", "docker volumes", "docker volume show", "docker storage ls"],
+    "answer": "docker volume ls"
+  },
+  {
+    "category": "Docker",
+    "set": 1,
+    "question": "Welcher Befehl zeigt Docker-Systeminformationen an?",
+    "options": ["docker info", "docker version", "docker status", "docker config"],
+    "answer": "docker info"
+  },
+  {
+    "category": "Docker",
+    "set": 2,
+    "question": "Welcher Befehl gibt die Docker-Version aus?",
+    "options": ["docker --version", "docker run", "docker ps", "docker pull"],
+    "answer": "docker --version"
+  },
+  {
+    "category": "Docker",
+    "set": 2,
+    "question": "Welcher Befehl zeigt die Docker-Version im JSON-Format an?",
+    "options": ["docker version --format json", "docker version -j", "docker version --json", "docker info --json"],
+    "answer": "docker version --format json"
+  },
+  {
+    "category": "Docker",
+    "set": 2,
+    "question": "Welcher Befehl listet nur Container-IDs auf?",
+    "options": ["docker ps -q", "docker ps --ids", "docker ps -i", "docker ps -s"],
+    "answer": "docker ps -q"
+  },
+  {
+    "category": "Docker",
+    "set": 2,
+    "question": "Welcher Befehl listet alle Container einschließlich gestoppter auf?",
+    "options": ["docker ps -a", "docker ps -l", "docker containers", "docker list"],
+    "answer": "docker ps -a"
+  },
+  {
+    "category": "Docker",
+    "set": 2,
+    "question": "Welcher Befehl erstellt einen Container, ohne ihn zu starten?",
+    "options": ["docker create", "docker run", "docker build", "docker start"],
+    "answer": "docker create"
+  },
+  {
+    "category": "Docker",
+    "set": 2,
+    "question": "Welcher Befehl startet einen vorhandenen, gestoppten Container?",
+    "options": ["docker start", "docker run", "docker create", "docker exec"],
+    "answer": "docker start"
+  },
+  {
+    "category": "Docker",
+    "set": 2,
+    "question": "Welcher Befehl stoppt einen laufenden Container ordnungsgemäß?",
+    "options": ["docker stop", "docker kill", "docker pause", "docker halt"],
+    "answer": "docker stop"
+  },
+  {
+    "category": "Docker",
+    "set": 2,
+    "question": "Welcher Befehl beendet einen Container zwangsweise?",
+    "options": ["docker kill", "docker stop", "docker terminate", "docker end"],
+    "answer": "docker kill"
+  },
+  {
+    "category": "Docker",
+    "set": 2,
+    "question": "Welcher Befehl startet einen Container neu?",
+    "options": ["docker restart", "docker reset", "docker reload", "docker rerun"],
+    "answer": "docker restart"
+  },
+  {
+    "category": "Docker",
+    "set": 2,
+    "question": "Welcher Befehl pausiert einen laufenden Container?",
+    "options": ["docker pause", "docker stop", "docker hold", "docker freeze"],
+    "answer": "docker pause"
+  },
+  {
+    "category": "Docker",
+    "set": 2,
+    "question": "Welcher Befehl setzt einen pausierten Container fort?",
+    "options": ["docker unpause", "docker resume", "docker start", "docker restart"],
+    "answer": "docker unpause"
+  },
+  {
+    "category": "Docker",
+    "set": 2,
+    "question": "Welcher Befehl entfernt einen Container?",
+    "options": ["docker rm", "docker stop", "docker delete", "docker clear"],
+    "answer": "docker rm"
+  },
+  {
+    "category": "Docker",
+    "set": 2,
+    "question": "Welcher Befehl entfernt ein Docker-Image?",
+    "options": ["docker rmi", "docker rm", "docker erase", "docker clean"],
+    "answer": "docker rmi"
+  },
+  {
+    "category": "Docker",
+    "set": 2,
+    "question": "Welcher Befehl zeigt den Verlauf eines Images an?",
+    "options": ["docker history", "docker layers", "docker image show", "docker inspect"],
+    "answer": "docker history"
+  },
+  {
+    "category": "Docker",
+    "set": 3,
+    "question": "Welcher Befehl listet laufende Container auf?",
+    "options": ["docker ps", "docker images", "docker start", "docker build"],
+    "answer": "docker ps"
+  },
+  {
+    "category": "Docker",
+    "set": 3,
+    "question": "Welcher Befehl führt einen Befehl in einem laufenden Container aus?",
+    "options": ["docker exec", "docker enter", "docker shell", "docker login"],
+    "answer": "docker exec"
+  },
+  {
+    "category": "Docker",
+    "set": 3,
+    "question": "Welcher Befehl verbindet sich mit einem laufenden Container?",
+    "options": ["docker attach", "docker connect", "docker exec", "docker join"],
+    "answer": "docker attach"
+  },
+  {
+    "category": "Docker",
+    "set": 3,
+    "question": "Welcher Befehl kopiert Dateien zwischen einem Container und dem Host?",
+    "options": ["docker cp", "docker copy", "docker transfer", "docker sync"],
+    "answer": "docker cp"
+  },
+  {
+    "category": "Docker",
+    "set": 3,
+    "question": "Welcher Befehl zeigt Docker-Ereignisse in Echtzeit an?",
+    "options": ["docker events", "docker logs", "docker monitor", "docker watch"],
+    "answer": "docker events"
+  },
+  {
+    "category": "Docker",
+    "set": 3,
+    "question": "Welcher Befehl speichert ein Image in einem tar-Archiv?",
+    "options": ["docker save", "docker export", "docker backup", "docker archive"],
+    "answer": "docker save"
+  },
+  {
+    "category": "Docker",
+    "set": 3,
+    "question": "Welcher Befehl lädt ein Image aus einem tar-Archiv?",
+    "options": ["docker load", "docker import", "docker restore", "docker pull"],
+    "answer": "docker load"
+  },
+  {
+    "category": "Docker",
+    "set": 3,
+    "question": "Welcher Befehl exportiert das Dateisystem eines Containers als tar-Archiv?",
+    "options": ["docker export", "docker save", "docker backup", "docker archive"],
+    "answer": "docker export"
+  },
+  {
+    "category": "Docker",
+    "set": 3,
+    "question": "Welcher Befehl importiert ein Tarball als Image?",
+    "options": ["docker import", "docker load", "docker pull", "docker build"],
+    "answer": "docker import"
+  },
+  {
+    "category": "Docker",
+    "set": 3,
+    "question": "Welcher Befehl erstellt ein Image aus den Änderungen eines Containers?",
+    "options": ["docker commit", "docker build", "docker save", "docker tag"],
+    "answer": "docker commit"
+  },
+  {
+    "category": "Docker",
+    "set": 3,
+    "question": "Welcher Befehl versieht ein Docker-Image mit einem Tag?",
+    "options": ["docker tag", "docker name", "docker commit", "docker label"],
+    "answer": "docker tag"
+  },
+  {
+    "category": "Docker",
+    "set": 3,
+    "question": "Welcher Befehl überträgt ein Image in eine Registry?",
+    "options": ["docker push", "docker upload", "docker publish", "docker send"],
+    "answer": "docker push"
+  },
+  {
+    "category": "Docker",
+    "set": 3,
+    "question": "Welcher Befehl meldet sich bei einer Docker-Registry an?",
+    "options": ["docker login", "docker auth", "docker connect", "docker signin"],
+    "answer": "docker login"
+  },
+  {
+    "category": "Docker",
+    "set": 3,
+    "question": "Welcher Befehl bereinigt ungenutzte Docker-Objekte?",
+    "options": ["docker system prune", "docker clean", "docker prune", "docker remove"],
+    "answer": "docker system prune"
+  },
+  {
+    "category": "Docker",
+    "set": 3,
+    "question": "Welcher Befehl zeigt die Docker-Festplattennutzung an?",
+    "options": ["docker system df", "docker disk", "docker usage", "docker info"],
+    "answer": "docker system df"
+  },
+  {
+    "category": "Docker",
+    "set": 4,
+    "question": "Welcher Befehl lädt ein Image von Docker Hub herunter?",
+    "options": ["docker pull", "docker fetch", "docker copy", "docker get"],
+    "answer": "docker pull"
+  },
+  {
+    "category": "Docker",
+    "set": 4,
+    "question": "Welcher Befehl lädt einen bestimmten Image-Tag herunter?",
+    "options": ["docker pull image:tag", "docker pull --tag tag", "docker pull -t tag", "docker get image:tag"],
+    "answer": "docker pull image:tag"
+  },
+  {
+    "category": "Docker",
+    "set": 4,
+    "question": "Welcher Befehl zeigt das Manifest eines Images aus einer Registry an, ohne das Image herunterzuladen?",
+    "options": ["docker manifest inspect", "docker pull --manifest", "docker image manifest", "docker show manifest"],
+    "answer": "docker manifest inspect"
+  },
+  {
+    "category": "Docker",
+    "set": 4,
+    "question": "Welcher Befehl listet Image-Digests auf?",
+    "options": ["docker images --digests", "docker digest", "docker image digest", "docker inspect digest"],
+    "answer": "docker images --digests"
+  },
+  {
+    "category": "Docker",
+    "set": 4,
+    "question": "Welcher Befehl entfernt alle ungenutzten Volumes?",
+    "options": ["docker volume prune", "docker volume clean", "docker prune volumes", "docker rm volume"],
+    "answer": "docker volume prune"
+  },
+  {
+    "category": "Docker",
+    "set": 4,
+    "question": "Welcher Befehl entfernt alle ungenutzten Netzwerke?",
+    "options": ["docker network prune", "docker prune network", "docker clean network", "docker rm network"],
+    "answer": "docker network prune"
+  },
+  {
+    "category": "Docker",
+    "set": 4,
+    "question": "Welcher Befehl zeigt die Nutzung des Build-Caches an?",
+    "options": ["docker builder du", "docker build cache", "docker cache usage", "docker builder stats"],
+    "answer": "docker builder du"
+  },
+  {
+    "category": "Docker",
+    "set": 4,
+    "question": "Welcher Befehl entfernt ungenutzten Build-Cache?",
+    "options": ["docker builder prune", "docker build clean", "docker cache prune", "docker prune build"],
+    "answer": "docker builder prune"
+  },
+  {
+    "category": "Docker",
+    "set": 4,
+    "question": "Welcher Befehl erstellt mit Buildx einen Image-Build für mehrere Plattformen?",
+    "options": ["docker buildx build", "docker build multi", "docker build platform", "docker image buildx"],
+    "answer": "docker buildx build"
+  },
+  {
+    "category": "Docker",
+    "set": 4,
+    "question": "Welcher Befehl listet verfügbare Buildx-Builder auf?",
+    "options": ["docker buildx ls", "docker buildx show", "docker builder ls", "docker buildx list"],
+    "answer": "docker buildx ls"
+  },
+  {
+    "category": "Docker",
+    "set": 4,
+    "question": "Welcher Befehl zeigt alle Docker-Kontexte an?",
+    "options": ["docker context ls", "docker contexts", "docker context show", "docker list context"],
+    "answer": "docker context ls"
+  },
+  {
+    "category": "Docker",
+    "set": 4,
+    "question": "Welcher Befehl wechselt zu einem anderen Docker-Kontext?",
+    "options": ["docker context use", "docker context switch", "docker use context", "docker context select"],
+    "answer": "docker context use"
+  },
+  {
+    "category": "Docker",
+    "set": 4,
+    "question": "Welcher Befehl entfernt einen Docker-Kontext?",
+    "options": ["docker context rm", "docker context delete", "docker remove context", "docker context erase"],
+    "answer": "docker context rm"
+  },
+  {
+    "category": "Docker",
+    "set": 4,
+    "question": "Welche Dockerfile-Anweisung legt das Basis-Image fest?",
+    "options": ["FROM", "BASE", "IMAGE", "START"],
+    "answer": "FROM"
+  },
+  {
+    "category": "Docker",
+    "set": 4,
+    "question": "Welche Dockerfile-Anweisung setzt Umgebungsvariablen?",
+    "options": ["ENV", "SET", "VAR", "EXPORT"],
+    "answer": "ENV"
+  },
+  {
+    "category": "Docker",
+    "set": 5,
+    "question": "Welcher Befehl zeigt die aktuelle CPU- und Speichernutzung laufender Container live an?",
+    "options": ["docker inspect -r", "docker stats", "docker usage", "docker top -m"],
+    "answer": "docker stats"
+  },
+  {
+    "category": "Docker",
+    "set": 5,
+    "question": "Welche Dockerfile-Anweisung stellt einen Standardbefehl bereit, der zur Laufzeit überschrieben werden kann?",
+    "options": ["COPY", "CMD", "LABEL", "RUN"],
+    "answer": "CMD"
+  },
+  {
+    "category": "Docker",
+    "set": 5,
+    "question": "Welche Dockerfile-Anweisung konfiguriert den Container so, dass er als ausführbare Datei läuft?",
+    "options": ["USER", "ENTRYPOINT", "EXPOSE", "ARG"],
+    "answer": "ENTRYPOINT"
+  },
+  {
+    "category": "Docker",
+    "set": 5,
+    "question": "Welche Dockerfile-Anweisung legt das Arbeitsverzeichnis für nachfolgende Anweisungen fest?",
+    "options": ["HOME", "CD", "WORKDIR", "PATH"],
+    "answer": "WORKDIR"
+  },
+  {
+    "category": "Docker",
+    "set": 5,
+    "question": "Welcher Befehl erstellt aus dem Dockerfile im aktuellen Verzeichnis ein Image mit dem Tag myapp?",
+    "options": ["docker build -t myapp .", "docker compile myapp", "docker make myapp", "docker create myapp ."],
+    "answer": "docker build -t myapp ."
+  },
+  {
+    "category": "Docker",
+    "set": 5,
+    "question": "Was bewirkt docker compose up -d?",
+    "options": ["Löscht alle Volumes", "Baut, ohne zu starten", "Startet Dienste im Hintergrund", "Stoppt alle Dienste"],
+    "answer": "Startet Dienste im Hintergrund"
+  },
+  {
+    "category": "Docker",
+    "set": 5,
+    "question": "Welche Speicheroption wird von Docker selbst erstellt und verwaltet?",
+    "options": ["Bind-Mount", "Benanntes Volume", "tmpfs-Mount", "Host-Verzeichnis"],
+    "answer": "Benanntes Volume"
+  },
+  {
+    "category": "Docker",
+    "set": 5,
+    "question": "Welcher Befehl gibt die Ausgabe-Logs eines Containers aus?",
+    "options": ["docker history", "docker diff", "docker events", "docker logs"],
+    "answer": "docker logs"
+  },
+  {
+    "category": "Docker",
+    "set": 5,
+    "question": "Welcher Netzwerktreiber wird standardmäßig für eigenständige Container verwendet?",
+    "options": ["macvlan", "bridge", "host", "overlay"],
+    "answer": "bridge"
+  },
+  {
+    "category": "Docker",
+    "set": 5,
+    "question": "Welche Dockerfile-Anweisung definiert eine Build-Zeit-Variable?",
+    "options": ["ARG", "VOLUME", "ENV", "SHELL"],
+    "answer": "ARG"
+  },
+  {
+    "category": "Docker",
+    "set": 5,
+    "question": "Was ist der Hauptvorteil eines Multi-Stage-Builds?",
+    "options": ["Verschlüsselung von Layern", "Planung von Jobs", "Ausführen vieler Container", "Kleinere finale Images"],
+    "answer": "Kleinere finale Images"
+  },
+  {
+    "category": "Docker",
+    "set": 5,
+    "question": "Welcher Befehl zeigt die Layer an, aus denen ein Image besteht?",
+    "options": ["docker tree", "docker history", "docker ps -l", "docker layers"],
+    "answer": "docker history"
+  },
+  {
+    "category": "Docker",
+    "set": 5,
+    "question": "Welche Datei schließt Dateien vom Docker-Build-Kontext aus?",
+    "options": ["Dockerfile.skip", ".gitignore", ".buildignore", ".dockerignore"],
+    "answer": ".dockerignore"
+  },
+  {
+    "category": "Docker",
+    "set": 5,
+    "question": "Welcher Befehl zeigt Low-Level-Details eines Containers oder Images als JSON an?",
+    "options": ["docker details", "docker describe", "docker show", "docker inspect"],
+    "answer": "docker inspect"
+  },
+  {
+    "category": "Docker",
+    "set": 1,
+    "question": "Welche docker-run-Option legt die Neustart-Richtlinie eines Containers fest?",
+    "options": ["--restart", "--detach", "--privileged", "--hostname"],
+    "answer": "--restart"
+  },
+  {
+    "category": "Docker",
+    "set": 2,
+    "question": "Referenz auf den Inhalts-Digest eines Docker-Images",
+    "options": ["sha256-Digest", "nur finale Artefakte in ein kleineres Image kopieren", "eine geänderte vorherige Schicht baut die folgenden Schichten neu", ".dockerignore"],
+    "answer": "sha256-Digest"
+  },
+  {
+    "category": "Docker",
+    "set": 3,
+    "question": "Neustart-Richtlinie für Docker-Container",
+    "options": ["Neustart-Richtlinie", "sha256-Digest", "nur finale Artefakte in ein kleineres Image kopieren", "eine geänderte vorherige Schicht baut die folgenden Schichten neu"],
+    "answer": "Neustart-Richtlinie"
+  },
+  {
+    "category": "Docker",
+    "set": 4,
+    "question": "Schreibgeschütztes Root-Dateisystem eines Docker-Containers",
+    "options": ["schreibgeschütztes Root-Dateisystem", "sha256-Digest", "nur finale Artefakte in ein kleineres Image kopieren", "eine geänderte vorherige Schicht baut die folgenden Schichten neu"],
+    "answer": "schreibgeschütztes Root-Dateisystem"
+  },
+  {
+    "category": "Docker",
+    "set": 5,
+    "question": "Gegenstück zum Docker-Image-Laden",
+    "options": ["docker load", "sha256-Digest", "nur finale Artefakte in ein kleineres Image kopieren", "eine geänderte vorherige Schicht baut die folgenden Schichten neu"],
+    "answer": "docker load"
+  },
+  {
+    "category": "Docker",
+    "set": 1,
+    "question": "Welcher Befehl startet einen neuen Prozess in einem bereits laufenden Container?",
+    "options": ["docker exec", "docker attach", "docker build", "docker commit"],
+    "answer": "docker exec"
+  },
+  {
+    "category": "Docker",
+    "set": 2,
+    "question": "Zweck eines Docker-Multi-Stage-Builds",
+    "options": ["nur finale Artefakte in ein kleineres Image kopieren", "sha256-Digest", "eine geänderte vorherige Schicht baut die folgenden Schichten neu", ".dockerignore"],
+    "answer": "nur finale Artefakte in ein kleineres Image kopieren"
+  },
+  {
+    "category": "Docker",
+    "set": 3,
+    "question": "Wiederverwendung von Docker-Image-Schichten",
+    "options": ["identische Schichten werden gemeinsam genutzt", "sha256-Digest", "nur finale Artefakte in ein kleineres Image kopieren", "eine geänderte vorherige Schicht baut die folgenden Schichten neu"],
+    "answer": "identische Schichten werden gemeinsam genutzt"
+  },
+  {
+    "category": "Docker",
+    "set": 4,
+    "question": "Docker-Flag für das Speicherlimit",
+    "options": ["--memory", "sha256-Digest", "nur finale Artefakte in ein kleineres Image kopieren", "eine geänderte vorherige Schicht baut die folgenden Schichten neu"],
+    "answer": "--memory"
+  },
+  {
+    "category": "Docker",
+    "set": 5,
+    "question": "Ergebnis eines Docker-Container-Exports",
+    "options": ["ein Dateisystem-tar-Archiv", "sha256-Digest", "nur finale Artefakte in ein kleineres Image kopieren", "eine geänderte vorherige Schicht baut die folgenden Schichten neu"],
+    "answer": "ein Dateisystem-tar-Archiv"
+  },
+  {
+    "category": "Docker",
+    "set": 1,
+    "question": "Welche Dockerfile-Anweisung wählt den Benutzer für nachfolgende Build-Schritte und die Container-Ausführung aus?",
+    "options": ["USER", "OWNER", "RUNAS", "LOGIN"],
+    "answer": "USER"
+  },
+  {
+    "category": "Docker",
+    "set": 2,
+    "question": "Invalidierung des Docker-Build-Caches",
+    "options": ["eine geänderte vorherige Schicht baut die folgenden Schichten neu", "sha256-Digest", "nur finale Artefakte in ein kleineres Image kopieren", ".dockerignore"],
+    "answer": "eine geänderte vorherige Schicht baut die folgenden Schichten neu"
+  },
+  {
+    "category": "Docker",
+    "set": 3,
+    "question": "Befehl zur Bereinigung von Docker-Images",
+    "options": ["docker image prune", "sha256-Digest", "nur finale Artefakte in ein kleineres Image kopieren", "eine geänderte vorherige Schicht baut die folgenden Schichten neu"],
+    "answer": "docker image prune"
+  },
+  {
+    "category": "Docker",
+    "set": 4,
+    "question": "Docker-Flag für das CPU-Kontingent",
+    "options": ["--cpus", "sha256-Digest", "nur finale Artefakte in ein kleineres Image kopieren", "eine geänderte vorherige Schicht baut die folgenden Schichten neu"],
+    "answer": "--cpus"
+  },
+  {
+    "category": "Docker",
+    "set": 5,
+    "question": "Befehl zum Importieren eines Docker-Images",
+    "options": ["docker import", "sha256-Digest", "nur finale Artefakte in ein kleineres Image kopieren", "eine geänderte vorherige Schicht baut die folgenden Schichten neu"],
+    "answer": "docker import"
+  },
+  {
+    "category": "Docker",
+    "set": 1,
+    "question": "Welche Dockerfile-Anweisung dokumentiert den Port, auf dem ein Container lauscht?",
+    "options": ["EXPOSE", "PORT", "PUBLISH", "LISTEN"],
+    "answer": "EXPOSE"
+  },
+  {
+    "category": "Docker",
+    "set": 2,
+    "question": "Datei zum Ausschluss vom Docker-Build-Kontext",
+    "options": [".dockerignore", "sha256-Digest", "nur finale Artefakte in ein kleineres Image kopieren", "eine geänderte vorherige Schicht baut die folgenden Schichten neu"],
+    "answer": ".dockerignore"
+  },
+  {
+    "category": "Docker",
+    "set": 3,
+    "question": "Befehl für Docker-Container-Logs",
+    "options": ["docker logs", "sha256-Digest", "nur finale Artefakte in ein kleineres Image kopieren", "eine geänderte vorherige Schicht baut die folgenden Schichten neu"],
+    "answer": "docker logs"
+  },
+  {
+    "category": "Docker",
+    "set": 4,
+    "question": "Dienstabhängigkeit in Docker Compose",
+    "options": ["depends_on", "sha256-Digest", "nur finale Artefakte in ein kleineres Image kopieren", "eine geänderte vorherige Schicht baut die folgenden Schichten neu"],
+    "answer": "depends_on"
+  },
+  {
+    "category": "Docker",
+    "set": 5,
+    "question": "Docker-Prune-Option für Volumes",
+    "options": ["docker volume prune", "sha256-Digest", "nur finale Artefakte in ein kleineres Image kopieren", "eine geänderte vorherige Schicht baut die folgenden Schichten neu"],
+    "answer": "docker volume prune"
+  },
+  {
+    "category": "Docker",
+    "set": 1,
+    "question": "Welcher Befehl zeigt detaillierte Metadaten für ein Docker-Objekt an?",
+    "options": ["docker inspect", "docker top", "docker diff", "docker pause"],
+    "answer": "docker inspect"
+  },
+  {
+    "category": "Docker",
+    "set": 2,
+    "question": "Gesundheitsprüfung für Docker-Container",
+    "options": ["HEALTHCHECK", "sha256-Digest", "nur finale Artefakte in ein kleineres Image kopieren", "eine geänderte vorherige Schicht baut die folgenden Schichten neu"],
+    "answer": "HEALTHCHECK"
+  },
+  {
+    "category": "Docker",
+    "set": 3,
+    "question": "Befehl zum Untersuchen eines Docker-Containers",
+    "options": ["docker inspect", "sha256-Digest", "nur finale Artefakte in ein kleineres Image kopieren", "eine geänderte vorherige Schicht baut die folgenden Schichten neu"],
+    "answer": "docker inspect"
+  },
+  {
+    "category": "Docker",
+    "set": 4,
+    "question": "Umgebungsdatei von Docker Compose",
+    "options": [".env", "sha256-Digest", "nur finale Artefakte in ein kleineres Image kopieren", "eine geänderte vorherige Schicht baut die folgenden Schichten neu"],
+    "answer": ".env"
+  },
+  {
+    "category": "Docker",
+    "set": 5,
+    "question": "Flag für den Init-Prozess eines Docker-Containers",
+    "options": ["--init", "sha256-Digest", "nur finale Artefakte in ein kleineres Image kopieren", "eine geänderte vorherige Schicht baut die folgenden Schichten neu"],
+    "answer": "--init"
+  },
+  {
+    "category": "Docker",
+    "set": 1,
+    "question": "Welcher Befehl streamt die Log-Ausgabe eines Containers fortlaufend?",
+    "options": ["docker logs -f", "docker events --once", "docker stats --no-stream", "docker history"],
+    "answer": "docker logs -f"
+  },
+  {
+    "category": "Docker",
+    "set": 2,
+    "question": "Lebenszyklus eines benannten Docker-Volumes",
+    "options": ["besteht unabhängig von einem Container fort", "sha256-Digest", "nur finale Artefakte in ein kleineres Image kopieren", "eine geänderte vorherige Schicht baut die folgenden Schichten neu"],
+    "answer": "besteht unabhängig von einem Container fort"
+  },
+  {
+    "category": "Docker",
+    "set": 3,
+    "question": "Befehl für die Docker-Prozessliste",
+    "options": ["docker top", "sha256-Digest", "nur finale Artefakte in ein kleineres Image kopieren", "eine geänderte vorherige Schicht baut die folgenden Schichten neu"],
+    "answer": "docker top"
+  },
+  {
+    "category": "Docker",
+    "set": 4,
+    "question": "Detached-Start mit Docker Compose",
+    "options": ["docker compose up -d", "sha256-Digest", "nur finale Artefakte in ein kleineres Image kopieren", "eine geänderte vorherige Schicht baut die folgenden Schichten neu"],
+    "answer": "docker compose up -d"
+  },
+  {
+    "category": "Docker",
+    "set": 5,
+    "question": "Zweck des Docker-User-Namespace",
+    "options": ["Container-Benutzer auf unprivilegierte Host-Benutzer abbilden", "sha256-Digest", "nur finale Artefakte in ein kleineres Image kopieren", "eine geänderte vorherige Schicht baut die folgenden Schichten neu"],
+    "answer": "Container-Benutzer auf unprivilegierte Host-Benutzer abbilden"
+  },
+  {
+    "category": "Docker",
+    "set": 1,
+    "question": "Welche docker-run-Option entfernt einen Container automatisch, nachdem er beendet wurde?",
+    "options": ["--rm", "--pull", "--init", "--detach"],
+    "answer": "--rm"
+  },
+  {
+    "category": "Docker",
+    "set": 2,
+    "question": "Quelle eines Docker-Bind-Mounts",
+    "options": ["Dateisystempfad des Hosts", "sha256-Digest", "nur finale Artefakte in ein kleineres Image kopieren", "eine geänderte vorherige Schicht baut die folgenden Schichten neu"],
+    "answer": "Dateisystempfad des Hosts"
+  },
+  {
+    "category": "Docker",
+    "set": 3,
+    "question": "Befehl für den Docker-Image-Verlauf",
+    "options": ["docker history", "sha256-Digest", "nur finale Artefakte in ein kleineres Image kopieren", "eine geänderte vorherige Schicht baut die folgenden Schichten neu"],
+    "answer": "docker history"
+  },
+  {
+    "category": "Docker",
+    "set": 4,
+    "question": "Stopp-Verhalten von Docker Compose",
+    "options": ["stoppt Dienste, ohne sie zu entfernen", "sha256-Digest", "nur finale Artefakte in ein kleineres Image kopieren", "eine geänderte vorherige Schicht baut die folgenden Schichten neu"],
+    "answer": "stoppt Dienste, ohne sie zu entfernen"
+  },
+  {
+    "category": "Docker",
+    "set": 5,
+    "question": "Zweck der Docker-Secrets-Speicherung",
+    "options": ["sensible Werte, die in Dienste eingebunden werden", "sha256-Digest", "nur finale Artefakte in ein kleineres Image kopieren", "eine geänderte vorherige Schicht baut die folgenden Schichten neu"],
+    "answer": "sensible Werte, die in Dienste eingebunden werden"
+  },
+  {
+    "category": "Docker",
+    "set": 1,
+    "question": "Was ist der Hauptzweck eines Docker-Multi-Stage-Builds?",
+    "options": [
+      "Build-Artefakte in ein kleineres finales Image kopieren",
+      "Jede Stufe als Container ausführen",
+      "Alle Build-Werkzeuge im finalen Image behalten",
+      "Docker-Volumes durch Layer ersetzen"
+    ],
+    "answer": "Build-Artefakte in ein kleineres finales Image kopieren"
+  },
+  {
+    "category": "Docker",
+    "set": 2,
+    "question": "Verhalten des Docker-Bridge-Netzwerks",
+    "options": ["verbindet Container in einem virtuellen Subnetz", "sha256-Digest", "nur finale Artefakte in ein kleineres Image kopieren", "eine geänderte vorherige Schicht baut die folgenden Schichten neu"],
+    "answer": "verbindet Container in einem virtuellen Subnetz"
+  },
+  {
+    "category": "Docker",
+    "set": 3,
+    "question": "Befehl zur Anmeldung bei einer Docker-Image-Registry",
+    "options": ["docker login", "sha256-Digest", "nur finale Artefakte in ein kleineres Image kopieren", "eine geänderte vorherige Schicht baut die folgenden Schichten neu"],
+    "answer": "docker login"
+  },
+  {
+    "category": "Docker",
+    "set": 4,
+    "question": "Befehl zum Ausführen in einem Docker-Container",
+    "options": ["docker exec", "sha256-Digest", "nur finale Artefakte in ein kleineres Image kopieren", "eine geänderte vorherige Schicht baut die folgenden Schichten neu"],
+    "answer": "docker exec"
+  },
+  {
+    "category": "Docker",
+    "set": 5,
+    "question": "Werte des Docker-Gesundheitsstatus",
+    "options": ["starting, healthy, unhealthy", "sha256-Digest", "nur finale Artefakte in ein kleineres Image kopieren", "eine geänderte vorherige Schicht baut die folgenden Schichten neu"],
+    "answer": "starting, healthy, unhealthy"
+  },
+  {
+    "category": "Docker",
+    "set": 1,
+    "question": "Welche docker-build-Option wählt eine benannte Stufe als Build-Ziel aus?",
+    "options": ["--target", "--stage", "--from", "--platform"],
+    "answer": "--target"
+  },
+  {
+    "category": "Docker",
+    "set": 2,
+    "question": "Verhalten des Docker-Host-Netzwerks",
+    "options": ["teilt sich den Netzwerk-Namespace des Hosts", "sha256-Digest", "nur finale Artefakte in ein kleineres Image kopieren", "eine geänderte vorherige Schicht baut die folgenden Schichten neu"],
+    "answer": "teilt sich den Netzwerk-Namespace des Hosts"
+  },
+  {
+    "category": "Docker",
+    "set": 3,
+    "question": "Docker-Build-Flag für die Zielstufe",
+    "options": ["--target", "sha256-Digest", "nur finale Artefakte in ein kleineres Image kopieren", "eine geänderte vorherige Schicht baut die folgenden Schichten neu"],
+    "answer": "--target"
+  },
+  {
+    "category": "Docker",
+    "set": 4,
+    "question": "Befehl zum Kopieren in/aus einem Docker-Container",
+    "options": ["docker cp", "sha256-Digest", "nur finale Artefakte in ein kleineres Image kopieren", "eine geänderte vorherige Schicht baut die folgenden Schichten neu"],
+    "answer": "docker cp"
+  },
+  {
+    "category": "Docker",
+    "set": 5,
+    "question": "Risiko des Docker-Daemon-Sockets",
+    "options": ["administrativer Zugriff auf Host-Ebene", "sha256-Digest", "nur finale Artefakte in ein kleineres Image kopieren", "eine geänderte vorherige Schicht baut die folgenden Schichten neu"],
+    "answer": "administrativer Zugriff auf Host-Ebene"
+  },
+  {
+    "category": "Docker",
+    "set": 1,
+    "question": "Welche Dockerfile-Anweisung definiert eine Container-Gesundheitsprüfung?",
+    "options": ["HEALTHCHECK", "HEALTH", "STATUS", "ONFAILURE"],
+    "answer": "HEALTHCHECK"
+  },
+  {
+    "category": "Docker",
+    "set": 2,
+    "question": "Docker-Flag zum Veröffentlichen von Ports",
+    "options": ["-p", "sha256-Digest", "nur finale Artefakte in ein kleineres Image kopieren", "eine geänderte vorherige Schicht baut die folgenden Schichten neu"],
+    "answer": "-p"
+  },
+  {
+    "category": "Docker",
+    "set": 3,
+    "question": "Docker-Build-Plattformoption",
+    "options": ["--platform", "sha256-Digest", "nur finale Artefakte in ein kleineres Image kopieren", "eine geänderte vorherige Schicht baut die folgenden Schichten neu"],
+    "answer": "--platform"
+  },
+  {
+    "category": "Docker",
+    "set": 4,
+    "question": "Befehl zum Speichern eines Docker-Images im Archivformat",
+    "options": ["docker save", "sha256-Digest", "nur finale Artefakte in ein kleineres Image kopieren", "eine geänderte vorherige Schicht baut die folgenden Schichten neu"],
+    "answer": "docker save"
+  },
+  {
+    "category": "Docker",
+    "set": 5,
+    "question": "Cache-Mount-Funktion im Dockerfile",
+    "options": ["BuildKit RUN --mount=type=cache", "sha256-Digest", "nur finale Artefakte in ein kleineres Image kopieren", "eine geänderte vorherige Schicht baut die folgenden Schichten neu"],
+    "answer": "BuildKit RUN --mount=type=cache"
+  },
+  {
+    "category": "Docker",
+    "set": 2,
+    "question": "Welche docker-run-Option bindet explizit einen Host-Pfad oder ein benanntes Volume in einen Container ein?",
+    "options": ["--mount", "--publish", "--network", "--restart"],
+    "answer": "--mount"
+  },
+  {
+    "category": "Docker",
+    "set": 5,
+    "question": "Untersuchung der Docker-Build-Metadaten",
+    "options": ["docker buildx imagetools inspect", "sha256-Digest", "nur finale Artefakte in ein kleineres Image kopieren", "eine geänderte vorherige Schicht baut die folgenden Schichten neu"],
+    "answer": "docker buildx imagetools inspect"
+  }
+]

@@ -24,7 +24,7 @@
     "category": "Docker",
     "set": 1,
     "question": "Which command lists all images including intermediate ones?",
-    "options": ["docker images -a", "docker images --all", "docker images -l", "docker images -q"],
+    "options": ["docker images -a", "docker images --filter", "docker images -l", "docker images -q"],
     "answer": "docker images -a"
   },
   {
@@ -122,14 +122,14 @@
     "category": "Docker",
     "set": 2,
     "question": "Which command lists only container IDs?",
-    "options": ["docker ps -q", "docker ps --ids", "docker ps -i", "docker ps --quiet"],
+    "options": ["docker ps -q", "docker ps --ids", "docker ps -i", "docker ps -s"],
     "answer": "docker ps -q"
   },
   {
     "category": "Docker",
     "set": 2,
     "question": "Which command lists all containers including stopped ones?",
-    "options": ["docker ps -a", "docker ps --all", "docker containers", "docker list"],
+    "options": ["docker ps -a", "docker ps -l", "docker containers", "docker list"],
     "answer": "docker ps -a"
   },
   {
@@ -324,7 +324,7 @@
   {
     "category": "Docker",
     "set": 4,
-    "question": "Which command pulls only the image manifest?",
+    "question": "Which command displays an image manifest from a registry without pulling the image?",
     "options": ["docker manifest inspect", "docker pull --manifest", "docker image manifest", "docker show manifest"],
     "answer": "docker manifest inspect"
   },
@@ -395,7 +395,7 @@
     "category": "Docker",
     "set": 4,
     "question": "Which command removes a Docker context?",
-    "options": ["docker context rm", "docker context delete", "docker remove context", "docker context remove"],
+    "options": ["docker context rm", "docker context delete", "docker remove context", "docker context erase"],
     "answer": "docker context rm"
   },
   {
@@ -513,14 +513,14 @@
   {
           "category":  "Docker",
           "set":  1,
-          "question":  "Which file excludes paths from a Docker build context?",
+          "question":  "Which docker run option sets the restart policy of a container?",
           "options":  [
-                          ".dockerignore",
-                          ".gitignore",
-                          "Dockerfile.lock",
-                          "docker.exclude"
+                          "--restart",
+                          "--detach",
+                          "--privileged",
+                          "--hostname"
                       ],
-          "answer":  ".dockerignore"
+          "answer":  "--restart"
       },
       {
           "category":  "Docker",
@@ -633,14 +633,14 @@
       {
           "category":  "Docker",
           "set":  1,
-          "question":  "Which command copies files between a container and the local filesystem?",
+          "question":  "Which Dockerfile instruction documents the port a container listens on?",
           "options":  [
-                          "docker cp",
-                          "docker save",
-                          "docker export",
-                          "docker pull"
+                          "EXPOSE",
+                          "PORT",
+                          "PUBLISH",
+                          "LISTEN"
                       ],
-          "answer":  "docker cp"
+          "answer":  "EXPOSE"
       },
       {
           "category":  "Docker",

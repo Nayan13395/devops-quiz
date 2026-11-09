@@ -1,0 +1,877 @@
+[
+  {
+    "category": "Linux",
+    "set": 1,
+    "question": "Какая команда используется для вывода списка файлов и каталогов в Linux?",
+    "options": ["ls", "dir", "list", "show"],
+    "answer": "ls"
+  },
+  {
+    "category": "Linux",
+    "set": 1,
+    "question": "Какая команда выводит последние 5 строк файла?",
+    "options": ["tail -n 5", "head -n 5", "less -5", "cut -5"],
+    "answer": "tail -n 5"
+  },
+  {
+    "category": "Linux",
+    "set": 1,
+    "question": "Какая команда показывает размер каталога?",
+    "options": ["du -sh", "df -sh", "ls -size", "dir -s"],
+    "answer": "du -sh"
+  },
+  {
+    "category": "Linux",
+    "set": 1,
+    "question": "Какая команда подсчитывает только количество строк в файле?",
+    "options": ["wc -l", "wc -w", "wc -c", "count -l"],
+    "answer": "wc -l"
+  },
+  {
+    "category": "Linux",
+    "set": 1,
+    "question": "Какая команда показывает время работы системы?",
+    "options": ["uptime", "timelog", "syslog", "runtime"],
+    "answer": "uptime"
+  },
+  {
+    "category": "Linux",
+    "set": 1,
+    "question": "Какая команда сравнивает два файла и показывает различия?",
+    "options": ["diff", "differ", "compare", "match"],
+    "answer": "diff"
+  },
+  {
+    "category": "Linux",
+    "set": 1,
+    "question": "Какая команда ищет шаблон внутри файла?",
+    "options": ["grep", "find", "search", "locate"],
+    "answer": "grep"
+  },
+  {
+    "category": "Linux",
+    "set": 1,
+    "question": "Какая команда меняет права доступа к файлу на 755?",
+    "options": ["chmod 755", "chown 755", "perm 755", "setperm 755"],
+    "answer": "chmod 755"
+  },
+  {
+    "category": "Linux",
+    "set": 1,
+    "question": "Какая команда показывает содержимое каталога в подробном формате?",
+    "options": ["ls -l", "dir -l", "show -l", "list -l"],
+    "answer": "ls -l"
+  },
+  {
+    "category": "Linux",
+    "set": 1,
+    "question": "Какая команда Linux выводит версию работающего ядра?",
+    "options": ["uname -r", "lsb_release -a", "hostnamectl -k", "cat /etc/hosts"],
+    "answer": "uname -r"
+  },
+  {
+    "category": "Linux",
+    "set": 1,
+    "question": "Какая команда создаёт новый пустой каталог?",
+    "options": ["mkdir", "rmdir", "touchdir", "newdir"],
+    "answer": "mkdir"
+  },
+  {
+    "category": "Linux",
+    "set": 1,
+    "question": "Какая команда удаляет пустой каталог?",
+    "options": ["rmdir", "rm -r", "del", "erase"],
+    "answer": "rmdir"
+  },
+  {
+    "category": "Linux",
+    "set": 1,
+    "question": "Какая команда показывает календарь на текущий месяц?",
+    "options": ["cal", "calendar", "date -cal", "showcal"],
+    "answer": "cal"
+  },
+  {
+    "category": "Linux",
+    "set": 1,
+    "question": "Какая команда показывает текущие дату и время?",
+    "options": ["date", "time", "clock", "now"],
+    "answer": "date"
+  },
+  {
+    "category": "Linux",
+    "set": 1,
+    "question": "Какая команда показывает информацию о таблице разделов диска?",
+    "options": ["fdisk -l", "parted -show", "diskinfo", "lsdisk"],
+    "answer": "fdisk -l"
+  },
+  {
+    "category": "Linux",
+    "set": 1,
+    "question": "Какая команда копирует стандартный ввод одновременно в файл и в стандартный вывод?",
+    "options": ["tee", "cut", "paste", "join"],
+    "answer": "tee"
+  },
+  {
+    "category": "Linux",
+    "set": 1,
+    "question": "Какая команда извлекает выбранные символьные поля из каждой строки?",
+    "options": ["cut", "sort", "fmt", "fold"],
+    "answer": "cut"
+  },
+  {
+    "category": "Linux",
+    "set": 1,
+    "question": "Какая опция sort удаляет повторяющиеся строки из отсортированного вывода?",
+    "options": ["sort -u", "sort -r", "sort -n", "sort -k"],
+    "answer": "sort -u"
+  },
+  {
+    "category": "Linux",
+    "set": 1,
+    "question": "Какая команда подсчитывает соседние повторяющиеся строки во вводе?",
+    "options": ["uniq -c", "wc -l", "comm -3", "diff -u"],
+    "answer": "uniq -c"
+  },
+  {
+    "category": "Linux",
+    "set": 1,
+    "question": "Какая команда преобразует или удаляет отдельные символы в потоке?",
+    "options": ["tr", "sed", "awk", "xargs"],
+    "answer": "tr"
+  },
+  {
+    "category": "Linux",
+    "set": 1,
+    "question": "Какая команда показывает записи журнала systemd для конкретного юнита?",
+    "options": ["journalctl -u", "systemctl show", "dmesg -T", "logger -t"],
+    "answer": "journalctl -u"
+  },
+  {
+    "category": "Linux",
+    "set": 1,
+    "question": "Какая команда запускает программу, удерживая рекомендательную блокировку файла?",
+    "options": ["flock", "nohup", "setsid", "chroot"],
+    "answer": "flock"
+  },
+  {
+    "category": "Linux",
+    "set": 1,
+    "question": "Какой инструмент командной строки безопасно передаёт ввод, разделённый нулевыми символами, другой команде?",
+    "options": ["xargs -0", "xargs -n", "parallel --pipe", "env -0"],
+    "answer": "xargs -0"
+  },
+  {
+    "category": "Linux",
+    "set": 1,
+    "question": "Какая команда показывает, сколько времени заняла загрузка каждой службы systemd?",
+    "options": ["systemd-analyze blame", "systemctl list-units", "journalctl --boot", "uptime -p"],
+    "answer": "systemd-analyze blame"
+  },
+  {
+    "category": "Linux",
+    "set": 1,
+    "question": "Какая команда останавливает процесс, если он превышает заданную длительность?",
+    "options": ["timeout", "watch", "time", "wait"],
+    "answer": "timeout"
+  },
+  {
+    "category": "Linux",
+    "set": 2,
+    "question": "Какая команда используется для копирования файлов в Linux?",
+    "options": ["cp", "mv", "copy", "clone"],
+    "answer": "cp"
+  },
+  {
+    "category": "Linux",
+    "set": 2,
+    "question": "Какая команда показывает скрытые файлы?",
+    "options": ["ls -a", "ls -h", "show hidden", "view -a"],
+    "answer": "ls -a"
+  },
+  {
+    "category": "Linux",
+    "set": 2,
+    "question": "Какая команда меняет группу-владельца файла?",
+    "options": ["chgrp", "chown -g", "group", "setgroup"],
+    "answer": "chgrp"
+  },
+  {
+    "category": "Linux",
+    "set": 2,
+    "question": "Какая команда показывает открытые файлы конкретного процесса?",
+    "options": ["lsof -p", "ps -o", "showfiles", "procfile"],
+    "answer": "lsof -p"
+  },
+  {
+    "category": "Linux",
+    "set": 2,
+    "question": "Какая команда создаёт файл и открывает его в редакторе nano?",
+    "options": ["nano filename", "touch filename", "cat filename", "edit filename"],
+    "answer": "nano filename"
+  },
+  {
+    "category": "Linux",
+    "set": 2,
+    "question": "Какая команда показывает файл постранично и позволяет перемещаться назад?",
+    "options": ["less", "more", "view", "page"],
+    "answer": "less"
+  },
+  {
+    "category": "Linux",
+    "set": 2,
+    "question": "Какая команда показывает конец файла и следит за новыми строками?",
+    "options": ["tail -f", "head -f", "watch", "follow"],
+    "answer": "tail -f"
+  },
+  {
+    "category": "Linux",
+    "set": 2,
+    "question": "Какая команда показывает процессы, потребляющие больше всего CPU?",
+    "options": ["top", "ps -top", "procmon", "cpuinfo"],
+    "answer": "top"
+  },
+  {
+    "category": "Linux",
+    "set": 2,
+    "question": "Какая команда показывает использование памяти в удобочитаемом формате?",
+    "options": ["free -h", "memory", "ram", "meminfo"],
+    "answer": "free -h"
+  },
+  {
+    "category": "Linux",
+    "set": 2,
+    "question": "Какая команда показывает тип файловой системы?",
+    "options": ["df -T", "fsinfo", "mount -t", "fstype"],
+    "answer": "df -T"
+  },
+  {
+    "category": "Linux",
+    "set": 2,
+    "question": "Какая команда показывает идентификаторы текущего пользователя и групп?",
+    "options": ["id", "whoami", "uid", "user"],
+    "answer": "id"
+  },
+  {
+    "category": "Linux",
+    "set": 2,
+    "question": "Какая команда показывает имя хоста системы?",
+    "options": ["hostname", "host", "sysname", "machinename"],
+    "answer": "hostname"
+  },
+  {
+    "category": "Linux",
+    "set": 2,
+    "question": "Какая команда показывает информацию о сетевых интерфейсах?",
+    "options": ["ip addr", "netinfo", "ifshow", "ipconfig"],
+    "answer": "ip addr"
+  },
+  {
+    "category": "Linux",
+    "set": 2,
+    "question": "Какая команда показывает таблицу маршрутизации?",
+    "options": ["ip route", "route -show", "netroute", "gateway"],
+    "answer": "ip route"
+  },
+  {
+    "category": "Linux",
+    "set": 2,
+    "question": "Команда маски прав по умолчанию в Linux",
+    "options": ["umask", "запускает программу с эффективным ID пользователя-владельца файла", "ограничивает удаление в общих каталогах", "используют один и тот же inode"],
+    "answer": "umask"
+  },
+  {
+    "category": "Linux",
+    "set": 2,
+    "question": "Значение права setuid в Linux",
+    "options": ["запускает программу с эффективным ID пользователя-владельца файла", "umask", "ограничивает удаление в общих каталогах", "используют один и тот же inode"],
+    "answer": "запускает программу с эффективным ID пользователя-владельца файла"
+  },
+  {
+    "category": "Linux",
+    "set": 2,
+    "question": "Значение sticky-бита каталога в Linux",
+    "options": ["ограничивает удаление в общих каталогах", "umask", "запускает программу с эффективным ID пользователя-владельца файла", "используют один и тот же inode"],
+    "answer": "ограничивает удаление в общих каталогах"
+  },
+  {
+    "category": "Linux",
+    "set": 2,
+    "question": "Поведение жёстких ссылок в Linux относительно inode",
+    "options": ["используют один и тот же inode", "umask", "запускает программу с эффективным ID пользователя-владельца файла", "ограничивает удаление в общих каталогах"],
+    "answer": "используют один и тот же inode"
+  },
+  {
+    "category": "Linux",
+    "set": 2,
+    "question": "Поведение символических ссылок в Linux относительно цели",
+    "options": ["хранят путь к другому файлу", "umask", "запускает программу с эффективным ID пользователя-владельца файла", "ограничивает удаление в общих каталогах"],
+    "answer": "хранят путь к другому файлу"
+  },
+  {
+    "category": "Linux",
+    "set": 2,
+    "question": "Команда включения службы systemd в Linux",
+    "options": ["systemctl enable service", "umask", "запускает программу с эффективным ID пользователя-владельца файла", "ограничивает удаление в общих каталогах"],
+    "answer": "systemctl enable service"
+  },
+  {
+    "category": "Linux",
+    "set": 2,
+    "question": "Флаг журнала текущей загрузки в Linux",
+    "options": ["journalctl -b", "umask", "запускает программу с эффективным ID пользователя-владельца файла", "ограничивает удаление в общих каталогах"],
+    "answer": "journalctl -b"
+  },
+  {
+    "category": "Linux",
+    "set": 2,
+    "question": "Сигнал корректного завершения процесса в Linux",
+    "options": ["SIGTERM", "umask", "запускает программу с эффективным ID пользователя-владельца файла", "ограничивает удаление в общих каталогах"],
+    "answer": "SIGTERM"
+  },
+  {
+    "category": "Linux",
+    "set": 2,
+    "question": "Сигнал принудительного завершения процесса в Linux",
+    "options": ["SIGKILL", "umask", "запускает программу с эффективным ID пользователя-владельца файла", "ограничивает удаление в общих каталогах"],
+    "answer": "SIGKILL"
+  },
+  {
+    "category": "Linux",
+    "set": 2,
+    "question": "Команда просмотра использования файловых систем диска в Linux",
+    "options": ["df -h", "umask", "запускает программу с эффективным ID пользователя-владельца файла", "ограничивает удаление в общих каталогах"],
+    "answer": "df -h"
+  },
+  {
+    "category": "Linux",
+    "set": 2,
+    "question": "Какая команда запускает процесс с изменённым приоритетом планирования?",
+    "options": ["nice", "renice", "ionice", "taskset"],
+    "answer": "nice"
+  },
+  {
+    "category": "Linux",
+    "set": 3,
+    "question": "Какая команда Linux создаёт временный файл с уникальным именем и выводит его путь?",
+    "options": ["mktemp", "tmpfile", "touch -t", "mkfifo"],
+    "answer": "mktemp"
+  },
+  {
+    "category": "Linux",
+    "set": 3,
+    "question": "Какая команда показывает все запущенные процессы в реальном времени?",
+    "options": ["top", "ps", "procview", "monitor"],
+    "answer": "top"
+  },
+  {
+    "category": "Linux",
+    "set": 3,
+    "question": "Какая команда выводит последние 20 строк файла?",
+    "options": ["tail -n 20", "head -20", "less -20", "view -20"],
+    "answer": "tail -n 20"
+  },
+  {
+    "category": "Linux",
+    "set": 3,
+    "question": "Какая команда подсчитывает слова в файле?",
+    "options": ["wc -w", "count -w", "words", "wc -c"],
+    "answer": "wc -w"
+  },
+  {
+    "category": "Linux",
+    "set": 3,
+    "question": "Какая команда показывает текущую дату в UTC?",
+    "options": ["date -u", "date -utc", "utctime", "time -u"],
+    "answer": "date -u"
+  },
+  {
+    "category": "Linux",
+    "set": 3,
+    "question": "Какая команда показывает все прослушиваемые порты?",
+    "options": ["ss -tuln", "netstat -a", "ports", "showports"],
+    "answer": "ss -tuln"
+  },
+  {
+    "category": "Linux",
+    "set": 3,
+    "question": "Какая команда GNU coreutils выводит полностью разрешённый абсолютный путь цели символической ссылки?",
+    "options": ["readlink -f", "ln -s", "stat -f", "basename"],
+    "answer": "readlink -f"
+  },
+  {
+    "category": "Linux",
+    "set": 3,
+    "question": "Какая команда показывает версию ядра?",
+    "options": ["uname -r", "kernel -v", "sysinfo", "version"],
+    "answer": "uname -r"
+  },
+  {
+    "category": "Linux",
+    "set": 3,
+    "question": "Какая команда показывает все загруженные модули ядра?",
+    "options": ["lsmod", "modlist", "kernelmod", "modules"],
+    "answer": "lsmod"
+  },
+  {
+    "category": "Linux",
+    "set": 3,
+    "question": "Какая команда показывает сообщения загрузки?",
+    "options": ["dmesg", "bootlog", "syslog", "journal"],
+    "answer": "dmesg"
+  },
+  {
+    "category": "Linux",
+    "set": 3,
+    "question": "Какая команда показывает состояние службы systemd?",
+    "options": ["systemctl status", "service status", "status", "svcstatus"],
+    "answer": "systemctl status"
+  },
+  {
+    "category": "Linux",
+    "set": 3,
+    "question": "Какая команда запускает службу systemd?",
+    "options": ["systemctl start", "service start", "start", "runservice"],
+    "answer": "systemctl start"
+  },
+  {
+    "category": "Linux",
+    "set": 3,
+    "question": "Какая команда останавливает службу systemd?",
+    "options": ["systemctl stop", "service stop", "stop", "haltservice"],
+    "answer": "systemctl stop"
+  },
+  {
+    "category": "Linux",
+    "set": 3,
+    "question": "Какая команда перезапускает службу systemd?",
+    "options": ["systemctl restart", "service restart", "restart", "reload"],
+    "answer": "systemctl restart"
+  },
+  {
+    "category": "Linux",
+    "set": 3,
+    "question": "Какая команда включает автозапуск службы при загрузке?",
+    "options": ["systemctl enable", "service enable", "enable", "bootstart"],
+    "answer": "systemctl enable"
+  },
+  {
+    "category": "Linux",
+    "set": 3,
+    "question": "Команда сводки размера каталога в Linux",
+    "options": ["du -sh directory", "umask", "запускает программу с эффективным ID пользователя-владельца файла", "ограничивает удаление в общих каталогах"],
+    "answer": "du -sh directory"
+  },
+  {
+    "category": "Linux",
+    "set": 3,
+    "question": "Команда вывода списка блочных устройств в Linux",
+    "options": ["lsblk", "umask", "запускает программу с эффективным ID пользователя-владельца файла", "ограничивает удаление в общих каталогах"],
+    "answer": "lsblk"
+  },
+  {
+    "category": "Linux",
+    "set": 3,
+    "question": "Команда вывода списка смонтированных файловых систем в Linux",
+    "options": ["findmnt", "umask", "запускает программу с эффективным ID пользователя-владельца файла", "ограничивает удаление в общих каталогах"],
+    "answer": "findmnt"
+  },
+  {
+    "category": "Linux",
+    "set": 3,
+    "question": "Команда создания архива gzip в Linux",
+    "options": ["tar -czf archive.tar.gz path", "umask", "запускает программу с эффективным ID пользователя-владельца файла", "ограничивает удаление в общих каталогах"],
+    "answer": "tar -czf archive.tar.gz path"
+  },
+  {
+    "category": "Linux",
+    "set": 3,
+    "question": "Команда просмотра содержимого архива в Linux",
+    "options": ["tar -tzf archive.tar.gz", "umask", "запускает программу с эффективным ID пользователя-владельца файла", "ограничивает удаление в общих каталогах"],
+    "answer": "tar -tzf archive.tar.gz"
+  },
+  {
+    "category": "Linux",
+    "set": 3,
+    "question": "Опция поиска файлов по имени в Linux",
+    "options": ["find path -name pattern", "umask", "запускает программу с эффективным ID пользователя-владельца файла", "ограничивает удаление в общих каталогах"],
+    "answer": "find path -name pattern"
+  },
+  {
+    "category": "Linux",
+    "set": 3,
+    "question": "Флаг рекурсивного поиска текста в Linux",
+    "options": ["grep -R", "umask", "запускает программу с эффективным ID пользователя-владельца файла", "ограничивает удаление в общих каталогах"],
+    "answer": "grep -R"
+  },
+  {
+    "category": "Linux",
+    "set": 3,
+    "question": "Потоковый редактор для подстановки текста в Linux",
+    "options": ["sed", "umask", "запускает программу с эффективным ID пользователя-владельца файла", "ограничивает удаление в общих каталогах"],
+    "answer": "sed"
+  },
+  {
+    "category": "Linux",
+    "set": 3,
+    "question": "Флаг разделителя при извлечении полей в Linux",
+    "options": ["cut -d delimiter -f field", "umask", "запускает программу с эффективным ID пользователя-владельца файла", "ограничивает удаление в общих каталогах"],
+    "answer": "cut -d delimiter -f field"
+  },
+  {
+    "category": "Linux",
+    "set": 3,
+    "question": "Флаг числовой сортировки в Linux",
+    "options": ["sort -n", "umask", "запускает программу с эффективным ID пользователя-владельца файла", "ограничивает удаление в общих каталогах"],
+    "answer": "sort -n"
+  },
+  {
+    "category": "Linux",
+    "set": 4,
+    "question": "Какая команда используется для перемещения или переименования файлов?",
+    "options": ["mv", "cp", "rename", "shift"],
+    "answer": "mv"
+  },
+  {
+    "category": "Linux",
+    "set": 4,
+    "question": "Какая команда изменяет принадлежность файла?",
+    "options": ["chown", "chmod", "owner", "setowner"],
+    "answer": "chown"
+  },
+  {
+    "category": "Linux",
+    "set": 4,
+    "question": "Какая команда показывает права доступа к файлу в восьмеричном формате?",
+    "options": ["stat -c %a", "ls -perm", "perm", "showperm"],
+    "answer": "stat -c %a"
+  },
+  {
+    "category": "Linux",
+    "set": 4,
+    "question": "Какая команда показывает тип файла?",
+    "options": ["file", "type", "kind", "format"],
+    "answer": "file"
+  },
+  {
+    "category": "Linux",
+    "set": 4,
+    "question": "Какая команда показывает подробную статистику файла?",
+    "options": ["stat", "fileinfo", "details", "ls -stat"],
+    "answer": "stat"
+  },
+  {
+    "category": "Linux",
+    "set": 4,
+    "question": "Какая команда ищет файлы по имени?",
+    "options": ["find", "search", "locate", "where"],
+    "answer": "find"
+  },
+  {
+    "category": "Linux",
+    "set": 4,
+    "question": "Какая команда находит исполняемый файл команды?",
+    "options": ["which", "whereis", "locate", "find"],
+    "answer": "which"
+  },
+  {
+    "category": "Linux",
+    "set": 4,
+    "question": "Какая команда ищет файлы с помощью базы данных?",
+    "options": ["locate", "find", "search", "query"],
+    "answer": "locate"
+  },
+  {
+    "category": "Linux",
+    "set": 4,
+    "question": "Какая команда обновляет базу данных locate?",
+    "options": ["updatedb", "updatedatabase", "refreshdb", "syncdb"],
+    "answer": "updatedb"
+  },
+  {
+    "category": "Linux",
+    "set": 4,
+    "question": "Какая команда показывает все настроенные задания cron?",
+    "options": ["crontab -l", "cron -list", "cronshow", "jobs"],
+    "answer": "crontab -l"
+  },
+  {
+    "category": "Linux",
+    "set": 4,
+    "question": "Какая команда редактирует задания cron?",
+    "options": ["crontab -e", "cronedit", "crontab", "schedule"],
+    "answer": "crontab -e"
+  },
+  {
+    "category": "Linux",
+    "set": 4,
+    "question": "Какая команда планирует одноразовую задачу?",
+    "options": ["at", "cron", "task", "schedule"],
+    "answer": "at"
+  },
+  {
+    "category": "Linux",
+    "set": 4,
+    "question": "Какая команда показывает активные задания в оболочке?",
+    "options": ["jobs", "ps", "bg", "fg"],
+    "answer": "jobs"
+  },
+  {
+    "category": "Linux",
+    "set": 4,
+    "question": "Какая команда переводит процесс в фоновый режим?",
+    "options": ["bg", "fg", "jobs", "nohup"],
+    "answer": "bg"
+  },
+  {
+    "category": "Linux",
+    "set": 4,
+    "question": "Какая команда возвращает фоновый процесс на передний план?",
+    "options": ["fg", "bg", "jobs", "top"],
+    "answer": "fg"
+  },
+  {
+    "category": "Linux",
+    "set": 4,
+    "question": "Команда подсчёта строк, слов и байтов в Linux",
+    "options": ["wc", "umask", "запускает программу с эффективным ID пользователя-владельца файла", "ограничивает удаление в общих каталогах"],
+    "answer": "wc"
+  },
+  {
+    "category": "Linux",
+    "set": 4,
+    "question": "Команда дерева процессов в Linux",
+    "options": ["pstree", "umask", "запускает программу с эффективным ID пользователя-владельца файла", "ограничивает удаление в общих каталогах"],
+    "answer": "pstree"
+  },
+  {
+    "category": "Linux",
+    "set": 4,
+    "question": "Команда просмотра прослушиваемых сокетов в Linux",
+    "options": ["ss -lntup", "umask", "запускает программу с эффективным ID пользователя-владельца файла", "ограничивает удаление в общих каталогах"],
+    "answer": "ss -lntup"
+  },
+  {
+    "category": "Linux",
+    "set": 4,
+    "question": "Инструмент для просмотра открытых файловых дескрипторов в Linux",
+    "options": ["lsof", "umask", "запускает программу с эффективным ID пользователя-владельца файла", "ограничивает удаление в общих каталогах"],
+    "answer": "lsof"
+  },
+  {
+    "category": "Linux",
+    "set": 4,
+    "question": "Команда экспорта переменной окружения в Linux",
+    "options": ["export NAME=value", "umask", "запускает программу с эффективным ID пользователя-владельца файла", "ограничивает удаление в общих каталогах"],
+    "answer": "export NAME=value"
+  },
+  {
+    "category": "Linux",
+    "set": 4,
+    "question": "Пользовательский crontab для запланированных задач в Linux",
+    "options": ["crontab -e", "umask", "запускает программу с эффективным ID пользователя-владельца файла", "ограничивает удаление в общих каталогах"],
+    "answer": "crontab -e"
+  },
+  {
+    "category": "Linux",
+    "set": 4,
+    "question": "Общепринятый каталог для временных файлов в Linux",
+    "options": ["/tmp", "umask", "запускает программу с эффективным ID пользователя-владельца файла", "ограничивает удаление в общих каталогах"],
+    "answer": "/tmp"
+  },
+  {
+    "category": "Linux",
+    "set": 4,
+    "question": "Команда DNS-запроса в Linux",
+    "options": ["getent hosts name", "umask", "запускает программу с эффективным ID пользователя-владельца файла", "ограничивает удаление в общих каталогах"],
+    "answer": "getent hosts name"
+  },
+  {
+    "category": "Linux",
+    "set": 4,
+    "question": "Команда таблицы маршрутов в Linux",
+    "options": ["ip route", "umask", "запускает программу с эффективным ID пользователя-владельца файла", "ограничивает удаление в общих каталогах"],
+    "answer": "ip route"
+  },
+  {
+    "category": "Linux",
+    "set": 4,
+    "question": "Команда отображения IP-адресов в Linux",
+    "options": ["ip addr", "umask", "запускает программу с эффективным ID пользователя-владельца файла", "ограничивает удаление в общих каталогах"],
+    "answer": "ip addr"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "Какая команда Bash возвращает в предыдущий рабочий каталог?",
+    "options": ["cd -", "cd ..", "cd ~", "popd -all"],
+    "answer": "cd -"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "Какая команда показывает свободную и используемую память в удобочитаемом виде?",
+    "options": ["ram -h", "top -m", "mem -h", "free -h"],
+    "answer": "free -h"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "В каком файле в Linux хранится основная информация об учётных записях пользователей?",
+    "options": ["/etc/users", "/var/accounts", "/etc/login.list", "/etc/passwd"],
+    "answer": "/etc/passwd"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "Какая команда создаёт символическую ссылку?",
+    "options": ["sym -s", "ln -s", "link -s", "mklink"],
+    "answer": "ln -s"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "Какая команда показывает последние входы пользователей в систему?",
+    "options": ["recent", "last", "prevlogin", "history -u"],
+    "answer": "last"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "Какая команда меняет владельца файла?",
+    "options": ["passwd", "umask", "chown", "chmod"],
+    "answer": "chown"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "Какой сигнал отправляет команда kill -9?",
+    "options": ["SIGHUP", "SIGKILL", "SIGTERM", "SIGSTOP"],
+    "answer": "SIGKILL"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "Какая команда показывает свободное дисковое пространство смонтированных файловых систем?",
+    "options": ["du -h", "fdisk -s", "df -h", "mount -s"],
+    "answer": "df -h"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "Какая команда выводит список всех запущенных процессов всех пользователей в стиле BSD?",
+    "options": ["ps aux", "jobs -all", "proc -a", "ls -p"],
+    "answer": "ps aux"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "В каком каталоге обычно находятся системные файлы журналов?",
+    "options": ["/opt/logs", "/usr/log", "/var/log", "/etc/log"],
+    "answer": "/var/log"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "Какая команда используется для редактирования периодических заданий пользователя?",
+    "options": ["at -e", "sleep -e", "nohup -e", "crontab -e"],
+    "answer": "crontab -e"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "Какая команда Linux показывает архитектуру ЦП, количество ядер и сведения о модели?",
+    "options": ["lscpu", "lsblk", "lsusb", "lsmod"],
+    "answer": "lscpu"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "Какая команда извлекает архив .tar.gz?",
+    "options": ["tar -czf", "untar -g", "tar -xzf", "gzip -c"],
+    "answer": "tar -xzf"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "Какая команда выводит список переменных окружения текущей оболочки?",
+    "options": ["shellenv", "env", "vars", "envs -l"],
+    "answer": "env"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "Какое значение chmod даёт права только на чтение владельцу, группе и остальным?",
+    "options": ["chmod 222", "chmod 444", "chmod 777", "chmod 111"],
+    "answer": "chmod 444"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "Какая команда задаёт маску прав по умолчанию для новых файлов и каталогов?",
+    "options": ["umask", "chmod", "chattr", "setfacl"],
+    "answer": "umask"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "Какая команда запрашивает в журнале systemd сообщения текущей загрузки?",
+    "options": ["journalctl -b", "dmesg --boot", "systemctl --logs", "logger -b"],
+    "answer": "journalctl -b"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "Какой файл определяет файловые системы, которые должны монтироваться автоматически при загрузке?",
+    "options": ["/etc/fstab", "/etc/mounts.conf", "/var/filesystems", "/boot/mounts"],
+    "answer": "/etc/fstab"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "Какая опция ls показывает номера inode для записей каталога?",
+    "options": ["-i", "-n", "-I", "-inode"],
+    "answer": "-i"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "Что происходит с группой-владельцем новых файлов в каталоге с установленным битом setgid?",
+    "options": ["Они наследуют группу каталога", "Они всегда принадлежат root", "Они наследуют основную группу создателя", "У них нет группы-владельца"],
+    "answer": "Они наследуют группу каталога"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "Какая команда может показать процесс, прослушивающий TCP-порт 8080?",
+    "options": ["ss -ltnp 'sport = :8080'", "ip route 8080", "ping -p 8080", "dig -p 8080"],
+    "answer": "ss -ltnp 'sport = :8080'"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "Какая команда запрашивает в конфигурации служб имён системы запись об учётной записи пользователя?",
+    "options": ["getent passwd alice", "userctl show alice", "passwd --query alice", "id --database alice"],
+    "answer": "getent passwd alice"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "Какой файл содержит список оболочек входа, считающихся допустимыми в системе Linux?",
+    "options": ["/etc/shells", "/etc/profile", "/var/shells", "/usr/bin/shells"],
+    "answer": "/etc/shells"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "Какая настройка Bash заставляет конвейер завершаться ошибкой, если любая команда в нём завершилась ошибкой?",
+    "options": ["set -o pipefail", "set -o errexit-pipe", "shopt -s pipecheck", "trap ERR PIPE"],
+    "answer": "set -o pipefail"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "Какая команда обновляет локальные индексы пакетов APT без обновления установленных пакетов?",
+    "options": ["apt update", "apt upgrade", "apt install --refresh", "dpkg --configure"],
+    "answer": "apt update"
+  }
+]

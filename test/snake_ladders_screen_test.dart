@@ -47,6 +47,38 @@ void main() {
     expect(find.text('P4: 0'), findsOneWidget);
   });
 
+  testWidgets('level selector starts and resets the chosen level', (
+    tester,
+  ) async {
+    SharedPreferences.setMockInitialValues({});
+    await tester.pumpWidget(const MaterialApp(home: SnakeLaddersScreen()));
+    await tester.pumpAndSettle();
+
+    await tester.tap(find.byKey(const ValueKey('snake-ladder-level-1')));
+    await tester.pumpAndSettle();
+    await tester.scrollUntilVisible(
+      find.text('Level 20'),
+      200,
+      scrollable: find.byType(Scrollable).last,
+    );
+    await tester.tap(find.text('Level 20'));
+    await tester.pumpAndSettle();
+
+    expect(find.text('2 players · Level 20 / 20'), findsOneWidget);
+    expect((await SnakeLaddersService.load())!.level, 20);
+    await tester.tap(find.byTooltip('New game'));
+    await tester.pumpAndSettle();
+    expect(find.text('2 players · Level 20 / 20'), findsOneWidget);
+    expect((await SnakeLaddersService.load())!.level, 20);
+
+    await tester.tap(find.byType(DropdownButtonFormField<SnakeLaddersMode>));
+    await tester.pumpAndSettle();
+    await tester.tap(find.text('3 players'));
+    await tester.pumpAndSettle();
+    expect(find.text('3 players · Level 20 / 20'), findsOneWidget);
+    expect((await SnakeLaddersService.load())!.level, 20);
+  });
+
   testWidgets('bot completes its turn and returns control', (tester) async {
     SharedPreferences.setMockInitialValues({});
     await SnakeLaddersService.save(

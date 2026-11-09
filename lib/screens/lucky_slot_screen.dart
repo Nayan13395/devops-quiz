@@ -4,6 +4,7 @@ import 'dart:math';
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
+import '../services/game_sound_service.dart';
 import 'reward_question_screen.dart';
 
 class LuckySlotScreen extends StatefulWidget {
@@ -133,6 +134,7 @@ class _LuckySlotScreenState extends State<LuckySlotScreen> {
 
       wonReward = null;
     });
+    unawaited(GameSoundService.play(GameSoundEffect.click));
 
     // =======================================================
     // START ALL 3 REELS
@@ -214,6 +216,7 @@ class _LuckySlotScreenState extends State<LuckySlotScreen> {
     // =======================================================
 
     final int reward = _rewardFromDigits(finalReel1, finalReel2, finalReel3);
+    unawaited(GameSoundService.play(GameSoundEffect.click));
 
     setState(() {
       wonReward = reward;

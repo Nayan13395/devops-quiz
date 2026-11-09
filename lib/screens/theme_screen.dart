@@ -185,6 +185,30 @@ class _ThemeScreenState extends State<ThemeScreen> {
       appBar: AppBar(
         title: const Text('🎨 Themes'),
         actions: [
+          Consumer<ThemeProvider>(
+            builder: (context, provider, child) => Tooltip(
+              message: provider.autoThemeEnabled
+                  ? 'Turn off daily automatic themes'
+                  : 'Automatically change to an unlocked theme every day',
+              child: TextButton.icon(
+                key: const ValueKey('theme-auto-toggle'),
+                onPressed: loading
+                    ? null
+                    : () => provider.toggleAutoTheme(totalPoints: totalPoints),
+                style: TextButton.styleFrom(
+                  backgroundColor: provider.autoThemeEnabled
+                      ? Theme.of(context).colorScheme.primaryContainer
+                      : null,
+                ),
+                icon: Icon(
+                  provider.autoThemeEnabled
+                      ? Icons.autorenew_rounded
+                      : Icons.auto_awesome_outlined,
+                ),
+                label: const Text('Auto'),
+              ),
+            ),
+          ),
           IconButton(
             key: const ValueKey('theme-search-toggle'),
             tooltip: _searchOpen ? 'Close theme search' : 'Search themes',
@@ -257,7 +281,7 @@ class _ThemeScreenState extends State<ThemeScreen> {
                   Consumer<ThemeProvider>(
                     builder: (context, provider, child) {
                       final query = _searchController.text.trim().toLowerCase();
-                      final themes = AppThemes.all
+                      final themes = AppThemes.sortedByUnlock
                           .where(
                             (theme) => theme.name.toLowerCase().contains(query),
                           )
@@ -522,8 +546,9 @@ class _ThemeScreenState extends State<ThemeScreen> {
 
                   const SizedBox(height: 7),
 
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  Wrap(
+                    alignment: WrapAlignment.spaceBetween,
+                    runSpacing: 4,
                     children: [
                       Text(
                         '${_formatPoints(totalPoints)} / '

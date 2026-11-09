@@ -1,0 +1,877 @@
+[
+  {
+    "category": "Bash Scripting",
+    "set": 1,
+    "question": "أي سطر يخبر النظام باستخدام Bash كمفسّر للسكربت؟",
+    "options": ["#!/bin/bash", "#/bin/bash", "//bin/bash", "@bash"],
+    "answer": "#!/bin/bash"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 1,
+    "question": "أي أمر ينفّذ script.sh إذا كان يملك صلاحية التنفيذ بالفعل؟",
+    "options": ["./script.sh", "run script.sh", "exec script.sh", "start script.sh"],
+    "answer": "./script.sh"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 1,
+    "question": "أي أمر يشغّل script.sh صراحةً باستخدام Bash؟",
+    "options": ["bash script.sh", "bash run script.sh", "bash exec script.sh", "bash start script.sh"],
+    "answer": "bash script.sh"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 1,
+    "question": "أي رمز يبدأ تعليقًا من سطر واحد في سكربت Bash؟",
+    "options": ["#", "//", "/*", "<!--"],
+    "answer": "#"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 1,
+    "question": "أي أمر يجعل script.sh قابلاً للتنفيذ؟",
+    "options": ["chmod +x script.sh", "chmod exec script.sh", "chmod run script.sh", "chmod allow script.sh"],
+    "answer": "chmod +x script.sh"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 1,
+    "question": "أي أمر مدمج يطبع النص إلى المخرج القياسي (standard output)؟",
+    "options": ["echo", "print", "write", "display"],
+    "answer": "echo"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 1,
+    "question": "أي أمر مدمج يقرأ المدخلات من المستخدم؟",
+    "options": ["read", "input", "get", "scan"],
+    "answer": "read"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 1,
+    "question": "أي رمز يُستخدم لتوسيع قيمة المتغير؟",
+    "options": ["$", "@", "%", "&"],
+    "answer": "$"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 1,
+    "question": "أي إسناد متغير صالح في Bash؟",
+    "options": ["name=John", "name = John", "set name John", "let name:John"],
+    "answer": "name=John"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 1,
+    "question": "أي أمر يطبع حالة الخروج للأمر السابق؟",
+    "options": ["echo $?", "echo $status", "echo $exit", "echo $code"],
+    "answer": "echo $?"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 1,
+    "question": "ماذا تشير حالة الخروج 0 عادةً؟",
+    "options": ["النجاح", "الفشل", "انتهاء المهلة", "رفض الإذن"],
+    "answer": "النجاح"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 1,
+    "question": "أي رمز يفصل بين عدة أوامر في سطر واحد؟",
+    "options": [";", ",", ":", "|"],
+    "answer": ";"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 1,
+    "question": "أي امتداد ملف يُستخدم عادةً لسكربتات الشل؟",
+    "options": [".sh", ".bashrc", ".exe", ".bin"],
+    "answer": ".sh"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 1,
+    "question": "أي أمر يعرض متغيرات البيئة؟",
+    "options": ["env", "chmod", "mkdir", "rm"],
+    "answer": "env"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 1,
+    "question": "أي أمر يعرض الشل الافتراضي للمستخدم الحالي؟",
+    "options": ["echo $SHELL", "env shell", "shell --show", "cat shell"],
+    "answer": "echo $SHELL"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 1,
+    "question": "أي حرف يُبطل المعنى الخاص للحرف التالي في Bash؟",
+    "options": ["الشرطة المائلة العكسية", "الشرطة المائلة الأمامية", "النجمة", "علامة العطف"],
+    "answer": "الشرطة المائلة العكسية"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 1,
+    "question": "أي نمط اقتباس يمنع توسيع المتغيرات واستبدال الأوامر؟",
+    "options": ["علامات الاقتباس المفردة", "علامات الاقتباس المزدوجة", "علامات الاقتباس الخلفية (Backticks)", "بدون علامات اقتباس"],
+    "answer": "علامات الاقتباس المفردة"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 1,
+    "question": "أي نمط اقتباس يسمح بتوسيع المتغيرات مع الحفاظ على المسافات؟",
+    "options": ["علامات الاقتباس المزدوجة", "علامات الاقتباس المفردة", "علامات الاقتباس الخلفية (Backticks)", "بدون علامات اقتباس"],
+    "answer": "علامات الاقتباس المزدوجة"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 1,
+    "question": "أي عامل يعيد توجيه المخرجات القياسية ويستبدل محتوى الملف؟",
+    "options": [">", ">>", "<", "2>"],
+    "answer": ">"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 1,
+    "question": "أي أمر يطبع مجلد العمل الحالي؟",
+    "options": ["pwd", "cwd", "whereami", "dirname"],
+    "answer": "pwd"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 1,
+    "question": "أي تدفق قياسي يُستخدم لرسائل الخطأ؟",
+    "options": ["stderr", "stdout", "stdin", "pipe"],
+    "answer": "stderr"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 1,
+    "question": "أي واصف ملف (file descriptor) يمثّل المدخلات القياسية؟",
+    "options": ["0", "1", "2", "3"],
+    "answer": "0"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 1,
+    "question": "أي أمر يمسح شاشة الطرفية؟",
+    "options": ["clear", "cls", "wipe", "erase"],
+    "answer": "clear"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 1,
+    "question": "أي اختصار لوحة مفاتيح يوقف عادةً العملية الجارية في المقدمة؟",
+    "options": ["Ctrl+C", "Ctrl+D", "Ctrl+Z", "Ctrl+L"],
+    "answer": "Ctrl+C"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 1,
+    "question": "أي أمر مدمج ينهي السكربت؟",
+    "options": ["exit", "stop", "end", "quit"],
+    "answer": "exit"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "أي صيغة تخزّن مخرجات date في متغير باسم now؟",
+    "options": ["now=$(date)", "now=date", "now:=$(date)", "date->now"],
+    "answer": "now=$(date)"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "أي معامل خاص يمثّل اسم السكربت؟",
+    "options": ["$0", "$1", "$#", "$@"],
+    "answer": "$0"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "أي معامل خاص يتوسع إلى معرّف العملية (process ID) لآخر أمر يعمل في الخلفية؟",
+    "options": ["$!", "$$", "$?", "$#"],
+    "answer": "$!"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "أي معامل خاص يمثّل عدد الوسائط الموضعية؟",
+    "options": ["$#", "$@", "$*", "$$"],
+    "answer": "$#"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "أي معامل خاص يوسّع جميع الوسائط الموضعية ككلمات منفصلة؟",
+    "options": ["$@", "$*", "$#", "$0"],
+    "answer": "$@"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "أي أمر مدمج في Bash يتجاهل أول معامل موضعي ويزيح البقية خطوة واحدة؟",
+    "options": ["shift", "unshift", "pop", "rotate"],
+    "answer": "shift"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "أي معامل خاص يمثّل معرّف العملية (process ID) للشل الحالي؟",
+    "options": ["$$", "$!", "$?", "$0"],
+    "answer": "$$"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "أي معامل خاص يمثّل حالة الخروج لآخر أمر؟",
+    "options": ["$?", "$!", "$$", "$#"],
+    "answer": "$?"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "أي توسيع يعيد قيمة افتراضية إذا كان var غير معيّن أو فارغًا؟",
+    "options": ["${var:-default}", "${var:=default}", "${var:+default}", "${var:?default}"],
+    "answer": "${var:-default}"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "أي توسيع يستخرج 3 أحرف من var بدءًا من الإزاحة 2؟",
+    "options": ["${var:2:3}", "${var:3:2}", "${var[2,3]}", "${var#2:3}"],
+    "answer": "${var:2:3}"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "أي توسيع يعيد طول قيمة var؟",
+    "options": ["${#var}", "${len(var)}", "${var:length}", "${var#length}"],
+    "answer": "${#var}"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "أي توسيع يحوّل قيمة var إلى أحرف كبيرة؟",
+    "options": ["${var^^}", "${var,,}", "${var!!}", "${var##}"],
+    "answer": "${var^^}"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "أي توسيع يزيل أطول بادئة مطابقة للنمط من var؟",
+    "options": ["${var##pattern}", "${var#pattern}", "${var%%pattern}", "${var%pattern}"],
+    "answer": "${var##pattern}"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "أي توسيع يستبدل أول تطابق فقط للنمط pattern في var؟",
+    "options": ["${var/pattern/replacement}", "${var//pattern/replacement}", "${var#pattern}", "${var%pattern}"],
+    "answer": "${var/pattern/replacement}"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "أي توسيع يطبع رسالة خطأ ويوقف سكربتًا غير تفاعلي إذا كان var غير معيّن أو فارغًا؟",
+    "options": ["${var:?message}", "${var:-message}", "${var:+message}", "${var:=message}"],
+    "answer": "${var:?message}"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "أي صيغة تنفّذ التوسيع الحسابي في Bash؟",
+    "options": ["$((5 + 3))", "$(5 + 3)", "${5 + 3}", "$[5 + 3]"],
+    "answer": "$((5 + 3))"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "أي أمر يزيد قيمة المتغير count بمقدار واحد؟",
+    "options": ["let count++", "count++", "increment count", "add count"],
+    "answer": "let count++"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "أي أمر يطبع 8 بعد جمع 5 و3؟",
+    "options": ["expr 5 + 3", "expr 5+3", "expr5 + 3", "expr add 5 3"],
+    "answer": "expr 5 + 3"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "أي أمر يعرّف count كمتغير من النوع الصحيح (integer)؟",
+    "options": ["declare -i count", "declare int count", "integer count", "set count integer"],
+    "answer": "declare -i count"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "أي أمر يجعل المتغير للقراءة فقط؟",
+    "options": ["readonly var", "lock var", "const var", "final var"],
+    "answer": "readonly var"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "أي أمر يزيل متغيرًا من بيئة الشل؟",
+    "options": ["unset var", "delete var", "remove var", "clear var"],
+    "answer": "unset var"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "أي أمر يجعل المتغير متاحًا للعمليات الفرعية؟",
+    "options": ["export var", "share var", "env var", "publish var"],
+    "answer": "export var"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "أي خيار يمنع إعادة توجيه المخرجات من الكتابة فوق ملف موجود؟",
+    "options": ["set -o noclobber", "set -o nooverwrite", "set -o protect", "set -o safe"],
+    "answer": "set -o noclobber"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "أي متغير في Bash يحمل عدد الثواني منذ بدء الشل؟",
+    "options": ["$SECONDS", "$RANDOM", "$LINENO", "$UID"],
+    "answer": "$SECONDS"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "أي توسيع في Bash يستبدل alt فقط إذا كان var معيّنًا وغير فارغ؟",
+    "options": ["${var:+alt}", "${var:-alt}", "${var:=alt}", "${var:?alt}"],
+    "answer": "${var:+alt}"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 3,
+    "question": "أي أمر مدمج يقيّم تعبيرات الاختبار ويعيد حالة خروج؟",
+    "options": ["test", "echo", "read", "cd"],
+    "answer": "test"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 3,
+    "question": "أي صيغة تُستخدم عادةً لإحاطة تعبيرات الاختبار الشرطية؟",
+    "options": ["[ ]", "{ }", "( )", "< >"],
+    "answer": "[ ]"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 3,
+    "question": "أي عامل اختبار يتحقق من وجود ملف؟",
+    "options": ["-e", "-f", "-d", "-x"],
+    "answer": "-e"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 3,
+    "question": "أي عامل اختبار يتحقق من أن المسار ملف عادي؟",
+    "options": ["-f", "-d", "-e", "-r"],
+    "answer": "-f"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 3,
+    "question": "أي عامل اختبار يتحقق من أن المسار مجلد؟",
+    "options": ["-d", "-f", "-s", "-w"],
+    "answer": "-d"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 3,
+    "question": "أي عامل اختبار يتحقق من أن الملف قابل للقراءة؟",
+    "options": ["-r", "-w", "-x", "-s"],
+    "answer": "-r"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 3,
+    "question": "أي عامل اختبار يتحقق من أن الملف قابل للكتابة؟",
+    "options": ["-w", "-r", "-x", "-e"],
+    "answer": "-w"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 3,
+    "question": "أي عامل اختبار يتحقق من أن الملف قابل للتنفيذ؟",
+    "options": ["-x", "-w", "-r", "-d"],
+    "answer": "-x"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 3,
+    "question": "أي عامل اختبار يتحقق من أن السلسلة النصية غير فارغة؟",
+    "options": ["-n", "-z", "-s", "-e"],
+    "answer": "-n"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 3,
+    "question": "أي عامل اختبار يتحقق من أن السلسلة النصية فارغة؟",
+    "options": ["-z", "-n", "-s", "-f"],
+    "answer": "-z"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 3,
+    "question": "أي عامل مقارنة رقمية يتحقق من المساواة؟",
+    "options": ["-eq", "=", "==", "-equal"],
+    "answer": "-eq"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 3,
+    "question": "أي عامل مقارنة رقمية يتحقق من \"أكبر من\"؟",
+    "options": ["-gt", ">", "-ge", "-lt"],
+    "answer": "-gt"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 3,
+    "question": "أي عامل مقارنة رقمية يتحقق من \"أصغر من أو يساوي\"؟",
+    "options": ["-le", "-lt", "-ge", "-ne"],
+    "answer": "-le"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 3,
+    "question": "أي كلمة مفتاحية تبدأ جملة شرطية؟",
+    "options": ["if", "case", "for", "while"],
+    "answer": "if"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 3,
+    "question": "أي كلمة مفتاحية تُنهي جملة if؟",
+    "options": ["fi", "end", "done", "exit"],
+    "answer": "fi"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 3,
+    "question": "أي كلمة مفتاحية توفّر فرعًا بديلًا عندما يكون شرط if خاطئًا؟",
+    "options": ["else", "elif", "or", "default"],
+    "answer": "else"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 3,
+    "question": "أي كلمة مفتاحية توفّر فرع else-if؟",
+    "options": ["elif", "elseif", "else if", "or"],
+    "answer": "elif"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 3,
+    "question": "أي حلقة تتكرر ما دام الشرط صحيحًا؟",
+    "options": ["while", "until", "repeat", "loop"],
+    "answer": "while"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 3,
+    "question": "أي حلقة تتكرر حتى يصبح الشرط صحيحًا؟",
+    "options": ["until", "while", "for", "case"],
+    "answer": "until"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 3,
+    "question": "أي حلقة تمرّ على عناصر قائمة؟",
+    "options": ["for", "while", "until", "case"],
+    "answer": "for"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 3,
+    "question": "أي كلمة مفتاحية للتحكم في الحلقة تتخطى إلى التكرار التالي؟",
+    "options": ["continue", "break", "next", "skip"],
+    "answer": "continue"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 3,
+    "question": "أي كلمة مفتاحية للتحكم في الحلقة تخرج من الحلقة فورًا؟",
+    "options": ["break", "continue", "exit", "stop"],
+    "answer": "break"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 3,
+    "question": "أي جملة تختار الأوامر بناءً على مطابقة الأنماط؟",
+    "options": ["case", "switch", "select", "match"],
+    "answer": "case"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 3,
+    "question": "أي كلمة مفتاحية تُنهي جملة case في Bash؟",
+    "options": ["esac", "end", "fi", "done"],
+    "answer": "esac"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 3,
+    "question": "أي صيغة حلقة تشبه الحلقات بأسلوب C في Bash؟",
+    "options": ["for ((i=0; i<5; i++))", "for i in 0 to 5", "loop i=0 to 5", "while (i<5)"],
+    "answer": "for ((i=0; i<5; i++))"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "أي صيغة تعرّف دالة Bash بسيطة؟",
+    "options": ["myfunc() { echo hi; }", "def myfunc: echo hi", "function = myfunc", "myfunc -> echo hi"],
+    "answer": "myfunc() { echo hi; }"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "أي أمر يستدعي دالة باسم myfunc؟",
+    "options": ["myfunc", "call myfunc", "run myfunc", "execute myfunc"],
+    "answer": "myfunc"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "أي كلمة مفتاحية تعرّف متغيرًا مرئيًا داخل الدالة فقط؟",
+    "options": ["local", "private", "internal", "hidden"],
+    "answer": "local"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "أي أمر يعيد حالة خروج 0 من دالة؟",
+    "options": ["return 0", "exit function 0", "stop 0", "end 0"],
+    "answer": "return 0"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "داخل الدالة، أي معامل يعطي عدد الوسائط الممررة إلى الدالة؟",
+    "options": ["$#", "$@", "$0", "$1"],
+    "answer": "$#"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "أي صيغة تنشئ مصفوفة مفهرسة بثلاثة عناصر؟",
+    "options": ["arr=(one two three)", "array arr one two three", "arr[one two three]", "set arr one two three"],
+    "answer": "arr=(one two three)"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "أي صيغة تصل إلى العنصر عند الفهرس 2 في arr؟",
+    "options": ["${arr[2]}", "${arr:2}", "$arr[2]", "arr{2}"],
+    "answer": "${arr[2]}"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "أي توسيع يعطي عدد العناصر في arr؟",
+    "options": ["${#arr[@]}", "${#arr}", "${arr:length}", "${arr[@]#}"],
+    "answer": "${#arr[@]}"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "أي صيغة تضيف newitem إلى نهاية arr؟",
+    "options": ["arr+=(newitem)", "arr=newitem", "arr.push(newitem)", "add arr newitem"],
+    "answer": "arr+=(newitem)"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "أي توسيع يعيد جميع عناصر arr؟",
+    "options": ["${arr[@]}", "${arr[0]}", "${arr[all]}", "${arr}"],
+    "answer": "${arr[@]}"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "أي أمر يعرّف مصفوفة ترابطية (associative array)؟",
+    "options": ["declare -A map", "declare -a map", "array -A map", "assoc map"],
+    "answer": "declare -A map"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "أي إعادة توجيه ترسل المخرج القياسي والخطأ القياسي معًا إلى output.log؟",
+    "options": ["command &> output.log", "command > output.log", "command 2> output.log", "command < output.log"],
+    "answer": "command &> output.log"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "أي إعادة توجيه تتجاهل جميع مخرجات الأمر؟",
+    "options": ["command > /dev/null", "command > null", "command > empty", "command > discard"],
+    "answer": "command > /dev/null"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "أي عامل يرسل مخرجات أمر كمدخلات لأمر آخر؟",
+    "options": ["|", ">", "<", "&"],
+    "answer": "|"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "أي رمز يشغّل أمرًا في الخلفية؟",
+    "options": ["&", "&&", "|", ";"],
+    "answer": "&"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "أي أمر مدمج ينتظر انتهاء المهام الخلفية؟",
+    "options": ["wait", "hold", "pause", "sleep"],
+    "answer": "wait"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "أي أمر ينفّذ script.sh في بيئة الشل الحالية؟",
+    "options": ["source script.sh", "bash script.sh", "./script.sh", "sh script.sh"],
+    "answer": "source script.sh"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "أي عامل يبدأ مستند here document؟",
+    "options": ["<<", ">>", "<", ">"],
+    "answer": "<<"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "أي أمر ينشئ ملفًا مؤقتًا آمنًا؟",
+    "options": ["mktemp", "tempfile", "touch tmp", "newfile"],
+    "answer": "mktemp"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "أي أمر ينفّذ التنظيف عندما يتلقى السكربت الإشارة SIGINT؟",
+    "options": ["trap 'cleanup' SIGINT", "handle SIGINT cleanup", "signal SIGINT cleanup", "catch SIGINT cleanup"],
+    "answer": "trap 'cleanup' SIGINT"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "أي إشارة تُرسل عادةً عندما يضغط المستخدم Ctrl+C؟",
+    "options": ["SIGINT", "SIGTERM", "SIGKILL", "SIGHUP"],
+    "answer": "SIGINT"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "أي خيار يجعل السكربت يخرج فورًا عند فشل أي أمر؟",
+    "options": ["set -e", "set -x", "set -u", "set -o pipefail"],
+    "answer": "set -e"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "أي خيار يسبب خطأً عند الإشارة إلى متغير غير معيّن؟",
+    "options": ["set -u", "set -e", "set -x", "set -a"],
+    "answer": "set -u"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "أي خيار يطبع كل أمر قبل تنفيذه لأغراض التصحيح؟",
+    "options": ["set -x", "set -e", "set -u", "set -v"],
+    "answer": "set -x"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "أي أمر يسرد دوال الشل المعرّفة حاليًا؟",
+    "options": ["declare -f", "declare -A", "functions", "listfunc"],
+    "answer": "declare -f"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 5,
+    "question": "أي سطر في أعلى السكربت يخبر النظام بتشغيله باستخدام Bash؟",
+    "options": ["//bash", "#!/bin/bash", "<?bash", "#include bash"],
+    "answer": "#!/bin/bash"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 5,
+    "question": "أي أمر ينشئ مجلدًا مع أي مجلدات أصل مفقودة؟",
+    "options": ["mkdir -p", "mkdir -r", "mkdir -m", "mkdir -v"],
+    "answer": "mkdir -p"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 5,
+    "question": "كيف تسند القيمة 5 إلى المتغير count في Bash؟",
+    "options": ["set count 5", "$count=5", "count=5", "count = 5"],
+    "answer": "count=5"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 5,
+    "question": "أي رمز يُستخدم لقراءة قيمة متغير باسم name؟",
+    "options": ["%name", "$name", "&name", "#name"],
+    "answer": "$name"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 5,
+    "question": "أي متغير يحمل عدد الوسائط الممررة إلى السكربت؟",
+    "options": ["$?", "$#", "$@", "$$"],
+    "answer": "$#"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 5,
+    "question": "أي متغير يحمل حالة الخروج لآخر أمر؟",
+    "options": ["$?", "$0", "$#", "$!"],
+    "answer": "$?"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 5,
+    "question": "أي عامل يشغّل الأمر الثاني فقط إذا نجح الأول؟",
+    "options": ["|", "||", ";", "&&"],
+    "answer": "&&"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 5,
+    "question": "أي عامل يضيف المخرجات إلى نهاية ملف؟",
+    "options": ["<<", ">>", "|&", ">"],
+    "answer": ">>"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 5,
+    "question": "أي كلمة مفتاحية تبدأ كتلة شرطية في Bash؟",
+    "options": ["check", "case-if", "if", "when"],
+    "answer": "if"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 5,
+    "question": "أي كلمة مفتاحية تُنهي كتلة if في Bash؟",
+    "options": ["endif", "fi", "done", "end"],
+    "answer": "fi"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 5,
+    "question": "أي حلقة تمرّ على قائمة من العناصر؟",
+    "options": ["foreach item list", "for item in list; do", "each item in list", "loop item in list"],
+    "answer": "for item in list; do"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 5,
+    "question": "أي أمر يطبع النص على الطرفية؟",
+    "options": ["print", "echo", "say", "out"],
+    "answer": "echo"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 5,
+    "question": "أي اختبار يتحقق من وجود ملف عادي؟",
+    "options": ["[ -e file ]", "[ -r file ]", "[ -d file ]", "[ -f file ]"],
+    "answer": "[ -f file ]"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 5,
+    "question": "أي اختبار يتحقق من أن السلسلة النصية فارغة؟",
+    "options": ["[ -s \"$str\" ]", "[ -e \"$str\" ]", "[ -n \"$str\" ]", "[ -z \"$str\" ]"],
+    "answer": "[ -z \"$str\" ]"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 5,
+    "question": "أي أمر يقرأ سطر مدخلات ويخزنه في متغير؟",
+    "options": ["read", "input", "scan", "get"],
+    "answer": "read"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 5,
+    "question": "أي صيغة تلتقط مخرجات أمر في متغير؟",
+    "options": ["var=$(date)", "var=[date]", "var={date}", "var=<date>"],
+    "answer": "var=$(date)"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 5,
+    "question": "أي أمر يحسب عدد الأسطر في ملف باسم data.txt في شل Bash؟",
+    "options": ["wc -l data.txt", "ls -l data.txt", "sort -l data.txt", "cut -l data.txt"],
+    "answer": "wc -l data.txt"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 5,
+    "question": "أي خيار يطبع كل أمر قبل تنفيذه؟",
+    "options": ["set -f", "set -u", "set -x", "set -e"],
+    "answer": "set -x"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 5,
+    "question": "أي متغير يحمل اسم السكربت قيد التشغيل؟",
+    "options": ["$*", "$1", "$0", "$#"],
+    "answer": "$0"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 5,
+    "question": "كيف تعرّف دالة باسم greet في Bash؟",
+    "options": ["fn greet { echo hi }", "function greet: echo hi", "def greet(): echo hi", "greet() { echo hi; }"],
+    "answer": "greet() { echo hi; }"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 5,
+    "question": "أي أمر ينفّذ ملفًا بأسلوب source في الشل الحالي؟",
+    "options": ["run file.sh", "import file.sh", "source file.sh", "call file.sh"],
+    "answer": "source file.sh"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 5,
+    "question": "أي رمز بدل (wildcard) يطابق أي عدد من الأحرف في أسماء الملفات؟",
+    "options": ["?", "~", "*", "#"],
+    "answer": "*"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 5,
+    "question": "أي كلمة مفتاحية تُستخدم للاختيار بين عدة أنماط في Bash؟",
+    "options": ["select-when", "match", "case", "switch"],
+    "answer": "case"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 5,
+    "question": "أي أمر يطبع الأسطر الأولى من ملف؟",
+    "options": ["cat -f", "head", "less -h", "tail"],
+    "answer": "head"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 5,
+    "question": "أي عامل يعيد توجيه الخطأ القياسي (standard error) إلى ملف؟",
+    "options": ["0<", "^>", "2>", "1>"],
+    "answer": "2>"
+  }
+]

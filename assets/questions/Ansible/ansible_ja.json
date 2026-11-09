@@ -1,0 +1,877 @@
+[
+  {
+    "category": "Ansible",
+    "set": 1,
+    "question": "Ansibleは主に何に使用されますか?",
+    "options": ["構成管理", "コンテナ化", "データベース管理", "監視"],
+    "answer": "構成管理"
+  },
+  {
+    "category": "Ansible",
+    "set": 1,
+    "question": "Ansibleはどの言語で書かれていますか?",
+    "options": ["Python", "Java", "Go", "Ruby"],
+    "answer": "Python"
+  },
+  {
+    "category": "Ansible",
+    "set": 1,
+    "question": "Ansibleで管理対象ホストを含むファイルはどれですか?",
+    "options": ["インベントリファイル", "プレイブック", "ロール", "モジュール"],
+    "answer": "インベントリファイル"
+  },
+  {
+    "category": "Ansible",
+    "set": 1,
+    "question": "デフォルトのインベントリファイルの場所はどこですか?",
+    "options": ["/etc/ansible/hosts", "/etc/hosts", "/ansible/hosts", "/usr/ansible/hosts"],
+    "answer": "/etc/ansible/hosts"
+  },
+  {
+    "category": "Ansible",
+    "set": 1,
+    "question": "Ansibleのバージョンを確認するコマンドはどれですか?",
+    "options": ["ansible --version", "ansible version", "ansible -v", "ansible check"],
+    "answer": "ansible --version"
+  },
+  {
+    "category": "Ansible",
+    "set": 1,
+    "question": "Ansibleがデフォルトで使用するプロトコルはどれですか?",
+    "options": ["SSH", "FTP", "Telnet", "HTTP"],
+    "answer": "SSH"
+  },
+  {
+    "category": "Ansible",
+    "set": 1,
+    "question": "Ansibleプレイブックとは何ですか?",
+    "options": ["自動化タスクを含むYAMLファイル", "インベントリファイル", "Pythonスクリプト", "設定ファイル"],
+    "answer": "自動化タスクを含むYAMLファイル"
+  },
+  {
+    "category": "Ansible",
+    "set": 1,
+    "question": "Ansibleプレイブックを実行するコマンドはどれですか?",
+    "options": ["ansible-playbook", "ansible-run", "ansible-execute", "ansible-start"],
+    "answer": "ansible-playbook"
+  },
+  {
+    "category": "Ansible",
+    "set": 1,
+    "question": "プレイブックで対象ホストを定義するキーワードはどれですか?",
+    "options": ["hosts", "servers", "nodes", "targets"],
+    "answer": "hosts"
+  },
+  {
+    "category": "Ansible",
+    "set": 1,
+    "question": "プレイブックでタスクを定義するキーワードはどれですか?",
+    "options": ["tasks", "actions", "jobs", "steps"],
+    "answer": "tasks"
+  },
+  {
+    "category": "Ansible",
+    "set": 1,
+    "question": "リモートホストにファイルをコピーするモジュールはどれですか?",
+    "options": ["copy", "fetch", "file", "transfer"],
+    "answer": "copy"
+  },
+  {
+    "category": "Ansible",
+    "set": 1,
+    "question": "サービスを管理するモジュールはどれですか?",
+    "options": ["service", "systemctl", "daemon", "process"],
+    "answer": "service"
+  },
+  {
+    "category": "Ansible",
+    "set": 1,
+    "question": "すべてのホストへの接続をテストするコマンドはどれですか?",
+    "options": ["ansible all -m ping", "ansible ping", "ansible test", "ansible connect"],
+    "answer": "ansible all -m ping"
+  },
+  {
+    "category": "Ansible",
+    "set": 1,
+    "question": "Ansibleプレイブックはどの形式で記述されますか?",
+    "options": ["YAML", "JSON", "XML", "INI"],
+    "answer": "YAML"
+  },
+  {
+    "category": "Ansible",
+    "set": 1,
+    "question": "Ansibleの設定を行うファイルはどれですか?",
+    "options": ["ansible.cfg", "ansible.conf", "config.yml", "ansible.ini"],
+    "answer": "ansible.cfg"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "プレイブックで変数を定義するキーワードはどれですか?",
+    "options": ["vars", "variables", "var", "define"],
+    "answer": "vars"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "変数を参照するために使用される構文はどれですか?",
+    "options": ["{{ variable_name }}", "$(variable_name)", "${variable_name}", "[variable_name]"],
+    "answer": "{{ variable_name }}"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "実行中にメッセージを表示するために使用されるモジュールはどれですか?",
+    "options": ["debug", "print", "echo", "message"],
+    "answer": "debug"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "条件付き実行に使用されるキーワードはどれですか?",
+    "options": ["when", "if", "condition", "check"],
+    "answer": "when"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "タスクを繰り返すために使用されるキーワードはどれですか?",
+    "options": ["loop", "repeat", "iterate", "for"],
+    "answer": "loop"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "現在のループ項目を保持する変数はどれですか?",
+    "options": ["item", "loopitem", "current", "value"],
+    "answer": "item"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "Jinja2テンプレートからファイルを作成するモジュールはどれですか?",
+    "options": ["template", "copy", "render", "jinja"],
+    "answer": "template"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "Ansibleが使用するテンプレートエンジンはどれですか?",
+    "options": ["Jinja2", "Mustache", "Velocity", "Smarty"],
+    "answer": "Jinja2"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "タスクの出力を変数に登録するキーワードはどれですか?",
+    "options": ["register", "save", "output", "store"],
+    "answer": "register"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "タスクの失敗を無視するキーワードはどれですか?",
+    "options": ["ignore_errors", "skip_errors", "continue", "ignore_failures"],
+    "answer": "ignore_errors"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "通知されたときにのみタスクを実行するために使用されるキーワードはどれですか?",
+    "options": ["handlers", "notify", "trigger", "events"],
+    "answer": "handlers"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "ハンドラーをトリガーするキーワードはどれですか?",
+    "options": ["notify", "handler", "alert", "call"],
+    "answer": "notify"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "別のプレイブックをインポートするキーワードはどれですか?",
+    "options": ["import_playbook", "include_playbook", "load_playbook", "playbook"],
+    "answer": "import_playbook"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "選択的に実行するためにタスクにタグを付けるキーワードはどれですか?",
+    "options": ["tags", "labels", "groups", "filter"],
+    "answer": "tags"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "特定のタグを持つタスクのみを実行するオプションはどれですか?",
+    "options": ["--tags", "--tag", "--filter", "--task"],
+    "answer": "--tags"
+  },
+  {
+    "category": "Ansible",
+    "set": 3,
+    "question": "Ansibleロールとは何ですか?",
+    "options": ["タスクとファイルの再利用可能なコレクション", "ユーザーアカウント", "インベントリグループ", "プレイブック変数"],
+    "answer": "タスクとファイルの再利用可能なコレクション"
+  },
+  {
+    "category": "Ansible",
+    "set": 3,
+    "question": "新しいロール構造を作成するコマンドはどれですか?",
+    "options": ["ansible-galaxy init", "ansible role create", "ansible init role", "ansible-playbook init"],
+    "answer": "ansible-galaxy init"
+  },
+  {
+    "category": "Ansible",
+    "set": 3,
+    "question": "ロールのタスクを含むディレクトリはどれですか?",
+    "options": ["tasks", "handlers", "files", "vars"],
+    "answer": "tasks"
+  },
+  {
+    "category": "Ansible",
+    "set": 3,
+    "question": "ロールのメインタスクファイルはどれですか?",
+    "options": ["tasks/main.yml", "tasks/tasks.yml", "main/tasks.yml", "role.yml"],
+    "answer": "tasks/main.yml"
+  },
+  {
+    "category": "Ansible",
+    "set": 3,
+    "question": "ロールのハンドラーを含むディレクトリはどれですか?",
+    "options": ["handlers", "tasks", "events", "notify"],
+    "answer": "handlers"
+  },
+  {
+    "category": "Ansible",
+    "set": 3,
+    "question": "ロール内でJinja2テンプレートを保存するディレクトリはどれですか?",
+    "options": ["templates", "files", "jinja", "render"],
+    "answer": "templates"
+  },
+  {
+    "category": "Ansible",
+    "set": 3,
+    "question": "ロール内で静的ファイルを保存するディレクトリはどれですか?",
+    "options": ["files", "templates", "static", "resources"],
+    "answer": "files"
+  },
+  {
+    "category": "Ansible",
+    "set": 3,
+    "question": "ロール変数を含むディレクトリはどれですか?",
+    "options": ["vars", "variables", "config", "settings"],
+    "answer": "vars"
+  },
+  {
+    "category": "Ansible",
+    "set": 3,
+    "question": "デフォルト変数を含むディレクトリはどれですか?",
+    "options": ["defaults", "vars", "config", "settings"],
+    "answer": "defaults"
+  },
+  {
+    "category": "Ansible",
+    "set": 3,
+    "question": "プレイブックにロールを含めるために使用されるキーワードはどれですか?",
+    "options": ["roles", "include_role", "role", "import_role"],
+    "answer": "roles"
+  },
+  {
+    "category": "Ansible",
+    "set": 3,
+    "question": "Ansible Galaxyとは何ですか?",
+    "options": ["Ansibleのロールとコレクションのリポジトリ", "監視ツール", "CI/CDプラットフォーム", "インベントリマネージャー"],
+    "answer": "Ansibleのロールとコレクションのリポジトリ"
+  },
+  {
+    "category": "Ansible",
+    "set": 3,
+    "question": "Galaxyからロールをインストールするコマンドはどれですか?",
+    "options": ["ansible-galaxy install", "ansible install role", "ansible role add", "ansible-galaxy add"],
+    "answer": "ansible-galaxy install"
+  },
+  {
+    "category": "Ansible",
+    "set": 3,
+    "question": "Ansible Vaultは何に使用されますか?",
+    "options": ["機密データの暗号化", "インベントリの管理", "プレイブックの実行", "ロールのインストール"],
+    "answer": "機密データの暗号化"
+  },
+  {
+    "category": "Ansible",
+    "set": 3,
+    "question": "既存のファイルを暗号化するコマンドはどれですか?",
+    "options": ["ansible-vault encrypt", "ansible-vault secure", "ansible-vault create", "ansible-vault lock"],
+    "answer": "ansible-vault encrypt"
+  },
+  {
+    "category": "Ansible",
+    "set": 3,
+    "question": "Ansibleコレクションとは何ですか?",
+    "options": ["ロール、モジュール、プラグインを含むパッケージ", "インベントリグループ", "暗号化されたファイル", "YAML変数"],
+    "answer": "ロール、モジュール、プラグインを含むパッケージ"
+  },
+  {
+    "category": "Ansible",
+    "set": 4,
+    "question": "AWXとは何ですか?",
+    "options": ["オープンソースのAnsible Automation Platform", "監視ツール", "コンテナランタイム", "バージョン管理システム"],
+    "answer": "オープンソースのAnsible Automation Platform"
+  },
+  {
+    "category": "Ansible",
+    "set": 4,
+    "question": "Ansible Towerは現在何と呼ばれていますか?",
+    "options": ["Red Hat Ansible Automation Platform", "Ansible Galaxy", "AWX Enterprise", "Automation Hub"],
+    "answer": "Red Hat Ansible Automation Platform"
+  },
+  {
+    "category": "Ansible",
+    "set": 4,
+    "question": "ダイナミックインベントリとは何ですか?",
+    "options": ["クラウドプロバイダーから自動的に生成されるインベントリ", "静的なホストファイル", "暗号化されたインベントリ", "ロールベースのインベントリ"],
+    "answer": "クラウドプロバイダーから自動的に生成されるインベントリ"
+  },
+  {
+    "category": "Ansible",
+    "set": 4,
+    "question": "プレイブックの構文をチェックするコマンドはどれですか?",
+    "options": ["ansible-playbook --syntax-check", "ansible-playbook --validate", "ansible-playbook check", "ansible validate"],
+    "answer": "ansible-playbook --syntax-check"
+  },
+  {
+    "category": "Ansible",
+    "set": 4,
+    "question": "プレイブックのドライランを実行するオプションはどれですか?",
+    "options": ["--check", "--dry", "--test", "--simulate"],
+    "answer": "--check"
+  },
+  {
+    "category": "Ansible",
+    "set": 4,
+    "question": "管理対象ファイルの差分を表示するオプションはどれですか?",
+    "options": ["--diff", "--compare", "--changes", "--show-diff"],
+    "answer": "--diff"
+  },
+  {
+    "category": "Ansible",
+    "set": 4,
+    "question": "Ansibleのデフォルトの実行ストラテジーは何ですか?",
+    "options": ["linear", "free", "parallel", "serial"],
+    "answer": "linear"
+  },
+  {
+    "category": "Ansible",
+    "set": 4,
+    "question": "プレイブックの実行を選択したホストに制限するオプションはどれですか?",
+    "options": ["--limit", "--hosts", "--target", "--group"],
+    "answer": "--limit"
+  },
+  {
+    "category": "Ansible",
+    "set": 4,
+    "question": "タスクの実行動作を制御するプラグインタイプはどれですか?",
+    "options": ["ストラテジープラグイン", "フィルタープラグイン", "コールバックプラグイン", "ルックアッププラグイン"],
+    "answer": "ストラテジープラグイン"
+  },
+  {
+    "category": "Ansible",
+    "set": 4,
+    "question": "外部ソースからデータを取得するプラグインはどれですか?",
+    "options": ["ルックアッププラグイン", "コールバックプラグイン", "コネクションプラグイン", "アクションプラグイン"],
+    "answer": "ルックアッププラグイン"
+  },
+  {
+    "category": "Ansible",
+    "set": 4,
+    "question": "変数データを加工するプラグインはどれですか?",
+    "options": ["フィルタープラグイン", "ルックアッププラグイン", "アクションプラグイン", "コネクションプラグイン"],
+    "answer": "フィルタープラグイン"
+  },
+  {
+    "category": "Ansible",
+    "set": 4,
+    "question": "Dockerコンテナを管理するモジュールはどれですか?",
+    "options": ["docker_container", "docker", "container", "docker_manage"],
+    "answer": "docker_container"
+  },
+  {
+    "category": "Ansible",
+    "set": 4,
+    "question": "Kubernetesリソースを管理するモジュールはどれですか?",
+    "options": ["k8s", "kubectl", "kubernetes", "cluster"],
+    "answer": "k8s"
+  },
+  {
+    "category": "Ansible",
+    "set": 4,
+    "question": "Ansibleにおける冪等性とは何ですか?",
+    "options": ["望ましい状態を変えずにタスクを繰り返し実行すること", "プレイブックの暗号化", "インベントリの作成", "ロールの管理"],
+    "answer": "望ましい状態を変えずにタスクを繰り返し実行すること"
+  },
+  {
+    "category": "Ansible",
+    "set": 4,
+    "question": "利用可能なすべてのAnsibleモジュールを一覧表示するコマンドはどれですか?",
+    "options": ["ansible-doc -l", "ansible modules", "ansible-list", "ansible-help modules"],
+    "answer": "ansible-doc -l"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "ansible-vaultのどのサブコマンドが、すでに暗号化されたファイルのパスワードを変更しますか?",
+    "options": ["rekey", "decrypt", "view", "create"],
+    "answer": "rekey"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "アドホックコマンドでインベントリ内のすべてのホストにpingを送るコマンドはどれですか?",
+    "options": ["ansible-playbook ping", "ansible-ping all", "ansible all -m ping", "ansible --ping-all"],
+    "answer": "ansible all -m ping"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "Ansibleが管理するホストを一覧にしたものは何ですか?",
+    "options": ["ロール", "プレイブック", "インベントリ", "Vault"],
+    "answer": "インベントリ"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "Ansibleで機密データを暗号化するツールはどれですか?",
+    "options": ["Ansible Lint", "Ansible Galaxy", "Ansible Doc", "Ansible Vault"],
+    "answer": "Ansible Vault"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "ハンドラーは何に使用されますか?",
+    "options": ["インベントリの作成", "SSH経由での接続", "変数の定義", "通知されたときにのみ実行されるタスク"],
+    "answer": "通知されたときにのみ実行されるタスク"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "最新のAnsibleでリストを反復処理するキーワードはどれですか?",
+    "options": ["iterate", "loop", "foreach", "repeat"],
+    "answer": "loop"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "Debian系システムにパッケージをインストールするモジュールはどれですか?",
+    "options": ["apt", "dnf", "pacman", "yum"],
+    "answer": "apt"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "AnsibleはLinuxホストに通常どのように接続しますか?",
+    "options": ["SSH", "SNMP", "RDP", "独自のエージェント"],
+    "answer": "SSH"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "プレイブックの構文を確認するコマンドはどれですか?",
+    "options": ["ansible-playbook --syntax-check", "ansible-playbook --validate", "ansible-check play.yml", "ansible-lint --run"],
+    "answer": "ansible-playbook --syntax-check"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "Ansibleにおける冪等性とは何を意味しますか?",
+    "options": ["タスクを並列で実行すること", "変数を暗号化すること", "ファクトを収集すること", "タスクを繰り返し実行しても同じ結果になること"],
+    "answer": "タスクを繰り返し実行しても同じ結果になること"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "再利用可能な自動化コンテンツをパッケージ化する構造はどれですか?",
+    "options": ["ロール", "コールバック", "インベントリ", "ファクト"],
+    "answer": "ロール"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "コントロールノードからリモートホストにファイルをコピーするモジュールはどれですか?",
+    "options": ["fetch", "copy", "debug", "shell"],
+    "answer": "copy"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "昇格した権限でタスクを実行するキーワードはどれですか?",
+    "options": ["become", "sudo_all", "elevate", "root"],
+    "answer": "become"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "コミュニティのロールとコレクションをダウンロードするツールはどれですか?",
+    "options": ["ansible-pull", "ansible-doc", "ansible-galaxy", "ansible-vault"],
+    "answer": "ansible-galaxy"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "実行を選択したホストに制限するオプションはどれですか?",
+    "options": ["--limit", "--only", "--target", "--hosts-only"],
+    "answer": "--limit"
+  },
+  {
+    "category": "Ansible",
+    "set": 1,
+    "question": "Ansibleタスクで権限昇格を有効にするキーワードはどれですか?",
+    "options": ["become: true", "delegate_to", "run_once", "check_mode"],
+    "answer": "become: true"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "Ansibleプレイブックのホスト選択パターン",
+    "options": ["--limit", "loop_var", "register", "defaults"],
+    "answer": "--limit"
+  },
+  {
+    "category": "Ansible",
+    "set": 3,
+    "question": "Ansibleのfreeストラテジーの動作",
+    "options": ["free", "--limit", "loop_var", "register"],
+    "answer": "free"
+  },
+  {
+    "category": "Ansible",
+    "set": 4,
+    "question": "Ansibleのファクト収集スイッチ",
+    "options": ["gather_facts", "--limit", "loop_var", "register"],
+    "answer": "gather_facts"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "Ansibleのforks設定",
+    "options": ["forks", "--limit", "loop_var", "register"],
+    "answer": "forks"
+  },
+  {
+    "category": "Ansible",
+    "set": 1,
+    "question": "条件が真の場合にのみAnsibleタスクを実行するキーワードはどれですか?",
+    "options": ["when", "until", "notify", "tags"],
+    "answer": "when"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "Ansibleのループ項目変数",
+    "options": ["loop_var", "--limit", "register", "defaults"],
+    "answer": "loop_var"
+  },
+  {
+    "category": "Ansible",
+    "set": 3,
+    "question": "Ansibleのlinearストラテジーの動作",
+    "options": ["linear", "--limit", "loop_var", "register"],
+    "answer": "linear"
+  },
+  {
+    "category": "Ansible",
+    "set": 4,
+    "question": "Ansibleのファクトキャッシュの目的",
+    "options": ["収集したファクトを再利用する", "--limit", "loop_var", "register"],
+    "answer": "収集したファクトを再利用する"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "Ansibleのチェックモードの動作",
+    "options": ["適用せずに変更を予測する", "--limit", "loop_var", "register"],
+    "answer": "適用せずに変更を予測する"
+  },
+  {
+    "category": "Ansible",
+    "set": 1,
+    "question": "管理対象ホストからファクトを収集する組み込みモジュールはどれですか?",
+    "options": ["ansible.builtin.setup", "ansible.builtin.copy", "ansible.builtin.command", "ansible.builtin.debug"],
+    "answer": "ansible.builtin.setup"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "Ansibleのタスク結果の登録",
+    "options": ["register", "--limit", "loop_var", "defaults"],
+    "answer": "register"
+  },
+  {
+    "category": "Ansible",
+    "set": 3,
+    "question": "Ansibleのローリングバッチ設定",
+    "options": ["serial", "--limit", "loop_var", "register"],
+    "answer": "serial"
+  },
+  {
+    "category": "Ansible",
+    "set": 4,
+    "question": "Ansibleの接続の委任",
+    "options": ["delegate_to", "--limit", "loop_var", "register"],
+    "answer": "delegate_to"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "Ansibleのtemplateモジュールの出力",
+    "options": ["Jinja2テンプレートをレンダリングする", "--limit", "loop_var", "register"],
+    "answer": "Jinja2テンプレートをレンダリングする"
+  },
+  {
+    "category": "Ansible",
+    "set": 1,
+    "question": "リスト内のすべての項目に対してタスクを繰り返すキーワードはどれですか?",
+    "options": ["loop", "serial", "block", "role"],
+    "answer": "loop"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "Ansibleのロールのdefaultsの優先順位",
+    "options": ["defaults", "--limit", "loop_var", "register"],
+    "answer": "defaults"
+  },
+  {
+    "category": "Ansible",
+    "set": 3,
+    "question": "Ansibleのタスクの非同期ポーリング",
+    "options": ["pollを伴うasync", "--limit", "loop_var", "register"],
+    "answer": "pollを伴うasync"
+  },
+  {
+    "category": "Ansible",
+    "set": 4,
+    "question": "Ansibleのローカル接続モード",
+    "options": ["connection: local", "--limit", "loop_var", "register"],
+    "answer": "connection: local"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "Ansibleのcopyモジュールの目的",
+    "options": ["コントローラーのファイルをホストにコピーする", "--limit", "loop_var", "register"],
+    "answer": "コントローラーのファイルをホストにコピーする"
+  },
+  {
+    "category": "Ansible",
+    "set": 1,
+    "question": "タスクの結果を変数に保存するキーワードはどれですか?",
+    "options": ["register", "vars", "facts", "include"],
+    "answer": "register"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "Ansibleのロールのvarsの優先順位",
+    "options": ["vars", "--limit", "loop_var", "register"],
+    "answer": "vars"
+  },
+  {
+    "category": "Ansible",
+    "set": 3,
+    "question": "Ansibleのインベントリの子グループ",
+    "options": ["children", "--limit", "loop_var", "register"],
+    "answer": "children"
+  },
+  {
+    "category": "Ansible",
+    "set": 4,
+    "question": "Ansibleの権限昇格の対象ユーザー",
+    "options": ["become_user", "--limit", "loop_var", "register"],
+    "answer": "become_user"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "Ansibleのfetchモジュールの方向",
+    "options": ["リモートのファイルをコントローラーにコピーする", "--limit", "loop_var", "register"],
+    "answer": "リモートのファイルをコントローラーにコピーする"
+  },
+  {
+    "category": "Ansible",
+    "set": 1,
+    "question": "変更後にタスクがハンドラーに通知するキーワードはどれですか?",
+    "options": ["notify", "listen", "changed_when", "rescue"],
+    "answer": "notify"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "Ansibleの動的なロールのインクルード",
+    "options": ["include_role", "--limit", "loop_var", "register"],
+    "answer": "include_role"
+  },
+  {
+    "category": "Ansible",
+    "set": 3,
+    "question": "Ansibleのインベントリのホスト変数ファイル",
+    "options": ["host_vars", "--limit", "loop_var", "register"],
+    "answer": "host_vars"
+  },
+  {
+    "category": "Ansible",
+    "set": 4,
+    "question": "Ansibleのタスクタグの選択",
+    "options": ["--tags", "--limit", "loop_var", "register"],
+    "answer": "--tags"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "Ansibleのsynchronizeの転送方式",
+    "options": ["SSH経由のrsync", "--limit", "loop_var", "register"],
+    "answer": "SSH経由のrsync"
+  },
+  {
+    "category": "Ansible",
+    "set": 1,
+    "question": "プレイブックの実行を選択したホストに制限するコマンドラインオプションはどれですか?",
+    "options": ["--limit", "--list-hosts", "--syntax-check", "--flush-cache"],
+    "answer": "--limit"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "Ansibleの静的なロールのインポート",
+    "options": ["import_role", "--limit", "loop_var", "register"],
+    "answer": "import_role"
+  },
+  {
+    "category": "Ansible",
+    "set": 3,
+    "question": "Ansibleのインベントリのグループ変数ファイル",
+    "options": ["group_vars", "--limit", "loop_var", "register"],
+    "answer": "group_vars"
+  },
+  {
+    "category": "Ansible",
+    "set": 4,
+    "question": "Ansibleのタグをスキップするオプション",
+    "options": ["--skip-tags", "--limit", "loop_var", "register"],
+    "answer": "--skip-tags"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "Ansibleのブロックのエラー回復",
+    "options": ["失敗したブロックから回復する", "--limit", "loop_var", "register"],
+    "answer": "失敗したブロックから回復する"
+  },
+  {
+    "category": "Ansible",
+    "set": 1,
+    "question": "機密性の高い変数やファイルを暗号化するAnsibleツールはどれですか?",
+    "options": ["ansible-vault", "ansible-galaxy", "ansible-doc", "ansible-inventory"],
+    "answer": "ansible-vault"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "Ansibleのハンドラーのフラッシュコマンド",
+    "options": ["meta: flush_handlers", "--limit", "loop_var", "register"],
+    "answer": "meta: flush_handlers"
+  },
+  {
+    "category": "Ansible",
+    "set": 3,
+    "question": "Ansibleのプレイブックの構文検証",
+    "options": ["ansible-playbook --syntax-check", "--limit", "loop_var", "register"],
+    "answer": "ansible-playbook --syntax-check"
+  },
+  {
+    "category": "Ansible",
+    "set": 4,
+    "question": "Ansibleのコレクションの名前空間形式",
+    "options": ["namespace.collection", "--limit", "loop_var", "register"],
+    "answer": "namespace.collection"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "Ansibleのalwaysセクションの動作",
+    "options": ["ブロックの結果に関係なく実行する", "--limit", "loop_var", "register"],
+    "answer": "ブロックの結果に関係なく実行する"
+  },
+  {
+    "category": "Ansible",
+    "set": 1,
+    "question": "プレイブックで提案される変更を適用せずに確認するオプションはどれですか?",
+    "options": ["--check", "--diff-only", "--force", "--step"],
+    "answer": "--check"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "Ansibleのタスク失敗のオーバーライド",
+    "options": ["ignore_errors", "--limit", "loop_var", "register"],
+    "answer": "ignore_errors"
+  },
+  {
+    "category": "Ansible",
+    "set": 3,
+    "question": "Ansibleの暗号化変数ツール",
+    "options": ["ansible-vault", "--limit", "loop_var", "register"],
+    "answer": "ansible-vault"
+  },
+  {
+    "category": "Ansible",
+    "set": 4,
+    "question": "Ansibleのモジュールドキュメントコマンド",
+    "options": ["ansible-doc", "--limit", "loop_var", "register"],
+    "answer": "ansible-doc"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "Ansibleのrescueセクションの動作",
+    "options": ["ブロックが失敗した後にのみ実行する", "--limit", "loop_var", "register"],
+    "answer": "ブロックが失敗した後にのみ実行する"
+  },
+  {
+    "category": "Ansible",
+    "set": 1,
+    "question": "現在のホストのバッチに対してタスクを一度だけ実行するキーワードはどれですか?",
+    "options": ["run_once: true", "serial: 1", "throttle: 1", "any_errors_fatal: true"],
+    "answer": "run_once: true"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "Ansibleのタスク変更のオーバーライド",
+    "options": ["changed_when", "--limit", "loop_var", "register"],
+    "answer": "changed_when"
+  },
+  {
+    "category": "Ansible",
+    "set": 3,
+    "question": "AnsibleのVaultパスワード識別子",
+    "options": ["--vault-id", "--limit", "loop_var", "register"],
+    "answer": "--vault-id"
+  },
+  {
+    "category": "Ansible",
+    "set": 4,
+    "question": "Ansibleの設定ファイル名",
+    "options": ["ansible.cfg", "--limit", "loop_var", "register"],
+    "answer": "ansible.cfg"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "Ansibleの冪等性の意味",
+    "options": ["繰り返し安全に適用できること", "--limit", "loop_var", "register"],
+    "answer": "繰り返し安全に適用できること"
+  }
+]

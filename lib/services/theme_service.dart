@@ -6,6 +6,8 @@ class ThemeService {
   ThemeService._();
 
   static const String _selectedThemeKey = 'selected_app_theme';
+  static const String _autoThemeEnabledKey = 'auto_theme_enabled_v1';
+  static const String _autoThemeDateKey = 'auto_theme_date_v1';
 
   /// Save the theme selected by the user.
   static Future<void> saveTheme(AppThemeType theme) async {
@@ -34,6 +36,54 @@ class ThemeService {
     } catch (_) {
       return AppThemeType.light;
     }
+  }
+
+  static Future<bool> loadAutoThemeEnabled() async {
+    final prefs = await SharedPreferences.getInstance();
+    return prefs.getBool(_autoThemeEnabledKey) ?? false;
+  }
+
+  static Future<void> saveAutoThemeEnabled(bool enabled) async {
+    final prefs = await SharedPreferences.getInstance();
+    await prefs.setBool(_autoThemeEnabledKey, enabled);
+  }
+
+  static Future<void> clearAutoThemeDate() async {
+    final prefs = await SharedPreferences.getInstance();
+    await prefs.remove(_autoThemeDateKey);
+  }
+
+  static Future<AppThemeType> loadDailyAutoTheme({
+    required int totalPoints,
+    AppThemeType? previousTheme,
+    DateTime? now,
+  }) async {
+    final date = now ?? DateTime.now();
+    final dateKey = '${date.year}-${date.month}-${date.day}';
+    final prefs = await SharedPreferences.getInstance();
+    final unlocked = AppThemes.sortedByUnlock
+        .where((theme) => AppThemes.isUnlocked(theme, totalPoints, now: date))
+        .toList();
+    if (unlocked.isEmpty) return AppThemeType.light;
+
+    if (prefs.getString(_autoThemeDateKey) == dateKey) {
+      final saved = await loadTheme();
+      if (unlocked.any((theme) => theme.type == saved)) return saved;
+    }
+
+    final dayIndex = DateTime.utc(
+      date.year,
+      date.month,
+      date.day,
+    ).difference(DateTime.utc(2000)).inDays;
+    var index = dayIndex % unlocked.length;
+    if (unlocked.length > 1 && unlocked[index].type == previousTheme) {
+      index = (index + 1) % unlocked.length;
+    }
+    final selected = unlocked[index].type;
+    await prefs.setString(_selectedThemeKey, selected.name);
+    await prefs.setString(_autoThemeDateKey, dateKey);
+    return selected;
   }
 
   /// Check whether a theme can be used

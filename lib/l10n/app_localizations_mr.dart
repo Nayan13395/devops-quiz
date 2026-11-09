@@ -123,13 +123,13 @@ class AppLocalizationsMr extends AppLocalizations {
   String get dontGiveUp => 'हार मानू नका!';
 
   @override
-  String get shareMessage1 => 'I scored';
+  String get shareMessage1 => 'माझा स्कोअर';
 
   @override
-  String get shareMessage2 => 'in the DevOps Quiz!';
+  String get shareMessage2 => 'DevOps प्रश्नमंजुषेत!';
 
   @override
-  String get downloadApp => 'Download the app:';
+  String get downloadApp => 'ॲप डाउनलोड करा:';
 
   @override
   String get score => 'गुण';
@@ -276,6 +276,6 @@ class AppLocalizationsMr extends AppLocalizations {
 
   @override
   String shareMessage(Object score, Object totalQuestions, Object earnedPoints, Object bonusPoints, Object percentage) {
-    return '🎯 मी DevOps Quiz मध्ये $score/$totalQuestions गुण मिळवले!\n\nतुम्ही माझा स्कोअर मागे टाकू शकता का?';
+    return '🎯 मी DevOps Quiz मध्ये $score/$totalQuestions गुण मिळवले!\n\n🏆 गुण: $earnedPoints\n🔥 बोनस: $bonusPoints\n📊 टक्केवारी: $percentage%\n\nतुम्ही माझा स्कोअर मागे टाकू शकता का?';
   }
 }

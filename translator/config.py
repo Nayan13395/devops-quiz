@@ -4,7 +4,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 MODEL = "qwen3:8b"
 
-CATEGORY = "GCP"
+CATEGORY = "Azure"
 
 SOURCE_FILE = (
     BASE_DIR /
@@ -20,3 +20,4 @@ OUTPUT_FILES = {
 }
 
 TEMPERATURE = 0
+

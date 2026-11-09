@@ -48,6 +48,40 @@ class FestivalCalendarService {
   static const Duration _indiaOffset = Duration(hours: 5, minutes: 30);
   static final Panchang _panchang = Panchang([registerIndia]);
   static final Map<int, List<FestivalWindow>> _yearCache = {};
+  static const Set<String> _diwaliCountries = {
+    'IN',
+    'NP',
+    'LK',
+    'BD',
+    'MY',
+    'SG',
+    'MU',
+  };
+  static const Set<String> _holiCountries = {'IN', 'NP', 'BD'};
+  static const Set<String> _ganapatiCountries = {'IN'};
+  static const Set<String> _navratriCountries = {'IN', 'NP'};
+  static const Set<String> _halloweenCountries = {
+    'US',
+    'CA',
+    'GB',
+    'IE',
+    'AU',
+    'NZ',
+    'FR',
+    'DE',
+    'ES',
+    'IT',
+    'NL',
+    'BE',
+    'AT',
+    'CH',
+    'PL',
+    'PT',
+    'DK',
+    'SE',
+    'NO',
+    'FI',
+  };
 
   static FestivalWindow? activeNow([DateTime? instant]) {
     final indiaNow = (instant ?? DateTime.now()).toUtc().add(_indiaOffset);
@@ -82,13 +116,18 @@ class FestivalCalendarService {
     DateTime date, {
     String? countryCode,
   }) {
+    final selectedCountry = countryCode?.toUpperCase();
     final windows = <FestivalWindow>[
       for (final year in [date.year - 1, date.year, date.year + 1])
-        ...windowsForYear(year).where((window) => window.contains(date)),
+        ...windowsForYear(year).where(
+          (window) =>
+              window.contains(date) &&
+              _isAvailableInCountry(window, selectedCountry),
+        ),
     ];
-    if (countryCode != null) {
+    if (selectedCountry != null) {
       for (final country in NationalDayService.countries.where(
-        (country) => country.code == countryCode.toUpperCase(),
+        (country) => country.code == selectedCountry,
       )) {
         for (final day in country.days) {
           if (day.month != date.month ||
@@ -108,6 +147,24 @@ class FestivalCalendarService {
       }
     }
     return List.unmodifiable(windows);
+  }
+
+  static bool _isAvailableInCountry(
+    FestivalWindow window,
+    String? countryCode,
+  ) {
+    if (countryCode == null) return true;
+    return switch (window.kind) {
+      FestivalKind.diwali => _diwaliCountries.contains(countryCode),
+      FestivalKind.holi => _holiCountries.contains(countryCode),
+      FestivalKind.ganapati => _ganapatiCountries.contains(countryCode),
+      FestivalKind.navratri => _navratriCountries.contains(countryCode),
+      FestivalKind.makarSankranti => countryCode == 'IN' || countryCode == 'NP',
+      FestivalKind.halloween => _halloweenCountries.contains(countryCode),
+      FestivalKind.peace =>
+        window.label != 'Gandhi Jayanti' || countryCode == 'IN',
+      _ => true,
+    };
   }
 
   static List<FestivalWindow> windowsForYear(int year) {

@@ -482,7 +482,7 @@
   {
     "category": "AWS",
     "set": 2,
-    "question": "സുരക്ഷിതമായ മൾട്ടി-അക്കൗണ്ട് AWS പരിസ്ഥിതി സജ്ജമാക്കുന്നത് എളുപ്പമാക്കുന്ന AWS സേവനം ഏതാണ്?",
+    "question": "സുരക്ഷിതമായ മൾട്ടി-അക്കൗണ്ട് AWS എൻവയോൺമെന്റ് സജ്ജമാക്കുന്നത് എളുപ്പമാക്കുന്ന AWS സേവനം ഏതാണ്?",
     "options": [
       "AWS Organizations",
       "AWS Control Tower",
@@ -1142,7 +1142,7 @@
   {
     "category": "AWS",
     "set": 4,
-    "question": "ബ്രൗസറിൽ നിന്ന് നേരിട്ട് Linux EC2 ഇൻസ്റ്റൻസുകളിലേക്ക് സുരക്ഷിത shell access ഏത് AWS സേവനം നൽകുന്നു?",
+    "question": "ബ്രൗസറിൽ നിന്ന് നേരിട്ട് Linux EC2 ഇൻസ്റ്റൻസുകളിലേക്ക് സുരക്ഷിത ഷെൽ ആക്സസ് ഏത് AWS സേവനം നൽകുന്നു?",
     "options": [
       "EC2 Instance Connect",
       "AWS Direct Connect",
@@ -1154,7 +1154,7 @@
   {
     "category": "AWS",
     "set": 4,
-    "question": "ബ്രൗസർ അധിഷ്ഠിത കമാൻഡ്-ലൈൻ പരിസ്ഥിതി ഏത് AWS സേവനമാണ് നൽകുന്നത്?",
+    "question": "ബ്രൗസർ അധിഷ്ഠിത കമാൻഡ്-ലൈൻ എൻവയോൺമെന്റ് ഏത് AWS സേവനമാണ് നൽകുന്നത്?",
     "options": [
       "AWS CloudShell",
       "AWS CLI",
@@ -1166,7 +1166,7 @@
   {
     "category": "AWS",
     "set": 4,
-    "question": "ക്ലൗഡ് അധിഷ്ഠിത സംയോജിത വികസന പരിസ്ഥിതി (IDE) ഏത് AWS സേവനമാണ് നൽകുന്നത്?",
+    "question": "ക്ലൗഡ് അധിഷ്ഠിത ഇന്റഗ്രേറ്റഡ് ഡെവലപ്മെന്റ് എൻവയോൺമെന്റ് (IDE) ഏത് AWS സേവനമാണ് നൽകുന്നത്?",
     "options": [
       "AWS Cloud9",
       "AWS CloudShell",
@@ -1226,14 +1226,14 @@
   {
     "category": "AWS",
     "set": 5,
-    "question": "മാനേജ് ചെയ്ത റിലേഷണൽ ഡാറ്റാബേസ് സേവനം ഏത് AWS സേവനമാണ്?",
+    "question": "ഓട്ടോമാറ്റിക് ഫെയ്ലോവറിനായി മറ്റൊരു Availability Zoneൽ സിൻക്രണസ് സ്റ്റാൻഡ്‌ബൈ റെപ്ലിക്ക നിലനിർത്തുന്ന Amazon RDS സവിശേഷത ഏതാണ്?",
     "options": [
-      "Amazon RDS",
-      "Amazon S3",
-      "Amazon DynamoDB",
-      "Amazon CloudFront"
+      "Multi-AZ deployment",
+      "Read replica",
+      "Manual snapshot",
+      "Parameter group"
     ],
-    "answer": "Amazon RDS"
+    "answer": "Multi-AZ deployment"
   },
   {
     "category": "AWS",
@@ -1262,14 +1262,14 @@
   {
     "category": "AWS",
     "set": 5,
-    "question": "കണ്ടന്റ് ഡെലിവറി നെറ്റ്‌വർക്ക് ആയ AWS സേവനം ഏതാണ്?",
+    "question": "S3 ഒറിജിൻ ഡിസ്ട്രിബ്യൂഷൻ വഴി മാത്രം വായിക്കാനാകുന്നതും നേരിട്ട് വായിക്കാനാകാത്തതുമാക്കുന്ന Amazon CloudFront സവിശേഷത ഏതാണ്?",
     "options": [
-      "Amazon SNS",
-      "Amazon Route 53",
-      "Amazon CloudFront",
-      "AWS Snowball"
+      "Origin Access Control",
+      "S3 Transfer Acceleration",
+      "Route 53 alias record",
+      "Lambda@Edge"
     ],
-    "answer": "Amazon CloudFront"
+    "answer": "Origin Access Control"
   },
   {
     "category": "AWS",
@@ -1310,14 +1310,14 @@
   {
     "category": "AWS",
     "set": 5,
-    "question": "മാനേജ് ചെയ്ത മെസേജ് ക്യൂ ഏത് AWS സേവനമാണ് നൽകുന്നത്?",
+    "question": "കർശനമായ സന്ദേശ ക്രമം നിലനിർത്തുകയും കൃത്യമായി ഒരു തവണ മാത്രമുള്ള പ്രോസസ്സിംഗ് പിന്തുണയ്ക്കുകയും ചെയ്യുന്ന Amazon SQS ക്യൂ തരം ഏതാണ്?",
     "options": [
-      "Amazon SES",
-      "Amazon SQS",
-      "AWS KMS",
-      "Amazon EFS"
+      "Standard queue",
+      "FIFO queue",
+      "Delay queue",
+      "Dead-letter queue"
     ],
-    "answer": "Amazon SQS"
+    "answer": "FIFO queue"
   },
   {
     "category": "AWS",
@@ -1430,14 +1430,14 @@
   {
     "category": "AWS",
     "set": 5,
-    "question": "പെറ്റാബൈറ്റ്-സ്കെയിൽ ഡാറ്റ വെയർഹൗസ് ആയ AWS സേവനം ഏതാണ്?",
+    "question": "Amazon Redshiftൽ, ഒരു ടേബിളിന്റെ distribution key എന്താണ് നിയന്ത്രിക്കുന്നത്?",
     "options": [
-      "Amazon DynamoDB",
-      "Amazon ElastiCache",
-      "Amazon Redshift",
-      "Amazon SQS"
+      "വരികൾ കമ്പ്യൂട്ട് നോഡുകളിലേക്ക് എങ്ങനെ വിതരണം ചെയ്യപ്പെടുന്നു",
+      "COPY കമാൻഡ് ഏത് IAM റോൾ ഉപയോഗിച്ച് പ്രവർത്തിക്കുന്നു",
+      "ഓട്ടോമേറ്റഡ് ബാക്കപ്പുകൾ എത്ര കാലം സൂക്ഷിക്കുന്നു",
+      "ക്ലസ്റ്റർ ഏത് KMS കീ ഉപയോഗിച്ച് എൻക്രിപ്റ്റ് ചെയ്യുന്നു"
     ],
-    "answer": "Amazon Redshift"
+    "answer": "വരികൾ കമ്പ്യൂട്ട് നോഡുകളിലേക്ക് എങ്ങനെ വിതരണം ചെയ്യപ്പെടുന്നു"
   },
   {
     "category": "AWS",
@@ -1490,13 +1490,13 @@
   {
     "category": "AWS",
     "set": 5,
-    "question": "മാനേജ് ചെയ്ത Apache Kafka ഏത് AWS സേവനമാണ് നൽകുന്നത്?",
+    "question": "ഒരു Amazon MSK ക്ലസ്റ്ററിൽ, ഏത് നോഡുകളാണ് ടോപ്പിക് പാർട്ടീഷനുകൾ സൂക്ഷിക്കുകയും Kafka പ്രൊഡ്യൂസർമാർക്കും കൺസ്യൂമർമാർക്കും സേവനം നൽകുകയും ചെയ്യുന്നത്?",
     "options": [
-      "Amazon S3",
-      "Amazon EBS",
-      "AWS KMS",
-      "Amazon MSK"
+      "Broker nodes",
+      "NAT gateways",
+      "Bastion hosts",
+      "Glue crawlers"
     ],
-    "answer": "Amazon MSK"
+    "answer": "Broker nodes"
   }
 ]

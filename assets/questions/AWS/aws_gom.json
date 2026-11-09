@@ -878,7 +878,7 @@
   {
     "category": "AWS",
     "set": 3,
-    "question": "ॲप्लिकेशनांक लॉग डेटा शोधपाक आनी विश्लेषण करपाक खंयची AWS सेवा दिता?",
+    "question": "ॲप्लिकेशनांक लॉग डेटा इंटरॅक्टिव्ह पद्धतीन शोधपाक आनी विश्लेषण करपाक खंयची AWS सेवा दिता?",
     "options": [
       "CloudWatch Logs Insights",
       "CloudTrail",
@@ -1142,7 +1142,7 @@
   {
     "category": "AWS",
     "set": 4,
-    "question": "ब्राउझरांतल्यान थेट Linux EC2 इन्स्टन्सांक सुरक्षित shell access खंयची AWS सेवा दिता?",
+    "question": "ब्राउझरांतल्यान थेट Linux EC2 इन्स्टन्सांक सुरक्षित शेल प्रवेश खंयची AWS सेवा दिता?",
     "options": [
       "EC2 Instance Connect",
       "AWS Direct Connect",
@@ -1226,14 +1226,14 @@
   {
     "category": "AWS",
     "set": 5,
-    "question": "व्यवस्थापन केल्ल्या रिलेशनल डेटाबेसाची AWS सेवा खंयची?",
+    "question": "आपसूक फेलओव्हरा खातीर दुसऱ्या Availability Zone त सिंक्रोनस स्टँडबाय रेप्लिका सांबाळपी Amazon RDS सुविधा खंयची?",
     "options": [
-      "Amazon RDS",
-      "Amazon S3",
-      "Amazon DynamoDB",
-      "Amazon CloudFront"
+      "Multi-AZ deployment",
+      "Read replica",
+      "Manual snapshot",
+      "Parameter group"
     ],
-    "answer": "Amazon RDS"
+    "answer": "Multi-AZ deployment"
   },
   {
     "category": "AWS",
@@ -1262,14 +1262,14 @@
   {
     "category": "AWS",
     "set": 5,
-    "question": "कंटेंट डिलिव्हरी नेटवर्क आसपी AWS सेवा खंयची?",
+    "question": "S3 ओरिजिन फकत डिस्ट्रिब्यूशना वरवीं वाचूंक मेळटा आनी थेट ना, हें निश्चित करपी Amazon CloudFront सुविधा खंयची?",
     "options": [
-      "Amazon SNS",
-      "Amazon Route 53",
-      "Amazon CloudFront",
-      "AWS Snowball"
+      "Origin Access Control",
+      "S3 Transfer Acceleration",
+      "Route 53 alias record",
+      "Lambda@Edge"
     ],
-    "answer": "Amazon CloudFront"
+    "answer": "Origin Access Control"
   },
   {
     "category": "AWS",
@@ -1310,14 +1310,14 @@
   {
     "category": "AWS",
     "set": 5,
-    "question": "व्यवस्थापन केल्ली मेसेज क्यू खंयची AWS सेवा दिता?",
+    "question": "मेसेजांचो काटेकोर क्रम राखपी आनी exactly-once प्रक्रियेक आधार दिवपी Amazon SQS क्यू प्रकार खंयचो?",
     "options": [
-      "Amazon SES",
-      "Amazon SQS",
-      "AWS KMS",
-      "Amazon EFS"
+      "Standard queue",
+      "FIFO queue",
+      "Delay queue",
+      "Dead-letter queue"
     ],
-    "answer": "Amazon SQS"
+    "answer": "FIFO queue"
   },
   {
     "category": "AWS",
@@ -1430,14 +1430,14 @@
   {
     "category": "AWS",
     "set": 5,
-    "question": "पेटाबाइट-स्केल डेटा वेअरहाउस आसपी AWS सेवा खंयची?",
+    "question": "Amazon Redshift त टेबलाची distribution key कितें नियंत्रित करता?",
     "options": [
-      "Amazon DynamoDB",
-      "Amazon ElastiCache",
-      "Amazon Redshift",
-      "Amazon SQS"
+      "रांगा कंप्यूट नोडांमदीं कशो वांटतात",
+      "COPY कमांड खंयची IAM रोल चलयता",
+      "स्वयंचलित बॅकअप किती काळ दवरतात",
+      "क्लस्टर खंयची KMS की वापरून एन्क्रिप्ट जाता"
     ],
-    "answer": "Amazon Redshift"
+    "answer": "रांगा कंप्यूट नोडांमदीं कशो वांटतात"
   },
   {
     "category": "AWS",
@@ -1490,13 +1490,13 @@
   {
     "category": "AWS",
     "set": 5,
-    "question": "व्यवस्थापन केल्लें Apache Kafka खंयची AWS सेवा दिता?",
+    "question": "Amazon MSK क्लस्टरांत खंयचे नोड टॉपिक पार्टिशन सांठयतात आनी Kafka प्रोड्यूसर तशेंच कंझ्युमरांक सेवा दितात?",
     "options": [
-      "Amazon S3",
-      "Amazon EBS",
-      "AWS KMS",
-      "Amazon MSK"
+      "Broker nodes",
+      "NAT gateways",
+      "Bastion hosts",
+      "Glue crawlers"
     ],
-    "answer": "Amazon MSK"
+    "answer": "Broker nodes"
   }
 ]

@@ -6,6 +6,7 @@ import '../widgets/level_picker_dialog.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 import '../services/find_words_level_service.dart';
+import '../services/game_sound_service.dart';
 import '../services/point_service.dart';
 
 class FindWordsScreen extends StatefulWidget {
@@ -153,6 +154,13 @@ class _FindWordsScreenState extends State<FindWordsScreen> {
     final path = _puzzle.pathBetween(start, end);
     final word = _puzzle.wordAtPath(start, end);
     if (word != null && !_foundWords.contains(word)) {
+      unawaited(
+        GameSoundService.play(
+          _foundWords.length + 1 == _puzzle.words.length
+              ? GameSoundEffect.win
+              : GameSoundEffect.correct,
+        ),
+      );
       setState(() {
         _foundWords.add(word);
         _foundPaths[word] = path!;

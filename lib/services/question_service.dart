@@ -20,19 +20,19 @@ class QuestionService {
     'es',
     'fr',
     'de',
+    'it',
     'pt',
     'ar',
     'id',
+    'tr',
     'ru',
     'ja',
     'zh',
     'bn',
     'as',
-    'brx',
     'doi',
     'gu',
     'kn',
-    'ks',
     'gom',
     'mai',
     'ml',
@@ -102,17 +102,18 @@ class QuestionService {
   }
 
   Future<List<Question>> _loadAllCategories(String language) async {
-    final List<Question> pool = [];
+    final categoryQuestions = await Future.wait(
+      categoryFiles.values.map((config) async {
+        try {
+          return await _loadCategory(config, language);
+        } catch (e) {
+          debugPrint('Daily quiz skipped ${config['folder']}: $e');
+          return <Question>[];
+        }
+      }),
+    );
 
-    for (final config in categoryFiles.values) {
-      try {
-        pool.addAll(await _loadCategory(config, language));
-      } catch (e) {
-        debugPrint('Daily quiz skipped ${config['folder']}: $e');
-      }
-    }
-
-    return pool;
+    return categoryQuestions.expand((questions) => questions).toList();
   }
 
   Future<List<Question>> _loadCategory(

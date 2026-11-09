@@ -3,6 +3,8 @@ import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
+import '../data/additional_learning_card_seeds.dart';
+
 class LearningScreen extends StatefulWidget {
   const LearningScreen({super.key});
 
@@ -81,9 +83,13 @@ class _LearningScreenState extends State<LearningScreen> {
   }
 
   void _handlePointerSignal(PointerSignalEvent event) {
-    if (event is PointerScrollEvent && event.scrollDelta.dy != 0) {
+    if (event is PointerScrollEvent &&
+        (event.scrollDelta.dx != 0 || event.scrollDelta.dy != 0)) {
       GestureBinding.instance.pointerSignalResolver.register(event, (_) {
-        _movePage(event.scrollDelta.dy > 0 ? 1 : -1);
+        final delta = event.scrollDelta.dx != 0
+            ? event.scrollDelta.dx
+            : event.scrollDelta.dy;
+        _movePage(delta > 0 ? 1 : -1);
       });
     }
   }
@@ -245,7 +251,7 @@ class _LearningScreenState extends State<LearningScreen> {
                           ),
                           child: PageView.builder(
                             controller: _pageController,
-                            scrollDirection: Axis.vertical,
+                            scrollDirection: Axis.horizontal,
                             onPageChanged: (index) =>
                                 setState(() => _currentIndex = index),
                             itemCount: cards.length,
@@ -268,7 +274,7 @@ class _LearningScreenState extends State<LearningScreen> {
                         onPressed: cards.isEmpty || _currentIndex == 0
                             ? null
                             : () => _movePage(-1),
-                        icon: const Icon(Icons.arrow_upward_rounded),
+                        icon: const Icon(Icons.arrow_back_rounded),
                       ),
                       Expanded(
                         child: LinearProgressIndicator(
@@ -290,7 +296,7 @@ class _LearningScreenState extends State<LearningScreen> {
                             cards.isEmpty || _currentIndex == cards.length - 1
                             ? null
                             : () => _movePage(1),
-                        icon: const Icon(Icons.arrow_downward_rounded),
+                        icon: const Icon(Icons.arrow_forward_rounded),
                       ),
                     ],
                   ),
@@ -416,7 +422,7 @@ class _LearningScreenState extends State<LearningScreen> {
   }
 }
 
-const List<DevOpsCard> learningCards = [
+const List<DevOpsCard> _baseLearningCards = [
   DevOpsCard(
     topic: 'Linux',
     icon: '🐧',
@@ -7560,6 +7566,43 @@ const List<DevOpsCard> learningCards = [
     marathiDescription: 'Grafana',
     example: '',
   ),
+];
+
+const Map<String, String> _learningCardIcons = {
+  'Ansible': '⚙️',
+  'AWS': '☁️',
+  'Azure': '☁️',
+  'Bash': '⌨️',
+  'Docker': '🐳',
+  'GCP': '☁️',
+  'Git': '🌿',
+  'Hybrid Cloud': '🔗',
+  'IBM Cloud': '☁️',
+  'JavaScript': '🟨',
+  'Jenkins': '⚙️',
+  'Kubernetes': '☸️',
+  'Linux': '🐧',
+  'Multi Cloud': '🌐',
+  'Networking': '🌐',
+  'Oracle Cloud': '☁️',
+  'Perl': '🐪',
+  'PowerShell': '💠',
+  'Python': '🐍',
+  'Ruby': '💎',
+  'Terraform': '🧱',
+};
+
+final List<DevOpsCard> learningCards = [
+  ..._baseLearningCards,
+  for (int index = 0; index < additionalLearningCardSeeds.length; index++)
+    DevOpsCard(
+      id: 'extra-${(index + 1).toString().padLeft(3, '0')}',
+      topic: additionalLearningCardSeeds[index].$1,
+      icon: _learningCardIcons[additionalLearningCardSeeds[index].$1]!,
+      command: additionalLearningCardSeeds[index].$2,
+      description: additionalLearningCardSeeds[index].$3,
+      example: additionalLearningCardSeeds[index].$4,
+    ),
 ];
 
 // ============================================================

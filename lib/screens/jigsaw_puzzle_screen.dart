@@ -1,8 +1,10 @@
+import 'dart:async';
 import 'dart:math' as math;
 
 import 'package:flutter/material.dart';
 
 import '../services/jigsaw_puzzle_service.dart';
+import '../services/game_sound_service.dart';
 import '../widgets/level_picker_dialog.dart';
 
 class JigsawPuzzleScreen extends StatefulWidget {
@@ -21,6 +23,7 @@ class _JigsawPuzzleScreenState extends State<JigsawPuzzleScreen> {
   bool _loading = true;
 
   int get _gridSize => JigsawPuzzleService.gridSizeFor(_level);
+  bool get _usesJigsawPieces => JigsawPuzzleService.usesJigsawPieces(_level);
 
   @override
   void initState() {
@@ -76,6 +79,10 @@ class _JigsawPuzzleScreenState extends State<JigsawPuzzleScreen> {
   }
 
   void _tapSlot(int slot) {
+    if (_isFixed(slot)) {
+      if (_selectedSlot != null) setState(() => _selectedSlot = null);
+      return;
+    }
     if (_selectedSlot == null) {
       setState(() => _selectedSlot = slot);
       return;
@@ -88,7 +95,7 @@ class _JigsawPuzzleScreenState extends State<JigsawPuzzleScreen> {
   }
 
   void _swapSlots(int first, int second) {
-    if (first == second) return;
+    if (first == second || _isFixed(first) || _isFixed(second)) return;
     setState(() {
       final value = _tiles[first];
       _tiles[first] = _tiles[second];
@@ -96,8 +103,15 @@ class _JigsawPuzzleScreenState extends State<JigsawPuzzleScreen> {
       _moves++;
       _selectedSlot = null;
     });
-    if (JigsawPuzzleService.isSolved(_tiles)) _finishLevel();
+    if (JigsawPuzzleService.isSolved(_tiles)) {
+      unawaited(GameSoundService.play(GameSoundEffect.win));
+      _finishLevel();
+    } else {
+      unawaited(GameSoundService.play(GameSoundEffect.click));
+    }
   }
+
+  bool _isFixed(int slot) => _tiles[slot] == slot;
 
   Future<void> _finishLevel() async {
     final completedLevel = _level;
@@ -152,23 +166,44 @@ class _JigsawPuzzleScreenState extends State<JigsawPuzzleScreen> {
 
   Widget _tile(int tile, int slot, double size, ColorScheme colors) {
     final selected = _selectedSlot == slot;
-    final tileImage = ClipRRect(
-      borderRadius: BorderRadius.circular(5),
-      child: CustomPaint(
-        painter: _PuzzleSceneTilePainter(
-          seed: _level,
-          gridSize: _gridSize,
-          tile: tile,
-        ),
-        child: const SizedBox.expand(),
+    final fixed = _isFixed(slot);
+    final sceneTile = CustomPaint(
+      painter: _PuzzleSceneTilePainter(
+        seed: _level,
+        gridSize: _gridSize,
+        tile: tile,
+        allowOverflowForTabs: _usesJigsawPieces,
       ),
+      foregroundPainter: _usesJigsawPieces
+          ? JigsawPieceOutlinePainter(
+              seed: _level,
+              gridSize: _gridSize,
+              piece: tile,
+              color: colors.onSurface.withValues(alpha: 0.7),
+            )
+          : null,
+      child: const SizedBox.expand(),
     );
+    final Widget tileImage = _usesJigsawPieces
+        ? ClipPath(
+            key: ValueKey('jigsaw-piece-clip-$tile'),
+            clipper: JigsawPieceClipper(
+              seed: _level,
+              gridSize: _gridSize,
+              piece: tile,
+            ),
+            child: sceneTile,
+          )
+        : ClipRRect(borderRadius: BorderRadius.circular(5), child: sceneTile);
 
     return DragTarget<int>(
-      onWillAcceptWithDetails: (details) => details.data != slot,
+      onWillAcceptWithDetails: (details) =>
+          details.data != slot && !_isFixed(details.data) && !fixed,
       onAcceptWithDetails: (details) => _swapSlots(details.data, slot),
       builder: (context, candidates, rejected) => LongPressDraggable<int>(
+        key: ValueKey('jigsaw-drag-$slot'),
         data: slot,
+        maxSimultaneousDrags: fixed ? 0 : null,
         feedback: Material(
           elevation: 8,
           borderRadius: BorderRadius.circular(6),
@@ -177,15 +212,20 @@ class _JigsawPuzzleScreenState extends State<JigsawPuzzleScreen> {
         childWhenDragging: Opacity(opacity: 0.3, child: tileImage),
         child: Semantics(
           button: true,
-          label: 'Puzzle piece ${tile + 1} of ${_tiles.length}',
+          label: fixed
+              ? 'Puzzle piece ${tile + 1} of ${_tiles.length}, correctly placed'
+              : 'Puzzle piece ${tile + 1} of ${_tiles.length}',
           child: InkWell(
             key: ValueKey('jigsaw-slot-$slot'),
             onTap: () => _tapSlot(slot),
             child: AnimatedContainer(
               duration: const Duration(milliseconds: 120),
               foregroundDecoration: BoxDecoration(
+                color: fixed ? Colors.green.withValues(alpha: 0.24) : null,
                 border: Border.all(
-                  color: selected
+                  color: fixed
+                      ? Colors.green.shade600
+                      : selected
                       ? colors.primary
                       : candidates.isNotEmpty
                       ? colors.tertiary
@@ -223,8 +263,8 @@ class _JigsawPuzzleScreenState extends State<JigsawPuzzleScreen> {
                   itemCount: _tiles.length,
                   gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
                     crossAxisCount: _gridSize,
-                    crossAxisSpacing: 2,
-                    mainAxisSpacing: 2,
+                    crossAxisSpacing: _usesJigsawPieces ? 0 : 2,
+                    mainAxisSpacing: _usesJigsawPieces ? 0 : 2,
                   ),
                   itemBuilder: (context, slot) =>
                       _tile(_tiles[slot], slot, tileSize, colors),
@@ -328,7 +368,7 @@ class _JigsawPuzzleScreenState extends State<JigsawPuzzleScreen> {
                           ),
                           const SizedBox(height: 14),
                           AspectRatio(
-                            aspectRatio: 16 / 7,
+                            aspectRatio: _usesJigsawPieces ? 1 : 16 / 7,
                             child: ClipRRect(
                               borderRadius: BorderRadius.circular(10),
                               child: CustomPaint(
@@ -337,6 +377,15 @@ class _JigsawPuzzleScreenState extends State<JigsawPuzzleScreen> {
                                   gridSize: 1,
                                   tile: 0,
                                 ),
+                                foregroundPainter: _usesJigsawPieces
+                                    ? JigsawPreviewOutlinePainter(
+                                        seed: _level,
+                                        gridSize: _gridSize,
+                                        color: Colors.white.withValues(
+                                          alpha: 0.82,
+                                        ),
+                                      )
+                                    : null,
                                 child: const SizedBox.expand(),
                               ),
                             ),
@@ -367,18 +416,20 @@ class _PuzzleSceneTilePainter extends CustomPainter {
     required this.seed,
     required this.gridSize,
     required this.tile,
+    this.allowOverflowForTabs = false,
   });
 
   final int seed;
   final int gridSize;
   final int tile;
+  final bool allowOverflowForTabs;
 
   @override
   void paint(Canvas canvas, Size size) {
     final row = tile ~/ gridSize;
     final column = tile % gridSize;
     canvas.save();
-    canvas.clipRect(Offset.zero & size);
+    if (!allowOverflowForTabs) canvas.clipRect(Offset.zero & size);
     canvas.translate(-column * size.width, -row * size.height);
     _paintScene(canvas, Size(size.width * gridSize, size.height * gridSize));
     canvas.restore();
@@ -491,5 +542,203 @@ class _PuzzleSceneTilePainter extends CustomPainter {
   bool shouldRepaint(_PuzzleSceneTilePainter oldDelegate) =>
       oldDelegate.seed != seed ||
       oldDelegate.gridSize != gridSize ||
-      oldDelegate.tile != tile;
+      oldDelegate.tile != tile ||
+      oldDelegate.allowOverflowForTabs != allowOverflowForTabs;
+}
+
+class JigsawPieceClipper extends CustomClipper<Path> {
+  const JigsawPieceClipper({
+    required this.seed,
+    required this.gridSize,
+    required this.piece,
+  });
+
+  final int seed;
+  final int gridSize;
+  final int piece;
+
+  @override
+  Path getClip(Size size) {
+    final row = piece ~/ gridSize;
+    final column = piece % gridSize;
+    final top = row == 0 ? 0 : -_edgePolarity(seed, row - 1, column, 0);
+    final right = column == gridSize - 1
+        ? 0
+        : _edgePolarity(seed, row, column, 1);
+    final bottom = row == gridSize - 1
+        ? 0
+        : _edgePolarity(seed, row, column, 0);
+    final left = column == 0 ? 0 : -_edgePolarity(seed, row, column - 1, 1);
+
+    final path = Path()..moveTo(0, 0);
+    _appendEdge(path, Offset.zero, Offset(size.width, 0), top);
+    _appendEdge(
+      path,
+      Offset(size.width, 0),
+      Offset(size.width, size.height),
+      right,
+    );
+    _appendEdge(
+      path,
+      Offset(size.width, size.height),
+      Offset(0, size.height),
+      bottom,
+    );
+    _appendEdge(path, Offset(0, size.height), Offset.zero, left);
+    path.close();
+    return path;
+  }
+
+  static int _edgePolarity(int seed, int row, int column, int axis) {
+    final mixed =
+        seed * 73856093 ^
+        row * 19349663 ^
+        column * 83492791 ^
+        axis * 2654435761;
+    return mixed.isEven ? 1 : -1;
+  }
+
+  static void _appendEdge(Path path, Offset start, Offset end, int polarity) {
+    if (polarity == 0) {
+      path.lineTo(end.dx, end.dy);
+      return;
+    }
+
+    final edge = end - start;
+    final length = edge.distance;
+    final tangent = edge / length;
+    final outward = Offset(tangent.dy, -tangent.dx) * polarity.toDouble();
+    final center = (start + end) / 2;
+    final halfNeck = length * 0.095;
+    final halfBulb = length * 0.205;
+    final depth = length * 0.18;
+    final neckStart = center - tangent * halfNeck;
+    final shoulderStart =
+        center - tangent * halfBulb + outward * (depth * 0.55);
+    final tip = center + outward * depth;
+    final shoulderEnd = center + tangent * halfBulb + outward * (depth * 0.55);
+    final neckEnd = center + tangent * halfNeck;
+
+    path.lineTo(neckStart.dx, neckStart.dy);
+    path.cubicTo(
+      (neckStart + tangent * (length * 0.035)).dx,
+      (neckStart + tangent * (length * 0.035)).dy,
+      (shoulderStart - tangent * (length * 0.045)).dx,
+      (shoulderStart - tangent * (length * 0.045)).dy,
+      shoulderStart.dx,
+      shoulderStart.dy,
+    );
+    final tipLeft = tip - tangent * (halfBulb * 0.62);
+    final tipRight = tip + tangent * (halfBulb * 0.62);
+    path.cubicTo(
+      (shoulderStart + outward * (depth * 0.62)).dx,
+      (shoulderStart + outward * (depth * 0.62)).dy,
+      tipLeft.dx,
+      tipLeft.dy,
+      tip.dx,
+      tip.dy,
+    );
+    path.cubicTo(
+      tipRight.dx,
+      tipRight.dy,
+      (shoulderEnd + outward * (depth * 0.62)).dx,
+      (shoulderEnd + outward * (depth * 0.62)).dy,
+      shoulderEnd.dx,
+      shoulderEnd.dy,
+    );
+    path.cubicTo(
+      (shoulderEnd + tangent * (length * 0.045)).dx,
+      (shoulderEnd + tangent * (length * 0.045)).dy,
+      (neckEnd - tangent * (length * 0.035)).dx,
+      (neckEnd - tangent * (length * 0.035)).dy,
+      neckEnd.dx,
+      neckEnd.dy,
+    );
+    path.lineTo(end.dx, end.dy);
+  }
+
+  @override
+  bool shouldReclip(covariant JigsawPieceClipper oldClipper) =>
+      oldClipper.seed != seed ||
+      oldClipper.gridSize != gridSize ||
+      oldClipper.piece != piece;
+}
+
+class JigsawPieceOutlinePainter extends CustomPainter {
+  const JigsawPieceOutlinePainter({
+    required this.seed,
+    required this.gridSize,
+    required this.piece,
+    required this.color,
+  });
+
+  final int seed;
+  final int gridSize;
+  final int piece;
+  final Color color;
+
+  @override
+  void paint(Canvas canvas, Size size) {
+    final path = JigsawPieceClipper(
+      seed: seed,
+      gridSize: gridSize,
+      piece: piece,
+    ).getClip(size);
+    canvas.drawShadow(path, Colors.black.withValues(alpha: 0.28), 2, true);
+    canvas.drawPath(
+      path,
+      Paint()
+        ..color = color
+        ..style = PaintingStyle.stroke
+        ..strokeWidth = 1.4,
+    );
+  }
+
+  @override
+  bool shouldRepaint(covariant JigsawPieceOutlinePainter oldDelegate) =>
+      oldDelegate.seed != seed ||
+      oldDelegate.gridSize != gridSize ||
+      oldDelegate.piece != piece ||
+      oldDelegate.color != color;
+}
+
+class JigsawPreviewOutlinePainter extends CustomPainter {
+  const JigsawPreviewOutlinePainter({
+    required this.seed,
+    required this.gridSize,
+    required this.color,
+  });
+
+  final int seed;
+  final int gridSize;
+  final Color color;
+
+  @override
+  void paint(Canvas canvas, Size size) {
+    final tileSize = Size(size.width / gridSize, size.height / gridSize);
+    final paint = Paint()
+      ..color = color
+      ..style = PaintingStyle.stroke
+      ..strokeWidth = 1.5;
+    for (int piece = 0; piece < gridSize * gridSize; piece++) {
+      canvas.save();
+      canvas.translate(
+        (piece % gridSize) * tileSize.width,
+        (piece ~/ gridSize) * tileSize.height,
+      );
+      final path = JigsawPieceClipper(
+        seed: seed,
+        gridSize: gridSize,
+        piece: piece,
+      ).getClip(tileSize);
+      canvas.drawPath(path, paint);
+      canvas.restore();
+    }
+  }
+
+  @override
+  bool shouldRepaint(covariant JigsawPreviewOutlinePainter oldDelegate) =>
+      oldDelegate.seed != seed ||
+      oldDelegate.gridSize != gridSize ||
+      oldDelegate.color != color;
 }

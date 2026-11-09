@@ -2,85 +2,10 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 
+import '../services/game_sound_service.dart';
 import '../services/point_service.dart';
+import '../services/true_false_blitz_service.dart';
 import '../widgets/daily_game_gate.dart';
-
-class _Statement {
-  final String text;
-  final bool isTrue;
-
-  const _Statement(this.text, this.isTrue);
-}
-
-const List<_Statement> _statements = [
-  _Statement('Docker containers share the host operating system kernel.', true),
-  _Statement('A Kubernetes Pod can contain more than one container.', true),
-  _Statement(
-    'The git pull command only downloads changes without merging.',
-    false,
-  ),
-  _Statement(
-    'Terraform stores the real-world state of resources in a state file.',
-    true,
-  ),
-  _Statement(
-    'Ansible requires an agent installed on every managed Linux host.',
-    false,
-  ),
-  _Statement('The Linux command ls -l shows a long listing format.', true),
-  _Statement('HTTP uses port 443 by default.', false),
-  _Statement('A Jenkinsfile can define a pipeline as code.', true),
-  _Statement(
-    'In Linux, chmod 777 gives only the owner full permissions.',
-    false,
-  ),
-  _Statement('DNS translates domain names to IP addresses.', true),
-  _Statement('A Docker image is a running instance of a container.', false),
-  _Statement(
-    'Kubernetes Services provide a stable network endpoint for Pods.',
-    true,
-  ),
-  _Statement('The git stash command permanently deletes your changes.', false),
-  _Statement('CI stands for Continuous Integration.', true),
-  _Statement('Python is a compiled language that needs no interpreter.', false),
-  _Statement('SSH uses port 22 by default.', true),
-  _Statement(
-    'A load balancer distributes traffic across multiple servers.',
-    true,
-  ),
-  _Statement('Blue-green deployment runs two production environments.', true),
-  _Statement('kubectl is the command-line tool for Kubernetes.', true),
-  _Statement('The Linux command rm -rf only removes empty folders.', false),
-  _Statement('Amazon S3 is a block storage service for EC2 volumes.', false),
-  _Statement(
-    'Infrastructure as Code lets you manage servers with versioned files.',
-    true,
-  ),
-  _Statement('The ping command uses the ICMP protocol.', true),
-  _Statement(
-    'Git branches are always copies of the entire repository on disk.',
-    false,
-  ),
-  _Statement('A Dockerfile contains instructions to build an image.', true),
-  _Statement('YAML files rely on indentation to show structure.', true),
-  _Statement('The cron service runs scheduled jobs on Linux.', true),
-  _Statement('Terraform apply previews changes without making any.', false),
-  _Statement('A reverse proxy can terminate TLS connections.', true),
-  _Statement('Ansible playbooks are written in XML.', false),
-  _Statement('Port 25 is commonly used by SMTP.', true),
-  _Statement(
-    'Kubernetes Namespaces can help separate resources within a cluster.',
-    true,
-  ),
-  _Statement('IPv4 addresses are 128 bits long.', false),
-  _Statement('A Git commit is a snapshot of tracked changes.', true),
-  _Statement('Prometheus is commonly used for monitoring and alerting.', true),
-  _Statement('The Linux command cat is used to change directories.', false),
-  _Statement('Containers always include a full guest operating system.', false),
-  _Statement('Helm helps package and deploy Kubernetes applications.', true),
-  _Statement('A rolling update replaces instances gradually.', true),
-  _Statement('Bash scripts can only be run on Windows.', false),
-];
 
 class TrueFalseBlitzScreen extends StatelessWidget {
   const TrueFalseBlitzScreen({super.key});
@@ -89,15 +14,21 @@ class TrueFalseBlitzScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final locale = Localizations.localeOf(context);
     return Scaffold(
       appBar: AppBar(title: const Text('True or False Blitz ⚡')),
-      body: const DailyGameGate(gameKey: gameKey, child: _BlitzGame()),
+      body: DailyGameGate(
+        gameKey: gameKey,
+        child: _BlitzGame(locale: locale),
+      ),
     );
   }
 }
 
 class _BlitzGame extends StatefulWidget {
-  const _BlitzGame();
+  const _BlitzGame({required this.locale});
+
+  final Locale locale;
 
   @override
   State<_BlitzGame> createState() => _BlitzGameState();
@@ -109,8 +40,9 @@ class _BlitzGameState extends State<_BlitzGame> {
   static const int _pointsPerAnswer = 10;
   static const int _wrongPenalty = 3;
 
-  late final List<_Statement> _deck = List<_Statement>.of(_statements)
-    ..shuffle();
+  List<TrueFalseBlitzStatement> _deck = [];
+  bool _loadingQuestions = true;
+  int _deckLoadToken = 0;
 
   Timer? _timer;
   bool _started = false;
@@ -124,13 +56,45 @@ class _BlitzGameState extends State<_BlitzGame> {
   Color? _flash;
 
   @override
+  void initState() {
+    super.initState();
+    _loadDeck();
+  }
+
+  @override
+  void didUpdateWidget(covariant _BlitzGame oldWidget) {
+    super.didUpdateWidget(oldWidget);
+    if (!_started && oldWidget.locale != widget.locale) _loadDeck();
+  }
+
+  Future<void> _loadDeck() async {
+    final token = ++_deckLoadToken;
+    setState(() => _loadingQuestions = true);
+    try {
+      final deck = await TrueFalseBlitzService.loadDailyDeck(widget.locale);
+      if (!mounted || token != _deckLoadToken) return;
+      setState(() {
+        _deck = deck;
+        _loadingQuestions = false;
+      });
+    } catch (error) {
+      debugPrint('True/False Blitz question load failed: $error');
+      if (!mounted || token != _deckLoadToken) return;
+      setState(() {
+        _deck = [];
+        _loadingQuestions = false;
+      });
+    }
+  }
+
+  @override
   void dispose() {
     _timer?.cancel();
     super.dispose();
   }
 
   void _start() {
-    if (_started || _finished) return;
+    if (_started || _finished || _deck.isEmpty || _loadingQuestions) return;
     setState(() {
       _timeLeft = _roundSeconds;
       _started = true;
@@ -151,6 +115,11 @@ class _BlitzGameState extends State<_BlitzGame> {
     if (_finished || !_started) return;
 
     final bool right = _deck[_index].isTrue == value;
+    unawaited(
+      GameSoundService.play(
+        right ? GameSoundEffect.correct : GameSoundEffect.incorrect,
+      ),
+    );
 
     setState(() {
       if (right) {
@@ -232,10 +201,27 @@ class _BlitzGameState extends State<_BlitzGame> {
         const Text('⚡', style: TextStyle(fontSize: 64)),
         const SizedBox(height: 12),
         const Text(
-          'Is the statement true or false?',
+          'Is the shown answer true or false?',
           textAlign: TextAlign.center,
           style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
         ),
+        const SizedBox(height: 12),
+        if (_loadingQuestions)
+          Padding(
+            padding: const EdgeInsets.all(12),
+            child: CircularProgressIndicator(
+              key: ValueKey('blitz-question-loading'),
+            ),
+          )
+        else
+          Text(
+            '${_deck.length} questions across '
+            '${_deck.map((statement) => statement.category).toSet().length} '
+            'categories',
+            key: const ValueKey('blitz-question-coverage'),
+            textAlign: TextAlign.center,
+            style: TextStyle(fontSize: 14, color: colors.onSurfaceVariant),
+          ),
         const SizedBox(height: 12),
         Text(
           'You have $_roundSeconds seconds. Each correct answer earns '
@@ -268,7 +254,7 @@ class _BlitzGameState extends State<_BlitzGame> {
         ),
         const SizedBox(height: 12),
         FilledButton.icon(
-          onPressed: _start,
+          onPressed: _loadingQuestions || _deck.isEmpty ? null : _start,
           icon: const Icon(Icons.play_arrow_rounded),
           label: const Text('Start'),
         ),
@@ -277,7 +263,9 @@ class _BlitzGameState extends State<_BlitzGame> {
   }
 
   Widget _play(ColorScheme colors) {
-    final _Statement? current = _index < _deck.length ? _deck[_index] : null;
+    final TrueFalseBlitzStatement? current = _index < _deck.length
+        ? _deck[_index]
+        : null;
 
     return Column(
       mainAxisSize: MainAxisSize.min,
@@ -309,10 +297,36 @@ class _BlitzGameState extends State<_BlitzGame> {
             borderRadius: BorderRadius.circular(20),
             border: Border.all(color: colors.outlineVariant),
           ),
-          child: Text(
-            current?.text ?? '',
-            textAlign: TextAlign.center,
-            style: const TextStyle(fontSize: 20, fontWeight: FontWeight.w600),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Text(
+                current?.category ?? '',
+                key: const ValueKey('blitz-category'),
+                textAlign: TextAlign.center,
+                style: TextStyle(
+                  color: colors.primary,
+                  fontSize: 14,
+                  fontWeight: FontWeight.w700,
+                ),
+              ),
+              const SizedBox(height: 10),
+              Text(
+                current?.question ?? '',
+                textAlign: TextAlign.center,
+                style: const TextStyle(
+                  fontSize: 18,
+                  fontWeight: FontWeight.w600,
+                ),
+              ),
+              const SizedBox(height: 10),
+              Text(
+                current?.answer ?? '',
+                key: const ValueKey('blitz-proposed-answer'),
+                textAlign: TextAlign.center,
+                style: const TextStyle(fontSize: 18),
+              ),
+            ],
           ),
         ),
         const SizedBox(height: 24),

@@ -3,6 +3,30 @@ import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
+Future<void> _pumpBlitz(WidgetTester tester) async {
+  await tester.pumpWidget(const MaterialApp(home: TrueFalseBlitzScreen()));
+  for (
+    int attempt = 0;
+    attempt < 200 &&
+        find.byType(CircularProgressIndicator).evaluate().isNotEmpty;
+    attempt++
+  ) {
+    await tester.pump(const Duration(milliseconds: 50));
+  }
+  expect(
+    find.byType(CircularProgressIndicator),
+    findsNothing,
+    reason:
+        find
+            .byKey(const ValueKey('blitz-question-loading'))
+            .evaluate()
+            .isNotEmpty
+        ? 'Question bank load did not finish'
+        : 'Daily game gate did not finish',
+  );
+  await tester.pumpAndSettle();
+}
+
 void main() {
   TestWidgetsFlutterBinding.ensureInitialized();
 
@@ -10,8 +34,7 @@ void main() {
     tester,
   ) async {
     SharedPreferences.setMockInitialValues({});
-    await tester.pumpWidget(const MaterialApp(home: TrueFalseBlitzScreen()));
-    await tester.pumpAndSettle();
+    await _pumpBlitz(tester);
     expect(find.text('0:45'), findsOneWidget);
     final slider = tester.widget<Slider>(
       find.byKey(const ValueKey('blitz-timer-slider')),
@@ -43,14 +66,15 @@ void main() {
     expect(find.text("Time's Up!"), findsOneWidget);
     final prefs = await SharedPreferences.getInstance();
     expect(prefs.getString('true_false_blitz_last_played'), isNotNull);
+    await tester.pumpWidget(const SizedBox.shrink());
+    await tester.pumpAndSettle();
   });
 
   testWidgets('short duration counts down using the selected duration', (
     tester,
   ) async {
     SharedPreferences.setMockInitialValues({});
-    await tester.pumpWidget(const MaterialApp(home: TrueFalseBlitzScreen()));
-    await tester.pumpAndSettle();
+    await _pumpBlitz(tester);
     tester
         .widget<Slider>(find.byKey(const ValueKey('blitz-timer-slider')))
         .onChanged!(15);

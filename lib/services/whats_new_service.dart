@@ -15,6 +15,7 @@ class WhatsNewService {
   static const String themes = 'themes';
   static const String settings = 'settings_languages';
   static const String achievements = 'achievements';
+  static const String sounds = 'game_sounds';
 
   static Future<bool> shouldShowRelease() async {
     final prefs = await SharedPreferences.getInstance();

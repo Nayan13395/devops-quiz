@@ -1,0 +1,877 @@
+[
+  {
+    "category": "Bash Scripting",
+    "set": 1,
+    "question": "Какая строка указывает системе использовать Bash в качестве интерпретатора скрипта?",
+    "options": ["#!/bin/bash", "#/bin/bash", "//bin/bash", "@bash"],
+    "answer": "#!/bin/bash"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 1,
+    "question": "Какая команда выполняет script.sh, если у него уже есть право на выполнение?",
+    "options": ["./script.sh", "run script.sh", "exec script.sh", "start script.sh"],
+    "answer": "./script.sh"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 1,
+    "question": "Какая команда явно запускает script.sh с помощью Bash?",
+    "options": ["bash script.sh", "bash run script.sh", "bash exec script.sh", "bash start script.sh"],
+    "answer": "bash script.sh"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 1,
+    "question": "Какой символ начинает однострочный комментарий в скрипте Bash?",
+    "options": ["#", "//", "/*", "<!--"],
+    "answer": "#"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 1,
+    "question": "Какая команда делает script.sh исполняемым?",
+    "options": ["chmod +x script.sh", "chmod exec script.sh", "chmod run script.sh", "chmod allow script.sh"],
+    "answer": "chmod +x script.sh"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 1,
+    "question": "Какая встроенная команда выводит текст в стандартный вывод?",
+    "options": ["echo", "print", "write", "display"],
+    "answer": "echo"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 1,
+    "question": "Какая встроенная команда считывает ввод пользователя?",
+    "options": ["read", "input", "get", "scan"],
+    "answer": "read"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 1,
+    "question": "Какой символ используется для подстановки значения переменной?",
+    "options": ["$", "@", "%", "&"],
+    "answer": "$"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 1,
+    "question": "Какое присваивание переменной допустимо в Bash?",
+    "options": ["name=John", "name = John", "set name John", "let name:John"],
+    "answer": "name=John"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 1,
+    "question": "Какая команда выводит код завершения предыдущей команды?",
+    "options": ["echo $?", "echo $status", "echo $exit", "echo $code"],
+    "answer": "echo $?"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 1,
+    "question": "Что обычно означает код завершения 0?",
+    "options": ["Успех", "Ошибка", "Тайм-аут", "Отказано в доступе"],
+    "answer": "Успех"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 1,
+    "question": "Какой символ разделяет несколько команд в одной строке?",
+    "options": [";", ",", ":", "|"],
+    "answer": ";"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 1,
+    "question": "Какое расширение файла обычно используется для shell-скриптов?",
+    "options": [".sh", ".bashrc", ".exe", ".bin"],
+    "answer": ".sh"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 1,
+    "question": "Какая команда отображает переменные окружения?",
+    "options": ["env", "chmod", "mkdir", "rm"],
+    "answer": "env"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 1,
+    "question": "Какая команда отображает оболочку по умолчанию текущего пользователя?",
+    "options": ["echo $SHELL", "env shell", "shell --show", "cat shell"],
+    "answer": "echo $SHELL"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 1,
+    "question": "Какой символ экранирует следующий символ в Bash?",
+    "options": ["Обратная косая черта", "Косая черта", "Звёздочка", "Амперсанд"],
+    "answer": "Обратная косая черта"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 1,
+    "question": "Какой стиль кавычек предотвращает подстановку переменных и команд?",
+    "options": ["Одинарные кавычки", "Двойные кавычки", "Обратные кавычки", "Без кавычек"],
+    "answer": "Одинарные кавычки"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 1,
+    "question": "Какой стиль кавычек допускает подстановку переменных и сохраняет пробелы?",
+    "options": ["Двойные кавычки", "Одинарные кавычки", "Обратные кавычки", "Без кавычек"],
+    "answer": "Двойные кавычки"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 1,
+    "question": "Какой оператор перенаправляет стандартный вывод и перезаписывает файл?",
+    "options": [">", ">>", "<", "2>"],
+    "answer": ">"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 1,
+    "question": "Какая команда выводит текущий рабочий каталог?",
+    "options": ["pwd", "cwd", "whereami", "dirname"],
+    "answer": "pwd"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 1,
+    "question": "Какой стандартный поток используется для сообщений об ошибках?",
+    "options": ["stderr", "stdout", "stdin", "канал (pipe)"],
+    "answer": "stderr"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 1,
+    "question": "Какой файловый дескриптор соответствует стандартному вводу?",
+    "options": ["0", "1", "2", "3"],
+    "answer": "0"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 1,
+    "question": "Какая команда очищает экран терминала?",
+    "options": ["clear", "cls", "wipe", "erase"],
+    "answer": "clear"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 1,
+    "question": "Какое сочетание клавиш обычно останавливает текущий процесс переднего плана?",
+    "options": ["Ctrl+C", "Ctrl+D", "Ctrl+Z", "Ctrl+L"],
+    "answer": "Ctrl+C"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 1,
+    "question": "Какая встроенная команда завершает скрипт?",
+    "options": ["exit", "stop", "end", "quit"],
+    "answer": "exit"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "Какой синтаксис сохраняет вывод команды date в переменную now?",
+    "options": ["now=$(date)", "now=date", "now:=$(date)", "date->now"],
+    "answer": "now=$(date)"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "Какой специальный параметр содержит имя скрипта?",
+    "options": ["$0", "$1", "$#", "$@"],
+    "answer": "$0"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "Какой специальный параметр раскрывается в идентификатор процесса последней фоновой команды?",
+    "options": ["$!", "$$", "$?", "$#"],
+    "answer": "$!"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "Какой специальный параметр содержит количество позиционных аргументов?",
+    "options": ["$#", "$@", "$*", "$$"],
+    "answer": "$#"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "Какой специальный параметр раскрывается во все позиционные аргументы как отдельные слова?",
+    "options": ["$@", "$*", "$#", "$0"],
+    "answer": "$@"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "Какая встроенная команда Bash отбрасывает первый позиционный параметр и сдвигает остальные на одну позицию?",
+    "options": ["shift", "unshift", "pop", "rotate"],
+    "answer": "shift"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "Какой специальный параметр содержит идентификатор процесса текущей оболочки?",
+    "options": ["$$", "$!", "$?", "$0"],
+    "answer": "$$"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "Какой специальный параметр содержит код завершения последней команды?",
+    "options": ["$?", "$!", "$$", "$#"],
+    "answer": "$?"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "Какая подстановка возвращает значение по умолчанию, если var не задана или пуста?",
+    "options": ["${var:-default}", "${var:=default}", "${var:+default}", "${var:?default}"],
+    "answer": "${var:-default}"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "Какая подстановка извлекает 3 символа из var, начиная со смещения 2?",
+    "options": ["${var:2:3}", "${var:3:2}", "${var[2,3]}", "${var#2:3}"],
+    "answer": "${var:2:3}"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "Какая подстановка возвращает длину значения var?",
+    "options": ["${#var}", "${len(var)}", "${var:length}", "${var#length}"],
+    "answer": "${#var}"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "Какая подстановка преобразует значение var в верхний регистр?",
+    "options": ["${var^^}", "${var,,}", "${var!!}", "${var##}"],
+    "answer": "${var^^}"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "Какая подстановка удаляет самый длинный совпадающий префикс pattern из var?",
+    "options": ["${var##pattern}", "${var#pattern}", "${var%%pattern}", "${var%pattern}"],
+    "answer": "${var##pattern}"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "Какая подстановка заменяет только первое совпадение pattern в var?",
+    "options": ["${var/pattern/replacement}", "${var//pattern/replacement}", "${var#pattern}", "${var%pattern}"],
+    "answer": "${var/pattern/replacement}"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "Какая подстановка выводит сообщение об ошибке и прерывает неинтерактивный скрипт, если var не задана или пуста?",
+    "options": ["${var:?message}", "${var:-message}", "${var:+message}", "${var:=message}"],
+    "answer": "${var:?message}"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "Какой синтаксис выполняет арифметическую подстановку в Bash?",
+    "options": ["$((5 + 3))", "$(5 + 3)", "${5 + 3}", "$[5 + 3]"],
+    "answer": "$((5 + 3))"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "Какая команда увеличивает переменную count на единицу?",
+    "options": ["let count++", "count++", "increment count", "add count"],
+    "answer": "let count++"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "Какая команда выводит 8 после сложения 5 и 3?",
+    "options": ["expr 5 + 3", "expr 5+3", "expr5 + 3", "expr add 5 3"],
+    "answer": "expr 5 + 3"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "Какая команда объявляет count целочисленной переменной?",
+    "options": ["declare -i count", "declare int count", "integer count", "set count integer"],
+    "answer": "declare -i count"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "Какая команда делает переменную доступной только для чтения?",
+    "options": ["readonly var", "lock var", "const var", "final var"],
+    "answer": "readonly var"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "Какая команда удаляет переменную из окружения оболочки?",
+    "options": ["unset var", "delete var", "remove var", "clear var"],
+    "answer": "unset var"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "Какая команда делает переменную доступной для дочерних процессов?",
+    "options": ["export var", "share var", "env var", "publish var"],
+    "answer": "export var"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "Какая опция не позволяет перенаправлению вывода перезаписывать существующий файл?",
+    "options": ["set -o noclobber", "set -o nooverwrite", "set -o protect", "set -o safe"],
+    "answer": "set -o noclobber"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "Какая переменная Bash содержит число секунд с момента запуска оболочки?",
+    "options": ["$SECONDS", "$RANDOM", "$LINENO", "$UID"],
+    "answer": "$SECONDS"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "Какая подстановка Bash подставляет alt, только если var задана и не пуста?",
+    "options": ["${var:+alt}", "${var:-alt}", "${var:=alt}", "${var:?alt}"],
+    "answer": "${var:+alt}"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 3,
+    "question": "Какая встроенная команда вычисляет проверочные выражения и возвращает код завершения?",
+    "options": ["test", "echo", "read", "cd"],
+    "answer": "test"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 3,
+    "question": "Какой синтаксис обычно заключает условные проверочные выражения?",
+    "options": ["[ ]", "{ }", "( )", "< >"],
+    "answer": "[ ]"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 3,
+    "question": "Какой оператор проверки определяет, существует ли файл?",
+    "options": ["-e", "-f", "-d", "-x"],
+    "answer": "-e"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 3,
+    "question": "Какой оператор проверки определяет, является ли path обычным файлом?",
+    "options": ["-f", "-d", "-e", "-r"],
+    "answer": "-f"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 3,
+    "question": "Какой оператор проверки определяет, является ли path каталогом?",
+    "options": ["-d", "-f", "-s", "-w"],
+    "answer": "-d"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 3,
+    "question": "Какой оператор проверки определяет, доступен ли файл для чтения?",
+    "options": ["-r", "-w", "-x", "-s"],
+    "answer": "-r"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 3,
+    "question": "Какой оператор проверки определяет, доступен ли файл для записи?",
+    "options": ["-w", "-r", "-x", "-e"],
+    "answer": "-w"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 3,
+    "question": "Какой оператор проверки определяет, является ли файл исполняемым?",
+    "options": ["-x", "-w", "-r", "-d"],
+    "answer": "-x"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 3,
+    "question": "Какой оператор проверки определяет, что строка не пуста?",
+    "options": ["-n", "-z", "-s", "-e"],
+    "answer": "-n"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 3,
+    "question": "Какой оператор проверки определяет, что строка пуста?",
+    "options": ["-z", "-n", "-s", "-f"],
+    "answer": "-z"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 3,
+    "question": "Какой оператор числового сравнения проверяет равенство?",
+    "options": ["-eq", "=", "==", "-equal"],
+    "answer": "-eq"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 3,
+    "question": "Какой оператор числового сравнения проверяет «больше чем»?",
+    "options": ["-gt", ">", "-ge", "-lt"],
+    "answer": "-gt"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 3,
+    "question": "Какой оператор числового сравнения проверяет «меньше или равно»?",
+    "options": ["-le", "-lt", "-ge", "-ne"],
+    "answer": "-le"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 3,
+    "question": "Какое ключевое слово начинает условный оператор?",
+    "options": ["if", "case", "for", "while"],
+    "answer": "if"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 3,
+    "question": "Какое ключевое слово закрывает оператор if?",
+    "options": ["fi", "end", "done", "exit"],
+    "answer": "fi"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 3,
+    "question": "Какое ключевое слово задаёт альтернативную ветвь, когда условие if ложно?",
+    "options": ["else", "elif", "or", "default"],
+    "answer": "else"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 3,
+    "question": "Какое ключевое слово задаёт ветвь «иначе если»?",
+    "options": ["elif", "elseif", "else if", "or"],
+    "answer": "elif"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 3,
+    "question": "Какой цикл повторяется, пока условие остаётся истинным?",
+    "options": ["while", "until", "repeat", "loop"],
+    "answer": "while"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 3,
+    "question": "Какой цикл повторяется, пока условие не станет истинным?",
+    "options": ["until", "while", "for", "case"],
+    "answer": "until"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 3,
+    "question": "Какой цикл перебирает элементы списка?",
+    "options": ["for", "while", "until", "case"],
+    "answer": "for"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 3,
+    "question": "Какое ключевое слово управления циклом переходит к следующей итерации?",
+    "options": ["continue", "break", "next", "skip"],
+    "answer": "continue"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 3,
+    "question": "Какое ключевое слово управления циклом немедленно выходит из цикла?",
+    "options": ["break", "continue", "exit", "stop"],
+    "answer": "break"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 3,
+    "question": "Какой оператор выбирает команды на основе сопоставления с шаблоном?",
+    "options": ["case", "switch", "select", "match"],
+    "answer": "case"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 3,
+    "question": "Какое ключевое слово закрывает оператор case в Bash?",
+    "options": ["esac", "end", "fi", "done"],
+    "answer": "esac"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 3,
+    "question": "Какой синтаксис цикла похож на циклы в стиле C в Bash?",
+    "options": ["for ((i=0; i<5; i++))", "for i in 0 to 5", "loop i=0 to 5", "while (i<5)"],
+    "answer": "for ((i=0; i<5; i++))"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "Какой синтаксис определяет простую функцию Bash?",
+    "options": ["myfunc() { echo hi; }", "def myfunc: echo hi", "function = myfunc", "myfunc -> echo hi"],
+    "answer": "myfunc() { echo hi; }"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "Какая команда вызывает функцию с именем myfunc?",
+    "options": ["myfunc", "call myfunc", "run myfunc", "execute myfunc"],
+    "answer": "myfunc"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "Какое ключевое слово объявляет переменную, видимую только внутри функции?",
+    "options": ["local", "private", "internal", "hidden"],
+    "answer": "local"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "Какая команда возвращает из функции код завершения 0?",
+    "options": ["return 0", "exit function 0", "stop 0", "end 0"],
+    "answer": "return 0"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "Какой параметр внутри функции содержит количество аргументов, переданных функции?",
+    "options": ["$#", "$@", "$0", "$1"],
+    "answer": "$#"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "Какой синтаксис создаёт индексированный массив из трёх элементов?",
+    "options": ["arr=(one two three)", "array arr one two three", "arr[one two three]", "set arr one two three"],
+    "answer": "arr=(one two three)"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "Какой синтаксис обращается к элементу массива arr с индексом 2?",
+    "options": ["${arr[2]}", "${arr:2}", "$arr[2]", "arr{2}"],
+    "answer": "${arr[2]}"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "Какая подстановка возвращает количество элементов в arr?",
+    "options": ["${#arr[@]}", "${#arr}", "${arr:length}", "${arr[@]#}"],
+    "answer": "${#arr[@]}"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "Какой синтаксис добавляет newitem в конец arr?",
+    "options": ["arr+=(newitem)", "arr=newitem", "arr.push(newitem)", "add arr newitem"],
+    "answer": "arr+=(newitem)"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "Какая подстановка возвращает все элементы arr?",
+    "options": ["${arr[@]}", "${arr[0]}", "${arr[all]}", "${arr}"],
+    "answer": "${arr[@]}"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "Какая команда объявляет ассоциативный массив?",
+    "options": ["declare -A map", "declare -a map", "array -A map", "assoc map"],
+    "answer": "declare -A map"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "Какое перенаправление отправляет и стандартный вывод, и стандартный поток ошибок в output.log?",
+    "options": ["command &> output.log", "command > output.log", "command 2> output.log", "command < output.log"],
+    "answer": "command &> output.log"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "Какое перенаправление отбрасывает весь вывод команды?",
+    "options": ["command > /dev/null", "command > null", "command > empty", "command > discard"],
+    "answer": "command > /dev/null"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "Какой оператор передаёт вывод одной команды на вход другой?",
+    "options": ["|", ">", "<", "&"],
+    "answer": "|"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "Какой символ запускает команду в фоновом режиме?",
+    "options": ["&", "&&", "|", ";"],
+    "answer": "&"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "Какая встроенная команда ожидает завершения фоновых заданий?",
+    "options": ["wait", "hold", "pause", "sleep"],
+    "answer": "wait"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "Какая команда выполняет script.sh в окружении текущей оболочки?",
+    "options": ["source script.sh", "bash script.sh", "./script.sh", "sh script.sh"],
+    "answer": "source script.sh"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "Какой оператор начинает here document?",
+    "options": ["<<", ">>", "<", ">"],
+    "answer": "<<"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "Какая команда создаёт безопасный временный файл?",
+    "options": ["mktemp", "tempfile", "touch tmp", "newfile"],
+    "answer": "mktemp"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "Какая команда запускает cleanup, когда скрипт получает SIGINT?",
+    "options": ["trap 'cleanup' SIGINT", "handle SIGINT cleanup", "signal SIGINT cleanup", "catch SIGINT cleanup"],
+    "answer": "trap 'cleanup' SIGINT"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "Какой сигнал обычно отправляется, когда пользователь нажимает Ctrl+C?",
+    "options": ["SIGINT", "SIGTERM", "SIGKILL", "SIGHUP"],
+    "answer": "SIGINT"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "Какая опция заставляет скрипт немедленно завершаться при сбое команды?",
+    "options": ["set -e", "set -x", "set -u", "set -o pipefail"],
+    "answer": "set -e"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "Какая опция вызывает ошибку при обращении к неустановленной переменной?",
+    "options": ["set -u", "set -e", "set -x", "set -a"],
+    "answer": "set -u"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "Какая опция выводит каждую команду перед выполнением для отладки?",
+    "options": ["set -x", "set -e", "set -u", "set -v"],
+    "answer": "set -x"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "Какая команда перечисляет определённые в данный момент функции оболочки?",
+    "options": ["declare -f", "declare -A", "functions", "listfunc"],
+    "answer": "declare -f"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 5,
+    "question": "Какая строка в начале скрипта указывает системе запускать его с помощью Bash?",
+    "options": ["//bash", "#!/bin/bash", "<?bash", "#include bash"],
+    "answer": "#!/bin/bash"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 5,
+    "question": "Какая команда создаёт каталог вместе со всеми отсутствующими родительскими каталогами?",
+    "options": ["mkdir -p", "mkdir -r", "mkdir -m", "mkdir -v"],
+    "answer": "mkdir -p"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 5,
+    "question": "Как присвоить значение 5 переменной count в Bash?",
+    "options": ["set count 5", "$count=5", "count=5", "count = 5"],
+    "answer": "count=5"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 5,
+    "question": "Какой символ используется для чтения значения переменной с именем name?",
+    "options": ["%name", "$name", "&name", "#name"],
+    "answer": "$name"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 5,
+    "question": "Какая переменная содержит количество аргументов, переданных скрипту?",
+    "options": ["$?", "$#", "$@", "$$"],
+    "answer": "$#"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 5,
+    "question": "Какая переменная содержит код завершения последней команды?",
+    "options": ["$?", "$0", "$#", "$!"],
+    "answer": "$?"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 5,
+    "question": "Какой оператор запускает вторую команду, только если первая завершилась успешно?",
+    "options": ["|", "||", ";", "&&"],
+    "answer": "&&"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 5,
+    "question": "Какой оператор дописывает вывод в конец файла?",
+    "options": ["<<", ">>", "|&", ">"],
+    "answer": ">>"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 5,
+    "question": "Какое ключевое слово начинает условный блок в Bash?",
+    "options": ["check", "case-if", "if", "when"],
+    "answer": "if"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 5,
+    "question": "Какое ключевое слово завершает блок if в Bash?",
+    "options": ["endif", "fi", "done", "end"],
+    "answer": "fi"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 5,
+    "question": "Какой цикл перебирает список элементов?",
+    "options": ["foreach item list", "for item in list; do", "each item in list", "loop item in list"],
+    "answer": "for item in list; do"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 5,
+    "question": "Какая команда выводит текст в терминал?",
+    "options": ["print", "echo", "say", "out"],
+    "answer": "echo"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 5,
+    "question": "Какая проверка определяет, существует ли обычный файл?",
+    "options": ["[ -e file ]", "[ -r file ]", "[ -d file ]", "[ -f file ]"],
+    "answer": "[ -f file ]"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 5,
+    "question": "Какая проверка определяет, что строка пуста?",
+    "options": ["[ -s \"$str\" ]", "[ -e \"$str\" ]", "[ -n \"$str\" ]", "[ -z \"$str\" ]"],
+    "answer": "[ -z \"$str\" ]"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 5,
+    "question": "Какая команда считывает строку ввода в переменную?",
+    "options": ["read", "input", "scan", "get"],
+    "answer": "read"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 5,
+    "question": "Какой синтаксис сохраняет вывод команды в переменную?",
+    "options": ["var=$(date)", "var=[date]", "var={date}", "var=<date>"],
+    "answer": "var=$(date)"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 5,
+    "question": "Какая команда подсчитывает строки в файле data.txt в оболочке Bash?",
+    "options": ["wc -l data.txt", "ls -l data.txt", "sort -l data.txt", "cut -l data.txt"],
+    "answer": "wc -l data.txt"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 5,
+    "question": "Какая опция выводит каждую команду перед её выполнением?",
+    "options": ["set -f", "set -u", "set -x", "set -e"],
+    "answer": "set -x"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 5,
+    "question": "Какая переменная содержит имя запущенного скрипта?",
+    "options": ["$*", "$1", "$0", "$#"],
+    "answer": "$0"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 5,
+    "question": "Как определить функцию с именем greet в Bash?",
+    "options": ["fn greet { echo hi }", "function greet: echo hi", "def greet(): echo hi", "greet() { echo hi; }"],
+    "answer": "greet() { echo hi; }"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 5,
+    "question": "Какая команда подключает файл (source) в текущей оболочке?",
+    "options": ["run file.sh", "import file.sh", "source file.sh", "call file.sh"],
+    "answer": "source file.sh"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 5,
+    "question": "Какой подстановочный символ соответствует любому количеству символов в именах файлов?",
+    "options": ["?", "~", "*", "#"],
+    "answer": "*"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 5,
+    "question": "Какое ключевое слово используется для выбора среди множества шаблонов в Bash?",
+    "options": ["select-when", "match", "case", "switch"],
+    "answer": "case"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 5,
+    "question": "Какая команда выводит первые строки файла?",
+    "options": ["cat -f", "head", "less -h", "tail"],
+    "answer": "head"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 5,
+    "question": "Какой оператор перенаправляет стандартный поток ошибок в файл?",
+    "options": ["0<", "^>", "2>", "1>"],
+    "answer": "2>"
+  }
+]

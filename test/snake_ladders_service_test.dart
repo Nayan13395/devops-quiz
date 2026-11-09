@@ -18,43 +18,37 @@ void main() {
     }
   });
 
-  test(
-    'weekly boards are stable, change weekly, and have distinct endpoints',
-    () {
-      for (int week = 2900; week < 3100; week++) {
-        final date = DateTime.fromMillisecondsSinceEpoch(
-          week * const Duration(days: 7).inMilliseconds,
-          isUtc: true,
-        );
-        final game = SnakeLaddersGame.create(now: date);
-        final same = SnakeLaddersGame.create(
-          now: date.add(const Duration(days: 6)),
-        );
-        final next = SnakeLaddersGame.create(
-          now: date.add(const Duration(days: 7)),
-        );
-        expect(same.ladders, game.ladders);
-        expect(same.snakes, game.snakes);
-        expect(next.ladders, isNot(game.ladders));
-        expect(next.snakes, isNot(game.snakes));
-        final endpoints = [
-          ...game.ladders.keys,
-          ...game.ladders.values,
-          ...game.snakes.keys,
-          ...game.snakes.values,
-        ];
-        expect(endpoints.toSet(), hasLength(30));
-        expect(
-          game.ladders.entries.every((entry) => entry.key < entry.value),
-          isTrue,
-        );
-        expect(
-          game.snakes.entries.every((entry) => entry.key > entry.value),
-          isTrue,
-        );
-      }
-    },
-  );
+  test('twenty levels have stable and distinct board layouts', () {
+    final layouts = <String>{};
+    for (int level = 1; level <= snakeLaddersLevelCount; level++) {
+      final game = SnakeLaddersGame.create(level: level);
+      final same = SnakeLaddersGame.create(level: level);
+      expect(same.ladders, game.ladders, reason: 'Level $level');
+      expect(same.snakes, game.snakes, reason: 'Level $level');
+      expect(game.ladders, hasLength(6), reason: 'Level $level');
+      expect(game.snakes, hasLength(6), reason: 'Level $level');
+      final endpoints = [
+        ...game.ladders.keys,
+        ...game.ladders.values,
+        ...game.snakes.keys,
+        ...game.snakes.values,
+      ];
+      expect(endpoints.toSet(), hasLength(24), reason: 'Level $level');
+      expect(
+        game.ladders.entries.every((entry) => entry.key < entry.value),
+        isTrue,
+      );
+      expect(
+        game.snakes.entries.every((entry) => entry.key > entry.value),
+        isTrue,
+      );
+      expect(
+        layouts.add('${game.ladders}|${game.snakes}'),
+        isTrue,
+        reason: 'Level $level duplicates an earlier board',
+      );
+    }
+  });
 
   test('landing on a ladder or snake moves to its endpoint', () {
     final game = SnakeLaddersGame.create();
@@ -83,6 +77,7 @@ void main() {
     SharedPreferences.setMockInitialValues({});
     final game = SnakeLaddersGame.create(
       mode: SnakeLaddersMode.fourPlayers,
+      level: 13,
       now: DateTime.utc(2026, 10, 23),
     );
     game.roll(6);
@@ -90,6 +85,7 @@ void main() {
     await SnakeLaddersService.save(game);
     final restored = (await SnakeLaddersService.load())!;
     expect(restored.toJson(), game.toJson());
+    expect(restored.level, 13);
     expect(restored.snakes, game.snakes);
     expect(restored.ladders, game.ladders);
   });

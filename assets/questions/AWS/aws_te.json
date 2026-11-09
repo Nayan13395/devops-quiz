@@ -1226,14 +1226,14 @@
   {
     "category": "AWS",
     "set": 5,
-    "question": "మేనేజ్ చేయబడిన రిలేషనల్ డేటాబేస్ సేవ అయిన AWS సేవ ఏది?",
+    "question": "ఆటోమేటిక్ ఫెయిల్‌ఓవర్ కోసం మరొక Availability Zoneలో సింక్రనస్ స్టాండ్‌బై రెప్లికాను నిర్వహించే Amazon RDS ఫీచర్ ఏది?",
     "options": [
-      "Amazon RDS",
-      "Amazon S3",
-      "Amazon DynamoDB",
-      "Amazon CloudFront"
+      "Multi-AZ deployment",
+      "Read replica",
+      "Manual snapshot",
+      "Parameter group"
     ],
-    "answer": "Amazon RDS"
+    "answer": "Multi-AZ deployment"
   },
   {
     "category": "AWS",
@@ -1262,14 +1262,14 @@
   {
     "category": "AWS",
     "set": 5,
-    "question": "కంటెంట్ డెలివరీ నెట్‌వర్క్ అయిన AWS సేవ ఏది?",
+    "question": "S3 ఆరిజిన్‌ను నేరుగా కాకుండా కేవలం డిస్ట్రిబ్యూషన్ ద్వారా మాత్రమే చదవగలిగేలా చేసే Amazon CloudFront ఫీచర్ ఏది?",
     "options": [
-      "Amazon SNS",
-      "Amazon Route 53",
-      "Amazon CloudFront",
-      "AWS Snowball"
+      "Origin Access Control",
+      "S3 Transfer Acceleration",
+      "Route 53 alias record",
+      "Lambda@Edge"
     ],
-    "answer": "Amazon CloudFront"
+    "answer": "Origin Access Control"
   },
   {
     "category": "AWS",
@@ -1310,14 +1310,14 @@
   {
     "category": "AWS",
     "set": 5,
-    "question": "మేనేజ్ చేయబడిన మెసేజ్ క్యూ‌ను ఏ AWS సేవ అందిస్తుంది?",
+    "question": "కఠినమైన మెసేజ్ క్రమాన్ని కాపాడుతూ, ఖచ్చితంగా ఒకసారి ప్రాసెసింగ్‌కు (exactly-once processing) మద్దతిచ్చే Amazon SQS క్యూ రకం ఏది?",
     "options": [
-      "Amazon SES",
-      "Amazon SQS",
-      "AWS KMS",
-      "Amazon EFS"
+      "Standard queue",
+      "FIFO queue",
+      "Delay queue",
+      "Dead-letter queue"
     ],
-    "answer": "Amazon SQS"
+    "answer": "FIFO queue"
   },
   {
     "category": "AWS",
@@ -1430,14 +1430,14 @@
   {
     "category": "AWS",
     "set": 5,
-    "question": "పెటాబైట్-స్థాయి డేటా వేర్‌హౌస్ అయిన AWS సేవ ఏది?",
+    "question": "Amazon Redshiftలో, ఒక టేబుల్ యొక్క డిస్ట్రిబ్యూషన్ కీ దేన్ని నియంత్రిస్తుంది?",
     "options": [
-      "Amazon DynamoDB",
-      "Amazon ElastiCache",
-      "Amazon Redshift",
-      "Amazon SQS"
+      "అడ్డు వరుసలు (rows) కంప్యూట్ నోడ్‌ల మధ్య ఎలా పంపిణీ అవుతాయి",
+      "COPY కమాండ్‌ను ఏ IAM రోల్ నడుపుతుంది",
+      "ఆటోమేటెడ్ బ్యాకప్‌లు ఎంతకాలం ఉంచబడతాయి",
+      "క్లస్టర్‌ను ఏ KMS కీ ఎన్‌క్రిప్ట్ చేస్తుంది"
     ],
-    "answer": "Amazon Redshift"
+    "answer": "అడ్డు వరుసలు (rows) కంప్యూట్ నోడ్‌ల మధ్య ఎలా పంపిణీ అవుతాయి"
   },
   {
     "category": "AWS",
@@ -1490,13 +1490,13 @@
   {
     "category": "AWS",
     "set": 5,
-    "question": "మేనేజ్ చేయబడిన Apache Kafkaను ఏ AWS సేవ అందిస్తుంది?",
+    "question": "Amazon MSK క్లస్టర్‌లో, టాపిక్ పార్టిషన్‌లను నిల్వ చేసి Kafka ప్రొడ్యూసర్‌లకు మరియు కన్స్యూమర్‌లకు సేవలందించే నోడ్‌లు ఏవి?",
     "options": [
-      "Amazon S3",
-      "Amazon EBS",
-      "AWS KMS",
-      "Amazon MSK"
+      "Broker nodes",
+      "NAT gateways",
+      "Bastion hosts",
+      "Glue crawlers"
     ],
-    "answer": "Amazon MSK"
+    "answer": "Broker nodes"
   }
 ]

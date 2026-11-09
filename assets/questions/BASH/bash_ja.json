@@ -1,0 +1,877 @@
+[
+  {
+    "category": "Bash Scripting",
+    "set": 1,
+    "question": "システムにBashをスクリプトのインタープリターとして使用させる行はどれですか？",
+    "options": ["#!/bin/bash", "#/bin/bash", "//bin/bash", "@bash"],
+    "answer": "#!/bin/bash"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 1,
+    "question": "script.shにすでに実行権限がある場合、これを実行するコマンドはどれですか？",
+    "options": ["./script.sh", "run script.sh", "exec script.sh", "start script.sh"],
+    "answer": "./script.sh"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 1,
+    "question": "Bashを使ってscript.shを明示的に実行するコマンドはどれですか？",
+    "options": ["bash script.sh", "bash run script.sh", "bash exec script.sh", "bash start script.sh"],
+    "answer": "bash script.sh"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 1,
+    "question": "Bashスクリプトで一行コメントを開始する記号はどれですか？",
+    "options": ["#", "//", "/*", "<!--"],
+    "answer": "#"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 1,
+    "question": "script.shを実行可能にするコマンドはどれですか？",
+    "options": ["chmod +x script.sh", "chmod exec script.sh", "chmod run script.sh", "chmod allow script.sh"],
+    "answer": "chmod +x script.sh"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 1,
+    "question": "標準出力にテキストを出力する組み込みコマンドはどれですか？",
+    "options": ["echo", "print", "write", "display"],
+    "answer": "echo"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 1,
+    "question": "ユーザーからの入力を読み取る組み込みコマンドはどれですか？",
+    "options": ["read", "input", "get", "scan"],
+    "answer": "read"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 1,
+    "question": "変数の値を展開するために使われる記号はどれですか？",
+    "options": ["$", "@", "%", "&"],
+    "answer": "$"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 1,
+    "question": "Bashで有効な変数代入はどれですか？",
+    "options": ["name=John", "name = John", "set name John", "let name:John"],
+    "answer": "name=John"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 1,
+    "question": "直前のコマンドの終了ステータスを出力するコマンドはどれですか？",
+    "options": ["echo $?", "echo $status", "echo $exit", "echo $code"],
+    "answer": "echo $?"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 1,
+    "question": "終了ステータス0は通常何を示しますか？",
+    "options": ["成功", "失敗", "タイムアウト", "権限拒否"],
+    "answer": "成功"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 1,
+    "question": "一行に複数のコマンドを区切る記号はどれですか？",
+    "options": [";", ",", ":", "|"],
+    "answer": ";"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 1,
+    "question": "シェルスクリプトによく使われるファイル拡張子はどれですか？",
+    "options": [".sh", ".bashrc", ".exe", ".bin"],
+    "answer": ".sh"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 1,
+    "question": "環境変数を表示するコマンドはどれですか？",
+    "options": ["env", "chmod", "mkdir", "rm"],
+    "answer": "env"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 1,
+    "question": "現在のユーザーのデフォルトシェルを表示するコマンドはどれですか？",
+    "options": ["echo $SHELL", "env shell", "shell --show", "cat shell"],
+    "answer": "echo $SHELL"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 1,
+    "question": "Bashで次の文字をエスケープする文字はどれですか？",
+    "options": ["バックスラッシュ", "スラッシュ", "アスタリスク", "アンパサンド"],
+    "answer": "バックスラッシュ"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 1,
+    "question": "変数展開とコマンド置換を防ぐクォートの種類はどれですか？",
+    "options": ["シングルクォート", "ダブルクォート", "バッククォート", "クォートなし"],
+    "answer": "シングルクォート"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 1,
+    "question": "空白を保持しつつ変数展開を許可するクォートの種類はどれですか？",
+    "options": ["ダブルクォート", "シングルクォート", "バッククォート", "クォートなし"],
+    "answer": "ダブルクォート"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 1,
+    "question": "標準出力をリダイレクトしてファイルを上書きする演算子はどれですか？",
+    "options": [">", ">>", "<", "2>"],
+    "answer": ">"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 1,
+    "question": "現在の作業ディレクトリを出力するコマンドはどれですか？",
+    "options": ["pwd", "cwd", "whereami", "dirname"],
+    "answer": "pwd"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 1,
+    "question": "エラーメッセージに使われる標準ストリームはどれですか？",
+    "options": ["stderr", "stdout", "stdin", "パイプ"],
+    "answer": "stderr"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 1,
+    "question": "標準入力を表すファイルディスクリプタはどれですか？",
+    "options": ["0", "1", "2", "3"],
+    "answer": "0"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 1,
+    "question": "ターミナル画面をクリアするコマンドはどれですか？",
+    "options": ["clear", "cls", "wipe", "erase"],
+    "answer": "clear"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 1,
+    "question": "通常、現在のフォアグラウンドプロセスを停止するキーボードショートカットはどれですか？",
+    "options": ["Ctrl+C", "Ctrl+D", "Ctrl+Z", "Ctrl+L"],
+    "answer": "Ctrl+C"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 1,
+    "question": "スクリプトを終了する組み込みコマンドはどれですか？",
+    "options": ["exit", "stop", "end", "quit"],
+    "answer": "exit"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "dateの出力をnowという変数に格納する構文はどれですか？",
+    "options": ["now=$(date)", "now=date", "now:=$(date)", "date->now"],
+    "answer": "now=$(date)"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "スクリプト名を表す特殊パラメータはどれですか？",
+    "options": ["$0", "$1", "$#", "$@"],
+    "answer": "$0"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "直近のバックグラウンドコマンドのプロセスIDに展開される特殊パラメータはどれですか？",
+    "options": ["$!", "$$", "$?", "$#"],
+    "answer": "$!"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "位置パラメータの数を表す特殊パラメータはどれですか？",
+    "options": ["$#", "$@", "$*", "$$"],
+    "answer": "$#"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "すべての位置パラメータを個別の単語として展開する特殊パラメータはどれですか？",
+    "options": ["$@", "$*", "$#", "$0"],
+    "answer": "$@"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "最初の位置パラメータを破棄し、残りを一つずつ前にずらすBashの組み込みコマンドはどれですか？",
+    "options": ["shift", "unshift", "pop", "rotate"],
+    "answer": "shift"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "現在のシェルのプロセスIDを表す特殊パラメータはどれですか？",
+    "options": ["$$", "$!", "$?", "$0"],
+    "answer": "$$"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "最後のコマンドの終了ステータスを表す特殊パラメータはどれですか？",
+    "options": ["$?", "$!", "$$", "$#"],
+    "answer": "$?"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "varが未設定または空の場合にデフォルト値を返す展開はどれですか？",
+    "options": ["${var:-default}", "${var:=default}", "${var:+default}", "${var:?default}"],
+    "answer": "${var:-default}"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "3文字をvarのオフセット2から抽出する展開はどれですか？",
+    "options": ["${var:2:3}", "${var:3:2}", "${var[2,3]}", "${var#2:3}"],
+    "answer": "${var:2:3}"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "varの値の長さを返す展開はどれですか？",
+    "options": ["${#var}", "${len(var)}", "${var:length}", "${var#length}"],
+    "answer": "${#var}"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "varの値を大文字に変換する展開はどれですか？",
+    "options": ["${var^^}", "${var,,}", "${var!!}", "${var##}"],
+    "answer": "${var^^}"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "varから最長一致する接頭辞パターンを削除する展開はどれですか？",
+    "options": ["${var##pattern}", "${var#pattern}", "${var%%pattern}", "${var%pattern}"],
+    "answer": "${var##pattern}"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "var内でpatternに最初に一致した部分だけを置換する展開はどれですか？",
+    "options": ["${var/pattern/replacement}", "${var//pattern/replacement}", "${var#pattern}", "${var%pattern}"],
+    "answer": "${var/pattern/replacement}"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "varが未設定または空の場合にエラーメッセージを出力し、非対話型スクリプトを中止する展開はどれですか？",
+    "options": ["${var:?message}", "${var:-message}", "${var:+message}", "${var:=message}"],
+    "answer": "${var:?message}"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "Bashで算術展開を行う構文はどれですか？",
+    "options": ["$((5 + 3))", "$(5 + 3)", "${5 + 3}", "$[5 + 3]"],
+    "answer": "$((5 + 3))"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "変数countを一つ増やすコマンドはどれですか？",
+    "options": ["let count++", "count++", "increment count", "add count"],
+    "answer": "let count++"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "8を出力するために5と3を足すコマンドはどれですか？",
+    "options": ["expr 5 + 3", "expr 5+3", "expr5 + 3", "expr add 5 3"],
+    "answer": "expr 5 + 3"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "countを整数変数として宣言するコマンドはどれですか？",
+    "options": ["declare -i count", "declare int count", "integer count", "set count integer"],
+    "answer": "declare -i count"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "変数を読み取り専用にするコマンドはどれですか？",
+    "options": ["readonly var", "lock var", "const var", "final var"],
+    "answer": "readonly var"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "シェル環境から変数を削除するコマンドはどれですか？",
+    "options": ["unset var", "delete var", "remove var", "clear var"],
+    "answer": "unset var"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "変数を子プロセスで利用可能にするコマンドはどれですか？",
+    "options": ["export var", "share var", "env var", "publish var"],
+    "answer": "export var"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "出力リダイレクトによる既存ファイルの上書きを防ぐオプションはどれですか？",
+    "options": ["set -o noclobber", "set -o nooverwrite", "set -o protect", "set -o safe"],
+    "answer": "set -o noclobber"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "シェルの起動からの経過秒数を保持するBash変数はどれですか？",
+    "options": ["$SECONDS", "$RANDOM", "$LINENO", "$UID"],
+    "answer": "$SECONDS"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "varが設定済みで空でない場合にのみaltに置き換えるBashの展開はどれですか？",
+    "options": ["${var:+alt}", "${var:-alt}", "${var:=alt}", "${var:?alt}"],
+    "answer": "${var:+alt}"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 3,
+    "question": "テスト式を評価して終了ステータスを返す組み込みコマンドはどれですか？",
+    "options": ["test", "echo", "read", "cd"],
+    "answer": "test"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 3,
+    "question": "条件テスト式を囲むのによく使われる構文はどれですか？",
+    "options": ["[ ]", "{ }", "( )", "< >"],
+    "answer": "[ ]"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 3,
+    "question": "ファイルが存在するかを確認するテスト演算子はどれですか？",
+    "options": ["-e", "-f", "-d", "-x"],
+    "answer": "-e"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 3,
+    "question": "パスが通常ファイルかどうかを確認するテスト演算子はどれですか？",
+    "options": ["-f", "-d", "-e", "-r"],
+    "answer": "-f"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 3,
+    "question": "パスがディレクトリかどうかを確認するテスト演算子はどれですか？",
+    "options": ["-d", "-f", "-s", "-w"],
+    "answer": "-d"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 3,
+    "question": "ファイルが読み取り可能かを確認するテスト演算子はどれですか？",
+    "options": ["-r", "-w", "-x", "-s"],
+    "answer": "-r"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 3,
+    "question": "ファイルが書き込み可能かを確認するテスト演算子はどれですか？",
+    "options": ["-w", "-r", "-x", "-e"],
+    "answer": "-w"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 3,
+    "question": "ファイルが実行可能かを確認するテスト演算子はどれですか？",
+    "options": ["-x", "-w", "-r", "-d"],
+    "answer": "-x"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 3,
+    "question": "文字列が空でないかを確認するテスト演算子はどれですか？",
+    "options": ["-n", "-z", "-s", "-e"],
+    "answer": "-n"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 3,
+    "question": "文字列が空かどうかを確認するテスト演算子はどれですか？",
+    "options": ["-z", "-n", "-s", "-f"],
+    "answer": "-z"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 3,
+    "question": "等しいかどうかを確認する数値比較演算子はどれですか？",
+    "options": ["-eq", "=", "==", "-equal"],
+    "answer": "-eq"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 3,
+    "question": "より大きいかどうかを確認する数値比較演算子はどれですか？",
+    "options": ["-gt", ">", "-ge", "-lt"],
+    "answer": "-gt"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 3,
+    "question": "以下かどうかを確認する数値比較演算子はどれですか？",
+    "options": ["-le", "-lt", "-ge", "-ne"],
+    "answer": "-le"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 3,
+    "question": "条件文を開始するキーワードはどれですか？",
+    "options": ["if", "case", "for", "while"],
+    "answer": "if"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 3,
+    "question": "if文を閉じるキーワードはどれですか？",
+    "options": ["fi", "end", "done", "exit"],
+    "answer": "fi"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 3,
+    "question": "ifの条件が偽のときの代替分岐を提供するキーワードはどれですか？",
+    "options": ["else", "elif", "or", "default"],
+    "answer": "else"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 3,
+    "question": "else-if分岐を提供するキーワードはどれですか？",
+    "options": ["elif", "elseif", "else if", "or"],
+    "answer": "elif"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 3,
+    "question": "条件が真である間、繰り返すループはどれですか？",
+    "options": ["while", "until", "repeat", "loop"],
+    "answer": "while"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 3,
+    "question": "条件が真になるまで繰り返すループはどれですか？",
+    "options": ["until", "while", "for", "case"],
+    "answer": "until"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 3,
+    "question": "リスト内の項目を順に処理するループはどれですか？",
+    "options": ["for", "while", "until", "case"],
+    "answer": "for"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 3,
+    "question": "次の反復にスキップするループ制御キーワードはどれですか？",
+    "options": ["continue", "break", "next", "skip"],
+    "answer": "continue"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 3,
+    "question": "ループを直ちに終了するループ制御キーワードはどれですか？",
+    "options": ["break", "continue", "exit", "stop"],
+    "answer": "break"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 3,
+    "question": "パターンマッチングに基づいてコマンドを選択する文はどれですか？",
+    "options": ["case", "switch", "select", "match"],
+    "answer": "case"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 3,
+    "question": "Bashでcase文を閉じるキーワードはどれですか？",
+    "options": ["esac", "end", "fi", "done"],
+    "answer": "esac"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 3,
+    "question": "BashでC言語スタイルのループに似た構文はどれですか？",
+    "options": ["for ((i=0; i<5; i++))", "for i in 0 to 5", "loop i=0 to 5", "while (i<5)"],
+    "answer": "for ((i=0; i<5; i++))"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "単純なBash関数を定義する構文はどれですか？",
+    "options": ["myfunc() { echo hi; }", "def myfunc: echo hi", "function = myfunc", "myfunc -> echo hi"],
+    "answer": "myfunc() { echo hi; }"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "myfuncという関数を呼び出すコマンドはどれですか？",
+    "options": ["myfunc", "call myfunc", "run myfunc", "execute myfunc"],
+    "answer": "myfunc"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "関数内でのみ参照できる変数を宣言するキーワードはどれですか？",
+    "options": ["local", "private", "internal", "hidden"],
+    "answer": "local"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "関数から終了ステータス0を返すコマンドはどれですか？",
+    "options": ["return 0", "exit function 0", "stop 0", "end 0"],
+    "answer": "return 0"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "関数内で、関数に渡された引数の数を表すパラメータはどれですか？",
+    "options": ["$#", "$@", "$0", "$1"],
+    "answer": "$#"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "三つの要素を持つインデックス配列を作成する構文はどれですか？",
+    "options": ["arr=(one two three)", "array arr one two three", "arr[one two three]", "set arr one two three"],
+    "answer": "arr=(one two three)"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "arrのインデックス2の要素にアクセスする構文はどれですか？",
+    "options": ["${arr[2]}", "${arr:2}", "$arr[2]", "arr{2}"],
+    "answer": "${arr[2]}"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "arrの要素数を返す展開はどれですか？",
+    "options": ["${#arr[@]}", "${#arr}", "${arr:length}", "${arr[@]#}"],
+    "answer": "${#arr[@]}"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "arrにnewitemを追加する構文はどれですか？",
+    "options": ["arr+=(newitem)", "arr=newitem", "arr.push(newitem)", "add arr newitem"],
+    "answer": "arr+=(newitem)"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "arrのすべての要素を返す展開はどれですか？",
+    "options": ["${arr[@]}", "${arr[0]}", "${arr[all]}", "${arr}"],
+    "answer": "${arr[@]}"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "連想配列を宣言するコマンドはどれですか？",
+    "options": ["declare -A map", "declare -a map", "array -A map", "assoc map"],
+    "answer": "declare -A map"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "標準出力と標準エラーの両方をoutput.logに送るリダイレクトはどれですか？",
+    "options": ["command &> output.log", "command > output.log", "command 2> output.log", "command < output.log"],
+    "answer": "command &> output.log"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "コマンドのすべての出力を破棄するリダイレクトはどれですか？",
+    "options": ["command > /dev/null", "command > null", "command > empty", "command > discard"],
+    "answer": "command > /dev/null"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "あるコマンドの出力を別のコマンドの入力として渡す演算子はどれですか？",
+    "options": ["|", ">", "<", "&"],
+    "answer": "|"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "コマンドをバックグラウンドで実行する記号はどれですか？",
+    "options": ["&", "&&", "|", ";"],
+    "answer": "&"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "バックグラウンドジョブの終了を待つ組み込みコマンドはどれですか？",
+    "options": ["wait", "hold", "pause", "sleep"],
+    "answer": "wait"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "script.shを現在のシェル環境で実行するコマンドはどれですか？",
+    "options": ["source script.sh", "bash script.sh", "./script.sh", "sh script.sh"],
+    "answer": "source script.sh"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "ヒアドキュメントを開始する演算子はどれですか？",
+    "options": ["<<", ">>", "<", ">"],
+    "answer": "<<"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "安全な一時ファイルを作成するコマンドはどれですか？",
+    "options": ["mktemp", "tempfile", "touch tmp", "newfile"],
+    "answer": "mktemp"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "スクリプトがSIGINTを受け取ったときにcleanupを実行するコマンドはどれですか？",
+    "options": ["trap 'cleanup' SIGINT", "handle SIGINT cleanup", "signal SIGINT cleanup", "catch SIGINT cleanup"],
+    "answer": "trap 'cleanup' SIGINT"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "ユーザーがCtrl+Cを押したときに通常送信されるシグナルはどれですか？",
+    "options": ["SIGINT", "SIGTERM", "SIGKILL", "SIGHUP"],
+    "answer": "SIGINT"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "コマンドが失敗したときにスクリプトを直ちに終了させるオプションはどれですか？",
+    "options": ["set -e", "set -x", "set -u", "set -o pipefail"],
+    "answer": "set -e"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "未設定の変数を参照したときにエラーにするオプションはどれですか？",
+    "options": ["set -u", "set -e", "set -x", "set -a"],
+    "answer": "set -u"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "デバッグ用に、各コマンドを実行前に出力するオプションはどれですか？",
+    "options": ["set -x", "set -e", "set -u", "set -v"],
+    "answer": "set -x"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "現在定義されているシェル関数を一覧表示するコマンドはどれですか？",
+    "options": ["declare -f", "declare -A", "functions", "listfunc"],
+    "answer": "declare -f"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 5,
+    "question": "システムにBashでスクリプトを実行させる、スクリプト先頭の行はどれですか？",
+    "options": ["//bash", "#!/bin/bash", "<?bash", "#include bash"],
+    "answer": "#!/bin/bash"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 5,
+    "question": "必要な親ディレクトリもまとめてディレクトリを作成するコマンドはどれですか？",
+    "options": ["mkdir -p", "mkdir -r", "mkdir -m", "mkdir -v"],
+    "answer": "mkdir -p"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 5,
+    "question": "Bashで変数countに値5を代入するにはどうしますか？",
+    "options": ["set count 5", "$count=5", "count=5", "count = 5"],
+    "answer": "count=5"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 5,
+    "question": "nameという変数の値を読み取るために使われる記号はどれですか？",
+    "options": ["%name", "$name", "&name", "#name"],
+    "answer": "$name"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 5,
+    "question": "スクリプトに渡された引数の数を保持する変数はどれですか？",
+    "options": ["$?", "$#", "$@", "$$"],
+    "answer": "$#"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 5,
+    "question": "最後のコマンドの終了ステータスを保持する変数はどれですか？",
+    "options": ["$?", "$0", "$#", "$!"],
+    "answer": "$?"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 5,
+    "question": "最初のコマンドが成功した場合にのみ二番目のコマンドを実行する演算子はどれですか？",
+    "options": ["|", "||", ";", "&&"],
+    "answer": "&&"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 5,
+    "question": "ファイルに出力を追記する演算子はどれですか？",
+    "options": ["<<", ">>", "|&", ">"],
+    "answer": ">>"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 5,
+    "question": "Bashで条件ブロックを開始するキーワードはどれですか？",
+    "options": ["check", "case-if", "if", "when"],
+    "answer": "if"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 5,
+    "question": "Bashでifブロックを終了するキーワードはどれですか？",
+    "options": ["endif", "fi", "done", "end"],
+    "answer": "fi"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 5,
+    "question": "項目のリストを順に処理するループはどれですか？",
+    "options": ["foreach item list", "for item in list; do", "each item in list", "loop item in list"],
+    "answer": "for item in list; do"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 5,
+    "question": "ターミナルにテキストを出力するコマンドはどれですか？",
+    "options": ["print", "echo", "say", "out"],
+    "answer": "echo"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 5,
+    "question": "通常ファイルが存在するかを確認するテストはどれですか？",
+    "options": ["[ -e file ]", "[ -r file ]", "[ -d file ]", "[ -f file ]"],
+    "answer": "[ -f file ]"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 5,
+    "question": "文字列が空かどうかを確認するテストはどれですか？",
+    "options": ["[ -s \"$str\" ]", "[ -e \"$str\" ]", "[ -n \"$str\" ]", "[ -z \"$str\" ]"],
+    "answer": "[ -z \"$str\" ]"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 5,
+    "question": "入力の一行を変数に読み込むコマンドはどれですか？",
+    "options": ["read", "input", "scan", "get"],
+    "answer": "read"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 5,
+    "question": "コマンドの出力を変数に取り込む構文はどれですか？",
+    "options": ["var=$(date)", "var=[date]", "var={date}", "var=<date>"],
+    "answer": "var=$(date)"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 5,
+    "question": "Bashシェルでdata.txtというファイルの行数を数えるコマンドはどれですか？",
+    "options": ["wc -l data.txt", "ls -l data.txt", "sort -l data.txt", "cut -l data.txt"],
+    "answer": "wc -l data.txt"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 5,
+    "question": "各コマンドを実行前に出力するオプションはどれですか？",
+    "options": ["set -f", "set -u", "set -x", "set -e"],
+    "answer": "set -x"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 5,
+    "question": "実行中のスクリプトの名前を保持する変数はどれですか？",
+    "options": ["$*", "$1", "$0", "$#"],
+    "answer": "$0"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 5,
+    "question": "Bashでgreetという関数を定義するにはどうしますか？",
+    "options": ["fn greet { echo hi }", "function greet: echo hi", "def greet(): echo hi", "greet() { echo hi; }"],
+    "answer": "greet() { echo hi; }"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 5,
+    "question": "現在のシェルでファイルを読み込んで実行するコマンドはどれですか？",
+    "options": ["run file.sh", "import file.sh", "source file.sh", "call file.sh"],
+    "answer": "source file.sh"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 5,
+    "question": "ファイル名で任意の数の文字に一致するワイルドカードはどれですか？",
+    "options": ["?", "~", "*", "#"],
+    "answer": "*"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 5,
+    "question": "Bashで多数のパターンから選択するために使われるキーワードはどれですか？",
+    "options": ["select-when", "match", "case", "switch"],
+    "answer": "case"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 5,
+    "question": "ファイルの先頭の行を出力するコマンドはどれですか？",
+    "options": ["cat -f", "head", "less -h", "tail"],
+    "answer": "head"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 5,
+    "question": "標準エラーをファイルにリダイレクトする演算子はどれですか？",
+    "options": ["0<", "^>", "2>", "1>"],
+    "answer": "2>"
+  }
+]

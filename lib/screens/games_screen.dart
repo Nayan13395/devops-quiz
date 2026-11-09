@@ -16,8 +16,8 @@ import 'connect_four_screen.dart';
 import 'ludo_game_screen.dart';
 import 'chess_screen.dart';
 import 'snake_ladders_screen.dart';
-import 'arrow_puzzle_screen.dart';
 import 'jigsaw_puzzle_screen.dart';
+import 'spot_the_difference_screen.dart';
 
 class GamesScreen extends StatefulWidget {
   const GamesScreen({super.key});
@@ -38,7 +38,7 @@ class _GamesScreenState extends State<GamesScreen> {
     ('Memory Match', 'Match DevOps pairs'),
     ('Word Guess', 'Guess DevOps words through levels'),
     ('Find Words', 'Search a grid for hidden DevOps terms'),
-    ('Arrow Puzzle', 'Clear arrows with an open path in 100 levels'),
+    ('Spot the Difference', 'Find five changes between two illustrated scenes'),
     ('Jigsaw Puzzle', 'Rebuild original illustrated scenes across 100 puzzles'),
     ('High or Low', 'Build a streak'),
     ('True or False Blitz', 'Quick answer quiz'),
@@ -354,26 +354,22 @@ class _GamesScreenState extends State<GamesScreen> {
                               },
                             ),
 
-                          // =================================
-                          // ARROW PUZZLE
-                          // =================================
                           if (_matchesSearch(
-                            'Arrow Puzzle',
-                            'Clear arrows with an open path in 100 levels.',
+                            'Spot the Difference',
+                            'Find five changes between two illustrated scenes.',
                           ))
                             _GameTile(
-                              icon: '➡️',
-                              title: 'Arrow Puzzle',
+                              icon: '👀',
+                              title: 'Spot the Difference',
                               description:
-                                  'Tap arrows with a clear path to escape. 100 levels.',
-                              onTap: () {
-                                Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                    builder: (_) => const ArrowPuzzleScreen(),
-                                  ),
-                                );
-                              },
+                                  'Find five changes between two illustrated scenes.',
+                              onTap: () => Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (_) =>
+                                      const SpotTheDifferenceScreen(),
+                                ),
+                              ),
                             ),
 
                           // =================================

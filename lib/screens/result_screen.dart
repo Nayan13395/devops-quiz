@@ -189,7 +189,7 @@ class ResultScreen extends StatelessWidget {
 
   Future<void> _downloadPdf(BuildContext context) async {
     try {
-      await QuizPdfService.generateQuizReport(
+      final savedPath = await QuizPdfService.generateQuizReport(
         questions: questions,
         userAnswers: userAnswers,
         displayedOptions: displayedOptions,
@@ -198,6 +198,11 @@ class ResultScreen extends StatelessWidget {
         points: points,
         category: category,
         setNumber: setNumber,
+      );
+      if (savedPath == null || !context.mounted) return;
+
+      ScaffoldMessenger.of(context).showSnackBar(
+        const SnackBar(content: Text('PDF downloaded successfully.')),
       );
     } catch (e) {
       if (!context.mounted) {
@@ -559,8 +564,8 @@ class ResultScreen extends StatelessWidget {
                       );
 
                       final pdfButton = _ActionButton(
-                        icon: Icons.picture_as_pdf_outlined,
-                        text: 'PDF Report',
+                        icon: Icons.download_rounded,
+                        text: 'Download PDF',
                         onPressed: () async {
                           await _downloadPdf(context);
                         },

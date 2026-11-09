@@ -1,8 +1,10 @@
+import 'dart:async';
 import 'dart:math' as math;
 
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
+import '../services/game_sound_service.dart';
 import '../services/point_service.dart';
 import '../services/word_guess_level_service.dart';
 
@@ -237,6 +239,11 @@ class _WordGuessLevelsScreenState extends State<WordGuessLevelsScreen> {
       _usedLetterTiles.clear();
     });
 
+    unawaited(
+      GameSoundService.play(
+        _won ? GameSoundEffect.correct : GameSoundEffect.incorrect,
+      ),
+    );
     if (_finished) _finishLevel();
   }
 

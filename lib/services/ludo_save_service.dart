@@ -3,16 +3,20 @@ import 'dart:convert';
 import 'package:flutter_ludo/flutter_ludo.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
+import 'ludo_match_history_service.dart';
+
 class LudoSavedGame {
   const LudoSavedGame({
     required this.state,
     required this.botPlayers,
     required this.rewarded,
+    required this.matchId,
   });
 
   final LudoGameState state;
   final Set<int> botPlayers;
   final bool rewarded;
+  final String matchId;
 }
 
 class LudoSaveService {
@@ -21,11 +25,13 @@ class LudoSaveService {
   static Future<void> save(
     LudoController controller, {
     required bool rewarded,
+    String? matchId,
   }) async {
     final snapshot = jsonEncode({
       'state': controller.state.toJson(),
       'bots': controller.botPlayers.toList()..sort(),
       'rewarded': rewarded,
+      'matchId': matchId ?? LudoMatchHistoryService.createMatchId(),
     });
     final prefs = await SharedPreferences.getInstance();
     await prefs.setString(saveKey, snapshot);
@@ -50,6 +56,9 @@ class LudoSaveService {
         state: state,
         botPlayers: bots,
         rewarded: data['rewarded'] as bool,
+        matchId:
+            data['matchId'] as String? ??
+            LudoMatchHistoryService.createMatchId(),
       );
     } catch (_) {
       return null;

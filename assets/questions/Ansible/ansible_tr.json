@@ -1,0 +1,877 @@
+[
+  {
+    "category": "Ansible",
+    "set": 1,
+    "question": "Ansible öncelikli olarak ne için kullanılır?",
+    "options": ["Yapılandırma Yönetimi", "Konteynerleştirme", "Veritabanı Yönetimi", "İzleme"],
+    "answer": "Yapılandırma Yönetimi"
+  },
+  {
+    "category": "Ansible",
+    "set": 1,
+    "question": "Ansible hangi dilde yazılmıştır?",
+    "options": ["Python", "Java", "Go", "Ruby"],
+    "answer": "Python"
+  },
+  {
+    "category": "Ansible",
+    "set": 1,
+    "question": "Ansible'da yönetilen sunucuları hangi dosya içerir?",
+    "options": ["Envanter Dosyası", "Playbook", "Rol", "Modül"],
+    "answer": "Envanter Dosyası"
+  },
+  {
+    "category": "Ansible",
+    "set": 1,
+    "question": "Varsayılan envanter dosyası konumu nedir?",
+    "options": ["/etc/ansible/hosts", "/etc/hosts", "/ansible/hosts", "/usr/ansible/hosts"],
+    "answer": "/etc/ansible/hosts"
+  },
+  {
+    "category": "Ansible",
+    "set": 1,
+    "question": "Hangi komut Ansible sürümünü kontrol eder?",
+    "options": ["ansible --version", "ansible version", "ansible -v", "ansible check"],
+    "answer": "ansible --version"
+  },
+  {
+    "category": "Ansible",
+    "set": 1,
+    "question": "Ansible varsayılan olarak hangi protokolü kullanır?",
+    "options": ["SSH", "FTP", "Telnet", "HTTP"],
+    "answer": "SSH"
+  },
+  {
+    "category": "Ansible",
+    "set": 1,
+    "question": "Ansible Playbook nedir?",
+    "options": ["Otomasyon görevleri içeren YAML dosyası", "Envanter dosyası", "Python betiği", "Yapılandırma dosyası"],
+    "answer": "Otomasyon görevleri içeren YAML dosyası"
+  },
+  {
+    "category": "Ansible",
+    "set": 1,
+    "question": "Hangi komut bir Ansible playbook'unu çalıştırır?",
+    "options": ["ansible-playbook", "ansible-run", "ansible-execute", "ansible-start"],
+    "answer": "ansible-playbook"
+  },
+  {
+    "category": "Ansible",
+    "set": 1,
+    "question": "Bir playbook'ta hedef sunucuları hangi anahtar sözcük tanımlar?",
+    "options": ["hosts", "servers", "nodes", "targets"],
+    "answer": "hosts"
+  },
+  {
+    "category": "Ansible",
+    "set": 1,
+    "question": "Bir playbook'ta görevleri hangi anahtar sözcük tanımlar?",
+    "options": ["tasks", "actions", "jobs", "steps"],
+    "answer": "tasks"
+  },
+  {
+    "category": "Ansible",
+    "set": 1,
+    "question": "Hangi modül dosyaları uzak sunuculara kopyalar?",
+    "options": ["copy", "fetch", "file", "transfer"],
+    "answer": "copy"
+  },
+  {
+    "category": "Ansible",
+    "set": 1,
+    "question": "Hangi modül servisleri yönetir?",
+    "options": ["service", "systemctl", "daemon", "process"],
+    "answer": "service"
+  },
+  {
+    "category": "Ansible",
+    "set": 1,
+    "question": "Hangi komut tüm sunuculara bağlantıyı test eder?",
+    "options": ["ansible all -m ping", "ansible ping", "ansible test", "ansible connect"],
+    "answer": "ansible all -m ping"
+  },
+  {
+    "category": "Ansible",
+    "set": 1,
+    "question": "Ansible playbook'ları hangi biçimde yazılır?",
+    "options": ["YAML", "JSON", "XML", "INI"],
+    "answer": "YAML"
+  },
+  {
+    "category": "Ansible",
+    "set": 1,
+    "question": "Ansible ayarlarını hangi dosya yapılandırır?",
+    "options": ["ansible.cfg", "ansible.conf", "config.yml", "ansible.ini"],
+    "answer": "ansible.cfg"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "Bir playbook'ta değişken tanımlamak için hangi anahtar sözcük kullanılır?",
+    "options": ["vars", "variables", "var", "define"],
+    "answer": "vars"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "Bir değişkene başvurmak için hangi sözdizimi kullanılır?",
+    "options": ["{{ variable_name }}", "$(variable_name)", "${variable_name}", "[variable_name]"],
+    "answer": "{{ variable_name }}"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "Çalıştırma sırasında mesaj göstermek için hangi modül kullanılır?",
+    "options": ["debug", "print", "echo", "message"],
+    "answer": "debug"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "Koşullu çalıştırma için hangi anahtar sözcük kullanılır?",
+    "options": ["when", "if", "condition", "check"],
+    "answer": "when"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "Bir görevi tekrarlamak için hangi anahtar sözcük kullanılır?",
+    "options": ["loop", "repeat", "iterate", "for"],
+    "answer": "loop"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "Geçerli döngü öğesini hangi değişken içerir?",
+    "options": ["item", "loopitem", "current", "value"],
+    "answer": "item"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "Hangi modül Jinja2 şablonlarından dosya oluşturur?",
+    "options": ["template", "copy", "render", "jinja"],
+    "answer": "template"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "Ansible hangi şablon motorunu kullanır?",
+    "options": ["Jinja2", "Mustache", "Velocity", "Smarty"],
+    "answer": "Jinja2"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "Hangi anahtar sözcük görev çıktısını bir değişkene kaydeder?",
+    "options": ["register", "save", "output", "store"],
+    "answer": "register"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "Hangi anahtar sözcük görev hatalarını yok sayar?",
+    "options": ["ignore_errors", "skip_errors", "continue", "ignore_failures"],
+    "answer": "ignore_errors"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "Görevleri yalnızca bildirim yapıldığında çalıştırmak için hangi anahtar sözcük kullanılır?",
+    "options": ["handlers", "notify", "trigger", "events"],
+    "answer": "handlers"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "Hangi anahtar sözcük bir handler'ı tetikler?",
+    "options": ["notify", "handler", "alert", "call"],
+    "answer": "notify"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "Hangi anahtar sözcük başka bir playbook'u içe aktarır?",
+    "options": ["import_playbook", "include_playbook", "load_playbook", "playbook"],
+    "answer": "import_playbook"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "Hangi anahtar sözcük görevleri seçici çalıştırma için etiketler?",
+    "options": ["tags", "labels", "groups", "filter"],
+    "answer": "tags"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "Hangi seçenek yalnızca belirli etiketlere sahip görevleri çalıştırır?",
+    "options": ["--tags", "--tag", "--filter", "--task"],
+    "answer": "--tags"
+  },
+  {
+    "category": "Ansible",
+    "set": 3,
+    "question": "Ansible Rolü nedir?",
+    "options": ["Yeniden kullanılabilir görev ve dosya koleksiyonu", "Kullanıcı hesabı", "Envanter grubu", "Playbook değişkeni"],
+    "answer": "Yeniden kullanılabilir görev ve dosya koleksiyonu"
+  },
+  {
+    "category": "Ansible",
+    "set": 3,
+    "question": "Hangi komut yeni bir rol yapısı oluşturur?",
+    "options": ["ansible-galaxy init", "ansible role create", "ansible init role", "ansible-playbook init"],
+    "answer": "ansible-galaxy init"
+  },
+  {
+    "category": "Ansible",
+    "set": 3,
+    "question": "Rol görevlerini hangi dizin içerir?",
+    "options": ["tasks", "handlers", "files", "vars"],
+    "answer": "tasks"
+  },
+  {
+    "category": "Ansible",
+    "set": 3,
+    "question": "Bir rolde ana görev dosyası hangisidir?",
+    "options": ["tasks/main.yml", "tasks/tasks.yml", "main/tasks.yml", "role.yml"],
+    "answer": "tasks/main.yml"
+  },
+  {
+    "category": "Ansible",
+    "set": 3,
+    "question": "Rol handler'larını hangi dizin içerir?",
+    "options": ["handlers", "tasks", "events", "notify"],
+    "answer": "handlers"
+  },
+  {
+    "category": "Ansible",
+    "set": 3,
+    "question": "Bir rolde Jinja2 şablonlarını hangi dizin saklar?",
+    "options": ["templates", "files", "jinja", "render"],
+    "answer": "templates"
+  },
+  {
+    "category": "Ansible",
+    "set": 3,
+    "question": "Bir rolde statik dosyaları hangi dizin saklar?",
+    "options": ["files", "templates", "static", "resources"],
+    "answer": "files"
+  },
+  {
+    "category": "Ansible",
+    "set": 3,
+    "question": "Rol değişkenlerini hangi dizin içerir?",
+    "options": ["vars", "variables", "config", "settings"],
+    "answer": "vars"
+  },
+  {
+    "category": "Ansible",
+    "set": 3,
+    "question": "Varsayılan değişkenleri hangi dizin içerir?",
+    "options": ["defaults", "vars", "config", "settings"],
+    "answer": "defaults"
+  },
+  {
+    "category": "Ansible",
+    "set": 3,
+    "question": "Bir playbook'a rol dahil etmek için hangi anahtar sözcük kullanılır?",
+    "options": ["roles", "include_role", "role", "import_role"],
+    "answer": "roles"
+  },
+  {
+    "category": "Ansible",
+    "set": 3,
+    "question": "Ansible Galaxy nedir?",
+    "options": ["Ansible rolleri ve koleksiyonları için depo", "İzleme aracı", "CI/CD platformu", "Envanter yöneticisi"],
+    "answer": "Ansible rolleri ve koleksiyonları için depo"
+  },
+  {
+    "category": "Ansible",
+    "set": 3,
+    "question": "Hangi komut Galaxy'den bir rol yükler?",
+    "options": ["ansible-galaxy install", "ansible install role", "ansible role add", "ansible-galaxy add"],
+    "answer": "ansible-galaxy install"
+  },
+  {
+    "category": "Ansible",
+    "set": 3,
+    "question": "Ansible Vault ne için kullanılır?",
+    "options": ["Hassas verileri şifrelemek", "Envanterleri yönetmek", "Playbook çalıştırmak", "Rol yüklemek"],
+    "answer": "Hassas verileri şifrelemek"
+  },
+  {
+    "category": "Ansible",
+    "set": 3,
+    "question": "Hangi komut mevcut bir dosyayı şifreler?",
+    "options": ["ansible-vault encrypt", "ansible-vault secure", "ansible-vault create", "ansible-vault lock"],
+    "answer": "ansible-vault encrypt"
+  },
+  {
+    "category": "Ansible",
+    "set": 3,
+    "question": "Ansible Koleksiyonları nedir?",
+    "options": ["Rol, modül ve eklenti içeren paketler", "Envanter grupları", "Şifrelenmiş dosyalar", "YAML değişkenleri"],
+    "answer": "Rol, modül ve eklenti içeren paketler"
+  },
+  {
+    "category": "Ansible",
+    "set": 4,
+    "question": "AWX nedir?",
+    "options": ["Açık kaynaklı Ansible Otomasyon Platformu", "İzleme Aracı", "Konteyner Çalışma Zamanı", "Sürüm Kontrol Sistemi"],
+    "answer": "Açık kaynaklı Ansible Otomasyon Platformu"
+  },
+  {
+    "category": "Ansible",
+    "set": 4,
+    "question": "Ansible Tower'ın artık adı nedir?",
+    "options": ["Red Hat Ansible Automation Platform", "Ansible Galaxy", "AWX Enterprise", "Automation Hub"],
+    "answer": "Red Hat Ansible Automation Platform"
+  },
+  {
+    "category": "Ansible",
+    "set": 4,
+    "question": "Dinamik Envanter nedir?",
+    "options": ["Bulut sağlayıcılarından otomatik oluşturulan envanter", "Statik hosts dosyası", "Şifrelenmiş envanter", "Rol tabanlı envanter"],
+    "answer": "Bulut sağlayıcılarından otomatik oluşturulan envanter"
+  },
+  {
+    "category": "Ansible",
+    "set": 4,
+    "question": "Hangi komut playbook sözdizimini kontrol eder?",
+    "options": ["ansible-playbook --syntax-check", "ansible-playbook --validate", "ansible-playbook check", "ansible validate"],
+    "answer": "ansible-playbook --syntax-check"
+  },
+  {
+    "category": "Ansible",
+    "set": 4,
+    "question": "Hangi seçenek bir playbook'un deneme çalıştırmasını yapar?",
+    "options": ["--check", "--dry", "--test", "--simulate"],
+    "answer": "--check"
+  },
+  {
+    "category": "Ansible",
+    "set": 4,
+    "question": "Hangi seçenek yönetilen dosyalardaki farkları gösterir?",
+    "options": ["--diff", "--compare", "--changes", "--show-diff"],
+    "answer": "--diff"
+  },
+  {
+    "category": "Ansible",
+    "set": 4,
+    "question": "Varsayılan Ansible çalıştırma stratejisi nedir?",
+    "options": ["linear", "free", "parallel", "serial"],
+    "answer": "linear"
+  },
+  {
+    "category": "Ansible",
+    "set": 4,
+    "question": "Hangi seçenek playbook çalıştırmasını seçili sunucularla sınırlar?",
+    "options": ["--limit", "--hosts", "--target", "--group"],
+    "answer": "--limit"
+  },
+  {
+    "category": "Ansible",
+    "set": 4,
+    "question": "Hangi eklenti türü görev çalıştırma davranışını kontrol eder?",
+    "options": ["Strateji Eklentisi", "Filtre Eklentisi", "Geri Çağırma Eklentisi", "Arama Eklentisi"],
+    "answer": "Strateji Eklentisi"
+  },
+  {
+    "category": "Ansible",
+    "set": 4,
+    "question": "Hangi eklenti harici kaynaklardan veri alır?",
+    "options": ["Arama Eklentisi", "Geri Çağırma Eklentisi", "Bağlantı Eklentisi", "Eylem Eklentisi"],
+    "answer": "Arama Eklentisi"
+  },
+  {
+    "category": "Ansible",
+    "set": 4,
+    "question": "Hangi eklenti değişken verilerini değiştirir?",
+    "options": ["Filtre Eklentisi", "Arama Eklentisi", "Eylem Eklentisi", "Bağlantı Eklentisi"],
+    "answer": "Filtre Eklentisi"
+  },
+  {
+    "category": "Ansible",
+    "set": 4,
+    "question": "Hangi modül Docker konteynerlerini yönetir?",
+    "options": ["docker_container", "docker", "container", "docker_manage"],
+    "answer": "docker_container"
+  },
+  {
+    "category": "Ansible",
+    "set": 4,
+    "question": "Hangi modül Kubernetes kaynaklarını yönetir?",
+    "options": ["k8s", "kubectl", "kubernetes", "cluster"],
+    "answer": "k8s"
+  },
+  {
+    "category": "Ansible",
+    "set": 4,
+    "question": "Ansible'da idempotency (eşgüçlülük) nedir?",
+    "options": ["Görevleri istenen durumu değiştirmeden tekrar tekrar çalıştırmak", "Playbook'ları şifrelemek", "Envanter oluşturmak", "Rolleri yönetmek"],
+    "answer": "Görevleri istenen durumu değiştirmeden tekrar tekrar çalıştırmak"
+  },
+  {
+    "category": "Ansible",
+    "set": 4,
+    "question": "Hangi komut mevcut tüm Ansible modüllerini listeler?",
+    "options": ["ansible-doc -l", "ansible modules", "ansible-list", "ansible-help modules"],
+    "answer": "ansible-doc -l"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "Hangi ansible-vault alt komutu zaten şifrelenmiş bir dosyanın parolasını değiştirir?",
+    "options": ["rekey", "decrypt", "view", "create"],
+    "answer": "rekey"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "Hangi komut envanterdeki tüm sunuculara ad-hoc komutla ping atar?",
+    "options": ["ansible-playbook ping", "ansible-ping all", "ansible all -m ping", "ansible --ping-all"],
+    "answer": "ansible all -m ping"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "Ansible'ın yönettiği sunucuları ne listeler?",
+    "options": ["Rol", "Playbook", "Envanter", "Vault"],
+    "answer": "Envanter"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "Ansible'da hassas verileri hangi araç şifreler?",
+    "options": ["Ansible Lint", "Ansible Galaxy", "Ansible Doc", "Ansible Vault"],
+    "answer": "Ansible Vault"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "Handler'lar ne için kullanılır?",
+    "options": ["Envanter oluşturmak", "SSH ile bağlanmak", "Değişken tanımlamak", "Yalnızca bildirim yapıldığında çalışan görevler"],
+    "answer": "Yalnızca bildirim yapıldığında çalışan görevler"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "Modern Ansible'da bir liste üzerinde yineleme yapan anahtar sözcük hangisidir?",
+    "options": ["iterate", "loop", "foreach", "repeat"],
+    "answer": "loop"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "Hangi modül Debian tabanlı sistemlere paket yükler?",
+    "options": ["apt", "dnf", "pacman", "yum"],
+    "answer": "apt"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "Ansible genellikle Linux sunucularına nasıl bağlanır?",
+    "options": ["SSH", "SNMP", "RDP", "Özel bir ajan"],
+    "answer": "SSH"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "Hangi komut bir playbook'un sözdizimini kontrol eder?",
+    "options": ["ansible-playbook --syntax-check", "ansible-playbook --validate", "ansible-check play.yml", "ansible-lint --run"],
+    "answer": "ansible-playbook --syntax-check"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "Ansible'da idempotency (eşgüçlülük) ne anlama gelir?",
+    "options": ["Görevleri paralel çalıştırmak", "Değişkenleri şifrelemek", "Fact'leri toplamak", "Bir görevi tekrar tekrar çalıştırmak aynı sonucu verir"],
+    "answer": "Bir görevi tekrar tekrar çalıştırmak aynı sonucu verir"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "Hangi yapı yeniden kullanılabilir otomasyon içeriğini paketler?",
+    "options": ["Rol", "Geri çağırma", "Envanter", "Fact"],
+    "answer": "Rol"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "Hangi modül bir dosyayı kontrol düğümünden uzak bir sunucuya kopyalar?",
+    "options": ["fetch", "copy", "debug", "shell"],
+    "answer": "copy"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "Hangi anahtar sözcük bir görevi yükseltilmiş ayrıcalıklarla çalıştırır?",
+    "options": ["become", "sudo_all", "elevate", "root"],
+    "answer": "become"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "Hangi araç topluluk rollerini ve koleksiyonlarını indirir?",
+    "options": ["ansible-pull", "ansible-doc", "ansible-galaxy", "ansible-vault"],
+    "answer": "ansible-galaxy"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "Hangi seçenek bir çalıştırmayı seçili sunucularla sınırlar?",
+    "options": ["--limit", "--only", "--target", "--hosts-only"],
+    "answer": "--limit"
+  },
+  {
+    "category": "Ansible",
+    "set": 1,
+    "question": "Hangi anahtar sözcük bir Ansible görevi için ayrıcalık yükseltmeyi etkinleştirir?",
+    "options": ["become: true", "delegate_to", "run_once", "check_mode"],
+    "answer": "become: true"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "Ansible playbook sunucu seçim kalıbı",
+    "options": ["--limit", "loop_var", "register", "defaults"],
+    "answer": "--limit"
+  },
+  {
+    "category": "Ansible",
+    "set": 3,
+    "question": "Ansible free stratejisi davranışı",
+    "options": ["free", "--limit", "loop_var", "register"],
+    "answer": "free"
+  },
+  {
+    "category": "Ansible",
+    "set": 4,
+    "question": "Ansible fact toplama anahtarı",
+    "options": ["gather_facts", "--limit", "loop_var", "register"],
+    "answer": "gather_facts"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "Ansible forks ayarı",
+    "options": ["forks", "--limit", "loop_var", "register"],
+    "answer": "forks"
+  },
+  {
+    "category": "Ansible",
+    "set": 1,
+    "question": "Hangi anahtar sözcük bir Ansible görevini yalnızca bir koşul doğru olduğunda çalıştırır?",
+    "options": ["when", "until", "notify", "tags"],
+    "answer": "when"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "Ansible döngü öğesi değişkeni",
+    "options": ["loop_var", "--limit", "register", "defaults"],
+    "answer": "loop_var"
+  },
+  {
+    "category": "Ansible",
+    "set": 3,
+    "question": "Ansible linear stratejisi davranışı",
+    "options": ["linear", "--limit", "loop_var", "register"],
+    "answer": "linear"
+  },
+  {
+    "category": "Ansible",
+    "set": 4,
+    "question": "Ansible fact önbelleğinin amacı",
+    "options": ["toplanan fact'leri yeniden kullanmak", "--limit", "loop_var", "register"],
+    "answer": "toplanan fact'leri yeniden kullanmak"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "Ansible check-mode davranışı",
+    "options": ["değişiklikleri uygulamadan tahmin etmek", "--limit", "loop_var", "register"],
+    "answer": "değişiklikleri uygulamadan tahmin etmek"
+  },
+  {
+    "category": "Ansible",
+    "set": 1,
+    "question": "Hangi yerleşik modül yönetilen sunuculardan fact toplar?",
+    "options": ["ansible.builtin.setup", "ansible.builtin.copy", "ansible.builtin.command", "ansible.builtin.debug"],
+    "answer": "ansible.builtin.setup"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "Ansible görev sonucu kaydı",
+    "options": ["register", "--limit", "loop_var", "defaults"],
+    "answer": "register"
+  },
+  {
+    "category": "Ansible",
+    "set": 3,
+    "question": "Ansible kademeli toplu çalıştırma ayarı",
+    "options": ["serial", "--limit", "loop_var", "register"],
+    "answer": "serial"
+  },
+  {
+    "category": "Ansible",
+    "set": 4,
+    "question": "Ansible bağlantı yetkilendirmesi (delegation)",
+    "options": ["delegate_to", "--limit", "loop_var", "register"],
+    "answer": "delegate_to"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "Ansible template modülü çıktısı",
+    "options": ["bir Jinja2 şablonunu işlemek", "--limit", "loop_var", "register"],
+    "answer": "bir Jinja2 şablonunu işlemek"
+  },
+  {
+    "category": "Ansible",
+    "set": 1,
+    "question": "Hangi anahtar sözcük bir görevi listedeki her öğe için tekrarlar?",
+    "options": ["loop", "serial", "block", "role"],
+    "answer": "loop"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "Ansible rol varsayılanlarının önceliği",
+    "options": ["defaults", "--limit", "loop_var", "register"],
+    "answer": "defaults"
+  },
+  {
+    "category": "Ansible",
+    "set": 3,
+    "question": "Ansible görev async yoklaması",
+    "options": ["poll ile async", "--limit", "loop_var", "register"],
+    "answer": "poll ile async"
+  },
+  {
+    "category": "Ansible",
+    "set": 4,
+    "question": "Ansible yerel bağlantı modu",
+    "options": ["connection: local", "--limit", "loop_var", "register"],
+    "answer": "connection: local"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "Ansible copy modülünün amacı",
+    "options": ["denetleyicideki bir dosyayı sunuculara kopyalamak", "--limit", "loop_var", "register"],
+    "answer": "denetleyicideki bir dosyayı sunuculara kopyalamak"
+  },
+  {
+    "category": "Ansible",
+    "set": 1,
+    "question": "Hangi anahtar sözcük bir görev sonucunu bir değişkene kaydeder?",
+    "options": ["register", "vars", "facts", "include"],
+    "answer": "register"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "Ansible rol vars önceliği",
+    "options": ["vars", "--limit", "loop_var", "register"],
+    "answer": "vars"
+  },
+  {
+    "category": "Ansible",
+    "set": 3,
+    "question": "Ansible envanter alt grupları",
+    "options": ["children", "--limit", "loop_var", "register"],
+    "answer": "children"
+  },
+  {
+    "category": "Ansible",
+    "set": 4,
+    "question": "Ansible ayrıcalık hedef kullanıcısı",
+    "options": ["become_user", "--limit", "loop_var", "register"],
+    "answer": "become_user"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "Ansible fetch modülü yönü",
+    "options": ["uzak bir dosyayı denetleyiciye kopyalamak", "--limit", "loop_var", "register"],
+    "answer": "uzak bir dosyayı denetleyiciye kopyalamak"
+  },
+  {
+    "category": "Ansible",
+    "set": 1,
+    "question": "Hangi anahtar sözcük bir görevin değişiklikten sonra bir handler'ı bilgilendirmesini sağlar?",
+    "options": ["notify", "listen", "changed_when", "rescue"],
+    "answer": "notify"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "Ansible dinamik rol dahil etme",
+    "options": ["include_role", "--limit", "loop_var", "register"],
+    "answer": "include_role"
+  },
+  {
+    "category": "Ansible",
+    "set": 3,
+    "question": "Ansible envanter sunucu değişkeni dosyası",
+    "options": ["host_vars", "--limit", "loop_var", "register"],
+    "answer": "host_vars"
+  },
+  {
+    "category": "Ansible",
+    "set": 4,
+    "question": "Ansible görev etiketi seçimi",
+    "options": ["--tags", "--limit", "loop_var", "register"],
+    "answer": "--tags"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "Ansible synchronize aktarımı",
+    "options": ["SSH üzerinden rsync", "--limit", "loop_var", "register"],
+    "answer": "SSH üzerinden rsync"
+  },
+  {
+    "category": "Ansible",
+    "set": 1,
+    "question": "Hangi komut satırı seçeneği bir playbook çalıştırmasını seçili sunucularla sınırlar?",
+    "options": ["--limit", "--list-hosts", "--syntax-check", "--flush-cache"],
+    "answer": "--limit"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "Ansible statik rol içe aktarma",
+    "options": ["import_role", "--limit", "loop_var", "register"],
+    "answer": "import_role"
+  },
+  {
+    "category": "Ansible",
+    "set": 3,
+    "question": "Ansible envanter grup değişkeni dosyası",
+    "options": ["group_vars", "--limit", "loop_var", "register"],
+    "answer": "group_vars"
+  },
+  {
+    "category": "Ansible",
+    "set": 4,
+    "question": "Ansible etiket atlama seçeneği",
+    "options": ["--skip-tags", "--limit", "loop_var", "register"],
+    "answer": "--skip-tags"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "Ansible blok hata kurtarma",
+    "options": ["başarısız bir bloktan kurtarmak", "--limit", "loop_var", "register"],
+    "answer": "başarısız bir bloktan kurtarmak"
+  },
+  {
+    "category": "Ansible",
+    "set": 1,
+    "question": "Hangi Ansible aracı hassas değişkenleri ve dosyaları şifreler?",
+    "options": ["ansible-vault", "ansible-galaxy", "ansible-doc", "ansible-inventory"],
+    "answer": "ansible-vault"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "Ansible handler boşaltma komutu",
+    "options": ["meta: flush_handlers", "--limit", "loop_var", "register"],
+    "answer": "meta: flush_handlers"
+  },
+  {
+    "category": "Ansible",
+    "set": 3,
+    "question": "Ansible playbook sözdizimi doğrulaması",
+    "options": ["ansible-playbook --syntax-check", "--limit", "loop_var", "register"],
+    "answer": "ansible-playbook --syntax-check"
+  },
+  {
+    "category": "Ansible",
+    "set": 4,
+    "question": "Ansible koleksiyon ad alanı biçimi",
+    "options": ["namespace.collection", "--limit", "loop_var", "register"],
+    "answer": "namespace.collection"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "Ansible always bölümü davranışı",
+    "options": ["blok sonucundan bağımsız çalışmak", "--limit", "loop_var", "register"],
+    "answer": "blok sonucundan bağımsız çalışmak"
+  },
+  {
+    "category": "Ansible",
+    "set": 1,
+    "question": "Hangi seçenek bir playbook'un önerilen değişikliklerini uygulamadan kontrol eder?",
+    "options": ["--check", "--diff-only", "--force", "--step"],
+    "answer": "--check"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "Ansible görev hatasını geçersiz kılma",
+    "options": ["ignore_errors", "--limit", "loop_var", "register"],
+    "answer": "ignore_errors"
+  },
+  {
+    "category": "Ansible",
+    "set": 3,
+    "question": "Ansible şifrelenmiş değişken aracı",
+    "options": ["ansible-vault", "--limit", "loop_var", "register"],
+    "answer": "ansible-vault"
+  },
+  {
+    "category": "Ansible",
+    "set": 4,
+    "question": "Ansible modül dokümantasyon komutu",
+    "options": ["ansible-doc", "--limit", "loop_var", "register"],
+    "answer": "ansible-doc"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "Ansible rescue bölümü davranışı",
+    "options": ["yalnızca blok başarısızlığından sonra çalışmak", "--limit", "loop_var", "register"],
+    "answer": "yalnızca blok başarısızlığından sonra çalışmak"
+  },
+  {
+    "category": "Ansible",
+    "set": 1,
+    "question": "Hangi anahtar sözcük bir görevi geçerli sunucu grubu için bir kez çalıştırır?",
+    "options": ["run_once: true", "serial: 1", "throttle: 1", "any_errors_fatal: true"],
+    "answer": "run_once: true"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "Ansible görev değişikliğini geçersiz kılma",
+    "options": ["changed_when", "--limit", "loop_var", "register"],
+    "answer": "changed_when"
+  },
+  {
+    "category": "Ansible",
+    "set": 3,
+    "question": "Ansible vault parola tanımlayıcısı",
+    "options": ["--vault-id", "--limit", "loop_var", "register"],
+    "answer": "--vault-id"
+  },
+  {
+    "category": "Ansible",
+    "set": 4,
+    "question": "Ansible yapılandırma dosyası adı",
+    "options": ["ansible.cfg", "--limit", "loop_var", "register"],
+    "answer": "ansible.cfg"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "Ansible idempotence anlamı",
+    "options": ["güvenli tekrarlı uygulama", "--limit", "loop_var", "register"],
+    "answer": "güvenli tekrarlı uygulama"
+  }
+]

@@ -1,0 +1,877 @@
+[
+  {
+    "category": "Bash Scripting",
+    "set": 1,
+    "question": "કઈ લાઇન સિસ્ટમને સ્ક્રિપ્ટ ઇન્ટરપ્રીટર તરીકે Bash વાપરવા કહે છે?",
+    "options": ["#!/bin/bash", "#/bin/bash", "//bin/bash", "@bash"],
+    "answer": "#!/bin/bash"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 1,
+    "question": "જો script.sh પાસે પહેલેથી execute પરવાનગી હોય, તો કયો કમાન્ડ તેને ચલાવે છે?",
+    "options": ["./script.sh", "run script.sh", "exec script.sh", "start script.sh"],
+    "answer": "./script.sh"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 1,
+    "question": "કયો કમાન્ડ Bash વડે script.sh ને સ્પષ્ટ રીતે ચલાવે છે?",
+    "options": ["bash script.sh", "bash run script.sh", "bash exec script.sh", "bash start script.sh"],
+    "answer": "bash script.sh"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 1,
+    "question": "Bash સ્ક્રિપ્ટમાં એક-લાઇન કૉમેન્ટ કયા ચિહ્નથી શરૂ થાય છે?",
+    "options": ["#", "//", "/*", "<!--"],
+    "answer": "#"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 1,
+    "question": "કયો કમાન્ડ script.sh ને executable બનાવે છે?",
+    "options": ["chmod +x script.sh", "chmod exec script.sh", "chmod run script.sh", "chmod allow script.sh"],
+    "answer": "chmod +x script.sh"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 1,
+    "question": "કયો builtin કમાન્ડ ટેક્સ્ટને standard output પર પ્રિન્ટ કરે છે?",
+    "options": ["echo", "print", "write", "display"],
+    "answer": "echo"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 1,
+    "question": "કયો builtin કમાન્ડ વપરાશકર્તા પાસેથી ઇનપુટ વાંચે છે?",
+    "options": ["read", "input", "get", "scan"],
+    "answer": "read"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 1,
+    "question": "વેરિયેબલની કિંમત expand કરવા માટે કયું ચિહ્ન વપરાય છે?",
+    "options": ["$", "@", "%", "&"],
+    "answer": "$"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 1,
+    "question": "Bash માં કયો વેરિયેબલ assignment માન્ય છે?",
+    "options": ["name=John", "name = John", "set name John", "let name:John"],
+    "answer": "name=John"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 1,
+    "question": "કયો કમાન્ડ પાછલા કમાન્ડનો exit status પ્રિન્ટ કરે છે?",
+    "options": ["echo $?", "echo $status", "echo $exit", "echo $code"],
+    "answer": "echo $?"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 1,
+    "question": "0 નો exit status સામાન્ય રીતે શું સૂચવે છે?",
+    "options": ["સફળતા", "નિષ્ફળતા", "સમય સમાપ્ત (Timeout)", "પરવાનગી નકારાઈ"],
+    "answer": "સફળતા"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 1,
+    "question": "એક લાઇનમાં અનેક કમાન્ડને કયું ચિહ્ન અલગ કરે છે?",
+    "options": [";", ",", ":", "|"],
+    "answer": ";"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 1,
+    "question": "શેલ સ્ક્રિપ્ટ માટે સામાન્ય રીતે કયું ફાઇલ એક્સ્ટેન્શન વપરાય છે?",
+    "options": [".sh", ".bashrc", ".exe", ".bin"],
+    "answer": ".sh"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 1,
+    "question": "કયો કમાન્ડ environment variables દર્શાવે છે?",
+    "options": ["env", "chmod", "mkdir", "rm"],
+    "answer": "env"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 1,
+    "question": "કયો કમાન્ડ વર્તમાન વપરાશકર્તાનો ડિફૉલ્ટ શેલ દર્શાવે છે?",
+    "options": ["echo $SHELL", "env shell", "shell --show", "cat shell"],
+    "answer": "echo $SHELL"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 1,
+    "question": "Bash માં કયો અક્ષર આગળના અક્ષરને escape કરે છે?",
+    "options": ["બૅકસ્લૅશ", "ફૉરવર્ડ સ્લૅશ", "ઍસ્ટરિસ્ક", "ઍમ્પરસૅન્ડ"],
+    "answer": "બૅકસ્લૅશ"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 1,
+    "question": "કઈ quoting શૈલી વેરિયેબલ expansion અને command substitution અટકાવે છે?",
+    "options": ["સિંગલ ક્વોટ્સ", "ડબલ ક્વોટ્સ", "બૅકટિક્સ", "ક્વોટ્સ વિના"],
+    "answer": "સિંગલ ક્વોટ્સ"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 1,
+    "question": "કઈ quoting શૈલી સ્પેસ જાળવીને વેરિયેબલ expansion ની મંજૂરી આપે છે?",
+    "options": ["ડબલ ક્વોટ્સ", "સિંગલ ક્વોટ્સ", "બૅકટિક્સ", "ક્વોટ્સ વિના"],
+    "answer": "ડબલ ક્વોટ્સ"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 1,
+    "question": "કયો ઑપરેટર standard output ને redirect કરે છે અને ફાઇલ overwrite કરે છે?",
+    "options": [">", ">>", "<", "2>"],
+    "answer": ">"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 1,
+    "question": "કયો કમાન્ડ હાલની વર્કિંગ ડિરેક્ટરી પ્રિન્ટ કરે છે?",
+    "options": ["pwd", "cwd", "whereami", "dirname"],
+    "answer": "pwd"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 1,
+    "question": "એરર સંદેશાઓ માટે કયો standard stream વપરાય છે?",
+    "options": ["stderr", "stdout", "stdin", "pipe"],
+    "answer": "stderr"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 1,
+    "question": "કયો file descriptor standard input દર્શાવે છે?",
+    "options": ["0", "1", "2", "3"],
+    "answer": "0"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 1,
+    "question": "કયો કમાન્ડ ટર્મિનલ સ્ક્રીન સાફ કરે છે?",
+    "options": ["clear", "cls", "wipe", "erase"],
+    "answer": "clear"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 1,
+    "question": "કયો કીબોર્ડ શૉર્ટકટ સામાન્ય રીતે વર્તમાન foreground પ્રોસેસને અટકાવે છે?",
+    "options": ["Ctrl+C", "Ctrl+D", "Ctrl+Z", "Ctrl+L"],
+    "answer": "Ctrl+C"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 1,
+    "question": "કયો builtin કમાન્ડ સ્ક્રિપ્ટને સમાપ્ત કરે છે?",
+    "options": ["exit", "stop", "end", "quit"],
+    "answer": "exit"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "કયો syntax date નું આઉટપુટ now નામના વેરિયેબલમાં સંગ્રહે છે?",
+    "options": ["now=$(date)", "now=date", "now:=$(date)", "date->now"],
+    "answer": "now=$(date)"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "કયું special parameter સ્ક્રિપ્ટનું નામ દર્શાવે છે?",
+    "options": ["$0", "$1", "$#", "$@"],
+    "answer": "$0"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "કયું special parameter સૌથી તાજેતરના બૅકગ્રાઉન્ડ કમાન્ડના process ID તરીકે expand થાય છે?",
+    "options": ["$!", "$$", "$?", "$#"],
+    "answer": "$!"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "કયું special parameter positional arguments ની સંખ્યા દર્શાવે છે?",
+    "options": ["$#", "$@", "$*", "$$"],
+    "answer": "$#"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "કયું special parameter બધા positional arguments ને અલગ શબ્દો તરીકે expand કરે છે?",
+    "options": ["$@", "$*", "$#", "$0"],
+    "answer": "$@"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "કયો Bash builtin પહેલો positional parameter કાઢી નાખે છે અને બાકીનાને એક સ્થાન નીચે ખસેડે છે?",
+    "options": ["shift", "unshift", "pop", "rotate"],
+    "answer": "shift"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "કયું special parameter વર્તમાન શેલનો process ID દર્શાવે છે?",
+    "options": ["$$", "$!", "$?", "$0"],
+    "answer": "$$"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "કયું special parameter છેલ્લા કમાન્ડનો exit status દર્શાવે છે?",
+    "options": ["$?", "$!", "$$", "$#"],
+    "answer": "$?"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "var unset અથવા ખાલી હોય તો કયો expansion ડિફૉલ્ટ કિંમત પરત કરે છે?",
+    "options": ["${var:-default}", "${var:=default}", "${var:+default}", "${var:?default}"],
+    "answer": "${var:-default}"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "કયો expansion var માંથી 3 અક્ષરો, offset 2 થી શરૂ કરીને, કાઢે છે?",
+    "options": ["${var:2:3}", "${var:3:2}", "${var[2,3]}", "${var#2:3}"],
+    "answer": "${var:2:3}"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "કયો expansion var ની કિંમતની લંબાઈ પરત કરે છે?",
+    "options": ["${#var}", "${len(var)}", "${var:length}", "${var#length}"],
+    "answer": "${#var}"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "કયો expansion var ની કિંમતને અપરકેસમાં ફેરવે છે?",
+    "options": ["${var^^}", "${var,,}", "${var!!}", "${var##}"],
+    "answer": "${var^^}"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "કયો expansion var માંથી સૌથી લાંબા મેળ ખાતા prefix pattern ને દૂર કરે છે?",
+    "options": ["${var##pattern}", "${var#pattern}", "${var%%pattern}", "${var%pattern}"],
+    "answer": "${var##pattern}"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "કયો expansion var માં pattern ના ફક્ત પ્રથમ મેળને બદલે છે?",
+    "options": ["${var/pattern/replacement}", "${var//pattern/replacement}", "${var#pattern}", "${var%pattern}"],
+    "answer": "${var/pattern/replacement}"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "જો var unset અથવા ખાલી હોય તો કયો expansion એરર સંદેશ પ્રિન્ટ કરે છે અને non-interactive સ્ક્રિપ્ટને અટકાવી (abort કરી) દે છે?",
+    "options": ["${var:?message}", "${var:-message}", "${var:+message}", "${var:=message}"],
+    "answer": "${var:?message}"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "Bash માં arithmetic expansion કયો syntax કરે છે?",
+    "options": ["$((5 + 3))", "$(5 + 3)", "${5 + 3}", "$[5 + 3]"],
+    "answer": "$((5 + 3))"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "કયો કમાન્ડ count વેરિયેબલને એક વડે વધારે છે?",
+    "options": ["let count++", "count++", "increment count", "add count"],
+    "answer": "let count++"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "કયો કમાન્ડ 8 પ્રિન્ટ કરે છે, જ્યારે 5 અને 3 ઉમેરવામાં આવે?",
+    "options": ["expr 5 + 3", "expr 5+3", "expr5 + 3", "expr add 5 3"],
+    "answer": "expr 5 + 3"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "કયો કમાન્ડ count ને integer વેરિયેબલ તરીકે declare કરે છે?",
+    "options": ["declare -i count", "declare int count", "integer count", "set count integer"],
+    "answer": "declare -i count"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "કયો કમાન્ડ વેરિયેબલને read-only બનાવે છે?",
+    "options": ["readonly var", "lock var", "const var", "final var"],
+    "answer": "readonly var"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "કયો કમાન્ડ શેલ environment માંથી વેરિયેબલ દૂર કરે છે?",
+    "options": ["unset var", "delete var", "remove var", "clear var"],
+    "answer": "unset var"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "કયો કમાન્ડ વેરિયેબલને child processes માટે ઉપલબ્ધ બનાવે છે?",
+    "options": ["export var", "share var", "env var", "publish var"],
+    "answer": "export var"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "કયો વિકલ્પ output redirection ને હાલની ફાઇલ overwrite કરતા અટકાવે છે?",
+    "options": ["set -o noclobber", "set -o nooverwrite", "set -o protect", "set -o safe"],
+    "answer": "set -o noclobber"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "કયો Bash વેરિયેબલ શેલ શરૂ થયા પછી વીતેલા સેકન્ડની સંખ્યા ધરાવે છે?",
+    "options": ["$SECONDS", "$RANDOM", "$LINENO", "$UID"],
+    "answer": "$SECONDS"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "કયો Bash expansion alt ને ત્યારે જ મૂકે છે જ્યારે var સેટ હોય અને ખાલી ન હોય?",
+    "options": ["${var:+alt}", "${var:-alt}", "${var:=alt}", "${var:?alt}"],
+    "answer": "${var:+alt}"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 3,
+    "question": "કયો builtin કમાન્ડ test expressions નું મૂલ્યાંકન કરે છે અને exit status પરત કરે છે?",
+    "options": ["test", "echo", "read", "cd"],
+    "answer": "test"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 3,
+    "question": "શરતી test expressions ને સામાન્ય રીતે કયો syntax ઘેરે છે?",
+    "options": ["[ ]", "{ }", "( )", "< >"],
+    "answer": "[ ]"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 3,
+    "question": "કયો test ઑપરેટર ફાઇલ અસ્તિત્વમાં છે કે નહીં તે તપાસે છે?",
+    "options": ["-e", "-f", "-d", "-x"],
+    "answer": "-e"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 3,
+    "question": "કયો test ઑપરેટર path સામાન્ય (regular) ફાઇલ છે કે નહીં તે તપાસે છે?",
+    "options": ["-f", "-d", "-e", "-r"],
+    "answer": "-f"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 3,
+    "question": "કયો test ઑપરેટર path ડિરેક્ટરી છે કે નહીં તે તપાસે છે?",
+    "options": ["-d", "-f", "-s", "-w"],
+    "answer": "-d"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 3,
+    "question": "કયો test ઑપરેટર ફાઇલ વાંચી શકાય તેવી છે કે નહીં તે તપાસે છે?",
+    "options": ["-r", "-w", "-x", "-s"],
+    "answer": "-r"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 3,
+    "question": "કયો test ઑપરેટર ફાઇલ લખી શકાય તેવી છે કે નહીં તે તપાસે છે?",
+    "options": ["-w", "-r", "-x", "-e"],
+    "answer": "-w"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 3,
+    "question": "કયો test ઑપરેટર ફાઇલ executable છે કે નહીં તે તપાસે છે?",
+    "options": ["-x", "-w", "-r", "-d"],
+    "answer": "-x"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 3,
+    "question": "કયો test ઑપરેટર સ્ટ્રિંગ ખાલી નથી તે તપાસે છે?",
+    "options": ["-n", "-z", "-s", "-e"],
+    "answer": "-n"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 3,
+    "question": "કયો test ઑપરેટર સ્ટ્રિંગ ખાલી છે તે તપાસે છે?",
+    "options": ["-z", "-n", "-s", "-f"],
+    "answer": "-z"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 3,
+    "question": "કયો સંખ્યાત્મક સરખામણી ઑપરેટર સમાનતા તપાસે છે?",
+    "options": ["-eq", "=", "==", "-equal"],
+    "answer": "-eq"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 3,
+    "question": "કયો સંખ્યાત્મક સરખામણી ઑપરેટર 'કરતાં મોટું' તપાસે છે?",
+    "options": ["-gt", ">", "-ge", "-lt"],
+    "answer": "-gt"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 3,
+    "question": "કયો સંખ્યાત્મક સરખામણી ઑપરેટર 'કરતાં નાનું અથવા સમાન' તપાસે છે?",
+    "options": ["-le", "-lt", "-ge", "-ne"],
+    "answer": "-le"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 3,
+    "question": "કયો કીવર્ડ શરતી સ્ટેટમેન્ટ શરૂ કરે છે?",
+    "options": ["if", "case", "for", "while"],
+    "answer": "if"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 3,
+    "question": "કયો કીવર્ડ if સ્ટેટમેન્ટ બંધ કરે છે?",
+    "options": ["fi", "end", "done", "exit"],
+    "answer": "fi"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 3,
+    "question": "if ની શરત false હોય ત્યારે કયો કીવર્ડ વૈકલ્પિક શાખા પૂરી પાડે છે?",
+    "options": ["else", "elif", "or", "default"],
+    "answer": "else"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 3,
+    "question": "કયો કીવર્ડ else-if શાખા પૂરી પાડે છે?",
+    "options": ["elif", "elseif", "else if", "or"],
+    "answer": "elif"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 3,
+    "question": "શરત સાચી રહે ત્યાં સુધી કયો લૂપ પુનરાવર્તન કરે છે?",
+    "options": ["while", "until", "repeat", "loop"],
+    "answer": "while"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 3,
+    "question": "શરત સાચી બને ત્યાં સુધી કયો લૂપ પુનરાવર્તન કરે છે?",
+    "options": ["until", "while", "for", "case"],
+    "answer": "until"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 3,
+    "question": "યાદીની આઇટમ્સ પર કયો લૂપ પુનરાવર્તન કરે છે?",
+    "options": ["for", "while", "until", "case"],
+    "answer": "for"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 3,
+    "question": "કયો લૂપ કંટ્રોલ કીવર્ડ આગલા પુનરાવર્તન પર જાય છે?",
+    "options": ["continue", "break", "next", "skip"],
+    "answer": "continue"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 3,
+    "question": "કયો લૂપ કંટ્રોલ કીવર્ડ લૂપમાંથી તરત બહાર નીકળે છે?",
+    "options": ["break", "continue", "exit", "stop"],
+    "answer": "break"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 3,
+    "question": "કયું સ્ટેટમેન્ટ pattern matching ના આધારે કમાન્ડ પસંદ કરે છે?",
+    "options": ["case", "switch", "select", "match"],
+    "answer": "case"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 3,
+    "question": "Bash માં case સ્ટેટમેન્ટને કયો કીવર્ડ બંધ કરે છે?",
+    "options": ["esac", "end", "fi", "done"],
+    "answer": "esac"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 3,
+    "question": "Bash માં C-શૈલીના લૂપ જેવો કયો લૂપ syntax છે?",
+    "options": ["for ((i=0; i<5; i++))", "for i in 0 to 5", "loop i=0 to 5", "while (i<5)"],
+    "answer": "for ((i=0; i<5; i++))"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "કયો syntax સાદું Bash ફંક્શન વ્યાખ્યાયિત કરે છે?",
+    "options": ["myfunc() { echo hi; }", "def myfunc: echo hi", "function = myfunc", "myfunc -> echo hi"],
+    "answer": "myfunc() { echo hi; }"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "myfunc નામના ફંક્શનને કયો કમાન્ડ કૉલ કરે છે?",
+    "options": ["myfunc", "call myfunc", "run myfunc", "execute myfunc"],
+    "answer": "myfunc"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "ફક્ત ફંક્શનની અંદર દેખાતો વેરિયેબલ કયો કીવર્ડ declare કરે છે?",
+    "options": ["local", "private", "internal", "hidden"],
+    "answer": "local"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "ફંક્શનમાંથી 0 નો exit status કયો કમાન્ડ પરત કરે છે?",
+    "options": ["return 0", "exit function 0", "stop 0", "end 0"],
+    "answer": "return 0"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "ફંક્શનની અંદર, કયું parameter ફંક્શનને પસાર કરેલા arguments ની સંખ્યા આપે છે?",
+    "options": ["$#", "$@", "$0", "$1"],
+    "answer": "$#"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "ત્રણ તત્વો સાથે indexed array કયો syntax બનાવે છે?",
+    "options": ["arr=(one two three)", "array arr one two three", "arr[one two three]", "set arr one two three"],
+    "answer": "arr=(one two three)"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "arr ના index 2 પરનું તત્વ કયો syntax access કરે છે?",
+    "options": ["${arr[2]}", "${arr:2}", "$arr[2]", "arr{2}"],
+    "answer": "${arr[2]}"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "કયો expansion arr માં તત્વોની સંખ્યા આપે છે?",
+    "options": ["${#arr[@]}", "${#arr}", "${arr:length}", "${arr[@]#}"],
+    "answer": "${#arr[@]}"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "arr માં newitem ઉમેરવા માટે કયો syntax છે?",
+    "options": ["arr+=(newitem)", "arr=newitem", "arr.push(newitem)", "add arr newitem"],
+    "answer": "arr+=(newitem)"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "કયો expansion arr ના બધા એલિમેન્ટ્સ પરત કરે છે?",
+    "options": ["${arr[@]}", "${arr[0]}", "${arr[all]}", "${arr}"],
+    "answer": "${arr[@]}"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "કયો કમાન્ડ associative array declare કરે છે?",
+    "options": ["declare -A map", "declare -a map", "array -A map", "assoc map"],
+    "answer": "declare -A map"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "કયું redirection standard output અને standard error બંનેને output.log માં મોકલે છે?",
+    "options": ["command &> output.log", "command > output.log", "command 2> output.log", "command < output.log"],
+    "answer": "command &> output.log"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "કયું redirection કમાન્ડનું બધું આઉટપુટ કાઢી નાખે છે?",
+    "options": ["command > /dev/null", "command > null", "command > empty", "command > discard"],
+    "answer": "command > /dev/null"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "કયો ઑપરેટર એક કમાન્ડના આઉટપુટને બીજા કમાન્ડના ઇનપુટ તરીકે મોકલે છે?",
+    "options": ["|", ">", "<", "&"],
+    "answer": "|"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "કયું ચિહ્ન કમાન્ડને બૅકગ્રાઉન્ડમાં ચલાવે છે?",
+    "options": ["&", "&&", "|", ";"],
+    "answer": "&"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "કયો builtin બૅકગ્રાઉન્ડ jobs પૂર્ણ થાય તેની રાહ જુએ છે?",
+    "options": ["wait", "hold", "pause", "sleep"],
+    "answer": "wait"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "કયો કમાન્ડ script.sh ને વર્તમાન શેલ environment માં ચલાવે છે?",
+    "options": ["source script.sh", "bash script.sh", "./script.sh", "sh script.sh"],
+    "answer": "source script.sh"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "કયો ઑપરેટર here document શરૂ કરે છે?",
+    "options": ["<<", ">>", "<", ">"],
+    "answer": "<<"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "કયો કમાન્ડ સુરક્ષિત અસ્થાયી (temporary) ફાઇલ બનાવે છે?",
+    "options": ["mktemp", "tempfile", "touch tmp", "newfile"],
+    "answer": "mktemp"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "સ્ક્રિપ્ટને SIGINT મળે ત્યારે કયો કમાન્ડ cleanup ચલાવે છે?",
+    "options": ["trap 'cleanup' SIGINT", "handle SIGINT cleanup", "signal SIGINT cleanup", "catch SIGINT cleanup"],
+    "answer": "trap 'cleanup' SIGINT"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "વપરાશકર્તા Ctrl+C દબાવે ત્યારે સામાન્ય રીતે કયો સિગ્નલ મોકલાય છે?",
+    "options": ["SIGINT", "SIGTERM", "SIGKILL", "SIGHUP"],
+    "answer": "SIGINT"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "કમાન્ડ નિષ્ફળ જાય ત્યારે સ્ક્રિપ્ટ તરત બહાર નીકળે તે માટે કયો વિકલ્પ છે?",
+    "options": ["set -e", "set -x", "set -u", "set -o pipefail"],
+    "answer": "set -e"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "unset વેરિયેબલનો સંદર્ભ લેવામાં આવે ત્યારે કયો વિકલ્પ એરર આપે છે?",
+    "options": ["set -u", "set -e", "set -x", "set -a"],
+    "answer": "set -u"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "ડિબગિંગ માટે દરેક કમાન્ડ ચલાવતા પહેલાં કયો વિકલ્પ તેને પ્રિન્ટ કરે છે?",
+    "options": ["set -x", "set -e", "set -u", "set -v"],
+    "answer": "set -x"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "હાલમાં વ્યાખ્યાયિત શેલ ફંક્શન્સની યાદી કયો કમાન્ડ આપે છે?",
+    "options": ["declare -f", "declare -A", "functions", "listfunc"],
+    "answer": "declare -f"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 5,
+    "question": "સ્ક્રિપ્ટની ટોચ પરની કઈ લાઇન સિસ્ટમને તેને Bash સાથે ચલાવવા કહે છે?",
+    "options": ["//bash", "#!/bin/bash", "<?bash", "#include bash"],
+    "answer": "#!/bin/bash"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 5,
+    "question": "કયો કમાન્ડ ખૂટતી parent ડિરેક્ટરીઓ સહિત ડિરેક્ટરી બનાવે છે?",
+    "options": ["mkdir -p", "mkdir -r", "mkdir -m", "mkdir -v"],
+    "answer": "mkdir -p"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 5,
+    "question": "Bash માં count વેરિયેબલને કિંમત 5 કેવી રીતે assign કરશો?",
+    "options": ["set count 5", "$count=5", "count=5", "count = 5"],
+    "answer": "count=5"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 5,
+    "question": "name નામના વેરિયેબલની કિંમત વાંચવા માટે કયું ચિહ્ન વપરાય છે?",
+    "options": ["%name", "$name", "&name", "#name"],
+    "answer": "$name"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 5,
+    "question": "સ્ક્રિપ્ટને પસાર કરેલા arguments ની સંખ્યા કયો વેરિયેબલ ધરાવે છે?",
+    "options": ["$?", "$#", "$@", "$$"],
+    "answer": "$#"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 5,
+    "question": "છેલ્લા કમાન્ડનો exit status કયો વેરિયેબલ ધરાવે છે?",
+    "options": ["$?", "$0", "$#", "$!"],
+    "answer": "$?"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 5,
+    "question": "પહેલો કમાન્ડ સફળ થાય તો જ બીજો કમાન્ડ કયો ઑપરેટર ચલાવે છે?",
+    "options": ["|", "||", ";", "&&"],
+    "answer": "&&"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 5,
+    "question": "કયો ઑપરેટર ફાઇલમાં આઉટપુટ append કરે છે?",
+    "options": ["<<", ">>", "|&", ">"],
+    "answer": ">>"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 5,
+    "question": "Bash માં કયો કીવર્ડ શરતી બ્લૉક શરૂ કરે છે?",
+    "options": ["check", "case-if", "if", "when"],
+    "answer": "if"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 5,
+    "question": "Bash માં કયો કીવર્ડ if બ્લૉકને સમાપ્ત કરે છે?",
+    "options": ["endif", "fi", "done", "end"],
+    "answer": "fi"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 5,
+    "question": "આઇટમ્સની યાદી પર કયો લૂપ પુનરાવર્તન કરે છે?",
+    "options": ["foreach item list", "for item in list; do", "each item in list", "loop item in list"],
+    "answer": "for item in list; do"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 5,
+    "question": "કયો કમાન્ડ ટર્મિનલ પર ટેક્સ્ટ પ્રિન્ટ કરે છે?",
+    "options": ["print", "echo", "say", "out"],
+    "answer": "echo"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 5,
+    "question": "કયો test સામાન્ય (regular) ફાઇલ અસ્તિત્વમાં છે કે નહીં તે તપાસે છે?",
+    "options": ["[ -e file ]", "[ -r file ]", "[ -d file ]", "[ -f file ]"],
+    "answer": "[ -f file ]"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 5,
+    "question": "કયો test સ્ટ્રિંગ ખાલી છે કે નહીં તે તપાસે છે?",
+    "options": ["[ -s \"$str\" ]", "[ -e \"$str\" ]", "[ -n \"$str\" ]", "[ -z \"$str\" ]"],
+    "answer": "[ -z \"$str\" ]"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 5,
+    "question": "કયો કમાન્ડ ઇનપુટની એક લાઇન વેરિયેબલમાં વાંચે છે?",
+    "options": ["read", "input", "scan", "get"],
+    "answer": "read"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 5,
+    "question": "કયો syntax કમાન્ડનું આઉટપુટ વેરિયેબલમાં કૅપ્ચર કરે છે?",
+    "options": ["var=$(date)", "var=[date]", "var={date}", "var=<date>"],
+    "answer": "var=$(date)"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 5,
+    "question": "Bash શેલમાં data.txt નામની ફાઇલમાં લાઇન્સની ગણતરી કયો કમાન્ડ કરે છે?",
+    "options": ["wc -l data.txt", "ls -l data.txt", "sort -l data.txt", "cut -l data.txt"],
+    "answer": "wc -l data.txt"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 5,
+    "question": "દરેક કમાન્ડ ચલાવતા પહેલાં કયો વિકલ્પ તેને પ્રિન્ટ કરે છે?",
+    "options": ["set -f", "set -u", "set -x", "set -e"],
+    "answer": "set -x"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 5,
+    "question": "ચાલતી સ્ક્રિપ્ટનું નામ કયો વેરિયેબલ ધરાવે છે?",
+    "options": ["$*", "$1", "$0", "$#"],
+    "answer": "$0"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 5,
+    "question": "Bash માં greet નામનું ફંક્શન કેવી રીતે વ્યાખ્યાયિત કરશો?",
+    "options": ["fn greet { echo hi }", "function greet: echo hi", "def greet(): echo hi", "greet() { echo hi; }"],
+    "answer": "greet() { echo hi; }"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 5,
+    "question": "કયો કમાન્ડ વર્તમાન શેલમાં ફાઇલને source કરે છે?",
+    "options": ["run file.sh", "import file.sh", "source file.sh", "call file.sh"],
+    "answer": "source file.sh"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 5,
+    "question": "ફાઇલનામોમાં કોઈપણ સંખ્યાના અક્ષરો સાથે કયો wildcard મેળ ખાય છે?",
+    "options": ["?", "~", "*", "#"],
+    "answer": "*"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 5,
+    "question": "Bash માં ઘણા patterns માંથી પસંદગી કરવા કયો કીવર્ડ વપરાય છે?",
+    "options": ["select-when", "match", "case", "switch"],
+    "answer": "case"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 5,
+    "question": "કયો કમાન્ડ ફાઇલની પ્રથમ લાઇન્સ પ્રિન્ટ કરે છે?",
+    "options": ["cat -f", "head", "less -h", "tail"],
+    "answer": "head"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 5,
+    "question": "કયો ઑપરેટર standard error ને ફાઇલમાં redirect કરે છે?",
+    "options": ["0<", "^>", "2>", "1>"],
+    "answer": "2>"
+  }
+]

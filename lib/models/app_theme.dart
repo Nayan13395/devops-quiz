@@ -8,6 +8,7 @@ enum AppThemeType {
   coffee,
   tea,
   ocean,
+  solarFlare,
   forest,
   aurora,
   matrix,
@@ -149,6 +150,18 @@ class AppThemes {
       primaryColor: Color(0xFF0277BD),
       secondaryColor: Color(0xFF4FC3F7),
       brightness: Brightness.light,
+    ),
+
+    // 75,000 POINTS
+    AppThemeInfo(
+      type: AppThemeType.solarFlare,
+      name: 'Solar Flare',
+      emoji: '🌞',
+      requiredPoints: 75000,
+      primaryColor: Color(0xFFB94D32),
+      secondaryColor: Color(0xFFFFC857),
+      tertiaryColor: Color(0xFF416B68),
+      brightness: Brightness.dark,
     ),
 
     // 20,000 POINTS
@@ -539,6 +552,17 @@ class AppThemes {
       brightness: Brightness.dark,
     ),
   ];
+
+  static List<AppThemeInfo> get sortedByUnlock {
+    final originalOrder = {
+      for (int index = 0; index < all.length; index++) all[index].type: index,
+    };
+    return all.toList()..sort((first, second) {
+      final pointsOrder = first.requiredPoints.compareTo(second.requiredPoints);
+      if (pointsOrder != 0) return pointsOrder;
+      return originalOrder[first.type]!.compareTo(originalOrder[second.type]!);
+    });
+  }
 
   static AppThemeInfo getTheme(AppThemeType type) {
     return all.firstWhere((theme) => theme.type == type);

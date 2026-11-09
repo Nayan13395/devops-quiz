@@ -98,7 +98,7 @@
   {
     "category": "AWS",
     "set": 1,
-    "question": "ଏକ ପୃଥକ ଭର୍ଚୁଆଲ୍ ନେଟୱର୍କ ପ୍ରଦାନ କରୁଥିବା AWS ନେଟୱର୍କିଂ ସେବା କେଉଁଟି?",
+    "question": "ଏକ ବିଚ୍ଛିନ୍ନ ଭର୍ଚୁଆଲ୍ ନେଟୱର୍କ ପ୍ରଦାନ କରୁଥିବା AWS ନେଟୱର୍କିଂ ସେବା କେଉଁଟି?",
     "options": [
       "Amazon Route 53",
       "AWS Direct Connect",
@@ -134,7 +134,7 @@
   {
     "category": "AWS",
     "set": 1,
-    "question": "ଚାହିଦା ଅନୁସାରେ EC2 ଇନ୍ଷ୍ଟାନ୍ସ ସଂଖ୍ୟା ସ୍ୱୟଂଚାଳିତ ଭାବେ ସମାୟୋଜନ କରୁଥିବା AWS ସେବା କେଉଁଟି?",
+    "question": "ଚାହିଦା ଅନୁସାରେ EC2 ଇନ୍ଷ୍ଟାନ୍ସ ସଂଖ୍ୟା ସ୍ୱୟଂଚାଳିତ ଭାବେ ସଜାଡ଼ୁଥିବା AWS ସେବା କେଉଁଟି?",
     "options": [
       "Elastic Beanstalk",
       "Auto Scaling",
@@ -242,7 +242,7 @@
   {
     "category": "AWS",
     "set": 1,
-    "question": "ନିର୍ଦ୍ଦିଷ୍ଟ ନେଟୱର୍କ ସଂଯୋଗ ବ୍ୟବହାର କରି ହାଇବ୍ରିଡ୍ କ୍ଲାଉଡ୍ ସଂଯୋଗ କେଉଁ AWS ସେବା ସକ୍ଷମ କରେ?",
+    "question": "ସମର୍ପିତ ନେଟୱର୍କ ସଂଯୋଗ ବ୍ୟବହାର କରି ହାଇବ୍ରିଡ୍ କ୍ଲାଉଡ୍ ସଂଯୋଗ କେଉଁ AWS ସେବା ସକ୍ଷମ କରେ?",
     "options": [
       "VPN Gateway",
       "AWS Direct Connect",
@@ -1142,7 +1142,7 @@
   {
     "category": "AWS",
     "set": 4,
-    "question": "ବ୍ରାଉଜର୍‌ରୁ ସିଧାସଳଖ Linux EC2 ଇନ୍ଷ୍ଟାନ୍ସକୁ ସୁରକ୍ଷିତ shell access କେଉଁ AWS ସେବା ପ୍ରଦାନ କରେ?",
+    "question": "ବ୍ରାଉଜର୍‌ରୁ ସିଧାସଳଖ Linux EC2 ଇନ୍ଷ୍ଟାନ୍ସକୁ ସୁରକ୍ଷିତ ଶେଲ୍ ଆକ୍ସେସ୍ କେଉଁ AWS ସେବା ପ୍ରଦାନ କରେ?",
     "options": [
       "EC2 Instance Connect",
       "AWS Direct Connect",
@@ -1226,14 +1226,14 @@
   {
     "category": "AWS",
     "set": 5,
-    "question": "ପରିଚାଳିତ ରିଲେସନାଲ୍ ଡାଟାବେସ୍ ସେବା କେଉଁ AWS ସେବା?",
+    "question": "ସ୍ୱୟଂଚାଳିତ ଫେଲଓଭର୍ ପାଇଁ ଅନ୍ୟ ଏକ Availability Zoneରେ ସିଙ୍କ୍ରୋନସ୍ ଷ୍ଟାଣ୍ଡବାଇ ରେପ୍ଲିକା ବଜାୟ ରଖୁଥିବା Amazon RDS ବୈଶିଷ୍ଟ୍ୟ କେଉଁଟି?",
     "options": [
-      "Amazon RDS",
-      "Amazon S3",
-      "Amazon DynamoDB",
-      "Amazon CloudFront"
+      "Multi-AZ deployment",
+      "Read replica",
+      "Manual snapshot",
+      "Parameter group"
     ],
-    "answer": "Amazon RDS"
+    "answer": "Multi-AZ deployment"
   },
   {
     "category": "AWS",
@@ -1262,14 +1262,14 @@
   {
     "category": "AWS",
     "set": 5,
-    "question": "କଣ୍ଟେଣ୍ଟ ଡେଲିଭରି ନେଟୱର୍କ୍ ଥିବା AWS ସେବା କେଉଁଟି?",
+    "question": "S3 ଅରିଜିନ୍‌କୁ କେବଳ ଡିଷ୍ଟ୍ରିବ୍ୟୁସନ୍ ମାଧ୍ୟମରେ ପଢ଼ାଯାଇପାରିବ, ସିଧାସଳଖ ନୁହେଁ ବୋଲି ସୁନିଶ୍ଚିତ କରୁଥିବା Amazon CloudFront ବୈଶିଷ୍ଟ୍ୟ କେଉଁଟି?",
     "options": [
-      "Amazon SNS",
-      "Amazon Route 53",
-      "Amazon CloudFront",
-      "AWS Snowball"
+      "Origin Access Control",
+      "S3 Transfer Acceleration",
+      "Route 53 alias record",
+      "Lambda@Edge"
     ],
-    "answer": "Amazon CloudFront"
+    "answer": "Origin Access Control"
   },
   {
     "category": "AWS",
@@ -1310,14 +1310,14 @@
   {
     "category": "AWS",
     "set": 5,
-    "question": "ପରିଚାଳିତ ମେସେଜ୍ କ୍ୟୁ କେଉଁ AWS ସେବା ପ୍ରଦାନ କରେ?",
+    "question": "କଠୋର ମେସେଜ୍ କ୍ରମ ବଜାୟ ରଖୁଥିବା ଏବଂ ଠିକ୍ ଥରେ ପ୍ରକ୍ରିୟାକରଣ (exactly-once) ସମର୍ଥନ କରୁଥିବା Amazon SQS କ୍ୟୁ ପ୍ରକାର କେଉଁଟି?",
     "options": [
-      "Amazon SES",
-      "Amazon SQS",
-      "AWS KMS",
-      "Amazon EFS"
+      "Standard queue",
+      "FIFO queue",
+      "Delay queue",
+      "Dead-letter queue"
     ],
-    "answer": "Amazon SQS"
+    "answer": "FIFO queue"
   },
   {
     "category": "AWS",
@@ -1430,14 +1430,14 @@
   {
     "category": "AWS",
     "set": 5,
-    "question": "ପେଟାବାଇଟ୍-ସ୍କେଲ୍ ଡାଟା ୱେରହାଉସ୍ ଥିବା AWS ସେବା କେଉଁଟି?",
+    "question": "Amazon Redshiftରେ ଏକ ଟେବୁଲ୍‌ର distribution key କ'ଣ ନିୟନ୍ତ୍ରଣ କରେ?",
     "options": [
-      "Amazon DynamoDB",
-      "Amazon ElastiCache",
-      "Amazon Redshift",
-      "Amazon SQS"
+      "ଧାଡ଼ିଗୁଡ଼ିକ କମ୍ପ୍ୟୁଟ୍ ନୋଡ୍ ମଧ୍ୟରେ କିପରି ବଣ୍ଟିତ ହୁଏ",
+      "କେଉଁ IAM ରୋଲ୍ COPY କମାଣ୍ଡ୍ ଚଲାଏ",
+      "ସ୍ୱୟଂଚାଳିତ ବ୍ୟାକଅପ୍ କେତେ ସମୟ ପର୍ଯ୍ୟନ୍ତ ରଖାଯାଏ",
+      "କେଉଁ KMS କୀ କ୍ଲଷ୍ଟର୍‌କୁ ଏନ୍କ୍ରିପ୍ଟ କରେ"
     ],
-    "answer": "Amazon Redshift"
+    "answer": "ଧାଡ଼ିଗୁଡ଼ିକ କମ୍ପ୍ୟୁଟ୍ ନୋଡ୍ ମଧ୍ୟରେ କିପରି ବଣ୍ଟିତ ହୁଏ"
   },
   {
     "category": "AWS",
@@ -1466,7 +1466,7 @@
   {
     "category": "AWS",
     "set": 5,
-    "question": "ଏକ ପୃଥକ ଭର୍ଚୁଆଲ୍ ନେଟୱର୍କ ଆରମ୍ଭ କରିବାକୁ କେଉଁ AWS ସେବା ଅନୁମତି ଦିଏ?",
+    "question": "ଏକ ବିଚ୍ଛିନ୍ନ ଭର୍ଚୁଆଲ୍ ନେଟୱର୍କ ଆରମ୍ଭ କରିବାକୁ କେଉଁ AWS ସେବା ଅନୁମତି ଦିଏ?",
     "options": [
       "Amazon Route 53",
       "Amazon SES",
@@ -1490,13 +1490,13 @@
   {
     "category": "AWS",
     "set": 5,
-    "question": "ପରିଚାଳିତ Apache Kafka କେଉଁ AWS ସେବା ପ୍ରଦାନ କରେ?",
+    "question": "Amazon MSK କ୍ଲଷ୍ଟର୍‌ରେ, କେଉଁ ନୋଡ୍‌ଗୁଡ଼ିକ ଟପିକ୍ ପାର୍ଟିସନ୍ ସଂରକ୍ଷଣ କରେ ଏବଂ Kafka ପ୍ରୋଡ୍ୟୁସର୍ ଓ କନ୍ଜ୍ୟୁମର୍‌ମାନଙ୍କୁ ସେବା ଦିଏ?",
     "options": [
-      "Amazon S3",
-      "Amazon EBS",
-      "AWS KMS",
-      "Amazon MSK"
+      "Broker nodes",
+      "NAT gateways",
+      "Bastion hosts",
+      "Glue crawlers"
     ],
-    "answer": "Amazon MSK"
+    "answer": "Broker nodes"
   }
 ]

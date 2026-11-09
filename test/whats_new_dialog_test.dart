@@ -29,22 +29,28 @@ void main() {
     await tester.pumpAndSettle();
 
     expect(find.text('DevOps Quiz 1.10.3'), findsOneWidget);
-    expect(find.text('Jigsaw and Arrow Puzzle'), findsOneWidget);
-    expect(find.text('32 interface languages'), findsOneWidget);
-    expect(find.text('More themes, plus theme search'), findsOneWidget);
+    expect(find.text('Spot the Difference'), findsOneWidget);
+    expect(find.text('More ways to play'), findsOneWidget);
+    expect(find.text('Daily Auto Themes'), findsOneWidget);
     await tester.scrollUntilVisible(
-      find.text('Course completion certificates'),
+      find.text('Game sound effects'),
       180,
       scrollable: find.byType(Scrollable).last,
     );
-    expect(find.text('Course completion certificates'), findsOneWidget);
+    expect(find.text('Game sound effects'), findsOneWidget);
 
     await tester.scrollUntilVisible(
-      find.text('Developer birthday'),
+      find.text('Celebrations by country'),
       180,
       scrollable: find.byType(Scrollable).last,
     );
-    expect(find.text('Developer birthday'), findsOneWidget);
+    expect(find.text('Celebrations by country'), findsOneWidget);
+    await tester.scrollUntilVisible(
+      find.text('Scratch Card refresh'),
+      180,
+      scrollable: find.byType(Scrollable).last,
+    );
+    expect(find.text('Scratch Card refresh'), findsOneWidget);
     expect(tester.takeException(), isNull);
   });
 }

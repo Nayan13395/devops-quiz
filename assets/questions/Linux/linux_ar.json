@@ -1,0 +1,877 @@
+[
+  {
+    "category": "Linux",
+    "set": 1,
+    "question": "ما الأمر المستخدم لعرض الملفات والمجلدات في Linux؟",
+    "options": ["ls", "dir", "list", "show"],
+    "answer": "ls"
+  },
+  {
+    "category": "Linux",
+    "set": 1,
+    "question": "ما الأمر الذي يعرض آخر 5 أسطر من ملف؟",
+    "options": ["tail -n 5", "head -n 5", "less -5", "cut -5"],
+    "answer": "tail -n 5"
+  },
+  {
+    "category": "Linux",
+    "set": 1,
+    "question": "ما الأمر الذي يعرض حجم مجلد؟",
+    "options": ["du -sh", "df -sh", "ls -size", "dir -s"],
+    "answer": "du -sh"
+  },
+  {
+    "category": "Linux",
+    "set": 1,
+    "question": "ما الأمر الذي يحسب عدد الأسطر فقط في ملف؟",
+    "options": ["wc -l", "wc -w", "wc -c", "count -l"],
+    "answer": "wc -l"
+  },
+  {
+    "category": "Linux",
+    "set": 1,
+    "question": "ما الأمر الذي يعرض مدة تشغيل النظام؟",
+    "options": ["uptime", "timelog", "syslog", "runtime"],
+    "answer": "uptime"
+  },
+  {
+    "category": "Linux",
+    "set": 1,
+    "question": "ما الأمر الذي يقارن بين ملفين ويعرض الاختلافات؟",
+    "options": ["diff", "differ", "compare", "match"],
+    "answer": "diff"
+  },
+  {
+    "category": "Linux",
+    "set": 1,
+    "question": "ما الأمر الذي يبحث عن نمط داخل ملف؟",
+    "options": ["grep", "find", "search", "locate"],
+    "answer": "grep"
+  },
+  {
+    "category": "Linux",
+    "set": 1,
+    "question": "ما الأمر الذي يغير أذونات الملف إلى 755؟",
+    "options": ["chmod 755", "chown 755", "perm 755", "setperm 755"],
+    "answer": "chmod 755"
+  },
+  {
+    "category": "Linux",
+    "set": 1,
+    "question": "ما الأمر الذي يعرض محتويات مجلد بصيغة مطولة؟",
+    "options": ["ls -l", "dir -l", "show -l", "list -l"],
+    "answer": "ls -l"
+  },
+  {
+    "category": "Linux",
+    "set": 1,
+    "question": "ما أمر Linux الذي يطبع إصدار النواة (kernel) قيد التشغيل؟",
+    "options": ["uname -r", "lsb_release -a", "hostnamectl -k", "cat /etc/hosts"],
+    "answer": "uname -r"
+  },
+  {
+    "category": "Linux",
+    "set": 1,
+    "question": "ما الأمر الذي ينشئ مجلداً فارغاً جديداً؟",
+    "options": ["mkdir", "rmdir", "touchdir", "newdir"],
+    "answer": "mkdir"
+  },
+  {
+    "category": "Linux",
+    "set": 1,
+    "question": "ما الأمر الذي يحذف مجلداً فارغاً؟",
+    "options": ["rmdir", "rm -r", "del", "erase"],
+    "answer": "rmdir"
+  },
+  {
+    "category": "Linux",
+    "set": 1,
+    "question": "ما الأمر الذي يعرض تقويم الشهر الحالي؟",
+    "options": ["cal", "calendar", "date -cal", "showcal"],
+    "answer": "cal"
+  },
+  {
+    "category": "Linux",
+    "set": 1,
+    "question": "ما الأمر الذي يعرض التاريخ والوقت الحاليين؟",
+    "options": ["date", "time", "clock", "now"],
+    "answer": "date"
+  },
+  {
+    "category": "Linux",
+    "set": 1,
+    "question": "ما الأمر الذي يعرض معلومات جدول أقسام القرص؟",
+    "options": ["fdisk -l", "parted -show", "diskinfo", "lsdisk"],
+    "answer": "fdisk -l"
+  },
+  {
+    "category": "Linux",
+    "set": 1,
+    "question": "ما الأمر الذي ينسخ الإدخال القياسي إلى ملف وإلى الإخراج القياسي معاً؟",
+    "options": ["tee", "cut", "paste", "join"],
+    "answer": "tee"
+  },
+  {
+    "category": "Linux",
+    "set": 1,
+    "question": "ما الأمر الذي يستخرج حقول أحرف محددة من كل سطر؟",
+    "options": ["cut", "sort", "fmt", "fold"],
+    "answer": "cut"
+  },
+  {
+    "category": "Linux",
+    "set": 1,
+    "question": "ما خيار sort الذي يزيل الأسطر المكررة من المخرجات المرتبة؟",
+    "options": ["sort -u", "sort -r", "sort -n", "sort -k"],
+    "answer": "sort -u"
+  },
+  {
+    "category": "Linux",
+    "set": 1,
+    "question": "ما الأمر الذي يعد الأسطر المتكررة المتجاورة في المدخلات؟",
+    "options": ["uniq -c", "wc -l", "comm -3", "diff -u"],
+    "answer": "uniq -c"
+  },
+  {
+    "category": "Linux",
+    "set": 1,
+    "question": "ما الأمر الذي يحوّل أو يحذف أحرفاً فردية في تدفق بيانات؟",
+    "options": ["tr", "sed", "awk", "xargs"],
+    "answer": "tr"
+  },
+  {
+    "category": "Linux",
+    "set": 1,
+    "question": "ما الأمر الذي يعرض سجلات systemd journal لوحدة محددة؟",
+    "options": ["journalctl -u", "systemctl show", "dmesg -T", "logger -t"],
+    "answer": "journalctl -u"
+  },
+  {
+    "category": "Linux",
+    "set": 1,
+    "question": "ما الأمر الذي يشغّل برنامجاً مع الاحتفاظ بقفل استشاري على ملف؟",
+    "options": ["flock", "nohup", "setsid", "chroot"],
+    "answer": "flock"
+  },
+  {
+    "category": "Linux",
+    "set": 1,
+    "question": "ما أداة سطر الأوامر التي تمرر بأمان مدخلات مفصولة بحرف null إلى أمر آخر؟",
+    "options": ["xargs -0", "xargs -n", "parallel --pipe", "env -0"],
+    "answer": "xargs -0"
+  },
+  {
+    "category": "Linux",
+    "set": 1,
+    "question": "ما الأمر الذي يعرض المدة التي استغرقتها كل خدمة systemd أثناء الإقلاع؟",
+    "options": ["systemd-analyze blame", "systemctl list-units", "journalctl --boot", "uptime -p"],
+    "answer": "systemd-analyze blame"
+  },
+  {
+    "category": "Linux",
+    "set": 1,
+    "question": "ما الأمر الذي يوقف عملية إذا تجاوزت مدة محددة؟",
+    "options": ["timeout", "watch", "time", "wait"],
+    "answer": "timeout"
+  },
+  {
+    "category": "Linux",
+    "set": 2,
+    "question": "ما الأمر المستخدم لنسخ الملفات في Linux؟",
+    "options": ["cp", "mv", "copy", "clone"],
+    "answer": "cp"
+  },
+  {
+    "category": "Linux",
+    "set": 2,
+    "question": "ما الأمر الذي يعرض الملفات المخفية؟",
+    "options": ["ls -a", "ls -h", "show hidden", "view -a"],
+    "answer": "ls -a"
+  },
+  {
+    "category": "Linux",
+    "set": 2,
+    "question": "ما الأمر الذي يغير ملكية المجموعة لملف؟",
+    "options": ["chgrp", "chown -g", "group", "setgroup"],
+    "answer": "chgrp"
+  },
+  {
+    "category": "Linux",
+    "set": 2,
+    "question": "ما الأمر الذي يعرض الملفات المفتوحة لعملية محددة؟",
+    "options": ["lsof -p", "ps -o", "showfiles", "procfile"],
+    "answer": "lsof -p"
+  },
+  {
+    "category": "Linux",
+    "set": 2,
+    "question": "ما الأمر الذي ينشئ ملفاً ويفتحه في محرر nano؟",
+    "options": ["nano filename", "touch filename", "cat filename", "edit filename"],
+    "answer": "nano filename"
+  },
+  {
+    "category": "Linux",
+    "set": 2,
+    "question": "ما الأمر الذي يعرض ملفاً شاشة تلو الأخرى ويتيح التنقل للخلف؟",
+    "options": ["less", "more", "view", "page"],
+    "answer": "less"
+  },
+  {
+    "category": "Linux",
+    "set": 2,
+    "question": "ما الأمر الذي يعرض الجزء الأخير من ملف ويتابع الأسطر الجديدة؟",
+    "options": ["tail -f", "head -f", "watch", "follow"],
+    "answer": "tail -f"
+  },
+  {
+    "category": "Linux",
+    "set": 2,
+    "question": "ما الأمر الذي يعرض العمليات الأكثر استهلاكاً للمعالج؟",
+    "options": ["top", "ps -top", "procmon", "cpuinfo"],
+    "answer": "top"
+  },
+  {
+    "category": "Linux",
+    "set": 2,
+    "question": "ما الأمر الذي يعرض استخدام الذاكرة بصيغة مقروءة للإنسان؟",
+    "options": ["free -h", "memory", "ram", "meminfo"],
+    "answer": "free -h"
+  },
+  {
+    "category": "Linux",
+    "set": 2,
+    "question": "ما الأمر الذي يعرض نوع نظام الملفات؟",
+    "options": ["df -T", "fsinfo", "mount -t", "fstype"],
+    "answer": "df -T"
+  },
+  {
+    "category": "Linux",
+    "set": 2,
+    "question": "ما الأمر الذي يعرض معرّفات المستخدم والمجموعة الحاليين؟",
+    "options": ["id", "whoami", "uid", "user"],
+    "answer": "id"
+  },
+  {
+    "category": "Linux",
+    "set": 2,
+    "question": "ما الأمر الذي يعرض اسم مضيف النظام؟",
+    "options": ["hostname", "host", "sysname", "machinename"],
+    "answer": "hostname"
+  },
+  {
+    "category": "Linux",
+    "set": 2,
+    "question": "ما الأمر الذي يعرض معلومات واجهات الشبكة؟",
+    "options": ["ip addr", "netinfo", "ifshow", "ipconfig"],
+    "answer": "ip addr"
+  },
+  {
+    "category": "Linux",
+    "set": 2,
+    "question": "ما الأمر الذي يعرض جدول التوجيه؟",
+    "options": ["ip route", "route -show", "netroute", "gateway"],
+    "answer": "ip route"
+  },
+  {
+    "category": "Linux",
+    "set": 2,
+    "question": "أمر قناع الأذونات الافتراضي في Linux",
+    "options": ["umask", "يشغّل برنامجاً بمعرّف المستخدم الفعلي لمالك الملف", "يقيّد الحذف في المجلدات المشتركة", "تتشارك نفس inode"],
+    "answer": "umask"
+  },
+  {
+    "category": "Linux",
+    "set": 2,
+    "question": "معنى إذن setuid في Linux",
+    "options": ["يشغّل برنامجاً بمعرّف المستخدم الفعلي لمالك الملف", "umask", "يقيّد الحذف في المجلدات المشتركة", "تتشارك نفس inode"],
+    "answer": "يشغّل برنامجاً بمعرّف المستخدم الفعلي لمالك الملف"
+  },
+  {
+    "category": "Linux",
+    "set": 2,
+    "question": "معنى بت sticky للمجلد في Linux",
+    "options": ["يقيّد الحذف في المجلدات المشتركة", "umask", "يشغّل برنامجاً بمعرّف المستخدم الفعلي لمالك الملف", "تتشارك نفس inode"],
+    "answer": "يقيّد الحذف في المجلدات المشتركة"
+  },
+  {
+    "category": "Linux",
+    "set": 2,
+    "question": "سلوك inode في الروابط الصلبة (hard link) في Linux",
+    "options": ["تتشارك نفس inode", "umask", "يشغّل برنامجاً بمعرّف المستخدم الفعلي لمالك الملف", "يقيّد الحذف في المجلدات المشتركة"],
+    "answer": "تتشارك نفس inode"
+  },
+  {
+    "category": "Linux",
+    "set": 2,
+    "question": "سلوك هدف الرابط الرمزي (symbolic link) في Linux",
+    "options": ["تخزّن مساراً إلى ملف آخر", "umask", "يشغّل برنامجاً بمعرّف المستخدم الفعلي لمالك الملف", "يقيّد الحذف في المجلدات المشتركة"],
+    "answer": "تخزّن مساراً إلى ملف آخر"
+  },
+  {
+    "category": "Linux",
+    "set": 2,
+    "question": "أمر تفعيل خدمة systemd في Linux",
+    "options": ["systemctl enable service", "umask", "يشغّل برنامجاً بمعرّف المستخدم الفعلي لمالك الملف", "يقيّد الحذف في المجلدات المشتركة"],
+    "answer": "systemctl enable service"
+  },
+  {
+    "category": "Linux",
+    "set": 2,
+    "question": "خيار سجل الإقلاع الحالي في Linux",
+    "options": ["journalctl -b", "umask", "يشغّل برنامجاً بمعرّف المستخدم الفعلي لمالك الملف", "يقيّد الحذف في المجلدات المشتركة"],
+    "answer": "journalctl -b"
+  },
+  {
+    "category": "Linux",
+    "set": 2,
+    "question": "إشارة الإنهاء السلس للعملية في Linux",
+    "options": ["SIGTERM", "umask", "يشغّل برنامجاً بمعرّف المستخدم الفعلي لمالك الملف", "يقيّد الحذف في المجلدات المشتركة"],
+    "answer": "SIGTERM"
+  },
+  {
+    "category": "Linux",
+    "set": 2,
+    "question": "إشارة الإنهاء القسري للعملية في Linux",
+    "options": ["SIGKILL", "umask", "يشغّل برنامجاً بمعرّف المستخدم الفعلي لمالك الملف", "يقيّد الحذف في المجلدات المشتركة"],
+    "answer": "SIGKILL"
+  },
+  {
+    "category": "Linux",
+    "set": 2,
+    "question": "أمر استخدام نظام ملفات القرص في Linux",
+    "options": ["df -h", "umask", "يشغّل برنامجاً بمعرّف المستخدم الفعلي لمالك الملف", "يقيّد الحذف في المجلدات المشتركة"],
+    "answer": "df -h"
+  },
+  {
+    "category": "Linux",
+    "set": 2,
+    "question": "ما الأمر الذي يبدأ عملية بأولوية جدولة معدّلة؟",
+    "options": ["nice", "renice", "ionice", "taskset"],
+    "answer": "nice"
+  },
+  {
+    "category": "Linux",
+    "set": 3,
+    "question": "ما أمر Linux الذي ينشئ ملفاً مؤقتاً باسم فريد ويطبع مساره؟",
+    "options": ["mktemp", "tmpfile", "touch -t", "mkfifo"],
+    "answer": "mktemp"
+  },
+  {
+    "category": "Linux",
+    "set": 3,
+    "question": "ما الأمر الذي يعرض جميع العمليات الجارية في الوقت الفعلي؟",
+    "options": ["top", "ps", "procview", "monitor"],
+    "answer": "top"
+  },
+  {
+    "category": "Linux",
+    "set": 3,
+    "question": "ما الأمر الذي يعرض آخر 20 سطراً من ملف؟",
+    "options": ["tail -n 20", "head -20", "less -20", "view -20"],
+    "answer": "tail -n 20"
+  },
+  {
+    "category": "Linux",
+    "set": 3,
+    "question": "ما الأمر الذي يحسب عدد الكلمات في ملف؟",
+    "options": ["wc -w", "count -w", "words", "wc -c"],
+    "answer": "wc -w"
+  },
+  {
+    "category": "Linux",
+    "set": 3,
+    "question": "ما الأمر الذي يعرض التاريخ الحالي بالتوقيت العالمي UTC؟",
+    "options": ["date -u", "date -utc", "utctime", "time -u"],
+    "answer": "date -u"
+  },
+  {
+    "category": "Linux",
+    "set": 3,
+    "question": "ما الأمر الذي يعرض جميع المنافذ المستمعة؟",
+    "options": ["ss -tuln", "netstat -a", "ports", "showports"],
+    "answer": "ss -tuln"
+  },
+  {
+    "category": "Linux",
+    "set": 3,
+    "question": "ما أمر GNU coreutils الذي يطبع المسار المطلق المحلول بالكامل لهدف رابط رمزي؟",
+    "options": ["readlink -f", "ln -s", "stat -f", "basename"],
+    "answer": "readlink -f"
+  },
+  {
+    "category": "Linux",
+    "set": 3,
+    "question": "ما الأمر الذي يعرض إصدار النواة (kernel)؟",
+    "options": ["uname -r", "kernel -v", "sysinfo", "version"],
+    "answer": "uname -r"
+  },
+  {
+    "category": "Linux",
+    "set": 3,
+    "question": "ما الأمر الذي يعرض جميع وحدات النواة المحمّلة؟",
+    "options": ["lsmod", "modlist", "kernelmod", "modules"],
+    "answer": "lsmod"
+  },
+  {
+    "category": "Linux",
+    "set": 3,
+    "question": "ما الأمر الذي يعرض رسائل الإقلاع؟",
+    "options": ["dmesg", "bootlog", "syslog", "journal"],
+    "answer": "dmesg"
+  },
+  {
+    "category": "Linux",
+    "set": 3,
+    "question": "ما الأمر الذي يعرض حالة خدمة systemd؟",
+    "options": ["systemctl status", "service status", "status", "svcstatus"],
+    "answer": "systemctl status"
+  },
+  {
+    "category": "Linux",
+    "set": 3,
+    "question": "ما الأمر الذي يشغّل خدمة systemd؟",
+    "options": ["systemctl start", "service start", "start", "runservice"],
+    "answer": "systemctl start"
+  },
+  {
+    "category": "Linux",
+    "set": 3,
+    "question": "ما الأمر الذي يوقف خدمة systemd؟",
+    "options": ["systemctl stop", "service stop", "stop", "haltservice"],
+    "answer": "systemctl stop"
+  },
+  {
+    "category": "Linux",
+    "set": 3,
+    "question": "ما الأمر الذي يعيد تشغيل خدمة systemd؟",
+    "options": ["systemctl restart", "service restart", "restart", "reload"],
+    "answer": "systemctl restart"
+  },
+  {
+    "category": "Linux",
+    "set": 3,
+    "question": "ما الأمر الذي يفعّل تشغيل خدمة عند الإقلاع؟",
+    "options": ["systemctl enable", "service enable", "enable", "bootstart"],
+    "answer": "systemctl enable"
+  },
+  {
+    "category": "Linux",
+    "set": 3,
+    "question": "أمر ملخص حجم المجلد في Linux",
+    "options": ["du -sh directory", "umask", "يشغّل برنامجاً بمعرّف المستخدم الفعلي لمالك الملف", "يقيّد الحذف في المجلدات المشتركة"],
+    "answer": "du -sh directory"
+  },
+  {
+    "category": "Linux",
+    "set": 3,
+    "question": "أمر عرض أجهزة الكتل (block devices) في Linux",
+    "options": ["lsblk", "umask", "يشغّل برنامجاً بمعرّف المستخدم الفعلي لمالك الملف", "يقيّد الحذف في المجلدات المشتركة"],
+    "answer": "lsblk"
+  },
+  {
+    "category": "Linux",
+    "set": 3,
+    "question": "أمر عرض أنظمة الملفات المركّبة في Linux",
+    "options": ["findmnt", "umask", "يشغّل برنامجاً بمعرّف المستخدم الفعلي لمالك الملف", "يقيّد الحذف في المجلدات المشتركة"],
+    "answer": "findmnt"
+  },
+  {
+    "category": "Linux",
+    "set": 3,
+    "question": "أمر إنشاء أرشيف مضغوط بـ gzip في Linux",
+    "options": ["tar -czf archive.tar.gz path", "umask", "يشغّل برنامجاً بمعرّف المستخدم الفعلي لمالك الملف", "يقيّد الحذف في المجلدات المشتركة"],
+    "answer": "tar -czf archive.tar.gz path"
+  },
+  {
+    "category": "Linux",
+    "set": 3,
+    "question": "أمر عرض محتويات الأرشيف في Linux",
+    "options": ["tar -tzf archive.tar.gz", "umask", "يشغّل برنامجاً بمعرّف المستخدم الفعلي لمالك الملف", "يقيّد الحذف في المجلدات المشتركة"],
+    "answer": "tar -tzf archive.tar.gz"
+  },
+  {
+    "category": "Linux",
+    "set": 3,
+    "question": "خيار البحث عن الملفات بالاسم في Linux",
+    "options": ["find path -name pattern", "umask", "يشغّل برنامجاً بمعرّف المستخدم الفعلي لمالك الملف", "يقيّد الحذف في المجلدات المشتركة"],
+    "answer": "find path -name pattern"
+  },
+  {
+    "category": "Linux",
+    "set": 3,
+    "question": "خيار البحث النصي التكراري في Linux",
+    "options": ["grep -R", "umask", "يشغّل برنامجاً بمعرّف المستخدم الفعلي لمالك الملف", "يقيّد الحذف في المجلدات المشتركة"],
+    "answer": "grep -R"
+  },
+  {
+    "category": "Linux",
+    "set": 3,
+    "question": "محرر التدفق لاستبدال النصوص في Linux",
+    "options": ["sed", "umask", "يشغّل برنامجاً بمعرّف المستخدم الفعلي لمالك الملف", "يقيّد الحذف في المجلدات المشتركة"],
+    "answer": "sed"
+  },
+  {
+    "category": "Linux",
+    "set": 3,
+    "question": "خيار الفاصل لاستخراج الحقول في Linux",
+    "options": ["cut -d delimiter -f field", "umask", "يشغّل برنامجاً بمعرّف المستخدم الفعلي لمالك الملف", "يقيّد الحذف في المجلدات المشتركة"],
+    "answer": "cut -d delimiter -f field"
+  },
+  {
+    "category": "Linux",
+    "set": 3,
+    "question": "خيار الترتيب الرقمي في Linux",
+    "options": ["sort -n", "umask", "يشغّل برنامجاً بمعرّف المستخدم الفعلي لمالك الملف", "يقيّد الحذف في المجلدات المشتركة"],
+    "answer": "sort -n"
+  },
+  {
+    "category": "Linux",
+    "set": 4,
+    "question": "ما الأمر المستخدم لنقل الملفات أو إعادة تسميتها؟",
+    "options": ["mv", "cp", "rename", "shift"],
+    "answer": "mv"
+  },
+  {
+    "category": "Linux",
+    "set": 4,
+    "question": "ما الأمر الذي يغير ملكية الملف؟",
+    "options": ["chown", "chmod", "owner", "setowner"],
+    "answer": "chown"
+  },
+  {
+    "category": "Linux",
+    "set": 4,
+    "question": "ما الأمر الذي يعرض أذونات الملف بالصيغة الثمانية؟",
+    "options": ["stat -c %a", "ls -perm", "perm", "showperm"],
+    "answer": "stat -c %a"
+  },
+  {
+    "category": "Linux",
+    "set": 4,
+    "question": "ما الأمر الذي يعرض نوع الملف؟",
+    "options": ["file", "type", "kind", "format"],
+    "answer": "file"
+  },
+  {
+    "category": "Linux",
+    "set": 4,
+    "question": "ما الأمر الذي يعرض إحصائيات مفصلة عن الملف؟",
+    "options": ["stat", "fileinfo", "details", "ls -stat"],
+    "answer": "stat"
+  },
+  {
+    "category": "Linux",
+    "set": 4,
+    "question": "ما الأمر الذي يبحث عن الملفات بالاسم؟",
+    "options": ["find", "search", "locate", "where"],
+    "answer": "find"
+  },
+  {
+    "category": "Linux",
+    "set": 4,
+    "question": "ما الأمر الذي يحدد موقع الملف التنفيذي لأمر ما؟",
+    "options": ["which", "whereis", "locate", "find"],
+    "answer": "which"
+  },
+  {
+    "category": "Linux",
+    "set": 4,
+    "question": "ما الأمر الذي يبحث عن الملفات باستخدام قاعدة بيانات؟",
+    "options": ["locate", "find", "search", "query"],
+    "answer": "locate"
+  },
+  {
+    "category": "Linux",
+    "set": 4,
+    "question": "ما الأمر الذي يحدّث قاعدة بيانات locate؟",
+    "options": ["updatedb", "updatedatabase", "refreshdb", "syncdb"],
+    "answer": "updatedb"
+  },
+  {
+    "category": "Linux",
+    "set": 4,
+    "question": "ما الأمر الذي يعرض جميع مهام cron المهيّأة؟",
+    "options": ["crontab -l", "cron -list", "cronshow", "jobs"],
+    "answer": "crontab -l"
+  },
+  {
+    "category": "Linux",
+    "set": 4,
+    "question": "ما الأمر الذي يحرر مهام cron؟",
+    "options": ["crontab -e", "cronedit", "crontab", "schedule"],
+    "answer": "crontab -e"
+  },
+  {
+    "category": "Linux",
+    "set": 4,
+    "question": "ما الأمر الذي يجدول مهمة لمرة واحدة؟",
+    "options": ["at", "cron", "task", "schedule"],
+    "answer": "at"
+  },
+  {
+    "category": "Linux",
+    "set": 4,
+    "question": "ما الأمر الذي يعرض المهام النشطة في الشل؟",
+    "options": ["jobs", "ps", "bg", "fg"],
+    "answer": "jobs"
+  },
+  {
+    "category": "Linux",
+    "set": 4,
+    "question": "ما الأمر الذي ينقل عملية إلى الخلفية؟",
+    "options": ["bg", "fg", "jobs", "nohup"],
+    "answer": "bg"
+  },
+  {
+    "category": "Linux",
+    "set": 4,
+    "question": "ما الأمر الذي يعيد عملية من الخلفية إلى المقدمة؟",
+    "options": ["fg", "bg", "jobs", "top"],
+    "answer": "fg"
+  },
+  {
+    "category": "Linux",
+    "set": 4,
+    "question": "أمر عدّ الأسطر والكلمات والبايتات في Linux",
+    "options": ["wc", "umask", "يشغّل برنامجاً بمعرّف المستخدم الفعلي لمالك الملف", "يقيّد الحذف في المجلدات المشتركة"],
+    "answer": "wc"
+  },
+  {
+    "category": "Linux",
+    "set": 4,
+    "question": "أمر شجرة العمليات في Linux",
+    "options": ["pstree", "umask", "يشغّل برنامجاً بمعرّف المستخدم الفعلي لمالك الملف", "يقيّد الحذف في المجلدات المشتركة"],
+    "answer": "pstree"
+  },
+  {
+    "category": "Linux",
+    "set": 4,
+    "question": "أمر عرض المقابس المستمعة في Linux",
+    "options": ["ss -lntup", "umask", "يشغّل برنامجاً بمعرّف المستخدم الفعلي لمالك الملف", "يقيّد الحذف في المجلدات المشتركة"],
+    "answer": "ss -lntup"
+  },
+  {
+    "category": "Linux",
+    "set": 4,
+    "question": "أداة واصفات الملفات المفتوحة في Linux",
+    "options": ["lsof", "umask", "يشغّل برنامجاً بمعرّف المستخدم الفعلي لمالك الملف", "يقيّد الحذف في المجلدات المشتركة"],
+    "answer": "lsof"
+  },
+  {
+    "category": "Linux",
+    "set": 4,
+    "question": "أمر تصدير متغير البيئة في Linux",
+    "options": ["export NAME=value", "umask", "يشغّل برنامجاً بمعرّف المستخدم الفعلي لمالك الملف", "يقيّد الحذف في المجلدات المشتركة"],
+    "answer": "export NAME=value"
+  },
+  {
+    "category": "Linux",
+    "set": 4,
+    "question": "جدول مهام المستخدم المجدولة crontab في Linux",
+    "options": ["crontab -e", "umask", "يشغّل برنامجاً بمعرّف المستخدم الفعلي لمالك الملف", "يقيّد الحذف في المجلدات المشتركة"],
+    "answer": "crontab -e"
+  },
+  {
+    "category": "Linux",
+    "set": 4,
+    "question": "عُرف المجلد المؤقت في Linux",
+    "options": ["/tmp", "umask", "يشغّل برنامجاً بمعرّف المستخدم الفعلي لمالك الملف", "يقيّد الحذف في المجلدات المشتركة"],
+    "answer": "/tmp"
+  },
+  {
+    "category": "Linux",
+    "set": 4,
+    "question": "أمر البحث في DNS في Linux",
+    "options": ["getent hosts name", "umask", "يشغّل برنامجاً بمعرّف المستخدم الفعلي لمالك الملف", "يقيّد الحذف في المجلدات المشتركة"],
+    "answer": "getent hosts name"
+  },
+  {
+    "category": "Linux",
+    "set": 4,
+    "question": "أمر جدول التوجيه في Linux",
+    "options": ["ip route", "umask", "يشغّل برنامجاً بمعرّف المستخدم الفعلي لمالك الملف", "يقيّد الحذف في المجلدات المشتركة"],
+    "answer": "ip route"
+  },
+  {
+    "category": "Linux",
+    "set": 4,
+    "question": "أمر عرض عنوان IP في Linux",
+    "options": ["ip addr", "umask", "يشغّل برنامجاً بمعرّف المستخدم الفعلي لمالك الملف", "يقيّد الحذف في المجلدات المشتركة"],
+    "answer": "ip addr"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "ما أمر Bash الذي يعود إلى مجلد العمل السابق؟",
+    "options": ["cd -", "cd ..", "cd ~", "popd -all"],
+    "answer": "cd -"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "ما الأمر الذي يعرض الذاكرة الحرة والمستخدمة بصيغة مقروءة للإنسان؟",
+    "options": ["ram -h", "top -m", "mem -h", "free -h"],
+    "answer": "free -h"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "ما الملف الذي يخزّن المعلومات الأساسية لحسابات المستخدمين في Linux؟",
+    "options": ["/etc/users", "/var/accounts", "/etc/login.list", "/etc/passwd"],
+    "answer": "/etc/passwd"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "ما الأمر الذي ينشئ رابطاً رمزياً؟",
+    "options": ["sym -s", "ln -s", "link -s", "mklink"],
+    "answer": "ln -s"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "ما الأمر الذي يعرض أحدث عمليات تسجيل دخول المستخدمين؟",
+    "options": ["recent", "last", "prevlogin", "history -u"],
+    "answer": "last"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "ما الأمر الذي يغير مالك الملف؟",
+    "options": ["passwd", "umask", "chown", "chmod"],
+    "answer": "chown"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "ما الإشارة التي يرسلها الأمر kill -9؟",
+    "options": ["SIGHUP", "SIGKILL", "SIGTERM", "SIGSTOP"],
+    "answer": "SIGKILL"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "ما الأمر الذي يعرض مساحة القرص الحرة لأنظمة الملفات المركّبة؟",
+    "options": ["du -h", "fdisk -s", "df -h", "mount -s"],
+    "answer": "df -h"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "ما الأمر الذي يعرض جميع العمليات الجارية لجميع المستخدمين بأسلوب BSD؟",
+    "options": ["ps aux", "jobs -all", "proc -a", "ls -p"],
+    "answer": "ps aux"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "ما المجلد الذي يحتوي عادةً على ملفات سجلات النظام؟",
+    "options": ["/opt/logs", "/usr/log", "/var/log", "/etc/log"],
+    "answer": "/var/log"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "ما الأمر المستخدم لتحرير المهام الدورية المجدولة للمستخدم؟",
+    "options": ["at -e", "sleep -e", "nohup -e", "crontab -e"],
+    "answer": "crontab -e"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "ما أمر Linux الذي يعرض معمارية المعالج وعدد الأنوية وتفاصيل الطراز؟",
+    "options": ["lscpu", "lsblk", "lsusb", "lsmod"],
+    "answer": "lscpu"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "ما الأمر الذي يستخرج أرشيف .tar.gz؟",
+    "options": ["tar -czf", "untar -g", "tar -xzf", "gzip -c"],
+    "answer": "tar -xzf"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "ما الأمر الذي يعرض متغيرات البيئة للشل الحالي؟",
+    "options": ["shellenv", "env", "vars", "envs -l"],
+    "answer": "env"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "ما قيمة chmod التي تمنح إذن القراءة فقط للمالك والمجموعة والآخرين؟",
+    "options": ["chmod 222", "chmod 444", "chmod 777", "chmod 111"],
+    "answer": "chmod 444"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "ما الأمر الذي يضبط قناع الأذونات الافتراضي للملفات والمجلدات المنشأة حديثاً؟",
+    "options": ["umask", "chmod", "chattr", "setfacl"],
+    "answer": "umask"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "ما الأمر الذي يستعلم عن systemd journal لرسائل الإقلاع الحالي؟",
+    "options": ["journalctl -b", "dmesg --boot", "systemctl --logs", "logger -b"],
+    "answer": "journalctl -b"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "ما الملف الذي يحدد أنظمة الملفات التي يجب تركيبها تلقائياً أثناء الإقلاع؟",
+    "options": ["/etc/fstab", "/etc/mounts.conf", "/var/filesystems", "/boot/mounts"],
+    "answer": "/etc/fstab"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "ما خيار ls الذي يعرض أرقام inode لعناصر المجلد؟",
+    "options": ["-i", "-n", "-I", "-inode"],
+    "answer": "-i"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "ماذا يحدث لملكية المجموعة للملفات الجديدة في مجلد مفعّل عليه بت setgid؟",
+    "options": ["ترث مجموعة المجلد", "تنتمي دائماً إلى root", "ترث المجموعة الأساسية للمنشئ", "ليس لها مجموعة مالكة"],
+    "answer": "ترث مجموعة المجلد"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "ما الأمر الذي يمكنه عرض العملية المستمعة على منفذ TCP رقم 8080؟",
+    "options": ["ss -ltnp 'sport = :8080'", "ip route 8080", "ping -p 8080", "dig -p 8080"],
+    "answer": "ss -ltnp 'sport = :8080'"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "ما الأمر الذي يستعلم عن إعدادات خدمة الأسماء في النظام لإدخال حساب مستخدم؟",
+    "options": ["getent passwd alice", "userctl show alice", "passwd --query alice", "id --database alice"],
+    "answer": "getent passwd alice"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "ما الملف الذي يسرد أصداف تسجيل الدخول المعتبرة صالحة في نظام Linux؟",
+    "options": ["/etc/shells", "/etc/profile", "/var/shells", "/usr/bin/shells"],
+    "answer": "/etc/shells"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "ما إعداد Bash الذي يجعل خط الأنابيب (pipeline) يفشل عند فشل أي أمر فيه؟",
+    "options": ["set -o pipefail", "set -o errexit-pipe", "shopt -s pipecheck", "trap ERR PIPE"],
+    "answer": "set -o pipefail"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "ما الأمر الذي يحدّث فهارس حزم APT المحلية دون ترقية الحزم المثبتة؟",
+    "options": ["apt update", "apt upgrade", "apt install --refresh", "dpkg --configure"],
+    "answer": "apt update"
+  }
+]

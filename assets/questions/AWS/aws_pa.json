@@ -1142,7 +1142,7 @@
   {
     "category": "AWS",
     "set": 4,
-    "question": "ਬ੍ਰਾਊਜ਼ਰ ਤੋਂ ਸਿੱਧੇ Linux EC2 ਇੰਸਟੈਂਸਾਂ ਲਈ ਸੁਰੱਖਿਅਤ shell access ਕਿਹੜੀ AWS ਸੇਵਾ ਦਿੰਦੀ ਹੈ?",
+    "question": "ਬ੍ਰਾਊਜ਼ਰ ਤੋਂ ਸਿੱਧੇ Linux EC2 ਇੰਸਟੈਂਸਾਂ ਲਈ ਸੁਰੱਖਿਅਤ ਸ਼ੈੱਲ ਪਹੁੰਚ ਕਿਹੜੀ AWS ਸੇਵਾ ਦਿੰਦੀ ਹੈ?",
     "options": [
       "EC2 Instance Connect",
       "AWS Direct Connect",
@@ -1226,14 +1226,14 @@
   {
     "category": "AWS",
     "set": 5,
-    "question": "ਪ੍ਰਬੰਧਿਤ ਰਿਲੇਸ਼ਨਲ ਡਾਟਾਬੇਸ ਸੇਵਾ ਕਿਹੜੀ AWS ਸੇਵਾ ਹੈ?",
+    "question": "Amazon RDS ਦੀ ਕਿਹੜੀ ਵਿਸ਼ੇਸ਼ਤਾ ਆਪਣੇ ਆਪ ਫੇਲਓਵਰ ਲਈ ਕਿਸੇ ਹੋਰ Availability Zone ਵਿੱਚ ਸਿੰਕ੍ਰੋਨਸ ਸਟੈਂਡਬਾਏ ਰਿਪਲਿਕਾ ਬਣਾਈ ਰੱਖਦੀ ਹੈ?",
     "options": [
-      "Amazon RDS",
-      "Amazon S3",
-      "Amazon DynamoDB",
-      "Amazon CloudFront"
+      "Multi-AZ deployment",
+      "Read replica",
+      "Manual snapshot",
+      "Parameter group"
     ],
-    "answer": "Amazon RDS"
+    "answer": "Multi-AZ deployment"
   },
   {
     "category": "AWS",
@@ -1262,14 +1262,14 @@
   {
     "category": "AWS",
     "set": 5,
-    "question": "ਕੰਟੈਂਟ ਡਿਲਿਵਰੀ ਨੈੱਟਵਰਕ ਕਿਹੜੀ AWS ਸੇਵਾ ਹੈ?",
+    "question": "Amazon CloudFront ਦੀ ਕਿਹੜੀ ਵਿਸ਼ੇਸ਼ਤਾ ਇਹ ਯਕੀਨੀ ਬਣਾਉਂਦੀ ਹੈ ਕਿ S3 ਓਰਿਜਿਨ ਨੂੰ ਸਿਰਫ਼ ਡਿਸਟ੍ਰੀਬਿਊਸ਼ਨ ਰਾਹੀਂ ਹੀ ਪੜ੍ਹਿਆ ਜਾ ਸਕੇ, ਸਿੱਧਾ ਨਹੀਂ?",
     "options": [
-      "Amazon SNS",
-      "Amazon Route 53",
-      "Amazon CloudFront",
-      "AWS Snowball"
+      "Origin Access Control",
+      "S3 Transfer Acceleration",
+      "Route 53 alias record",
+      "Lambda@Edge"
     ],
-    "answer": "Amazon CloudFront"
+    "answer": "Origin Access Control"
   },
   {
     "category": "AWS",
@@ -1310,14 +1310,14 @@
   {
     "category": "AWS",
     "set": 5,
-    "question": "ਪ੍ਰਬੰਧਿਤ ਸੁਨੇਹਾ ਕਤਾਰ ਕਿਹੜੀ AWS ਸੇਵਾ ਪ੍ਰਦਾਨ ਕਰਦੀ ਹੈ?",
+    "question": "Amazon SQS ਦੀ ਕਿਹੜੀ ਕਤਾਰ ਕਿਸਮ ਸੁਨੇਹਿਆਂ ਦਾ ਸਖ਼ਤ ਕ੍ਰਮ ਬਣਾਈ ਰੱਖਦੀ ਹੈ ਅਤੇ ਬਿਲਕੁਲ-ਇੱਕ-ਵਾਰ ਪ੍ਰੋਸੈਸਿੰਗ ਦਾ ਸਮਰਥਨ ਕਰਦੀ ਹੈ?",
     "options": [
-      "Amazon SES",
-      "Amazon SQS",
-      "AWS KMS",
-      "Amazon EFS"
+      "Standard queue",
+      "FIFO queue",
+      "Delay queue",
+      "Dead-letter queue"
     ],
-    "answer": "Amazon SQS"
+    "answer": "FIFO queue"
   },
   {
     "category": "AWS",
@@ -1430,14 +1430,14 @@
   {
     "category": "AWS",
     "set": 5,
-    "question": "ਪੈਟਾਬਾਈਟ-ਪੱਧਰ ਦਾ ਡਾਟਾ ਵੇਅਰਹਾਊਸ ਕਿਹੜੀ AWS ਸੇਵਾ ਹੈ?",
+    "question": "Amazon Redshift ਵਿੱਚ ਟੇਬਲ ਦੀ ਡਿਸਟ੍ਰੀਬਿਊਸ਼ਨ ਕੁੰਜੀ ਕਿਸ ਚੀਜ਼ ਨੂੰ ਕੰਟਰੋਲ ਕਰਦੀ ਹੈ?",
     "options": [
-      "Amazon DynamoDB",
-      "Amazon ElastiCache",
-      "Amazon Redshift",
-      "Amazon SQS"
+      "ਕਤਾਰਾਂ ਕੰਪਿਊਟ ਨੋਡਾਂ ਵਿੱਚ ਕਿਵੇਂ ਵੰਡੀਆਂ ਜਾਂਦੀਆਂ ਹਨ",
+      "COPY ਕਮਾਂਡ ਕਿਹੜੀ IAM ਰੋਲ ਚਲਾਉਂਦੀ ਹੈ",
+      "ਆਟੋਮੈਟਿਕ ਬੈਕਅੱਪ ਕਿੰਨੇ ਸਮੇਂ ਲਈ ਰੱਖੇ ਜਾਂਦੇ ਹਨ",
+      "ਕਲੱਸਟਰ ਨੂੰ ਕਿਹੜੀ KMS ਕੁੰਜੀ ਇਨਕ੍ਰਿਪਟ ਕਰਦੀ ਹੈ"
     ],
-    "answer": "Amazon Redshift"
+    "answer": "ਕਤਾਰਾਂ ਕੰਪਿਊਟ ਨੋਡਾਂ ਵਿੱਚ ਕਿਵੇਂ ਵੰਡੀਆਂ ਜਾਂਦੀਆਂ ਹਨ"
   },
   {
     "category": "AWS",
@@ -1490,13 +1490,13 @@
   {
     "category": "AWS",
     "set": 5,
-    "question": "ਪ੍ਰਬੰਧਿਤ Apache Kafka ਕਿਹੜੀ AWS ਸੇਵਾ ਪ੍ਰਦਾਨ ਕਰਦੀ ਹੈ?",
+    "question": "Amazon MSK ਕਲੱਸਟਰ ਵਿੱਚ ਕਿਹੜੇ ਨੋਡ ਟੌਪਿਕ ਪਾਰਟੀਸ਼ਨ ਸੰਭਾਲਦੇ ਹਨ ਅਤੇ Kafka ਪ੍ਰੋਡਿਊਸਰਾਂ ਤੇ ਕੰਜ਼ਿਊਮਰਾਂ ਨੂੰ ਸੇਵਾ ਦਿੰਦੇ ਹਨ?",
     "options": [
-      "Amazon S3",
-      "Amazon EBS",
-      "AWS KMS",
-      "Amazon MSK"
+      "Broker nodes",
+      "NAT gateways",
+      "Bastion hosts",
+      "Glue crawlers"
     ],
-    "answer": "Amazon MSK"
+    "answer": "Broker nodes"
   }
 ]

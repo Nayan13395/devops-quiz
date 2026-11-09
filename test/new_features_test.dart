@@ -5,7 +5,6 @@ import 'package:devops_quiz/language_provider.dart';
 import 'package:devops_quiz/models/app_theme.dart';
 import 'package:devops_quiz/models/question.dart';
 import 'package:devops_quiz/screens/certificates_screen.dart';
-import 'package:devops_quiz/screens/arrow_puzzle_screen.dart';
 import 'package:devops_quiz/screens/chess_screen.dart';
 import 'package:devops_quiz/screens/connect_four_screen.dart';
 import 'package:devops_quiz/screens/command_match_screen.dart';
@@ -17,7 +16,6 @@ import 'package:devops_quiz/screens/true_false_blitz_screen.dart';
 import 'package:devops_quiz/screens/snake_ladders_screen.dart';
 import 'package:devops_quiz/screens/word_guess_levels_screen.dart';
 import 'package:devops_quiz/services/achievement_service.dart';
-import 'package:devops_quiz/services/arrow_puzzle_service.dart';
 import 'package:devops_quiz/services/certificate_service.dart';
 import 'package:devops_quiz/services/daily_login_bonus_service.dart';
 import 'package:devops_quiz/services/festival_calendar_service.dart';
@@ -225,139 +223,6 @@ void main() {
     },
   );
 
-  test('Tap Away generates 100 unique levels that can all be cleared', () {
-    final levels = ArrowPuzzleService.levels;
-
-    expect(levels, hasLength(100));
-    expect(levels.map((level) => level.signature).toSet(), hasLength(100));
-
-    for (final level in levels) {
-      expect(level.size, inInclusiveRange(5, 7));
-      final removed = <int>{};
-
-      while (removed.length < level.size * level.size) {
-        final available = [
-          for (int cell = 0; cell < level.size * level.size; cell++)
-            if (level.canRemove(cell, removed)) cell,
-        ];
-
-        expect(available, isNotEmpty, reason: 'Level ${level.number} locked');
-        removed.add(available.first);
-      }
-
-      expect(removed.length, level.size * level.size);
-    }
-  });
-
-  test('arrow levels unlock sequentially and award 100 points once', () async {
-    SharedPreferences.setMockInitialValues({});
-
-    expect(await ArrowPuzzleService.loadSolvedLevels(), isEmpty);
-    expect(ArrowPuzzleService.isUnlocked(1, {}), isTrue);
-    expect(ArrowPuzzleService.isUnlocked(2, {}), isFalse);
-
-    expect(await ArrowPuzzleService.completeLevel(2), isFalse);
-    expect(await ArrowPuzzleService.completeLevel(1), isTrue);
-    expect(await ArrowPuzzleService.completeLevel(2), isTrue);
-    expect(await PointService.getTotalPoints(), 200);
-    expect(ArrowPuzzleService.isUnlocked(3, {1, 2}), isTrue);
-    expect(ArrowPuzzleService.isUnlocked(4, {1, 2}), isFalse);
-
-    expect(await ArrowPuzzleService.completeLevel(2), isFalse);
-    expect(await PointService.getTotalPoints(), 200);
-    expect(await ArrowPuzzleService.completeLevel(101), isFalse);
-  });
-
-  testWidgets('Tap Away fits phone and desktop viewports', (tester) async {
-    for (final size in [
-      const Size(320, 568),
-      const Size(360, 640),
-      const Size(844, 390),
-      const Size(1280, 800),
-    ]) {
-      tester.view.devicePixelRatio = 1;
-      tester.view.physicalSize = size;
-      addTearDown(tester.view.resetPhysicalSize);
-      addTearDown(tester.view.resetDevicePixelRatio);
-      SharedPreferences.setMockInitialValues({});
-
-      await tester.pumpWidget(gameApp(const ArrowPuzzleScreen(), textScale: 1));
-      await tester.pumpAndSettle();
-
-      expect(find.text('Level 1'), findsOneWidget, reason: '$size');
-      expect(
-        find.text('Tap an arrow that can escape the board.'),
-        findsOneWidget,
-        reason: '$size',
-      );
-      expect(tester.takeException(), isNull, reason: '$size');
-    }
-  });
-
-  testWidgets('clearing a board awards points and unlocks the next level', (
-    tester,
-  ) async {
-    SharedPreferences.setMockInitialValues({});
-    await tester.pumpWidget(gameApp(const ArrowPuzzleScreen(), textScale: 1));
-    await tester.pumpAndSettle();
-
-    final level = ArrowPuzzleService.levels.first;
-    final removed = <int>{};
-
-    while (removed.length < level.size * level.size) {
-      final cell = List<int>.generate(
-        level.size * level.size,
-        (i) => i,
-      ).firstWhere((i) => level.canRemove(i, removed));
-      final tile = find.byKey(ValueKey<String>('arrow-cell-$cell'));
-
-      await tester.ensureVisible(tile);
-      await tester.tap(tile);
-      await tester.pump(const Duration(milliseconds: 240));
-      removed.add(cell);
-    }
-
-    await tester.pumpAndSettle();
-
-    expect(find.text('Level 1 cleared!'), findsOneWidget);
-    expect(await PointService.getTotalPoints(), 100);
-
-    await tester.tap(find.text('Next level'));
-    await tester.pumpAndSettle();
-
-    expect(find.text('Level 2'), findsOneWidget);
-    expect(tester.takeException(), isNull);
-  });
-
-  testWidgets('tapping a blocked arrow costs a heart', (tester) async {
-    SharedPreferences.setMockInitialValues({});
-    await tester.pumpWidget(gameApp(const ArrowPuzzleScreen(), textScale: 1));
-    await tester.pumpAndSettle();
-
-    final level = ArrowPuzzleService.levels.first;
-    final available = level.availableArrows.toSet();
-    final blocked = List<int>.generate(
-      level.size * level.size,
-      (i) => i,
-    ).firstWhere((cell) => !available.contains(cell));
-
-    await tester.tap(find.byKey(ValueKey<String>('arrow-cell-$blocked')));
-    await tester.pump();
-    await tester.pump(const Duration(milliseconds: 500));
-
-    expect(
-      find.text('That arrow is blocked. You lost a heart.'),
-      findsOneWidget,
-    );
-    expect(
-      tester
-          .widget<Icon>(find.byKey(const ValueKey<String>('arrow-life-2')))
-          .color,
-      isNot(Theme.of(tester.element(find.byType(Scaffold))).colorScheme.error),
-    );
-    expect(tester.takeException(), isNull);
-  });
-
   test('untranslated sets and languages fall back to English', () async {
     final hindi = await QuestionService().loadQuestions(
       const Locale('hi'),
@@ -397,16 +262,14 @@ void main() {
     );
   });
 
-  test('remaining 19 scheduled Indian languages are registered', () {
+  test('remaining 17 scheduled Indian languages are registered', () {
     const scheduledIndian = {
       'as',
       'bn',
-      'brx',
       'doi',
       'gu',
       'hi',
       'kn',
-      'ks',
       'gom',
       'mai',
       'ml',
@@ -431,12 +294,12 @@ void main() {
       QuestionService.supportedQuestionLanguages,
       containsAll(scheduledIndian),
     );
-    expect(scheduledIndian.difference({'hi', 'mr', 'bn'}), hasLength(19));
+    expect(scheduledIndian.difference({'hi', 'mr', 'bn'}), hasLength(17));
     expect(
       scheduledIndian
           .difference({'hi', 'mr', 'bn'})
           .every(LanguageProvider.isUiAvailable),
-      isFalse,
+      isTrue,
     );
   });
 
@@ -923,7 +786,7 @@ void main() {
         .map((language) => language.code)
         .toList();
 
-    expect(codes, hasLength(13));
+    expect(codes, hasLength(30));
     expect(
       AppLocalizations.supportedLocales.map((l) => l.languageCode).toSet(),
       codes.toSet(),
@@ -998,7 +861,7 @@ void main() {
     });
   }
 
-  testWidgets('games hub lists board games and omits Tap Away', (tester) async {
+  testWidgets('games hub lists board games', (tester) async {
     tester.view.devicePixelRatio = 1;
     tester.view.physicalSize = const Size(1280, 900);
     addTearDown(tester.view.resetPhysicalSize);
@@ -1025,7 +888,6 @@ void main() {
       );
       expect(find.text(title), findsOneWidget);
     }
-    expect(find.text('Tap Away Arrows: 100 Levels 🆕'), findsNothing);
     expect(tester.takeException(), isNull);
   });
 

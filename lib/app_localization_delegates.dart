@@ -14,7 +14,7 @@ const appLocalizationDelegates = <LocalizationsDelegate<dynamic>>[
   GlobalWidgetsLocalizations.delegate,
 ];
 
-const _rightToLeftLanguages = {'ar', 'fa', 'he', 'ps', 'ur', 'sd', 'ks'};
+const _rightToLeftLanguages = {'ar', 'fa', 'he', 'ps', 'ur', 'sd'};
 
 Locale _controlLocale(Locale locale) =>
     Locale(_rightToLeftLanguages.contains(locale.languageCode) ? 'ur' : 'en');

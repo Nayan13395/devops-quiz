@@ -1,0 +1,882 @@
+[
+  {
+    "category": "Docker",
+    "set": 1,
+    "question": "أي أمر يبني صورة Docker؟",
+    "options": ["docker build", "docker run", "docker ps", "docker pull"],
+    "answer": "docker build"
+  },
+  {
+    "category": "Docker",
+    "set": 1,
+    "question": "أي أمر يشغّل حاوية في الوضع المنفصل (detached)؟",
+    "options": ["docker run -d", "docker run -b", "docker run --bg", "docker run --background"],
+    "answer": "docker run -d"
+  },
+  {
+    "category": "Docker",
+    "set": 1,
+    "question": "أي أمر يشغّل حاوية في الوضع التفاعلي؟",
+    "options": ["docker run -it", "docker run -i", "docker run -t", "docker run --interactive"],
+    "answer": "docker run -it"
+  },
+  {
+    "category": "Docker",
+    "set": 1,
+    "question": "أي أمر يعرض جميع الصور بما فيها الوسيطة؟",
+    "options": ["docker images -a", "docker images --filter", "docker images -l", "docker images -q"],
+    "answer": "docker images -a"
+  },
+  {
+    "category": "Docker",
+    "set": 1,
+    "question": "أي أمر يزيل جميع الحاويات المتوقفة؟",
+    "options": ["docker container prune", "docker rm -a", "docker rm --all", "docker clean"],
+    "answer": "docker container prune"
+  },
+  {
+    "category": "Docker",
+    "set": 1,
+    "question": "أي أمر يزيل جميع الصور غير المستخدمة؟",
+    "options": ["docker image prune", "docker rmi -a", "docker images --clean", "docker image clean"],
+    "answer": "docker image prune"
+  },
+  {
+    "category": "Docker",
+    "set": 1,
+    "question": "أي أمر يعرض استخدام موارد الحاوية؟",
+    "options": ["docker stats", "docker top", "docker monitor", "docker usage"],
+    "answer": "docker stats"
+  },
+  {
+    "category": "Docker",
+    "set": 1,
+    "question": "أي أمر يعرض العمليات قيد التشغيل داخل الحاوية؟",
+    "options": ["docker top", "docker ps", "docker stats", "docker inspect"],
+    "answer": "docker top"
+  },
+  {
+    "category": "Docker",
+    "set": 1,
+    "question": "أي أمر يعرض سجلات الحاوية؟",
+    "options": ["docker logs", "docker events", "docker output", "docker inspect"],
+    "answer": "docker logs"
+  },
+  {
+    "category": "Docker",
+    "set": 1,
+    "question": "أي أمر يفحص حاوية أو صورة؟",
+    "options": ["docker inspect", "docker details", "docker info", "docker config"],
+    "answer": "docker inspect"
+  },
+  {
+    "category": "Docker",
+    "set": 1,
+    "question": "أي أمر ينشئ شبكة Docker؟",
+    "options": ["docker network create", "docker create network", "docker net add", "docker network build"],
+    "answer": "docker network create"
+  },
+  {
+    "category": "Docker",
+    "set": 1,
+    "question": "أي أمر يعرض شبكات Docker؟",
+    "options": ["docker network ls", "docker networks", "docker net list", "docker show networks"],
+    "answer": "docker network ls"
+  },
+  {
+    "category": "Docker",
+    "set": 1,
+    "question": "أي أمر ينشئ وحدة تخزين (volume) في Docker؟",
+    "options": ["docker volume create", "docker storage create", "docker volume add", "docker create volume"],
+    "answer": "docker volume create"
+  },
+  {
+    "category": "Docker",
+    "set": 1,
+    "question": "أي أمر يعرض وحدات تخزين Docker؟",
+    "options": ["docker volume ls", "docker volumes", "docker volume show", "docker storage ls"],
+    "answer": "docker volume ls"
+  },
+  {
+    "category": "Docker",
+    "set": 1,
+    "question": "أي أمر يعرض معلومات نظام Docker؟",
+    "options": ["docker info", "docker version", "docker status", "docker config"],
+    "answer": "docker info"
+  },
+  {
+    "category": "Docker",
+    "set": 2,
+    "question": "أي أمر يعطي إصدار Docker؟",
+    "options": ["docker --version", "docker run", "docker ps", "docker pull"],
+    "answer": "docker --version"
+  },
+  {
+    "category": "Docker",
+    "set": 2,
+    "question": "أي أمر يعرض إصدار Docker بتنسيق JSON؟",
+    "options": ["docker version --format json", "docker version -j", "docker version --json", "docker info --json"],
+    "answer": "docker version --format json"
+  },
+  {
+    "category": "Docker",
+    "set": 2,
+    "question": "أي أمر يعرض معرّفات الحاويات فقط؟",
+    "options": ["docker ps -q", "docker ps --ids", "docker ps -i", "docker ps -s"],
+    "answer": "docker ps -q"
+  },
+  {
+    "category": "Docker",
+    "set": 2,
+    "question": "أي أمر يعرض جميع الحاويات بما فيها المتوقفة؟",
+    "options": ["docker ps -a", "docker ps -l", "docker containers", "docker list"],
+    "answer": "docker ps -a"
+  },
+  {
+    "category": "Docker",
+    "set": 2,
+    "question": "أي أمر ينشئ حاوية دون تشغيلها؟",
+    "options": ["docker create", "docker run", "docker build", "docker start"],
+    "answer": "docker create"
+  },
+  {
+    "category": "Docker",
+    "set": 2,
+    "question": "أي أمر يشغّل حاوية موجودة ومتوقفة؟",
+    "options": ["docker start", "docker run", "docker create", "docker exec"],
+    "answer": "docker start"
+  },
+  {
+    "category": "Docker",
+    "set": 2,
+    "question": "أي أمر يوقف حاوية قيد التشغيل بسلاسة؟",
+    "options": ["docker stop", "docker kill", "docker pause", "docker halt"],
+    "answer": "docker stop"
+  },
+  {
+    "category": "Docker",
+    "set": 2,
+    "question": "أي أمر يقتل حاوية قسرًا؟",
+    "options": ["docker kill", "docker stop", "docker terminate", "docker end"],
+    "answer": "docker kill"
+  },
+  {
+    "category": "Docker",
+    "set": 2,
+    "question": "أي أمر يعيد تشغيل حاوية؟",
+    "options": ["docker restart", "docker reset", "docker reload", "docker rerun"],
+    "answer": "docker restart"
+  },
+  {
+    "category": "Docker",
+    "set": 2,
+    "question": "أي أمر يوقف حاوية قيد التشغيل مؤقتًا؟",
+    "options": ["docker pause", "docker stop", "docker hold", "docker freeze"],
+    "answer": "docker pause"
+  },
+  {
+    "category": "Docker",
+    "set": 2,
+    "question": "أي أمر يستأنف حاوية موقوفة مؤقتًا؟",
+    "options": ["docker unpause", "docker resume", "docker start", "docker restart"],
+    "answer": "docker unpause"
+  },
+  {
+    "category": "Docker",
+    "set": 2,
+    "question": "أي أمر يزيل حاوية؟",
+    "options": ["docker rm", "docker stop", "docker delete", "docker clear"],
+    "answer": "docker rm"
+  },
+  {
+    "category": "Docker",
+    "set": 2,
+    "question": "أي أمر يزيل صورة Docker؟",
+    "options": ["docker rmi", "docker rm", "docker erase", "docker clean"],
+    "answer": "docker rmi"
+  },
+  {
+    "category": "Docker",
+    "set": 2,
+    "question": "أي أمر يعرض سجل الصورة؟",
+    "options": ["docker history", "docker layers", "docker image show", "docker inspect"],
+    "answer": "docker history"
+  },
+  {
+    "category": "Docker",
+    "set": 3,
+    "question": "أي أمر يعرض الحاويات قيد التشغيل؟",
+    "options": ["docker ps", "docker images", "docker start", "docker build"],
+    "answer": "docker ps"
+  },
+  {
+    "category": "Docker",
+    "set": 3,
+    "question": "أي أمر ينفّذ أمرًا داخل حاوية قيد التشغيل؟",
+    "options": ["docker exec", "docker enter", "docker shell", "docker login"],
+    "answer": "docker exec"
+  },
+  {
+    "category": "Docker",
+    "set": 3,
+    "question": "أي أمر يتصل بحاوية قيد التشغيل (attach)؟",
+    "options": ["docker attach", "docker connect", "docker exec", "docker join"],
+    "answer": "docker attach"
+  },
+  {
+    "category": "Docker",
+    "set": 3,
+    "question": "أي أمر ينسخ الملفات بين الحاوية والمضيف؟",
+    "options": ["docker cp", "docker copy", "docker transfer", "docker sync"],
+    "answer": "docker cp"
+  },
+  {
+    "category": "Docker",
+    "set": 3,
+    "question": "أي أمر يعرض أحداث Docker في الوقت الفعلي؟",
+    "options": ["docker events", "docker logs", "docker monitor", "docker watch"],
+    "answer": "docker events"
+  },
+  {
+    "category": "Docker",
+    "set": 3,
+    "question": "أي أمر يحفظ صورة في أرشيف tar؟",
+    "options": ["docker save", "docker export", "docker backup", "docker archive"],
+    "answer": "docker save"
+  },
+  {
+    "category": "Docker",
+    "set": 3,
+    "question": "أي أمر يحمّل صورة من أرشيف tar؟",
+    "options": ["docker load", "docker import", "docker restore", "docker pull"],
+    "answer": "docker load"
+  },
+  {
+    "category": "Docker",
+    "set": 3,
+    "question": "أي أمر يصدّر نظام ملفات الحاوية كأرشيف tar؟",
+    "options": ["docker export", "docker save", "docker backup", "docker archive"],
+    "answer": "docker export"
+  },
+  {
+    "category": "Docker",
+    "set": 3,
+    "question": "أي أمر يستورد ملف tarball كصورة؟",
+    "options": ["docker import", "docker load", "docker pull", "docker build"],
+    "answer": "docker import"
+  },
+  {
+    "category": "Docker",
+    "set": 3,
+    "question": "أي أمر ينشئ صورة من تغييرات حاوية؟",
+    "options": ["docker commit", "docker build", "docker save", "docker tag"],
+    "answer": "docker commit"
+  },
+  {
+    "category": "Docker",
+    "set": 3,
+    "question": "أي أمر يضع وسمًا (tag) على صورة Docker؟",
+    "options": ["docker tag", "docker name", "docker commit", "docker label"],
+    "answer": "docker tag"
+  },
+  {
+    "category": "Docker",
+    "set": 3,
+    "question": "أي أمر يدفع صورة إلى سجل (registry)؟",
+    "options": ["docker push", "docker upload", "docker publish", "docker send"],
+    "answer": "docker push"
+  },
+  {
+    "category": "Docker",
+    "set": 3,
+    "question": "أي أمر يسجّل الدخول إلى سجل Docker؟",
+    "options": ["docker login", "docker auth", "docker connect", "docker signin"],
+    "answer": "docker login"
+  },
+  {
+    "category": "Docker",
+    "set": 3,
+    "question": "أي أمر ينظّف كائنات Docker غير المستخدمة؟",
+    "options": ["docker system prune", "docker clean", "docker prune", "docker remove"],
+    "answer": "docker system prune"
+  },
+  {
+    "category": "Docker",
+    "set": 3,
+    "question": "أي أمر يعرض استخدام Docker للقرص؟",
+    "options": ["docker system df", "docker disk", "docker usage", "docker info"],
+    "answer": "docker system df"
+  },
+  {
+    "category": "Docker",
+    "set": 4,
+    "question": "أي أمر ينزّل صورة من Docker Hub؟",
+    "options": ["docker pull", "docker fetch", "docker copy", "docker get"],
+    "answer": "docker pull"
+  },
+  {
+    "category": "Docker",
+    "set": 4,
+    "question": "أي أمر يسحب وسم صورة محددًا؟",
+    "options": ["docker pull image:tag", "docker pull --tag tag", "docker pull -t tag", "docker get image:tag"],
+    "answer": "docker pull image:tag"
+  },
+  {
+    "category": "Docker",
+    "set": 4,
+    "question": "أي أمر يعرض بيان الصورة (manifest) من سجل دون سحب الصورة؟",
+    "options": ["docker manifest inspect", "docker pull --manifest", "docker image manifest", "docker show manifest"],
+    "answer": "docker manifest inspect"
+  },
+  {
+    "category": "Docker",
+    "set": 4,
+    "question": "أي أمر يعرض ملخصات (digests) الصور؟",
+    "options": ["docker images --digests", "docker digest", "docker image digest", "docker inspect digest"],
+    "answer": "docker images --digests"
+  },
+  {
+    "category": "Docker",
+    "set": 4,
+    "question": "أي أمر يزيل جميع وحدات التخزين غير المستخدمة؟",
+    "options": ["docker volume prune", "docker volume clean", "docker prune volumes", "docker rm volume"],
+    "answer": "docker volume prune"
+  },
+  {
+    "category": "Docker",
+    "set": 4,
+    "question": "أي أمر يزيل جميع الشبكات غير المستخدمة؟",
+    "options": ["docker network prune", "docker prune network", "docker clean network", "docker rm network"],
+    "answer": "docker network prune"
+  },
+  {
+    "category": "Docker",
+    "set": 4,
+    "question": "أي أمر يعرض استخدام ذاكرة التخزين المؤقت للبناء؟",
+    "options": ["docker builder du", "docker build cache", "docker cache usage", "docker builder stats"],
+    "answer": "docker builder du"
+  },
+  {
+    "category": "Docker",
+    "set": 4,
+    "question": "أي أمر يزيل ذاكرة التخزين المؤقت للبناء غير المستخدمة؟",
+    "options": ["docker builder prune", "docker build clean", "docker cache prune", "docker prune build"],
+    "answer": "docker builder prune"
+  },
+  {
+    "category": "Docker",
+    "set": 4,
+    "question": "أي أمر ينشئ بناء صورة متعدد المنصات باستخدام Buildx؟",
+    "options": ["docker buildx build", "docker build multi", "docker build platform", "docker image buildx"],
+    "answer": "docker buildx build"
+  },
+  {
+    "category": "Docker",
+    "set": 4,
+    "question": "أي أمر يعرض أدوات البناء (builders) المتاحة في Buildx؟",
+    "options": ["docker buildx ls", "docker buildx show", "docker builder ls", "docker buildx list"],
+    "answer": "docker buildx ls"
+  },
+  {
+    "category": "Docker",
+    "set": 4,
+    "question": "أي أمر يعرض جميع سياقات Docker؟",
+    "options": ["docker context ls", "docker contexts", "docker context show", "docker list context"],
+    "answer": "docker context ls"
+  },
+  {
+    "category": "Docker",
+    "set": 4,
+    "question": "أي أمر يبدّل إلى سياق Docker مختلف؟",
+    "options": ["docker context use", "docker context switch", "docker use context", "docker context select"],
+    "answer": "docker context use"
+  },
+  {
+    "category": "Docker",
+    "set": 4,
+    "question": "أي أمر يزيل سياق Docker؟",
+    "options": ["docker context rm", "docker context delete", "docker remove context", "docker context erase"],
+    "answer": "docker context rm"
+  },
+  {
+    "category": "Docker",
+    "set": 4,
+    "question": "أي تعليمة في Dockerfile تحدد الصورة الأساسية؟",
+    "options": ["FROM", "BASE", "IMAGE", "START"],
+    "answer": "FROM"
+  },
+  {
+    "category": "Docker",
+    "set": 4,
+    "question": "أي تعليمة في Dockerfile تضبط متغيرات البيئة؟",
+    "options": ["ENV", "SET", "VAR", "EXPORT"],
+    "answer": "ENV"
+  },
+  {
+    "category": "Docker",
+    "set": 5,
+    "question": "أي أمر يعرض الاستخدام المباشر للمعالج والذاكرة للحاويات قيد التشغيل؟",
+    "options": ["docker inspect -r", "docker stats", "docker usage", "docker top -m"],
+    "answer": "docker stats"
+  },
+  {
+    "category": "Docker",
+    "set": 5,
+    "question": "أي تعليمة في Dockerfile توفّر أمرًا افتراضيًا يمكن تجاوزه وقت التشغيل؟",
+    "options": ["COPY", "CMD", "LABEL", "RUN"],
+    "answer": "CMD"
+  },
+  {
+    "category": "Docker",
+    "set": 5,
+    "question": "أي تعليمة في Dockerfile تهيّئ الحاوية لتعمل كملف تنفيذي؟",
+    "options": ["USER", "ENTRYPOINT", "EXPOSE", "ARG"],
+    "answer": "ENTRYPOINT"
+  },
+  {
+    "category": "Docker",
+    "set": 5,
+    "question": "أي تعليمة في Dockerfile تحدد دليل العمل للتعليمات اللاحقة؟",
+    "options": ["HOME", "CD", "WORKDIR", "PATH"],
+    "answer": "WORKDIR"
+  },
+  {
+    "category": "Docker",
+    "set": 5,
+    "question": "أي أمر يبني صورة بوسم myapp من Dockerfile في الدليل الحالي؟",
+    "options": ["docker build -t myapp .", "docker compile myapp", "docker make myapp", "docker create myapp ."],
+    "answer": "docker build -t myapp ."
+  },
+  {
+    "category": "Docker",
+    "set": 5,
+    "question": "ماذا يفعل docker compose up -d؟",
+    "options": ["يحذف جميع وحدات التخزين", "يبني دون تشغيل", "يشغّل الخدمات في الخلفية", "يوقف جميع الخدمات"],
+    "answer": "يشغّل الخدمات في الخلفية"
+  },
+  {
+    "category": "Docker",
+    "set": 5,
+    "question": "أي خيار تخزين ينشئه Docker ويديره بنفسه؟",
+    "options": ["Bind mount", "وحدة تخزين مسماة (Named volume)", "tmpfs mount", "دليل المضيف"],
+    "answer": "وحدة تخزين مسماة (Named volume)"
+  },
+  {
+    "category": "Docker",
+    "set": 5,
+    "question": "أي أمر يطبع سجلات المخرجات للحاوية؟",
+    "options": ["docker history", "docker diff", "docker events", "docker logs"],
+    "answer": "docker logs"
+  },
+  {
+    "category": "Docker",
+    "set": 5,
+    "question": "أي برنامج تشغيل شبكة (network driver) يُستخدم افتراضيًا للحاويات المستقلة؟",
+    "options": ["macvlan", "bridge", "host", "overlay"],
+    "answer": "bridge"
+  },
+  {
+    "category": "Docker",
+    "set": 5,
+    "question": "أي تعليمة في Dockerfile تعرّف متغيرًا وقت البناء؟",
+    "options": ["ARG", "VOLUME", "ENV", "SHELL"],
+    "answer": "ARG"
+  },
+  {
+    "category": "Docker",
+    "set": 5,
+    "question": "ما الفائدة الرئيسية من البناء متعدد المراحل (multi-stage build)؟",
+    "options": ["تشفير الطبقات", "جدولة المهام", "تشغيل حاويات كثيرة", "صور نهائية أصغر"],
+    "answer": "صور نهائية أصغر"
+  },
+  {
+    "category": "Docker",
+    "set": 5,
+    "question": "أي أمر يعرض الطبقات التي تتكون منها الصورة؟",
+    "options": ["docker tree", "docker history", "docker ps -l", "docker layers"],
+    "answer": "docker history"
+  },
+  {
+    "category": "Docker",
+    "set": 5,
+    "question": "أي ملف يستبعد ملفات من سياق بناء Docker؟",
+    "options": ["Dockerfile.skip", ".gitignore", ".buildignore", ".dockerignore"],
+    "answer": ".dockerignore"
+  },
+  {
+    "category": "Docker",
+    "set": 5,
+    "question": "أي أمر يعرض تفاصيل منخفضة المستوى لحاوية أو صورة بتنسيق JSON؟",
+    "options": ["docker details", "docker describe", "docker show", "docker inspect"],
+    "answer": "docker inspect"
+  },
+  {
+    "category": "Docker",
+    "set": 1,
+    "question": "أي خيار في docker run يحدد سياسة إعادة تشغيل الحاوية؟",
+    "options": ["--restart", "--detach", "--privileged", "--hostname"],
+    "answer": "--restart"
+  },
+  {
+    "category": "Docker",
+    "set": 2,
+    "question": "مرجع ملخص محتوى صورة Docker",
+    "options": ["ملخص sha256", "نسخ المخرجات النهائية فقط إلى صورة أصغر", "تغيير طبقة سابقة يعيد بناء الطبقات التالية", ".dockerignore"],
+    "answer": "ملخص sha256"
+  },
+  {
+    "category": "Docker",
+    "set": 3,
+    "question": "سياسة إعادة تشغيل حاوية Docker",
+    "options": ["سياسة إعادة التشغيل", "ملخص sha256", "نسخ المخرجات النهائية فقط إلى صورة أصغر", "تغيير طبقة سابقة يعيد بناء الطبقات التالية"],
+    "answer": "سياسة إعادة التشغيل"
+  },
+  {
+    "category": "Docker",
+    "set": 4,
+    "question": "الجذر للقراءة فقط في حاوية Docker",
+    "options": ["نظام ملفات جذر للقراءة فقط", "ملخص sha256", "نسخ المخرجات النهائية فقط إلى صورة أصغر", "تغيير طبقة سابقة يعيد بناء الطبقات التالية"],
+    "answer": "نظام ملفات جذر للقراءة فقط"
+  },
+  {
+    "category": "Docker",
+    "set": 5,
+    "question": "الأمر المقابل لتحميل صورة Docker",
+    "options": ["docker load", "ملخص sha256", "نسخ المخرجات النهائية فقط إلى صورة أصغر", "تغيير طبقة سابقة يعيد بناء الطبقات التالية"],
+    "answer": "docker load"
+  },
+  {
+    "category": "Docker",
+    "set": 1,
+    "question": "أي أمر يشغّل عملية جديدة داخل حاوية قيد التشغيل بالفعل؟",
+    "options": ["docker exec", "docker attach", "docker build", "docker commit"],
+    "answer": "docker exec"
+  },
+  {
+    "category": "Docker",
+    "set": 2,
+    "question": "غرض البناء متعدد المراحل في Docker",
+    "options": ["نسخ المخرجات النهائية فقط إلى صورة أصغر", "ملخص sha256", "تغيير طبقة سابقة يعيد بناء الطبقات التالية", ".dockerignore"],
+    "answer": "نسخ المخرجات النهائية فقط إلى صورة أصغر"
+  },
+  {
+    "category": "Docker",
+    "set": 3,
+    "question": "إعادة استخدام طبقات صورة Docker",
+    "options": ["تتم مشاركة الطبقات المتطابقة", "ملخص sha256", "نسخ المخرجات النهائية فقط إلى صورة أصغر", "تغيير طبقة سابقة يعيد بناء الطبقات التالية"],
+    "answer": "تتم مشاركة الطبقات المتطابقة"
+  },
+  {
+    "category": "Docker",
+    "set": 4,
+    "question": "خيار تحديد حد الذاكرة لموارد Docker",
+    "options": ["--memory", "ملخص sha256", "نسخ المخرجات النهائية فقط إلى صورة أصغر", "تغيير طبقة سابقة يعيد بناء الطبقات التالية"],
+    "answer": "--memory"
+  },
+  {
+    "category": "Docker",
+    "set": 5,
+    "question": "ناتج تصدير حاوية Docker",
+    "options": ["أرشيف tar لنظام الملفات", "ملخص sha256", "نسخ المخرجات النهائية فقط إلى صورة أصغر", "تغيير طبقة سابقة يعيد بناء الطبقات التالية"],
+    "answer": "أرشيف tar لنظام الملفات"
+  },
+  {
+    "category": "Docker",
+    "set": 1,
+    "question": "أي تعليمة في Dockerfile تحدد المستخدم لخطوات البناء اللاحقة وتنفيذ الحاوية؟",
+    "options": ["USER", "OWNER", "RUNAS", "LOGIN"],
+    "answer": "USER"
+  },
+  {
+    "category": "Docker",
+    "set": 2,
+    "question": "إبطال ذاكرة التخزين المؤقت للبناء في Docker",
+    "options": ["تغيير طبقة سابقة يعيد بناء الطبقات التالية", "ملخص sha256", "نسخ المخرجات النهائية فقط إلى صورة أصغر", ".dockerignore"],
+    "answer": "تغيير طبقة سابقة يعيد بناء الطبقات التالية"
+  },
+  {
+    "category": "Docker",
+    "set": 3,
+    "question": "أمر تنظيف صور Docker",
+    "options": ["docker image prune", "ملخص sha256", "نسخ المخرجات النهائية فقط إلى صورة أصغر", "تغيير طبقة سابقة يعيد بناء الطبقات التالية"],
+    "answer": "docker image prune"
+  },
+  {
+    "category": "Docker",
+    "set": 4,
+    "question": "خيار حصة المعالج في Docker",
+    "options": ["--cpus", "ملخص sha256", "نسخ المخرجات النهائية فقط إلى صورة أصغر", "تغيير طبقة سابقة يعيد بناء الطبقات التالية"],
+    "answer": "--cpus"
+  },
+  {
+    "category": "Docker",
+    "set": 5,
+    "question": "أمر استيراد صورة Docker",
+    "options": ["docker import", "ملخص sha256", "نسخ المخرجات النهائية فقط إلى صورة أصغر", "تغيير طبقة سابقة يعيد بناء الطبقات التالية"],
+    "answer": "docker import"
+  },
+  {
+    "category": "Docker",
+    "set": 1,
+    "question": "أي تعليمة في Dockerfile توثّق المنفذ الذي تستمع إليه الحاوية؟",
+    "options": ["EXPOSE", "PORT", "PUBLISH", "LISTEN"],
+    "answer": "EXPOSE"
+  },
+  {
+    "category": "Docker",
+    "set": 2,
+    "question": "ملف استبعاد سياق بناء Docker",
+    "options": [".dockerignore", "ملخص sha256", "نسخ المخرجات النهائية فقط إلى صورة أصغر", "تغيير طبقة سابقة يعيد بناء الطبقات التالية"],
+    "answer": ".dockerignore"
+  },
+  {
+    "category": "Docker",
+    "set": 3,
+    "question": "أمر سجلات حاوية Docker",
+    "options": ["docker logs", "ملخص sha256", "نسخ المخرجات النهائية فقط إلى صورة أصغر", "تغيير طبقة سابقة يعيد بناء الطبقات التالية"],
+    "answer": "docker logs"
+  },
+  {
+    "category": "Docker",
+    "set": 4,
+    "question": "اعتمادية خدمات Docker Compose",
+    "options": ["depends_on", "ملخص sha256", "نسخ المخرجات النهائية فقط إلى صورة أصغر", "تغيير طبقة سابقة يعيد بناء الطبقات التالية"],
+    "answer": "depends_on"
+  },
+  {
+    "category": "Docker",
+    "set": 5,
+    "question": "خيار تنظيف وحدات تخزين Docker",
+    "options": ["docker volume prune", "ملخص sha256", "نسخ المخرجات النهائية فقط إلى صورة أصغر", "تغيير طبقة سابقة يعيد بناء الطبقات التالية"],
+    "answer": "docker volume prune"
+  },
+  {
+    "category": "Docker",
+    "set": 1,
+    "question": "أي أمر يعرض بيانات وصفية مفصلة لكائن Docker؟",
+    "options": ["docker inspect", "docker top", "docker diff", "docker pause"],
+    "answer": "docker inspect"
+  },
+  {
+    "category": "Docker",
+    "set": 2,
+    "question": "فحص صحة حاوية Docker",
+    "options": ["HEALTHCHECK", "ملخص sha256", "نسخ المخرجات النهائية فقط إلى صورة أصغر", "تغيير طبقة سابقة يعيد بناء الطبقات التالية"],
+    "answer": "HEALTHCHECK"
+  },
+  {
+    "category": "Docker",
+    "set": 3,
+    "question": "أمر فحص حاوية Docker",
+    "options": ["docker inspect", "ملخص sha256", "نسخ المخرجات النهائية فقط إلى صورة أصغر", "تغيير طبقة سابقة يعيد بناء الطبقات التالية"],
+    "answer": "docker inspect"
+  },
+  {
+    "category": "Docker",
+    "set": 4,
+    "question": "ملف البيئة في Docker Compose",
+    "options": [".env", "ملخص sha256", "نسخ المخرجات النهائية فقط إلى صورة أصغر", "تغيير طبقة سابقة يعيد بناء الطبقات التالية"],
+    "answer": ".env"
+  },
+  {
+    "category": "Docker",
+    "set": 5,
+    "question": "خيار عملية init في حاوية Docker",
+    "options": ["--init", "ملخص sha256", "نسخ المخرجات النهائية فقط إلى صورة أصغر", "تغيير طبقة سابقة يعيد بناء الطبقات التالية"],
+    "answer": "--init"
+  },
+  {
+    "category": "Docker",
+    "set": 1,
+    "question": "أي أمر يبث مخرجات سجل الحاوية باستمرار؟",
+    "options": ["docker logs -f", "docker events --once", "docker stats --no-stream", "docker history"],
+    "answer": "docker logs -f"
+  },
+  {
+    "category": "Docker",
+    "set": 2,
+    "question": "دورة حياة وحدة التخزين المسماة في Docker",
+    "options": ["تستمر بشكل مستقل عن الحاوية", "ملخص sha256", "نسخ المخرجات النهائية فقط إلى صورة أصغر", "تغيير طبقة سابقة يعيد بناء الطبقات التالية"],
+    "answer": "تستمر بشكل مستقل عن الحاوية"
+  },
+  {
+    "category": "Docker",
+    "set": 3,
+    "question": "أمر قائمة العمليات في Docker",
+    "options": ["docker top", "ملخص sha256", "نسخ المخرجات النهائية فقط إلى صورة أصغر", "تغيير طبقة سابقة يعيد بناء الطبقات التالية"],
+    "answer": "docker top"
+  },
+  {
+    "category": "Docker",
+    "set": 4,
+    "question": "تشغيل Docker Compose في الوضع المنفصل",
+    "options": ["docker compose up -d", "ملخص sha256", "نسخ المخرجات النهائية فقط إلى صورة أصغر", "تغيير طبقة سابقة يعيد بناء الطبقات التالية"],
+    "answer": "docker compose up -d"
+  },
+  {
+    "category": "Docker",
+    "set": 5,
+    "question": "غرض فضاء أسماء المستخدم (user namespace) في Docker",
+    "options": ["ربط مستخدمي الحاوية بمستخدمين غير مميزين على المضيف", "ملخص sha256", "نسخ المخرجات النهائية فقط إلى صورة أصغر", "تغيير طبقة سابقة يعيد بناء الطبقات التالية"],
+    "answer": "ربط مستخدمي الحاوية بمستخدمين غير مميزين على المضيف"
+  },
+  {
+    "category": "Docker",
+    "set": 1,
+    "question": "أي خيار في docker run يزيل الحاوية تلقائيًا بعد خروجها؟",
+    "options": ["--rm", "--pull", "--init", "--detach"],
+    "answer": "--rm"
+  },
+  {
+    "category": "Docker",
+    "set": 2,
+    "question": "مصدر bind mount في Docker",
+    "options": ["مسار في نظام ملفات المضيف", "ملخص sha256", "نسخ المخرجات النهائية فقط إلى صورة أصغر", "تغيير طبقة سابقة يعيد بناء الطبقات التالية"],
+    "answer": "مسار في نظام ملفات المضيف"
+  },
+  {
+    "category": "Docker",
+    "set": 3,
+    "question": "أمر سجل صورة Docker",
+    "options": ["docker history", "ملخص sha256", "نسخ المخرجات النهائية فقط إلى صورة أصغر", "تغيير طبقة سابقة يعيد بناء الطبقات التالية"],
+    "answer": "docker history"
+  },
+  {
+    "category": "Docker",
+    "set": 4,
+    "question": "سلوك إيقاف Docker Compose",
+    "options": ["يوقف الخدمات دون إزالتها", "ملخص sha256", "نسخ المخرجات النهائية فقط إلى صورة أصغر", "تغيير طبقة سابقة يعيد بناء الطبقات التالية"],
+    "answer": "يوقف الخدمات دون إزالتها"
+  },
+  {
+    "category": "Docker",
+    "set": 5,
+    "question": "غرض تخزين أسرار Docker (secrets)",
+    "options": ["قيم حساسة تُركَّب في الخدمات", "ملخص sha256", "نسخ المخرجات النهائية فقط إلى صورة أصغر", "تغيير طبقة سابقة يعيد بناء الطبقات التالية"],
+    "answer": "قيم حساسة تُركَّب في الخدمات"
+  },
+  {
+    "category": "Docker",
+    "set": 1,
+    "question": "ما الغرض الرئيسي من بناء Docker متعدد المراحل؟",
+    "options": [
+      "نسخ مخرجات البناء إلى صورة نهائية أصغر",
+      "تشغيل كل مرحلة كحاوية",
+      "الاحتفاظ بجميع أدوات البناء في الصورة النهائية",
+      "استبدال وحدات تخزين Docker بالطبقات"
+    ],
+    "answer": "نسخ مخرجات البناء إلى صورة نهائية أصغر"
+  },
+  {
+    "category": "Docker",
+    "set": 2,
+    "question": "سلوك شبكة bridge في Docker",
+    "options": ["تربط الحاويات على شبكة فرعية افتراضية", "ملخص sha256", "نسخ المخرجات النهائية فقط إلى صورة أصغر", "تغيير طبقة سابقة يعيد بناء الطبقات التالية"],
+    "answer": "تربط الحاويات على شبكة فرعية افتراضية"
+  },
+  {
+    "category": "Docker",
+    "set": 3,
+    "question": "أمر تسجيل الدخول إلى سجل صور Docker",
+    "options": ["docker login", "ملخص sha256", "نسخ المخرجات النهائية فقط إلى صورة أصغر", "تغيير طبقة سابقة يعيد بناء الطبقات التالية"],
+    "answer": "docker login"
+  },
+  {
+    "category": "Docker",
+    "set": 4,
+    "question": "أمر exec في حاوية Docker",
+    "options": ["docker exec", "ملخص sha256", "نسخ المخرجات النهائية فقط إلى صورة أصغر", "تغيير طبقة سابقة يعيد بناء الطبقات التالية"],
+    "answer": "docker exec"
+  },
+  {
+    "category": "Docker",
+    "set": 5,
+    "question": "قيم حالة الصحة في Docker",
+    "options": ["starting, healthy, unhealthy", "ملخص sha256", "نسخ المخرجات النهائية فقط إلى صورة أصغر", "تغيير طبقة سابقة يعيد بناء الطبقات التالية"],
+    "answer": "starting, healthy, unhealthy"
+  },
+  {
+    "category": "Docker",
+    "set": 1,
+    "question": "أي خيار في docker build يحدد مرحلة مسماة كهدف للبناء؟",
+    "options": ["--target", "--stage", "--from", "--platform"],
+    "answer": "--target"
+  },
+  {
+    "category": "Docker",
+    "set": 2,
+    "question": "سلوك شبكة host في Docker",
+    "options": ["تشارك فضاء أسماء شبكة المضيف", "ملخص sha256", "نسخ المخرجات النهائية فقط إلى صورة أصغر", "تغيير طبقة سابقة يعيد بناء الطبقات التالية"],
+    "answer": "تشارك فضاء أسماء شبكة المضيف"
+  },
+  {
+    "category": "Docker",
+    "set": 3,
+    "question": "خيار مرحلة هدف البناء في Docker",
+    "options": ["--target", "ملخص sha256", "نسخ المخرجات النهائية فقط إلى صورة أصغر", "تغيير طبقة سابقة يعيد بناء الطبقات التالية"],
+    "answer": "--target"
+  },
+  {
+    "category": "Docker",
+    "set": 4,
+    "question": "أمر نسخ حاوية Docker",
+    "options": ["docker cp", "ملخص sha256", "نسخ المخرجات النهائية فقط إلى صورة أصغر", "تغيير طبقة سابقة يعيد بناء الطبقات التالية"],
+    "answer": "docker cp"
+  },
+  {
+    "category": "Docker",
+    "set": 5,
+    "question": "خطر مقبس (socket) خدمة Docker",
+    "options": ["صلاحيات إدارية على مستوى المضيف", "ملخص sha256", "نسخ المخرجات النهائية فقط إلى صورة أصغر", "تغيير طبقة سابقة يعيد بناء الطبقات التالية"],
+    "answer": "صلاحيات إدارية على مستوى المضيف"
+  },
+  {
+    "category": "Docker",
+    "set": 1,
+    "question": "أي تعليمة في Dockerfile تعرّف فحص صحة الحاوية؟",
+    "options": ["HEALTHCHECK", "HEALTH", "STATUS", "ONFAILURE"],
+    "answer": "HEALTHCHECK"
+  },
+  {
+    "category": "Docker",
+    "set": 2,
+    "question": "خيار نشر المنافذ في Docker",
+    "options": ["-p", "ملخص sha256", "نسخ المخرجات النهائية فقط إلى صورة أصغر", "تغيير طبقة سابقة يعيد بناء الطبقات التالية"],
+    "answer": "-p"
+  },
+  {
+    "category": "Docker",
+    "set": 3,
+    "question": "خيار منصة البناء في Docker",
+    "options": ["--platform", "ملخص sha256", "نسخ المخرجات النهائية فقط إلى صورة أصغر", "تغيير طبقة سابقة يعيد بناء الطبقات التالية"],
+    "answer": "--platform"
+  },
+  {
+    "category": "Docker",
+    "set": 4,
+    "question": "أمر حفظ صورة Docker بتنسيق الحفظ",
+    "options": ["docker save", "ملخص sha256", "نسخ المخرجات النهائية فقط إلى صورة أصغر", "تغيير طبقة سابقة يعيد بناء الطبقات التالية"],
+    "answer": "docker save"
+  },
+  {
+    "category": "Docker",
+    "set": 5,
+    "question": "ميزة تركيب ذاكرة التخزين المؤقت في Dockerfile",
+    "options": ["BuildKit RUN --mount=type=cache", "ملخص sha256", "نسخ المخرجات النهائية فقط إلى صورة أصغر", "تغيير طبقة سابقة يعيد بناء الطبقات التالية"],
+    "answer": "BuildKit RUN --mount=type=cache"
+  },
+  {
+    "category": "Docker",
+    "set": 2,
+    "question": "أي خيار في docker run يركّب صراحةً مسارًا من المضيف أو وحدة تخزين مسماة في الحاوية؟",
+    "options": ["--mount", "--publish", "--network", "--restart"],
+    "answer": "--mount"
+  },
+  {
+    "category": "Docker",
+    "set": 5,
+    "question": "فحص البيانات الوصفية لبناء Docker",
+    "options": ["docker buildx imagetools inspect", "ملخص sha256", "نسخ المخرجات النهائية فقط إلى صورة أصغر", "تغيير طبقة سابقة يعيد بناء الطبقات التالية"],
+    "answer": "docker buildx imagetools inspect"
+  }
+]

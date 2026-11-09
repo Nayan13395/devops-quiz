@@ -6,6 +6,8 @@ import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 import '../services/point_service.dart';
+import '../services/game_player_names.dart';
+import '../services/game_sound_service.dart';
 
 enum _TicTacToeMode { computer, local }
 
@@ -133,6 +135,11 @@ class _TicTacToeScreenState extends State<TicTacToeScreen>
       _board[index] = marker;
       _resolveMove(marker);
     });
+    unawaited(
+      GameSoundService.play(
+        _winner == null ? GameSoundEffect.click : GameSoundEffect.win,
+      ),
+    );
     unawaited(_saveProgress());
 
     if (_winner == 'X' && _mode == _TicTacToeMode.computer) {
@@ -239,21 +246,34 @@ class _TicTacToeScreenState extends State<TicTacToeScreen>
   }
 
   String get _status {
+    final firstName = GamePlayerNames.signedInFirstName;
     if (_winner != null) {
       return _winner == 'X'
           ? _mode == _TicTacToeMode.computer
-                ? 'You win!'
-                : 'X wins!'
+                ? firstName == null
+                      ? 'You win!'
+                      : '$firstName wins!'
+                : firstName == null
+                ? 'X wins!'
+                : '$firstName (X) wins!'
           : _mode == _TicTacToeMode.computer
           ? 'Computer wins'
-          : 'O wins!';
+          : firstName == null
+          ? 'O wins!'
+          : 'Player 2 (O) wins!';
     }
     if (_draw) return 'It\'s a draw';
     return _mode == _TicTacToeMode.computer
         ? _turn == 'X'
-              ? 'Your turn'
+              ? firstName == null
+                    ? 'Your turn'
+                    : '$firstName\'s turn'
               : 'Computer is thinking'
-        : 'Player $_turn to move';
+        : firstName == null
+        ? 'Player $_turn to move'
+        : _turn == 'X'
+        ? '$firstName to move'
+        : 'Player 2 to move';
   }
 
   @override
@@ -307,8 +327,8 @@ class _TicTacToeScreenState extends State<TicTacToeScreen>
                           children: [
                             _Score(
                               label: _mode == _TicTacToeMode.computer
-                                  ? 'You'
-                                  : 'X',
+                                  ? GamePlayerNames.playerOne(fallback: 'You')
+                                  : GamePlayerNames.signedInFirstName ?? 'X',
                               score: _xWins,
                               color: colors.primary,
                             ),
@@ -322,7 +342,9 @@ class _TicTacToeScreenState extends State<TicTacToeScreen>
                             _Score(
                               label: _mode == _TicTacToeMode.computer
                                   ? 'CPU'
-                                  : 'O',
+                                  : GamePlayerNames.signedInFirstName == null
+                                  ? 'O'
+                                  : 'Player 2',
                               score: _oWins,
                               color: colors.tertiary,
                             ),

@@ -31,7 +31,7 @@
         "category": "GCP",
         "set": 1,
         "question": "Which Google Cloud service provides a fully managed relational database?",
-        "options": ["Bigtable", "Cloud SQL", "Firestore", "Spanner"],
+        "options": ["Bigtable", "Cloud SQL", "Firestore", "Memorystore"],
         "answer": "Cloud SQL"
     },
     {
@@ -205,9 +205,9 @@
 {
     "category": "GCP",
     "set": 2,
-    "question": "Which Google Cloud service provides scalable shared file storage using NFS?",
-    "options": ["Filestore", "Persistent Disk", "Cloud Storage", "Cloud SQL"],
-    "answer": "Filestore"
+    "question": "Which Compute Engine resource automatically maintains a group of identical VMs and can autoscale them with load?",
+    "options": ["Managed Instance Group", "Instance Template", "Sole-tenant Node", "Persistent Disk Snapshot"],
+    "answer": "Managed Instance Group"
 },
 {
     "category": "GCP",
@@ -317,8 +317,8 @@
 {
     "category": "GCP",
     "set": 2,
-    "question": "Which Google Cloud feature allows projects to be grouped for centralized administration?",
-    "options": ["Folders", "VPC", "Organizations", "Resource Manager"],
+    "question": "Which Google Cloud resource sits between an Organization and projects, grouping projects by team or department?",
+    "options": ["Folders", "VPC", "Billing Account", "Labels"],
     "answer": "Folders"
 },
 {
@@ -367,7 +367,7 @@
     "category": "GCP",
     "set": 3,
     "question": "Which Google Cloud service provides Optical Character Recognition (OCR) for images and documents?",
-    "options": ["Vision AI", "Speech-to-Text", "Document AI", "Natural Language AI"],
+    "options": ["Vision AI", "Speech-to-Text", "Dialogflow CX", "Natural Language AI"],
     "answer": "Vision AI"
 },
 {
@@ -443,9 +443,9 @@
 {
     "category": "GCP",
     "set": 3,
-    "question": "Which Google Cloud storage class is optimized for data accessed once a year or less?",
-    "options": ["Archive Storage", "Nearline Storage", "Standard Storage", "Coldline Storage"],
-    "answer": "Archive Storage"
+    "question": "Which Cloud Storage feature automatically deletes objects or changes their storage class based on age?",
+    "options": ["Object Lifecycle Management", "Signed URLs", "Requester Pays", "Uniform bucket-level access"],
+    "answer": "Object Lifecycle Management"
 },
 {
     "category": "GCP",
@@ -471,7 +471,7 @@
 {
     "category": "GCP",
     "set": 3,
-    "question": "Which Google Cloud service scans source code for security vulnerabilities?",
+    "question": "Which Google Cloud service scans deployed web applications for vulnerabilities such as XSS?",
     "options": ["Web Security Scanner", "Security Command Center", "Cloud Armor", "Cloud IDS"],
     "answer": "Web Security Scanner"
 },
@@ -513,9 +513,9 @@
 {
     "category": "GCP",
     "set": 3,
-    "question": "Which Google Cloud service provides a managed Redis cache?",
-    "options": ["Memorystore", "Firestore", "Bigtable", "Cloud SQL"],
-    "answer": "Memorystore"
+    "question":     "Which Memorystore for Redis service tier provides a standby replica with automatic failover?",
+    "options": ["Basic tier", "Standard tier", "Archive tier", "Free tier"],
+    "answer": "Standard tier"
 },
 {
     "category": "GCP",
@@ -576,7 +576,7 @@
 {
     "category": "GCP",
     "set": 4,
-    "question": "Which Google Cloud service is used to schedule Kubernetes workloads?",
+    "question": "Which Google Cloud offering runs Kubernetes workloads while Google manages the nodes?",
     "options": ["GKE Autopilot", "Compute Engine", "Cloud Functions", "App Engine"],
     "answer": "GKE Autopilot"
 },
@@ -716,9 +716,9 @@
   {
     "category": "GCP",
     "set": 5,
-    "question": "Which Google Cloud service is a serverless data warehouse?",
-    "options": ["Cloud SQL", "Bigtable", "Spanner", "BigQuery"],
-    "answer": "BigQuery"
+    "question": "Which BigQuery feature divides a table by a date or integer column so queries scan less data?",
+    "options": ["Table partitioning", "Authorized views", "Scheduled queries", "Time travel"],
+    "answer": "Table partitioning"
   },
   {
     "category": "GCP",
@@ -849,9 +849,9 @@
   {
     "category": "GCP",
     "set": 5,
-    "question": "Which Google Cloud service provides managed DNS?",
-    "options": ["Cloud Router", "Cloud CDN", "Cloud NAT", "Cloud DNS"],
-    "answer": "Cloud DNS"
+    "question": "Which Cloud DNS feature protects against DNS spoofing by cryptographically signing zone records?",
+    "options": ["DNSSEC", "Private zones", "Response policy zones", "Forwarding zones"],
+    "answer": "DNSSEC"
   },
   {
     "category": "GCP",
@@ -870,8 +870,8 @@
   {
     "category": "GCP",
     "set": 5,
-    "question": "Which Google Cloud service provides managed Redis and Memcached?",
-    "options": ["Bigtable", "Spanner", "Memorystore", "Filestore"],
-    "answer": "Memorystore"
+    "question": "Which Compute Engine VM provisioning model is heavily discounted but can be reclaimed by Google at any time?",
+    "options": ["Spot VMs", "Sole-tenant nodes", "Shielded VMs", "Confidential VMs"],
+    "answer": "Spot VMs"
   }
 ]

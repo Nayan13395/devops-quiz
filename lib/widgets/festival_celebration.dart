@@ -70,6 +70,8 @@ class _FestivalPainter extends CustomPainter {
 
   @override
   void paint(Canvas canvas, Size size) {
+    canvas.save();
+    canvas.clipRect(Offset.zero & size);
     switch (kind) {
       case FestivalKind.diwali:
         _paintDiwali(canvas, size);
@@ -98,6 +100,7 @@ class _FestivalPainter extends CustomPainter {
           _paintNationalDay(canvas, size);
         }
     }
+    canvas.restore();
   }
 
   void _paintHalloween(Canvas canvas, Size size) {
@@ -284,10 +287,133 @@ class _FestivalPainter extends CustomPainter {
 
   void _paintDiwali(Canvas canvas, Size size) {
     final flicker = 0.88 + math.sin(_phase * math.pi * 2) * 0.12;
-    _drawLantern(canvas, Offset(size.width * 0.12, 38), 0.82);
-    _drawLantern(canvas, Offset(size.width * 0.88, 38), 0.82);
-    _drawDiya(canvas, Offset(size.width * 0.14, size.height - 30), flicker);
-    _drawDiya(canvas, Offset(size.width * 0.86, size.height - 30), flicker);
+    final unit = (size.shortestSide / 360).clamp(0.58, 1.12);
+    _drawMarigoldGarland(canvas, size, unit);
+
+    final sideLanternY = math.min(size.height * 0.19, 70 * unit);
+    final centerLanternY = math.min(size.height * 0.1, 37 * unit);
+    _drawLantern(canvas, Offset(size.width * 0.13, sideLanternY), unit * 0.68);
+    _drawLantern(canvas, Offset(size.width * 0.87, sideLanternY), unit * 0.68);
+    if (size.width >= 720 && size.height >= 600) {
+      _drawLantern(
+        canvas,
+        Offset(size.width * 0.5, centerLanternY),
+        unit * 0.8,
+      );
+    }
+
+    final diyaY = size.height - 42 * unit;
+    final rangoliY = size.height - 16 * unit;
+    _drawRangoli(canvas, Offset(size.width * 0.14, rangoliY), unit * 0.9);
+    _drawRangoli(canvas, Offset(size.width * 0.86, rangoliY), unit * 0.9);
+    _drawDiya(canvas, Offset(size.width * 0.14, diyaY), flicker, unit);
+    _drawDiya(canvas, Offset(size.width * 0.86, diyaY), flicker, unit);
+  }
+
+  void _drawMarigoldGarland(Canvas canvas, Size size, double unit) {
+    final path = Path()
+      ..moveTo(0, 0)
+      ..quadraticBezierTo(size.width * 0.25, 34 * unit, size.width * 0.5, 0)
+      ..quadraticBezierTo(size.width * 0.75, 34 * unit, size.width, 0);
+    final garlandPaint = Paint()
+      ..color = const Color(0xFFD8A437)
+      ..style = PaintingStyle.stroke
+      ..strokeWidth = 2.2 * unit
+      ..strokeCap = StrokeCap.round;
+    canvas.drawPath(path, garlandPaint);
+
+    final metric = path.computeMetrics().first;
+    final marigold = Paint()..color = const Color(0xFFF2A51A);
+    for (double distance = 0; distance <= metric.length; distance += 5 * unit) {
+      final point = metric.getTangentForOffset(distance)!.position;
+      canvas.drawCircle(point, 3.2 * unit, marigold);
+      canvas.drawCircle(
+        point + Offset(1.2 * unit, -1.2 * unit),
+        1.1 * unit,
+        Paint()..color = const Color(0xFFFFD35A),
+      );
+    }
+
+    for (final x in [size.width * 0.13, size.width * 0.5, size.width * 0.87]) {
+      final drop = x == size.width * 0.5 ? 43 * unit : 27 * unit;
+      for (double y = 8 * unit; y < drop; y += 6 * unit) {
+        canvas.drawCircle(
+          Offset(x, y),
+          2.6 * unit,
+          Paint()..color = const Color(0xFFE99A19),
+        );
+      }
+    }
+
+    final orange = Paint()..color = const Color(0xFFF28C18);
+    final yellow = Paint()..color = const Color(0xFFFFD447);
+    final orangeCenter = Paint()..color = const Color(0xFFD56D11);
+    final yellowCenter = Paint()..color = const Color(0xFFE8AD24);
+    for (final x in [8 * unit, size.width - 8 * unit]) {
+      canvas.drawLine(
+        Offset(x, 0),
+        Offset(x, size.height - 8 * unit),
+        garlandPaint,
+      );
+      int bloom = 0;
+      for (double y = 8 * unit; y <= size.height - 8 * unit; y += 10.5 * unit) {
+        final isOrange = (bloom ~/ 3).isEven;
+        final petals = isOrange ? orange : yellow;
+        final center = Offset(x, y);
+        for (int petal = 0; petal < 8; petal++) {
+          final angle = petal * math.pi / 4;
+          canvas.drawCircle(
+            center + Offset(math.cos(angle), math.sin(angle)) * 3.65 * unit,
+            2.15 * unit,
+            petals,
+          );
+        }
+        canvas.drawCircle(center, 3.6 * unit, petals);
+        canvas.drawCircle(
+          center,
+          1.8 * unit,
+          isOrange ? orangeCenter : yellowCenter,
+        );
+        bloom++;
+      }
+    }
+  }
+
+  void _drawRangoli(Canvas canvas, Offset center, double scale) {
+    final line = Paint()
+      ..color = const Color(0xFF5C4288).withValues(alpha: 0.72)
+      ..style = PaintingStyle.stroke
+      ..strokeWidth = 1.1 * scale;
+    final gold = Paint()
+      ..color = const Color(0xFFE8B84E).withValues(alpha: 0.9)
+      ..style = PaintingStyle.stroke
+      ..strokeWidth = 1.3 * scale;
+    canvas.drawOval(
+      Rect.fromCenter(center: center, width: 58 * scale, height: 20 * scale),
+      line,
+    );
+    canvas.drawOval(
+      Rect.fromCenter(center: center, width: 42 * scale, height: 14 * scale),
+      gold,
+    );
+    for (int petal = 0; petal < 8; petal++) {
+      final angle = petal * math.pi / 4;
+      final offset = Offset(math.cos(angle), math.sin(angle));
+      final petalCenter = center + offset * 11 * scale;
+      canvas.drawOval(
+        Rect.fromCenter(
+          center: petalCenter,
+          width: 7 * scale,
+          height: 3 * scale,
+        ),
+        line..style = PaintingStyle.fill,
+      );
+    }
+    canvas.drawCircle(
+      center,
+      2 * scale,
+      Paint()..color = const Color(0xFFD7A63A),
+    );
   }
 
   void _paintKites(Canvas canvas, Size size) {
@@ -370,100 +496,304 @@ class _FestivalPainter extends CustomPainter {
   }
 
   void _drawLantern(Canvas canvas, Offset center, double scale) {
-    final linePaint = Paint()
-      ..color = Colors.deepOrange.withValues(alpha: 0.3)
-      ..strokeWidth = 1.4;
-    final bodyPaint = Paint()
-      ..color = Colors.deepOrange.withValues(alpha: 0.22)
-      ..style = PaintingStyle.fill;
-    final borderPaint = Paint()
-      ..color = Colors.amber.withValues(alpha: 0.56)
-      ..style = PaintingStyle.stroke
-      ..strokeWidth = 1.5;
+    final artworkScale = scale * 0.4;
+    canvas.save();
+    canvas.translate(center.dx, center.dy);
+    canvas.scale(artworkScale);
+    canvas.translate(-120, -139);
 
-    canvas.drawLine(
-      Offset(center.dx, center.dy - 34 * scale),
-      Offset(center.dx, center.dy - 14 * scale),
-      linePaint,
+    final suspension = Path()
+      ..moveTo(120, 25)
+      ..lineTo(120, 55)
+      ..moveTo(81, 61)
+      ..lineTo(120, 25)
+      ..lineTo(159, 61);
+    canvas.drawPath(
+      suspension,
+      Paint()
+        ..color = const Color(0xFF987431)
+        ..style = PaintingStyle.stroke
+        ..strokeWidth = 1.6,
     );
-    final shape = Path()
-      ..moveTo(center.dx - 11 * scale, center.dy - 14 * scale)
-      ..lineTo(center.dx + 11 * scale, center.dy - 14 * scale)
-      ..lineTo(center.dx + 9 * scale, center.dy + 11 * scale)
-      ..lineTo(center.dx, center.dy + 19 * scale)
-      ..lineTo(center.dx - 9 * scale, center.dy + 11 * scale)
-      ..close();
-    canvas.drawPath(shape, bodyPaint);
-    canvas.drawPath(shape, borderPaint);
-    canvas.drawLine(
-      Offset(center.dx - 8 * scale, center.dy - 5 * scale),
-      Offset(center.dx + 8 * scale, center.dy - 5 * scale),
-      borderPaint,
+
+    final body = Path()
+      ..addPolygon(const [
+        Offset(82, 75),
+        Offset(158, 75),
+        Offset(200, 139),
+        Offset(158, 203),
+        Offset(82, 203),
+        Offset(40, 139),
+      ], true);
+    final gold = const LinearGradient(
+      colors: [
+        Color(0xFFAA6813),
+        Color(0xFFFFEAA0),
+        Color(0xFFEFC44F),
+        Color(0xFFAD741B),
+      ],
+      stops: [0, 0.35, 0.65, 1],
+    ).createShader(const Rect.fromLTWH(40, 55, 160, 168));
+    canvas.drawPath(body, Paint()..color = const Color(0xFFF6BC3B));
+
+    final panels = [
+      (
+        const [
+          Offset(82, 76),
+          Offset(120, 139),
+          Offset(82, 202),
+          Offset(41, 139),
+        ],
+        const Color(0xFFB43770),
+      ),
+      (
+        const [
+          Offset(158, 76),
+          Offset(199, 139),
+          Offset(158, 202),
+          Offset(120, 139),
+        ],
+        const Color(0xFF268B84),
+      ),
+      (
+        const [Offset(87, 81), Offset(153, 81), Offset(120, 132)],
+        const Color(0xFFF5D04E),
+      ),
+      (
+        const [Offset(120, 146), Offset(153, 197), Offset(87, 197)],
+        const Color(0xFF89A943),
+      ),
+    ];
+    for (final (vertices, color) in panels) {
+      canvas.drawPath(
+        Path()..addPolygon(vertices, true),
+        Paint()..color = color,
+      );
+    }
+    final seams = Path()
+      ..moveTo(82, 75)
+      ..lineTo(120, 139)
+      ..lineTo(158, 75)
+      ..moveTo(82, 203)
+      ..lineTo(120, 139)
+      ..lineTo(158, 203);
+    canvas.drawPath(
+      seams,
+      Paint()
+        ..shader = gold
+        ..style = PaintingStyle.stroke
+        ..strokeWidth = 4,
+    );
+    canvas.drawPath(
+      body,
+      Paint()
+        ..shader = gold
+        ..style = PaintingStyle.stroke
+        ..strokeWidth = 2,
+    );
+
+    final inlay = Path()
+      ..moveTo(83, 94)
+      ..lineTo(54, 139)
+      ..lineTo(83, 184)
+      ..moveTo(157, 94)
+      ..lineTo(186, 139)
+      ..lineTo(157, 184);
+    canvas.drawPath(
+      inlay,
+      Paint()
+        ..color = const Color(0xFFFFF0B6)
+        ..style = PaintingStyle.stroke
+        ..strokeWidth = 1.5,
+    );
+    _drawKandilFlower(canvas, const Offset(82, 139), 1.45);
+    _drawKandilFlower(canvas, const Offset(158, 139), 1.45);
+    _drawKandilFlower(canvas, const Offset(120, 102), 0.9);
+    _drawKandilFlower(canvas, const Offset(120, 182), 0.9);
+
+    const fringeColors = [
+      Color(0xFFDB3A54),
+      Color(0xFFF0A941),
+      Color(0xFF6D9B46),
+    ];
+    for (int strand = 0; strand < 10; strand++) {
+      final start = 85 + strand * 7.8;
+      final end = 360.0 + (strand % 3) * 8;
+      final strip = Path()
+        ..moveTo(start, 218)
+        ..cubicTo(start + 4, 266, start - 6, 320, start - 4, end);
+      canvas.drawPath(
+        strip,
+        Paint()
+          ..color = fringeColors[strand % fringeColors.length]
+          ..style = PaintingStyle.stroke
+          ..strokeWidth = 5.5,
+      );
+    }
+    for (final collar in const [
+      Rect.fromLTWH(79, 55, 82, 25),
+      Rect.fromLTWH(79, 200, 82, 23),
+    ]) {
+      final shape = RRect.fromRectAndRadius(collar, const Radius.circular(2));
+      canvas.drawRRect(shape, Paint()..color = const Color(0xFF385E4F));
+      canvas.drawRRect(
+        shape,
+        Paint()
+          ..shader = gold
+          ..style = PaintingStyle.stroke
+          ..strokeWidth = 3,
+      );
+      for (final horizontal in [94.0, 120.0, 146.0]) {
+        _drawKandilFlower(canvas, Offset(horizontal, collar.center.dy), 0.85);
+      }
+    }
+    canvas.restore();
+  }
+
+  void _drawKandilFlower(Canvas canvas, Offset center, double scale) {
+    final petals = Paint()..color = const Color(0xFFFFDF81);
+    for (int petal = 0; petal < 4; petal++) {
+      canvas.save();
+      canvas.translate(center.dx, center.dy);
+      canvas.rotate(petal * math.pi / 2);
+      canvas.drawOval(
+        Rect.fromCenter(
+          center: Offset(0, -6 * scale),
+          width: 5.8 * scale,
+          height: 9.4 * scale,
+        ),
+        petals,
+      );
+      canvas.restore();
+    }
+    canvas.drawCircle(
+      center,
+      2.5 * scale,
+      Paint()..color = const Color(0xFFFFF2AD),
     );
   }
 
-  void _drawDiya(Canvas canvas, Offset center, double flicker) {
-    final bowl = Paint()..color = const Color(0xC4C87524);
+  void _drawDiya(Canvas canvas, Offset center, double flicker, double scale) {
+    Offset point(double x, double y) => center + Offset(x * scale, y * scale);
+    final glow = Paint()..color = const Color(0x30FFC45A);
+    canvas.drawCircle(point(0, -12), 34 * scale, glow);
+    final bowl = Paint()..color = const Color(0xFFFFC91D);
     final rim = Paint()
-      ..color = const Color(0xDDF1B94E)
+      ..color = const Color(0xFFFFD47A)
       ..style = PaintingStyle.stroke
-      ..strokeWidth = 1.5;
+      ..strokeWidth = 1.5 * scale
+      ..strokeCap = StrokeCap.round;
     final bowlPath = Path()
-      ..moveTo(center.dx - 18, center.dy - 2)
+      ..moveTo(point(-34, -4).dx, point(-34, -4).dy)
       ..quadraticBezierTo(
-        center.dx,
-        center.dy + 13,
-        center.dx + 18,
-        center.dy - 2,
+        point(-21, 12).dx,
+        point(-21, 12).dy,
+        point(0, 14).dx,
+        point(0, 14).dy,
       )
       ..quadraticBezierTo(
-        center.dx + 14,
-        center.dy + 9,
-        center.dx,
-        center.dy + 10,
+        point(21, 12).dx,
+        point(21, 12).dy,
+        point(34, -4).dx,
+        point(34, -4).dy,
       )
       ..quadraticBezierTo(
-        center.dx - 14,
-        center.dy + 9,
-        center.dx - 18,
-        center.dy - 2,
+        point(29, 22).dx,
+        point(29, 22).dy,
+        point(0, 26).dx,
+        point(0, 26).dy,
+      )
+      ..quadraticBezierTo(
+        point(-29, 22).dx,
+        point(-29, 22).dy,
+        point(-34, -4).dx,
+        point(-34, -4).dy,
       )
       ..close();
     canvas.drawPath(bowlPath, bowl);
+    canvas.drawLine(point(-34, -4), point(34, -4), rim);
+    canvas.drawOval(
+      Rect.fromCenter(
+        center: point(0, 1),
+        width: 52 * scale,
+        height: 9 * scale,
+      ),
+      Paint()..color = const Color(0xFFEF7A18),
+    );
+    final decoration = Paint()
+      ..color = const Color(0xFF7D2871)
+      ..style = PaintingStyle.stroke
+      ..strokeWidth = 1.4 * scale;
+    final bowlMotif = Path()
+      ..moveTo(point(-21, 8).dx, point(-21, 8).dy)
+      ..quadraticBezierTo(
+        point(0, 19).dx,
+        point(0, 19).dy,
+        point(21, 8).dx,
+        point(21, 8).dy,
+      );
+    canvas.drawPath(bowlMotif, decoration);
+    for (final petal in [-1.0, 0.0, 1.0]) {
+      canvas.drawOval(
+        Rect.fromCenter(
+          center: point(petal * 7, 14 + (petal == 0 ? 0 : 1)),
+          width: 6 * scale,
+          height: 3.8 * scale,
+        ),
+        Paint()..color = const Color(0xFF8D3475),
+      );
+    }
+    canvas.drawCircle(
+      point(0, 14),
+      2 * scale,
+      Paint()..color = const Color(0xFFE95354),
+    );
     canvas.drawLine(
-      Offset(center.dx - 18, center.dy - 2),
-      Offset(center.dx + 18, center.dy - 2),
-      rim,
+      point(0, -5),
+      point(0, -14),
+      Paint()
+        ..color = const Color(0xFF66371F)
+        ..strokeWidth = 1.5 * scale
+        ..strokeCap = StrokeCap.round,
     );
 
+    final flameSway = math.sin(_phase * math.pi * 2) * 1.4;
     final flame = Path()
-      ..moveTo(center.dx, center.dy - 4)
+      ..moveTo(point(0, -12).dx, point(0, -12).dy)
       ..cubicTo(
-        center.dx - 8 * flicker,
-        center.dy - 14,
-        center.dx + 1,
-        center.dy - 22 * flicker,
-        center.dx + 2,
-        center.dy - 28 * flicker,
+        point(-7 * flicker, -20).dx + flameSway,
+        point(-7 * flicker, -20).dy,
+        point(-10 + flameSway, -33 * flicker).dx,
+        point(-10 + flameSway, -33 * flicker).dy,
+        point(0 + flameSway, -44 * flicker).dx,
+        point(0 + flameSway, -44 * flicker).dy,
       )
       ..cubicTo(
-        center.dx + 13,
-        center.dy - 17,
-        center.dx + 8 * flicker,
-        center.dy - 9,
-        center.dx,
-        center.dy - 4,
+        point(11 + flameSway, -32).dx,
+        point(11 + flameSway, -32).dy,
+        point(8 * flicker, -18).dx,
+        point(8 * flicker, -18).dy,
+        point(0, -12).dx,
+        point(0, -12).dy,
       )
       ..close();
-    canvas.drawPath(
-      flame,
-      Paint()..color = Colors.orange.withValues(alpha: 0.48),
-    );
-    canvas.drawCircle(
-      Offset(center.dx + 2, center.dy - 10),
-      3,
-      Paint()..color = Colors.yellow.withValues(alpha: 0.65),
-    );
+    canvas.drawPath(flame, Paint()..color = const Color(0xFFFFA900));
+    final innerFlame = Path()
+      ..moveTo(point(0, -14).dx, point(0, -14).dy)
+      ..quadraticBezierTo(
+        point(-4, -23).dx + flameSway / 2,
+        point(-4, -23).dy,
+        point(1 + flameSway, -36 * flicker).dx,
+        point(1 + flameSway, -36 * flicker).dy,
+      )
+      ..quadraticBezierTo(
+        point(8, -23).dx,
+        point(8, -23).dy,
+        point(0, -14).dx,
+        point(0, -14).dy,
+      )
+      ..close();
+    canvas.drawPath(innerFlame, Paint()..color = const Color(0xFFFFE99B));
   }
 
   void _drawKite(Canvas canvas, Offset center, double direction, int index) {

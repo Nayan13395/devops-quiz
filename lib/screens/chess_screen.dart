@@ -5,6 +5,8 @@ import 'package:chess/chess.dart' as chess;
 import 'package:flutter/material.dart';
 
 import '../services/chess_save_service.dart';
+import '../services/game_sound_service.dart';
+import '../services/game_player_names.dart';
 import '../services/point_service.dart';
 import '../widgets/chess_piece_view.dart';
 
@@ -199,6 +201,15 @@ class _ChessScreenState extends State<ChessScreen> with WidgetsBindingObserver {
   Future<void> _afterMove() async {
     setState(() => _busy = true);
     final humanWin = !_againstComputer || _game.turn != _userColor;
+    unawaited(
+      GameSoundService.play(
+        _game.game_over
+            ? humanWin
+                  ? GameSoundEffect.win
+                  : GameSoundEffect.incorrect
+            : GameSoundEffect.click,
+      ),
+    );
     final award = _game.in_checkmate && humanWin && !_rewarded;
     if (award) _rewarded = true;
     await _save();
@@ -290,6 +301,7 @@ class _ChessScreenState extends State<ChessScreen> with WidgetsBindingObserver {
   Widget build(BuildContext context) {
     final colors = Theme.of(context).colorScheme;
     final destinations = _legalDestinations;
+    final playerOneName = GamePlayerNames.signedInFirstName;
 
     return Scaffold(
       appBar: AppBar(
@@ -338,10 +350,14 @@ class _ChessScreenState extends State<ChessScreen> with WidgetsBindingObserver {
                         const SizedBox(height: 4),
                         Text(
                           !_againstComputer
-                              ? 'Player 1 · White / Player 2 · Black'
+                              ? '${GamePlayerNames.playerOne()} · White / Player 2 · Black'
                               : _userIsWhite
-                              ? 'You are White · Computer is Black'
-                              : 'You are Black · Computer is White',
+                              ? playerOneName == null
+                                    ? 'You are White · Computer is Black'
+                                    : '$playerOneName (White) · Computer (Black)'
+                              : playerOneName == null
+                              ? 'You are Black · Computer is White'
+                              : '$playerOneName (Black) · Computer (White)',
                           key: const ValueKey('chess-player-colors'),
                           style: Theme.of(context).textTheme.bodySmall
                               ?.copyWith(color: colors.onSurfaceVariant),

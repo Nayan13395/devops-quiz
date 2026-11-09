@@ -1226,14 +1226,14 @@
   {
     "category": "AWS",
     "set": 5,
-    "question": "منظم ریلشنل ڈیٹابیس سروس کون سی AWS سروس ہے؟",
+    "question": "Amazon RDS کی کون سی خصوصیت خودکار فیل اوور کے لیے دوسری Availability Zone میں ہم وقت ساز (synchronous) اسٹینڈ بائی ریپلیکا برقرار رکھتی ہے؟",
     "options": [
-      "Amazon RDS",
-      "Amazon S3",
-      "Amazon DynamoDB",
-      "Amazon CloudFront"
+      "Multi-AZ deployment",
+      "Read replica",
+      "Manual snapshot",
+      "Parameter group"
     ],
-    "answer": "Amazon RDS"
+    "answer": "Multi-AZ deployment"
   },
   {
     "category": "AWS",
@@ -1262,14 +1262,14 @@
   {
     "category": "AWS",
     "set": 5,
-    "question": "کون سی AWS سروس ایک کنٹینٹ ڈیلیوری نیٹ ورک ہے؟",
+    "question": "Amazon CloudFront کی کون سی خصوصیت یقینی بناتی ہے کہ S3 origin کو صرف distribution کے ذریعے پڑھا جا سکے، براہِ راست نہیں؟",
     "options": [
-      "Amazon SNS",
-      "Amazon Route 53",
-      "Amazon CloudFront",
-      "AWS Snowball"
+      "Origin Access Control",
+      "S3 Transfer Acceleration",
+      "Route 53 alias record",
+      "Lambda@Edge"
     ],
-    "answer": "Amazon CloudFront"
+    "answer": "Origin Access Control"
   },
   {
     "category": "AWS",
@@ -1310,14 +1310,14 @@
   {
     "category": "AWS",
     "set": 5,
-    "question": "منظم میسج کیو کون سی AWS سروس فراہم کرتی ہے؟",
+    "question": "Amazon SQS کی کون سی قطار کی قسم پیغامات کی سخت ترتیب برقرار رکھتی ہے اور exactly-once پروسیسنگ کو سپورٹ کرتی ہے؟",
     "options": [
-      "Amazon SES",
-      "Amazon SQS",
-      "AWS KMS",
-      "Amazon EFS"
+      "Standard queue",
+      "FIFO queue",
+      "Delay queue",
+      "Dead-letter queue"
     ],
-    "answer": "Amazon SQS"
+    "answer": "FIFO queue"
   },
   {
     "category": "AWS",
@@ -1430,14 +1430,14 @@
   {
     "category": "AWS",
     "set": 5,
-    "question": "پیٹا بائٹ پیمانے کا ڈیٹا ویئرہاؤس کون سی AWS سروس ہے؟",
+    "question": "Amazon Redshift میں ٹیبل کی distribution key کیا کنٹرول کرتی ہے؟",
     "options": [
-      "Amazon DynamoDB",
-      "Amazon ElastiCache",
-      "Amazon Redshift",
-      "Amazon SQS"
+      "قطاریں کمپیوٹ نوڈز میں کیسے تقسیم ہوتی ہیں",
+      "COPY کمانڈ کون سا IAM رول چلاتا ہے",
+      "خودکار بیک اپس کتنی دیر محفوظ رکھے جاتے ہیں",
+      "کلسٹر کو کون سی KMS key انکرپٹ کرتی ہے"
     ],
-    "answer": "Amazon Redshift"
+    "answer": "قطاریں کمپیوٹ نوڈز میں کیسے تقسیم ہوتی ہیں"
   },
   {
     "category": "AWS",
@@ -1490,13 +1490,13 @@
   {
     "category": "AWS",
     "set": 5,
-    "question": "منظم Apache Kafka کون سی AWS سروس فراہم کرتی ہے؟",
+    "question": "Amazon MSK کلسٹر میں کون سے نوڈز topic partitions ذخیرہ کرتے ہیں اور Kafka producers اور consumers کو سروس دیتے ہیں؟",
     "options": [
-      "Amazon S3",
-      "Amazon EBS",
-      "AWS KMS",
-      "Amazon MSK"
+      "Broker nodes",
+      "NAT gateways",
+      "Bastion hosts",
+      "Glue crawlers"
     ],
-    "answer": "Amazon MSK"
+    "answer": "Broker nodes"
   }
 ]

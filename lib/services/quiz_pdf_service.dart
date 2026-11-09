@@ -1,13 +1,13 @@
 import 'dart:typed_data';
 
+import 'package:file_saver/file_saver.dart';
 import 'package:pdf/pdf.dart';
 import 'package:pdf/widgets.dart' as pw;
-import 'package:printing/printing.dart';
 
 import '../models/question.dart';
 
 class QuizPdfService {
-  static Future<void> generateQuizReport({
+  static Future<String?> generateQuizReport({
     required List<Question> questions,
     required Map<int, String> userAnswers,
     required Map<int, List<String>> displayedOptions,
@@ -137,7 +137,12 @@ class QuizPdfService {
 
     final Uint8List bytes = await pdf.save();
 
-    await Printing.sharePdf(bytes: bytes, filename: fileName);
+    return FileSaver.instance.saveAs(
+      name: fileName.replaceFirst(RegExp(r'\.pdf$'), ''),
+      bytes: bytes,
+      fileExtension: 'pdf',
+      mimeType: MimeType.pdf,
+    );
   }
 
   static pw.Widget _buildSummary({

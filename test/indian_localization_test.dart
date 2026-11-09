@@ -11,12 +11,10 @@ import 'package:shared_preferences/shared_preferences.dart';
 const indianLanguageCodes = {
   'as',
   'bn',
-  'brx',
   'doi',
   'gu',
   'hi',
   'kn',
-  'ks',
   'gom',
   'mai',
   'ml',
@@ -36,8 +34,15 @@ const indianLanguageCodes = {
 void main() {
   TestWidgetsFlutterBinding.ensureInitialized();
 
+  test('Bodo and Kashmiri are not selectable', () {
+    for (final code in ['brx', 'ks']) {
+      expect(LanguageProvider.isUiAvailable(code), isFalse, reason: code);
+      expect(LanguageProvider.isSupported(code), isFalse, reason: code);
+    }
+  });
+
   test(
-    'all 22 scheduled Indian languages have selectable generated UI bundles',
+    'all 20 scheduled Indian languages have selectable generated UI bundles',
     () async {
       for (final code in indianLanguageCodes) {
         expect(LanguageProvider.isUiAvailable(code), isTrue, reason: code);
@@ -142,7 +147,7 @@ void main() {
         final field = tester.element(find.byType(TextField));
         expect(
           Directionality.of(field),
-          {'ks', 'sd', 'ur'}.contains(code)
+          {'sd', 'ur'}.contains(code)
               ? TextDirection.rtl
               : TextDirection.ltr,
           reason: code,

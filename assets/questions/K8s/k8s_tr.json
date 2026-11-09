@@ -1,0 +1,877 @@
+[
+  {
+    "category": "Kubernetes",
+    "set": 1,
+    "question": "Hangi komut pod'ları listeler?",
+    "options": ["kubectl get pods", "kubectl pods", "kubectl list", "kubectl show"],
+    "answer": "kubectl get pods"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 1,
+    "question": "Hangi komut tüm namespace'lerdeki pod'ları listeler?",
+    "options": ["kubectl get pods -A", "kubectl get pods --all", "kubectl pods all", "kubectl list pods"],
+    "answer": "kubectl get pods -A"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 1,
+    "question": "Hangi komut bir pod'u açıklar?",
+    "options": ["kubectl describe pod", "kubectl details pod", "kubectl inspect pod", "kubectl info pod"],
+    "answer": "kubectl describe pod"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 1,
+    "question": "Hangi komut pod günlüklerini (loglarını) görüntüler?",
+    "options": ["kubectl logs", "kubectl get logs", "kubectl show logs", "kubectl pod logs"],
+    "answer": "kubectl logs"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 1,
+    "question": "Hangi komut pod günlüklerini sürekli olarak görüntüler?",
+    "options": ["kubectl logs -f", "kubectl logs --follow", "kubectl follow logs", "kubectl stream logs"],
+    "answer": "kubectl logs -f"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 1,
+    "question": "Hangi komut bir pod'u siler?",
+    "options": ["kubectl delete pod", "kubectl remove pod", "kubectl erase pod", "kubectl destroy pod"],
+    "answer": "kubectl delete pod"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 1,
+    "question": "Hangi komut bir deployment oluşturur?",
+    "options": ["kubectl create deployment", "kubectl add deployment", "kubectl run deployment", "kubectl deploy create"],
+    "answer": "kubectl create deployment"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 1,
+    "question": "Hangi komut deployment'ları listeler?",
+    "options": ["kubectl get deployments", "kubectl deployments", "kubectl show deployments", "kubectl list deploy"],
+    "answer": "kubectl get deployments"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 1,
+    "question": "Hangi komut service'leri listeler?",
+    "options": ["kubectl get services", "kubectl services", "kubectl list svc", "kubectl show services"],
+    "answer": "kubectl get services"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 1,
+    "question": "Hangi komut node'ları listeler?",
+    "options": ["kubectl get nodes", "kubectl nodes", "kubectl list nodes", "kubectl show nodes"],
+    "answer": "kubectl get nodes"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 1,
+    "question": "Hangi komut küme (cluster) bilgilerini görüntüler?",
+    "options": ["kubectl cluster-info", "kubectl get cluster", "kubectl show cluster", "kubectl info cluster"],
+    "answer": "kubectl cluster-info"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 1,
+    "question": "Hangi komut bir YAML dosyasındaki yapılandırmayı uygular?",
+    "options": ["kubectl apply -f", "kubectl create yaml", "kubectl update -f", "kubectl deploy -f"],
+    "answer": "kubectl apply -f"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 1,
+    "question": "Hangi komut bir YAML dosyasından kaynaklar oluşturur?",
+    "options": ["kubectl create -f", "kubectl run -f", "kubectl deploy -f", "kubectl start -f"],
+    "answer": "kubectl create -f"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 1,
+    "question": "Hangi komut bir YAML dosyasında tanımlanan kaynakları siler?",
+    "options": ["kubectl delete -f", "kubectl remove -f", "kubectl destroy -f", "kubectl erase -f"],
+    "answer": "kubectl delete -f"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 1,
+    "question": "Hangi komut çalışan bir pod'un içinde komut çalıştırır?",
+    "options": ["kubectl exec", "kubectl run inside", "kubectl pod exec", "kubectl connect"],
+    "answer": "kubectl exec"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 2,
+    "question": "Hangi komut namespace'leri listeler?",
+    "options": ["kubectl get namespaces", "kubectl namespaces", "kubectl show namespaces", "kubectl list namespaces"],
+    "answer": "kubectl get namespaces"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 2,
+    "question": "Hangi komut bir namespace oluşturur?",
+    "options": ["kubectl create namespace", "kubectl add namespace", "kubectl namespace create", "kubectl new namespace"],
+    "answer": "kubectl create namespace"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 2,
+    "question": "Hangi komut bir namespace'i siler?",
+    "options": ["kubectl delete namespace", "kubectl remove namespace", "kubectl destroy namespace", "kubectl erase namespace"],
+    "answer": "kubectl delete namespace"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 2,
+    "question": "Hangi komut ReplicaSet'leri listeler?",
+    "options": ["kubectl get replicasets", "kubectl replicasets", "kubectl list rs", "kubectl show rs"],
+    "answer": "kubectl get replicasets"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 2,
+    "question": "Hangi komut ConfigMap'leri listeler?",
+    "options": ["kubectl get configmaps", "kubectl configmaps", "kubectl show configmaps", "kubectl list configmaps"],
+    "answer": "kubectl get configmaps"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 2,
+    "question": "Hangi komut Secret'ları listeler?",
+    "options": ["kubectl get secrets", "kubectl secrets", "kubectl list secrets", "kubectl show secrets"],
+    "answer": "kubectl get secrets"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 2,
+    "question": "Hangi komut Ingress kaynaklarını listeler?",
+    "options": ["kubectl get ingress", "kubectl ingress", "kubectl list ingress", "kubectl show ingress"],
+    "answer": "kubectl get ingress"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 2,
+    "question": "Hangi komut Persistent Volume'ları listeler?",
+    "options": ["kubectl get pv", "kubectl pv", "kubectl volumes", "kubectl show pv"],
+    "answer": "kubectl get pv"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 2,
+    "question": "Hangi komut Persistent Volume Claim'leri listeler?",
+    "options": ["kubectl get pvc", "kubectl pvc", "kubectl volumes claim", "kubectl show pvc"],
+    "answer": "kubectl get pvc"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 2,
+    "question": "Hangi komut bir kümedeki olayları (events) görüntüler?",
+    "options": ["kubectl get events", "kubectl events", "kubectl show events", "kubectl list events"],
+    "answer": "kubectl get events"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 2,
+    "question": "Hangi komut bir namespace'teki tüm kaynakları görüntüler?",
+    "options": ["kubectl get all", "kubectl all", "kubectl resources", "kubectl show all"],
+    "answer": "kubectl get all"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 2,
+    "question": "Hangi komut pod'ların kaynak kullanımını görüntüler?",
+    "options": ["kubectl top pods", "kubectl usage pods", "kubectl stats pods", "kubectl monitor pods"],
+    "answer": "kubectl top pods"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 2,
+    "question": "Hangi komut node'ların kaynak kullanımını görüntüler?",
+    "options": ["kubectl top nodes", "kubectl usage nodes", "kubectl stats nodes", "kubectl monitor nodes"],
+    "answer": "kubectl top nodes"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 2,
+    "question": "Hangi komut DaemonSet'leri listeler?",
+    "options": ["kubectl get daemonsets", "kubectl daemonsets", "kubectl list daemonsets", "kubectl show daemonsets"],
+    "answer": "kubectl get daemonsets"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "Hangi bileşen pod'ları node'lara zamanlar (schedule eder)?",
+    "options": ["kube-scheduler", "kubelet", "etcd", "kube-proxy"],
+    "answer": "kube-scheduler"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "Hangi bileşen her node üzerinde çalışır?",
+    "options": ["kubelet", "etcd", "kube-apiserver", "controller-manager"],
+    "answer": "kubelet"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "Hangi bileşen kontrol düzleminin (control plane) ön yüzü olarak görev yapar?",
+    "options": ["kube-apiserver", "kubelet", "etcd", "kube-proxy"],
+    "answer": "kube-apiserver"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "Hangi bileşen küme durumunu saklar?",
+    "options": ["etcd", "kubelet", "CoreDNS", "Ingress"],
+    "answer": "etcd"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "Hangi bileşen node'lardaki ağ kurallarını yönetir?",
+    "options": ["kube-proxy", "kubelet", "etcd", "Scheduler"],
+    "answer": "kube-proxy"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "Kubernetes'te yaygın olarak hangi DNS servisi kullanılır?",
+    "options": ["CoreDNS", "Bind", "Route53", "Consul"],
+    "answer": "CoreDNS"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "Kubernetes'te dağıtılabilen en küçük birim hangi nesnedir?",
+    "options": ["Pod", "Cluster", "Node", "Service"],
+    "answer": "Pod"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "Hangi nesne durumsuz (stateless) uygulamaları yönetir?",
+    "options": ["Deployment", "ConfigMap", "Secret", "Namespace"],
+    "answer": "Deployment"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "Hangi nesne durumlu (stateful) uygulamaları yönetir?",
+    "options": ["StatefulSet", "Deployment", "ReplicaSet", "DaemonSet"],
+    "answer": "StatefulSet"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "Hangi nesne belirtilen sayıda pod kopyasının çalışmasını sağlar?",
+    "options": ["ReplicaSet", "Service", "ConfigMap", "Namespace"],
+    "answer": "ReplicaSet"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "Hangi nesne pod'ları ağ trafiğine açar?",
+    "options": ["Service", "Node", "ReplicaSet", "Volume"],
+    "answer": "Service"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "Hangi nesne service'lere dışarıdan erişimi yönetir?",
+    "options": ["Ingress", "Pod", "ReplicaSet", "Secret"],
+    "answer": "Ingress"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "Hangi nesne yapılandırma verilerini saklar?",
+    "options": ["ConfigMap", "Deployment", "Ingress", "Node"],
+    "answer": "ConfigMap"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "Hangi nesne parola gibi hassas bilgileri saklar?",
+    "options": ["Secret", "ConfigMap", "Service", "Namespace"],
+    "answer": "Secret"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "Hangi nesne pod'lara kalıcı depolama sağlar?",
+    "options": ["PersistentVolume", "ReplicaSet", "Namespace", "Service"],
+    "answer": "PersistentVolume"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 4,
+    "question": "Hangi komut bir deployment'ı ölçeklendirir?",
+    "options": ["kubectl scale deployment", "kubectl resize deployment", "kubectl expand deployment", "kubectl increase deployment"],
+    "answer": "kubectl scale deployment"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 4,
+    "question": "Hangi komut bir deployment'ı 5 kopyaya ölçeklendirir?",
+    "options": ["kubectl scale deployment --replicas=5", "kubectl replicas 5", "kubectl expand deployment", "kubectl set replicas"],
+    "answer": "kubectl scale deployment --replicas=5"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 4,
+    "question": "Hangi komut bir deployment'ı yeniden başlatır?",
+    "options": ["kubectl rollout restart deployment", "kubectl restart deployment", "kubectl deployment restart", "kubectl reload deployment"],
+    "answer": "kubectl rollout restart deployment"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 4,
+    "question": "Hangi komut bir deployment'ın rollout durumunu kontrol eder?",
+    "options": ["kubectl rollout status", "kubectl deployment status", "kubectl rollout check", "kubectl get rollout"],
+    "answer": "kubectl rollout status"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 4,
+    "question": "Hangi komut bir deployment'ı geri alır?",
+    "options": ["kubectl rollout undo", "kubectl rollback", "kubectl undo deployment", "kubectl deployment rollback"],
+    "answer": "kubectl rollout undo"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 4,
+    "question": "Hangi komut rollout geçmişini görüntüler?",
+    "options": ["kubectl rollout history", "kubectl history", "kubectl deployment history", "kubectl show rollout"],
+    "answer": "kubectl rollout history"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 4,
+    "question": "Hangi komut bir deployment rollout'unu duraklatır?",
+    "options": ["kubectl rollout pause", "kubectl pause deployment", "kubectl stop rollout", "kubectl hold deployment"],
+    "answer": "kubectl rollout pause"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 4,
+    "question": "Hangi komut duraklatılmış bir deployment rollout'unu devam ettirir?",
+    "options": ["kubectl rollout resume", "kubectl resume deployment", "kubectl continue rollout", "kubectl restart rollout"],
+    "answer": "kubectl rollout resume"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 4,
+    "question": "Hangi komut bir node'u zamanlanamaz (unschedulable) olarak işaretler?",
+    "options": ["kubectl cordon", "kubectl drain", "kubectl taint", "kubectl stop"],
+    "answer": "kubectl cordon"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 4,
+    "question": "Hangi komut iş yüklerini bir node'dan güvenli şekilde tahliye eder?",
+    "options": ["kubectl drain", "kubectl cordon", "kubectl delete node", "kubectl migrate"],
+    "answer": "kubectl drain"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 4,
+    "question": "Hangi komut bir node'u yeniden zamanlanabilir hale getirir?",
+    "options": ["kubectl uncordon", "kubectl enable", "kubectl restart", "kubectl activate"],
+    "answer": "kubectl uncordon"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 4,
+    "question": "Hangi komut ayrıntılı node bilgilerini görüntüler?",
+    "options": ["kubectl describe node", "kubectl inspect node", "kubectl info node", "kubectl node show"],
+    "answer": "kubectl describe node"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 4,
+    "question": "Hangi komut yerel bir portu bir pod'a yönlendirir?",
+    "options": ["kubectl port-forward", "kubectl tunnel", "kubectl expose", "kubectl connect"],
+    "answer": "kubectl port-forward"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 4,
+    "question": "Hangi komut bir pod'a veya pod'dan dosya kopyalar?",
+    "options": ["kubectl cp", "kubectl copy", "kubectl transfer", "kubectl sync"],
+    "answer": "kubectl cp"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 4,
+    "question": "Hangi komut çalışan bir pod'un YAML tanımını görüntüler?",
+    "options": ["kubectl get pod -o yaml", "kubectl show pod yaml", "kubectl export pod", "kubectl pod yaml"],
+    "answer": "kubectl get pod -o yaml"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "Bir Kubernetes ReplicaSet spec'inde, yönettiği Pod'ları tanımlamak için kullanılan etiketleri belirleyen alan hangisidir?",
+    "options": ["spec.selector", "spec.nodeName", "spec.serviceName", "spec.restartPolicy"],
+    "answer": "spec.selector"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "Hangi kaynak gizli olmayan yapılandırma verilerini anahtar-değer çiftleri olarak saklar?",
+    "options": ["Namespace", "ConfigMap", "Secret", "PersistentVolume"],
+    "answer": "ConfigMap"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "Hangi denetleyici (controller) her node üzerinde bir pod çalıştırır?",
+    "options": ["StatefulSet", "DaemonSet", "Deployment", "Job"],
+    "answer": "DaemonSet"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "Hangi service türü bir uygulamayı her node üzerindeki sabit bir portta dışarıya açar?",
+    "options": ["ClusterIP", "ExternalName", "NodePort", "Headless"],
+    "answer": "NodePort"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "Hangi komut bir manifest dosyasından kaynakları oluşturur veya günceller?",
+    "options": ["kubectl apply -f", "kubectl run -f", "kubectl load -f", "kubectl push -f"],
+    "answer": "kubectl apply -f"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "Hangi komut bir pod'un ayrıntılı bilgilerini ve son olaylarını gösterir?",
+    "options": ["kubectl describe pod", "kubectl status pod", "kubectl events-only pod", "kubectl info pod"],
+    "answer": "kubectl describe pod"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "Hangi komut bir Kubernetes kümesinde etcd veritabanının yedek anlık görüntüsünü (snapshot) oluşturur?",
+    "options": ["etcdctl snapshot save", "kubectl backup etcd", "kubeadm etcd dump", "kubectl cp etcd"],
+    "answer": "etcdctl snapshot save"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "Hangi iş yükü bir görevi tamamlanana kadar çalıştırır?",
+    "options": ["DaemonSet", "Service", "Job", "Ingress"],
+    "answer": "Job"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "Hangi probe Kubernetes'e sağlıksız bir container'ı yeniden başlatmasını söyler?",
+    "options": ["Liveness probe", "Health route", "Startup gate", "Readiness probe"],
+    "answer": "Liveness probe"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "Hangi komut web deployment'ını 5 kopyaya ölçeklendirir?",
+    "options": ["kubectl expand deployment web 5", "kubectl replicas web=5", "kubectl scale deployment web --replicas=5", "kubectl resize web --to=5"],
+    "answer": "kubectl scale deployment web --replicas=5"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "Hangi iş yükü pod'lara kararlı ağ kimlikleri ve depolama sağlar?",
+    "options": ["DaemonSet", "Deployment", "ReplicaSet", "StatefulSet"],
+    "answer": "StatefulSet"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "Hangi araç yaygın olarak Kubernetes'in paket yöneticisi olarak adlandırılır?",
+    "options": ["kubelet", "kubeadm", "kubectl", "Helm"],
+    "answer": "Helm"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "Hangi komut web adlı pod'u siler?",
+    "options": ["kubectl delete pod web", "kubectl stop pod web", "kubectl remove pod web", "kubectl kill pod web"],
+    "answer": "kubectl delete pod web"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "Hangi nesne dış HTTP trafiğini küme içindeki service'lere yönlendirir?",
+    "options": ["Volume", "Namespace", "Ingress", "ConfigMap"],
+    "answer": "Ingress"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "Hangi kubectl komutu bir pod'un günlüklerini yazdırır?",
+    "options": ["kubectl log-show", "kubectl tail-pod", "kubectl logs", "kubectl output"],
+    "answer": "kubectl logs"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 1,
+    "question": "Hangi probe bir Pod'un Service trafiği alıp almayacağını belirler?",
+    "options": ["readinessProbe", "livenessProbe", "startupProbe", "execProbe"],
+    "answer": "readinessProbe"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 2,
+    "question": "Kubernetes service kararlı sanal adresi",
+    "options": ["Service", "LoadBalancer", "namespace'e ait kaynaklar", "hassas olmayan yapılandırma değerleri"],
+    "answer": "Service"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "Kubernetes kopya sayısını güncelleme komutu",
+    "options": ["kubectl scale deployment/name --replicas=N", "Service", "LoadBalancer", "namespace'e ait kaynaklar"],
+    "answer": "kubectl scale deployment/name --replicas=N"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 4,
+    "question": "Kubernetes persistent volume claim rolü",
+    "options": ["bir iş yükünün depolama talebi", "Service", "LoadBalancer", "namespace'e ait kaynaklar"],
+    "answer": "bir iş yükünün depolama talebi"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "Kubernetes ephemeral container amacı",
+    "options": ["geçici hata ayıklama container'ı", "Service", "LoadBalancer", "namespace'e ait kaynaklar"],
+    "answer": "geçici hata ayıklama container'ı"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 1,
+    "question": "Hangi probe, yavaş başlayan bir container'a liveness kontrolleri başlamadan önce ek süre tanır?",
+    "options": ["startupProbe", "readinessProbe", "tcpProbe", "httpProbe"],
+    "answer": "startupProbe"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 2,
+    "question": "Kubernetes service dış bulut uç noktası",
+    "options": ["LoadBalancer", "Service", "namespace'e ait kaynaklar", "hassas olmayan yapılandırma değerleri"],
+    "answer": "LoadBalancer"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "Kubernetes pod günlüğü önceki container bayrağı",
+    "options": ["--previous", "Service", "LoadBalancer", "namespace'e ait kaynaklar"],
+    "answer": "--previous"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 4,
+    "question": "Kubernetes storage class rolü",
+    "options": ["birimleri bir politikayla sağlar", "Service", "LoadBalancer", "namespace'e ait kaynaklar"],
+    "answer": "birimleri bir politikayla sağlar"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "Kubernetes pod disruption budget amacı",
+    "options": ["gönüllü kesintiler sırasında kullanılabilirliği korumak", "Service", "LoadBalancer", "namespace'e ait kaynaklar"],
+    "answer": "gönüllü kesintiler sırasında kullanılabilirliği korumak"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 1,
+    "question": "Hangi Kubernetes kaynağı kopya sayısını gözlemlenen metriklere göre ayarlar?",
+    "options": ["HorizontalPodAutoscaler", "PodDisruptionBudget", "ResourceQuota", "LimitRange"],
+    "answer": "HorizontalPodAutoscaler"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 2,
+    "question": "Kubernetes namespace kapsamı",
+    "options": ["namespace'e ait kaynaklar", "Service", "LoadBalancer", "hassas olmayan yapılandırma değerleri"],
+    "answer": "namespace'e ait kaynaklar"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "Kubernetes pod kabuk (shell) komutu",
+    "options": ["kubectl exec -it pod -- sh", "Service", "LoadBalancer", "namespace'e ait kaynaklar"],
+    "answer": "kubectl exec -it pod -- sh"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 4,
+    "question": "Kubernetes service account rolü",
+    "options": ["bir pod içindeki süreçler için kimlik", "Service", "LoadBalancer", "namespace'e ait kaynaklar"],
+    "answer": "bir pod içindeki süreçler için kimlik"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "Kubernetes HPA metrik kaynağı",
+    "options": ["kaynak metrikleri veya özel metrikler", "Service", "LoadBalancer", "namespace'e ait kaynaklar"],
+    "answer": "kaynak metrikleri veya özel metrikler"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 1,
+    "question": "Hangi kaynak, kullanılabilir minimum Pod sayısını korumak için gönüllü kesintileri sınırlar?",
+    "options": ["PodDisruptionBudget", "HorizontalPodAutoscaler", "NetworkPolicy", "ResourceQuota"],
+    "answer": "PodDisruptionBudget"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 2,
+    "question": "Kubernetes ConfigMap veri amacı",
+    "options": ["hassas olmayan yapılandırma değerleri", "Service", "LoadBalancer", "namespace'e ait kaynaklar"],
+    "answer": "hassas olmayan yapılandırma değerleri"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "Kubernetes resource request anlamı",
+    "options": ["beklenen minimum CPU veya bellek", "Service", "LoadBalancer", "namespace'e ait kaynaklar"],
+    "answer": "beklenen minimum CPU veya bellek"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 4,
+    "question": "Kubernetes RBAC role binding (rol bağlama) işlevi",
+    "options": ["bir özneye rol verir", "Service", "LoadBalancer", "namespace'e ait kaynaklar"],
+    "answer": "bir özneye rol verir"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "Kubernetes rollout duraklatma komutu",
+    "options": ["kubectl rollout pause deployment/name", "Service", "LoadBalancer", "namespace'e ait kaynaklar"],
+    "answer": "kubectl rollout pause deployment/name"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 1,
+    "question": "Hangi kaynak Pod'lar için hassas olmayan yapılandırmayı anahtar-değer verisi olarak saklar?",
+    "options": ["ConfigMap", "Secret", "Lease", "EndpointSlice"],
+    "answer": "ConfigMap"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 2,
+    "question": "Kubernetes Secret veri amacı",
+    "options": ["hassas yapılandırma değerleri", "Service", "LoadBalancer", "namespace'e ait kaynaklar"],
+    "answer": "hassas yapılandırma değerleri"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "Kubernetes resource limit anlamı",
+    "options": ["izin verilen maksimum CPU veya bellek", "Service", "LoadBalancer", "namespace'e ait kaynaklar"],
+    "answer": "izin verilen maksimum CPU veya bellek"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 4,
+    "question": "Kubernetes cluster role kapsamı",
+    "options": ["küme kaynakları genelinde izinler", "Service", "LoadBalancer", "namespace'e ait kaynaklar"],
+    "answer": "küme kaynakları genelinde izinler"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "Kubernetes rollout devam ettirme komutu",
+    "options": ["kubectl rollout resume deployment/name", "Service", "LoadBalancer", "namespace'e ait kaynaklar"],
+    "answer": "kubectl rollout resume deployment/name"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 1,
+    "question": "Hangi Kubernetes kaynağı seçili Pod'lara gelen ve onlardan çıkan ağ trafiğini kısıtlayabilir?",
+    "options": ["NetworkPolicy", "Ingress", "ServiceAccount", "PriorityClass"],
+    "answer": "NetworkPolicy"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 2,
+    "question": "Kubernetes readiness probe etkisi",
+    "options": ["pod'u service uç noktalarından çıkarır", "Service", "LoadBalancer", "namespace'e ait kaynaklar"],
+    "answer": "pod'u service uç noktalarından çıkarır"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "Kubernetes node taint etkisi",
+    "options": ["eşleşen toleration'ı olmayan pod'ları iter", "Service", "LoadBalancer", "namespace'e ait kaynaklar"],
+    "answer": "eşleşen toleration'ı olmayan pod'ları iter"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 4,
+    "question": "Kubernetes cron job zamanlama alanı",
+    "options": ["cron biçiminde zamanlama", "Service", "LoadBalancer", "namespace'e ait kaynaklar"],
+    "answer": "cron biçiminde zamanlama"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "Kubernetes secret'ların beklemede (at rest) şifrelenmesi",
+    "options": ["etcd'de saklanan Secret verilerini şifrelemek", "Service", "LoadBalancer", "namespace'e ait kaynaklar"],
+    "answer": "etcd'de saklanan Secret verilerini şifrelemek"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 1,
+    "question": "Bir Pod'da ana container'lar başlamadan önce tamamlanana kadar çalışan container hangisidir?",
+    "options": ["initContainer", "sidecar", "ephemeralContainer", "pauseContainer"],
+    "answer": "initContainer"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 2,
+    "question": "Kubernetes liveness probe etkisi",
+    "options": ["sağlıksız bir container'ı yeniden başlatır", "Service", "LoadBalancer", "namespace'e ait kaynaklar"],
+    "answer": "sağlıksız bir container'ı yeniden başlatır"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "Kubernetes pod toleration etkisi",
+    "options": ["taint'li bir node'a zamanlamaya izin verir", "Service", "LoadBalancer", "namespace'e ait kaynaklar"],
+    "answer": "taint'li bir node'a zamanlamaya izin verir"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 4,
+    "question": "Kubernetes job tamamlanma ayarı",
+    "options": ["başarılı tamamlanma sayısı", "Service", "LoadBalancer", "namespace'e ait kaynaklar"],
+    "answer": "başarılı tamamlanma sayısı"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "Kubernetes API server rolü",
+    "options": ["küme API nesnelerini doğrular ve saklar", "Service", "LoadBalancer", "namespace'e ait kaynaklar"],
+    "answer": "küme API nesnelerini doğrular ve saklar"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 1,
+    "question": "Hangi Pod zamanlama ayarı, eşleşen taint'e sahip bir node'a yerleştirmeye izin verir?",
+    "options": ["toleration", "taint", "nodeSelector", "topologySpreadConstraints"],
+    "answer": "toleration"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 2,
+    "question": "Kubernetes startup probe etkisi",
+    "options": ["yavaş başlangıç sırasında diğer probe'ları geciktirir", "Service", "LoadBalancer", "namespace'e ait kaynaklar"],
+    "answer": "yavaş başlangıç sırasında diğer probe'ları geciktirir"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "Kubernetes node selector amacı",
+    "options": ["pod'u eşleşen etiketlere sahip node'lara yerleştirmek", "Service", "LoadBalancer", "namespace'e ait kaynaklar"],
+    "answer": "pod'u eşleşen etiketlere sahip node'lara yerleştirmek"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 4,
+    "question": "Kubernetes daemon set yerleşimi",
+    "options": ["uygun her node üzerinde bir pod çalıştırır", "Service", "LoadBalancer", "namespace'e ait kaynaklar"],
+    "answer": "uygun her node üzerinde bir pod çalıştırır"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "Kubernetes kubelet sorumluluğu",
+    "options": ["her node üzerinde çalışır ve pod'ları yönetir", "Service", "LoadBalancer", "namespace'e ait kaynaklar"],
+    "answer": "her node üzerinde çalışır ve pod'ları yönetir"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 1,
+    "question": "Hangi kubectl komutu bir Deployment'ı önceki rollout revizyonuna geri döndürür?",
+    "options": ["kubectl rollout undo", "kubectl rollout pause", "kubectl scale", "kubectl replace"],
+    "answer": "kubectl rollout undo"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 2,
+    "question": "Kubernetes deployment geri alma komutu",
+    "options": ["kubectl rollout undo deployment/name", "Service", "LoadBalancer", "namespace'e ait kaynaklar"],
+    "answer": "kubectl rollout undo deployment/name"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "Kubernetes affinity amacı",
+    "options": ["tercih edilen veya zorunlu yerleşim kurallarını ifade etmek", "Service", "LoadBalancer", "namespace'e ait kaynaklar"],
+    "answer": "tercih edilen veya zorunlu yerleşim kurallarını ifade etmek"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 4,
+    "question": "Kubernetes stateful set kimliği",
+    "options": ["kararlı ağ kimliği ve depolama", "Service", "LoadBalancer", "namespace'e ait kaynaklar"],
+    "answer": "kararlı ağ kimliği ve depolama"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "Kubernetes CoreDNS rolü",
+    "options": ["service DNS adlarını çözümler", "Service", "LoadBalancer", "namespace'e ait kaynaklar"],
+    "answer": "service DNS adlarını çözümler"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 1,
+    "question": "Hangi kubectl komutu yerel bir portu bir Pod üzerindeki bir porta yönlendirir?",
+    "options": ["kubectl port-forward", "kubectl proxy", "kubectl expose", "kubectl attach"],
+    "answer": "kubectl port-forward"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 2,
+    "question": "Kubernetes rollout durum komutu",
+    "options": ["kubectl rollout status deployment/name", "Service", "LoadBalancer", "namespace'e ait kaynaklar"],
+    "answer": "kubectl rollout status deployment/name"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "Kubernetes ingress controller rolü",
+    "options": ["HTTP trafiğini service'lere yönlendirir", "Service", "LoadBalancer", "namespace'e ait kaynaklar"],
+    "answer": "HTTP trafiğini service'lere yönlendirir"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 4,
+    "question": "Kubernetes init container amacı",
+    "options": ["uygulama container'ları başlamadan önce kurulumu tamamlamak", "Service", "LoadBalancer", "namespace'e ait kaynaklar"],
+    "answer": "uygulama container'ları başlamadan önce kurulumu tamamlamak"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "Kubernetes finalizer amacı",
+    "options": ["temizlik tamamlanana kadar silmeyi geciktirir", "Service", "LoadBalancer", "namespace'e ait kaynaklar"],
+    "answer": "temizlik tamamlanana kadar silmeyi geciktirir"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 2,
+    "question": "Hangi Kubernetes kaynağı Job'ları yinelenen, zamana dayalı bir takvimle oluşturur?",
+    "options": ["CronJob", "DaemonSet", "ReplicaSet", "StatefulSet"],
+    "answer": "CronJob"
+  }
+]

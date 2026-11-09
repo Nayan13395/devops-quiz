@@ -290,7 +290,7 @@
   {
     "category": "AWS",
     "set": 1,
-    "question": "আর্কিটেকচাৰৰ উত্তম পদ্ধতিৰ পৰামৰ্শ আৰু খৰচ অপ্টিমাইজেচন কোন AWS সেৱাই প্ৰদান কৰে?",
+    "question": "আৰ্কিটেকচাৰৰ উত্তম পদ্ধতিৰ পৰামৰ্শ আৰু খৰচ অপ্টিমাইজেচন কোন AWS সেৱাই প্ৰদান কৰে?",
     "options": [
       "AWS Trusted Advisor",
       "CloudWatch",
@@ -926,7 +926,7 @@
   {
     "category": "AWS",
     "set": 4,
-    "question": "টেক্সটক স্বাভাৱিক শুনা কথালৈ ৰূপান্তৰ কৰা AWS সেৱা কোনটো?",
+    "question": "টেক্সটক স্বাভাৱিক শুনা যোৱা কথালৈ ৰূপান্তৰ কৰা AWS সেৱা কোনটো?",
     "options": [
       "Amazon Lex",
       "Amazon Polly",
@@ -1142,7 +1142,7 @@
   {
     "category": "AWS",
     "set": 4,
-    "question": "ব্ৰাউজাৰৰ পৰাই Linux EC2 ইনষ্টেন্সত সুৰক্ষিত shell access কোন AWS সেৱাই দিয়ে?",
+    "question": "ব্ৰাউজাৰৰ পৰাই Linux EC2 ইনষ্টেন্সত সুৰক্ষিত ছেল এক্সেছ কোন AWS সেৱাই দিয়ে?",
     "options": [
       "EC2 Instance Connect",
       "AWS Direct Connect",
@@ -1226,14 +1226,14 @@
   {
     "category": "AWS",
     "set": 5,
-    "question": "পৰিচালিত ৰিলেচনেল ডাটাবেছ সেৱা কোন AWS সেৱা?",
+    "question": "কোন Amazon RDS সুবিধাই স্বয়ংক্ৰিয় ফেইলঅ'ভাৰৰ বাবে অন্য এটা Availability Zone-ত এটা ছিংক্ৰ'নাছ ষ্টেণ্ডবাই ৰেপ্লিকা বজাই ৰাখে?",
     "options": [
-      "Amazon RDS",
-      "Amazon S3",
-      "Amazon DynamoDB",
-      "Amazon CloudFront"
+      "Multi-AZ deployment",
+      "Read replica",
+      "Manual snapshot",
+      "Parameter group"
     ],
-    "answer": "Amazon RDS"
+    "answer": "Multi-AZ deployment"
   },
   {
     "category": "AWS",
@@ -1262,14 +1262,14 @@
   {
     "category": "AWS",
     "set": 5,
-    "question": "কোন AWS সেৱা এটা কণ্টেণ্ট ডেলিভাৰী নেটৱৰ্ক?",
+    "question": "কোন Amazon CloudFront সুবিধাই নিশ্চিত কৰে যে এটা S3 অৰিজিন কেৱল ডিষ্ট্ৰিবিউচনৰ জৰিয়তেহে পঢ়িব পাৰি, পোনপটীয়াকৈ নহয়?",
     "options": [
-      "Amazon SNS",
-      "Amazon Route 53",
-      "Amazon CloudFront",
-      "AWS Snowball"
+      "Origin Access Control",
+      "S3 Transfer Acceleration",
+      "Route 53 alias record",
+      "Lambda@Edge"
     ],
-    "answer": "Amazon CloudFront"
+    "answer": "Origin Access Control"
   },
   {
     "category": "AWS",
@@ -1298,7 +1298,7 @@
   {
     "category": "AWS",
     "set": 5,
-    "question": "টেমপ্লেটৰ পৰা আন্তঃগাঁথনি প্ৰভিজন কৰা AWS সেৱা কোনটো?",
+    "question": "টেমপ্লেটৰ পৰা পৰিকাঠামো প্ৰভিজন কৰা AWS সেৱা কোনটো?",
     "options": [
       "AWS CloudFormation",
       "AWS CloudShell",
@@ -1310,14 +1310,14 @@
   {
     "category": "AWS",
     "set": 5,
-    "question": "পৰিচালিত মেছেজ কিউ কোন AWS সেৱাই প্ৰদান কৰে?",
+    "question": "কোন Amazon SQS কিউ প্ৰকাৰে মেছেজৰ কঠোৰ ক্ৰম বজাই ৰাখে আৰু exactly-once প্ৰক্ৰিয়াকৰণ সমৰ্থন কৰে?",
     "options": [
-      "Amazon SES",
-      "Amazon SQS",
-      "AWS KMS",
-      "Amazon EFS"
+      "Standard queue",
+      "FIFO queue",
+      "Delay queue",
+      "Dead-letter queue"
     ],
-    "answer": "Amazon SQS"
+    "answer": "FIFO queue"
   },
   {
     "category": "AWS",
@@ -1430,14 +1430,14 @@
   {
     "category": "AWS",
     "set": 5,
-    "question": "পেটাবাইট-স্কেল ডাটা ৱেৰহাউছ কোন AWS সেৱা?",
+    "question": "Amazon Redshift-ত এটা টেবুলৰ distribution key-এ কি নিয়ন্ত্ৰণ কৰে?",
     "options": [
-      "Amazon DynamoDB",
-      "Amazon ElastiCache",
-      "Amazon Redshift",
-      "Amazon SQS"
+      "শাৰীসমূহ কম্পিউট নোডসমূহৰ মাজত কেনেকৈ বিতৰণ কৰা হয়",
+      "কোন IAM ৰ'লে COPY কমাণ্ড চলায়",
+      "স্বয়ংক্ৰিয় বেকআপ কিমান সময়লৈ সংৰক্ষণ কৰা হয়",
+      "কোন KMS কীয়ে ক্লাষ্টাৰ এনক্ৰিপ্ট কৰে"
     ],
-    "answer": "Amazon Redshift"
+    "answer": "শাৰীসমূহ কম্পিউট নোডসমূহৰ মাজত কেনেকৈ বিতৰণ কৰা হয়"
   },
   {
     "category": "AWS",
@@ -1490,13 +1490,13 @@
   {
     "category": "AWS",
     "set": 5,
-    "question": "পৰিচালিত Apache Kafka কোন AWS সেৱাই প্ৰদান কৰে?",
+    "question": "এটা Amazon MSK ক্লাষ্টাৰত কোন নোডসমূহে টপিক পাৰ্টিচন সংৰক্ষণ কৰে আৰু Kafka প্ৰডিউছাৰ আৰু কনজিউমাৰক সেৱা প্ৰদান কৰে?",
     "options": [
-      "Amazon S3",
-      "Amazon EBS",
-      "AWS KMS",
-      "Amazon MSK"
+      "Broker nodes",
+      "NAT gateways",
+      "Bastion hosts",
+      "Glue crawlers"
     ],
-    "answer": "Amazon MSK"
+    "answer": "Broker nodes"
   }
 ]

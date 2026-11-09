@@ -1,8 +1,10 @@
+import 'dart:async';
 import 'dart:math';
 
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
+import '../services/game_sound_service.dart';
 import 'reward_question_screen.dart';
 
 class ScratchCardScreen extends StatefulWidget {
@@ -104,6 +106,7 @@ class _ScratchCardScreenState extends State<ScratchCardScreen> {
     setState(() {
       rewardClaimed = true;
     });
+    unawaited(GameSoundService.play(GameSoundEffect.click));
 
     // =======================================================
     // CONSUME TODAY'S SCRATCH
@@ -261,99 +264,104 @@ class _ScratchCardScreenState extends State<ScratchCardScreen> {
       body: loading
           ? const Center(child: CircularProgressIndicator())
           : SafeArea(
-              child: SingleChildScrollView(
-                padding: const EdgeInsets.all(20),
+              child: LayoutBuilder(
+                builder: (context, constraints) => SingleChildScrollView(
+                  padding: EdgeInsets.all(
+                    constraints.maxHeight < 600 ? 16 : 20,
+                  ),
 
-                child: Center(
-                  child: ConstrainedBox(
-                    constraints: const BoxConstraints(maxWidth: 500),
+                  child: Center(
+                    child: ConstrainedBox(
+                      constraints: const BoxConstraints(maxWidth: 500),
 
-                    child: Column(
-                      children: [
-                        const SizedBox(height: 10),
+                      child: Column(
+                        mainAxisSize: MainAxisSize.min,
+                        children: [
+                          const SizedBox(height: 10),
 
-                        // =====================================
-                        // TITLE
-                        // =====================================
-                        const Text(
-                          'Daily Scratch',
-                          textAlign: TextAlign.center,
-                          style: TextStyle(
-                            fontSize: 28,
-                            fontWeight: FontWeight.bold,
+                          // =====================================
+                          // TITLE
+                          // =====================================
+                          const Text(
+                            'Daily Scratch',
+                            textAlign: TextAlign.center,
+                            style: TextStyle(
+                              fontSize: 28,
+                              fontWeight: FontWeight.bold,
+                            ),
                           ),
-                        ),
 
-                        const SizedBox(height: 8),
+                          const SizedBox(height: 8),
 
-                        Text(
-                          canScratch
-                              ? 'Scratch the card to reveal today\'s reward!'
-                              : 'You have already used today\'s scratch card.',
-                          textAlign: TextAlign.center,
-                          style: TextStyle(
-                            fontSize: 16,
-                            color: colors.onSurfaceVariant,
+                          Text(
+                            canScratch
+                                ? 'Scratch the card to reveal today\'s reward!'
+                                : 'You have already used today\'s scratch card.',
+                            textAlign: TextAlign.center,
+                            style: TextStyle(
+                              fontSize: 16,
+                              color: colors.onSurfaceVariant,
+                            ),
                           ),
-                        ),
 
-                        const SizedBox(height: 30),
+                          const SizedBox(height: 30),
 
-                        // =====================================
-                        // SCRATCH CARD
-                        // =====================================
-                        _buildScratchCard(context),
+                          // =====================================
+                          // SCRATCH CARD
+                          // =====================================
+                          _buildScratchCard(context),
 
-                        const SizedBox(height: 24),
+                          const SizedBox(height: 24),
 
-                        // =====================================
-                        // STATUS
-                        // =====================================
-                        if (!canScratch && rewardClaimed)
-                          Container(
+                          // =====================================
+                          // STATUS
+                          // =====================================
+                          if (!canScratch && rewardClaimed)
+                            Container(
+                              width: double.infinity,
+                              padding: const EdgeInsets.all(14),
+                              decoration: BoxDecoration(
+                                color: colors.primaryContainer,
+                                borderRadius: BorderRadius.circular(14),
+                              ),
+                              child: Text(
+                                'Today\'s reward: ⭐ $reward points',
+                                textAlign: TextAlign.center,
+                                style: TextStyle(
+                                  fontSize: 17,
+                                  fontWeight: FontWeight.bold,
+                                  color: colors.onPrimaryContainer,
+                                ),
+                              ),
+                            ),
+
+                          const SizedBox(height: 20),
+
+                          // =====================================
+                          // BACK TO GAMES BUTTON (FIXED)
+                          // =====================================
+                          SizedBox(
                             width: double.infinity,
-                            padding: const EdgeInsets.all(14),
-                            decoration: BoxDecoration(
-                              color: colors.primaryContainer,
-                              borderRadius: BorderRadius.circular(14),
-                            ),
-                            child: Text(
-                              'Today\'s reward: ⭐ $reward points',
-                              textAlign: TextAlign.center,
-                              style: TextStyle(
-                                fontSize: 17,
-                                fontWeight: FontWeight.bold,
-                                color: colors.onPrimaryContainer,
+                            height: 52,
+                            child: ElevatedButton.icon(
+                              // ✅ Simply pop the current screen to return to GamesScreen
+                              onPressed: () {
+                                Navigator.pop(context);
+                              },
+                              icon: const Icon(Icons.arrow_back_rounded),
+                              label: const Text(
+                                'Back to Games',
+                                style: TextStyle(
+                                  fontSize: 16,
+                                  fontWeight: FontWeight.bold,
+                                ),
                               ),
                             ),
                           ),
 
-                        const SizedBox(height: 20),
-
-                        // =====================================
-                        // BACK TO GAMES BUTTON (FIXED)
-                        // =====================================
-                        SizedBox(
-                          width: double.infinity,
-                          height: 52,
-                          child: ElevatedButton.icon(
-                            // ✅ Simply pop the current screen to return to GamesScreen
-                            onPressed: () {
-                              Navigator.pop(context);
-                            },
-                            icon: const Icon(Icons.arrow_back_rounded),
-                            label: const Text(
-                              'Back to Games',
-                              style: TextStyle(
-                                fontSize: 16,
-                                fontWeight: FontWeight.bold,
-                              ),
-                            ),
-                          ),
-                        ),
-
-                        const SizedBox(height: 20),
-                      ],
+                          const SizedBox(height: 20),
+                        ],
+                      ),
                     ),
                   ),
                 ),
@@ -504,6 +512,7 @@ class _ScratchCardScreenState extends State<ScratchCardScreen> {
                 // SCRATCH LAYER
                 // ===========================================
                 GestureDetector(
+                  key: const ValueKey('scratch-card-cover'),
                   behavior: HitTestBehavior.opaque,
 
                   onPanStart: (details) {
@@ -514,11 +523,51 @@ class _ScratchCardScreenState extends State<ScratchCardScreen> {
                     _scratch(details.localPosition);
                   },
 
-                  child: CustomPaint(
-                    painter: _ScratchPainter(
-                      scratchPoints: _scratchPoints,
-                      coverColor: colors.secondaryContainer,
-                      textColor: colors.onSecondaryContainer,
+                  child: ClipPath(
+                    clipper: _ScratchRevealClipper(_scratchPoints),
+                    child: Stack(
+                      fit: StackFit.expand,
+                      children: [
+                        DecoratedBox(
+                          decoration: const BoxDecoration(
+                            color: Color(0xFF061536),
+                          ),
+                          child: Image.asset(
+                            'assets/icon/app_icon.png',
+                            key: const ValueKey('scratch-card-logo'),
+                            fit: BoxFit.contain,
+                          ),
+                        ),
+                        if (_scratchPoints.length < 15)
+                          Center(
+                            child: Container(
+                              padding: const EdgeInsets.symmetric(
+                                horizontal: 18,
+                                vertical: 10,
+                              ),
+                              decoration: BoxDecoration(
+                                color: Colors.black.withValues(alpha: 0.62),
+                                borderRadius: BorderRadius.circular(12),
+                              ),
+                              child: const Text(
+                                'SCRATCH HERE  👆',
+                                textAlign: TextAlign.center,
+                                style: TextStyle(
+                                  color: Colors.white,
+                                  fontSize: 18,
+                                  fontWeight: FontWeight.w800,
+                                  shadows: [
+                                    Shadow(
+                                      color: Colors.black54,
+                                      blurRadius: 3,
+                                      offset: Offset(0, 1),
+                                    ),
+                                  ],
+                                ),
+                              ),
+                            ),
+                          ),
+                      ],
                     ),
                   ),
                 ),
@@ -535,71 +584,23 @@ class _ScratchCardScreenState extends State<ScratchCardScreen> {
 // SCRATCH PAINTER
 // ===========================================================
 
-class _ScratchPainter extends CustomPainter {
+class _ScratchRevealClipper extends CustomClipper<Path> {
+  const _ScratchRevealClipper(this.scratchPoints);
+
   final List<Offset> scratchPoints;
 
-  final Color coverColor;
-  final Color textColor;
-
-  _ScratchPainter({
-    required this.scratchPoints,
-    required this.coverColor,
-    required this.textColor,
-  });
-
   @override
-  void paint(Canvas canvas, Size size) {
-    final Paint coverPaint = Paint()..color = coverColor;
-
-    canvas.drawRect(Offset.zero & size, coverPaint);
-
-    // =======================================================
-    // SCRATCH INSTRUCTION
-    // =======================================================
-
-    if (scratchPoints.length < 15) {
-      final TextPainter textPainter = TextPainter(
-        text: TextSpan(
-          text: 'SCRATCH HERE\n👆',
-          style: TextStyle(
-            color: textColor,
-            fontSize: 22,
-            fontWeight: FontWeight.bold,
-            height: 1.5,
-          ),
-        ),
-        textAlign: TextAlign.center,
-        textDirection: TextDirection.ltr,
-      );
-
-      textPainter.layout(maxWidth: size.width);
-
-      textPainter.paint(
-        canvas,
-        Offset(
-          (size.width - textPainter.width) / 2,
-          (size.height - textPainter.height) / 2,
-        ),
-      );
+  Path getClip(Size size) {
+    final cover = Path()..addRect(Offset.zero & size);
+    final scratches = Path();
+    for (final point in scratchPoints) {
+      scratches.addOval(Rect.fromCircle(center: point, radius: 25));
     }
-
-    // =======================================================
-    // ERASE SCRATCHED AREAS
-    // =======================================================
-
-    final Paint scratchPaint = Paint()
-      ..blendMode = BlendMode.clear
-      ..style = PaintingStyle.fill;
-
-    for (final Offset point in scratchPoints) {
-      canvas.drawCircle(point, 25, scratchPaint);
-    }
+    return Path.combine(PathOperation.difference, cover, scratches);
   }
 
   @override
-  bool shouldRepaint(covariant _ScratchPainter oldDelegate) {
-    return true;
-  }
+  bool shouldReclip(covariant _ScratchRevealClipper oldClipper) => true;
 }
 
 // ===========================================================

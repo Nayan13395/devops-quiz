@@ -1,5 +1,8 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
 
+import '../services/game_sound_service.dart';
 import '../services/point_service.dart';
 import '../widgets/daily_game_gate.dart';
 
@@ -107,6 +110,7 @@ class _MatchGameState extends State<_MatchGame> {
     if (command == null || _matched.contains(meaning)) return;
 
     if (identical(command, meaning)) {
+      unawaited(GameSoundService.play(GameSoundEffect.correct));
       setState(() {
         _matched.add(command);
         _points += _missedBefore.contains(command)
@@ -123,6 +127,7 @@ class _MatchGameState extends State<_MatchGame> {
       return;
     }
 
+    unawaited(GameSoundService.play(GameSoundEffect.incorrect));
     setState(() {
       _mistakes++;
       _missedBefore.add(command);

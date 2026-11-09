@@ -722,14 +722,14 @@
 {
     "category": "Hybrid Cloud",
     "set": 3,
-    "question": "Which cloud-native architecture allows independent deployment of application components?",
+    "question": "Which Kubernetes mechanism limits the total CPU and memory that can be consumed within a namespace?",
     "options": [
-        "Microservices",
-        "Monolithic",
-        "Client-Server",
-        "Peer-to-Peer"
+        "ResourceQuota",
+        "Ingress",
+        "DaemonSet",
+        "ServiceAccount"
     ],
-    "answer": "Microservices"
+    "answer": "ResourceQuota"
 },
 {
     "category": "Hybrid Cloud",
@@ -746,14 +746,14 @@
 {
     "category": "Hybrid Cloud",
     "set": 3,
-    "question": "Which tool is commonly used to package Kubernetes applications?",
+    "question": "Which Kubernetes object restricts which pods may communicate with each other at the network level?",
     "options": [
-        "Helm",
-        "Docker Compose",
-        "Ansible",
-        "Terraform"
+        "NetworkPolicy",
+        "ResourceQuota",
+        "LimitRange",
+        "PodDisruptionBudget"
     ],
-    "answer": "Helm"
+    "answer": "NetworkPolicy"
 },
 {
     "category": "Hybrid Cloud",
@@ -818,14 +818,14 @@
 {
     "category": "Hybrid Cloud",
     "set": 3,
-    "question": "Which cloud security model continuously verifies users and devices before granting access?",
+    "question": "Which Kubernetes object ensures a minimum number of pods stay available during voluntary disruptions such as node drains?",
     "options": [
-        "Zero Trust Architecture",
-        "Open Network",
-        "Implicit Trust",
-        "Guest Access"
+        "PodDisruptionBudget",
+        "HorizontalPodAutoscaler",
+        "NetworkPolicy",
+        "PersistentVolumeClaim"
     ],
-    "answer": "Zero Trust Architecture"
+    "answer": "PodDisruptionBudget"
 },
 {
     "category": "Hybrid Cloud",

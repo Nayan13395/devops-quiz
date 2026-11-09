@@ -116,46 +116,64 @@ void main() {
     expect(tester.takeException(), isNull);
   });
 
-  test(
-    '500 distinct cards cover all 21 categories and retain 107 originals',
-    () {
-      expect(learningCards, hasLength(500));
-      expect(learningCards.map((card) => card.id).toSet(), hasLength(500));
+  test('1000 distinct cards cover all 21 categories with 500 additions', () {
+    expect(learningCards, hasLength(1000));
+    expect(learningCards.map((card) => card.id).toSet(), hasLength(1000));
+    expect(
+      learningCards
+          .map((card) => '${card.topic}|${card.command.toLowerCase()}')
+          .toSet(),
+      hasLength(1000),
+    );
+    final additions = learningCards
+        .where((card) => card.id.startsWith('extra-'))
+        .toList();
+    expect(additions, hasLength(500));
+    expect(additions.map((card) => card.id).toSet(), hasLength(500));
+    expect(
+      additions
+          .map((card) => '${card.topic}|${card.command.toLowerCase()}')
+          .toSet(),
+      hasLength(500),
+    );
+    expect(
+      additions.map((card) => card.topic).toSet(),
+      categoryAssets.keys.toSet(),
+    );
+    expect(learningCards.where((card) => !card.isConcept), hasLength(607));
+    expect(
+      learningCards.map((card) => card.topic).toSet(),
+      categoryAssets.keys.toSet(),
+    );
+    for (final topic in categoryAssets.keys) {
       expect(
-        learningCards
-            .map((card) => '${card.topic}|${card.command.toLowerCase()}')
-            .toSet(),
-        hasLength(500),
+        learningCards.where((card) => card.topic == topic).length,
+        inInclusiveRange(46, 48),
       );
-      expect(learningCards.where((card) => !card.isConcept), hasLength(107));
       expect(
-        learningCards.map((card) => card.topic).toSet(),
-        categoryAssets.keys.toSet(),
+        additions.where((card) => card.topic == topic).length,
+        inInclusiveRange(23, 24),
       );
-      for (final topic in categoryAssets.keys) {
-        expect(
-          learningCards.where((card) => card.topic == topic).length,
-          inInclusiveRange(23, 24),
-        );
-      }
-      for (final card in learningCards) {
-        expect(card.id, isNotEmpty);
-        expect(card.command, isNotEmpty);
-        expect(card.description, isNotEmpty);
+    }
+    for (final card in learningCards) {
+      expect(card.id, isNotEmpty);
+      expect(card.command, isNotEmpty);
+      expect(card.description, isNotEmpty);
+      if (!card.id.startsWith('extra-')) {
         expect(card.hindiDescription, isNotEmpty);
         expect(card.marathiDescription, isNotEmpty);
-        if (!card.isConcept) expect(card.example, isNotEmpty);
-        for (final language in ['en', 'hi', 'mr']) {
-          final translated = card.localized(language);
-          expect(translated.id, card.id);
-          expect(translated.topic, card.topic);
-          expect(translated.example, card.example);
-          expect(translated.command, isNotEmpty);
-          expect(translated.description, isNotEmpty);
-        }
       }
-    },
-  );
+      if (!card.isConcept) expect(card.example, isNotEmpty);
+      for (final language in ['en', 'hi', 'mr']) {
+        final translated = card.localized(language);
+        expect(translated.id, card.id);
+        expect(translated.topic, card.topic);
+        expect(translated.example, card.example);
+        expect(translated.command, isNotEmpty);
+        expect(translated.description, isNotEmpty);
+      }
+    }
+  });
 
   test(
     'concept translations match the same source question and answer',
@@ -212,11 +230,11 @@ void main() {
   );
 
   for (final language in ['en', 'hi', 'mr']) {
-    testWidgets('learning catalog has 500 cards in $language', (tester) async {
+    testWidgets('learning catalog has 1000 cards in $language', (tester) async {
       await tester.pumpWidget(learningApp(language));
       await tester.pumpAndSettle();
 
-      expect(find.text('1 / 500'), findsOneWidget);
+      expect(find.text('1 / 1000'), findsOneWidget);
       expect(tester.takeException(), isNull);
     });
 
@@ -273,7 +291,7 @@ void main() {
     expect(find.text('0 / 0'), findsOneWidget);
     await tester.tap(find.text('Reset filters'));
     await tester.pumpAndSettle();
-    expect(find.text('1 / 500'), findsOneWidget);
+    expect(find.text('1 / 1000'), findsOneWidget);
   });
 
   testWidgets('search and current card survive changing language', (
@@ -283,10 +301,10 @@ void main() {
     await tester.pumpAndSettle();
     await tester.tap(find.byTooltip('Next'));
     await tester.pumpAndSettle();
-    expect(find.text('2 / 500'), findsOneWidget);
+    expect(find.text('2 / 1000'), findsOneWidget);
     await tester.pumpWidget(learningApp('hi'));
     await tester.pumpAndSettle();
-    expect(find.text('2 / 500'), findsOneWidget);
+    expect(find.text('2 / 1000'), findsOneWidget);
     expect(find.text('grep'), findsOneWidget);
     await tester.enterText(find.byType(TextField), 'Work in progress');
     await tester.pumpAndSettle();
@@ -302,28 +320,31 @@ void main() {
     expect(tester.takeException(), isNull);
   });
 
-  testWidgets('touch, wheel and buttons navigate without skipping cards', (
+  testWidgets('left/right swipes, wheel and buttons navigate cards', (
     tester,
   ) async {
     await tester.pumpWidget(learningApp('en'));
     await tester.pumpAndSettle();
     await tester.tap(find.byTooltip('Next'));
     await tester.pumpAndSettle();
-    expect(find.text('2 / 500'), findsOneWidget);
+    expect(find.text('2 / 1000'), findsOneWidget);
     await tester.tap(find.byTooltip('Previous'));
     await tester.pumpAndSettle();
-    expect(find.text('1 / 500'), findsOneWidget);
-    await tester.drag(find.byType(PageView), const Offset(0, -400));
+    expect(find.text('1 / 1000'), findsOneWidget);
+    await tester.drag(find.byType(PageView), const Offset(-400, 0));
     await tester.pumpAndSettle();
-    expect(find.text('2 / 500'), findsOneWidget);
+    expect(find.text('2 / 1000'), findsOneWidget);
+    await tester.drag(find.byType(PageView), const Offset(600, 0));
+    await tester.pumpAndSettle();
+    expect(find.text('1 / 1000'), findsOneWidget);
     await tester.sendEventToBinding(
       PointerScrollEvent(
         position: tester.getCenter(find.byType(Card).first),
-        scrollDelta: const Offset(0, 120),
+        scrollDelta: const Offset(120, 0),
       ),
     );
     await tester.pumpAndSettle();
-    expect(find.text('3 / 500'), findsOneWidget);
+    expect(find.text('2 / 1000'), findsOneWidget);
     expect(tester.takeException(), isNull);
   });
 

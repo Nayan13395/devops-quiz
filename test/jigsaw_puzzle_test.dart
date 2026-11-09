@@ -9,6 +9,25 @@ import 'package:shared_preferences/shared_preferences.dart';
 void main() {
   TestWidgetsFlutterBinding.ensureInitialized();
 
+  test('later jigsaw levels use interlocking piece outlines', () {
+    expect(JigsawPuzzleService.usesJigsawPieces(20), isFalse);
+    expect(JigsawPuzzleService.usesJigsawPieces(21), isTrue);
+    expect(JigsawPuzzleService.usesJigsawPieces(100), isTrue);
+
+    final path = JigsawPieceClipper(
+      seed: 21,
+      gridSize: 4,
+      piece: 5,
+    ).getClip(const Size(100, 100));
+    final perimeter = path.computeMetrics().fold<double>(
+      0,
+      (total, metric) => total + metric.length,
+    );
+
+    expect(path.contains(const Offset(50, 50)), isTrue);
+    expect(perimeter, greaterThan(400));
+  });
+
   test(
     '100 jigsaw levels have valid progressive grids and movable layouts',
     () {
@@ -55,6 +74,65 @@ void main() {
       expect(await JigsawPuzzleService.loadCompletedLevels(), {1, 2});
     },
   );
+
+  testWidgets('level 21 displays clipped jigsaw pieces', (tester) async {
+    SharedPreferences.setMockInitialValues({
+      'jigsaw_completed_levels_v1': [
+        for (int level = 1; level <= 20; level++) '$level',
+      ],
+      'jigsaw_selected_level_v1': 21,
+    });
+    tester.view.devicePixelRatio = 1;
+    tester.view.physicalSize = const Size(390, 844);
+    addTearDown(tester.view.resetPhysicalSize);
+    addTearDown(tester.view.resetDevicePixelRatio);
+
+    await tester.pumpWidget(const MaterialApp(home: JigsawPuzzleScreen()));
+    await tester.pumpAndSettle();
+
+    expect(find.text('Puzzle 21'), findsOneWidget);
+    expect(find.byKey(const ValueKey('jigsaw-piece-clip-5')), findsOneWidget);
+    expect(tester.takeException(), isNull);
+  });
+
+  testWidgets('correctly placed pieces turn green and stay fixed', (
+    tester,
+  ) async {
+    SharedPreferences.setMockInitialValues({});
+    tester.view.devicePixelRatio = 1;
+    tester.view.physicalSize = const Size(390, 844);
+    addTearDown(tester.view.resetPhysicalSize);
+    addTearDown(tester.view.resetDevicePixelRatio);
+    final tiles = JigsawPuzzleService.shuffledTiles(1);
+    final target = tiles.indexed.firstWhere((entry) => entry.$1 != entry.$2).$1;
+    final source = tiles.indexOf(target);
+
+    await tester.pumpWidget(const MaterialApp(home: JigsawPuzzleScreen()));
+    await tester.pumpAndSettle();
+    await tester.tap(find.byKey(ValueKey('jigsaw-slot-$target')));
+    await tester.tap(find.byKey(ValueKey('jigsaw-slot-$source')));
+    await tester.pumpAndSettle();
+
+    final frame = tester.widget<AnimatedContainer>(
+      find.descendant(
+        of: find.byKey(ValueKey('jigsaw-slot-$target')),
+        matching: find.byType(AnimatedContainer),
+      ),
+    );
+    final decoration = frame.foregroundDecoration! as BoxDecoration;
+    final draggable = tester.widget<LongPressDraggable<int>>(
+      find.byKey(ValueKey('jigsaw-drag-$target')),
+    );
+    expect(decoration.color, Colors.green.withValues(alpha: 0.24));
+    expect(decoration.border!.top.color, Colors.green.shade600);
+    expect(draggable.maxSimultaneousDrags, 0);
+
+    await tester.tap(find.byKey(ValueKey('jigsaw-slot-$target')));
+    await tester.tap(find.byKey(const ValueKey('jigsaw-slot-0')));
+    await tester.pumpAndSettle();
+    expect(find.textContaining('1 moves'), findsOneWidget);
+    expect(tester.takeException(), isNull);
+  });
 
   testWidgets('Jigsaw Puzzle is searchable, opens, and supports tile swaps', (
     tester,

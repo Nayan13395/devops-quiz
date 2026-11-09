@@ -1,0 +1,877 @@
+[
+  {
+    "category": "Bash Scripting",
+    "set": 1,
+    "question": "స్క్రిప్ట్ ఇంటర్‌ప్రెటర్‌గా Bash ను ఉపయోగించమని సిస్టమ్‌కు ఏ లైన్ చెబుతుంది?",
+    "options": ["#!/bin/bash", "#/bin/bash", "//bin/bash", "@bash"],
+    "answer": "#!/bin/bash"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 1,
+    "question": "script.sh కు ఇప్పటికే execute అనుమతి ఉంటే, దానిని ఏ కమాండ్ అమలు చేస్తుంది?",
+    "options": ["./script.sh", "run script.sh", "exec script.sh", "start script.sh"],
+    "answer": "./script.sh"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 1,
+    "question": "Bash ఉపయోగించి script.sh ను స్పష్టంగా ఏ కమాండ్ అమలు చేస్తుంది?",
+    "options": ["bash script.sh", "bash run script.sh", "bash exec script.sh", "bash start script.sh"],
+    "answer": "bash script.sh"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 1,
+    "question": "Bash స్క్రిప్ట్‌లో ఒక-లైన్ కామెంట్‌ను ఏ చిహ్నం ప్రారంభిస్తుంది?",
+    "options": ["#", "//", "/*", "<!--"],
+    "answer": "#"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 1,
+    "question": "script.sh ను ఎగ్జిక్యూటబుల్‌గా ఏ కమాండ్ చేస్తుంది?",
+    "options": ["chmod +x script.sh", "chmod exec script.sh", "chmod run script.sh", "chmod allow script.sh"],
+    "answer": "chmod +x script.sh"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 1,
+    "question": "టెక్స్ట్‌ను స్టాండర్డ్ అవుట్‌పుట్‌కు ప్రింట్ చేసే builtin కమాండ్ ఏది?",
+    "options": ["echo", "print", "write", "display"],
+    "answer": "echo"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 1,
+    "question": "వినియోగదారు నుండి ఇన్‌పుట్ చదివే builtin కమాండ్ ఏది?",
+    "options": ["read", "input", "get", "scan"],
+    "answer": "read"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 1,
+    "question": "వేరియబుల్ విలువను విస్తరించడానికి ఏ చిహ్నం ఉపయోగిస్తారు?",
+    "options": ["$", "@", "%", "&"],
+    "answer": "$"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 1,
+    "question": "Bash లో ఏ వేరియబుల్ అసైన్‌మెంట్ చెల్లుబాటు అవుతుంది?",
+    "options": ["name=John", "name = John", "set name John", "let name:John"],
+    "answer": "name=John"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 1,
+    "question": "మునుపటి కమాండ్ యొక్క exit status ను ఏ కమాండ్ ప్రింట్ చేస్తుంది?",
+    "options": ["echo $?", "echo $status", "echo $exit", "echo $code"],
+    "answer": "echo $?"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 1,
+    "question": "exit status 0 సాధారణంగా దేనిని సూచిస్తుంది?",
+    "options": ["విజయం", "వైఫల్యం", "టైమ్‌అవుట్", "అనుమతి నిరాకరించబడింది"],
+    "answer": "విజయం"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 1,
+    "question": "ఒకే లైన్‌లో బహుళ కమాండ్‌లను ఏ చిహ్నం వేరు చేస్తుంది?",
+    "options": [";", ",", ":", "|"],
+    "answer": ";"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 1,
+    "question": "షెల్ స్క్రిప్ట్‌ల కోసం సాధారణంగా ఏ ఫైల్ ఎక్స్‌టెన్షన్ ఉపయోగిస్తారు?",
+    "options": [".sh", ".bashrc", ".exe", ".bin"],
+    "answer": ".sh"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 1,
+    "question": "ఎన్విరాన్‌మెంట్ వేరియబుల్స్‌ను ఏ కమాండ్ ప్రదర్శిస్తుంది?",
+    "options": ["env", "chmod", "mkdir", "rm"],
+    "answer": "env"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 1,
+    "question": "ప్రస్తుత వినియోగదారు యొక్క డిఫాల్ట్ షెల్‌ను ఏ కమాండ్ ప్రదర్శిస్తుంది?",
+    "options": ["echo $SHELL", "env shell", "shell --show", "cat shell"],
+    "answer": "echo $SHELL"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 1,
+    "question": "Bash లో తదుపరి అక్షరాన్ని ఏ అక్షరం escape చేస్తుంది?",
+    "options": ["బ్యాక్‌స్లాష్", "ఫార్వర్డ్ స్లాష్", "ఆస్టరిస్క్", "ఆంపర్‌సాండ్"],
+    "answer": "బ్యాక్‌స్లాష్"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 1,
+    "question": "వేరియబుల్ విస్తరణ మరియు కమాండ్ సబ్‌స్టిట్యూషన్‌ను ఏ కోటింగ్ శైలి నిరోధిస్తుంది?",
+    "options": ["సింగిల్ కోట్స్", "డబుల్ కోట్స్", "బ్యాక్‌టిక్స్", "కోట్స్ లేకుండా"],
+    "answer": "సింగిల్ కోట్స్"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 1,
+    "question": "ఖాళీలను నిలుపుకుంటూ వేరియబుల్ విస్తరణను ఏ కోటింగ్ శైలి అనుమతిస్తుంది?",
+    "options": ["డబుల్ కోట్స్", "సింగిల్ కోట్స్", "బ్యాక్‌టిక్స్", "కోట్స్ లేకుండా"],
+    "answer": "డబుల్ కోట్స్"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 1,
+    "question": "స్టాండర్డ్ అవుట్‌పుట్‌ను రీడైరెక్ట్ చేసి ఫైల్‌ను ఓవర్‌రైట్ చేసే ఆపరేటర్ ఏది?",
+    "options": [">", ">>", "<", "2>"],
+    "answer": ">"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 1,
+    "question": "ప్రస్తుత వర్కింగ్ డైరెక్టరీని ప్రింట్ చేసే కమాండ్ ఏది?",
+    "options": ["pwd", "cwd", "whereami", "dirname"],
+    "answer": "pwd"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 1,
+    "question": "ఎర్రర్ సందేశాల కోసం ఏ స్టాండర్డ్ స్ట్రీమ్ ఉపయోగిస్తారు?",
+    "options": ["stderr", "stdout", "stdin", "pipe"],
+    "answer": "stderr"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 1,
+    "question": "స్టాండర్డ్ ఇన్‌పుట్‌ను ఏ file descriptor సూచిస్తుంది?",
+    "options": ["0", "1", "2", "3"],
+    "answer": "0"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 1,
+    "question": "టెర్మినల్ స్క్రీన్‌ను ఏ కమాండ్ క్లియర్ చేస్తుంది?",
+    "options": ["clear", "cls", "wipe", "erase"],
+    "answer": "clear"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 1,
+    "question": "ప్రస్తుత foreground ప్రాసెస్‌ను సాధారణంగా ఆపే కీబోర్డ్ షార్ట్‌కట్ ఏది?",
+    "options": ["Ctrl+C", "Ctrl+D", "Ctrl+Z", "Ctrl+L"],
+    "answer": "Ctrl+C"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 1,
+    "question": "స్క్రిప్ట్‌ను ముగించే builtin కమాండ్ ఏది?",
+    "options": ["exit", "stop", "end", "quit"],
+    "answer": "exit"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "date అవుట్‌పుట్‌ను now అనే వేరియబుల్‌లో నిల్వ చేసే సింటాక్స్ ఏది?",
+    "options": ["now=$(date)", "now=date", "now:=$(date)", "date->now"],
+    "answer": "now=$(date)"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "స్క్రిప్ట్ పేరును ఏ ప్రత్యేక పారామీటర్ సూచిస్తుంది?",
+    "options": ["$0", "$1", "$#", "$@"],
+    "answer": "$0"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "అత్యంత ఇటీవలి బ్యాక్‌గ్రౌండ్ కమాండ్ యొక్క ప్రాసెస్ ID కి విస్తరించే ప్రత్యేక పారామీటర్ ఏది?",
+    "options": ["$!", "$$", "$?", "$#"],
+    "answer": "$!"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "positional ఆర్గ్యుమెంట్ల సంఖ్యను ఏ ప్రత్యేక పారామీటర్ సూచిస్తుంది?",
+    "options": ["$#", "$@", "$*", "$$"],
+    "answer": "$#"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "అన్ని positional ఆర్గ్యుమెంట్లను వేర్వేరు పదాలుగా ఏ ప్రత్యేక పారామీటర్ విస్తరిస్తుంది?",
+    "options": ["$@", "$*", "$#", "$0"],
+    "answer": "$@"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "మొదటి positional పారామీటర్‌ను తొలగించి, మిగిలినవాటిని ఒక స్థానం కిందికి జరిపే Bash builtin కమాండ్ ఏది?",
+    "options": ["shift", "unshift", "pop", "rotate"],
+    "answer": "shift"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "ప్రస్తుత షెల్ యొక్క ప్రాసెస్ ID ని ఏ ప్రత్యేక పారామీటర్ సూచిస్తుంది?",
+    "options": ["$$", "$!", "$?", "$0"],
+    "answer": "$$"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "చివరి కమాండ్ యొక్క exit status ను ఏ ప్రత్యేక పారామీటర్ సూచిస్తుంది?",
+    "options": ["$?", "$!", "$$", "$#"],
+    "answer": "$?"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "var సెట్ చేయబడకపోయినా లేదా ఖాళీగా ఉన్నా డిఫాల్ట్ విలువను తిరిగి ఇచ్చే ఎక్స్‌పాన్షన్ ఏది?",
+    "options": ["${var:-default}", "${var:=default}", "${var:+default}", "${var:?default}"],
+    "answer": "${var:-default}"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "var నుండి 3 అక్షరాలను, offset 2 నుండి ప్రారంభించి, వెలికితీసే ఎక్స్‌పాన్షన్ ఏది?",
+    "options": ["${var:2:3}", "${var:3:2}", "${var[2,3]}", "${var#2:3}"],
+    "answer": "${var:2:3}"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "var విలువ యొక్క పొడవును తిరిగి ఇచ్చే ఎక్స్‌పాన్షన్ ఏది?",
+    "options": ["${#var}", "${len(var)}", "${var:length}", "${var#length}"],
+    "answer": "${#var}"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "var విలువను అప్పర్‌కేస్‌కు మార్చే ఎక్స్‌పాన్షన్ ఏది?",
+    "options": ["${var^^}", "${var,,}", "${var!!}", "${var##}"],
+    "answer": "${var^^}"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "var నుండి అతి పొడవైన మ్యాచింగ్ prefix ప్యాటర్న్‌ను తొలగించే ఎక్స్‌పాన్షన్ ఏది?",
+    "options": ["${var##pattern}", "${var#pattern}", "${var%%pattern}", "${var%pattern}"],
+    "answer": "${var##pattern}"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "var లో pattern యొక్క మొదటి మ్యాచ్‌ను మాత్రమే భర్తీ చేసే ఎక్స్‌పాన్షన్ ఏది?",
+    "options": ["${var/pattern/replacement}", "${var//pattern/replacement}", "${var#pattern}", "${var%pattern}"],
+    "answer": "${var/pattern/replacement}"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "var సెట్ చేయబడకపోయినా లేదా ఖాళీగా ఉన్నా ఎర్రర్ సందేశాన్ని ప్రింట్ చేసి, non-interactive స్క్రిప్ట్‌ను ఆపివేసే ఎక్స్‌పాన్షన్ ఏది?",
+    "options": ["${var:?message}", "${var:-message}", "${var:+message}", "${var:=message}"],
+    "answer": "${var:?message}"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "Bash లో అరిథ్‌మెటిక్ ఎక్స్‌పాన్షన్‌ను ఏ సింటాక్స్ నిర్వహిస్తుంది?",
+    "options": ["$((5 + 3))", "$(5 + 3)", "${5 + 3}", "$[5 + 3]"],
+    "answer": "$((5 + 3))"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "count వేరియబుల్‌ను ఒకటి పెంచే కమాండ్ ఏది?",
+    "options": ["let count++", "count++", "increment count", "add count"],
+    "answer": "let count++"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "8 ను ప్రింట్ చేసే కమాండ్ ఏది, 5 మరియు 3 ను కలిపిన తర్వాత?",
+    "options": ["expr 5 + 3", "expr 5+3", "expr5 + 3", "expr add 5 3"],
+    "answer": "expr 5 + 3"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "count ను integer వేరియబుల్‌గా ప్రకటించే కమాండ్ ఏది?",
+    "options": ["declare -i count", "declare int count", "integer count", "set count integer"],
+    "answer": "declare -i count"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "వేరియబుల్‌ను రీడ్-ఓన్లీగా చేసే కమాండ్ ఏది?",
+    "options": ["readonly var", "lock var", "const var", "final var"],
+    "answer": "readonly var"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "షెల్ ఎన్విరాన్‌మెంట్ నుండి వేరియబుల్‌ను తొలగించే కమాండ్ ఏది?",
+    "options": ["unset var", "delete var", "remove var", "clear var"],
+    "answer": "unset var"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "వేరియబుల్‌ను చైల్డ్ ప్రాసెస్‌లకు అందుబాటులో ఉంచే కమాండ్ ఏది?",
+    "options": ["export var", "share var", "env var", "publish var"],
+    "answer": "export var"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "అవుట్‌పుట్ రీడైరెక్షన్ ఇప్పటికే ఉన్న ఫైల్‌ను ఓవర్‌రైట్ చేయకుండా నిరోధించే ఆప్షన్ ఏది?",
+    "options": ["set -o noclobber", "set -o nooverwrite", "set -o protect", "set -o safe"],
+    "answer": "set -o noclobber"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "షెల్ ప్రారంభమైనప్పటి నుండి గడిచిన సెకన్ల సంఖ్యను కలిగి ఉండే Bash వేరియబుల్ ఏది?",
+    "options": ["$SECONDS", "$RANDOM", "$LINENO", "$UID"],
+    "answer": "$SECONDS"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "var సెట్ చేయబడి, ఖాళీగా లేనప్పుడు మాత్రమే దాని స్థానంలో alt ను ప్రతిక్షేపించే Bash ఎక్స్‌పాన్షన్ ఏది?",
+    "options": ["${var:+alt}", "${var:-alt}", "${var:=alt}", "${var:?alt}"],
+    "answer": "${var:+alt}"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 3,
+    "question": "టెస్ట్ ఎక్స్‌ప్రెషన్‌లను మూల్యాంకనం చేసి exit status ను తిరిగి ఇచ్చే builtin కమాండ్ ఏది?",
+    "options": ["test", "echo", "read", "cd"],
+    "answer": "test"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 3,
+    "question": "కండిషనల్ టెస్ట్ ఎక్స్‌ప్రెషన్‌లను సాధారణంగా ఏ సింటాక్స్‌తో చుట్టి రాస్తారు?",
+    "options": ["[ ]", "{ }", "( )", "< >"],
+    "answer": "[ ]"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 3,
+    "question": "ఫైల్ ఉందో లేదో తనిఖీ చేసే టెస్ట్ ఆపరేటర్ ఏది?",
+    "options": ["-e", "-f", "-d", "-x"],
+    "answer": "-e"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 3,
+    "question": "path ఒక సాధారణ ఫైల్ కాదా అని తనిఖీ చేసే టెస్ట్ ఆపరేటర్ ఏది?",
+    "options": ["-f", "-d", "-e", "-r"],
+    "answer": "-f"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 3,
+    "question": "path ఒక డైరెక్టరీ కాదా అని తనిఖీ చేసే టెస్ట్ ఆపరేటర్ ఏది?",
+    "options": ["-d", "-f", "-s", "-w"],
+    "answer": "-d"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 3,
+    "question": "ఫైల్ చదవగలిగేదిగా ఉందో లేదో తనిఖీ చేసే టెస్ట్ ఆపరేటర్ ఏది?",
+    "options": ["-r", "-w", "-x", "-s"],
+    "answer": "-r"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 3,
+    "question": "ఫైల్ రాయగలిగేదిగా ఉందో లేదో తనిఖీ చేసే టెస్ట్ ఆపరేటర్ ఏది?",
+    "options": ["-w", "-r", "-x", "-e"],
+    "answer": "-w"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 3,
+    "question": "ఫైల్ ఎగ్జిక్యూటబుల్ అవునా కాదా అని తనిఖీ చేసే టెస్ట్ ఆపరేటర్ ఏది?",
+    "options": ["-x", "-w", "-r", "-d"],
+    "answer": "-x"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 3,
+    "question": "స్ట్రింగ్ ఖాళీ కాకుండా ఉందో లేదో తనిఖీ చేసే టెస్ట్ ఆపరేటర్ ఏది?",
+    "options": ["-n", "-z", "-s", "-e"],
+    "answer": "-n"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 3,
+    "question": "స్ట్రింగ్ ఖాళీగా ఉందో లేదో తనిఖీ చేసే టెస్ట్ ఆపరేటర్ ఏది?",
+    "options": ["-z", "-n", "-s", "-f"],
+    "answer": "-z"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 3,
+    "question": "సమానత్వాన్ని తనిఖీ చేసే సంఖ్యా పోలిక ఆపరేటర్ ఏది?",
+    "options": ["-eq", "=", "==", "-equal"],
+    "answer": "-eq"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 3,
+    "question": "కంటే ఎక్కువ (greater than) అని తనిఖీ చేసే సంఖ్యా పోలిక ఆపరేటర్ ఏది?",
+    "options": ["-gt", ">", "-ge", "-lt"],
+    "answer": "-gt"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 3,
+    "question": "కంటే తక్కువ లేదా సమానం (less than or equal to) అని తనిఖీ చేసే సంఖ్యా పోలిక ఆపరేటర్ ఏది?",
+    "options": ["-le", "-lt", "-ge", "-ne"],
+    "answer": "-le"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 3,
+    "question": "కండిషనల్ స్టేట్‌మెంట్‌ను ఏ కీవర్డ్ ప్రారంభిస్తుంది?",
+    "options": ["if", "case", "for", "while"],
+    "answer": "if"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 3,
+    "question": "if స్టేట్‌మెంట్‌ను ఏ కీవర్డ్ ముగిస్తుంది?",
+    "options": ["fi", "end", "done", "exit"],
+    "answer": "fi"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 3,
+    "question": "if షరతు తప్పు అయినప్పుడు ప్రత్యామ్నాయ శాఖను అందించే కీవర్డ్ ఏది?",
+    "options": ["else", "elif", "or", "default"],
+    "answer": "else"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 3,
+    "question": "else-if శాఖను అందించే కీవర్డ్ ఏది?",
+    "options": ["elif", "elseif", "else if", "or"],
+    "answer": "elif"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 3,
+    "question": "షరతు నిజమై ఉన్నంత వరకు పునరావృతమయ్యే లూప్ ఏది?",
+    "options": ["while", "until", "repeat", "loop"],
+    "answer": "while"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 3,
+    "question": "షరతు నిజం అయ్యే వరకు పునరావృతమయ్యే లూప్ ఏది?",
+    "options": ["until", "while", "for", "case"],
+    "answer": "until"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 3,
+    "question": "జాబితాలోని అంశాలపై పునరావృతమయ్యే లూప్ ఏది?",
+    "options": ["for", "while", "until", "case"],
+    "answer": "for"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 3,
+    "question": "తదుపరి పునరావృతానికి దాటవేసే లూప్ కంట్రోల్ కీవర్డ్ ఏది?",
+    "options": ["continue", "break", "next", "skip"],
+    "answer": "continue"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 3,
+    "question": "లూప్ నుండి వెంటనే నిష్క్రమించే లూప్ కంట్రోల్ కీవర్డ్ ఏది?",
+    "options": ["break", "continue", "exit", "stop"],
+    "answer": "break"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 3,
+    "question": "ప్యాటర్న్ మ్యాచింగ్ ఆధారంగా కమాండ్‌లను ఎంచుకునే స్టేట్‌మెంట్ ఏది?",
+    "options": ["case", "switch", "select", "match"],
+    "answer": "case"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 3,
+    "question": "Bash లో case స్టేట్‌మెంట్‌ను ఏ కీవర్డ్ ముగిస్తుంది?",
+    "options": ["esac", "end", "fi", "done"],
+    "answer": "esac"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 3,
+    "question": "Bash లో C-శైలి లూప్‌లను పోలి ఉండే లూప్ సింటాక్స్ ఏది?",
+    "options": ["for ((i=0; i<5; i++))", "for i in 0 to 5", "loop i=0 to 5", "while (i<5)"],
+    "answer": "for ((i=0; i<5; i++))"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "సాధారణ Bash ఫంక్షన్‌ను నిర్వచించే సింటాక్స్ ఏది?",
+    "options": ["myfunc() { echo hi; }", "def myfunc: echo hi", "function = myfunc", "myfunc -> echo hi"],
+    "answer": "myfunc() { echo hi; }"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "myfunc అనే ఫంక్షన్‌ను పిలిచే కమాండ్ ఏది?",
+    "options": ["myfunc", "call myfunc", "run myfunc", "execute myfunc"],
+    "answer": "myfunc"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "ఫంక్షన్ లోపల మాత్రమే కనిపించే వేరియబుల్‌ను ప్రకటించే కీవర్డ్ ఏది?",
+    "options": ["local", "private", "internal", "hidden"],
+    "answer": "local"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "ఫంక్షన్ నుండి 0 exit status ను తిరిగి ఇచ్చే కమాండ్ ఏది?",
+    "options": ["return 0", "exit function 0", "stop 0", "end 0"],
+    "answer": "return 0"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "ఫంక్షన్ లోపల, ఫంక్షన్‌కు పంపిన ఆర్గ్యుమెంట్ల సంఖ్యను ఏ పారామీటర్ ఇస్తుంది?",
+    "options": ["$#", "$@", "$0", "$1"],
+    "answer": "$#"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "మూడు ఎలిమెంట్లతో indexed array ను సృష్టించే సింటాక్స్ ఏది?",
+    "options": ["arr=(one two three)", "array arr one two three", "arr[one two three]", "set arr one two three"],
+    "answer": "arr=(one two three)"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "arr లోని index 2 వద్ద ఉన్న ఎలిమెంట్‌ను యాక్సెస్ చేసే సింటాక్స్ ఏది?",
+    "options": ["${arr[2]}", "${arr:2}", "$arr[2]", "arr{2}"],
+    "answer": "${arr[2]}"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "arr లోని ఎలిమెంట్ల సంఖ్యను ఇచ్చే ఎక్స్‌పాన్షన్ ఏది?",
+    "options": ["${#arr[@]}", "${#arr}", "${arr:length}", "${arr[@]#}"],
+    "answer": "${#arr[@]}"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "arr కు newitem ను జోడించే సింటాక్స్ ఏది?",
+    "options": ["arr+=(newitem)", "arr=newitem", "arr.push(newitem)", "add arr newitem"],
+    "answer": "arr+=(newitem)"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "arr లోని అన్ని ఎలిమెంట్లను తిరిగి ఇచ్చే ఎక్స్‌పాన్షన్ ఏది?",
+    "options": ["${arr[@]}", "${arr[0]}", "${arr[all]}", "${arr}"],
+    "answer": "${arr[@]}"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "associative array ను ప్రకటించే కమాండ్ ఏది?",
+    "options": ["declare -A map", "declare -a map", "array -A map", "assoc map"],
+    "answer": "declare -A map"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "స్టాండర్డ్ అవుట్‌పుట్ మరియు స్టాండర్డ్ ఎర్రర్ రెండింటినీ output.log కు పంపే రీడైరెక్షన్ ఏది?",
+    "options": ["command &> output.log", "command > output.log", "command 2> output.log", "command < output.log"],
+    "answer": "command &> output.log"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "కమాండ్ యొక్క మొత్తం అవుట్‌పుట్‌ను విస్మరించే రీడైరెక్షన్ ఏది?",
+    "options": ["command > /dev/null", "command > null", "command > empty", "command > discard"],
+    "answer": "command > /dev/null"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "ఒక కమాండ్ అవుట్‌పుట్‌ను మరొక కమాండ్‌కు ఇన్‌పుట్‌గా పంపే ఆపరేటర్ ఏది?",
+    "options": ["|", ">", "<", "&"],
+    "answer": "|"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "కమాండ్‌ను బ్యాక్‌గ్రౌండ్‌లో అమలు చేసే చిహ్నం ఏది?",
+    "options": ["&", "&&", "|", ";"],
+    "answer": "&"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "బ్యాక్‌గ్రౌండ్ జాబ్‌లు పూర్తయ్యే వరకు వేచి ఉండే builtin ఏది?",
+    "options": ["wait", "hold", "pause", "sleep"],
+    "answer": "wait"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "script.sh ను ప్రస్తుత షెల్ ఎన్విరాన్‌మెంట్‌లో అమలు చేసే కమాండ్ ఏది?",
+    "options": ["source script.sh", "bash script.sh", "./script.sh", "sh script.sh"],
+    "answer": "source script.sh"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "here document ను ప్రారంభించే ఆపరేటర్ ఏది?",
+    "options": ["<<", ">>", "<", ">"],
+    "answer": "<<"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "సురక్షితమైన తాత్కాలిక ఫైల్‌ను సృష్టించే కమాండ్ ఏది?",
+    "options": ["mktemp", "tempfile", "touch tmp", "newfile"],
+    "answer": "mktemp"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "స్క్రిప్ట్‌కు SIGINT వచ్చినప్పుడు cleanup ను అమలు చేసే కమాండ్ ఏది?",
+    "options": ["trap 'cleanup' SIGINT", "handle SIGINT cleanup", "signal SIGINT cleanup", "catch SIGINT cleanup"],
+    "answer": "trap 'cleanup' SIGINT"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "వినియోగదారు Ctrl+C నొక్కినప్పుడు సాధారణంగా ఏ సిగ్నల్ పంపబడుతుంది?",
+    "options": ["SIGINT", "SIGTERM", "SIGKILL", "SIGHUP"],
+    "answer": "SIGINT"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "ఏదైనా కమాండ్ విఫలమైనప్పుడు స్క్రిప్ట్ వెంటనే నిష్క్రమించేలా చేసే ఆప్షన్ ఏది?",
+    "options": ["set -e", "set -x", "set -u", "set -o pipefail"],
+    "answer": "set -e"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "సెట్ చేయని వేరియబుల్‌ను ప్రస్తావించినప్పుడు ఎర్రర్ వచ్చేలా చేసే ఆప్షన్ ఏది?",
+    "options": ["set -u", "set -e", "set -x", "set -a"],
+    "answer": "set -u"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "డీబగ్గింగ్ కోసం ప్రతి కమాండ్‌ను అమలు చేసే ముందు ప్రింట్ చేసే ఆప్షన్ ఏది?",
+    "options": ["set -x", "set -e", "set -u", "set -v"],
+    "answer": "set -x"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "ప్రస్తుతం నిర్వచించబడిన షెల్ ఫంక్షన్లను జాబితా చేసే కమాండ్ ఏది?",
+    "options": ["declare -f", "declare -A", "functions", "listfunc"],
+    "answer": "declare -f"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 5,
+    "question": "స్క్రిప్ట్‌ను Bash తో అమలు చేయమని సిస్టమ్‌కు చెప్పే స్క్రిప్ట్ పైన ఉండే లైన్ ఏది?",
+    "options": ["//bash", "#!/bin/bash", "<?bash", "#include bash"],
+    "answer": "#!/bin/bash"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 5,
+    "question": "తప్పిపోయిన పేరెంట్ డైరెక్టరీలతో సహా డైరెక్టరీని సృష్టించే కమాండ్ ఏది?",
+    "options": ["mkdir -p", "mkdir -r", "mkdir -m", "mkdir -v"],
+    "answer": "mkdir -p"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 5,
+    "question": "Bash లో count వేరియబుల్‌కు 5 విలువను ఎలా అసైన్ చేస్తారు?",
+    "options": ["set count 5", "$count=5", "count=5", "count = 5"],
+    "answer": "count=5"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 5,
+    "question": "name అనే వేరియబుల్ విలువను చదవడానికి ఏ చిహ్నం ఉపయోగిస్తారు?",
+    "options": ["%name", "$name", "&name", "#name"],
+    "answer": "$name"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 5,
+    "question": "స్క్రిప్ట్‌కు పంపిన ఆర్గ్యుమెంట్ల సంఖ్యను ఏ వేరియబుల్ కలిగి ఉంటుంది?",
+    "options": ["$?", "$#", "$@", "$$"],
+    "answer": "$#"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 5,
+    "question": "చివరి కమాండ్ యొక్క exit status ను ఏ వేరియబుల్ కలిగి ఉంటుంది?",
+    "options": ["$?", "$0", "$#", "$!"],
+    "answer": "$?"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 5,
+    "question": "మొదటి కమాండ్ విజయవంతమైతేనే రెండవ కమాండ్‌ను అమలు చేసే ఆపరేటర్ ఏది?",
+    "options": ["|", "||", ";", "&&"],
+    "answer": "&&"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 5,
+    "question": "అవుట్‌పుట్‌ను ఫైల్‌కు జోడించే ఆపరేటర్ ఏది?",
+    "options": ["<<", ">>", "|&", ">"],
+    "answer": ">>"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 5,
+    "question": "Bash లో కండిషనల్ బ్లాక్‌ను ఏ కీవర్డ్ ప్రారంభిస్తుంది?",
+    "options": ["check", "case-if", "if", "when"],
+    "answer": "if"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 5,
+    "question": "Bash లో if బ్లాక్‌ను ఏ కీవర్డ్ ముగిస్తుంది?",
+    "options": ["endif", "fi", "done", "end"],
+    "answer": "fi"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 5,
+    "question": "అంశాల జాబితాపై పునరావృతమయ్యే లూప్ ఏది?",
+    "options": ["foreach item list", "for item in list; do", "each item in list", "loop item in list"],
+    "answer": "for item in list; do"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 5,
+    "question": "టెర్మినల్‌కు టెక్స్ట్‌ను ప్రింట్ చేసే కమాండ్ ఏది?",
+    "options": ["print", "echo", "say", "out"],
+    "answer": "echo"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 5,
+    "question": "సాధారణ ఫైల్ ఉందో లేదో తనిఖీ చేసే టెస్ట్ ఏది?",
+    "options": ["[ -e file ]", "[ -r file ]", "[ -d file ]", "[ -f file ]"],
+    "answer": "[ -f file ]"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 5,
+    "question": "స్ట్రింగ్ ఖాళీగా ఉందో లేదో తనిఖీ చేసే టెస్ట్ ఏది?",
+    "options": ["[ -s \"$str\" ]", "[ -e \"$str\" ]", "[ -n \"$str\" ]", "[ -z \"$str\" ]"],
+    "answer": "[ -z \"$str\" ]"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 5,
+    "question": "ఇన్‌పుట్ యొక్క ఒక లైన్‌ను వేరియబుల్‌లోకి చదివే కమాండ్ ఏది?",
+    "options": ["read", "input", "scan", "get"],
+    "answer": "read"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 5,
+    "question": "కమాండ్ అవుట్‌పుట్‌ను వేరియబుల్‌లోకి సంగ్రహించే సింటాక్స్ ఏది?",
+    "options": ["var=$(date)", "var=[date]", "var={date}", "var=<date>"],
+    "answer": "var=$(date)"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 5,
+    "question": "Bash షెల్‌లో data.txt అనే ఫైల్‌లోని లైన్లను లెక్కించే కమాండ్ ఏది?",
+    "options": ["wc -l data.txt", "ls -l data.txt", "sort -l data.txt", "cut -l data.txt"],
+    "answer": "wc -l data.txt"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 5,
+    "question": "ప్రతి కమాండ్‌ను అమలు చేయడానికి ముందు ప్రింట్ చేసే ఆప్షన్ ఏది?",
+    "options": ["set -f", "set -u", "set -x", "set -e"],
+    "answer": "set -x"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 5,
+    "question": "అమలవుతున్న స్క్రిప్ట్ పేరును ఏ వేరియబుల్ కలిగి ఉంటుంది?",
+    "options": ["$*", "$1", "$0", "$#"],
+    "answer": "$0"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 5,
+    "question": "Bash లో greet అనే ఫంక్షన్‌ను ఎలా నిర్వచిస్తారు?",
+    "options": ["fn greet { echo hi }", "function greet: echo hi", "def greet(): echo hi", "greet() { echo hi; }"],
+    "answer": "greet() { echo hi; }"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 5,
+    "question": "ప్రస్తుత షెల్‌లో ఫైల్‌ను source చేసే కమాండ్ ఏది?",
+    "options": ["run file.sh", "import file.sh", "source file.sh", "call file.sh"],
+    "answer": "source file.sh"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 5,
+    "question": "ఫైల్ పేర్లలో ఎన్ని అక్షరాలకైనా సరిపోయే వైల్డ్‌కార్డ్ ఏది?",
+    "options": ["?", "~", "*", "#"],
+    "answer": "*"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 5,
+    "question": "Bash లో అనేక ప్యాటర్న్‌ల నుండి ఎంచుకోవడానికి ఉపయోగించే కీవర్డ్ ఏది?",
+    "options": ["select-when", "match", "case", "switch"],
+    "answer": "case"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 5,
+    "question": "ఫైల్ యొక్క మొదటి లైన్లను ప్రింట్ చేసే కమాండ్ ఏది?",
+    "options": ["cat -f", "head", "less -h", "tail"],
+    "answer": "head"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 5,
+    "question": "స్టాండర్డ్ ఎర్రర్‌ను ఫైల్‌కు రీడైరెక్ట్ చేసే ఆపరేటర్ ఏది?",
+    "options": ["0<", "^>", "2>", "1>"],
+    "answer": "2>"
+  }
+]

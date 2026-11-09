@@ -1226,14 +1226,14 @@
   {
     "category": "AWS",
     "set": 5,
-    "question": "मैनेज्ड रिलेशनल डेटाबेस सेवा कोन AWS सेवा अछि?",
+    "question": "Amazon RDS केर कोन सुविधा स्वचालित फेलओवर लेल दोसर Availability Zone मे सिंक्रोनस स्टैंडबाई रेप्लिका बनौने रखैत अछि?",
     "options": [
-      "Amazon RDS",
-      "Amazon S3",
-      "Amazon DynamoDB",
-      "Amazon CloudFront"
+      "Multi-AZ deployment",
+      "Read replica",
+      "Manual snapshot",
+      "Parameter group"
     ],
-    "answer": "Amazon RDS"
+    "answer": "Multi-AZ deployment"
   },
   {
     "category": "AWS",
@@ -1262,14 +1262,14 @@
   {
     "category": "AWS",
     "set": 5,
-    "question": "कंटेंट डिलीवरी नेटवर्क कोन AWS सेवा अछि?",
+    "question": "Amazon CloudFront केर कोन सुविधा ई सुनिश्चित करैत अछि जे S3 origin केँ मात्र distribution क माध्यम सँ पढ़ल जा सकय, सीधा नहि?",
     "options": [
-      "Amazon SNS",
-      "Amazon Route 53",
-      "Amazon CloudFront",
-      "AWS Snowball"
+      "Origin Access Control",
+      "S3 Transfer Acceleration",
+      "Route 53 alias record",
+      "Lambda@Edge"
     ],
-    "answer": "Amazon CloudFront"
+    "answer": "Origin Access Control"
   },
   {
     "category": "AWS",
@@ -1310,14 +1310,14 @@
   {
     "category": "AWS",
     "set": 5,
-    "question": "मैनेज्ड मेसेज क्यू कोन AWS सेवा प्रदान करैत अछि?",
+    "question": "Amazon SQS क्यूक कोन प्रकार संदेशक सख्त क्रम बनौने रखैत अछि आ exactly-once प्रोसेसिंग समर्थित करैत अछि?",
     "options": [
-      "Amazon SES",
-      "Amazon SQS",
-      "AWS KMS",
-      "Amazon EFS"
+      "Standard queue",
+      "FIFO queue",
+      "Delay queue",
+      "Dead-letter queue"
     ],
-    "answer": "Amazon SQS"
+    "answer": "FIFO queue"
   },
   {
     "category": "AWS",
@@ -1422,22 +1422,22 @@
     "options": [
       "एकटा बिलिंग खाता",
       "एकटा IAM समूह",
-      "एकटा Region के भीतर एक वा बेसी डेटा सेंटर",
-      "एकटा एज स्थान"
+      "एकटा Region क भीतर एक वा बेसी डेटा सेंटर",
+      "एकटा एज लोकेशन"
     ],
-    "answer": "एकटा Region के भीतर एक वा बेसी डेटा सेंटर"
+    "answer": "एकटा Region क भीतर एक वा बेसी डेटा सेंटर"
   },
   {
     "category": "AWS",
     "set": 5,
-    "question": "पेटाबाइट-स्केल डेटा वेयरहाउस कोन AWS सेवा अछि?",
+    "question": "Amazon Redshift मे टेबलक distribution key की नियंत्रित करैत अछि?",
     "options": [
-      "Amazon DynamoDB",
-      "Amazon ElastiCache",
-      "Amazon Redshift",
-      "Amazon SQS"
+      "पंक्ति सभ compute node सभ मे कोना बाँटल जाइत अछि",
+      "COPY command कोन IAM role चलबैत अछि",
+      "स्वचालित बैकअप कतेक समय धरि राखल जाइत अछि",
+      "क्लस्टर केँ कोन KMS key एन्क्रिप्ट करैत अछि"
     ],
-    "answer": "Amazon Redshift"
+    "answer": "पंक्ति सभ compute node सभ मे कोना बाँटल जाइत अछि"
   },
   {
     "category": "AWS",
@@ -1490,13 +1490,13 @@
   {
     "category": "AWS",
     "set": 5,
-    "question": "मैनेज्ड Apache Kafka कोन AWS सेवा प्रदान करैत अछि?",
+    "question": "Amazon MSK क्लस्टर मे कोन node सभ topic partition जमा करैत अछि आ Kafka producer तथा consumer केँ सेवा दैत अछि?",
     "options": [
-      "Amazon S3",
-      "Amazon EBS",
-      "AWS KMS",
-      "Amazon MSK"
+      "Broker nodes",
+      "NAT gateways",
+      "Bastion hosts",
+      "Glue crawlers"
     ],
-    "answer": "Amazon MSK"
+    "answer": "Broker nodes"
   }
 ]

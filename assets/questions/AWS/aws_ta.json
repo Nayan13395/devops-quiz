@@ -350,7 +350,7 @@
   {
     "category": "AWS",
     "set": 2,
-    "question": "உடல் சாதனத்தைப் பயன்படுத்தி அதிக அளவு தரவை மாற்ற எந்த AWS சேவை பயன்படுத்தப்படுகிறது?",
+    "question": "இயற்பியல் சாதனத்தைப் பயன்படுத்தி அதிக அளவு தரவை மாற்ற எந்த AWS சேவை பயன்படுத்தப்படுகிறது?",
     "options": [
       "AWS DataSync",
       "AWS Snowball",
@@ -1142,7 +1142,7 @@
   {
     "category": "AWS",
     "set": 4,
-    "question": "உலாவியிலிருந்தே Linux EC2 இன்ஸ்டன்ஸ்களுக்கு பாதுகாப்பான shell access வழங்கும் AWS சேவை எது?",
+    "question": "உலாவியிலிருந்தே Linux EC2 இன்ஸ்டன்ஸ்களுக்கு பாதுகாப்பான ஷெல் அணுகலை வழங்கும் AWS சேவை எது?",
     "options": [
       "EC2 Instance Connect",
       "AWS Direct Connect",
@@ -1226,14 +1226,14 @@
   {
     "category": "AWS",
     "set": 5,
-    "question": "நிர்வகிக்கப்படும் தொடர்புடைய தரவுத்தளச் சேவையான AWS சேவை எது?",
+    "question": "தானியங்கி ஃபெயில்ஓவருக்காக மற்றொரு Availability Zoneஇல் ஒத்திசைவான ஸ்டாண்ட்பை பிரதியைப் பராமரிக்கும் Amazon RDS அம்சம் எது?",
     "options": [
-      "Amazon RDS",
-      "Amazon S3",
-      "Amazon DynamoDB",
-      "Amazon CloudFront"
+      "Multi-AZ deployment",
+      "Read replica",
+      "Manual snapshot",
+      "Parameter group"
     ],
-    "answer": "Amazon RDS"
+    "answer": "Multi-AZ deployment"
   },
   {
     "category": "AWS",
@@ -1262,14 +1262,14 @@
   {
     "category": "AWS",
     "set": 5,
-    "question": "உள்ளடக்க விநியோக வலையமைப்பான AWS சேவை எது?",
+    "question": "S3 origin-ஐ distribution வழியாக மட்டுமே படிக்க முடியும், நேரடியாகப் படிக்க முடியாது என்பதை உறுதிசெய்யும் Amazon CloudFront அம்சம் எது?",
     "options": [
-      "Amazon SNS",
-      "Amazon Route 53",
-      "Amazon CloudFront",
-      "AWS Snowball"
+      "Origin Access Control",
+      "S3 Transfer Acceleration",
+      "Route 53 alias record",
+      "Lambda@Edge"
     ],
-    "answer": "Amazon CloudFront"
+    "answer": "Origin Access Control"
   },
   {
     "category": "AWS",
@@ -1310,14 +1310,14 @@
   {
     "category": "AWS",
     "set": 5,
-    "question": "நிர்வகிக்கப்படும் செய்தி வரிசையை எந்த AWS சேவை வழங்குகிறது?",
+    "question": "கண்டிப்பான செய்தி வரிசையைப் பாதுகாத்து, சரியாக ஒருமுறை செயலாக்கத்தை (exactly-once processing) ஆதரிக்கும் Amazon SQS வரிசை வகை எது?",
     "options": [
-      "Amazon SES",
-      "Amazon SQS",
-      "AWS KMS",
-      "Amazon EFS"
+      "Standard queue",
+      "FIFO queue",
+      "Delay queue",
+      "Dead-letter queue"
     ],
-    "answer": "Amazon SQS"
+    "answer": "FIFO queue"
   },
   {
     "category": "AWS",
@@ -1430,14 +1430,14 @@
   {
     "category": "AWS",
     "set": 5,
-    "question": "பெட்டாபைட் அளவிலான தரவுக் கிடங்காக இருக்கும் AWS சேவை எது?",
+    "question": "Amazon Redshift-இல், ஒரு அட்டவணையின் distribution key எதைக் கட்டுப்படுத்துகிறது?",
     "options": [
-      "Amazon DynamoDB",
-      "Amazon ElastiCache",
-      "Amazon Redshift",
-      "Amazon SQS"
+      "வரிசைகள் கணினி நோடுகள் முழுவதும் எவ்வாறு விநியோகிக்கப்படுகின்றன",
+      "COPY கட்டளையை எந்த IAM role இயக்குகிறது",
+      "தானியங்கி காப்புப்பிரதிகள் எவ்வளவு காலம் வைத்திருக்கப்படுகின்றன",
+      "கிளஸ்டரை எந்த KMS key குறியாக்கம் செய்கிறது"
     ],
-    "answer": "Amazon Redshift"
+    "answer": "வரிசைகள் கணினி நோடுகள் முழுவதும் எவ்வாறு விநியோகிக்கப்படுகின்றன"
   },
   {
     "category": "AWS",
@@ -1490,13 +1490,13 @@
   {
     "category": "AWS",
     "set": 5,
-    "question": "நிர்வகிக்கப்படும் Apache Kafka சேவையை எந்த AWS சேவை வழங்குகிறது?",
+    "question": "Amazon MSK கிளஸ்டரில், topic partition-களைச் சேமித்து Kafka producer மற்றும் consumer-களுக்குச் சேவை வழங்கும் நோடுகள் எவை?",
     "options": [
-      "Amazon S3",
-      "Amazon EBS",
-      "AWS KMS",
-      "Amazon MSK"
+      "Broker nodes",
+      "NAT gateways",
+      "Bastion hosts",
+      "Glue crawlers"
     ],
-    "answer": "Amazon MSK"
+    "answer": "Broker nodes"
   }
 ]

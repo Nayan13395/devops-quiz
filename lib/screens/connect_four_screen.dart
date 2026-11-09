@@ -1,6 +1,11 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
 
+import '../services/game_sound_service.dart';
 import '../services/point_service.dart';
+
+enum _ConnectFourMode { vsBot, twoPlayer }
 
 class ConnectFourScreen extends StatefulWidget {
   const ConnectFourScreen({super.key});
@@ -17,17 +22,28 @@ class _ConnectFourScreenState extends State<ConnectFourScreen> {
   int _turn = 1;
   int? _winner;
   bool _draw = false;
+  _ConnectFourMode _mode = _ConnectFourMode.twoPlayer;
+  bool _botThinking = false;
+  int _turnToken = 0;
   Set<int> _winningCells = {};
 
-  void _drop(int column) {
-    if (_winner != null || _draw) return;
-    final row = List<int>.generate(_rows, (index) => _rows - index - 1)
-        .firstWhere(
-          (candidate) => _board[candidate * _columns + column] == null,
-          orElse: () => -1,
-        );
+  int _landingRow(int column) =>
+      List<int>.generate(_rows, (index) => _rows - index - 1).firstWhere(
+        (candidate) => _board[candidate * _columns + column] == null,
+        orElse: () => -1,
+      );
+
+  void _drop(int column, {bool isBotMove = false}) {
+    if (_winner != null ||
+        _draw ||
+        _botThinking && !isBotMove ||
+        _mode == _ConnectFourMode.vsBot && _turn == 2 && !isBotMove) {
+      return;
+    }
+    final row = _landingRow(column);
     if (row < 0) return;
 
+    final movedBy = _turn;
     final cell = row * _columns + column;
     setState(() {
       _board[cell] = _turn;
@@ -39,12 +55,69 @@ class _ConnectFourScreenState extends State<ConnectFourScreen> {
         _draw = true;
       } else {
         _turn = _turn == 1 ? 2 : 1;
+        _botThinking = _mode == _ConnectFourMode.vsBot && _turn == 2;
       }
     });
 
-    if (_winner != null) {
+    unawaited(
+      GameSoundService.play(
+        _winner == null ? GameSoundEffect.click : GameSoundEffect.win,
+      ),
+    );
+    if (_winner != null &&
+        (_mode == _ConnectFourMode.twoPlayer || movedBy == 1)) {
       _awardWin();
     }
+    if (_botThinking) unawaited(_playBotMove(_turnToken));
+  }
+
+  Future<void> _playBotMove(int turnToken) async {
+    await Future<void>.delayed(const Duration(milliseconds: 350));
+    if (!mounted ||
+        turnToken != _turnToken ||
+        _mode != _ConnectFourMode.vsBot ||
+        _winner != null ||
+        _draw ||
+        _turn != 2) {
+      return;
+    }
+    final column = _bestBotColumn();
+    if (column == null) return;
+    setState(() => _botThinking = false);
+    _drop(column, isBotMove: true);
+  }
+
+  int? _bestBotColumn() {
+    const centerOrder = [3, 2, 4, 1, 5, 0, 6];
+    for (final player in [2, 1]) {
+      for (final column in centerOrder) {
+        final row = _landingRow(column);
+        if (row < 0) continue;
+        final cell = row * _columns + column;
+        _board[cell] = player;
+        final wins = _winningLine(row, column, player).isNotEmpty;
+        _board[cell] = null;
+        if (wins) return column;
+      }
+    }
+    for (final column in centerOrder) {
+      if (_landingRow(column) >= 0) return column;
+    }
+    return null;
+  }
+
+  void _setMode(_ConnectFourMode mode) {
+    if (_mode == mode) return;
+    _turnToken++;
+    setState(() {
+      _mode = mode;
+      _board = List<int?>.filled(_rows * _columns, null);
+      _turn = 1;
+      _winner = null;
+      _draw = false;
+      _botThinking = false;
+      _winningCells = {};
+    });
   }
 
   List<int> _winningLine(int row, int column, int player) {
@@ -88,6 +161,8 @@ class _ConnectFourScreenState extends State<ConnectFourScreen> {
       _turn = 1;
       _winner = null;
       _draw = false;
+      _botThinking = false;
+      _turnToken++;
       _winningCells = {};
     });
   }
@@ -97,9 +172,19 @@ class _ConnectFourScreenState extends State<ConnectFourScreen> {
     final colors = Theme.of(context).colorScheme;
     final done = _winner != null || _draw;
     final status = _winner != null
-        ? '${_winner == 1 ? 'Red' : 'Yellow'} wins!'
+        ? _mode == _ConnectFourMode.vsBot
+              ? _winner == 1
+                    ? 'You win!'
+                    : 'Bot wins!'
+              : '${_winner == 1 ? 'Red' : 'Yellow'} wins!'
         : _draw
         ? 'Board full — draw'
+        : _mode == _ConnectFourMode.vsBot
+        ? _turn == 1
+              ? 'Your turn'
+              : _botThinking
+              ? 'Bot is thinking'
+              : 'Bot turn'
         : '${_turn == 1 ? 'Red' : 'Yellow'} to move';
 
     return Scaffold(
@@ -121,6 +206,24 @@ class _ConnectFourScreenState extends State<ConnectFourScreen> {
               constraints: const BoxConstraints(maxWidth: 500),
               child: Column(
                 children: [
+                  SegmentedButton<_ConnectFourMode>(
+                    segments: const [
+                      ButtonSegment(
+                        value: _ConnectFourMode.vsBot,
+                        label: Text('Vs Bot'),
+                        icon: Icon(Icons.smart_toy_outlined),
+                      ),
+                      ButtonSegment(
+                        value: _ConnectFourMode.twoPlayer,
+                        label: Text('2 Player'),
+                        icon: Icon(Icons.people_outline),
+                      ),
+                    ],
+                    selected: {_mode},
+                    onSelectionChanged: (selection) =>
+                        _setMode(selection.first),
+                  ),
+                  const SizedBox(height: 18),
                   Text(
                     status,
                     style: Theme.of(context).textTheme.titleLarge?.copyWith(
@@ -129,7 +232,9 @@ class _ConnectFourScreenState extends State<ConnectFourScreen> {
                   ),
                   const SizedBox(height: 6),
                   Text(
-                    'Two players · tap a column to drop a disc',
+                    _mode == _ConnectFourMode.vsBot
+                        ? 'Play against the bot · tap a column to drop a disc'
+                        : 'Two players · tap a column to drop a disc',
                     style: Theme.of(context).textTheme.bodyMedium?.copyWith(
                       color: colors.onSurfaceVariant,
                     ),
@@ -172,6 +277,7 @@ class _ConnectFourScreenState extends State<ConnectFourScreen> {
                                     ? null
                                     : () => _drop(index % _columns),
                                 child: AnimatedContainer(
+                                  key: ValueKey('connect-four-disc-$index'),
                                   duration: const Duration(milliseconds: 180),
                                   decoration: BoxDecoration(
                                     shape: BoxShape.circle,
@@ -198,8 +304,18 @@ class _ConnectFourScreenState extends State<ConnectFourScreen> {
                     spacing: 18,
                     runSpacing: 8,
                     children: [
-                      _Legend(color: Colors.red.shade600, label: 'Red'),
-                      _Legend(color: Colors.amber.shade400, label: 'Yellow'),
+                      _Legend(
+                        color: Colors.red.shade600,
+                        label: _mode == _ConnectFourMode.vsBot
+                            ? 'You · Red'
+                            : 'Red · Player 1',
+                      ),
+                      _Legend(
+                        color: Colors.amber.shade400,
+                        label: _mode == _ConnectFourMode.vsBot
+                            ? 'Bot · Yellow'
+                            : 'Yellow · Player 2',
+                      ),
                     ],
                   ),
                   const SizedBox(height: 18),

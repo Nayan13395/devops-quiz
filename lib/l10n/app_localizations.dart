@@ -8,7 +8,6 @@ import 'package:intl/intl.dart' as intl;
 import 'app_localizations_ar.dart';
 import 'app_localizations_as.dart';
 import 'app_localizations_bn.dart';
-import 'app_localizations_brx.dart';
 import 'app_localizations_de.dart';
 import 'app_localizations_doi.dart';
 import 'app_localizations_en.dart';
@@ -18,9 +17,9 @@ import 'app_localizations_gom.dart';
 import 'app_localizations_gu.dart';
 import 'app_localizations_hi.dart';
 import 'app_localizations_id.dart';
+import 'app_localizations_it.dart';
 import 'app_localizations_ja.dart';
 import 'app_localizations_kn.dart';
-import 'app_localizations_ks.dart';
 import 'app_localizations_mai.dart';
 import 'app_localizations_ml.dart';
 import 'app_localizations_mni.dart';
@@ -35,6 +34,7 @@ import 'app_localizations_sat.dart';
 import 'app_localizations_sd.dart';
 import 'app_localizations_ta.dart';
 import 'app_localizations_te.dart';
+import 'app_localizations_tr.dart';
 import 'app_localizations_ur.dart';
 import 'app_localizations_zh.dart';
 
@@ -124,7 +124,6 @@ abstract class AppLocalizations {
     Locale('ar'),
     Locale('as'),
     Locale('bn'),
-    Locale('brx'),
     Locale('de'),
     Locale('doi'),
     Locale('en'),
@@ -134,9 +133,9 @@ abstract class AppLocalizations {
     Locale('gu'),
     Locale('hi'),
     Locale('id'),
+    Locale('it'),
     Locale('ja'),
     Locale('kn'),
-    Locale('ks'),
     Locale('mai'),
     Locale('ml'),
     Locale('mni'),
@@ -151,6 +150,7 @@ abstract class AppLocalizations {
     Locale('sd'),
     Locale('ta'),
     Locale('te'),
+    Locale('tr'),
     Locale('ur'),
     Locale('zh')
   ];
@@ -699,7 +699,7 @@ class _AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> 
   }
 
   @override
-  bool isSupported(Locale locale) => <String>['ar', 'as', 'bn', 'brx', 'de', 'doi', 'en', 'es', 'fr', 'gom', 'gu', 'hi', 'id', 'ja', 'kn', 'ks', 'mai', 'ml', 'mni', 'mr', 'ne', 'or', 'pa', 'pt', 'ru', 'sa', 'sat', 'sd', 'ta', 'te', 'ur', 'zh'].contains(locale.languageCode);
+  bool isSupported(Locale locale) => <String>['ar', 'as', 'bn', 'de', 'doi', 'en', 'es', 'fr', 'gom', 'gu', 'hi', 'id', 'it', 'ja', 'kn', 'mai', 'ml', 'mni', 'mr', 'ne', 'or', 'pa', 'pt', 'ru', 'sa', 'sat', 'sd', 'ta', 'te', 'tr', 'ur', 'zh'].contains(locale.languageCode);
 
   @override
   bool shouldReload(_AppLocalizationsDelegate old) => false;
@@ -713,7 +713,6 @@ AppLocalizations lookupAppLocalizations(Locale locale) {
     case 'ar': return AppLocalizationsAr();
     case 'as': return AppLocalizationsAs();
     case 'bn': return AppLocalizationsBn();
-    case 'brx': return AppLocalizationsBrx();
     case 'de': return AppLocalizationsDe();
     case 'doi': return AppLocalizationsDoi();
     case 'en': return AppLocalizationsEn();
@@ -723,9 +722,9 @@ AppLocalizations lookupAppLocalizations(Locale locale) {
     case 'gu': return AppLocalizationsGu();
     case 'hi': return AppLocalizationsHi();
     case 'id': return AppLocalizationsId();
+    case 'it': return AppLocalizationsIt();
     case 'ja': return AppLocalizationsJa();
     case 'kn': return AppLocalizationsKn();
-    case 'ks': return AppLocalizationsKs();
     case 'mai': return AppLocalizationsMai();
     case 'ml': return AppLocalizationsMl();
     case 'mni': return AppLocalizationsMni();
@@ -740,6 +739,7 @@ AppLocalizations lookupAppLocalizations(Locale locale) {
     case 'sd': return AppLocalizationsSd();
     case 'ta': return AppLocalizationsTa();
     case 'te': return AppLocalizationsTe();
+    case 'tr': return AppLocalizationsTr();
     case 'ur': return AppLocalizationsUr();
     case 'zh': return AppLocalizationsZh();
   }

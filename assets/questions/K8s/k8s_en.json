@@ -415,9 +415,9 @@
   {
     "category": "Kubernetes",
     "set": 5,
-    "question": "Which object makes sure a specified number of pod replicas is running?",
-    "options": ["ReplicaSet", "Service", "Ingress", "ConfigMap"],
-    "answer": "ReplicaSet"
+    "question": "Which field in a Kubernetes ReplicaSet spec defines the labels used to identify the Pods it manages?",
+    "options": ["spec.selector", "spec.nodeName", "spec.serviceName", "spec.restartPolicy"],
+    "answer": "spec.selector"
   },
   {
     "category": "Kubernetes",
@@ -457,9 +457,9 @@
   {
     "category": "Kubernetes",
     "set": 5,
-    "question": "Which component stores the entire cluster state?",
-    "options": ["kube-scheduler", "kube-proxy", "kubelet", "etcd"],
-    "answer": "etcd"
+    "question": "Which command creates a backup snapshot of the etcd database in a Kubernetes cluster?",
+    "options": ["etcdctl snapshot save", "kubectl backup etcd", "kubeadm etcd dump", "kubectl cp etcd"],
+    "answer": "etcdctl snapshot save"
   },
   {
     "category": "Kubernetes",

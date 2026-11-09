@@ -12,6 +12,8 @@ class JigsawPuzzleService {
   static const String _completedKey = 'jigsaw_completed_levels_v1';
   static const String _selectedKey = 'jigsaw_selected_level_v1';
 
+  static bool usesJigsawPieces(int level) => level >= 21 && level <= levelCount;
+
   static int gridSizeFor(int level) {
     if (level < 1 || level > levelCount) {
       throw RangeError.range(level, 1, levelCount, 'level');
