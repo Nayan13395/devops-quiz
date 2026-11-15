@@ -1,0 +1,302 @@
+[
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "أي مكوّن يجدول الـ pods على الـ nodes؟",
+    "options": [
+      "kube-scheduler",
+      "kubelet",
+      "etcd",
+      "kube-proxy"
+    ],
+    "answer": "kube-scheduler"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "أي مكوّن يعمل على كل node؟",
+    "options": [
+      "kubelet",
+      "etcd",
+      "kube-apiserver",
+      "controller-manager"
+    ],
+    "answer": "kubelet"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "أي مكوّن يعمل كواجهة أمامية لطبقة التحكم (control plane)؟",
+    "options": [
+      "kube-apiserver",
+      "kubelet",
+      "etcd",
+      "kube-proxy"
+    ],
+    "answer": "kube-apiserver"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "أي مكوّن يخزّن حالة الـ cluster؟",
+    "options": [
+      "etcd",
+      "kubelet",
+      "CoreDNS",
+      "Ingress"
+    ],
+    "answer": "etcd"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "أي مكوّن يدير قواعد الشبكة على الـ nodes؟",
+    "options": [
+      "kube-proxy",
+      "kubelet",
+      "etcd",
+      "Scheduler"
+    ],
+    "answer": "kube-proxy"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "ما خدمة DNS الشائعة الاستخدام في Kubernetes؟",
+    "options": [
+      "CoreDNS",
+      "Bind",
+      "Route53",
+      "Consul"
+    ],
+    "answer": "CoreDNS"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "أي كائن هو أصغر وحدة قابلة للنشر في Kubernetes؟",
+    "options": [
+      "Pod",
+      "Cluster",
+      "Node",
+      "Service"
+    ],
+    "answer": "Pod"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "أي كائن يدير التطبيقات عديمة الحالة (stateless)؟",
+    "options": [
+      "Deployment",
+      "ConfigMap",
+      "Secret",
+      "Namespace"
+    ],
+    "answer": "Deployment"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "أي حمل عمل يوفر هويات Pod ثابتة ونشرا مرتبا للتطبيقات ذات الحالة؟",
+    "options": [
+      "StatefulSet",
+      "Deployment",
+      "ReplicaSet",
+      "DaemonSet"
+    ],
+    "answer": "StatefulSet"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "أي كائن يضمن تشغيل عدد محدد من نسخ الـ pod؟",
+    "options": [
+      "ReplicaSet",
+      "Service",
+      "ConfigMap",
+      "Namespace"
+    ],
+    "answer": "ReplicaSet"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "أي كائن يعرّض الـ pods لحركة مرور الشبكة؟",
+    "options": [
+      "Service",
+      "Node",
+      "ReplicaSet",
+      "Volume"
+    ],
+    "answer": "Service"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "أي كائن يدير الوصول الخارجي إلى الـ services؟",
+    "options": [
+      "Ingress",
+      "Pod",
+      "ReplicaSet",
+      "Secret"
+    ],
+    "answer": "Ingress"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "أي كائن يخزّن بيانات الإعدادات؟",
+    "options": [
+      "ConfigMap",
+      "Deployment",
+      "Ingress",
+      "Node"
+    ],
+    "answer": "ConfigMap"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "أي كائن يخزّن المعلومات الحساسة مثل كلمات المرور؟",
+    "options": [
+      "Secret",
+      "ConfigMap",
+      "Service",
+      "Namespace"
+    ],
+    "answer": "Secret"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "أي كائن يوفّر تخزينًا دائمًا للـ pods؟",
+    "options": [
+      "PersistentVolume",
+      "ReplicaSet",
+      "Namespace",
+      "Service"
+    ],
+    "answer": "PersistentVolume"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "أي مسبار يحدد جاهزية الحاوية لاستقبال حركة Service؟",
+    "options": [
+      "مسبار إبقاء اتصال TCP حيا",
+      "Readiness probe",
+      "Liveness probe",
+      "مسبار بدء التشغيل"
+    ],
+    "answer": "Readiness probe"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "ماذا قد يحدث بعد فشل مسبار الحيوية مرات تتجاوز العتبة المضبوطة؟",
+    "options": [
+      "يعيد kubelet تشغيل الحاوية وفقا لسياسة إعادة تشغيلها",
+      "ينقل المجدول جميع وحدات Pod إلى عقدة جديدة",
+      "يحذف خادم API كائن Deployment",
+      "تتحول Service إلى Service من نوع ExternalName"
+    ],
+    "answer": "يعيد kubelet تشغيل الحاوية وفقا لسياسة إعادة تشغيلها"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "ماذا يفعل مسبار بدء التشغيل أثناء استمرار بدء التطبيق؟",
+    "options": [
+      "يعطّل كل حدود موارد الحاوية",
+      "يمنع سحب الصورة",
+      "يحجز عقدة مخصصة لمستوى التحكم",
+      "يؤخر فحوص الحيوية والجاهزية حتى نجاح مسبار بدء التشغيل"
+    ],
+    "answer": "يؤخر فحوص الحيوية والجاهزية حتى نجاح مسبار بدء التشغيل"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "ما الصحيح عن حاويات التهيئة العادية في Pod؟",
+    "options": [
+      "يجب أن تعرض منفذ Service",
+      "تعمل دائما على عقد منفصلة",
+      "تعمل بالترتيب حتى الاكتمال قبل بدء حاويات التطبيق",
+      "تعمل جميعها بعد خروج حاويات التطبيق فقط"
+    ],
+    "answer": "تعمل بالترتيب حتى الاكتمال قبل بدء حاويات التطبيق"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "ما الموارد التي تتشاركها حاويات Pod نفسها عادة؟",
+    "options": [
+      "عنوان IP منفصل لـ Service لكل حاوية",
+      "نطاق أسماء الشبكة وعنوان IP الخاص بـ Pod",
+      "نظام ملفات جذري قابل للكتابة",
+      "عقدة مستقلة لكل حاوية"
+    ],
+    "answer": "نطاق أسماء الشبكة وعنوان IP الخاص بـ Pod"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "أي حقل يعلن كمية الموارد التي يستخدمها المجدول عند اختيار موضع حاوية؟",
+    "options": [
+      "resources.requests",
+      "resources.limits",
+      "securityContext",
+      "imagePullPolicy"
+    ],
+    "answer": "resources.requests"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "ماذا يمثل طلب CPU بقيمة 250m للحاوية؟",
+    "options": [
+      "وحدتا CPU ونصف وحدة",
+      "خمس وعشرون وحدة CPU",
+      "مئتان وخمسون وحدة CPU",
+      "ربع وحدة CPU"
+    ],
+    "answer": "ربع وحدة CPU"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "ما النتيجة المعتادة لتجاوز حاوية حد الذاكرة المفروض؟",
+    "options": [
+      "تُبنى صورتها من جديد بذاكرة أكبر",
+      "يتغير منفذ Service الخاص بها تلقائيا",
+      "قد تنهيها آلية نفاد الذاكرة",
+      "يتضاعف طلب الذاكرة تلقائيا"
+    ],
+    "answer": "قد تنهيها آلية نفاد الذاكرة"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "أي حقل في Pod يشترط مطابقة العقد المستهدفة لجميع تسميات العقد المحددة؟",
+    "options": [
+      "dnsPolicy",
+      "nodeSelector",
+      "serviceAccountName",
+      "hostAliases"
+    ],
+    "answer": "nodeSelector"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "هل تضمن إضافة سماحية لـ taint على عقدة جدولة Pod على تلك العقدة؟",
+    "options": [
+      "لا، تبقى قيود الجدولة الأخرى والموارد المتاحة سارية",
+      "نعم، فهي تتجاوز كل قيود الموارد",
+      "نعم، فهي تتخطى كل قواعد تقارب العقد",
+      "لا، السماحيات تمنع دائما الوضع على العقدة ذات taint"
+    ],
+    "answer": "لا، تبقى قيود الجدولة الأخرى والموارد المتاحة سارية"
+  }
+]

@@ -1,0 +1,302 @@
+[
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "Quale parola chiave si usa per definire le variabili in un playbook?",
+    "options": [
+      "vars",
+      "variables",
+      "var",
+      "define"
+    ],
+    "answer": "vars"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "Quale sintassi si usa per fare riferimento a una variabile?",
+    "options": [
+      "{{ variable_name }}",
+      "$(variable_name)",
+      "${variable_name}",
+      "[variable_name]"
+    ],
+    "answer": "{{ variable_name }}"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "Quale modulo si usa per mostrare messaggi durante l'esecuzione?",
+    "options": [
+      "debug",
+      "print",
+      "echo",
+      "message"
+    ],
+    "answer": "debug"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "Quale parola chiave si usa per l'esecuzione condizionale?",
+    "options": [
+      "when",
+      "if",
+      "condition",
+      "check"
+    ],
+    "answer": "when"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "Quale parola chiave si usa per ripetere un'attività?",
+    "options": [
+      "loop",
+      "repeat",
+      "iterate",
+      "for"
+    ],
+    "answer": "loop"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "Quale variabile contiene per impostazione predefinita l'elemento corrente del ciclo?",
+    "options": [
+      "item",
+      "loopitem",
+      "current",
+      "value"
+    ],
+    "answer": "item"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "Quale modulo crea file a partire da template Jinja2?",
+    "options": [
+      "template",
+      "copy",
+      "render",
+      "jinja"
+    ],
+    "answer": "template"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "Quale motore di template usa Ansible?",
+    "options": [
+      "Jinja2",
+      "Mustache",
+      "Velocity",
+      "Smarty"
+    ],
+    "answer": "Jinja2"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "Quale parola chiave registra l'output di un'attività in una variabile?",
+    "options": [
+      "register",
+      "save",
+      "output",
+      "store"
+    ],
+    "answer": "register"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "Quale parola chiave consente di proseguire dopo il fallimento di un'attività, senza nascondere errori di sintassi o connessione?",
+    "options": [
+      "ignore_errors",
+      "skip_errors",
+      "continue",
+      "ignore_failures"
+    ],
+    "answer": "ignore_errors"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "Quale parola chiave si usa per eseguire attività solo quando vengono notificate?",
+    "options": [
+      "handlers",
+      "notify",
+      "trigger",
+      "events"
+    ],
+    "answer": "handlers"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "Quale parola chiave attiva un handler?",
+    "options": [
+      "notify",
+      "handler",
+      "alert",
+      "call"
+    ],
+    "answer": "notify"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "Quale parola chiave importa un altro playbook?",
+    "options": [
+      "import_playbook",
+      "include_playbook",
+      "load_playbook",
+      "playbook"
+    ],
+    "answer": "import_playbook"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "Quale parola chiave assegna tag alle attività per l'esecuzione selettiva?",
+    "options": [
+      "tags",
+      "labels",
+      "groups",
+      "filter"
+    ],
+    "answer": "tags"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "Quale opzione esegue solo le attività con tag specifici?",
+    "options": [
+      "--tags",
+      "--skip-tags",
+      "--limit",
+      "--list-tags"
+    ],
+    "answer": "--tags"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "Quale parola chiave dell'attività definisce una condizione personalizzata per segnalare una modifica?",
+    "options": [
+      "changed_when",
+      "failed_when",
+      "until",
+      "when"
+    ],
+    "answer": "changed_when"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "Quale parola chiave dell'attività definisce una condizione personalizzata per segnalare un errore?",
+    "options": [
+      "changed_when",
+      "retries",
+      "delay",
+      "failed_when"
+    ],
+    "answer": "failed_when"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "Quale parola chiave dell'attività specifica la condizione che deve diventare vera durante i tentativi successivi?",
+    "options": [
+      "loop",
+      "notify",
+      "until",
+      "when"
+    ],
+    "answer": "until"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "Quale modulo definisce direttamente variabili con nome per l'host corrente usando valori forniti dall'attività, anziché caricarle da un file?",
+    "options": [
+      "ansible.builtin.add_host",
+      "ansible.builtin.set_fact",
+      "ansible.builtin.setup",
+      "ansible.builtin.include_vars"
+    ],
+    "answer": "ansible.builtin.set_fact"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "Quale espressione accede all'output standard di un'attività registrata come result?",
+    "options": [
+      "result.stdout",
+      "result.stderr",
+      "result.rc",
+      "result.changed"
+    ],
+    "answer": "result.stdout"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "Quale test Jinja2 verifica se una variabile è stata definita?",
+    "options": [
+      "is none",
+      "is string",
+      "is sequence",
+      "is defined"
+    ],
+    "answer": "is defined"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "Quale parola chiave di Ansible raggruppa attività affinché condividano direttive e gestione degli errori?",
+    "options": [
+      "roles",
+      "handlers",
+      "block",
+      "loop"
+    ],
+    "answer": "block"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "Quando un'attività invia normalmente le proprie notifiche notify?",
+    "options": [
+      "Solo all'avvio del playbook",
+      "Quando termina correttamente e segnala changed",
+      "Ogni volta che viene saltata a causa di una condizione",
+      "Ogni volta che il suo modulo segnala unchanged"
+    ],
+    "answer": "Quando termina correttamente e segnala changed"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "Quale impostazione rinomina in server la variabile dell'elemento corrente di un ciclo?",
+    "options": [
+      "loop_control: {loop_var: server}",
+      "loop_control: {label: server}",
+      "loop_control: {index_var: server}",
+      "loop_control: {pause: 1}"
+    ],
+    "answer": "loop_control: {loop_var: server}"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "Quale opzione da riga di comando fornisce variabili aggiuntive con precedenza elevata?",
+    "options": [
+      "--tags",
+      "--limit",
+      "--start-at-task",
+      "--extra-vars"
+    ],
+    "answer": "--extra-vars"
+  }
+]

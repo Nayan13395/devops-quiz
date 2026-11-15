@@ -1,0 +1,302 @@
+[
+  {
+    "category": "Bash Scripting",
+    "set": 5,
+    "question": "システムにBashでスクリプトを実行させる、スクリプト先頭の行はどれですか？",
+    "options": [
+      "//bash",
+      "#!/bin/bash",
+      "<?bash",
+      "#include bash"
+    ],
+    "answer": "#!/bin/bash"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 5,
+    "question": "必要な親ディレクトリもまとめてディレクトリを作成するコマンドはどれですか？",
+    "options": [
+      "mkdir -p",
+      "mkdir -r",
+      "mkdir -m",
+      "mkdir -v"
+    ],
+    "answer": "mkdir -p"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 5,
+    "question": "Bashで変数countに値5を代入するにはどうしますか？",
+    "options": [
+      "set count 5",
+      "$count=5",
+      "count=5",
+      "count = 5"
+    ],
+    "answer": "count=5"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 5,
+    "question": "nameという変数の値を読み取るために使われる記号はどれですか？",
+    "options": [
+      "%name",
+      "$name",
+      "&name",
+      "#name"
+    ],
+    "answer": "$name"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 5,
+    "question": "スクリプトに渡された引数の数を保持する変数はどれですか？",
+    "options": [
+      "$?",
+      "$#",
+      "$@",
+      "$$"
+    ],
+    "answer": "$#"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 5,
+    "question": "最後のコマンドの終了ステータスを保持する変数はどれですか？",
+    "options": [
+      "$?",
+      "$0",
+      "$#",
+      "$!"
+    ],
+    "answer": "$?"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 5,
+    "question": "最初のコマンドが成功した場合にのみ二番目のコマンドを実行する演算子はどれですか？",
+    "options": [
+      "|",
+      "||",
+      ";",
+      "&&"
+    ],
+    "answer": "&&"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 5,
+    "question": "ファイルに出力を追記する演算子はどれですか？",
+    "options": [
+      "<<",
+      ">>",
+      "|&",
+      ">"
+    ],
+    "answer": ">>"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 5,
+    "question": "Bashで条件ブロックを開始するキーワードはどれですか？",
+    "options": [
+      "check",
+      "case-if",
+      "if",
+      "when"
+    ],
+    "answer": "if"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 5,
+    "question": "Bashでifブロックを終了するキーワードはどれですか？",
+    "options": [
+      "endif",
+      "fi",
+      "done",
+      "end"
+    ],
+    "answer": "fi"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 5,
+    "question": "項目のリストを順に処理するループはどれですか？",
+    "options": [
+      "foreach item list",
+      "for item in list; do",
+      "each item in list",
+      "loop item in list"
+    ],
+    "answer": "for item in list; do"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 5,
+    "question": "ターミナルにテキストを出力するコマンドはどれですか？",
+    "options": [
+      "print",
+      "echo",
+      "say",
+      "out"
+    ],
+    "answer": "echo"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 5,
+    "question": "通常ファイルが存在するかを確認するテストはどれですか？",
+    "options": [
+      "[ -e file ]",
+      "[ -r file ]",
+      "[ -d file ]",
+      "[ -f file ]"
+    ],
+    "answer": "[ -f file ]"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 5,
+    "question": "文字列が空かどうかを確認するテストはどれですか？",
+    "options": [
+      "[ -s \"$str\" ]",
+      "[ -e \"$str\" ]",
+      "[ -n \"$str\" ]",
+      "[ -z \"$str\" ]"
+    ],
+    "answer": "[ -z \"$str\" ]"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 5,
+    "question": "入力の一行を変数に読み込むコマンドはどれですか？",
+    "options": [
+      "read",
+      "input",
+      "scan",
+      "get"
+    ],
+    "answer": "read"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 5,
+    "question": "コマンドの出力を変数に取り込む構文はどれですか？",
+    "options": [
+      "var=$(date)",
+      "var=[date]",
+      "var={date}",
+      "var=<date>"
+    ],
+    "answer": "var=$(date)"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 5,
+    "question": "Bashシェルでdata.txtというファイルの行数を数えるコマンドはどれですか？",
+    "options": [
+      "wc -l data.txt",
+      "ls -l data.txt",
+      "sort -l data.txt",
+      "cut -l data.txt"
+    ],
+    "answer": "wc -l data.txt"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 5,
+    "question": "各コマンドを実行前に出力するオプションはどれですか？",
+    "options": [
+      "set -f",
+      "set -u",
+      "set -x",
+      "set -e"
+    ],
+    "answer": "set -x"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 5,
+    "question": "実行中のスクリプトの名前を保持する変数はどれですか？",
+    "options": [
+      "$*",
+      "$1",
+      "$0",
+      "$#"
+    ],
+    "answer": "$0"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 5,
+    "question": "Bashでgreetという関数を定義するにはどうしますか？",
+    "options": [
+      "fn greet { echo hi }",
+      "function greet: echo hi",
+      "def greet(): echo hi",
+      "greet() { echo hi; }"
+    ],
+    "answer": "greet() { echo hi; }"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 5,
+    "question": "現在のシェルでファイルを読み込んで実行するコマンドはどれですか？",
+    "options": [
+      "run file.sh",
+      "import file.sh",
+      "source file.sh",
+      "call file.sh"
+    ],
+    "answer": "source file.sh"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 5,
+    "question": "ファイル名で任意の数の文字に一致するワイルドカードはどれですか？",
+    "options": [
+      "?",
+      "~",
+      "*",
+      "#"
+    ],
+    "answer": "*"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 5,
+    "question": "Bashで多数のパターンから選択するために使われるキーワードはどれですか？",
+    "options": [
+      "select-when",
+      "match",
+      "case",
+      "switch"
+    ],
+    "answer": "case"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 5,
+    "question": "ファイルの先頭の行を出力するコマンドはどれですか？",
+    "options": [
+      "cat -f",
+      "head",
+      "less -h",
+      "tail"
+    ],
+    "answer": "head"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 5,
+    "question": "標準エラーをファイルにリダイレクトする演算子はどれですか？",
+    "options": [
+      "0<",
+      "^>",
+      "2>",
+      "1>"
+    ],
+    "answer": "2>"
+  }
+]

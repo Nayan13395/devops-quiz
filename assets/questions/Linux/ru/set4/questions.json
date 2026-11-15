@@ -1,0 +1,302 @@
+[
+  {
+    "category": "Linux",
+    "set": 4,
+    "question": "Какая команда используется для перемещения или переименования файлов?",
+    "options": [
+      "mv",
+      "cp",
+      "ln",
+      "shift"
+    ],
+    "answer": "mv"
+  },
+  {
+    "category": "Linux",
+    "set": 4,
+    "question": "Какая команда изменяет принадлежность файла?",
+    "options": [
+      "chown",
+      "chmod",
+      "owner",
+      "setowner"
+    ],
+    "answer": "chown"
+  },
+  {
+    "category": "Linux",
+    "set": 4,
+    "question": "Какая команда показывает права доступа к файлу в восьмеричном формате?",
+    "options": [
+      "stat -c %a",
+      "ls -perm",
+      "perm",
+      "showperm"
+    ],
+    "answer": "stat -c %a"
+  },
+  {
+    "category": "Linux",
+    "set": 4,
+    "question": "Какая команда показывает тип файла?",
+    "options": [
+      "file",
+      "type",
+      "kind",
+      "format"
+    ],
+    "answer": "file"
+  },
+  {
+    "category": "Linux",
+    "set": 4,
+    "question": "Какая команда показывает подробную статистику файла?",
+    "options": [
+      "stat",
+      "fileinfo",
+      "details",
+      "ls -stat"
+    ],
+    "answer": "stat"
+  },
+  {
+    "category": "Linux",
+    "set": 4,
+    "question": "Какая команда ищет файлы по имени прямо в деревьях каталогов, а не по готовой базе?",
+    "options": [
+      "find",
+      "search",
+      "locate",
+      "where"
+    ],
+    "answer": "find"
+  },
+  {
+    "category": "Linux",
+    "set": 4,
+    "question": "Какая команда ищет в PATH и обычно выводит путь первого подходящего исполняемого файла?",
+    "options": [
+      "which",
+      "whereis",
+      "locate",
+      "find"
+    ],
+    "answer": "which"
+  },
+  {
+    "category": "Linux",
+    "set": 4,
+    "question": "Какая команда ищет файлы с помощью базы данных?",
+    "options": [
+      "locate",
+      "find",
+      "search",
+      "query"
+    ],
+    "answer": "locate"
+  },
+  {
+    "category": "Linux",
+    "set": 4,
+    "question": "Какая команда обновляет базу данных locate?",
+    "options": [
+      "updatedb",
+      "updatedatabase",
+      "refreshdb",
+      "syncdb"
+    ],
+    "answer": "updatedb"
+  },
+  {
+    "category": "Linux",
+    "set": 4,
+    "question": "Какая команда показывает записи crontab текущего пользователя?",
+    "options": [
+      "crontab -l",
+      "cron -list",
+      "cronshow",
+      "jobs"
+    ],
+    "answer": "crontab -l"
+  },
+  {
+    "category": "Linux",
+    "set": 4,
+    "question": "Какая команда редактирует задания cron?",
+    "options": [
+      "crontab -e",
+      "cronedit",
+      "crontab",
+      "schedule"
+    ],
+    "answer": "crontab -e"
+  },
+  {
+    "category": "Linux",
+    "set": 4,
+    "question": "Какая команда планирует одноразовую задачу?",
+    "options": [
+      "at",
+      "cron",
+      "task",
+      "schedule"
+    ],
+    "answer": "at"
+  },
+  {
+    "category": "Linux",
+    "set": 4,
+    "question": "Какая команда показывает активные задания в оболочке?",
+    "options": [
+      "jobs",
+      "ps",
+      "bg",
+      "fg"
+    ],
+    "answer": "jobs"
+  },
+  {
+    "category": "Linux",
+    "set": 4,
+    "question": "Какая встроенная команда оболочки возобновляет остановленное задание в фоне?",
+    "options": [
+      "bg",
+      "fg",
+      "jobs",
+      "nohup"
+    ],
+    "answer": "bg"
+  },
+  {
+    "category": "Linux",
+    "set": 4,
+    "question": "Какая команда возвращает фоновый процесс на передний план?",
+    "options": [
+      "fg",
+      "bg",
+      "jobs",
+      "top"
+    ],
+    "answer": "fg"
+  },
+  {
+    "category": "Linux",
+    "set": 4,
+    "question": "Какая команда systemd перечитывает определения юнитов после изменения файла службы?",
+    "options": [
+      "systemctl daemon-reload",
+      "systemctl reload app.service",
+      "systemctl restart app.service",
+      "systemctl reset-failed app.service"
+    ],
+    "answer": "systemctl daemon-reload"
+  },
+  {
+    "category": "Linux",
+    "set": 4,
+    "question": "Что делает 'systemctl disable app.service' без --now?",
+    "options": [
+      "Останавливает службу и удаляет её файл юнита",
+      "Перезапускает службу с заводскими настройками",
+      "Запрещает любой ручной запуск маскированием юнита",
+      "Удаляет ссылки включения, не обязательно останавливая работающую службу"
+    ],
+    "answer": "Удаляет ссылки включения, не обязательно останавливая работающую службу"
+  },
+  {
+    "category": "Linux",
+    "set": 4,
+    "question": "Какая команда показывает записи журнала app.service?",
+    "options": [
+      "systemctl show app.service",
+      "systemctl list-dependencies app.service",
+      "journalctl -u app.service",
+      "systemctl cat app.service"
+    ],
+    "answer": "journalctl -u app.service"
+  },
+  {
+    "category": "Linux",
+    "set": 4,
+    "question": "Какая опция journalctl ограничивает вывод текущей загрузкой?",
+    "options": [
+      "-k",
+      "-b",
+      "-f",
+      "-r"
+    ],
+    "answer": "-b"
+  },
+  {
+    "category": "Linux",
+    "set": 4,
+    "question": "Какое поле первое в стандартной пятичастной пользовательской crontab?",
+    "options": [
+      "Минута",
+      "Час",
+      "День месяца",
+      "День недели"
+    ],
+    "answer": "Минута"
+  },
+  {
+    "category": "Linux",
+    "set": 4,
+    "question": "Когда выполняется '0 2 * * *' в стандартной пользовательской crontab?",
+    "options": [
+      "На минуте 2 каждого часа",
+      "Каждые две минуты",
+      "В полночь второго дня каждого месяца",
+      "В 02:00 ежедневно в часовом поясе cron"
+    ],
+    "answer": "В 02:00 ежедневно в часовом поясе cron"
+  },
+  {
+    "category": "Linux",
+    "set": 4,
+    "question": "Что встроенная команда Bash export делает с переменной оболочки?",
+    "options": [
+      "Копирует её в окружение родительской оболочки",
+      "Делает её значение доступным только для чтения",
+      "Включает её в окружение впоследствии запускаемых дочерних процессов",
+      "Навсегда записывает её в профиль каждого пользователя"
+    ],
+    "answer": "Включает её в окружение впоследствии запускаемых дочерних процессов"
+  },
+  {
+    "category": "Linux",
+    "set": 4,
+    "question": "Какое перенаправление Bash дописывает стандартный вывод в app.log?",
+    "options": [
+      "2> app.log",
+      ">> app.log",
+      "> app.log",
+      "< app.log"
+    ],
+    "answer": ">> app.log"
+  },
+  {
+    "category": "Linux",
+    "set": 4,
+    "question": "Какое перенаправление Bash направляет ошибки туда же, куда стандартный вывод?",
+    "options": [
+      "2>&1",
+      "1>&2",
+      "2>errors.log",
+      "<input.txt"
+    ],
+    "answer": "2>&1"
+  },
+  {
+    "category": "Linux",
+    "set": 4,
+    "question": "Во что раскрывается $? в Bash сразу после завершения команды?",
+    "options": [
+      "В ID процесса текущей оболочки",
+      "В число позиционных параметров",
+      "В ID процесса последнего фонового задания",
+      "В статус выхода последнего конвейера переднего плана"
+    ],
+    "answer": "В статус выхода последнего конвейера переднего плана"
+  }
+]

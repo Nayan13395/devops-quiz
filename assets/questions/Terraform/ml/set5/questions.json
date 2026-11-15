@@ -1,0 +1,302 @@
+[
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "Terraformന് നിലവിലെ ഒബ്ജക്റ്റ് നിലനിർത്താനായി റിസോഴ്സ് വിലാസമാറ്റം രേഖപ്പെടുത്തുന്ന പ്രഖ്യാപന ബ്ലോക്ക് ഏതാണ്?",
+    "options": [
+      "removed",
+      "check",
+      "moved",
+      "import"
+    ],
+    "answer": "moved"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "moved ബ്ലോക്കിൽ പുതിയ റിസോഴ്സ് വിലാസം നൽകുന്ന ആർഗ്യുമെന്റ് ഏതാണ്?",
+    "options": [
+      "provider",
+      "to",
+      "from",
+      "id"
+    ],
+    "answer": "to"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "apply സമയത്ത് ഇറക്കുമതി ചെയ്യാനുള്ള നിലവിലെ ഇൻഫ്രാസ്ട്രക്ചർ ഒബ്ജക്റ്റ് പ്രഖ്യാപിക്കുന്ന ബ്ലോക്ക് ഏതാണ്?",
+    "options": [
+      "import",
+      "moved",
+      "output",
+      "check"
+    ],
+    "answer": "import"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "യഥാർത്ഥ ഒബ്ജക്റ്റ് നശിപ്പിക്കാതെ റിസോഴ്സിനെ സ്റ്റേറ്റിൽനിന്ന് നീക്കുന്ന removed ബ്ലോക്ക് ക്രമീകരണം ഏതാണ്?",
+    "options": [
+      "lifecycle { destroy = true }",
+      "lifecycle { create_before_destroy = true }",
+      "lifecycle { prevent_destroy = false }",
+      "lifecycle { destroy = false }"
+    ],
+    "answer": "lifecycle { destroy = false }"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "സാധാരണ ഇൻപുട്ട് വേരിയബിളിനെ sensitive എന്ന് അടയാളപ്പെടുത്തിയാൽ പ്രാദേശിക സ്റ്റേറ്റ് ഫയലിലെ മൂല്യത്തിന് എന്തു സംഭവിക്കും?",
+    "options": [
+      "അത് എപ്പോഴും സ്റ്റേറ്റിൽനിന്ന് ഒഴിവാക്കപ്പെടും",
+      "സൂക്ഷിക്കുന്നതിന് മുമ്പ് അതിന് പകരം വേരിയബിളിന്റെ പേര് വയ്ക്കും",
+      "സാധാരണ CLI ഔട്ട്പുട്ടിൽ മറച്ചാലും അത് സാധാരണ ടെക്സ്റ്റായി സൂക്ഷിക്കപ്പെടാം",
+      "sensitive ഫ്ലാഗ് അതിനെ സ്വയമേവ എൻക്രിപ്റ്റ് ചെയ്യും"
+    ],
+    "answer": "സാധാരണ CLI ഔട്ട്പുട്ടിൽ മറച്ചാലും അത് സാധാരണ ടെക്സ്റ്റായി സൂക്ഷിക്കപ്പെടാം"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "രഹസ്യസ്വഭാവമുള്ള ഔട്ട്പുട്ട് മൂല്യങ്ങൾ യന്ത്രം വായിക്കുന്ന രൂപത്തിൽ വെളിപ്പെടുത്തുന്ന output കമാൻഡ് ഫോർമാറ്റ് ഏതാണ്?",
+    "options": [
+      "terraform providers schema -json",
+      "terraform output -json",
+      "terraform output -help",
+      "terraform output -no-color"
+    ],
+    "answer": "terraform output -json"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "Terraform മൂല്യം JSON സ്ട്രിങ്ങാക്കുന്ന ഫങ്ഷൻ ഏതാണ്?",
+    "options": [
+      "jsonencode",
+      "jsondecode",
+      "yamldecode",
+      "file"
+    ],
+    "answer": "jsonencode"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "JSON സ്ട്രിങ് പാർസ് ചെയ്ത് Terraform മൂല്യമാക്കുന്ന ഫങ്ഷൻ ഏതാണ്?",
+    "options": [
+      "jsonencode",
+      "yamlencode",
+      "templatefile",
+      "jsondecode"
+    ],
+    "answer": "jsondecode"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "നൽകിയ വേരിയബിൾ മാപ്പ് ഉപയോഗിച്ച് ടെംപ്ലേറ്റ് ഫയൽ തയ്യാറാക്കുന്ന ഫങ്ഷൻ ഏതാണ്?",
+    "options": [
+      "fileset",
+      "filebase64",
+      "templatefile",
+      "file"
+    ],
+    "answer": "templatefile"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "ഡൈനാമിക് പിശകില്ലാതെ വിലയിരുത്താനാകുന്ന ആദ്യ ആർഗ്യുമെന്റ് നൽകുന്ന ഫങ്ഷൻ ഏതാണ്?",
+    "options": [
+      "lookup",
+      "try",
+      "can",
+      "coalesce"
+    ],
+    "answer": "try"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "ഡൈനാമിക് പിശകില്ലാതെ എക്സ്പ്രഷൻ വിലയിരുത്താനാകുമോ എന്ന് പറയുന്ന ഫങ്ഷൻ ഏതാണ്?",
+    "options": [
+      "can",
+      "try",
+      "contains",
+      "length"
+    ],
+    "answer": "can"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "mergeന് നൽകിയ രണ്ട് മാപ്പുകളിൽ ഒരേ കീ ഉണ്ടെങ്കിൽ ഏത് മൂല്യം ജയിക്കും?",
+    "options": [
+      "മുമ്പത്തെ ആർഗ്യുമെന്റിന്റെ മൂല്യം",
+      "മൂല്യങ്ങൾ എല്ലായ്പ്പോഴും പട്ടികയായി കൂട്ടിച്ചേർക്കും",
+      "ആവർത്തിച്ച കീ എല്ലായ്പ്പോഴും പിശകുണ്ടാക്കും",
+      "പിന്നത്തെ ആർഗ്യുമെന്റിന്റെ മൂല്യം"
+    ],
+    "answer": "പിന്നത്തെ ആർഗ്യുമെന്റിന്റെ മൂല്യം"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "5.4.x പതിപ്പുകൾ അനുവദിക്കുകയും 5.5.0 അനുവദിക്കാതിരിക്കുകയും ചെയ്യുന്ന പ്രൊവൈഡർ പതിപ്പ് പരിധി ഏതാണ്?",
+    "options": [
+      ">= 5.4.0",
+      ">= 5.0, < 6.0",
+      "~> 5.4.0",
+      "~> 5.4"
+    ],
+    "answer": "~> 5.4.0"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "null നൽകിയ റിസോഴ്സ് ആർഗ്യുമെന്റിനെ Terraform സാധാരണയായി എങ്ങനെ കണക്കാക്കുന്നു?",
+    "options": [
+      "മുഴുവൻ റിസോഴ്സും നീക്കാനുള്ള അഭ്യർത്ഥനയായി",
+      "അതിന്റെ ഡിഫോൾട്ടുകളും ആവശ്യങ്ങളും ബാധകമായ, ഒഴിവാക്കിയ ആർഗ്യുമെന്റായി",
+      "എല്ലാ പ്രൊവൈഡറിലും ശൂന്യ സ്ട്രിങ്ങായി",
+      "എല്ലാ പ്രൊവൈഡറിലും സംഖ്യയായ പൂജ്യമായി"
+    ],
+    "answer": "അതിന്റെ ഡിഫോൾട്ടുകളും ആവശ്യങ്ങളും ബാധകമായ, ഒഴിവാക്കിയ ആർഗ്യുമെന്റായി"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "താൻ എഴുതിയിരിക്കുന്ന മൊഡ്യൂളിന്റെ ഫയൽസിസ്റ്റം പാത നൽകുന്ന എക്സ്പ്രഷൻ ഏതാണ്?",
+    "options": [
+      "path.module",
+      "path.root",
+      "path.cwd",
+      "terraform.workspace"
+    ],
+    "answer": "path.module"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "CLI കോൺഫിഗറേഷനെ HCP Terraformലേക്ക് ബന്ധിപ്പിക്കാൻ നിർദേശിക്കുന്ന terraform ബ്ലോക്ക് സവിശേഷത ഏതാണ്?",
+    "options": [
+      "locals",
+      "moved",
+      "check",
+      "cloud"
+    ],
+    "answer": "cloud"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "റഫറൻസ് ചെയ്ത സ്റ്റേറ്റിൽനിന്ന് terraform_remote_state നേരിട്ട് നൽകുന്ന മേൽത്തല മൂല്യങ്ങൾ ഏതൊക്കെയാണ്?",
+    "options": [
+      "പ്രൊവൈഡറിന്റെ എല്ലാ പ്രാമാണീകരണ വിവരങ്ങളും",
+      "എല്ലാ ഉപമൊഡ്യൂളുകളുടെയും പ്രാദേശിക മൂല്യങ്ങൾ",
+      "മൂല മൊഡ്യൂൾ ഔട്ട്പുട്ടുകൾ",
+      "ഓരോ റിസോഴ്സ് ഗുണവും മേൽത്തല ഔട്ട്പുട്ടായി"
+    ],
+    "answer": "മൂല മൊഡ്യൂൾ ഔട്ട്പുട്ടുകൾ"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "റഫറൻസ് ചെയ്ത നിയന്ത്രിത റിസോഴ്സ് മാറുമ്പോൾ മാറ്റിസ്ഥാപിക്കൽ ആവശ്യപ്പെടുന്ന ലൈഫ്‌സൈക്കിൾ നിയമം ഏതാണ്?",
+    "options": [
+      "create_before_destroy",
+      "replace_triggered_by",
+      "ignore_changes",
+      "prevent_destroy"
+    ],
+    "answer": "replace_triggered_by"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "പ്രത്യേക പ്രൊവൈഡർ ഇൻസ്റ്റാൾ ചെയ്യാതെ സാധാരണ ഇൻപുട്ട് മൂല്യത്തിന് റിസോഴ്സ് ലൈഫ്‌സൈക്കിൾ നൽകുന്ന അന്തർനിർമിത റിസോഴ്സ് ഏതാണ്?",
+    "options": [
+      "terraform_data",
+      "terraform_remote_state",
+      "local_file",
+      "random_id"
+    ],
+    "answer": "terraform_data"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "സാധാരണ plan അല്ലെങ്കിൽ apply സമയത്ത് check ബ്ലോക്കിലെ സ്ഥിരീകരണം പരാജയപ്പെട്ടാൽ എന്തു സംഭവിക്കും?",
+    "options": [
+      "Terraform പരിശോധിച്ച ഒബ്ജക്റ്റ് എല്ലായ്പ്പോഴും നശിപ്പിക്കും",
+      "Terraform നിശ്ശബ്ദമായി check ബ്ലോക്ക് നീക്കും",
+      "ഏതെങ്കിലും റിസോഴ്സ് പുതുക്കുന്നതിന് മുമ്പ് Terraform എല്ലായ്പ്പോഴും പുറത്തുകടക്കും",
+      "Terraform മുന്നറിയിപ്പ് നൽകും, പക്ഷേ ആ പരാജയം മാത്രം കാരണം പ്രവർത്തനം തടയില്ല"
+    ],
+    "answer": "Terraform മുന്നറിയിപ്പ് നൽകും, പക്ഷേ ആ പരാജയം മാത്രം കാരണം പ്രവർത്തനം തടയില്ല"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "റിസോഴ്സ് ലൈഫ്‌സൈക്കിൾ മുൻനിബന്ധന false ആയാൽ എന്തു സംഭവിക്കും?",
+    "options": [
+      "Terraform റിസോഴ്സിനെ ഡാറ്റാ ഉറവിടമാക്കും",
+      "Terraform മുൻനിബന്ധനയ്ക്ക് പകരം മുന്നറിയിപ്പ് മാത്രം നൽകും",
+      "Terraform പിശക് റിപ്പോർട്ട് ചെയ്ത് ബന്ധപ്പെട്ട പ്രവർത്തനം തടയും",
+      "അടുത്ത നിർവഹണം വരെ Terraform മുൻനിബന്ധന അവഗണിക്കും"
+    ],
+    "answer": "Terraform പിശക് റിപ്പോർട്ട് ചെയ്ത് ബന്ധപ്പെട്ട പ്രവർത്തനം തടയും"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "Terraformന്റെ സ്വന്തം ടെസ്റ്റ് ഫയലുകൾ പ്രവർത്തിപ്പിക്കുന്ന കമാൻഡ് ഏതാണ്?",
+    "options": [
+      "terraform console",
+      "terraform test",
+      "terraform validate",
+      "terraform fmt"
+    ],
+    "answer": "terraform test"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "Terraform ടെസ്റ്റിലെ run ബ്ലോക്കിനെ ഡിഫോൾട്ട് applyക്കു പകരം plan ചെയ്യിക്കുന്ന ക്രമീകരണം ഏതാണ്?",
+    "options": [
+      "command = plan",
+      "command = validate",
+      "command = refresh",
+      "command = console"
+    ],
+    "answer": "command = plan"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "ഡയറക്ടറിക്കുള്ളിൽ ഗ്ലോബ് പാറ്റേണുമായി പൊരുത്തപ്പെടുന്ന ആപേക്ഷിക പാതകളുടെ കൂട്ടം നൽകുന്ന ഫങ്ഷൻ ഏതാണ്?",
+    "options": [
+      "file",
+      "dirname",
+      "basename",
+      "fileset"
+    ],
+    "answer": "fileset"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "വ്യത്യസ്ത പ്രവേശന നിയന്ത്രണങ്ങൾ ആവശ്യമായ പരിതസ്ഥിതികൾ വേർതിരിക്കാൻ CLI വർക്സ്പേസുകൾ മാത്രം അനുയോജ്യമല്ലാത്തത് എന്തുകൊണ്ട്?",
+    "options": [
+      "അവ വ്യത്യസ്ത ഇൻപുട്ട് വേരിയബിൾ മൂല്യങ്ങൾ ഉപയോഗിക്കാൻ അനുവദിക്കില്ല",
+      "അവ എല്ലാ പരിതസ്ഥിതികളെയും ഒരേ റിസോഴ്സ് പേരുകൾ ഉപയോഗിക്കാൻ നിർബന്ധിക്കും",
+      "അവ ഒരേ ബാക്കെൻഡ് കോൺഫിഗറേഷനും പ്രാമാണീകരണ പശ്ചാത്തലവും പങ്കിടുന്നു",
+      "അവ എല്ലായ്പ്പോഴും ഒരേ സ്റ്റേറ്റ് സ്നാപ്ഷോട്ട് പങ്കിടുന്നു"
+    ],
+    "answer": "അവ ഒരേ ബാക്കെൻഡ് കോൺഫിഗറേഷനും പ്രാമാണീകരണ പശ്ചാത്തലവും പങ്കിടുന്നു"
+  }
+]

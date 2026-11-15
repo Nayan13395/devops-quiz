@@ -1,0 +1,302 @@
+[
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "Apa yang dicegah dengan memberi tanda kutip pada ekspansi Bash seperti \"$name\"?",
+    "options": [
+      "Semua ekspansi parameter di dalam tanda kutip",
+      "Perubahan variabel di kemudian hari",
+      "Penerimaan argumen kosong oleh perintah",
+      "Pemisahan kata dan ekspansi nama jalur terhadap nilai hasil ekspansi"
+    ],
+    "answer": "Pemisahan kata dan ekspansi nama jalur terhadap nilai hasil ekspansi"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "Apa akibat menulis '$HOME' dengan tanda kutip tunggal dalam Bash?",
+    "options": [
+      "Mengekspansi direktori kerja sebelumnya",
+      "Menghapus tanda dolar dan meneruskan HOME",
+      "Meneruskan teks literal $HOME",
+      "Mengekspansi direktori home pengguna"
+    ],
+    "answer": "Meneruskan teks literal $HOME"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "Apa yang disisipkan substitusi perintah Bash dengan $(command)?",
+    "options": [
+      "Status keluar perintah sebagai angka desimal",
+      "Keluaran standar perintah dengan baris baru di ujung dihapus",
+      "ID proses numerik perintah",
+      "Hanya keluaran kesalahan standar perintah"
+    ],
+    "answer": "Keluaran standar perintah dengan baris baru di ujung dihapus"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "Perintah bawaan Bash mana yang membaca dan menjalankan perintah dari berkas skrip dalam shell saat ini?",
+    "options": [
+      "source",
+      "exec",
+      "eval",
+      "export"
+    ],
+    "answer": "source"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "Apa yang dilakukan 'exec program' dalam skrip Bash jika eksekusi berhasil?",
+    "options": [
+      "Memulai program sebagai pekerjaan latar belakang sementara shell berlanjut",
+      "Menjalankan program dua kali lalu membandingkan hasil",
+      "Memuat keluaran program sebagai kode sumber shell",
+      "Mengganti proses shell dengan program"
+    ],
+    "answer": "Mengganti proses shell dengan program"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "Dengan pipefail Bash aktif, apa status pipeline jika satu atau lebih perintah gagal?",
+    "options": [
+      "Selalu nol jika perintah terakhir berhasil",
+      "Jumlah seluruh status keluar perintah",
+      "Status perintah paling kanan yang mengembalikan nilai bukan nol",
+      "Selalu status perintah pertama"
+    ],
+    "answer": "Status perintah paling kanan yang mengembalikan nilai bukan nol"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "Perintah mana yang memverifikasi checksum SHA-256 dalam checksums.txt menggunakan GNU Coreutils?",
+    "options": [
+      "cksum checksums.txt",
+      "sha256sum -c checksums.txt",
+      "sha256sum checksums.txt",
+      "md5sum -c checksums.txt"
+    ],
+    "answer": "sha256sum -c checksums.txt"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "Perintah GNU tar mana yang membuat arsip direktori logs dengan kompresi gzip?",
+    "options": [
+      "tar -czf logs.tar.gz logs",
+      "tar -xzf logs.tar.gz",
+      "tar -tzf logs.tar.gz",
+      "gzip -d logs.tar.gz"
+    ],
+    "answer": "tar -czf logs.tar.gz logs"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "Opsi tar mana yang mencantumkan isi arsip tanpa mengekstraknya?",
+    "options": [
+      "-x",
+      "-c",
+      "-r",
+      "-t"
+    ],
+    "answer": "-t"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "Apa akibat umum bit setgid pada direktori Linux bagi berkas baru yang dibuat di dalamnya?",
+    "options": [
+      "Berkas dimiliki pengguna root",
+      "Berkas tidak dapat dihapus oleh pemiliknya",
+      "Berkas mewarisi kepemilikan grup direktori",
+      "Berkas selalu menjadi dapat dieksekusi oleh setiap pengguna"
+    ],
+    "answer": "Berkas mewarisi kepemilikan grup direktori"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "Apa yang terutama dibatasi sticky bit pada direktori bersama yang dapat ditulis?",
+    "options": [
+      "Siapa yang dapat mengalokasikan blok disk pada sistem berkas",
+      "Siapa yang dapat menghapus atau mengganti nama berkas dalam direktori",
+      "Siapa yang dapat membaca setiap berkas dalam direktori",
+      "Siapa yang dapat menjalankan program di luar direktori"
+    ],
+    "answer": "Siapa yang dapat menghapus atau mengganti nama berkas dalam direktori"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "Perintah mana yang menampilkan entri daftar kontrol akses berkas?",
+    "options": [
+      "getfacl file.txt",
+      "setfacl -b file.txt",
+      "getfattr -d file.txt",
+      "lsattr file.txt"
+    ],
+    "answer": "getfacl file.txt"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "Berkas mana yang biasanya berisi catatan akun pengguna lokal, bukan hash kata sandi?",
+    "options": [
+      "/etc/shadow",
+      "/etc/group",
+      "/etc/gshadow",
+      "/etc/passwd"
+    ],
+    "answer": "/etc/passwd"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "Perintah mana yang menambahkan alice ke grup tambahan docker tanpa mengganti grup tambahannya yang sudah ada?",
+    "options": [
+      "usermod -g docker alice",
+      "usermod -l docker alice",
+      "usermod -aG docker alice",
+      "usermod -G docker alice"
+    ],
+    "answer": "usermod -aG docker alice"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "Perintah mana yang mengunci kata sandi pengguna Linux untuk autentikasi berbasis kata sandi?",
+    "options": [
+      "passwd -e alice",
+      "passwd -l alice",
+      "passwd -u alice",
+      "passwd -S alice"
+    ],
+    "answer": "passwd -l alice"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "Perintah mana yang meminta entri passwd alice dari sumber layanan nama yang dikonfigurasi?",
+    "options": [
+      "getent passwd alice",
+      "groups alice",
+      "id -u alice",
+      "whoami"
+    ],
+    "answer": "getent passwd alice"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "Berkas mana yang biasanya menentukan sistem berkas untuk dipasang otomatis saat boot?",
+    "options": [
+      "/etc/hosts",
+      "/etc/shells",
+      "/etc/resolv.conf",
+      "/etc/fstab"
+    ],
+    "answer": "/etc/fstab"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "Perintah mana yang menampilkan UUID sistem berkas dan atribut perangkat blok lainnya?",
+    "options": [
+      "modinfo",
+      "lscpu",
+      "blkid",
+      "lsmod"
+    ],
+    "answer": "blkid"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "Mengapa sistem berkas biasanya harus dilepas sebelum menjalankan fsck yang melakukan perbaikan?",
+    "options": [
+      "Sistem berkas yang terpasang tidak pernah memiliki ruang kosong",
+      "Penulisan bersamaan dapat bertentangan dengan perbaikan dan merusak data",
+      "Pelepasan otomatis mengenkripsi seluruh metadata sistem berkas",
+      "fsck hanya mendukung sistem berkas tanpa nama perangkat"
+    ],
+    "answer": "Penulisan bersamaan dapat bertentangan dengan perbaikan dan merusak data"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "Perintah mana yang menampilkan area swap aktif?",
+    "options": [
+      "swapon --show",
+      "swapoff -a",
+      "free -s 1",
+      "vmstat -d"
+    ],
+    "answer": "swapon --show"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "Perintah mana yang memuat modul kernel Linux beserta dependensinya?",
+    "options": [
+      "rmmod",
+      "lsmod",
+      "modinfo",
+      "modprobe"
+    ],
+    "answer": "modprobe"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "Perintah systemd mana yang mencegah unit dimulai dengan menautkannya ke /dev/null?",
+    "options": [
+      "systemctl stop app.service",
+      "systemctl reset-failed app.service",
+      "systemctl mask app.service",
+      "systemctl disable app.service"
+    ],
+    "answer": "systemctl mask app.service"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "Opsi SSH mana yang memilih berkas identitas privat untuk autentikasi?",
+    "options": [
+      "-R",
+      "-i",
+      "-p",
+      "-L"
+    ],
+    "answer": "-i"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "Perintah mana yang menyalin berkas lokal secara aman ke direktori pengguna jarak jauh melalui SSH?",
+    "options": [
+      "scp report.txt alice@server:/home/alice/",
+      "ssh alice@server cat report.txt",
+      "sftp -b report.txt alice@server",
+      "ssh-keygen -f report.txt"
+    ],
+    "answer": "scp report.txt alice@server:/home/alice/"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "Apa yang diminta 'rsync -n'?",
+    "options": [
+      "Penghapusan berkas tujuan yang tidak ada di sumber",
+      "Kompresi data berkas yang ditransfer",
+      "Pelestarian rekursif setiap atribut sistem berkas",
+      "Simulasi yang melaporkan perubahan yang akan dilakukan tanpa menerapkannya"
+    ],
+    "answer": "Simulasi yang melaporkan perubahan yang akan dilakukan tanpa menerapkannya"
+  }
+]

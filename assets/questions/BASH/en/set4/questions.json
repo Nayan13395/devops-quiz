@@ -1,0 +1,302 @@
+[
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "Which syntax defines a simple Bash function?",
+    "options": [
+      "myfunc() { echo hi; }",
+      "def myfunc: echo hi",
+      "function = myfunc",
+      "myfunc -> echo hi"
+    ],
+    "answer": "myfunc() { echo hi; }"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "Which command calls a function named myfunc?",
+    "options": [
+      "myfunc",
+      "call myfunc",
+      "run myfunc",
+      "execute myfunc"
+    ],
+    "answer": "myfunc"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "Which keyword declares a variable that is visible only inside a function?",
+    "options": [
+      "local",
+      "private",
+      "internal",
+      "hidden"
+    ],
+    "answer": "local"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "Which command returns an exit status of 0 from a function?",
+    "options": [
+      "return 0",
+      "exit function 0",
+      "stop 0",
+      "end 0"
+    ],
+    "answer": "return 0"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "Inside a function, which parameter gives the number of arguments passed to the function?",
+    "options": [
+      "$#",
+      "$@",
+      "$0",
+      "$1"
+    ],
+    "answer": "$#"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "Which syntax creates an indexed array with three elements?",
+    "options": [
+      "arr=(one two three)",
+      "array arr one two three",
+      "arr[one two three]",
+      "set arr one two three"
+    ],
+    "answer": "arr=(one two three)"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "Which syntax accesses the element at index 2 of arr?",
+    "options": [
+      "${arr[2]}",
+      "${arr:2}",
+      "$arr[2]",
+      "arr{2}"
+    ],
+    "answer": "${arr[2]}"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "Which expansion gives the number of elements in arr?",
+    "options": [
+      "${#arr[@]}",
+      "${#arr}",
+      "${arr:length}",
+      "${arr[@]#}"
+    ],
+    "answer": "${#arr[@]}"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "Which syntax appends newitem to arr?",
+    "options": [
+      "arr+=(newitem)",
+      "arr=newitem",
+      "arr.push(newitem)",
+      "add arr newitem"
+    ],
+    "answer": "arr+=(newitem)"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "Which expansion returns all elements of arr?",
+    "options": [
+      "${arr[@]}",
+      "${arr[0]}",
+      "${arr[all]}",
+      "${arr}"
+    ],
+    "answer": "${arr[@]}"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "Which command declares an associative array?",
+    "options": [
+      "declare -A map",
+      "declare -a map",
+      "array -A map",
+      "assoc map"
+    ],
+    "answer": "declare -A map"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "Which redirection sends both standard output and standard error to output.log?",
+    "options": [
+      "command &> output.log",
+      "command > output.log",
+      "command 2> output.log",
+      "command < output.log"
+    ],
+    "answer": "command &> output.log"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "Which redirection discards all command output?",
+    "options": [
+      "command > /dev/null",
+      "command > null",
+      "command > empty",
+      "command > discard"
+    ],
+    "answer": "command > /dev/null"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "Which operator sends the output of one command as input to another?",
+    "options": [
+      "|",
+      ">",
+      "<",
+      "&"
+    ],
+    "answer": "|"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "Which symbol runs a command in the background?",
+    "options": [
+      "&",
+      "&&",
+      "|",
+      ";"
+    ],
+    "answer": "&"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "Which builtin waits for background jobs to finish?",
+    "options": [
+      "wait",
+      "hold",
+      "pause",
+      "sleep"
+    ],
+    "answer": "wait"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "Which command executes script.sh in the current shell environment?",
+    "options": [
+      "source script.sh",
+      "bash script.sh",
+      "./script.sh",
+      "sh script.sh"
+    ],
+    "answer": "source script.sh"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "Which operator starts a here document?",
+    "options": [
+      "<<",
+      ">>",
+      "<",
+      ">"
+    ],
+    "answer": "<<"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "Which command creates a secure temporary file?",
+    "options": [
+      "mktemp",
+      "tempfile",
+      "touch tmp",
+      "newfile"
+    ],
+    "answer": "mktemp"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "Which command runs cleanup when the script receives SIGINT?",
+    "options": [
+      "trap 'cleanup' SIGINT",
+      "handle SIGINT cleanup",
+      "signal SIGINT cleanup",
+      "catch SIGINT cleanup"
+    ],
+    "answer": "trap 'cleanup' SIGINT"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "Which signal is usually sent when the user presses Ctrl+C?",
+    "options": [
+      "SIGINT",
+      "SIGTERM",
+      "SIGKILL",
+      "SIGHUP"
+    ],
+    "answer": "SIGINT"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "Which option makes the script exit immediately when a command fails?",
+    "options": [
+      "set -e",
+      "set -x",
+      "set -u",
+      "set -o pipefail"
+    ],
+    "answer": "set -e"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "Which option causes an error when an unset variable is referenced?",
+    "options": [
+      "set -u",
+      "set -e",
+      "set -x",
+      "set -a"
+    ],
+    "answer": "set -u"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "Which option prints each command before executing it for debugging?",
+    "options": [
+      "set -x",
+      "set -e",
+      "set -u",
+      "set -v"
+    ],
+    "answer": "set -x"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "Which command lists currently defined shell functions?",
+    "options": [
+      "declare -f",
+      "declare -A",
+      "functions",
+      "listfunc"
+    ],
+    "answer": "declare -f"
+  }
+]

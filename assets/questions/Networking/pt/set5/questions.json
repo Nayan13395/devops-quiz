@@ -1,0 +1,302 @@
+[
+  {
+    "category": "Networking",
+    "set": 5,
+    "question": "O que o DNSSEC foi projetado para fornecer aos dados DNS?",
+    "options": [
+      "Criptografia de todas as consultas e respostas DNS",
+      "Autenticação dos clientes antes de consultar uma zona pública",
+      "Disponibilidade garantida apesar do tráfego de negação de serviço",
+      "Autenticação da origem dos dados e integridade"
+    ],
+    "answer": "Autenticação da origem dos dados e integridade"
+  },
+  {
+    "category": "Networking",
+    "set": 5,
+    "question": "Qual porta de destino é atribuída ao DNS sobre TLS?",
+    "options": [
+      "443",
+      "5353",
+      "853",
+      "53"
+    ],
+    "answer": "853"
+  },
+  {
+    "category": "Networking",
+    "set": 5,
+    "question": "O que um resolvedor recursivo normalmente faz quando uma resposta DNS por UDP está truncada e é necessária uma resposta completa?",
+    "options": [
+      "Interpreta o truncamento como prova de que o domínio não existe",
+      "Repete a consulta usando TCP",
+      "Aceita a resposta parcial como completa",
+      "Solicita cada fragmento UDP ausente usando seu deslocamento original no pacote"
+    ],
+    "answer": "Repete a consulta usando TCP"
+  },
+  {
+    "category": "Networking",
+    "set": 5,
+    "question": "Qual protocolo de transporte carrega os pacotes QUIC?",
+    "options": [
+      "UDP",
+      "TCP",
+      "SCTP",
+      "ICMP"
+    ],
+    "answer": "UDP"
+  },
+  {
+    "category": "Networking",
+    "set": 5,
+    "question": "Qual versão do HTTP funciona sobre QUIC?",
+    "options": [
+      "HTTP/2",
+      "HTTP/1.1",
+      "HTTP/1.0",
+      "HTTP/3"
+    ],
+    "answer": "HTTP/3"
+  },
+  {
+    "category": "Networking",
+    "set": 5,
+    "question": "O que significa o bloqueio de início de fila do TCP para fluxos HTTP/2 em uma única conexão?",
+    "options": [
+      "Somente os cabeçalhos HTTP podem ser atrasados por uma perda TCP",
+      "Uma perda TCP afeta apenas o fluxo que contém os bytes ausentes",
+      "Dados TCP perdidos podem atrasar a entrega de fluxos que seriam independentes",
+      "Cada fluxo deve terminar completamente antes que outro possa ser criado"
+    ],
+    "answer": "Dados TCP perdidos podem atrasar a entrega de fluxos que seriam independentes"
+  },
+  {
+    "category": "Networking",
+    "set": 5,
+    "question": "O que uma inundação TCP SYN tenta esgotar principalmente em um servidor?",
+    "options": [
+      "As filas de trabalho que processam solicitações de aplicação autenticadas com sucesso",
+      "Os recursos que acompanham handshakes de conexão incompletos",
+      "Os buffers que armazenam respostas HTTP completas de sessões estabelecidas",
+      "O armazenamento ocupado por arquivos de tickets de sessão TLS"
+    ],
+    "answer": "Os recursos que acompanham handshakes de conexão incompletos"
+  },
+  {
+    "category": "Networking",
+    "set": 5,
+    "question": "O que distingue a entrega unicast da multicast?",
+    "options": [
+      "Unicast se destina a um receptor, enquanto multicast se destina a um grupo de membros inscritos",
+      "Unicast sempre usa UDP, enquanto multicast sempre usa TCP",
+      "Unicast exige IPv6, enquanto multicast exige IPv4",
+      "Unicast criptografa os quadros, enquanto multicast os comprime"
+    ],
+    "answer": "Unicast se destina a um receptor, enquanto multicast se destina a um grupo de membros inscritos"
+  },
+  {
+    "category": "Networking",
+    "set": 5,
+    "question": "Qual faixa IPv4 é reservada para endereçamento multicast?",
+    "options": [
+      "240.0.0.0/4",
+      "169.254.0.0/16",
+      "127.0.0.0/8",
+      "224.0.0.0/4"
+    ],
+    "answer": "224.0.0.0/4"
+  },
+  {
+    "category": "Networking",
+    "set": 5,
+    "question": "Qual protocolo comunica a participação em grupos multicast IPv4 entre hosts e roteadores vizinhos?",
+    "options": [
+      "OSPF",
+      "DHCP",
+      "IGMP",
+      "ARP"
+    ],
+    "answer": "IGMP"
+  },
+  {
+    "category": "Networking",
+    "set": 5,
+    "question": "Para quem o roteamento anycast entrega um pacote quando vários locais anunciam o mesmo endereço?",
+    "options": [
+      "Um servidor DNS selecionado aleatoriamente, independentemente da rota",
+      "Uma instância selecionada pelo sistema de roteamento",
+      "Todas as instâncias simultaneamente",
+      "Apenas a instância com o maior endereço MAC"
+    ],
+    "answer": "Uma instância selecionada pelo sistema de roteamento"
+  },
+  {
+    "category": "Networking",
+    "set": 5,
+    "question": "Qual é a função de uma tag IEEE 802.1Q em um quadro Ethernet?",
+    "options": [
+      "Identificar a VLAN do quadro",
+      "Substituir o endereço MAC de destino",
+      "Identificar o comprimento do prefixo da sub-rede IP",
+      "Registrar quantos roteadores o quadro atravessou"
+    ],
+    "answer": "Identificar a VLAN do quadro"
+  },
+  {
+    "category": "Networking",
+    "set": 5,
+    "question": "O que Spanning Tree Protocol evita principalmente em uma rede Ethernet com pontes?",
+    "options": [
+      "Laços de roteamento IP entre sistemas autônomos",
+      "Atribuições duplicadas de endereços IP por servidores DHCP independentes",
+      "Atribuições sobrepostas de portas TCP em um host",
+      "Laços de encaminhamento de camada 2"
+    ],
+    "answer": "Laços de encaminhamento de camada 2"
+  },
+  {
+    "category": "Networking",
+    "set": 5,
+    "question": "Como um enlace Ethernet full-duplex transporta tráfego?",
+    "options": [
+      "Os dois extremos devem se alternar após detectar colisões",
+      "Um extremo fica permanentemente limitado à recepção",
+      "Os dois extremos podem transmitir ao mesmo tempo",
+      "Apenas um extremo pode transmitir até que o enlace seja redefinido"
+    ],
+    "answer": "Os dois extremos podem transmitir ao mesmo tempo"
+  },
+  {
+    "category": "Networking",
+    "set": 5,
+    "question": "Qual é a finalidade da agregação de enlaces?",
+    "options": [
+      "Replicar cada quadro unicast em todos os uplinks disponíveis",
+      "Combinar vários enlaces físicos em um enlace lógico",
+      "Combinar várias VLANs eliminando seus domínios de broadcast separados",
+      "Converter todas as portas conectadas do switch em um único meio compartilhado half-duplex"
+    ],
+    "answer": "Combinar vários enlaces físicos em um enlace lógico"
+  },
+  {
+    "category": "Networking",
+    "set": 5,
+    "question": "O que o DSCP em um cabeçalho IP ajuda os dispositivos de rede a classificar?",
+    "options": [
+      "Tráfego para tratamento diferenciado de qualidade de serviço",
+      "Pacotes para remontagem de fragmentos por número de identificação",
+      "Pacotes para prevenção de laços pelo número restante de saltos",
+      "Conexões para identificação dos extremos por número de porta"
+    ],
+    "answer": "Tráfego para tratamento diferenciado de qualidade de serviço"
+  },
+  {
+    "category": "Networking",
+    "set": 5,
+    "question": "O que o jitter mede em um fluxo de pacotes de rede?",
+    "options": [
+      "A taxa média de transmissão de pacotes",
+      "A fração de pacotes perdidos",
+      "O tamanho máximo da carga útil dos pacotes",
+      "A variação do atraso dos pacotes"
+    ],
+    "answer": "A variação do atraso dos pacotes"
+  },
+  {
+    "category": "Networking",
+    "set": 5,
+    "question": "Por que retransmissões repetidas podem reduzir a vazão útil de uma aplicação?",
+    "options": [
+      "Elas obrigam cada roteador a dobrar a capacidade do enlace de saída",
+      "Elas garantem que o receptor possa aumentar sua janela anunciada",
+      "Elas consomem capacidade sem entregar novos dados adicionais da aplicação",
+      "Elas reduzem a sobrecarga do protocolo removendo os cabeçalhos de transporte"
+    ],
+    "answer": "Elas consomem capacidade sem entregar novos dados adicionais da aplicação"
+  },
+  {
+    "category": "Networking",
+    "set": 5,
+    "question": "O que Path MTU Discovery busca determinar?",
+    "options": [
+      "O número de pacotes que um roteador pode enfileirar antes de descartar tráfego",
+      "O maior tamanho de pacote utilizável ao longo de um caminho sem fragmentação",
+      "O número máximo de bytes não confirmados que um receptor pode armazenar em buffer",
+      "O tempo mínimo de ida e volta necessário para evitar congestionamento"
+    ],
+    "answer": "O maior tamanho de pacote utilizável ao longo de um caminho sem fragmentação"
+  },
+  {
+    "category": "Networking",
+    "set": 5,
+    "question": "Qual tupla de extremos de socket distingue uma conexão TCP de outras conexões TCP?",
+    "options": [
+      "IP de origem, porta de origem, IP de destino, porta de destino",
+      "IP de origem, IP de destino, número de sequência, número de confirmação",
+      "Porta de origem, porta de destino, tamanho da janela, soma de verificação",
+      "IP de origem, porta de origem, IP de destino, limite de saltos IP"
+    ],
+    "answer": "IP de origem, porta de origem, IP de destino, porta de destino"
+  },
+  {
+    "category": "Networking",
+    "set": 5,
+    "question": "Para que uma porta efêmera é comumente usada?",
+    "options": [
+      "Uma porta conhecida de servidor atribuída permanentemente",
+      "Uma porta física de switch dedicada ao tráfego de tronco",
+      "Uma porta de destino reservada compartilhada por todos os protocolos de roteamento",
+      "Um extremo de transporte temporário do lado do cliente"
+    ],
+    "answer": "Um extremo de transporte temporário do lado do cliente"
+  },
+  {
+    "category": "Networking",
+    "set": 5,
+    "question": "O que a diretiva HTTP Cache-Control no-store informa a um cache?",
+    "options": [
+      "Armazene a resposta apenas em um cache privado",
+      "Armazene a resposta até expirar seu período de validade declarado",
+      "Não armazene a solicitação nem a resposta abrangida pela diretiva",
+      "Armazene a resposta, mas revalide antes de reutilizá-la"
+    ],
+    "answer": "Não armazene a solicitação nem a resposta abrangida pela diretiva"
+  },
+  {
+    "category": "Networking",
+    "set": 5,
+    "question": "O que uma resposta HTTP 304 indica após um GET condicional?",
+    "options": [
+      "O servidor de origem não conseguiu resolver seu próprio nome de host",
+      "A representação em cache pode ser reutilizada conforme o resultado da validação",
+      "O recurso solicitado foi movido permanentemente",
+      "O cliente deve mudar para outro protocolo de transporte"
+    ],
+    "answer": "A representação em cache pode ser reutilizada conforme o resultado da validação"
+  },
+  {
+    "category": "Networking",
+    "set": 5,
+    "question": "Qual cabeçalho de proxy costuma registrar o IP do cliente original quando um proxy reverso encaminha uma solicitação HTTP?",
+    "options": [
+      "X-Forwarded-For",
+      "Content-Type",
+      "Accept-Encoding",
+      "Cache-Control"
+    ],
+    "answer": "X-Forwarded-For"
+  },
+  {
+    "category": "Networking",
+    "set": 5,
+    "question": "Por que uma aplicação deve confiar em cabeçalhos encaminhados de IP do cliente apenas quando vêm de proxies confiáveis configurados?",
+    "options": [
+      "TLS autentica automaticamente o valor do IP do cliente original dentro de cada cabeçalho",
+      "As somas de verificação TCP provam que o cabeçalho identifica o cliente original",
+      "Todo proxy de encaminhamento assina criptograficamente esse cabeçalho por padrão",
+      "Os clientes podem falsificar esses cabeçalhos se o limite de confiança não for imposto"
+    ],
+    "answer": "Os clientes podem falsificar esses cabeçalhos se o limite de confiança não for imposto"
+  }
+]

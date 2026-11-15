@@ -1,0 +1,302 @@
+[
+  {
+    "category": "Terraform",
+    "set": 2,
+    "question": "Terraform 中哪个块用于定义输入变量?",
+    "options": [
+      "variable",
+      "input",
+      "vars",
+      "parameter"
+    ],
+    "answer": "variable"
+  },
+  {
+    "category": "Terraform",
+    "set": 2,
+    "question": "哪个块用于定义本地值?",
+    "options": [
+      "locals",
+      "local",
+      "values",
+      "variables"
+    ],
+    "answer": "locals"
+  },
+  {
+    "category": "Terraform",
+    "set": 2,
+    "question": "哪个块用于获取现有基础设施的信息?",
+    "options": [
+      "data",
+      "resource",
+      "provider",
+      "output"
+    ],
+    "answer": "data"
+  },
+  {
+    "category": "Terraform",
+    "set": 2,
+    "question": "哪个元参数接受整数，以创建相应数量的资源实例？",
+    "options": [
+      "count",
+      "for_each",
+      "repeat",
+      "loop"
+    ],
+    "answer": "count"
+  },
+  {
+    "category": "Terraform",
+    "set": 2,
+    "question": "哪个元参数根据映射或字符串集合创建资源实例？",
+    "options": [
+      "for_each",
+      "count",
+      "each",
+      "loop"
+    ],
+    "answer": "for_each"
+  },
+  {
+    "category": "Terraform",
+    "set": 2,
+    "question": "条件表达式使用哪个运算符?",
+    "options": [
+      "? :",
+      "if",
+      "switch",
+      "case"
+    ],
+    "answer": "? :"
+  },
+  {
+    "category": "Terraform",
+    "set": 2,
+    "question": "哪个函数返回列表的长度?",
+    "options": [
+      "length()",
+      "count()",
+      "size()",
+      "len()"
+    ],
+    "answer": "length()"
+  },
+  {
+    "category": "Terraform",
+    "set": 2,
+    "question": "哪个函数将字符串转换为大写？",
+    "options": [
+      "upper()",
+      "toupper()",
+      "capitalize()",
+      "upcase()"
+    ],
+    "answer": "upper()"
+  },
+  {
+    "category": "Terraform",
+    "set": 2,
+    "question": "哪个函数将列表元素连接成字符串？",
+    "options": [
+      "join()",
+      "concat()",
+      "merge()",
+      "append()"
+    ],
+    "answer": "join()"
+  },
+  {
+    "category": "Terraform",
+    "set": 2,
+    "question": "哪个函数将作为独立参数传入的两个或更多列表合并为一个列表？",
+    "options": [
+      "concat()",
+      "join()",
+      "merge()",
+      "flatten()"
+    ],
+    "answer": "concat()"
+  },
+  {
+    "category": "Terraform",
+    "set": 2,
+    "question": "Terraform 中的隐式依赖是什么?",
+    "options": [
+      "自动检测到的依赖",
+      "手动依赖",
+      "提供商依赖",
+      "状态依赖"
+    ],
+    "answer": "自动检测到的依赖"
+  },
+  {
+    "category": "Terraform",
+    "set": 2,
+    "question": "哪个参数用于创建显式依赖?",
+    "options": [
+      "depends_on",
+      "dependency",
+      "require",
+      "depends"
+    ],
+    "answer": "depends_on"
+  },
+  {
+    "category": "Terraform",
+    "set": 2,
+    "question": "哪个命令列出状态中的资源地址，而不显示属性值？",
+    "options": [
+      "terraform state list",
+      "terraform state show",
+      "terraform show",
+      "terraform state resources"
+    ],
+    "answer": "terraform state list"
+  },
+  {
+    "category": "Terraform",
+    "set": 2,
+    "question": "哪个命令用于将现有基础设施导入 Terraform 状态?",
+    "options": [
+      "terraform import",
+      "terraform load",
+      "terraform sync",
+      "terraform attach"
+    ],
+    "answer": "terraform import"
+  },
+  {
+    "category": "Terraform",
+    "set": 2,
+    "question": "哪种输入变量类型只接受 true 或 false？",
+    "options": [
+      "bool",
+      "string",
+      "number",
+      "list(string)"
+    ],
+    "answer": "bool"
+  },
+  {
+    "category": "Terraform",
+    "set": 2,
+    "question": "哪种输入变量类型表示字符串键到字符串值的映射？",
+    "options": [
+      "list(string)",
+      "set(string)",
+      "tuple([string])",
+      "map(string)"
+    ],
+    "answer": "map(string)"
+  },
+  {
+    "category": "Terraform",
+    "set": 2,
+    "question": "调用方未设置值时，哪个变量参数提供默认值？",
+    "options": [
+      "nullable",
+      "sensitive",
+      "default",
+      "description"
+    ],
+    "answer": "default"
+  },
+  {
+    "category": "Terraform",
+    "set": 2,
+    "question": "变量声明中的哪个块检查其值是否满足自定义规则？",
+    "options": [
+      "connection",
+      "validation",
+      "lifecycle",
+      "provisioner"
+    ],
+    "answer": "validation"
+  },
+  {
+    "category": "Terraform",
+    "set": 2,
+    "question": "哪个环境变量提供输入变量 region 的值？",
+    "options": [
+      "TF_VAR_region",
+      "TF_LOG_region",
+      "TF_CLI_ARGS_region",
+      "TF_DATA_DIR_region"
+    ],
+    "answer": "TF_VAR_region"
+  },
+  {
+    "category": "Terraform",
+    "set": 2,
+    "question": "CLI 会自动将哪个文件作为根模块的变量定义文件加载？",
+    "options": [
+      "production.tfvars",
+      "production.vars",
+      "production.hcl",
+      "production.auto.tfvars"
+    ],
+    "answer": "production.auto.tfvars"
+  },
+  {
+    "category": "Terraform",
+    "set": 2,
+    "question": "在使用 count 的资源中，哪个表达式给出当前实例从零开始的索引？",
+    "options": [
+      "each.value",
+      "self.index",
+      "count.index",
+      "each.key"
+    ],
+    "answer": "count.index"
+  },
+  {
+    "category": "Terraform",
+    "set": 2,
+    "question": "在使用 for_each 遍历映射的资源中，哪个表达式读取当前元素的值？",
+    "options": [
+      "self.value",
+      "each.value",
+      "each.key",
+      "count.index"
+    ],
+    "answer": "each.value"
+  },
+  {
+    "category": "Terraform",
+    "set": 2,
+    "question": "哪个函数从列表中删除重复元素，同时保留首次出现的顺序？",
+    "options": [
+      "distinct",
+      "sort",
+      "reverse",
+      "flatten"
+    ],
+    "answer": "distinct"
+  },
+  {
+    "category": "Terraform",
+    "set": 2,
+    "question": "哪个函数移除列表中直接嵌套的列表层级？",
+    "options": [
+      "concat",
+      "merge",
+      "join",
+      "flatten"
+    ],
+    "answer": "flatten"
+  },
+  {
+    "category": "Terraform",
+    "set": 2,
+    "question": "哪个表达式通过将每个名称转成大写来创建新列表？",
+    "options": [
+      "[for name in var.names : length(name)]",
+      "[for name in var.names : trimspace(name)]",
+      "[for name in var.names : upper(name)]",
+      "[for name in var.names : lower(name)]"
+    ],
+    "answer": "[for name in var.names : upper(name)]"
+  }
+]

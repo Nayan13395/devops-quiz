@@ -1,0 +1,302 @@
+[
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "playbook में वेरिएबल परिभाषित करने के लिए किस कीवर्ड का उपयोग किया जाता है?",
+    "options": [
+      "vars",
+      "variables",
+      "var",
+      "define"
+    ],
+    "answer": "vars"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "वेरिएबल को संदर्भित करने के लिए कौन सा सिंटैक्स उपयोग किया जाता है?",
+    "options": [
+      "{{ variable_name }}",
+      "$(variable_name)",
+      "${variable_name}",
+      "[variable_name]"
+    ],
+    "answer": "{{ variable_name }}"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "निष्पादन के दौरान संदेश प्रदर्शित करने के लिए कौन सा मॉड्यूल उपयोग किया जाता है?",
+    "options": [
+      "debug",
+      "print",
+      "echo",
+      "message"
+    ],
+    "answer": "debug"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "कंडीशनल निष्पादन के लिए किस कीवर्ड का उपयोग किया जाता है?",
+    "options": [
+      "when",
+      "if",
+      "condition",
+      "check"
+    ],
+    "answer": "when"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "किसी कार्य को दोहराने के लिए किस कीवर्ड का उपयोग किया जाता है?",
+    "options": [
+      "loop",
+      "repeat",
+      "iterate",
+      "for"
+    ],
+    "answer": "loop"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "डिफ़ॉल्ट रूप से लूप का वर्तमान आइटम किस चर में होता है?",
+    "options": [
+      "item",
+      "loopitem",
+      "current",
+      "value"
+    ],
+    "answer": "item"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "कौन सा मॉड्यूल Jinja2 टेम्पलेट से फ़ाइलें बनाता है?",
+    "options": [
+      "template",
+      "copy",
+      "render",
+      "jinja"
+    ],
+    "answer": "template"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "Ansible कौन सा टेम्प्लेटिंग इंजन उपयोग करता है?",
+    "options": [
+      "Jinja2",
+      "Mustache",
+      "Velocity",
+      "Smarty"
+    ],
+    "answer": "Jinja2"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "कौन सा कीवर्ड कार्य आउटपुट को वेरिएबल में रजिस्टर करता है?",
+    "options": [
+      "register",
+      "save",
+      "output",
+      "store"
+    ],
+    "answer": "register"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "कौन-सा कीवर्ड कार्य की विफलता के बाद आगे बढ़ता है, लेकिन सिंटैक्स या कनेक्शन त्रुटियाँ नहीं दबाता?",
+    "options": [
+      "ignore_errors",
+      "skip_errors",
+      "continue",
+      "ignore_failures"
+    ],
+    "answer": "ignore_errors"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "केवल सूचित किए जाने पर कार्य चलाने के लिए किस कीवर्ड का उपयोग किया जाता है?",
+    "options": [
+      "handlers",
+      "notify",
+      "trigger",
+      "events"
+    ],
+    "answer": "handlers"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "handler को ट्रिगर करने के लिए कौन सा कीवर्ड उपयोग किया जाता है?",
+    "options": [
+      "notify",
+      "handler",
+      "alert",
+      "call"
+    ],
+    "answer": "notify"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "दूसरा playbook इम्पोर्ट करने के लिए किस कीवर्ड का उपयोग किया जाता है?",
+    "options": [
+      "import_playbook",
+      "include_playbook",
+      "load_playbook",
+      "playbook"
+    ],
+    "answer": "import_playbook"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "चयनात्मक निष्पादन के लिए कार्यों को टैग करने के लिए कौन सा कीवर्ड उपयोग किया जाता है?",
+    "options": [
+      "tags",
+      "labels",
+      "groups",
+      "filter"
+    ],
+    "answer": "tags"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "केवल विशिष्ट टैग वाले कार्य कौन सा विकल्प चलाता है?",
+    "options": [
+      "--tags",
+      "--skip-tags",
+      "--limit",
+      "--list-tags"
+    ],
+    "answer": "--tags"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "बदलाव रिपोर्ट करने की कस्टम शर्त कौन-सा कार्य कीवर्ड परिभाषित करता है?",
+    "options": [
+      "changed_when",
+      "failed_when",
+      "until",
+      "when"
+    ],
+    "answer": "changed_when"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "विफलता रिपोर्ट करने की कस्टम शर्त कौन-सा कार्य कीवर्ड परिभाषित करता है?",
+    "options": [
+      "changed_when",
+      "retries",
+      "delay",
+      "failed_when"
+    ],
+    "answer": "failed_when"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "पुनः प्रयासों में सत्य होनी चाहिए ऐसी शर्त कौन-सा कार्य कीवर्ड बताता है?",
+    "options": [
+      "loop",
+      "notify",
+      "until",
+      "when"
+    ],
+    "answer": "until"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "फ़ाइल से लोड करने के बजाय कार्य के दिए मानों से वर्तमान होस्ट के नामित चर सीधे कौन-सा मॉड्यूल बनाता है?",
+    "options": [
+      "ansible.builtin.add_host",
+      "ansible.builtin.set_fact",
+      "ansible.builtin.setup",
+      "ansible.builtin.include_vars"
+    ],
+    "answer": "ansible.builtin.set_fact"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "result के रूप में दर्ज कार्य का मानक आउटपुट किस अभिव्यक्ति से मिलता है?",
+    "options": [
+      "result.stdout",
+      "result.stderr",
+      "result.rc",
+      "result.changed"
+    ],
+    "answer": "result.stdout"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "चर परिभाषित है या नहीं, यह कौन-सा Jinja2 परीक्षण जाँचता है?",
+    "options": [
+      "is none",
+      "is string",
+      "is sequence",
+      "is defined"
+    ],
+    "answer": "is defined"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "साझा निर्देश और त्रुटि प्रबंधन के लिए कार्यों को कौन-सा Ansible कीवर्ड समूहित करता है?",
+    "options": [
+      "roles",
+      "handlers",
+      "block",
+      "loop"
+    ],
+    "answer": "block"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "कार्य सामान्यतः अपनी notify सूचनाएँ कब भेजता है?",
+    "options": [
+      "केवल प्लेबुक शुरू होने पर",
+      "सफलतापूर्वक पूरा होकर changed रिपोर्ट करने पर",
+      "किसी शर्त से छोड़े जाने पर हर बार",
+      "मॉड्यूल के unchanged रिपोर्ट करने पर हर बार"
+    ],
+    "answer": "सफलतापूर्वक पूरा होकर changed रिपोर्ट करने पर"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "लूप के वर्तमान आइटम वाले चर का नाम server कौन-सी सेटिंग करती है?",
+    "options": [
+      "loop_control: {loop_var: server}",
+      "loop_control: {label: server}",
+      "loop_control: {index_var: server}",
+      "loop_control: {pause: 1}"
+    ],
+    "answer": "loop_control: {loop_var: server}"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "उच्च प्राथमिकता वाले अतिरिक्त चर कौन-सा कमांड-लाइन विकल्प देता है?",
+    "options": [
+      "--tags",
+      "--limit",
+      "--start-at-task",
+      "--extra-vars"
+    ],
+    "answer": "--extra-vars"
+  }
+]

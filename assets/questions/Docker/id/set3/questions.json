@@ -1,0 +1,302 @@
+[
+  {
+    "category": "Docker",
+    "set": 3,
+    "question": "Perintah mana yang menampilkan daftar container yang sedang berjalan?",
+    "options": [
+      "docker ps",
+      "docker images",
+      "docker start",
+      "docker build"
+    ],
+    "answer": "docker ps"
+  },
+  {
+    "category": "Docker",
+    "set": 3,
+    "question": "Perintah mana yang menjalankan perintah di dalam container yang sedang berjalan?",
+    "options": [
+      "docker exec",
+      "docker enter",
+      "docker shell",
+      "docker login"
+    ],
+    "answer": "docker exec"
+  },
+  {
+    "category": "Docker",
+    "set": 3,
+    "question": "Perintah mana yang terhubung (attach) ke container yang sedang berjalan?",
+    "options": [
+      "docker attach",
+      "docker connect",
+      "docker exec",
+      "docker join"
+    ],
+    "answer": "docker attach"
+  },
+  {
+    "category": "Docker",
+    "set": 3,
+    "question": "Perintah mana yang menyalin file antara container dan host?",
+    "options": [
+      "docker cp",
+      "docker copy",
+      "docker transfer",
+      "docker sync"
+    ],
+    "answer": "docker cp"
+  },
+  {
+    "category": "Docker",
+    "set": 3,
+    "question": "Perintah mana yang menampilkan event Docker secara real-time?",
+    "options": [
+      "docker events",
+      "docker logs",
+      "docker monitor",
+      "docker watch"
+    ],
+    "answer": "docker events"
+  },
+  {
+    "category": "Docker",
+    "set": 3,
+    "question": "Perintah mana yang menyimpan image ke arsip tar?",
+    "options": [
+      "docker save",
+      "docker export",
+      "docker backup",
+      "docker archive"
+    ],
+    "answer": "docker save"
+  },
+  {
+    "category": "Docker",
+    "set": 3,
+    "question": "Perintah mana yang memuat image dari arsip tar?",
+    "options": [
+      "docker load",
+      "docker import",
+      "docker restore",
+      "docker pull"
+    ],
+    "answer": "docker load"
+  },
+  {
+    "category": "Docker",
+    "set": 3,
+    "question": "Perintah mana yang mengekspor filesystem container sebagai arsip tar?",
+    "options": [
+      "docker export",
+      "docker save",
+      "docker backup",
+      "docker archive"
+    ],
+    "answer": "docker export"
+  },
+  {
+    "category": "Docker",
+    "set": 3,
+    "question": "Perintah mana yang mengimpor tarball sebagai image?",
+    "options": [
+      "docker import",
+      "docker load",
+      "docker pull",
+      "docker build"
+    ],
+    "answer": "docker import"
+  },
+  {
+    "category": "Docker",
+    "set": 3,
+    "question": "Perintah mana yang membuat image dari perubahan pada sebuah container?",
+    "options": [
+      "docker commit",
+      "docker build",
+      "docker save",
+      "docker tag"
+    ],
+    "answer": "docker commit"
+  },
+  {
+    "category": "Docker",
+    "set": 3,
+    "question": "Perintah mana yang memberi tag pada image Docker?",
+    "options": [
+      "docker tag",
+      "docker name",
+      "docker commit",
+      "docker label"
+    ],
+    "answer": "docker tag"
+  },
+  {
+    "category": "Docker",
+    "set": 3,
+    "question": "Perintah mana yang mengirim (push) image ke registry?",
+    "options": [
+      "docker push",
+      "docker upload",
+      "docker publish",
+      "docker send"
+    ],
+    "answer": "docker push"
+  },
+  {
+    "category": "Docker",
+    "set": 3,
+    "question": "Perintah mana yang masuk (login) ke registry Docker?",
+    "options": [
+      "docker login",
+      "docker auth",
+      "docker connect",
+      "docker signin"
+    ],
+    "answer": "docker login"
+  },
+  {
+    "category": "Docker",
+    "set": 3,
+    "question": "Perintah mana yang membersihkan objek Docker yang tidak terpakai?",
+    "options": [
+      "docker system prune",
+      "docker clean",
+      "docker prune",
+      "docker remove"
+    ],
+    "answer": "docker system prune"
+  },
+  {
+    "category": "Docker",
+    "set": 3,
+    "question": "Perintah mana yang menampilkan penggunaan disk Docker?",
+    "options": [
+      "docker system df",
+      "docker disk",
+      "docker usage",
+      "docker info"
+    ],
+    "answer": "docker system df"
+  },
+  {
+    "category": "Docker",
+    "set": 3,
+    "question": "Instruksi Dockerfile mana yang mendeklarasikan variabel waktu build yang dapat diberikan melalui --build-arg?",
+    "options": [
+      "USER",
+      "ARG",
+      "ENV",
+      "LABEL"
+    ],
+    "answer": "ARG"
+  },
+  {
+    "category": "Docker",
+    "set": 3,
+    "question": "Instruksi Dockerfile mana yang menentukan pengguna untuk instruksi RUN berikutnya dan proses eksekusi bawaan?",
+    "options": [
+      "USER",
+      "SHELL",
+      "WORKDIR",
+      "STOPSIGNAL"
+    ],
+    "answer": "USER"
+  },
+  {
+    "category": "Docker",
+    "set": 3,
+    "question": "Apa perbedaan CMD dan RUN dalam Dockerfile?",
+    "options": [
+      "CMD selalu berjalan sebelum FROM",
+      "CMD menyalin berkas dari host",
+      "CMD membuat tahap build baru",
+      "CMD menyediakan nilai bawaan untuk eksekusi kontainer, bukan menjalankan langkah build"
+    ],
+    "answer": "CMD menyediakan nilai bawaan untuk eksekusi kontainer, bukan menjalankan langkah build"
+  },
+  {
+    "category": "Docker",
+    "set": 3,
+    "question": "Jika image memiliki ENTRYPOINT bentuk exec, bagaimana argumen biasa setelah nama image dalam docker run biasanya digunakan?",
+    "options": [
+      "Argumen ditafsirkan sebagai instruksi Dockerfile",
+      "Argumen disimpan sebagai label image",
+      "Argumen ditambahkan ke perintah titik masuk",
+      "Argumen mengganti berkas eksekutabel titik masuk"
+    ],
+    "answer": "Argumen ditambahkan ke perintah titik masuk"
+  },
+  {
+    "category": "Docker",
+    "set": 3,
+    "question": "Instruksi Dockerfile mana yang memulai tahap lain dalam build multitahap?",
+    "options": [
+      "ARG",
+      "FROM",
+      "RUN",
+      "COPY"
+    ],
+    "answer": "FROM"
+  },
+  {
+    "category": "Docker",
+    "set": 3,
+    "question": "Opsi mana yang menyalin artefak dari tahap bernama build dalam Dockerfile multitahap?",
+    "options": [
+      "COPY --from=build",
+      "COPY --chown=build",
+      "COPY --chmod=build",
+      "COPY --exclude=build"
+    ],
+    "answer": "COPY --from=build"
+  },
+  {
+    "category": "Docker",
+    "set": 3,
+    "question": "Instruksi mana yang mendefinisikan perintah yang dijalankan Docker untuk menilai kesehatan kontainer?",
+    "options": [
+      "STOPSIGNAL",
+      "ENTRYPOINT",
+      "ONBUILD",
+      "HEALTHCHECK"
+    ],
+    "answer": "HEALTHCHECK"
+  },
+  {
+    "category": "Docker",
+    "set": 3,
+    "question": "Referensi image mana yang mengikat unduhan pada digest konten, bukan tag yang dapat berubah?",
+    "options": [
+      "nginx:stable",
+      "nginx:alpine",
+      "nginx@sha256:<digest>",
+      "nginx:latest"
+    ],
+    "answer": "nginx@sha256:<digest>"
+  },
+  {
+    "category": "Docker",
+    "set": 3,
+    "question": "Apa arti sebenarnya dari tag image 'latest'?",
+    "options": [
+      "Tag itu otomatis memperbarui kontainer yang sedang berjalan",
+      "Tag itu merupakan tag konvensional yang dapat diperbarui penerbit",
+      "Tag itu menjamin image dengan waktu pembuatan paling baru",
+      "Tag itu selalu memilih rilis stabil"
+    ],
+    "answer": "Tag itu merupakan tag konvensional yang dapat diperbarui penerbit"
+  },
+  {
+    "category": "Docker",
+    "set": 3,
+    "question": "Perintah mana yang menunjukkan berkas ditambahkan, diubah, atau dihapus dalam sistem berkas kontainer?",
+    "options": [
+      "docker diff web",
+      "docker history web",
+      "docker inspect web",
+      "docker logs web"
+    ],
+    "answer": "docker diff web"
+  }
+]

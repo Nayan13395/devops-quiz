@@ -2,9 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:devops_quiz/screens/chess_screen.dart';
 import 'package:devops_quiz/screens/tic_tac_toe_screen.dart';
+import 'package:shared_preferences/shared_preferences.dart';
+import 'package:devops_quiz/services/chess_save_service.dart';
 
 void main() {
   TestWidgetsFlutterBinding.ensureInitialized();
+  setUp(
+    () => SharedPreferences.setMockInitialValues({'game_sound_enabled': false}),
+  );
 
   testWidgets('Tic-Tac-Toe alternates the opening move each round', (
     tester,
@@ -59,6 +64,10 @@ void main() {
   testWidgets('Chess alternates the user color and bot opening', (
     tester,
   ) async {
+    tester.view.devicePixelRatio = 1;
+    tester.view.physicalSize = const Size(800, 1000);
+    addTearDown(tester.view.resetPhysicalSize);
+    addTearDown(tester.view.resetDevicePixelRatio);
     await tester.pumpWidget(const MaterialApp(home: ChessScreen()));
     await tester.pumpAndSettle();
 
@@ -68,44 +77,39 @@ void main() {
     await tester.tap(find.byKey(const ValueKey('chess-square-e4')));
     await tester.pumpAndSettle();
     expect(find.text('Black to move'), findsOneWidget);
-    expect(_moveCount(tester), 1);
+    expect(await _moveCount(), 1);
     await tester.pump(const Duration(milliseconds: 1300));
     await tester.pumpAndSettle();
-    expect(_moveCount(tester), 2);
+    expect(await _moveCount(), 2);
     expect(find.text('White to move'), findsOneWidget);
 
     await tester.tap(find.byTooltip('New game'));
     await tester.pumpAndSettle();
     expect(find.text('You are Black · Computer is White'), findsOneWidget);
     expect(find.text('White to move'), findsOneWidget);
-    expect(_moveCount(tester), 0);
+    expect(await _moveCount(), 0);
     await tester.pump(const Duration(milliseconds: 1300));
     await tester.pumpAndSettle();
     expect(find.text('Black to move'), findsOneWidget);
-    expect(_moveCount(tester), 1);
+    expect(await _moveCount(), 1);
 
     await tester.tap(find.byKey(const ValueKey('chess-square-e7')));
     await tester.tap(find.byKey(const ValueKey('chess-square-e5')));
     await tester.pumpAndSettle();
     expect(find.text('White to move'), findsOneWidget);
-    expect(_moveCount(tester), 2);
+    expect(await _moveCount(), 2);
     await tester.pump(const Duration(milliseconds: 1300));
     await tester.pumpAndSettle();
-    expect(_moveCount(tester), 3);
+    expect(await _moveCount(), 3);
     expect(find.text('Black to move'), findsOneWidget);
 
     await tester.tap(find.byTooltip('New game'));
     await tester.pumpAndSettle();
     expect(find.text('You are White · Computer is Black'), findsOneWidget);
     expect(find.text('White to move'), findsOneWidget);
-    expect(_moveCount(tester), 0);
+    expect(await _moveCount(), 0);
   });
 }
 
-int _moveCount(WidgetTester tester) {
-  final text = tester.widget<Text>(
-    find.byKey(const ValueKey('chess-move-list')),
-  );
-  if (text.data == null || text.data!.startsWith('Tap a piece')) return 0;
-  return text.data!.trim().split(RegExp(r'\s+')).length;
-}
+Future<int> _moveCount() async =>
+    (await ChessSaveService.load())!.game.history.length;

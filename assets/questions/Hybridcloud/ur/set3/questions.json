@@ -1,0 +1,302 @@
+[
+  {
+    "category": "Hybrid Cloud",
+    "set": 3,
+    "question": "کون سا Kubernetes ریسورس کسی ایپلیکیشن کو کلسٹر کے اندر اندرونی طور پر ایکسپوز کرتا ہے؟",
+    "options": [
+      "ClusterIP Service",
+      "Ingress",
+      "NodePort",
+      "LoadBalancer"
+    ],
+    "answer": "ClusterIP Service"
+  },
+  {
+    "category": "Hybrid Cloud",
+    "set": 3,
+    "question": "کون سا Kubernetes ریسورس کلاؤڈ فراہم کنندہ کے لوڈ بیلنسر کے ذریعے ایپلیکیشن کو بیرونی طور پر ایکسپوز کرتا ہے؟",
+    "options": [
+      "LoadBalancer Service",
+      "ReplicaSet",
+      "DaemonSet",
+      "ConfigMap"
+    ],
+    "answer": "LoadBalancer Service"
+  },
+  {
+    "category": "Hybrid Cloud",
+    "set": 3,
+    "question": "کون سا Kubernetes جزو سروسز تک بیرونی HTTP اور HTTPS رسائی کا انتظام کرتا ہے؟",
+    "options": [
+      "Ingress Controller",
+      "Scheduler",
+      "kube-proxy",
+      "etcd"
+    ],
+    "answer": "Ingress Controller"
+  },
+  {
+    "category": "Hybrid Cloud",
+    "set": 3,
+    "question": "کون سا Kubernetes ریسورس غیر حساس کنفیگریشن ڈیٹا محفوظ کرتا ہے؟",
+    "options": [
+      "ConfigMap",
+      "Secret",
+      "PersistentVolume",
+      "Namespace"
+    ],
+    "answer": "ConfigMap"
+  },
+  {
+    "category": "Hybrid Cloud",
+    "set": 3,
+    "question": "کون سا Kubernetes ریسورس پاس ورڈز، API keys اور سرٹیفکیٹس کو محفوظ طریقے سے اسٹور کرتا ہے؟",
+    "options": [
+      "Secret",
+      "ConfigMap",
+      "Pod",
+      "Deployment"
+    ],
+    "answer": "Secret"
+  },
+  {
+    "category": "Hybrid Cloud",
+    "set": 3,
+    "question": "کون سا Kubernetes آبجیکٹ یقینی بناتا ہے کہ pod replicas کی مخصوص تعداد چل رہی ہو؟",
+    "options": [
+      "Deployment",
+      "Namespace",
+      "ServiceAccount",
+      "Node"
+    ],
+    "answer": "Deployment"
+  },
+  {
+    "category": "Hybrid Cloud",
+    "set": 3,
+    "question": "کون سا Kubernetes ریسورس کلسٹر کے ہر node پر ایک pod چلاتا ہے؟",
+    "options": [
+      "DaemonSet",
+      "ReplicaSet",
+      "Job",
+      "CronJob"
+    ],
+    "answer": "DaemonSet"
+  },
+  {
+    "category": "Hybrid Cloud",
+    "set": 3,
+    "question": "طے شدہ کام انجام دینے کے لیے کون سا Kubernetes ریسورس استعمال ہوتا ہے؟",
+    "options": [
+      "CronJob",
+      "Job",
+      "StatefulSet",
+      "ReplicaSet"
+    ],
+    "answer": "CronJob"
+  },
+  {
+    "category": "Hybrid Cloud",
+    "set": 3,
+    "question": "کون سا کلاؤڈ-نیٹو اصول کلاؤڈ فراہم کنندگان کے درمیان ایپلیکیشن کی پورٹیبلٹی کو بہتر بناتا ہے؟",
+    "options": [
+      "Containerization",
+      "مخصوص ہارڈ ویئر",
+      "وینڈر کے مخصوص APIs",
+      "دستی ڈپلائمنٹ"
+    ],
+    "answer": "Containerization"
+  },
+  {
+    "category": "Hybrid Cloud",
+    "set": 3,
+    "question": "Kubernetes کے ساتھ عام طور پر کون سا اوپن سورس کنٹینر رن ٹائم استعمال ہوتا ہے؟",
+    "options": [
+      "containerd",
+      "VirtualBox",
+      "Hyper-V",
+      "VMware ESXi"
+    ],
+    "answer": "containerd"
+  },
+  {
+    "category": "Hybrid Cloud",
+    "set": 3,
+    "question": "کون سا Kubernetes میکانزم کسی namespace کے اندر استعمال ہونے والی کل CPU اور میموری کو محدود کرتا ہے؟",
+    "options": [
+      "ResourceQuota",
+      "Ingress",
+      "DaemonSet",
+      "ServiceAccount"
+    ],
+    "answer": "ResourceQuota"
+  },
+  {
+    "category": "Hybrid Cloud",
+    "set": 3,
+    "question": "کون سا GitOps اصول Git کو سچائی کا واحد ذریعہ (single source of truth) مانتا ہے؟",
+    "options": [
+      "Declarative Configuration",
+      "دستی کنفیگریشن",
+      "SSH Access",
+      "پروڈکشن میں براہ راست تبدیلیاں"
+    ],
+    "answer": "Declarative Configuration"
+  },
+  {
+    "category": "Hybrid Cloud",
+    "set": 3,
+    "question": "کون سا Kubernetes آبجیکٹ نیٹ ورک کی سطح پر یہ محدود کرتا ہے کہ کون سے pods ایک دوسرے سے رابطہ کر سکتے ہیں؟",
+    "options": [
+      "NetworkPolicy",
+      "ResourceQuota",
+      "LimitRange",
+      "PodDisruptionBudget"
+    ],
+    "answer": "NetworkPolicy"
+  },
+  {
+    "category": "Hybrid Cloud",
+    "set": 3,
+    "question": "کون سا نیٹ ورکنگ تصور مختلف Kubernetes کلسٹرز کے pods کے درمیان رابطے کو ممکن بناتا ہے؟",
+    "options": [
+      "Multi-Cluster Networking",
+      "Port Forwarding",
+      "SSH Tunnel",
+      "FTP"
+    ],
+    "answer": "Multi-Cluster Networking"
+  },
+  {
+    "category": "Hybrid Cloud",
+    "set": 3,
+    "question": "کون سا اسٹوریج حل Kubernetes ورک لوڈز کے لیے مستقل (persistent) اسٹوریج فراہم کرتا ہے؟",
+    "options": [
+      "Persistent Volume",
+      "ConfigMap",
+      "Namespace",
+      "ReplicaSet"
+    ],
+    "answer": "Persistent Volume"
+  },
+  {
+    "category": "Hybrid Cloud",
+    "set": 3,
+    "question": "کون سا Kubernetes آبجیکٹ Persistent Volume سے اسٹوریج کی درخواست کرتا ہے؟",
+    "options": [
+      "PersistentVolumeClaim",
+      "Secret",
+      "Service",
+      "ConfigMap"
+    ],
+    "answer": "PersistentVolumeClaim"
+  },
+  {
+    "category": "Hybrid Cloud",
+    "set": 3,
+    "question": "کون سی حکمت عملی ایپلیکیشن کا نیا ورژن پہلے صارفین کے ایک چھوٹے فیصد پر ڈپلائے کرتی ہے؟",
+    "options": [
+      "Canary Deployment",
+      "Rolling Restart",
+      "Big Bang Deployment",
+      "Cold Migration"
+    ],
+    "answer": "Canary Deployment"
+  },
+  {
+    "category": "Hybrid Cloud",
+    "set": 3,
+    "question": "کون سی ڈپلائمنٹ حکمت عملی دو ایک جیسے پروڈکشن ماحول استعمال کرتی ہے اور تصدیق کے بعد ٹریفک منتقل کرتی ہے؟",
+    "options": [
+      "Blue-Green Deployment",
+      "Rolling Update",
+      "Canary Deployment",
+      "Recreate Deployment"
+    ],
+    "answer": "Blue-Green Deployment"
+  },
+  {
+    "category": "Hybrid Cloud",
+    "set": 3,
+    "question": "کون سا Kubernetes آبجیکٹ node drain جیسی رضاکارانہ رکاوٹوں کے دوران pods کی کم از کم تعداد کو دستیاب رکھتا ہے؟",
+    "options": [
+      "PodDisruptionBudget",
+      "HorizontalPodAutoscaler",
+      "NetworkPolicy",
+      "PersistentVolumeClaim"
+    ],
+    "answer": "PodDisruptionBudget"
+  },
+  {
+    "category": "Hybrid Cloud",
+    "set": 3,
+    "question": "کون سا DevOps عمل ڈپلائمنٹ سے پہلے ایپلیکیشن کی تبدیلیوں کی خودکار طور پر توثیق کرتا ہے؟",
+    "options": [
+      "Continuous Testing",
+      "Manual Testing",
+      "FTP Deployment",
+      "SSH Deployment"
+    ],
+    "answer": "Continuous Testing"
+  },
+  {
+    "category": "Hybrid Cloud",
+    "set": 3,
+    "question": "کون سا عمل کوڈ کی تبدیلیوں کو مسلسل ایک مشترکہ ریپوزٹری میں ضم کرتا ہے؟",
+    "options": [
+      "Continuous Integration",
+      "Disaster Recovery",
+      "Backup",
+      "Failover"
+    ],
+    "answer": "Continuous Integration"
+  },
+  {
+    "category": "Hybrid Cloud",
+    "set": 3,
+    "question": "کون سا عمل تصدیق شدہ سافٹ ویئر کو خودکار طور پر پروڈکشن میں جاری کرتا ہے؟",
+    "options": [
+      "Continuous Deployment",
+      "Static Analysis",
+      "Code Review",
+      "Branching"
+    ],
+    "answer": "Continuous Deployment"
+  },
+  {
+    "category": "Hybrid Cloud",
+    "set": 3,
+    "question": "کون سا مانیٹرنگ میٹرک ناپتا ہے کہ ایپلیکیشن کسی درخواست کا جواب دینے میں کتنا وقت لیتی ہے؟",
+    "options": [
+      "Latency",
+      "Throughput",
+      "CPU کی فریکوئنسی",
+      "ڈسک کا سائز"
+    ],
+    "answer": "Latency"
+  },
+  {
+    "category": "Hybrid Cloud",
+    "set": 3,
+    "question": "کون سا ریزیلینس پیٹرن ناکامی کے بعد ٹریفک کو خودکار طور پر صحت مند وسائل کی طرف موڑ دیتا ہے؟",
+    "options": [
+      "Failover",
+      "Forking",
+      "Polling",
+      "Scraping"
+    ],
+    "answer": "Failover"
+  },
+  {
+    "category": "Hybrid Cloud",
+    "set": 3,
+    "question": "کون سا کلاؤڈ ڈیزائن اصول ناکامی کے واحد نقطے سے بچنے کے لیے ورک لوڈز کو متعدد ماحول میں تقسیم کرتا ہے؟",
+    "options": [
+      "High Availability",
+      "Single Instance",
+      "مخصوص ہوسٹ",
+      "Standalone Architecture"
+    ],
+    "answer": "High Availability"
+  }
+]

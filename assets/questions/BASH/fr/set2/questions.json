@@ -1,0 +1,302 @@
+[
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "Quelle syntaxe stocke la sortie de date dans une variable nommée now ?",
+    "options": [
+      "now=$(date)",
+      "now=date",
+      "now:=$(date)",
+      "date->now"
+    ],
+    "answer": "now=$(date)"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "Quel paramètre spécial représente le nom du script ?",
+    "options": [
+      "$0",
+      "$1",
+      "$#",
+      "$@"
+    ],
+    "answer": "$0"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "Quel paramètre spécial se développe en l'identifiant de processus de la dernière commande exécutée en arrière-plan ?",
+    "options": [
+      "$!",
+      "$$",
+      "$?",
+      "$#"
+    ],
+    "answer": "$!"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "Quel paramètre spécial représente le nombre d'arguments positionnels ?",
+    "options": [
+      "$#",
+      "$@",
+      "$*",
+      "$$"
+    ],
+    "answer": "$#"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "Quel paramètre spécial développe tous les arguments positionnels en mots séparés ?",
+    "options": [
+      "$@",
+      "$*",
+      "$#",
+      "$0"
+    ],
+    "answer": "$@"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "Quelle commande interne de Bash supprime le premier paramètre positionnel et décale les autres d'un rang ?",
+    "options": [
+      "shift",
+      "unshift",
+      "pop",
+      "rotate"
+    ],
+    "answer": "shift"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "Quel paramètre spécial représente l'identifiant de processus du shell courant ?",
+    "options": [
+      "$$",
+      "$!",
+      "$?",
+      "$0"
+    ],
+    "answer": "$$"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "Quel paramètre spécial représente le code de retour de la dernière commande ?",
+    "options": [
+      "$?",
+      "$!",
+      "$$",
+      "$#"
+    ],
+    "answer": "$?"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "Quelle expansion renvoie une valeur par défaut si var n'est pas définie ou est vide ?",
+    "options": [
+      "${var:-default}",
+      "${var:=default}",
+      "${var:+default}",
+      "${var:?default}"
+    ],
+    "answer": "${var:-default}"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "Quelle expansion extrait 3 caractères de var à partir du décalage 2 ?",
+    "options": [
+      "${var:2:3}",
+      "${var:3:2}",
+      "${var[2,3]}",
+      "${var#2:3}"
+    ],
+    "answer": "${var:2:3}"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "Quelle expansion renvoie la longueur de la valeur de var ?",
+    "options": [
+      "${#var}",
+      "${len(var)}",
+      "${var:length}",
+      "${var#length}"
+    ],
+    "answer": "${#var}"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "Quelle expansion convertit la valeur de var en majuscules ?",
+    "options": [
+      "${var^^}",
+      "${var,,}",
+      "${var!!}",
+      "${var##}"
+    ],
+    "answer": "${var^^}"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "Quelle expansion supprime le plus long préfixe correspondant au motif pattern de var ?",
+    "options": [
+      "${var##pattern}",
+      "${var#pattern}",
+      "${var%%pattern}",
+      "${var%pattern}"
+    ],
+    "answer": "${var##pattern}"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "Quelle expansion remplace uniquement la première occurrence de pattern dans var ?",
+    "options": [
+      "${var/pattern/replacement}",
+      "${var//pattern/replacement}",
+      "${var#pattern}",
+      "${var%pattern}"
+    ],
+    "answer": "${var/pattern/replacement}"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "Quelle expansion affiche un message d'erreur et interrompt un script non interactif si var n'est pas définie ou est vide ?",
+    "options": [
+      "${var:?message}",
+      "${var:-message}",
+      "${var:+message}",
+      "${var:=message}"
+    ],
+    "answer": "${var:?message}"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "Quelle syntaxe effectue une expansion arithmétique en Bash ?",
+    "options": [
+      "$((5 + 3))",
+      "$(5 + 3)",
+      "${5 + 3}",
+      "$[5 + 3]"
+    ],
+    "answer": "$((5 + 3))"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "Quelle commande incrémente de un la variable count ?",
+    "options": [
+      "let count++",
+      "count++",
+      "increment count",
+      "add count"
+    ],
+    "answer": "let count++"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "Quelle commande affiche 8 après avoir additionné 5 et 3 ?",
+    "options": [
+      "expr 5 + 3",
+      "expr 5+3",
+      "expr5 + 3",
+      "expr add 5 3"
+    ],
+    "answer": "expr 5 + 3"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "Quelle commande déclare count comme variable entière ?",
+    "options": [
+      "declare -i count",
+      "declare int count",
+      "integer count",
+      "set count integer"
+    ],
+    "answer": "declare -i count"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "Quelle commande rend une variable en lecture seule ?",
+    "options": [
+      "readonly var",
+      "lock var",
+      "const var",
+      "final var"
+    ],
+    "answer": "readonly var"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "Quelle commande supprime une variable de l'environnement du shell ?",
+    "options": [
+      "unset var",
+      "delete var",
+      "remove var",
+      "clear var"
+    ],
+    "answer": "unset var"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "Quelle commande rend une variable disponible pour les processus enfants ?",
+    "options": [
+      "export var",
+      "share var",
+      "env var",
+      "publish var"
+    ],
+    "answer": "export var"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "Quelle option empêche la redirection de sortie d'écraser un fichier existant ?",
+    "options": [
+      "set -o noclobber",
+      "set -o nooverwrite",
+      "set -o protect",
+      "set -o safe"
+    ],
+    "answer": "set -o noclobber"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "Quelle variable Bash contient le nombre de secondes écoulées depuis le démarrage du shell ?",
+    "options": [
+      "$SECONDS",
+      "$RANDOM",
+      "$LINENO",
+      "$UID"
+    ],
+    "answer": "$SECONDS"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "Quelle expansion Bash substitue alt uniquement si var est définie et non vide ?",
+    "options": [
+      "${var:+alt}",
+      "${var:-alt}",
+      "${var:=alt}",
+      "${var:?alt}"
+    ],
+    "answer": "${var:+alt}"
+  }
+]

@@ -1,0 +1,302 @@
+[
+  {
+    "category": "Docker",
+    "set": 5,
+    "question": "ARG나 ENV에 암호를 저장하지 않고 BuildKit 비밀 마운트를 써야 하는 이유는?",
+    "options": [
+      "비밀 마운트는 레지스트리 암호를 자동 교체한다",
+      "비밀 마운트는 생성된 모든 이미지 계층을 암호화한다",
+      "비밀 마운트는 빌드의 모든 네트워크 접근을 막는다",
+      "비밀 마운트는 제공한 비밀을 이미지의 ARG 또는 ENV 값으로 남기지 않는다"
+    ],
+    "answer": "비밀 마운트는 제공한 비밀을 이미지의 ARG 또는 ENV 값으로 남기지 않는다"
+  },
+  {
+    "category": "Docker",
+    "set": 5,
+    "question": "RUN 지시문에서 BuildKit 캐시 마운트를 쓰는 목적은?",
+    "options": [
+      "기본 이미지를 빈 파일 시스템으로 바꾼다",
+      "모든 RUN이 캐시 없이 실행되도록 보장한다",
+      "마운트를 최종 이미지 내용으로 만들지 않고 도구 캐시를 빌드 간 재사용한다",
+      "실행 로그를 이미지 레지스트리에 저장한다"
+    ],
+    "answer": "마운트를 최종 이미지 내용으로 만들지 않고 도구 캐시를 빌드 간 재사용한다"
+  },
+  {
+    "category": "Docker",
+    "set": 5,
+    "question": "COPY와 뒤따르는 의존 단계의 캐시를 보통 무효화하는 빌드 입력 변경은?",
+    "options": [
+      "지시문을 바꾸지 않고 일반 Dockerfile 주석만 수정",
+      "복사되는 원본 파일의 내용 변경",
+      "복사되는 파일의 수정 시각만 변경",
+      ".dockerignore로 제외한 파일 변경"
+    ],
+    "answer": "복사되는 원본 파일의 내용 변경"
+  },
+  {
+    "category": "Docker",
+    "set": 5,
+    "question": "Dockerfile의 'FROM scratch'가 선택하는 것은?",
+    "options": [
+      "기본 이미지 파일 시스템이 없는 빈 시작점",
+      "최소 Debian 설치",
+      "실행 중인 호스트의 루트 파일 시스템",
+      "가장 최근에 로컬로 만든 이미지"
+    ],
+    "answer": "기본 이미지 파일 시스템이 없는 빈 시작점"
+  },
+  {
+    "category": "Docker",
+    "set": 5,
+    "question": "이미지에 키-값 메타데이터를 추가하는 Dockerfile 지시문은?",
+    "options": [
+      "ARG",
+      "EXPOSE",
+      "STOPSIGNAL",
+      "LABEL"
+    ],
+    "answer": "LABEL"
+  },
+  {
+    "category": "Docker",
+    "set": 5,
+    "question": "컨테이너 중지 시 보내는 기본 신호를 바꾸는 Dockerfile 지시문은?",
+    "options": [
+      "SHELL",
+      "ONBUILD",
+      "STOPSIGNAL",
+      "HEALTHCHECK"
+    ],
+    "answer": "STOPSIGNAL"
+  },
+  {
+    "category": "Docker",
+    "set": 5,
+    "question": "주 서버 프로세스에 exec 형식 ENTRYPOINT를 흔히 선호하는 이유는?",
+    "options": [
+      "서버가 영이 아닌 상태를 반환하지 못하게 한다",
+      "서버와 컨테이너 신호 사이에 추가 셸을 두지 않는다",
+      "root가 아닌 사용자를 자동 생성한다",
+      "이미지에 프로세스 감독기를 설치한다"
+    ],
+    "answer": "서버와 컨테이너 신호 사이에 추가 셸을 두지 않는다"
+  },
+  {
+    "category": "Docker",
+    "set": 5,
+    "question": "'docker run --init'이 컨테이너에 추가하는 것은?",
+    "options": [
+      "신호를 전달하고 종료된 자식 프로세스를 회수하는 작은 init 프로세스",
+      "전체 systemd 설치",
+      "두 번째 Docker 데몬",
+      "각 프로세스용 대화형 로그인 셸"
+    ],
+    "answer": "신호를 전달하고 종료된 자식 프로세스를 회수하는 작은 init 프로세스"
+  },
+  {
+    "category": "Docker",
+    "set": 5,
+    "question": "모든 Linux capability를 제거하고 Linux 컨테이너를 실행하는 옵션은?",
+    "options": [
+      "--cap-add=ALL",
+      "--privileged",
+      "--security-opt seccomp=unconfined",
+      "--cap-drop=ALL"
+    ],
+    "answer": "--cap-drop=ALL"
+  },
+  {
+    "category": "Docker",
+    "set": 5,
+    "question": "rootless Docker가 주로 바꾸는 것은?",
+    "options": [
+      "이미지에 레지스트리가 필요 없어짐",
+      "컨테이너가 Linux 네임스페이스를 더 이상 쓰지 않음",
+      "데몬과 컨테이너가 호스트의 root 권한 없이 실행됨",
+      "모든 컨테이너가 호스트 루트 파일 시스템을 공유함"
+    ],
+    "answer": "데몬과 컨테이너가 호스트의 root 권한 없이 실행됨"
+  },
+  {
+    "category": "Docker",
+    "set": 5,
+    "question": "컨테이너 자원 사용을 주로 제한하고 집계하는 Linux 기능은?",
+    "options": [
+      "Linux 세분화 권한(capability)",
+      "제어 그룹",
+      "네임스페이스",
+      "Seccomp 필터"
+    ],
+    "answer": "제어 그룹"
+  },
+  {
+    "category": "Docker",
+    "set": 5,
+    "question": "컨테이너에 프로세스 ID와 네트워크 인터페이스 같은 자원의 격리된 보기를 제공하는 Linux 기능은?",
+    "options": [
+      "네임스페이스",
+      "제어 그룹",
+      "Seccomp 필터",
+      "Linux 세분화 권한(capability)"
+    ],
+    "answer": "네임스페이스"
+  },
+  {
+    "category": "Docker",
+    "set": 5,
+    "question": "Linux 컨테이너에 호스트 네트워크 네임스페이스를 제공하는 Docker 네트워크 드라이버는?",
+    "options": [
+      "bridge",
+      "overlay",
+      "none",
+      "host"
+    ],
+    "answer": "host"
+  },
+  {
+    "category": "Docker",
+    "set": 5,
+    "question": "컨테이너에 루프백 인터페이스만 남기는 Docker 네트워크 드라이버는?",
+    "options": [
+      "host",
+      "overlay",
+      "none",
+      "bridge"
+    ],
+    "answer": "none"
+  },
+  {
+    "category": "Docker",
+    "set": 5,
+    "question": "여러 Docker 호스트의 컨테이너 통신을 위한 네트워크 드라이버는?",
+    "options": [
+      "none",
+      "overlay",
+      "bridge",
+      "host"
+    ],
+    "answer": "overlay"
+  },
+  {
+    "category": "Docker",
+    "set": 5,
+    "question": "새 컨테이너에서 '--network container:web'은 무엇을 하는가?",
+    "options": [
+      "web의 네트워크 네임스페이스를 공유한다",
+      "web의 파일 시스템 계층을 복사한다",
+      "호스트의 모든 인터페이스를 직접 연결한다",
+      "web이라는 새 네트워크를 만든다"
+    ],
+    "answer": "web의 네트워크 네임스페이스를 공유한다"
+  },
+  {
+    "category": "Docker",
+    "set": 5,
+    "question": "비어 있지 않은 컨테이너 경로에 디렉터리를 마운트하면 기존 이미지 파일이 사라진 것처럼 보일 수 있는 이유는?",
+    "options": [
+      "Docker가 원래 이미지 계층을 지우기 때문",
+      "Docker가 파일을 레지스트리로 옮기기 때문",
+      "그 파일을 뺀 이미지가 자동 재빌드되기 때문",
+      "마운트되어 있는 동안 해당 경로의 기존 파일이 가려지기 때문"
+    ],
+    "answer": "마운트되어 있는 동안 해당 경로의 기존 파일이 가려지기 때문"
+  },
+  {
+    "category": "Docker",
+    "set": 5,
+    "question": "volume-nocopy 없이 빈 이름 있는 볼륨을 파일이 있는 컨테이너 디렉터리에 처음 마운트하면 Docker는 보통 어떻게 하는가?",
+    "options": [
+      "디렉터리가 비어 있지 않아 시작을 거부한다",
+      "이름 있는 볼륨을 바인드 마운트로 바꾼다",
+      "기존 디렉터리 파일을 볼륨으로 복사한다",
+      "이미지의 파일을 영구 삭제한다"
+    ],
+    "answer": "기존 디렉터리 파일을 볼륨으로 복사한다"
+  },
+  {
+    "category": "Docker",
+    "set": 5,
+    "question": "web 컨테이너의 공개 포트 매핑을 나열하는 명령은?",
+    "options": [
+      "docker wait web",
+      "docker port web",
+      "docker top web",
+      "docker diff web"
+    ],
+    "answer": "docker port web"
+  },
+  {
+    "category": "Docker",
+    "set": 5,
+    "question": "web 컨테이너 로그의 마지막 20줄만 가져오는 명령은?",
+    "options": [
+      "docker logs --tail 20 web",
+      "docker logs --since 20m web",
+      "docker logs --until 20m web",
+      "docker logs --timestamps web"
+    ],
+    "answer": "docker logs --tail 20 web"
+  },
+  {
+    "category": "Docker",
+    "set": 5,
+    "question": "Docker 이미지와 컨테이너의 주요 차이는?",
+    "options": [
+      "이미지는 항상 실행 중이고 컨테이너는 항상 중지됨",
+      "이미지는 네트워크에, 컨테이너는 레지스트리에만 속함",
+      "이미지는 로그만, 컨테이너는 메타데이터만 저장함",
+      "이미지는 읽기 전용 템플릿이고 컨테이너는 실행 상태를 가진 인스턴스임"
+    ],
+    "answer": "이미지는 읽기 전용 템플릿이고 컨테이너는 실행 상태를 가진 인스턴스임"
+  },
+  {
+    "category": "Docker",
+    "set": 5,
+    "question": "Docker 컨텍스트가 CLI에 주로 지정하는 것은?",
+    "options": [
+      "선택된 Dockerfile 빌드 스테이지",
+      "모든 이미지의 기본 대상 플랫폼",
+      "Docker 데몬 엔드포인트의 연결 설정",
+      "이미지 빌드 컨텍스트로 보내는 파일과 디렉터리"
+    ],
+    "answer": "Docker 데몬 엔드포인트의 연결 설정"
+  },
+  {
+    "category": "Docker",
+    "set": 5,
+    "question": "Docker 클라이언트를 레지스트리에서 로그아웃시키는 명령은?",
+    "options": [
+      "docker trust inspect",
+      "docker logout",
+      "docker login",
+      "docker context use"
+    ],
+    "answer": "docker logout"
+  },
+  {
+    "category": "Docker",
+    "set": 5,
+    "question": "docker login이 표준 입력에서 암호를 읽게 하는 옵션은?",
+    "options": [
+      "--password-stdin",
+      "--username",
+      "--config",
+      "--context"
+    ],
+    "answer": "--password-stdin"
+  },
+  {
+    "category": "Docker",
+    "set": 5,
+    "question": "api라는 Docker Swarm 서비스의 태스크를 나열하는 명령은?",
+    "options": [
+      "docker service inspect api",
+      "docker service logs api",
+      "docker service scale api=3",
+      "docker service ps api"
+    ],
+    "answer": "docker service ps api"
+  }
+]

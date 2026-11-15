@@ -1,0 +1,302 @@
+[
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "ಪ್ಲೇಬುಕ್‌ನಲ್ಲಿ ವೇರಿಯೇಬಲ್‌ಗಳನ್ನು ವ್ಯಾಖ್ಯಾನಿಸಲು ಯಾವ ಕೀವರ್ಡ್ ಅನ್ನು ಬಳಸಲಾಗುತ್ತದೆ?",
+    "options": [
+      "vars",
+      "variables",
+      "var",
+      "define"
+    ],
+    "answer": "vars"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "ವೇರಿಯೇಬಲ್ ಅನ್ನು ಉಲ್ಲೇಖಿಸಲು ಯಾವ ಸಿಂಟ್ಯಾಕ್ಸ್ ಅನ್ನು ಬಳಸಲಾಗುತ್ತದೆ?",
+    "options": [
+      "{{ variable_name }}",
+      "$(variable_name)",
+      "${variable_name}",
+      "[variable_name]"
+    ],
+    "answer": "{{ variable_name }}"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "ಎಕ್ಸಿಕ್ಯೂಶನ್ ಸಮಯದಲ್ಲಿ ಸಂದೇಶಗಳನ್ನು ಪ್ರದರ್ಶಿಸಲು ಯಾವ ಮಾಡ್ಯೂಲ್ ಅನ್ನು ಬಳಸಲಾಗುತ್ತದೆ?",
+    "options": [
+      "debug",
+      "print",
+      "echo",
+      "message"
+    ],
+    "answer": "debug"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "ಷರತ್ತುಬದ್ಧ ಕಾರ್ಯಗತಗೊಳಿಸಲು ಯಾವ ಕೀವರ್ಡ್ ಅನ್ನು ಬಳಸಲಾಗುತ್ತದೆ?",
+    "options": [
+      "when",
+      "if",
+      "condition",
+      "check"
+    ],
+    "answer": "when"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "ಕಾರ್ಯವನ್ನು ಪುನರಾವರ್ತಿಸಲು ಯಾವ ಕೀವರ್ಡ್ ಅನ್ನು ಬಳಸಲಾಗುತ್ತದೆ?",
+    "options": [
+      "loop",
+      "repeat",
+      "iterate",
+      "for"
+    ],
+    "answer": "loop"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "ಪೂರ್ವನಿಯೋಜಿತವಾಗಿ, ಲೂಪ್‌ನ ಪ್ರಸ್ತುತ ಅಂಶವು ಯಾವ ಚರದಲ್ಲಿರುತ್ತದೆ?",
+    "options": [
+      "item",
+      "loopitem",
+      "current",
+      "value"
+    ],
+    "answer": "item"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "ಯಾವ ಮಾಡ್ಯೂಲ್ ಜಿಂಜಾ2 ಟೆಂಪ್ಲೇಟ್‌ಗಳಿಂದ ಫೈಲ್‌ಗಳನ್ನು ರಚಿಸುತ್ತದೆ?",
+    "options": [
+      "template",
+      "copy",
+      "render",
+      "jinja"
+    ],
+    "answer": "template"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "ಅನ್ಸಿಬಲ್ ಯಾವ ಟೆಂಪ್ಲೇಟಿಂಗ್ ಎಂಜಿನ್ ಅನ್ನು ಬಳಸುತ್ತದೆ?",
+    "options": [
+      "Jinja2",
+      "Mustache",
+      "Velocity",
+      "Smarty"
+    ],
+    "answer": "Jinja2"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "ಯಾವ ಕೀವರ್ಡ್ ಟಾಸ್ಕ್ ಔಟ್‌ಪುಟ್ ಅನ್ನು ವೇರಿಯೇಬಲ್ ಆಗಿ ನೋಂದಾಯಿಸುತ್ತದೆ?",
+    "options": [
+      "register",
+      "save",
+      "output",
+      "store"
+    ],
+    "answer": "register"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "ಕಾರ್ಯವು ವಿಫಲ ಫಲಿತಾಂಶ ನೀಡಿದ ಬಳಿಕವೂ ಮುಂದುವರಿಯಲು ಅನುಮತಿಸುವ, ಆದರೆ ಸಿಂಟ್ಯಾಕ್ಸ್ ಅಥವಾ ಸಂಪರ್ಕ ದೋಷಗಳನ್ನು ಮರೆಮಾಡದ ಕೀವರ್ಡ್ ಯಾವುದು?",
+    "options": [
+      "ignore_errors",
+      "skip_errors",
+      "continue",
+      "ignore_failures"
+    ],
+    "answer": "ignore_errors"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "ಸೂಚನೆ ನೀಡಿದಾಗ ಮಾತ್ರ ಕಾರ್ಯಗಳನ್ನು ಕಾರ್ಯಗತಗೊಳಿಸಲು ಯಾವ ಕೀವರ್ಡ್ ಅನ್ನು ಬಳಸಲಾಗುತ್ತದೆ?",
+    "options": [
+      "handlers",
+      "notify",
+      "trigger",
+      "events"
+    ],
+    "answer": "handlers"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "ಯಾವ ಕೀವರ್ಡ್ ಹ್ಯಾಂಡ್ಲರ್ ಅನ್ನು ಪ್ರಚೋದಿಸುತ್ತದೆ?",
+    "options": [
+      "notify",
+      "handler",
+      "alert",
+      "call"
+    ],
+    "answer": "notify"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "ಯಾವ ಕೀವರ್ಡ್ ಮತ್ತೊಂದು ಪ್ಲೇಬುಕ್ ಅನ್ನು ಆಮದು ಮಾಡಿಕೊಳ್ಳುತ್ತದೆ?",
+    "options": [
+      "import_playbook",
+      "include_playbook",
+      "load_playbook",
+      "playbook"
+    ],
+    "answer": "import_playbook"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "ಆಯ್ದ ಕಾರ್ಯಗತಗೊಳಿಸಲು ಯಾವ ಕೀವರ್ಡ್ ಕಾರ್ಯಗಳನ್ನು ಟ್ಯಾಗ್ ಮಾಡುತ್ತದೆ?",
+    "options": [
+      "tags",
+      "labels",
+      "groups",
+      "filter"
+    ],
+    "answer": "tags"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "ಯಾವ ಆಯ್ಕೆಯು ನಿರ್ದಿಷ್ಟ ಟ್ಯಾಗ್‌ಗಳೊಂದಿಗೆ ಕಾರ್ಯಗಳನ್ನು ಮಾತ್ರ ರನ್ ಮಾಡುತ್ತದೆ?",
+    "options": [
+      "--tags",
+      "--skip-tags",
+      "--limit",
+      "--list-tags"
+    ],
+    "answer": "--tags"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "ಬದಲಾವಣೆಯನ್ನು ವರದಿ ಮಾಡಲು ಕಸ್ಟಮ್ ಷರತ್ತನ್ನು ವ್ಯಾಖ್ಯಾನಿಸುವ ಕಾರ್ಯ ಕೀವರ್ಡ್ ಯಾವುದು?",
+    "options": [
+      "changed_when",
+      "failed_when",
+      "until",
+      "when"
+    ],
+    "answer": "changed_when"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "ವೈಫಲ್ಯವನ್ನು ವರದಿ ಮಾಡಲು ಕಸ್ಟಮ್ ಷರತ್ತನ್ನು ವ್ಯಾಖ್ಯಾನಿಸುವ ಕಾರ್ಯ ಕೀವರ್ಡ್ ಯಾವುದು?",
+    "options": [
+      "changed_when",
+      "retries",
+      "delay",
+      "failed_when"
+    ],
+    "answer": "failed_when"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "ಮರುಪ್ರಯತ್ನಗಳ ಸಮಯದಲ್ಲಿ ನಿಜವಾಗಬೇಕಾದ ಷರತ್ತನ್ನು ಯಾವ ಕಾರ್ಯ ಕೀವರ್ಡ್ ಸೂಚಿಸುತ್ತದೆ?",
+    "options": [
+      "loop",
+      "notify",
+      "until",
+      "when"
+    ],
+    "answer": "until"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "ಪ್ರಸ್ತುತ ಹೋಸ್ಟ್‌ಗಾಗಿ ಹೆಸರಿರುವ ಚರಗಳನ್ನು ಫೈಲ್‌ನಿಂದ ಲೋಡ್ ಮಾಡುವ ಬದಲು ಕಾರ್ಯವು ಒದಗಿಸಿದ ಮೌಲ್ಯಗಳಿಂದ ನೇರವಾಗಿ ವ್ಯಾಖ್ಯಾನಿಸುವ ಮಾಡ್ಯೂಲ್ ಯಾವುದು?",
+    "options": [
+      "ansible.builtin.add_host",
+      "ansible.builtin.set_fact",
+      "ansible.builtin.setup",
+      "ansible.builtin.include_vars"
+    ],
+    "answer": "ansible.builtin.set_fact"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "result ಎಂದು ನೋಂದಾಯಿಸಲಾದ ಕಾರ್ಯದ ಪ್ರಮಾಣಿತ ಔಟ್‌ಪುಟ್ ಅನ್ನು ಯಾವ ಅಭಿವ್ಯಕ್ತಿ ಪಡೆಯುತ್ತದೆ?",
+    "options": [
+      "result.stdout",
+      "result.stderr",
+      "result.rc",
+      "result.changed"
+    ],
+    "answer": "result.stdout"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "ಚರವನ್ನು ವ್ಯಾಖ್ಯಾನಿಸಲಾಗಿದೆಯೇ ಎಂದು ಯಾವ Jinja2 ಪರೀಕ್ಷೆ ಪರಿಶೀಲಿಸುತ್ತದೆ?",
+    "options": [
+      "is none",
+      "is string",
+      "is sequence",
+      "is defined"
+    ],
+    "answer": "is defined"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "ನಿರ್ದೇಶನಗಳು ಮತ್ತು ದೋಷ ನಿರ್ವಹಣೆಯನ್ನು ಹಂಚಿಕೊಳ್ಳುವಂತೆ ಕಾರ್ಯಗಳನ್ನು ಗುಂಪುಗೊಳಿಸುವ Ansible ಕೀವರ್ಡ್ ಯಾವುದು?",
+    "options": [
+      "roles",
+      "handlers",
+      "block",
+      "loop"
+    ],
+    "answer": "block"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "ಕಾರ್ಯವು ಸಾಮಾನ್ಯವಾಗಿ ತನ್ನ notify ಸೂಚನೆಗಳನ್ನು ಯಾವಾಗ ಕಳುಹಿಸುತ್ತದೆ?",
+    "options": [
+      "ಪ್ಲೇಬುಕ್ ಪ್ರಾರಂಭವಾದಾಗ ಮಾತ್ರ",
+      "ಅದು ಯಶಸ್ವಿಯಾಗಿ ಪೂರ್ಣಗೊಂಡು ಬದಲಾವಣೆಯಾಗಿದೆ ಎಂದು ವರದಿ ಮಾಡಿದಾಗ",
+      "ಷರತ್ತಿನ ಕಾರಣದಿಂದ ಅದನ್ನು ಬಿಟ್ಟುಬಿಟ್ಟಾಗಲೆಲ್ಲ",
+      "ಅದರ ಮಾಡ್ಯೂಲ್ ಬದಲಾವಣೆಯಾಗಿಲ್ಲ ಎಂದು ವರದಿ ಮಾಡಿದಾಗಲೆಲ್ಲ"
+    ],
+    "answer": "ಅದು ಯಶಸ್ವಿಯಾಗಿ ಪೂರ್ಣಗೊಂಡು ಬದಲಾವಣೆಯಾಗಿದೆ ಎಂದು ವರದಿ ಮಾಡಿದಾಗ"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "ಲೂಪ್‌ನ ಪ್ರಸ್ತುತ ಅಂಶದ ಚರದ ಹೆಸರನ್ನು server ಎಂದು ಬದಲಿಸುವ ಸೆಟ್ಟಿಂಗ್ ಯಾವುದು?",
+    "options": [
+      "loop_control: {loop_var: server}",
+      "loop_control: {label: server}",
+      "loop_control: {index_var: server}",
+      "loop_control: {pause: 1}"
+    ],
+    "answer": "loop_control: {loop_var: server}"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "ಚರಗಳ ಆದ್ಯತೆಯಲ್ಲಿ ಉನ್ನತ ಸ್ಥಾನ ಹೊಂದಿರುವ ಹೆಚ್ಚುವರಿ ಚರಗಳನ್ನು ಯಾವ ಕಮಾಂಡ್-ಲೈನ್ ಆಯ್ಕೆ ಒದಗಿಸುತ್ತದೆ?",
+    "options": [
+      "--tags",
+      "--limit",
+      "--start-at-task",
+      "--extra-vars"
+    ],
+    "answer": "--extra-vars"
+  }
+]

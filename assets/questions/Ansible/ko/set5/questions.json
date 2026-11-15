@@ -1,0 +1,302 @@
+[
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "작업 수준 재정의가 없다면 확인 모드를 지원하지 않는 모듈은 확인 모드 실행에서 어떻게 되는가?",
+    "options": [
+      "항상 일반 변경을 수행한다",
+      "자동으로 localhost에서 실행된다",
+      "확인 모드를 지원할 때까지 재시도된다",
+      "변경하지 않고 건너뛴다"
+    ],
+    "answer": "변경하지 않고 건너뛴다"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "플레이북을 --check로 호출해도 실제 변경을 허용하는 작업 설정은?",
+    "options": [
+      "changed_when: false",
+      "ignore_errors: true",
+      "check_mode: false",
+      "diff: false"
+    ],
+    "answer": "check_mode: false"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "이미 알림을 받은 핸들러를 즉시 실행하는 Ansible meta 동작은?",
+    "options": [
+      "reset_connection",
+      "flush_handlers",
+      "clear_facts",
+      "end_play"
+    ],
+    "answer": "flush_handlers"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "변경을 일으킨 두 작업이 실행 전의 같은 핸들러에 알리면, 해당 실행 시점에 핸들러는 보통 몇 번 실행되는가?",
+    "options": [
+      "한 번",
+      "두 번",
+      "인벤토리 그룹마다 한 번",
+      "알림이 충돌하므로 한 번도 실행되지 않음"
+    ],
+    "answer": "한 번"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "같은 실행 시점에 알림을 받은 핸들러의 실행 순서를 정하는 것은?",
+    "options": [
+      "이름의 알파벳 순서",
+      "notify 목록의 이름 순서",
+      "관리 대상 호스트가 연결된 순서",
+      "handlers 섹션의 정의 순서"
+    ],
+    "answer": "handlers 섹션의 정의 순서"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "블록의 rescue 작업을 보통 유발하는 실패는?",
+    "options": [
+      "플레이북에 잘못된 작업 정의가 있음",
+      "YAML 문서를 파싱할 수 없음",
+      "블록 안의 작업이 실패 결과를 반환함",
+      "작업 실행 전에 호스트에 도달할 수 없게 됨"
+    ],
+    "answer": "블록 안의 작업이 실패 결과를 반환함"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "일반 작업에서 ignore_errors가 숨기지 않는 오류는?",
+    "options": [
+      "failed_when 조건이 true로 평가됨",
+      "정의되지 않은 변수 오류",
+      "명령이 보고한 영이 아닌 종료 상태",
+      "명시적으로 failed로 표시된 모듈 결과"
+    ],
+    "answer": "정의되지 않은 변수 오류"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "처리되지 않은 작업 실패 시 현재 배치가 그 작업을 마친 뒤 모든 호스트의 play를 중단하는 키워드는?",
+    "options": [
+      "any_errors_fatal",
+      "ignore_unreachable",
+      "max_fail_percentage: 100",
+      "force_handlers"
+    ],
+    "answer": "any_errors_fatal"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "접근 가능한 호스트에서 뒤의 작업이 실패하면 force_handlers는 어떤 효과가 있는가?",
+    "options": [
+      "정의된 모든 핸들러가 알림 없이도 실행된다",
+      "실패한 모든 작업이 자동 재시도된다",
+      "일반 작업보다 핸들러가 먼저 실행된다",
+      "이미 알림을 받은 핸들러는 그 호스트에서 여전히 실행될 수 있다"
+    ],
+    "answer": "이미 알림을 받은 핸들러는 그 호스트에서 여전히 실행될 수 있다"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "민감한 작업 인수와 결과의 일반 로그 기록을 숨기는 설정은?",
+    "options": [
+      "check_mode: true",
+      "changed_when: false",
+      "no_log: true",
+      "diff: true"
+    ],
+    "answer": "no_log: true"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "--diff를 켜도 파일 내용 차이를 숨기는 작업 설정은?",
+    "options": [
+      "ignore_errors: true",
+      "diff: false",
+      "no_log: false",
+      "check_mode: false"
+    ],
+    "answer": "diff: false"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "다른 인벤토리 호스트의 변수에 접근할 수 있는 사전은?",
+    "options": [
+      "hostvars",
+      "ansible_facts",
+      "environment",
+      "ansible_loop"
+    ],
+    "answer": "hostvars"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "현재 호스트의 인벤토리 이름을 담는 특수 변수는?",
+    "options": [
+      "ansible_host",
+      "ansible_user",
+      "ansible_playbook_python",
+      "inventory_hostname"
+    ],
+    "answer": "inventory_hostname"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "호스트 그룹이 공유하는 변수에 통상 사용하는 인벤토리 옆 디렉터리는?",
+    "options": [
+      "roles",
+      "collections",
+      "group_vars",
+      "host_vars"
+    ],
+    "answer": "group_vars"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "ansible.builtin.file 조회는 기본적으로 어디에서 파일을 읽는가?",
+    "options": [
+      "become_user로 지정한 호스트",
+      "제어 노드",
+      "모든 관리 대상 호스트",
+      "play의 첫 번째 호스트"
+    ],
+    "answer": "제어 노드"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "YAML 문자열을 Ansible 데이터 구조로 바꾸는 필터는?",
+    "options": [
+      "from_yaml",
+      "to_yaml",
+      "to_json",
+      "dict2items"
+    ],
+    "answer": "from_yaml"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "사전을 키/값 사전들의 목록으로 바꾸는 필터는?",
+    "options": [
+      "items2dict",
+      "flatten",
+      "zip",
+      "dict2items"
+    ],
+    "answer": "dict2items"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "목록의 중복 요소를 제거하는 필터는?",
+    "options": [
+      "reverse",
+      "flatten",
+      "unique",
+      "sort"
+    ],
+    "answer": "unique"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "표현식을 확인하고 지정된 단언이 충족되지 않으면 실패하는 모듈은?",
+    "options": [
+      "ansible.builtin.set_fact",
+      "ansible.builtin.assert",
+      "ansible.builtin.debug",
+      "ansible.builtin.pause"
+    ],
+    "answer": "ansible.builtin.assert"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "정규식으로 텍스트 파일의 특정 줄을 관리하는 모듈은?",
+    "options": [
+      "ansible.builtin.lineinfile",
+      "ansible.builtin.blockinfile",
+      "ansible.builtin.copy",
+      "ansible.builtin.slurp"
+    ],
+    "answer": "ansible.builtin.lineinfile"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "URL을 요청하고 예상 HTTP 상태 코드를 확인할 수 있는 모듈은?",
+    "options": [
+      "ansible.builtin.get_url",
+      "ansible.builtin.fetch",
+      "ansible.builtin.wait_for",
+      "ansible.builtin.uri"
+    ],
+    "answer": "ansible.builtin.uri"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "TCP 포트가 요구한 상태에 도달할 때까지 기다리는 모듈은?",
+    "options": [
+      "ansible.builtin.async_status",
+      "ansible.builtin.ping",
+      "ansible.builtin.wait_for",
+      "ansible.builtin.pause"
+    ],
+    "answer": "ansible.builtin.wait_for"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "지정한 경로가 이미 있으면 ansible.builtin.command 실행을 건너뛰는 매개변수는?",
+    "options": [
+      "stdin",
+      "creates",
+      "removes",
+      "chdir"
+    ],
+    "answer": "creates"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "심볼릭 링크를 만드는 file 모듈 설정은?",
+    "options": [
+      "state: link",
+      "state: directory",
+      "state: touch",
+      "state: hard"
+    ],
+    "answer": "state: link"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "후속 play를 위해 메모리 내 인벤토리에 호스트를 추가할 수 있는 모듈은?",
+    "options": [
+      "ansible.builtin.group_by",
+      "ansible.builtin.set_fact",
+      "ansible.builtin.meta",
+      "ansible.builtin.add_host"
+    ],
+    "answer": "ansible.builtin.add_host"
+  }
+]

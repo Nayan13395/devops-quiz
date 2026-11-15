@@ -1,0 +1,302 @@
+[
+  {
+    "category": "Terraform",
+    "set": 2,
+    "question": "أي كتلة تُستخدم لتعريف متغيرات الإدخال في Terraform؟",
+    "options": [
+      "variable",
+      "input",
+      "vars",
+      "parameter"
+    ],
+    "answer": "variable"
+  },
+  {
+    "category": "Terraform",
+    "set": 2,
+    "question": "أي كتلة تُستخدم لتعريف القيم المحلية؟",
+    "options": [
+      "locals",
+      "local",
+      "values",
+      "variables"
+    ],
+    "answer": "locals"
+  },
+  {
+    "category": "Terraform",
+    "set": 2,
+    "question": "أي كتلة تُستخدم لجلب معلومات البنية التحتية الموجودة؟",
+    "options": [
+      "data",
+      "resource",
+      "provider",
+      "output"
+    ],
+    "answer": "data"
+  },
+  {
+    "category": "Terraform",
+    "set": 2,
+    "question": "أي معامل وصفي يقبل عددا صحيحا لإنشاء ذلك العدد من نسخ المورد؟",
+    "options": [
+      "count",
+      "for_each",
+      "repeat",
+      "loop"
+    ],
+    "answer": "count"
+  },
+  {
+    "category": "Terraform",
+    "set": 2,
+    "question": "أي معامل وصفي ينشئ نسخ الموارد من خريطة أو مجموعة سلاسل نصية؟",
+    "options": [
+      "for_each",
+      "count",
+      "each",
+      "loop"
+    ],
+    "answer": "for_each"
+  },
+  {
+    "category": "Terraform",
+    "set": 2,
+    "question": "أي عامل يُستخدم للتعبيرات الشرطية؟",
+    "options": [
+      "? :",
+      "if",
+      "switch",
+      "case"
+    ],
+    "answer": "? :"
+  },
+  {
+    "category": "Terraform",
+    "set": 2,
+    "question": "أي دالة تعيد طول القائمة؟",
+    "options": [
+      "length()",
+      "count()",
+      "size()",
+      "len()"
+    ],
+    "answer": "length()"
+  },
+  {
+    "category": "Terraform",
+    "set": 2,
+    "question": "أي دالة تحوّل سلسلة نصية إلى أحرف كبيرة؟",
+    "options": [
+      "upper()",
+      "toupper()",
+      "capitalize()",
+      "upcase()"
+    ],
+    "answer": "upper()"
+  },
+  {
+    "category": "Terraform",
+    "set": 2,
+    "question": "أي دالة تصل عناصر قائمة في سلسلة نصية؟",
+    "options": [
+      "join()",
+      "concat()",
+      "merge()",
+      "append()"
+    ],
+    "answer": "join()"
+  },
+  {
+    "category": "Terraform",
+    "set": 2,
+    "question": "أي دالة تجمع قائمتين أو أكثر، معطاة كوسائط منفصلة، في قائمة واحدة؟",
+    "options": [
+      "concat()",
+      "join()",
+      "merge()",
+      "flatten()"
+    ],
+    "answer": "concat()"
+  },
+  {
+    "category": "Terraform",
+    "set": 2,
+    "question": "ما هو الاعتماد الضمني (implicit dependency) في Terraform؟",
+    "options": [
+      "اعتماد يتم اكتشافه تلقائيًا",
+      "اعتماد يدوي",
+      "اعتماد المزود",
+      "اعتماد الحالة"
+    ],
+    "answer": "اعتماد يتم اكتشافه تلقائيًا"
+  },
+  {
+    "category": "Terraform",
+    "set": 2,
+    "question": "أي وسيط ينشئ اعتمادًا صريحًا؟",
+    "options": [
+      "depends_on",
+      "dependency",
+      "require",
+      "depends"
+    ],
+    "answer": "depends_on"
+  },
+  {
+    "category": "Terraform",
+    "set": 2,
+    "question": "أي أمر يسرد عناوين الموارد في الحالة دون إظهار قيم سماتها؟",
+    "options": [
+      "terraform state list",
+      "terraform state show",
+      "terraform show",
+      "terraform state resources"
+    ],
+    "answer": "terraform state list"
+  },
+  {
+    "category": "Terraform",
+    "set": 2,
+    "question": "أي أمر يستورد بنية تحتية موجودة إلى حالة Terraform؟",
+    "options": [
+      "terraform import",
+      "terraform load",
+      "terraform sync",
+      "terraform attach"
+    ],
+    "answer": "terraform import"
+  },
+  {
+    "category": "Terraform",
+    "set": 2,
+    "question": "أي نوع متغير إدخال يقبل true أو false فقط؟",
+    "options": [
+      "bool",
+      "string",
+      "number",
+      "list(string)"
+    ],
+    "answer": "bool"
+  },
+  {
+    "category": "Terraform",
+    "set": 2,
+    "question": "أي نوع متغير إدخال يصف خريطة من مفاتيح نصية إلى قيم نصية؟",
+    "options": [
+      "list(string)",
+      "set(string)",
+      "tuple([string])",
+      "map(string)"
+    ],
+    "answer": "map(string)"
+  },
+  {
+    "category": "Terraform",
+    "set": 2,
+    "question": "أي وسيط للمتغير يوفر قيمة إذا لم يحددها المستدعي؟",
+    "options": [
+      "nullable",
+      "sensitive",
+      "default",
+      "description"
+    ],
+    "answer": "default"
+  },
+  {
+    "category": "Terraform",
+    "set": 2,
+    "question": "أي كتلة داخل إعلان المتغير تتحقق من استيفاء قيمته قاعدة مخصصة؟",
+    "options": [
+      "connection",
+      "validation",
+      "lifecycle",
+      "provisioner"
+    ],
+    "answer": "validation"
+  },
+  {
+    "category": "Terraform",
+    "set": 2,
+    "question": "أي متغير بيئة يوفر قيمة متغير الإدخال region؟",
+    "options": [
+      "TF_VAR_region",
+      "TF_LOG_region",
+      "TF_CLI_ARGS_region",
+      "TF_DATA_DIR_region"
+    ],
+    "answer": "TF_VAR_region"
+  },
+  {
+    "category": "Terraform",
+    "set": 2,
+    "question": "أي ملف تحمّله CLI تلقائيا لتعريف متغيرات الوحدة الجذرية؟",
+    "options": [
+      "production.tfvars",
+      "production.vars",
+      "production.hcl",
+      "production.auto.tfvars"
+    ],
+    "answer": "production.auto.tfvars"
+  },
+  {
+    "category": "Terraform",
+    "set": 2,
+    "question": "في مورد يستخدم count، أي تعبير يعطي فهرس النسخة الحالية بدءا من الصفر؟",
+    "options": [
+      "each.value",
+      "self.index",
+      "count.index",
+      "each.key"
+    ],
+    "answer": "count.index"
+  },
+  {
+    "category": "Terraform",
+    "set": 2,
+    "question": "في مورد يستخدم for_each مع خريطة، أي تعبير يقرأ قيمة العنصر الحالي؟",
+    "options": [
+      "self.value",
+      "each.value",
+      "each.key",
+      "count.index"
+    ],
+    "answer": "each.value"
+  },
+  {
+    "category": "Terraform",
+    "set": 2,
+    "question": "أي دالة تزيل العناصر المكررة من قائمة مع حفظ ترتيب الظهور الأول؟",
+    "options": [
+      "distinct",
+      "sort",
+      "reverse",
+      "flatten"
+    ],
+    "answer": "distinct"
+  },
+  {
+    "category": "Terraform",
+    "set": 2,
+    "question": "أي دالة تزيل مستويات القوائم المتداخلة مباشرة في قائمة؟",
+    "options": [
+      "concat",
+      "merge",
+      "join",
+      "flatten"
+    ],
+    "answer": "flatten"
+  },
+  {
+    "category": "Terraform",
+    "set": 2,
+    "question": "أي تعبير ينشئ قائمة بتحويل كل اسم إلى أحرف كبيرة؟",
+    "options": [
+      "[for name in var.names : length(name)]",
+      "[for name in var.names : trimspace(name)]",
+      "[for name in var.names : upper(name)]",
+      "[for name in var.names : lower(name)]"
+    ],
+    "answer": "[for name in var.names : upper(name)]"
+  }
+]

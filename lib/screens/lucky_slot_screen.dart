@@ -1,3 +1,4 @@
+import '../l10n/game_localizations.dart';
 import 'dart:async';
 import 'dart:math';
 
@@ -309,7 +310,9 @@ class _LuckySlotScreenState extends State<LuckySlotScreen> {
                   // TITLE
                   // ===========================================
                   Text(
-                    jackpot ? 'JACKPOT 777!' : 'Reward Revealed!',
+                    jackpot
+                        ? gameL10n(context).gameUiJACKPOT777
+                        : gameL10n(context).gameUiRewardRevealed,
                     textAlign: TextAlign.center,
                     style: const TextStyle(
                       fontSize: 24,
@@ -343,7 +346,9 @@ class _LuckySlotScreenState extends State<LuckySlotScreen> {
                   // YOUR REWARD
                   // ===========================================
                   Text(
-                    jackpot ? 'Lucky 777!' : 'Your reward',
+                    jackpot
+                        ? gameL10n(context).gameUiLucky777
+                        : gameL10n(context).gameUiYourReward,
                     textAlign: TextAlign.center,
                     style: TextStyle(
                       fontSize: jackpot ? 20 : 17,
@@ -366,10 +371,10 @@ class _LuckySlotScreenState extends State<LuckySlotScreen> {
 
                   const SizedBox(height: 4),
 
-                  const Text(
-                    'POINTS',
+                  Text(
+                    gameL10n(context).gameUiPOINTS,
                     textAlign: TextAlign.center,
-                    style: TextStyle(
+                    style: const TextStyle(
                       fontSize: 15,
                       fontWeight: FontWeight.bold,
                       letterSpacing: 1.5,
@@ -395,8 +400,9 @@ class _LuckySlotScreenState extends State<LuckySlotScreen> {
                       mainAxisSize: MainAxisSize.min,
                       children: [
                         Text(
-                          'Answer 1 quiz question correctly '
-                          'to claim this reward.',
+                          gameL10n(
+                            context,
+                          ).gameUiAnswer1QuizQuestionCorrectlyToClaimThisReward,
                           textAlign: TextAlign.center,
                           style: TextStyle(
                             fontSize: 15,
@@ -408,7 +414,7 @@ class _LuckySlotScreenState extends State<LuckySlotScreen> {
                         const SizedBox(height: 8),
 
                         Text(
-                          'Wrong answer = reward lost.',
+                          gameL10n(context).gameUiWrongAnswerRewardLost,
                           textAlign: TextAlign.center,
                           style: TextStyle(
                             fontSize: 13,
@@ -444,9 +450,9 @@ class _LuckySlotScreenState extends State<LuckySlotScreen> {
                         );
                       },
                       icon: const Icon(Icons.quiz_outlined),
-                      label: const Text(
-                        'Answer Question',
-                        style: TextStyle(
+                      label: Text(
+                        gameL10n(context).gameUiAnswerQuestion,
+                        style: const TextStyle(
                           fontSize: 16,
                           fontWeight: FontWeight.bold,
                         ),
@@ -492,7 +498,7 @@ class _LuckySlotScreenState extends State<LuckySlotScreen> {
     final ColorScheme colors = Theme.of(context).colorScheme;
 
     return Scaffold(
-      appBar: AppBar(title: const Text('🎰 Lucky Slots')),
+      appBar: AppBar(title: Text(gameL10n(context).gameUiLuckySlots6602dbb)),
 
       body: loading
           ? const Center(child: CircularProgressIndicator())
@@ -511,10 +517,10 @@ class _LuckySlotScreenState extends State<LuckySlotScreen> {
                         // ===================================
                         // TITLE
                         // ===================================
-                        const Text(
-                          'Lucky Slots',
+                        Text(
+                          gameL10n(context).gameUiLuckySlots,
                           textAlign: TextAlign.center,
-                          style: TextStyle(
+                          style: const TextStyle(
                             fontSize: 28,
                             fontWeight: FontWeight.bold,
                           ),
@@ -524,8 +530,12 @@ class _LuckySlotScreenState extends State<LuckySlotScreen> {
 
                         Text(
                           canPlay
-                              ? 'Roll the slots, then answer a question to claim the reward!'
-                              : 'You have already played today.',
+                              ? gameL10n(
+                                  context,
+                                ).gameUiRollTheSlotsThenAnswerAQuestionToClaim
+                              : gameL10n(
+                                  context,
+                                ).gameUiYouHaveAlreadyPlayedToday,
                           textAlign: TextAlign.center,
                           style: TextStyle(
                             fontSize: 16,
@@ -625,10 +635,10 @@ class _LuckySlotScreenState extends State<LuckySlotScreen> {
                                 : const Icon(Icons.casino_outlined),
                             label: Text(
                               spinning
-                                  ? 'SPINNING...'
+                                  ? gameL10n(context).gameUiSPINNING
                                   : canPlay
-                                  ? 'ROLL NOW'
-                                  : 'COME BACK TOMORROW',
+                                  ? gameL10n(context).gameUiROLLNOW
+                                  : gameL10n(context).gameUiCOMEBACKTOMORROW,
                               style: const TextStyle(
                                 fontSize: 17,
                                 fontWeight: FontWeight.bold,
@@ -652,8 +662,12 @@ class _LuckySlotScreenState extends State<LuckySlotScreen> {
                             ),
                             child: Text(
                               wonReward == 777
-                                  ? '🎰 JACKPOT! 777 points available!'
-                                  : 'Today\'s reward: ⭐ $wonReward points',
+                                  ? gameL10n(
+                                      context,
+                                    ).gameUiJACKPOT777PointsAvailable
+                                  : gameL10n(context).gameUiTodaySRewardPoints(
+                                      (wonReward).toString(),
+                                    ),
                               textAlign: TextAlign.center,
                               style: TextStyle(
                                 fontSize: 17,
@@ -678,9 +692,9 @@ class _LuckySlotScreenState extends State<LuckySlotScreen> {
                               Navigator.pop(context);
                             },
                             icon: const Icon(Icons.arrow_back_rounded),
-                            label: const Text(
-                              'Back to Games',
-                              style: TextStyle(
+                            label: Text(
+                              gameL10n(context).gameUiBackToGames,
+                              style: const TextStyle(
                                 fontSize: 16,
                                 fontWeight: FontWeight.bold,
                               ),

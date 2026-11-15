@@ -1,0 +1,302 @@
+[
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "date-இன் வெளியீட்டை now என்ற மாறியில் சேமிக்கும் தொடரியல் எது?",
+    "options": [
+      "now=$(date)",
+      "now=date",
+      "now:=$(date)",
+      "date->now"
+    ],
+    "answer": "now=$(date)"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "ஸ்கிரிப்ட் பெயரைக் குறிக்கும் சிறப்பு அளவுரு எது?",
+    "options": [
+      "$0",
+      "$1",
+      "$#",
+      "$@"
+    ],
+    "answer": "$0"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "மிக சமீபத்திய பின்னணி கட்டளையின் செயல்முறை ID-ஆக விரிவாகும் சிறப்பு அளவுரு எது?",
+    "options": [
+      "$!",
+      "$$",
+      "$?",
+      "$#"
+    ],
+    "answer": "$!"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "நிலை சார்ந்த ஆர்க்யுமெண்ட்டுகளின் எண்ணிக்கையைக் குறிக்கும் சிறப்பு அளவுரு எது?",
+    "options": [
+      "$#",
+      "$@",
+      "$*",
+      "$$"
+    ],
+    "answer": "$#"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "அனைத்து நிலை சார்ந்த ஆர்க்யுமெண்ட்டுகளையும் தனித்தனி சொற்களாக விரிவாக்கும் சிறப்பு அளவுரு எது?",
+    "options": [
+      "$@",
+      "$*",
+      "$#",
+      "$0"
+    ],
+    "answer": "$@"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "முதல் நிலை சார்ந்த அளவுருவை நீக்கி, மற்றவற்றை ஒன்று கீழே நகர்த்தும் Bash உள்ளமைந்த கட்டளை எது?",
+    "options": [
+      "shift",
+      "unshift",
+      "pop",
+      "rotate"
+    ],
+    "answer": "shift"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "தற்போதைய ஷெல்லின் செயல்முறை ID-ஐக் குறிக்கும் சிறப்பு அளவுரு எது?",
+    "options": [
+      "$$",
+      "$!",
+      "$?",
+      "$0"
+    ],
+    "answer": "$$"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "கடைசி கட்டளையின் வெளியேறு நிலையைக் குறிக்கும் சிறப்பு அளவுரு எது?",
+    "options": [
+      "$?",
+      "$!",
+      "$$",
+      "$#"
+    ],
+    "answer": "$?"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "var அமைக்கப்படாவிட்டால் அல்லது காலியாக இருந்தால் இயல்புநிலை மதிப்பைத் தரும் விரிவாக்கம் எது?",
+    "options": [
+      "${var:-default}",
+      "${var:=default}",
+      "${var:+default}",
+      "${var:?default}"
+    ],
+    "answer": "${var:-default}"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "var-இலிருந்து 3 எழுத்துகளை offset 2-இல் தொடங்கிப் பிரித்தெடுக்கும் விரிவாக்கம் எது?",
+    "options": [
+      "${var:2:3}",
+      "${var:3:2}",
+      "${var[2,3]}",
+      "${var#2:3}"
+    ],
+    "answer": "${var:2:3}"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "var-இன் மதிப்பின் நீளத்தைத் தரும் விரிவாக்கம் எது?",
+    "options": [
+      "${#var}",
+      "${len(var)}",
+      "${var:length}",
+      "${var#length}"
+    ],
+    "answer": "${#var}"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "var-இன் மதிப்பை பெரிய எழுத்துகளாக மாற்றும் விரிவாக்கம் எது?",
+    "options": [
+      "${var^^}",
+      "${var,,}",
+      "${var!!}",
+      "${var##}"
+    ],
+    "answer": "${var^^}"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "var-இலிருந்து மிக நீளமான பொருந்தும் முன்னொட்டு பேட்டர்னை நீக்கும் விரிவாக்கம் எது?",
+    "options": [
+      "${var##pattern}",
+      "${var#pattern}",
+      "${var%%pattern}",
+      "${var%pattern}"
+    ],
+    "answer": "${var##pattern}"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "var-இல் pattern-இன் முதல் பொருத்தத்தை மட்டும் மாற்றும் விரிவாக்கம் எது?",
+    "options": [
+      "${var/pattern/replacement}",
+      "${var//pattern/replacement}",
+      "${var#pattern}",
+      "${var%pattern}"
+    ],
+    "answer": "${var/pattern/replacement}"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "var அமைக்கப்படாவிட்டால் அல்லது காலியாக இருந்தால் பிழைச் செய்தியை அச்சிட்டு, ஊடாடாத (non-interactive) ஸ்கிரிப்ட்டை நிறுத்தும் விரிவாக்கம் எது?",
+    "options": [
+      "${var:?message}",
+      "${var:-message}",
+      "${var:+message}",
+      "${var:=message}"
+    ],
+    "answer": "${var:?message}"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "Bash-இல் கணித விரிவாக்கத்தைச் செய்யும் தொடரியல் எது?",
+    "options": [
+      "$((5 + 3))",
+      "$(5 + 3)",
+      "${5 + 3}",
+      "$[5 + 3]"
+    ],
+    "answer": "$((5 + 3))"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "count மாறியை ஒன்று அதிகரிக்கும் கட்டளை எது?",
+    "options": [
+      "let count++",
+      "count++",
+      "increment count",
+      "add count"
+    ],
+    "answer": "let count++"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "8-ஐ அச்சிடும் கட்டளை எது, 5 மற்றும் 3-ஐக் கூட்டிய பின்?",
+    "options": [
+      "expr 5 + 3",
+      "expr 5+3",
+      "expr5 + 3",
+      "expr add 5 3"
+    ],
+    "answer": "expr 5 + 3"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "count-ஐ முழு எண் மாறியாக அறிவிக்கும் கட்டளை எது?",
+    "options": [
+      "declare -i count",
+      "declare int count",
+      "integer count",
+      "set count integer"
+    ],
+    "answer": "declare -i count"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "ஒரு மாறியைப் படிக்க மட்டும் (read-only) ஆக்கும் கட்டளை எது?",
+    "options": [
+      "readonly var",
+      "lock var",
+      "const var",
+      "final var"
+    ],
+    "answer": "readonly var"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "ஷெல் சூழலிலிருந்து ஒரு மாறியை நீக்கும் கட்டளை எது?",
+    "options": [
+      "unset var",
+      "delete var",
+      "remove var",
+      "clear var"
+    ],
+    "answer": "unset var"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "ஒரு மாறியை சைல்டு செயல்முறைகளுக்குக் கிடைக்கச் செய்யும் கட்டளை எது?",
+    "options": [
+      "export var",
+      "share var",
+      "env var",
+      "publish var"
+    ],
+    "answer": "export var"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "வெளியீட்டு திசைதிருப்பல் ஏற்கனவே உள்ள கோப்பை மேலெழுதாமல் தடுக்கும் விருப்பம் எது?",
+    "options": [
+      "set -o noclobber",
+      "set -o nooverwrite",
+      "set -o protect",
+      "set -o safe"
+    ],
+    "answer": "set -o noclobber"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "ஷெல் தொடங்கியதிலிருந்து கடந்த வினாடிகளின் எண்ணிக்கையைக் கொண்டிருக்கும் Bash மாறி எது?",
+    "options": [
+      "$SECONDS",
+      "$RANDOM",
+      "$LINENO",
+      "$UID"
+    ],
+    "answer": "$SECONDS"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "var அமைக்கப்பட்டு காலியாக இல்லாவிட்டால் மட்டும் alt-ஐ மாற்றீடு செய்யும் Bash விரிவாக்கம் எது?",
+    "options": [
+      "${var:+alt}",
+      "${var:-alt}",
+      "${var:=alt}",
+      "${var:?alt}"
+    ],
+    "answer": "${var:+alt}"
+  }
+]

@@ -1,0 +1,302 @@
+[
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "କେଉଁ ସିଣ୍ଟାକ୍ସ date ର ଆଉଟପୁଟ୍‌କୁ now ନାମକ ଭାରିଏବଲ୍‌ରେ ସଂରକ୍ଷଣ କରେ?",
+    "options": [
+      "now=$(date)",
+      "now=date",
+      "now:=$(date)",
+      "date->now"
+    ],
+    "answer": "now=$(date)"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "କେଉଁ special parameter ସ୍କ୍ରିପ୍ଟର ନାମକୁ ବୁଝାଏ?",
+    "options": [
+      "$0",
+      "$1",
+      "$#",
+      "$@"
+    ],
+    "answer": "$0"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "କେଉଁ special parameter ସବୁଠାରୁ ସାମ୍ପ୍ରତିକ background କମାଣ୍ଡର process ID ରେ expand ହୁଏ?",
+    "options": [
+      "$!",
+      "$$",
+      "$?",
+      "$#"
+    ],
+    "answer": "$!"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "କେଉଁ special parameter positional arguments ର ସଂଖ୍ୟାକୁ ବୁଝାଏ?",
+    "options": [
+      "$#",
+      "$@",
+      "$*",
+      "$$"
+    ],
+    "answer": "$#"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "କେଉଁ special parameter ସମସ୍ତ positional arguments କୁ ଅଲଗା ଶବ୍ଦ ଭାବେ expand କରେ?",
+    "options": [
+      "$@",
+      "$*",
+      "$#",
+      "$0"
+    ],
+    "answer": "$@"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "କେଉଁ Bash builtin ପ୍ରଥମ positional parameter କୁ ବାଦ୍ ଦେଇ ବାକିଗୁଡ଼ିକୁ ଏକ ସ୍ଥାନ ତଳକୁ ଘୁଞ୍ଚାଏ?",
+    "options": [
+      "shift",
+      "unshift",
+      "pop",
+      "rotate"
+    ],
+    "answer": "shift"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "କେଉଁ special parameter ବର୍ତ୍ତମାନର ଶେଲ୍‌ର process ID କୁ ବୁଝାଏ?",
+    "options": [
+      "$$",
+      "$!",
+      "$?",
+      "$0"
+    ],
+    "answer": "$$"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "କେଉଁ special parameter ଶେଷ କମାଣ୍ଡର exit status କୁ ବୁଝାଏ?",
+    "options": [
+      "$?",
+      "$!",
+      "$$",
+      "$#"
+    ],
+    "answer": "$?"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "var unset କିମ୍ବା ଖାଲି ଥିଲେ କେଉଁ expansion ଏକ ଡିଫଲ୍ଟ ମୂଲ୍ୟ ଫେରାଏ?",
+    "options": [
+      "${var:-default}",
+      "${var:=default}",
+      "${var:+default}",
+      "${var:?default}"
+    ],
+    "answer": "${var:-default}"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "କେଉଁ expansion var ରୁ 3 ଟି ଅକ୍ଷର ବାହାର କରେ, offset 2 ରୁ ଆରମ୍ଭ କରି?",
+    "options": [
+      "${var:2:3}",
+      "${var:3:2}",
+      "${var[2,3]}",
+      "${var#2:3}"
+    ],
+    "answer": "${var:2:3}"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "କେଉଁ expansion var ର ମୂଲ୍ୟର ଲମ୍ବ ଫେରାଏ?",
+    "options": [
+      "${#var}",
+      "${len(var)}",
+      "${var:length}",
+      "${var#length}"
+    ],
+    "answer": "${#var}"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "କେଉଁ expansion var ର ମୂଲ୍ୟକୁ ବଡ଼ ଅକ୍ଷରରେ ପରିବର୍ତ୍ତନ କରେ?",
+    "options": [
+      "${var^^}",
+      "${var,,}",
+      "${var!!}",
+      "${var##}"
+    ],
+    "answer": "${var^^}"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "କେଉଁ expansion var ରୁ ସବୁଠାରୁ ଲମ୍ବା ମେଳ ଖାଉଥିବା prefix pattern କୁ ହଟାଏ?",
+    "options": [
+      "${var##pattern}",
+      "${var#pattern}",
+      "${var%%pattern}",
+      "${var%pattern}"
+    ],
+    "answer": "${var##pattern}"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "କେଉଁ expansion var ରେ pattern ର କେବଳ ପ୍ରଥମ ମିଳାନକୁ ବଦଳାଏ?",
+    "options": [
+      "${var/pattern/replacement}",
+      "${var//pattern/replacement}",
+      "${var#pattern}",
+      "${var%pattern}"
+    ],
+    "answer": "${var/pattern/replacement}"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "var unset କିମ୍ବା ଖାଲି ଥିଲେ କେଉଁ expansion ଏକ ତ୍ରୁଟି ବାର୍ତ୍ତା ପ୍ରିଣ୍ଟ କରି non-interactive ସ୍କ୍ରିପ୍ଟକୁ ବନ୍ଦ କରିଦିଏ?",
+    "options": [
+      "${var:?message}",
+      "${var:-message}",
+      "${var:+message}",
+      "${var:=message}"
+    ],
+    "answer": "${var:?message}"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "Bash ରେ କେଉଁ ସିଣ୍ଟାକ୍ସ arithmetic expansion କରେ?",
+    "options": [
+      "$((5 + 3))",
+      "$(5 + 3)",
+      "${5 + 3}",
+      "$[5 + 3]"
+    ],
+    "answer": "$((5 + 3))"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "କେଉଁ କମାଣ୍ଡ count ଭାରିଏବଲ୍‌କୁ ଏକ ଦ୍ୱାରା ବଢ଼ାଏ?",
+    "options": [
+      "let count++",
+      "count++",
+      "increment count",
+      "add count"
+    ],
+    "answer": "let count++"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "କେଉଁ କମାଣ୍ଡ 8 ପ୍ରିଣ୍ଟ କରେ, 5 ଓ 3 ଯୋଗ କରିବା ପରେ?",
+    "options": [
+      "expr 5 + 3",
+      "expr 5+3",
+      "expr5 + 3",
+      "expr add 5 3"
+    ],
+    "answer": "expr 5 + 3"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "କେଉଁ କମାଣ୍ଡ count କୁ integer ଭାରିଏବଲ୍ ଭାବେ ଘୋଷଣା କରେ?",
+    "options": [
+      "declare -i count",
+      "declare int count",
+      "integer count",
+      "set count integer"
+    ],
+    "answer": "declare -i count"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "କେଉଁ କମାଣ୍ଡ ଏକ ଭାରିଏବଲ୍‌କୁ read-only କରେ?",
+    "options": [
+      "readonly var",
+      "lock var",
+      "const var",
+      "final var"
+    ],
+    "answer": "readonly var"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "କେଉଁ କମାଣ୍ଡ ଶେଲ୍ environment ରୁ ଏକ ଭାରିଏବଲ୍ ହଟାଏ?",
+    "options": [
+      "unset var",
+      "delete var",
+      "remove var",
+      "clear var"
+    ],
+    "answer": "unset var"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "କେଉଁ କମାଣ୍ଡ ଏକ ଭାରିଏବଲ୍‌କୁ child processes ପାଇଁ ଉପଲବ୍ଧ କରାଏ?",
+    "options": [
+      "export var",
+      "share var",
+      "env var",
+      "publish var"
+    ],
+    "answer": "export var"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "କେଉଁ ବିକଳ୍ପ output redirection କୁ ବିଦ୍ୟମାନ ଫାଇଲ୍ overwrite କରିବାରୁ ରୋକେ?",
+    "options": [
+      "set -o noclobber",
+      "set -o nooverwrite",
+      "set -o protect",
+      "set -o safe"
+    ],
+    "answer": "set -o noclobber"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "କେଉଁ Bash ଭାରିଏବଲ୍ ଶେଲ୍ ଆରମ୍ଭ ହେବା ପରଠାରୁ ଅତିବାହିତ ସେକେଣ୍ଡ ସଂଖ୍ୟା ଧାରଣ କରେ?",
+    "options": [
+      "$SECONDS",
+      "$RANDOM",
+      "$LINENO",
+      "$UID"
+    ],
+    "answer": "$SECONDS"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "କେଉଁ Bash expansion var set ଥିଲେ ଏବଂ ଖାଲି ନ ଥିଲେ ହିଁ alt ପ୍ରତିସ୍ଥାପନ କରେ?",
+    "options": [
+      "${var:+alt}",
+      "${var:-alt}",
+      "${var:=alt}",
+      "${var:?alt}"
+    ],
+    "answer": "${var:+alt}"
+  }
+]

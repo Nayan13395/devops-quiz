@@ -1,0 +1,187 @@
+{
+  "languages": ["hi", "mr"],
+  "scope": "Previously changed Set 5 English records whose Hindi/Marathi banks still contain older questions. Match by set and within-set ordinal; never move records.",
+  "categories": {
+    "Ansible": {
+      "60": {"question": {"hi": "कौन सा ansible-vault उपकमांड पहले से एन्क्रिप्ट की गई फ़ाइल का पासवर्ड बदलता है?", "mr": "कोणता ansible-vault उपकमांड आधीच एन्क्रिप्ट केलेल्या फाइलचा पासवर्ड बदलतो?"}}
+    },
+    "AWS": {
+      "102": {"question": {"hi": "कौन सी Amazon RDS सुविधा स्वचालित failover के लिए दूसरे Availability Zone में समकालिक standby replica रखती है?", "mr": "कोणते Amazon RDS वैशिष्ट्य स्वयंचलित failover साठी दुसऱ्या Availability Zone मध्ये समकालिक standby replica ठेवते?"}, "options": {
+        "0": {"hi": "Multi-AZ परिनियोजन", "mr": "Multi-AZ उपयोजन"},
+        "1": {"hi": "रीड रेप्लिका", "mr": "रीड रेप्लिका"},
+        "2": {"hi": "मैनुअल स्नैपशॉट", "mr": "मॅन्युअल स्नॅपशॉट"},
+        "3": {"hi": "पैरामीटर समूह", "mr": "पॅरामीटर गट"}
+      }},
+      "109": {"question": {"hi": "किस Amazon SQS कतार प्रकार में संदेशों का सख्त क्रम बना रहता है और exactly-once processing समर्थित है?", "mr": "कोणता Amazon SQS रांग प्रकार संदेशांचा काटेकोर क्रम राखतो आणि exactly-once processing समर्थित करतो?"}, "options": {
+        "0": {"hi": "मानक कतार", "mr": "मानक रांग"},
+        "1": {"hi": "FIFO कतार", "mr": "FIFO रांग"},
+        "2": {"hi": "विलंब कतार", "mr": "विलंब रांग"},
+        "3": {"hi": "डेड-लेटर कतार", "mr": "डेड-लेटर रांग"}
+      }},
+      "119": {"question": {"hi": "Amazon Redshift में टेबल की distribution key क्या नियंत्रित करती है?", "mr": "Amazon Redshift मध्ये टेबलची distribution key काय नियंत्रित करते?"}, "options": {
+        "0": {"hi": "पंक्तियाँ compute nodes में कैसे बाँटी जाती हैं", "mr": "ओळी compute nodes मध्ये कशा विभागल्या जातात"},
+        "1": {"hi": "कौन सी IAM भूमिका COPY कमांड चलाती है", "mr": "कोणती IAM भूमिका COPY कमांड चालवते"},
+        "2": {"hi": "स्वचालित बैकअप कितने समय तक रखे जाते हैं", "mr": "स्वयंचलित बॅकअप किती काळ ठेवले जातात"},
+        "3": {"hi": "कौन सी KMS key क्लस्टर एन्क्रिप्ट करती है", "mr": "कोणती KMS key क्लस्टर एन्क्रिप्ट करते"}
+      }},
+      "124": {"question": {"hi": "Amazon MSK क्लस्टर में कौन से nodes topic partitions संग्रहीत करते हैं और Kafka producers तथा consumers को सेवा देते हैं?", "mr": "Amazon MSK क्लस्टरमध्ये कोणते nodes topic partitions साठवतात आणि Kafka producers व consumers ना सेवा देतात?"}, "options": {
+        "0": {"hi": "ब्रोकर नोड्स", "mr": "ब्रोकर नोड्स"},
+        "1": {"hi": "NAT गेटवे", "mr": "NAT गेटवे"},
+        "2": {"hi": "बैस्टियन होस्ट", "mr": "बॅस्टियन होस्ट"},
+        "3": {"hi": "Glue क्रॉलर", "mr": "Glue क्रॉलर"}
+      }}
+    },
+    "Azure": {
+      "102": {"question": {"hi": "कौन सी Microsoft Entra ID सुविधा साइन-इन के समय उपयोगकर्ताओं से अतिरिक्त सत्यापन विधि द्वारा पहचान की पुष्टि करवाती है?", "mr": "कोणते Microsoft Entra ID वैशिष्ट्य साइन-इन करताना वापरकर्त्यांना अतिरिक्त पडताळणी पद्धतीने ओळख पुष्टी करण्यास सांगते?"}},
+      "108": {"question": {"hi": "कौन सा Azure SQL परिनियोजन विकल्प प्रबंधित PaaS सेवा के रूप में लगभग पूर्ण SQL Server instance अनुकूलता देता है, जिससे lift-and-shift माइग्रेशन आसान होता है?", "mr": "कोणता Azure SQL उपयोजन पर्याय व्यवस्थापित PaaS सेवा म्हणून जवळजवळ पूर्ण SQL Server instance सुसंगतता देऊन lift-and-shift स्थलांतर सुलभ करतो?"}},
+      "118": {"question": {"hi": "कौन सा Azure Storage redundancy विकल्प एक ही क्षेत्र के तीन availability zones में डेटा की समकालिक प्रतिकृति बनाता है?", "mr": "कोणता Azure Storage redundancy पर्याय एकाच प्रदेशातील तीन availability zones मध्ये डेटाची समकालिक प्रतिकृती बनवतो?"}, "options": {
+        "0": {"hi": "स्थानीय अतिरिक्त प्रतियों वाला संग्रहण (LRS)", "mr": "स्थानिक अतिरिक्त प्रतिकृती असलेले संचयन (LRS)"},
+        "1": {"hi": "ज़ोन में अतिरिक्त प्रतियों वाला संग्रहण (ZRS)", "mr": "झोनमध्ये अतिरिक्त प्रतिकृती असलेले संचयन (ZRS)"},
+        "2": {"hi": "भौगोलिक अतिरिक्त प्रतियों वाला संग्रहण (GRS)", "mr": "भौगोलिक अतिरिक्त प्रतिकृती असलेले संचयन (GRS)"},
+        "3": {"hi": "रीड-एक्सेस भौगोलिक अतिरिक्त प्रतियों वाला संग्रहण (RA-GRS)", "mr": "वाचन-प्रवेशासह भौगोलिक अतिरिक्त प्रतिकृती असलेले संचयन (RA-GRS)"}
+      }}
+    },
+    "BASH": {
+      "101": {"question": {"hi": "कौन सा कमांड डायरेक्टरी के साथ उसकी अनुपस्थित मूल डायरेक्टरियाँ भी बनाता है?", "mr": "कोणता कमांड डायरेक्टरीसोबत तिच्या नसलेल्या पालक डायरेक्टरीही तयार करतो?"}},
+      "116": {"question": {"hi": "Bash शेल में data.txt नाम की फ़ाइल की पंक्तियाँ गिनने वाला कमांड कौन सा है?", "mr": "Bash शेलमध्ये data.txt नावाच्या फाइलमधील ओळी कोणता कमांड मोजतो?"}}
+    },
+    "GCP": {
+      "102": {"question": {"hi": "कौन सी BigQuery सुविधा तारीख या पूर्णांक कॉलम के आधार पर टेबल को विभाजित करती है ताकि क्वेरी कम डेटा स्कैन करें?", "mr": "क्वेरींना कमी डेटा स्कॅन करावा लागावा म्हणून कोणते BigQuery वैशिष्ट्य तारीख किंवा पूर्णांक कॉलमवरून टेबल विभागते?"}, "options": {
+        "0": {"hi": "टेबल विभाजन", "mr": "टेबल विभाजन"},
+        "1": {"hi": "अधिकृत व्यू", "mr": "अधिकृत व्ह्यू"},
+        "2": {"hi": "अनुसूचित क्वेरी", "mr": "नियोजित क्वेरी"},
+        "3": {"hi": "टाइम ट्रैवल", "mr": "टाइम ट्रॅव्हल"}
+      }},
+      "121": {"question": {"hi": "कौन सी Cloud DNS सुविधा ज़ोन रिकॉर्ड पर क्रिप्टोग्राफ़िक हस्ताक्षर करके DNS spoofing से बचाती है?", "mr": "कोणते Cloud DNS वैशिष्ट्य झोन रेकॉर्डवर क्रिप्टोग्राफिक स्वाक्षरी करून DNS spoofing पासून संरक्षण देते?"}, "options": {
+        "1": {"hi": "निजी ज़ोन", "mr": "खाजगी झोन"},
+        "2": {"hi": "प्रतिक्रिया नीति ज़ोन", "mr": "प्रतिसाद धोरण झोन"},
+        "3": {"hi": "फ़ॉरवर्डिंग ज़ोन", "mr": "फॉरवर्डिंग झोन"}
+      }},
+      "124": {"question": {"hi": "कौन सा Compute Engine VM provisioning मॉडल भारी छूट देता है लेकिन Google किसी भी समय VM वापस ले सकता है?", "mr": "कोणत्या Compute Engine VM provisioning मॉडेलमध्ये मोठी सवलत मिळते, परंतु Google कधीही VM परत घेऊ शकते?"}}
+    },
+    "Git": {
+      "61": {"question": {"hi": "कौन सा कमांड फ़ाइल को working directory में रखते हुए उसकी tracking रोकता है?", "mr": "कोणता कमांड फाइल working directory मध्ये ठेवून तिचे tracking थांबवतो?"}},
+      "62": {"question": {"hi": "कौन सा कमांड लेखक के अनुसार समूह बनाकर commit की संख्या का सारांश देता है?", "mr": "कोणता कमांड लेखकानुसार गट करून commit संख्येचा सारांश देतो?"}},
+      "66": {"question": {"hi": "कौन सा कमांड tracked फ़ाइल का नाम बदलकर उस बदलाव को stage करता है?", "mr": "कोणता कमांड tracked फाइलचे नाव बदलून तो बदल stage करतो?"}}
+    },
+    "IBM": {
+      "100": {"question": {"hi": "कौन सा IBM Cloud Kubernetes Service ऐड-ऑन लंबित pod resource requests के आधार पर worker nodes की संख्या अपने-आप बदलता है?", "mr": "कोणते IBM Cloud Kubernetes Service अॅड-ऑन प्रलंबित pod resource requests नुसार worker nodes ची संख्या आपोआप बदलते?"}},
+      "107": {"question": {"hi": "कौन सी IBM Cloud IAM सुविधा Kubernetes pod जैसे workload को लंबे समय तक मान्य API keys के बिना पहचान ग्रहण करने देती है?", "mr": "कोणते IBM Cloud IAM वैशिष्ट्य Kubernetes pod सारख्या workload ला दीर्घकालीन API keys शिवाय ओळख स्वीकारू देते?"}, "options": {
+        "0": {"hi": "एक्सेस समूह", "mr": "प्रवेश गट"},
+        "1": {"hi": "विश्वसनीय प्रोफ़ाइल", "mr": "विश्वसनीय प्रोफाइल"},
+        "2": {"hi": "संसाधन समूह", "mr": "संसाधन गट"},
+        "3": {"hi": "फ़्लोटिंग IP", "mr": "फ्लोटिंग IP"}
+      }}
+    },
+    "Javascript": {
+      "101": {"question": {"hi": "JavaScript में फ़ंक्शन-स्कोप वाला variable घोषित करने के लिए कौन सा keyword उपयोग होता है?", "mr": "JavaScript मध्ये फंक्शन-स्कोप असलेला variable घोषित करण्यासाठी कोणता keyword वापरतात?"}},
+      "103": {"question": {"hi": "कौन सी array method जाँचती है कि कम से कम एक तत्व शर्त पूरी करता है?", "mr": "किमान एक घटक अट पूर्ण करतो का हे कोणती array method तपासते?"}},
+      "105": {"question": {"hi": "JavaScript में Number.isNaN(NaN) क्या लौटाता है?", "mr": "JavaScript मध्ये Number.isNaN(NaN) काय परत करते?"}},
+      "107": {"question": {"hi": "कौन सा keyword JavaScript generator function को रोककर caller को एक मान लौटाता है?", "mr": "कोणता keyword JavaScript generator function ला थांबवून caller ला एक मूल्य परत करतो?"}},
+      "116": {"question": {"hi": "कौन सी array method किसी दिए गए मान की पहली उपस्थिति का index लौटाती है?", "mr": "कोणती array method दिलेल्या मूल्याच्या पहिल्या उपस्थितीचा index परत करते?"}},
+      "120": {"question": {"hi": "कौन सी string method स्ट्रिंग के दोनों सिरों से whitespace हटाती है?", "mr": "कोणती string method स्ट्रिंगच्या दोन्ही टोकांवरील whitespace काढते?"}},
+      "121": {"question": {"hi": "कौन सी string method टेक्स्ट को बड़े अक्षरों में बदलती है?", "mr": "कोणती string method मजकूर मोठ्या अक्षरांत रूपांतरित करते?"}}
+    },
+    "Jenkins": {
+      "58": {"question": {"hi": "कौन सा Pipeline step अपने ब्लॉक के अंदर के steps के लिए working directory सेट करता है?", "mr": "कोणता Pipeline step त्याच्या ब्लॉकमधील steps साठी working directory ठरवतो?"}},
+      "59": {"question": {"hi": "कौन सा Pipeline step workspace की फ़ाइल को स्ट्रिंग में पढ़ता है?", "mr": "कोणता Pipeline step workspace मधील फाइल स्ट्रिंगमध्ये वाचतो?"}},
+      "60": {"question": {"hi": "कौन सा Pipeline step workspace की फ़ाइल में टेक्स्ट लिखता है?", "mr": "कोणता Pipeline step workspace मधील फाइलमध्ये मजकूर लिहितो?"}},
+      "61": {"question": {"hi": "कौन सा Pipeline step जाँचता है कि workspace में कोई फ़ाइल मौजूद है या नहीं?", "mr": "कोणता Pipeline step workspace मध्ये फाइल आहे का ते तपासतो?"}},
+      "66": {"question": {"hi": "Pipeline Utility Steps का कौन सा step workspace की फ़ाइलों का zip archive बनाता है?", "mr": "Pipeline Utility Steps मधील कोणता step workspace मधील फाइल्सचे zip archive तयार करतो?"}},
+      "67": {"question": {"hi": "Pipeline Utility Steps का कौन सा step zip archive खोलकर उसकी फ़ाइलें निकालता है?", "mr": "Pipeline Utility Steps मधील कोणता step zip archive मधील फाइल्स काढतो?"}},
+      "70": {"question": {"hi": "Pipeline Utility Steps का कौन सा step JSON फ़ाइल को parse करके ऑब्जेक्ट बनाता है?", "mr": "Pipeline Utility Steps मधील कोणता step JSON फाइल parse करून ऑब्जेक्ट बनवतो?"}},
+      "72": {"question": {"hi": "HTTP Request प्लगइन का कौन सा step Pipeline से HTTP अनुरोध भेजता है?", "mr": "HTTP Request प्लगइनमधील कोणता step Pipeline मधून HTTP विनंत्या पाठवतो?"}},
+      "77": {"question": {"hi": "कौन सा Pipeline step निष्पादन को निश्चित समय तक रोकता है?", "mr": "कोणता Pipeline step कार्यान्वयन ठरावीक वेळेसाठी थांबवतो?"}},
+      "82": {"question": {"hi": "कौन सा Jenkins प्रशासन पृष्ठ प्रशासकों को controller पर Groovy scripts चलाने देता है?", "mr": "कोणते Jenkins प्रशासन पृष्ठ प्रशासकांना controller वर Groovy scripts चालवू देते?"}, "options": {
+        "0": {"hi": "स्क्रिप्ट कंसोल", "mr": "स्क्रिप्ट कन्सोल"},
+        "1": {"hi": "बिल्ड कतार", "mr": "बिल्ड रांग"},
+        "2": {"hi": "क्रेडेंशियल संग्रह", "mr": "क्रेडेन्शियल संग्रह"},
+        "3": {"hi": "अपडेट केंद्र", "mr": "अद्यतन केंद्र"}
+      }},
+      "87": {"question": {"hi": "JENKINS_HOME में कौन सी फ़ाइल Jenkins का वैश्विक सिस्टम कॉन्फ़िगरेशन संग्रहीत करती है?", "mr": "JENKINS_HOME मधील कोणती फाइल Jenkins चे जागतिक सिस्टम कॉन्फिगरेशन साठवते?"}},
+      "92": {"question": {"hi": "कौन सा Jenkins प्लगइन controller का कॉन्फ़िगरेशन YAML में घोषणात्मक रूप से परिभाषित करने देता है?", "mr": "कोणता Jenkins प्लगइन controller चे कॉन्फिगरेशन YAML मध्ये घोषणात्मक पद्धतीने परिभाषित करू देतो?"}},
+      "97": {"question": {"hi": "कौन सा Declarative Pipeline विकल्प console output में timestamps जोड़ता है?", "mr": "कोणता Declarative Pipeline पर्याय console output मध्ये timestamps जोडतो?"}},
+      "102": {"question": {"hi": "कौन सी post condition अपने steps केवल pipeline विफल होने पर चलाती है?", "mr": "कोणती post condition तिचे steps फक्त pipeline अयशस्वी झाल्यावर चालवते?"}},
+      "107": {"question": {"hi": "पूरे हो चुके Jenkins Pipeline build के लिए Replay क्या करता है?", "mr": "पूर्ण झालेल्या Jenkins Pipeline build साठी Replay काय करते?"}, "options": {
+        "0": {"hi": "संपादित Pipeline script के साथ उसे फिर से चलाता है", "mr": "संपादित Pipeline script वापरून तो पुन्हा चालवते"},
+        "1": {"hi": "हटाई गई job को पुनर्स्थापित करता है", "mr": "काढलेली job पुनर्स्थापित करते"},
+        "2": {"hi": "एजेंट को पीछे ले जाता है", "mr": "एजंटला मागे नेते"},
+        "3": {"hi": "console output फिर से चलाता है", "mr": "console output पुन्हा दाखवते"}
+      }},
+      "112": {"question": {"hi": "कौन सी Jenkins सुविधा विफल Declarative Pipeline को चुने गए stage से फिर चलाने देती है?", "mr": "कोणते Jenkins वैशिष्ट्य अयशस्वी Declarative Pipeline निवडलेल्या stage पासून पुन्हा चालवू देते?"}},
+      "117": {"question": {"hi": "कौन सा Pipeline step build console log में संदेश प्रिंट करता है?", "mr": "कोणता Pipeline step build console log मध्ये संदेश छापतो?"}},
+      "122": {"question": {"hi": "कौन सा Jenkins security realm विकल्प उपयोगकर्ता खाते Jenkins के अंदर ही संग्रहीत करता है?", "mr": "कोणता Jenkins security realm पर्याय वापरकर्ता खाती Jenkins मध्येच साठवतो?"}, "options": {
+        "0": {"hi": "Jenkins का अपना उपयोगकर्ता डेटाबेस", "mr": "Jenkins चा स्वतःचा वापरकर्ता डेटाबेस"},
+        "2": {"hi": "Unix उपयोगकर्ता/समूह डेटाबेस", "mr": "Unix वापरकर्ता/गट डेटाबेस"},
+        "3": {"hi": "servlet container को सौंपना", "mr": "servlet container कडे सोपवणे"}
+      }}
+    },
+    "K8s": {
+      "59": {"question": {"hi": "Kubernetes ReplicaSet spec का कौन सा फ़ील्ड उसके प्रबंधित Pods पहचानने के लिए प्रयुक्त labels परिभाषित करता है?", "mr": "Kubernetes ReplicaSet spec मधील कोणते फील्ड त्याने व्यवस्थापित केलेले Pods ओळखण्यासाठी वापरलेले labels परिभाषित करते?"}},
+      "65": {"question": {"hi": "कौन सा कमांड Kubernetes क्लस्टर के etcd डेटाबेस का बैकअप स्नैपशॉट बनाता है?", "mr": "कोणता कमांड Kubernetes क्लस्टरमधील etcd डेटाबेसचा बॅकअप स्नॅपशॉट तयार करतो?"}}
+    },
+    "Linux": {
+      "100": {"question": {"hi": "कौन सा Bash कमांड पिछली working directory पर वापस जाता है?", "mr": "कोणता Bash कमांड मागील working directory वर परत जातो?"}},
+      "111": {"question": {"hi": "कौन सा Linux कमांड CPU architecture, core count और model की जानकारी दिखाता है?", "mr": "कोणता Linux कमांड CPU architecture, core count आणि model ची माहिती दाखवतो?"}}
+    },
+    "Networking": {
+      "59": {"question": {"hi": "IPv4 header का TTL फ़ील्ड किस सीमा को नियंत्रित करता है?", "mr": "IPv4 header मधील TTL फील्ड कोणती मर्यादा ठरवते?"}, "options": {
+        "0": {"hi": "पैकेट जितने router hops पार कर सकता है उनकी संख्या", "mr": "पॅकेट पार करू शकणाऱ्या router hops ची संख्या"},
+        "1": {"hi": "पैकेट payload का आकार", "mr": "पॅकेट payload चा आकार"},
+        "2": {"hi": "लिंक की गति", "mr": "लिंकचा वेग"},
+        "3": {"hi": "खुले TCP पोर्ट की संख्या", "mr": "उघड्या TCP पोर्टची संख्या"}
+      }},
+      "66": {"question": {"hi": "HTTP 404 status code क्या दर्शाता है?", "mr": "HTTP 404 status code काय दर्शवतो?"}, "options": {
+        "0": {"hi": "अनुरोधित संसाधन नहीं मिला", "mr": "विनंती केलेले संसाधन सापडले नाही"},
+        "1": {"hi": "अनुरोध सफल हुआ", "mr": "विनंती यशस्वी झाली"},
+        "2": {"hi": "सर्वर क्रैश हो गया", "mr": "सर्व्हर क्रॅश झाला"},
+        "3": {"hi": "प्रमाणीकरण आवश्यक है", "mr": "प्रमाणीकरण आवश्यक आहे"}
+      }},
+      "69": {"question": {"hi": "एकल IPv4 host route को कौन सी prefix length दर्शाती है?", "mr": "एका IPv4 host route साठी कोणती prefix length वापरतात?"}}
+    },
+    "Oracle": {
+      "110": {"question": {"hi": "कौन सी OCI Resource Manager सुविधा पता लगाती है कि तैनात संसाधन Terraform कॉन्फ़िगरेशन से अलग हैं?", "mr": "उपयोजित संसाधने Terraform कॉन्फिगरेशनपेक्षा वेगळी आहेत हे कोणते OCI Resource Manager वैशिष्ट्य ओळखते?"}, "options": {
+        "0": {"hi": "ड्रिफ़्ट का पता लगाना", "mr": "ड्रिफ्ट शोधणे"}
+      }}
+    },
+    "Perl": {
+      "100": {"question": {"hi": "कौन सा Perl keyword ऐसा variable घोषित करता है जो subroutine calls के बीच अपना मान बनाए रखता है (use feature 'state' के साथ)?", "mr": "कोणता Perl keyword subroutine calls दरम्यान मूल्य टिकवणारा variable घोषित करतो (use feature 'state' सह)?"}},
+      "101": {"question": {"hi": "कौन सा Perl syntax @array का अंतिम index देता है?", "mr": "कोणता Perl syntax @array चा शेवटचा index देतो?"}},
+      "102": {"question": {"hi": "कौन सा Perl फ़ंक्शन छद्म-यादृच्छिक संख्या लौटाता है?", "mr": "कोणते Perl फंक्शन छद्म-यादृच्छिक संख्या परत करते?"}},
+      "105": {"question": {"hi": "कौन सा Perl ऑपरेटर दो संख्याओं की तुलना करके -1, 0 या 1 लौटाता है?", "mr": "कोणता Perl ऑपरेटर दोन संख्यांची तुलना करून -1, 0 किंवा 1 परत करतो?"}},
+      "108": {"question": {"hi": "Perl का ternary conditional operator कौन सा है?", "mr": "Perl मधील ternary conditional operator कोणता आहे?"}},
+      "120": {"question": {"hi": "कौन सा Perl फ़ंक्शन हर call पर एक key/value जोड़ी लौटाकर hash पर iteration करता है?", "mr": "कोणते Perl फंक्शन प्रत्येक call ला एक key/value जोडी परत करून hash वर iteration करते?"}}
+    },
+    "Powershell": {
+      "104": {"question": {"hi": "कौन सा PowerShell cmdlet objects को success output stream में भेजता है ताकि वे आगे पाइप किए जा सकें?", "mr": "कोणता PowerShell cmdlet objects success output stream मध्ये पाठवतो, जेणेकरून ते पुढे पाइप करता येतील?"}},
+      "109": {"question": {"hi": "कौन सा PowerShell cmdlet script को निर्धारित समय तक रोकता है?", "mr": "कोणता PowerShell cmdlet script ठरावीक कालावधीसाठी थांबवतो?"}},
+      "113": {"question": {"hi": "कौन सा PowerShell cmdlet फ़ाइल का hash निकालता है?", "mr": "कोणता PowerShell cmdlet फाइलचा hash काढतो?"}},
+      "115": {"question": {"hi": "कौन सा PowerShell cmdlet output objects को तालिका के रूप में दिखाता है?", "mr": "कोणता PowerShell cmdlet output objects तक्त्याच्या स्वरूपात दाखवतो?"}},
+      "117": {"question": {"hi": "कौन सा PowerShell cmdlet टेक्स्ट या फ़ाइलों में regex pattern खोजता है?", "mr": "कोणता PowerShell cmdlet मजकूर किंवा फाइल्समध्ये regex pattern शोधतो?"}}
+    },
+    "Python": {
+      "101": {"question": {"hi": "Python में type(3.0) क्या लौटाता है?", "mr": "Python मध्ये type(3.0) काय परत करते?"}},
+      "103": {"question": {"hi": "Python में 'abc'[::-1] का मान क्या है?", "mr": "Python मध्ये 'abc'[::-1] चे मूल्य काय आहे?"}},
+      "105": {"question": {"hi": "कौन सी list method उसी सूची में तत्वों का क्रम उलटती है?", "mr": "कोणती list method त्याच यादीतील घटकांचा क्रम उलटवते?"}},
+      "113": {"question": {"hi": "कौन सा अंतर्निहित फ़ंक्शन iterable का सबसे बड़ा तत्व लौटाता है?", "mr": "कोणते अंगभूत फंक्शन iterable मधील सर्वात मोठा घटक परत करते?"}},
+      "114": {"question": {"hi": "कौन सा Python keyword variable नाम की binding हटाता है?", "mr": "कोणता Python keyword variable नावाचे binding काढतो?"}},
+      "116": {"question": {"hi": "कौन सी str method separator का उपयोग करके strings के iterable को जोड़ती है?", "mr": "कोणती str method separator वापरून strings चा iterable जोडते?"}},
+      "117": {"question": {"hi": "Python में कौन सी method स्ट्रिंग को सूची में विभाजित करती है?", "mr": "Python मध्ये कोणती method स्ट्रिंग यादीत विभागते?"}},
+      "120": {"question": {"hi": "कौन सी str method शुरुआत और अंत का whitespace हटाती है?", "mr": "कोणती str method सुरुवातीचा आणि शेवटचा whitespace काढते?"}},
+      "123": {"question": {"hi": "Python में 10 % 3 का परिणाम क्या है?", "mr": "Python मध्ये 10 % 3 चा परिणाम काय आहे?"}},
+      "124": {"question": {"hi": "asyncio के साथ उपयोग के लिए coroutine function कौन सा syntax परिभाषित करता है?", "mr": "asyncio सोबत वापरण्यासाठी coroutine function कोणता syntax परिभाषित करतो?"}}
+    },
+    "Ruby": {
+      "101": {"question": {"hi": "कौन सा Ruby range literal अपना अंतिम मान शामिल नहीं करता?", "mr": "कोणता Ruby range literal त्याचे अंतिम मूल्य समाविष्ट करत नाही?"}},
+      "102": {"question": {"hi": "कौन सी String method स्ट्रिंग को symbol में बदलती है?", "mr": "कोणती String method स्ट्रिंगचे symbol मध्ये रूपांतर करते?"}},
+      "103": {"question": {"hi": "Ruby में कौन सा keyword loop की अगली iteration पर जाता है?", "mr": "Ruby मध्ये कोणता keyword loop च्या पुढील iteration वर जातो?"}},
+      "113": {"question": {"hi": "कौन सी Integer method किसी block को निश्चित संख्या में चलाती है?", "mr": "कोणती Integer method एखादा block ठरावीक वेळा चालवते?"}},
+      "114": {"question": {"hi": "कौन सी Hash method जाँचती है कि दी गई key मौजूद है या नहीं?", "mr": "कोणती Hash method दिलेली key अस्तित्वात आहे का ते तपासते?"}},
+      "122": {"question": {"hi": "Ruby में कौन सा keyword loop से जल्दी बाहर निकलता है?", "mr": "Ruby मध्ये कोणता keyword loop मधून लवकर बाहेर पडतो?"}},
+      "123": {"question": {"hi": "Ruby का safe navigation operator कौन सा है?", "mr": "Ruby चा safe navigation operator कोणता आहे?"}}
+    },
+    "Terraform": {
+      "63": {"question": {"hi": "terraform ब्लॉक का कौन सा argument अनुमत Terraform CLI संस्करण को सीमित करता है?", "mr": "terraform ब्लॉकमधील कोणता argument परवानगी असलेल्या Terraform CLI आवृत्तीवर मर्यादा घालतो?"}}
+    }
+  }
+}

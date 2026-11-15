@@ -1,3 +1,4 @@
+import '../l10n/game_localizations.dart';
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
@@ -67,17 +68,19 @@ class _DailyGameGateState extends State<DailyGameGate> {
                           color: colors.primary,
                         ),
                         const SizedBox(height: 20),
-                        const Text(
-                          'Already Played Today!',
+                        Text(
+                          gameL10n(context).gameUiAlreadyPlayedToday,
                           textAlign: TextAlign.center,
-                          style: TextStyle(
+                          style: const TextStyle(
                             fontSize: 24,
                             fontWeight: FontWeight.bold,
                           ),
                         ),
                         const SizedBox(height: 12),
                         Text(
-                          'Come back tomorrow for another round.',
+                          gameL10n(
+                            context,
+                          ).gameUiComeBackTomorrowForAnotherRound,
                           textAlign: TextAlign.center,
                           style: TextStyle(
                             fontSize: 16,
@@ -88,7 +91,7 @@ class _DailyGameGateState extends State<DailyGameGate> {
                         FilledButton.icon(
                           onPressed: () => Navigator.pop(context),
                           icon: const Icon(Icons.arrow_back_rounded),
-                          label: const Text('Back to Games'),
+                          label: Text(gameL10n(context).gameUiBackToGames),
                         ),
                       ],
                     ),
@@ -124,7 +127,7 @@ Future<void> showGameResultDialog(
             Navigator.pop(dialogContext);
             Navigator.pop(context);
           },
-          child: const Text('Done'),
+          child: Text(gameL10n(context).gameUiDone),
         ),
       ],
     ),

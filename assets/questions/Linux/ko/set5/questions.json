@@ -1,0 +1,302 @@
+[
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "Bash 확장을 \"$name\"처럼 따옴표로 감싸면 무엇을 막는가?",
+    "options": [
+      "따옴표 내부의 모든 매개변수 확장",
+      "나중에 변수가 변경되는 것",
+      "명령이 빈 인수를 받는 것",
+      "확장된 값의 단어 분리와 경로명 확장"
+    ],
+    "answer": "확장된 값의 단어 분리와 경로명 확장"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "Bash에서 '$HOME'을 작은따옴표로 감싸면 어떻게 되는가?",
+    "options": [
+      "이전 작업 디렉터리로 확장된다",
+      "달러 기호를 빼고 HOME을 전달한다",
+      "문자 그대로 $HOME을 전달한다",
+      "사용자의 홈 디렉터리로 확장된다"
+    ],
+    "answer": "문자 그대로 $HOME을 전달한다"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "Bash의 $(command) 명령 치환은 무엇을 삽입하는가?",
+    "options": [
+      "명령의 종료 상태를 십진수로",
+      "끝의 줄바꿈을 제거한 명령의 표준 출력",
+      "명령의 숫자 프로세스 ID",
+      "명령의 표준 오류만"
+    ],
+    "answer": "끝의 줄바꿈을 제거한 명령의 표준 출력"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "현재 셸 안에서 스크립트 파일의 명령을 읽고 실행하는 Bash 내장 명령은?",
+    "options": [
+      "source",
+      "exec",
+      "eval",
+      "export"
+    ],
+    "answer": "source"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "Bash 스크립트의 'exec program'이 성공하면 무엇을 하는가?",
+    "options": [
+      "셸은 계속 실행하면서 program을 백그라운드로 시작한다",
+      "program을 두 번 실행하고 결과를 비교한다",
+      "program의 출력을 셸 소스로 불러온다",
+      "셸 프로세스를 program으로 대체한다"
+    ],
+    "answer": "셸 프로세스를 program으로 대체한다"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "Bash pipefail을 켠 상태에서 하나 이상의 명령이 실패하면 파이프라인 상태는?",
+    "options": [
+      "마지막 명령이 성공하면 항상 영",
+      "모든 명령 종료 상태의 합",
+      "영이 아닌 값을 반환한 가장 오른쪽 명령의 상태",
+      "항상 첫 명령의 상태"
+    ],
+    "answer": "영이 아닌 값을 반환한 가장 오른쪽 명령의 상태"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "GNU Coreutils로 checksums.txt의 SHA-256 체크섬을 검증하는 명령은?",
+    "options": [
+      "cksum checksums.txt",
+      "sha256sum -c checksums.txt",
+      "sha256sum checksums.txt",
+      "md5sum -c checksums.txt"
+    ],
+    "answer": "sha256sum -c checksums.txt"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "logs 디렉터리를 gzip 압축 아카이브로 만드는 GNU tar 명령은?",
+    "options": [
+      "tar -czf logs.tar.gz logs",
+      "tar -xzf logs.tar.gz",
+      "tar -tzf logs.tar.gz",
+      "gzip -d logs.tar.gz"
+    ],
+    "answer": "tar -czf logs.tar.gz logs"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "추출하지 않고 아카이브 내용을 나열하는 tar 옵션은?",
+    "options": [
+      "-x",
+      "-c",
+      "-r",
+      "-t"
+    ],
+    "answer": "-t"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "Linux 디렉터리의 setgid 비트는 그 안의 새 파일에 보통 어떤 영향을 주는가?",
+    "options": [
+      "root 사용자의 소유가 된다",
+      "소유자도 삭제할 수 없게 된다",
+      "디렉터리의 그룹 소유권을 상속한다",
+      "항상 모든 사용자가 실행할 수 있게 된다"
+    ],
+    "answer": "디렉터리의 그룹 소유권을 상속한다"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "공유 쓰기 가능 디렉터리의 스티키 비트가 주로 제한하는 것은?",
+    "options": [
+      "파일 시스템에서 디스크 블록을 할당할 수 있는 사용자",
+      "디렉터리 안의 파일을 삭제하거나 이름을 바꿀 수 있는 사용자",
+      "디렉터리 안의 모든 파일을 읽을 수 있는 사용자",
+      "디렉터리 밖의 프로그램을 실행할 수 있는 사용자"
+    ],
+    "answer": "디렉터리 안의 파일을 삭제하거나 이름을 바꿀 수 있는 사용자"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "파일의 접근 제어 목록 항목을 보여 주는 명령은?",
+    "options": [
+      "getfacl file.txt",
+      "setfacl -b file.txt",
+      "getfattr -d file.txt",
+      "lsattr file.txt"
+    ],
+    "answer": "getfacl file.txt"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "암호 해시 대신 로컬 사용자 계정 기록을 보통 저장하는 파일은?",
+    "options": [
+      "/etc/shadow",
+      "/etc/group",
+      "/etc/gshadow",
+      "/etc/passwd"
+    ],
+    "answer": "/etc/passwd"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "기존 보조 그룹을 대체하지 않고 alice를 docker 보조 그룹에 추가하는 명령은?",
+    "options": [
+      "usermod -g docker alice",
+      "usermod -l docker alice",
+      "usermod -aG docker alice",
+      "usermod -G docker alice"
+    ],
+    "answer": "usermod -aG docker alice"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "암호 기반 인증을 막도록 Linux 사용자의 암호를 잠그는 명령은?",
+    "options": [
+      "passwd -e alice",
+      "passwd -l alice",
+      "passwd -u alice",
+      "passwd -S alice"
+    ],
+    "answer": "passwd -l alice"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "설정된 이름 서비스 원본에서 alice의 passwd 항목을 조회하는 명령은?",
+    "options": [
+      "getent passwd alice",
+      "groups alice",
+      "id -u alice",
+      "whoami"
+    ],
+    "answer": "getent passwd alice"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "부팅 때 자동 마운트할 파일 시스템을 보통 정의하는 파일은?",
+    "options": [
+      "/etc/hosts",
+      "/etc/shells",
+      "/etc/resolv.conf",
+      "/etc/fstab"
+    ],
+    "answer": "/etc/fstab"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "파일 시스템 UUID와 다른 블록 장치 속성을 표시하는 명령은?",
+    "options": [
+      "modinfo",
+      "lscpu",
+      "blkid",
+      "lsmod"
+    ],
+    "answer": "blkid"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "복구용 fsck를 실행하기 전에 파일 시스템을 보통 마운트 해제해야 하는 이유는?",
+    "options": [
+      "마운트된 파일 시스템에는 빈 공간이 전혀 없기 때문",
+      "동시 쓰기가 복구와 충돌해 데이터를 손상할 수 있기 때문",
+      "마운트 해제가 모든 메타데이터를 자동 암호화하기 때문",
+      "fsck는 장치 이름이 없는 파일 시스템만 지원하기 때문"
+    ],
+    "answer": "동시 쓰기가 복구와 충돌해 데이터를 손상할 수 있기 때문"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "사용 중인 스왑 영역을 보여 주는 명령은?",
+    "options": [
+      "swapon --show",
+      "swapoff -a",
+      "free -s 1",
+      "vmstat -d"
+    ],
+    "answer": "swapon --show"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "의존 모듈까지 포함해 Linux 커널 모듈을 불러오는 명령은?",
+    "options": [
+      "rmmod",
+      "lsmod",
+      "modinfo",
+      "modprobe"
+    ],
+    "answer": "modprobe"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "유닛을 /dev/null에 연결해 시작을 막는 systemd 명령은?",
+    "options": [
+      "systemctl stop app.service",
+      "systemctl reset-failed app.service",
+      "systemctl mask app.service",
+      "systemctl disable app.service"
+    ],
+    "answer": "systemctl mask app.service"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "인증에 사용할 개인 키 파일을 선택하는 SSH 옵션은?",
+    "options": [
+      "-R",
+      "-i",
+      "-p",
+      "-L"
+    ],
+    "answer": "-i"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "SSH로 로컬 파일을 원격 사용자의 디렉터리에 안전하게 복사하는 명령은?",
+    "options": [
+      "scp report.txt alice@server:/home/alice/",
+      "ssh alice@server cat report.txt",
+      "sftp -b report.txt alice@server",
+      "ssh-keygen -f report.txt"
+    ],
+    "answer": "scp report.txt alice@server:/home/alice/"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "'rsync -n'이 요청하는 것은?",
+    "options": [
+      "원본에 없는 대상 파일 삭제",
+      "전송 파일 데이터 압축",
+      "모든 파일 시스템 속성의 재귀적 보존",
+      "실제 변경 없이 예정된 변경을 보고하는 모의 실행"
+    ],
+    "answer": "실제 변경 없이 예정된 변경을 보고하는 모의 실행"
+  }
+]

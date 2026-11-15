@@ -1,0 +1,302 @@
+[
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "কাজের স্তরে আলাদা সেটিং না থাকলে চেক মোডে সেই মোড না-সমর্থনকারী মডিউলের কী হয়?",
+    "options": [
+      "মডিউল সবসময় স্বাভাবিক পরিবর্তন করে",
+      "মডিউল স্বয়ংক্রিয়ভাবে localhost-এ চলে",
+      "চেক মোড সমর্থন করা পর্যন্ত বারবার চেষ্টা করা হয়",
+      "পরিবর্তন না করে মডিউলটি বাদ দেওয়া হয়"
+    ],
+    "answer": "পরিবর্তন না করে মডিউলটি বাদ দেওয়া হয়"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "--check দিয়ে প্লেবুক ডাকলেও বাস্তব পরিবর্তন করতে দেয় কোন কাজের সেটিং?",
+    "options": [
+      "changed_when: false",
+      "ignore_errors: true",
+      "check_mode: false",
+      "diff: false"
+    ],
+    "answer": "check_mode: false"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "আগে বিজ্ঞপ্তি পাওয়া হ্যান্ডলার সঙ্গে সঙ্গে চালায় কোন Ansible meta অ্যাকশন?",
+    "options": [
+      "reset_connection",
+      "flush_handlers",
+      "clear_facts",
+      "end_play"
+    ],
+    "answer": "flush_handlers"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "পরিবর্তন করা দুটি কাজ একই হ্যান্ডলার চলার আগে তাকে জানালে সেই চালানোর সময় হ্যান্ডলারটি সাধারণত কতবার চলে?",
+    "options": [
+      "একবার",
+      "দুবার",
+      "প্রতি ইনভেন্টরি গ্রুপে একবার",
+      "বিজ্ঞপ্তিতে সংঘাত হওয়ায় একবারও নয়"
+    ],
+    "answer": "একবার"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "একই চালানোর মুহূর্তে বিজ্ঞপ্তি পাওয়া হ্যান্ডলারদের ক্রম কী ঠিক করে?",
+    "options": [
+      "নামের বর্ণানুক্রম",
+      "notify তালিকায় নামের ক্রম",
+      "পরিচালিত হোস্টগুলোর যুক্ত হওয়ার ক্রম",
+      "handlers অংশে সংজ্ঞার ক্রম"
+    ],
+    "answer": "handlers অংশে সংজ্ঞার ক্রম"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "কোন ব্যর্থতা সাধারণত ব্লকের rescue কাজ চালায়?",
+    "options": [
+      "প্লেবুকে অবৈধ কাজের সংজ্ঞা থাকা",
+      "YAML নথি পার্স করতে না পারা",
+      "ব্লকের ভেতরের কাজ ব্যর্থ ফল ফেরত দেওয়া",
+      "কাজ চলার আগে হোস্টে পৌঁছানো অসম্ভব হওয়া"
+    ],
+    "answer": "ব্লকের ভেতরের কাজ ব্যর্থ ফল ফেরত দেওয়া"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "সাধারণ কাজে ignore_errors কোন ত্রুটি চাপা দেয় না?",
+    "options": [
+      "failed_when শর্ত true হওয়া",
+      "অসংজ্ঞায়িত ভেরিয়েবলের ত্রুটি",
+      "কমান্ডের জানানো শূন্য ছাড়া অন্য প্রস্থান অবস্থা",
+      "মডিউলের ফল স্পষ্টভাবে failed হওয়া"
+    ],
+    "answer": "অসংজ্ঞায়িত ভেরিয়েবলের ত্রুটি"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "সামলানো হয়নি এমন কাজের ব্যর্থতায় বর্তমান ব্যাচ সেই কাজ শেষ করলে সব হোস্টে play থামায় কোন কীওয়ার্ড?",
+    "options": [
+      "any_errors_fatal",
+      "ignore_unreachable",
+      "max_fail_percentage: 100",
+      "force_handlers"
+    ],
+    "answer": "any_errors_fatal"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "পৌঁছানো যায় এমন হোস্টে পরের কাজ ব্যর্থ হলে force_handlers কী করে?",
+    "options": [
+      "সব সংজ্ঞায়িত হ্যান্ডলার বিজ্ঞপ্তি ছাড়াও চলে",
+      "সব ব্যর্থ কাজ স্বয়ংক্রিয়ভাবে আবার চেষ্টা করা হয়",
+      "সাধারণ কাজের আগে হ্যান্ডলার চলে",
+      "আগে বিজ্ঞপ্তি পাওয়া হ্যান্ডলার সেই হোস্টে তখনও চলতে পারে"
+    ],
+    "answer": "আগে বিজ্ঞপ্তি পাওয়া হ্যান্ডলার সেই হোস্টে তখনও চলতে পারে"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "সংবেদনশীল কাজের আর্গুমেন্ট ও ফলের স্বাভাবিক লগ বন্ধ করে কোন সেটিং?",
+    "options": [
+      "check_mode: true",
+      "changed_when: false",
+      "no_log: true",
+      "diff: true"
+    ],
+    "answer": "no_log: true"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "--diff চালু থাকলেও ফাইলের বিষয়বস্তুর পার্থক্য লুকায় কোন কাজের সেটিং?",
+    "options": [
+      "ignore_errors: true",
+      "diff: false",
+      "no_log: false",
+      "check_mode: false"
+    ],
+    "answer": "diff: false"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "অন্য ইনভেন্টরি হোস্টের ভেরিয়েবল কোন অভিধান থেকে পাওয়া যায়?",
+    "options": [
+      "hostvars",
+      "ansible_facts",
+      "environment",
+      "ansible_loop"
+    ],
+    "answer": "hostvars"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "বর্তমান হোস্টের ইনভেন্টরি নাম থাকে কোন বিশেষ ভেরিয়েবলে?",
+    "options": [
+      "ansible_host",
+      "ansible_user",
+      "ansible_playbook_python",
+      "inventory_hostname"
+    ],
+    "answer": "inventory_hostname"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "হোস্ট গ্রুপের সাধারণ ভেরিয়েবলের জন্য ইনভেন্টরির পাশে সাধারণত কোন ডিরেক্টরি থাকে?",
+    "options": [
+      "roles",
+      "collections",
+      "group_vars",
+      "host_vars"
+    ],
+    "answer": "group_vars"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "ansible.builtin.file লুকআপ ডিফল্টভাবে কোথায় ফাইল পড়ে?",
+    "options": [
+      "become_user নির্দেশিত হোস্টে",
+      "কন্ট্রোল নোডে",
+      "প্রতিটি পরিচালিত হোস্টে",
+      "play-এর প্রথম হোস্টে"
+    ],
+    "answer": "কন্ট্রোল নোডে"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "YAML স্ট্রিংকে Ansible ডেটা কাঠামোতে বদলায় কোন ফিল্টার?",
+    "options": [
+      "from_yaml",
+      "to_yaml",
+      "to_json",
+      "dict2items"
+    ],
+    "answer": "from_yaml"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "অভিধানকে কী/মান অভিধানের তালিকায় বদলায় কোন ফিল্টার?",
+    "options": [
+      "items2dict",
+      "flatten",
+      "zip",
+      "dict2items"
+    ],
+    "answer": "dict2items"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "তালিকার পুনরাবৃত্ত উপাদান বাদ দেয় কোন ফিল্টার?",
+    "options": [
+      "reverse",
+      "flatten",
+      "unique",
+      "sort"
+    ],
+    "answer": "unique"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "এক্সপ্রেশন পরীক্ষা করে নির্ধারিত শর্ত পূরণ না হলে ব্যর্থ হয় কোন মডিউল?",
+    "options": [
+      "ansible.builtin.set_fact",
+      "ansible.builtin.assert",
+      "ansible.builtin.debug",
+      "ansible.builtin.pause"
+    ],
+    "answer": "ansible.builtin.assert"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "রেগুলার এক্সপ্রেশন দিয়ে টেক্সট ফাইলের নির্দিষ্ট লাইন পরিচালনা করে কোন মডিউল?",
+    "options": [
+      "ansible.builtin.lineinfile",
+      "ansible.builtin.blockinfile",
+      "ansible.builtin.copy",
+      "ansible.builtin.slurp"
+    ],
+    "answer": "ansible.builtin.lineinfile"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "URL অনুরোধ করে প্রত্যাশিত HTTP স্ট্যাটাস কোড পরীক্ষা করতে পারে কোন মডিউল?",
+    "options": [
+      "ansible.builtin.get_url",
+      "ansible.builtin.fetch",
+      "ansible.builtin.wait_for",
+      "ansible.builtin.uri"
+    ],
+    "answer": "ansible.builtin.uri"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "TCP পোর্ট চাওয়া অবস্থায় আসা পর্যন্ত অপেক্ষা করে কোন মডিউল?",
+    "options": [
+      "ansible.builtin.async_status",
+      "ansible.builtin.ping",
+      "ansible.builtin.wait_for",
+      "ansible.builtin.pause"
+    ],
+    "answer": "ansible.builtin.wait_for"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "নির্ধারিত পথ আগে থেকেই থাকলে ansible.builtin.command চালানো বাদ দেয় কোন পরামিতি?",
+    "options": [
+      "stdin",
+      "creates",
+      "removes",
+      "chdir"
+    ],
+    "answer": "creates"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "সিম্বলিক লিংক বানায় file মডিউলের কোন সেটিং?",
+    "options": [
+      "state: link",
+      "state: directory",
+      "state: touch",
+      "state: hard"
+    ],
+    "answer": "state: link"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "পরবর্তী play-এর জন্য মেমরির ইনভেন্টরিতে হোস্ট যোগ করতে পারে কোন মডিউল?",
+    "options": [
+      "ansible.builtin.group_by",
+      "ansible.builtin.set_fact",
+      "ansible.builtin.meta",
+      "ansible.builtin.add_host"
+    ],
+    "answer": "ansible.builtin.add_host"
+  }
+]

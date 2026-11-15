@@ -1,0 +1,302 @@
+[
+  {
+    "category": "Docker",
+    "set": 2,
+    "question": "Какая команда показывает версию Docker?",
+    "options": [
+      "docker --version",
+      "docker run",
+      "docker ps",
+      "docker pull"
+    ],
+    "answer": "docker --version"
+  },
+  {
+    "category": "Docker",
+    "set": 2,
+    "question": "Какая команда показывает версию Docker в формате JSON?",
+    "options": [
+      "docker version --format json",
+      "docker version -j",
+      "docker version --json",
+      "docker info --json"
+    ],
+    "answer": "docker version --format json"
+  },
+  {
+    "category": "Docker",
+    "set": 2,
+    "question": "Какая команда выводит только идентификаторы контейнеров?",
+    "options": [
+      "docker ps -q",
+      "docker ps --ids",
+      "docker ps -i",
+      "docker ps --size"
+    ],
+    "answer": "docker ps -q"
+  },
+  {
+    "category": "Docker",
+    "set": 2,
+    "question": "Какая команда выводит список всех контейнеров, включая остановленные?",
+    "options": [
+      "docker ps -a",
+      "docker ps --size",
+      "docker containers",
+      "docker list"
+    ],
+    "answer": "docker ps -a"
+  },
+  {
+    "category": "Docker",
+    "set": 2,
+    "question": "Какая команда создаёт контейнер без его запуска?",
+    "options": [
+      "docker create",
+      "docker run",
+      "docker build",
+      "docker start"
+    ],
+    "answer": "docker create"
+  },
+  {
+    "category": "Docker",
+    "set": 2,
+    "question": "Какая команда запускает существующий остановленный контейнер?",
+    "options": [
+      "docker start",
+      "docker run",
+      "docker create",
+      "docker exec"
+    ],
+    "answer": "docker start"
+  },
+  {
+    "category": "Docker",
+    "set": 2,
+    "question": "Какая команда корректно останавливает работающий контейнер?",
+    "options": [
+      "docker stop",
+      "docker kill",
+      "docker pause",
+      "docker halt"
+    ],
+    "answer": "docker stop"
+  },
+  {
+    "category": "Docker",
+    "set": 2,
+    "question": "Какая команда принудительно завершает контейнер?",
+    "options": [
+      "docker kill",
+      "docker stop",
+      "docker terminate",
+      "docker end"
+    ],
+    "answer": "docker kill"
+  },
+  {
+    "category": "Docker",
+    "set": 2,
+    "question": "Какая команда перезапускает контейнер?",
+    "options": [
+      "docker restart",
+      "docker reset",
+      "docker reload",
+      "docker rerun"
+    ],
+    "answer": "docker restart"
+  },
+  {
+    "category": "Docker",
+    "set": 2,
+    "question": "Какая команда приостанавливает работающий контейнер?",
+    "options": [
+      "docker pause",
+      "docker stop",
+      "docker hold",
+      "docker freeze"
+    ],
+    "answer": "docker pause"
+  },
+  {
+    "category": "Docker",
+    "set": 2,
+    "question": "Какая команда возобновляет приостановленный контейнер?",
+    "options": [
+      "docker unpause",
+      "docker resume",
+      "docker start",
+      "docker restart"
+    ],
+    "answer": "docker unpause"
+  },
+  {
+    "category": "Docker",
+    "set": 2,
+    "question": "Какая команда удаляет контейнер?",
+    "options": [
+      "docker rm",
+      "docker stop",
+      "docker delete",
+      "docker clear"
+    ],
+    "answer": "docker rm"
+  },
+  {
+    "category": "Docker",
+    "set": 2,
+    "question": "Какая команда удаляет образ Docker?",
+    "options": [
+      "docker rmi",
+      "docker rm",
+      "docker erase",
+      "docker clean"
+    ],
+    "answer": "docker rmi"
+  },
+  {
+    "category": "Docker",
+    "set": 2,
+    "question": "Какая команда показывает историю образа?",
+    "options": [
+      "docker history",
+      "docker layers",
+      "docker image show",
+      "docker inspect"
+    ],
+    "answer": "docker history"
+  },
+  {
+    "category": "Docker",
+    "set": 2,
+    "question": "Какая опция docker run задаёт переменную APP_ENV равной prod?",
+    "options": [
+      "--name APP_ENV=prod",
+      "--hostname APP_ENV=prod",
+      "-e APP_ENV=prod",
+      "--label APP_ENV=prod"
+    ],
+    "answer": "-e APP_ENV=prod"
+  },
+  {
+    "category": "Docker",
+    "set": 2,
+    "question": "Какая опция делает корневую файловую систему контейнера доступной только для чтения?",
+    "options": [
+      "--init",
+      "--read-only",
+      "--privileged",
+      "--tty"
+    ],
+    "answer": "--read-only"
+  },
+  {
+    "category": "Docker",
+    "set": 2,
+    "question": "Какая политика перезапуска запускает контейнер повторно после ненулевого кода выхода, но не после успешного завершения?",
+    "options": [
+      "on-failure",
+      "always",
+      "unless-stopped",
+      "no"
+    ],
+    "answer": "on-failure"
+  },
+  {
+    "category": "Docker",
+    "set": 2,
+    "question": "Какая команда ограничивает новый контейнер памятью 512 MiB?",
+    "options": [
+      "docker run --memory-reservation 512m alpine",
+      "docker run --memory-swap 512m alpine",
+      "docker run --shm-size 512m alpine",
+      "docker run --memory 512m alpine"
+    ],
+    "answer": "docker run --memory 512m alpine"
+  },
+  {
+    "category": "Docker",
+    "set": 2,
+    "question": "Какая опция задаёт контейнеру квоту CPU, равную половине CPU?",
+    "options": [
+      "--cpuset-cpus 0",
+      "--cpu-period 50000",
+      "--cpus 0.5",
+      "--cpu-shares 512"
+    ],
+    "answer": "--cpus 0.5"
+  },
+  {
+    "category": "Docker",
+    "set": 2,
+    "question": "Какой тип монтирования напрямую предоставляет определённый каталог хоста внутри контейнера?",
+    "options": [
+      "Монтирование tmpfs",
+      "Bind mount",
+      "Именованный том",
+      "Анонимный том"
+    ],
+    "answer": "Bind mount"
+  },
+  {
+    "category": "Docker",
+    "set": 2,
+    "question": "Какой тип монтирования хранит файлы в памяти хоста, а не как обычные постоянные файлы на диске Linux?",
+    "options": [
+      "Монтирование tmpfs",
+      "Bind mount",
+      "Именованный том",
+      "Анонимный том"
+    ],
+    "answer": "Монтирование tmpfs"
+  },
+  {
+    "category": "Docker",
+    "set": 2,
+    "question": "Какая команда подключает существующий контейнер web к сети backend?",
+    "options": [
+      "docker network disconnect backend web",
+      "docker network inspect backend web",
+      "docker network rm backend web",
+      "docker network connect backend web"
+    ],
+    "answer": "docker network connect backend web"
+  },
+  {
+    "category": "Docker",
+    "set": 2,
+    "question": "Какая сетевая возможность отличает пользовательский мост от стандартного моста Docker?",
+    "options": [
+      "Автоматическая межхостовая маршрутизация без настройки",
+      "Автоматическая публикация каждого объявленного порта",
+      "Автоматическое разрешение DNS-имён между контейнерами",
+      "Автоматическое шифрование всего трафика контейнеров"
+    ],
+    "answer": "Автоматическое разрешение DNS-имён между контейнерами"
+  },
+  {
+    "category": "Docker",
+    "set": 2,
+    "question": "Какая команда переименовывает контейнер oldweb в newweb?",
+    "options": [
+      "docker network connect oldweb newweb",
+      "docker rename oldweb newweb",
+      "docker tag oldweb newweb",
+      "docker cp oldweb newweb"
+    ],
+    "answer": "docker rename oldweb newweb"
+  },
+  {
+    "category": "Docker",
+    "set": 2,
+    "question": "Какая команда ждёт остановки web и выводит его код выхода?",
+    "options": [
+      "docker wait web",
+      "docker logs web",
+      "docker top web",
+      "docker attach web"
+    ],
+    "answer": "docker wait web"
+  }
+]

@@ -1,0 +1,302 @@
+[
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "Terraform ಈಗಿರುವ ಆಬ್ಜೆಕ್ಟ್ ಉಳಿಸಿಕೊಳ್ಳಲು ರಿಸೋರ್ಸ್ ವಿಳಾಸ ಬದಲಾವಣೆ ದಾಖಲಿಸುವ ಘೋಷಣಾತ್ಮಕ ಬ್ಲಾಕ್ ಯಾವುದು?",
+    "options": [
+      "removed",
+      "check",
+      "moved",
+      "import"
+    ],
+    "answer": "moved"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "moved ಬ್ಲಾಕ್‌ನಲ್ಲಿ ಹೊಸ ರಿಸೋರ್ಸ್ ವಿಳಾಸ ನೀಡುವ ಆರ್ಗ್ಯುಮೆಂಟ್ ಯಾವುದು?",
+    "options": [
+      "provider",
+      "to",
+      "from",
+      "id"
+    ],
+    "answer": "to"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "apply ಸಮಯದಲ್ಲಿ ಆಮದು ಮಾಡಲು ಈಗಿರುವ ಮೂಲಸೌಕರ್ಯ ಆಬ್ಜೆಕ್ಟ್ ಘೋಷಿಸುವ ಬ್ಲಾಕ್ ಯಾವುದು?",
+    "options": [
+      "import",
+      "moved",
+      "output",
+      "check"
+    ],
+    "answer": "import"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "ನಿಜವಾದ ಮೂಲಸೌಕರ್ಯ ಆಬ್ಜೆಕ್ಟ್ ನಾಶಪಡಿಸದೆ ರಿಸೋರ್ಸ್ ಅನ್ನು ಸ್ಟೇಟ್‌ನಿಂದ ಮರೆಯುವ removed ಬ್ಲಾಕ್ ಸೆಟ್ಟಿಂಗ್ ಯಾವುದು?",
+    "options": [
+      "lifecycle { destroy = true }",
+      "lifecycle { create_before_destroy = true }",
+      "lifecycle { prevent_destroy = false }",
+      "lifecycle { destroy = false }"
+    ],
+    "answer": "lifecycle { destroy = false }"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "ಸಾಮಾನ್ಯ ಇನ್‌ಪುಟ್ ಚರವನ್ನು sensitive ಎಂದು ಗುರುತಿಸಿದಾಗ ಸ್ಥಳೀಯ ಸ್ಟೇಟ್ ಫೈಲ್‌ನ ಮೌಲ್ಯಕ್ಕೆ ಏನಾಗುತ್ತದೆ?",
+    "options": [
+      "ಅದು ಯಾವಾಗಲೂ ಸ್ಟೇಟ್‌ನಿಂದ ಹೊರಗಿರುತ್ತದೆ",
+      "ಉಳಿಸುವ ಮೊದಲು ಅದರ ಬದಲು ಚರದ ಹೆಸರನ್ನು ಇಡಲಾಗುತ್ತದೆ",
+      "ಸಾಮಾನ್ಯ CLI ಔಟ್‌ಪುಟ್‌ನಲ್ಲಿ ಮರೆಮಾಡಿದರೂ ಅದು ಸರಳ ಪಠ್ಯವಾಗಿ ಉಳಿಯಬಹುದು",
+      "sensitive ಫ್ಲ್ಯಾಗ್ ಅದನ್ನು ಸ್ವಯಂಚಾಲಿತವಾಗಿ ಗೂಢಲಿಪೀಕರಿಸುತ್ತದೆ"
+    ],
+    "answer": "ಸಾಮಾನ್ಯ CLI ಔಟ್‌ಪುಟ್‌ನಲ್ಲಿ ಮರೆಮಾಡಿದರೂ ಅದು ಸರಳ ಪಠ್ಯವಾಗಿ ಉಳಿಯಬಹುದು"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "ಗೌಪ್ಯ ಔಟ್‌ಪುಟ್ ಮೌಲ್ಯಗಳನ್ನು ಯಂತ್ರ ಓದಬಹುದಾದ ರೂಪದಲ್ಲಿ ಬಹಿರಂಗಪಡಿಸುವ output ಆಜ್ಞೆ ಸ್ವರೂಪ ಯಾವುದು?",
+    "options": [
+      "terraform providers schema -json",
+      "terraform output -json",
+      "terraform output -help",
+      "terraform output -no-color"
+    ],
+    "answer": "terraform output -json"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "Terraform ಮೌಲ್ಯವನ್ನು JSON ಸ್ಟ್ರಿಂಗ್ ಆಗಿ ಮಾಡುವ ಫಂಕ್ಷನ್ ಯಾವುದು?",
+    "options": [
+      "jsonencode",
+      "jsondecode",
+      "yamldecode",
+      "file"
+    ],
+    "answer": "jsonencode"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "JSON ಸ್ಟ್ರಿಂಗ್ ಪಾರ್ಸ್ ಮಾಡಿ Terraform ಮೌಲ್ಯ ಮಾಡುವ ಫಂಕ್ಷನ್ ಯಾವುದು?",
+    "options": [
+      "jsonencode",
+      "yamlencode",
+      "templatefile",
+      "jsondecode"
+    ],
+    "answer": "jsondecode"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "ನೀಡಿದ ಚರ ಮ್ಯಾಪ್‌ನಿಂದ ಟೆಂಪ್ಲೇಟ್ ಫೈಲ್ ಸಿದ್ಧಪಡಿಸುವ ಫಂಕ್ಷನ್ ಯಾವುದು?",
+    "options": [
+      "fileset",
+      "filebase64",
+      "templatefile",
+      "file"
+    ],
+    "answer": "templatefile"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "ಡೈನಾಮಿಕ್ ದೋಷವಿಲ್ಲದೆ ಮೌಲ್ಯಮಾಪನವಾಗುವ ಮೊದಲ ಆರ್ಗ್ಯುಮೆಂಟ್ ನೀಡುವ ಫಂಕ್ಷನ್ ಯಾವುದು?",
+    "options": [
+      "lookup",
+      "try",
+      "can",
+      "coalesce"
+    ],
+    "answer": "try"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "ಅಭಿವ್ಯಕ್ತಿಯನ್ನು ಡೈನಾಮಿಕ್ ದೋಷವಿಲ್ಲದೆ ಮೌಲ್ಯಮಾಪನ ಮಾಡಬಹುದೇ ಎಂದು ತಿಳಿಸುವ ಫಂಕ್ಷನ್ ಯಾವುದು?",
+    "options": [
+      "can",
+      "try",
+      "contains",
+      "length"
+    ],
+    "answer": "can"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "mergeಗೆ ನೀಡಿದ ಎರಡು ಮ್ಯಾಪ್‌ಗಳಲ್ಲಿ ಒಂದೇ ಕೀ ಇದ್ದರೆ ಯಾವ ಮೌಲ್ಯಕ್ಕೆ ಆದ್ಯತೆ?",
+    "options": [
+      "ಹಿಂದಿನ ಆರ್ಗ್ಯುಮೆಂಟ್‌ನ ಮೌಲ್ಯ",
+      "ಮೌಲ್ಯಗಳನ್ನು ಯಾವಾಗಲೂ ಪಟ್ಟಿಯಾಗಿ ಸೇರಿಸಲಾಗುತ್ತದೆ",
+      "ಮರುಕಳಿಸಿದ ಕೀ ಯಾವಾಗಲೂ ದೋಷ ಉಂಟುಮಾಡುತ್ತದೆ",
+      "ನಂತರದ ಆರ್ಗ್ಯುಮೆಂಟ್‌ನ ಮೌಲ್ಯ"
+    ],
+    "answer": "ನಂತರದ ಆರ್ಗ್ಯುಮೆಂಟ್‌ನ ಮೌಲ್ಯ"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "5.4.x ಆವೃತ್ತಿಗಳಿಗೆ ಅವಕಾಶ ಕೊಟ್ಟು 5.5.0ಗೆ ಕೊಡದ ಪ್ರೊವೈಡರ್ ಆವೃತ್ತಿ ಮಿತಿ ಯಾವುದು?",
+    "options": [
+      ">= 5.4.0",
+      ">= 5.0, < 6.0",
+      "~> 5.4.0",
+      "~> 5.4"
+    ],
+    "answer": "~> 5.4.0"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "null ಕೊಟ್ಟಿರುವ ರಿಸೋರ್ಸ್ ಆರ್ಗ್ಯುಮೆಂಟ್ ಅನ್ನು Terraform ಸಾಮಾನ್ಯವಾಗಿ ಹೇಗೆ ಪರಿಗಣಿಸುತ್ತದೆ?",
+    "options": [
+      "ಸಂಪೂರ್ಣ ರಿಸೋರ್ಸ್ ಅಳಿಸುವ ವಿನಂತಿಯಾಗಿ",
+      "ಅದರ ಪೂರ್ವನಿಯೋಜಿತ ಮೌಲ್ಯಗಳು ಮತ್ತು ಅಗತ್ಯಗಳಿಗೆ ಒಳಪಟ್ಟ, ನೀಡದ ಆರ್ಗ್ಯುಮೆಂಟ್ ಆಗಿ",
+      "ಪ್ರತಿ ಪ್ರೊವೈಡರ್‌ನಲ್ಲಿ ಖಾಲಿ ಸ್ಟ್ರಿಂಗ್ ಆಗಿ",
+      "ಪ್ರತಿ ಪ್ರೊವೈಡರ್‌ನಲ್ಲಿ ಸಂಖ್ಯಾತ್ಮಕ ಶೂನ್ಯವಾಗಿ"
+    ],
+    "answer": "ಅದರ ಪೂರ್ವನಿಯೋಜಿತ ಮೌಲ್ಯಗಳು ಮತ್ತು ಅಗತ್ಯಗಳಿಗೆ ಒಳಪಟ್ಟ, ನೀಡದ ಆರ್ಗ್ಯುಮೆಂಟ್ ಆಗಿ"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "ತಾನು ಬರೆಯಲ್ಪಟ್ಟ ಮಾಡ್ಯೂಲ್‌ನ ಫೈಲ್‌ಸಿಸ್ಟಮ್ ಪಾತ್ ನೀಡುವ ಅಭಿವ್ಯಕ್ತಿ ಯಾವುದು?",
+    "options": [
+      "path.module",
+      "path.root",
+      "path.cwd",
+      "terraform.workspace"
+    ],
+    "answer": "path.module"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "CLI ಸಂರಚನೆಯನ್ನು HCP Terraformಗೆ ಸಂಪರ್ಕಿಸಲು ಶಿಫಾರಸಾದ terraform ಬ್ಲಾಕ್ ಸೌಲಭ್ಯ ಯಾವುದು?",
+    "options": [
+      "locals",
+      "moved",
+      "check",
+      "cloud"
+    ],
+    "answer": "cloud"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "ಉಲ್ಲೇಖಿತ ಸ್ಟೇಟ್‌ನಿಂದ terraform_remote_state ಯಾವ ಮೇಲ್ಮಟ್ಟದ ಮೌಲ್ಯಗಳನ್ನು ನೇರವಾಗಿ ನೀಡುತ್ತದೆ?",
+    "options": [
+      "ಪ್ರೊವೈಡರ್‌ನ ಎಲ್ಲ ದೃಢೀಕರಣ ವಿವರಗಳು",
+      "ಎಲ್ಲ ಉಪಮಾಡ್ಯೂಲ್‌ಗಳ ಸ್ಥಳೀಯ ಮೌಲ್ಯಗಳು",
+      "ಮೂಲ ಮಾಡ್ಯೂಲ್ ಔಟ್‌ಪುಟ್‌ಗಳು",
+      "ಪ್ರತಿ ರಿಸೋರ್ಸ್ ಗುಣ ಮೇಲ್ಮಟ್ಟದ ಔಟ್‌ಪುಟ್ ಆಗಿ"
+    ],
+    "answer": "ಮೂಲ ಮಾಡ್ಯೂಲ್ ಔಟ್‌ಪುಟ್‌ಗಳು"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "ಉಲ್ಲೇಖಿತ ನಿರ್ವಹಿತ ರಿಸೋರ್ಸ್ ಬದಲಾದಾಗ ಬದಲಿ ಕೇಳುವ ಜೀವನಚಕ್ರ ನಿಯಮ ಯಾವುದು?",
+    "options": [
+      "create_before_destroy",
+      "replace_triggered_by",
+      "ignore_changes",
+      "prevent_destroy"
+    ],
+    "answer": "replace_triggered_by"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "ಪ್ರತ್ಯೇಕ ಪ್ರೊವೈಡರ್ ಸ್ಥಾಪಿಸದೆ ಸಾಮಾನ್ಯ ಇನ್‌ಪುಟ್ ಮೌಲ್ಯಕ್ಕೆ ರಿಸೋರ್ಸ್ ಜೀವನಚಕ್ರ ಕೊಡುವ ಅಂತರ್ಗತ ರಿಸೋರ್ಸ್ ಯಾವುದು?",
+    "options": [
+      "terraform_data",
+      "terraform_remote_state",
+      "local_file",
+      "random_id"
+    ],
+    "answer": "terraform_data"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "ಸಾಮಾನ್ಯ plan ಅಥವಾ apply ಸಮಯದಲ್ಲಿ check ಬ್ಲಾಕ್‌ನ ದೃಢೀಕರಣ ವಿಫಲವಾದರೆ ಏನಾಗುತ್ತದೆ?",
+    "options": [
+      "Terraform ಪರೀಕ್ಷಿಸಿದ ಆಬ್ಜೆಕ್ಟ್ ಅನ್ನು ಯಾವಾಗಲೂ ನಾಶಪಡಿಸುತ್ತದೆ",
+      "Terraform ಮೌನವಾಗಿ check ಬ್ಲಾಕ್ ತೆಗೆದುಹಾಕುತ್ತದೆ",
+      "ಯಾವುದೇ ರಿಸೋರ್ಸ್ ನವೀಕರಿಸುವ ಮೊದಲು Terraform ಯಾವಾಗಲೂ ನಿರ್ಗಮಿಸುತ್ತದೆ",
+      "Terraform ಎಚ್ಚರಿಕೆ ನೀಡುತ್ತದೆ, ಆದರೆ ಆ ವೈಫಲ್ಯಕ್ಕಾಗಿಯೇ ಕಾರ್ಯ ತಡೆಯುವುದಿಲ್ಲ"
+    ],
+    "answer": "Terraform ಎಚ್ಚರಿಕೆ ನೀಡುತ್ತದೆ, ಆದರೆ ಆ ವೈಫಲ್ಯಕ್ಕಾಗಿಯೇ ಕಾರ್ಯ ತಡೆಯುವುದಿಲ್ಲ"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "ರಿಸೋರ್ಸ್ ಜೀವನಚಕ್ರದ ಪೂರ್ವಷರತ್ತು false ಆದರೆ ಏನಾಗುತ್ತದೆ?",
+    "options": [
+      "Terraform ರಿಸೋರ್ಸ್ ಅನ್ನು ಡೇಟಾ ಮೂಲವಾಗಿ ಬದಲಿಸುತ್ತದೆ",
+      "Terraform ಪೂರ್ವಷರತ್ತಿನ ಬದಲು ಕೇವಲ ಎಚ್ಚರಿಕೆ ನೀಡುತ್ತದೆ",
+      "Terraform ದೋಷ ತಿಳಿಸಿ ಸಂಬಂಧಿತ ಕಾರ್ಯ ತಡೆಯುತ್ತದೆ",
+      "ಮುಂದಿನ ಬಾರಿ ಚಲಿಸುವವರೆಗೆ Terraform ಪೂರ್ವಷರತ್ತು ನಿರ್ಲಕ್ಷಿಸುತ್ತದೆ"
+    ],
+    "answer": "Terraform ದೋಷ ತಿಳಿಸಿ ಸಂಬಂಧಿತ ಕಾರ್ಯ ತಡೆಯುತ್ತದೆ"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "Terraformನ ಸ್ವಂತ ಪರೀಕ್ಷಾ ಫೈಲ್‌ಗಳನ್ನು ಚಲಾಯಿಸುವ ಆಜ್ಞೆ ಯಾವುದು?",
+    "options": [
+      "terraform console",
+      "terraform test",
+      "terraform validate",
+      "terraform fmt"
+    ],
+    "answer": "terraform test"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "Terraform ಪರೀಕ್ಷೆಯ run ಬ್ಲಾಕ್‌ಗೆ ಪೂರ್ವನಿಯೋಜಿತ apply ಬದಲು plan ಮಾಡಿಸುವ ಸೆಟ್ಟಿಂಗ್ ಯಾವುದು?",
+    "options": [
+      "command = plan",
+      "command = validate",
+      "command = refresh",
+      "command = console"
+    ],
+    "answer": "command = plan"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "ಡೈರೆಕ್ಟರಿಯಡಿ ಗ್ಲಾಬ್ ಮಾದರಿಗೆ ಹೊಂದುವ ಸಾಪೇಕ್ಷ ಪಾತ್‌ಗಳ ಸಂಗ್ರಹ ನೀಡುವ ಫಂಕ್ಷನ್ ಯಾವುದು?",
+    "options": [
+      "file",
+      "dirname",
+      "basename",
+      "fileset"
+    ],
+    "answer": "fileset"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "ವಿಭಿನ್ನ ಪ್ರವೇಶ ನಿಯಂತ್ರಣ ಬೇಕಾದ ಪರಿಸರಗಳನ್ನು ಪ್ರತ್ಯೇಕಿಸಲು CLI ವರ್ಕ್‌ಸ್ಪೇಸ್ ಮಾತ್ರ ಏಕೆ ಸೂಕ್ತವಾಗದಿರಬಹುದು?",
+    "options": [
+      "ಅವು ವಿಭಿನ್ನ ಇನ್‌ಪುಟ್ ಚರ ಮೌಲ್ಯ ಬಳಸಲು ಬಿಡುವುದಿಲ್ಲ",
+      "ಅವು ಪ್ರತಿ ಪರಿಸರಕ್ಕೂ ಒಂದೇ ರಿಸೋರ್ಸ್ ಹೆಸರು ಬಳಸಲು ಒತ್ತಾಯಿಸುತ್ತವೆ",
+      "ಅವು ಒಂದೇ ಬ್ಯಾಕ್‌ಎಂಡ್ ಸಂರಚನೆ ಮತ್ತು ದೃಢೀಕರಣ ಸಂದರ್ಭ ಹಂಚಿಕೊಳ್ಳುತ್ತವೆ",
+      "ಅವು ಯಾವಾಗಲೂ ಒಂದೇ ಸ್ಟೇಟ್ ಸ್ನ್ಯಾಪ್‌ಶಾಟ್ ಹಂಚಿಕೊಳ್ಳುತ್ತವೆ"
+    ],
+    "answer": "ಅವು ಒಂದೇ ಬ್ಯಾಕ್‌ಎಂಡ್ ಸಂರಚನೆ ಮತ್ತು ದೃಢೀಕರಣ ಸಂದರ್ಭ ಹಂಚಿಕೊಳ್ಳುತ್ತವೆ"
+  }
+]

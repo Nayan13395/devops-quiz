@@ -1,0 +1,302 @@
+[
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "Quel mot-clé sert à définir des variables dans un playbook ?",
+    "options": [
+      "vars",
+      "variables",
+      "var",
+      "define"
+    ],
+    "answer": "vars"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "Quelle syntaxe sert à référencer une variable ?",
+    "options": [
+      "{{ variable_name }}",
+      "$(variable_name)",
+      "${variable_name}",
+      "[variable_name]"
+    ],
+    "answer": "{{ variable_name }}"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "Quel module sert à afficher des messages pendant l'exécution ?",
+    "options": [
+      "debug",
+      "print",
+      "echo",
+      "message"
+    ],
+    "answer": "debug"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "Quel mot-clé sert à l'exécution conditionnelle ?",
+    "options": [
+      "when",
+      "if",
+      "condition",
+      "check"
+    ],
+    "answer": "when"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "Quel mot-clé sert à répéter une tâche ?",
+    "options": [
+      "loop",
+      "repeat",
+      "iterate",
+      "for"
+    ],
+    "answer": "loop"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "Quelle variable contient par défaut l'élément courant d'une boucle ?",
+    "options": [
+      "item",
+      "loopitem",
+      "current",
+      "value"
+    ],
+    "answer": "item"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "Quel module crée des fichiers à partir de modèles Jinja2 ?",
+    "options": [
+      "template",
+      "copy",
+      "render",
+      "jinja"
+    ],
+    "answer": "template"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "Quel moteur de modèles Ansible utilise-t-il ?",
+    "options": [
+      "Jinja2",
+      "Mustache",
+      "Velocity",
+      "Smarty"
+    ],
+    "answer": "Jinja2"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "Quel mot-clé enregistre la sortie d'une tâche dans une variable ?",
+    "options": [
+      "register",
+      "save",
+      "output",
+      "store"
+    ],
+    "answer": "register"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "Quel mot-clé poursuit l'exécution après l'échec d'une tâche, sans masquer les erreurs de syntaxe ou de connexion ?",
+    "options": [
+      "ignore_errors",
+      "skip_errors",
+      "continue",
+      "ignore_failures"
+    ],
+    "answer": "ignore_errors"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "Quel mot-clé sert à exécuter des tâches uniquement lorsqu'elles sont notifiées ?",
+    "options": [
+      "handlers",
+      "notify",
+      "trigger",
+      "events"
+    ],
+    "answer": "handlers"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "Quel mot-clé déclenche un handler ?",
+    "options": [
+      "notify",
+      "handler",
+      "alert",
+      "call"
+    ],
+    "answer": "notify"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "Quel mot-clé importe un autre playbook ?",
+    "options": [
+      "import_playbook",
+      "include_playbook",
+      "load_playbook",
+      "playbook"
+    ],
+    "answer": "import_playbook"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "Quel mot-clé étiquette les tâches pour une exécution sélective ?",
+    "options": [
+      "tags",
+      "labels",
+      "groups",
+      "filter"
+    ],
+    "answer": "tags"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "Quelle option exécute uniquement les tâches ayant des tags spécifiques ?",
+    "options": [
+      "--tags",
+      "--skip-tags",
+      "--limit",
+      "--list-tags"
+    ],
+    "answer": "--tags"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "Quel mot-clé de tâche définit une condition personnalisée pour signaler une modification ?",
+    "options": [
+      "changed_when",
+      "failed_when",
+      "until",
+      "when"
+    ],
+    "answer": "changed_when"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "Quel mot-clé de tâche définit une condition personnalisée pour signaler un échec ?",
+    "options": [
+      "changed_when",
+      "retries",
+      "delay",
+      "failed_when"
+    ],
+    "answer": "failed_when"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "Quel mot-clé de tâche indique la condition qui doit devenir vraie pendant les nouvelles tentatives ?",
+    "options": [
+      "loop",
+      "notify",
+      "until",
+      "when"
+    ],
+    "answer": "until"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "Quel module définit directement des variables nommées pour l'hôte courant à partir de valeurs fournies par la tâche, au lieu de les charger depuis un fichier ?",
+    "options": [
+      "ansible.builtin.add_host",
+      "ansible.builtin.set_fact",
+      "ansible.builtin.setup",
+      "ansible.builtin.include_vars"
+    ],
+    "answer": "ansible.builtin.set_fact"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "Quelle expression accède à la sortie standard d'une tâche enregistrée sous result ?",
+    "options": [
+      "result.stdout",
+      "result.stderr",
+      "result.rc",
+      "result.changed"
+    ],
+    "answer": "result.stdout"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "Quel test Jinja2 vérifie si une variable a été définie ?",
+    "options": [
+      "is none",
+      "is string",
+      "is sequence",
+      "is defined"
+    ],
+    "answer": "is defined"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "Quel mot-clé Ansible regroupe des tâches pour partager des directives et la gestion des erreurs ?",
+    "options": [
+      "roles",
+      "handlers",
+      "block",
+      "loop"
+    ],
+    "answer": "block"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "Quand une tâche envoie-t-elle normalement ses notifications notify ?",
+    "options": [
+      "Uniquement au démarrage du playbook",
+      "Lorsqu'elle réussit et signale changed",
+      "Chaque fois qu'une condition entraîne son omission",
+      "Chaque fois que son module signale unchanged"
+    ],
+    "answer": "Lorsqu'elle réussit et signale changed"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "Quel paramètre renomme en server la variable de l'élément courant d'une boucle ?",
+    "options": [
+      "loop_control: {loop_var: server}",
+      "loop_control: {label: server}",
+      "loop_control: {index_var: server}",
+      "loop_control: {pause: 1}"
+    ],
+    "answer": "loop_control: {loop_var: server}"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "Quelle option de ligne de commande fournit des variables supplémentaires de priorité élevée ?",
+    "options": [
+      "--tags",
+      "--limit",
+      "--start-at-task",
+      "--extra-vars"
+    ],
+    "answer": "--extra-vars"
+  }
+]

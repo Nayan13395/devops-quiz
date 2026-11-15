@@ -1,0 +1,302 @@
+[
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "Quale sintassi definisce una semplice funzione Bash?",
+    "options": [
+      "myfunc() { echo hi; }",
+      "def myfunc: echo hi",
+      "function = myfunc",
+      "myfunc -> echo hi"
+    ],
+    "answer": "myfunc() { echo hi; }"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "Quale comando chiama una funzione chiamata myfunc?",
+    "options": [
+      "myfunc",
+      "call myfunc",
+      "run myfunc",
+      "execute myfunc"
+    ],
+    "answer": "myfunc"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "Quale parola chiave dichiara una variabile visibile solo all'interno di una funzione?",
+    "options": [
+      "local",
+      "private",
+      "internal",
+      "hidden"
+    ],
+    "answer": "local"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "Quale comando restituisce uno stato di uscita 0 da una funzione?",
+    "options": [
+      "return 0",
+      "exit function 0",
+      "stop 0",
+      "end 0"
+    ],
+    "answer": "return 0"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "All'interno di una funzione, quale parametro fornisce il numero di argomenti passati alla funzione?",
+    "options": [
+      "$#",
+      "$@",
+      "$0",
+      "$1"
+    ],
+    "answer": "$#"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "Quale sintassi crea un array indicizzato con tre elementi?",
+    "options": [
+      "arr=(one two three)",
+      "array arr one two three",
+      "arr[one two three]",
+      "set arr one two three"
+    ],
+    "answer": "arr=(one two three)"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "Quale sintassi accede all'elemento all'indice 2 di arr?",
+    "options": [
+      "${arr[2]}",
+      "${arr:2}",
+      "$arr[2]",
+      "arr{2}"
+    ],
+    "answer": "${arr[2]}"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "Quale espansione fornisce il numero di elementi in arr?",
+    "options": [
+      "${#arr[@]}",
+      "${#arr}",
+      "${arr:length}",
+      "${arr[@]#}"
+    ],
+    "answer": "${#arr[@]}"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "Quale sintassi aggiunge newitem in coda ad arr?",
+    "options": [
+      "arr+=(newitem)",
+      "arr=newitem",
+      "arr.push(newitem)",
+      "add arr newitem"
+    ],
+    "answer": "arr+=(newitem)"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "Quale espansione restituisce tutti gli elementi di arr?",
+    "options": [
+      "${arr[@]}",
+      "${arr[0]}",
+      "${arr[all]}",
+      "${arr}"
+    ],
+    "answer": "${arr[@]}"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "Quale comando dichiara un array associativo?",
+    "options": [
+      "declare -A map",
+      "declare -a map",
+      "array -A map",
+      "assoc map"
+    ],
+    "answer": "declare -A map"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "Quale reindirizzamento invia sia lo standard output sia lo standard error a output.log?",
+    "options": [
+      "command &> output.log",
+      "command > output.log",
+      "command 2> output.log",
+      "command < output.log"
+    ],
+    "answer": "command &> output.log"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "Quale reindirizzamento scarta tutto l'output di un comando?",
+    "options": [
+      "command > /dev/null",
+      "command > null",
+      "command > empty",
+      "command > discard"
+    ],
+    "answer": "command > /dev/null"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "Quale operatore invia l'output di un comando come input a un altro?",
+    "options": [
+      "|",
+      ">",
+      "<",
+      "&"
+    ],
+    "answer": "|"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "Quale simbolo esegue un comando in background?",
+    "options": [
+      "&",
+      "&&",
+      "|",
+      ";"
+    ],
+    "answer": "&"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "Quale builtin attende il completamento dei job in background?",
+    "options": [
+      "wait",
+      "hold",
+      "pause",
+      "sleep"
+    ],
+    "answer": "wait"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "Quale comando esegue script.sh nell'ambiente della shell corrente?",
+    "options": [
+      "source script.sh",
+      "bash script.sh",
+      "./script.sh",
+      "sh script.sh"
+    ],
+    "answer": "source script.sh"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "Quale operatore inizia un here document?",
+    "options": [
+      "<<",
+      ">>",
+      "<",
+      ">"
+    ],
+    "answer": "<<"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "Quale comando crea un file temporaneo sicuro?",
+    "options": [
+      "mktemp",
+      "tempfile",
+      "touch tmp",
+      "newfile"
+    ],
+    "answer": "mktemp"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "Quale comando esegue la pulizia quando lo script riceve SIGINT?",
+    "options": [
+      "trap 'cleanup' SIGINT",
+      "handle SIGINT cleanup",
+      "signal SIGINT cleanup",
+      "catch SIGINT cleanup"
+    ],
+    "answer": "trap 'cleanup' SIGINT"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "Quale segnale viene solitamente inviato quando l'utente preme Ctrl+C?",
+    "options": [
+      "SIGINT",
+      "SIGTERM",
+      "SIGKILL",
+      "SIGHUP"
+    ],
+    "answer": "SIGINT"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "Quale opzione fa terminare lo script immediatamente quando un comando fallisce?",
+    "options": [
+      "set -e",
+      "set -x",
+      "set -u",
+      "set -o pipefail"
+    ],
+    "answer": "set -e"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "Quale opzione genera un errore quando si fa riferimento a una variabile non impostata?",
+    "options": [
+      "set -u",
+      "set -e",
+      "set -x",
+      "set -a"
+    ],
+    "answer": "set -u"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "Quale opzione stampa ogni comando prima di eseguirlo, per il debug?",
+    "options": [
+      "set -x",
+      "set -e",
+      "set -u",
+      "set -v"
+    ],
+    "answer": "set -x"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "Quale comando elenca le funzioni shell attualmente definite?",
+    "options": [
+      "declare -f",
+      "declare -A",
+      "functions",
+      "listfunc"
+    ],
+    "answer": "declare -f"
+  }
+]

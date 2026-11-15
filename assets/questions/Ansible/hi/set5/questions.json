@@ -1,0 +1,302 @@
+[
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "कार्य स्तर पर अलग सेटिंग न हो तो जाँच मोड न समर्थित करने वाला मॉड्यूल जाँच मोड में कैसे चलता है?",
+    "options": [
+      "हमेशा अपने सामान्य बदलाव करता है",
+      "स्वतः localhost पर चलता है",
+      "जाँच मोड समर्थित होने तक बार-बार प्रयास होता है",
+      "बदलाव करने के बजाय छोड़ दिया जाता है"
+    ],
+    "answer": "बदलाव करने के बजाय छोड़ दिया जाता है"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "--check से प्लेबुक चलाने पर भी असली बदलाव करने देती कौन-सी कार्य सेटिंग है?",
+    "options": [
+      "changed_when: false",
+      "ignore_errors: true",
+      "check_mode: false",
+      "diff: false"
+    ],
+    "answer": "check_mode: false"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "पहले सूचित हैंडलर तुरंत चलाने वाली Ansible meta क्रिया कौन-सी है?",
+    "options": [
+      "reset_connection",
+      "flush_handlers",
+      "clear_facts",
+      "end_play"
+    ],
+    "answer": "flush_handlers"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "बदलाव करने वाले दो कार्य एक ही हैंडलर को उसके चलने से पहले सूचित करें तो उस निष्पादन बिंदु पर वह सामान्यतः कितनी बार चलता है?",
+    "options": [
+      "एक बार",
+      "दो बार",
+      "हर इन्वेंटरी समूह के लिए एक बार",
+      "सूचनाओं में टकराव होने से एक बार भी नहीं"
+    ],
+    "answer": "एक बार"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "एक ही निष्पादन बिंदु के लिए सूचित हैंडलरों का क्रम क्या तय करता है?",
+    "options": [
+      "नामों का वर्णानुक्रम",
+      "notify सूची में नामों का क्रम",
+      "प्रबंधित होस्टों के जुड़ने का क्रम",
+      "handlers अनुभाग में परिभाषा का क्रम"
+    ],
+    "answer": "handlers अनुभाग में परिभाषा का क्रम"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "कौन-सी विफलता सामान्यतः ब्लॉक के rescue कार्य चलाती है?",
+    "options": [
+      "प्लेबुक में अमान्य कार्य परिभाषा होना",
+      "YAML दस्तावेज़ पार्स न होना",
+      "ब्लॉक के भीतर कार्य का विफल परिणाम लौटाना",
+      "कार्य चलने से पहले होस्ट का पहुँच से बाहर होना"
+    ],
+    "answer": "ब्लॉक के भीतर कार्य का विफल परिणाम लौटाना"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "सामान्य कार्य में ignore_errors किस त्रुटि को नहीं दबाता?",
+    "options": [
+      "failed_when शर्त का true होना",
+      "अपरिभाषित चर की त्रुटि",
+      "कमांड द्वारा रिपोर्ट किया गया गैर-शून्य निकास स्टेटस",
+      "मॉड्यूल का परिणाम स्पष्ट रूप से failed होना"
+    ],
+    "answer": "अपरिभाषित चर की त्रुटि"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "अनियंत्रित कार्य विफलता पर वर्तमान बैच का वह कार्य पूरा होने के बाद सभी होस्टों पर play कौन-सा कीवर्ड रोकता है?",
+    "options": [
+      "any_errors_fatal",
+      "ignore_unreachable",
+      "max_fail_percentage: 100",
+      "force_handlers"
+    ],
+    "answer": "any_errors_fatal"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "पहुँच योग्य होस्ट पर बाद का कार्य विफल हो तो force_handlers का प्रभाव क्या है?",
+    "options": [
+      "सभी परिभाषित हैंडलर सूचना के बिना भी चलते हैं",
+      "सभी विफल कार्य स्वतः दोहराए जाते हैं",
+      "हैंडलर सभी सामान्य कार्यों से पहले चलते हैं",
+      "पहले सूचित हैंडलर उस होस्ट पर फिर भी चल सकते हैं"
+    ],
+    "answer": "पहले सूचित हैंडलर उस होस्ट पर फिर भी चल सकते हैं"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "संवेदनशील कार्य तर्कों और परिणामों की सामान्य लॉगिंग कौन-सी सेटिंग रोकती है?",
+    "options": [
+      "check_mode: true",
+      "changed_when: false",
+      "no_log: true",
+      "diff: true"
+    ],
+    "answer": "no_log: true"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "--diff चालू होने पर भी फ़ाइल सामग्री के अंतर कौन-सी कार्य सेटिंग छिपाती है?",
+    "options": [
+      "ignore_errors: true",
+      "diff: false",
+      "no_log: false",
+      "check_mode: false"
+    ],
+    "answer": "diff: false"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "दूसरे इन्वेंटरी होस्ट के चर किस डिक्शनरी से मिलते हैं?",
+    "options": [
+      "hostvars",
+      "ansible_facts",
+      "environment",
+      "ansible_loop"
+    ],
+    "answer": "hostvars"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "वर्तमान होस्ट का इन्वेंटरी नाम किस विशेष चर में होता है?",
+    "options": [
+      "ansible_host",
+      "ansible_user",
+      "ansible_playbook_python",
+      "inventory_hostname"
+    ],
+    "answer": "inventory_hostname"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "होस्ट समूह के साझा चरों के लिए इन्वेंटरी के पास सामान्यतः कौन-सी निर्देशिका होती है?",
+    "options": [
+      "roles",
+      "collections",
+      "group_vars",
+      "host_vars"
+    ],
+    "answer": "group_vars"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "ansible.builtin.file लुकअप डिफ़ॉल्ट रूप से फ़ाइल कहाँ पढ़ता है?",
+    "options": [
+      "become_user द्वारा बताए गए होस्ट पर",
+      "नियंत्रण नोड पर",
+      "हर प्रबंधित होस्ट पर",
+      "play के पहले होस्ट पर"
+    ],
+    "answer": "नियंत्रण नोड पर"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "YAML स्ट्रिंग को Ansible डेटा संरचना में कौन-सा फ़िल्टर बदलता है?",
+    "options": [
+      "from_yaml",
+      "to_yaml",
+      "to_json",
+      "dict2items"
+    ],
+    "answer": "from_yaml"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "डिक्शनरी को कुंजी/मान डिक्शनरियों की सूची में कौन-सा फ़िल्टर बदलता है?",
+    "options": [
+      "items2dict",
+      "flatten",
+      "zip",
+      "dict2items"
+    ],
+    "answer": "dict2items"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "सूची के दोहराए गए तत्व कौन-सा फ़िल्टर हटाता है?",
+    "options": [
+      "reverse",
+      "flatten",
+      "unique",
+      "sort"
+    ],
+    "answer": "unique"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "अभिव्यक्तियाँ जाँचकर निर्दिष्ट अभिकथन पूरे न होने पर कौन-सा मॉड्यूल विफल होता है?",
+    "options": [
+      "ansible.builtin.set_fact",
+      "ansible.builtin.assert",
+      "ansible.builtin.debug",
+      "ansible.builtin.pause"
+    ],
+    "answer": "ansible.builtin.assert"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "रेगुलर एक्सप्रेशन से टेक्स्ट फ़ाइल की विशेष पंक्ति कौन-सा मॉड्यूल सँभालता है?",
+    "options": [
+      "ansible.builtin.lineinfile",
+      "ansible.builtin.blockinfile",
+      "ansible.builtin.copy",
+      "ansible.builtin.slurp"
+    ],
+    "answer": "ansible.builtin.lineinfile"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "URL से अनुरोध कर अपेक्षित HTTP स्टेटस कोड कौन-सा मॉड्यूल जाँच सकता है?",
+    "options": [
+      "ansible.builtin.get_url",
+      "ansible.builtin.fetch",
+      "ansible.builtin.wait_for",
+      "ansible.builtin.uri"
+    ],
+    "answer": "ansible.builtin.uri"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "TCP पोर्ट के अपेक्षित अवस्था में आने तक कौन-सा मॉड्यूल रुकता है?",
+    "options": [
+      "ansible.builtin.async_status",
+      "ansible.builtin.ping",
+      "ansible.builtin.wait_for",
+      "ansible.builtin.pause"
+    ],
+    "answer": "ansible.builtin.wait_for"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "बताया गया पथ मौजूद हो तो ansible.builtin.command को छोड़ने वाला पैरामीटर कौन-सा है?",
+    "options": [
+      "stdin",
+      "creates",
+      "removes",
+      "chdir"
+    ],
+    "answer": "creates"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "file मॉड्यूल की कौन-सी सेटिंग प्रतीकात्मक लिंक बनाती है?",
+    "options": [
+      "state: link",
+      "state: directory",
+      "state: touch",
+      "state: hard"
+    ],
+    "answer": "state: link"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "बाद के play के लिए मेमोरी वाली इन्वेंटरी में होस्ट कौन-सा मॉड्यूल जोड़ सकता है?",
+    "options": [
+      "ansible.builtin.group_by",
+      "ansible.builtin.set_fact",
+      "ansible.builtin.meta",
+      "ansible.builtin.add_host"
+    ],
+    "answer": "ansible.builtin.add_host"
+  }
+]

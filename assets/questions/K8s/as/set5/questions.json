@@ -1,0 +1,302 @@
+[
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "Pod ট্ৰেফিকত প্ৰভাৱ পেলাবলৈ NetworkPolicy-ক কি লাগে?",
+    "options": [
+      "নিৰ্বাচিত প্ৰতিটো Pod-ৰ বাবে LoadBalancer Service",
+      "একে নেমস্পেচৰ PersistentVolumeClaim",
+      "প্ৰতিটো নীতিৰ বাবে পৃথক API ছাৰ্ভাৰ",
+      "NetworkPolicy বলবৎ কৰা নেটৱৰ্ক ৰূপায়ণ"
+    ],
+    "answer": "NetworkPolicy বলবৎ কৰা নেটৱৰ্ক ৰূপায়ণ"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "একে Pod নিৰ্বাচন কৰা একাধিক NetworkPolicy-ৰ প্ৰৱেশ অনুমতি কেনেকৈ একত্ৰ হয়?",
+    "options": [
+      "প্ৰথমে সৃষ্টি কৰা নীতিয়ে পিছৰ সকলো নীতি অতিক্ৰম কৰে",
+      "প্ৰতিটো নীতিয়ে প্ৰতিটো পেকেট স্বাধীনভাৱে অনুমতি দিব লাগে",
+      "অনুমোদিত ট্ৰেফিক সকলো প্ৰৱেশ অনুমতিৰ ইউনিয়ন বা সংযুক্ত সমষ্টি",
+      "শেষত সৃষ্টি কৰা নীতিয়ে আগৰ সকলো নীতি অতিক্ৰম কৰে"
+    ],
+    "answer": "অনুমোদিত ট্ৰেফিক সকলো প্ৰৱেশ অনুমতিৰ ইউনিয়ন বা সংযুক্ত সমষ্টি"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "নেমস্পেচৰ ভিতৰত অধিকাৰ নিৰ্ধাৰণ কৰা RBAC অবজেক্ট কোনটো?",
+    "options": [
+      "ResourceQuota",
+      "Role",
+      "RoleBinding",
+      "ServiceAccount"
+    ],
+    "answer": "Role"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "এটা নেমস্পেচত Role বা ClusterRole-ৰ অধিকাৰ প্ৰদান কৰা RBAC অবজেক্ট কোনটো?",
+    "options": [
+      "RoleBinding",
+      "ClusterRoleBinding",
+      "ServiceAccount",
+      "LimitRange"
+    ],
+    "answer": "RoleBinding"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "Kubernetes API-ত প্ৰৱেশৰ বাবে Pod-ৰ প্ৰক্ৰিয়াক সাধাৰণতে কি পৰিচয় দিয়া হয়?",
+    "options": [
+      "StorageClass",
+      "RuntimeClass",
+      "PriorityClass",
+      "ServiceAccount"
+    ],
+    "answer": "ServiceAccount"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "Secret ডেটা base64-ত ক’ড কৰিলে অবজেক্ট পঢ়িব পৰা ব্যক্তিৰ পৰা সুৰক্ষা নহয় কিয়?",
+    "options": [
+      "Base64-এ ডেটা স্বয়ংক্ৰিয়ভাৱে DNS-ত প্ৰকাশ কৰে",
+      "Base64-ৰ বাবে Pod-ত সঞ্চিত ব্যক্তিগত চাবি লাগে",
+      "Base64 ওলোটা কৰিব পৰা সংকেতায়নহে, এনক্ৰিপশ্যন নহয়",
+      "Base64-এ Kubernetes-ক ডেটা ৰাখিবলৈ নিদিয়ে"
+    ],
+    "answer": "Base64 ওলোটা কৰিব পৰা সংকেতায়নহে, এনক্ৰিপশ্যন নহয়"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "Kubernetes-ক Pod-ত API পৰিচয়-প্ৰমাণ স্বয়ংক্ৰিয়ভাৱে মাউণ্ট কৰিবলৈ নিদিয়া ক্ষেত্ৰ কোনটো?",
+    "options": [
+      "shareProcessNamespace: false",
+      "automountServiceAccountToken: false",
+      "hostNetwork: false",
+      "enableServiceLinks: false"
+    ],
+    "answer": "automountServiceAccountToken: false"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "নেমস্পেচৰ মুঠ সম্পদ ব্যৱহাৰ সীমিত কৰা অবজেক্ট কোনটো?",
+    "options": [
+      "ResourceQuota",
+      "LimitRange",
+      "PriorityClass",
+      "PodDisruptionBudget"
+    ],
+    "answer": "ResourceQuota"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "নেমস্পেচৰ কণ্টেইনাৰক ডিফল্ট সম্পদ অনুৰোধ আৰু সীমা দিব পৰা অবজেক্ট কোনটো?",
+    "options": [
+      "ResourceQuota",
+      "HorizontalPodAutoscaler",
+      "RuntimeClass",
+      "LimitRange"
+    ],
+    "answer": "LimitRange"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "Kubernetes অবজেক্ট মচিবলৈ অনুৰোধ কৰাৰ পিছত finalizer-এ কি কৰে?",
+    "options": [
+      "নিৰ্ভৰশীল সকলো অবজেক্ট লগে লগে মচে",
+      "অবজেক্টক অপৰিৱৰ্তনীয় Secret কৰে",
+      "প্ৰয়োজনীয় চাফাইয়ে finalizer আঁতৰোৱালৈ অবজেক্টক মচাৰ অপেক্ষাত ৰাখে",
+      "অবজেক্টৰ সকলো ভৱিষ্যৎ আপডেট ৰোধ কৰে"
+    ],
+    "answer": "প্ৰয়োজনীয় চাফাইয়ে finalizer আঁতৰোৱালৈ অবজেক্টক মচাৰ অপেক্ষাত ৰাখে"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "স্বয়ংক্ৰিয় আবৰ্জনা সংগ্ৰহৰ বাবে নিৰ্ভৰশীল অবজেক্টক মালিকৰ সৈতে জোৰা মেটাডেটা ক্ষেত্ৰ কোনটো?",
+    "options": [
+      "managedFields",
+      "ownerReferences",
+      "annotations",
+      "labels"
+    ],
+    "answer": "ownerReferences"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "CustomResourceDefinition-এ ক্লাষ্টাৰত কি যোগ কৰে?",
+    "options": [
+      "Kubernetes API-এ যোগান ধৰা নতুন নিজা সম্পদৰ ধৰণ",
+      "বিদ্যমান ধৰণৰ বাবে চলি থকা সমন্বয় কণ্ট্ৰ’লাৰ",
+      "প্ৰতিটো সেৱা একাউণ্টক RBAC অধিকাৰ",
+      "প্ৰতিটো অন্তৰ্নিৰ্মিত সম্পদৰ ধৰণৰ এটা ইনষ্টেন্স"
+    ],
+    "answer": "Kubernetes API-এ যোগান ধৰা নতুন নিজা সম্পদৰ ধৰণ"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "কেৱল নিজা সম্পদৰ সংজ্ঞা আৰু Kubernetes অপাৰেটৰৰ পাৰ্থক্য কি?",
+    "options": [
+      "অপাৰেটৰে কেৱল স্কিমাৰ সংজ্ঞা ৰাখিব পাৰে",
+      "অপাৰেটৰে API ছাৰ্ভাৰৰ প্ৰয়োজন নাইকিয়া কৰে",
+      "অপাৰেটৰে কেৱল kubectl-ৰ আউটপুট বিন্যাস সলনি কৰে",
+      "অপাৰেটৰে প্ৰতিনিধিত্ব কৰা এপ পৰিচালনা কৰিবলৈ সমন্বয়ৰ যুক্তিও চলায়"
+    ],
+    "answer": "অপাৰেটৰে প্ৰতিনিধিত্ব কৰা এপ পৰিচালনা কৰিবলৈ সমন্বয়ৰ যুক্তিও চলায়"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "প্ৰমাণীকৰণ আৰু অধিকাৰ পৰীক্ষাৰ পিছত কিন্তু সঞ্চয়ৰ আগতে API অনুৰোধ নাকচ বা সলনি কৰিব পৰা ব্যৱস্থা কোনটো?",
+    "options": [
+      "কণ্টেইনাৰৰ ইমেজ আহৰণ",
+      "Service শেষবিন্দুৰ ৰাউটিং",
+      "এডমিশ্যন নিয়ন্ত্ৰণ",
+      "Pod-ৰ সময়সূচী নিৰ্ধাৰণ"
+    ],
+    "answer": "এডমিশ্যন নিয়ন্ত্ৰণ"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "কোনো যোগ্য নোডে Pod-ৰ বাধ্যতামূলক নোড এফিনিটি পূৰণ নকৰিলে কি হয়?",
+    "options": [
+      "API ছাৰ্ভাৰে তাক প্ৰতিটো নোডত ৰাখে",
+      "যোগ্য নোড আহা বা চৰ্ত সলনি হোৱালৈ Pod নিৰ্ধাৰণ নকৰাকৈ থাকে",
+      "সূচী নিৰ্ধাৰকে এবাৰ চেষ্টাৰ পিছত নিয়ম উপেক্ষা কৰে",
+      "Pod স্বয়ংক্ৰিয়ভাৱে DaemonSet হৈ পৰে"
+    ],
+    "answer": "যোগ্য নোড আহা বা চৰ্ত সলনি হোৱালৈ Pod নিৰ্ধাৰণ নকৰাকৈ থাকে"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "preferredDuringSchedulingIgnoredDuringExecution নোড এফিনিটিয়ে কি বুজায়?",
+    "options": [
+      "অন্য দিশত যোগ্য কিন্তু মিল নোহোৱা নোডক বাদ নিদিয়া স্থানৰ পছন্দ",
+      "মিল নোহোৱা নোডত স্থান দিয়া নিষিদ্ধ কৰা বাধ্যতামূলক চৰ্ত",
+      "নোডৰ লেবেল সলনি হ’লে Pod বহিষ্কাৰ কৰাৰ নিৰ্দেশ",
+      "সূচী নিৰ্ধাৰক সম্পূৰ্ণ এৰাই যোৱাৰ অনুৰোধ"
+    ],
+    "answer": "অন্য দিশত যোগ্য কিন্তু মিল নোহোৱা নোডক বাদ নিদিয়া স্থানৰ পছন্দ"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "চলি থকা Pod-ৰ নোড এফিনিটিৰ নিয়মৰ সৈতে নোড লেবেল আৰু নিমিলিলে IgnoredDuringExecution-ৰ অৰ্থ কি?",
+    "options": [
+      "Pod লগে লগে মচিব লাগে",
+      "Pod-ৰ কণ্টেইনাৰ স্বয়ংক্ৰিয়ভাৱে পুনৰ আৰম্ভ হয়",
+      "নোডৰ লেবেল স্বয়ংক্ৰিয়ভাৱে আগৰ মানলৈ ঘূৰে",
+      "কেৱল সেই নিয়মে চলি থকা Pod বহিষ্কাৰ নকৰে"
+    ],
+    "answer": "কেৱল সেই নিয়মে চলি থকা Pod বহিষ্কাৰ নকৰে"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "Pod-এ spec.nodeName স্পষ্টভাৱে নিৰ্ধাৰণ কৰিলে কি হয়?",
+    "options": [
+      "সেই নামে নোড সৃষ্টি কৰে",
+      "বৰ্তমান Pod চলোৱা নোডৰ নাম সলনি কৰে",
+      "সূচী নিৰ্ধাৰক এৰাই নিৰ্দিষ্ট নামৰ নোডত আবণ্টিত হয়",
+      "মিল থকা সকলো নোড লেবেলৰ ক্ৰম স্থিৰ কৰিবলৈ কয়"
+    ],
+    "answer": "সূচী নিৰ্ধাৰক এৰাই নিৰ্দিষ্ট নামৰ নোডত আবণ্টিত হয়"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "ট’প’লজি বিতৰণৰ সীমাৰ উদ্দেশ্য কি?",
+    "options": [
+      "নিয়ন্ত্ৰণ স্তৰৰ উপাদানৰ মাজৰ ট্ৰেফিক এনক্ৰিপ্ট কৰা",
+      "মিলা Pod ট’প’লজি ডমেইনৰ মাজত কেনেকৈ বিয়পিব সেয়া নিয়ন্ত্ৰণ কৰা",
+      "স্থায়ী ভলিউমৰ মাজত কণ্টেইনাৰৰ ফাইল কপি কৰা",
+      "প্ৰতিটো নেমস্পেচক এটা ৰাজহুৱা IP আবণ্টন কৰা"
+    ],
+    "answer": "মিলা Pod ট’প’লজি ডমেইনৰ মাজত কেনেকৈ বিয়পিব সেয়া নিয়ন্ত্ৰণ কৰা"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "সহনশীলতা নথকা চলি থকা Pod বহিষ্কাৰ কৰিব পৰা taint প্ৰভাৱ কোনটো?",
+    "options": [
+      "NoExecute",
+      "NoSchedule",
+      "PreferNoSchedule",
+      "None"
+    ],
+    "answer": "NoExecute"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "Linux কণ্টেইনাৰক root নোহোৱা ব্যৱহাৰকাৰীৰে চলাবলৈ বাধ্য কৰা securityContext ছেটিং কোনটো?",
+    "options": [
+      "readOnlyRootFilesystem: true",
+      "privileged: false",
+      "allowPrivilegeEscalation: false",
+      "runAsNonRoot: true"
+    ],
+    "answer": "runAsNonRoot: true"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "Linux প্ৰক্ৰিয়াই পেৰেণ্টতকৈ অধিক অধিকাৰ নাপাবলৈ বাধা দিয়া কণ্টেইনাৰৰ securityContext ছেটিং কোনটো?",
+    "options": [
+      "readOnlyRootFilesystem: true",
+      "privileged: false",
+      "allowPrivilegeEscalation: false",
+      "runAsNonRoot: true"
+    ],
+    "answer": "allowPrivilegeEscalation: false"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "এপৰ কণ্টেইনাৰ নসলনোৱাকৈ সমস্যাৰ অনুসন্ধানত বিদ্যমান Pod-ত যোগ কৰিব পৰা কণ্টেইনাৰৰ ধৰণ কোনটো?",
+    "options": [
+      "পুনৰ আৰম্ভ কৰিব পৰা init কণ্টেইনাৰ",
+      "অস্থায়ী কণ্টেইনাৰ",
+      "সাধাৰণ init কণ্টেইনাৰ",
+      "সাধাৰণ এপ কণ্টেইনাৰ"
+    ],
+    "answer": "অস্থায়ী কণ্টেইনাৰ"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "Service-ৰ নেটৱৰ্ক শেষবিন্দু প্ৰসাৰণযোগ্য গোটত অনুসৰণ কৰা সম্পদ কোনটো?",
+    "options": [
+      "EndpointSlice",
+      "IngressClass",
+      "NetworkPolicy",
+      "RuntimeClass"
+    ],
+    "answer": "EndpointSlice"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "Ingress সম্পদে প্ৰকৃততে HTTP ৰাউটিং বিন্যাস কৰিবলৈ কি লাগে?",
+    "options": [
+      "প্ৰতিটো নেমস্পেচত ingress নামৰ ConfigMap",
+      "প্ৰতিটো হোষ্টনামৰ বাবে PersistentVolume",
+      "সকলো নিৰ্বাচিত Pod পুনৰ আৰম্ভ কৰা Job",
+      "নিজৰ নিয়ম ৰূপায়ণ কৰা Ingress কণ্ট্ৰ’লাৰ"
+    ],
+    "answer": "নিজৰ নিয়ম ৰূপায়ণ কৰা Ingress কণ্ট্ৰ’লাৰ"
+  }
+]

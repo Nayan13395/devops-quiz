@@ -1,0 +1,302 @@
+[
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "କାର୍ଯ୍ୟ ସ୍ତରରେ ଅଲଗା ସେଟିଂ ନଥିଲେ ଚେକ୍ ମୋଡ୍‌ରେ ତାହାକୁ ସମର୍ଥନ ନକରୁଥିବା ମଡ୍ୟୁଲ୍‌ର କ’ଣ ହୁଏ?",
+    "options": [
+      "ମଡ୍ୟୁଲ୍ ସର୍ବଦା ନିଜର ସାଧାରଣ ପରିବର୍ତ୍ତନ କରେ",
+      "ମଡ୍ୟୁଲ୍ ସ୍ୱୟଂଚାଳିତ ଭାବେ localhostରେ ଚାଲେ",
+      "ଚେକ୍ ମୋଡ୍‌କୁ ସମର୍ଥନ କରିବା ପର୍ଯ୍ୟନ୍ତ ମଡ୍ୟୁଲ୍‌କୁ ପୁଣି ଚଲାଇବାକୁ ଚେଷ୍ଟା କରାଯାଏ",
+      "ପରିବର୍ତ୍ତନ କରିବା ବଦଳରେ ମଡ୍ୟୁଲ୍‌କୁ ଛାଡ଼ି ଦିଆଯାଏ"
+    ],
+    "answer": "ପରିବର୍ତ୍ତନ କରିବା ବଦଳରେ ମଡ୍ୟୁଲ୍‌କୁ ଛାଡ଼ି ଦିଆଯାଏ"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "ପ୍ଲେବୁକ୍ --check ସହ ଚାଲିଲେ ମଧ୍ୟ ପ୍ରକୃତ ପରିବର୍ତ୍ତନ କରିବାକୁ ଦେଉଥିବା କାର୍ଯ୍ୟ ସେଟିଂ କେଉଁଟି?",
+    "options": [
+      "changed_when: false",
+      "ignore_errors: true",
+      "check_mode: false",
+      "diff: false"
+    ],
+    "answer": "check_mode: false"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "ପୂର୍ବରୁ ସୂଚନା ପାଇଥିବା ହ୍ୟାଣ୍ଡଲର୍‌କୁ ତୁରନ୍ତ ଚଲାଉଥିବା Ansible meta କ୍ରିୟା କେଉଁଟି?",
+    "options": [
+      "reset_connection",
+      "flush_handlers",
+      "clear_facts",
+      "end_play"
+    ],
+    "answer": "flush_handlers"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "ପରିବର୍ତ୍ତନ କରିଥିବା ଦୁଇଟି କାର୍ଯ୍ୟ ଏକା ହ୍ୟାଣ୍ଡଲର୍‌କୁ ତାହାର ବାକି ନିଷ୍ପାଦନ ପୂର୍ବରୁ ସୂଚନା ଦେଲେ, ସେହି ନିଷ୍ପାଦନ ସମୟରେ ତାହା ସାଧାରଣତଃ କେତେଥର ଚାଲେ?",
+    "options": [
+      "ଥରେ",
+      "ଦୁଇଥର",
+      "ପ୍ରତ୍ୟେକ ଇନ୍‌ଭେଣ୍ଟରି ଗୋଷ୍ଠୀ ପାଇଁ ଥରେ",
+      "ସୂଚନାଗୁଡ଼ିକ ପରସ୍ପର ବିରୋଧୀ ହେବାରୁ ଶୂନ୍ୟଥର"
+    ],
+    "answer": "ଥରେ"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "ଏକା ସମୟରେ ବାକି ନିଷ୍ପାଦନ ହେଉଥିବା ସୂଚିତ ହ୍ୟାଣ୍ଡଲର୍‌ମାନଙ୍କ କ୍ରମ କ’ଣ ନିର୍ଣ୍ଣୟ କରେ?",
+    "options": [
+      "ସେମାନଙ୍କ ନାମର ବର୍ଣ୍ଣାନୁକ୍ରମ",
+      "notify ତାଲିକାରେ ନାମର କ୍ରମ",
+      "ପରିଚାଳିତ ହୋଷ୍ଟ ସଂଯୁକ୍ତ ହୋଇଥିବା କ୍ରମ",
+      "handlers ବିଭାଗରେ ସେମାନଙ୍କ ପରିଭାଷାର କ୍ରମ"
+    ],
+    "answer": "handlers ବିଭାଗରେ ସେମାନଙ୍କ ପରିଭାଷାର କ୍ରମ"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "ବ୍ଲକ୍‌ର rescue କାର୍ଯ୍ୟ ସାଧାରଣତଃ କେଉଁ ବିଫଳତାରେ ଆରମ୍ଭ ହୁଏ?",
+    "options": [
+      "ପ୍ଲେବୁକ୍‌ରେ ଅବୈଧ କାର୍ଯ୍ୟ ପରିଭାଷା ଥିଲେ",
+      "YAML ଦସ୍ତାବିଜ ପାର୍ସ ହୋଇ ନପାରିଲେ",
+      "ବ୍ଲକ୍ ଭିତରର କାର୍ଯ୍ୟ ବିଫଳ ଫଳାଫଳ ଦେଲେ",
+      "କାର୍ଯ୍ୟ ଚାଲିବା ପୂର୍ବରୁ ହୋଷ୍ଟ ଅପହଞ୍ଚ ହୋଇଗଲେ"
+    ],
+    "answer": "ବ୍ଲକ୍ ଭିତରର କାର୍ଯ୍ୟ ବିଫଳ ଫଳାଫଳ ଦେଲେ"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "ସାଧାରଣ କାର୍ଯ୍ୟରେ ignore_errors କେଉଁ ତ୍ରୁଟିକୁ ଦବାଏ ନାହିଁ?",
+    "options": [
+      "failed_when ସର୍ତ୍ତ true ହେବା",
+      "ଅପରିଭାଷିତ ଚଳର ତ୍ରୁଟି",
+      "କମାଣ୍ଡ ଦେଇଥିବା ଶୂନ୍ୟ ବ୍ୟତୀତ ପ୍ରସ୍ଥାନ ସ୍ଥିତି",
+      "ସ୍ପଷ୍ଟ ଭାବେ ବିଫଳ ଚିହ୍ନିତ ମଡ୍ୟୁଲ୍ ଫଳାଫଳ"
+    ],
+    "answer": "ଅପରିଭାଷିତ ଚଳର ତ୍ରୁଟି"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "ନିୟନ୍ତ୍ରଣ କରାଯାଇନଥିବା କାର୍ଯ୍ୟ ବିଫଳତା ହେଲେ ବର୍ତ୍ତମାନ ବ୍ୟାଚ୍ ସେହି କାର୍ଯ୍ୟ ସାରିବା ପରେ ସବୁ ହୋଷ୍ଟରେ ପ୍ଲେ ବନ୍ଦ କରୁଥିବା କୀୱାର୍ଡ କେଉଁଟି?",
+    "options": [
+      "any_errors_fatal",
+      "ignore_unreachable",
+      "max_fail_percentage: 100",
+      "force_handlers"
+    ],
+    "answer": "any_errors_fatal"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "ପହଞ୍ଚଯୋଗ୍ୟ ହୋଷ୍ଟରେ ପରବର୍ତ୍ତୀ କାର୍ଯ୍ୟ ବିଫଳ ହେଲେ force_handlersର ପ୍ରଭାବ କ’ଣ?",
+    "options": [
+      "ପ୍ରତ୍ୟେକ ପରିଭାଷିତ ହ୍ୟାଣ୍ଡଲର୍ ସୂଚନା ବିନା ମଧ୍ୟ ଚାଲେ",
+      "ସବୁ ବିଫଳ କାର୍ଯ୍ୟ ସ୍ୱୟଂଚାଳିତ ଭାବେ ପୁଣି ଚାଲେ",
+      "ସବୁ ସାଧାରଣ କାର୍ଯ୍ୟ ପୂର୍ବରୁ ହ୍ୟାଣ୍ଡଲର୍ ଚାଲେ",
+      "ପୂର୍ବରୁ ସୂଚିତ ହ୍ୟାଣ୍ଡଲର୍ ସେହି ହୋଷ୍ଟରେ ଏବେ ମଧ୍ୟ ଚାଲିପାରେ"
+    ],
+    "answer": "ପୂର୍ବରୁ ସୂଚିତ ହ୍ୟାଣ୍ଡଲର୍ ସେହି ହୋଷ୍ଟରେ ଏବେ ମଧ୍ୟ ଚାଲିପାରେ"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "ସମ୍ବେଦନଶୀଳ କାର୍ଯ୍ୟ ଆର୍ଗ୍ୟୁମେଣ୍ଟ ଓ ଫଳାଫଳର ସାଧାରଣ ଲଗିଂ ବନ୍ଦ କରୁଥିବା ସେଟିଂ କେଉଁଟି?",
+    "options": [
+      "check_mode: true",
+      "changed_when: false",
+      "no_log: true",
+      "diff: true"
+    ],
+    "answer": "no_log: true"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "--diff ସକ୍ରିୟ ଥିଲେ ମଧ୍ୟ ଫାଇଲ୍ ବିଷୟବସ୍ତୁର ତଫାତ ଲୁଚାଉଥିବା କାର୍ଯ୍ୟ ସେଟିଂ କେଉଁଟି?",
+    "options": [
+      "ignore_errors: true",
+      "diff: false",
+      "no_log: false",
+      "check_mode: false"
+    ],
+    "answer": "diff: false"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "ଅନ୍ୟ ଇନ୍‌ଭେଣ୍ଟରି ହୋଷ୍ଟ ସହ ଜଡ଼ିତ ଚଳଗୁଡ଼ିକୁ ପହଞ୍ଚ ଦେଉଥିବା ଡିକ୍ସନରି କେଉଁଟି?",
+    "options": [
+      "hostvars",
+      "ansible_facts",
+      "environment",
+      "ansible_loop"
+    ],
+    "answer": "hostvars"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "ବର୍ତ୍ତମାନ ହୋଷ୍ଟର ଇନ୍‌ଭେଣ୍ଟରି ନାମ ଧାରଣ କରୁଥିବା ବିଶେଷ ଚଳ କେଉଁଟି?",
+    "options": [
+      "ansible_host",
+      "ansible_user",
+      "ansible_playbook_python",
+      "inventory_hostname"
+    ],
+    "answer": "inventory_hostname"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "ହୋଷ୍ଟ ଗୋଷ୍ଠୀର ସାଧାରଣ ଚଳଗୁଡ଼ିକ ପାଇଁ ଇନ୍‌ଭେଣ୍ଟରି ପାଖରେ ସାଧାରଣତଃ କେଉଁ ଡିରେକ୍ଟୋରି ବ୍ୟବହାର ହୁଏ?",
+    "options": [
+      "roles",
+      "collections",
+      "group_vars",
+      "host_vars"
+    ],
+    "answer": "group_vars"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "ansible.builtin.file ଲୁକ୍‌ଅପ୍ ଡିଫଲ୍ଟ ଭାବେ ଫାଇଲ୍ କେଉଁଠି ପଢ଼େ?",
+    "options": [
+      "become_user ଦ୍ୱାରା ନାମିତ ହୋଷ୍ଟରେ",
+      "ନିୟନ୍ତ୍ରଣ ନୋଡ୍‌ରେ",
+      "ପ୍ରତ୍ୟେକ ପରିଚାଳିତ ହୋଷ୍ଟରେ",
+      "ପ୍ଲେର ପ୍ରଥମ ହୋଷ୍ଟରେ"
+    ],
+    "answer": "ନିୟନ୍ତ୍ରଣ ନୋଡ୍‌ରେ"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "YAML ଷ୍ଟ୍ରିଙ୍ଗ୍‌କୁ Ansible ଡାଟା ଗଠନରେ ବଦଳାଉଥିବା ଫିଲ୍ଟର୍ କେଉଁଟି?",
+    "options": [
+      "from_yaml",
+      "to_yaml",
+      "to_json",
+      "dict2items"
+    ],
+    "answer": "from_yaml"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "ଡିକ୍ସନରିକୁ କୀ/ମୂଲ୍ୟ ଡିକ୍ସନରିର ତାଲିକାରେ ବଦଳାଉଥିବା ଫିଲ୍ଟର୍ କେଉଁଟି?",
+    "options": [
+      "items2dict",
+      "flatten",
+      "zip",
+      "dict2items"
+    ],
+    "answer": "dict2items"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "ତାଲିକାରୁ ପୁନରାବୃତ୍ତ ଉପାଦାନ ହଟାଉଥିବା ଫିଲ୍ଟର୍ କେଉଁଟି?",
+    "options": [
+      "reverse",
+      "flatten",
+      "unique",
+      "sort"
+    ],
+    "answer": "unique"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "ଅଭିବ୍ୟକ୍ତି ଯାଞ୍ଚ କରି ନିର୍ଦ୍ଦିଷ୍ଟ ନିଶ୍ଚିତକରଣ ସର୍ତ୍ତ ପୂରଣ ନହେଲେ ବିଫଳ ହେଉଥିବା ମଡ୍ୟୁଲ୍ କେଉଁଟି?",
+    "options": [
+      "ansible.builtin.set_fact",
+      "ansible.builtin.assert",
+      "ansible.builtin.debug",
+      "ansible.builtin.pause"
+    ],
+    "answer": "ansible.builtin.assert"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "ରେଗୁଲାର୍ ଏକ୍ସପ୍ରେସନ୍ ବ୍ୟବହାର କରି ଟେକ୍ସଟ୍ ଫାଇଲ୍‌ର ନିର୍ଦ୍ଦିଷ୍ଟ ଧାଡ଼ି ପରିଚାଳନା କରୁଥିବା ମଡ୍ୟୁଲ୍ କେଉଁଟି?",
+    "options": [
+      "ansible.builtin.lineinfile",
+      "ansible.builtin.blockinfile",
+      "ansible.builtin.copy",
+      "ansible.builtin.slurp"
+    ],
+    "answer": "ansible.builtin.lineinfile"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "URL ଅନୁରୋଧ କରି ଆଶା କରାଯାଇଥିବା HTTP ସ୍ଥିତି କୋଡ୍ ଯାଞ୍ଚ କରିପାରୁଥିବା ମଡ୍ୟୁଲ୍ କେଉଁଟି?",
+    "options": [
+      "ansible.builtin.get_url",
+      "ansible.builtin.fetch",
+      "ansible.builtin.wait_for",
+      "ansible.builtin.uri"
+    ],
+    "answer": "ansible.builtin.uri"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "TCP ପୋର୍ଟ ଅନୁରୋଧ କରାଯାଇଥିବା ସ୍ଥିତିକୁ ଆସିବା ପର୍ଯ୍ୟନ୍ତ ଅପେକ୍ଷା କରୁଥିବା ମଡ୍ୟୁଲ୍ କେଉଁଟି?",
+    "options": [
+      "ansible.builtin.async_status",
+      "ansible.builtin.ping",
+      "ansible.builtin.wait_for",
+      "ansible.builtin.pause"
+    ],
+    "answer": "ansible.builtin.wait_for"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "ନିର୍ଦ୍ଦିଷ୍ଟ ପାଥ୍ ପୂର୍ବରୁ ଥିଲେ ansible.builtin.commandକୁ ନିଷ୍ପାଦନ ଛାଡ଼ିବାକୁ କହୁଥିବା ପାରାମିଟର୍ କେଉଁଟି?",
+    "options": [
+      "stdin",
+      "creates",
+      "removes",
+      "chdir"
+    ],
+    "answer": "creates"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "ପ୍ରତୀକାତ୍ମକ ଲିଙ୍କ୍ ତିଆରି କରୁଥିବା file ମଡ୍ୟୁଲ୍ ସେଟିଂ କେଉଁଟି?",
+    "options": [
+      "state: link",
+      "state: directory",
+      "state: touch",
+      "state: hard"
+    ],
+    "answer": "state: link"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "ପରବର୍ତ୍ତୀ ପ୍ଲେଗୁଡ଼ିକ ପାଇଁ ମେମୋରିର ଇନ୍‌ଭେଣ୍ଟରିରେ ହୋଷ୍ଟ ଯୋଡ଼ିପାରୁଥିବା ମଡ୍ୟୁଲ୍ କେଉଁଟି?",
+    "options": [
+      "ansible.builtin.group_by",
+      "ansible.builtin.set_fact",
+      "ansible.builtin.meta",
+      "ansible.builtin.add_host"
+    ],
+    "answer": "ansible.builtin.add_host"
+  }
+]

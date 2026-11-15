@@ -1,0 +1,302 @@
+[
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "Hangi sözdizimi date çıktısını now adlı bir değişkende saklar?",
+    "options": [
+      "now=$(date)",
+      "now=date",
+      "now:=$(date)",
+      "date->now"
+    ],
+    "answer": "now=$(date)"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "Hangi özel parametre betik adını temsil eder?",
+    "options": [
+      "$0",
+      "$1",
+      "$#",
+      "$@"
+    ],
+    "answer": "$0"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "Hangi özel parametre en son arka plan komutunun işlem kimliğine (process ID) genişler?",
+    "options": [
+      "$!",
+      "$$",
+      "$?",
+      "$#"
+    ],
+    "answer": "$!"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "Hangi özel parametre konumsal argümanların sayısını temsil eder?",
+    "options": [
+      "$#",
+      "$@",
+      "$*",
+      "$$"
+    ],
+    "answer": "$#"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "Hangi özel parametre tüm konumsal argümanları ayrı sözcükler olarak genişletir?",
+    "options": [
+      "$@",
+      "$*",
+      "$#",
+      "$0"
+    ],
+    "answer": "$@"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "Hangi Bash yerleşik komutu ilk konumsal parametreyi atar ve geri kalanları bir kademe aşağı kaydırır?",
+    "options": [
+      "shift",
+      "unshift",
+      "pop",
+      "rotate"
+    ],
+    "answer": "shift"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "Hangi özel parametre geçerli kabuğun işlem kimliğini (process ID) temsil eder?",
+    "options": [
+      "$$",
+      "$!",
+      "$?",
+      "$0"
+    ],
+    "answer": "$$"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "Hangi özel parametre son komutun çıkış durumunu temsil eder?",
+    "options": [
+      "$?",
+      "$!",
+      "$$",
+      "$#"
+    ],
+    "answer": "$?"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "var tanımsızsa veya boşsa hangi genişletme varsayılan bir değer döndürür?",
+    "options": [
+      "${var:-default}",
+      "${var:=default}",
+      "${var:+default}",
+      "${var:?default}"
+    ],
+    "answer": "${var:-default}"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "Hangi genişletme var değerinden 3 karakteri, 2 ofsetinden başlayarak çıkarır?",
+    "options": [
+      "${var:2:3}",
+      "${var:3:2}",
+      "${var[2,3]}",
+      "${var#2:3}"
+    ],
+    "answer": "${var:2:3}"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "Hangi genişletme var değerinin uzunluğunu döndürür?",
+    "options": [
+      "${#var}",
+      "${len(var)}",
+      "${var:length}",
+      "${var#length}"
+    ],
+    "answer": "${#var}"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "Hangi genişletme var değerini büyük harfe dönüştürür?",
+    "options": [
+      "${var^^}",
+      "${var,,}",
+      "${var!!}",
+      "${var##}"
+    ],
+    "answer": "${var^^}"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "Hangi genişletme var içinden eşleşen en uzun ön eki (prefix) kaldırır?",
+    "options": [
+      "${var##pattern}",
+      "${var#pattern}",
+      "${var%%pattern}",
+      "${var%pattern}"
+    ],
+    "answer": "${var##pattern}"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "Hangi genişletme var içinde pattern'in yalnızca ilk eşleşmesini değiştirir?",
+    "options": [
+      "${var/pattern/replacement}",
+      "${var//pattern/replacement}",
+      "${var#pattern}",
+      "${var%pattern}"
+    ],
+    "answer": "${var/pattern/replacement}"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "var tanımsızsa veya boşsa hangi genişletme bir hata mesajı yazdırır ve etkileşimli olmayan bir betiği durdurur?",
+    "options": [
+      "${var:?message}",
+      "${var:-message}",
+      "${var:+message}",
+      "${var:=message}"
+    ],
+    "answer": "${var:?message}"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "Bash'te hangi sözdizimi aritmetik genişletme yapar?",
+    "options": [
+      "$((5 + 3))",
+      "$(5 + 3)",
+      "${5 + 3}",
+      "$[5 + 3]"
+    ],
+    "answer": "$((5 + 3))"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "Hangi komut count değişkenini bir artırır?",
+    "options": [
+      "let count++",
+      "count++",
+      "increment count",
+      "add count"
+    ],
+    "answer": "let count++"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "Hangi komut 8 sonucunu yazdırmak için 5 ile 3'ü toplar?",
+    "options": [
+      "expr 5 + 3",
+      "expr 5+3",
+      "expr5 + 3",
+      "expr add 5 3"
+    ],
+    "answer": "expr 5 + 3"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "Hangi komut count'u tamsayı değişkeni olarak tanımlar?",
+    "options": [
+      "declare -i count",
+      "declare int count",
+      "integer count",
+      "set count integer"
+    ],
+    "answer": "declare -i count"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "Hangi komut bir değişkeni salt okunur yapar?",
+    "options": [
+      "readonly var",
+      "lock var",
+      "const var",
+      "final var"
+    ],
+    "answer": "readonly var"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "Hangi komut bir değişkeni kabuk ortamından kaldırır?",
+    "options": [
+      "unset var",
+      "delete var",
+      "remove var",
+      "clear var"
+    ],
+    "answer": "unset var"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "Hangi komut bir değişkeni alt işlemlerin kullanımına sunar?",
+    "options": [
+      "export var",
+      "share var",
+      "env var",
+      "publish var"
+    ],
+    "answer": "export var"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "Hangi seçenek çıktı yönlendirmesinin mevcut bir dosyanın üzerine yazmasını engeller?",
+    "options": [
+      "set -o noclobber",
+      "set -o nooverwrite",
+      "set -o protect",
+      "set -o safe"
+    ],
+    "answer": "set -o noclobber"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "Hangi Bash değişkeni kabuğun başlamasından bu yana geçen saniye sayısını tutar?",
+    "options": [
+      "$SECONDS",
+      "$RANDOM",
+      "$LINENO",
+      "$UID"
+    ],
+    "answer": "$SECONDS"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "Hangi Bash genişletmesi alt değerini yalnızca var tanımlı ve boş değilse yerine koyar?",
+    "options": [
+      "${var:+alt}",
+      "${var:-alt}",
+      "${var:=alt}",
+      "${var:?alt}"
+    ],
+    "answer": "${var:+alt}"
+  }
+]

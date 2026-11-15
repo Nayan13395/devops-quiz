@@ -1,0 +1,302 @@
+[
+  {
+    "category": "Ansible",
+    "set": 3,
+    "question": "ما هو Ansible Role؟",
+    "options": [
+      "مجموعة قابلة لإعادة الاستخدام من المهام والملفات",
+      "حساب مستخدم",
+      "مجموعة في Inventory",
+      "متغير في playbook"
+    ],
+    "answer": "مجموعة قابلة لإعادة الاستخدام من المهام والملفات"
+  },
+  {
+    "category": "Ansible",
+    "set": 3,
+    "question": "أي أمر ينشئ هيكل role جديدًا؟",
+    "options": [
+      "ansible-galaxy init",
+      "ansible role create",
+      "ansible init role",
+      "ansible-playbook init"
+    ],
+    "answer": "ansible-galaxy init"
+  },
+  {
+    "category": "Ansible",
+    "set": 3,
+    "question": "أي مجلد يحتوي على مهام role؟",
+    "options": [
+      "tasks",
+      "handlers",
+      "files",
+      "vars"
+    ],
+    "answer": "tasks"
+  },
+  {
+    "category": "Ansible",
+    "set": 3,
+    "question": "أي ملف هو ملف المهام الرئيسي في role؟",
+    "options": [
+      "tasks/main.yml",
+      "tasks/tasks.yml",
+      "main/tasks.yml",
+      "role.yml"
+    ],
+    "answer": "tasks/main.yml"
+  },
+  {
+    "category": "Ansible",
+    "set": 3,
+    "question": "أي مجلد يحتوي على handlers الخاصة بـ role؟",
+    "options": [
+      "handlers",
+      "tasks",
+      "events",
+      "notify"
+    ],
+    "answer": "handlers"
+  },
+  {
+    "category": "Ansible",
+    "set": 3,
+    "question": "أي مجلد يخزن قوالب Jinja2 في role؟",
+    "options": [
+      "templates",
+      "files",
+      "jinja",
+      "render"
+    ],
+    "answer": "templates"
+  },
+  {
+    "category": "Ansible",
+    "set": 3,
+    "question": "أي مجلد يخزن الملفات الثابتة في role؟",
+    "options": [
+      "files",
+      "templates",
+      "static",
+      "resources"
+    ],
+    "answer": "files"
+  },
+  {
+    "category": "Ansible",
+    "set": 3,
+    "question": "أي مجلد يحتوي على متغيرات role؟",
+    "options": [
+      "vars",
+      "variables",
+      "config",
+      "settings"
+    ],
+    "answer": "vars"
+  },
+  {
+    "category": "Ansible",
+    "set": 3,
+    "question": "أي مجلد يحتوي على المتغيرات الافتراضية؟",
+    "options": [
+      "defaults",
+      "vars",
+      "config",
+      "settings"
+    ],
+    "answer": "defaults"
+  },
+  {
+    "category": "Ansible",
+    "set": 3,
+    "question": "أي كلمة مفتاحية على مستوى play تعلن قائمة ثابتة من الأدوار بدلا من استدعاء دور من مهمة منفردة؟",
+    "options": [
+      "roles",
+      "include_role",
+      "role",
+      "import_role"
+    ],
+    "answer": "roles"
+  },
+  {
+    "category": "Ansible",
+    "set": 3,
+    "question": "ما هو Ansible Galaxy؟",
+    "options": [
+      "مستودع لـ roles و collections الخاصة بـ Ansible",
+      "أداة مراقبة",
+      "منصة CI/CD",
+      "مدير Inventory"
+    ],
+    "answer": "مستودع لـ roles و collections الخاصة بـ Ansible"
+  },
+  {
+    "category": "Ansible",
+    "set": 3,
+    "question": "أي أمر يثبّت role من Galaxy؟",
+    "options": [
+      "ansible-galaxy install",
+      "ansible install role",
+      "ansible role add",
+      "ansible-galaxy add"
+    ],
+    "answer": "ansible-galaxy install"
+  },
+  {
+    "category": "Ansible",
+    "set": 3,
+    "question": "فيمَ يُستخدم Ansible Vault؟",
+    "options": [
+      "تشفير البيانات الحساسة",
+      "إدارة Inventories",
+      "تشغيل playbooks",
+      "تثبيت roles"
+    ],
+    "answer": "تشفير البيانات الحساسة"
+  },
+  {
+    "category": "Ansible",
+    "set": 3,
+    "question": "أي أمر يشفّر ملفًا موجودًا؟",
+    "options": [
+      "ansible-vault encrypt",
+      "ansible-vault secure",
+      "ansible-vault create",
+      "ansible-vault lock"
+    ],
+    "answer": "ansible-vault encrypt"
+  },
+  {
+    "category": "Ansible",
+    "set": 3,
+    "question": "ما هي Ansible Collections؟",
+    "options": [
+      "حزم تحتوي على roles و modules و plugins",
+      "مجموعات Inventory",
+      "ملفات مشفرة",
+      "متغيرات YAML"
+    ],
+    "answer": "حزم تحتوي على roles و modules و plugins"
+  },
+  {
+    "category": "Ansible",
+    "set": 3,
+    "question": "أي ملف للدور يعلن عادة الاعتماد على أدوار أخرى؟",
+    "options": [
+      "vars/main.yml",
+      "meta/main.yml",
+      "defaults/main.yml",
+      "handlers/main.yml"
+    ],
+    "answer": "meta/main.yml"
+  },
+  {
+    "category": "Ansible",
+    "set": 3,
+    "question": "أي أمر يثبت مجموعة باسم community.general؟",
+    "options": [
+      "ansible-galaxy collection install community.general",
+      "ansible-galaxy role install community.general",
+      "ansible-galaxy collection build community.general",
+      "ansible-galaxy collection verify community.general"
+    ],
+    "answer": "ansible-galaxy collection install community.general"
+  },
+  {
+    "category": "Ansible",
+    "set": 3,
+    "question": "ماذا يحدد اسم المجموعة المؤهل بالكامل ansible.builtin.copy؟",
+    "options": [
+      "دور copy داخل مجموعة مضيفين باسم builtin",
+      "اسم مضيف في الجرد يتبعه نوع اتصاله",
+      "معرّف Vault يتبعه اسم ملف مشفر",
+      "وحدة copy في مجموعة builtin ضمن نطاق الأسماء ansible"
+    ],
+    "answer": "وحدة copy في مجموعة builtin ضمن نطاق الأسماء ansible"
+  },
+  {
+    "category": "Ansible",
+    "set": 3,
+    "question": "أي أمر يعرض ملف Vault مشفرا دون تركه مفكوك التشفير على القرص بشكل دائم؟",
+    "options": [
+      "ansible-vault edit secrets.yml",
+      "ansible-vault rekey secrets.yml",
+      "ansible-vault view secrets.yml",
+      "ansible-vault decrypt secrets.yml"
+    ],
+    "answer": "ansible-vault view secrets.yml"
+  },
+  {
+    "category": "Ansible",
+    "set": 3,
+    "question": "أي أمر يغيّر كلمة مرور حماية ملف موجود مشفر باستخدام Vault؟",
+    "options": [
+      "ansible-vault create secrets.yml",
+      "ansible-vault rekey secrets.yml",
+      "ansible-vault view secrets.yml",
+      "ansible-vault encrypt secrets.yml"
+    ],
+    "answer": "ansible-vault rekey secrets.yml"
+  },
+  {
+    "category": "Ansible",
+    "set": 3,
+    "question": "أي خيار يطلب كلمة مرور Vault عند تشغيل playbook؟",
+    "options": [
+      "--ask-vault-pass",
+      "--ask-pass",
+      "--ask-become-pass",
+      "--private-key"
+    ],
+    "answer": "--ask-vault-pass"
+  },
+  {
+    "category": "Ansible",
+    "set": 3,
+    "question": "أي إجراء للمهمة يحمّل دورا ديناميكيا وقت التنفيذ؟",
+    "options": [
+      "ansible.builtin.import_role",
+      "ansible.builtin.import_tasks",
+      "ansible.builtin.include_vars",
+      "ansible.builtin.include_role"
+    ],
+    "answer": "ansible.builtin.include_role"
+  },
+  {
+    "category": "Ansible",
+    "set": 3,
+    "question": "أي إجراء للمهمة يستورد ملف مهام استيرادا ثابتا؟",
+    "options": [
+      "ansible.builtin.include_vars",
+      "ansible.builtin.import_role",
+      "ansible.builtin.import_tasks",
+      "ansible.builtin.include_tasks"
+    ],
+    "answer": "ansible.builtin.import_tasks"
+  },
+  {
+    "category": "Ansible",
+    "set": 3,
+    "question": "أي مصدر للمتغيرات له الأولوية إذا ظهر الاسم نفسه في القيم الافتراضية للدور ومتغيراته؟",
+    "options": [
+      "يسبب التعريفان دائما خطأ في الصياغة",
+      "متغيرات الدور",
+      "القيم الافتراضية للدور",
+      "تُوصل القيمتان دائما معا"
+    ],
+    "answer": "متغيرات الدور"
+  },
+  {
+    "category": "Ansible",
+    "set": 3,
+    "question": "أي أمر ينشئ متغيرا مشفرا من سلسلة نصية معطاة؟",
+    "options": [
+      "ansible-vault encrypt_string",
+      "ansible-vault encrypt",
+      "ansible-vault rekey",
+      "ansible-vault view"
+    ],
+    "answer": "ansible-vault encrypt_string"
+  }
+]

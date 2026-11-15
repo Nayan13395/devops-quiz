@@ -1,0 +1,302 @@
+[
+  {
+    "category": "Terraform",
+    "set": 3,
+    "question": "কোন Terraform ফিচার পুনরায় ব্যবহারযোগ্য ইনফ্রাস্ট্রাকচার কম্পোনেন্টের সুযোগ দেয়?",
+    "options": [
+      "মডিউল",
+      "প্রোভাইডার",
+      "ভেরিয়েবল",
+      "আউটপুট"
+    ],
+    "answer": "মডিউল"
+  },
+  {
+    "category": "Terraform",
+    "set": 3,
+    "question": "একটি মডিউল কল করতে কোন ব্লক ব্যবহৃত হয়?",
+    "options": [
+      "module",
+      "import",
+      "resource",
+      "provider"
+    ],
+    "answer": "module"
+  },
+  {
+    "category": "Terraform",
+    "set": 3,
+    "question": "কোন আর্গুমেন্ট একটি মডিউলের সোর্স লোকেশন নির্দিষ্ট করে?",
+    "options": [
+      "source",
+      "path",
+      "location",
+      "module_source"
+    ],
+    "answer": "source"
+  },
+  {
+    "category": "Terraform",
+    "set": 3,
+    "question": "কোন Terraform Registry পাবলিক মডিউল হোস্ট করে?",
+    "options": [
+      "Terraform Registry",
+      "Docker Hub",
+      "GitHub Packages",
+      "AWS Marketplace"
+    ],
+    "answer": "Terraform Registry"
+  },
+  {
+    "category": "Terraform",
+    "set": 3,
+    "question": "কোন ব্যাকএন্ড Terraform স্টেট Amazon S3-এ সংরক্ষণ করে?",
+    "options": [
+      "s3",
+      "aws",
+      "bucket",
+      "remote"
+    ],
+    "answer": "s3"
+  },
+  {
+    "category": "Terraform",
+    "set": 3,
+    "question": "S3 ব্যাকএন্ডের এখন অপ্রচলিত টেবিলভিত্তিক স্টেট লকিংয়ে কোন AWS সেবা ব্যবহৃত হত?",
+    "options": [
+      "DynamoDB",
+      "RDS",
+      "EFS",
+      "Lambda"
+    ],
+    "answer": "DynamoDB"
+  },
+  {
+    "category": "Terraform",
+    "set": 3,
+    "question": "আগের Terraform Cloud, অর্থাৎ HCP Terraform-এ স্টেট রাখতে পারে কোন পুরোনো ব্যাকএন্ড ধরন?",
+    "options": [
+      "remote",
+      "cloud",
+      "terraform",
+      "tfc"
+    ],
+    "answer": "remote"
+  },
+  {
+    "category": "Terraform",
+    "set": 3,
+    "question": "স্টেট লকিংয়ের উদ্দেশ্য কী?",
+    "options": [
+      "একযোগে পরিবর্তন প্রতিরোধ করা",
+      "স্টেট ফাইল এনক্রিপ্ট করা",
+      "স্টেট ব্যাকআপ করা",
+      "স্টেট কমপ্রেস করা"
+    ],
+    "answer": "একযোগে পরিবর্তন প্রতিরোধ করা"
+  },
+  {
+    "category": "Terraform",
+    "set": 3,
+    "question": "কোন কমান্ড রিমোট স্টেট লোকাল মেশিনে নিয়ে আসে?",
+    "options": [
+      "terraform state pull",
+      "terraform pull",
+      "terraform get-state",
+      "terraform state download"
+    ],
+    "answer": "terraform state pull"
+  },
+  {
+    "category": "Terraform",
+    "set": 3,
+    "question": "কোন কমান্ড স্টেট একটি ব্যাকএন্ডে পুশ করে?",
+    "options": [
+      "terraform state push",
+      "terraform push",
+      "terraform upload",
+      "terraform state upload"
+    ],
+    "answer": "terraform state push"
+  },
+  {
+    "category": "Terraform",
+    "set": 3,
+    "question": "কোন ব্যাকএন্ড টাইপ স্টেট লোকাল ডিস্কে সংরক্ষণ করে?",
+    "options": [
+      "local",
+      "file",
+      "disk",
+      "host"
+    ],
+    "answer": "local"
+  },
+  {
+    "category": "Terraform",
+    "set": 3,
+    "question": "কোন কমান্ড একটি রিসোর্স মুছে না ফেলে স্টেট থেকে সরিয়ে দেয়?",
+    "options": [
+      "terraform state rm",
+      "terraform rm",
+      "terraform destroy",
+      "terraform remove"
+    ],
+    "answer": "terraform state rm"
+  },
+  {
+    "category": "Terraform",
+    "set": 3,
+    "question": "কোন কমান্ড স্টেটের মধ্যে রিসোর্স স্থানান্তর করে?",
+    "options": [
+      "terraform state mv",
+      "terraform move",
+      "terraform mv",
+      "terraform state move"
+    ],
+    "answer": "terraform state mv"
+  },
+  {
+    "category": "Terraform",
+    "set": 3,
+    "question": "কোন ডেটা সোর্স অন্য একটি স্টেট ফাইল থেকে আউটপুট পড়ে?",
+    "options": [
+      "terraform_remote_state",
+      "remote_state",
+      "state_data",
+      "terraform_state"
+    ],
+    "answer": "terraform_remote_state"
+  },
+  {
+    "category": "Terraform",
+    "set": 3,
+    "question": "কোন ফাইল প্রোভাইডার ভার্সন লক করে?",
+    "options": [
+      ".terraform.lock.hcl",
+      "terraform.lock",
+      "providers.lock",
+      "terraform.providers"
+    ],
+    "answer": ".terraform.lock.hcl"
+  },
+  {
+    "category": "Terraform",
+    "set": 3,
+    "question": "রেজিস্ট্রি থেকে ইনস্টল করা মডিউলের সংস্করণ বেছে নেয় কোন আর্গুমেন্ট?",
+    "options": [
+      "version",
+      "ref",
+      "revision",
+      "required_version"
+    ],
+    "answer": "version"
+  },
+  {
+    "category": "Terraform",
+    "set": 3,
+    "question": "network উপমডিউলের vpc_id আউটপুট পড়ে কোন এক্সপ্রেশন?",
+    "options": [
+      "var.network.vpc_id",
+      "local.network.vpc_id",
+      "data.network.vpc_id",
+      "module.network.vpc_id"
+    ],
+    "answer": "module.network.vpc_id"
+  },
+  {
+    "category": "Terraform",
+    "set": 3,
+    "question": "অতিরিক্ত প্রোভাইডার সেটিংয়ের নাম দেয় provider ব্লকের কোন আর্গুমেন্ট?",
+    "options": [
+      "version",
+      "count",
+      "alias",
+      "source"
+    ],
+    "answer": "alias"
+  },
+  {
+    "category": "Terraform",
+    "set": 3,
+    "question": "নির্দিষ্ট উপনামের প্রোভাইডার সেটিং বেছে নেয় কোন রিসোর্স মেটা-আর্গুমেন্ট?",
+    "options": [
+      "for_each",
+      "provider",
+      "providers",
+      "depends_on"
+    ],
+    "answer": "provider"
+  },
+  {
+    "category": "Terraform",
+    "set": 3,
+    "question": "নির্দিষ্ট প্রোভাইডার সেটিং উপমডিউলে দেয় কোন মডিউল-কল আর্গুমেন্ট?",
+    "options": [
+      "providers",
+      "provider",
+      "required_providers",
+      "configuration_aliases"
+    ],
+    "answer": "providers"
+  },
+  {
+    "category": "Terraform",
+    "set": 3,
+    "question": "ব্যাকএন্ড সেটিং বদলালে পুরোনো স্টেট সরানোর চেষ্টা করে কোন terraform init বিকল্প?",
+    "options": [
+      "-reconfigure",
+      "-upgrade",
+      "-get=false",
+      "-migrate-state"
+    ],
+    "answer": "-migrate-state"
+  },
+  {
+    "category": "Terraform",
+    "set": 3,
+    "question": "স্টেট সরানোর চেষ্টা ছাড়াই আগের ব্যাকএন্ড সেটিং উপেক্ষা করে কোন terraform init বিকল্প?",
+    "options": [
+      "-upgrade",
+      "-lock=false",
+      "-reconfigure",
+      "-migrate-state"
+    ],
+    "answer": "-reconfigure"
+  },
+  {
+    "category": "Terraform",
+    "set": 3,
+    "question": "staging নামের CLI ওয়ার্কস্পেস বানিয়ে বেছে নেয় কোন কমান্ড?",
+    "options": [
+      "terraform workspace list",
+      "terraform workspace new staging",
+      "terraform workspace select staging",
+      "terraform workspace show"
+    ],
+    "answer": "terraform workspace new staging"
+  },
+  {
+    "category": "Terraform",
+    "set": 3,
+    "question": "বর্তমান CLI ওয়ার্কস্পেসের নাম দেখায় কোন কমান্ড?",
+    "options": [
+      "terraform workspace show",
+      "terraform workspace list",
+      "terraform workspace select default",
+      "terraform state list"
+    ],
+    "answer": "terraform workspace show"
+  },
+  {
+    "category": "Terraform",
+    "set": 3,
+    "question": "S3-এর নিজস্ব লকফাইল-ভিত্তিক স্টেট লকিং চালু করে কোন S3 ব্যাকএন্ড আর্গুমেন্ট?",
+    "options": [
+      "encrypt = true",
+      "workspace_key_prefix = \"env\"",
+      "skip_region_validation = true",
+      "use_lockfile = true"
+    ],
+    "answer": "use_lockfile = true"
+  }
+]

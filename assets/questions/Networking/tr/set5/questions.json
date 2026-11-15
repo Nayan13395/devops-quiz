@@ -1,0 +1,302 @@
+[
+  {
+    "category": "Networking",
+    "set": 5,
+    "question": "DNSSEC, DNS verileri için ne sağlamak üzere tasarlanmıştır?",
+    "options": [
+      "Tüm DNS sorgu ve yanıtlarının şifrelenmesini",
+      "Genel bir bölgeyi sorgulamadan önce istemcilerin kimlik doğrulamasını",
+      "Hizmet engelleme trafiğine rağmen garantili kullanılabilirliği",
+      "Veri kaynağının kimlik doğrulamasını ve bütünlüğünü"
+    ],
+    "answer": "Veri kaynağının kimlik doğrulamasını ve bütünlüğünü"
+  },
+  {
+    "category": "Networking",
+    "set": 5,
+    "question": "TLS üzerinden DNS için hangi hedef bağlantı noktası atanmıştır?",
+    "options": [
+      "443",
+      "5353",
+      "853",
+      "53"
+    ],
+    "answer": "853"
+  },
+  {
+    "category": "Networking",
+    "set": 5,
+    "question": "UDP DNS yanıtı kısaltıldığında ve tam yanıt gerektiğinde özyinelemeli çözümleyici normalde ne yapar?",
+    "options": [
+      "Kısaltmayı alan adının bulunmadığının kanıtı sayar",
+      "Sorguyu TCP üzerinden yineler",
+      "Kısmi yanıtı tam kabul eder",
+      "Her eksik UDP parçasını özgün paket konumuna göre ister"
+    ],
+    "answer": "Sorguyu TCP üzerinden yineler"
+  },
+  {
+    "category": "Networking",
+    "set": 5,
+    "question": "QUIC paketlerini hangi taşıma protokolü taşır?",
+    "options": [
+      "UDP",
+      "TCP",
+      "SCTP",
+      "ICMP"
+    ],
+    "answer": "UDP"
+  },
+  {
+    "category": "Networking",
+    "set": 5,
+    "question": "QUIC üzerinde hangi HTTP sürümü çalışır?",
+    "options": [
+      "HTTP/2",
+      "HTTP/1.1",
+      "HTTP/1.0",
+      "HTTP/3"
+    ],
+    "answer": "HTTP/3"
+  },
+  {
+    "category": "Networking",
+    "set": 5,
+    "question": "Tek bağlantıdaki HTTP/2 akışları için TCP sıra başı engellemesi ne anlama gelir?",
+    "options": [
+      "TCP kaybı yalnızca HTTP başlıklarını geciktirebilir",
+      "TCP kaybı yalnızca eksik baytları içeren akışı etkiler",
+      "Kayıp TCP verisi, birbirinden bağımsız akışların teslimini de geciktirebilir",
+      "Yeni bir akış oluşturulmadan önce her akış tamamen bitmelidir"
+    ],
+    "answer": "Kayıp TCP verisi, birbirinden bağımsız akışların teslimini de geciktirebilir"
+  },
+  {
+    "category": "Networking",
+    "set": 5,
+    "question": "TCP SYN seli bir sunucuda öncelikle neyi tüketmeye çalışır?",
+    "options": [
+      "Kimliği başarıyla doğrulanmış uygulama isteklerini işleyen çalışan kuyruklarını",
+      "Tamamlanmamış bağlantı el sıkışmalarını izleyen kaynakları",
+      "Kurulu oturumların tam HTTP yanıtlarını tutan arabellekleri",
+      "TLS oturum bileti dosyalarının kapladığı depolamayı"
+    ],
+    "answer": "Tamamlanmamış bağlantı el sıkışmalarını izleyen kaynakları"
+  },
+  {
+    "category": "Networking",
+    "set": 5,
+    "question": "Tek noktaya gönderimi çok noktaya gönderimden ne ayırır?",
+    "options": [
+      "Tek noktaya gönderim bir alıcıyı, çok noktaya gönderim katılım sağlanmış bir grubu hedefler",
+      "Tek noktaya gönderim her zaman UDP, çok noktaya gönderim her zaman TCP kullanır",
+      "Tek noktaya gönderim IPv6, çok noktaya gönderim IPv4 gerektirir",
+      "Tek noktaya gönderim çerçeveleri şifreler, çok noktaya gönderim sıkıştırır"
+    ],
+    "answer": "Tek noktaya gönderim bir alıcıyı, çok noktaya gönderim katılım sağlanmış bir grubu hedefler"
+  },
+  {
+    "category": "Networking",
+    "set": 5,
+    "question": "Çok noktaya gönderim adreslemesi için hangi IPv4 aralığı ayrılmıştır?",
+    "options": [
+      "240.0.0.0/4",
+      "169.254.0.0/16",
+      "127.0.0.0/8",
+      "224.0.0.0/4"
+    ],
+    "answer": "224.0.0.0/4"
+  },
+  {
+    "category": "Networking",
+    "set": 5,
+    "question": "Ana makineler ile komşu yönlendiriciler arasında IPv4 çok noktaya gönderim grubu üyeliğini hangi protokol bildirir?",
+    "options": [
+      "OSPF",
+      "DHCP",
+      "IGMP",
+      "ARP"
+    ],
+    "answer": "IGMP"
+  },
+  {
+    "category": "Networking",
+    "set": 5,
+    "question": "Birden fazla konum aynı adresi duyurduğunda anycast yönlendirmesi paketi nereye teslim eder?",
+    "options": [
+      "Rotadan bağımsız, rastgele seçilmiş bir DNS sunucusuna",
+      "Yönlendirme sisteminin seçtiği tek bir örneğe",
+      "Tüm örneklere aynı anda",
+      "Yalnızca en büyük MAC adresine sahip örneğe"
+    ],
+    "answer": "Yönlendirme sisteminin seçtiği tek bir örneğe"
+  },
+  {
+    "category": "Networking",
+    "set": 5,
+    "question": "Ethernet çerçevesindeki IEEE 802.1Q etiketinin görevi nedir?",
+    "options": [
+      "Çerçevenin VLAN kimliğini belirtmek",
+      "Hedef MAC adresini değiştirmek",
+      "IP alt ağ önekinin uzunluğunu belirtmek",
+      "Çerçevenin geçtiği yönlendirici sayısını kaydetmek"
+    ],
+    "answer": "Çerçevenin VLAN kimliğini belirtmek"
+  },
+  {
+    "category": "Networking",
+    "set": 5,
+    "question": "Spanning Tree Protocol köprülenmiş Ethernet ağında esas olarak neyi önler?",
+    "options": [
+      "Otonom sistemler arasındaki IP yönlendirme döngülerini",
+      "Bağımsız DHCP sunucularının yinelenen IP adresi atamalarını",
+      "Ana makinedeki çakışan TCP bağlantı noktası atamalarını",
+      "Katman 2 iletim döngülerini"
+    ],
+    "answer": "Katman 2 iletim döngülerini"
+  },
+  {
+    "category": "Networking",
+    "set": 5,
+    "question": "Tam çift yönlü Ethernet bağlantısı trafiği nasıl taşır?",
+    "options": [
+      "İki uç çarpışma algıladıktan sonra sırayla göndermelidir",
+      "Uçlardan biri sürekli olarak yalnızca alıcıdır",
+      "İki uç aynı anda iletim yapabilir",
+      "Bağlantı sıfırlanana kadar yalnızca bir uç iletim yapabilir"
+    ],
+    "answer": "İki uç aynı anda iletim yapabilir"
+  },
+  {
+    "category": "Networking",
+    "set": 5,
+    "question": "Bağlantı birleştirmenin amacı nedir?",
+    "options": [
+      "Her tek noktaya gönderim çerçevesini tüm kullanılabilir üst bağlantılara çoğaltmak",
+      "Birden fazla fiziksel bağlantıyı tek mantıksal bağlantıda birleştirmek",
+      "Ayrı yayın alanlarını kaldırarak birden fazla VLAN'ı birleştirmek",
+      "Bağlı tüm anahtar bağlantı noktalarını tek paylaşılan yarı çift yönlü ortama dönüştürmek"
+    ],
+    "answer": "Birden fazla fiziksel bağlantıyı tek mantıksal bağlantıda birleştirmek"
+  },
+  {
+    "category": "Networking",
+    "set": 5,
+    "question": "IP başlığındaki DSCP, ağ aygıtlarının neyi sınıflandırmasına yardımcı olur?",
+    "options": [
+      "Farklı hizmet kalitesi uygulanacak trafiği",
+      "Kimlik numarasına göre parçaları birleştirilecek paketleri",
+      "Kalan atlama sayısıyla döngüsü önlenecek paketleri",
+      "Bağlantı noktası numarasıyla uçları tanımlanacak bağlantıları"
+    ],
+    "answer": "Farklı hizmet kalitesi uygulanacak trafiği"
+  },
+  {
+    "category": "Networking",
+    "set": 5,
+    "question": "Ağ paket akışında jitter neyi ölçer?",
+    "options": [
+      "Ortalama paket iletim hızını",
+      "Kayıp paket oranını",
+      "En yüksek paket veri yükü uzunluğunu",
+      "Paket gecikmesindeki değişkenliği"
+    ],
+    "answer": "Paket gecikmesindeki değişkenliği"
+  },
+  {
+    "category": "Networking",
+    "set": 5,
+    "question": "Tekrarlanan yeniden iletimler bir uygulamanın yararlı veri hızını neden düşürebilir?",
+    "options": [
+      "Her yönlendiriciyi çıkış bağlantısı kapasitesini iki katına çıkarmaya zorlar",
+      "Alıcının duyurduğu pencereyi artırabilmesini garanti eder",
+      "Yeni ve benzersiz uygulama verisi teslim etmeden kapasite tüketir",
+      "Taşıma başlıklarını kaldırarak protokol ek yükünü azaltır"
+    ],
+    "answer": "Yeni ve benzersiz uygulama verisi teslim etmeden kapasite tüketir"
+  },
+  {
+    "category": "Networking",
+    "set": 5,
+    "question": "Path MTU Discovery neyi belirlemeye çalışır?",
+    "options": [
+      "Yönlendiricinin trafik düşürmeden önce kuyruğa alabileceği paket sayısını",
+      "Yol boyunca parçalama olmadan kullanılabilecek en büyük paket boyutunu",
+      "Alıcının arabelleğe alabileceği en yüksek onaylanmamış bayt sayısını",
+      "Tıkanıklıktan kaçınmak için gereken en düşük gidiş dönüş süresini"
+    ],
+    "answer": "Yol boyunca parçalama olmadan kullanılabilecek en büyük paket boyutunu"
+  },
+  {
+    "category": "Networking",
+    "set": 5,
+    "question": "Hangi soket uç demeti bir TCP bağlantısını diğer TCP bağlantılarından ayırır?",
+    "options": [
+      "Kaynak IP, kaynak bağlantı noktası, hedef IP, hedef bağlantı noktası",
+      "Kaynak IP, hedef IP, sıra numarası, onay numarası",
+      "Kaynak bağlantı noktası, hedef bağlantı noktası, pencere boyutu, sağlama toplamı",
+      "Kaynak IP, kaynak bağlantı noktası, hedef IP, IP atlama sınırı"
+    ],
+    "answer": "Kaynak IP, kaynak bağlantı noktası, hedef IP, hedef bağlantı noktası"
+  },
+  {
+    "category": "Networking",
+    "set": 5,
+    "question": "Geçici bağlantı noktası yaygın olarak ne için kullanılır?",
+    "options": [
+      "Kalıcı atanmış, iyi bilinen bir sunucu bağlantı noktası",
+      "Omurga trafiğine ayrılmış fiziksel anahtar bağlantı noktası",
+      "Tüm yönlendirme protokollerinin paylaştığı ayrılmış hedef bağlantı noktası",
+      "İstemci tarafındaki geçici taşıma uç noktası"
+    ],
+    "answer": "İstemci tarafındaki geçici taşıma uç noktası"
+  },
+  {
+    "category": "Networking",
+    "set": 5,
+    "question": "HTTP Cache-Control no-store yönergesi önbelleğe ne söyler?",
+    "options": [
+      "Yanıtı yalnızca özel önbellekte sakla",
+      "Yanıtı belirtilen tazelik süresi dolana kadar sakla",
+      "Yönergenin kapsadığı isteği veya yanıtı saklama",
+      "Yanıtı sakla ancak yeniden kullanmadan önce doğrula"
+    ],
+    "answer": "Yönergenin kapsadığı isteği veya yanıtı saklama"
+  },
+  {
+    "category": "Networking",
+    "set": 5,
+    "question": "Koşullu GET sonrasındaki HTTP 304 yanıtı neyi gösterir?",
+    "options": [
+      "Kaynak sunucu kendi ana makine adını çözümleyememiştir",
+      "Doğrulama sonucuna göre önbellekteki temsil yeniden kullanılabilir",
+      "İstenen kaynak kalıcı olarak taşınmıştır",
+      "İstemci farklı bir taşıma protokolüne geçmelidir"
+    ],
+    "answer": "Doğrulama sonucuna göre önbellekteki temsil yeniden kullanılabilir"
+  },
+  {
+    "category": "Networking",
+    "set": 5,
+    "question": "Ters vekil HTTP isteğini iletirken ilk istemcinin IP adresini genellikle hangi vekil başlığı kaydeder?",
+    "options": [
+      "X-Forwarded-For",
+      "Content-Type",
+      "Accept-Encoding",
+      "Cache-Control"
+    ],
+    "answer": "X-Forwarded-For"
+  },
+  {
+    "category": "Networking",
+    "set": 5,
+    "question": "Uygulama, iletilen istemci IP başlıklarına neden yalnızca yapılandırılmış güvenilir vekillerden geldiğinde güvenmelidir?",
+    "options": [
+      "TLS her başlıktaki özgün istemci IP değerini otomatik olarak doğrular",
+      "TCP sağlama toplamları başlığın özgün istemciyi adlandırdığını kanıtlar",
+      "Her iletici vekil bu başlığı varsayılan olarak kriptografik olarak imzalar",
+      "Güven sınırı uygulanmazsa istemciler bu başlıkları taklit edebilir"
+    ],
+    "answer": "Güven sınırı uygulanmazsa istemciler bu başlıkları taklit edebilir"
+  }
+]

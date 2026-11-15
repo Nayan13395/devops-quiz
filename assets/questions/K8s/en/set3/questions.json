@@ -1,0 +1,302 @@
+[
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "Which component schedules pods on nodes?",
+    "options": [
+      "kube-scheduler",
+      "kubelet",
+      "etcd",
+      "kube-proxy"
+    ],
+    "answer": "kube-scheduler"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "Which component runs on every node?",
+    "options": [
+      "kubelet",
+      "etcd",
+      "kube-apiserver",
+      "controller-manager"
+    ],
+    "answer": "kubelet"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "Which component acts as the front-end of the control plane?",
+    "options": [
+      "kube-apiserver",
+      "kubelet",
+      "etcd",
+      "kube-proxy"
+    ],
+    "answer": "kube-apiserver"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "Which component stores cluster state?",
+    "options": [
+      "etcd",
+      "kubelet",
+      "CoreDNS",
+      "Ingress"
+    ],
+    "answer": "etcd"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "Which component manages networking rules on nodes?",
+    "options": [
+      "kube-proxy",
+      "kubelet",
+      "etcd",
+      "Scheduler"
+    ],
+    "answer": "kube-proxy"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "Which DNS service is commonly used in Kubernetes?",
+    "options": [
+      "CoreDNS",
+      "Bind",
+      "Route53",
+      "Consul"
+    ],
+    "answer": "CoreDNS"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "Which object is the smallest deployable unit in Kubernetes?",
+    "options": [
+      "Pod",
+      "Cluster",
+      "Node",
+      "Service"
+    ],
+    "answer": "Pod"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "Which object manages stateless applications?",
+    "options": [
+      "Deployment",
+      "ConfigMap",
+      "Secret",
+      "Namespace"
+    ],
+    "answer": "Deployment"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "Which workload provides stable Pod identities and ordered deployment for stateful applications?",
+    "options": [
+      "StatefulSet",
+      "Deployment",
+      "ReplicaSet",
+      "DaemonSet"
+    ],
+    "answer": "StatefulSet"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "Which object ensures a specified number of pod replicas are running?",
+    "options": [
+      "ReplicaSet",
+      "Service",
+      "ConfigMap",
+      "Namespace"
+    ],
+    "answer": "ReplicaSet"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "Which object exposes pods to network traffic?",
+    "options": [
+      "Service",
+      "Node",
+      "ReplicaSet",
+      "Volume"
+    ],
+    "answer": "Service"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "Which object manages external access to services?",
+    "options": [
+      "Ingress",
+      "Pod",
+      "ReplicaSet",
+      "Secret"
+    ],
+    "answer": "Ingress"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "Which object stores configuration data?",
+    "options": [
+      "ConfigMap",
+      "Deployment",
+      "Ingress",
+      "Node"
+    ],
+    "answer": "ConfigMap"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "Which object stores sensitive information like passwords?",
+    "options": [
+      "Secret",
+      "ConfigMap",
+      "Service",
+      "Namespace"
+    ],
+    "answer": "Secret"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "Which object provides persistent storage to pods?",
+    "options": [
+      "PersistentVolume",
+      "ReplicaSet",
+      "Namespace",
+      "Service"
+    ],
+    "answer": "PersistentVolume"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "Which probe determines whether a container is ready to receive Service traffic?",
+    "options": [
+      "TCP keepalive probe",
+      "Readiness probe",
+      "Liveness probe",
+      "Startup probe"
+    ],
+    "answer": "Readiness probe"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "What can happen after a liveness probe repeatedly fails past its configured threshold?",
+    "options": [
+      "The kubelet restarts that container according to its restart policy",
+      "The scheduler moves every Pod to a new node",
+      "The API server deletes the Deployment",
+      "The Service becomes an ExternalName Service"
+    ],
+    "answer": "The kubelet restarts that container according to its restart policy"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "What does a startup probe do while an application is still starting?",
+    "options": [
+      "Disables all container resource limits",
+      "Prevents the image from being pulled",
+      "Reserves a dedicated control-plane node",
+      "Delays liveness and readiness probing until the startup probe succeeds"
+    ],
+    "answer": "Delays liveness and readiness probing until the startup probe succeeds"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "What is true of ordinary init containers in a Pod?",
+    "options": [
+      "They must expose a Service port",
+      "They always run on separate nodes",
+      "They run to completion in order before application containers start",
+      "They all run only after application containers exit"
+    ],
+    "answer": "They run to completion in order before application containers start"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "Which resources do containers in the same Pod normally share?",
+    "options": [
+      "A separate Service IP for each container",
+      "A network namespace and Pod IP address",
+      "A writable root filesystem",
+      "A distinct node for each container"
+    ],
+    "answer": "A network namespace and Pod IP address"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "Which field declares the resource amount used by the scheduler when considering a container's placement?",
+    "options": [
+      "resources.requests",
+      "resources.limits",
+      "securityContext",
+      "imagePullPolicy"
+    ],
+    "answer": "resources.requests"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "What does a container CPU request of 250m represent?",
+    "options": [
+      "Two and a half CPUs",
+      "Twenty-five CPUs",
+      "Two hundred fifty CPUs",
+      "One quarter of a CPU"
+    ],
+    "answer": "One quarter of a CPU"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "What is a typical consequence of a container exceeding its enforced memory limit?",
+    "options": [
+      "Its image is rebuilt with more memory",
+      "Its Service port is automatically changed",
+      "It may be terminated by the out-of-memory mechanism",
+      "Its memory request is automatically doubled"
+    ],
+    "answer": "It may be terminated by the out-of-memory mechanism"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "Which Pod field requires target nodes to match all specified node labels?",
+    "options": [
+      "dnsPolicy",
+      "nodeSelector",
+      "serviceAccountName",
+      "hostAliases"
+    ],
+    "answer": "nodeSelector"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "Does adding a toleration for a node's taint guarantee that a Pod will be scheduled on that node?",
+    "options": [
+      "No, other scheduling constraints and available resources still apply",
+      "Yes, it overrides every resource constraint",
+      "Yes, it bypasses all node affinity rules",
+      "No, tolerations always forbid placement on the tainted node"
+    ],
+    "answer": "No, other scheduling constraints and available resources still apply"
+  }
+]

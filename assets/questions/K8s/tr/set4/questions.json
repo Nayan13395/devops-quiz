@@ -1,0 +1,302 @@
+[
+  {
+    "category": "Kubernetes",
+    "set": 4,
+    "question": "Hangi komut bir deployment'ı ölçeklendirir?",
+    "options": [
+      "kubectl scale deployment",
+      "kubectl resize deployment",
+      "kubectl expand deployment",
+      "kubectl increase deployment"
+    ],
+    "answer": "kubectl scale deployment"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 4,
+    "question": "Hangi komut bir deployment'ı 5 kopyaya ölçeklendirir?",
+    "options": [
+      "kubectl scale deployment --replicas=5",
+      "kubectl replicas 5",
+      "kubectl expand deployment",
+      "kubectl set replicas"
+    ],
+    "answer": "kubectl scale deployment --replicas=5"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 4,
+    "question": "Hangi komut bir deployment'ı yeniden başlatır?",
+    "options": [
+      "kubectl rollout restart deployment",
+      "kubectl restart deployment",
+      "kubectl deployment restart",
+      "kubectl reload deployment"
+    ],
+    "answer": "kubectl rollout restart deployment"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 4,
+    "question": "Hangi komut bir deployment'ın rollout durumunu kontrol eder?",
+    "options": [
+      "kubectl rollout status",
+      "kubectl deployment status",
+      "kubectl rollout check",
+      "kubectl get rollout"
+    ],
+    "answer": "kubectl rollout status"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 4,
+    "question": "Hangi komut bir deployment'ı geri alır?",
+    "options": [
+      "kubectl rollout undo",
+      "kubectl rollback",
+      "kubectl undo deployment",
+      "kubectl deployment rollback"
+    ],
+    "answer": "kubectl rollout undo"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 4,
+    "question": "Hangi komut rollout geçmişini görüntüler?",
+    "options": [
+      "kubectl rollout history",
+      "kubectl history",
+      "kubectl deployment history",
+      "kubectl show rollout"
+    ],
+    "answer": "kubectl rollout history"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 4,
+    "question": "Hangi komut bir deployment rollout'unu duraklatır?",
+    "options": [
+      "kubectl rollout pause",
+      "kubectl pause deployment",
+      "kubectl stop rollout",
+      "kubectl hold deployment"
+    ],
+    "answer": "kubectl rollout pause"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 4,
+    "question": "Hangi komut duraklatılmış bir deployment rollout'unu devam ettirir?",
+    "options": [
+      "kubectl rollout resume",
+      "kubectl resume deployment",
+      "kubectl continue rollout",
+      "kubectl restart rollout"
+    ],
+    "answer": "kubectl rollout resume"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 4,
+    "question": "Mevcut Pod'ları tahliye etmeye çalışmadan düğümü zamanlanamaz olarak hangi komut işaretler?",
+    "options": [
+      "kubectl cordon",
+      "kubectl uncordon",
+      "kubectl get node",
+      "kubectl describe node"
+    ],
+    "answer": "kubectl cordon"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 4,
+    "question": "Hangi komut iş yüklerini bir node'dan güvenli şekilde tahliye eder?",
+    "options": [
+      "kubectl drain",
+      "kubectl cordon",
+      "kubectl delete node",
+      "kubectl migrate"
+    ],
+    "answer": "kubectl drain"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 4,
+    "question": "Hangi komut bir node'u yeniden zamanlanabilir hale getirir?",
+    "options": [
+      "kubectl uncordon",
+      "kubectl enable",
+      "kubectl restart",
+      "kubectl activate"
+    ],
+    "answer": "kubectl uncordon"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 4,
+    "question": "Hangi komut ayrıntılı node bilgilerini görüntüler?",
+    "options": [
+      "kubectl describe node",
+      "kubectl inspect node",
+      "kubectl info node",
+      "kubectl node show"
+    ],
+    "answer": "kubectl describe node"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 4,
+    "question": "Hangi komut yerel bir portu bir pod'a yönlendirir?",
+    "options": [
+      "kubectl port-forward",
+      "kubectl tunnel",
+      "kubectl expose",
+      "kubectl connect"
+    ],
+    "answer": "kubectl port-forward"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 4,
+    "question": "Hangi komut bir pod'a veya pod'dan dosya kopyalar?",
+    "options": [
+      "kubectl cp",
+      "kubectl copy",
+      "kubectl transfer",
+      "kubectl sync"
+    ],
+    "answer": "kubectl cp"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 4,
+    "question": "Hangi komut çalışan bir pod'un YAML tanımını görüntüler?",
+    "options": [
+      "kubectl get pod -o yaml",
+      "kubectl show pod yaml",
+      "kubectl export pod",
+      "kubectl pod yaml"
+    ],
+    "answer": "kubectl get pod -o yaml"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 4,
+    "question": "site Deployment nesnesindeki web kapsayıcısını nginx:1.27 imajına hangi komut günceller?",
+    "options": [
+      "kubectl set image deployment/site web=nginx:1.27",
+      "kubectl set env deployment/site web=nginx:1.27",
+      "kubectl annotate deployment/site web=nginx:1.27",
+      "kubectl label deployment/site web=nginx:1.27"
+    ],
+    "answer": "kubectl set image deployment/site web=nginx:1.27"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 4,
+    "question": "Bildirimi canlı yapılandırmayla değişikliği uygulamadan hangi komut karşılaştırır?",
+    "options": [
+      "kubectl apply -f app.yaml",
+      "kubectl replace -f app.yaml",
+      "kubectl delete -f app.yaml",
+      "kubectl diff -f app.yaml"
+    ],
+    "answer": "kubectl diff -f app.yaml"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 4,
+    "question": "İstenen kaynağı kalıcı saklamadan API sunucusunda deneme çalıştırmasını hangi kubectl seçeneği yapar?",
+    "options": [
+      "--validate=false",
+      "--force",
+      "--dry-run=server",
+      "--dry-run=client"
+    ],
+    "answer": "--dry-run=server"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 4,
+    "question": "api Pod'u Ready olana kadar en fazla 60 saniye hangi komut bekler?",
+    "options": [
+      "kubectl get pod api --request-timeout=60s",
+      "kubectl wait --for=condition=Ready pod/api --timeout=60s",
+      "kubectl wait --for=delete pod/api --timeout=60s",
+      "kubectl logs api --since=60s"
+    ],
+    "answer": "kubectl wait --for=condition=Ready pod/api --timeout=60s"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 4,
+    "question": "Aşamalı güncellemede kullanılamayan kopya sayısını hangi Deployment ayarı sınırlar?",
+    "options": [
+      "maxUnavailable",
+      "maxSurge",
+      "revisionHistoryLimit",
+      "progressDeadlineSeconds"
+    ],
+    "answer": "maxUnavailable"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 4,
+    "question": "Aşamalı güncellemede istenen kopya sayısının üzerine geçici ek Pod'lara hangi Deployment ayarı izin verir?",
+    "options": [
+      "maxUnavailable",
+      "minReadySeconds",
+      "revisionHistoryLimit",
+      "maxSurge"
+    ],
+    "answer": "maxSurge"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 4,
+    "question": "Seçilmiş Pod grubundaki eşzamanlı gönüllü kesintileri hangi kaynak sınırlar?",
+    "options": [
+      "LimitRange",
+      "NetworkPolicy",
+      "PodDisruptionBudget",
+      "ResourceQuota"
+    ],
+    "answer": "PodDisruptionBudget"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 4,
+    "question": "İş yükü kopya sayısını gözlenen ölçümlere göre hangi denetleyici ayarlar?",
+    "options": [
+      "CronJob",
+      "HorizontalPodAutoscaler",
+      "ReplicaSet",
+      "DaemonSet"
+    ],
+    "answer": "HorizontalPodAutoscaler"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 4,
+    "question": "kubectl top aracının CPU ve bellek kullanımını bildirmesi için ne bulunmalıdır?",
+    "options": [
+      "Genellikle Metrics Server tarafından sağlanan kaynak ölçümleri API'si",
+      "Her ad alanı için Ingress denetleyicisi",
+      "Blok aygıtı olan varsayılan StorageClass",
+      "Her Pod için LoadBalancer Service"
+    ],
+    "answer": "Genellikle Metrics Server tarafından sağlanan kaynak ölçümleri API'si"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 4,
+    "question": "Bağlı kümenin desteklediği API kaynak türlerini hangi komut listeler?",
+    "options": [
+      "kubectl api-versions",
+      "kubectl cluster-info",
+      "kubectl config view",
+      "kubectl api-resources"
+    ],
+    "answer": "kubectl api-resources"
+  }
+]

@@ -2,6 +2,7 @@ import 'dart:convert';
 
 import 'package:shared_preferences/shared_preferences.dart';
 
+import '../l10n/notification_localizations.dart';
 import '../models/app_notification.dart';
 import 'certificate_service.dart';
 import 'daily_login_bonus_service.dart';
@@ -19,12 +20,17 @@ class InAppNotificationService {
   // GET ALL NOTIFICATIONS
   // =========================================================
 
-  static Future<List<AppNotification>> getNotifications() async {
+  static Future<List<AppNotification>> getNotifications({
+    String? languageCode,
+  }) async {
     final prefs = await SharedPreferences.getInstance();
+    final l10n = await NotificationLocalizations.loadSelected(
+      languageCode: languageCode,
+    );
 
     final List<String> readIds = prefs.getStringList(_readIdsKey) ?? [];
 
-    final List<AppNotification> notifications = await _buildNotifications();
+    final List<AppNotification> notifications = await _buildNotifications(l10n);
 
     final List<AppNotification> result = notifications.map((notification) {
       return notification.copyWith(isRead: readIds.contains(notification.id));
@@ -39,8 +45,10 @@ class InAppNotificationService {
   // GET ONLY UNREAD / NEW NOTIFICATIONS
   // =========================================================
 
-  static Future<List<AppNotification>> getUnreadNotifications() async {
-    final notifications = await getNotifications();
+  static Future<List<AppNotification>> getUnreadNotifications({
+    String? languageCode,
+  }) async {
+    final notifications = await getNotifications(languageCode: languageCode);
 
     return notifications.where((notification) => !notification.isRead).toList();
   }
@@ -49,8 +57,10 @@ class InAppNotificationService {
   // GET UNREAD COUNT
   // =========================================================
 
-  static Future<int> getUnreadCount() async {
-    final notifications = await getUnreadNotifications();
+  static Future<int> getUnreadCount({String? languageCode}) async {
+    final notifications = await getUnreadNotifications(
+      languageCode: languageCode,
+    );
 
     return notifications.length;
   }
@@ -80,7 +90,8 @@ class InAppNotificationService {
   static Future<void> markAllAsRead() async {
     final prefs = await SharedPreferences.getInstance();
 
-    final notifications = await _buildNotifications();
+    final l10n = await NotificationLocalizations.loadSelected();
+    final notifications = await _buildNotifications(l10n);
 
     final Set<String> readIds = {
       ...?prefs.getStringList(_readIdsKey),
@@ -115,10 +126,12 @@ class InAppNotificationService {
   // BUILD NOTIFICATIONS
   // =========================================================
 
-  static Future<List<AppNotification>> _buildNotifications() async {
-    final List<AppNotification> notifications = _defaultNotifications();
-    notifications.add(await _buildDailyRewardNotification());
-    notifications.addAll(await _buildDynamicNotifications());
+  static Future<List<AppNotification>> _buildNotifications(
+    NotificationLocalizations l10n,
+  ) async {
+    final List<AppNotification> notifications = _defaultNotifications(l10n);
+    notifications.add(await _buildDailyRewardNotification(l10n));
+    notifications.addAll(await _buildDynamicNotifications(l10n));
     return notifications;
   }
 
@@ -126,7 +139,9 @@ class InAppNotificationService {
   // NOTIFICATIONS THAT DEPEND ON THE USER'S STATE
   // =========================================================
 
-  static Future<List<AppNotification>> _buildDynamicNotifications() async {
+  static Future<List<AppNotification>> _buildDynamicNotifications(
+    NotificationLocalizations l10n,
+  ) async {
     final List<AppNotification> result = [];
 
     // New version available on Google Play.
@@ -136,12 +151,11 @@ class InAppNotificationService {
       result.add(
         AppNotification(
           id: 'app_update_$updateVersion',
-          title: 'Update Available: v$updateVersion 🚀',
-          message:
-              'A new version of DevOps Quiz is available on Google Play with new features and improvements.',
+          title: l10n.text('inApp.appUpdate.title', {'version': updateVersion}),
+          message: l10n.text('inApp.appUpdate.message'),
           type: AppNotificationType.appUpdate,
           createdAt: DateTime.now(),
-          actionText: 'Update Now',
+          actionText: l10n.text('inApp.appUpdate.action'),
           actionRoute: 'play_store',
         ),
       );
@@ -152,12 +166,11 @@ class InAppNotificationService {
       result.add(
         AppNotification(
           id: 'rate_app_v1',
-          title: 'Enjoying DevOps Quiz? ⭐',
-          message:
-              'Rate us on Google Play. Your feedback helps other learners find the app.',
+          title: l10n.text('inApp.rateApp.title'),
+          message: l10n.text('inApp.rateApp.message'),
           type: AppNotificationType.announcement,
           createdAt: DateTime(2026, 10, 4, 9, 0),
-          actionText: 'Rate Now',
+          actionText: l10n.text('inApp.rateApp.action'),
           actionRoute: 'rate_app',
         ),
       );
@@ -170,12 +183,15 @@ class InAppNotificationService {
       result.add(
         AppNotification(
           id: 'certificate_${certificate.category}',
-          title: 'Certificate Earned: ${certificate.category} 🎓',
-          message:
-              'You completed every ${certificate.category} set. View and download your certificate.',
+          title: l10n.text('inApp.certificate.title', {
+            'category': certificate.category,
+          }),
+          message: l10n.text('inApp.certificate.message', {
+            'category': certificate.category,
+          }),
           type: AppNotificationType.achievement,
           createdAt: certificate.issuedOn,
-          actionText: 'View Certificates',
+          actionText: l10n.text('inApp.certificate.action'),
           actionRoute: 'certificates',
         ),
       );
@@ -188,7 +204,9 @@ class InAppNotificationService {
   // DAILY REWARD
   // =========================================================
 
-  static Future<AppNotification> _buildDailyRewardNotification() async {
+  static Future<AppNotification> _buildDailyRewardNotification(
+    NotificationLocalizations l10n,
+  ) async {
     final bool claimed = await DailyLoginBonusService.hasClaimedToday();
     final int? lastBonus = await DailyLoginBonusService.getLastBonusAmount();
     final DateTime now = DateTime.now();
@@ -196,10 +214,12 @@ class InAppNotificationService {
     if (claimed) {
       return AppNotification(
         id: _dailyRewardId(),
-        title: 'Daily Reward Collected!',
+        title: l10n.text('inApp.dailyRewardCollected.title'),
         message: lastBonus != null
-            ? 'You received $lastBonus points from today\'s daily login bonus.'
-            : 'You have collected today\'s daily login bonus.',
+            ? l10n.text('inApp.dailyRewardCollected.messageWithPoints', {
+                'points': lastBonus,
+              })
+            : l10n.text('inApp.dailyRewardCollected.message'),
         type: AppNotificationType.dailyReward,
         createdAt: DateTime(now.year, now.month, now.day, 0, 0),
         actionText: null,
@@ -209,13 +229,12 @@ class InAppNotificationService {
 
     return AppNotification(
       id: _dailyRewardId(),
-      title: 'Daily Reward Available!',
-      message:
-          'Open DevOps Quiz today and collect your daily login bonus of up to 1000 points.',
+      title: l10n.text('inApp.dailyRewardAvailable.title'),
+      message: l10n.text('inApp.dailyRewardAvailable.message'),
       type: AppNotificationType.dailyReward,
       createdAt: DateTime(now.year, now.month, now.day, 0, 0),
       isRead: false,
-      actionText: 'Claim Reward',
+      actionText: l10n.text('inApp.dailyRewardAvailable.action'),
       actionRoute: 'claim_daily_reward',
     );
   }
@@ -236,225 +255,161 @@ class InAppNotificationService {
   // STATIC APP NOTIFICATIONS
   // =========================================================
 
-  static List<AppNotification> _defaultNotifications() {
+  static List<AppNotification> _defaultNotifications(
+    NotificationLocalizations l10n,
+  ) {
     return [
-      // =====================================================
-      // DAILY QUIZ NOTIFICATION
-      // =====================================================
-      AppNotification(
-        id: 'daily_quiz_v1',
-        title: 'Daily Quiz is Ready! 📅',
-        message:
-            'Complete today\'s daily quiz to earn bonus points and keep your streak alive!',
+      _staticNotification(
+        l10n,
+        'daily_quiz_v1',
         type: AppNotificationType.dailyReward,
         createdAt: DateTime(2026, 8, 10, 8, 0),
-        actionText: 'Play Now',
-        actionRoute: 'daily_quiz', // ✅ Triggers redirect to QuizScreen
+        actionRoute: 'daily_quiz',
       ),
-
-      // =====================================================
-      // LATEST RELEASE HIGHLIGHTS
-      // =====================================================
-      AppNotification(
-        id: 'whats_new_v1102',
-        title: 'A Fresh DevOps Quiz Update ✨',
-        message:
-            'Explore animated category icons, follow your personal progress, '
-            'and see exactly how many daily login points you collected.',
+      _staticNotification(
+        l10n,
+        'whats_new_v1102',
         type: AppNotificationType.newFeature,
         createdAt: DateTime(2026, 10, 16, 12, 0),
-        actionText: 'Explore Categories',
         actionRoute: 'categories',
       ),
-
-      AppNotification(
-        id: 'spot_difference_v1',
-        title: 'New Game: Spot the Difference! 🔎',
-        message:
-            'Find five changes in original illustrated scenes across 10 '
-            'levels. Clear a level to unlock the next one.',
+      _staticNotification(
+        l10n,
+        'spot_difference_v1',
         type: AppNotificationType.newGame,
         createdAt: DateTime(2026, 11, 6, 12, 0),
-        actionText: 'Play Now',
         actionRoute: 'games',
       ),
-
-      AppNotification(
-        id: 'whats_new_v1104',
-        title: 'What’s New in DevOps Quiz 1.10.3 ✨',
-        message:
-            'See the latest games, daily Auto themes, sound settings, and '
-            'country-aware celebrations.',
+      _staticNotification(
+        l10n,
+        'whats_new_v1104',
         type: AppNotificationType.newFeature,
         createdAt: DateTime(2026, 11, 6, 12, 10),
-        actionText: 'See What’s New',
         actionRoute: 'whats_new',
       ),
-
-      AppNotification(
-        id: 'auto_themes_v1',
-        title: 'Daily Auto Themes Are Here! 🎨',
-        message:
-            'Unlock Solar Flare at 75,000 points or turn on Auto to rotate '
-            'through your unlocked themes every day.',
+      _staticNotification(
+        l10n,
+        'auto_themes_v1',
         type: AppNotificationType.newFeature,
         createdAt: DateTime(2026, 11, 6, 11, 50),
-        actionText: 'Explore Themes',
         actionRoute: 'themes',
       ),
-
-      AppNotification(
-        id: 'game_sounds_v1',
-        title: 'Game Sound Effects 🔊',
-        message:
-            'Games now give audio feedback for actions and answers. Manage '
-            'the global sound switch in Settings.',
+      _staticNotification(
+        l10n,
+        'game_sounds_v1',
         type: AppNotificationType.newFeature,
         createdAt: DateTime(2026, 11, 6, 11, 40),
-        actionText: 'Open Settings',
         actionRoute: 'settings',
       ),
-
-      AppNotification(
-        id: 'regional_festivals_v1',
-        title: 'Welcome Celebrations Follow Your Region 🌍',
-        message:
-            'Choose a country on Welcome to see regional festivals, including '
-            'a refreshed Diwali kandil and diyas.',
+      _staticNotification(
+        l10n,
+        'regional_festivals_v1',
         type: AppNotificationType.newFeature,
         createdAt: DateTime(2026, 11, 6, 11, 30),
       ),
-
-      AppNotification(
-        id: 'board_games_v2',
-        title: 'New Modes and Levels for Board Games 🎲',
-        message:
-            'Connect Four now offers bot and two-player modes. Snake and '
-            'Ladders now has 20 selectable levels, and Ludo moves are clearer.',
+      _staticNotification(
+        l10n,
+        'board_games_v2',
         type: AppNotificationType.newGame,
         createdAt: DateTime(2026, 11, 6, 11, 20),
-        actionText: 'Play Games',
         actionRoute: 'games',
       ),
-
-      AppNotification(
-        id: 'certificates_v1',
-        title: 'Earn Certificates! 🎓',
-        message:
-            'Finish all 5 sets of any category to unlock a certificate you can download and share.',
+      _staticNotification(
+        l10n,
+        'certificates_v1',
         type: AppNotificationType.newFeature,
         createdAt: DateTime(2026, 10, 3, 11, 50),
-        actionText: 'View Progress',
         actionRoute: 'certificates',
       ),
-
-      AppNotification(
-        id: 'new_sets_v1',
-        title: 'New Set 5 in Every Category 📚',
-        message:
-            'All 21 categories now include a fresh fifth set of questions.',
+      _staticNotification(
+        l10n,
+        'new_sets_v1',
         type: AppNotificationType.newFeature,
         createdAt: DateTime(2026, 10, 3, 11, 40),
-        actionText: 'Start Learning',
         actionRoute: 'categories',
       ),
-
-      AppNotification(
-        id: 'board_games_v1',
-        title: 'Classic Board Games Are Here! 🎲',
-        message:
-            'Play Tic-Tac-Toe against the computer, challenge a friend in Connect Four, or race three bots in Ludo.',
+      _staticNotification(
+        l10n,
+        'board_games_v1',
         type: AppNotificationType.newGame,
         createdAt: DateTime(2026, 10, 16, 12, 0),
-        actionText: 'Play Now',
         actionRoute: 'games',
       ),
-
-      AppNotification(
-        id: 'daily_quiz_all_v1',
-        title: 'Daily Quiz Covers Every Category 📅',
-        message:
-            'Each daily quiz now mixes questions from all 21 categories. Can you score 100%?',
+      _staticNotification(
+        l10n,
+        'daily_quiz_all_v1',
         type: AppNotificationType.newFeature,
         createdAt: DateTime(2026, 10, 3, 11, 20),
-        actionText: 'Play Daily Quiz',
         actionRoute: 'daily_quiz',
       ),
-
-      AppNotification(
-        id: 'themes_v2',
-        title: '5 New Themes 🎨',
-        message:
-            'Sakura, Sunset, Coffee, Aurora and Matrix are now available to unlock.',
+      _staticNotification(
+        l10n,
+        'themes_v2',
         type: AppNotificationType.newFeature,
         createdAt: DateTime(2026, 10, 3, 11, 10),
-        actionText: 'Browse Themes',
         actionRoute: 'themes',
       ),
-
-      AppNotification(
-        id: 'languages_v1',
-        title: '10 New Languages 🌍',
-        message:
-            'DevOps Quiz now speaks Spanish, French, German, Portuguese, Arabic, Indonesian, Russian, Japanese, Chinese and Bengali.',
+      _staticNotification(
+        l10n,
+        'languages_v1',
         type: AppNotificationType.newFeature,
         createdAt: DateTime(2026, 10, 3, 11, 0),
-        actionText: 'Change Language',
         actionRoute: 'settings',
       ),
-
-      AppNotification(
-        id: 'milestones_v1',
-        title: 'New Milestones 🏅',
-        message:
-            'Unlock new rewards for quizzes, points, daily quizzes, finished sets and certificates.',
+      _staticNotification(
+        l10n,
+        'milestones_v1',
         type: AppNotificationType.achievement,
         createdAt: DateTime(2026, 10, 3, 10, 50),
-        actionText: 'View Milestones',
         actionRoute: 'achievements',
       ),
-
-      // =====================================================
-      // SCRIPTING CATEGORY
-      // =====================================================
-      AppNotification(
-        id: 'scripting_category_v1',
-        title: 'New Category: Scripting! 📜',
-        message:
-            'Practice Bash, Python, Perl, PowerShell, JavaScript, and Ruby with our brand new Scripting quiz sets.',
+      _staticNotification(
+        l10n,
+        'scripting_category_v1',
         type: AppNotificationType.newFeature,
         createdAt: DateTime(2026, 8, 9, 10, 0),
-        actionText: 'Explore',
         actionRoute: 'scripting',
       ),
-
-      // =====================================================
-      // GAMES FEATURE
-      // =====================================================
-      AppNotification(
-        id: 'games_feature_v1',
-        title: 'New Skill Games Available! 🎮',
-        message:
-            'Play Memory Match, Word Guess, and Higher or Lower to earn bonus points.',
+      _staticNotification(
+        l10n,
+        'games_feature_v1',
         type: AppNotificationType.newGame,
         createdAt: DateTime(2026, 8, 9, 12, 0),
-        actionText: 'Play Now',
         actionRoute: 'games',
       ),
-
-      // =====================================================
-      // LUCKY SLOTS
-      // =====================================================
-      AppNotification(
-        id: 'lucky_slots_v1',
-        title: 'Try Lucky Slots! 🎰',
-        message: 'Spin and win between 10 and 999 points.',
+      _staticNotification(
+        l10n,
+        'lucky_slots_v1',
         type: AppNotificationType.newGame,
         createdAt: DateTime(2026, 8, 2, 12, 0),
-        actionText: 'Play Now',
         actionRoute: 'lucky_slots',
       ),
     ];
+  }
+
+  static AppNotification _staticNotification(
+    NotificationLocalizations l10n,
+    String id, {
+    required AppNotificationType type,
+    required DateTime createdAt,
+    String? actionRoute,
+  }) {
+    final base = 'inApp.$id';
+    String? actionText;
+    try {
+      actionText = l10n.text('$base.action');
+    } on StateError {
+      actionText = null;
+    }
+    return AppNotification(
+      id: id,
+      title: l10n.text('$base.title'),
+      message: l10n.text('$base.message'),
+      type: type,
+      createdAt: createdAt,
+      actionText: actionText,
+      actionRoute: actionRoute,
+    );
   }
 
   // =========================================================

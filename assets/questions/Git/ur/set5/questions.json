@@ -1,0 +1,302 @@
+[
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "کون سی کمانڈ release نام کی موجودہ برانچ کے لیے منسلک ورکنگ ٹری شامل کرتی ہے؟",
+    "options": [
+      "git worktree prune",
+      "git worktree lock ..\\release",
+      "git worktree add ..\\release release",
+      "git worktree list"
+    ],
+    "answer": "git worktree add ..\\release release"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "کون سی فائل مرکزی منصوبے کے ورژن شدہ سب ماڈیول پاتھ اور URL درج کرتی ہے؟",
+    "options": [
+      ".gitmessage",
+      ".gitmodules",
+      ".gitignore",
+      ".gitattributes"
+    ],
+    "answer": ".gitmodules"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "کون سی کمانڈ درج شدہ سب ماڈیول، بشمول اندرونی سب ماڈیول، ابتدائی طور پر ترتیب دے کر چیک آؤٹ کرتی ہے؟",
+    "options": [
+      "git submodule update --init --recursive",
+      "git submodule deinit --all",
+      "git submodule status",
+      "git submodule sync"
+    ],
+    "answer": "git submodule update --init --recursive"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "مرکزی منصوبہ کسی کمٹ میں سب ماڈیول کے لیے عموماً کیا درج کرتا ہے؟",
+    "options": [
+      "سب ماڈیول کا پورا آبجیکٹ ڈیٹابیس",
+      "صرف سب ماڈیول کی طے شدہ برانچ کا نام",
+      "صرف سب ماڈیول کی غیر کمٹ شدہ تبدیلیاں",
+      "سب ماڈیول کے کسی مخصوص کمٹ کا حوالہ"
+    ],
+    "answer": "سب ماڈیول کے کسی مخصوص کمٹ کا حوالہ"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "کون سی کمانڈ تمام حوالوں اور ان سے قابلِ رسائی تاریخ پر مشتمل قابلِ منتقلی بنڈل بناتی ہے؟",
+    "options": [
+      "git format-patch -1 HEAD",
+      "git diff --binary > backup.bundle",
+      "git bundle create backup.bundle --all",
+      "git archive --output=backup.bundle HEAD"
+    ],
+    "answer": "git bundle create backup.bundle --all"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "کون سی کمانڈ HEAD کی زیرِ نگرانی فائلیں Git تاریخ کے بغیر ZIP آرکائیو میں برآمد کرتی ہے؟",
+    "options": [
+      "git format-patch --stdout HEAD > source.zip",
+      "git archive --format=zip --output=source.zip HEAD",
+      "git bundle create source.zip --all",
+      "git clone --bare . source.zip"
+    ],
+    "answer": "git archive --format=zip --output=source.zip HEAD"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "کون سی کمانڈ تازہ ترین کمٹ کو ای میل طرز کی پیچ فائل میں بدلتی ہے؟",
+    "options": [
+      "git format-patch -1 HEAD",
+      "git diff HEAD",
+      "git show --stat HEAD",
+      "git log -1 --oneline"
+    ],
+    "answer": "git format-patch -1 HEAD"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "کون سی کمانڈ git format-patch سے بنے ای میل پیچ لاگو کرکے ان سے کمٹ بناتی ہے؟",
+    "options": [
+      "git apply changes.patch",
+      "git diff changes.patch",
+      "git add changes.patch",
+      "git am changes.patch"
+    ],
+    "answer": "git am changes.patch"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "کون سی کمانڈ فائلیں بدلے بغیر جانچتی ہے کہ سادہ پیچ لاگو ہو سکتا ہے یا نہیں؟",
+    "options": [
+      "git am changes.patch",
+      "git add changes.patch",
+      "git apply --check changes.patch",
+      "git apply changes.patch"
+    ],
+    "answer": "git apply --check changes.patch"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "Git آبجیکٹ کی کون سی قسم فائل کے نام کے بغیر اس کا مواد رکھتی ہے؟",
+    "options": [
+      "تشریحی ٹیگ",
+      "Blob",
+      "Tree",
+      "کمٹ"
+    ],
+    "answer": "Blob"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "Git آبجیکٹ کی کون سی قسم فائل نام اور بلاب یا ذیلی ٹری کے حوالے درج کرتی ہے؟",
+    "options": [
+      "Tree",
+      "Blob",
+      "کمٹ",
+      "تشریحی ٹیگ"
+    ],
+    "answer": "Tree"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "کون سی کمانڈ معلوم آبجیکٹ ID کی قسم بتاتی ہے؟",
+    "options": [
+      "git cat-file -s abc1234",
+      "git rev-parse abc1234",
+      "git log -1 abc1234",
+      "git cat-file -t abc1234"
+    ],
+    "answer": "git cat-file -t abc1234"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "کون سی کمانڈ HEAD کا مکمل آبجیکٹ ID دکھاتی ہے؟",
+    "options": [
+      "git status --short",
+      "git branch --show-current",
+      "git rev-parse HEAD",
+      "git symbolic-ref HEAD"
+    ],
+    "answer": "git rev-parse HEAD"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "ورژن کی کون سی حد وہ کمٹ منتخب کرتی ہے جو feature سے قابلِ رسائی ہوں مگر main سے نہیں؟",
+    "options": [
+      "main^",
+      "main..feature",
+      "feature..main",
+      "main...feature"
+    ],
+    "answer": "main..feature"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "git log کا کون سا اختیار صرف مرج کمٹ دکھاتا ہے؟",
+    "options": [
+      "--merges",
+      "--no-merges",
+      "--first-parent",
+      "--reverse"
+    ],
+    "answer": "--merges"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "git diff کا کون سا اختیار تبدیل شدہ پاتھ اور ان کی تبدیلی کی حالت کے حروف دکھاتا ہے؟",
+    "options": [
+      "--name-only",
+      "--stat",
+      "--shortstat",
+      "--name-status"
+    ],
+    "answer": "--name-status"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "کون سی فائل پاتھ کے لیے متن کی یکساں سازی جیسے ورژن شدہ اوصاف متعین کرتی ہے؟",
+    "options": [
+      ".gitmodules",
+      ".gitconfig",
+      ".gitattributes",
+      ".gitignore"
+    ],
+    "answer": ".gitattributes"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": ".gitattributes کا قاعدہ '*.sh text eol=lf' مماثل متنی فائلوں کے لیے کیا ہدایت دیتا ہے؟",
+    "options": [
+      "خالی سطروں کا خودکار حذف",
+      "ورکنگ ٹری میں LF اختتامِ سطر",
+      "ورکنگ ٹری میں CRLF اختتامِ سطر",
+      "متن میں تبدیلی کیے بغیر بائنری کے طور پر برتاؤ"
+    ],
+    "answer": "ورکنگ ٹری میں LF اختتامِ سطر"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "کون سا ہک مجوزہ کمٹ پیغام کی فائل جانچ کر کمٹ مسترد کر سکتا ہے؟",
+    "options": [
+      "commit-msg",
+      "post-commit",
+      "post-checkout",
+      "post-merge"
+    ],
+    "answer": "commit-msg"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "کون سی ترتیب Git ہکس کے لیے اپنی مرضی کی ڈائریکٹری منتخب کرتی ہے؟",
+    "options": [
+      "core.worktree",
+      "core.excludesFile",
+      "core.attributesFile",
+      "core.hooksPath"
+    ],
+    "answer": "core.hooksPath"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "کون سی فائل کسی ایک ڈویلپر کو مشترکہ .gitignore قاعدہ شامل کیے بغیر غیر زیرِ نگرانی فائلیں مقامی طور پر نظرانداز کرنے دیتی ہے؟",
+    "options": [
+      ".git\\description",
+      ".git\\packed-refs",
+      ".git\\info\\exclude",
+      ".git\\HEAD"
+    ],
+    "answer": ".git\\info\\exclude"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "کون سی کمانڈ بائی سیکٹ نشست ختم کرتی ہے اور عموماً اصل برانچ پر واپس لے جاتی ہے؟",
+    "options": [
+      "git bisect log",
+      "git bisect reset",
+      "git bisect skip",
+      "git bisect good"
+    ],
+    "answer": "git bisect reset"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "کون سی کمانڈ پیچ کی ایک سلسلہ وار کڑی کے دو نسخوں کا موازنہ کرتی ہے؟",
+    "options": [
+      "git range-diff main..old main..new",
+      "git diff old new",
+      "git log old..new",
+      "git merge-base old new"
+    ],
+    "answer": "git range-diff main..old main..new"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "کون سی کمانڈ کمٹ بناتے وقت آخر میں Signed-off-by اندراج جوڑتی ہے؟",
+    "options": [
+      "git commit --gpg-sign",
+      "git commit --amend",
+      "git commit --no-verify",
+      "git commit --signoff"
+    ],
+    "answer": "git commit --signoff"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "git log -S'old_name' طے شدہ طور پر کیا تلاش کرتا ہے؟",
+    "options": [
+      "وہ کمٹ جن کے پیغام میں old_name ہو",
+      "وہ برانچیں جن کے نام میں old_name ہو",
+      "وہ کمٹ جو old_name کے آنے کی تعداد بدلتے ہوں",
+      "وہ کمٹ جن کے مصنف کا نام old_name ہو"
+    ],
+    "answer": "وہ کمٹ جو old_name کے آنے کی تعداد بدلتے ہوں"
+  }
+]

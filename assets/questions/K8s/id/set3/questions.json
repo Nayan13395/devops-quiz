@@ -1,0 +1,302 @@
+[
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "Komponen mana yang menjadwalkan pod pada node?",
+    "options": [
+      "kube-scheduler",
+      "kubelet",
+      "etcd",
+      "kube-proxy"
+    ],
+    "answer": "kube-scheduler"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "Komponen mana yang berjalan di setiap node?",
+    "options": [
+      "kubelet",
+      "etcd",
+      "kube-apiserver",
+      "controller-manager"
+    ],
+    "answer": "kubelet"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "Komponen mana yang bertindak sebagai front-end dari control plane?",
+    "options": [
+      "kube-apiserver",
+      "kubelet",
+      "etcd",
+      "kube-proxy"
+    ],
+    "answer": "kube-apiserver"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "Komponen mana yang menyimpan status cluster?",
+    "options": [
+      "etcd",
+      "kubelet",
+      "CoreDNS",
+      "Ingress"
+    ],
+    "answer": "etcd"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "Komponen mana yang mengelola aturan jaringan pada node?",
+    "options": [
+      "kube-proxy",
+      "kubelet",
+      "etcd",
+      "Scheduler"
+    ],
+    "answer": "kube-proxy"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "Layanan DNS mana yang umum digunakan di Kubernetes?",
+    "options": [
+      "CoreDNS",
+      "Bind",
+      "Route53",
+      "Consul"
+    ],
+    "answer": "CoreDNS"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "Objek mana yang merupakan unit terkecil yang dapat di-deploy di Kubernetes?",
+    "options": [
+      "Pod",
+      "Cluster",
+      "Node",
+      "Service"
+    ],
+    "answer": "Pod"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "Objek mana yang mengelola aplikasi stateless?",
+    "options": [
+      "Deployment",
+      "ConfigMap",
+      "Secret",
+      "Namespace"
+    ],
+    "answer": "Deployment"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "Beban kerja mana yang menyediakan identitas Pod stabil dan penerapan berurutan untuk aplikasi berstatus?",
+    "options": [
+      "StatefulSet",
+      "Deployment",
+      "ReplicaSet",
+      "DaemonSet"
+    ],
+    "answer": "StatefulSet"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "Objek mana yang memastikan sejumlah replika pod tertentu tetap berjalan?",
+    "options": [
+      "ReplicaSet",
+      "Service",
+      "ConfigMap",
+      "Namespace"
+    ],
+    "answer": "ReplicaSet"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "Objek mana yang mengekspos pod ke lalu lintas jaringan?",
+    "options": [
+      "Service",
+      "Node",
+      "ReplicaSet",
+      "Volume"
+    ],
+    "answer": "Service"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "Objek mana yang mengelola akses eksternal ke service?",
+    "options": [
+      "Ingress",
+      "Pod",
+      "ReplicaSet",
+      "Secret"
+    ],
+    "answer": "Ingress"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "Objek mana yang menyimpan data konfigurasi?",
+    "options": [
+      "ConfigMap",
+      "Deployment",
+      "Ingress",
+      "Node"
+    ],
+    "answer": "ConfigMap"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "Objek mana yang menyimpan informasi sensitif seperti kata sandi?",
+    "options": [
+      "Secret",
+      "ConfigMap",
+      "Service",
+      "Namespace"
+    ],
+    "answer": "Secret"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "Objek mana yang menyediakan penyimpanan persisten untuk pod?",
+    "options": [
+      "PersistentVolume",
+      "ReplicaSet",
+      "Namespace",
+      "Service"
+    ],
+    "answer": "PersistentVolume"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "Probe mana yang menentukan apakah kontainer siap menerima lalu lintas Service?",
+    "options": [
+      "Probe penjaga koneksi TCP",
+      "Readiness probe",
+      "Liveness probe",
+      "Probe permulaan"
+    ],
+    "answer": "Readiness probe"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "Apa yang dapat terjadi setelah probe keaktifan berulang kali gagal melewati ambang yang dikonfigurasi?",
+    "options": [
+      "kubelet memulai ulang kontainer tersebut sesuai kebijakan mulai ulangnya",
+      "Penjadwal memindahkan semua Pod ke simpul baru",
+      "Server API menghapus Deployment",
+      "Service berubah menjadi Service ExternalName"
+    ],
+    "answer": "kubelet memulai ulang kontainer tersebut sesuai kebijakan mulai ulangnya"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "Apa yang dilakukan probe permulaan ketika aplikasi masih dalam proses memulai?",
+    "options": [
+      "Menonaktifkan semua batas sumber daya kontainer",
+      "Mencegah pengunduhan image",
+      "Mencadangkan simpul bidang kontrol khusus",
+      "Menunda probe keaktifan dan kesiapan sampai probe permulaan berhasil"
+    ],
+    "answer": "Menunda probe keaktifan dan kesiapan sampai probe permulaan berhasil"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "Apa yang benar tentang kontainer init biasa dalam Pod?",
+    "options": [
+      "Kontainer harus mengekspos port Service",
+      "Kontainer selalu berjalan pada simpul yang terpisah",
+      "Kontainer berjalan sampai selesai secara berurutan sebelum kontainer aplikasi dimulai",
+      "Semua kontainer hanya berjalan setelah kontainer aplikasi berakhir"
+    ],
+    "answer": "Kontainer berjalan sampai selesai secara berurutan sebelum kontainer aplikasi dimulai"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "Sumber daya apa yang biasanya dibagi oleh kontainer dalam Pod yang sama?",
+    "options": [
+      "IP Service terpisah untuk setiap kontainer",
+      "Ruang nama jaringan dan alamat IP Pod",
+      "Sistem berkas akar yang dapat ditulis",
+      "Simpul berbeda untuk setiap kontainer"
+    ],
+    "answer": "Ruang nama jaringan dan alamat IP Pod"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "Kolom mana yang mendeklarasikan jumlah sumber daya yang digunakan penjadwal saat mempertimbangkan penempatan kontainer?",
+    "options": [
+      "resources.requests",
+      "resources.limits",
+      "securityContext",
+      "imagePullPolicy"
+    ],
+    "answer": "resources.requests"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "Apa arti permintaan CPU kontainer sebesar 250m?",
+    "options": [
+      "Dua setengah CPU",
+      "Dua puluh lima CPU",
+      "Dua ratus lima puluh CPU",
+      "Seperempat CPU"
+    ],
+    "answer": "Seperempat CPU"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "Apa akibat umum jika kontainer melebihi batas memori yang diberlakukan?",
+    "options": [
+      "Image-nya dibangun ulang dengan memori lebih besar",
+      "Port Service-nya otomatis diubah",
+      "Kontainer dapat dihentikan oleh mekanisme kehabisan memori",
+      "Permintaan memorinya otomatis digandakan"
+    ],
+    "answer": "Kontainer dapat dihentikan oleh mekanisme kehabisan memori"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "Kolom Pod mana yang mewajibkan simpul tujuan cocok dengan semua label simpul yang ditentukan?",
+    "options": [
+      "dnsPolicy",
+      "nodeSelector",
+      "serviceAccountName",
+      "hostAliases"
+    ],
+    "answer": "nodeSelector"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "Apakah menambahkan toleransi terhadap taint simpul menjamin Pod akan dijadwalkan pada simpul itu?",
+    "options": [
+      "Tidak, batasan penjadwalan lain dan sumber daya yang tersedia tetap berlaku",
+      "Ya, toleransi mengesampingkan semua batasan sumber daya",
+      "Ya, toleransi melewati semua aturan afinitas simpul",
+      "Tidak, toleransi selalu melarang penempatan pada simpul dengan taint tersebut"
+    ],
+    "answer": "Tidak, batasan penjadwalan lain dan sumber daya yang tersedia tetap berlaku"
+  }
+]

@@ -1,0 +1,302 @@
+[
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "பணி-நிலையில் மாற்று அமைப்பு இல்லாமல் சரிபார்ப்பு முறையில் இயக்கும்போது, அந்த முறையை ஆதரிக்காத தொகுதிக்கு என்ன நிகழும்?",
+    "options": [
+      "தொகுதி எப்போதும் தனது வழக்கமான மாற்றங்களைச் செய்கிறது",
+      "தொகுதி தானாக localhostஇல் இயங்குகிறது",
+      "சரிபார்ப்பு முறையை ஆதரிக்கும்வரை தொகுதி மீண்டும் முயற்சிக்கப்படுகிறது",
+      "மாற்றங்கள் செய்வதற்குப் பதிலாகத் தொகுதி தவிர்க்கப்படுகிறது"
+    ],
+    "answer": "மாற்றங்கள் செய்வதற்குப் பதிலாகத் தொகுதி தவிர்க்கப்படுகிறது"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "பிளேபுக் --check உடன் இயக்கப்பட்டாலும் உண்மையான மாற்றங்களைச் செய்ய அனுமதிக்கும் பணி அமைப்பு எது?",
+    "options": [
+      "changed_when: false",
+      "ignore_errors: true",
+      "check_mode: false",
+      "diff: false"
+    ],
+    "answer": "check_mode: false"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "ஏற்கெனவே அறிவிக்கப்பட்ட கையாளிகளை உடனே இயக்கும் Ansible meta நடவடிக்கை எது?",
+    "options": [
+      "reset_connection",
+      "flush_handlers",
+      "clear_facts",
+      "end_play"
+    ],
+    "answer": "flush_handlers"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "மாற்றம் செய்த இரண்டு பணிகள் ஒரே கையாளிக்கு அதன் நிலுவை இயக்கத்திற்கு முன் அறிவித்தால், அந்த இயக்க நேரத்தில் கையாளி வழக்கமாக எத்தனை முறை இயங்கும்?",
+    "options": [
+      "ஒருமுறை",
+      "இருமுறை",
+      "கணினிப் பட்டியலின் ஒவ்வொரு குழுவிற்கும் ஒருமுறை",
+      "அறிவிப்புகள் முரண்படுவதால் ஒருமுறைகூட இயங்காது"
+    ],
+    "answer": "ஒருமுறை"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "ஒரே நிலுவை இயக்க நேரத்தில் இயக்கப்படும் அறிவிக்கப்பட்ட கையாளிகளின் வரிசையை எது தீர்மானிக்கிறது?",
+    "options": [
+      "அவற்றின் பெயர்களின் அகரவரிசை",
+      "notify பட்டியலில் பெயர்களின் வரிசை",
+      "நிர்வகிக்கப்படும் கணினிகள் இணைந்த வரிசை",
+      "handlers பகுதியில் அவை வரையறுக்கப்பட்ட வரிசை"
+    ],
+    "answer": "handlers பகுதியில் அவை வரையறுக்கப்பட்ட வரிசை"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "ஒரு தொகுப்பின் rescue பணிகளை வழக்கமாகத் தொடங்கும் தோல்வி எது?",
+    "options": [
+      "பிளேபுக்கில் செல்லாத பணி வரையறை இருப்பது",
+      "YAML ஆவணத்தைப் பகுத்தறிய முடியாதது",
+      "தொகுப்பிற்குள் ஒரு பணி தோல்வி முடிவைத் தருவது",
+      "பணி இயங்குவதற்கு முன்பே கணினியை அணுக முடியாமல் போவது"
+    ],
+    "answer": "தொகுப்பிற்குள் ஒரு பணி தோல்வி முடிவைத் தருவது"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "சாதாரண பணியில் ignore_errors மறைக்காத பிழை எது?",
+    "options": [
+      "failed_when நிபந்தனை மெய்யாக மதிப்பிடப்படுவது",
+      "வரையறுக்கப்படாத மாறி தொடர்பான பிழை",
+      "கட்டளை அறிவிக்கும் பூஜ்ஜியமல்லாத வெளியேறும் நிலை",
+      "வெளிப்படையாகத் தோல்வி எனக் குறிக்கப்பட்ட தொகுதி முடிவு"
+    ],
+    "answer": "வரையறுக்கப்படாத மாறி தொடர்பான பிழை"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "கையாளப்படாத பணி தோல்வியின்போது தற்போதைய தொகுதி அந்தப் பணியை முடித்ததும் எல்லாக் கணினிகளிலும் பிளேயை நிறுத்தும் முக்கியச்சொல் எது?",
+    "options": [
+      "any_errors_fatal",
+      "ignore_unreachable",
+      "max_fail_percentage: 100",
+      "force_handlers"
+    ],
+    "answer": "any_errors_fatal"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "அணுகக்கூடிய கணினியில் பின்னர் ஒரு பணி தோல்வியடைந்தால் force_handlersஇன் விளைவு என்ன?",
+    "options": [
+      "வரையறுக்கப்பட்ட ஒவ்வொரு கையாளியும் அறிவிப்பின்றியே இயங்கும்",
+      "தோல்வியடைந்த அனைத்துப் பணிகளும் தானாக மீண்டும் முயற்சிக்கப்படும்",
+      "கையாளிகள் சாதாரண பணிகள் அனைத்திற்கும் முன் இயங்கும்",
+      "முன்பு அறிவிக்கப்பட்ட கையாளிகள் அந்தக் கணினியில் இன்னும் இயங்கலாம்"
+    ],
+    "answer": "முன்பு அறிவிக்கப்பட்ட கையாளிகள் அந்தக் கணினியில் இன்னும் இயங்கலாம்"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "பணியின் ரகசியத் தன்மையுள்ள மதிப்புருக்களையும் முடிவுகளையும் வழக்கமாகப் பதிவு செய்வதைத் தடுக்கும் அமைப்பு எது?",
+    "options": [
+      "check_mode: true",
+      "changed_when: false",
+      "no_log: true",
+      "diff: true"
+    ],
+    "answer": "no_log: true"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "--diff இயக்கப்பட்டாலும் கோப்பின் உள்ளடக்க வேறுபாடுகளைக் காட்டாமல் தடுக்கும் பணி அமைப்பு எது?",
+    "options": [
+      "ignore_errors: true",
+      "diff: false",
+      "no_log: false",
+      "check_mode: false"
+    ],
+    "answer": "diff: false"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "கணினிப் பட்டியலின் மற்றொரு கணினியுடன் தொடர்புடைய மாறிகளை அணுக உதவும் அகராதி எது?",
+    "options": [
+      "hostvars",
+      "ansible_facts",
+      "environment",
+      "ansible_loop"
+    ],
+    "answer": "hostvars"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "தற்போதைய கணினியின் கணினிப் பட்டியல் பெயரைக் கொண்ட சிறப்பு மாறி எது?",
+    "options": [
+      "ansible_host",
+      "ansible_user",
+      "ansible_playbook_python",
+      "inventory_hostname"
+    ],
+    "answer": "inventory_hostname"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "ஒரு கணினிக் குழு பகிரும் மாறிகளுக்கு வழக்கமாகக் கணினிப் பட்டியலருகே உள்ள எந்த அடைவு பயன்படுத்தப்படுகிறது?",
+    "options": [
+      "roles",
+      "collections",
+      "group_vars",
+      "host_vars"
+    ],
+    "answer": "group_vars"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "ansible.builtin.file தேடல் இயல்புநிலையில் கோப்பை எங்கே படிக்கிறது?",
+    "options": [
+      "become_user பெயரிடும் கணினியில்",
+      "கட்டுப்பாட்டு முனையில்",
+      "நிர்வகிக்கப்படும் ஒவ்வொரு கணினியிலும்",
+      "பிளேயின் முதல் கணினியில்"
+    ],
+    "answer": "கட்டுப்பாட்டு முனையில்"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "YAML சரத்தை Ansible தரவுக் கட்டமைப்பாக மாற்றும் வடிகட்டி எது?",
+    "options": [
+      "from_yaml",
+      "to_yaml",
+      "to_json",
+      "dict2items"
+    ],
+    "answer": "from_yaml"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "அகராதியை விசை/மதிப்பு அகராதிகளின் பட்டியலாக மாற்றும் வடிகட்டி எது?",
+    "options": [
+      "items2dict",
+      "flatten",
+      "zip",
+      "dict2items"
+    ],
+    "answer": "dict2items"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "பட்டியலில் மீண்டும் வரும் உறுப்புகளை நீக்கும் வடிகட்டி எது?",
+    "options": [
+      "reverse",
+      "flatten",
+      "unique",
+      "sort"
+    ],
+    "answer": "unique"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "கோவைகளைச் சோதித்து, குறிப்பிட்ட உறுதிப்பாட்டு நிபந்தனைகள் நிறைவேறாவிட்டால் தோல்வியடையும் தொகுதி எது?",
+    "options": [
+      "ansible.builtin.set_fact",
+      "ansible.builtin.assert",
+      "ansible.builtin.debug",
+      "ansible.builtin.pause"
+    ],
+    "answer": "ansible.builtin.assert"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "ரெகுலர் எக்ஸ்பிரெஷனைப் பயன்படுத்தி உரைக் கோப்பின் குறிப்பிட்ட வரியை நிர்வகிக்கும் தொகுதி எது?",
+    "options": [
+      "ansible.builtin.lineinfile",
+      "ansible.builtin.blockinfile",
+      "ansible.builtin.copy",
+      "ansible.builtin.slurp"
+    ],
+    "answer": "ansible.builtin.lineinfile"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "URL கோரிக்கை விடுத்து எதிர்பார்க்கப்படும் HTTP நிலைக் குறியீட்டைச் சரிபார்க்கக்கூடிய தொகுதி எது?",
+    "options": [
+      "ansible.builtin.get_url",
+      "ansible.builtin.fetch",
+      "ansible.builtin.wait_for",
+      "ansible.builtin.uri"
+    ],
+    "answer": "ansible.builtin.uri"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "TCP போர்ட் கோரிய நிலையை அடையும்வரை காத்திருக்கும் தொகுதி எது?",
+    "options": [
+      "ansible.builtin.async_status",
+      "ansible.builtin.ping",
+      "ansible.builtin.wait_for",
+      "ansible.builtin.pause"
+    ],
+    "answer": "ansible.builtin.wait_for"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "குறிப்பிட்ட பாதை ஏற்கெனவே இருந்தால் ansible.builtin.command இயக்கத்தைத் தவிர்க்கச் செய்யும் அளவுரு எது?",
+    "options": [
+      "stdin",
+      "creates",
+      "removes",
+      "chdir"
+    ],
+    "answer": "creates"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "குறியீட்டு இணைப்பை உருவாக்கும் file தொகுதி அமைப்பு எது?",
+    "options": [
+      "state: link",
+      "state: directory",
+      "state: touch",
+      "state: hard"
+    ],
+    "answer": "state: link"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "பின்னர் வரும் பிளேகளுக்காக நினைவகக் கணினிப் பட்டியலில் ஒரு கணினியைச் சேர்க்கக்கூடிய தொகுதி எது?",
+    "options": [
+      "ansible.builtin.group_by",
+      "ansible.builtin.set_fact",
+      "ansible.builtin.meta",
+      "ansible.builtin.add_host"
+    ],
+    "answer": "ansible.builtin.add_host"
+  }
+]

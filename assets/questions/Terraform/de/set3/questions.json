@@ -1,0 +1,302 @@
+[
+  {
+    "category": "Terraform",
+    "set": 3,
+    "question": "Welches Terraform-Feature ermöglicht wiederverwendbare Infrastrukturkomponenten?",
+    "options": [
+      "Module",
+      "Provider",
+      "Variablen",
+      "Outputs"
+    ],
+    "answer": "Module"
+  },
+  {
+    "category": "Terraform",
+    "set": 3,
+    "question": "Welcher Block wird zum Aufrufen eines Moduls verwendet?",
+    "options": [
+      "module",
+      "import",
+      "resource",
+      "provider"
+    ],
+    "answer": "module"
+  },
+  {
+    "category": "Terraform",
+    "set": 3,
+    "question": "Welches Argument gibt den Quellspeicherort eines Moduls an?",
+    "options": [
+      "source",
+      "path",
+      "location",
+      "module_source"
+    ],
+    "answer": "source"
+  },
+  {
+    "category": "Terraform",
+    "set": 3,
+    "question": "Welche Terraform Registry hostet öffentliche Module?",
+    "options": [
+      "Terraform Registry",
+      "Docker Hub",
+      "GitHub Packages",
+      "AWS Marketplace"
+    ],
+    "answer": "Terraform Registry"
+  },
+  {
+    "category": "Terraform",
+    "set": 3,
+    "question": "Welches Backend speichert den Terraform-State in Amazon S3?",
+    "options": [
+      "s3",
+      "aws",
+      "bucket",
+      "remote"
+    ],
+    "answer": "s3"
+  },
+  {
+    "category": "Terraform",
+    "set": 3,
+    "question": "Welcher AWS-Dienst wurde für die inzwischen veraltete tabellenbasierte Zustandssperre des S3-Backends verwendet?",
+    "options": [
+      "DynamoDB",
+      "RDS",
+      "EFS",
+      "Lambda"
+    ],
+    "answer": "DynamoDB"
+  },
+  {
+    "category": "Terraform",
+    "set": 3,
+    "question": "Welcher ältere Backend-Typ kann den Zustand in HCP Terraform, ehemals Terraform Cloud, speichern?",
+    "options": [
+      "remote",
+      "cloud",
+      "terraform",
+      "tfc"
+    ],
+    "answer": "remote"
+  },
+  {
+    "category": "Terraform",
+    "set": 3,
+    "question": "Was ist der Zweck des State Lockings?",
+    "options": [
+      "Gleichzeitige Änderungen verhindern",
+      "State-Datei verschlüsseln",
+      "State sichern",
+      "State komprimieren"
+    ],
+    "answer": "Gleichzeitige Änderungen verhindern"
+  },
+  {
+    "category": "Terraform",
+    "set": 3,
+    "question": "Welcher Befehl lädt den Remote-State auf den lokalen Rechner?",
+    "options": [
+      "terraform state pull",
+      "terraform pull",
+      "terraform get-state",
+      "terraform state download"
+    ],
+    "answer": "terraform state pull"
+  },
+  {
+    "category": "Terraform",
+    "set": 3,
+    "question": "Welcher Befehl überträgt den State in ein Backend?",
+    "options": [
+      "terraform state push",
+      "terraform push",
+      "terraform upload",
+      "terraform state upload"
+    ],
+    "answer": "terraform state push"
+  },
+  {
+    "category": "Terraform",
+    "set": 3,
+    "question": "Welcher Backend-Typ speichert den State auf der lokalen Festplatte?",
+    "options": [
+      "local",
+      "file",
+      "disk",
+      "host"
+    ],
+    "answer": "local"
+  },
+  {
+    "category": "Terraform",
+    "set": 3,
+    "question": "Welcher Befehl entfernt eine Ressource aus dem State, ohne sie zu löschen?",
+    "options": [
+      "terraform state rm",
+      "terraform rm",
+      "terraform destroy",
+      "terraform remove"
+    ],
+    "answer": "terraform state rm"
+  },
+  {
+    "category": "Terraform",
+    "set": 3,
+    "question": "Welcher Befehl verschiebt Ressourcen innerhalb des States?",
+    "options": [
+      "terraform state mv",
+      "terraform move",
+      "terraform mv",
+      "terraform state move"
+    ],
+    "answer": "terraform state mv"
+  },
+  {
+    "category": "Terraform",
+    "set": 3,
+    "question": "Welche Datenquelle liest Outputs aus einer anderen State-Datei?",
+    "options": [
+      "terraform_remote_state",
+      "remote_state",
+      "state_data",
+      "terraform_state"
+    ],
+    "answer": "terraform_remote_state"
+  },
+  {
+    "category": "Terraform",
+    "set": 3,
+    "question": "Welche Datei sperrt Provider-Versionen?",
+    "options": [
+      ".terraform.lock.hcl",
+      "terraform.lock",
+      "providers.lock",
+      "terraform.providers"
+    ],
+    "answer": ".terraform.lock.hcl"
+  },
+  {
+    "category": "Terraform",
+    "set": 3,
+    "question": "Welches Argument wählt die Version eines aus einer Registry installierten Moduls?",
+    "options": [
+      "version",
+      "ref",
+      "revision",
+      "required_version"
+    ],
+    "answer": "version"
+  },
+  {
+    "category": "Terraform",
+    "set": 3,
+    "question": "Welcher Ausdruck liest die Ausgabe vpc_id eines untergeordneten Moduls namens network?",
+    "options": [
+      "var.network.vpc_id",
+      "local.network.vpc_id",
+      "data.network.vpc_id",
+      "module.network.vpc_id"
+    ],
+    "answer": "module.network.vpc_id"
+  },
+  {
+    "category": "Terraform",
+    "set": 3,
+    "question": "Welches Argument im provider-Block benennt eine zusätzliche Provider-Konfiguration?",
+    "options": [
+      "version",
+      "count",
+      "alias",
+      "source"
+    ],
+    "answer": "alias"
+  },
+  {
+    "category": "Terraform",
+    "set": 3,
+    "question": "Welches Ressourcen-Metaargument wählt eine bestimmte Provider-Konfiguration mit Alias?",
+    "options": [
+      "for_each",
+      "provider",
+      "providers",
+      "depends_on"
+    ],
+    "answer": "provider"
+  },
+  {
+    "category": "Terraform",
+    "set": 3,
+    "question": "Welches Argument eines Modulaufrufs übergibt bestimmte Provider-Konfigurationen an ein untergeordnetes Modul?",
+    "options": [
+      "providers",
+      "provider",
+      "required_providers",
+      "configuration_aliases"
+    ],
+    "answer": "providers"
+  },
+  {
+    "category": "Terraform",
+    "set": 3,
+    "question": "Welche Option von terraform init versucht nach einer Backend-Konfigurationsänderung den vorhandenen Zustand zu verschieben?",
+    "options": [
+      "-reconfigure",
+      "-upgrade",
+      "-get=false",
+      "-migrate-state"
+    ],
+    "answer": "-migrate-state"
+  },
+  {
+    "category": "Terraform",
+    "set": 3,
+    "question": "Welche Option von terraform init ignoriert die bisherige Backend-Konfiguration, ohne eine Zustandsmigration zu versuchen?",
+    "options": [
+      "-upgrade",
+      "-lock=false",
+      "-reconfigure",
+      "-migrate-state"
+    ],
+    "answer": "-reconfigure"
+  },
+  {
+    "category": "Terraform",
+    "set": 3,
+    "question": "Welcher Befehl erstellt und wählt einen CLI-Arbeitsbereich namens staging?",
+    "options": [
+      "terraform workspace list",
+      "terraform workspace new staging",
+      "terraform workspace select staging",
+      "terraform workspace show"
+    ],
+    "answer": "terraform workspace new staging"
+  },
+  {
+    "category": "Terraform",
+    "set": 3,
+    "question": "Welcher Befehl zeigt den Namen des aktuellen CLI-Arbeitsbereichs?",
+    "options": [
+      "terraform workspace show",
+      "terraform workspace list",
+      "terraform workspace select default",
+      "terraform state list"
+    ],
+    "answer": "terraform workspace show"
+  },
+  {
+    "category": "Terraform",
+    "set": 3,
+    "question": "Welches Argument des S3-Backends aktiviert die native S3-Zustandssperre per Sperrdatei?",
+    "options": [
+      "encrypt = true",
+      "workspace_key_prefix = \"env\"",
+      "skip_region_validation = true",
+      "use_lockfile = true"
+    ],
+    "answer": "use_lockfile = true"
+  }
+]

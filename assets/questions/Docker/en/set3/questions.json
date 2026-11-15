@@ -1,0 +1,302 @@
+[
+  {
+    "category": "Docker",
+    "set": 3,
+    "question": "Which command lists running containers?",
+    "options": [
+      "docker ps",
+      "docker images",
+      "docker start",
+      "docker build"
+    ],
+    "answer": "docker ps"
+  },
+  {
+    "category": "Docker",
+    "set": 3,
+    "question": "Which command executes a command inside a running container?",
+    "options": [
+      "docker exec",
+      "docker enter",
+      "docker shell",
+      "docker login"
+    ],
+    "answer": "docker exec"
+  },
+  {
+    "category": "Docker",
+    "set": 3,
+    "question": "Which command attaches to a running container?",
+    "options": [
+      "docker attach",
+      "docker connect",
+      "docker exec",
+      "docker join"
+    ],
+    "answer": "docker attach"
+  },
+  {
+    "category": "Docker",
+    "set": 3,
+    "question": "Which command copies files between a container and the host?",
+    "options": [
+      "docker cp",
+      "docker copy",
+      "docker transfer",
+      "docker sync"
+    ],
+    "answer": "docker cp"
+  },
+  {
+    "category": "Docker",
+    "set": 3,
+    "question": "Which command displays real-time Docker events?",
+    "options": [
+      "docker events",
+      "docker logs",
+      "docker monitor",
+      "docker watch"
+    ],
+    "answer": "docker events"
+  },
+  {
+    "category": "Docker",
+    "set": 3,
+    "question": "Which command saves an image to a tar archive?",
+    "options": [
+      "docker save",
+      "docker export",
+      "docker backup",
+      "docker archive"
+    ],
+    "answer": "docker save"
+  },
+  {
+    "category": "Docker",
+    "set": 3,
+    "question": "Which command loads an image from a tar archive?",
+    "options": [
+      "docker load",
+      "docker import",
+      "docker restore",
+      "docker pull"
+    ],
+    "answer": "docker load"
+  },
+  {
+    "category": "Docker",
+    "set": 3,
+    "question": "Which command exports a container filesystem as a tar archive?",
+    "options": [
+      "docker export",
+      "docker save",
+      "docker backup",
+      "docker archive"
+    ],
+    "answer": "docker export"
+  },
+  {
+    "category": "Docker",
+    "set": 3,
+    "question": "Which command imports a tarball as an image?",
+    "options": [
+      "docker import",
+      "docker load",
+      "docker pull",
+      "docker build"
+    ],
+    "answer": "docker import"
+  },
+  {
+    "category": "Docker",
+    "set": 3,
+    "question": "Which command creates an image from a container's changes?",
+    "options": [
+      "docker commit",
+      "docker build",
+      "docker save",
+      "docker tag"
+    ],
+    "answer": "docker commit"
+  },
+  {
+    "category": "Docker",
+    "set": 3,
+    "question": "Which command tags a Docker image?",
+    "options": [
+      "docker tag",
+      "docker name",
+      "docker commit",
+      "docker label"
+    ],
+    "answer": "docker tag"
+  },
+  {
+    "category": "Docker",
+    "set": 3,
+    "question": "Which command pushes an image to a registry?",
+    "options": [
+      "docker push",
+      "docker upload",
+      "docker publish",
+      "docker send"
+    ],
+    "answer": "docker push"
+  },
+  {
+    "category": "Docker",
+    "set": 3,
+    "question": "Which command logs into a Docker registry?",
+    "options": [
+      "docker login",
+      "docker auth",
+      "docker connect",
+      "docker signin"
+    ],
+    "answer": "docker login"
+  },
+  {
+    "category": "Docker",
+    "set": 3,
+    "question": "Which command prunes unused Docker objects?",
+    "options": [
+      "docker system prune",
+      "docker clean",
+      "docker prune",
+      "docker remove"
+    ],
+    "answer": "docker system prune"
+  },
+  {
+    "category": "Docker",
+    "set": 3,
+    "question": "Which command displays Docker disk usage?",
+    "options": [
+      "docker system df",
+      "docker disk",
+      "docker usage",
+      "docker info"
+    ],
+    "answer": "docker system df"
+  },
+  {
+    "category": "Docker",
+    "set": 3,
+    "question": "Which Dockerfile instruction declares a build-time variable that can be supplied with --build-arg?",
+    "options": [
+      "USER",
+      "ARG",
+      "ENV",
+      "LABEL"
+    ],
+    "answer": "ARG"
+  },
+  {
+    "category": "Docker",
+    "set": 3,
+    "question": "Which Dockerfile instruction specifies the user for subsequent RUN instructions and the default runtime process?",
+    "options": [
+      "USER",
+      "SHELL",
+      "WORKDIR",
+      "STOPSIGNAL"
+    ],
+    "answer": "USER"
+  },
+  {
+    "category": "Docker",
+    "set": 3,
+    "question": "What distinguishes CMD from RUN in a Dockerfile?",
+    "options": [
+      "CMD always executes before FROM",
+      "CMD copies files from the host",
+      "CMD creates a new build stage",
+      "CMD supplies defaults for container execution rather than running a build step"
+    ],
+    "answer": "CMD supplies defaults for container execution rather than running a build step"
+  },
+  {
+    "category": "Docker",
+    "set": 3,
+    "question": "When an image has an exec-form ENTRYPOINT, how are ordinary arguments after the image name in docker run normally used?",
+    "options": [
+      "They are interpreted as Dockerfile instructions",
+      "They are stored as image labels",
+      "They are appended to the entrypoint command",
+      "They replace the entrypoint executable"
+    ],
+    "answer": "They are appended to the entrypoint command"
+  },
+  {
+    "category": "Docker",
+    "set": 3,
+    "question": "Which Dockerfile instruction begins another stage in a multi-stage build?",
+    "options": [
+      "ARG",
+      "FROM",
+      "RUN",
+      "COPY"
+    ],
+    "answer": "FROM"
+  },
+  {
+    "category": "Docker",
+    "set": 3,
+    "question": "Which option copies artifacts from a stage named build in a multi-stage Dockerfile?",
+    "options": [
+      "COPY --from=build",
+      "COPY --chown=build",
+      "COPY --chmod=build",
+      "COPY --exclude=build"
+    ],
+    "answer": "COPY --from=build"
+  },
+  {
+    "category": "Docker",
+    "set": 3,
+    "question": "Which instruction defines a command that Docker runs to assess a container's health?",
+    "options": [
+      "STOPSIGNAL",
+      "ENTRYPOINT",
+      "ONBUILD",
+      "HEALTHCHECK"
+    ],
+    "answer": "HEALTHCHECK"
+  },
+  {
+    "category": "Docker",
+    "set": 3,
+    "question": "Which image reference pins a pull to a content digest instead of a mutable tag?",
+    "options": [
+      "nginx:stable",
+      "nginx:alpine",
+      "nginx@sha256:<digest>",
+      "nginx:latest"
+    ],
+    "answer": "nginx@sha256:<digest>"
+  },
+  {
+    "category": "Docker",
+    "set": 3,
+    "question": "What does a 'latest' image tag actually mean?",
+    "options": [
+      "It automatically updates running containers",
+      "It is a conventional tag that the publisher can update",
+      "It guarantees the newest image by creation time",
+      "It always selects a stable release"
+    ],
+    "answer": "It is a conventional tag that the publisher can update"
+  },
+  {
+    "category": "Docker",
+    "set": 3,
+    "question": "Which command shows files added, changed, or deleted in a container's filesystem?",
+    "options": [
+      "docker diff web",
+      "docker history web",
+      "docker inspect web",
+      "docker logs web"
+    ],
+    "answer": "docker diff web"
+  }
+]

@@ -1,0 +1,302 @@
+[
+  {
+    "category": "Terraform",
+    "set": 4,
+    "question": "फ़ाइलें दोबारा लिखे बिना Terraform फ़ॉर्मैट कौन-सा कमांड जाँचता है?",
+    "options": [
+      "terraform fmt -check",
+      "terraform validate",
+      "terraform fmt -write=true",
+      "terraform plan"
+    ],
+    "answer": "terraform fmt -check"
+  },
+  {
+    "category": "Terraform",
+    "set": 4,
+    "question": "बदलाव योजना या दूरस्थ सेवाओं की जाँच बिना Terraform कॉन्फ़िगरेशन की आंतरिक सिंटैक्स और संगति कौन-सा कमांड जाँचता है?",
+    "options": [
+      "terraform validate",
+      "terraform plan",
+      "terraform check",
+      "terraform verify"
+    ],
+    "answer": "terraform validate"
+  },
+  {
+    "category": "Terraform",
+    "set": 4,
+    "question": "विज़ुअल डिपेंडेंसी ग्राफ़ बनाने के लिए किस कमांड का उपयोग किया जाता है?",
+    "options": [
+      "terraform graph",
+      "terraform map",
+      "terraform diagram",
+      "terraform tree"
+    ],
+    "answer": "terraform graph"
+  },
+  {
+    "category": "Terraform",
+    "set": 4,
+    "question": "कौन सी Terraform सुविधा कॉन्फ़िगरेशन ड्रिफ्ट का पता लगाने में मदद करती है?",
+    "options": [
+      "terraform plan",
+      "terraform fmt",
+      "terraform output",
+      "terraform console"
+    ],
+    "answer": "terraform plan"
+  },
+  {
+    "category": "Terraform",
+    "set": 4,
+    "question": "इंटरैक्टिव Terraform कंसोल खोलने के लिए किस कमांड का उपयोग किया जाता है?",
+    "options": [
+      "terraform console",
+      "terraform shell",
+      "terraform repl",
+      "terraform interactive"
+    ],
+    "answer": "terraform console"
+  },
+  {
+    "category": "Terraform",
+    "set": 4,
+    "question": "वास्तविक अवसंरचना से स्थिति ताज़ा करने वाला कौन-सा पुराना कमांड अब refresh-only plan/apply प्रक्रिया के पक्ष में अप्रचलित है?",
+    "options": [
+      "terraform refresh",
+      "terraform sync",
+      "terraform update",
+      "terraform pull"
+    ],
+    "answer": "terraform refresh"
+  },
+  {
+    "category": "Terraform",
+    "set": 4,
+    "question": "Terraform वेरिएबल परिभाषाओं के लिए कौन सा फ़ाइल एक्सटेंशन उपयोग किया जाता है?",
+    "options": [
+      ".tfvars",
+      ".vars",
+      ".tfvar",
+      ".terraform"
+    ],
+    "answer": ".tfvars"
+  },
+  {
+    "category": "Terraform",
+    "set": 4,
+    "question": "किसी विशिष्ट tfvars फ़ाइल से मान लागू करने के लिए किस कमांड का उपयोग किया जाता है?",
+    "options": [
+      "terraform apply -var-file",
+      "terraform apply -vars",
+      "terraform apply -tfvars",
+      "terraform apply -file"
+    ],
+    "answer": "terraform apply -var-file"
+  },
+  {
+    "category": "Terraform",
+    "set": 4,
+    "question": "कौन सी Terraform सुविधा डायनामिक ब्लॉक बनाने में मदद करती है?",
+    "options": [
+      "dynamic",
+      "foreach",
+      "loop",
+      "template"
+    ],
+    "answer": "dynamic"
+  },
+  {
+    "category": "Terraform",
+    "set": 4,
+    "question": "कौन सा फंक्शन स्ट्रिंग को लिस्ट में विभाजित करता है?",
+    "options": [
+      "split",
+      "join",
+      "slice",
+      "parse"
+    ],
+    "answer": "split"
+  },
+  {
+    "category": "Terraform",
+    "set": 4,
+    "question": "कौन सा फंक्शन कई मैप को मर्ज करता है?",
+    "options": [
+      "merge",
+      "concat",
+      "combine",
+      "append"
+    ],
+    "answer": "merge"
+  },
+  {
+    "category": "Terraform",
+    "set": 4,
+    "question": "कौन सी Terraform सुविधा कंडीशनल रिसोर्स निर्माण की अनुमति देती है?",
+    "options": [
+      "count",
+      "depends_on",
+      "provider",
+      "workspace"
+    ],
+    "answer": "count"
+  },
+  {
+    "category": "Terraform",
+    "set": 4,
+    "question": "बिना अतिरिक्त तर्क के नवीनतम स्थिति और संसाधन गुण पठनीय रूप में कौन-सा कमांड दिखाता है?",
+    "options": [
+      "terraform show",
+      "terraform state list",
+      "terraform state show",
+      "terraform output"
+    ],
+    "answer": "terraform show"
+  },
+  {
+    "category": "Terraform",
+    "set": 4,
+    "question": "कौन सी Terraform सुविधा सुनिश्चित करती है कि रिसोर्स सही क्रम में बनाए जाएँ?",
+    "options": [
+      "Dependency Graph",
+      "Count",
+      "Workspace",
+      "Output"
+    ],
+    "answer": "Dependency Graph"
+  },
+  {
+    "category": "Terraform",
+    "set": 4,
+    "question": "कॉन्फ़िगरेशन द्वारा उपयोग किए जाने वाले प्रोवाइडर प्रदर्शित करने के लिए किस कमांड का उपयोग किया जाता है?",
+    "options": [
+      "terraform providers",
+      "terraform provider list",
+      "terraform show providers",
+      "terraform plugin list"
+    ],
+    "answer": "terraform providers"
+  },
+  {
+    "category": "Terraform",
+    "set": 4,
+    "question": "विशेष प्रबंधित संसाधन इंस्टेंस का प्रतिस्थापन कौन-सा योजना विकल्प माँगता है?",
+    "options": [
+      "-destroy",
+      "-replace=aws_instance.web",
+      "-target=aws_instance.web",
+      "-refresh=false"
+    ],
+    "answer": "-replace=aws_instance.web"
+  },
+  {
+    "category": "Terraform",
+    "set": 4,
+    "question": "-detailed-exitcode के साथ सफल terraform plan बदलाव पाए तो कौन-सा निकास कोड देता है?",
+    "options": [
+      "2",
+      "0",
+      "1",
+      "3"
+    ],
+    "answer": "2"
+  },
+  {
+    "category": "Terraform",
+    "set": 4,
+    "question": "Terraform से बाहर हुए बदलावों से मिलाने के लिए केवल स्थिति और आउटपुट अपडेट कौन-सा योजना मोड सुझाता है?",
+    "options": [
+      "-destroy",
+      "-refresh=false",
+      "-target=aws_instance.web",
+      "-refresh-only"
+    ],
+    "answer": "-refresh-only"
+  },
+  {
+    "category": "Terraform",
+    "set": 4,
+    "question": "पुराना ऑब्जेक्ट नष्ट करने से पहले नया बनाने वाला जीवनचक्र नियम कौन-सा है?",
+    "options": [
+      "ignore_changes",
+      "replace_triggered_by",
+      "create_before_destroy",
+      "prevent_destroy"
+    ],
+    "answer": "create_before_destroy"
+  },
+  {
+    "category": "Terraform",
+    "set": 4,
+    "question": "कॉन्फ़िगरेशन में रहने तक संसाधन नष्ट करने की योजना कौन-सा जीवनचक्र नियम रोकता है?",
+    "options": [
+      "replace_triggered_by",
+      "prevent_destroy",
+      "create_before_destroy",
+      "ignore_changes"
+    ],
+    "answer": "prevent_destroy"
+  },
+  {
+    "category": "Terraform",
+    "set": 4,
+    "question": "दूसरे तंत्र को विशेष संसाधन गुण सँभालने देता कौन-सा जीवनचक्र नियम Terraform को उन गुणों के अपडेट की योजना बनाने से रोकता है?",
+    "options": [
+      "ignore_changes",
+      "prevent_destroy",
+      "create_before_destroy",
+      "replace_triggered_by"
+    ],
+    "answer": "ignore_changes"
+  },
+  {
+    "category": "Terraform",
+    "set": 4,
+    "question": "निर्धारित संस्करण सीमाओं के भीतर प्रदाता अपग्रेड करने देता कौन-सा terraform init विकल्प है?",
+    "options": [
+      "-reconfigure",
+      "-backend=false",
+      "-lockfile=readonly",
+      "-upgrade"
+    ],
+    "answer": "-upgrade"
+  },
+  {
+    "category": "Terraform",
+    "set": 4,
+    "question": "संसाधन पते aws_instance.web के सहेजे गुण कौन-सा कमांड दिखाता है?",
+    "options": [
+      "terraform import aws_instance.web i-1234567890abcdef0",
+      "terraform state rm aws_instance.web",
+      "terraform state show aws_instance.web",
+      "terraform state list aws_instance.web"
+    ],
+    "answer": "terraform state show aws_instance.web"
+  },
+  {
+    "category": "Terraform",
+    "set": 4,
+    "question": "Terraform की विस्तृत नैदानिक लॉगिंग कौन-सा पर्यावरण चर चालू करता है?",
+    "options": [
+      "TF_IN_AUTOMATION",
+      "TF_LOG",
+      "TF_INPUT",
+      "TF_WORKSPACE"
+    ],
+    "answer": "TF_LOG"
+  },
+  {
+    "category": "Terraform",
+    "set": 4,
+    "question": "एक साथ संसाधन कार्यों को पाँच तक कौन-सा terraform apply विकल्प सीमित करता है?",
+    "options": [
+      "-parallelism=5",
+      "-lock-timeout=5s",
+      "-refresh=false",
+      "-auto-approve"
+    ],
+    "answer": "-parallelism=5"
+  }
+]

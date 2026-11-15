@@ -1,0 +1,302 @@
+[
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "哪种语法定义一个简单的 Bash 函数？",
+    "options": [
+      "myfunc() { echo hi; }",
+      "def myfunc: echo hi",
+      "function = myfunc",
+      "myfunc -> echo hi"
+    ],
+    "answer": "myfunc() { echo hi; }"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "哪个命令调用名为 myfunc 的函数？",
+    "options": [
+      "myfunc",
+      "call myfunc",
+      "run myfunc",
+      "execute myfunc"
+    ],
+    "answer": "myfunc"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "哪个关键字声明仅在函数内部可见的变量？",
+    "options": [
+      "local",
+      "private",
+      "internal",
+      "hidden"
+    ],
+    "answer": "local"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "哪个命令从函数中返回退出状态 0？",
+    "options": [
+      "return 0",
+      "exit function 0",
+      "stop 0",
+      "end 0"
+    ],
+    "answer": "return 0"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "在函数内部，哪个参数给出传递给该函数的参数个数？",
+    "options": [
+      "$#",
+      "$@",
+      "$0",
+      "$1"
+    ],
+    "answer": "$#"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "哪种语法创建包含三个元素的索引数组？",
+    "options": [
+      "arr=(one two three)",
+      "array arr one two three",
+      "arr[one two three]",
+      "set arr one two three"
+    ],
+    "answer": "arr=(one two three)"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "哪种语法访问 arr 中索引为 2 的元素？",
+    "options": [
+      "${arr[2]}",
+      "${arr:2}",
+      "$arr[2]",
+      "arr{2}"
+    ],
+    "answer": "${arr[2]}"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "哪种展开给出 arr 中的元素个数？",
+    "options": [
+      "${#arr[@]}",
+      "${#arr}",
+      "${arr:length}",
+      "${arr[@]#}"
+    ],
+    "answer": "${#arr[@]}"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "哪种语法将 newitem 追加到 arr？",
+    "options": [
+      "arr+=(newitem)",
+      "arr=newitem",
+      "arr.push(newitem)",
+      "add arr newitem"
+    ],
+    "answer": "arr+=(newitem)"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "哪种展开返回 arr 的所有元素？",
+    "options": [
+      "${arr[@]}",
+      "${arr[0]}",
+      "${arr[all]}",
+      "${arr}"
+    ],
+    "answer": "${arr[@]}"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "哪个命令声明关联数组？",
+    "options": [
+      "declare -A map",
+      "declare -a map",
+      "array -A map",
+      "assoc map"
+    ],
+    "answer": "declare -A map"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "哪种重定向将标准输出和标准错误都发送到 output.log？",
+    "options": [
+      "command &> output.log",
+      "command > output.log",
+      "command 2> output.log",
+      "command < output.log"
+    ],
+    "answer": "command &> output.log"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "哪种重定向丢弃命令的所有输出？",
+    "options": [
+      "command > /dev/null",
+      "command > null",
+      "command > empty",
+      "command > discard"
+    ],
+    "answer": "command > /dev/null"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "哪个运算符将一个命令的输出作为另一个命令的输入？",
+    "options": [
+      "|",
+      ">",
+      "<",
+      "&"
+    ],
+    "answer": "|"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "哪个符号让命令在后台运行？",
+    "options": [
+      "&",
+      "&&",
+      "|",
+      ";"
+    ],
+    "answer": "&"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "哪个内置命令等待后台作业完成？",
+    "options": [
+      "wait",
+      "hold",
+      "pause",
+      "sleep"
+    ],
+    "answer": "wait"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "哪个命令在当前 Shell 环境中执行 script.sh？",
+    "options": [
+      "source script.sh",
+      "bash script.sh",
+      "./script.sh",
+      "sh script.sh"
+    ],
+    "answer": "source script.sh"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "哪个运算符开始一个 here document？",
+    "options": [
+      "<<",
+      ">>",
+      "<",
+      ">"
+    ],
+    "answer": "<<"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "哪个命令创建安全的临时文件？",
+    "options": [
+      "mktemp",
+      "tempfile",
+      "touch tmp",
+      "newfile"
+    ],
+    "answer": "mktemp"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "哪个命令在脚本收到 SIGINT 时运行清理操作？",
+    "options": [
+      "trap 'cleanup' SIGINT",
+      "handle SIGINT cleanup",
+      "signal SIGINT cleanup",
+      "catch SIGINT cleanup"
+    ],
+    "answer": "trap 'cleanup' SIGINT"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "用户按下 Ctrl+C 时通常发送哪个信号？",
+    "options": [
+      "SIGINT",
+      "SIGTERM",
+      "SIGKILL",
+      "SIGHUP"
+    ],
+    "answer": "SIGINT"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "哪个选项使脚本在命令失败时立即退出？",
+    "options": [
+      "set -e",
+      "set -x",
+      "set -u",
+      "set -o pipefail"
+    ],
+    "answer": "set -e"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "哪个选项在引用未设置的变量时导致错误？",
+    "options": [
+      "set -u",
+      "set -e",
+      "set -x",
+      "set -a"
+    ],
+    "answer": "set -u"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "哪个选项在执行每个命令之前将其打印出来以便调试？",
+    "options": [
+      "set -x",
+      "set -e",
+      "set -u",
+      "set -v"
+    ],
+    "answer": "set -x"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "哪个命令列出当前已定义的 Shell 函数？",
+    "options": [
+      "declare -f",
+      "declare -A",
+      "functions",
+      "listfunc"
+    ],
+    "answer": "declare -f"
+  }
+]

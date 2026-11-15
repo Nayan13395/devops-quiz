@@ -1,0 +1,302 @@
+[
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "একে পাইপলাইনৰ একেলগে চলাৰ সলনি নতুন ৰান শাৰীত ৰখা ঘোষণামূলক বিকল্প কোনটো?",
+    "options": [
+      "parallelsAlwaysFailFast()",
+      "disableConcurrentBuilds()",
+      "disableResume()",
+      "skipDefaultCheckout()"
+    ],
+    "answer": "disableConcurrentBuilds()"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "পুৰণি বিল্ড ৰেকৰ্ড আৰু আৰ্টিফেক্ট ৰখাৰ নিয়ম দিয়া ঘোষণামূলক বিকল্প কোনটো?",
+    "options": [
+      "buildDiscarder(logRotator(numToKeepStr: '10'))",
+      "timeout(time: 10, unit: 'MINUTES')",
+      "retry(10)",
+      "quietPeriod(10)"
+    ],
+    "answer": "buildDiscarder(logRotator(numToKeepStr: '10'))"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "Jenkins cron-ৰ H চিহ্নই কি দিয়ে?",
+    "options": [
+      "ব্যৱহাৰকাৰীৰ কম্পিউটাৰৰ বৰ্তমান সময়ৰ ঘণ্টাৰ মান",
+      "কেৱল বন্ধৰ দিনত চলোৱাৰ অনুৰোধ",
+      "কেৱল নোড খালী থাকিলে চলোৱাৰ অনুৰোধ",
+      "সময়সূচীৰ বোজা বিতৰণ কৰিবলৈ জবৰ নামৰ ওপৰত নিৰ্ভৰ কৰা স্থিৰ হেশ্ব"
+    ],
+    "answer": "সময়সূচীৰ বোজা বিতৰণ কৰিবলৈ জবৰ নামৰ ওপৰত নিৰ্ভৰ কৰা স্থিৰ হেশ্ব"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "Jenkins-ৰ পাঁচ-ক্ষেত্ৰ cron-ত পঞ্চম ক্ষেত্ৰটোৱে কি বুজায়?",
+    "options": [
+      "দিনৰ ঘণ্টা",
+      "মাহৰ দিন",
+      "সপ্তাহৰ দিন",
+      "ঘণ্টাৰ মিনিট"
+    ],
+    "answer": "সপ্তাহৰ দিন"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "আগৰ বিল্ড বিফল বা অস্থিৰ আছিল আৰু এতিয়াৰটো সফল হ’লে কোন post চৰ্ত চলে?",
+    "options": [
+      "unsuccessful",
+      "fixed",
+      "changed",
+      "regression"
+    ],
+    "answer": "fixed"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "আন post চৰ্ত মূল্যায়নৰ পিছত চলা post চৰ্ত কোনটো?",
+    "options": [
+      "cleanup",
+      "always",
+      "changed",
+      "success"
+    ],
+    "answer": "cleanup"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "ষ্টেজৰ এজেণ্ট আবণ্টনৰ আগতে চৰ্ত মূল্যায়ন কৰা when বিকল্প কোনটো?",
+    "options": [
+      "beforeInput false",
+      "beforeOptions false",
+      "branch 'main'",
+      "beforeAgent true"
+    ],
+    "answer": "beforeAgent true"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "মাল্টিব্ৰাঞ্চ পাইপলাইনত নামযুক্ত শাখা নিৰ্বাচন কৰা when চৰ্ত কোনটো?",
+    "options": [
+      "buildingTag()",
+      "changeRequest()",
+      "branch 'main'",
+      "tag 'main'"
+    ],
+    "answer": "branch 'main'"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "অপাৰেটিং ছিষ্টেম আৰু ব্ৰাউজাৰৰ দৰে অক্ষৰ মানৰ সমন্বয় চলোৱা ঘোষণামূলক গঠন কোনটো?",
+    "options": [
+      "environment",
+      "matrix",
+      "parallel",
+      "steps"
+    ],
+    "answer": "matrix"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "ঘোষণামূলক মেট্ৰিক্সৰ পৰা অবাঞ্ছিত সমন্বয় আঁতৰোৱা অংশ কোনটো?",
+    "options": [
+      "excludes",
+      "axes",
+      "stages",
+      "tools"
+    ],
+    "answer": "excludes"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "সমান্তৰাল শাখাৰ এটা বিফল হ’লে বাকীবোৰ ৰখোৱা ষ্টেজৰ ছেটিং কোনটো?",
+    "options": [
+      "beforeAgent true",
+      "reuseNode true",
+      "alwaysPull true",
+      "failFast true"
+    ],
+    "answer": "failFast true"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "বিল্ড অস্থিৰ হ’লেই পৰৱৰ্তী ষ্টেজ এৰি দিয়া ঘোষণামূলক বিকল্প কোনটো?",
+    "options": [
+      "disableResume()",
+      "preserveStashes()",
+      "skipStagesAfterUnstable()",
+      "skipDefaultCheckout()"
+    ],
+    "answer": "skipStagesAfterUnstable()"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "বিফলতা নথিভুক্ত কৰিও ব্লকৰ পিছত আগবাঢ়িবলৈ দিয়া ধাপ কোনটো?",
+    "options": [
+      "input",
+      "catchError",
+      "error",
+      "timeout"
+    ],
+    "answer": "catchError"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "প্ৰক্ৰিয়া শেষ হ’লে sh(script: 'check.sh', returnStatus: true)-এ কি ঘূৰাই দিয়ে?",
+    "options": [
+      "প্ৰক্ৰিয়াৰ সংখ্যামূলক প্ৰস্থান কোড",
+      "সম্পূৰ্ণ মানক আউটপুট টেক্সট",
+      "শ্বেলৰ প্ৰক্ৰিয়া ID",
+      "Jenkins পৰিচয়-প্ৰমাণৰ অবজেক্ট"
+    ],
+    "answer": "প্ৰক্ৰিয়াৰ সংখ্যামূলক প্ৰস্থান কোড"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "sh(script: 'echo ready', returnStdout: true) সফল হ’লে কি ঘূৰাই দিয়ে?",
+    "options": [
+      "সংখ্যামূলক বিল্ড নম্বৰ",
+      "মেপ হিচাপে শ্বেলৰ পৰিৱেশ",
+      "এজেণ্টৰ লেবেলৰ তালিকা",
+      "ধৰি ৰখা মানক আউটপুটৰ ষ্ট্ৰিং"
+    ],
+    "answer": "ধৰি ৰখা মানক আউটপুটৰ ষ্ট্ৰিং"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "বৰ্তমান কাৰ্যস্থান ডাইৰেক্টৰীৰ সকলো বস্তু উপডাইৰেক্টৰীসহ মচা ধাপ কোনটো?",
+    "options": [
+      "pwd",
+      "readFile",
+      "deleteDir",
+      "fileExists"
+    ],
+    "answer": "deleteDir"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "বৰ্তমান কাৰ্যস্থানত পথ আছে নে নাই চোৱা ধাপ কোনটো?",
+    "options": [
+      "libraryResource",
+      "fileExists",
+      "readFile",
+      "writeFile"
+    ],
+    "answer": "fileExists"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "আন Jenkins জব চলাই বিল্ড পৰামিতিও দিব পৰা ধাপ কোনটো?",
+    "options": [
+      "build",
+      "stage",
+      "node",
+      "checkout"
+    ],
+    "answer": "build"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "ষ্টেজ পুনৰ আৰম্ভ কৰিবলৈ সম্পূৰ্ণ বিল্ডৰ stash ৰখা ঘোষণামূলক বিকল্প কোনটো?",
+    "options": [
+      "disableResume()",
+      "skipDefaultCheckout()",
+      "quietPeriod(5)",
+      "preserveStashes()"
+    ],
+    "answer": "preserveStashes()"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "vars/deploy.groovy-এ সংজ্ঞায়িত কৰা সামগ্ৰিক চলক deploy-ৰ সহায়িকা কোন উমৈহতীয়া লাইব্ৰেৰী ফাইলত থাকে?",
+    "options": [
+      "resources/deploy.txt",
+      "vars/main.groovy",
+      "vars/deploy.txt",
+      "src/deploy.groovy"
+    ],
+    "answer": "vars/deploy.txt"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "Jenkins পাইপলাইনত @NonCPS-ৰে চিহ্নিত পদ্ধতিৰ মূল সীমা কি?",
+    "options": [
+      "ই Windows এজেণ্টত চলিব লাগিব",
+      "ই CPS-ৰূপান্তৰিত পাইপলাইন ধাপ আহ্বান কৰিব নোৱাৰে",
+      "ইয়াত stage নিৰ্দেশ থাকিব লাগিব",
+      "ই সদায় ষ্ট্ৰিং ঘূৰাই দিব লাগিব"
+    ],
+    "answer": "ই CPS-ৰূপান্তৰিত পাইপলাইন ধাপ আহ্বান কৰিব নোৱাৰে"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "ছেণ্ডবক্সত থকা অননুমোদিত Groovy কোডে বিচৰা স্বাক্ষৰ পৰীক্ষা কৰা Jenkins সুবিধা কোনটো?",
+    "options": [
+      "প্ৰক্ৰিয়াৰ ভিতৰৰ স্ক্ৰিপ্ট অনুমোদন",
+      "Credentials Store",
+      "Build Queue",
+      "SCM প’লিঙৰ লগ"
+    ],
+    "answer": "প্ৰক্ৰিয়াৰ ভিতৰৰ স্ক্ৰিপ্ট অনুমোদন"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "বান্ধি দিয়া গোপন চলক শ্বেলক বিস্তাৰ কৰিবলৈ দিয়া স্ক্ৰিপ্টত কোন Groovy উদ্ধৃতিৰূপ উপযুক্ত?",
+    "options": [
+      "গোপন মানসহ ডাবল-কোট কৰা Groovy ইণ্টাৰপ’লেটেড ষ্ট্ৰিং",
+      "গোপন মানসহ তিনিটা ডাবল-কোটৰ Groovy ইণ্টাৰপ’লেটেড ষ্ট্ৰিং",
+      "মুকলি পাঠ্যৰ গোপন মান যোগ কৰি গঢ়া Groovy ষ্ট্ৰিং",
+      "ছিংগল-কোট কৰা Groovy ষ্ট্ৰিং"
+    ],
+    "answer": "ছিংগল-কোট কৰা Groovy ষ্ট্ৰিং"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "সম্পৰ্কিত ৱেব অনুৰোধত Jenkins CSRF crumb-ৰ উদ্দেশ্য কি?",
+    "options": [
+      "আপলোডৰ আগতে বিল্ড আৰ্টিফেক্ট এনক্ৰিপ্ট কৰা",
+      "বিল্ড চলোৱা এজেণ্ট বাছি লোৱা",
+      "অৱস্থা সলনি কৰা অনুৰোধ প্ৰতিষ্ঠিত ব্যৱহাৰকাৰী অধিবেশনৰ নে যাচাই কৰাত সহায় কৰা",
+      "সকলো জবৰ অধিকাৰ পৰীক্ষাৰ স্থান লোৱা"
+    ],
+    "answer": "অৱস্থা সলনি কৰা অনুৰোধ প্ৰতিষ্ঠিত ব্যৱহাৰকাৰী অধিবেশনৰ নে যাচাই কৰাত সহায় কৰা"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "পৃথক জবৰ মাজত উমৈহতীয়া পৰীক্ষা যন্ত্ৰত একচেটিয়া প্ৰৱেশ সমন্বয় কৰিবলৈ পাইপলাইনে কি ব্যৱহাৰ কৰিব লাগে?",
+    "options": [
+      "skipDefaultCheckout বিকল্প",
+      "Lockable Resources প্লাগইনৰ lock ধাপ",
+      "timestamps বিকল্প",
+      "buildDiscarder বিকল্প"
+    ],
+    "answer": "Lockable Resources প্লাগইনৰ lock ধাপ"
+  }
+]

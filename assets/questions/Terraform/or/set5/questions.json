@@ -1,0 +1,302 @@
+[
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "Terraform ବର୍ତ୍ତମାନ ଅବଜେକ୍ଟ ରଖିପାରିବା ପାଇଁ ରିସୋର୍ସ ଠିକଣା ପରିବର୍ତ୍ତନ ଲେଖୁଥିବା ଘୋଷଣାତ୍ମକ ବ୍ଲକ୍ କେଉଁଟି?",
+    "options": [
+      "removed",
+      "check",
+      "moved",
+      "import"
+    ],
+    "answer": "moved"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "moved ବ୍ଲକ୍‌ରେ ନୂଆ ରିସୋର୍ସ ଠିକଣା ଦେଉଥିବା ଆର୍ଗ୍ୟୁମେଣ୍ଟ କେଉଁଟି?",
+    "options": [
+      "provider",
+      "to",
+      "from",
+      "id"
+    ],
+    "answer": "to"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "apply ସମୟରେ ଆମଦାନି କରିବା ପାଇଁ ବର୍ତ୍ତମାନ ଭିତ୍ତିଭୂମି ଅବଜେକ୍ଟ ଘୋଷଣା କରୁଥିବା ବ୍ଲକ୍ କେଉଁଟି?",
+    "options": [
+      "import",
+      "moved",
+      "output",
+      "check"
+    ],
+    "answer": "import"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "ପ୍ରକୃତ ଅବଜେକ୍ଟ ନଷ୍ଟ ନକରି ରିସୋର୍ସକୁ ଷ୍ଟେଟ୍‌ରୁ ଭୁଲିଯାଉଥିବା removed ବ୍ଲକ୍ ସେଟିଂ କେଉଁଟି?",
+    "options": [
+      "lifecycle { destroy = true }",
+      "lifecycle { create_before_destroy = true }",
+      "lifecycle { prevent_destroy = false }",
+      "lifecycle { destroy = false }"
+    ],
+    "answer": "lifecycle { destroy = false }"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "ସାଧାରଣ ଇନ୍‌ପୁଟ୍ ଚଳକୁ sensitive ଚିହ୍ନ ଦେଲେ ସ୍ଥାନୀୟ ଷ୍ଟେଟ୍ ଫାଇଲ୍‌ରେ ତାହାର ମୂଲ୍ୟର କ’ଣ ହୁଏ?",
+    "options": [
+      "ତାହା ସର୍ବଦା ଷ୍ଟେଟ୍‌ରୁ ବାହାରେ ରହେ",
+      "ରଖିବା ପୂର୍ବରୁ ତାହା ବଦଳରେ ଚଳର ନାମ ରଖାଯାଏ",
+      "ସାଧାରଣ CLI ଆଉଟ୍‌ପୁଟ୍‌ରେ ଲୁଚିଥିଲେ ମଧ୍ୟ ସରଳ ପାଠ୍ୟରେ ରହିପାରେ",
+      "sensitive ଫ୍ଲାଗ୍ ତାହାକୁ ସ୍ୱୟଂଚାଳିତ ଗୁପ୍ତୀକରଣ କରେ"
+    ],
+    "answer": "ସାଧାରଣ CLI ଆଉଟ୍‌ପୁଟ୍‌ରେ ଲୁଚିଥିଲେ ମଧ୍ୟ ସରଳ ପାଠ୍ୟରେ ରହିପାରେ"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "ସମ୍ବେଦନଶୀଳ ଆଉଟ୍‌ପୁଟ୍ ମୂଲ୍ୟକୁ ଯନ୍ତ୍ର-ପଠନଯୋଗ୍ୟ ରୂପରେ ଖୋଲିପାରୁଥିବା output କମାଣ୍ଡ ଫର୍ମାଟ୍ କେଉଁଟି?",
+    "options": [
+      "terraform providers schema -json",
+      "terraform output -json",
+      "terraform output -help",
+      "terraform output -no-color"
+    ],
+    "answer": "terraform output -json"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "Terraform ମୂଲ୍ୟକୁ JSON ଷ୍ଟ୍ରିଙ୍ଗ୍ କରୁଥିବା ଫଙ୍କସନ୍ କେଉଁଟି?",
+    "options": [
+      "jsonencode",
+      "jsondecode",
+      "yamldecode",
+      "file"
+    ],
+    "answer": "jsonencode"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "JSON ଷ୍ଟ୍ରିଙ୍ଗ୍ ପାର୍ସ କରି Terraform ମୂଲ୍ୟ କରୁଥିବା ଫଙ୍କସନ୍ କେଉଁଟି?",
+    "options": [
+      "jsonencode",
+      "yamlencode",
+      "templatefile",
+      "jsondecode"
+    ],
+    "answer": "jsondecode"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "ଦିଆଯାଇଥିବା ଚଳ ମ୍ୟାପ୍‌ରେ ଟେମ୍ପଲେଟ୍ ଫାଇଲ୍ ତିଆରି କରୁଥିବା ଫଙ୍କସନ୍ କେଉଁଟି?",
+    "options": [
+      "fileset",
+      "filebase64",
+      "templatefile",
+      "file"
+    ],
+    "answer": "templatefile"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "ଗତିଶୀଳ ତ୍ରୁଟି ବିନା ମୂଲ୍ୟାୟନ ହେଉଥିବା ପ୍ରଥମ ଆର୍ଗ୍ୟୁମେଣ୍ଟ ଦେଉଥିବା ଫଙ୍କସନ୍ କେଉଁଟି?",
+    "options": [
+      "lookup",
+      "try",
+      "can",
+      "coalesce"
+    ],
+    "answer": "try"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "ଅଭିବ୍ୟକ୍ତି ଗତିଶୀଳ ତ୍ରୁଟି ବିନା ମୂଲ୍ୟାୟନ ହୋଇପାରିବ କି ନାହିଁ କହୁଥିବା ଫଙ୍କସନ୍ କେଉଁଟି?",
+    "options": [
+      "can",
+      "try",
+      "contains",
+      "length"
+    ],
+    "answer": "can"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "mergeକୁ ଦିଆଯାଇଥିବା ଦୁଇ ମ୍ୟାପ୍‌ରେ ଏକା କୀ ଥିଲେ କେଉଁ ମୂଲ୍ୟ ପ୍ରାଧାନ୍ୟ ପାଏ?",
+    "options": [
+      "ପୂର୍ବ ଆର୍ଗ୍ୟୁମେଣ୍ଟର ମୂଲ୍ୟ",
+      "ମୂଲ୍ୟଗୁଡ଼ିକ ସର୍ବଦା ତାଲିକାରେ ମିଶନ୍ତି",
+      "ପୁନରାବୃତ୍ତ କୀ ସର୍ବଦା ତ୍ରୁଟି ଆଣେ",
+      "ପରବର୍ତ୍ତୀ ଆର୍ଗ୍ୟୁମେଣ୍ଟର ମୂଲ୍ୟ"
+    ],
+    "answer": "ପରବର୍ତ୍ତୀ ଆର୍ଗ୍ୟୁମେଣ୍ଟର ମୂଲ୍ୟ"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "5.4.x ସଂସ୍କରଣ ମାନୁଥିବା କିନ୍ତୁ 5.5.0 ନମାନୁଥିବା ପ୍ରୋଭାଇଡର୍ ସଂସ୍କରଣ ସୀମା କେଉଁଟି?",
+    "options": [
+      ">= 5.4.0",
+      ">= 5.0, < 6.0",
+      "~> 5.4.0",
+      "~> 5.4"
+    ],
+    "answer": "~> 5.4.0"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "null ଦିଆଯାଇଥିବା ରିସୋର୍ସ ଆର୍ଗ୍ୟୁମେଣ୍ଟକୁ Terraform ସାଧାରଣତଃ କ’ଣ ଭାବେ ଧରେ?",
+    "options": [
+      "ସମ୍ପୂର୍ଣ୍ଣ ରିସୋର୍ସ ମିଟାଇବାର ଅନୁରୋଧ",
+      "ନଦିଆଯାଇଥିବା ଆର୍ଗ୍ୟୁମେଣ୍ଟ, ଯାହାର ଡିଫଲ୍ଟ ମୂଲ୍ୟ ଓ ଆବଶ୍ୟକତା ଲାଗୁ ହୁଏ",
+      "ପ୍ରତ୍ୟେକ ପ୍ରୋଭାଇଡର୍‌ରେ ଖାଲି ଷ୍ଟ୍ରିଙ୍ଗ୍",
+      "ପ୍ରତ୍ୟେକ ପ୍ରୋଭାଇଡର୍‌ରେ ସଂଖ୍ୟାତ୍ମକ ଶୂନ୍ୟ"
+    ],
+    "answer": "ନଦିଆଯାଇଥିବା ଆର୍ଗ୍ୟୁମେଣ୍ଟ, ଯାହାର ଡିଫଲ୍ଟ ମୂଲ୍ୟ ଓ ଆବଶ୍ୟକତା ଲାଗୁ ହୁଏ"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "ଯେଉଁ ମଡ୍ୟୁଲ୍‌ରେ ଲେଖାଯାଇଛି ତାହାର ଫାଇଲ୍‌ସିଷ୍ଟମ୍ ପାଥ୍ ଦେଉଥିବା ଅଭିବ୍ୟକ୍ତି କେଉଁଟି?",
+    "options": [
+      "path.module",
+      "path.root",
+      "path.cwd",
+      "terraform.workspace"
+    ],
+    "answer": "path.module"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "CLI ସଂରଚନାକୁ HCP Terraform ସହ ଯୋଡ଼ିବାକୁ ସୁପାରିସ ହୋଇଥିବା terraform ବ୍ଲକ୍ ସୁବିଧା କେଉଁଟି?",
+    "options": [
+      "locals",
+      "moved",
+      "check",
+      "cloud"
+    ],
+    "answer": "cloud"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "terraform_remote_state ସନ୍ଦର୍ଭିତ ଷ୍ଟେଟ୍‌ରୁ କେଉଁ ଶୀର୍ଷସ୍ତରୀୟ ମୂଲ୍ୟ ସିଧା ଦିଏ?",
+    "options": [
+      "ପ୍ରୋଭାଇଡର୍‌ର ସବୁ ପ୍ରମାଣୀକରଣ ବିବରଣୀ",
+      "ସବୁ ଉପମଡ୍ୟୁଲ୍‌ର ସ୍ଥାନୀୟ ମୂଲ୍ୟ",
+      "ମୂଳ ମଡ୍ୟୁଲ୍‌ର ଆଉଟ୍‌ପୁଟ୍",
+      "ପ୍ରତ୍ୟେକ ରିସୋର୍ସ ଗୁଣ ଶୀର୍ଷସ୍ତରୀୟ ଆଉଟ୍‌ପୁଟ୍ ଭାବେ"
+    ],
+    "answer": "ମୂଳ ମଡ୍ୟୁଲ୍‌ର ଆଉଟ୍‌ପୁଟ୍"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "ସନ୍ଦର୍ଭିତ ପରିଚାଳିତ ରିସୋର୍ସ ବଦଳିଲେ ବଦଳି ତିଆରି କରିବାକୁ କହୁଥିବା ଜୀବନଚକ୍ର ନିୟମ କେଉଁଟି?",
+    "options": [
+      "create_before_destroy",
+      "replace_triggered_by",
+      "ignore_changes",
+      "prevent_destroy"
+    ],
+    "answer": "replace_triggered_by"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "ଅଲଗା ପ୍ରୋଭାଇଡର୍ ସ୍ଥାପନ ନକରି ସାଧାରଣ ଇନ୍‌ପୁଟ୍ ମୂଲ୍ୟକୁ ରିସୋର୍ସ ଜୀବନଚକ୍ର ଦେଉଥିବା ଅନ୍ତର୍ନିର୍ମିତ ରିସୋର୍ସ କେଉଁଟି?",
+    "options": [
+      "terraform_data",
+      "terraform_remote_state",
+      "local_file",
+      "random_id"
+    ],
+    "answer": "terraform_data"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "ସାଧାରଣ plan କିମ୍ବା apply ସମୟରେ check ବ୍ଲକ୍‌ର ନିଶ୍ଚିତକରଣ ବିଫଳ ହେଲେ କ’ଣ ହୁଏ?",
+    "options": [
+      "Terraform ସର୍ବଦା ଯାଞ୍ଚ ହୋଇଥିବା ଅବଜେକ୍ଟ ନଷ୍ଟ କରେ",
+      "Terraform ଚୁପଚାପ check ବ୍ଲକ୍ ହଟାଏ",
+      "କୌଣସି ରିସୋର୍ସ ତାଜା କରିବା ପୂର୍ବରୁ Terraform ସର୍ବଦା ବନ୍ଦ ହୁଏ",
+      "Terraform ଚେତାବନୀ ଦିଏ, କିନ୍ତୁ କେବଳ ସେହି ବିଫଳତା ପାଇଁ କାର୍ଯ୍ୟ ରୋକେ ନାହିଁ"
+    ],
+    "answer": "Terraform ଚେତାବନୀ ଦିଏ, କିନ୍ତୁ କେବଳ ସେହି ବିଫଳତା ପାଇଁ କାର୍ଯ୍ୟ ରୋକେ ନାହିଁ"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "ରିସୋର୍ସ ଜୀବନଚକ୍ରର ପୂର୍ବସର୍ତ୍ତ false ହେଲେ କ’ଣ ହୁଏ?",
+    "options": [
+      "Terraform ରିସୋର୍ସକୁ ଡାଟା ଉତ୍ସରେ ବଦଳାଏ",
+      "Terraform ପୂର୍ବସର୍ତ୍ତ ବଦଳରେ କେବଳ ଚେତାବନୀ ଦିଏ",
+      "Terraform ତ୍ରୁଟି କହି ସମ୍ପର୍କିତ କାର୍ଯ୍ୟ ରୋକେ",
+      "Terraform ପରବର୍ତ୍ତୀ ନିଷ୍ପାଦନ ପର୍ଯ୍ୟନ୍ତ ପୂର୍ବସର୍ତ୍ତ ଅଣଦେଖା କରେ"
+    ],
+    "answer": "Terraform ତ୍ରୁଟି କହି ସମ୍ପର୍କିତ କାର୍ଯ୍ୟ ରୋକେ"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "Terraformର ନିଜସ୍ୱ ପରୀକ୍ଷା ଫାଇଲ୍ ଚଲାଉଥିବା କମାଣ୍ଡ କେଉଁଟି?",
+    "options": [
+      "terraform console",
+      "terraform test",
+      "terraform validate",
+      "terraform fmt"
+    ],
+    "answer": "terraform test"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "Terraform ପରୀକ୍ଷାର run ବ୍ଲକ୍‌କୁ ଡିଫଲ୍ଟ apply ବଦଳରେ plan କରାଉଥିବା ସେଟିଂ କେଉଁଟି?",
+    "options": [
+      "command = plan",
+      "command = validate",
+      "command = refresh",
+      "command = console"
+    ],
+    "answer": "command = plan"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "ଡିରେକ୍ଟୋରି ତଳେ ଗ୍ଲବ୍ ପ୍ୟାଟର୍ନ ସହ ମେଳଖାଉଥିବା ସାପେକ୍ଷ ପାଥ୍ ସମୂହ ଦେଉଥିବା ଫଙ୍କସନ୍ କେଉଁଟି?",
+    "options": [
+      "file",
+      "dirname",
+      "basename",
+      "fileset"
+    ],
+    "answer": "fileset"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "ଭିନ୍ନ ପ୍ରବେଶ ନିୟନ୍ତ୍ରଣ ଦରକାର ଥିବା ପରିବେଶକୁ ଅଲଗା କରିବାକୁ କେବଳ CLI ୱାର୍କସ୍ପେସ୍ କାହିଁକି ଅନୁପଯୁକ୍ତ ହୋଇପାରେ?",
+    "options": [
+      "ସେଗୁଡ଼ିକ ଭିନ୍ନ ଇନ୍‌ପୁଟ୍ ଚଳ ମୂଲ୍ୟ ବ୍ୟବହାରକୁ ରୋକନ୍ତି",
+      "ସେଗୁଡ଼ିକ ସବୁ ପରିବେଶକୁ ଏକା ରିସୋର୍ସ ନାମ ବ୍ୟବହାର ପାଇଁ ବାଧ୍ୟ କରନ୍ତି",
+      "ସେଗୁଡ଼ିକର ବ୍ୟାକ୍‌ଏଣ୍ଡ ସଂରଚନା ଓ ପ୍ରମାଣୀକରଣ ପରିପ୍ରେକ୍ଷ୍ୟ ଏକା",
+      "ସେଗୁଡ଼ିକ ସର୍ବଦା ଏକା ଷ୍ଟେଟ୍ ସ୍ନାପ୍‌ସଟ୍ ଭାଗ କରନ୍ତି"
+    ],
+    "answer": "ସେଗୁଡ଼ିକର ବ୍ୟାକ୍‌ଏଣ୍ଡ ସଂରଚନା ଓ ପ୍ରମାଣୀକରଣ ପରିପ୍ରେକ୍ଷ୍ୟ ଏକା"
+  }
+]

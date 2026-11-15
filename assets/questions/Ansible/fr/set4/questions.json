@@ -1,0 +1,302 @@
+[
+  {
+    "category": "Ansible",
+    "set": 4,
+    "question": "Qu'est-ce qu'AWX ?",
+    "options": [
+      "Une interface web, une REST API et un moteur de tâches open source pour Ansible",
+      "Le registre public de collections d'Ansible",
+      "L'utilitaire de chiffrement en ligne de commande d'Ansible",
+      "Un gestionnaire de paquets Python"
+    ],
+    "answer": "Une interface web, une REST API et un moteur de tâches open source pour Ansible"
+  },
+  {
+    "category": "Ansible",
+    "set": 4,
+    "question": "Quel composant de Red Hat Ansible Automation Platform a succédé à Ansible Tower ?",
+    "options": [
+      "Automation controller",
+      "Automation hub",
+      "Event-Driven Ansible",
+      "Automation mesh"
+    ],
+    "answer": "Automation controller"
+  },
+  {
+    "category": "Ansible",
+    "set": 4,
+    "question": "Qu'est-ce qu'un inventaire dynamique ?",
+    "options": [
+      "Un inventaire généré depuis des sources externes telles que des API cloud ou une CMDB",
+      "Un fichier hosts tenu à jour manuellement",
+      "Un fichier d'inventaire chiffré par définition",
+      "Une liste de gestionnaires dans un rôle"
+    ],
+    "answer": "Un inventaire généré depuis des sources externes telles que des API cloud ou une CMDB"
+  },
+  {
+    "category": "Ansible",
+    "set": 4,
+    "question": "Quelle commande vérifie la syntaxe d'un playbook ?",
+    "options": [
+      "ansible-playbook --syntax-check",
+      "ansible-playbook --validate",
+      "ansible-playbook check",
+      "ansible validate"
+    ],
+    "answer": "ansible-playbook --syntax-check"
+  },
+  {
+    "category": "Ansible",
+    "set": 4,
+    "question": "Quelle option effectue une exécution à blanc d'un playbook ?",
+    "options": [
+      "--check",
+      "--dry",
+      "--test",
+      "--simulate"
+    ],
+    "answer": "--check"
+  },
+  {
+    "category": "Ansible",
+    "set": 4,
+    "question": "Quelle option affiche les différences dans les fichiers gérés ?",
+    "options": [
+      "--diff",
+      "--compare",
+      "--changes",
+      "--show-diff"
+    ],
+    "answer": "--diff"
+  },
+  {
+    "category": "Ansible",
+    "set": 4,
+    "question": "Quelle est la stratégie d'exécution par défaut d'Ansible ?",
+    "options": [
+      "linear",
+      "free",
+      "parallel",
+      "serial"
+    ],
+    "answer": "linear"
+  },
+  {
+    "category": "Ansible",
+    "set": 4,
+    "question": "Quelle option limite l'exécution du playbook à certains hôtes ?",
+    "options": [
+      "--limit",
+      "--hosts",
+      "--target",
+      "--group"
+    ],
+    "answer": "--limit"
+  },
+  {
+    "category": "Ansible",
+    "set": 4,
+    "question": "Quel type de plugin contrôle le comportement d'exécution des tâches ?",
+    "options": [
+      "Plugin de stratégie",
+      "Plugin de filtre",
+      "Plugin de callback",
+      "Plugin de recherche"
+    ],
+    "answer": "Plugin de stratégie"
+  },
+  {
+    "category": "Ansible",
+    "set": 4,
+    "question": "Quel plugin récupère des données depuis des sources externes ?",
+    "options": [
+      "Plugin de recherche",
+      "Plugin de callback",
+      "Plugin de connexion",
+      "Plugin d'action"
+    ],
+    "answer": "Plugin de recherche"
+  },
+  {
+    "category": "Ansible",
+    "set": 4,
+    "question": "Quel plugin modifie les données des variables ?",
+    "options": [
+      "Plugin de filtre",
+      "Plugin de recherche",
+      "Plugin d'action",
+      "Plugin de connexion"
+    ],
+    "answer": "Plugin de filtre"
+  },
+  {
+    "category": "Ansible",
+    "set": 4,
+    "question": "Quel module gère les conteneurs Docker ?",
+    "options": [
+      "docker_container",
+      "docker",
+      "container",
+      "docker_manage"
+    ],
+    "answer": "docker_container"
+  },
+  {
+    "category": "Ansible",
+    "set": 4,
+    "question": "Quel module gère les ressources Kubernetes ?",
+    "options": [
+      "k8s",
+      "kubectl",
+      "kubernetes",
+      "cluster"
+    ],
+    "answer": "k8s"
+  },
+  {
+    "category": "Ansible",
+    "set": 4,
+    "question": "Qu'est-ce que l'idempotence dans Ansible ?",
+    "options": [
+      "Exécuter des tâches de façon répétée sans modifier l'état souhaité",
+      "Chiffrer des playbooks",
+      "Créer des inventaires",
+      "Gérer des rôles"
+    ],
+    "answer": "Exécuter des tâches de façon répétée sans modifier l'état souhaité"
+  },
+  {
+    "category": "Ansible",
+    "set": 4,
+    "question": "Quelle commande liste tous les modules Ansible disponibles ?",
+    "options": [
+      "ansible-doc -l",
+      "ansible modules",
+      "ansible-list",
+      "ansible-help modules"
+    ],
+    "answer": "ansible-doc -l"
+  },
+  {
+    "category": "Ansible",
+    "set": 4,
+    "question": "Quel mot-clé de play répartit les hôtes en lots pour une mise à jour progressive ?",
+    "options": [
+      "throttle",
+      "order",
+      "serial",
+      "forks"
+    ],
+    "answer": "serial"
+  },
+  {
+    "category": "Ansible",
+    "set": 4,
+    "question": "Quelle stratégie d'exécution permet à chaque hôte d'avancer sans attendre que les autres terminent la tâche courante ?",
+    "options": [
+      "serial",
+      "free",
+      "linear",
+      "debug"
+    ],
+    "answer": "free"
+  },
+  {
+    "category": "Ansible",
+    "set": 4,
+    "question": "Quelle option d'ansible-playbook fixe le nombre maximal de processus de travail parallèles ?",
+    "options": [
+      "--forks",
+      "--limit",
+      "--timeout",
+      "--step"
+    ],
+    "answer": "--forks"
+  },
+  {
+    "category": "Ansible",
+    "set": 4,
+    "question": "Quel mot-clé de tâche exécute une tâche sur un hôte indiqué plutôt que sur l'hôte courant de l'inventaire ?",
+    "options": [
+      "remote_user",
+      "become_user",
+      "connection",
+      "delegate_to"
+    ],
+    "answer": "delegate_to"
+  },
+  {
+    "category": "Ansible",
+    "set": 4,
+    "question": "Lorsque serial est configuré, que signifie normalement run_once pour une tâche ?",
+    "options": [
+      "L'exécuter une fois pour chaque hôte du play",
+      "L'exécuter uniquement après la fin de tous les gestionnaires",
+      "L'exécuter une fois par lot serial",
+      "L'exécuter une fois par groupe d'inventaire"
+    ],
+    "answer": "L'exécuter une fois par lot serial"
+  },
+  {
+    "category": "Ansible",
+    "set": 4,
+    "question": "Quel mot-clé de play désactive la collecte automatique des faits ?",
+    "options": [
+      "any_errors_fatal: false",
+      "gather_facts: false",
+      "check_mode: false",
+      "become: false"
+    ],
+    "answer": "gather_facts: false"
+  },
+  {
+    "category": "Ansible",
+    "set": 4,
+    "question": "Quelle commande affiche la hiérarchie des groupes de l'inventaire ?",
+    "options": [
+      "ansible-inventory --graph",
+      "ansible-inventory --list",
+      "ansible-inventory --host web1",
+      "ansible-config dump"
+    ],
+    "answer": "ansible-inventory --graph"
+  },
+  {
+    "category": "Ansible",
+    "set": 4,
+    "question": "Quel type de plugin personnalise les rapports d'événements de tâches et les sorties d'exécution ?",
+    "options": [
+      "Plugin de connexion",
+      "Plugin d'inventaire",
+      "Plugin de cache",
+      "Plugin de rappel"
+    ],
+    "answer": "Plugin de rappel"
+  },
+  {
+    "category": "Ansible",
+    "set": 4,
+    "question": "Quel paramètre lance une tâche asynchrone sans attendre sa fin lorsque async est également défini ?",
+    "options": [
+      "delay: 0",
+      "throttle: 1",
+      "poll: 0",
+      "retries: 0"
+    ],
+    "answer": "poll: 0"
+  },
+  {
+    "category": "Ansible",
+    "set": 4,
+    "question": "Quel module vérifie l'état d'un travail asynchrone précédemment lancé ?",
+    "options": [
+      "ansible.builtin.setup",
+      "ansible.builtin.async_status",
+      "ansible.builtin.wait_for",
+      "ansible.builtin.stat"
+    ],
+    "answer": "ansible.builtin.async_status"
+  }
+]

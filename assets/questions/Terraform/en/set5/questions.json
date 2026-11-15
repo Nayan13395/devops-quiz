@@ -1,0 +1,302 @@
+[
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "Which declarative block records a resource address change so Terraform can preserve the existing object?",
+    "options": [
+      "removed",
+      "check",
+      "moved",
+      "import"
+    ],
+    "answer": "moved"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "In a moved block, which argument specifies the new resource address?",
+    "options": [
+      "provider",
+      "to",
+      "from",
+      "id"
+    ],
+    "answer": "to"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "Which block declares an existing infrastructure object to import during an apply operation?",
+    "options": [
+      "import",
+      "moved",
+      "output",
+      "check"
+    ],
+    "answer": "import"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "Which removed-block setting forgets a resource without destroying its real infrastructure object?",
+    "options": [
+      "lifecycle { destroy = true }",
+      "lifecycle { create_before_destroy = true }",
+      "lifecycle { prevent_destroy = false }",
+      "lifecycle { destroy = false }"
+    ],
+    "answer": "lifecycle { destroy = false }"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "When a regular input variable is marked sensitive, what happens to its value in a local state file?",
+    "options": [
+      "It is always excluded from state",
+      "It is replaced with its variable name before storage",
+      "It can still be stored in plaintext even though ordinary CLI output is redacted",
+      "It is automatically encrypted by the sensitive flag"
+    ],
+    "answer": "It can still be stored in plaintext even though ordinary CLI output is redacted"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "Which output command format can expose sensitive output values in machine-readable form?",
+    "options": [
+      "terraform providers schema -json",
+      "terraform output -json",
+      "terraform output -help",
+      "terraform output -no-color"
+    ],
+    "answer": "terraform output -json"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "Which function converts a Terraform value into a JSON string?",
+    "options": [
+      "jsonencode",
+      "jsondecode",
+      "yamldecode",
+      "file"
+    ],
+    "answer": "jsonencode"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "Which function parses a JSON string into a Terraform value?",
+    "options": [
+      "jsonencode",
+      "yamlencode",
+      "templatefile",
+      "jsondecode"
+    ],
+    "answer": "jsondecode"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "Which function renders a template file using a supplied map of variables?",
+    "options": [
+      "fileset",
+      "filebase64",
+      "templatefile",
+      "file"
+    ],
+    "answer": "templatefile"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "Which function returns the first argument that evaluates without a dynamic error?",
+    "options": [
+      "lookup",
+      "try",
+      "can",
+      "coalesce"
+    ],
+    "answer": "try"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "Which function reports whether an expression can be evaluated without a dynamic error?",
+    "options": [
+      "can",
+      "try",
+      "contains",
+      "length"
+    ],
+    "answer": "can"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "If two maps passed to merge contain the same key, which value wins?",
+    "options": [
+      "The value from the earlier argument",
+      "The values are always combined into a list",
+      "The duplicate key always causes an error",
+      "The value from the later argument"
+    ],
+    "answer": "The value from the later argument"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "Which provider version constraint allows 5.4.x releases but not 5.5.0?",
+    "options": [
+      ">= 5.4.0",
+      ">= 5.0, < 6.0",
+      "~> 5.4.0",
+      "~> 5.4"
+    ],
+    "answer": "~> 5.4.0"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "What does Terraform generally treat a resource argument assigned null as?",
+    "options": [
+      "A request to delete the entire resource",
+      "An omitted argument, subject to that argument's defaults and requirements",
+      "An empty string in every provider",
+      "A numeric zero in every provider"
+    ],
+    "answer": "An omitted argument, subject to that argument's defaults and requirements"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "Which expression names the filesystem path of the module where it is written?",
+    "options": [
+      "path.module",
+      "path.root",
+      "path.cwd",
+      "terraform.workspace"
+    ],
+    "answer": "path.module"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "Which terraform block feature is recommended for connecting a CLI configuration to HCP Terraform?",
+    "options": [
+      "locals",
+      "moved",
+      "check",
+      "cloud"
+    ],
+    "answer": "cloud"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "Which top-level values does terraform_remote_state expose directly from the referenced state?",
+    "options": [
+      "All provider credentials",
+      "All child-module local values",
+      "Root-module outputs",
+      "Every resource attribute as a top-level output"
+    ],
+    "answer": "Root-module outputs"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "Which lifecycle rule requests replacement when a referenced managed resource changes?",
+    "options": [
+      "create_before_destroy",
+      "replace_triggered_by",
+      "ignore_changes",
+      "prevent_destroy"
+    ],
+    "answer": "replace_triggered_by"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "Which built-in managed resource gives an ordinary input value a resource lifecycle without installing a separate provider?",
+    "options": [
+      "terraform_data",
+      "terraform_remote_state",
+      "local_file",
+      "random_id"
+    ],
+    "answer": "terraform_data"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "What happens when an assertion in a check block fails during an ordinary plan or apply?",
+    "options": [
+      "Terraform always destroys the checked object",
+      "Terraform silently removes the check block",
+      "Terraform always exits before refreshing any resources",
+      "Terraform reports a warning without blocking the operation solely for that failure"
+    ],
+    "answer": "Terraform reports a warning without blocking the operation solely for that failure"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "What happens when a resource lifecycle precondition evaluates to false?",
+    "options": [
+      "Terraform converts the resource into a data source",
+      "Terraform replaces the precondition with a warning only",
+      "Terraform reports an error and prevents the associated operation",
+      "Terraform ignores the precondition until the next run"
+    ],
+    "answer": "Terraform reports an error and prevents the associated operation"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "Which command runs Terraform's native test files?",
+    "options": [
+      "terraform console",
+      "terraform test",
+      "terraform validate",
+      "terraform fmt"
+    ],
+    "answer": "terraform test"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "Which setting makes a run block in a Terraform test perform a plan instead of the default apply?",
+    "options": [
+      "command = plan",
+      "command = validate",
+      "command = refresh",
+      "command = console"
+    ],
+    "answer": "command = plan"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "Which function returns the collection of relative paths matching a glob pattern under a directory?",
+    "options": [
+      "file",
+      "dirname",
+      "basename",
+      "fileset"
+    ],
+    "answer": "fileset"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "Why can CLI workspaces alone be unsuitable for separating environments that require different access controls?",
+    "options": [
+      "They prevent the use of different input-variable values",
+      "They force every environment to use the same resource names",
+      "They share the same backend configuration and authentication context",
+      "They always share one state snapshot"
+    ],
+    "answer": "They share the same backend configuration and authentication context"
+  }
+]

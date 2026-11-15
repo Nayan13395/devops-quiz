@@ -1,3 +1,4 @@
+import '../l10n/game_localizations.dart';
 import 'dart:async';
 import 'dart:convert';
 import 'dart:math';
@@ -218,9 +219,9 @@ class _TicTacToeScreenState extends State<TicTacToeScreen>
     try {
       await PointService.addPoints(10, source: PointSource.game);
       if (mounted) {
-        ScaffoldMessenger.of(
-          context,
-        ).showSnackBar(const SnackBar(content: Text('You earned 10 points!')));
+        ScaffoldMessenger.of(context).showSnackBar(
+          SnackBar(content: Text(gameL10n(context).gameUiYouEarned10Points)),
+        );
       }
     } catch (error) {
       debugPrint('Tic-Tac-Toe reward failed: $error');
@@ -251,29 +252,29 @@ class _TicTacToeScreenState extends State<TicTacToeScreen>
       return _winner == 'X'
           ? _mode == _TicTacToeMode.computer
                 ? firstName == null
-                      ? 'You win!'
-                      : '$firstName wins!'
+                      ? gameL10n(context).gameUiYouWin
+                      : gameL10n(context).gameUiWins((firstName).toString())
                 : firstName == null
-                ? 'X wins!'
-                : '$firstName (X) wins!'
+                ? gameL10n(context).gameUiXWins
+                : gameL10n(context).gameUiXWins8443126((firstName).toString())
           : _mode == _TicTacToeMode.computer
-          ? 'Computer wins'
+          ? gameL10n(context).gameUiComputerWins
           : firstName == null
-          ? 'O wins!'
-          : 'Player 2 (O) wins!';
+          ? gameL10n(context).gameUiOWins
+          : gameL10n(context).gameUiPlayer2OWins;
     }
-    if (_draw) return 'It\'s a draw';
+    if (_draw) return gameL10n(context).gameUiItSADraw;
     return _mode == _TicTacToeMode.computer
         ? _turn == 'X'
               ? firstName == null
-                    ? 'Your turn'
-                    : '$firstName\'s turn'
-              : 'Computer is thinking'
+                    ? gameL10n(context).gameUiYourTurn
+                    : gameL10n(context).gameUiSTurn((firstName).toString())
+              : gameL10n(context).gameUiComputerIsThinking
         : firstName == null
-        ? 'Player $_turn to move'
+        ? gameL10n(context).gameUiPlayerToMove((_turn).toString())
         : _turn == 'X'
-        ? '$firstName to move'
-        : 'Player 2 to move';
+        ? gameL10n(context).gameUiToMove((firstName).toString())
+        : gameL10n(context).gameUiPlayer2ToMove;
   }
 
   @override
@@ -283,10 +284,10 @@ class _TicTacToeScreenState extends State<TicTacToeScreen>
 
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Tic-Tac-Toe'),
+        title: Text(gameL10n(context).gameUiTicTacToe),
         actions: [
           IconButton(
-            tooltip: 'New round',
+            tooltip: gameL10n(context).gameUiNewRound,
             onPressed: _loading ? null : _resetBoard,
             icon: const Icon(Icons.refresh_rounded),
           ),
@@ -303,16 +304,16 @@ class _TicTacToeScreenState extends State<TicTacToeScreen>
                     child: Column(
                       children: [
                         SegmentedButton<_TicTacToeMode>(
-                          segments: const [
+                          segments: [
                             ButtonSegment(
                               value: _TicTacToeMode.computer,
-                              label: Text('Vs computer'),
-                              icon: Icon(Icons.smart_toy_outlined),
+                              label: Text(gameL10n(context).gameUiVsComputer),
+                              icon: const Icon(Icons.smart_toy_outlined),
                             ),
                             ButtonSegment(
                               value: _TicTacToeMode.local,
-                              label: Text('2 players'),
-                              icon: Icon(Icons.people_outline_rounded),
+                              label: Text(gameL10n(context).gameUi2Players),
+                              icon: const Icon(Icons.people_outline_rounded),
                             ),
                           ],
                           selected: {_mode},
@@ -327,14 +328,16 @@ class _TicTacToeScreenState extends State<TicTacToeScreen>
                           children: [
                             _Score(
                               label: _mode == _TicTacToeMode.computer
-                                  ? GamePlayerNames.playerOne(fallback: 'You')
+                                  ? GamePlayerNames.playerOne(
+                                      fallback: gameL10n(context).gameUiYou,
+                                    )
                                   : GamePlayerNames.signedInFirstName ?? 'X',
                               score: _xWins,
                               color: colors.primary,
                             ),
                             const SizedBox(width: 28),
                             _Score(
-                              label: 'Draws',
+                              label: gameL10n(context).gameUiDraws,
                               score: _draws,
                               color: colors.onSurfaceVariant,
                             ),
@@ -344,7 +347,7 @@ class _TicTacToeScreenState extends State<TicTacToeScreen>
                                   ? 'CPU'
                                   : GamePlayerNames.signedInFirstName == null
                                   ? 'O'
-                                  : 'Player 2',
+                                  : gameL10n(context).gameUiPlayer2,
                               score: _oWins,
                               color: colors.tertiary,
                             ),
@@ -376,8 +379,11 @@ class _TicTacToeScreenState extends State<TicTacToeScreen>
                               final marker = _board[index];
                               return Semantics(
                                 button: true,
-                                label:
-                                    'Cell ${index + 1}${marker == null ? '' : ': $marker'}',
+                                label: gameL10n(context).gameUiCell(
+                                  (index + 1).toString(),
+                                  (marker == null ? '' : ': $marker')
+                                      .toString(),
+                                ),
                                 child: Material(
                                   color: marker == null
                                       ? colors.surfaceContainerHighest
@@ -417,7 +423,7 @@ class _TicTacToeScreenState extends State<TicTacToeScreen>
                         FilledButton.icon(
                           onPressed: _resetBoard,
                           icon: const Icon(Icons.replay_rounded),
-                          label: const Text('Play again'),
+                          label: Text(gameL10n(context).gameUiPlayAgain),
                         ),
                       ],
                     ),

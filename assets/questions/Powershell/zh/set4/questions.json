@@ -1,0 +1,302 @@
+[
+  {
+    "category": "PowerShell",
+    "set": 4,
+    "question": "哪个关键字用于处理终止性错误？",
+    "options": [
+      "catch",
+      "error",
+      "exception",
+      "handle"
+    ],
+    "answer": "catch"
+  },
+  {
+    "category": "PowerShell",
+    "set": 4,
+    "question": "哪个关键字无论是否出错，都会在 try/catch 之后运行代码？",
+    "options": [
+      "finally",
+      "always",
+      "end",
+      "complete"
+    ],
+    "answer": "finally"
+  },
+  {
+    "category": "PowerShell",
+    "set": 4,
+    "question": "哪个自动变量存储最近的错误？",
+    "options": [
+      "$Error",
+      "$Errors",
+      "$Exception",
+      "$LastError"
+    ],
+    "answer": "$Error"
+  },
+  {
+    "category": "PowerShell",
+    "set": 4,
+    "question": "哪个通用参数用于更改错误处理行为？",
+    "options": [
+      "-ErrorAction",
+      "-ErrorMode",
+      "-OnException",
+      "-Catch"
+    ],
+    "answer": "-ErrorAction"
+  },
+  {
+    "category": "PowerShell",
+    "set": 4,
+    "question": "哪个 ErrorAction 值会抑制错误且不会将其添加到 $Error？",
+    "options": [
+      "Ignore",
+      "SilentlyContinue",
+      "Continue",
+      "Stop"
+    ],
+    "answer": "Ignore"
+  },
+  {
+    "category": "PowerShell",
+    "set": 4,
+    "question": "哪个变量存储最后一个本机命令的退出代码？",
+    "options": [
+      "$LASTEXITCODE",
+      "$EXITCODE",
+      "$ErrorCode",
+      "$NativeExit"
+    ],
+    "answer": "$LASTEXITCODE"
+  },
+  {
+    "category": "PowerShell",
+    "set": 4,
+    "question": "哪个变量指示上一个命令是否成功？",
+    "options": [
+      "$?",
+      "$OK",
+      "$Success",
+      "$Result"
+    ],
+    "answer": "$?"
+  },
+  {
+    "category": "PowerShell",
+    "set": 4,
+    "question": "哪个 cmdlet 用于启动后台作业？",
+    "options": [
+      "Start-Job",
+      "Invoke-Job",
+      "New-Job",
+      "Run-Job"
+    ],
+    "answer": "Start-Job"
+  },
+  {
+    "category": "PowerShell",
+    "set": 4,
+    "question": "哪个 cmdlet 用于列出后台作业？",
+    "options": [
+      "Get-Job",
+      "Show-Job",
+      "List-Job",
+      "View-Job"
+    ],
+    "answer": "Get-Job"
+  },
+  {
+    "category": "PowerShell",
+    "set": 4,
+    "question": "哪个 cmdlet 用于检索作业输出？",
+    "options": [
+      "Receive-Job",
+      "Get-JobOutput",
+      "Read-Job",
+      "Fetch-Job"
+    ],
+    "answer": "Receive-Job"
+  },
+  {
+    "category": "PowerShell",
+    "set": 4,
+    "question": "哪个 cmdlet 用于停止后台作业？",
+    "options": [
+      "Stop-Job",
+      "Kill-Job",
+      "End-Job",
+      "Cancel-Job"
+    ],
+    "answer": "Stop-Job"
+  },
+  {
+    "category": "PowerShell",
+    "set": 4,
+    "question": "哪个 cmdlet 用于删除后台作业？",
+    "options": [
+      "Remove-Job",
+      "Delete-Job",
+      "Clear-Job",
+      "Close-Job"
+    ],
+    "answer": "Remove-Job"
+  },
+  {
+    "category": "PowerShell",
+    "set": 4,
+    "question": "哪种语法用于创建脚本块？",
+    "options": [
+      "{ }",
+      "( )",
+      "[ ]",
+      "< >"
+    ],
+    "answer": "{ }"
+  },
+  {
+    "category": "PowerShell",
+    "set": 4,
+    "question": "哪个运算符用于调用命令或脚本块？",
+    "options": [
+      "&",
+      "|",
+      "$",
+      "@"
+    ],
+    "answer": "&"
+  },
+  {
+    "category": "PowerShell",
+    "set": 4,
+    "question": "哪个运算符用于在当前作用域中点源执行脚本？",
+    "options": [
+      ".",
+      "::",
+      "->",
+      "#"
+    ],
+    "answer": "."
+  },
+  {
+    "category": "PowerShell",
+    "set": 4,
+    "question": "哪个运算符用于执行正则表达式匹配？",
+    "options": [
+      "-match",
+      "-like",
+      "-eq",
+      "-contains"
+    ],
+    "answer": "-match"
+  },
+  {
+    "category": "PowerShell",
+    "set": 4,
+    "question": "哪个运算符用于执行区分大小写的相等比较？",
+    "options": [
+      "-ceq",
+      "-eq",
+      "-ieq",
+      "-caseeq"
+    ],
+    "answer": "-ceq"
+  },
+  {
+    "category": "PowerShell",
+    "set": 4,
+    "question": "哪个运算符用于检查集合是否包含某个值？",
+    "options": [
+      "-contains",
+      "-in",
+      "-has",
+      "-includes"
+    ],
+    "answer": "-contains"
+  },
+  {
+    "category": "PowerShell",
+    "set": 4,
+    "question": "哪个运算符用于检查集合是否不包含某个值？",
+    "options": [
+      "-notcontains",
+      "-notin",
+      "-excludes",
+      "-without"
+    ],
+    "answer": "-notcontains"
+  },
+  {
+    "category": "PowerShell",
+    "set": 4,
+    "question": "哪个字面量用于创建空哈希表？",
+    "options": [
+      "@{}",
+      "[]",
+      "@()",
+      "{}"
+    ],
+    "answer": "@{}"
+  },
+  {
+    "category": "PowerShell",
+    "set": 4,
+    "question": "哪种 PowerShell 类型用于存储键值对？",
+    "options": [
+      "Hashtable",
+      "Array",
+      "String",
+      "PSCustomObject"
+    ],
+    "answer": "Hashtable"
+  },
+  {
+    "category": "PowerShell",
+    "set": 4,
+    "question": "哪种语法可以可靠地访问 $hash 中键 'Name' 的值？",
+    "options": [
+      "$hash['Name']",
+      "$hash{Name}",
+      "$hash->Name",
+      "$hash(Name)"
+    ],
+    "answer": "$hash['Name']"
+  },
+  {
+    "category": "PowerShell",
+    "set": 4,
+    "question": "哪个变量存储当前用户名？",
+    "options": [
+      "$env:USERNAME",
+      "$env:USER",
+      "$USERNAME",
+      "$currentUser"
+    ],
+    "answer": "$env:USERNAME"
+  },
+  {
+    "category": "PowerShell",
+    "set": 4,
+    "question": "哪个 PowerShell 驱动器用于公开环境变量？",
+    "options": [
+      "Env:",
+      "Environment:",
+      "Variables:",
+      "System:"
+    ],
+    "answer": "Env:"
+  },
+  {
+    "category": "PowerShell",
+    "set": 4,
+    "question": "哪个自动变量存储当前用户配置文件的路径？",
+    "options": [
+      "$PROFILE",
+      "$PROFILEPATH",
+      "$PSProfile",
+      "$CurrentUserProfile"
+    ],
+    "answer": "$PROFILE"
+  }
+]

@@ -2,12 +2,13 @@ import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:devops_quiz/screens/memory_match_screen.dart';
+import 'package:devops_quiz/services/point_service.dart';
 
 void main() {
   TestWidgetsFlutterBinding.ensureInitialized();
 
   testWidgets('clearing a level unlocks the next level', (tester) async {
-    SharedPreferences.setMockInitialValues({});
+    SharedPreferences.setMockInitialValues({'game_sound_enabled': false});
     await tester.pumpWidget(const MaterialApp(home: MemoryMatchScreen()));
 
     for (
@@ -30,6 +31,15 @@ void main() {
     expect(pairs, hasLength(4));
 
     await tester.pump(const Duration(seconds: 5));
+    // Exceed the previous best-move threshold: completion still earns 100.
+    final first = pairs.values.first.first;
+    final mismatch = pairs.values.last.first;
+    for (var attempt = 0; attempt < 5; attempt++) {
+      await tester.tap(find.byKey(ValueKey('memory-match-card-$first')));
+      await tester.tap(find.byKey(ValueKey('memory-match-card-$mismatch')));
+      await tester.pump(const Duration(milliseconds: 801));
+      await tester.pumpAndSettle();
+    }
     for (final indexes in pairs.values) {
       await tester.tap(find.byKey(ValueKey('memory-match-card-${indexes[0]}')));
       await tester.tap(find.byKey(ValueKey('memory-match-card-${indexes[1]}')));
@@ -38,6 +48,7 @@ void main() {
     }
 
     expect(find.text('Level 1 complete!'), findsOneWidget);
+    expect(await PointService.getTotalPoints(), 100);
     expect(
       (await SharedPreferences.getInstance()).getInt(
         'memory_match_highest_unlocked_level_v1',

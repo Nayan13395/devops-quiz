@@ -1,9 +1,31 @@
+import 'dart:async';
+import 'dart:math';
 import 'dart:ui';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
 import '../data/additional_learning_card_seeds.dart';
+import '../l10n/app_localizations.dart';
+import '../services/saved_data_service.dart';
+import '../services/learning_translation_service.dart';
+
+const Duration _autoSwapInterval = Duration(seconds: 10);
+const double _swipeDistance = 50;
+const double _swipeVelocity = 300;
+
+final learningQuestionReferences = <String, (String, int)>{
+  for (final card in learningCards)
+    if (card.isConcept && card.sourceQuestion != null)
+      card.id: (card.topic, card.sourceQuestion!),
+};
+
+Future<Map<String, LearningCardTranslation>> loadLearningCardTranslations(
+  String language,
+) => LearningTranslationService.loadForQuestions(
+  language,
+  learningQuestionReferences,
+);
 
 class LearningScreen extends StatefulWidget {
   const LearningScreen({super.key});
@@ -13,23 +35,160 @@ class LearningScreen extends StatefulWidget {
 }
 
 class _LearningScreenState extends State<LearningScreen> {
-  final PageController _pageController = PageController(keepPage: false);
   final TextEditingController _searchController = TextEditingController();
+  final Set<String> _savedIds = {};
+  Timer? _autoTimer;
   int _currentIndex = 0;
   String _topic = '';
   String _query = '';
-  bool _changingPage = false;
+  bool _autoSwap = false;
+  bool _savedOnly = false;
+  bool _savingCard = false;
+  bool _savedLoaded = false;
+  String? _language;
+  Map<String, LearningCardTranslation>? _translations;
+  bool _translationError = false;
+  int? _shuffleSeed;
+  Offset _slideFrom = const Offset(1, 0);
+  Offset _drag = Offset.zero;
+  double _overscroll = 0;
+
+  @override
+  void initState() {
+    super.initState();
+    SavedDataService.changes.addListener(_loadSaved);
+    _loadSaved();
+  }
+
+  @override
+  void didChangeDependencies() {
+    super.didChangeDependencies();
+    final language = Localizations.localeOf(context).languageCode;
+    if (_language != language) {
+      _language = language;
+      _translations = null;
+      _translationError = false;
+      _loadTranslations(language);
+    }
+  }
+
+  Future<void> _loadTranslations(String language) async {
+    try {
+      final translations = await loadLearningCardTranslations(language);
+      if (mounted && _language == language) {
+        setState(() {
+          _translations = translations;
+          _translationError = false;
+          _currentIndex = min(_currentIndex, max(0, _visibleCards.length - 1));
+        });
+      }
+    } catch (error, stack) {
+      debugPrint('Loading learning translations failed: $error\n$stack');
+      if (mounted && _language == language) {
+        setState(() => _translationError = true);
+      }
+    }
+  }
 
   @override
   void dispose() {
-    _pageController.dispose();
+    SavedDataService.changes.removeListener(_loadSaved);
+    _autoTimer?.cancel();
     _searchController.dispose();
     super.dispose();
   }
 
+  Future<void> _loadSaved() async {
+    try {
+      final ids = await SavedDataService.cardIds();
+      if (!mounted) return;
+      setState(() {
+        _savedIds
+          ..clear()
+          ..addAll(ids);
+        _savedLoaded = true;
+        _currentIndex = min(_currentIndex, max(0, _visibleCards.length - 1));
+      });
+    } catch (error, stack) {
+      debugPrint('Loading saved learning cards failed: $error\n$stack');
+      if (mounted) {
+        WidgetsBinding.instance.addPostFrameCallback((_) {
+          if (mounted) _savedDataError();
+        });
+      }
+    }
+  }
+
+  void _savedDataError() {
+    ScaffoldMessenger.of(context).showSnackBar(
+      SnackBar(content: Text(AppLocalizations.of(context)!.savedDataError)),
+    );
+  }
+
+  Future<void> _toggleSaved(String id) async {
+    final saved = !_savedIds.contains(id);
+    setState(() => _savingCard = true);
+    try {
+      await SavedDataService.saveCard(id, saved);
+      if (!mounted) return;
+      setState(() {
+        if (saved) {
+          _savedIds.add(id);
+        } else {
+          _savedIds.remove(id);
+        }
+        final count = _visibleCards.length;
+        if (_currentIndex >= count) _currentIndex = max(0, count - 1);
+      });
+    } catch (error, stack) {
+      debugPrint('Saving learning card failed: $error\n$stack');
+      if (mounted) _savedDataError();
+    } finally {
+      if (mounted) setState(() => _savingCard = false);
+    }
+  }
+
+  void _toggleSavedOnly() {
+    setState(() {
+      _savedOnly = !_savedOnly;
+      _currentIndex = 0;
+    });
+    _restartAutoSwap();
+  }
+
+  void _toggleShuffle() {
+    setState(() {
+      _shuffleSeed = _shuffleSeed == null
+          ? DateTime.now().microsecondsSinceEpoch & 0x7fffffff
+          : null;
+      _currentIndex = 0;
+    });
+    _restartAutoSwap();
+  }
+
+  void _toggleAutoSwap() {
+    setState(() => _autoSwap = !_autoSwap);
+    _restartAutoSwap();
+  }
+
+  void _restartAutoSwap() {
+    _autoTimer?.cancel();
+    _autoTimer = null;
+    if (!_autoSwap) return;
+    _autoTimer = Timer.periodic(_autoSwapInterval, (_) {
+      final count = _visibleCards.length;
+      if (!mounted || count < 2 || _translations == null) return;
+      setState(() {
+        _slideFrom = const Offset(1, 0);
+        _currentIndex = (_currentIndex + 1) % count;
+      });
+    });
+  }
+
   List<DevOpsCard> get _visibleCards {
     final query = _query.trim().toLowerCase();
-    return learningCards.where((card) {
+    final cards = learningCards.where((card) {
+      if (_savedOnly && !_savedIds.contains(card.id)) return false;
       if (_topic.isNotEmpty && card.topic != _topic) return false;
       return query.isEmpty ||
           [
@@ -41,45 +200,70 @@ class _LearningScreenState extends State<LearningScreen> {
             card.marathiCommand ?? '',
             card.hindiDescription ?? '',
             card.marathiDescription ?? '',
+            _translations?[card.id]?.command ?? '',
+            _translations?[card.id]?.description ?? '',
           ].any((text) => text.toLowerCase().contains(query));
     }).toList();
-  }
-
-  String _text(String language, String english, String hindi, String marathi) {
-    return switch (language) {
-      'hi' => hindi,
-      'mr' => marathi,
-      _ => english,
-    };
+    if (_shuffleSeed != null) cards.shuffle(Random(_shuffleSeed));
+    return cards;
   }
 
   void _filter({String? topic, String? query}) {
-    if (_pageController.hasClients) _pageController.jumpToPage(0);
     setState(() {
       _topic = topic ?? _topic;
       _query = query ?? _query;
       _currentIndex = 0;
     });
+    _restartAutoSwap();
   }
 
-  Future<void> _movePage(int direction) async {
+  void _movePage(int direction, [Offset? from]) {
     final target = _currentIndex + direction;
-    if (_changingPage ||
-        !_pageController.hasClients ||
-        target < 0 ||
-        target >= _visibleCards.length) {
+    if (target < 0 || target >= _visibleCards.length) return;
+    setState(() {
+      _slideFrom = from ?? Offset(direction > 0 ? 1 : -1, 0);
+      _currentIndex = target;
+    });
+    _restartAutoSwap();
+  }
+
+  void _onDragEnd(Axis axis, DragEndDetails details) {
+    final horizontal = axis == Axis.horizontal;
+    final distance = horizontal ? _drag.dx : _drag.dy;
+    final velocity = details.primaryVelocity ?? 0;
+    _drag = Offset.zero;
+    if (distance.abs() < _swipeDistance && velocity.abs() < _swipeVelocity) {
       return;
     }
-    _changingPage = true;
-    try {
-      await _pageController.animateToPage(
-        target,
-        duration: const Duration(milliseconds: 280),
-        curve: Curves.easeInOut,
-      );
-    } finally {
-      _changingPage = false;
+    _swipe(
+      horizontal: horizontal,
+      towardStart: (distance != 0 ? distance : velocity) < 0,
+    );
+  }
+
+  void _swipe({required bool horizontal, required bool towardStart}) {
+    if (towardStart) {
+      _movePage(1, horizontal ? const Offset(1, 0) : const Offset(0, 1));
+    } else {
+      _movePage(-1, horizontal ? const Offset(-1, 0) : const Offset(0, -1));
     }
+  }
+
+  bool _handleScrollNotification(ScrollNotification notification) {
+    if (notification is ScrollStartNotification) {
+      _overscroll = 0;
+    } else if (notification is OverscrollNotification &&
+        notification.dragDetails != null &&
+        notification.metrics.axis == Axis.vertical) {
+      _overscroll += notification.overscroll;
+    } else if (notification is ScrollEndNotification) {
+      final overscroll = _overscroll;
+      _overscroll = 0;
+      if (overscroll.abs() >= _swipeDistance / 2) {
+        _swipe(horizontal: false, towardStart: overscroll > 0);
+      }
+    }
+    return false;
   }
 
   void _handlePointerSignal(PointerSignalEvent event) {
@@ -100,18 +284,12 @@ class _LearningScreenState extends State<LearningScreen> {
     final language = Localizations.localeOf(context).languageCode;
     final cards = _visibleCards;
     final topics = learningCards.map((card) => card.topic).toSet();
-    final allTopics = _text(
-      language,
-      'All categories',
-      'सभी श्रेणियाँ',
-      'सर्व श्रेणी',
-    );
+    final l = AppLocalizations.of(context)!;
+    final allTopics = l.learningControlAllCategories;
 
     return Scaffold(
       appBar: AppBar(
-        title: Text(
-          _text(language, 'DevOps Learning', 'DevOps सीखें', 'DevOps शिका'),
-        ),
+        title: Text(l.learningControlTitle),
         actions: [
           Padding(
             padding: const EdgeInsets.only(right: 16),
@@ -142,24 +320,14 @@ class _LearningScreenState extends State<LearningScreen> {
                           controller: _searchController,
                           onChanged: (query) => _filter(query: query),
                           decoration: InputDecoration(
-                            labelText: _text(
-                              language,
-                              'Search cards',
-                              'कार्ड खोजें',
-                              'कार्ड शोधा',
-                            ),
+                            labelText: l.learningControlSearchCards,
                             prefixIcon: const Icon(Icons.search_rounded),
                             border: const OutlineInputBorder(),
                             isDense: true,
                             suffixIcon: _query.isEmpty
                                 ? null
                                 : IconButton(
-                                    tooltip: _text(
-                                      language,
-                                      'Clear search',
-                                      'खोज मिटाएँ',
-                                      'शोध साफ करा',
-                                    ),
+                                    tooltip: l.learningControlClearSearch,
                                     icon: const Icon(Icons.close_rounded),
                                     onPressed: () {
                                       _searchController.clear();
@@ -171,12 +339,7 @@ class _LearningScreenState extends State<LearningScreen> {
                       ),
                       const SizedBox(width: 8),
                       PopupMenuButton<String>(
-                        tooltip: _text(
-                          language,
-                          'Category',
-                          'श्रेणी',
-                          'श्रेणी',
-                        ),
+                        tooltip: l.learningControlCategory,
                         initialValue: _topic,
                         icon: const Icon(Icons.filter_list_rounded),
                         onSelected: (topic) => _filter(topic: topic),
@@ -190,20 +353,64 @@ class _LearningScreenState extends State<LearningScreen> {
                   ),
                 ),
                 Padding(
-                  padding: const EdgeInsets.fromLTRB(16, 8, 16, 0),
-                  child: Align(
-                    alignment: Alignment.centerLeft,
-                    child: Text(
-                      _topic.isEmpty ? allTopics : _topic,
-                      style: TextStyle(
-                        color: colors.onSurfaceVariant,
-                        fontWeight: FontWeight.w600,
+                  padding: const EdgeInsets.fromLTRB(16, 4, 8, 0),
+                  child: Row(
+                    children: [
+                      Expanded(
+                        child: Text(
+                          _topic.isEmpty ? allTopics : _topic,
+                          overflow: TextOverflow.ellipsis,
+                          style: TextStyle(
+                            color: colors.onSurfaceVariant,
+                            fontWeight: FontWeight.w600,
+                          ),
+                        ),
                       ),
-                    ),
+                      _toggleButton(
+                        selected: _savedOnly,
+                        icon: Icons.bookmarks_outlined,
+                        selectedIcon: Icons.bookmarks_rounded,
+                        tooltip: _savedOnly
+                            ? l.learningControlShowAll
+                            : l.learningControlShowSaved(_savedIds.length),
+                        onPressed: _toggleSavedOnly,
+                      ),
+                      _toggleButton(
+                        selected: _shuffleSeed != null,
+                        icon: Icons.shuffle_rounded,
+                        selectedIcon: Icons.shuffle_on_rounded,
+                        tooltip: _shuffleSeed != null
+                            ? l.learningControlShuffleOff
+                            : l.learningControlShuffleOn,
+                        onPressed: _toggleShuffle,
+                      ),
+                      _toggleButton(
+                        selected: _autoSwap,
+                        icon: Icons.play_circle_outline_rounded,
+                        selectedIcon: Icons.pause_circle_rounded,
+                        tooltip: _autoSwap
+                            ? l.learningControlAutoOff
+                            : l.learningControlAutoOn,
+                        onPressed: _toggleAutoSwap,
+                      ),
+                    ],
                   ),
                 ),
                 Expanded(
-                  child: cards.isEmpty
+                  child: _translationError
+                      ? Center(
+                          child: TextButton(
+                            onPressed: () => _loadTranslations(language),
+                            child: Text(
+                              '${AppLocalizations.of(context)!.savedDataError}\n'
+                              '${AppLocalizations.of(context)!.retry}',
+                              textAlign: TextAlign.center,
+                            ),
+                          ),
+                        )
+                      : _translations == null
+                      ? const Center(child: CircularProgressIndicator())
+                      : cards.isEmpty
                       ? Center(
                           child: Padding(
                             padding: const EdgeInsets.all(16),
@@ -213,26 +420,17 @@ class _LearningScreenState extends State<LearningScreen> {
                                 const Icon(Icons.search_off_rounded, size: 40),
                                 const SizedBox(height: 12),
                                 Text(
-                                  _text(
-                                    language,
-                                    'No matching cards',
-                                    'कोई कार्ड नहीं मिला',
-                                    'कोणतेही कार्ड सापडले नाही',
-                                  ),
+                                  _savedOnly && _savedIds.isEmpty
+                                      ? l.learningControlNoSaved
+                                      : l.learningControlNoMatches,
                                   textAlign: TextAlign.center,
                                 ),
                                 TextButton.icon(
                                   icon: const Icon(Icons.restart_alt_rounded),
-                                  label: Text(
-                                    _text(
-                                      language,
-                                      'Reset filters',
-                                      'फ़िल्टर हटाएँ',
-                                      'फिल्टर काढा',
-                                    ),
-                                  ),
+                                  label: Text(l.learningControlResetFilters),
                                   onPressed: () {
                                     _searchController.clear();
+                                    _savedOnly = false;
                                     _filter(topic: '', query: '');
                                   },
                                 ),
@@ -249,17 +447,27 @@ class _LearningScreenState extends State<LearningScreen> {
                               PointerDeviceKind.trackpad,
                             },
                           ),
-                          child: PageView.builder(
-                            controller: _pageController,
-                            scrollDirection: Axis.horizontal,
-                            onPageChanged: (index) =>
-                                setState(() => _currentIndex = index),
-                            itemCount: cards.length,
-                            itemBuilder: (_, index) => Listener(
-                              onPointerSignal: _handlePointerSignal,
-                              child: _buildCard(
-                                cards[index].localized(language),
-                                language,
+                          child: GestureDetector(
+                            key: const Key('learning-swipe-area'),
+                            behavior: HitTestBehavior.opaque,
+                            onHorizontalDragStart: (_) => _drag = Offset.zero,
+                            onHorizontalDragUpdate: (details) =>
+                                _drag += Offset(details.delta.dx, 0),
+                            onHorizontalDragEnd: (details) =>
+                                _onDragEnd(Axis.horizontal, details),
+                            onVerticalDragStart: (_) => _drag = Offset.zero,
+                            onVerticalDragUpdate: (details) =>
+                                _drag += Offset(0, details.delta.dy),
+                            onVerticalDragEnd: (details) =>
+                                _onDragEnd(Axis.vertical, details),
+                            child: NotificationListener<ScrollNotification>(
+                              onNotification: _handleScrollNotification,
+                              child: Listener(
+                                onPointerSignal: _handlePointerSignal,
+                                child: _buildSwitcher(
+                                  cards[min(_currentIndex, cards.length - 1)],
+                                  language,
+                                ),
                               ),
                             ),
                           ),
@@ -270,7 +478,7 @@ class _LearningScreenState extends State<LearningScreen> {
                   child: Row(
                     children: [
                       IconButton(
-                        tooltip: _text(language, 'Previous', 'पिछला', 'मागील'),
+                        tooltip: l.learningControlPrevious,
                         onPressed: cards.isEmpty || _currentIndex == 0
                             ? null
                             : () => _movePage(-1),
@@ -282,16 +490,11 @@ class _LearningScreenState extends State<LearningScreen> {
                               ? 0
                               : (_currentIndex + 1) / cards.length,
                           minHeight: 4,
-                          semanticsLabel: _text(
-                            language,
-                            'Progress',
-                            'प्रगति',
-                            'प्रगती',
-                          ),
+                          semanticsLabel: l.learningControlProgress,
                         ),
                       ),
                       IconButton(
-                        tooltip: _text(language, 'Next', 'अगला', 'पुढील'),
+                        tooltip: l.learningControlNext,
                         onPressed:
                             cards.isEmpty || _currentIndex == cards.length - 1
                             ? null
@@ -309,8 +512,77 @@ class _LearningScreenState extends State<LearningScreen> {
     );
   }
 
+  Widget _toggleButton({
+    required bool selected,
+    required IconData icon,
+    required IconData selectedIcon,
+    required String tooltip,
+    required VoidCallback onPressed,
+  }) {
+    return IconButton(
+      tooltip: tooltip,
+      isSelected: selected,
+      icon: Icon(icon),
+      selectedIcon: Icon(selectedIcon),
+      style: selected
+          ? IconButton.styleFrom(
+              backgroundColor: Theme.of(context).colorScheme.secondaryContainer,
+            )
+          : null,
+      onPressed: onPressed,
+    );
+  }
+
+  Widget _buildSwitcher(DevOpsCard card, String language) {
+    final pageKey = ValueKey('page-${card.id}');
+    return ClipRect(
+      child: AnimatedSwitcher(
+        duration: const Duration(milliseconds: 280),
+        switchInCurve: Curves.easeInOut,
+        switchOutCurve: Curves.easeInOut,
+        layoutBuilder: (current, previous) =>
+            Stack(fit: StackFit.expand, children: [...previous, ?current]),
+        transitionBuilder: (child, animation) {
+          final incoming = child.key == pageKey;
+          return SlideTransition(
+            position: Tween<Offset>(
+              begin: incoming ? _slideFrom : -_slideFrom,
+              end: Offset.zero,
+            ).animate(animation),
+            child: child,
+          );
+        },
+        child: KeyedSubtree(
+          key: pageKey,
+          child: _translations!.containsKey(card.id)
+              ? _buildCard(
+                  card.localized(
+                    language,
+                    translation: _translations![card.id],
+                  ),
+                  language,
+                )
+              : Center(
+                  child: Padding(
+                    padding: const EdgeInsets.all(24),
+                    child: Text(
+                      AppLocalizations.of(
+                        context,
+                      )!.learningTranslationUnavailable,
+                      textAlign: TextAlign.center,
+                    ),
+                  ),
+                ),
+        ),
+      ),
+    );
+  }
+
   Widget _buildCard(DevOpsCard card, String language) {
     final colors = Theme.of(context).colorScheme;
+    final saved = _savedIds.contains(card.id);
+    final l = AppLocalizations.of(context)!;
+    final copiedMessage = l.learningControlExampleCopied;
     return Padding(
       padding: const EdgeInsets.all(16),
       child: Card(
@@ -323,6 +595,7 @@ class _LearningScreenState extends State<LearningScreen> {
         ),
         clipBehavior: Clip.antiAlias,
         child: SingleChildScrollView(
+          physics: const ClampingScrollPhysics(),
           padding: const EdgeInsets.all(20),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
@@ -341,6 +614,20 @@ class _LearningScreenState extends State<LearningScreen> {
                       ),
                     ),
                   ),
+                  IconButton(
+                    tooltip: saved
+                        ? l.learningControlRemoveSaved
+                        : l.learningControlSaveCard,
+                    icon: Icon(
+                      saved
+                          ? Icons.bookmark_rounded
+                          : Icons.bookmark_border_rounded,
+                      color: saved ? colors.primary : null,
+                    ),
+                    onPressed: !_savedLoaded || _savingCard
+                        ? null
+                        : () => _toggleSaved(card.id),
+                  ),
                   Icon(
                     card.isConcept
                         ? Icons.lightbulb_outline_rounded
@@ -352,6 +639,7 @@ class _LearningScreenState extends State<LearningScreen> {
               const SizedBox(height: 24),
               Text(
                 card.command,
+                textDirection: card.isConcept ? null : TextDirection.ltr,
                 style: TextStyle(
                   fontSize: 22,
                   height: 1.4,
@@ -371,41 +659,28 @@ class _LearningScreenState extends State<LearningScreen> {
                   children: [
                     Expanded(
                       child: Text(
-                        _text(language, 'Example', 'उदाहरण', 'उदाहरण'),
+                        l.learningControlExample,
                         style: TextStyle(color: colors.onSurfaceVariant),
                       ),
                     ),
                     IconButton(
-                      tooltip: _text(
-                        language,
-                        'Copy example',
-                        'उदाहरण कॉपी करें',
-                        'उदाहरण कॉपी करा',
-                      ),
+                      tooltip: l.learningControlCopyExample,
                       icon: const Icon(Icons.copy_rounded, size: 20),
                       onPressed: () async {
                         await Clipboard.setData(
                           ClipboardData(text: card.example),
                         );
                         if (!mounted) return;
-                        ScaffoldMessenger.of(context).showSnackBar(
-                          SnackBar(
-                            content: Text(
-                              _text(
-                                language,
-                                'Example copied',
-                                'उदाहरण कॉपी किया गया',
-                                'उदाहरण कॉपी केले',
-                              ),
-                            ),
-                          ),
-                        );
+                        ScaffoldMessenger.of(
+                          context,
+                        ).showSnackBar(SnackBar(content: Text(copiedMessage)));
                       },
                     ),
                   ],
                 ),
                 Text(
                   card.example,
+                  textDirection: TextDirection.ltr,
                   style: TextStyle(
                     fontSize: 15,
                     height: 1.6,
@@ -7638,21 +7913,28 @@ class DevOpsCard {
     this.sourceQuestion,
   });
 
-  DevOpsCard localized(String language) {
+  DevOpsCard localized(
+    String language, {
+    LearningCardTranslation? translation,
+  }) {
     return DevOpsCard(
       id: id,
       topic: topic,
       icon: icon,
-      command: switch (language) {
-        'hi' => hindiCommand ?? command,
-        'mr' => marathiCommand ?? command,
-        _ => command,
-      },
-      description: switch (language) {
-        'hi' => hindiDescription ?? description,
-        'mr' => marathiDescription ?? description,
-        _ => description,
-      },
+      command:
+          translation?.command ??
+          switch (language) {
+            'hi' => hindiCommand ?? command,
+            'mr' => marathiCommand ?? command,
+            _ => command,
+          },
+      description:
+          translation?.description ??
+          switch (language) {
+            'hi' => hindiDescription ?? description,
+            'mr' => marathiDescription ?? description,
+            _ => description,
+          },
       example: example,
       isConcept: isConcept,
       sourceQuestion: sourceQuestion,

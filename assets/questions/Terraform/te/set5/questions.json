@@ -1,0 +1,302 @@
+[
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "Terraform ప్రస్తుత ఆబ్జెక్ట్‌ను కాపాడేలా రిసోర్స్ చిరునామా మార్పును నమోదు చేసే ప్రకటనాత్మక బ్లాక్ ఏది?",
+    "options": [
+      "removed",
+      "check",
+      "moved",
+      "import"
+    ],
+    "answer": "moved"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "moved బ్లాక్‌లో కొత్త రిసోర్స్ చిరునామాను చెప్పే ఆర్గ్యుమెంట్ ఏది?",
+    "options": [
+      "provider",
+      "to",
+      "from",
+      "id"
+    ],
+    "answer": "to"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "apply సమయంలో దిగుమతి చేయడానికి ఇప్పటికే ఉన్న మౌలిక సదుపాయ ఆబ్జెక్ట్‌ను ప్రకటించే బ్లాక్ ఏది?",
+    "options": [
+      "import",
+      "moved",
+      "output",
+      "check"
+    ],
+    "answer": "import"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "నిజమైన మౌలిక సదుపాయ ఆబ్జెక్ట్‌ను తొలగించకుండా రిసోర్స్‌ను స్టేట్ నుంచి తీసివేసే removed బ్లాక్ సెట్టింగ్ ఏది?",
+    "options": [
+      "lifecycle { destroy = true }",
+      "lifecycle { create_before_destroy = true }",
+      "lifecycle { prevent_destroy = false }",
+      "lifecycle { destroy = false }"
+    ],
+    "answer": "lifecycle { destroy = false }"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "సాధారణ ఇన్‌పుట్ వేరియబుల్‌ను sensitiveగా గుర్తిస్తే స్థానిక స్టేట్ ఫైల్‌లో దాని విలువ ఏమవుతుంది?",
+    "options": [
+      "దాన్ని ఎల్లప్పుడూ స్టేట్ నుంచి మినహాయిస్తారు",
+      "నిల్వ చేసే ముందు దాని స్థానంలో వేరియబుల్ పేరు పెడతారు",
+      "సాధారణ CLI అవుట్‌పుట్‌లో దాచినా అది సాధారణ టెక్స్ట్‌గా నిల్వ కావచ్చు",
+      "sensitive ఫ్లాగ్ దాన్ని స్వయంచాలకంగా గుప్తీకరిస్తుంది"
+    ],
+    "answer": "సాధారణ CLI అవుట్‌పుట్‌లో దాచినా అది సాధారణ టెక్స్ట్‌గా నిల్వ కావచ్చు"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "సున్నితమైన అవుట్‌పుట్ విలువలను యంత్రం చదవగల రూపంలో బయటపెట్టే output కమాండ్ ఫార్మాట్ ఏది?",
+    "options": [
+      "terraform providers schema -json",
+      "terraform output -json",
+      "terraform output -help",
+      "terraform output -no-color"
+    ],
+    "answer": "terraform output -json"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "Terraform విలువను JSON స్ట్రింగ్‌గా మార్చే ఫంక్షన్ ఏది?",
+    "options": [
+      "jsonencode",
+      "jsondecode",
+      "yamldecode",
+      "file"
+    ],
+    "answer": "jsonencode"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "JSON స్ట్రింగ్‌ను పార్స్ చేసి Terraform విలువగా మార్చే ఫంక్షన్ ఏది?",
+    "options": [
+      "jsonencode",
+      "yamlencode",
+      "templatefile",
+      "jsondecode"
+    ],
+    "answer": "jsondecode"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "అందించిన వేరియబుల్ మ్యాప్‌తో టెంప్లేట్ ఫైల్‌ను రూపొందించే ఫంక్షన్ ఏది?",
+    "options": [
+      "fileset",
+      "filebase64",
+      "templatefile",
+      "file"
+    ],
+    "answer": "templatefile"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "డైనమిక్ లోపం లేకుండా విలువ లెక్కించగల మొదటి ఆర్గ్యుమెంట్‌ను ఇచ్చే ఫంక్షన్ ఏది?",
+    "options": [
+      "lookup",
+      "try",
+      "can",
+      "coalesce"
+    ],
+    "answer": "try"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "ఎక్స్‌ప్రెషన్‌ను డైనమిక్ లోపం లేకుండా లెక్కించగలమో లేదో చెప్పే ఫంక్షన్ ఏది?",
+    "options": [
+      "can",
+      "try",
+      "contains",
+      "length"
+    ],
+    "answer": "can"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "mergeకు ఇచ్చిన రెండు మ్యాప్‌లలో ఒకే కీ ఉంటే ఏ విలువకు ప్రాధాన్యం లభిస్తుంది?",
+    "options": [
+      "ముందు ఆర్గ్యుమెంట్ విలువ",
+      "విలువలను ఎల్లప్పుడూ జాబితాగా కలుపుతారు",
+      "పునరావృత కీ ఎల్లప్పుడూ లోపం కలిగిస్తుంది",
+      "తరువాతి ఆర్గ్యుమెంట్ విలువ"
+    ],
+    "answer": "తరువాతి ఆర్గ్యుమెంట్ విలువ"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "5.4.x విడుదలలను అనుమతించి 5.5.0ను అనుమతించని ప్రొవైడర్ వెర్షన్ పరిమితి ఏది?",
+    "options": [
+      ">= 5.4.0",
+      ">= 5.0, < 6.0",
+      "~> 5.4.0",
+      "~> 5.4"
+    ],
+    "answer": "~> 5.4.0"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "null ఇచ్చిన రిసోర్స్ ఆర్గ్యుమెంట్‌ను Terraform సాధారణంగా ఎలా పరిగణిస్తుంది?",
+    "options": [
+      "మొత్తం రిసోర్స్‌ను తొలగించాలనే అభ్యర్థనగా",
+      "దాని డిఫాల్ట్‌లు, అవసరాలకు లోబడి ఉన్న ఇవ్వని ఆర్గ్యుమెంట్‌గా",
+      "ప్రతి ప్రొవైడర్‌లో ఖాళీ స్ట్రింగ్‌గా",
+      "ప్రతి ప్రొవైడర్‌లో సంఖ్యా సున్నాగా"
+    ],
+    "answer": "దాని డిఫాల్ట్‌లు, అవసరాలకు లోబడి ఉన్న ఇవ్వని ఆర్గ్యుమెంట్‌గా"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "తాను రాసిన మాడ్యూల్ ఫైల్‌సిస్టమ్ పాత్‌ను తెలిపే ఎక్స్‌ప్రెషన్ ఏది?",
+    "options": [
+      "path.module",
+      "path.root",
+      "path.cwd",
+      "terraform.workspace"
+    ],
+    "answer": "path.module"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "CLI కాన్ఫిగరేషన్‌ను HCP Terraformతో కలపడానికి సిఫార్సు చేసే terraform బ్లాక్ లక్షణం ఏది?",
+    "options": [
+      "locals",
+      "moved",
+      "check",
+      "cloud"
+    ],
+    "answer": "cloud"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "terraform_remote_state సూచించిన స్టేట్ నుంచి ఏ పైస్థాయి విలువలను నేరుగా అందిస్తుంది?",
+    "options": [
+      "ప్రొవైడర్ అన్ని ప్రామాణీకరణ వివరాలు",
+      "అన్ని ఉపమాడ్యూల్‌ల స్థానిక విలువలు",
+      "ప్రధాన మాడ్యూల్ అవుట్‌పుట్‌లు",
+      "ప్రతి రిసోర్స్ లక్షణం పైస్థాయి అవుట్‌పుట్‌గా"
+    ],
+    "answer": "ప్రధాన మాడ్యూల్ అవుట్‌పుట్‌లు"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "సూచించిన నిర్వహిత రిసోర్స్ మారితే భర్తీ చేయాలని కోరే లైఫ్‌సైకిల్ నియమం ఏది?",
+    "options": [
+      "create_before_destroy",
+      "replace_triggered_by",
+      "ignore_changes",
+      "prevent_destroy"
+    ],
+    "answer": "replace_triggered_by"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "వేరే ప్రొవైడర్‌ను ఇన్‌స్టాల్ చేయకుండా సాధారణ ఇన్‌పుట్ విలువకు రిసోర్స్ లైఫ్‌సైకిల్ ఇచ్చే అంతర్నిర్మిత రిసోర్స్ ఏది?",
+    "options": [
+      "terraform_data",
+      "terraform_remote_state",
+      "local_file",
+      "random_id"
+    ],
+    "answer": "terraform_data"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "సాధారణ plan లేదా apply సమయంలో check బ్లాక్‌లోని నిర్ధారణ విఫలమైతే ఏమవుతుంది?",
+    "options": [
+      "Terraform ఎల్లప్పుడూ తనిఖీ చేసిన ఆబ్జెక్ట్‌ను నాశనం చేస్తుంది",
+      "Terraform నిశ్శబ్దంగా check బ్లాక్‌ను తొలగిస్తుంది",
+      "ఏ రిసోర్స్‌నూ తాజాపరచకముందే Terraform ఎల్లప్పుడూ నిష్క్రమిస్తుంది",
+      "Terraform హెచ్చరిక ఇస్తుంది కానీ ఆ వైఫల్యం వల్ల మాత్రమే చర్యను ఆపదు"
+    ],
+    "answer": "Terraform హెచ్చరిక ఇస్తుంది కానీ ఆ వైఫల్యం వల్ల మాత్రమే చర్యను ఆపదు"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "రిసోర్స్ లైఫ్‌సైకిల్ ముందస్తు షరతు false అయితే ఏమవుతుంది?",
+    "options": [
+      "Terraform రిసోర్స్‌ను డేటా మూలంగా మారుస్తుంది",
+      "Terraform ముందస్తు షరతు స్థానంలో కేవలం హెచ్చరిక పెడుతుంది",
+      "Terraform లోపాన్ని తెలిపి సంబంధిత చర్యను ఆపుతుంది",
+      "Terraform తదుపరి అమలు వరకు ముందస్తు షరతును విస్మరిస్తుంది"
+    ],
+    "answer": "Terraform లోపాన్ని తెలిపి సంబంధిత చర్యను ఆపుతుంది"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "Terraform సొంత టెస్ట్ ఫైళ్లను నడిపే కమాండ్ ఏది?",
+    "options": [
+      "terraform console",
+      "terraform test",
+      "terraform validate",
+      "terraform fmt"
+    ],
+    "answer": "terraform test"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "Terraform టెస్ట్‌లో run బ్లాక్‌ను డిఫాల్ట్ apply బదులుగా plan చేయించే సెట్టింగ్ ఏది?",
+    "options": [
+      "command = plan",
+      "command = validate",
+      "command = refresh",
+      "command = console"
+    ],
+    "answer": "command = plan"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "డైరెక్టరీ కింద గ్లోబ్ నమూనాకు సరిపోలే సాపేక్ష పాత్‌ల సమాహారాన్ని ఇచ్చే ఫంక్షన్ ఏది?",
+    "options": [
+      "file",
+      "dirname",
+      "basename",
+      "fileset"
+    ],
+    "answer": "fileset"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "వేర్వేరు యాక్సెస్ నియంత్రణలు అవసరమైన వాతావరణాలను విడదీయడానికి CLI వర్క్‌స్పేస్‌లు మాత్రమే ఎందుకు సరిపోకపోవచ్చు?",
+    "options": [
+      "అవి వేర్వేరు ఇన్‌పుట్ వేరియబుల్ విలువలను వాడనివ్వవు",
+      "అవి ప్రతి వాతావరణాన్ని ఒకే రిసోర్స్ పేర్లు వాడేలా చేస్తాయి",
+      "వాటి బ్యాకెండ్ కాన్ఫిగరేషన్, ప్రామాణీకరణ సందర్భం ఒకటే",
+      "అవి ఎల్లప్పుడూ ఒకే స్టేట్ స్నాప్‌షాట్‌ను పంచుకుంటాయి"
+    ],
+    "answer": "వాటి బ్యాకెండ్ కాన్ఫిగరేషన్, ప్రామాణీకరణ సందర్భం ఒకటే"
+  }
+]

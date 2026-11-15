@@ -1,0 +1,302 @@
+[
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "أي كلمة مفتاحية تُستخدم لتعريف المتغيرات في playbook؟",
+    "options": [
+      "vars",
+      "variables",
+      "var",
+      "define"
+    ],
+    "answer": "vars"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "ما الصيغة المستخدمة للإشارة إلى متغير؟",
+    "options": [
+      "{{ variable_name }}",
+      "$(variable_name)",
+      "${variable_name}",
+      "[variable_name]"
+    ],
+    "answer": "{{ variable_name }}"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "أي وحدة (module) تُستخدم لعرض الرسائل أثناء التنفيذ؟",
+    "options": [
+      "debug",
+      "print",
+      "echo",
+      "message"
+    ],
+    "answer": "debug"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "أي كلمة مفتاحية تُستخدم للتنفيذ المشروط؟",
+    "options": [
+      "when",
+      "if",
+      "condition",
+      "check"
+    ],
+    "answer": "when"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "أي كلمة مفتاحية تُستخدم لتكرار مهمة؟",
+    "options": [
+      "loop",
+      "repeat",
+      "iterate",
+      "for"
+    ],
+    "answer": "loop"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "أي متغير يحتوي افتراضيا على العنصر الحالي للحلقة؟",
+    "options": [
+      "item",
+      "loopitem",
+      "current",
+      "value"
+    ],
+    "answer": "item"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "أي وحدة (module) تنشئ ملفات من قوالب Jinja2؟",
+    "options": [
+      "template",
+      "copy",
+      "render",
+      "jinja"
+    ],
+    "answer": "template"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "أي محرك قوالب يستخدمه Ansible؟",
+    "options": [
+      "Jinja2",
+      "Mustache",
+      "Velocity",
+      "Smarty"
+    ],
+    "answer": "Jinja2"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "أي كلمة مفتاحية تسجل مخرجات المهمة في متغير؟",
+    "options": [
+      "register",
+      "save",
+      "output",
+      "store"
+    ],
+    "answer": "register"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "أي كلمة مفتاحية تتابع التنفيذ بعد إرجاع المهمة نتيجة فشل، دون إخفاء أخطاء الصياغة أو الاتصال؟",
+    "options": [
+      "ignore_errors",
+      "skip_errors",
+      "continue",
+      "ignore_failures"
+    ],
+    "answer": "ignore_errors"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "أي كلمة مفتاحية تُستخدم لتنفيذ المهام فقط عند الإشعار؟",
+    "options": [
+      "handlers",
+      "notify",
+      "trigger",
+      "events"
+    ],
+    "answer": "handlers"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "أي كلمة مفتاحية تُشغّل handler؟",
+    "options": [
+      "notify",
+      "handler",
+      "alert",
+      "call"
+    ],
+    "answer": "notify"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "أي كلمة مفتاحية تستورد playbook آخر؟",
+    "options": [
+      "import_playbook",
+      "include_playbook",
+      "load_playbook",
+      "playbook"
+    ],
+    "answer": "import_playbook"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "أي كلمة مفتاحية تضع وسومًا على المهام للتنفيذ الانتقائي؟",
+    "options": [
+      "tags",
+      "labels",
+      "groups",
+      "filter"
+    ],
+    "answer": "tags"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "أي خيار يشغّل المهام ذات وسوم محددة فقط؟",
+    "options": [
+      "--tags",
+      "--skip-tags",
+      "--limit",
+      "--list-tags"
+    ],
+    "answer": "--tags"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "أي كلمة مفتاحية للمهمة تحدد شرطا مخصصا للإبلاغ عن حدوث تغيير؟",
+    "options": [
+      "changed_when",
+      "failed_when",
+      "until",
+      "when"
+    ],
+    "answer": "changed_when"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "أي كلمة مفتاحية للمهمة تحدد شرطا مخصصا للإبلاغ عن الفشل؟",
+    "options": [
+      "changed_when",
+      "retries",
+      "delay",
+      "failed_when"
+    ],
+    "answer": "failed_when"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "أي كلمة مفتاحية للمهمة تحدد الشرط الذي يجب أن يصبح صحيحا أثناء إعادة المحاولة؟",
+    "options": [
+      "loop",
+      "notify",
+      "until",
+      "when"
+    ],
+    "answer": "until"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "أي وحدة تعرّف متغيرات مسماة للمضيف الحالي مباشرة من قيم تقدمها المهمة، بدلا من تحميلها من ملف؟",
+    "options": [
+      "ansible.builtin.add_host",
+      "ansible.builtin.set_fact",
+      "ansible.builtin.setup",
+      "ansible.builtin.include_vars"
+    ],
+    "answer": "ansible.builtin.set_fact"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "أي تعبير يصل إلى الخرج القياسي لمهمة مسجلة باسم result؟",
+    "options": [
+      "result.stdout",
+      "result.stderr",
+      "result.rc",
+      "result.changed"
+    ],
+    "answer": "result.stdout"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "أي اختبار في Jinja2 يتحقق من تعريف متغير؟",
+    "options": [
+      "is none",
+      "is string",
+      "is sequence",
+      "is defined"
+    ],
+    "answer": "is defined"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "أي كلمة مفتاحية في Ansible تجمع المهام لتشارك التوجيهات ومعالجة الأخطاء؟",
+    "options": [
+      "roles",
+      "handlers",
+      "block",
+      "loop"
+    ],
+    "answer": "block"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "متى ترسل المهمة عادة إشعارات notify؟",
+    "options": [
+      "عند بدء playbook فقط",
+      "عندما تنتهي بنجاح وتبلغ عن changed",
+      "كلما جرى تخطيها بسبب شرط",
+      "كلما أبلغت وحدتها عن unchanged"
+    ],
+    "answer": "عندما تنتهي بنجاح وتبلغ عن changed"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "أي إعداد يغيّر اسم متغير العنصر الحالي للحلقة إلى server؟",
+    "options": [
+      "loop_control: {loop_var: server}",
+      "loop_control: {label: server}",
+      "loop_control: {index_var: server}",
+      "loop_control: {pause: 1}"
+    ],
+    "answer": "loop_control: {loop_var: server}"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "أي خيار لسطر الأوامر يمرر متغيرات إضافية ذات أولوية مرتفعة؟",
+    "options": [
+      "--tags",
+      "--limit",
+      "--start-at-task",
+      "--extra-vars"
+    ],
+    "answer": "--extra-vars"
+  }
+]

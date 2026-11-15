@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import '../l10n/achievement_localizations.dart';
 import '../models/achievement.dart';
 
 Future<void> showAchievementDialog(
@@ -53,7 +54,7 @@ Future<void> showAchievementDialog(
                 const SizedBox(height: 8),
 
                 Text(
-                  achievement.title,
+                  achievementText(dialogContext, achievement).title,
                   textAlign: TextAlign.center,
                   softWrap: true,
                   style: TextStyle(
@@ -65,7 +66,7 @@ Future<void> showAchievementDialog(
                 const SizedBox(height: 8),
 
                 Text(
-                  achievement.description,
+                  achievementText(dialogContext, achievement).description,
                   textAlign: TextAlign.center,
                   softWrap: true,
                   style: TextStyle(

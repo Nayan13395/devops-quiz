@@ -1,0 +1,302 @@
+[
+  {
+    "category": "Docker",
+    "set": 4,
+    "question": "Какая команда загружает образ из Docker Hub?",
+    "options": [
+      "docker pull",
+      "docker fetch",
+      "docker copy",
+      "docker get"
+    ],
+    "answer": "docker pull"
+  },
+  {
+    "category": "Docker",
+    "set": 4,
+    "question": "Какая команда загружает образ с определённым тегом?",
+    "options": [
+      "docker pull image:tag",
+      "docker pull --tag tag",
+      "docker pull -t tag",
+      "docker get image:tag"
+    ],
+    "answer": "docker pull image:tag"
+  },
+  {
+    "category": "Docker",
+    "set": 4,
+    "question": "Какая команда просматривает манифест образа без загрузки слоёв?",
+    "options": [
+      "docker manifest inspect",
+      "docker pull --manifest",
+      "docker image manifest",
+      "docker show manifest"
+    ],
+    "answer": "docker manifest inspect"
+  },
+  {
+    "category": "Docker",
+    "set": 4,
+    "question": "Какая команда выводит дайджесты образов?",
+    "options": [
+      "docker images --digests",
+      "docker digest",
+      "docker image digest",
+      "docker inspect digest"
+    ],
+    "answer": "docker images --digests"
+  },
+  {
+    "category": "Docker",
+    "set": 4,
+    "question": "Какая команда с Docker Engine API 1.42 или новее удаляет все неиспользуемые локальные тома, включая именованные?",
+    "options": [
+      "docker volume prune -a",
+      "docker volume clean",
+      "docker prune volumes",
+      "docker rm volume"
+    ],
+    "answer": "docker volume prune -a"
+  },
+  {
+    "category": "Docker",
+    "set": 4,
+    "question": "Какая команда удаляет неиспользуемые пользовательские сети Docker?",
+    "options": [
+      "docker network prune",
+      "docker prune network",
+      "docker clean network",
+      "docker rm network"
+    ],
+    "answer": "docker network prune"
+  },
+  {
+    "category": "Docker",
+    "set": 4,
+    "question": "Какая команда показывает дисковое пространство кэша выбранного сборщика Buildx?",
+    "options": [
+      "docker buildx du",
+      "docker build cache",
+      "docker cache usage",
+      "docker builder stats"
+    ],
+    "answer": "docker buildx du"
+  },
+  {
+    "category": "Docker",
+    "set": 4,
+    "question": "Какая команда удаляет неиспользуемый кэш сборки?",
+    "options": [
+      "docker builder prune",
+      "docker build clean",
+      "docker cache prune",
+      "docker prune build"
+    ],
+    "answer": "docker builder prune"
+  },
+  {
+    "category": "Docker",
+    "set": 4,
+    "question": "Какая команда поддерживает многоплатформенные сборки образов с подходящим списком --platform и сборщиком?",
+    "options": [
+      "docker buildx build",
+      "docker build multi",
+      "docker build platform",
+      "docker image buildx"
+    ],
+    "answer": "docker buildx build"
+  },
+  {
+    "category": "Docker",
+    "set": 4,
+    "question": "Какая команда выводит список доступных сборщиков Buildx?",
+    "options": [
+      "docker buildx ls",
+      "docker buildx show",
+      "docker builder ls",
+      "docker buildx list"
+    ],
+    "answer": "docker buildx ls"
+  },
+  {
+    "category": "Docker",
+    "set": 4,
+    "question": "Какая команда показывает все контексты Docker?",
+    "options": [
+      "docker context ls",
+      "docker contexts",
+      "docker context show",
+      "docker list context"
+    ],
+    "answer": "docker context ls"
+  },
+  {
+    "category": "Docker",
+    "set": 4,
+    "question": "Какая команда переключается на другой контекст Docker?",
+    "options": [
+      "docker context use",
+      "docker context switch",
+      "docker use context",
+      "docker context select"
+    ],
+    "answer": "docker context use"
+  },
+  {
+    "category": "Docker",
+    "set": 4,
+    "question": "Какая команда удаляет контекст Docker?",
+    "options": [
+      "docker context rm",
+      "docker context inspect",
+      "docker remove context",
+      "docker context use"
+    ],
+    "answer": "docker context rm"
+  },
+  {
+    "category": "Docker",
+    "set": 4,
+    "question": "Какая инструкция Dockerfile задаёт базовый образ?",
+    "options": [
+      "FROM",
+      "BASE",
+      "IMAGE",
+      "START"
+    ],
+    "answer": "FROM"
+  },
+  {
+    "category": "Docker",
+    "set": 4,
+    "question": "Какая инструкция Dockerfile задаёт переменные окружения?",
+    "options": [
+      "ENV",
+      "SET",
+      "VAR",
+      "EXPORT"
+    ],
+    "answer": "ENV"
+  },
+  {
+    "category": "Docker",
+    "set": 4,
+    "question": "Какая команда запускает службы файла Compose в фоновом режиме?",
+    "options": [
+      "docker compose up -d",
+      "docker compose create",
+      "docker compose config",
+      "docker compose down"
+    ],
+    "answer": "docker compose up -d"
+  },
+  {
+    "category": "Docker",
+    "set": 4,
+    "question": "Какой ключ верхнего уровня Compose содержит определения служб приложения?",
+    "options": [
+      "volumes",
+      "networks",
+      "configs",
+      "services"
+    ],
+    "answer": "services"
+  },
+  {
+    "category": "Docker",
+    "set": 4,
+    "question": "Какая команда отображает и проверяет итоговую конфигурацию Compose?",
+    "options": [
+      "docker compose images",
+      "docker compose top",
+      "docker compose config",
+      "docker compose ps"
+    ],
+    "answer": "docker compose config"
+  },
+  {
+    "category": "Docker",
+    "set": 4,
+    "question": "Что обычно делает 'docker compose down' без --volumes?",
+    "options": [
+      "Удаляет только файл конфигурации Compose",
+      "Удаляет контейнеры и сети проекта, сохраняя именованные тома",
+      "Удаляет все образы и тома хоста",
+      "Приостанавливает контейнеры без удаления"
+    ],
+    "answer": "Удаляет контейнеры и сети проекта, сохраняя именованные тома"
+  },
+  {
+    "category": "Docker",
+    "set": 4,
+    "question": "Что требуется до запуска зависимой службы, если depends_on Compose использует service_healthy?",
+    "options": [
+      "Зависимость должна пройти настроенную проверку здоровья",
+      "Зависимость должна успешно завершиться",
+      "Все объявленные порты должны быть опубликованы на хосте",
+      "Образ зависимости должен быть отправлен в реестр"
+    ],
+    "answer": "Зависимость должна пройти настроенную проверку здоровья"
+  },
+  {
+    "category": "Docker",
+    "set": 4,
+    "question": "Какая опция Buildx задаёт платформы вроде linux/amd64 и linux/arm64?",
+    "options": [
+      "--target",
+      "--builder",
+      "--progress",
+      "--platform"
+    ],
+    "answer": "--platform"
+  },
+  {
+    "category": "Docker",
+    "set": 4,
+    "question": "Какая опция Buildx выбирает именованную стадию Dockerfile как цель сборки?",
+    "options": [
+      "--tag",
+      "--file",
+      "--target",
+      "--platform"
+    ],
+    "answer": "--target"
+  },
+  {
+    "category": "Docker",
+    "set": 4,
+    "question": "Какая опция сборки Buildx отправляет результат прямо в реестр?",
+    "options": [
+      "--pull",
+      "--push",
+      "--load",
+      "--no-cache"
+    ],
+    "answer": "--push"
+  },
+  {
+    "category": "Docker",
+    "set": 4,
+    "question": "Что '--no-cache' предписывает Docker при сборке образа?",
+    "options": [
+      "Не использовать кэшированные результаты сборки",
+      "Удалить все локальные образы",
+      "Отключить кэш файловой системы при работе контейнера",
+      "Пропустить загрузку базового образа"
+    ],
+    "answer": "Не использовать кэшированные результаты сборки"
+  },
+  {
+    "category": "Docker",
+    "set": 4,
+    "question": "Какая команда показывает сведения об именованном томе Docker?",
+    "options": [
+      "docker volume ls",
+      "docker volume create data",
+      "docker volume prune",
+      "docker volume inspect data"
+    ],
+    "answer": "docker volume inspect data"
+  }
+]

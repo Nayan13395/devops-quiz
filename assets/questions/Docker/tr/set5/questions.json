@@ -1,0 +1,302 @@
+[
+  {
+    "category": "Docker",
+    "set": 5,
+    "question": "Derleme, parolayı ARG veya ENV yönergesinde tutmak yerine neden BuildKit gizli bilgi bağlaması kullanmalıdır?",
+    "options": [
+      "Gizli bilgi bağlamaları kayıt deposu parolalarını otomatik yeniler",
+      "Gizli bilgi bağlamaları ortaya çıkan tüm imaj katmanlarını şifreler",
+      "Gizli bilgi bağlamaları derlemenin tüm ağ erişimini engeller",
+      "Gizli bilgi bağlamaları, sağlanan sırrın imaj ARG veya ENV değeri olarak kalıcı tutulmasını önler"
+    ],
+    "answer": "Gizli bilgi bağlamaları, sağlanan sırrın imaj ARG veya ENV değeri olarak kalıcı tutulmasını önler"
+  },
+  {
+    "category": "Docker",
+    "set": 5,
+    "question": "RUN yönergesindeki BuildKit önbellek bağlamasının amacı nedir?",
+    "options": [
+      "Temel imajı boş dosya sistemiyle değiştirmek",
+      "Her RUN yönergesinin önbelleksiz çalışmasını garanti etmek",
+      "Bağlamayı son imajın içeriğine katmadan araç önbelleğini derlemeler arasında yeniden kullanmak",
+      "Çalışma zamanı günlüklerini imaj kayıt deposunda saklamak"
+    ],
+    "answer": "Bağlamayı son imajın içeriğine katmadan araç önbelleğini derlemeler arasında yeniden kullanmak"
+  },
+  {
+    "category": "Docker",
+    "set": 5,
+    "question": "Hangi derleme girdisi değişikliği COPY yönergesinin ve sonraki bağımlı adımların önbelleğini normalde geçersiz kılar?",
+    "options": [
+      "Yönergeleri değiştirmeden sıradan Dockerfile yorumunu düzenlemek",
+      "Kopyalanan kaynak dosyanın içeriğini değiştirmek",
+      "Kopyalanan dosyanın yalnızca değişiklik zamanını değiştirmek",
+      ".dockerignore tarafından dışlanan dosyayı değiştirmek"
+    ],
+    "answer": "Kopyalanan kaynak dosyanın içeriğini değiştirmek"
+  },
+  {
+    "category": "Docker",
+    "set": 5,
+    "question": "'FROM scratch' Dockerfile yönergesi neyi seçer?",
+    "options": [
+      "Temel imaj dosya sistemi olmayan boş başlangıç noktasını",
+      "En küçük Debian kurulumunu",
+      "Çalışan ana makinenin kök dosya sistemini",
+      "En son yerel oluşturulan imajı"
+    ],
+    "answer": "Temel imaj dosya sistemi olmayan boş başlangıç noktasını"
+  },
+  {
+    "category": "Docker",
+    "set": 5,
+    "question": "İmaja anahtar-değer metaverisini hangi Dockerfile yönergesi ekler?",
+    "options": [
+      "ARG",
+      "EXPOSE",
+      "STOPSIGNAL",
+      "LABEL"
+    ],
+    "answer": "LABEL"
+  },
+  {
+    "category": "Docker",
+    "set": 5,
+    "question": "Kapsayıcı durdurulurken gönderilen varsayılan sinyali hangi Dockerfile yönergesi değiştirir?",
+    "options": [
+      "SHELL",
+      "ONBUILD",
+      "STOPSIGNAL",
+      "HEALTHCHECK"
+    ],
+    "answer": "STOPSIGNAL"
+  },
+  {
+    "category": "Docker",
+    "set": 5,
+    "question": "Ana sunucu süreci için neden genellikle exec biçimli ENTRYPOINT tercih edilir?",
+    "options": [
+      "Sunucunun sıfırdan farklı durum döndürmesini engeller",
+      "Sunucuyla kapsayıcı sinyalleri arasında ek kabuk bulunmasını önler",
+      "Otomatik olarak root olmayan kullanıcı oluşturur",
+      "İmaja süreç gözetmeni kurar"
+    ],
+    "answer": "Sunucuyla kapsayıcı sinyalleri arasında ek kabuk bulunmasını önler"
+  },
+  {
+    "category": "Docker",
+    "set": 5,
+    "question": "'docker run --init' kapsayıcıya ne ekler?",
+    "options": [
+      "Sinyalleri ileten ve bitmiş alt süreçleri toplayan küçük bir init süreci",
+      "Tam systemd kurulumu",
+      "İkinci Docker arka plan süreci",
+      "Her süreç için etkileşimli oturum açma kabuğu"
+    ],
+    "answer": "Sinyalleri ileten ve bitmiş alt süreçleri toplayan küçük bir init süreci"
+  },
+  {
+    "category": "Docker",
+    "set": 5,
+    "question": "Tüm Linux yetenekleri kaldırılmış Linux kapsayıcısını hangi seçenek çalıştırır?",
+    "options": [
+      "--cap-add=ALL",
+      "--privileged",
+      "--security-opt seccomp=unconfined",
+      "--cap-drop=ALL"
+    ],
+    "answer": "--cap-drop=ALL"
+  },
+  {
+    "category": "Docker",
+    "set": 5,
+    "question": "Root yetkisiz Docker esas olarak neyi değiştirir?",
+    "options": [
+      "İmajlar artık kayıt deposuna ihtiyaç duymaz",
+      "Kapsayıcılar artık Linux ad alanlarını kullanmaz",
+      "Arka plan süreci ve kapsayıcılar ana makine root yetkileri olmadan çalışır",
+      "Tüm kapsayıcılar ana makinenin kök dosya sistemini paylaşır"
+    ],
+    "answer": "Arka plan süreci ve kapsayıcılar ana makine root yetkileri olmadan çalışır"
+  },
+  {
+    "category": "Docker",
+    "set": 5,
+    "question": "Kapsayıcı kaynak kullanımını esas olarak hangi Linux özelliği sınırlar ve kaydeder?",
+    "options": [
+      "Linux yetenekleri",
+      "Denetim grupları",
+      "Ad alanları",
+      "Seccomp filtreleri"
+    ],
+    "answer": "Denetim grupları"
+  },
+  {
+    "category": "Docker",
+    "set": 5,
+    "question": "Kapsayıcılara süreç kimlikleri ve ağ arayüzleri gibi kaynakların yalıtılmış görünümlerini hangi Linux özelliği verir?",
+    "options": [
+      "Ad alanları",
+      "Denetim grupları",
+      "Seccomp filtreleri",
+      "Linux yetenekleri"
+    ],
+    "answer": "Ad alanları"
+  },
+  {
+    "category": "Docker",
+    "set": 5,
+    "question": "Linux kapsayıcısına ana makinenin ağ ad alanını hangi Docker ağ sürücüsü verir?",
+    "options": [
+      "bridge",
+      "overlay",
+      "none",
+      "host"
+    ],
+    "answer": "host"
+  },
+  {
+    "category": "Docker",
+    "set": 5,
+    "question": "Kapsayıcıda yalnızca geri döngü arayüzünü hangi Docker ağ sürücüsü bırakır?",
+    "options": [
+      "host",
+      "overlay",
+      "none",
+      "bridge"
+    ],
+    "answer": "none"
+  },
+  {
+    "category": "Docker",
+    "set": 5,
+    "question": "Birden fazla Docker ana makinesindeki kapsayıcı iletişimi için hangi Docker ağ sürücüsü tasarlanmıştır?",
+    "options": [
+      "none",
+      "overlay",
+      "bridge",
+      "host"
+    ],
+    "answer": "overlay"
+  },
+  {
+    "category": "Docker",
+    "set": 5,
+    "question": "'--network container:web' yeni kapsayıcı için ne yapar?",
+    "options": [
+      "web kapsayıcısının ağ ad alanını paylaşır",
+      "web kapsayıcısının dosya sistemi katmanlarını kopyalar",
+      "Ana makinenin tüm arayüzlerini doğrudan bağlar",
+      "web adlı yeni ağ oluşturur"
+    ],
+    "answer": "web kapsayıcısının ağ ad alanını paylaşır"
+  },
+  {
+    "category": "Docker",
+    "set": 5,
+    "question": "Bir dizini boş olmayan kapsayıcı yolunun üzerine bağlamak mevcut imaj dosyalarını neden kaybolmuş gibi gösterebilir?",
+    "options": [
+      "Docker özgün imaj katmanlarını siler",
+      "Docker dosyaları kayıt deposuna taşır",
+      "İmaj bu dosyalar olmadan otomatik yeniden oluşturulur",
+      "Bağlama yerinde kaldığı sürece o yoldaki dosyaları örter"
+    ],
+    "answer": "Bağlama yerinde kaldığı sürece o yoldaki dosyaları örter"
+  },
+  {
+    "category": "Docker",
+    "set": 5,
+    "question": "Boş adlandırılmış birim, volume-nocopy olmadan ilk kez dosya içeren kapsayıcı dizinine bağlandığında Docker normalde ne yapar?",
+    "options": [
+      "Dizin boş olmadığı için başlamayı reddeder",
+      "Adlandırılmış birimi bind mount türüne dönüştürür",
+      "Dizindeki mevcut dosyaları birime kopyalar",
+      "Dosyaları imajdan kalıcı olarak siler"
+    ],
+    "answer": "Dizindeki mevcut dosyaları birime kopyalar"
+  },
+  {
+    "category": "Docker",
+    "set": 5,
+    "question": "web kapsayıcısının yayımlanmış bağlantı noktası eşlemelerini hangi komut listeler?",
+    "options": [
+      "docker wait web",
+      "docker port web",
+      "docker top web",
+      "docker diff web"
+    ],
+    "answer": "docker port web"
+  },
+  {
+    "category": "Docker",
+    "set": 5,
+    "question": "web kapsayıcısının günlüklerinden yalnızca son 20 satırı hangi komut alır?",
+    "options": [
+      "docker logs --tail 20 web",
+      "docker logs --since 20m web",
+      "docker logs --until 20m web",
+      "docker logs --timestamps web"
+    ],
+    "answer": "docker logs --tail 20 web"
+  },
+  {
+    "category": "Docker",
+    "set": 5,
+    "question": "Docker imajı ile kapsayıcı arasındaki temel fark nedir?",
+    "options": [
+      "İmaj her zaman çalışır, kapsayıcı her zaman durmuştur",
+      "İmaj bir ağa, kapsayıcı yalnızca kayıt deposuna aittir",
+      "İmaj yalnızca günlük, kapsayıcı yalnızca metaveri saklar",
+      "İmaj salt okunur şablon, kapsayıcı ise çalışma durumu olan örnektir"
+    ],
+    "answer": "İmaj salt okunur şablon, kapsayıcı ise çalışma durumu olan örnektir"
+  },
+  {
+    "category": "Docker",
+    "set": 5,
+    "question": "Docker bağlamı CLI için esas olarak neyi tanımlar?",
+    "options": [
+      "Seçilen Dockerfile derleme aşamasını",
+      "Her imajın varsayılan hedef platformunu",
+      "Docker arka plan süreci uç noktasının bağlantı ayarlarını",
+      "İmaj derleme bağlamı olarak gönderilen dosya ve dizinleri"
+    ],
+    "answer": "Docker arka plan süreci uç noktasının bağlantı ayarlarını"
+  },
+  {
+    "category": "Docker",
+    "set": 5,
+    "question": "Docker istemcisinin kayıt deposu oturumunu hangi komut kapatır?",
+    "options": [
+      "docker trust inspect",
+      "docker logout",
+      "docker login",
+      "docker context use"
+    ],
+    "answer": "docker logout"
+  },
+  {
+    "category": "Docker",
+    "set": 5,
+    "question": "docker login komutunun parolayı standart girdiden okumasına hangi seçenek izin verir?",
+    "options": [
+      "--password-stdin",
+      "--username",
+      "--config",
+      "--context"
+    ],
+    "answer": "--password-stdin"
+  },
+  {
+    "category": "Docker",
+    "set": 5,
+    "question": "api adlı Docker Swarm hizmetine ait görevleri hangi komut listeler?",
+    "options": [
+      "docker service inspect api",
+      "docker service logs api",
+      "docker service scale api=3",
+      "docker service ps api"
+    ],
+    "answer": "docker service ps api"
+  }
+]

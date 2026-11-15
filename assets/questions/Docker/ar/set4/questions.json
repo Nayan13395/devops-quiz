@@ -1,0 +1,302 @@
+[
+  {
+    "category": "Docker",
+    "set": 4,
+    "question": "أي أمر ينزّل صورة من Docker Hub؟",
+    "options": [
+      "docker pull",
+      "docker fetch",
+      "docker copy",
+      "docker get"
+    ],
+    "answer": "docker pull"
+  },
+  {
+    "category": "Docker",
+    "set": 4,
+    "question": "أي أمر يسحب وسم صورة محددًا؟",
+    "options": [
+      "docker pull image:tag",
+      "docker pull --tag tag",
+      "docker pull -t tag",
+      "docker get image:tag"
+    ],
+    "answer": "docker pull image:tag"
+  },
+  {
+    "category": "Docker",
+    "set": 4,
+    "question": "أي أمر يفحص بيان الصورة دون تنزيل طبقاتها؟",
+    "options": [
+      "docker manifest inspect",
+      "docker pull --manifest",
+      "docker image manifest",
+      "docker show manifest"
+    ],
+    "answer": "docker manifest inspect"
+  },
+  {
+    "category": "Docker",
+    "set": 4,
+    "question": "أي أمر يعرض ملخصات (digests) الصور؟",
+    "options": [
+      "docker images --digests",
+      "docker digest",
+      "docker image digest",
+      "docker inspect digest"
+    ],
+    "answer": "docker images --digests"
+  },
+  {
+    "category": "Docker",
+    "set": 4,
+    "question": "مع Docker Engine API 1.42 أو أحدث، أي أمر يزيل كل وحدات التخزين المحلية غير المستخدمة، بما فيها المسماة؟",
+    "options": [
+      "docker volume prune -a",
+      "docker volume clean",
+      "docker prune volumes",
+      "docker rm volume"
+    ],
+    "answer": "docker volume prune -a"
+  },
+  {
+    "category": "Docker",
+    "set": 4,
+    "question": "أي أمر يزيل شبكات Docker المخصصة غير المستخدمة؟",
+    "options": [
+      "docker network prune",
+      "docker prune network",
+      "docker clean network",
+      "docker rm network"
+    ],
+    "answer": "docker network prune"
+  },
+  {
+    "category": "Docker",
+    "set": 4,
+    "question": "أي أمر يعرض استهلاك القرص لذاكرة البناء المؤقتة لدى باني Buildx المحدد؟",
+    "options": [
+      "docker buildx du",
+      "docker build cache",
+      "docker cache usage",
+      "docker builder stats"
+    ],
+    "answer": "docker buildx du"
+  },
+  {
+    "category": "Docker",
+    "set": 4,
+    "question": "أي أمر يزيل ذاكرة التخزين المؤقت للبناء غير المستخدمة؟",
+    "options": [
+      "docker builder prune",
+      "docker build clean",
+      "docker cache prune",
+      "docker prune build"
+    ],
+    "answer": "docker builder prune"
+  },
+  {
+    "category": "Docker",
+    "set": 4,
+    "question": "أي أمر يدعم بناء صور متعددة المنصات عند تزويده بقائمة --platform وبانٍ مناسبين؟",
+    "options": [
+      "docker buildx build",
+      "docker build multi",
+      "docker build platform",
+      "docker image buildx"
+    ],
+    "answer": "docker buildx build"
+  },
+  {
+    "category": "Docker",
+    "set": 4,
+    "question": "أي أمر يعرض أدوات البناء (builders) المتاحة في Buildx؟",
+    "options": [
+      "docker buildx ls",
+      "docker buildx show",
+      "docker builder ls",
+      "docker buildx list"
+    ],
+    "answer": "docker buildx ls"
+  },
+  {
+    "category": "Docker",
+    "set": 4,
+    "question": "أي أمر يعرض جميع سياقات Docker؟",
+    "options": [
+      "docker context ls",
+      "docker contexts",
+      "docker context show",
+      "docker list context"
+    ],
+    "answer": "docker context ls"
+  },
+  {
+    "category": "Docker",
+    "set": 4,
+    "question": "أي أمر يبدّل إلى سياق Docker مختلف؟",
+    "options": [
+      "docker context use",
+      "docker context switch",
+      "docker use context",
+      "docker context select"
+    ],
+    "answer": "docker context use"
+  },
+  {
+    "category": "Docker",
+    "set": 4,
+    "question": "أي أمر يزيل سياق Docker؟",
+    "options": [
+      "docker context rm",
+      "docker context inspect",
+      "docker remove context",
+      "docker context use"
+    ],
+    "answer": "docker context rm"
+  },
+  {
+    "category": "Docker",
+    "set": 4,
+    "question": "أي تعليمة في Dockerfile تحدد الصورة الأساسية؟",
+    "options": [
+      "FROM",
+      "BASE",
+      "IMAGE",
+      "START"
+    ],
+    "answer": "FROM"
+  },
+  {
+    "category": "Docker",
+    "set": 4,
+    "question": "أي تعليمة في Dockerfile تضبط متغيرات البيئة؟",
+    "options": [
+      "ENV",
+      "SET",
+      "VAR",
+      "EXPORT"
+    ],
+    "answer": "ENV"
+  },
+  {
+    "category": "Docker",
+    "set": 4,
+    "question": "أي أمر يبدأ خدمات ملف Compose في الخلفية؟",
+    "options": [
+      "docker compose up -d",
+      "docker compose create",
+      "docker compose config",
+      "docker compose down"
+    ],
+    "answer": "docker compose up -d"
+  },
+  {
+    "category": "Docker",
+    "set": 4,
+    "question": "أي مفتاح رئيسي في Compose يحتوي تعريفات خدمات التطبيق؟",
+    "options": [
+      "volumes",
+      "networks",
+      "configs",
+      "services"
+    ],
+    "answer": "services"
+  },
+  {
+    "category": "Docker",
+    "set": 4,
+    "question": "أي أمر يعرض إعداد Compose بعد حله ويتحقق منه؟",
+    "options": [
+      "docker compose images",
+      "docker compose top",
+      "docker compose config",
+      "docker compose ps"
+    ],
+    "answer": "docker compose config"
+  },
+  {
+    "category": "Docker",
+    "set": 4,
+    "question": "ماذا يفعل 'docker compose down' عادة دون --volumes؟",
+    "options": [
+      "يزيل ملف إعداد Compose فقط",
+      "يزيل حاويات المشروع وشبكاته مع إبقاء وحدات التخزين المسماة",
+      "يحذف كل صور المضيف ووحدات تخزينه",
+      "يوقف الحاويات مؤقتا دون إزالتها"
+    ],
+    "answer": "يزيل حاويات المشروع وشبكاته مع إبقاء وحدات التخزين المسماة"
+  },
+  {
+    "category": "Docker",
+    "set": 4,
+    "question": "عند استخدام service_healthy في depends_on لدى Compose، ما المطلوب قبل بدء الخدمة التابعة؟",
+    "options": [
+      "يجب أن تجتاز الخدمة المعتمَد عليها فحص السلامة المضبوط",
+      "يجب أن تنتهي الخدمة المعتمَد عليها بنجاح",
+      "يجب نشر كل منفذ معلن على المضيف",
+      "يجب دفع صورة الخدمة المعتمَد عليها إلى سجل"
+    ],
+    "answer": "يجب أن تجتاز الخدمة المعتمَد عليها فحص السلامة المضبوط"
+  },
+  {
+    "category": "Docker",
+    "set": 4,
+    "question": "أي خيار في Buildx يحدد منصات مثل linux/amd64 وlinux/arm64؟",
+    "options": [
+      "--target",
+      "--builder",
+      "--progress",
+      "--platform"
+    ],
+    "answer": "--platform"
+  },
+  {
+    "category": "Docker",
+    "set": 4,
+    "question": "أي خيار في Buildx يختار مرحلة Dockerfile مسماة كهدف بناء؟",
+    "options": [
+      "--tag",
+      "--file",
+      "--target",
+      "--platform"
+    ],
+    "answer": "--target"
+  },
+  {
+    "category": "Docker",
+    "set": 4,
+    "question": "أي خيار بناء في Buildx يدفع النتيجة مباشرة إلى سجل؟",
+    "options": [
+      "--pull",
+      "--push",
+      "--load",
+      "--no-cache"
+    ],
+    "answer": "--push"
+  },
+  {
+    "category": "Docker",
+    "set": 4,
+    "question": "ماذا يطلب '--no-cache' من Docker أثناء بناء الصورة؟",
+    "options": [
+      "عدم إعادة استخدام نتائج البناء المخزنة مؤقتا",
+      "إزالة كل صورة محلية",
+      "تعطيل ذاكرة نظام الملفات المؤقتة أثناء تشغيل الحاوية",
+      "تخطي تنزيل الصورة الأساسية"
+    ],
+    "answer": "عدم إعادة استخدام نتائج البناء المخزنة مؤقتا"
+  },
+  {
+    "category": "Docker",
+    "set": 4,
+    "question": "أي أمر يعرض تفاصيل وحدة تخزين Docker مسماة؟",
+    "options": [
+      "docker volume ls",
+      "docker volume create data",
+      "docker volume prune",
+      "docker volume inspect data"
+    ],
+    "answer": "docker volume inspect data"
+  }
+]

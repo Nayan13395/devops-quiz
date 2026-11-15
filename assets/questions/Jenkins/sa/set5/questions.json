@@ -1,0 +1,302 @@
+[
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "समानायाः Pipeline समकालिकनिष्पादनस्य स्थाने नूतननिष्पादनं प्रतीक्षापङ्क्तौ स्थापयन् Declarative विकल्पः कः?",
+    "options": [
+      "parallelsAlwaysFailFast()",
+      "disableConcurrentBuilds()",
+      "disableResume()",
+      "skipDefaultCheckout()"
+    ],
+    "answer": "disableConcurrentBuilds()"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "पुरातननिर्माणाभिलेखानां निर्माणोत्पादानां च रक्षणनियमान् निर्दिशन् Declarative विकल्पः कः?",
+    "options": [
+      "buildDiscarder(logRotator(numToKeepStr: '10'))",
+      "timeout(time: 10, unit: 'MINUTES')",
+      "retry(10)",
+      "quietPeriod(10)"
+    ],
+    "answer": "buildDiscarder(logRotator(numToKeepStr: '10'))"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "Jenkins cron व्यञ्जके H चिह्नं किं प्रयच्छति?",
+    "options": [
+      "उपयोक्तृसङ्गणकस्य वर्तमानहोराम्",
+      "केवलम् अवकाशदिनेषु निष्पादनस्य अनुरोधम्",
+      "केवलं नोड् निष्क्रिये सति निष्पादनस्य अनुरोधम्",
+      "नियोजितभारप्रसारणाय स्थिरं कार्यनामाधारितं हैश्"
+    ],
+    "answer": "नियोजितभारप्रसारणाय स्थिरं कार्यनामाधारितं हैश्"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "Jenkins इत्यस्य पञ्चक्षेत्रात्मके cron वाक्यविन्यासे पञ्चमं क्षेत्रं किं सूचयति?",
+    "options": [
+      "दिनस्य होराम्",
+      "मासस्य दिनम्",
+      "सप्ताहस्य दिनम्",
+      "होरायाः मिनिट्-मूल्यम्"
+    ],
+    "answer": "सप्ताहस्य दिनम्"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "पूर्वनिर्माणस्य विफलतायाः अस्थिरतायाः वा अनन्तरं नूतननिर्माणसाफल्ये किं post निबन्धनं प्रवर्तते?",
+    "options": [
+      "unsuccessful",
+      "fixed",
+      "changed",
+      "regression"
+    ],
+    "answer": "fixed"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "अन्येषां post निबन्धनानां मूल्याङ्कनानन्तरं किं post निबन्धनं प्रवर्तते?",
+    "options": [
+      "cleanup",
+      "always",
+      "changed",
+      "success"
+    ],
+    "answer": "cleanup"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "चरणस्य एजण्ट्-वितरणात् पूर्वं चरणनिबन्धनं मूल्याङ्कयन् when विकल्पः कः?",
+    "options": [
+      "beforeInput false",
+      "beforeOptions false",
+      "branch 'main'",
+      "beforeAgent true"
+    ],
+    "answer": "beforeAgent true"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "Multibranch Pipeline मध्ये नामयुक्तां शाखां लक्ष्यीकुर्वत् when निबन्धनं किम्?",
+    "options": [
+      "buildingTag()",
+      "changeRequest()",
+      "branch 'main'",
+      "tag 'main'"
+    ],
+    "answer": "branch 'main'"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "प्रचालनतन्त्रब्राउजरादीनाम् अक्षाणां मूल्यसंयोगान् निष्पादयन्ती Declarative रचना का?",
+    "options": [
+      "environment",
+      "matrix",
+      "parallel",
+      "steps"
+    ],
+    "answer": "matrix"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "Declarative आव्यूहात् अनिष्टसंयोगान् कः विभागः अपनयति?",
+    "options": [
+      "excludes",
+      "axes",
+      "stages",
+      "tools"
+    ],
+    "answer": "excludes"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "समानान्तरशाखायुक्तचरणे एकस्याः विफलतायाम् अन्याः स्थगयन् विन्यासः कः?",
+    "options": [
+      "beforeAgent true",
+      "reuseNode true",
+      "alwaysPull true",
+      "failFast true"
+    ],
+    "answer": "failFast true"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "निर्माणस्य अस्थिरत्वे उत्तरवर्तिचरणान् परित्यजन् Declarative विकल्पः कः?",
+    "options": [
+      "disableResume()",
+      "preserveStashes()",
+      "skipStagesAfterUnstable()",
+      "skipDefaultCheckout()"
+    ],
+    "answer": "skipStagesAfterUnstable()"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "विफलतां लिखित्वा स्वखण्डानन्तरं निष्पादनम् अनुवर्तयितुम् अनुमन्यमानं Pipeline पदं किम्?",
+    "options": [
+      "input",
+      "catchError",
+      "error",
+      "timeout"
+    ],
+    "answer": "catchError"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "प्रक्रियानिर्गमनानन्तरं sh(script: 'check.sh', returnStatus: true) किं प्रत्यर्पयति?",
+    "options": [
+      "प्रक्रियायाः सङ्ख्यात्मकं निर्गमनकूटम्",
+      "सम्पूर्णं मानकनिर्गमपाठम्",
+      "शेल् इत्यस्य प्रक्रिया-ID",
+      "Jenkins प्रमाणीकरणविवरणवस्तु"
+    ],
+    "answer": "प्रक्रियायाः सङ्ख्यात्मकं निर्गमनकूटम्"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "साफल्ये sh(script: 'echo ready', returnStdout: true) किं प्रत्यर्पयति?",
+    "options": [
+      "सङ्ख्यात्मकं निर्माणक्रमाङ्कम्",
+      "map रूपेण शेल्-पर्यावरणम्",
+      "एजण्ट्-लेबल्-सूचीम्",
+      "सङ्गृहीतं मानकनिर्गमवर्णक्रमम्"
+    ],
+    "answer": "सङ्गृहीतं मानकनिर्गमवर्णक्रमम्"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "वर्तमानकार्यक्षेत्रनिर्देशिकायाः विषयम् उपस्तरैः सह लोपयत् Pipeline पदं किम्?",
+    "options": [
+      "pwd",
+      "readFile",
+      "deleteDir",
+      "fileExists"
+    ],
+    "answer": "deleteDir"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "वर्तमानकार्यक्षेत्रे पथः अस्ति न वा इति किं Pipeline पदं परीक्षते?",
+    "options": [
+      "libraryResource",
+      "fileExists",
+      "readFile",
+      "writeFile"
+    ],
+    "answer": "fileExists"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "अन्यं Jenkins कार्यं प्रेरयितुं निर्माणप्राचलान् प्रदातुं च समर्थं Pipeline पदं किम्?",
+    "options": [
+      "build",
+      "stage",
+      "node",
+      "checkout"
+    ],
+    "answer": "build"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "चरणपुनरारम्भाय समाप्तनिर्माणेभ्यः स्टैश्-घटकान् रक्षन् Declarative विकल्पः कः?",
+    "options": [
+      "disableResume()",
+      "skipDefaultCheckout()",
+      "quietPeriod(5)",
+      "preserveStashes()"
+    ],
+    "answer": "preserveStashes()"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "vars/deploy.groovy द्वारा परिभाषितस्य वैश्विकस्य deploy चरस्य सहायपाठं Shared Library इत्यस्य का सञ्चिका प्रयच्छति?",
+    "options": [
+      "resources/deploy.txt",
+      "vars/main.groovy",
+      "vars/deploy.txt",
+      "src/deploy.groovy"
+    ],
+    "answer": "vars/deploy.txt"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "Jenkins Pipeline मध्ये @NonCPS चिह्नितस्य मेथड् इत्यस्य प्रधाननिबन्धनं किम्?",
+    "options": [
+      "तत् Windows एजण्ट् मध्ये निष्पादनीयम्",
+      "तेन CPS-परिवर्तितानि Pipeline पदानि न आह्वातव्यानि",
+      "तस्मिन् stage निर्देशः आवश्यकः",
+      "तेन सर्वदा वर्णक्रमः प्रत्यर्पणीयः"
+    ],
+    "answer": "तेन CPS-परिवर्तितानि Pipeline पदानि न आह्वातव्यानि"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "अननुमोदितस्य सैण्ड्बॉक्स्-Groovy सङ्केतस्य अनुरोधितसिग्नेचर्-घटकान् का Jenkins सुविधा समीक्षते?",
+    "options": [
+      "प्रक्रियान्तः स्क्रिप्ट्-अनुमोदनम्",
+      "Credentials Store",
+      "Build Queue",
+      "SCM आवधिकपरीक्षणवृत्तलेखः"
+    ],
+    "answer": "प्रक्रियान्तः स्क्रिप्ट्-अनुमोदनम्"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "शेल् स्वयं बद्धगुप्तचरं विस्तारयेत् इति स्क्रिप्ट्-कृते का Groovy उद्धरणशैली अनुशंस्यते?",
+    "options": [
+      "गुप्तमूल्यान्तःस्थापनयुक्तः द्विरुद्धृतः Groovy वर्णक्रमः",
+      "गुप्तमूल्यान्तःस्थापनयुक्तः त्रिगुणद्विरुद्धरणचिह्नयुक्तः Groovy वर्णक्रमः",
+      "साधारणपाठगुप्तमूल्यसंयोजनेन निर्मितः Groovy वर्णक्रमः",
+      "एकल-उद्धरणचिह्नयुक्तः Groovy वर्णक्रमः"
+    ],
+    "answer": "एकल-उद्धरणचिह्नयुक्तः Groovy वर्णक्रमः"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "सम्बद्धजालानुरोधानां कृते Jenkins CSRF crumb इत्यस्य प्रयोजनं किम्?",
+    "options": [
+      "प्रेषणात् पूर्वं निर्माणोत्पादस्य गुप्तीकरणम्",
+      "निर्माणनिष्पादकस्य एजण्ट् इत्यस्य चयनम्",
+      "अवस्थापरिवर्तकानुरोधः स्थापितोपयोक्तृसत्रस्य अस्ति इति सत्यापनसाहाय्यम्",
+      "सर्वकार्याणाम् अधिकारपरीक्षणस्य प्रतिस्थापनम्"
+    ],
+    "answer": "अवस्थापरिवर्तकानुरोधः स्थापितोपयोक्तृसत्रस्य अस्ति इति सत्यापनसाहाय्यम्"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "विभिन्नकार्येषु सामान्यपरीक्षणोपकरणस्य एककालिकैककार्यप्रवेशं समन्वयितुं Pipeline किं प्रयुञ्जीत?",
+    "options": [
+      "skipDefaultCheckout विकल्पम्",
+      "Lockable Resources प्लगिन् इत्यस्य lock पदम्",
+      "timestamps विकल्पम्",
+      "buildDiscarder विकल्पम्"
+    ],
+    "answer": "Lockable Resources प्लगिन् इत्यस्य lock पदम्"
+  }
+]

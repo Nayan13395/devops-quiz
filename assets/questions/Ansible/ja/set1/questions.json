@@ -1,0 +1,302 @@
+[
+  {
+    "category": "Ansible",
+    "set": 1,
+    "question": "Ansibleは主に何に使用されますか?",
+    "options": [
+      "構成管理",
+      "コンテナ化",
+      "データベース管理",
+      "監視"
+    ],
+    "answer": "構成管理"
+  },
+  {
+    "category": "Ansible",
+    "set": 1,
+    "question": "Ansibleはどの言語で書かれていますか?",
+    "options": [
+      "Python",
+      "Java",
+      "Go",
+      "Ruby"
+    ],
+    "answer": "Python"
+  },
+  {
+    "category": "Ansible",
+    "set": 1,
+    "question": "Ansibleで管理対象ホストを含むファイルはどれですか?",
+    "options": [
+      "インベントリファイル",
+      "プレイブック",
+      "ロール",
+      "モジュール"
+    ],
+    "answer": "インベントリファイル"
+  },
+  {
+    "category": "Ansible",
+    "set": 1,
+    "question": "デフォルトのインベントリファイルの場所はどこですか?",
+    "options": [
+      "/etc/ansible/hosts",
+      "/etc/hosts",
+      "/ansible/hosts",
+      "/usr/ansible/hosts"
+    ],
+    "answer": "/etc/ansible/hosts"
+  },
+  {
+    "category": "Ansible",
+    "set": 1,
+    "question": "Ansibleのバージョンを確認するコマンドはどれですか?",
+    "options": [
+      "ansible --version",
+      "ansible version",
+      "ansible -v",
+      "ansible check"
+    ],
+    "answer": "ansible --version"
+  },
+  {
+    "category": "Ansible",
+    "set": 1,
+    "question": "Ansible の標準接続プラグインが Linux ホストに通常使うプロトコルはどれか？",
+    "options": [
+      "SSH",
+      "FTP",
+      "Telnet",
+      "HTTP"
+    ],
+    "answer": "SSH"
+  },
+  {
+    "category": "Ansible",
+    "set": 1,
+    "question": "Ansibleプレイブックとは何ですか?",
+    "options": [
+      "自動化タスクを含むYAMLファイル",
+      "インベントリファイル",
+      "Pythonスクリプト",
+      "設定ファイル"
+    ],
+    "answer": "自動化タスクを含むYAMLファイル"
+  },
+  {
+    "category": "Ansible",
+    "set": 1,
+    "question": "Ansibleプレイブックを実行するコマンドはどれですか?",
+    "options": [
+      "ansible-playbook",
+      "ansible-run",
+      "ansible-execute",
+      "ansible-start"
+    ],
+    "answer": "ansible-playbook"
+  },
+  {
+    "category": "Ansible",
+    "set": 1,
+    "question": "プレイブックで対象ホストを定義するキーワードはどれですか?",
+    "options": [
+      "hosts",
+      "servers",
+      "nodes",
+      "targets"
+    ],
+    "answer": "hosts"
+  },
+  {
+    "category": "Ansible",
+    "set": 1,
+    "question": "プレイブックでタスクを定義するキーワードはどれですか?",
+    "options": [
+      "tasks",
+      "actions",
+      "jobs",
+      "steps"
+    ],
+    "answer": "tasks"
+  },
+  {
+    "category": "Ansible",
+    "set": 1,
+    "question": "リモートホストにファイルをコピーするモジュールはどれですか?",
+    "options": [
+      "copy",
+      "fetch",
+      "file",
+      "transfer"
+    ],
+    "answer": "copy"
+  },
+  {
+    "category": "Ansible",
+    "set": 1,
+    "question": "サービスを管理するモジュールはどれですか?",
+    "options": [
+      "service",
+      "systemctl",
+      "daemon",
+      "process"
+    ],
+    "answer": "service"
+  },
+  {
+    "category": "Ansible",
+    "set": 1,
+    "question": "すべての対象 POSIX ホストで Ansible の接続と利用可能な Python を確認するコマンドはどれか？",
+    "options": [
+      "ansible all -m ping",
+      "ansible ping",
+      "ansible test",
+      "ansible connect"
+    ],
+    "answer": "ansible all -m ping"
+  },
+  {
+    "category": "Ansible",
+    "set": 1,
+    "question": "Ansible プレイブックの記述に通常使う、読みやすい形式はどれか？",
+    "options": [
+      "YAML",
+      "JSON",
+      "XML",
+      "INI"
+    ],
+    "answer": "YAML"
+  },
+  {
+    "category": "Ansible",
+    "set": 1,
+    "question": "Ansibleの設定を行うファイルはどれですか?",
+    "options": [
+      "ansible.cfg",
+      "ansible.conf",
+      "config.yml",
+      "ansible.ini"
+    ],
+    "answer": "ansible.cfg"
+  },
+  {
+    "category": "Ansible",
+    "set": 1,
+    "question": "管理対象ホストのファクトを収集する Ansible モジュールはどれか？",
+    "options": [
+      "ansible.builtin.stat",
+      "ansible.builtin.debug",
+      "ansible.builtin.assert",
+      "ansible.builtin.setup"
+    ],
+    "answer": "ansible.builtin.setup"
+  },
+  {
+    "category": "Ansible",
+    "set": 1,
+    "question": "Ansible の権限昇格を有効にするタスク設定はどれか？",
+    "options": [
+      "run_once: true",
+      "delegate_facts: true",
+      "become: true",
+      "check_mode: true"
+    ],
+    "answer": "become: true"
+  },
+  {
+    "category": "Ansible",
+    "set": 1,
+    "question": "ホストへのログインユーザーを指定するインベントリ変数はどれか？",
+    "options": [
+      "ansible_connection",
+      "ansible_user",
+      "ansible_host",
+      "ansible_port"
+    ],
+    "answer": "ansible_user"
+  },
+  {
+    "category": "Ansible",
+    "set": 1,
+    "question": "ansible-playbook 実行時にインベントリファイルを選ぶオプションはどれか？",
+    "options": [
+      "-i inventory.ini",
+      "-e inventory.ini",
+      "--limit inventory.ini",
+      "--tags inventory.ini"
+    ],
+    "answer": "-i inventory.ini"
+  },
+  {
+    "category": "Ansible",
+    "set": 1,
+    "question": "管理対象ホストにディレクトリが存在することを保証するモジュールはどれか？",
+    "options": [
+      "ansible.builtin.fetch",
+      "ansible.builtin.slurp",
+      "ansible.builtin.template",
+      "ansible.builtin.file"
+    ],
+    "answer": "ansible.builtin.file"
+  },
+  {
+    "category": "Ansible",
+    "set": 1,
+    "question": "リモートファイルを取得して制御ノードに保存するモジュールはどれか？",
+    "options": [
+      "ansible.builtin.get_url",
+      "ansible.builtin.unarchive",
+      "ansible.builtin.fetch",
+      "ansible.builtin.copy"
+    ],
+    "answer": "ansible.builtin.fetch"
+  },
+  {
+    "category": "Ansible",
+    "set": 1,
+    "question": "対象ホストのパッケージマネージャーに汎用インターフェースを提供するモジュールはどれか？",
+    "options": [
+      "ansible.builtin.package_facts",
+      "ansible.builtin.package",
+      "ansible.builtin.service",
+      "ansible.builtin.command"
+    ],
+    "answer": "ansible.builtin.package"
+  },
+  {
+    "category": "Ansible",
+    "set": 1,
+    "question": "Ansible による通常のエージェントレスな Linux ホスト管理を説明するものはどれか？",
+    "options": [
+      "各管理対象ホストへの常駐 Ansible エージェントのインストールは不要",
+      "各管理対象ホストで Ansible スケジューラーサービスを動かす必要がある",
+      "各管理対象ホストで Galaxy サーバーを動かす必要がある",
+      "各管理対象ホストが Ansible メッセージブローカーに接続する必要がある"
+    ],
+    "answer": "各管理対象ホストへの常駐 Ansible エージェントのインストールは不要"
+  },
+  {
+    "category": "Ansible",
+    "set": 1,
+    "question": "シェル演算子が必要な場合にリモートシェル経由でコマンドを実行するモジュールはどれか？",
+    "options": [
+      "ansible.builtin.command",
+      "ansible.builtin.script",
+      "ansible.builtin.debug",
+      "ansible.builtin.shell"
+    ],
+    "answer": "ansible.builtin.shell"
+  },
+  {
+    "category": "Ansible",
+    "set": 1,
+    "question": "web1 という名前で別の IP アドレスに接続できるようにするインベントリ変数はどれか？",
+    "options": [
+      "ansible_user",
+      "ansible_port",
+      "ansible_host",
+      "inventory_hostname"
+    ],
+    "answer": "ansible_host"
+  }
+]

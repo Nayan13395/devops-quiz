@@ -1,0 +1,302 @@
+[
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "ಸರಳ Bash ಫಂಕ್ಷನ್ ಅನ್ನು ವ್ಯಾಖ್ಯಾನಿಸುವ ಸಿಂಟ್ಯಾಕ್ಸ್ ಯಾವುದು?",
+    "options": [
+      "myfunc() { echo hi; }",
+      "def myfunc: echo hi",
+      "function = myfunc",
+      "myfunc -> echo hi"
+    ],
+    "answer": "myfunc() { echo hi; }"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "myfunc ಎಂಬ ಫಂಕ್ಷನ್ ಅನ್ನು ಕರೆಯುವ ಕಮಾಂಡ್ ಯಾವುದು?",
+    "options": [
+      "myfunc",
+      "call myfunc",
+      "run myfunc",
+      "execute myfunc"
+    ],
+    "answer": "myfunc"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "ಫಂಕ್ಷನ್‌ನ ಒಳಗೆ ಮಾತ್ರ ಗೋಚರಿಸುವ ವೇರಿಯಬಲ್ ಅನ್ನು ಘೋಷಿಸುವ ಕೀವರ್ಡ್ ಯಾವುದು?",
+    "options": [
+      "local",
+      "private",
+      "internal",
+      "hidden"
+    ],
+    "answer": "local"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "ಫಂಕ್ಷನ್‌ನಿಂದ 0 ಎಕ್ಸಿಟ್ ಸ್ಟೇಟಸ್ ಹಿಂತಿರುಗಿಸುವ ಕಮಾಂಡ್ ಯಾವುದು?",
+    "options": [
+      "return 0",
+      "exit function 0",
+      "stop 0",
+      "end 0"
+    ],
+    "answer": "return 0"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "ಫಂಕ್ಷನ್‌ನ ಒಳಗೆ, ಫಂಕ್ಷನ್‌ಗೆ ರವಾನಿಸಿದ ಆರ್ಗ್ಯುಮೆಂಟ್‌ಗಳ ಸಂಖ್ಯೆಯನ್ನು ಯಾವ ಪ್ಯಾರಾಮೀಟರ್ ನೀಡುತ್ತದೆ?",
+    "options": [
+      "$#",
+      "$@",
+      "$0",
+      "$1"
+    ],
+    "answer": "$#"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "ಮೂರು ಅಂಶಗಳಿರುವ ಇಂಡೆಕ್ಸ್ಡ್ ಅರೇ ರಚಿಸುವ ಸಿಂಟ್ಯಾಕ್ಸ್ ಯಾವುದು?",
+    "options": [
+      "arr=(one two three)",
+      "array arr one two three",
+      "arr[one two three]",
+      "set arr one two three"
+    ],
+    "answer": "arr=(one two three)"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "arr ನ ಇಂಡೆಕ್ಸ್ 2 ರಲ್ಲಿರುವ ಅಂಶವನ್ನು ಪ್ರವೇಶಿಸುವ ಸಿಂಟ್ಯಾಕ್ಸ್ ಯಾವುದು?",
+    "options": [
+      "${arr[2]}",
+      "${arr:2}",
+      "$arr[2]",
+      "arr{2}"
+    ],
+    "answer": "${arr[2]}"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "arr ನಲ್ಲಿರುವ ಅಂಶಗಳ ಸಂಖ್ಯೆಯನ್ನು ನೀಡುವ ವಿಸ್ತರಣೆ ಯಾವುದು?",
+    "options": [
+      "${#arr[@]}",
+      "${#arr}",
+      "${arr:length}",
+      "${arr[@]#}"
+    ],
+    "answer": "${#arr[@]}"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "arr ಗೆ newitem ಅನ್ನು ಸೇರಿಸುವ ಸಿಂಟ್ಯಾಕ್ಸ್ ಯಾವುದು?",
+    "options": [
+      "arr+=(newitem)",
+      "arr=newitem",
+      "arr.push(newitem)",
+      "add arr newitem"
+    ],
+    "answer": "arr+=(newitem)"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "arr ನ ಎಲ್ಲಾ ಅಂಶಗಳನ್ನು ಹಿಂತಿರುಗಿಸುವ ವಿಸ್ತರಣೆ ಯಾವುದು?",
+    "options": [
+      "${arr[@]}",
+      "${arr[0]}",
+      "${arr[all]}",
+      "${arr}"
+    ],
+    "answer": "${arr[@]}"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "ಅಸೋಸಿಯೇಟಿವ್ ಅರೇ ಅನ್ನು ಘೋಷಿಸುವ ಕಮಾಂಡ್ ಯಾವುದು?",
+    "options": [
+      "declare -A map",
+      "declare -a map",
+      "array -A map",
+      "assoc map"
+    ],
+    "answer": "declare -A map"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "ಸ್ಟ್ಯಾಂಡರ್ಡ್ ಔಟ್‌ಪುಟ್ ಮತ್ತು ಸ್ಟ್ಯಾಂಡರ್ಡ್ ಎರರ್ ಎರಡನ್ನೂ output.log ಗೆ ಕಳುಹಿಸುವ ಮರುನಿರ್ದೇಶನ ಯಾವುದು?",
+    "options": [
+      "command &> output.log",
+      "command > output.log",
+      "command 2> output.log",
+      "command < output.log"
+    ],
+    "answer": "command &> output.log"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "ಕಮಾಂಡ್‌ನ ಎಲ್ಲಾ ಔಟ್‌ಪುಟ್ ಅನ್ನು ತಿರಸ್ಕರಿಸುವ ಮರುನಿರ್ದೇಶನ ಯಾವುದು?",
+    "options": [
+      "command > /dev/null",
+      "command > null",
+      "command > empty",
+      "command > discard"
+    ],
+    "answer": "command > /dev/null"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "ಒಂದು ಕಮಾಂಡ್‌ನ ಔಟ್‌ಪುಟ್ ಅನ್ನು ಇನ್ನೊಂದಕ್ಕೆ ಇನ್‌ಪುಟ್ ಆಗಿ ಕಳುಹಿಸುವ ಆಪರೇಟರ್ ಯಾವುದು?",
+    "options": [
+      "|",
+      ">",
+      "<",
+      "&"
+    ],
+    "answer": "|"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "ಕಮಾಂಡ್ ಅನ್ನು ಹಿನ್ನೆಲೆಯಲ್ಲಿ (background) ಚಲಾಯಿಸುವ ಚಿಹ್ನೆ ಯಾವುದು?",
+    "options": [
+      "&",
+      "&&",
+      "|",
+      ";"
+    ],
+    "answer": "&"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "ಹಿನ್ನೆಲೆ ಜಾಬ್‌ಗಳು ಮುಗಿಯುವವರೆಗೆ ಕಾಯುವ ಬಿಲ್ಟ್‌ಇನ್ ಯಾವುದು?",
+    "options": [
+      "wait",
+      "hold",
+      "pause",
+      "sleep"
+    ],
+    "answer": "wait"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "ಪ್ರಸ್ತುತ ಶೆಲ್ ಎನ್ವಿರಾನ್ಮೆಂಟ್‌ನಲ್ಲಿ script.sh ಅನ್ನು ಚಲಾಯಿಸುವ ಕಮಾಂಡ್ ಯಾವುದು?",
+    "options": [
+      "source script.sh",
+      "bash script.sh",
+      "./script.sh",
+      "sh script.sh"
+    ],
+    "answer": "source script.sh"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "ಹಿಯರ್ ಡಾಕ್ಯುಮೆಂಟ್ ಅನ್ನು ಪ್ರಾರಂಭಿಸುವ ಆಪರೇಟರ್ ಯಾವುದು?",
+    "options": [
+      "<<",
+      ">>",
+      "<",
+      ">"
+    ],
+    "answer": "<<"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "ಸುರಕ್ಷಿತ ತಾತ್ಕಾಲಿಕ ಫೈಲ್ ಅನ್ನು ರಚಿಸುವ ಕಮಾಂಡ್ ಯಾವುದು?",
+    "options": [
+      "mktemp",
+      "tempfile",
+      "touch tmp",
+      "newfile"
+    ],
+    "answer": "mktemp"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "ಸ್ಕ್ರಿಪ್ಟ್‌ಗೆ SIGINT ಬಂದಾಗ cleanup ಅನ್ನು ಚಲಾಯಿಸುವ ಕಮಾಂಡ್ ಯಾವುದು?",
+    "options": [
+      "trap 'cleanup' SIGINT",
+      "handle SIGINT cleanup",
+      "signal SIGINT cleanup",
+      "catch SIGINT cleanup"
+    ],
+    "answer": "trap 'cleanup' SIGINT"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "ಬಳಕೆದಾರರು Ctrl+C ಒತ್ತಿದಾಗ ಸಾಮಾನ್ಯವಾಗಿ ಯಾವ ಸಿಗ್ನಲ್ ಕಳುಹಿಸಲಾಗುತ್ತದೆ?",
+    "options": [
+      "SIGINT",
+      "SIGTERM",
+      "SIGKILL",
+      "SIGHUP"
+    ],
+    "answer": "SIGINT"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "ಕಮಾಂಡ್ ವಿಫಲವಾದಾಗ ಸ್ಕ್ರಿಪ್ಟ್ ತಕ್ಷಣ ನಿರ್ಗಮಿಸುವಂತೆ ಮಾಡುವ ಆಯ್ಕೆ ಯಾವುದು?",
+    "options": [
+      "set -e",
+      "set -x",
+      "set -u",
+      "set -o pipefail"
+    ],
+    "answer": "set -e"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "ಸೆಟ್ ಆಗದ ವೇರಿಯಬಲ್ ಅನ್ನು ಉಲ್ಲೇಖಿಸಿದಾಗ ದೋಷ ಉಂಟುಮಾಡುವ ಆಯ್ಕೆ ಯಾವುದು?",
+    "options": [
+      "set -u",
+      "set -e",
+      "set -x",
+      "set -a"
+    ],
+    "answer": "set -u"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "ಡೀಬಗ್ ಮಾಡಲು ಪ್ರತಿ ಕಮಾಂಡ್ ಅನ್ನು ಚಲಾಯಿಸುವ ಮೊದಲು ಮುದ್ರಿಸುವ ಆಯ್ಕೆ ಯಾವುದು?",
+    "options": [
+      "set -x",
+      "set -e",
+      "set -u",
+      "set -v"
+    ],
+    "answer": "set -x"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "ಪ್ರಸ್ತುತ ವ್ಯಾಖ್ಯಾನಿಸಲಾದ ಶೆಲ್ ಫಂಕ್ಷನ್‌ಗಳನ್ನು ಪಟ್ಟಿ ಮಾಡುವ ಕಮಾಂಡ್ ಯಾವುದು?",
+    "options": [
+      "declare -f",
+      "declare -A",
+      "functions",
+      "listfunc"
+    ],
+    "answer": "declare -f"
+  }
+]

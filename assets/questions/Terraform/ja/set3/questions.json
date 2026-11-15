@@ -1,0 +1,302 @@
+[
+  {
+    "category": "Terraform",
+    "set": 3,
+    "question": "再利用可能なインフラストラクチャコンポーネントを可能にするTerraformの機能はどれですか?",
+    "options": [
+      "モジュール",
+      "プロバイダー",
+      "変数",
+      "出力"
+    ],
+    "answer": "モジュール"
+  },
+  {
+    "category": "Terraform",
+    "set": 3,
+    "question": "モジュールを呼び出すために使用されるブロックはどれですか?",
+    "options": [
+      "module",
+      "import",
+      "resource",
+      "provider"
+    ],
+    "answer": "module"
+  },
+  {
+    "category": "Terraform",
+    "set": 3,
+    "question": "モジュールのソースの場所を指定する引数はどれですか?",
+    "options": [
+      "source",
+      "path",
+      "location",
+      "module_source"
+    ],
+    "answer": "source"
+  },
+  {
+    "category": "Terraform",
+    "set": 3,
+    "question": "パブリックモジュールをホストしているのはどのTerraform Registryですか?",
+    "options": [
+      "Terraform Registry",
+      "Docker Hub",
+      "GitHub Packages",
+      "AWS Marketplace"
+    ],
+    "answer": "Terraform Registry"
+  },
+  {
+    "category": "Terraform",
+    "set": 3,
+    "question": "TerraformのステートをAmazon S3に保存するバックエンドはどれですか?",
+    "options": [
+      "s3",
+      "aws",
+      "bucket",
+      "remote"
+    ],
+    "answer": "s3"
+  },
+  {
+    "category": "Terraform",
+    "set": 3,
+    "question": "S3 バックエンドの非推奨となったテーブル式状態ロックで使っていた AWS サービスはどれか？",
+    "options": [
+      "DynamoDB",
+      "RDS",
+      "EFS",
+      "Lambda"
+    ],
+    "answer": "DynamoDB"
+  },
+  {
+    "category": "Terraform",
+    "set": 3,
+    "question": "旧 Terraform Cloud である HCP Terraform に状態を保存できる旧式バックエンドはどれか？",
+    "options": [
+      "remote",
+      "cloud",
+      "terraform",
+      "tfc"
+    ],
+    "answer": "remote"
+  },
+  {
+    "category": "Terraform",
+    "set": 3,
+    "question": "ステートロックの目的は何ですか?",
+    "options": [
+      "同時変更を防ぐ",
+      "ステートファイルを暗号化する",
+      "ステートをバックアップする",
+      "ステートを圧縮する"
+    ],
+    "answer": "同時変更を防ぐ"
+  },
+  {
+    "category": "Terraform",
+    "set": 3,
+    "question": "リモートステートをローカルマシンに取得するコマンドはどれですか?",
+    "options": [
+      "terraform state pull",
+      "terraform pull",
+      "terraform get-state",
+      "terraform state download"
+    ],
+    "answer": "terraform state pull"
+  },
+  {
+    "category": "Terraform",
+    "set": 3,
+    "question": "ステートをバックエンドにプッシュするコマンドはどれですか?",
+    "options": [
+      "terraform state push",
+      "terraform push",
+      "terraform upload",
+      "terraform state upload"
+    ],
+    "answer": "terraform state push"
+  },
+  {
+    "category": "Terraform",
+    "set": 3,
+    "question": "ステートをローカルディスクに保存するバックエンドタイプはどれですか?",
+    "options": [
+      "local",
+      "file",
+      "disk",
+      "host"
+    ],
+    "answer": "local"
+  },
+  {
+    "category": "Terraform",
+    "set": 3,
+    "question": "リソースを削除せずにステートから除去するコマンドはどれですか?",
+    "options": [
+      "terraform state rm",
+      "terraform rm",
+      "terraform destroy",
+      "terraform remove"
+    ],
+    "answer": "terraform state rm"
+  },
+  {
+    "category": "Terraform",
+    "set": 3,
+    "question": "ステート内でリソースを移動するコマンドはどれですか?",
+    "options": [
+      "terraform state mv",
+      "terraform move",
+      "terraform mv",
+      "terraform state move"
+    ],
+    "answer": "terraform state mv"
+  },
+  {
+    "category": "Terraform",
+    "set": 3,
+    "question": "別のステートファイルの出力を読み取るデータソースはどれですか?",
+    "options": [
+      "terraform_remote_state",
+      "remote_state",
+      "state_data",
+      "terraform_state"
+    ],
+    "answer": "terraform_remote_state"
+  },
+  {
+    "category": "Terraform",
+    "set": 3,
+    "question": "プロバイダーのバージョンをロックするファイルはどれですか?",
+    "options": [
+      ".terraform.lock.hcl",
+      "terraform.lock",
+      "providers.lock",
+      "terraform.providers"
+    ],
+    "answer": ".terraform.lock.hcl"
+  },
+  {
+    "category": "Terraform",
+    "set": 3,
+    "question": "レジストリから導入するモジュールのバージョンを選ぶ引数はどれか？",
+    "options": [
+      "version",
+      "ref",
+      "revision",
+      "required_version"
+    ],
+    "answer": "version"
+  },
+  {
+    "category": "Terraform",
+    "set": 3,
+    "question": "子モジュール network の vpc_id 出力を読む式はどれか？",
+    "options": [
+      "var.network.vpc_id",
+      "local.network.vpc_id",
+      "data.network.vpc_id",
+      "module.network.vpc_id"
+    ],
+    "answer": "module.network.vpc_id"
+  },
+  {
+    "category": "Terraform",
+    "set": 3,
+    "question": "追加のプロバイダー設定に名前を付ける provider ブロック引数はどれか？",
+    "options": [
+      "version",
+      "count",
+      "alias",
+      "source"
+    ],
+    "answer": "alias"
+  },
+  {
+    "category": "Terraform",
+    "set": 3,
+    "question": "特定の別名付きプロバイダー設定を選ぶリソースのメタ引数はどれか？",
+    "options": [
+      "for_each",
+      "provider",
+      "providers",
+      "depends_on"
+    ],
+    "answer": "provider"
+  },
+  {
+    "category": "Terraform",
+    "set": 3,
+    "question": "特定のプロバイダー設定を子モジュールに渡すモジュール呼び出し引数はどれか？",
+    "options": [
+      "providers",
+      "provider",
+      "required_providers",
+      "configuration_aliases"
+    ],
+    "answer": "providers"
+  },
+  {
+    "category": "Terraform",
+    "set": 3,
+    "question": "バックエンド変更後に既存状態の移動を試みる terraform init オプションはどれか？",
+    "options": [
+      "-reconfigure",
+      "-upgrade",
+      "-get=false",
+      "-migrate-state"
+    ],
+    "answer": "-migrate-state"
+  },
+  {
+    "category": "Terraform",
+    "set": 3,
+    "question": "状態移行を試さず以前のバックエンド設定を無視する terraform init オプションはどれか？",
+    "options": [
+      "-upgrade",
+      "-lock=false",
+      "-reconfigure",
+      "-migrate-state"
+    ],
+    "answer": "-reconfigure"
+  },
+  {
+    "category": "Terraform",
+    "set": 3,
+    "question": "staging という CLI ワークスペースを作成して選択するコマンドはどれか？",
+    "options": [
+      "terraform workspace list",
+      "terraform workspace new staging",
+      "terraform workspace select staging",
+      "terraform workspace show"
+    ],
+    "answer": "terraform workspace new staging"
+  },
+  {
+    "category": "Terraform",
+    "set": 3,
+    "question": "現在の CLI ワークスペース名を表示するコマンドはどれか？",
+    "options": [
+      "terraform workspace show",
+      "terraform workspace list",
+      "terraform workspace select default",
+      "terraform state list"
+    ],
+    "answer": "terraform workspace show"
+  },
+  {
+    "category": "Terraform",
+    "set": 3,
+    "question": "S3 のネイティブなロックファイル方式を有効にする S3 バックエンド引数はどれか？",
+    "options": [
+      "encrypt = true",
+      "workspace_key_prefix = \"env\"",
+      "skip_region_validation = true",
+      "use_lockfile = true"
+    ],
+    "answer": "use_lockfile = true"
+  }
+]

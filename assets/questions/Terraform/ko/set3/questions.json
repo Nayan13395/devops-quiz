@@ -1,0 +1,302 @@
+[
+  {
+    "category": "Terraform",
+    "set": 3,
+    "question": "재사용 가능한 인프라 구성 요소를 가능하게 하는 Terraform 기능은 무엇입니까?",
+    "options": [
+      "모듈",
+      "공급자",
+      "변수",
+      "출력"
+    ],
+    "answer": "모듈"
+  },
+  {
+    "category": "Terraform",
+    "set": 3,
+    "question": "모듈을 호출하는 데 사용하는 블록은 무엇입니까?",
+    "options": [
+      "module",
+      "import",
+      "resource",
+      "provider"
+    ],
+    "answer": "module"
+  },
+  {
+    "category": "Terraform",
+    "set": 3,
+    "question": "모듈의 소스 위치를 지정하는 인수는 무엇입니까?",
+    "options": [
+      "source",
+      "path",
+      "location",
+      "module_source"
+    ],
+    "answer": "source"
+  },
+  {
+    "category": "Terraform",
+    "set": 3,
+    "question": "공개 모듈을 호스팅하는 Terraform 레지스트리는 무엇입니까?",
+    "options": [
+      "Terraform Registry",
+      "Docker Hub",
+      "GitHub Packages",
+      "AWS Marketplace"
+    ],
+    "answer": "Terraform Registry"
+  },
+  {
+    "category": "Terraform",
+    "set": 3,
+    "question": "Terraform 상태를 Amazon S3에 저장하는 백엔드는 무엇입니까?",
+    "options": [
+      "s3",
+      "aws",
+      "bucket",
+      "remote"
+    ],
+    "answer": "s3"
+  },
+  {
+    "category": "Terraform",
+    "set": 3,
+    "question": "현재 사용이 권장되지 않는 S3 백엔드의 테이블 기반 상태 잠금에 쓰였던 AWS 서비스는?",
+    "options": [
+      "DynamoDB",
+      "RDS",
+      "EFS",
+      "Lambda"
+    ],
+    "answer": "DynamoDB"
+  },
+  {
+    "category": "Terraform",
+    "set": 3,
+    "question": "이전 Terraform Cloud인 HCP Terraform에 상태를 저장할 수 있는 레거시 백엔드 유형은?",
+    "options": [
+      "remote",
+      "cloud",
+      "terraform",
+      "tfc"
+    ],
+    "answer": "remote"
+  },
+  {
+    "category": "Terraform",
+    "set": 3,
+    "question": "상태 잠금의 목적은 무엇입니까?",
+    "options": [
+      "동시 수정 방지",
+      "상태 파일 암호화",
+      "상태 백업",
+      "상태 압축"
+    ],
+    "answer": "동시 수정 방지"
+  },
+  {
+    "category": "Terraform",
+    "set": 3,
+    "question": "원격 상태를 로컬 머신으로 가져오는 명령어는 무엇입니까?",
+    "options": [
+      "terraform state pull",
+      "terraform pull",
+      "terraform get-state",
+      "terraform state download"
+    ],
+    "answer": "terraform state pull"
+  },
+  {
+    "category": "Terraform",
+    "set": 3,
+    "question": "상태를 백엔드로 푸시하는 명령어는 무엇입니까?",
+    "options": [
+      "terraform state push",
+      "terraform push",
+      "terraform upload",
+      "terraform state upload"
+    ],
+    "answer": "terraform state push"
+  },
+  {
+    "category": "Terraform",
+    "set": 3,
+    "question": "상태를 로컬 디스크에 저장하는 백엔드 유형은 무엇입니까?",
+    "options": [
+      "local",
+      "file",
+      "disk",
+      "host"
+    ],
+    "answer": "local"
+  },
+  {
+    "category": "Terraform",
+    "set": 3,
+    "question": "리소스를 삭제하지 않고 상태에서만 제거하는 명령어는 무엇입니까?",
+    "options": [
+      "terraform state rm",
+      "terraform rm",
+      "terraform destroy",
+      "terraform remove"
+    ],
+    "answer": "terraform state rm"
+  },
+  {
+    "category": "Terraform",
+    "set": 3,
+    "question": "상태 내에서 리소스를 이동하는 명령어는 무엇입니까?",
+    "options": [
+      "terraform state mv",
+      "terraform move",
+      "terraform mv",
+      "terraform state move"
+    ],
+    "answer": "terraform state mv"
+  },
+  {
+    "category": "Terraform",
+    "set": 3,
+    "question": "다른 상태 파일의 출력을 읽는 데이터 소스는 무엇입니까?",
+    "options": [
+      "terraform_remote_state",
+      "remote_state",
+      "state_data",
+      "terraform_state"
+    ],
+    "answer": "terraform_remote_state"
+  },
+  {
+    "category": "Terraform",
+    "set": 3,
+    "question": "공급자 버전을 고정하는 파일은 무엇입니까?",
+    "options": [
+      ".terraform.lock.hcl",
+      "terraform.lock",
+      "providers.lock",
+      "terraform.providers"
+    ],
+    "answer": ".terraform.lock.hcl"
+  },
+  {
+    "category": "Terraform",
+    "set": 3,
+    "question": "레지스트리에서 설치하는 모듈의 버전을 선택하는 인수는?",
+    "options": [
+      "version",
+      "ref",
+      "revision",
+      "required_version"
+    ],
+    "answer": "version"
+  },
+  {
+    "category": "Terraform",
+    "set": 3,
+    "question": "network 자식 모듈의 vpc_id 출력을 읽는 표현식은?",
+    "options": [
+      "var.network.vpc_id",
+      "local.network.vpc_id",
+      "data.network.vpc_id",
+      "module.network.vpc_id"
+    ],
+    "answer": "module.network.vpc_id"
+  },
+  {
+    "category": "Terraform",
+    "set": 3,
+    "question": "추가 프로바이더 설정의 이름을 정하는 provider 블록 인수는?",
+    "options": [
+      "version",
+      "count",
+      "alias",
+      "source"
+    ],
+    "answer": "alias"
+  },
+  {
+    "category": "Terraform",
+    "set": 3,
+    "question": "특정 별칭의 프로바이더 설정을 선택하는 리소스 메타 인수는?",
+    "options": [
+      "for_each",
+      "provider",
+      "providers",
+      "depends_on"
+    ],
+    "answer": "provider"
+  },
+  {
+    "category": "Terraform",
+    "set": 3,
+    "question": "특정 프로바이더 설정을 자식 모듈에 전달하는 모듈 호출 인수는?",
+    "options": [
+      "providers",
+      "provider",
+      "required_providers",
+      "configuration_aliases"
+    ],
+    "answer": "providers"
+  },
+  {
+    "category": "Terraform",
+    "set": 3,
+    "question": "백엔드 설정 변경 후 기존 상태 이동을 시도하는 terraform init 옵션은?",
+    "options": [
+      "-reconfigure",
+      "-upgrade",
+      "-get=false",
+      "-migrate-state"
+    ],
+    "answer": "-migrate-state"
+  },
+  {
+    "category": "Terraform",
+    "set": 3,
+    "question": "상태 이관을 시도하지 않고 이전 백엔드 설정을 무시하는 terraform init 옵션은?",
+    "options": [
+      "-upgrade",
+      "-lock=false",
+      "-reconfigure",
+      "-migrate-state"
+    ],
+    "answer": "-reconfigure"
+  },
+  {
+    "category": "Terraform",
+    "set": 3,
+    "question": "staging이라는 CLI 작업 공간을 만들고 선택하는 명령은?",
+    "options": [
+      "terraform workspace list",
+      "terraform workspace new staging",
+      "terraform workspace select staging",
+      "terraform workspace show"
+    ],
+    "answer": "terraform workspace new staging"
+  },
+  {
+    "category": "Terraform",
+    "set": 3,
+    "question": "현재 CLI 작업 공간 이름을 보여 주는 명령은?",
+    "options": [
+      "terraform workspace show",
+      "terraform workspace list",
+      "terraform workspace select default",
+      "terraform state list"
+    ],
+    "answer": "terraform workspace show"
+  },
+  {
+    "category": "Terraform",
+    "set": 3,
+    "question": "S3 자체 잠금 파일 방식의 상태 잠금을 켜는 S3 백엔드 인수는?",
+    "options": [
+      "encrypt = true",
+      "workspace_key_prefix = \"env\"",
+      "skip_region_validation = true",
+      "use_lockfile = true"
+    ],
+    "answer": "use_lockfile = true"
+  }
+]

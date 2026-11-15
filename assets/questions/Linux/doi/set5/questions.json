@@ -1,0 +1,302 @@
+[
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "Bash एक्सपैंशन गी \"$name\" दे रूप च कोट करने कन्नै केह् रोकेआ जंदा ऐ?",
+    "options": [
+      "कोटें दे अंदर सारा पैरामीटर एक्सपैंशन",
+      "वेरिएबल दा बाद च बदलोना",
+      "कमांड गी खाली आर्ग्युमेंट मिलना",
+      "फैले दे मुल्ल दा वर्ड स्प्लिटिंग ते पाथनेम एक्सपैंशन"
+    ],
+    "answer": "फैले दे मुल्ल दा वर्ड स्प्लिटिंग ते पाथनेम एक्सपैंशन"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "Bash च सिंगल-कोट करने पर '$HOME' केह् करदा ऐ?",
+    "options": [
+      "पिछली वर्किंग डायरेक्टरी गी फैलांदा ऐ",
+      "डॉलर साइन हटाइयै HOME पास करदा ऐ",
+      "शाब्दिक टेक्स्ट $HOME पास करदा ऐ",
+      "यूज़र दी होम डायरेक्टरी गी फैलांदा ऐ"
+    ],
+    "answer": "शाब्दिक टेक्स्ट $HOME पास करदा ऐ"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "$(command) इस्तेमाल करने आह्ली Bash कमांड सबस्टीट्यूशन केह् पांदी ऐ?",
+    "options": [
+      "कमांड दी एग्जिट स्थिति दशमलव संख्या दे रूप च",
+      "कमांड दा स्टैंडर्ड आउटपुट, पिछली नमीं लैनां हटाइयै",
+      "कमांड दी संख्यात्मक प्रोसेस ID",
+      "सिर्फ कमांड दा स्टैंडर्ड एरर"
+    ],
+    "answer": "कमांड दा स्टैंडर्ड आउटपुट, पिछली नमीं लैनां हटाइयै"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "कैह्ड़ा Bash बिल्टइन मौजूदा शैल च स्क्रिप्ट फाइल दे कमांड पढ़दा ते चलांदा ऐ?",
+    "options": [
+      "source",
+      "exec",
+      "eval",
+      "export"
+    ],
+    "answer": "source"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "जदूं एग्जीक्यूशन सफल होंदा ऐ तां Bash स्क्रिप्ट च 'exec program' केह् करदा ऐ?",
+    "options": [
+      "program गी बैकग्राउंड जॉब दे रूप च शुरू करदा ऐ ते शैल चलदी रौंह्दी ऐ",
+      "program गी दो बारी चलांदा ऐ ते नतीजें दी तुलना करदा ऐ",
+      "program दे आउटपुट गी शैल सोर्स कोड दे रूप च लोड करदा ऐ",
+      "शैल प्रोसेस गी program कन्नै बदली दिंदा ऐ"
+    ],
+    "answer": "शैल प्रोसेस गी program कन्नै बदली दिंदा ऐ"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "Bash pipefail इनेबल होने पर, जेकर इक जां ज्यादा कमांड फेल होंदे न तां पाइपलाइन दी स्थिति केह् होंदी ऐ?",
+    "options": [
+      "जेकर आखरी कमांड सफल होऐ तां हमेशा जीरो",
+      "सारे कमांडें दी एग्जिट स्थितियें दा जोड़",
+      "सब थमां सज्जे आह्ले उस कमांड दी स्थिति जिसने नॉनजीरो मुड़ोआ",
+      "हमेशा पैहले कमांड दी स्थिति"
+    ],
+    "answer": "सब थमां सज्जे आह्ले उस कमांड दी स्थिति जिसने नॉनजीरो मुड़ोआ"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "GNU Coreutils दा इस्तेमाल करियै कैह्ड़ा कमांड checksums.txt च दर्ज SHA-256 चेकसम दी पुष्टि करदा ऐ?",
+    "options": [
+      "cksum checksums.txt",
+      "sha256sum -c checksums.txt",
+      "sha256sum checksums.txt",
+      "md5sum -c checksums.txt"
+    ],
+    "answer": "sha256sum -c checksums.txt"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "कैह्ड़ा GNU tar कमांड logs डायरेक्टरी दा gzip-कंप्रेस्ड आर्काइव बनांदा ऐ?",
+    "options": [
+      "tar -czf logs.tar.gz logs",
+      "tar -xzf logs.tar.gz",
+      "tar -tzf logs.tar.gz",
+      "gzip -d logs.tar.gz"
+    ],
+    "answer": "tar -czf logs.tar.gz logs"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "कैह्ड़ा tar ऑप्शन आर्काइव दी सामग्री गी कड्ढे बिना सूचीबद्ध करदा ऐ?",
+    "options": [
+      "-x",
+      "-c",
+      "-r",
+      "-t"
+    ],
+    "answer": "-t"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "Linux डायरेक्टरी पर setgid बिट आमतौर पर उदे अंदर नमीं बनी दी फाइलें आस्तै केह् करदा ऐ?",
+    "options": [
+      "ओह root यूज़र दी मल्कियत बनी जंदियां न",
+      "उंदे मालक द्वारा उनेंगी हटाया नेईं जाई सकदा",
+      "ओह डायरेक्टरी दी ग्रुप ओनरशिप विरासत च लैंदियां न",
+      "ओह हमेशा हर यूज़र आस्तै एक्जीक्यूटेबल बनी जंदियां न"
+    ],
+    "answer": "ओह डायरेक्टरी दी ग्रुप ओनरशिप विरासत च लैंदियां न"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "सांझी लिखने जोग डायरेक्टरी पर स्टिकी बिट मुक्ख रूप कन्नै केदे पर पाबंदी लांदा ऐ?",
+    "options": [
+      "फाइलसिस्टम पर डिस्क ब्लॉक कुस आबंटत करी सकदा ऐ",
+      "उस डायरेक्टरी च फाइलां कुस हटाई जां उंदा नांऽ बदली सकदा ऐ",
+      "उस डायरेक्टरी दी हर फाइल कुस पढ़ी सकदा ऐ",
+      "उस डायरेक्टरी थमां बाह्र प्रोग्राम कुस चलाई सकदा ऐ"
+    ],
+    "answer": "उस डायरेक्टरी च फाइलां कुस हटाई जां उंदा नांऽ बदली सकदा ऐ"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "कैह्ड़ा कमांड फाइल आस्तै एक्सेस-कंट्रोल-लिस्ट एंट्रियां दिखांदा ऐ?",
+    "options": [
+      "getfacl file.txt",
+      "setfacl -b file.txt",
+      "getfattr -d file.txt",
+      "lsattr file.txt"
+    ],
+    "answer": "getfacl file.txt"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "कैह्ड़ी फाइल आमतौर पर पासवर्ड हैश दे बजाय स्थानीय यूज़र अकाउंट रिकार्ड रखदी ऐ?",
+    "options": [
+      "/etc/shadow",
+      "/etc/group",
+      "/etc/gshadow",
+      "/etc/passwd"
+    ],
+    "answer": "/etc/passwd"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "कैह्ड़ा कमांड alice दे मौजूदा सप्लीमेंट्री ग्रुपें गी बदले बिना उसी सप्लीमेंट्री ग्रुप docker च जोड़दा ऐ?",
+    "options": [
+      "usermod -g docker alice",
+      "usermod -l docker alice",
+      "usermod -aG docker alice",
+      "usermod -G docker alice"
+    ],
+    "answer": "usermod -aG docker alice"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "कैह्ड़ा कमांड पासवर्ड-आधारित प्रमाणीकरण आस्तै Linux यूज़र दा पासवर्ड लॉक करदा ऐ?",
+    "options": [
+      "passwd -e alice",
+      "passwd -l alice",
+      "passwd -u alice",
+      "passwd -S alice"
+    ],
+    "answer": "passwd -l alice"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "कैह्ड़ा कमांड alice दी passwd एंट्री आस्तै कन्फिगर कीते गेदे नेम-सर्विस स्रोतें गी क्वेरी करदा ऐ?",
+    "options": [
+      "getent passwd alice",
+      "groups alice",
+      "id -u alice",
+      "whoami"
+    ],
+    "answer": "getent passwd alice"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "कैह्ड़ी फाइल आमतौर पर बूट पर अपने-आप माउंट होने आह्ले फाइलसिस्टम परिभाषत करदी ऐ?",
+    "options": [
+      "/etc/hosts",
+      "/etc/shells",
+      "/etc/resolv.conf",
+      "/etc/fstab"
+    ],
+    "answer": "/etc/fstab"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "कैह्ड़ा कमांड फाइलसिस्टम UUID ते होर ब्लॉक-डिवाइस गुण दिखांदा ऐ?",
+    "options": [
+      "modinfo",
+      "lscpu",
+      "blkid",
+      "lsmod"
+    ],
+    "answer": "blkid"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "मरम्मत करने आह्ले fsck ऑपरेशन थमां पैहले फाइलसिस्टम गी आमतौर पर अनमाउंट केह् करना चाहिदा?",
+    "options": [
+      "माउंट कीते गेदे फाइलसिस्टमें च कदें खाली जगह नेईं होंदी",
+      "इक्कै बेल्लै होने आह्ले फाइलसिस्टम राइट मरम्मत कन्नै टकराई सकदे न ते डेटा गी नुकसान पुजाई सकदे न",
+      "अनमाउंट करने कन्नै सारा फाइलसिस्टम मेटाडेटा अपने-आप एन्क्रिप्ट होई जंदा ऐ",
+      "fsck सिर्फ उनें फाइलसिस्टमें गी सपोर्ट करदा ऐ जिंदे डिवाइस नांऽ नेईं होंदे"
+    ],
+    "answer": "इक्कै बेल्लै होने आह्ले फाइलसिस्टम राइट मरम्मत कन्नै टकराई सकदे न ते डेटा गी नुकसान पुजाई सकदे न"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "कैह्ड़ा कमांड सक्रिय स्वैप एरिये दिखांदा ऐ?",
+    "options": [
+      "swapon --show",
+      "swapoff -a",
+      "free -s 1",
+      "vmstat -d"
+    ],
+    "answer": "swapon --show"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "कैह्ड़ा कमांड Linux कर्नल मॉड्यूल गी उदी निर्भरताएं समेत लोड करदा ऐ?",
+    "options": [
+      "rmmod",
+      "lsmod",
+      "modinfo",
+      "modprobe"
+    ],
+    "answer": "modprobe"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "कैह्ड़ा systemd कमांड कुसै यूनिट गी /dev/null कन्नै लिंक करियै उसी शुरू होने थमां रोकदा ऐ?",
+    "options": [
+      "systemctl stop app.service",
+      "systemctl reset-failed app.service",
+      "systemctl mask app.service",
+      "systemctl disable app.service"
+    ],
+    "answer": "systemctl mask app.service"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "कैह्ड़ा SSH ऑप्शन प्रमाणीकरण आस्तै प्राइवेट आइडेंटिटी फाइल चुनदा ऐ?",
+    "options": [
+      "-R",
+      "-i",
+      "-p",
+      "-L"
+    ],
+    "answer": "-i"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "कैह्ड़ा कमांड SSH राहें स्थानीय फाइल गी रिमोट यूज़र दी डायरेक्टरी च सुरक्षत रूप कन्नै कापी करदा ऐ?",
+    "options": [
+      "scp report.txt alice@server:/home/alice/",
+      "ssh alice@server cat report.txt",
+      "sftp -b report.txt alice@server",
+      "ssh-keygen -f report.txt"
+    ],
+    "answer": "scp report.txt alice@server:/home/alice/"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "'rsync -n' केह् मंगदा ऐ?",
+    "options": [
+      "स्रोत च गैर-मौजूद मंजल फाइलें गी मिटाना",
+      "ट्रांसफर कीते जाने आह्ले फाइल डेटा दा कंप्रेशन",
+      "हर फाइलसिस्टम एट्रिब्यूट दा रिकर्सिव संरक्षण",
+      "इक ड्राई रन जेहड़ा बदलाव कीते बिना इरादे दे बदलावें दी रिपोर्ट दिंदा ऐ"
+    ],
+    "answer": "इक ड्राई रन जेहड़ा बदलाव कीते बिना इरादे दे बदलावें दी रिपोर्ट दिंदा ऐ"
+  }
+]

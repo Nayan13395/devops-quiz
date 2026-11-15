@@ -1,0 +1,302 @@
+[
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "Pod वाहतुकीचेर परिणाम करपाखातीर NetworkPolicy क कशाची गरज आसता?",
+    "options": [
+      "दरेक निवडिल्ल्या Pod खातीर LoadBalancer Service",
+      "त्याच नांव-क्षेत्रांत PersistentVolumeClaim",
+      "दरेक धोरणाखातीर वेगळो API सेवक",
+      "NetworkPolicy लागू करपी जाळ्याची अंमलबजावणी"
+    ],
+    "answer": "NetworkPolicy लागू करपी जाळ्याची अंमलबजावणी"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "एकच Pod निवडपी अनेक NetworkPolicy तांणी परवानगी दिल्ली भितर येवपी वाहतूक कशी एकठांय करतात?",
+    "options": [
+      "पयलीं तयार केल्लें धोरण सगळीं फुडलीं धोरणां रद्द करता",
+      "दरेक धोरणान दरेक पॅकेटाक वेगळ्यान परवानगी दिवंक जाय",
+      "परवानगी आशिल्ली वाहतूक तांच्या भितर-येवपाच्या परवानग्यांचो एकत्र संच आसता",
+      "निमाणें तयार केल्लें धोरण सगळीं आदलीं धोरणां रद्द करता"
+    ],
+    "answer": "परवानगी आशिल्ली वाहतूक तांच्या भितर-येवपाच्या परवानग्यांचो एकत्र संच आसता"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "नांव-क्षेत्रा भितर परवानग्यो थारावपी RBAC वस्तू खंयची?",
+    "options": [
+      "ResourceQuota",
+      "Role",
+      "RoleBinding",
+      "ServiceAccount"
+    ],
+    "answer": "Role"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "एका नांव-क्षेत्रा भितर Role वा ClusterRole च्यो परवानग्यो दिवपी RBAC वस्तू खंयची?",
+    "options": [
+      "RoleBinding",
+      "ClusterRoleBinding",
+      "ServiceAccount",
+      "LimitRange"
+    ],
+    "answer": "RoleBinding"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "Kubernetes API प्रवेशाखातीर Pod मदीं चलपी प्रक्रियांक साधारण खंयची वळख दितात?",
+    "options": [
+      "StorageClass",
+      "RuntimeClass",
+      "PriorityClass",
+      "ServiceAccount"
+    ],
+    "answer": "ServiceAccount"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "वस्तू वाचूंक शकपी मनशापसून Secret चो डेटा राखपाक ताचें base64 एन्कोडिंग करप पुरेसें कित्याक ना?",
+    "options": [
+      "Base64 आपोआप DNS वरवीं डेटा प्रकाशित करता",
+      "Base64 क Pod मदीं सांठयल्ली खाजगी की गरजेची आसता",
+      "Base64 हें उलट करून मूळ डेटा मेळोवप शक्य आशिल्लें एन्कोडिंग आसा, कूटबद्धीकरण न्हय",
+      "Base64 हें Kubernetes क डेटा सांठोवपापसून अडयता"
+    ],
+    "answer": "Base64 हें उलट करून मूळ डेटा मेळोवप शक्य आशिल्लें एन्कोडिंग आसा, कूटबद्धीकरण न्हय"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "Kubernetes न Pod मदीं API प्रमाणीकरण तपशील आपोआप माउंट करप थांबोवूंक शकपी क्षेत्र खंयचें?",
+    "options": [
+      "shareProcessNamespace: false",
+      "automountServiceAccountToken: false",
+      "hostNetwork: false",
+      "enableServiceLinks: false"
+    ],
+    "answer": "automountServiceAccountToken: false"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "नांव-क्षेत्रांतल्या एकूण संसाधन वापराक मर्यादा घालपी वस्तू खंयची?",
+    "options": [
+      "ResourceQuota",
+      "LimitRange",
+      "PriorityClass",
+      "PodDisruptionBudget"
+    ],
+    "answer": "ResourceQuota"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "नांव-क्षेत्रांतल्या कंटेनरांक पूर्वनिर्धारीत संसाधन मागण्यो आनी मर्यादा दिवंक शकपी वस्तू खंयची?",
+    "options": [
+      "ResourceQuota",
+      "HorizontalPodAutoscaler",
+      "RuntimeClass",
+      "LimitRange"
+    ],
+    "answer": "LimitRange"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "काडून उडोवपाची मागणी केल्या उपरांत Kubernetes वस्तूचेरलो finalizer किदें करता?",
+    "options": [
+      "दरेक अवलंबून आशिल्ली वस्तू रोखडीच काडून उडयता",
+      "वस्तू बदलूंक जायनाशिल्ल्या Secret मदीं बदलता",
+      "गरजेची साफसफाय finalizer काडटा तों मेरेन वस्तू काडून उडोवप प्रलंबीत दवरता",
+      "वस्तूचेरले सगळे फुडले बदल अडयता"
+    ],
+    "answer": "गरजेची साफसफाय finalizer काडटा तों मेरेन वस्तू काडून उडोवप प्रलंबीत दवरता"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "कचरो एकठांय करून काडपाखातीर अवलंबून आशिल्ल्या वस्तूंक तांच्या धन्यां कडेन जोडपी मेटाडेटा क्षेत्र खंयचें?",
+    "options": [
+      "managedFields",
+      "ownerReferences",
+      "annotations",
+      "labels"
+    ],
+    "answer": "ownerReferences"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "CustomResourceDefinition क्लस्टरांत किदें जोडटा?",
+    "options": [
+      "Kubernetes API पुरवता असो नवो आपल्या गरजेचो संसाधन प्रकार",
+      "अस्तित्वांतल्या प्रकाराखातीर चालू आशिल्लो स्थिती-जुळवणी नियंत्रक",
+      "दरेक सेवा खात्याक RBAC परवानगी",
+      "दरेक अंगभूत संसाधन प्रकाराचें प्रतिरूप"
+    ],
+    "answer": "Kubernetes API पुरवता असो नवो आपल्या गरजेचो संसाधन प्रकार"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "Kubernetes ऑपरेटर आनी फकत आपल्या गरजेची संसाधन व्याख्या हांचो फरक किदें?",
+    "options": [
+      "ऑपरेटर फकत रचना व्याख्या सांठोवूंक शकता",
+      "ऑपरेटर API सेवकाची गरज काडून उडयता",
+      "ऑपरेटर फकत kubectl च्या निर्गमाचें स्वरूप बदलता",
+      "दाखयल्लो अनुप्रयोग सांबाळपाखातीर ऑपरेटर स्थिती-जुळवणी तर्क लेगीत चलयता"
+    ],
+    "answer": "दाखयल्लो अनुप्रयोग सांबाळपाखातीर ऑपरेटर स्थिती-जुळवणी तर्क लेगीत चलयता"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "प्रमाणीकरण आनी अधिकार तपासणी उपरांत, कायम सांठोवचे पयलीं API मागणी न्हयकारूंक वा बदलूंक शकपी यंत्रणा खंयची?",
+    "options": [
+      "कंटेनर प्रतिमा हाडप",
+      "Service अंतबिंदू मार्गनिर्देशन",
+      "प्रवेश-मंजुरी नियंत्रण",
+      "Pod नियोजन"
+    ],
+    "answer": "प्रवेश-मंजुरी नियंत्रण"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "खंयचोय पात्र नोड Pod च्या आवश्यक नोड-सुसंगततेक जुळना जाल्यार किदें जाता?",
+    "options": [
+      "API सेवक ताका दरेक नोडाचेर नेमता",
+      "योग्य नोड उपलब्ध जायसर वा मर्यादा बदलसर Pod नेमूंक नाशिल्लो उरता",
+      "एका यत्ना उपरांत नियोजक नियमाक दुर्लक्ष करता",
+      "Pod आपोआप DaemonSet जाता"
+    ],
+    "answer": "योग्य नोड उपलब्ध जायसर वा मर्यादा बदलसर Pod नेमूंक नाशिल्लो उरता"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "preferredDuringSchedulingIgnoredDuringExecution नोड-सुसंगतता किदें सांगता?",
+    "options": [
+      "जुळनाशिल्ले पूण हेर बाबतींनी पात्र नोड वगळिनाशिल्ली स्थान-निवडीची पसंती",
+      "जुळनाशिल्ल्या नोडांचेर दवरप अडोवपी सक्तीची अट",
+      "नोड लेबल बदलल्यार Pod काडपाची सूचना",
+      "नियोजक पुरायपणान वगळपाची मागणी"
+    ],
+    "answer": "जुळनाशिल्ले पूण हेर बाबतींनी पात्र नोड वगळिनाशिल्ली स्थान-निवडीची पसंती"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "नोडाचीं लेबल चालू Pod च्या नोड-सुसंगतता नियमाक जुळप बंद जाल्यार IgnoredDuringExecution हाचो अर्थ किदें?",
+    "options": [
+      "Pod रोखडोच काडून उडोवंक जाय",
+      "Pod चे कंटेनर आपोआप परत सुरू जातात",
+      "नोडाचीं लेबल आपोआप पयलींच्या मोलांक परत येतात",
+      "फकत त्या नियमाक लागून चालू Pod काडनात"
+    ],
+    "answer": "फकत त्या नियमाक लागून चालू Pod काडनात"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "Pod न spec.nodeName स्पष्टपणान दिल्यार किदें जाता?",
+    "options": [
+      "तो त्या नांवाचो नोड तयार करता",
+      "Pod सद्या चलपी नोडाचें नांव तो बदलता",
+      "नियोजक वगळून तो त्या नांवाच्या नोडाक नेमटात",
+      "सगळ्या जुळपी नोड लेबलांक क्रम दिवपाक तो नियोजकाक सांगता"
+    ],
+    "answer": "नियोजक वगळून तो त्या नांवाच्या नोडाक नेमटात"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "टोपोलॉजी प्रसार मर्यादांचो हेतू किदें?",
+    "options": [
+      "नियंत्रण-पांवड्याच्या घटकांमदली वाहतूक कूटबद्ध करप",
+      "जुळपी Pod टोपोलॉजी क्षेत्रांनी कशे वांटटात ताचेर नियंत्रण दवरप",
+      "कायम व्हॉल्यूमां मदीं कंटेनर फायलींची प्रत काडप",
+      "दरेक नांव-क्षेत्राक एक सार्वजनिक IP दिवप"
+    ],
+    "answer": "जुळपी Pod टोपोलॉजी क्षेत्रांनी कशे वांटटात ताचेर नियंत्रण दवरप"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "taint सहन करिनाशिल्ले पयलींच चालू Pod काडूंक शकपी taint परिणाम खंयचो?",
+    "options": [
+      "NoExecute",
+      "NoSchedule",
+      "PreferNoSchedule",
+      "None"
+    ],
+    "answer": "NoExecute"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "Linux कंटेनर root नाशिल्लो वापरपी म्हूणच चलप गरजेचें करपी कंटेनर securityContext मांडावळ खंयची?",
+    "options": [
+      "readOnlyRootFilesystem: true",
+      "privileged: false",
+      "allowPrivilegeEscalation: false",
+      "runAsNonRoot: true"
+    ],
+    "answer": "runAsNonRoot: true"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "Linux प्रक्रियेक तिच्या पालका परस चड अधिकार मेळोवपापसून अडोवपी कंटेनर securityContext मांडावळ खंयची?",
+    "options": [
+      "readOnlyRootFilesystem: true",
+      "privileged: false",
+      "allowPrivilegeEscalation: false",
+      "runAsNonRoot: true"
+    ],
+    "answer": "allowPrivilegeEscalation: false"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "अनुप्रयोग कंटेनर बदलिनासतना अडचणी सोडोवपाखातीर अस्तित्वांतल्या Pod मदीं खंयच्या प्रकारचो कंटेनर जोडूंक शकता?",
+    "options": [
+      "परत सुरू करूंक शकपी init कंटेनर",
+      "तात्पुरतो कंटेनर",
+      "सामान्य init कंटेनर",
+      "नियमित अनुप्रयोग कंटेनर"
+    ],
+    "answer": "तात्पुरतो कंटेनर"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "Service चे जाळें अंतबिंदू वाडोवप शक्य आशिल्ल्या गटांनी नोंदोवपी संसाधन खंयचें?",
+    "options": [
+      "EndpointSlice",
+      "IngressClass",
+      "NetworkPolicy",
+      "RuntimeClass"
+    ],
+    "answer": "EndpointSlice"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "Ingress संसाधनान प्रत्यक्ष HTTP मार्गनिर्देशनाची मांडावळ करपाखातीर किदें गरजेचें आसा?",
+    "options": [
+      "दरेक नांव-क्षेत्रांत ingress नांवाचो ConfigMap",
+      "दरेक होस्टनांवाखातीर PersistentVolume",
+      "सगळे निवडिल्ले Pod परत सुरू करपी Job",
+      "ताचे नियम लागू करपी Ingress नियंत्रक"
+    ],
+    "answer": "ताचे नियम लागू करपी Ingress नियंत्रक"
+  }
+]

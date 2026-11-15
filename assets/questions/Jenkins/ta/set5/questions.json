@@ -1,0 +1,302 @@
+[
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "ஒரே Pipelineஐ ஒரே நேரத்தில் இயக்காமல் புதிய இயக்கத்தை வரிசையில் வைக்கும் Declarative விருப்பம் எது?",
+    "options": [
+      "parallelsAlwaysFailFast()",
+      "disableConcurrentBuilds()",
+      "disableResume()",
+      "skipDefaultCheckout()"
+    ],
+    "answer": "disableConcurrentBuilds()"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "பழைய உருவாக்கப் பதிவுகளையும் பொருட்களையும் வைத்திருக்கும் விதிகளை அமைக்கும் Declarative விருப்பம் எது?",
+    "options": [
+      "buildDiscarder(logRotator(numToKeepStr: '10'))",
+      "timeout(time: 10, unit: 'MINUTES')",
+      "retry(10)",
+      "quietPeriod(10)"
+    ],
+    "answer": "buildDiscarder(logRotator(numToKeepStr: '10'))"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "Jenkins cron கோவையில் H குறியீடு எதை வழங்குகிறது?",
+    "options": [
+      "பயனரின் கணினியில் தற்போதைய மணி",
+      "விடுமுறைகளில் மட்டும் இயக்கும் கோரிக்கை",
+      "முனை செயலற்றிருக்கும்போது மட்டும் இயக்கும் கோரிக்கை",
+      "அட்டவணையிட்ட சுமையைப் பகிரும் வேலைப் பெயர்சார்ந்த நிலையான ஹாஷ்"
+    ],
+    "answer": "அட்டவணையிட்ட சுமையைப் பகிரும் வேலைப் பெயர்சார்ந்த நிலையான ஹாஷ்"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "Jenkinsஇன் ஐந்து புல cron தொடரியலில் ஐந்தாவது புலம் எதைக் குறிக்கிறது?",
+    "options": [
+      "நாளின் மணி",
+      "மாதத்தின் நாள்",
+      "வாரத்தின் நாள்",
+      "மணியின் நிமிடம்"
+    ],
+    "answer": "வாரத்தின் நாள்"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "முந்தைய உருவாக்கம் தோல்வியடைந்தோ நிலையற்றோ இருந்தபின் புதியது வெற்றிபெற்றால் இயங்கும் post நிபந்தனை எது?",
+    "options": [
+      "unsuccessful",
+      "fixed",
+      "changed",
+      "regression"
+    ],
+    "answer": "fixed"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "மற்ற post நிபந்தனைகள் மதிப்பிட்ட பிறகு இயங்கும் post நிபந்தனை எது?",
+    "options": [
+      "cleanup",
+      "always",
+      "changed",
+      "success"
+    ],
+    "answer": "cleanup"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "ஒரு நிலையின் ஏஜென்டை ஒதுக்கும்முன் நிபந்தனையை மதிப்பிடும் when விருப்பம் எது?",
+    "options": [
+      "beforeInput false",
+      "beforeOptions false",
+      "branch 'main'",
+      "beforeAgent true"
+    ],
+    "answer": "beforeAgent true"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "Multibranch Pipelineஇல் பெயரிட்ட கிளையைக் குறிவைக்கும் when நிபந்தனை எது?",
+    "options": [
+      "buildingTag()",
+      "changeRequest()",
+      "branch 'main'",
+      "tag 'main'"
+    ],
+    "answer": "branch 'main'"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "இயக்கமுறைமை, உலாவி போன்ற அச்சுகளின் மதிப்புச் சேர்க்கைகளை இயக்கும் Declarative கட்டமைப்பு எது?",
+    "options": [
+      "environment",
+      "matrix",
+      "parallel",
+      "steps"
+    ],
+    "answer": "matrix"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "Declarative அணியிலிருந்து தேவையற்ற சேர்க்கைகளை நீக்கும் பகுதி எது?",
+    "options": [
+      "excludes",
+      "axes",
+      "stages",
+      "tools"
+    ],
+    "answer": "excludes"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "இணைக் கிளைகள் கொண்ட நிலையில் ஒன்று தோல்வியடைந்தால் மற்றவற்றை நிறுத்தும் அமைப்பு எது?",
+    "options": [
+      "beforeAgent true",
+      "reuseNode true",
+      "alwaysPull true",
+      "failFast true"
+    ],
+    "answer": "failFast true"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "உருவாக்கம் நிலையற்றதானதும் பிந்தைய நிலைகளைத் தவிர்க்கும் Declarative விருப்பம் எது?",
+    "options": [
+      "disableResume()",
+      "preserveStashes()",
+      "skipStagesAfterUnstable()",
+      "skipDefaultCheckout()"
+    ],
+    "answer": "skipStagesAfterUnstable()"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "தோல்வியைப் பதிவுசெய்து தனது தொகுப்பிற்குப் பிறகு இயக்கத்தைத் தொடர அனுமதிக்கும் Pipeline படி எது?",
+    "options": [
+      "input",
+      "catchError",
+      "error",
+      "timeout"
+    ],
+    "answer": "catchError"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "செயல்முறை முடிந்ததும் sh(script: 'check.sh', returnStatus: true) எதைத் தருகிறது?",
+    "options": [
+      "செயல்முறையின் எண் வெளியேறும் குறியீடு",
+      "முழு நிலையான வெளியீட்டு உரை",
+      "ஷெல்லின் செயல்முறை ID",
+      "Jenkins அணுகல் விவரப் பொருள்"
+    ],
+    "answer": "செயல்முறையின் எண் வெளியேறும் குறியீடு"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "வெற்றிபெறும்போது sh(script: 'echo ready', returnStdout: true) எதைத் தருகிறது?",
+    "options": [
+      "உருவாக்கத்தின் எண்",
+      "மேப்பாக ஷெல்லின் சூழல்",
+      "ஏஜென்டின் லேபிள் பட்டியல்",
+      "பெறப்பட்ட நிலையான வெளியீட்டுச் சரம்"
+    ],
+    "answer": "பெறப்பட்ட நிலையான வெளியீட்டுச் சரம்"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "தற்போதைய பணியிட அடைவின் உள்ளடக்கத்தை உட்பகுதிகளுடன் நீக்கும் Pipeline படி எது?",
+    "options": [
+      "pwd",
+      "readFile",
+      "deleteDir",
+      "fileExists"
+    ],
+    "answer": "deleteDir"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "தற்போதைய பணியிடத்தில் பாதை உள்ளதா எனச் சோதிக்கும் Pipeline படி எது?",
+    "options": [
+      "libraryResource",
+      "fileExists",
+      "readFile",
+      "writeFile"
+    ],
+    "answer": "fileExists"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "மற்றொரு Jenkins வேலையைத் தூண்டி உருவாக்க அளவுருக்களையும் வழங்கக்கூடிய Pipeline படி எது?",
+    "options": [
+      "build",
+      "stage",
+      "node",
+      "checkout"
+    ],
+    "answer": "build"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "நிலைகளை மீண்டும் தொடங்க முடிந்த உருவாக்கங்களின் ஸ்டாஷ்களை வைத்திருக்கும் Declarative விருப்பம் எது?",
+    "options": [
+      "disableResume()",
+      "skipDefaultCheckout()",
+      "quietPeriod(5)",
+      "preserveStashes()"
+    ],
+    "answer": "preserveStashes()"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "vars/deploy.groovy வரையறுக்கும் உலகளாவிய deploy மாறிக்கான உதவி உரையை வழங்கும் Shared Library கோப்பு எது?",
+    "options": [
+      "resources/deploy.txt",
+      "vars/main.groovy",
+      "vars/deploy.txt",
+      "src/deploy.groovy"
+    ],
+    "answer": "vars/deploy.txt"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "Jenkins Pipelineஇல் @NonCPS குறியிடப்பட்ட மெத்தட்டின் முக்கியக் கட்டுப்பாடு என்ன?",
+    "options": [
+      "அது Windows ஏஜென்டில் இயங்க வேண்டும்",
+      "அது CPS மாற்றம் செய்யப்பட்ட Pipeline படிகளை அழைக்கக்கூடாது",
+      "அதில் stage அறிவுறுத்தல் இருக்க வேண்டும்",
+      "அது எப்போதும் சரத்தைத் தர வேண்டும்"
+    ],
+    "answer": "அது CPS மாற்றம் செய்யப்பட்ட Pipeline படிகளை அழைக்கக்கூடாது"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "அனுமதிக்கப்படாத சாண்ட்பாக்ஸ் Groovy குறியீடு கோரும் கையொப்பங்களை மதிப்பாய்வு செய்யும் Jenkins வசதி எது?",
+    "options": [
+      "செயல்முறைக்குள் ஸ்கிரிப்ட் ஒப்புதல்",
+      "Credentials Store",
+      "Build Queue",
+      "SCM தொடர் விசாரணைப் பதிவு"
+    ],
+    "answer": "செயல்முறைக்குள் ஸ்கிரிப்ட் ஒப்புதல்"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "பிணைக்கப்பட்ட ரகசிய மாறியை ஷெல் விரிவாக்க அனுமதிக்கும் ஸ்கிரிப்டிற்கு எந்த Groovy மேற்கோள் பாணி பரிந்துரைக்கப்படுகிறது?",
+    "options": [
+      "ரகசியத்தை உள்ளீடு செய்த இரட்டை மேற்கோள் Groovy சரம்",
+      "ரகசியத்தை உள்ளீடு செய்த மூன்று இரட்டை மேற்கோள் Groovy சரம்",
+      "சாதாரண உரை ரகசியத்தை இணைத்து உருவாக்கிய Groovy சரம்",
+      "ஒற்றை மேற்கோள் Groovy சரம்"
+    ],
+    "answer": "ஒற்றை மேற்கோள் Groovy சரம்"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "தொடர்புடைய வலைக் கோரிக்கைகளுக்கு Jenkins CSRF crumbஇன் நோக்கம் என்ன?",
+    "options": [
+      "பதிவேற்றும்முன் உருவாக்கப் பொருளை மறையாக்குதல்",
+      "உருவாக்கத்தை இயக்கும் ஏஜென்டைத் தேர்ந்தெடுத்தல்",
+      "நிலை மாற்றும் கோரிக்கை நிறுவப்பட்ட பயனர் அமர்வைச் சேர்ந்தது எனச் சரிபார்க்க உதவுதல்",
+      "அனைத்து வேலைகளின் அனுமதிச் சோதனைகளுக்குப் பதிலாகச் செயல்படுதல்"
+    ],
+    "answer": "நிலை மாற்றும் கோரிக்கை நிறுவப்பட்ட பயனர் அமர்வைச் சேர்ந்தது எனச் சரிபார்க்க உதவுதல்"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "வெவ்வேறு வேலைகளுக்கிடையே பகிரப்பட்ட சோதனைச் சாதனத்தை ஒரே நேரத்தில் ஒன்று மட்டும் அணுக Pipeline எதைப் பயன்படுத்த வேண்டும்?",
+    "options": [
+      "skipDefaultCheckout விருப்பம்",
+      "Lockable Resources செருகுநிரலின் lock படி",
+      "timestamps விருப்பம்",
+      "buildDiscarder விருப்பம்"
+    ],
+    "answer": "Lockable Resources செருகுநிரலின் lock படி"
+  }
+]

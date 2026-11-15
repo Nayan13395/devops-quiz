@@ -1,0 +1,302 @@
+[
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "Which Declarative option queues a new run rather than allowing concurrent runs of the same Pipeline?",
+    "options": [
+      "parallelsAlwaysFailFast()",
+      "disableConcurrentBuilds()",
+      "disableResume()",
+      "skipDefaultCheckout()"
+    ],
+    "answer": "disableConcurrentBuilds()"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "Which Declarative option specifies retention rules for old build records and artifacts?",
+    "options": [
+      "buildDiscarder(logRotator(numToKeepStr: '10'))",
+      "timeout(time: 10, unit: 'MINUTES')",
+      "retry(10)",
+      "quietPeriod(10)"
+    ],
+    "answer": "buildDiscarder(logRotator(numToKeepStr: '10'))"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "What does the H symbol in a Jenkins cron expression provide?",
+    "options": [
+      "The current hour on the user's computer",
+      "A request to run only on holidays",
+      "A request to run only when a node is idle",
+      "A stable job-name-based hash used to spread scheduled load"
+    ],
+    "answer": "A stable job-name-based hash used to spread scheduled load"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "In Jenkins' five-field cron syntax, what does the fifth field represent?",
+    "options": [
+      "Hour of the day",
+      "Day of the month",
+      "Day of the week",
+      "Minute of the hour"
+    ],
+    "answer": "Day of the week"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "Which post condition runs when a build succeeds after the previous build failed or was unstable?",
+    "options": [
+      "unsuccessful",
+      "fixed",
+      "changed",
+      "regression"
+    ],
+    "answer": "fixed"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "Which post condition runs after the other post conditions have been evaluated?",
+    "options": [
+      "cleanup",
+      "always",
+      "changed",
+      "success"
+    ],
+    "answer": "cleanup"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "Which when option evaluates a stage condition before allocating that stage's agent?",
+    "options": [
+      "beforeInput false",
+      "beforeOptions false",
+      "branch 'main'",
+      "beforeAgent true"
+    ],
+    "answer": "beforeAgent true"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "Which when condition targets a named branch in a Multibranch Pipeline?",
+    "options": [
+      "buildingTag()",
+      "changeRequest()",
+      "branch 'main'",
+      "tag 'main'"
+    ],
+    "answer": "branch 'main'"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "Which Declarative construct runs combinations of axis values such as operating system and browser?",
+    "options": [
+      "environment",
+      "matrix",
+      "parallel",
+      "steps"
+    ],
+    "answer": "matrix"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "Which section removes unwanted combinations from a Declarative matrix?",
+    "options": [
+      "excludes",
+      "axes",
+      "stages",
+      "tools"
+    ],
+    "answer": "excludes"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "Which setting on a stage containing parallel branches stops the other branches when one fails?",
+    "options": [
+      "beforeAgent true",
+      "reuseNode true",
+      "alwaysPull true",
+      "failFast true"
+    ],
+    "answer": "failFast true"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "Which Declarative option skips later stages once the build becomes unstable?",
+    "options": [
+      "disableResume()",
+      "preserveStashes()",
+      "skipStagesAfterUnstable()",
+      "skipDefaultCheckout()"
+    ],
+    "answer": "skipStagesAfterUnstable()"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "Which Pipeline step records a failure while allowing execution after its body to continue?",
+    "options": [
+      "input",
+      "catchError",
+      "error",
+      "timeout"
+    ],
+    "answer": "catchError"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "What does sh(script: 'check.sh', returnStatus: true) return after the process exits?",
+    "options": [
+      "The numeric process exit code",
+      "The complete standard-output text",
+      "The process ID of the shell",
+      "A Jenkins credentials object"
+    ],
+    "answer": "The numeric process exit code"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "What does sh(script: 'echo ready', returnStdout: true) return on success?",
+    "options": [
+      "The numeric build number",
+      "The shell's environment as a map",
+      "The agent's label list",
+      "The captured standard-output string"
+    ],
+    "answer": "The captured standard-output string"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "Which Pipeline step deletes the current workspace directory's contents recursively?",
+    "options": [
+      "pwd",
+      "readFile",
+      "deleteDir",
+      "fileExists"
+    ],
+    "answer": "deleteDir"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "Which Pipeline step checks whether a path exists in the current workspace?",
+    "options": [
+      "libraryResource",
+      "fileExists",
+      "readFile",
+      "writeFile"
+    ],
+    "answer": "fileExists"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "Which Pipeline step triggers another Jenkins job and can pass build parameters?",
+    "options": [
+      "build",
+      "stage",
+      "node",
+      "checkout"
+    ],
+    "answer": "build"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "Which Declarative option retains stashes from completed builds for restarting stages?",
+    "options": [
+      "disableResume()",
+      "skipDefaultCheckout()",
+      "quietPeriod(5)",
+      "preserveStashes()"
+    ],
+    "answer": "preserveStashes()"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "Which file in a Shared Library provides help text for the global variable deploy defined by vars/deploy.groovy?",
+    "options": [
+      "resources/deploy.txt",
+      "vars/main.groovy",
+      "vars/deploy.txt",
+      "src/deploy.groovy"
+    ],
+    "answer": "vars/deploy.txt"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "What is a key restriction of a method annotated @NonCPS in a Jenkins Pipeline?",
+    "options": [
+      "It must run on a Windows agent",
+      "It must not call CPS-transformed Pipeline steps",
+      "It must contain a stage directive",
+      "It must always return a string"
+    ],
+    "answer": "It must not call CPS-transformed Pipeline steps"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "Which Jenkins facility reviews signatures requested by unapproved sandboxed Groovy code?",
+    "options": [
+      "In-process Script Approval",
+      "Credentials Store",
+      "Build Queue",
+      "SCM Polling Log"
+    ],
+    "answer": "In-process Script Approval"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "Which Groovy quoting style is recommended for a shell script that lets the shell expand a bound secret variable?",
+    "options": [
+      "A double-quoted interpolated Groovy string containing the secret",
+      "A triple-double-quoted interpolated Groovy string containing the secret",
+      "A Groovy string formed by concatenating the plaintext secret",
+      "A single-quoted Groovy string"
+    ],
+    "answer": "A single-quoted Groovy string"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "What is the purpose of a Jenkins CSRF crumb for relevant web requests?",
+    "options": [
+      "Encrypt a build artifact before upload",
+      "Select the agent that executes a build",
+      "Help verify that a state-changing request belongs to an established user session",
+      "Replace authorization checks for all jobs"
+    ],
+    "answer": "Help verify that a state-changing request belongs to an established user session"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "What should a Pipeline use to coordinate exclusive access to a shared test device across different jobs?",
+    "options": [
+      "The skipDefaultCheckout option",
+      "The lock step from the Lockable Resources plugin",
+      "The timestamps option",
+      "The buildDiscarder option"
+    ],
+    "answer": "The lock step from the Lockable Resources plugin"
+  }
+]

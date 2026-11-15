@@ -1,0 +1,302 @@
+[
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "टास्क-लेवल ओवरराइड दे बगैर, चेक-मोड रन दौरान उस मॉड्यूल कन्नै केह् होंदा ऐ जेह्ड़ा चेक मोड गी सपोर्ट नेईं करदा?",
+    "options": [
+      "मॉड्यूल हमेशा अपने आम बदलाऽ करदा ऐ",
+      "मॉड्यूल अपने आप localhost पर चलदा ऐ",
+      "मॉड्यूल गी तदूं तगर रीट्राई कीता जंदा ऐ जदूं तगर ओह चेक मोड गी सपोर्ट नेईं करदा",
+      "मॉड्यूल बदलाऽ करने दी थाहर स्किप कीता जंदा ऐ"
+    ],
+    "answer": "मॉड्यूल बदलाऽ करने दी थाहर स्किप कीता जंदा ऐ"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "जदूं प्लेबुक --check कन्नै चलाई जंदी ऐ तां बी केह्ड़ी टास्क सेटिंग असली बदलाऽ करने दिंदी ऐ?",
+    "options": [
+      "changed_when: false",
+      "ignore_errors: true",
+      "check_mode: false",
+      "diff: false"
+    ],
+    "answer": "check_mode: false"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "केह्ड़ा Ansible मेटा एक्शन उनें हैंडलरें गी फौरन चलांदा ऐ जिनेंगी पैहले थमां नोटिफाई कीता जा चुके दा ऐ?",
+    "options": [
+      "reset_connection",
+      "flush_handlers",
+      "clear_facts",
+      "end_play"
+    ],
+    "answer": "flush_handlers"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "जे दो changed टास्क हैंडलर गी फ्लश होने थमां पैहलें नोटिफाई करन तां ओह हैंडलर फ्लश प्वाइंट पर आमतौर पर कितनी बारी चलदा ऐ?",
+    "options": [
+      "इक बारी",
+      "दो बारी",
+      "हर इन्वेंटरी ग्रुप आस्तै इक बारी",
+      "सिफर बारी, कीजे नोटिफिकेशन आपस च टकरांदे न"
+    ],
+    "answer": "इक बारी"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "इक्को फ्लश प्वाइंट पर नोटिफाई कीते गेदे हैंडलरें दा एक्ज़ीक्यूशन क्रम केह्ड़ी गल्ल तय करदी ऐ?",
+    "options": [
+      "उंदे नांएं दा वर्णमाला क्रम",
+      "notify लिस्ट च नांएं दा क्रम",
+      "मैनेज कीते गेदे होस्टें दे कनेक्ट होने दा क्रम",
+      "handlers सेक्शन च उंदी परिभाशा दा क्रम"
+    ],
+    "answer": "handlers सेक्शन च उंदी परिभाशा दा क्रम"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "केह्ड़ी नाकामी आमतौर पर block दे rescue टास्कें गी ट्रिगर करदी ऐ?",
+    "options": [
+      "प्लेबुक च गलत टास्क परिभाशा ऐ",
+      "YAML डॉक्यूमेंट पार्स नेईं कीता जाई सकदा",
+      "block दे अंदर कोई टास्क फेल नतीजा दिंदा ऐ",
+      "टास्क चलने थमां पैहलें कोई होस्ट पुज्जने जोग नेईं रेहंदा"
+    ],
+    "answer": "block दे अंदर कोई टास्क फेल नतीजा दिंदा ऐ"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "आम टास्क पर ignore_errors केह्ड़ी गलती गी नेईं दबांदा?",
+    "options": [
+      "failed_when शर्त दा true बनी जाना",
+      "अपरिभाशत-वेरिएबल दी गलती",
+      "कमांड दी रिपोर्ट कीती गेदी गैर-सिफर एग्ज़िट स्थिति",
+      "मॉड्यूल दा साफ तौर पर failed मार्क कीता गेदा नतीजा"
+    ],
+    "answer": "अपरिभाशत-वेरिएबल दी गलती"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "केह्ड़ा कीवर्ड बिना संभाली गेदी टास्क नाकामी गी, मौजूदा बैच दे उस टास्क गी पूरा करने दे बाद, सारे होस्टें पर प्ले गी रोकने आला बनांदा ऐ?",
+    "options": [
+      "any_errors_fatal",
+      "ignore_unreachable",
+      "max_fail_percentage: 100",
+      "force_handlers"
+    ],
+    "answer": "any_errors_fatal"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "जदूं पुज्जने जोग होस्ट पर बाद दा कोई टास्क फेल होंदा ऐ तां force_handlers दा केह् असर होंदा ऐ?",
+    "options": [
+      "हर परिभाशत हैंडलर नोटिफिकेशन दे बगैर बी चलदा ऐ",
+      "सारे फेल टास्क अपने आप रीट्राई होंदे न",
+      "हैंडलर आम टास्कें थमां पैहलें चलदे न",
+      "पैहलें नोटिफाई कीते गेदे हैंडलर उस होस्ट पर फिरी बी चली सकदे न"
+    ],
+    "answer": "पैहलें नोटिफाई कीते गेदे हैंडलर उस होस्ट पर फिरी बी चली सकदे न"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "केह्ड़ी टास्क सेटिंग संवेदनशील टास्क आर्ग्युमेंटें ते नतीजें दी आम लॉगिंग गी दबांदी ऐ?",
+    "options": [
+      "check_mode: true",
+      "changed_when: false",
+      "no_log: true",
+      "diff: true"
+    ],
+    "answer": "no_log: true"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "--diff चालू होने पर बी केह्ड़ी टास्क सेटिंग फाइल-सामग्री दे फर्कें गी दबांदी ऐ?",
+    "options": [
+      "ignore_errors: true",
+      "diff: false",
+      "no_log: false",
+      "check_mode: false"
+    ],
+    "answer": "diff: false"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "केह्ड़ी डिक्शनरी कुसै होर इन्वेंटरी होस्ट कन्नै जुड़े वेरिएबलें तगर पुज्जन दिंदी ऐ?",
+    "options": [
+      "hostvars",
+      "ansible_facts",
+      "environment",
+      "ansible_loop"
+    ],
+    "answer": "hostvars"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "केह्ड़े मैजिक वेरिएबल च मौजूदा होस्ट दा इन्वेंटरी नां होंदा ऐ?",
+    "options": [
+      "ansible_host",
+      "ansible_user",
+      "ansible_playbook_python",
+      "inventory_hostname"
+    ],
+    "answer": "inventory_hostname"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "होस्ट ग्रुप दे सांझे वेरिएबलें आस्तै रवायती तौर पर केह्ड़ी इन्वेंटरी दे नेड़ले आली डायरेक्टरी इस्तेमाल होंदी ऐ?",
+    "options": [
+      "roles",
+      "collections",
+      "group_vars",
+      "host_vars"
+    ],
+    "answer": "group_vars"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "ansible.builtin.file लुकअप डिफ़ॉल्ट तौर पर फाइल कुत्थें पढ़दा ऐ?",
+    "options": [
+      "become_user ने नामजद कीते गेदे होस्ट पर",
+      "कंट्रोल नोड पर",
+      "हर मैनेज कीते गेदे होस्ट पर",
+      "प्ले दे पैहले होस्ट पर"
+    ],
+    "answer": "कंट्रोल नोड पर"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "केह्ड़ा फिल्टर YAML स्ट्रिंग गी Ansible डेटा स्ट्रक्चर च बदलदा ऐ?",
+    "options": [
+      "from_yaml",
+      "to_yaml",
+      "to_json",
+      "dict2items"
+    ],
+    "answer": "from_yaml"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "केह्ड़ा फिल्टर डिक्शनरी गी key/value डिक्शनरियें दी लिस्ट च बदलदा ऐ?",
+    "options": [
+      "items2dict",
+      "flatten",
+      "zip",
+      "dict2items"
+    ],
+    "answer": "dict2items"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "केह्ड़ा फिल्टर लिस्ट थमां दोहरे तत्वें गी हटांदा ऐ?",
+    "options": [
+      "reverse",
+      "flatten",
+      "unique",
+      "sort"
+    ],
+    "answer": "unique"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "केह्ड़ा मॉड्यूल एक्सप्रेशनें गी चेक करदा ऐ ते दस्सी गेदियां assertions पूरियां नेईं होने पर फेल होंदा ऐ?",
+    "options": [
+      "ansible.builtin.set_fact",
+      "ansible.builtin.assert",
+      "ansible.builtin.debug",
+      "ansible.builtin.pause"
+    ],
+    "answer": "ansible.builtin.assert"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "केह्ड़ा मॉड्यूल रेगुलर एक्सप्रेशन दा इस्तेमाल करियै टेक्स्ट फाइल दी कुसै खास लाइन गी मैनेज करदा ऐ?",
+    "options": [
+      "ansible.builtin.lineinfile",
+      "ansible.builtin.blockinfile",
+      "ansible.builtin.copy",
+      "ansible.builtin.slurp"
+    ],
+    "answer": "ansible.builtin.lineinfile"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "केह्ड़ा मॉड्यूल URL गी रिक्वेस्ट करदा ऐ ते उम्मीद कीते गेदे HTTP स्टेटस कोड गी चेक करी सकदा ऐ?",
+    "options": [
+      "ansible.builtin.get_url",
+      "ansible.builtin.fetch",
+      "ansible.builtin.wait_for",
+      "ansible.builtin.uri"
+    ],
+    "answer": "ansible.builtin.uri"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "केह्ड़ा मॉड्यूल तदूं तगर उडीकदा ऐ जदूं तगर TCP पोर्ट मंगी गेदी स्थिति च नेईं पुज्जदा?",
+    "options": [
+      "ansible.builtin.async_status",
+      "ansible.builtin.ping",
+      "ansible.builtin.wait_for",
+      "ansible.builtin.pause"
+    ],
+    "answer": "ansible.builtin.wait_for"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "केह्ड़ा पैरामीटर ansible.builtin.command गी तदूं एक्ज़ीक्यूशन स्किप करने दिंदा ऐ जदूं कोई दस्सेआ गेदा पाथ पैहले थमां मौजूद होऐ?",
+    "options": [
+      "stdin",
+      "creates",
+      "removes",
+      "chdir"
+    ],
+    "answer": "creates"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "file मॉड्यूल दी केह्ड़ी सेटिंग सिंबॉलिक लिंक बनांदी ऐ?",
+    "options": [
+      "state: link",
+      "state: directory",
+      "state: touch",
+      "state: hard"
+    ],
+    "answer": "state: link"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "केह्ड़ा मॉड्यूल बाद दे प्लेएं आस्तै इन-मेमोरी इन्वेंटरी च होस्ट जोड़ी सकदा ऐ?",
+    "options": [
+      "ansible.builtin.group_by",
+      "ansible.builtin.set_fact",
+      "ansible.builtin.meta",
+      "ansible.builtin.add_host"
+    ],
+    "answer": "ansible.builtin.add_host"
+  }
+]

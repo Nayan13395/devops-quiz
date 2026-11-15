@@ -1,6 +1,20 @@
 import 'package:devops_quiz/widgets/level_picker_dialog.dart';
+import 'package:devops_quiz/app_localization_delegates.dart';
+import 'package:devops_quiz/l10n/app_localizations.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
+
+Widget _app(
+  Widget home, {
+  String language = 'en',
+  TransitionBuilder? builder,
+}) => MaterialApp(
+  locale: Locale(language),
+  supportedLocales: AppLocalizations.supportedLocales,
+  localizationsDelegates: appLocalizationDelegates,
+  builder: builder,
+  home: home,
+);
 
 void main() {
   testWidgets('500-level picker fits phones, landscape and larger text', (
@@ -18,14 +32,8 @@ void main() {
       for (final scale in [1.0, 1.8]) {
         tester.view.physicalSize = size;
         await tester.pumpWidget(
-          MaterialApp(
-            builder: (context, child) => MediaQuery(
-              data: MediaQuery.of(
-                context,
-              ).copyWith(textScaler: TextScaler.linear(scale)),
-              child: child!,
-            ),
-            home: Scaffold(
+          _app(
+            Scaffold(
               body: Builder(
                 builder: (context) => TextButton(
                   onPressed: () => showDialog<int>(
@@ -39,6 +47,12 @@ void main() {
                   child: const Text('Open'),
                 ),
               ),
+            ),
+            builder: (context, child) => MediaQuery(
+              data: MediaQuery.of(
+                context,
+              ).copyWith(textScaler: TextScaler.linear(scale)),
+              child: child!,
             ),
           ),
         );
@@ -69,8 +83,8 @@ void main() {
   ) async {
     int? selected;
     await tester.pumpWidget(
-      MaterialApp(
-        home: Scaffold(
+      _app(
+        Scaffold(
           body: Builder(
             builder: (context) => TextButton(
               onPressed: () async {
@@ -101,5 +115,44 @@ void main() {
     await tester.tap(find.byKey(const ValueKey('game-level-3')));
     await tester.pumpAndSettle();
     expect(selected, 3);
+  });
+
+  testWidgets('labels and tooltips use the active locale', (tester) async {
+    final l10n = lookupAppLocalizations(const Locale('es'));
+    await tester.pumpWidget(
+      _app(
+        Scaffold(
+          body: Builder(
+            builder: (context) => TextButton(
+              onPressed: () => showDialog<int>(
+                context: context,
+                builder: (_) => LevelPickerDialog(
+                  levelCount: 3,
+                  isUnlocked: (level) => level <= 2,
+                  isCompleted: (level) => level == 1,
+                ),
+              ),
+              child: const Text('Open'),
+            ),
+          ),
+        ),
+        language: 'es',
+      ),
+    );
+    await tester.tap(find.text('Open'));
+    await tester.pumpAndSettle();
+    expect(find.text(l10n.gameUiChooseLevel), findsOneWidget);
+    expect(find.text('Choose level'), findsNothing);
+    expect(
+      find.byTooltip(l10n.sharedDialogLevelCompleted('1')),
+      findsOneWidget,
+    );
+    expect(find.byTooltip(l10n.sharedDialogPlayLevel('2')), findsOneWidget);
+    expect(
+      find.byTooltip(l10n.sharedDialogCompleteLevelToUnlock('2')),
+      findsOneWidget,
+    );
+    await tester.tap(find.text(l10n.gameUiClose));
+    await tester.pumpAndSettle();
   });
 }

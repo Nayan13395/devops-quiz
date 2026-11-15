@@ -1,0 +1,302 @@
+[
+  {
+    "category": "Terraform",
+    "set": 3,
+    "question": "أي ميزة في Terraform تتيح مكونات بنية تحتية قابلة لإعادة الاستخدام؟",
+    "options": [
+      "الوحدات (Modules)",
+      "المزودات (Providers)",
+      "المتغيرات (Variables)",
+      "المخرجات (Outputs)"
+    ],
+    "answer": "الوحدات (Modules)"
+  },
+  {
+    "category": "Terraform",
+    "set": 3,
+    "question": "أي كتلة تُستخدم لاستدعاء وحدة؟",
+    "options": [
+      "module",
+      "import",
+      "resource",
+      "provider"
+    ],
+    "answer": "module"
+  },
+  {
+    "category": "Terraform",
+    "set": 3,
+    "question": "أي وسيط يحدد موقع مصدر الوحدة؟",
+    "options": [
+      "source",
+      "path",
+      "location",
+      "module_source"
+    ],
+    "answer": "source"
+  },
+  {
+    "category": "Terraform",
+    "set": 3,
+    "question": "أي سجل Terraform يستضيف الوحدات العامة؟",
+    "options": [
+      "Terraform Registry",
+      "Docker Hub",
+      "GitHub Packages",
+      "AWS Marketplace"
+    ],
+    "answer": "Terraform Registry"
+  },
+  {
+    "category": "Terraform",
+    "set": 3,
+    "question": "أي واجهة خلفية (backend) تخزّن حالة Terraform في Amazon S3؟",
+    "options": [
+      "s3",
+      "aws",
+      "bucket",
+      "remote"
+    ],
+    "answer": "s3"
+  },
+  {
+    "category": "Terraform",
+    "set": 3,
+    "question": "أي خدمة AWS استُخدمت لقفل حالة الواجهة الخلفية S3 المعتمد على جدول، والذي أصبح متقادما؟",
+    "options": [
+      "DynamoDB",
+      "RDS",
+      "EFS",
+      "Lambda"
+    ],
+    "answer": "DynamoDB"
+  },
+  {
+    "category": "Terraform",
+    "set": 3,
+    "question": "أي نوع واجهة خلفية قديم يخزن الحالة في HCP Terraform، المعروف سابقا باسم Terraform Cloud؟",
+    "options": [
+      "remote",
+      "cloud",
+      "terraform",
+      "tfc"
+    ],
+    "answer": "remote"
+  },
+  {
+    "category": "Terraform",
+    "set": 3,
+    "question": "ما الغرض من قفل الحالة؟",
+    "options": [
+      "منع التعديلات المتزامنة",
+      "تشفير ملف الحالة",
+      "نسخ الحالة احتياطيًا",
+      "ضغط الحالة"
+    ],
+    "answer": "منع التعديلات المتزامنة"
+  },
+  {
+    "category": "Terraform",
+    "set": 3,
+    "question": "أي أمر يسحب الحالة البعيدة إلى الجهاز المحلي؟",
+    "options": [
+      "terraform state pull",
+      "terraform pull",
+      "terraform get-state",
+      "terraform state download"
+    ],
+    "answer": "terraform state pull"
+  },
+  {
+    "category": "Terraform",
+    "set": 3,
+    "question": "أي أمر يدفع الحالة إلى الواجهة الخلفية؟",
+    "options": [
+      "terraform state push",
+      "terraform push",
+      "terraform upload",
+      "terraform state upload"
+    ],
+    "answer": "terraform state push"
+  },
+  {
+    "category": "Terraform",
+    "set": 3,
+    "question": "أي نوع من الواجهات الخلفية يخزّن الحالة على القرص المحلي؟",
+    "options": [
+      "local",
+      "file",
+      "disk",
+      "host"
+    ],
+    "answer": "local"
+  },
+  {
+    "category": "Terraform",
+    "set": 3,
+    "question": "أي أمر يزيل موردًا من الحالة دون حذفه؟",
+    "options": [
+      "terraform state rm",
+      "terraform rm",
+      "terraform destroy",
+      "terraform remove"
+    ],
+    "answer": "terraform state rm"
+  },
+  {
+    "category": "Terraform",
+    "set": 3,
+    "question": "أي أمر ينقل الموارد داخل الحالة؟",
+    "options": [
+      "terraform state mv",
+      "terraform move",
+      "terraform mv",
+      "terraform state move"
+    ],
+    "answer": "terraform state mv"
+  },
+  {
+    "category": "Terraform",
+    "set": 3,
+    "question": "أي مصدر بيانات يقرأ المخرجات من ملف حالة آخر؟",
+    "options": [
+      "terraform_remote_state",
+      "remote_state",
+      "state_data",
+      "terraform_state"
+    ],
+    "answer": "terraform_remote_state"
+  },
+  {
+    "category": "Terraform",
+    "set": 3,
+    "question": "أي ملف يقفل إصدارات المزودات؟",
+    "options": [
+      ".terraform.lock.hcl",
+      "terraform.lock",
+      "providers.lock",
+      "terraform.providers"
+    ],
+    "answer": ".terraform.lock.hcl"
+  },
+  {
+    "category": "Terraform",
+    "set": 3,
+    "question": "أي وسيط يحدد إصدار وحدة مثبّتة من سجل؟",
+    "options": [
+      "version",
+      "ref",
+      "revision",
+      "required_version"
+    ],
+    "answer": "version"
+  },
+  {
+    "category": "Terraform",
+    "set": 3,
+    "question": "أي تعبير يقرأ المخرج vpc_id للوحدة الفرعية network؟",
+    "options": [
+      "var.network.vpc_id",
+      "local.network.vpc_id",
+      "data.network.vpc_id",
+      "module.network.vpc_id"
+    ],
+    "answer": "module.network.vpc_id"
+  },
+  {
+    "category": "Terraform",
+    "set": 3,
+    "question": "أي وسيط في كتلة provider يسمّي إعدادا إضافيا للموفر؟",
+    "options": [
+      "version",
+      "count",
+      "alias",
+      "source"
+    ],
+    "answer": "alias"
+  },
+  {
+    "category": "Terraform",
+    "set": 3,
+    "question": "أي معامل وصفي للمورد يختار إعداد موفر محددا ذا اسم مستعار؟",
+    "options": [
+      "for_each",
+      "provider",
+      "providers",
+      "depends_on"
+    ],
+    "answer": "provider"
+  },
+  {
+    "category": "Terraform",
+    "set": 3,
+    "question": "أي وسيط لاستدعاء الوحدة يمرر إعدادات موفرين محددة إلى وحدة فرعية؟",
+    "options": [
+      "providers",
+      "provider",
+      "required_providers",
+      "configuration_aliases"
+    ],
+    "answer": "providers"
+  },
+  {
+    "category": "Terraform",
+    "set": 3,
+    "question": "أي خيار في terraform init يحاول نقل الحالة الموجودة بعد تغير إعداد الواجهة الخلفية؟",
+    "options": [
+      "-reconfigure",
+      "-upgrade",
+      "-get=false",
+      "-migrate-state"
+    ],
+    "answer": "-migrate-state"
+  },
+  {
+    "category": "Terraform",
+    "set": 3,
+    "question": "أي خيار في terraform init يتجاهل إعداد الواجهة الخلفية السابق دون محاولة ترحيل حالته؟",
+    "options": [
+      "-upgrade",
+      "-lock=false",
+      "-reconfigure",
+      "-migrate-state"
+    ],
+    "answer": "-reconfigure"
+  },
+  {
+    "category": "Terraform",
+    "set": 3,
+    "question": "أي أمر ينشئ مساحة عمل CLI باسم staging ويختارها؟",
+    "options": [
+      "terraform workspace list",
+      "terraform workspace new staging",
+      "terraform workspace select staging",
+      "terraform workspace show"
+    ],
+    "answer": "terraform workspace new staging"
+  },
+  {
+    "category": "Terraform",
+    "set": 3,
+    "question": "أي أمر يعرض اسم مساحة عمل CLI الحالية؟",
+    "options": [
+      "terraform workspace show",
+      "terraform workspace list",
+      "terraform workspace select default",
+      "terraform state list"
+    ],
+    "answer": "terraform workspace show"
+  },
+  {
+    "category": "Terraform",
+    "set": 3,
+    "question": "أي وسيط للواجهة الخلفية S3 يفعّل قفل الحالة الأصلي المعتمد على ملف قفل S3؟",
+    "options": [
+      "encrypt = true",
+      "workspace_key_prefix = \"env\"",
+      "skip_region_validation = true",
+      "use_lockfile = true"
+    ],
+    "answer": "use_lockfile = true"
+  }
+]

@@ -1,4 +1,4 @@
-import 'package:tithi_engine/data/india.dart';
+﻿import 'package:tithi_engine/data/india.dart';
 import 'package:tithi_engine/tithi_engine.dart';
 
 import 'national_day_service.dart';
@@ -171,20 +171,15 @@ class FestivalCalendarService {
     return _yearCache.putIfAbsent(year, () {
       final windows = <FestivalWindow>[];
 
-      void addPanchangFestival(
-        String festivalId,
+      void addTithiFestival(
+        LunarMonth month,
+        Tithi tithi,
         FestivalKind kind, {
         int daysBefore = 0,
         int daysAfter = 0,
+        String? label,
       }) {
-        final definitions = festivals.where(
-          (festival) => festival.id == festivalId,
-        );
-        if (definitions.isEmpty) return;
-
-        final date = _panchang
-            .dateFor(definitions.first, year, City.ujjain)
-            ?.date;
+        final date = _panchang.findDate(month, tithi, year, City.ujjain);
         if (date == null) return;
 
         final observance = DateTime.utc(date.year, date.month, date.day);
@@ -193,57 +188,41 @@ class FestivalCalendarService {
             kind: kind,
             startsOn: observance.subtract(Duration(days: daysBefore)),
             endsOn: observance.add(Duration(days: daysAfter)),
+            label: label,
           ),
         );
       }
 
-      addPanchangFestival(
-        'diwali',
+      addTithiFestival(
+        LunarMonth.kartika,
+        Tithi.krishna(15),
         FestivalKind.diwali,
         daysBefore: 2,
         daysAfter: 2,
       );
-      addPanchangFestival('holi', FestivalKind.holi);
-      addPanchangFestival(
-        'ganesh_chaturthi',
+      addTithiFestival(
+        LunarMonth.phalguna,
+        Tithi.shukla(15),
+        FestivalKind.holi,
+      );
+      addTithiFestival(
+        LunarMonth.bhadrapada,
+        Tithi.shukla(4),
         FestivalKind.ganapati,
         daysAfter: 9,
       );
-      addPanchangFestival(
-        'sharad_navratri',
+      addTithiFestival(
+        LunarMonth.ashvina,
+        Tithi.shukla(1),
         FestivalKind.navratri,
         daysAfter: 8,
       );
-
-      final buddhaDate = _panchang
-          .dateFor(
-            const FestivalDef(
-              id: 'buddha_purnima',
-              name: 'Buddha Purnima',
-              month: LunarMonth.vaishakha,
-              paksha: Paksha.shukla,
-              tithiInPaksha: 15,
-              muhurta: MuhurtaRule.sunrise,
-            ),
-            year,
-            City.ujjain,
-          )
-          ?.date;
-      if (buddhaDate != null) {
-        final date = DateTime.utc(
-          buddhaDate.year,
-          buddhaDate.month,
-          buddhaDate.day,
-        );
-        windows.add(
-          FestivalWindow(
-            kind: FestivalKind.peace,
-            startsOn: date,
-            endsOn: date,
-            label: 'Buddha Purnima',
-          ),
-        );
-      }
+      addTithiFestival(
+        LunarMonth.vaishakha,
+        Tithi.shukla(15),
+        FestivalKind.peace,
+        label: 'Buddha Purnima',
+      );
       for (final (month, day, kind, label) in [
         (10, 31, FestivalKind.halloween, 'Halloween'),
         (10, 2, FestivalKind.peace, 'Gandhi Jayanti'),

@@ -1,0 +1,302 @@
+[
+  {
+    "category": "Git",
+    "set": 1,
+    "question": "什么是 Git?",
+    "options": [
+      "版本控制系统",
+      "数据库",
+      "操作系统",
+      "Web 服务器"
+    ],
+    "answer": "版本控制系统"
+  },
+  {
+    "category": "Git",
+    "set": 1,
+    "question": "哪个命令用于初始化新的 Git 仓库?",
+    "options": [
+      "git init",
+      "git create",
+      "git start",
+      "git new"
+    ],
+    "answer": "git init"
+  },
+  {
+    "category": "Git",
+    "set": 1,
+    "question": "哪个命令用于显示当前仓库状态?",
+    "options": [
+      "git status",
+      "git show",
+      "git info",
+      "git state"
+    ],
+    "answer": "git status"
+  },
+  {
+    "category": "Git",
+    "set": 1,
+    "question": "哪个命令用于将文件添加到暂存区?",
+    "options": [
+      "git add",
+      "git commit",
+      "git push",
+      "git clone"
+    ],
+    "answer": "git add"
+  },
+  {
+    "category": "Git",
+    "set": 1,
+    "question": "哪个命令用于提交已暂存的更改?",
+    "options": [
+      "git commit",
+      "git add",
+      "git push",
+      "git save"
+    ],
+    "answer": "git commit"
+  },
+  {
+    "category": "Git",
+    "set": 1,
+    "question": "哪个命令用于显示提交历史?",
+    "options": [
+      "git log",
+      "git status",
+      "git show",
+      "git history"
+    ],
+    "answer": "git log"
+  },
+  {
+    "category": "Git",
+    "set": 1,
+    "question": "哪个命令用于以单行形式显示提交历史?",
+    "options": [
+      "git log --oneline",
+      "git history",
+      "git show",
+      "git log -v"
+    ],
+    "answer": "git log --oneline"
+  },
+  {
+    "category": "Git",
+    "set": 1,
+    "question": "哪个命令将 Git 提交作者的全局姓名设为 Alex？",
+    "options": [
+      "git config --global user.name \"Alex\"",
+      "git config --global user.email \"Alex\"",
+      "git config --get user.name",
+      "git config --global --unset user.name"
+    ],
+    "answer": "git config --global user.name \"Alex\""
+  },
+  {
+    "category": "Git",
+    "set": 1,
+    "question": "哪个命令将 Git 提交作者的全局邮箱设为 alex@example.com？",
+    "options": [
+      "git config --global user.email \"alex@example.com\"",
+      "git config --global user.name \"alex@example.com\"",
+      "git config --get user.email",
+      "git config --global --unset user.email"
+    ],
+    "answer": "git config --global user.email \"alex@example.com\""
+  },
+  {
+    "category": "Git",
+    "set": 1,
+    "question": "哪个命令用于克隆远程仓库?",
+    "options": [
+      "git clone",
+      "git copy",
+      "git pull",
+      "git fork"
+    ],
+    "answer": "git clone"
+  },
+  {
+    "category": "Git",
+    "set": 1,
+    "question": "哪个命令用于显示文件之间的差异?",
+    "options": [
+      "git diff",
+      "git compare",
+      "git status",
+      "git check"
+    ],
+    "answer": "git diff"
+  },
+  {
+    "category": "Git",
+    "set": 1,
+    "question": "Git 中使用哪个文件来忽略文件?",
+    "options": [
+      ".gitignore",
+      ".gitconfig",
+      ".ignore",
+      ".gitexclude"
+    ],
+    "answer": ".gitignore"
+  },
+  {
+    "category": "Git",
+    "set": 1,
+    "question": "在仓库根目录运行时，哪个命令暂存所有未忽略的新增、修改和删除，而不创建提交？",
+    "options": [
+      "git add .",
+      "git commit -a",
+      "git push",
+      "git stage all"
+    ],
+    "answer": "git add ."
+  },
+  {
+    "category": "Git",
+    "set": 1,
+    "question": "哪个命令选项直接从命令行接收提交说明？",
+    "options": [
+      "git commit -m",
+      "git commit",
+      "git add -m",
+      "git message"
+    ],
+    "answer": "git commit -m"
+  },
+  {
+    "category": "Git",
+    "set": 1,
+    "question": "哪个命令用于删除已跟踪的文件?",
+    "options": [
+      "git rm",
+      "git delete",
+      "git remove",
+      "git erase"
+    ],
+    "answer": "git rm"
+  },
+  {
+    "category": "Git",
+    "set": 1,
+    "question": "哪个命令在提交前显示索引与 HEAD 之间的差异？",
+    "options": [
+      "git diff",
+      "git log --oneline",
+      "git status --short",
+      "git diff --cached"
+    ],
+    "answer": "git diff --cached"
+  },
+  {
+    "category": "Git",
+    "set": 1,
+    "question": "已跟踪文件的名称加入 .gitignore 后会怎样？",
+    "options": [
+      "其历史提交会自动被清除",
+      "其修改会自动提交",
+      "在明确从索引中移除前，它仍会被跟踪",
+      "它会立即从工作树中删除"
+    ],
+    "answer": "在明确从索引中移除前，它仍会被跟踪"
+  },
+  {
+    "category": "Git",
+    "set": 1,
+    "question": "哪个命令停止跟踪 config.local，但保留其工作树副本？",
+    "options": [
+      "git clean -f config.local",
+      "git rm --cached config.local",
+      "git rm config.local",
+      "git restore config.local"
+    ],
+    "answer": "git rm --cached config.local"
+  },
+  {
+    "category": "Git",
+    "set": 1,
+    "question": "哪个命令仅为当前仓库设置 user.name？",
+    "options": [
+      "git config --local user.name \"Alex\"",
+      "git config --global user.name \"Alex\"",
+      "git config --system user.name \"Alex\"",
+      "git config --get user.name"
+    ],
+    "answer": "git config --local user.name \"Alex\""
+  },
+  {
+    "category": "Git",
+    "set": 1,
+    "question": "检出本地分支时，HEAD 通常指向什么？",
+    "options": [
+      "远程仓库的默认分支",
+      "最近创建的标签",
+      "仓库中最早的提交",
+      "当前分支引用"
+    ],
+    "answer": "当前分支引用"
+  },
+  {
+    "category": "Git",
+    "set": 1,
+    "question": "哪个命令以交互方式暂存选中的修改块？",
+    "options": [
+      "git add -f",
+      "git add -N",
+      "git add -p",
+      "git add -A"
+    ],
+    "answer": "git add -p"
+  },
+  {
+    "category": "Git",
+    "set": 1,
+    "question": "哪个命令使用已暂存内容创建新提交并替换最近一次提交？",
+    "options": [
+      "git commit --no-verify",
+      "git commit --amend",
+      "git commit --dry-run",
+      "git commit --allow-empty"
+    ],
+    "answer": "git commit --amend"
+  },
+  {
+    "category": "Git",
+    "set": 1,
+    "question": "哪个命令重命名已跟踪文件并暂存该重命名？",
+    "options": [
+      "git mv old.txt new.txt",
+      "git cp old.txt new.txt",
+      "git merge old.txt new.txt",
+      "git restore old.txt new.txt"
+    ],
+    "answer": "git mv old.txt new.txt"
+  },
+  {
+    "category": "Git",
+    "set": 1,
+    "question": "哪个命令列出索引中当前跟踪的路径？",
+    "options": [
+      "git ls-remote",
+      "git remote -v",
+      "git reflog",
+      "git ls-files"
+    ],
+    "answer": "git ls-files"
+  },
+  {
+    "category": "Git",
+    "set": 1,
+    "question": "哪个命令通过恢复索引版本来丢弃 notes.txt 中未暂存的修改？",
+    "options": [
+      "git add notes.txt",
+      "git diff -- notes.txt",
+      "git restore notes.txt",
+      "git restore --staged notes.txt"
+    ],
+    "answer": "git restore notes.txt"
+  }
+]

@@ -1,0 +1,302 @@
+[
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "ਕਿਹੜਾ ਸਿੰਟੈਕਸ ਇੱਕ ਸਧਾਰਨ Bash ਫੰਕਸ਼ਨ ਨੂੰ ਪਰਿਭਾਸ਼ਿਤ ਕਰਦਾ ਹੈ?",
+    "options": [
+      "myfunc() { echo hi; }",
+      "def myfunc: echo hi",
+      "function = myfunc",
+      "myfunc -> echo hi"
+    ],
+    "answer": "myfunc() { echo hi; }"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "ਕਿਹੜੀ ਕਮਾਂਡ myfunc ਨਾਮ ਦੇ ਫੰਕਸ਼ਨ ਨੂੰ ਕਾਲ ਕਰਦੀ ਹੈ?",
+    "options": [
+      "myfunc",
+      "call myfunc",
+      "run myfunc",
+      "execute myfunc"
+    ],
+    "answer": "myfunc"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "ਕਿਹੜਾ ਕੀਵਰਡ ਅਜਿਹਾ ਵੇਰੀਏਬਲ ਘੋਸ਼ਿਤ ਕਰਦਾ ਹੈ ਜੋ ਸਿਰਫ਼ ਫੰਕਸ਼ਨ ਦੇ ਅੰਦਰ ਦਿਖਾਈ ਦਿੰਦਾ ਹੈ?",
+    "options": [
+      "local",
+      "private",
+      "internal",
+      "hidden"
+    ],
+    "answer": "local"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "ਕਿਹੜੀ ਕਮਾਂਡ ਫੰਕਸ਼ਨ ਤੋਂ 0 ਦੀ exit status ਵਾਪਸ ਕਰਦੀ ਹੈ?",
+    "options": [
+      "return 0",
+      "exit function 0",
+      "stop 0",
+      "end 0"
+    ],
+    "answer": "return 0"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "ਫੰਕਸ਼ਨ ਦੇ ਅੰਦਰ, ਕਿਹੜਾ ਪੈਰਾਮੀਟਰ ਫੰਕਸ਼ਨ ਨੂੰ ਭੇਜੇ ਗਏ ਆਰਗੂਮੈਂਟਾਂ ਦੀ ਗਿਣਤੀ ਦਿੰਦਾ ਹੈ?",
+    "options": [
+      "$#",
+      "$@",
+      "$0",
+      "$1"
+    ],
+    "answer": "$#"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "ਕਿਹੜਾ ਸਿੰਟੈਕਸ ਤਿੰਨ ਤੱਤਾਂ ਵਾਲੀ indexed ਐਰੇ ਬਣਾਉਂਦਾ ਹੈ?",
+    "options": [
+      "arr=(one two three)",
+      "array arr one two three",
+      "arr[one two three]",
+      "set arr one two three"
+    ],
+    "answer": "arr=(one two three)"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "ਕਿਹੜਾ ਸਿੰਟੈਕਸ arr ਦੇ index 2 ਵਾਲੇ ਤੱਤ ਤੱਕ ਪਹੁੰਚਦਾ ਹੈ?",
+    "options": [
+      "${arr[2]}",
+      "${arr:2}",
+      "$arr[2]",
+      "arr{2}"
+    ],
+    "answer": "${arr[2]}"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "ਕਿਹੜਾ ਐਕਸਪੈਂਸ਼ਨ arr ਵਿੱਚ ਤੱਤਾਂ ਦੀ ਗਿਣਤੀ ਦਿੰਦਾ ਹੈ?",
+    "options": [
+      "${#arr[@]}",
+      "${#arr}",
+      "${arr:length}",
+      "${arr[@]#}"
+    ],
+    "answer": "${#arr[@]}"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "ਕਿਹੜਾ ਸਿੰਟੈਕਸ arr ਵਿੱਚ newitem ਜੋੜਦਾ (append) ਹੈ?",
+    "options": [
+      "arr+=(newitem)",
+      "arr=newitem",
+      "arr.push(newitem)",
+      "add arr newitem"
+    ],
+    "answer": "arr+=(newitem)"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "ਕਿਹੜਾ ਐਕਸਪੈਂਸ਼ਨ arr ਦੇ ਸਾਰੇ ਤੱਤ ਵਾਪਸ ਕਰਦਾ ਹੈ?",
+    "options": [
+      "${arr[@]}",
+      "${arr[0]}",
+      "${arr[all]}",
+      "${arr}"
+    ],
+    "answer": "${arr[@]}"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "ਕਿਹੜੀ ਕਮਾਂਡ ਇੱਕ associative ਐਰੇ ਘੋਸ਼ਿਤ ਕਰਦੀ ਹੈ?",
+    "options": [
+      "declare -A map",
+      "declare -a map",
+      "array -A map",
+      "assoc map"
+    ],
+    "answer": "declare -A map"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "ਕਿਹੜੀ ਰੀਡਾਇਰੈਕਸ਼ਨ ਸਟੈਂਡਰਡ ਆਊਟਪੁੱਟ ਅਤੇ ਸਟੈਂਡਰਡ ਐਰਰ ਦੋਵਾਂ ਨੂੰ output.log ਵਿੱਚ ਭੇਜਦੀ ਹੈ?",
+    "options": [
+      "command &> output.log",
+      "command > output.log",
+      "command 2> output.log",
+      "command < output.log"
+    ],
+    "answer": "command &> output.log"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "ਕਿਹੜੀ ਰੀਡਾਇਰੈਕਸ਼ਨ ਕਮਾਂਡ ਦੀ ਸਾਰੀ ਆਊਟਪੁੱਟ ਨੂੰ ਰੱਦ ਕਰ ਦਿੰਦੀ ਹੈ?",
+    "options": [
+      "command > /dev/null",
+      "command > null",
+      "command > empty",
+      "command > discard"
+    ],
+    "answer": "command > /dev/null"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "ਕਿਹੜਾ ਆਪਰੇਟਰ ਇੱਕ ਕਮਾਂਡ ਦੀ ਆਊਟਪੁੱਟ ਨੂੰ ਦੂਜੀ ਕਮਾਂਡ ਦੇ ਇਨਪੁੱਟ ਵਜੋਂ ਭੇਜਦਾ ਹੈ?",
+    "options": [
+      "|",
+      ">",
+      "<",
+      "&"
+    ],
+    "answer": "|"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "ਕਿਹੜਾ ਚਿੰਨ੍ਹ ਕਮਾਂਡ ਨੂੰ ਬੈਕਗ੍ਰਾਊਂਡ ਵਿੱਚ ਚਲਾਉਂਦਾ ਹੈ?",
+    "options": [
+      "&",
+      "&&",
+      "|",
+      ";"
+    ],
+    "answer": "&"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "ਕਿਹੜੀ builtin ਬੈਕਗ੍ਰਾਊਂਡ ਜੌਬਾਂ ਦੇ ਖਤਮ ਹੋਣ ਦੀ ਉਡੀਕ ਕਰਦੀ ਹੈ?",
+    "options": [
+      "wait",
+      "hold",
+      "pause",
+      "sleep"
+    ],
+    "answer": "wait"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "ਕਿਹੜੀ ਕਮਾਂਡ script.sh ਨੂੰ ਮੌਜੂਦਾ ਸ਼ੈੱਲ ਐਨਵਾਇਰਮੈਂਟ ਵਿੱਚ ਚਲਾਉਂਦੀ ਹੈ?",
+    "options": [
+      "source script.sh",
+      "bash script.sh",
+      "./script.sh",
+      "sh script.sh"
+    ],
+    "answer": "source script.sh"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "ਕਿਹੜਾ ਆਪਰੇਟਰ here document ਸ਼ੁਰੂ ਕਰਦਾ ਹੈ?",
+    "options": [
+      "<<",
+      ">>",
+      "<",
+      ">"
+    ],
+    "answer": "<<"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "ਕਿਹੜੀ ਕਮਾਂਡ ਇੱਕ ਸੁਰੱਖਿਅਤ ਅਸਥਾਈ ਫਾਈਲ ਬਣਾਉਂਦੀ ਹੈ?",
+    "options": [
+      "mktemp",
+      "tempfile",
+      "touch tmp",
+      "newfile"
+    ],
+    "answer": "mktemp"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "ਜਦੋਂ ਸਕ੍ਰਿਪਟ ਨੂੰ SIGINT ਮਿਲੇ ਤਾਂ ਕਿਹੜੀ ਕਮਾਂਡ cleanup ਚਲਾਉਂਦੀ ਹੈ?",
+    "options": [
+      "trap 'cleanup' SIGINT",
+      "handle SIGINT cleanup",
+      "signal SIGINT cleanup",
+      "catch SIGINT cleanup"
+    ],
+    "answer": "trap 'cleanup' SIGINT"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "ਜਦੋਂ ਉਪਭੋਗਤਾ Ctrl+C ਦਬਾਉਂਦਾ ਹੈ ਤਾਂ ਆਮ ਤੌਰ 'ਤੇ ਕਿਹੜਾ ਸਿਗਨਲ ਭੇਜਿਆ ਜਾਂਦਾ ਹੈ?",
+    "options": [
+      "SIGINT",
+      "SIGTERM",
+      "SIGKILL",
+      "SIGHUP"
+    ],
+    "answer": "SIGINT"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "ਕਿਹੜਾ ਵਿਕਲਪ ਸਕ੍ਰਿਪਟ ਨੂੰ ਕਮਾਂਡ ਫੇਲ ਹੋਣ 'ਤੇ ਤੁਰੰਤ ਬਾਹਰ ਨਿਕਲਣ ਲਈ ਮਜਬੂਰ ਕਰਦਾ ਹੈ?",
+    "options": [
+      "set -e",
+      "set -x",
+      "set -u",
+      "set -o pipefail"
+    ],
+    "answer": "set -e"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "ਕਿਹੜਾ ਵਿਕਲਪ unset ਵੇਰੀਏਬਲ ਦਾ ਹਵਾਲਾ ਦੇਣ 'ਤੇ ਗਲਤੀ ਪੈਦਾ ਕਰਦਾ ਹੈ?",
+    "options": [
+      "set -u",
+      "set -e",
+      "set -x",
+      "set -a"
+    ],
+    "answer": "set -u"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "ਡੀਬੱਗਿੰਗ ਲਈ ਕਿਹੜਾ ਵਿਕਲਪ ਹਰ ਕਮਾਂਡ ਨੂੰ ਚਲਾਉਣ ਤੋਂ ਪਹਿਲਾਂ ਪ੍ਰਿੰਟ ਕਰਦਾ ਹੈ?",
+    "options": [
+      "set -x",
+      "set -e",
+      "set -u",
+      "set -v"
+    ],
+    "answer": "set -x"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "ਕਿਹੜੀ ਕਮਾਂਡ ਮੌਜੂਦਾ ਸਮੇਂ ਪਰਿਭਾਸ਼ਿਤ ਸ਼ੈੱਲ ਫੰਕਸ਼ਨਾਂ ਦੀ ਸੂਚੀ ਦਿਖਾਉਂਦੀ ਹੈ?",
+    "options": [
+      "declare -f",
+      "declare -A",
+      "functions",
+      "listfunc"
+    ],
+    "answer": "declare -f"
+  }
+]

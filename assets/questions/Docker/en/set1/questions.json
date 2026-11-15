@@ -1,0 +1,302 @@
+[
+  {
+    "category": "Docker",
+    "set": 1,
+    "question": "Which command builds a Docker image?",
+    "options": [
+      "docker build",
+      "docker run",
+      "docker ps",
+      "docker pull"
+    ],
+    "answer": "docker build"
+  },
+  {
+    "category": "Docker",
+    "set": 1,
+    "question": "Which command runs a container in detached mode?",
+    "options": [
+      "docker run -d",
+      "docker run -b",
+      "docker run --bg",
+      "docker run --background"
+    ],
+    "answer": "docker run -d"
+  },
+  {
+    "category": "Docker",
+    "set": 1,
+    "question": "Which command keeps standard input open and allocates a pseudo-TTY for a new container?",
+    "options": [
+      "docker run -it",
+      "docker run -i",
+      "docker run -t",
+      "docker run --interactive"
+    ],
+    "answer": "docker run -it"
+  },
+  {
+    "category": "Docker",
+    "set": 1,
+    "question": "Which command lists all images including intermediate ones?",
+    "options": [
+      "docker images -a",
+      "docker images --digests",
+      "docker images -l",
+      "docker images -q"
+    ],
+    "answer": "docker images -a"
+  },
+  {
+    "category": "Docker",
+    "set": 1,
+    "question": "Which command removes all stopped containers?",
+    "options": [
+      "docker container prune",
+      "docker rm -a",
+      "docker rm --all",
+      "docker clean"
+    ],
+    "answer": "docker container prune"
+  },
+  {
+    "category": "Docker",
+    "set": 1,
+    "question": "Which command removes all unused images?",
+    "options": [
+      "docker image prune -a",
+      "docker rmi -a",
+      "docker images --clean",
+      "docker image clean"
+    ],
+    "answer": "docker image prune -a"
+  },
+  {
+    "category": "Docker",
+    "set": 1,
+    "question": "Which command displays container resource usage?",
+    "options": [
+      "docker stats",
+      "docker top",
+      "docker monitor",
+      "docker usage"
+    ],
+    "answer": "docker stats"
+  },
+  {
+    "category": "Docker",
+    "set": 1,
+    "question": "Which command displays the processes running inside a container?",
+    "options": [
+      "docker top",
+      "docker ps",
+      "docker stats",
+      "docker inspect"
+    ],
+    "answer": "docker top"
+  },
+  {
+    "category": "Docker",
+    "set": 1,
+    "question": "Which command displays container logs?",
+    "options": [
+      "docker logs",
+      "docker events",
+      "docker output",
+      "docker inspect"
+    ],
+    "answer": "docker logs"
+  },
+  {
+    "category": "Docker",
+    "set": 1,
+    "question": "Which command inspects a container or image?",
+    "options": [
+      "docker inspect",
+      "docker details",
+      "docker info",
+      "docker config"
+    ],
+    "answer": "docker inspect"
+  },
+  {
+    "category": "Docker",
+    "set": 1,
+    "question": "Which command creates a Docker network?",
+    "options": [
+      "docker network create",
+      "docker create network",
+      "docker net add",
+      "docker network build"
+    ],
+    "answer": "docker network create"
+  },
+  {
+    "category": "Docker",
+    "set": 1,
+    "question": "Which command lists Docker networks?",
+    "options": [
+      "docker network ls",
+      "docker networks",
+      "docker net list",
+      "docker show networks"
+    ],
+    "answer": "docker network ls"
+  },
+  {
+    "category": "Docker",
+    "set": 1,
+    "question": "Which command creates a Docker volume?",
+    "options": [
+      "docker volume create",
+      "docker storage create",
+      "docker volume add",
+      "docker create volume"
+    ],
+    "answer": "docker volume create"
+  },
+  {
+    "category": "Docker",
+    "set": 1,
+    "question": "Which command lists Docker volumes?",
+    "options": [
+      "docker volume ls",
+      "docker volumes",
+      "docker volume show",
+      "docker storage ls"
+    ],
+    "answer": "docker volume ls"
+  },
+  {
+    "category": "Docker",
+    "set": 1,
+    "question": "Which command displays Docker system information?",
+    "options": [
+      "docker info",
+      "docker version",
+      "docker status",
+      "docker config"
+    ],
+    "answer": "docker info"
+  },
+  {
+    "category": "Docker",
+    "set": 1,
+    "question": "Which Dockerfile instruction executes a command while building an image?",
+    "options": [
+      "CMD",
+      "ENTRYPOINT",
+      "EXPOSE",
+      "RUN"
+    ],
+    "answer": "RUN"
+  },
+  {
+    "category": "Docker",
+    "set": 1,
+    "question": "Which Dockerfile instruction sets the working directory for subsequent instructions?",
+    "options": [
+      "SHELL",
+      "LABEL",
+      "WORKDIR",
+      "USER"
+    ],
+    "answer": "WORKDIR"
+  },
+  {
+    "category": "Docker",
+    "set": 1,
+    "question": "Which Dockerfile instruction copies local build-context files without ADD's automatic archive extraction?",
+    "options": [
+      "VOLUME",
+      "COPY",
+      "ADD",
+      "RUN"
+    ],
+    "answer": "COPY"
+  },
+  {
+    "category": "Docker",
+    "set": 1,
+    "question": "What does the EXPOSE instruction do when used alone in a Dockerfile?",
+    "options": [
+      "Documents the container ports intended for use",
+      "Publishes those ports on the host",
+      "Opens those ports in the host firewall",
+      "Starts a server on those ports"
+    ],
+    "answer": "Documents the container ports intended for use"
+  },
+  {
+    "category": "Docker",
+    "set": 1,
+    "question": "Which file normally excludes selected paths from the Docker build context?",
+    "options": [
+      ".gitignore",
+      "Dockerfile",
+      "compose.yaml",
+      ".dockerignore"
+    ],
+    "answer": ".dockerignore"
+  },
+  {
+    "category": "Docker",
+    "set": 1,
+    "question": "What does the final dot in 'docker build .' identify?",
+    "options": [
+      "The container's working directory",
+      "The location of the Docker daemon",
+      "The current directory as the build context",
+      "The registry for the resulting image"
+    ],
+    "answer": "The current directory as the build context"
+  },
+  {
+    "category": "Docker",
+    "set": 1,
+    "question": "Which command names a new container 'web' when starting nginx?",
+    "options": [
+      "docker run --network web nginx",
+      "docker run --name web nginx",
+      "docker run --hostname web nginx",
+      "docker run --label web nginx"
+    ],
+    "answer": "docker run --name web nginx"
+  },
+  {
+    "category": "Docker",
+    "set": 1,
+    "question": "Which command maps host TCP port 8080 to container TCP port 80?",
+    "options": [
+      "docker run -p 8080:80 nginx",
+      "docker run -p 80:8080 nginx",
+      "docker run --expose 8080 nginx",
+      "docker run --expose 80 nginx"
+    ],
+    "answer": "docker run -p 8080:80 nginx"
+  },
+  {
+    "category": "Docker",
+    "set": 1,
+    "question": "Which docker run option automatically removes the container when it exits?",
+    "options": [
+      "--init",
+      "--read-only",
+      "--privileged",
+      "--rm"
+    ],
+    "answer": "--rm"
+  },
+  {
+    "category": "Docker",
+    "set": 1,
+    "question": "What normally happens to files in a container's writable layer when that container is removed?",
+    "options": [
+      "They become a named volume",
+      "They are uploaded to its registry",
+      "They are removed with the container",
+      "They are merged into its source image"
+    ],
+    "answer": "They are removed with the container"
+  }
+]

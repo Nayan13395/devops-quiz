@@ -1,0 +1,302 @@
+[
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "کون سا سنٹیکس date کا آؤٹ پٹ now نامی ویری ایبل میں محفوظ کرتا ہے؟",
+    "options": [
+      "now=$(date)",
+      "now=date",
+      "now:=$(date)",
+      "date->now"
+    ],
+    "answer": "now=$(date)"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "کون سا special parameter اسکرپٹ کے نام کی نمائندگی کرتا ہے؟",
+    "options": [
+      "$0",
+      "$1",
+      "$#",
+      "$@"
+    ],
+    "answer": "$0"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "کون سا special parameter سب سے حالیہ بیک گراؤنڈ کمانڈ کی process ID میں ایکسپینڈ ہوتا ہے؟",
+    "options": [
+      "$!",
+      "$$",
+      "$?",
+      "$#"
+    ],
+    "answer": "$!"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "کون سا special parameter positional arguments کی تعداد کی نمائندگی کرتا ہے؟",
+    "options": [
+      "$#",
+      "$@",
+      "$*",
+      "$$"
+    ],
+    "answer": "$#"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "کون سا special parameter تمام positional arguments کو الگ الگ الفاظ کے طور پر ایکسپینڈ کرتا ہے؟",
+    "options": [
+      "$@",
+      "$*",
+      "$#",
+      "$0"
+    ],
+    "answer": "$@"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "کون سی Bash builtin پہلے positional parameter کو ہٹا دیتی ہے اور باقی کو ایک جگہ نیچے کھسکا دیتی ہے؟",
+    "options": [
+      "shift",
+      "unshift",
+      "pop",
+      "rotate"
+    ],
+    "answer": "shift"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "کون سا special parameter موجودہ شیل کی process ID کی نمائندگی کرتا ہے؟",
+    "options": [
+      "$$",
+      "$!",
+      "$?",
+      "$0"
+    ],
+    "answer": "$$"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "کون سا special parameter آخری کمانڈ کے exit status کی نمائندگی کرتا ہے؟",
+    "options": [
+      "$?",
+      "$!",
+      "$$",
+      "$#"
+    ],
+    "answer": "$?"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "کون سا ایکسپینشن اس وقت ڈیفالٹ ویلیو لوٹاتا ہے جب var غیر سیٹ یا خالی ہو؟",
+    "options": [
+      "${var:-default}",
+      "${var:=default}",
+      "${var:+default}",
+      "${var:?default}"
+    ],
+    "answer": "${var:-default}"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "کون سا ایکسپینشن var سے 3 کریکٹرز نکالتا ہے، جو آفسیٹ 2 سے شروع ہوتے ہیں؟",
+    "options": [
+      "${var:2:3}",
+      "${var:3:2}",
+      "${var[2,3]}",
+      "${var#2:3}"
+    ],
+    "answer": "${var:2:3}"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "کون سا ایکسپینشن var کی ویلیو کی لمبائی لوٹاتا ہے؟",
+    "options": [
+      "${#var}",
+      "${len(var)}",
+      "${var:length}",
+      "${var#length}"
+    ],
+    "answer": "${#var}"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "کون سا ایکسپینشن var کی ویلیو کو بڑے حروف (uppercase) میں تبدیل کرتا ہے؟",
+    "options": [
+      "${var^^}",
+      "${var,,}",
+      "${var!!}",
+      "${var##}"
+    ],
+    "answer": "${var^^}"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "کون سا ایکسپینشن var سے سب سے لمبا مماثل prefix pattern ہٹاتا ہے؟",
+    "options": [
+      "${var##pattern}",
+      "${var#pattern}",
+      "${var%%pattern}",
+      "${var%pattern}"
+    ],
+    "answer": "${var##pattern}"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "کون سا ایکسپینشن var میں pattern کے صرف پہلے match کو تبدیل کرتا ہے؟",
+    "options": [
+      "${var/pattern/replacement}",
+      "${var//pattern/replacement}",
+      "${var#pattern}",
+      "${var%pattern}"
+    ],
+    "answer": "${var/pattern/replacement}"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "کون سا ایکسپینشن اس وقت ایرر میسج پرنٹ کرتا ہے اور non-interactive اسکرپٹ کو ختم کر دیتا ہے جب var غیر سیٹ یا خالی ہو؟",
+    "options": [
+      "${var:?message}",
+      "${var:-message}",
+      "${var:+message}",
+      "${var:=message}"
+    ],
+    "answer": "${var:?message}"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "Bash میں arithmetic expansion کون سا سنٹیکس انجام دیتا ہے؟",
+    "options": [
+      "$((5 + 3))",
+      "$(5 + 3)",
+      "${5 + 3}",
+      "$[5 + 3]"
+    ],
+    "answer": "$((5 + 3))"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "کون سی کمانڈ ویری ایبل count کو ایک سے بڑھاتی ہے؟",
+    "options": [
+      "let count++",
+      "count++",
+      "increment count",
+      "add count"
+    ],
+    "answer": "let count++"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "کون سی کمانڈ 8 پرنٹ کرتی ہے جب 5 اور 3 کو جمع کیا جائے؟",
+    "options": [
+      "expr 5 + 3",
+      "expr 5+3",
+      "expr5 + 3",
+      "expr add 5 3"
+    ],
+    "answer": "expr 5 + 3"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "کون سی کمانڈ count کو integer ویری ایبل کے طور پر declare کرتی ہے؟",
+    "options": [
+      "declare -i count",
+      "declare int count",
+      "integer count",
+      "set count integer"
+    ],
+    "answer": "declare -i count"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "کون سی کمانڈ ویری ایبل کو read-only بناتی ہے؟",
+    "options": [
+      "readonly var",
+      "lock var",
+      "const var",
+      "final var"
+    ],
+    "answer": "readonly var"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "کون سی کمانڈ ویری ایبل کو شیل environment سے ہٹاتی ہے؟",
+    "options": [
+      "unset var",
+      "delete var",
+      "remove var",
+      "clear var"
+    ],
+    "answer": "unset var"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "کون سی کمانڈ ویری ایبل کو child processes کے لیے دستیاب بناتی ہے؟",
+    "options": [
+      "export var",
+      "share var",
+      "env var",
+      "publish var"
+    ],
+    "answer": "export var"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "کون سا آپشن آؤٹ پٹ ری ڈائریکشن کو موجودہ فائل اوور رائٹ کرنے سے روکتا ہے؟",
+    "options": [
+      "set -o noclobber",
+      "set -o nooverwrite",
+      "set -o protect",
+      "set -o safe"
+    ],
+    "answer": "set -o noclobber"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "کون سی Bash ویری ایبل شیل شروع ہونے کے بعد سے گزرے سیکنڈز کی تعداد رکھتی ہے؟",
+    "options": [
+      "$SECONDS",
+      "$RANDOM",
+      "$LINENO",
+      "$UID"
+    ],
+    "answer": "$SECONDS"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "کون سا Bash ایکسپینشن alt کو صرف اسی صورت متبادل کرتا ہے جب var سیٹ ہو اور خالی نہ ہو؟",
+    "options": [
+      "${var:+alt}",
+      "${var:-alt}",
+      "${var:=alt}",
+      "${var:?alt}"
+    ],
+    "answer": "${var:+alt}"
+  }
+]

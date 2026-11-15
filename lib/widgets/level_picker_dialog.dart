@@ -2,6 +2,8 @@ import 'dart:math' as math;
 
 import 'package:flutter/material.dart';
 
+import '../l10n/game_localizations.dart';
+
 class LevelPickerDialog extends StatelessWidget {
   const LevelPickerDialog({
     super.key,
@@ -21,11 +23,12 @@ class LevelPickerDialog extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final colors = Theme.of(context).colorScheme;
+    final l10n = gameL10n(context);
     final screen = MediaQuery.sizeOf(context);
     final textScale = MediaQuery.textScalerOf(context).scale(16) / 16;
     return AlertDialog(
       insetPadding: const EdgeInsets.symmetric(horizontal: 16, vertical: 16),
-      title: const Text('Choose level'),
+      title: Text(l10n.gameUiChooseLevel),
       contentPadding: const EdgeInsets.fromLTRB(16, 12, 16, 8),
       content: SizedBox(
         width: 420,
@@ -52,10 +55,12 @@ class LevelPickerDialog extends StatelessWidget {
                 final selected = level == currentLevel;
                 return Tooltip(
                   message: completed
-                      ? 'Level $level completed'
+                      ? l10n.sharedDialogLevelCompleted(level.toString())
                       : unlocked
-                      ? 'Play level $level'
-                      : 'Complete level ${level - 1} to unlock',
+                      ? l10n.sharedDialogPlayLevel(level.toString())
+                      : l10n.sharedDialogCompleteLevelToUnlock(
+                          (level - 1).toString(),
+                        ),
                   child: FilledButton.tonal(
                     key: ValueKey('$levelKeyPrefix-level-$level'),
                     onPressed: unlocked
@@ -99,7 +104,7 @@ class LevelPickerDialog extends StatelessWidget {
       actions: [
         TextButton(
           onPressed: () => Navigator.pop(context),
-          child: const Text('Close'),
+          child: Text(l10n.gameUiClose),
         ),
       ],
     );

@@ -1,0 +1,4002 @@
+{
+  "linux-001": {
+    "command": "cat",
+    "description": "Dosyaların içeriklerini birleştirir ve yazdırır."
+  },
+  "linux-002": {
+    "command": "grep",
+    "description": "Dosyalarda belirli bir deseni arar."
+  },
+  "linux-003": {
+    "command": "chmod",
+    "description": "Dosya veya dizin erişim izinlerini değiştirir."
+  },
+  "linux-004": {
+    "command": "chown",
+    "description": "Bir dosyanın veya dizinin sahipliğini değiştirir."
+  },
+  "linux-005": {
+    "command": "ls",
+    "description": "Bir dizinin içeriğini listeler."
+  },
+  "linux-006": {
+    "command": "cd",
+    "description": "Geçerli çalışma dizinini değiştirir."
+  },
+  "linux-007": {
+    "command": "pwd",
+    "description": "Geçerli çalışma dizininin yolunu yazdırır."
+  },
+  "linux-008": {
+    "command": "mkdir",
+    "description": "Yeni bir dizin oluşturur."
+  },
+  "linux-009": {
+    "command": "rm",
+    "description": "Dosyaları veya dizinleri siler."
+  },
+  "linux-010": {
+    "command": "cp",
+    "description": "Dosyaları veya dizinleri kopyalar."
+  },
+  "linux-011": {
+    "command": "mv",
+    "description": "Dosyaları ve dizinleri taşır veya yeniden adlandırır."
+  },
+  "linux-012": {
+    "command": "ps",
+    "description": "O anda çalışan süreçleri gösterir."
+  },
+  "linux-013": {
+    "command": "top",
+    "description": "Sistem süreçlerini ve kaynaklarını gerçek zamanlı gösterir."
+  },
+  "linux-014": {
+    "command": "df",
+    "description": "Disk alanı kullanımını gösterir."
+  },
+  "linux-015": {
+    "command": "free",
+    "description": "Sistem belleği kullanımını gösterir."
+  },
+  "linux-016": {
+    "command": "systemctl status",
+    "description": "Bir systemd hizmetinin geçerli durumunu ve son günlük kayıtlarını gösterir."
+  },
+  "linux-017": {
+    "command": "journalctl",
+    "description": "Tek tek hizmetlere yönelik filtrelerle systemd günlüklerini okur."
+  },
+  "linux-018": {
+    "command": "find",
+    "description": "Bir dizin ağacında ad veya tür gibi koşullara uyan dosyaları arar."
+  },
+  "linux-019": {
+    "command": "tail",
+    "description": "Bir dosyanın son satırlarını gösterir ve eklenen yeni satırları izleyebilir."
+  },
+  "linux-020": {
+    "command": "Hangi komut bir dosyanın son 5 satırını görüntüler?",
+    "description": "tail -n 5"
+  },
+  "linux-021": {
+    "command": "Hangi komut bir dizinin boyutunu gösterir?",
+    "description": "du -sh"
+  },
+  "linux-022": {
+    "command": "Hangi komut bir dosyadaki yalnızca satır sayısını sayar?",
+    "description": "wc -l"
+  },
+  "linux-023": {
+    "command": "Hangi komut sistemin çalışma süresini (uptime) görüntüler?",
+    "description": "uptime"
+  },
+  "git-001": {
+    "command": "git clone",
+    "description": "Uzak bir deponun yerel kopyasını oluşturur."
+  },
+  "git-002": {
+    "command": "git init",
+    "description": "Yeni bir Git deposu başlatır."
+  },
+  "git-003": {
+    "command": "git add",
+    "description": "Değişiklikleri bir sonraki işleme için hazırlama alanına ekler."
+  },
+  "git-004": {
+    "command": "git commit",
+    "description": "Hazırlanan değişiklikleri depoya kaydeder."
+  },
+  "git-005": {
+    "command": "git push",
+    "description": "Yerel işlemeleri uzak bir depoya yükler."
+  },
+  "git-006": {
+    "command": "git pull",
+    "description": "Uzak bir depodan değişiklikleri getirir ve birleştirir."
+  },
+  "git-007": {
+    "command": "git branch",
+    "description": "Dalları listeler, oluşturur veya siler."
+  },
+  "git-008": {
+    "command": "git checkout",
+    "description": "Dallar arasında geçiş yapar veya çalışma ağacı dosyalarını geri yükler."
+  },
+  "git-009": {
+    "command": "git merge",
+    "description": "İki veya daha fazla geliştirme geçmişini birleştirir."
+  },
+  "git-010": {
+    "command": "git status",
+    "description": "Çalışma ağacının durumunu gösterir."
+  },
+  "git-011": {
+    "command": "git diff",
+    "description": "Çalışma ağacı ile hazırlama alanı arasındaki değişiklikleri gösterir; --staged, bir sonraki işleme için hazırlanan değişiklikleri gösterir."
+  },
+  "git-012": {
+    "command": "git stash",
+    "description": "İzlenen dosyalardaki değişiklikleri geçici olarak saklar ve temiz bir çalışma ağacı geri getirir; izlenmeyen dosyaları dahil etmek için -u kullanın."
+  },
+  "git-013": {
+    "command": "Git nedir?",
+    "description": "Sürüm Kontrol Sistemi"
+  },
+  "git-014": {
+    "command": "Hangi komut commit geçmişini görüntüler?",
+    "description": "git log"
+  },
+  "git-015": {
+    "command": "Hangi komut commit geçmişini tek satırlık biçimde görüntüler?",
+    "description": "git log --oneline"
+  },
+  "git-016": {
+    "command": "Git commit yazarının genel adını Alex olarak hangi komut ayarlar?",
+    "description": "git config --global user.name \"Alex\""
+  },
+  "git-017": {
+    "command": "Git commit yazarının genel e-posta adresini alex@example.com olarak hangi komut ayarlar?",
+    "description": "git config --global user.email \"alex@example.com\""
+  },
+  "git-018": {
+    "command": "Git'te dosyaları yok saymak için hangi dosya kullanılır?",
+    "description": ".gitignore"
+  },
+  "git-019": {
+    "command": "Depo kökünde çalıştırıldığında, yok sayılmayan tüm ekleme, değiştirme ve silmeleri commit oluşturmadan hangi komut hazırlama alanına alır?",
+    "description": "git add ."
+  },
+  "git-020": {
+    "command": "Commit iletisini doğrudan komut satırından hangi seçenek kabul eder?",
+    "description": "git commit -m"
+  },
+  "git-021": {
+    "command": "Hangi komut izlenen bir dosyayı kaldırır?",
+    "description": "git rm"
+  },
+  "git-022": {
+    "command": "user.name değerini yalnızca geçerli depo için hangi komut ayarlar?",
+    "description": "git config --local user.name \"Alex\""
+  },
+  "git-023": {
+    "command": "Seçilen değişiklik parçalarını etkileşimli olarak hangi komut hazırlar?",
+    "description": "git add -p"
+  },
+  "docker-001": {
+    "command": "docker build",
+    "description": "Bir Dockerfile dosyasından imaj oluşturur."
+  },
+  "docker-002": {
+    "command": "docker run",
+    "description": "Yeni bir kapsayıcıda komut çalıştırır."
+  },
+  "docker-003": {
+    "command": "docker ps",
+    "description": "Çalışan kapsayıcıları listeler."
+  },
+  "docker-004": {
+    "command": "docker images",
+    "description": "Yerel Docker imajlarını listeler."
+  },
+  "docker-005": {
+    "command": "docker stop",
+    "description": "Çalışan bir veya daha fazla kapsayıcıyı durdurur."
+  },
+  "docker-006": {
+    "command": "docker rm",
+    "description": "Bir veya daha fazla kapsayıcıyı siler."
+  },
+  "docker-007": {
+    "command": "docker rmi",
+    "description": "Bir veya daha fazla imajı siler."
+  },
+  "docker-008": {
+    "command": "docker exec",
+    "description": "Çalışan bir kapsayıcıda komut çalıştırır."
+  },
+  "docker-009": {
+    "command": "docker logs",
+    "description": "Bir kapsayıcının günlüklerini getirir."
+  },
+  "docker-010": {
+    "command": "docker-compose up",
+    "description": "docker-compose.yml dosyasından kapsayıcılar oluşturur ve başlatır."
+  },
+  "docker-011": {
+    "command": "docker inspect",
+    "description": "Kapsayıcılar ve imajlar gibi Docker nesneleri hakkında ayrıntılı JSON bilgileri gösterir."
+  },
+  "docker-012": {
+    "command": "docker stats",
+    "description": "CPU ve bellek dahil kapsayıcı kaynak kullanımını canlı gösterir; --no-stream tek bir anlık görüntü gösterir."
+  },
+  "docker-013": {
+    "command": "Hangi komut bir konteyneri arka plan (detached) modunda çalıştırır?",
+    "description": "docker run -d"
+  },
+  "docker-014": {
+    "command": "Yeni kapsayıcı için standart girdiyi açık tutup sözde TTY ayıran komut hangisidir?",
+    "description": "docker run -it"
+  },
+  "docker-015": {
+    "command": "Hangi komut ara imajlar dahil tüm imajları listeler?",
+    "description": "docker images -a"
+  },
+  "docker-016": {
+    "command": "Hangi komut durdurulmuş tüm konteynerleri siler?",
+    "description": "docker container prune"
+  },
+  "docker-017": {
+    "command": "Hangi komut kullanılmayan tüm imajları siler?",
+    "description": "docker image prune -a"
+  },
+  "docker-018": {
+    "command": "Hangi komut bir konteynerin içinde çalışan işlemleri gösterir?",
+    "description": "docker top"
+  },
+  "docker-019": {
+    "command": "Hangi komut bir Docker ağı oluşturur?",
+    "description": "docker network create"
+  },
+  "docker-020": {
+    "command": "Hangi komut Docker ağlarını listeler?",
+    "description": "docker network ls"
+  },
+  "docker-021": {
+    "command": "Hangi komut bir Docker birimi (volume) oluşturur?",
+    "description": "docker volume create"
+  },
+  "docker-022": {
+    "command": "Hangi komut Docker birimlerini (volume) listeler?",
+    "description": "docker volume ls"
+  },
+  "docker-023": {
+    "command": "Hangi komut Docker sistem bilgilerini gösterir?",
+    "description": "docker info"
+  },
+  "k8s-001": {
+    "command": "kubectl get pods",
+    "description": "Geçerli ad alanındaki pod'ları listeler."
+  },
+  "k8s-002": {
+    "command": "kubectl apply",
+    "description": "Dosya adını kullanarak bir kaynağa yapılandırma uygular."
+  },
+  "k8s-003": {
+    "command": "kubectl delete",
+    "description": "Kaynakları dosya adlarına veya adlarına göre siler."
+  },
+  "k8s-004": {
+    "command": "kubectl describe",
+    "description": "Belirli bir kaynak hakkında ayrıntılı bilgi gösterir."
+  },
+  "k8s-005": {
+    "command": "kubectl logs",
+    "description": "Bir pod içindeki kapsayıcının günlüklerini yazdırır."
+  },
+  "k8s-006": {
+    "command": "kubectl exec",
+    "description": "Bir kapsayıcıda komut yürütür."
+  },
+  "k8s-007": {
+    "command": "kubectl get nodes",
+    "description": "Kümedeki tüm düğümleri listeler."
+  },
+  "k8s-008": {
+    "command": "kubectl get services",
+    "description": "Geçerli ad alanındaki tüm hizmetleri listeler."
+  },
+  "k8s-009": {
+    "command": "kubectl scale",
+    "description": "Bir Deployment veya ReplicaSet için yeni bir boyut belirler."
+  },
+  "k8s-010": {
+    "command": "kubectl port-forward",
+    "description": "Yerel bağlantı noktalarını bir pod'a yönlendirir."
+  },
+  "k8s-011": {
+    "command": "kubectl rollout status",
+    "description": "Bir kaynağın dağıtım ilerlemesini tamamlanana veya zaman aşımına ulaşılana kadar izler."
+  },
+  "k8s-012": {
+    "command": "Hangi komut tüm namespace'lerdeki pod'ları listeler?",
+    "description": "kubectl get pods -A"
+  },
+  "k8s-013": {
+    "command": "Hangi komut bir pod'u açıklar?",
+    "description": "kubectl describe pod"
+  },
+  "k8s-014": {
+    "command": "Hangi komut pod günlüklerini sürekli olarak görüntüler?",
+    "description": "kubectl logs -f"
+  },
+  "k8s-015": {
+    "command": "Hangi komut bir pod'u siler?",
+    "description": "kubectl delete pod"
+  },
+  "k8s-016": {
+    "command": "Hangi komut bir deployment oluşturur?",
+    "description": "kubectl create deployment"
+  },
+  "k8s-017": {
+    "command": "Hangi komut deployment'ları listeler?",
+    "description": "kubectl get deployments"
+  },
+  "k8s-018": {
+    "command": "Hangi komut küme (cluster) bilgilerini görüntüler?",
+    "description": "kubectl cluster-info"
+  },
+  "k8s-019": {
+    "command": "Hangi komut bir YAML dosyasındaki yapılandırmayı uygular?",
+    "description": "kubectl apply -f"
+  },
+  "k8s-020": {
+    "command": "Hangi komut bir YAML dosyasından kaynaklar oluşturur?",
+    "description": "kubectl create -f"
+  },
+  "k8s-021": {
+    "command": "Hangi komut bir YAML dosyasında tanımlanan kaynakları siler?",
+    "description": "kubectl delete -f"
+  },
+  "k8s-022": {
+    "command": "İstek için payments adlı ad alanını hangi kubectl seçeneği seçer?",
+    "description": "-n payments"
+  },
+  "k8s-023": {
+    "command": "Geçerli kubeconfig bağlamının adını hangi komut gösterir?",
+    "description": "kubectl config current-context"
+  },
+  "networking-001": {
+    "command": "curl",
+    "description": "Bir sunucudan veya sunucuya veri aktarır."
+  },
+  "networking-002": {
+    "command": "ping",
+    "description": "Bir IP ağındaki ana makinenin erişilebilirliğini test eder."
+  },
+  "networking-003": {
+    "command": "ssh",
+    "description": "Uzak bir makineye güvenli biçimde bağlanır."
+  },
+  "networking-004": {
+    "command": "netstat",
+    "description": "Ağ bağlantılarını ve yönlendirme tablolarını gösterir."
+  },
+  "networking-005": {
+    "command": "nslookup",
+    "description": "İnternet alan adı sunucularını sorgular."
+  },
+  "networking-006": {
+    "command": "dig",
+    "description": "DNS sorgulamaları yapar ve yanıtları gösterir."
+  },
+  "networking-007": {
+    "command": "traceroute",
+    "description": "Paketlerin bir ağ ana makinesine giderken izlediği yolu yazdırır."
+  },
+  "networking-008": {
+    "command": "iptables",
+    "description": "Linux üzerinde IP paket filtreleme kurallarını yapılandırır."
+  },
+  "networking-009": {
+    "command": "telnet",
+    "description": "Başka bir ana makineyle etkileşimli iletişim kurar."
+  },
+  "networking-010": {
+    "command": "nc (netcat)",
+    "description": "Ağ bağlantıları üzerinden veri okur ve yazar."
+  },
+  "networking-011": {
+    "command": "IP neyin kısaltmasıdır?",
+    "description": "Internet Protocol"
+  },
+  "networking-012": {
+    "command": "Web sayfalarını aktarmak için hangi protokol kullanılır?",
+    "description": "HTTP"
+  },
+  "networking-013": {
+    "command": "HTTPS varsayılan olarak hangi bağlantı noktasını kullanır?",
+    "description": "443"
+  },
+  "networking-014": {
+    "command": "HTTP varsayılan olarak hangi bağlantı noktasını kullanır?",
+    "description": "80"
+  },
+  "networking-015": {
+    "command": "SSH varsayılan olarak hangi bağlantı noktasını kullanır?",
+    "description": "22"
+  },
+  "networking-016": {
+    "command": "DNS ne işe yarar?",
+    "description": "Alan adlarını IP adreslerine çözümler"
+  },
+  "networking-017": {
+    "command": "OSI modelinin hangi katmanı yönlendirmeyi (routing) yönetir?",
+    "description": "Ağ Katmanı"
+  },
+  "networking-018": {
+    "command": "E-posta göndermek için hangi protokol kullanılır?",
+    "description": "SMTP"
+  },
+  "networking-019": {
+    "command": "Hangisi bir IPv4 geri döngü adresidir?",
+    "description": "127.0.0.1"
+  },
+  "networking-020": {
+    "command": "Hangi protokol bağlantı odaklıdır?",
+    "description": "TCP"
+  },
+  "networking-021": {
+    "command": "Hangi protokol bağlantısızdır?",
+    "description": "UDP"
+  },
+  "networking-022": {
+    "command": "Hangi komut yönlendirme bilgilerini gösterir?",
+    "description": "ip route"
+  },
+  "networking-023": {
+    "command": "Linux'ta hangi komut ağ arayüzlerini gösterir?",
+    "description": "ip addr"
+  },
+  "networking-024": {
+    "command": "Bir IPv4 adresinde kaç bit bulunur?",
+    "description": "32"
+  },
+  "jenkins-001": {
+    "command": "Jenkinsfile",
+    "description": "Bir Jenkins Pipeline tanımını içeren metin dosyası."
+  },
+  "jenkins-002": {
+    "command": "Pipeline",
+    "description": "Sürekli teslim işlem hatlarını destekleyen bir eklenti paketi."
+  },
+  "jenkins-003": {
+    "command": "Agent",
+    "description": "Pipeline veya aşamanın nerede yürütüleceğini belirtir."
+  },
+  "jenkins-004": {
+    "command": "Stage",
+    "description": "Görevlerin kavramsal olarak ayrı bir alt kümesini tanımlar."
+  },
+  "jenkins-005": {
+    "command": "Node",
+    "description": "Bir Pipeline yürütebilen makine."
+  },
+  "jenkins-006": {
+    "command": "Build Trigger",
+    "description": "Bir Jenkins derlemesini başlatan mekanizmalar."
+  },
+  "jenkins-007": {
+    "command": "Artifact",
+    "description": "Bir derleme sürecinin ürettiği dosya."
+  },
+  "jenkins-008": {
+    "command": "Post actions",
+    "description": "Bir aşama veya işlem hattı tamamlandıktan sonra gerçekleştirilen eylemler."
+  },
+  "jenkins-009": {
+    "command": "Credentials",
+    "description": "Jenkins işlerinde kullanılan, güvenli biçimde saklanan gizli bilgiler."
+  },
+  "jenkins-010": {
+    "command": "Jenkins nedir?",
+    "description": "CI/CD Aracı"
+  },
+  "jenkins-011": {
+    "command": "Jenkins hangi dilde yazılmıştır?",
+    "description": "Java"
+  },
+  "jenkins-012": {
+    "command": "Jenkins varsayılan olarak hangi portu kullanır?",
+    "description": "8080"
+  },
+  "jenkins-013": {
+    "command": "Jenkins Job nedir?",
+    "description": "Otomatik görev"
+  },
+  "jenkins-014": {
+    "command": "Hangi eklenti Jenkins'i Git ile entegre eder?",
+    "description": "Git Plugin"
+  },
+  "jenkins-015": {
+    "command": "Jenkins öncelikle ne için kullanılır?",
+    "description": "Otomasyon"
+  },
+  "jenkins-016": {
+    "command": "CI neyin kısaltmasıdır?",
+    "description": "Sürekli Entegrasyon"
+  },
+  "jenkins-017": {
+    "command": "DevOps'ta CD neyin kısaltmasıdır?",
+    "description": "Sürekli Teslimat"
+  },
+  "jenkins-018": {
+    "command": "Jenkins eklentilerini hangi menü yükler?",
+    "description": "Manage Jenkins"
+  },
+  "jenkins-019": {
+    "command": "Jenkins Home dizini değişkeni nedir?",
+    "description": "JENKINS_HOME"
+  },
+  "jenkins-020": {
+    "command": "Hangi düğme bir Jenkins işini manuel olarak başlatır?",
+    "description": "Build Now"
+  },
+  "jenkins-021": {
+    "command": "Jenkins ile en yaygın entegre edilen kaynak kod yönetim sistemi hangisidir?",
+    "description": "Git"
+  },
+  "jenkins-022": {
+    "command": "Derleme işlerinin araçlarından bağımsız olarak Jenkins denetleyicisinin kendisini çalıştırmak için ne gerekir?",
+    "description": "JRE veya JDK tarafından sağlanan, desteklenen bir Java çalışma zamanı"
+  },
+  "jenkins-023": {
+    "command": "Basit görevler için en yaygın kullanılan Jenkins iş türü hangisidir?",
+    "description": "Freestyle Project"
+  },
+  "jenkins-024": {
+    "command": "Jenkins çalışma alanı ne için kullanılır?",
+    "description": "İş çalışırken depodan alınan veya üretilen dosyalar için"
+  },
+  "terraform-001": {
+    "command": "terraform init",
+    "description": "Terraform dosyaları içeren bir çalışma dizinini başlatır."
+  },
+  "terraform-002": {
+    "command": "terraform plan",
+    "description": "Terraform tarafından gerçekleştirilecek eylemleri gösteren bir yürütme planı oluşturur."
+  },
+  "terraform-003": {
+    "command": "terraform apply",
+    "description": "İstenen duruma ulaşmak için değişiklikleri uygular."
+  },
+  "terraform-004": {
+    "command": "terraform destroy",
+    "description": "Terraform tarafından yönetilen altyapıyı yok eder."
+  },
+  "terraform-005": {
+    "command": "terraform fmt",
+    "description": "Terraform dosyalarını standart biçimde yeniden yazar."
+  },
+  "terraform-006": {
+    "command": "terraform validate",
+    "description": "Bir dizindeki yapılandırma dosyalarını doğrular."
+  },
+  "terraform-007": {
+    "command": "terraform state",
+    "description": "Gelişmiş durum yönetimi sağlar; kaynakları listeleme ve taşıma buna dahildir."
+  },
+  "terraform-008": {
+    "command": "Provider",
+    "description": "Terraform aracının bulut sağlayıcılarıyla etkileşmesini sağlayan eklenti."
+  },
+  "terraform-009": {
+    "command": "Resource",
+    "description": "Terraform tarafından oluşturulan ve yönetilen bir altyapı nesnesini tanımlar."
+  },
+  "terraform-010": {
+    "command": "Variable",
+    "description": "Bir Terraform modülünün farklı ayarlarla yeniden kullanılabilmesi için girdi değerleri kabul eder."
+  },
+  "terraform-011": {
+    "command": "terraform output",
+    "description": "Kök modülün çıktı değerlerini Terraform durumundan okur."
+  },
+  "terraform-012": {
+    "command": "Terraform nedir?",
+    "description": "Kod Olarak Altyapı Aracı"
+  },
+  "terraform-013": {
+    "command": "Terraform'u kim geliştirdi?",
+    "description": "HashiCorp"
+  },
+  "terraform-014": {
+    "command": "JSON alternatifinden farklı olarak Terraform'un yerel yapılandırma sözdizimi hangi dile dayanır?",
+    "description": "HCL"
+  },
+  "terraform-015": {
+    "command": "Terraform dosyaları için yaygın olarak hangi dosya uzantısı kullanılır?",
+    "description": ".tf"
+  },
+  "terraform-016": {
+    "command": "Hangi dosya Terraform durumunu (state) yerel olarak saklar?",
+    "description": "terraform.tfstate"
+  },
+  "terraform-017": {
+    "command": "Hangi komut Terraform sürümünü gösterir?",
+    "description": "terraform version"
+  },
+  "terraform-018": {
+    "command": "Terraform hangi yaklaşımı izler?",
+    "description": "Bildirimsel"
+  },
+  "terraform-019": {
+    "command": "Durumdan kök modül çıktı değerlerini hangi komut yazdırır?",
+    "description": "terraform output"
+  },
+  "terraform-020": {
+    "command": "region adlı girdi değişkenini hangi ifade okur?",
+    "description": "var.region"
+  },
+  "terraform-021": {
+    "command": "prefix adlı yerel değeri hangi ifade okur?",
+    "description": "local.prefix"
+  },
+  "terraform-022": {
+    "command": "terraform bloğunun hangi argümanı Terraform CLI sürümünü sınırlar?",
+    "description": "required_version"
+  },
+  "terraform-023": {
+    "command": "terraform içindeki hangi blok sağlayıcı kaynak adreslerini ve sürüm kısıtlarını bildirir?",
+    "description": "required_providers"
+  },
+  "terraform-024": {
+    "command": "Terraform sağlayıcısı temel olarak ne sunar?",
+    "description": "API veya hizmetle etkileşim için kaynak türleri ve veri kaynakları"
+  },
+  "ansible-001": {
+    "command": "ansible",
+    "description": "Bir Ansible envanterindeki ana makinelerde anlık bir görev çalıştırır."
+  },
+  "ansible-002": {
+    "command": "ansible-playbook",
+    "description": "Bir Ansible playbook dosyasında tanımlanan otomasyon görevlerini çalıştırır."
+  },
+  "ansible-003": {
+    "command": "Inventory",
+    "description": "Ansible tarafından yönetilen ana makineleri ve ana makine gruplarını listeler."
+  },
+  "ansible-004": {
+    "command": "Playbook",
+    "description": "Otomasyon görevlerini ve hedef ana makineleri YAML biçiminde tanımlar."
+  },
+  "ansible-005": {
+    "command": "Module",
+    "description": "Paket yükleme veya dosya kopyalama gibi belirli bir Ansible işlemi gerçekleştirir."
+  },
+  "ansible-006": {
+    "command": "Task",
+    "description": "Bir otomasyon adımını gerçekleştirmek için bağımsız değişkenlerle bir Ansible modülü çağırır."
+  },
+  "ansible-007": {
+    "command": "Role",
+    "description": "Ansible görevlerini, işleyicilerini, değişkenlerini ve dosyalarını yeniden kullanılabilir bir dizin yapısında düzenler."
+  },
+  "ansible-008": {
+    "command": "Vault",
+    "description": "Parola gibi hassas verileri şifreli dosyalarda tutar."
+  },
+  "ansible-009": {
+    "command": "Handler",
+    "description": "Yalnızca başka bir görev tarafından bildirildiğinde çalışan görev."
+  },
+  "ansible-010": {
+    "command": "Facts",
+    "description": "Uzak sistemler hakkında bilgi içeren değişkenler."
+  },
+  "ansible-011": {
+    "command": "Ansible öncelikli olarak ne için kullanılır?",
+    "description": "Yapılandırma Yönetimi"
+  },
+  "ansible-012": {
+    "command": "Ansible hangi dilde yazılmıştır?",
+    "description": "Python"
+  },
+  "ansible-013": {
+    "command": "Ansible'da yönetilen sunucuları hangi dosya içerir?",
+    "description": "Envanter Dosyası"
+  },
+  "ansible-014": {
+    "command": "Varsayılan envanter dosyası konumu nedir?",
+    "description": "/etc/ansible/hosts"
+  },
+  "ansible-015": {
+    "command": "Hangi komut Ansible sürümünü kontrol eder?",
+    "description": "ansible --version"
+  },
+  "ansible-016": {
+    "command": "Ansible'ın varsayılan bağlantı eklentisi Linux ana makineleri için genellikle hangi protokolü kullanır?",
+    "description": "SSH"
+  },
+  "ansible-017": {
+    "command": "Ansible Playbook nedir?",
+    "description": "Otomasyon görevleri içeren YAML dosyası"
+  },
+  "ansible-018": {
+    "command": "Bir playbook'ta hedef sunucuları hangi anahtar sözcük tanımlar?",
+    "description": "hosts"
+  },
+  "ansible-019": {
+    "command": "Bir playbook'ta görevleri hangi anahtar sözcük tanımlar?",
+    "description": "tasks"
+  },
+  "ansible-020": {
+    "command": "Hangi modül dosyaları uzak sunuculara kopyalar?",
+    "description": "copy"
+  },
+  "ansible-021": {
+    "command": "Hangi modül servisleri yönetir?",
+    "description": "service"
+  },
+  "ansible-022": {
+    "command": "Hangi komut, hedeflenen tüm POSIX ana makinelerinde Ansible bağlantısını ve kullanılabilir bir Python kurulumunu denetler?",
+    "description": "ansible all -m ping"
+  },
+  "ansible-023": {
+    "command": "Ansible playbook'ları yazmak için geleneksel olarak hangi kolay okunabilir biçim kullanılır?",
+    "description": "YAML"
+  },
+  "ansible-024": {
+    "command": "Ansible ayarlarını hangi dosya yapılandırır?",
+    "description": "ansible.cfg"
+  },
+  "bash-001": {
+    "command": "#!/bin/bash",
+    "description": "Sisteme Bash kabuğunu kullanmasını söyleyen shebang satırı."
+  },
+  "bash-002": {
+    "command": "echo",
+    "description": "Bir metin satırını veya değişken değerini gösterir."
+  },
+  "bash-003": {
+    "command": "if [ condition ]",
+    "description": "Bash betiklerinde temel koşul ifadesi."
+  },
+  "bash-004": {
+    "command": "script.sh dosyasının çalıştırma izni zaten varsa hangi komut onu çalıştırır?",
+    "description": "./script.sh"
+  },
+  "bash-005": {
+    "command": "Hangi komut script.sh dosyasını açıkça Bash kullanarak çalıştırır?",
+    "description": "bash script.sh"
+  },
+  "bash-006": {
+    "command": "Bash betiğinde tek satırlık yorum hangi sembolle başlar?",
+    "description": "#"
+  },
+  "bash-007": {
+    "command": "Hangi komut script.sh dosyasını çalıştırılabilir yapar?",
+    "description": "chmod +x script.sh"
+  },
+  "bash-008": {
+    "command": "Hangi yerleşik komut kullanıcıdan girdi okur?",
+    "description": "read"
+  },
+  "bash-009": {
+    "command": "Bir değişkenin değerini genişletmek için hangi sembol kullanılır?",
+    "description": "$"
+  },
+  "bash-010": {
+    "command": "Bash'te hangi değişken ataması geçerlidir?",
+    "description": "name=John"
+  },
+  "bash-011": {
+    "command": "Hangi komut bir önceki komutun çıkış durumunu yazdırır?",
+    "description": "echo $?"
+  },
+  "bash-012": {
+    "command": "0 çıkış durumu genellikle neyi gösterir?",
+    "description": "Başarı"
+  },
+  "bash-013": {
+    "command": "Hangi sembol tek satırdaki birden fazla komutu ayırır?",
+    "description": ";"
+  },
+  "bash-014": {
+    "command": "Kabuk betikleri için yaygın olarak hangi dosya uzantısı kullanılır?",
+    "description": ".sh"
+  },
+  "bash-015": {
+    "command": "Hangi komut ortam değişkenlerini görüntüler?",
+    "description": "env"
+  },
+  "bash-016": {
+    "command": "Hangi komut geçerli kullanıcının varsayılan kabuğunu görüntüler?",
+    "description": "echo $SHELL"
+  },
+  "bash-017": {
+    "command": "Bash'te hangi karakter kendisinden sonraki karakteri kaçırır (escape)?",
+    "description": "Ters eğik çizgi"
+  },
+  "bash-018": {
+    "command": "Hangi tırnak stili değişken genişletmeyi ve komut yerine koymayı engeller?",
+    "description": "Tek tırnak"
+  },
+  "bash-019": {
+    "command": "Hangi tırnak stili boşlukları korurken değişken genişletmeye izin verir?",
+    "description": "Çift tırnak"
+  },
+  "bash-020": {
+    "command": "Hangi operatör standart çıktıyı yönlendirir ve dosyanın üzerine yazar?",
+    "description": ">"
+  },
+  "bash-021": {
+    "command": "Hangi komut geçerli çalışma dizinini yazdırır?",
+    "description": "pwd"
+  },
+  "bash-022": {
+    "command": "Hata mesajları için hangi standart akış kullanılır?",
+    "description": "stderr"
+  },
+  "bash-023": {
+    "command": "Hangi dosya tanımlayıcısı standart girdiyi temsil eder?",
+    "description": "0"
+  },
+  "bash-024": {
+    "command": "Hangi komut terminal ekranını temizler?",
+    "description": "clear"
+  },
+  "python-001": {
+    "command": "print()",
+    "description": "Veriyi konsola yazdırır."
+  },
+  "python-002": {
+    "command": "import",
+    "description": "Bir modülü veya belirli işlevleri betiğe içe aktarır."
+  },
+  "python-003": {
+    "command": "def",
+    "description": "Yeniden kullanılabilir bir kod bloğu, yani işlev tanımlar."
+  },
+  "python-004": {
+    "command": "pip install",
+    "description": "PyPI üzerinden Python paketleri yükler."
+  },
+  "python-005": {
+    "command": "virtualenv",
+    "description": "Yalıtılmış bir Python ortamı oluşturur."
+  },
+  "python-006": {
+    "command": "Python'da hangi sembol yorum satırı başlatır?",
+    "description": "#"
+  },
+  "python-007": {
+    "command": "Hangi yerleşik fonksiyon kullanıcı girdisini okur?",
+    "description": "input()"
+  },
+  "python-008": {
+    "command": "Python kaynak dosyaları için hangi dosya uzantısı kullanılır?",
+    "description": ".py"
+  },
+  "python-009": {
+    "command": "Hangi operatör eşitliği kontrol eder?",
+    "description": "=="
+  },
+  "python-010": {
+    "command": "Hangi operatör bir değer atar?",
+    "description": "="
+  },
+  "python-011": {
+    "command": "Hangi ifade değeri 5 olan x adlı bir değişken oluşturur?",
+    "description": "x = 5"
+  },
+  "python-012": {
+    "command": "Hangi yerleşik fonksiyon bir nesnenin veri türünü döndürür?",
+    "description": "type()"
+  },
+  "python-013": {
+    "command": "Hangi yerleşik fonksiyon bir değeri tamsayıya dönüştürür?",
+    "description": "int()"
+  },
+  "python-014": {
+    "command": "Hangi yerleşik fonksiyon bir değeri dizeye (string) dönüştürür?",
+    "description": "str()"
+  },
+  "python-015": {
+    "command": "Hangi yerleşik fonksiyon bir dizinin uzunluğunu döndürür?",
+    "description": "len()"
+  },
+  "python-016": {
+    "command": "Hangi yerleşik fonksiyon bir sayı dizisi üretir?",
+    "description": "range()"
+  },
+  "python-017": {
+    "command": "Hangi anahtar kelime bir dizi üzerinde yineleme yapan döngüyü başlatır?",
+    "description": "for"
+  },
+  "python-018": {
+    "command": "Hangi anahtar kelime bir koşul doğru olduğu sürece kodu tekrarlar?",
+    "description": "while"
+  },
+  "python-019": {
+    "command": "Python'da bir for veya while döngüsüne bağlı olan ve yalnızca döngü break ile kesilmeden tamamlanırsa çalışan yan tümce hangisidir?",
+    "description": "else"
+  },
+  "python-020": {
+    "command": "Python'da hangi anahtar kelime geçerli döngü yinelemesini atlar?",
+    "description": "continue"
+  },
+  "python-021": {
+    "command": "Hangi Python anahtar kelimesi iç içe bir fonksiyonun, kapsayan fonksiyondaki bir değişkeni yeniden bağlamasını sağlar?",
+    "description": "nonlocal"
+  },
+  "python-022": {
+    "command": "Hangi anahtar kelime istisna (exception) yönetimini başlatır?",
+    "description": "try"
+  },
+  "python-023": {
+    "command": "Hangi yerleşik Python fonksiyonu bir nesnenin benzersiz kimliğini döndürür?",
+    "description": "id()"
+  },
+  "python-024": {
+    "command": "Hangi sözdizimi bir sözlük (dictionary) oluşturur?",
+    "description": "{'name': 'John'}"
+  },
+  "perl-001": {
+    "command": "Komut satırından bir Perl betiğini hangi komut çalıştırır?",
+    "description": "perl script.pl"
+  },
+  "perl-002": {
+    "command": "Perl betikleri için yaygın olarak hangi shebang satırı kullanılır?",
+    "description": "#!/usr/bin/perl"
+  },
+  "perl-003": {
+    "command": "Perl'de tek satırlık yorum hangi sembolle başlar?",
+    "description": "#"
+  },
+  "perl-004": {
+    "command": "Hangi yerleşik fonksiyon çıktıyı yazdırır?",
+    "description": "print"
+  },
+  "perl-005": {
+    "command": "Bir Perl deyimini genellikle hangi karakter sonlandırır?",
+    "description": ";"
+  },
+  "perl-006": {
+    "command": "Hangi sigil skaler değişkeni belirtir?",
+    "description": "$"
+  },
+  "perl-007": {
+    "command": "Hangi Perl fonksiyonu bir dizge içindeki alt dizgenin konumunu döndürür?",
+    "description": "index"
+  },
+  "perl-008": {
+    "command": "Hangi Perl fonksiyonu bir sayının mutlak değerini döndürür?",
+    "description": "abs"
+  },
+  "perl-009": {
+    "command": "Bir dizgenin uzunluğunu hangi fonksiyon döndürür?",
+    "description": "length"
+  },
+  "perl-010": {
+    "command": "Bir dizgenin sonundaki satır sonu karakterini hangi fonksiyon kaldırır?",
+    "description": "chomp"
+  },
+  "perl-011": {
+    "command": "Bir dizgeyi listeye bölen fonksiyon hangisidir?",
+    "description": "split"
+  },
+  "perl-012": {
+    "command": "Liste öğelerini bir dizgede birleştiren fonksiyon hangisidir?",
+    "description": "join"
+  },
+  "perl-013": {
+    "command": "Dizgeleri birleştiren (concatenate) operatör hangisidir?",
+    "description": "."
+  },
+  "perl-014": {
+    "command": "Bir dizgeyi tekrarlayan operatör hangisidir?",
+    "description": "x"
+  },
+  "perl-015": {
+    "command": "Bir dosyayı açan fonksiyon hangisidir?",
+    "description": "open"
+  },
+  "perl-016": {
+    "command": "Perl'de hangi dosya modu bir dosyayı okumak için açar?",
+    "description": "<"
+  },
+  "perl-017": {
+    "command": "Hangi Perl fonksiyonu bir dosyayı dosya sisteminden siler?",
+    "description": "unlink"
+  },
+  "perl-018": {
+    "command": "Hangi Perl dosya testi operatörü bir yolun var olup olmadığını denetler?",
+    "description": "-e"
+  },
+  "perl-019": {
+    "command": "Hangi yerleşik dosya tanıtıcısı standart girdiyi temsil eder?",
+    "description": "STDIN"
+  },
+  "perl-020": {
+    "command": "Hangi yerleşik dosya tanıtıcısı standart çıktıyı temsil eder?",
+    "description": "STDOUT"
+  },
+  "perl-021": {
+    "command": "Hangi yerleşik dosya tanıtıcısı standart hatayı temsil eder?",
+    "description": "STDERR"
+  },
+  "perl-022": {
+    "command": "Açık bir dosya tanıtıcısını hangi fonksiyon kapatır?",
+    "description": "close"
+  },
+  "perl-023": {
+    "command": "Hangi özel değişken varsayılan girdi değişkenidir?",
+    "description": "$_"
+  },
+  "perl-024": {
+    "command": "Hangi özel değişken son başarılı desen eşleşmesini içerir?",
+    "description": "$&"
+  },
+  "powershell-001": {
+    "command": "Hangi cmdlet geçerli konumu görüntüler?",
+    "description": "Get-Location"
+  },
+  "powershell-002": {
+    "command": "Hangi cmdlet dosyaları ve dizinleri listeler?",
+    "description": "Get-ChildItem"
+  },
+  "powershell-003": {
+    "command": "Hangi cmdlet geçerli dizini değiştirir?",
+    "description": "Set-Location"
+  },
+  "powershell-004": {
+    "command": "Hangi cmdlet bir dosyanın içeriğini görüntüler?",
+    "description": "Get-Content"
+  },
+  "powershell-005": {
+    "command": "Hangi cmdlet yeni bir dosya veya dizin oluşturur?",
+    "description": "New-Item"
+  },
+  "powershell-006": {
+    "command": "Hangi cmdlet dosyaları ve dizinleri kopyalar?",
+    "description": "Copy-Item"
+  },
+  "powershell-007": {
+    "command": "Hangi cmdlet dosyaları ve dizinleri taşır?",
+    "description": "Move-Item"
+  },
+  "powershell-008": {
+    "command": "Hangi cmdlet dosyaları ve dizinleri siler?",
+    "description": "Remove-Item"
+  },
+  "powershell-009": {
+    "command": "Hangi cmdlet bir dosyayı yeniden adlandırır?",
+    "description": "Rename-Item"
+  },
+  "powershell-010": {
+    "command": "PowerShell'de tek satırlık yorumu hangi simge başlatır?",
+    "description": "#"
+  },
+  "powershell-011": {
+    "command": "Hangi PowerShell cmdlet'i bir dosyanın sonuna metin ekler?",
+    "description": "Add-Content"
+  },
+  "powershell-012": {
+    "command": "Bir değişken adından önce hangi simge kullanılır?",
+    "description": "$"
+  },
+  "powershell-013": {
+    "command": "Hangi cmdlet komut geçmişini görüntüler?",
+    "description": "Get-History"
+  },
+  "powershell-014": {
+    "command": "Hangi cmdlet konsol ekranını temizler?",
+    "description": "Clear-Host"
+  },
+  "powershell-015": {
+    "command": "Hangi cmdlet yardım bilgilerini görüntüler?",
+    "description": "Get-Help"
+  },
+  "powershell-016": {
+    "command": "Hangi cmdlet yerel yardım dosyalarını günceller?",
+    "description": "Update-Help"
+  },
+  "powershell-017": {
+    "command": "Hangi cmdlet kullanılabilir komutları listeler?",
+    "description": "Get-Command"
+  },
+  "powershell-018": {
+    "command": "Hangi cmdlet bir nesnenin özelliklerini ve yöntemlerini görüntüler?",
+    "description": "Get-Member"
+  },
+  "powershell-019": {
+    "command": "Hangi otomatik değişken ayrıntılı PowerShell sürüm bilgilerini içerir?",
+    "description": "$PSVersionTable"
+  },
+  "powershell-020": {
+    "command": "Hangi cmdlet takma adları (alias) listeler?",
+    "description": "Get-Alias"
+  },
+  "powershell-021": {
+    "command": "Hangi cmdlet geçerli yürütme ilkesini (execution policy) görüntüler?",
+    "description": "Get-ExecutionPolicy"
+  },
+  "powershell-022": {
+    "command": "Hangi cmdlet yürütme ilkesini (execution policy) değiştirir?",
+    "description": "Set-ExecutionPolicy"
+  },
+  "powershell-023": {
+    "command": "Hangi yürütme ilkesi varsayılan olarak betiklerin çalışmasını engeller?",
+    "description": "Restricted"
+  },
+  "powershell-024": {
+    "command": "Hangi yürütme ilkesi yerel olarak oluşturulan betiklerin çalışmasına izin verir?",
+    "description": "RemoteSigned"
+  },
+  "javascript-001": {
+    "command": "JavaScript nedir?",
+    "description": "Programlama dili"
+  },
+  "javascript-002": {
+    "command": "Hangi anahtar kelime blok kapsamlı bir değişken tanımlar?",
+    "description": "let"
+  },
+  "javascript-003": {
+    "command": "Hangi anahtar kelime bir sabit tanımlar?",
+    "description": "const"
+  },
+  "javascript-004": {
+    "command": "Tek satırlık bir yorumu hangi sembol başlatır?",
+    "description": "//"
+  },
+  "javascript-005": {
+    "command": "Bir nesnenin belirli bir yapıcının (constructor) örneği olup olmadığını hangi JavaScript operatörü kontrol eder?",
+    "description": "instanceof"
+  },
+  "javascript-006": {
+    "command": "Hangi değer bilinçli olarak değer olmadığını ifade eder?",
+    "description": "null"
+  },
+  "javascript-007": {
+    "command": "Bir değişken tanımlanıp değer atanmadığında hangi değer döndürülür?",
+    "description": "undefined"
+  },
+  "javascript-008": {
+    "command": "Aşağıdakilerden hangisi ilkel (primitive) veri türü değildir?",
+    "description": "object"
+  },
+  "javascript-009": {
+    "command": "Hangi fonksiyon bir dizeyi (string) tam sayıya dönüştürür?",
+    "description": "parseInt()"
+  },
+  "javascript-010": {
+    "command": "Hangi fonksiyon bir dizeyi (string) ondalıklı sayıya dönüştürür?",
+    "description": "parseFloat()"
+  },
+  "javascript-011": {
+    "command": "Hangi operatör hem değer hem de tür eşitliğini kontrol eder?",
+    "description": "==="
+  },
+  "javascript-012": {
+    "command": "Hangi operatör tür dönüşümü ile değer eşitliğini kontrol eder?",
+    "description": "=="
+  },
+  "javascript-013": {
+    "command": "Hangi operatör bölme işleminin kalanını döndürür?",
+    "description": "%"
+  },
+  "javascript-014": {
+    "command": "Hangi fonksiyon tarayıcıda bir mesaj kutusu görüntüler?",
+    "description": "alert()"
+  },
+  "javascript-015": {
+    "command": "Hangi yöntem çıktıyı tarayıcı konsoluna yazar?",
+    "description": "console.log()"
+  },
+  "javascript-016": {
+    "command": "JavaScript kodunu dahil etmek için hangi HTML etiketi kullanılır?",
+    "description": "<script>"
+  },
+  "javascript-017": {
+    "command": "Hangi anahtar kelime bir fonksiyon tanımlar?",
+    "description": "function"
+  },
+  "javascript-018": {
+    "command": "Hangi deyim bir döngüden hemen çıkar?",
+    "description": "break"
+  },
+  "javascript-019": {
+    "command": "Hangi deyim mevcut döngü yinelemesini atlar?",
+    "description": "continue"
+  },
+  "javascript-020": {
+    "command": "Hangi döngü kodunu en az bir kez çalıştırır?",
+    "description": "do...while"
+  },
+  "javascript-021": {
+    "command": "Dizi elemanları üzerinde yineleme yapmak için yaygın olarak hangi döngü kullanılır?",
+    "description": "for"
+  },
+  "javascript-022": {
+    "command": "Hangi deyim kodu bir koşula göre çalıştırır?",
+    "description": "if"
+  },
+  "javascript-023": {
+    "command": "Hangi anahtar kelime hata yönetimini başlatır?",
+    "description": "try"
+  },
+  "javascript-024": {
+    "command": "Hangi deyim elle hata fırlatır?",
+    "description": "throw"
+  },
+  "ruby-001": {
+    "command": "Ruby nasıl bir dildir?",
+    "description": "Nesne yönelimli programlama dili"
+  },
+  "ruby-002": {
+    "command": "Ruby'yi kim yarattı?",
+    "description": "Yukihiro Matsumoto"
+  },
+  "ruby-003": {
+    "command": "Ruby betikleri için hangi dosya uzantısı kullanılır?",
+    "description": ".rb"
+  },
+  "ruby-004": {
+    "command": "Hangi komut bir Ruby betiğini çalıştırır?",
+    "description": "ruby filename.rb"
+  },
+  "ruby-005": {
+    "command": "Ruby'de tek satırlık yorumu hangi sembol başlatır?",
+    "description": "#"
+  },
+  "ruby-006": {
+    "command": "Ruby'de çok satırlı yorumu hangi anahtar kelime başlatır?",
+    "description": "=begin"
+  },
+  "ruby-007": {
+    "command": "Ruby'de hangi anahtar kelime bir metot tanımlar?",
+    "description": "def"
+  },
+  "ruby-008": {
+    "command": "Hangi anahtar kelime bir metot tanımını bitirir?",
+    "description": "end"
+  },
+  "ruby-009": {
+    "command": "Hangi metot çıktıyı yeni satırla birlikte yazdırır?",
+    "description": "puts"
+  },
+  "ruby-010": {
+    "command": "Hangi metot çıktıyı yeni satır eklemeden yazdırır?",
+    "description": "print"
+  },
+  "ruby-011": {
+    "command": "Hangi metot standart girdiden bir satır okur?",
+    "description": "gets"
+  },
+  "ruby-012": {
+    "command": "Ruby'de hangi metot bir nesneyi dizeye (string) dönüştürür?",
+    "description": "to_s"
+  },
+  "ruby-013": {
+    "command": "Ruby'de hangi metot bir dizeyi (string) tamsayıya dönüştürür?",
+    "description": "to_i"
+  },
+  "ruby-014": {
+    "command": "Hangi metot bir dizeyi (string) ondalıklı sayıya (float) dönüştürür?",
+    "description": "to_f"
+  },
+  "ruby-015": {
+    "command": "Hangi metot bir nesnenin sınıfını döndürür?",
+    "description": "class"
+  },
+  "ruby-016": {
+    "command": "Hangi metot bir nesnenin belirli bir sınıf türünden olup olmadığını kontrol eder?",
+    "description": "is_a?"
+  },
+  "ruby-017": {
+    "command": "Hangi metot bir nesnenin bir metoda yanıt verip vermediğini kontrol eder?",
+    "description": "respond_to?"
+  },
+  "ruby-018": {
+    "command": "Hangi metot bir nesne için benzersiz bir tanımlayıcı döndürür?",
+    "description": "object_id"
+  },
+  "ruby-019": {
+    "command": "Ruby'de değer eşitliğini hangi operatör kontrol eder?",
+    "description": "=="
+  },
+  "ruby-020": {
+    "command": "Case ifadeleri karşılaştırma için yaygın olarak hangi operatörü kullanır?",
+    "description": "==="
+  },
+  "ruby-021": {
+    "command": "Karşılaştırma ve sıralama için hangi operatör kullanılır?",
+    "description": "<=>"
+  },
+  "ruby-022": {
+    "command": "Ruby'de sabitler nasıl tanımlanır?",
+    "description": "Adın büyük harfle başlamasıyla"
+  },
+  "ruby-023": {
+    "command": "Hangi önek bir örnek değişkenini (instance variable) belirtir?",
+    "description": "@"
+  },
+  "ruby-024": {
+    "command": "Ruby'de bir sayıyı üssüne yükseltmek için hangi operatör kullanılır?",
+    "description": "**"
+  },
+  "aws-001": {
+    "command": "aws cli",
+    "description": "AWS hizmetlerini CLI üzerinden yönetmek için birleşik araç."
+  },
+  "aws-002": {
+    "command": "IAM",
+    "description": "AWS kaynaklarına erişimi güvenli biçimde denetler."
+  },
+  "aws-003": {
+    "command": "S3",
+    "description": "Her türlü veriyi saklamak ve almak için tasarlanmış nesne depolaması."
+  },
+  "aws-004": {
+    "command": "EC2",
+    "description": "Bulutta ölçeklenebilir bilgi işlem kapasitesi sağlar."
+  },
+  "aws-005": {
+    "command": "VPC",
+    "description": "Bulutun mantıksal olarak yalıtılmış bir bölümünü sağlar."
+  },
+  "aws-006": {
+    "command": "Sanal sunucuları başlatmak için öncelikli olarak hangi AWS hizmeti kullanılır?",
+    "description": "Amazon EC2"
+  },
+  "aws-007": {
+    "command": "Hangi AWS depolama hizmeti nesne depolama için tasarlanmıştır?",
+    "description": "Amazon S3"
+  },
+  "aws-008": {
+    "command": "Hangi AWS hizmeti kullanıcı kimliklerini ve izinlerini yönetir?",
+    "description": "AWS IAM"
+  },
+  "aws-009": {
+    "command": "Hangi AWS hizmeti sunucusuz (serverless) bilgi işlem sağlar?",
+    "description": "AWS Lambda"
+  },
+  "aws-010": {
+    "command": "Hangi AWS hizmeti yönetilen bir ilişkisel veritabanıdır?",
+    "description": "Amazon RDS"
+  },
+  "aws-011": {
+    "command": "Hangi AWS veritabanı tamamen yönetilen ve NoSQL'dir?",
+    "description": "Amazon DynamoDB"
+  },
+  "aws-012": {
+    "command": "Hangi AWS hizmeti uygulamaları ve AWS kaynaklarını izlemeye yardımcı olur?",
+    "description": "Amazon CloudWatch"
+  },
+  "aws-013": {
+    "command": "Hangi AWS hizmeti denetim amacıyla API etkinliğini kaydeder?",
+    "description": "CloudTrail"
+  },
+  "aws-014": {
+    "command": "Hangi AWS ağ hizmeti yalıtılmış bir sanal ağ sağlar?",
+    "description": "Amazon VPC"
+  },
+  "aws-015": {
+    "command": "Hangi AWS hizmeti DNS yönetimi sağlar?",
+    "description": "Route 53"
+  },
+  "aws-016": {
+    "command": "Hangi AWS hizmeti trafiği birden fazla EC2 örneğine dağıtır?",
+    "description": "Elastic Load Balancer"
+  },
+  "aws-017": {
+    "command": "Hangi AWS hizmeti talebe göre EC2 örneklerinin sayısını otomatik olarak ayarlar?",
+    "description": "Auto Scaling"
+  },
+  "aws-018": {
+    "command": "Altyapıyı kod olarak dağıtmak için hangi AWS hizmeti kullanılır?",
+    "description": "AWS CloudFormation"
+  },
+  "aws-019": {
+    "command": "Hangi AWS hizmeti bir içerik dağıtım ağıdır (CDN)?",
+    "description": "Amazon CloudFront"
+  },
+  "aws-020": {
+    "command": "Hangi AWS hizmeti yönetilen Kubernetes sağlar?",
+    "description": "Amazon EKS"
+  },
+  "aws-021": {
+    "command": "Hangi AWS hizmeti yönetilen Docker konteyner orkestrasyonu sağlar?",
+    "description": "Amazon ECS"
+  },
+  "aws-022": {
+    "command": "Hangi AWS hizmeti parolalar ve API anahtarları gibi gizli bilgileri güvenli bir şekilde saklar?",
+    "description": "AWS Secrets Manager"
+  },
+  "aws-023": {
+    "command": "Hangi AWS hizmeti şifreleme anahtarlarını yönetir?",
+    "description": "AWS KMS"
+  },
+  "aws-024": {
+    "command": "Hangi AWS hizmeti uygulamaları DDoS saldırılarına karşı korur?",
+    "description": "AWS Shield"
+  },
+  "azure-001": {
+    "command": "Sanal makineler oluşturmak için hangi Microsoft Azure hizmeti kullanılır?",
+    "description": "Azure Virtual Machines"
+  },
+  "azure-002": {
+    "command": "Hangi Azure hizmeti yapılandırılmamış veriler için nesne depolama sağlar?",
+    "description": "Azure Blob Storage"
+  },
+  "azure-003": {
+    "command": "Kimlik ve erişim yönetimi için hangi Azure hizmeti kullanılır?",
+    "description": "Microsoft Entra ID"
+  },
+  "azure-004": {
+    "command": "Hangi Azure hizmeti sunucusuz (serverless) bilgi işlem sağlar?",
+    "description": "Azure Functions"
+  },
+  "azure-005": {
+    "command": "Hangi Azure hizmeti SQL Server için yönetilen bir ilişkisel veritabanı sağlar?",
+    "description": "Azure SQL Database"
+  },
+  "azure-006": {
+    "command": "Hangi Azure veritabanı hizmeti küresel olarak dağıtılmış ve NoSQL'dir?",
+    "description": "Azure Cosmos DB"
+  },
+  "azure-007": {
+    "command": "Uygulamaları ve altyapıyı izlemek için hangi Azure hizmeti kullanılır?",
+    "description": "Azure Monitor"
+  },
+  "azure-008": {
+    "command": "Hangi Azure hizmeti web uygulamalarından telemetri toplar?",
+    "description": "Application Insights"
+  },
+  "azure-009": {
+    "command": "Hangi Azure ağ hizmeti yalıtılmış bir özel ağ oluşturur?",
+    "description": "Azure Virtual Network"
+  },
+  "azure-010": {
+    "command": "Hangi Azure hizmeti DNS barındırma sağlar?",
+    "description": "Azure DNS"
+  },
+  "azure-011": {
+    "command": "Hangi Azure hizmeti gelen trafiği birden fazla sanal makine arasında dağıtır?",
+    "description": "Azure Load Balancer"
+  },
+  "azure-012": {
+    "command": "Hangi Azure hizmeti 7. katman küresel yük dengeleme sağlar?",
+    "description": "Azure Front Door"
+  },
+  "azure-013": {
+    "command": "Hangi Azure hizmeti yönetilen Kubernetes sağlar?",
+    "description": "Azure Kubernetes Service (AKS)"
+  },
+  "azure-014": {
+    "command": "Hangi Azure hizmeti sunucuları yönetmeden kapsayıcıları çalıştırır?",
+    "description": "Azure Container Instances"
+  },
+  "azure-015": {
+    "command": "Hangi Azure hizmeti altyapıyı yönetmeden web uygulamalarını barındırır?",
+    "description": "Azure App Service"
+  },
+  "azure-016": {
+    "command": "Hangi Azure hizmeti gizli bilgileri, anahtarları ve sertifikaları güvenli bir şekilde depolar?",
+    "description": "Azure Key Vault"
+  },
+  "azure-017": {
+    "command": "Hangi Azure hizmeti Microsoft Azure'a özel adanmış bağlantı sağlar?",
+    "description": "Azure ExpressRoute"
+  },
+  "azure-018": {
+    "command": "Hangi Azure hizmeti Azure portalı üzerinden sanal makinelere güvenli uzaktan erişim sağlar?",
+    "description": "Azure Bastion"
+  },
+  "azure-019": {
+    "command": "Azure sanal makinelerini ve diğer iş yüklerini yedeklemek için hangi Azure hizmeti kullanılır?",
+    "description": "Azure Backup"
+  },
+  "azure-020": {
+    "command": "Sanal makinelerin olağanüstü durum kurtarması için hangi Azure hizmeti kullanılır?",
+    "description": "Azure Site Recovery"
+  },
+  "azure-021": {
+    "command": "Yönetişim ilkeleri oluşturmak ve uygulamak için hangi Azure hizmeti kullanılır?",
+    "description": "Azure Policy"
+  },
+  "azure-022": {
+    "command": "Hangi Azure hizmeti Azure yönetimini şirket içi ve çoklu bulut ortamlarına genişletir?",
+    "description": "Azure Arc"
+  },
+  "azure-023": {
+    "command": "Sürekli entegrasyon ve sürekli dağıtım (CI/CD) için hangi Azure DevOps bileşeni kullanılır?",
+    "description": "Azure Pipelines"
+  },
+  "azure-024": {
+    "command": "Hangi Azure DevOps hizmeti Git depoları sağlar?",
+    "description": "Azure Repos"
+  },
+  "gcp-001": {
+    "command": "Sanal makineleri oluşturmak ve yönetmek için hangi Google Cloud hizmeti kullanılır?",
+    "description": "Compute Engine"
+  },
+  "gcp-002": {
+    "command": "Hangi Google Cloud hizmeti nesne depolama sağlar?",
+    "description": "Cloud Storage"
+  },
+  "gcp-003": {
+    "command": "Hangi Google Cloud hizmeti sunucusuz (serverless) fonksiyonlar sağlar?",
+    "description": "Cloud Functions"
+  },
+  "gcp-004": {
+    "command": "Kubernetes kümelerini çalıştırmak için hangi Google Cloud hizmeti kullanılır?",
+    "description": "Google Kubernetes Engine (GKE)"
+  },
+  "gcp-005": {
+    "command": "Hangi Google Cloud hizmeti tamamen yönetilen bir ilişkisel veritabanı sağlar?",
+    "description": "Cloud SQL"
+  },
+  "gcp-006": {
+    "command": "Hangi Google Cloud veritabanı küresel olarak dağıtılmış bir ilişkisel veritabanıdır?",
+    "description": "Cloud Spanner"
+  },
+  "gcp-007": {
+    "command": "Hangi Google Cloud NoSQL doküman veritabanı sunucusuzdur (serverless)?",
+    "description": "Firestore"
+  },
+  "gcp-008": {
+    "command": "Petabayt ölçeğinde veri analitiği için hangi Google Cloud hizmeti kullanılır?",
+    "description": "BigQuery"
+  },
+  "gcp-009": {
+    "command": "Hangi Google Cloud hizmeti izleme ve gözlemlenebilirlik sağlar?",
+    "description": "Cloud Monitoring"
+  },
+  "gcp-010": {
+    "command": "Hangi Google Cloud hizmeti uygulama günlüklerini toplar?",
+    "description": "Cloud Logging"
+  },
+  "gcp-011": {
+    "command": "Hangi Google Cloud hizmeti kullanıcıları, rolleri ve izinleri yönetir?",
+    "description": "Cloud Identity and IAM"
+  },
+  "gcp-012": {
+    "command": "Hangi Google Cloud hizmeti yalıtılmış özel ağlar oluşturur?",
+    "description": "Virtual Private Cloud (VPC)"
+  },
+  "gcp-013": {
+    "command": "Hangi Google Cloud hizmeti DNS barındırma sağlar?",
+    "description": "Cloud DNS"
+  },
+  "gcp-014": {
+    "command": "Hangi Google Cloud hizmeti trafiği birden fazla sanal makine arasında dağıtır?",
+    "description": "Cloud Load Balancing"
+  },
+  "gcp-015": {
+    "command": "Hangi Google Cloud hizmeti içerik teslimini dünya genelinde hızlandırır?",
+    "description": "Cloud CDN"
+  },
+  "gcp-016": {
+    "command": "Hangi Google Cloud hizmeti web uygulamalarını DDoS saldırılarına ve yaygın web açıklarına karşı korur?",
+    "description": "Cloud Armor"
+  },
+  "gcp-017": {
+    "command": "Hangi Google Cloud hizmeti altyapıyı yönetmeden yönetilen konteyner çalıştırma sağlar?",
+    "description": "Cloud Run"
+  },
+  "gcp-018": {
+    "command": "Hangi Google Cloud hizmeti web uygulamaları geliştirmek için tamamen yönetilen bir platformdur?",
+    "description": "App Engine"
+  },
+  "gcp-019": {
+    "command": "Hangi Google Cloud hizmeti gizli bilgileri, parolaları ve API anahtarlarını güvenli şekilde saklar?",
+    "description": "Secret Manager"
+  },
+  "gcp-020": {
+    "command": "Hangi Google Cloud hizmeti şifreleme anahtarlarını yönetir?",
+    "description": "Cloud KMS"
+  },
+  "gcp-021": {
+    "command": "Hangi Google Cloud hizmeti Google Cloud'a adanmış özel bağlantı sağlar?",
+    "description": "Cloud Interconnect"
+  },
+  "gcp-022": {
+    "command": "Hangi Google Cloud hizmeti şirket içi ağlar ile GCP arasında güvenli şifreli bağlantı sağlar?",
+    "description": "Cloud VPN"
+  },
+  "gcp-023": {
+    "command": "Hangi Google Cloud hizmeti harici IP adresi olmayan özel örnekler için giden internet erişimi sağlar?",
+    "description": "Cloud NAT"
+  },
+  "gcp-024": {
+    "command": "Hangi Google Cloud hizmeti VPC'ler ile şirket içi ağlar arasında rotaları dinamik olarak değiştirir?",
+    "description": "Cloud Router"
+  },
+  "oracle-001": {
+    "command": "Sanal makineler oluşturmak için hangi Oracle Cloud Infrastructure hizmeti kullanılır?",
+    "description": "Compute"
+  },
+  "oracle-002": {
+    "command": "Hangi OCI hizmeti ölçeklenebilir nesne depolama sağlar?",
+    "description": "Object Storage"
+  },
+  "oracle-003": {
+    "command": "Hangi OCI depolama hizmeti kalıcı blok depolama sağlar?",
+    "description": "Block Volumes"
+  },
+  "oracle-004": {
+    "command": "Hangi OCI hizmeti paylaşımlı NFS dosya depolama sağlar?",
+    "description": "File Storage"
+  },
+  "oracle-005": {
+    "command": "OCI sanal ağ hizmetinin adı nedir?",
+    "description": "Virtual Cloud Network (VCN)"
+  },
+  "oracle-006": {
+    "command": "Hangi OCI hizmeti kullanıcıları, grupları ve politikaları yönetir?",
+    "description": "Identity and Access Management (IAM)"
+  },
+  "oracle-007": {
+    "command": "Hangi OCI özelliği bulut kaynaklarını mantıksal olarak düzenler?",
+    "description": "Compartments"
+  },
+  "oracle-008": {
+    "command": "Hangi OCI özelliği kullanıcılar ve gruplar için izinleri tanımlar?",
+    "description": "Policies"
+  },
+  "oracle-009": {
+    "command": "Hangi OCI hizmeti gelen trafiği dağıtır?",
+    "description": "Load Balancer"
+  },
+  "oracle-010": {
+    "command": "Hangi OCI hizmeti özel ve adanmış bağlantı sağlar?",
+    "description": "FastConnect"
+  },
+  "oracle-011": {
+    "command": "Hangi OCI hizmeti IPSec bağlantısı sağlar?",
+    "description": "Site-to-Site VPN"
+  },
+  "oracle-012": {
+    "command": "Hangi OCI bileşeni VCN'leri şirket içi (on-premises) ağlara bağlar?",
+    "description": "Dynamic Routing Gateway (DRG)"
+  },
+  "oracle-013": {
+    "command": "Hangi OCI veritabanı kendi kendini yönetir?",
+    "description": "Autonomous Database"
+  },
+  "oracle-014": {
+    "command": "Hangi OCI hizmeti Kubernetes kümelerini yönetir?",
+    "description": "Container Engine for Kubernetes (OKE)"
+  },
+  "oracle-015": {
+    "command": "Hangi OCI hizmeti sunucusuz (serverless) çalıştırma sağlar?",
+    "description": "Functions"
+  },
+  "oracle-016": {
+    "command": "Hangi OCI hizmeti API'leri yayınlar ve güvenliğini sağlar?",
+    "description": "API Gateway"
+  },
+  "oracle-017": {
+    "command": "Hangi OCI hizmeti CI/CD işlem hatlarını (pipeline) destekler?",
+    "description": "DevOps"
+  },
+  "oracle-018": {
+    "command": "Hangi OCI hizmeti Terraform dağıtımlarını yönetir?",
+    "description": "Resource Manager"
+  },
+  "oracle-019": {
+    "command": "Hangi OCI hizmeti metrikleri toplar?",
+    "description": "Monitoring"
+  },
+  "oracle-020": {
+    "command": "Hangi OCI hizmeti günlükleri (log) depolar?",
+    "description": "Logging"
+  },
+  "oracle-021": {
+    "command": "Hangi OCI hizmeti uyarı gönderir?",
+    "description": "Notifications"
+  },
+  "oracle-022": {
+    "command": "Hangi OCI hizmeti kaynak olaylarına tepki verir?",
+    "description": "Events"
+  },
+  "oracle-023": {
+    "command": "Hangi OCI hizmeti gizli bilgileri ve şifreleme anahtarlarını saklar?",
+    "description": "Vault"
+  },
+  "oracle-024": {
+    "command": "Hangi OCI hizmeti güvenlik duruşunu izler?",
+    "description": "Cloud Guard"
+  },
+  "ibm-001": {
+    "command": "Sanal sunucular oluşturmak için hangi IBM Cloud hizmeti kullanılır?",
+    "description": "Virtual Servers for VPC"
+  },
+  "ibm-002": {
+    "command": "Hangi IBM Cloud hizmeti nesne depolama sağlar?",
+    "description": "Cloud Object Storage"
+  },
+  "ibm-003": {
+    "command": "IBM Cloud'un yalıtılmış sanal ağ hizmeti nedir?",
+    "description": "Virtual Private Cloud (VPC)"
+  },
+  "ibm-004": {
+    "command": "Hangi IBM Cloud hizmeti kullanıcıları ve erişimi yönetir?",
+    "description": "IBM Cloud IAM"
+  },
+  "ibm-005": {
+    "command": "Hangi IBM Cloud hizmeti yönetilen Kubernetes sağlar?",
+    "description": "IBM Cloud Kubernetes Service"
+  },
+  "ibm-006": {
+    "command": "Hangi IBM Cloud hizmeti yönetilen Red Hat OpenShift sağlar?",
+    "description": "Red Hat OpenShift on IBM Cloud"
+  },
+  "ibm-007": {
+    "command": "Komut satırından IBM Cloud'a oturum açmanızı sağlayan komut hangisidir?",
+    "description": "ibmcloud login"
+  },
+  "ibm-008": {
+    "command": "Hangi IBM Cloud hizmeti altyapıyı yönetmeden konteynerleri çalıştırır?",
+    "description": "IBM Cloud Code Engine"
+  },
+  "ibm-009": {
+    "command": "Hangi IBM Cloud hizmeti gelen trafiği dağıtır?",
+    "description": "Load Balancer"
+  },
+  "ibm-010": {
+    "command": "Hangi IBM Cloud hizmeti güvenli siteden siteye bağlantı sağlar?",
+    "description": "VPN for VPC"
+  },
+  "ibm-011": {
+    "command": "Hangi IBM Cloud hizmeti şirket içi (on-premises) ağlara adanmış özel bağlantı sağlar?",
+    "description": "Direct Link"
+  },
+  "ibm-012": {
+    "command": "Hangi IBM Cloud teklifi yönetilen veritabanları sağlar?",
+    "description": "IBM Cloud Databases"
+  },
+  "ibm-013": {
+    "command": "Hangi IBM Cloud veritabanı Db2 tabanlıdır?",
+    "description": "Db2 on Cloud"
+  },
+  "ibm-014": {
+    "command": "Hangi IBM Cloud hizmeti altyapı izleme sağlar?",
+    "description": "IBM Cloud Monitoring"
+  },
+  "ibm-015": {
+    "command": "Hangi IBM Cloud hizmeti günlükleri merkezileştirir?",
+    "description": "IBM Log Analysis"
+  },
+  "ibm-016": {
+    "command": "Hangi IBM Cloud hizmeti gizli bilgileri güvenli bir şekilde saklar?",
+    "description": "Secrets Manager"
+  },
+  "ibm-017": {
+    "command": "Hangi IBM Cloud hizmeti şifreleme anahtarlarını yönetir?",
+    "description": "Key Protect"
+  },
+  "ibm-018": {
+    "command": "Hangi IBM Cloud hizmeti HSM destekli anahtar yönetimi sunar?",
+    "description": "Hyper Protect Crypto Services"
+  },
+  "ibm-019": {
+    "command": "Hangi IBM Cloud hizmeti konteyner imajlarını depolar?",
+    "description": "Container Registry"
+  },
+  "ibm-020": {
+    "command": "Hangi IBM Cloud hizmeti Terraform dağıtımlarını yönetir?",
+    "description": "Schematics"
+  },
+  "ibm-021": {
+    "command": "Hangi IBM Cloud hizmeti bildirim gönderir?",
+    "description": "Event Notifications"
+  },
+  "ibm-022": {
+    "command": "Hangi IBM Cloud hizmeti CDN ve DDoS koruması sağlar?",
+    "description": "Cloud Internet Services"
+  },
+  "ibm-023": {
+    "command": "Hangi IBM yapay zeka platformu yapay zeka hizmetleri sağlar?",
+    "description": "watsonx"
+  },
+  "ibm-024": {
+    "command": "Hangi IBM teklifi Kubernetes üzerinde kurumsal yazılım sağlar?",
+    "description": "Cloud Pak"
+  },
+  "multicloud-001": {
+    "command": "Hangi bulut stratejisi iki veya daha fazla genel bulut sağlayıcısının hizmetlerini kullanır?",
+    "description": "Multi-Cloud"
+  },
+  "multicloud-002": {
+    "command": "Hangi bulut stratejisi genel ve özel bulutları birleştirir?",
+    "description": "Hibrit Bulut"
+  },
+  "multicloud-003": {
+    "command": "Çoklu bulut Infrastructure as Code için yaygın olarak hangi araç kullanılır?",
+    "description": "Terraform"
+  },
+  "multicloud-004": {
+    "command": "Bulutlar arasında konteynerleri orkestre etmek için yaygın olarak kullanılan CNCF projesi hangisidir?",
+    "description": "Kubernetes"
+  },
+  "multicloud-005": {
+    "command": "Bulut API'lerini sunmak için yaygın olarak hangi protokol kullanılır?",
+    "description": "REST"
+  },
+  "multicloud-006": {
+    "command": "Hangi uygulama, satıcıya bağımlılığı (vendor lock-in) önlemeye yardımcı olur?",
+    "description": "Açık standartları kullanmak"
+  },
+  "multicloud-007": {
+    "command": "Bulut sağlayıcıları arasında konteynerleştirme için yaygın olarak hangi araç kullanılır?",
+    "description": "Docker"
+  },
+  "multicloud-008": {
+    "command": "Hangi protokol bulutlar arasında birleşik (federated) kimlik sağlar?",
+    "description": "SAML"
+  },
+  "multicloud-009": {
+    "command": "Bulut API'leri için yaygın olarak hangi kimlik doğrulama standardı kullanılır?",
+    "description": "OAuth 2.0"
+  },
+  "multicloud-010": {
+    "command": "Hangi bulut hizmet modeli sanal makineler sağlar?",
+    "description": "IaaS"
+  },
+  "multicloud-011": {
+    "command": "Hangi bulut hizmet modeli yönetilen uygulama platformları sağlar?",
+    "description": "PaaS"
+  },
+  "multicloud-012": {
+    "command": "Hangi bulut hizmet modeli yazılımı internet üzerinden sunar?",
+    "description": "SaaS"
+  },
+  "multicloud-013": {
+    "command": "Hangi izleme yaklaşımı birden fazla bulut sağlayıcısından metrik toplar?",
+    "description": "Merkezi İzleme"
+  },
+  "multicloud-014": {
+    "command": "Hangi günlükleme yaklaşımı tüm bulut sağlayıcılarından günlükleri toplar?",
+    "description": "Merkezi Günlükleme"
+  },
+  "multicloud-015": {
+    "command": "Hangi ağ tekniği birden fazla bulut ortamını güvenli şekilde birbirine bağlar?",
+    "description": "VPN"
+  },
+  "multicloud-016": {
+    "command": "Hangi ağ hizmeti bulutlar arasında özel (dedicated) bağlantı sağlar?",
+    "description": "Direct Connect/ExpressRoute/Interconnect"
+  },
+  "multicloud-017": {
+    "command": "Kubernetes'te hizmet keşfi (service discovery) için yaygın olarak hangi teknoloji kullanılır?",
+    "description": "DNS"
+  },
+  "multicloud-018": {
+    "command": "Birden fazla bulutta CI/CD için yaygın olarak hangi araç kullanılır?",
+    "description": "Jenkins"
+  },
+  "multicloud-019": {
+    "command": "Hangi açık kaynaklı izleme platformu çoklu bulut ortamlarını destekler?",
+    "description": "Prometheus"
+  },
+  "multicloud-020": {
+    "command": "Hangi görselleştirme platformu yaygın olarak Prometheus ile birlikte çalışır?",
+    "description": "Grafana"
+  },
+  "multicloud-021": {
+    "command": "Hangi güvenlik ilkesi yalnızca gerekli izinleri verir?",
+    "description": "En Az Yetki"
+  },
+  "multicloud-022": {
+    "command": "Hangi yöntem verileri hem beklemede hem de aktarım sırasında şifreler?",
+    "description": "Şifreleme"
+  },
+  "multicloud-023": {
+    "command": "Hangi bulut mimarisi sağlayıcılar arasında erişilebilirliği artırır?",
+    "description": "Yedeklilik"
+  },
+  "multicloud-024": {
+    "command": "Hangi dağıtım yaklaşımı iş yüklerini birden fazla buluta dağıtır?",
+    "description": "Active-Active"
+  },
+  "hybridcloud-001": {
+    "command": "Hibrit Bulut (Hybrid Cloud) nedir?",
+    "description": "Genel ve özel bulut ortamlarının birleşimi"
+  },
+  "hybridcloud-002": {
+    "command": "Hangi dağıtım modeli şirket içi (on-premises) altyapıyı genel bulutla birleştirir?",
+    "description": "Hybrid Cloud"
+  },
+  "hybridcloud-003": {
+    "command": "Şirket içi bir veri merkezini genel buluta güvenli şekilde bağlamak için yaygın olarak hangi teknoloji kullanılır?",
+    "description": "VPN"
+  },
+  "hybridcloud-004": {
+    "command": "Hangi AWS hizmeti AWS altyapısını şirket içi ortamlara genişletir?",
+    "description": "AWS Outposts"
+  },
+  "hybridcloud-005": {
+    "command": "Hangi Microsoft Azure hizmeti hibrit ve çoklu bulut kaynaklarının yönetimini sağlar?",
+    "description": "Azure Arc"
+  },
+  "hybridcloud-006": {
+    "command": "Hangi Google Cloud platformu hibrit ortamlarda Kubernetes kümelerini yönetmeye yardımcı olur?",
+    "description": "Anthos"
+  },
+  "hybridcloud-007": {
+    "command": "Hangi IBM Cloud hizmeti bulut hizmetlerini herhangi bir ortama genişletir?",
+    "description": "IBM Cloud Satellite"
+  },
+  "hybridcloud-008": {
+    "command": "Hangi Oracle Cloud sunumu bulut hizmetlerini müşterinin veri merkezi içinde sağlar?",
+    "description": "OCI Dedicated Region"
+  },
+  "hybridcloud-009": {
+    "command": "Hibrit bulut ortamlarında en yaygın kullanılan konteyner orkestrasyon platformu hangisidir?",
+    "description": "Kubernetes"
+  },
+  "hybridcloud-010": {
+    "command": "Hibrit bulutta kurumsal Kubernetes çalıştırmak için yaygın olarak kullanılan açık kaynaklı platform hangisidir?",
+    "description": "OpenShift"
+  },
+  "hybridcloud-011": {
+    "command": "Hibrit bulut ortamlarında yaygın olarak kullanılan Kod Olarak Altyapı (Infrastructure as Code) aracı hangisidir?",
+    "description": "Terraform"
+  },
+  "hybridcloud-012": {
+    "command": "Hibrit bulut dağıtımlarında yaygın olarak kullanılan yapılandırma yönetimi aracı hangisidir?",
+    "description": "Ansible"
+  },
+  "hybridcloud-013": {
+    "command": "Hibrit bulut dağıtımları için sıkça kullanılan CI/CD aracı hangisidir?",
+    "description": "Jenkins"
+  },
+  "hybridcloud-014": {
+    "command": "Hibrit bulutun başlıca avantajı nedir?",
+    "description": "İş yüklerini en uygun oldukları yerde çalıştırma esnekliği"
+  },
+  "hybridcloud-015": {
+    "command": "Hangi ağ hizmeti şirket içi ortam ile AWS arasında özel bağlantı sağlar?",
+    "description": "AWS Direct Connect"
+  },
+  "hybridcloud-016": {
+    "command": "Hangi Azure ağ hizmeti Azure'a özel bağlantı sağlar?",
+    "description": "Azure ExpressRoute"
+  },
+  "hybridcloud-017": {
+    "command": "Hangi Google Cloud ağ hizmeti Google Cloud'a özel bağlantı sağlar?",
+    "description": "Cloud Interconnect"
+  },
+  "hybridcloud-018": {
+    "command": "Hangi Oracle Cloud ağ hizmeti özel ve adanmış bağlantı sağlar?",
+    "description": "OCI FastConnect"
+  },
+  "hybridcloud-019": {
+    "command": "Hangi IBM Cloud hizmeti özel ağ bağlantısı sağlar?",
+    "description": "IBM Cloud Direct Link"
+  },
+  "hybridcloud-020": {
+    "command": "Hibrit bulutta Tek Oturum Açma (Single Sign-On) için yaygın olarak hangi kimlik doğrulama yöntemi kullanılır?",
+    "description": "SAML"
+  },
+  "hybridcloud-021": {
+    "command": "Hibrit bulut uygulamalarında API kimlik doğrulaması için yaygın olarak hangi protokol kullanılır?",
+    "description": "OAuth 2.0"
+  },
+  "hybridcloud-022": {
+    "command": "Hangi mimari, şirket içi ve bulut ortamlarında uygulama erişilebilirliğini artırır?",
+    "description": "Active-Active"
+  },
+  "hybridcloud-023": {
+    "command": "Hibrit bulut Kubernetes ortamlarında yaygın olarak hangi izleme platformu kullanılır?",
+    "description": "Prometheus"
+  },
+  "hybridcloud-024": {
+    "command": "Prometheus ile yaygın olarak birlikte kullanılan görselleştirme aracı hangisidir?",
+    "description": "Grafana"
+  },
+  "extra-001": {
+    "command": "ansible-vault encrypt",
+    "description": "Mevcut bir dosyayı yapılandırılmış kasa parolasıyla şifreler."
+  },
+  "extra-002": {
+    "command": "ansible-vault decrypt",
+    "description": "Kontrollü yerel inceleme için kasayla şifrelenmiş bir dosyanın şifresini çözer."
+  },
+  "extra-003": {
+    "command": "ansible-vault encrypt_string",
+    "description": "Bir değeri değişken dosyasında satır içi saklanabilecek şekilde şifreler."
+  },
+  "extra-004": {
+    "command": "ansible-vault rekey",
+    "description": "Şifreli kasa dosyasını koruyan parolayı değiştirir."
+  },
+  "extra-005": {
+    "command": "ansible-inventory --graph",
+    "description": "Envanter gruplarını ve ana makinelerle ilişkilerini gösterir."
+  },
+  "extra-006": {
+    "command": "ansible-inventory --list",
+    "description": "Çözümlenmiş envanteri grup değişkenleri dahil JSON olarak sunar."
+  },
+  "extra-007": {
+    "command": "ansible-config dump --only-changed",
+    "description": "Ansible varsayılanlarından farklı yapılandırma değerlerini gösterir."
+  },
+  "extra-008": {
+    "command": "ansible-doc ansible.builtin.copy",
+    "description": "Modül belgelerini ve desteklenen parametreleri gösterir."
+  },
+  "extra-009": {
+    "command": "ansible-galaxy collection install",
+    "description": "Bir koleksiyondan yeniden kullanılabilir modüller ve eklentiler yükler."
+  },
+  "extra-010": {
+    "command": "ansible-galaxy collection list",
+    "description": "Etkin Ansible yollarında yüklü koleksiyonları listeler."
+  },
+  "extra-011": {
+    "command": "ansible-playbook --check",
+    "description": "Bekleyen birçok değişikliği önizlemek için bir playbook'u denetim modunda çalıştırır."
+  },
+  "extra-012": {
+    "command": "ansible-playbook --diff",
+    "description": "Desteklenen dosya değişikliklerini playbook sonucunun yanında gösterir."
+  },
+  "extra-013": {
+    "command": "ansible-playbook --limit",
+    "description": "Playbook çalıştırmasını bir ana makine veya grup deseniyle sınırlar."
+  },
+  "extra-014": {
+    "command": "ansible-playbook --tags",
+    "description": "Yalnızca atanmış etiketlerine göre seçilen görevleri çalıştırır."
+  },
+  "extra-015": {
+    "command": "ansible-playbook --skip-tags",
+    "description": "Etiketlenmiş görevleri playbook çalıştırmasından hariç tutar."
+  },
+  "extra-016": {
+    "command": "ansible-playbook --list-tasks",
+    "description": "Playbook ve geçerli seçim seçenekleriyle eşleşen görevleri listeler."
+  },
+  "extra-017": {
+    "command": "ansible-playbook --list-hosts",
+    "description": "Görevleri çalıştırmadan playbook'un hedefleyeceği ana makineleri listeler."
+  },
+  "extra-018": {
+    "command": "ansible.builtin.assert",
+    "description": "Gerekli bir koşul yanlış olduğunda play'in başarısız olmasını sağlar."
+  },
+  "extra-019": {
+    "command": "delegate_to",
+    "description": "Bir görevi geçerli envanter ana makinesi dışındaki bir ana makinede yürütür."
+  },
+  "extra-020": {
+    "command": "serial",
+    "description": "Dağıtımın etkisini sınırlamak için play'i ana makinelerde gruplar halinde çalıştırır."
+  },
+  "extra-021": {
+    "command": "any_errors_fatal",
+    "description": "Önemli bir görev hatasından sonra play'i tüm ana makinelerde durdurur."
+  },
+  "extra-022": {
+    "command": "block / rescue / always",
+    "description": "Görevleri gruplar ve başarısızlıklar için kurtarma ve temizleme davranışını tanımlar."
+  },
+  "extra-023": {
+    "command": "changed_when",
+    "description": "Bir görevin değişiklik yapıldığını bildirme durumunu geçersiz kılar."
+  },
+  "extra-024": {
+    "command": "ansible.builtin.meta: flush_handlers",
+    "description": "Bildirilen işleyicileri play sonunu beklemek yerine hemen çalıştırır."
+  },
+  "extra-025": {
+    "command": "aws sts get-caller-identity",
+    "description": "Etkin AWS hesabını, kullanıcıyı veya üstlenilen rolü doğrular."
+  },
+  "extra-026": {
+    "command": "aws sts assume-role",
+    "description": "Güvenilen bir IAM rolü için geçici kimlik bilgileri ister."
+  },
+  "extra-027": {
+    "command": "S3 bucket versioning",
+    "description": "Yanlışlıkla üzerine yazılan nesneleri kurtarabilmek için önceki sürümleri tutar."
+  },
+  "extra-028": {
+    "command": "S3 lifecycle rule",
+    "description": "Yaşa veya filtrelere göre nesneleri otomatik olarak başka depolama sınıflarına geçirir ya da sürelerini doldurur."
+  },
+  "extra-029": {
+    "command": "S3 presigned URL",
+    "description": "Uzun ömürlü kimlik bilgilerini paylaşmadan bir nesneye süreli erişim verir."
+  },
+  "extra-030": {
+    "command": "S3 server-side encryption",
+    "description": "Saklanan nesneleri S3 tarafından veya müşteri tarafından yönetilen anahtarlarla şifreler."
+  },
+  "extra-031": {
+    "command": "EC2 IMDSv2",
+    "description": "Örnek meta verisi kimlik bilgilerinin açığa çıkma riskini azaltmak için oturum belirteçleri kullanır."
+  },
+  "extra-032": {
+    "command": "Security group vs network ACL",
+    "description": "Güvenlik grupları durum bilgili örnek kurallarıdır; ağ ACL'leri ise durum bilgisiz alt ağ kurallarıdır."
+  },
+  "extra-033": {
+    "command": "Application Load Balancer target health",
+    "description": "Kayıtlı hedeflerin yapılandırılmış sağlık denetimlerini geçip geçmediğini bildirir."
+  },
+  "extra-034": {
+    "command": "Auto Scaling instance refresh",
+    "description": "Başlatma şablonu değişikliğinden sonra grup örneklerini kademeli olarak yeniler."
+  },
+  "extra-035": {
+    "command": "EBS volume snapshot",
+    "description": "Bir blok depolama biriminin belirli bir andaki yedeğini oluşturur."
+  },
+  "extra-036": {
+    "command": "CloudWatch metric alarm",
+    "description": "Bir ölçüm yapılandırılmış eşiği aştığında durum değiştirir."
+  },
+  "extra-037": {
+    "command": "CloudTrail event lookup",
+    "description": "Kaydedilmiş yönetim olaylarında bir kimlik, kaynak veya eylem arar."
+  },
+  "extra-038": {
+    "command": "SQS visibility timeout",
+    "description": "Alınan bir iletiyi tüketici işlerken geçici olarak gizler."
+  },
+  "extra-039": {
+    "command": "SQS dead-letter queue",
+    "description": "Kaynak kuyruğun yeniden teslim sınırını aşan iletileri yakalar."
+  },
+  "extra-040": {
+    "command": "SNS message filter policy",
+    "description": "Konu iletilerini yalnızca öznitelikleri abonelik filtresiyle eşleştiğinde teslim eder."
+  },
+  "extra-041": {
+    "command": "Lambda reserved concurrency",
+    "description": "Eşzamanlı yürütmeleri sınırlar ve bir işlev için kapasite ayırır."
+  },
+  "extra-042": {
+    "command": "API Gateway stage variables",
+    "description": "Yolları değiştirmeden entegrasyonlara aşamaya özgü değerler sağlar."
+  },
+  "extra-043": {
+    "command": "RDS Multi-AZ deployment",
+    "description": "Kullanılabilirlik için beklemede bir veritabanı tutar; bu, okuma ölçeklendirme replikası değildir."
+  },
+  "extra-044": {
+    "command": "RDS read replica",
+    "description": "Okuma trafiğini eşzamansız çoğaltılmış bir veritabanı örneğinden karşılar."
+  },
+  "extra-045": {
+    "command": "DynamoDB partition key",
+    "description": "Öğeleri bölümler arasında dağıtır ve istek yükünü dengeli yaymalıdır."
+  },
+  "extra-046": {
+    "command": "DynamoDB conditional write",
+    "description": "Yazma işlemini yalnızca öğe koşulu doğru olduğunda uygular."
+  },
+  "extra-047": {
+    "command": "KMS key rotation",
+    "description": "Çağıranlar için anahtar tanımlayıcısını sabit tutarken anahtar malzemesini döndürür."
+  },
+  "extra-048": {
+    "command": "IAM permission boundary",
+    "description": "Kimlik politikalarının bir kimliğe verebileceği en yüksek izinleri belirler."
+  },
+  "extra-049": {
+    "command": "az account show",
+    "description": "Azure CLI için etkin abonelik ve kiracı bağlamını gösterir."
+  },
+  "extra-050": {
+    "command": "az account set",
+    "description": "Sonraki CLI komutlarının kullanacağı aboneliği seçer."
+  },
+  "extra-051": {
+    "command": "Resource lock",
+    "description": "Korunan kaynak kapsamlarının silinmesini veya değiştirilmesini önler."
+  },
+  "extra-052": {
+    "command": "Managed identity",
+    "description": "Bir Azure iş yükünün saklanmış istemci sırları olmadan Entra belirteçleri almasını sağlar."
+  },
+  "extra-053": {
+    "command": "Azure RBAC role assignment",
+    "description": "Seçilen kapsamda yerleşik veya özel bir rol verir."
+  },
+  "extra-054": {
+    "command": "Key Vault secret version",
+    "description": "Gizli bilgi revizyonlarını adreslenebilir tutar ve kontrollü döndürmeyi destekler."
+  },
+  "extra-055": {
+    "command": "Key Vault soft delete",
+    "description": "Silinen kasa nesnelerini saklama süresi boyunca kurtarma için tutar."
+  },
+  "extra-056": {
+    "command": "Private endpoint",
+    "description": "Bir PaaS hizmetini sanal ağdaki özel bir IP adresine eşler."
+  },
+  "extra-057": {
+    "command": "Private DNS zone link",
+    "description": "Özel uç nokta DNS kayıtlarını bağlı sanal ağlar içinde çözümlenebilir hale getirir."
+  },
+  "extra-058": {
+    "command": "NSG flow logs",
+    "description": "Desteklenen ağ güvenlik grupları için ağ akışı kararlarını kaydeder."
+  },
+  "extra-059": {
+    "command": "Application Gateway probe",
+    "description": "Yapılandırılmış yol, ana makine ve aralığı kullanarak arka uç sağlığını denetler."
+  },
+  "extra-060": {
+    "command": "Front Door origin health",
+    "description": "Kaynak sunucuların yapılandırılmış sağlık yoklamasını karşılayıp karşılamadığını izler."
+  },
+  "extra-061": {
+    "command": "Blob lifecycle management",
+    "description": "Blob'ları yaşa, öneke veya erişim katmanına göre taşır ya da sürelerini doldurur."
+  },
+  "extra-062": {
+    "command": "Blob soft delete",
+    "description": "Silinen blob'ları yapılandırılmış süre içinde geri yüklenebilmeleri için tutar."
+  },
+  "extra-063": {
+    "command": "Azure SQL point-in-time restore",
+    "description": "Saklama aralığı içindeki önceki bir andan veritabanı kopyası oluşturur."
+  },
+  "extra-064": {
+    "command": "Cosmos DB request units",
+    "description": "Veritabanı işlemleri için normalleştirilmiş aktarım kapasitesini temsil eder."
+  },
+  "extra-065": {
+    "command": "Azure Monitor alert rule",
+    "description": "Ölçümleri veya günlükleri değerlendirir ve koşullar eşleştiğinde bir eylem grubunu tetikler."
+  },
+  "extra-066": {
+    "command": "Log Analytics workspace query",
+    "description": "Toplanan telemetriyi analiz etmek için Kusto Query Language kullanır."
+  },
+  "extra-067": {
+    "command": "App Service deployment slot",
+    "description": "Üretim ortamıyla değiştirilebilen ayrı bir dağıtım hedefi sağlar."
+  },
+  "extra-068": {
+    "command": "Container Apps revision",
+    "description": "Trafik alabilen değişmez bir uygulama sürümünü temsil eder."
+  },
+  "extra-069": {
+    "command": "AKS node pool taint",
+    "description": "Özel havuza yalnızca uygun toleransı olan pod'ların yerleşmesi için zamanlamayı sınırlar."
+  },
+  "extra-070": {
+    "command": "Bicep what-if",
+    "description": "Bir dağıtım uygulanmadan önce Azure kaynak değişikliklerini önizler."
+  },
+  "extra-071": {
+    "command": "Azure Policy compliance",
+    "description": "Atanmış politika tanımlarıyla uyumlu veya çelişen kaynakları gösterir."
+  },
+  "extra-072": {
+    "command": "Service Bus dead-letter queue",
+    "description": "Başarıyla teslim edilemeyen veya işlenemeyen iletileri saklar."
+  },
+  "extra-073": {
+    "command": "set -o pipefail",
+    "description": "Boru hattındaki herhangi bir komut başarısız olduğunda boru hattı hatası döndürür."
+  },
+  "extra-074": {
+    "command": "trap cleanup EXIT",
+    "description": "Hata sonrası dahil, kabuk çıkarken temizleme mantığını çalıştırır."
+  },
+  "extra-075": {
+    "command": "mktemp -d",
+    "description": "Yalıtılmış ara dosyalar için benzersiz bir geçici dizin oluşturur."
+  },
+  "extra-076": {
+    "command": "read -r",
+    "description": "Ters eğik çizgileri kaçış dizileri olarak yorumlamadan girdiyi okur."
+  },
+  "extra-077": {
+    "command": "mapfile -t",
+    "description": "Yeni satırla ayrılmış girdiyi indeksli bir Bash dizisine yükler."
+  },
+  "extra-078": {
+    "command": "[[ -v variable ]]",
+    "description": "Değeri boş olsa bile bir kabuk değişkeninin atanmış olup olmadığını test eder."
+  },
+  "extra-079": {
+    "command": "printf %q",
+    "description": "Bir değeri kabuk girdisi olarak güvenle temsil edilecek biçimde tırnaklar."
+  },
+  "extra-080": {
+    "command": "parameter defaulting",
+    "description": "Değişken atanmamış veya boş olduğunda yedek değer kullanır."
+  },
+  "extra-081": {
+    "command": "parameter substring",
+    "description": "Bash parametre genişletmesini kullanarak bir dizgenin bölümünü çıkarır."
+  },
+  "extra-082": {
+    "command": "parameter substitution",
+    "description": "Harici bir süreç başlatmadan eşleşen metni değiştirir."
+  },
+  "extra-083": {
+    "command": "process substitution",
+    "description": "Komut çıktısını bir programa dosya benzeri girdi olarak iletir."
+  },
+  "extra-084": {
+    "command": "here-string",
+    "description": "Standart girdi üzerinden bir komuta tek bir dizge verir."
+  },
+  "extra-085": {
+    "command": "getopts",
+    "description": "Taşınabilir bir kabuk döngüsünde kısa komut satırı seçeneklerini ayrıştırır."
+  },
+  "extra-086": {
+    "command": "wait -n",
+    "description": "Daha fazla iş başlatmadan önce herhangi bir arka plan işinin bitmesini bekler."
+  },
+  "extra-087": {
+    "command": "jobs -pr",
+    "description": "Bu kabuğun başlattığı çalışan arka plan işlerinin süreç kimliklerini listeler."
+  },
+  "extra-088": {
+    "command": "exec command",
+    "description": "Geçerli kabuk sürecini bir komutla değiştirir."
+  },
+  "extra-089": {
+    "command": "command -v",
+    "description": "Bir komut adı için kabuğun çalıştıracağı yürütülebilir dosyayı bulur."
+  },
+  "extra-090": {
+    "command": "umask",
+    "description": "Yeni oluşturulan dosya ve dizinlerden varsayılan olarak kaldırılacak izin bitlerini belirler."
+  },
+  "extra-091": {
+    "command": "noclobber",
+    "description": "Çıktı yönlendirmesinin mevcut dosyanın üzerine yazmasını varsayılan olarak önler."
+  },
+  "extra-092": {
+    "command": "flock",
+    "description": "Eşzamanlı betik çalıştırmalarının çakışmaması için danışmalı kilitleme sağlar."
+  },
+  "extra-093": {
+    "command": "timeout",
+    "description": "İzin verilen süreden uzun çalışan komutu durdurur."
+  },
+  "extra-094": {
+    "command": "xargs -0",
+    "description": "NUL ile ayrılmış dosya adlarını başka bir komuta güvenle iletir."
+  },
+  "extra-095": {
+    "command": "find -print0",
+    "description": "Boşlukları ve yeni satırları işleyebilmek için dosya adlarını NUL karakterleriyle ayırarak üretir."
+  },
+  "extra-096": {
+    "command": "set -u",
+    "description": "Atanmamış değişkenin genişletilmesini hata olarak değerlendirir."
+  },
+  "extra-097": {
+    "command": "docker buildx imagetools inspect",
+    "description": "Çok platformlu bir imaj manifestini ve yayımlandığı platformları inceler."
+  },
+  "extra-098": {
+    "command": "docker buildx build --platform",
+    "description": "Bir veya daha fazla CPU mimarisi için imaj oluşturur."
+  },
+  "extra-099": {
+    "command": "docker image inspect",
+    "description": "Katmanlar, mimari ve giriş noktası gibi imaj meta verilerini gösterir."
+  },
+  "extra-100": {
+    "command": "docker image history",
+    "description": "İmaj katmanlarını ve bunları oluşturan komutları listeler."
+  },
+  "extra-101": {
+    "command": "docker system df",
+    "description": "İmajların, kapsayıcıların, birimlerin ve derleme önbelleğinin disk kullanımını raporlar."
+  },
+  "extra-102": {
+    "command": "docker builder prune",
+    "description": "Yerel depolama alanını geri kazanmak için kullanılmayan derleme önbelleğini siler."
+  },
+  "extra-103": {
+    "command": "docker volume inspect",
+    "description": "Bir Docker biriminin bağlama noktasını, sürücüsünü ve etiketlerini gösterir."
+  },
+  "extra-104": {
+    "command": "docker network inspect",
+    "description": "Bağlı kapsayıcıları, IPAM ayarlarını ve ağ sürücüsü ayrıntılarını gösterir."
+  },
+  "extra-105": {
+    "command": "docker stats --no-stream",
+    "description": "Çalışan kapsayıcıların kaynak kullanımının tek seferlik görüntüsünü alır."
+  },
+  "extra-106": {
+    "command": "docker events --since",
+    "description": "Seçilen zamandan itibaren kapsayıcı yaşam döngüsü olaylarını akış halinde iletir."
+  },
+  "extra-107": {
+    "command": "docker exec --workdir",
+    "description": "Bir kapsayıcıda seçilen dizinden başlayarak komut çalıştırır."
+  },
+  "extra-108": {
+    "command": "docker cp",
+    "description": "Yerel yol ile kapsayıcı dosya sistemi arasında dosya kopyalar."
+  },
+  "extra-109": {
+    "command": "docker wait",
+    "description": "Bir kapsayıcının durmasını bekler ve çıkış kodunu yazdırır."
+  },
+  "extra-110": {
+    "command": "docker inspect health status",
+    "description": "Yapılandırılmış sağlık denetiminin durumunu ve son yoklama sonuçlarını okur."
+  },
+  "extra-111": {
+    "command": "HEALTHCHECK start-period",
+    "description": "Başarısızlıklar sayılmaya başlamadan önce uygulamaya başlatma süresi tanır."
+  },
+  "extra-112": {
+    "command": "read-only root filesystem",
+    "description": "Çalışma sırasında kapsayıcının kök dosya sistemine yazılmasını önler."
+  },
+  "extra-113": {
+    "command": "docker run --init",
+    "description": "Sinyalleri iletmek ve sonlanmış alt süreçleri toplamak için küçük bir init süreci ekler."
+  },
+  "extra-114": {
+    "command": "docker run --cap-drop",
+    "description": "Sürecin gereksinim duymadığı Linux yeteneklerini kaldırır."
+  },
+  "extra-115": {
+    "command": "docker run --security-opt",
+    "description": "seccomp profili gibi çalışma zamanı güvenlik ayarlarını uygular."
+  },
+  "extra-116": {
+    "command": "docker run --pids-limit",
+    "description": "Bir kapsayıcının oluşturabileceği süreç sayısını sınırlar."
+  },
+  "extra-117": {
+    "command": "docker compose config",
+    "description": "Birleştirilmiş Compose yapılandırmasını sunar ve doğrular."
+  },
+  "extra-118": {
+    "command": "docker compose profiles",
+    "description": "İsteğe bağlı hizmetleri yalnızca adlandırılmış profilleri seçildiğinde etkinleştirir."
+  },
+  "extra-119": {
+    "command": "docker compose up --wait",
+    "description": "Dönmeden önce hizmetlerin sağlıklı veya çalışır hale gelmesini bekler."
+  },
+  "extra-120": {
+    "command": "container stop timeout",
+    "description": "Düzenli durdurma sinyali gönderir ve kapsayıcıyı zorla sonlandırmadan önce bekler."
+  },
+  "extra-121": {
+    "command": "gcloud config get-value project",
+    "description": "Açıkça proje belirtmeyen komutların kullandığı projeyi gösterir."
+  },
+  "extra-122": {
+    "command": "gcloud auth list",
+    "description": "Kimliği doğrulanmış hesapları listeler ve etkin kimliği belirtir."
+  },
+  "extra-123": {
+    "command": "gcloud projects get-iam-policy",
+    "description": "Erişim incelemesi için proje düzeyindeki IAM bağlamalarını okur."
+  },
+  "extra-124": {
+    "command": "IAM service account impersonation",
+    "description": "Yetkili bir kimliğin hizmet hesabı için kısa ömürlü kimlik bilgileri almasını sağlar."
+  },
+  "extra-125": {
+    "command": "Cloud Storage object versioning",
+    "description": "Bir nesne değiştirildiğinde veya silindiğinde eski nesil sürümlerini tutar."
+  },
+  "extra-126": {
+    "command": "Cloud Storage retention policy",
+    "description": "Saklama süresi dolana kadar nesnelerin silinmesini veya değiştirilmesini önler."
+  },
+  "extra-127": {
+    "command": "Cloud Run revision traffic",
+    "description": "Kademeli dağıtımlar için istekleri hizmet revizyonları arasında böler."
+  },
+  "extra-128": {
+    "command": "Cloud Run min instances",
+    "description": "Soğuk başlatmaları azaltmak için yapılandırılmış sayıda örneği hazır tutar."
+  },
+  "extra-129": {
+    "command": "GKE Workload Identity",
+    "description": "Kubernetes iş yüklerine anahtar dosyası olmadan kısa ömürlü Google kimlik bilgileri sağlar."
+  },
+  "extra-130": {
+    "command": "GKE node taint",
+    "description": "Düğümleri, eşleşen toleransı bildiren pod'lara ayırır."
+  },
+  "extra-131": {
+    "command": "Pub/Sub dead-letter topic",
+    "description": "Tekrar tekrar teslim edilemeyen iletileri inceleme için ayrı bir konuya yönlendirir."
+  },
+  "extra-132": {
+    "command": "Pub/Sub acknowledgment deadline",
+    "description": "Abonenin çekilen iletiyi onaylaması için sahip olduğu süreyi belirler."
+  },
+  "extra-133": {
+    "command": "BigQuery partition pruning",
+    "description": "Bölümleme sütununa göre filtreleyerek taranan veriyi azaltır."
+  },
+  "extra-134": {
+    "command": "BigQuery dry run",
+    "description": "Sorguyu yürütmeden işlenecek bayt miktarını tahmin eder."
+  },
+  "extra-135": {
+    "command": "Cloud SQL automated backups",
+    "description": "Yapılandırılabilir saklama süresiyle zamanlanmış veritabanı yedekleri oluşturur."
+  },
+  "extra-136": {
+    "command": "Cloud SQL point-in-time recovery",
+    "description": "Yedekler ve işlem günlükleriyle veritabanını seçilen ana geri yükler."
+  },
+  "extra-137": {
+    "command": "Cloud Logging exclusion",
+    "description": "Eşleşen günlük kayıtlarını alım sırasında depolama dışında bırakır."
+  },
+  "extra-138": {
+    "command": "Cloud Monitoring uptime check",
+    "description": "Erişilebilir bir uç noktayı yoklar ve kullanılabilirlik ile gecikmeyi kaydeder."
+  },
+  "extra-139": {
+    "command": "VPC flow logs",
+    "description": "Desteklenen alt ağlar için örneklenmiş ağ akışlarını kaydeder."
+  },
+  "extra-140": {
+    "command": "Cloud NAT",
+    "description": "Özel örneklere harici IP adresi olmadan internete çıkış sağlar."
+  },
+  "extra-141": {
+    "command": "Artifact Registry cleanup policy",
+    "description": "Eski paket sürümlerini yaşa, etiketlere veya tutma kurallarına göre kaldırır."
+  },
+  "extra-142": {
+    "command": "Secret Manager version disable",
+    "description": "Bir gizli bilgi sürümünün geçmişini silmeden ona erişimi durdurur."
+  },
+  "extra-143": {
+    "command": "KMS key version rotation",
+    "description": "Önceki sürümleri şifre çözme için tutarken yeni kriptografik anahtar malzemesi oluşturur."
+  },
+  "extra-144": {
+    "command": "Organization Policy constraint",
+    "description": "Merkezi olarak yönetilen koruyucu kuralları projelere ve klasörlere uygular."
+  },
+  "extra-145": {
+    "command": "git switch -c",
+    "description": "Tek işlemde yeni dal oluşturur ve bu dala geçer."
+  },
+  "extra-146": {
+    "command": "git restore --staged",
+    "description": "Çalışma ağacındaki değişikliklerini koruyarak yolları indeksten kaldırır."
+  },
+  "extra-147": {
+    "command": "git restore --source",
+    "description": "Çalışma ağacındaki bir yolun içeriğini seçilen işlemedeki içerikle değiştirir."
+  },
+  "extra-148": {
+    "command": "git diff --check",
+    "description": "Satır sonu boşlukları ve çakışma işaretleri gibi boşluk hatalarını bulur."
+  },
+  "extra-149": {
+    "command": "git diff --stat",
+    "description": "Tüm yamayı yazdırmadan değişen dosyaları ve satır sayılarını özetler."
+  },
+  "extra-150": {
+    "command": "git log --graph",
+    "description": "Dalların, birleştirmelerin ve işlemelerin ASCII grafiğini çizer."
+  },
+  "extra-151": {
+    "command": "git show --stat",
+    "description": "Bir işlemenin özetini ve değiştirdiği dosyaları gösterir."
+  },
+  "extra-152": {
+    "command": "git blame -L",
+    "description": "Seçilen her kaynak satırıyla ilişkili işlemeyi ve yazarı gösterir."
+  },
+  "extra-153": {
+    "command": "git bisect",
+    "description": "Bir gerilemeye neden olan işlemeyi bulmak için ikili arama kullanır."
+  },
+  "extra-154": {
+    "command": "git cherry-pick -x",
+    "description": "Bir işlemeyi uygular ve özgün özet değerini yeni işleme iletisine kaydeder."
+  },
+  "extra-155": {
+    "command": "git revert",
+    "description": "Önceki işlemenin değişikliklerini tersine çeviren yeni bir işleme oluşturur."
+  },
+  "extra-156": {
+    "command": "git reflog",
+    "description": "Artık bir dal üzerinde olmayan işlemeler dahil son yerel başvuru hareketlerini listeler."
+  },
+  "extra-157": {
+    "command": "git clean -nd",
+    "description": "Temizleme işleminin kaldıracağı izlenmeyen dosyaları önizler."
+  },
+  "extra-158": {
+    "command": "git stash push --include-untracked",
+    "description": "İzlenen ve izlenmeyen çalışmaları işlemeden geçici olarak saklar."
+  },
+  "extra-159": {
+    "command": "git stash branch",
+    "description": "Bir dal oluşturur ve seçilen geçici değişiklik kaydını bu dala yeniden uygular."
+  },
+  "extra-160": {
+    "command": "git worktree add",
+    "description": "Başka bir dalı ayrı bir çalışma dizinine çıkarır."
+  },
+  "extra-161": {
+    "command": "git submodule update --init",
+    "description": "Üst deponun kaydettiği alt modül revizyonlarını başlatır ve çalışma alanına çıkarır."
+  },
+  "extra-162": {
+    "command": "git config --show-origin",
+    "description": "Bir Git ayarının hangi yapılandırma dosyasından geldiğini gösterir."
+  },
+  "extra-163": {
+    "command": "git commit --fixup",
+    "description": "Hedef işlemeyle otomatik birleştirilmesi amaçlanan bir işleme oluşturur."
+  },
+  "extra-164": {
+    "command": "git rebase --autosquash",
+    "description": "Yeniden temellendirme sırasında fixup ve squash işlemelerini hedeflerinin yanına taşır."
+  },
+  "extra-165": {
+    "command": "git format-patch",
+    "description": "İşlemeleri posta kutusuyla uyumlu yama dosyaları olarak dışa aktarır."
+  },
+  "extra-166": {
+    "command": "git am",
+    "description": "Yama dosyalarını uygular ve meta verilerinden işlemeler oluşturur."
+  },
+  "extra-167": {
+    "command": "git verify-commit",
+    "description": "İşleme imzasını yapılandırılmış güvenilen anahtarlara göre denetler."
+  },
+  "extra-168": {
+    "command": "git fsck --full",
+    "description": "Depo nesnelerinin bağlantılılığını denetler ve erişilemeyen nesneleri raporlar."
+  },
+  "extra-169": {
+    "command": "identity federation",
+    "description": "İş yüklerinin statik sırlar olmadan ortamlar arasında güvenilen kimlik beyanları alışverişi yapmasını sağlar."
+  },
+  "extra-170": {
+    "command": "private connectivity failover",
+    "description": "Birincil özel bağlantı başarısız olduğunda ikincil VPN veya devreyi kullanılabilir tutar."
+  },
+  "extra-171": {
+    "command": "split-horizon DNS",
+    "description": "Tek bir ad için iç ve dış istemcilere farklı DNS yanıtları döndürür."
+  },
+  "extra-172": {
+    "command": "centralized certificate lifecycle",
+    "description": "Ortamlar arasında sertifikaları tutarlı biçimde düzenler, döndürür ve iptal eder."
+  },
+  "extra-173": {
+    "command": "cross-environment secrets rotation",
+    "description": "İstemciler güvenli geçiş yaparken her iki konumdaki kimlik bilgilerini döndürür."
+  },
+  "extra-174": {
+    "command": "data residency boundary",
+    "description": "Düzenlemeye tabi verileri ve yedekleri onaylı coğrafi konumlarda tutar."
+  },
+  "extra-175": {
+    "command": "WAN latency budget",
+    "description": "Eşzamanlı uygulama bağımlılıkları için kabul edilebilir ağ gecikmesini tanımlar."
+  },
+  "extra-176": {
+    "command": "egress control plane",
+    "description": "Siteler ve bulutlar arasında çıkış yollarını, incelemeyi ve politikayı merkezileştirir."
+  },
+  "extra-177": {
+    "command": "configuration drift detection",
+    "description": "Dağıtılmış ayarları her ortamdaki beyan edilmiş istenen durumla karşılaştırır."
+  },
+  "extra-178": {
+    "command": "hybrid observability correlation",
+    "description": "Platformlar arası telemetriyi bağlamak için tutarlı hizmet ve iz kimlikleri kullanır."
+  },
+  "extra-179": {
+    "command": "site-to-cloud route advertisement",
+    "description": "Şirket içi yönlendiriciler ile bulut ağ geçitleri arasında onaylı özel ağ öneklerini yayımlar."
+  },
+  "extra-180": {
+    "command": "active-passive workload failover",
+    "description": "Doğrulanmış birincil arızadan sonra trafiği hazır ikincil ortama taşır."
+  },
+  "extra-181": {
+    "command": "active-active data consistency",
+    "description": "Her iki site eşzamanlı yazma kabul ettiğinde çakışmaların nasıl ele alınacağını tanımlar."
+  },
+  "extra-182": {
+    "command": "hybrid backup immutability",
+    "description": "Yedek kopyaları ele geçirilmiş üretim kimlik bilgileriyle değiştirilmeye karşı korur."
+  },
+  "extra-183": {
+    "command": "local dependency cache",
+    "description": "Bulut bağlantısı kesildiğinde gerekli yapıtları kullanılabilir tutar."
+  },
+  "extra-184": {
+    "command": "edge workload update ring",
+    "description": "Yazılım güncellemelerini uzak sitelere kontrollü dalgalar halinde dağıtır."
+  },
+  "extra-185": {
+    "command": "policy translation",
+    "description": "Eşdeğer erişim ve ağ gereksinimlerini her platformun yerel denetimlerine eşler."
+  },
+  "extra-186": {
+    "command": "hybrid service ownership",
+    "description": "Platform sınırlarını aşan her bağımlılık için bir operasyon sorumlusu atar."
+  },
+  "extra-187": {
+    "command": "cross-cloud identity mapping",
+    "description": "Harici kimlikleri başka bir buluttaki en az ayrıcalıklı rollere eşler."
+  },
+  "extra-188": {
+    "command": "clock synchronization",
+    "description": "Günlükler, sertifikalar ve kimlik doğrulama için ana makineleri güvenilen zaman kaynaklarıyla eşzamanlı tutar."
+  },
+  "extra-189": {
+    "command": "hybrid deployment contract",
+    "description": "Bağımsız yayımlanan bileşenler için uyumlu sürümler ve arayüzler tanımlar."
+  },
+  "extra-190": {
+    "command": "regional traffic steering",
+    "description": "Ölçülen sağlık ve gecikmeyi kullanarak kullanıcıları sağlıklı, yakın bir ortama yönlendirir."
+  },
+  "extra-191": {
+    "command": "offline operation mode",
+    "description": "Uzak hizmetlere erişilemediğinde hangi işlevlerin kullanılabilir kalacağını belirtir."
+  },
+  "extra-192": {
+    "command": "hybrid disaster recovery test",
+    "description": "Kurtarma prosedürlerinin hem veri merkezi hem bulut bağımlılıklarında çalıştığını kanıtlar."
+  },
+  "extra-193": {
+    "command": "ibmcloud target",
+    "description": "Sonraki CLI işlemleri için hesabı, bölgeyi ve kaynak grubunu seçer."
+  },
+  "extra-194": {
+    "command": "ibmcloud resource groups",
+    "description": "Hizmetleri ve erişim kapsamlarını düzenleyen kaynak gruplarını listeler."
+  },
+  "extra-195": {
+    "command": "ibmcloud iam user-policies",
+    "description": "Doğrudan bir kullanıcı kimliğine atanmış politikaları gösterir."
+  },
+  "extra-196": {
+    "command": "IBM Cloud API key rotation",
+    "description": "Kimlik bilgisini yeniler ve eskisini iptal etmeden önce bağımlı iş yüklerini günceller."
+  },
+  "extra-197": {
+    "command": "VPC security group",
+    "description": "VPC arayüzlerinin gelen ve giden trafiğini durum bilgili olarak denetler."
+  },
+  "extra-198": {
+    "command": "VPC network ACL",
+    "description": "Alt ağ düzeyinde durum bilgisiz izin ve ret kuralları uygular."
+  },
+  "extra-199": {
+    "command": "VPC floating IP",
+    "description": "Genel bir adresi desteklenen VPC ağ arayüzüyle ilişkilendirir."
+  },
+  "extra-200": {
+    "command": "VPC VPN gateway",
+    "description": "Bir VPC ağını IPsec tüneli üzerinden uzak ağa bağlar."
+  },
+  "extra-201": {
+    "command": "Cloud Object Storage HMAC key",
+    "description": "Desteklenen nesne depolama istemcilerine S3 uyumlu kimlik bilgileri sağlar."
+  },
+  "extra-202": {
+    "command": "Cloud Object Storage retention",
+    "description": "Nesneleri belirli süre boyunca silinmeye veya üzerine yazılmaya karşı korur."
+  },
+  "extra-203": {
+    "command": "Kubernetes worker pool",
+    "description": "Ortak makine ve alan yapılandırmasına sahip küme çalışan düğümlerini gruplar."
+  },
+  "extra-204": {
+    "command": "Kubernetes cluster autoscaler",
+    "description": "Zamanlanamayan pod'lara göre çalışan düğüm sayısını ayarlar."
+  },
+  "extra-205": {
+    "command": "Code Engine job",
+    "description": "Sürekli uç nokta sunmak yerine sonlu bir iş yükünü tamamlanana kadar çalıştırır."
+  },
+  "extra-206": {
+    "command": "Code Engine project",
+    "description": "Uygulamalar, işler, derlemeler ve yapılandırma için yalıtılmış kapsam sağlar."
+  },
+  "extra-207": {
+    "command": "Secrets Manager secret group",
+    "description": "Gizli bilgi yöneticisi örneğinde sırları ve erişim politikasını düzenler."
+  },
+  "extra-208": {
+    "command": "Secrets Manager rotation policy",
+    "description": "Desteklenen gizli bilgi türleri ve bağlı hizmetler için döndürme zamanlar."
+  },
+  "extra-209": {
+    "command": "Activity Tracker event",
+    "description": "Denetim, inceleme ve uyarı amacıyla hesap etkinliğini kaydeder."
+  },
+  "extra-210": {
+    "command": "Log Analysis parsing rule",
+    "description": "Alım sırasında uygulama günlük iletilerinden yapılandırılmış alanlar çıkarır."
+  },
+  "extra-211": {
+    "command": "Key Protect root key",
+    "description": "Entegre hizmetlerin kullandığı veri şifreleme anahtarlarını korur."
+  },
+  "extra-212": {
+    "command": "Key Protect key rotation",
+    "description": "Yönetilen başvuruları korurken kriptografik anahtar malzemesini döndürür."
+  },
+  "extra-213": {
+    "command": "Cloud Internet Services origin pool",
+    "description": "Sağlığa dayalı trafik dağıtımı için arka uç kaynaklarını gruplar."
+  },
+  "extra-214": {
+    "command": "Cloud Internet Services WAF rule",
+    "description": "Web saldırısı deseniyle eşleşen istekleri engeller veya doğrulamaya tabi tutar."
+  },
+  "extra-215": {
+    "command": "Schematics workspace",
+    "description": "IBM Cloud tarafından yönetilen yürütme ortamlarında Terraform otomasyonu çalıştırır."
+  },
+  "extra-216": {
+    "command": "Schematics action",
+    "description": "Bir çalışma alanının yönettiği kaynaklarda operasyonel eylem çalıştırır."
+  },
+  "extra-217": {
+    "command": "Object.hasOwn",
+    "description": "Prototipte aramadan bir nesnenin özelliği doğrudan içerip içermediğini denetler."
+  },
+  "extra-218": {
+    "command": "structuredClone",
+    "description": "Desteklenen yapılandırılmış değerlerin derin kopyasını oluşturur."
+  },
+  "extra-219": {
+    "command": "Array.toSorted",
+    "description": "Özgün diziyi değiştirmeden sıralanmış kopya döndürür."
+  },
+  "extra-220": {
+    "command": "Array.flatMap",
+    "description": "Her öğeyi dönüştürür ve sonuç dizisinin bir düzeyini düzleştirir."
+  },
+  "extra-221": {
+    "command": "Array.some",
+    "description": "En az bir dizi öğesinin koşulu sağlayıp sağlamadığını test eder."
+  },
+  "extra-222": {
+    "command": "Array.every",
+    "description": "Tüm dizi öğelerinin koşulu sağlayıp sağlamadığını test eder."
+  },
+  "extra-223": {
+    "command": "Map.groupBy",
+    "description": "Yinelenebilir değerleri geri çağırmanın döndürdüğü anahtara göre gruplar."
+  },
+  "extra-224": {
+    "command": "Promise.allSettled",
+    "description": "Tüm promise'ları bekler ve hem gerçekleşen hem reddedilen sonuçları korur."
+  },
+  "extra-225": {
+    "command": "AbortController",
+    "description": "fetch ve iptali destekleyen diğer eşzamansız işlere iptal sinyali verir."
+  },
+  "extra-226": {
+    "command": "fetch response.ok",
+    "description": "Bir HTTP yanıt durumunun başarı aralığında olup olmadığını denetler."
+  },
+  "extra-227": {
+    "command": "URLSearchParams",
+    "description": "URL sorgu dizgelerini doğru kodlamayla oluşturur ve ayrıştırır."
+  },
+  "extra-228": {
+    "command": "import.meta.env",
+    "description": "Desteklenen modül sistemlerinde derleme aracının sağladığı ortam değerlerini okur."
+  },
+  "extra-229": {
+    "command": "dynamic import",
+    "description": "Modülü gerektiğinde yükler ve dışa aktardıkları için bir promise döndürür."
+  },
+  "extra-230": {
+    "command": "top-level await",
+    "description": "Desteklenen modüllerin eşzamansız başlatmayı doğrudan beklemesini sağlar."
+  },
+  "extra-231": {
+    "command": "WeakMap",
+    "description": "Anahtarları sırf eşleme nedeniyle bellekte tutmadan nesne anahtarlı meta veri saklar."
+  },
+  "extra-232": {
+    "command": "WeakSet",
+    "description": "Girdilerinin çöp toplamayla kaldırılmasını engellemeden nesne üyeliğini izler."
+  },
+  "extra-233": {
+    "command": "Object.freeze",
+    "description": "Çalışma zamanında nesnenin kendi özelliklerinin değiştirilmesini önler."
+  },
+  "extra-234": {
+    "command": "nullish coalescing",
+    "description": "Yalnızca null veya undefined için yedek değer kullanır; geçerli falsy değerleri korur."
+  },
+  "extra-235": {
+    "command": "optional chaining",
+    "description": "Önceki başvuru null veya undefined olabileceğinde iç içe değerleri güvenle okur."
+  },
+  "extra-236": {
+    "command": "Error cause",
+    "description": "Hatayı bağlamla sarmalarken kaynak istisnayı ekler."
+  },
+  "extra-237": {
+    "command": "TextEncoder",
+    "description": "JavaScript dizgelerini UTF-8 baytlarına kodlar."
+  },
+  "extra-238": {
+    "command": "crypto.randomUUID",
+    "description": "Platformun kriptografik rastgelelik kaynağını kullanarak UUID oluşturur."
+  },
+  "extra-239": {
+    "command": "ReadableStream",
+    "description": "Yanıtın tamamını arabelleğe almak yerine akan veriyi artımlı işler."
+  },
+  "extra-240": {
+    "command": "Object.fromEntries",
+    "description": "Yinelenebilir anahtar-değer çiftlerinden bir nesne oluşturur."
+  },
+  "extra-241": {
+    "command": "pipeline options timeout",
+    "description": "Yapılandırılan sürenin sonunda işlem hattını veya aşamayı durdurur."
+  },
+  "extra-242": {
+    "command": "pipeline options disableConcurrentBuilds",
+    "description": "Aynı işlem hattı işinin çalıştırmalarının çakışmasını önler."
+  },
+  "extra-243": {
+    "command": "when branch",
+    "description": "Bildirimsel aşamayı yalnızca geçerli dal eşleştiğinde çalıştırır."
+  },
+  "extra-244": {
+    "command": "when changeset",
+    "description": "Aşamayı yalnızca değişen dosyalar bir desenle eşleştiğinde çalıştırır."
+  },
+  "extra-245": {
+    "command": "input step",
+    "description": "Yetkili bir insan kararı için işlem hattını duraklatır."
+  },
+  "extra-246": {
+    "command": "stash and unstash",
+    "description": "Farklı aracılardaki aşamalar arasında seçilen dosyaları aktarır."
+  },
+  "extra-247": {
+    "command": "archiveArtifacts",
+    "description": "Derleme çıktılarını Jenkins derleme kaydıyla birlikte saklar."
+  },
+  "extra-248": {
+    "command": "junit publisher",
+    "description": "Test sonucu XML verisini yayımlar ve başarısızlıklarda derlemeleri kararsız olarak işaretler."
+  },
+  "extra-249": {
+    "command": "credentials binding",
+    "description": "Saklanan kimlik bilgilerini sınırlı bir bloğa ortam değişkenleri olarak sunar."
+  },
+  "extra-250": {
+    "command": "withEnv",
+    "description": "Sınırlı bir işlem hattı bloğu için ortam değerleri ekler veya üzerlerine yazar."
+  },
+  "extra-251": {
+    "command": "agent label",
+    "description": "İşlem hattını veya aşamayı eşleşen bir Jenkins aracısında zamanlar."
+  },
+  "extra-252": {
+    "command": "matrix axis",
+    "description": "Aşamayı bildirilen ortam değerlerinin birleşimleri için çalıştırır."
+  },
+  "extra-253": {
+    "command": "parallel stages",
+    "description": "Bağımsız bildirimsel aşamaları eşzamanlı yürütür."
+  },
+  "extra-254": {
+    "command": "post always",
+    "description": "İşlem hattının sonucundan bağımsız olarak temizleme veya raporlama adımlarını çalıştırır."
+  },
+  "extra-255": {
+    "command": "post unsuccessful",
+    "description": "Başarısız veya kararsız sonuçlar için kurtarma ya da bildirim mantığını çalıştırır."
+  },
+  "extra-256": {
+    "command": "retry step",
+    "description": "Geçici bir işlem başarısız olduğunda bloğu tekrarlar."
+  },
+  "extra-257": {
+    "command": "warnError",
+    "description": "İşlem hattının sürmesine izin verirken aşamayı kararsız olarak işaretler."
+  },
+  "extra-258": {
+    "command": "lockable resource",
+    "description": "İşlem hatlarının paylaşılan kaynağa erişimini sıraya koyar."
+  },
+  "extra-259": {
+    "command": "milestone step",
+    "description": "Eski derlemelerin daha yeni bir derlemeyi geçerek ilerlemesini önler."
+  },
+  "extra-260": {
+    "command": "build job step",
+    "description": "Parametrelerle ve isteğe bağlı beklemeyle başka bir Jenkins işi tetikler."
+  },
+  "extra-261": {
+    "command": "copyArtifacts",
+    "description": "Başka bir derlemeden seçilen yapıtları geçerli çalışma alanına kopyalar."
+  },
+  "extra-262": {
+    "command": "pipeline shared library",
+    "description": "Birden fazla iş için yeniden kullanılabilir işlem hattı adımlarını ve genel değişkenleri paketler."
+  },
+  "extra-263": {
+    "command": "Replay build",
+    "description": "Kontrollü hata ayıklama için geçici betik düzenlemeleriyle işlem hattını yeniden çalıştırır."
+  },
+  "extra-264": {
+    "command": "build discard policy",
+    "description": "Depolama büyümesini denetlemek için saklanan derleme geçmişini ve yapıtları sınırlar."
+  },
+  "extra-265": {
+    "command": "kubectl rollout history",
+    "description": "Deployment dağıtımının oluşturduğu revizyonları gösterir."
+  },
+  "extra-266": {
+    "command": "kubectl rollout undo",
+    "description": "Geri alma güvenliyse iş yükünü önceki revizyona döndürür."
+  },
+  "extra-267": {
+    "command": "kubectl rollout pause",
+    "description": "Değişiklikler incelenirken Deployment dağıtımını duraklatır."
+  },
+  "extra-268": {
+    "command": "kubectl rollout resume",
+    "description": "Daha önce duraklatılmış dağıtımı sürdürür."
+  },
+  "extra-269": {
+    "command": "kubectl auth can-i",
+    "description": "Geçerli kimliğin belirli bir API eylemine yetkili olup olmadığını denetler."
+  },
+  "extra-270": {
+    "command": "kubectl api-resources",
+    "description": "API sunucusunun sunduğu kaynak türlerini ve kapsamlarını listeler."
+  },
+  "extra-271": {
+    "command": "kubectl explain",
+    "description": "Bir kaynak alanının şema belgelerini okur."
+  },
+  "extra-272": {
+    "command": "kubectl wait",
+    "description": "Kaynak koşulu doğru olana veya zaman aşımına kadar bekler."
+  },
+  "extra-273": {
+    "command": "kubectl plugin list",
+    "description": "Geçerli PATH üzerinde bulunan yürütülebilir kubectl eklentilerini listeler."
+  },
+  "extra-274": {
+    "command": "kubectl diff",
+    "description": "Uygulamadan önce manifestin canlı kümeyi nasıl değiştireceğini gösterir."
+  },
+  "extra-275": {
+    "command": "kubectl apply --server-side",
+    "description": "Güncellemeler için sunucu taraflı alan sahipliği ve çakışma algılama kullanır."
+  },
+  "extra-276": {
+    "command": "PodDisruptionBudget",
+    "description": "Yeterli replikanın kullanılabilir kalması için gönüllü kesintileri sınırlar."
+  },
+  "extra-277": {
+    "command": "startup probe",
+    "description": "Yavaş başlayan kapsayıcılara canlılık denetimleri başlamadan önce süre tanır."
+  },
+  "extra-278": {
+    "command": "readiness probe",
+    "description": "Trafik kabul edemediği sürece pod'u hizmet uç noktalarından çıkarır."
+  },
+  "extra-279": {
+    "command": "liveness probe",
+    "description": "Süreci artık sağlıklı değilse kapsayıcıyı yeniden başlatır."
+  },
+  "extra-280": {
+    "command": "topology spread constraints",
+    "description": "Birbiriyle ilişkili arızaları azaltmak için pod'ları alanlara veya düğümlere dağıtır."
+  },
+  "extra-281": {
+    "command": "Pod priority class",
+    "description": "Kaynak baskısı altında zamanlama sırasını ve olası öncelikli yer değiştirmeyi etkiler."
+  },
+  "extra-282": {
+    "command": "resource quota",
+    "description": "Bir ad alanındaki toplam kaynak tüketimini sınırlar."
+  },
+  "extra-283": {
+    "command": "LimitRange",
+    "description": "Ad alanı nesneleri için varsayılan ve azami kaynak isteklerini veya sınırlarını belirler."
+  },
+  "extra-284": {
+    "command": "EndpointSlice",
+    "description": "Kubernetes Services tarafından kullanılan ölçeklenebilir arka uç uç nokta verilerini saklar."
+  },
+  "extra-285": {
+    "command": "IngressClass",
+    "description": "Ingress kaynağını hangi denetleyicinin uygulayacağını seçer."
+  },
+  "extra-286": {
+    "command": "NetworkPolicy egress",
+    "description": "Seçilen pod'ların bağlanabileceği hedefleri sınırlar."
+  },
+  "extra-287": {
+    "command": "init container",
+    "description": "Uygulama kapsayıcıları başlamadan önce kurulum işini tamamlar."
+  },
+  "extra-288": {
+    "command": "ephemeral container",
+    "description": "Mevcut pod'a geçici bir hata ayıklama kapsayıcısı ekler."
+  },
+  "extra-289": {
+    "command": "lsof -i",
+    "description": "Bir bağlantı noktası veya protokolle eşleşen ağ soketlerini kullanan süreçleri listeler."
+  },
+  "extra-290": {
+    "command": "ss -lntp",
+    "description": "Dinleyen TCP soketlerini, sayısal adresleri ve sahibi olan süreçleri gösterir."
+  },
+  "extra-291": {
+    "command": "ip route get",
+    "description": "Çekirdeğin bir hedef için kullanacağı yolu ve kaynak adresini gösterir."
+  },
+  "extra-292": {
+    "command": "ip neigh",
+    "description": "Adres çözümlemede kullanılan yerel komşu önbelleğini gösterir."
+  },
+  "extra-293": {
+    "command": "ethtool",
+    "description": "Desteklenen ağ arayüzü özelliklerini inceler veya yapılandırır."
+  },
+  "extra-294": {
+    "command": "iostat -xz",
+    "description": "sysstat paketinden aygıt kullanımı ve gecikme ölçümlerini raporlar."
+  },
+  "extra-295": {
+    "command": "vmstat",
+    "description": "Bellek, süreçler, sayfalama, blok G/Ç ve CPU etkinliğini özetler."
+  },
+  "extra-296": {
+    "command": "pidstat",
+    "description": "Süreç başına CPU, bellek veya G/Ç istatistiklerini raporlar."
+  },
+  "extra-297": {
+    "command": "strace -p",
+    "description": "Tanı amacıyla mevcut bir sürecin sistem çağrılarını izler."
+  },
+  "extra-298": {
+    "command": "ltrace",
+    "description": "Sürecin paylaşılan kitaplık işlevlerine yaptığı çağrıları izler."
+  },
+  "extra-299": {
+    "command": "perf top",
+    "description": "Sistemde CPU örneklerini tüketen işlevleri canlı gösterir."
+  },
+  "extra-300": {
+    "command": "systemd-analyze blame",
+    "description": "Başlangıç birimlerini önyükleme sırasında harcadıkları süreye göre sıralar."
+  },
+  "extra-301": {
+    "command": "systemctl cat",
+    "description": "Birim dosyasını ek geçersiz kılma dosyalarıyla birlikte gösterir."
+  },
+  "extra-302": {
+    "command": "journalctl -u -S",
+    "description": "Bir systemd biriminin günlüğünü hizmete ve başlangıç zamanına göre filtreler."
+  },
+  "extra-303": {
+    "command": "loginctl list-sessions",
+    "description": "systemd-logind tarafından yönetilen etkin giriş oturumlarını listeler."
+  },
+  "extra-304": {
+    "command": "getfacl",
+    "description": "Temel sahip/grup/mod bitlerinin ötesindeki POSIX erişim denetim listelerini okur."
+  },
+  "extra-305": {
+    "command": "setfacl -m",
+    "description": "Dosya sistemi nesnesine erişim denetim listesi girdisi ekler veya mevcut girdiyi değiştirir."
+  },
+  "extra-306": {
+    "command": "find -mmin",
+    "description": "Belirli sayıda dakika içinde değiştirilmiş dosyaları bulur."
+  },
+  "extra-307": {
+    "command": "stat -c",
+    "description": "Mod, sahip, boyut ve zaman damgaları gibi seçilen dosya meta verilerini yazdırır."
+  },
+  "extra-308": {
+    "command": "du -xhd1",
+    "description": "Dosya sistemi sınırlarını aşmadan dizin kullanımını özetler."
+  },
+  "extra-309": {
+    "command": "tar --exclude",
+    "description": "Eşleşen dosya veya dizinleri dışarıda bırakarak arşiv oluşturur."
+  },
+  "extra-310": {
+    "command": "flock -n",
+    "description": "Kritik görevi çalıştırmadan önce engellemeyen danışmalı kilit alır."
+  },
+  "extra-311": {
+    "command": "renice",
+    "description": "Çalışan bir sürecin zamanlama önceliğini değiştirir."
+  },
+  "extra-312": {
+    "command": "ulimit -n",
+    "description": "Kabuk sürecinin dosya tanımlayıcı sınırını okur veya değiştirir."
+  },
+  "extra-313": {
+    "command": "portable container image",
+    "description": "Desteklenen kayıt depoları arasında taşınabilen OCI uyumlu imaj biçimleri kullanır."
+  },
+  "extra-314": {
+    "command": "workload identity federation",
+    "description": "Güvenilen harici kimlik beyanlarını kısa ömürlü bulut kimlik bilgileriyle değiştirir."
+  },
+  "extra-315": {
+    "command": "cloud resource tagging standard",
+    "description": "Tutarlı sahip, ortam, maliyet merkezi ve veri sınıfı etiketleri kullanır."
+  },
+  "extra-316": {
+    "command": "provider lockfile",
+    "description": "Ekiplerin incelenmiş sağlayıcı ikililerini yüklemesi için sağlayıcı paketlerinin sağlama toplamlarını sabitler."
+  },
+  "extra-317": {
+    "command": "cross-cloud DNS delegation",
+    "description": "Her platformun kendi hizmet kayıtlarını yönetebilmesi için alt alan adlarını devreder."
+  },
+  "extra-318": {
+    "command": "global traffic failover",
+    "description": "Birincil uç nokta kullanılamadığında istekleri sağlıklı sağlayıcıya yönlendirir."
+  },
+  "extra-319": {
+    "command": "cloud egress cost review",
+    "description": "Verinin sağlayıcıdan, bölgeden veya alandan çıkışından kaynaklanan ücretleri belirler."
+  },
+  "extra-320": {
+    "command": "portable health endpoint",
+    "description": "Barındırma platformlarında eşdeğer hazır olma ve canlılık sinyalleri sunar."
+  },
+  "extra-321": {
+    "command": "cross-provider log correlation",
+    "description": "İsteklerin sağlayıcı sınırları boyunca izlenebilmesi için iz kimliklerini aktarır."
+  },
+  "extra-322": {
+    "command": "cloud-neutral backup format",
+    "description": "Kurtarılabilir veriyi tek bir yönetilen hizmete bağlı olmayan biçimlerde saklar."
+  },
+  "extra-323": {
+    "command": "service-level objective portability",
+    "description": "Kullanılabilirlik ve gecikme hedeflerini sağlayıcıya özgü ölçümlerden bağımsız tanımlar."
+  },
+  "extra-324": {
+    "command": "cloud policy as code",
+    "description": "Sağlayıcı kaynakları oluşturulmadan önce ortak koruyucu kuralları CI içinde doğrular."
+  },
+  "extra-325": {
+    "command": "secret provider abstraction",
+    "description": "Uygulamaların gizli değerleri sabit bir arayüz üzerinden kullanmasını sağlar."
+  },
+  "extra-326": {
+    "command": "artifact promotion by digest",
+    "description": "Her ortam için yeniden derlemek yerine değişmez yapıt kimliklerini ilerletir."
+  },
+  "extra-327": {
+    "command": "cross-cloud certificate renewal",
+    "description": "Bağımsız giriş sistemlerinde sertifika düzenlemeyi ve dağıtımını koordine eder."
+  },
+  "extra-328": {
+    "command": "multi-provider quota planning",
+    "description": "Sağlayıcılar arasında ölçekleme yapmadan önce hizmet kotalarını ve kapasite sınırlarını izler."
+  },
+  "extra-329": {
+    "command": "cloud incident runbook",
+    "description": "Ortak bir hizmet hedefini karşılayan sağlayıcıya özgü kurtarma adımlarını belgeler."
+  },
+  "extra-330": {
+    "command": "data transfer minimization",
+    "description": "Gecikmeyi ve bulutlar arası ücretleri azaltmak için hesaplamayı verisine yakın tutar."
+  },
+  "extra-331": {
+    "command": "immutable deployment artifact",
+    "description": "Yayın birimi olarak imzalı, sürümlü bir derleme yapıtı kullanır."
+  },
+  "extra-332": {
+    "command": "provider outage dependency map",
+    "description": "Hizmetleri sağlayıcı bölgelerine ve paylaşılan kontrol düzlemi bağımlılıklarına eşler."
+  },
+  "extra-333": {
+    "command": "cloud configuration drift",
+    "description": "Gerçek ayarları sürüm denetimindeki istenen yapılandırmayla karşılaştırır."
+  },
+  "extra-334": {
+    "command": "portable deployment manifest",
+    "description": "İş yükü ayarlarını sağlayıcıya özgü altyapı bağlamalarından ayırır."
+  },
+  "extra-335": {
+    "command": "cross-cloud restore exercise",
+    "description": "Yedeklerin kullanılabilir olduğunu varsaymak yerine farklı sağlayıcıda kurtarmayı test eder."
+  },
+  "extra-336": {
+    "command": "shared responsibility matrix",
+    "description": "Sağlayıcının ve iş yükü ekibinin sorumlu olduğu güvenlik denetimlerini netleştirir."
+  },
+  "extra-337": {
+    "command": "TCP three-way handshake",
+    "description": "SYN, SYN-ACK ve ACK segmentleriyle TCP bağlantısı kurar."
+  },
+  "extra-338": {
+    "command": "TCP retransmission",
+    "description": "Kayıp veya aşırı gecikme sonrasında onaylanmamış veriyi yeniden gönderir."
+  },
+  "extra-339": {
+    "command": "MTU path discovery",
+    "description": "Parçalanmadan taşınabilen en büyük paket boyutunu bulur."
+  },
+  "extra-340": {
+    "command": "DNS CNAME record",
+    "description": "Bir DNS adını doğrudan adrese değil başka bir ada takma ad olarak eşler."
+  },
+  "extra-341": {
+    "command": "DNS negative caching",
+    "description": "Bir adın veya kaydın bulunmadığını belirli süre önbellekte tutar."
+  },
+  "extra-342": {
+    "command": "DNS split horizon",
+    "description": "İstemcinin çözümleyici görünümüne göre farklı kayıtlar döndürür."
+  },
+  "extra-343": {
+    "command": "BGP local preference",
+    "description": "Bir otonom sistem içinde tercih edilen çıkış yollarını seçer."
+  },
+  "extra-344": {
+    "command": "BGP AS path prepending",
+    "description": "Uzak yol seçimini etkilemek için duyurulan yolu daha uzun gösterir."
+  },
+  "extra-345": {
+    "command": "BGP graceful restart",
+    "description": "Eşler desteklediğinde yönlendirme süreci yeniden başlatılırken iletimi korur."
+  },
+  "extra-346": {
+    "command": "VLAN trunk",
+    "description": "Bir fiziksel Ethernet bağlantısı üzerinden birden çok etiketli VLAN taşır."
+  },
+  "extra-347": {
+    "command": "802.1Q native VLAN",
+    "description": "Trunk üzerinde etiketsiz trafik taşır ve her iki uçta eşleşmelidir."
+  },
+  "extra-348": {
+    "command": "LACP port channel",
+    "description": "Yedeklilik ve kapasite için fiziksel bağlantıları müzakere edilmiş mantıksal bağlantıda birleştirir."
+  },
+  "extra-349": {
+    "command": "ARP cache",
+    "description": "Yerel ağda IPv4 adreslerini bağlantı katmanı adreslerine eşler."
+  },
+  "extra-350": {
+    "command": "IPv6 neighbor discovery",
+    "description": "Adres çözümleme ve yönlendirici keşfi için ICMPv6 iletileri kullanır."
+  },
+  "extra-351": {
+    "command": "NAT port exhaustion",
+    "description": "NAT aygıtında eşzamanlı akışlar için boş kaynak bağlantı noktası kalmadığında oluşur."
+  },
+  "extra-352": {
+    "command": "TLS SNI",
+    "description": "İstemcinin TLS el sıkışması sırasında istenen ana makine adını belirtmesini sağlar."
+  },
+  "extra-353": {
+    "command": "TLS ALPN",
+    "description": "TLS kurulumu sırasında HTTP/2 gibi bir uygulama protokolü üzerinde anlaşır."
+  },
+  "extra-354": {
+    "command": "HTTP CONNECT proxy",
+    "description": "Genellikle TLS trafiği için HTTP vekili üzerinden tünel oluşturur."
+  },
+  "extra-355": {
+    "command": "reverse proxy buffering",
+    "description": "Aracının istek veya yanıt gövdelerini arabelleğe alıp almayacağını denetler."
+  },
+  "extra-356": {
+    "command": "Anycast routing",
+    "description": "Yönlendirmenin yakın bir site seçmesi için tek adresi birden çok konumdan duyurur."
+  },
+  "extra-357": {
+    "command": "ECMP",
+    "description": "Akışları birden fazla eşit maliyetli yola dağıtır."
+  },
+  "extra-358": {
+    "command": "network flow logs",
+    "description": "Trafiğin örneklenmiş kaynak, hedef, bağlantı noktası ve izin/ret ayrıntılarını kaydeder."
+  },
+  "extra-359": {
+    "command": "ICMP destination unreachable",
+    "description": "Ana makineye, ağa, protokole, bağlantı noktasına veya yola erişilemediğini bildirir."
+  },
+  "extra-360": {
+    "command": "packet capture ring buffer",
+    "description": "Uzun tanı çalışmalarının sınırlı disk alanı kullanması için yakalama dosyalarını döndürür."
+  },
+  "extra-361": {
+    "command": "oci iam region-subscription list",
+    "description": "Geçerli kiracı için etkinleştirilmiş bölgeleri listeler."
+  },
+  "extra-362": {
+    "command": "OCI compartment hierarchy",
+    "description": "Kiracı içinde kaynakları düzenler ve IAM politika kapsamını uygular."
+  },
+  "extra-363": {
+    "command": "OCI dynamic group",
+    "description": "Eşleşen bölme veya kaynak kurallarıyla kaynak kimliklerini seçer."
+  },
+  "extra-364": {
+    "command": "OCI resource principal",
+    "description": "OCI iş yükünün saklanmış kullanıcı API anahtarı olmadan yetkili hizmetleri çağırmasını sağlar."
+  },
+  "extra-365": {
+    "command": "OCI Vault secret version",
+    "description": "Uygulamalar ve entegrasyonlar için sürümlü gizli bilgi içerikleri saklar."
+  },
+  "extra-366": {
+    "command": "OCI Vault key rotation",
+    "description": "Eski sürümleri şifre çözme için tutarken yeni anahtar sürümleri oluşturur."
+  },
+  "extra-367": {
+    "command": "Object Storage retention rule",
+    "description": "Nesneleri yapılandırılmış süre boyunca silinmeye veya üzerine yazılmaya karşı korur."
+  },
+  "extra-368": {
+    "command": "Object Storage pre-authenticated request",
+    "description": "Seçilen nesne veya kovalara kapsamı ve süresi sınırlı erişim verir."
+  },
+  "extra-369": {
+    "command": "VCN route rule",
+    "description": "Eşleşen hedef trafiğini ağ geçidine veya özel sonraki atlamaya yönlendirir."
+  },
+  "extra-370": {
+    "command": "Network Security Group",
+    "description": "Sanal ağ kurallarını tüm alt ağ yerine seçilen VNIC arayüzlerine uygular."
+  },
+  "extra-371": {
+    "command": "OCI service gateway",
+    "description": "Bir VCN ağından desteklenen Oracle hizmetlerine özel erişim sağlar."
+  },
+  "extra-372": {
+    "command": "OCI NAT gateway",
+    "description": "Özel alt ağ kaynaklarının gelen trafiğe açılmadan genel bağlantılar başlatmasını sağlar."
+  },
+  "extra-373": {
+    "command": "Load Balancer backend set",
+    "description": "Arka uç sunucularını bir politika ve sağlık denetimi yapılandırmasıyla gruplar."
+  },
+  "extra-374": {
+    "command": "Compute instance pool",
+    "description": "Benzer bilgi işlem örneklerini hata etki alanları boyunca grup olarak yönetir."
+  },
+  "extra-375": {
+    "command": "Block Volume backup policy",
+    "description": "Yeniden kullanılabilir politikayla birim yedeklerini zamanlar."
+  },
+  "extra-376": {
+    "command": "File Storage export set",
+    "description": "Dosya sistemleri için ağ erişimini ve dışa aktarma seçeneklerini tanımlar."
+  },
+  "extra-377": {
+    "command": "OKE node pool",
+    "description": "Küme için çalışan düğüm tipini, imajı, alt ağı ve ölçekleme ayarlarını tanımlar."
+  },
+  "extra-378": {
+    "command": "OKE workload identity",
+    "description": "Kubernetes hizmet hesaplarını kimlik olarak OCI kaynaklarına erişmek üzere yetkilendirir."
+  },
+  "extra-379": {
+    "command": "Autonomous Database wallet",
+    "description": "TLS korumalı veritabanı erişimi için istemci bağlantı malzemesi içerir."
+  },
+  "extra-380": {
+    "command": "Database Data Guard",
+    "description": "Olağanüstü durum kurtarma ve rol geçişleri için beklemede veritabanı tutar."
+  },
+  "extra-381": {
+    "command": "Logging service search",
+    "description": "Kaynak ve uygulama olaylarını incelemek için merkezi OCI günlüklerini sorgular."
+  },
+  "extra-382": {
+    "command": "Monitoring alarm",
+    "description": "Ölçüm sorgusunu değerlendirir ve eşik aşıldığında bildirim gönderir."
+  },
+  "extra-383": {
+    "command": "Resource Manager stack drift",
+    "description": "Dağıtılmış kaynakları yığının Terraform yapılandırmasıyla karşılaştırır."
+  },
+  "extra-384": {
+    "command": "Cloud Guard responder recipe",
+    "description": "Algılayıcı kuralı risk belirlediğinde otomatik veya elle yapılacak eylemleri tanımlar."
+  },
+  "extra-385": {
+    "command": "strict and warnings",
+    "description": "Derleme zamanı denetimlerini ve yararlı çalışma zamanı tanılarını etkinleştirir."
+  },
+  "extra-386": {
+    "command": "defined-or operator",
+    "description": "Değer sıfır veya boşken değil, yalnızca tanımsızken yedek değer kullanır."
+  },
+  "extra-387": {
+    "command": "three-argument open",
+    "description": "Dosyayı açıkça belirtilen modda açar ve iki bağımsız değişkenli belirsiz ayrıştırmadan kaçınır."
+  },
+  "extra-388": {
+    "command": "autodie",
+    "description": "Yaygın sistem çağrısı hatalarını otomatik olarak istisnalara dönüştürür."
+  },
+  "extra-389": {
+    "command": "File::Temp",
+    "description": "Güvenli, benzersiz adlarla geçici dosya ve dizinler oluşturur."
+  },
+  "extra-390": {
+    "command": "Getopt::Long",
+    "description": "Uzun komut satırı seçeneklerini ayrıştırıp değişkenlere aktarır."
+  },
+  "extra-391": {
+    "command": "JSON::PP decode_json",
+    "description": "Çekirdek JSON::PP modülüyle JSON belgesini Perl başvurularına ayrıştırır."
+  },
+  "extra-392": {
+    "command": "JSON::PP encode_json",
+    "description": "Perl veri yapılarını kompakt JSON baytları olarak serileştirir."
+  },
+  "extra-393": {
+    "command": "File::Basename",
+    "description": "Yoldan dizin, dosya adı ve sonek bileşenlerini çıkarır."
+  },
+  "extra-394": {
+    "command": "File::Path make_path",
+    "description": "İç içe dizinler oluşturur ve dosya sistemi hatalarını bildirir."
+  },
+  "extra-395": {
+    "command": "File::Find",
+    "description": "Dizin ağacını dolaşır ve her girdi için geri çağırma çalıştırır."
+  },
+  "extra-396": {
+    "command": "IPC::Open3",
+    "description": "stdin, stdout ve stderr için ayrı tanıtıcılarla alt süreç çalıştırır."
+  },
+  "extra-397": {
+    "command": "system list form",
+    "description": "Bağımsız değişkenleri yorumlamak için kabuk çağırmadan program çalıştırır."
+  },
+  "extra-398": {
+    "command": "Time::HiRes alarm",
+    "description": "Zamanla sınırlı işlemler için saniye altı hassasiyetli alarm kurar."
+  },
+  "extra-399": {
+    "command": "POSIX strftime",
+    "description": "Zaman damgasını yerel ayardan bağımsız, belirtilen desenle biçimlendirir."
+  },
+  "extra-400": {
+    "command": "Digest::SHA",
+    "description": "Dosyalar veya veri akışları için kriptografik özetler hesaplar."
+  },
+  "extra-401": {
+    "command": "List::Util max",
+    "description": "Sayısal değerler listesindeki en büyük değeri bulur."
+  },
+  "extra-402": {
+    "command": "List::Util any",
+    "description": "Herhangi bir liste öğesinin koşulu sağlayıp sağlamadığını test eder."
+  },
+  "extra-403": {
+    "command": "Try::Tiny",
+    "description": "Kısa try, catch ve finally bloklarıyla istisnaları işler."
+  },
+  "extra-404": {
+    "command": "Test::More subtests",
+    "description": "İlişkili doğrulamaları gruplar ve anlaşılır, iç içe test sonucu raporlar."
+  },
+  "extra-405": {
+    "command": "Test::Warnings",
+    "description": "Test sırasında kodun beklenen uyarıları ürettiğini doğrular."
+  },
+  "extra-406": {
+    "command": "DBI placeholders",
+    "description": "Enjeksiyon ve tırnaklama hatalarından kaçınmak için değerleri SQL metninden ayrı bağlar."
+  },
+  "extra-407": {
+    "command": "DBI transaction",
+    "description": "Veritabanı yazmalarını birlikte kaydedilecek veya hata halinde geri alınacak şekilde gruplar."
+  },
+  "extra-408": {
+    "command": "Encode decode",
+    "description": "Açıkça belirtilen kodlamayla bayt dizgelerini karakter dizgelerine dönüştürür."
+  },
+  "extra-409": {
+    "command": "Get-Command -All",
+    "description": "Gölgelenenler dahil, eşleşen ada sahip tüm komutları listeler."
+  },
+  "extra-410": {
+    "command": "Get-Member",
+    "description": "Boru hattı nesnelerinde bulunan özellikleri ve yöntemleri inceler."
+  },
+  "extra-411": {
+    "command": "Select-Object -ExpandProperty",
+    "description": "Kaynak nesneyi sarmalamak yerine özellik değerini doğrudan üretir."
+  },
+  "extra-412": {
+    "command": "Where-Object property shorthand",
+    "description": "Desteklenen PowerShell sürümlerinde kısa karşılaştırma söz dizimiyle nesneleri filtreler."
+  },
+  "extra-413": {
+    "command": "ForEach-Object -Parallel",
+    "description": "Desteklenen PowerShell sürümlerinde boru hattı öğelerini eşzamanlı işler."
+  },
+  "extra-414": {
+    "command": "Start-Job",
+    "description": "Geçerli oturum içinde ayrı bir arka plan işinde çalışma yürütür."
+  },
+  "extra-415": {
+    "command": "Receive-Job -Keep",
+    "description": "İş çıktısını iş geçmişinden kaldırmadan okur."
+  },
+  "extra-416": {
+    "command": "Try / Catch / Finally",
+    "description": "Sonlandırıcı hataları işler ve temizleme kodunun çalışabilmesini garanti eder."
+  },
+  "extra-417": {
+    "command": "ErrorAction Stop",
+    "description": "Birçok sonlandırıcı olmayan hatayı catch bloğunun işleyebilmesi için sonlandırıcı hataya yükseltir."
+  },
+  "extra-418": {
+    "command": "Set-StrictMode",
+    "description": "Başlatılmamış değişkenleri ve diğer yaygın betik hatalarını algılar."
+  },
+  "extra-419": {
+    "command": "ConvertFrom-Json -AsHashtable",
+    "description": "Desteklenen PowerShell sürümlerinde JSON verisini değiştirilebilir karma tablosuna ayrıştırır."
+  },
+  "extra-420": {
+    "command": "ConvertTo-Json -Depth",
+    "description": "İç içe nesneleri seçilen derinliğe kadar serileştirir."
+  },
+  "extra-421": {
+    "command": "Invoke-RestMethod -StatusCodeVariable",
+    "description": "REST yanıtını ayrıştırırken HTTP durum kodunu yakalar."
+  },
+  "extra-422": {
+    "command": "Test-NetConnection",
+    "description": "Uzak uç noktaya DNS çözümlemesini ve TCP bağlantısını denetler."
+  },
+  "extra-423": {
+    "command": "Get-FileHash",
+    "description": "Bütünlük denetimleri ve yapıt karşılaştırması için dosya özeti hesaplar."
+  },
+  "extra-424": {
+    "command": "Compare-Object",
+    "description": "İki koleksiyon veya nesne özelliği arasındaki farkları gösterir."
+  },
+  "extra-425": {
+    "command": "Import-Csv",
+    "description": "Ayraçlı satırları, başlıkları özellik adları olacak nesneler olarak yükler."
+  },
+  "extra-426": {
+    "command": "Export-Clixml",
+    "description": "PowerShell nesnelerini tür bilgilerini koruyarak serileştirir."
+  },
+  "extra-427": {
+    "command": "PSSession",
+    "description": "Birden fazla komut için yeniden kullanılabilir uzak PowerShell bağlantısı tutar."
+  },
+  "extra-428": {
+    "command": "Register-ArgumentCompleter",
+    "description": "Komut veya parametreye özel sekme tuşuyla tamamlama ekler."
+  },
+  "extra-429": {
+    "command": "SupportsShouldProcess",
+    "description": "Gelişmiş işlevlerde standart -WhatIf ve -Confirm davranışını etkinleştirir."
+  },
+  "extra-430": {
+    "command": "SecureString",
+    "description": "Hassas metni bellekte korunan bir dizge türüyle temsil eder."
+  },
+  "extra-431": {
+    "command": "Resolve-Path",
+    "description": "Yolu sağlayıcıyla nitelenmiş mutlak konumuna genişletir."
+  },
+  "extra-432": {
+    "command": "pathlib.Path.rglob",
+    "description": "Glob deseniyle eşleşen yolları alt dizinlerde özyinelemeli bulur."
+  },
+  "extra-433": {
+    "command": "pathlib.Path.replace",
+    "description": "Dosya sistemi desteklediğinde hedef yolu atomik olarak değiştirir."
+  },
+  "extra-434": {
+    "command": "subprocess.run check",
+    "description": "Çağrılan süreç başarısız çıktığında CalledProcessError yükseltir."
+  },
+  "extra-435": {
+    "command": "subprocess timeout",
+    "description": "Süreç sınırını aştığında beklemeyi bırakır ve TimeoutExpired yükseltir."
+  },
+  "extra-436": {
+    "command": "contextlib.ExitStack",
+    "description": "Dinamik sayıda bağlam yöneticisini tek temizleme kapsamında yönetir."
+  },
+  "extra-437": {
+    "command": "dataclasses.field default_factory",
+    "description": "Her dataclass örneği için yeni, değiştirilebilir bir varsayılan değer oluşturur."
+  },
+  "extra-438": {
+    "command": "typing.Protocol",
+    "description": "Açık kalıtım gerektirmeden yapısal arayüzleri tanımlar."
+  },
+  "extra-439": {
+    "command": "functools.cache",
+    "description": "Bağımsız değişkenler özetlenebilir olduğunda işlev sonuçlarını önbelleğe alır."
+  },
+  "extra-440": {
+    "command": "functools.partial",
+    "description": "Bazı bağımsız değişkenleri önceden ayarlanmış çağrılabilir nesne oluşturur."
+  },
+  "extra-441": {
+    "command": "itertools.batched",
+    "description": "Desteklenen Python sürümlerinde yinelenebilir öğeleri sabit boyutlu demetlere gruplar."
+  },
+  "extra-442": {
+    "command": "collections.Counter",
+    "description": "Özetlenebilir değerleri sayar ve kullanışlı sıklık işlemleri sağlar."
+  },
+  "extra-443": {
+    "command": "collections.defaultdict",
+    "description": "Fabrika işleviyle eksik eşleme değerleri oluşturur."
+  },
+  "extra-444": {
+    "command": "contextlib.suppress",
+    "description": "Dar bir bağlam bloğunda seçilen istisna türlerini yok sayar."
+  },
+  "extra-445": {
+    "command": "logging LoggerAdapter",
+    "description": "Sarmalanmış günlükleyicinin kayıtlarına bağlamsal alanlar ekler."
+  },
+  "extra-446": {
+    "command": "logging QueueHandler",
+    "description": "Günlük işlemeyi kuyruk üzerinden dinleyici iş parçacığına veya sürecine taşır."
+  },
+  "extra-447": {
+    "command": "asyncio.TaskGroup",
+    "description": "İlişkili görevleri yapılandırılmış iptal ve istisna işlemeyle çalıştırır."
+  },
+  "extra-448": {
+    "command": "asyncio.Semaphore",
+    "description": "Kaynak yoğun bölüme girebilen eş yordam sayısını sınırlar."
+  },
+  "extra-449": {
+    "command": "yield from",
+    "description": "Yinelemeyi ve üreteç denetimini alt üretece devreder."
+  },
+  "extra-450": {
+    "command": "memoryview",
+    "description": "Alttaki baytları kopyalamadan arabellek verisinin görünümünü sağlar."
+  },
+  "extra-451": {
+    "command": "zip strict",
+    "description": "Birlikte zip edilen yinelenebilirlerin uzunlukları farklıysa ValueError yükseltir."
+  },
+  "extra-452": {
+    "command": "enum StrEnum",
+    "description": "Desteklenen Python sürümlerinde dizge değerli enum üyeleri tanımlar."
+  },
+  "extra-453": {
+    "command": "tomllib",
+    "description": "Desteklenen Python sürümlerinde standart kitaplıkla TOML ayrıştırır."
+  },
+  "extra-454": {
+    "command": "unittest.mock autospec",
+    "description": "Taklit nesneleri gerçek nesnenin imzası ve mevcut öznitelikleriyle sınırlar."
+  },
+  "extra-455": {
+    "command": "Enumerable#filter_map",
+    "description": "Tek geçişte değerleri dönüştürür ve nil sonuçlarını kaldırır."
+  },
+  "extra-456": {
+    "command": "Enumerable#tally",
+    "description": "Numaralandırılabilir koleksiyonda her değerin görülme sayısını sayar."
+  },
+  "extra-457": {
+    "command": "Enumerable#each_slice",
+    "description": "Numaralandırılabilir koleksiyondan art arda sabit boyutlu gruplar üretir."
+  },
+  "extra-458": {
+    "command": "Hash#fetch",
+    "description": "Anahtarı açık varsayılanla okur veya varsayılan verilmemişse istisna yükseltir."
+  },
+  "extra-459": {
+    "command": "Hash#transform_values",
+    "description": "Anahtarları koruyarak her değeri dönüştürülmüş bir karma tablosu döndürür."
+  },
+  "extra-460": {
+    "command": "Hash#compact",
+    "description": "nil değerli girdiler çıkarılmış bir kopya döndürür."
+  },
+  "extra-461": {
+    "command": "String#delete_prefix",
+    "description": "Özgün dizgeyi değiştirmeden eşleşen tek bir öneki kaldırır."
+  },
+  "extra-462": {
+    "command": "String#match?",
+    "description": "MatchData sonucu oluşturmadan dizgenin düzenli ifadeyle eşleşmesini denetler."
+  },
+  "extra-463": {
+    "command": "Regexp named captures",
+    "description": "Anlamlı alanları sayısal konum yerine adla yakalar."
+  },
+  "extra-464": {
+    "command": "safe navigation operator",
+    "description": "Yöntemi yalnızca alıcı nil değilse çağırır."
+  },
+  "extra-465": {
+    "command": "Data.define",
+    "description": "Desteklenen Ruby sürümlerinde adlandırılmış üyeli değişmez değer nesneleri oluşturur."
+  },
+  "extra-466": {
+    "command": "Struct keyword_init",
+    "description": "Adlandırılmış anahtar sözcük bağımsız değişkenleriyle başlatılan hafif kayıt oluşturur."
+  },
+  "extra-467": {
+    "command": "Enumerable#lazy",
+    "description": "Değerleri yalnızca istendikçe işleyen tembel bir zincir oluşturur."
+  },
+  "extra-468": {
+    "command": "Fiber scheduler",
+    "description": "Desteklenen G/Ç işlemlerinin zamanlayıcı altında işbirlikçi biçimde yürütmeyi bırakmasına izin verir."
+  },
+  "extra-469": {
+    "command": "Timeout.timeout",
+    "description": "Blok yapılandırılmış süreyi aşarsa istisna yükseltir."
+  },
+  "extra-470": {
+    "command": "Open3.capture3",
+    "description": "Alt süreç çalıştırır; stdout, stderr ve durumunu ayrı ayrı yakalar."
+  },
+  "extra-471": {
+    "command": "Tempfile.create",
+    "description": "Bloktan sonra otomatik temizlenen geçici dosya oluşturur."
+  },
+  "extra-472": {
+    "command": "JSON.parse symbolize_names",
+    "description": "Uygulama için uygunsa JSON nesnesi anahtarlarını sembol olarak ayrıştırır."
+  },
+  "extra-473": {
+    "command": "Logger tagged context",
+    "description": "İlişkilendirme için günlük satırlarına istek veya iş kimlikleri ekler."
+  },
+  "extra-474": {
+    "command": "ActiveSupport retry_on",
+    "description": "Seçilen iş istisnalarında yapılandırılmış bekleme artırma stratejisiyle yeniden dener."
+  },
+  "extra-475": {
+    "command": "RSpec shared examples",
+    "description": "Davranış sözleşmesini birden fazla gerçekleştirimde yeniden kullanır."
+  },
+  "extra-476": {
+    "command": "Rake file task",
+    "description": "Yalnızca dosya yoksa veya önkoşullardan eskiyse çalışan görev tanımlar."
+  },
+  "extra-477": {
+    "command": "Bundler deployment mode",
+    "description": "Kilitlenmiş bağımlılıkları öngörülebilir bir dağıtım düzeninde yükler."
+  },
+  "extra-478": {
+    "command": "terraform providers lock",
+    "description": "Seçilen platformların sağlayıcı sağlama toplamlarını bağımlılık kilit dosyasına yazar."
+  },
+  "extra-479": {
+    "command": "terraform fmt -check",
+    "description": "Terraform dosyaları standart biçimden farklıysa başarısız olur."
+  },
+  "extra-480": {
+    "command": "terraform providers schema",
+    "description": "Kaynak ve veri kaynağı özniteliklerini incelemek için sağlayıcı şemalarını yazdırır."
+  },
+  "extra-481": {
+    "command": "terraform graph",
+    "description": "Graphviz ile çizilebilen bağımlılık grafiği üretir."
+  },
+  "extra-482": {
+    "command": "terraform state list",
+    "description": "Durum dosyasında şu anda izlenen kaynak adreslerini listeler."
+  },
+  "extra-483": {
+    "command": "terraform state show",
+    "description": "Bir kaynak adresi için saklanan öznitelikleri gösterir."
+  },
+  "extra-484": {
+    "command": "terraform state mv",
+    "description": "Güvenli yapılandırma yeniden düzenlemesinden sonra durum adresini taşır."
+  },
+  "extra-485": {
+    "command": "terraform state rm",
+    "description": "Gerçek altyapıyı yok etmeden kaynağı izlemeyi bırakır."
+  },
+  "extra-486": {
+    "command": "terraform import",
+    "description": "Mevcut uzak nesneyi Terraform kaynak adresiyle ilişkilendirir."
+  },
+  "extra-487": {
+    "command": "terraform force-unlock",
+    "description": "Yalnızca etkin işlem olmadığını doğruladıktan sonra eski durum kilidini kaldırır."
+  },
+  "extra-488": {
+    "command": "terraform console",
+    "description": "Terraform ifadelerini geçerli yapılandırmaya göre değerlendirir."
+  },
+  "extra-489": {
+    "command": "terraform output -raw",
+    "description": "Tek çıktı değerini JSON tırnaklaması olmadan yazdırır."
+  },
+  "extra-490": {
+    "command": "terraform plan -target",
+    "description": "Sınırlı bir bağımlılık dilimini planlar; tam inceleme planının yerini almamalıdır."
+  },
+  "extra-491": {
+    "command": "terraform apply -replace",
+    "description": "Kullanımdan kaldırılmış taint iş akışı yerine seçilen kaynağın yenilenmesini planlar."
+  },
+  "extra-492": {
+    "command": "terraform moved block",
+    "description": "Durum geçişinin planlama sırasında olması için kaynak adresi değişikliğini bildirir."
+  },
+  "extra-493": {
+    "command": "terraform check block",
+    "description": "Ortaya çıkan altyapı hakkında engellemeyen bir doğrulamayı değerlendirir."
+  },
+  "extra-494": {
+    "command": "terraform test",
+    "description": "Taklit veya gerçek sağlayıcı davranışıyla yerel yapılandırma testlerini çalıştırır."
+  },
+  "extra-495": {
+    "command": "terraform_data resource",
+    "description": "Tetikleyiciler ve provisioner geçişi için yaşam döngüsünü destekleyen bir kaynak sağlar."
+  },
+  "extra-496": {
+    "command": "terraform_data triggers_replace",
+    "description": "Seçilen değerler değiştiğinde terraform_data örneğini yeniler."
+  },
+  "extra-497": {
+    "command": "provider alias",
+    "description": "Ayrı hesaplar veya bölgeler için aynı sağlayıcının birden fazla örneğini yapılandırır."
+  },
+  "extra-498": {
+    "command": "configuration_aliases",
+    "description": "Alt modülün çağıranından beklediği sağlayıcı takma adlarını bildirir."
+  },
+  "extra-499": {
+    "command": "sensitive output",
+    "description": "CLI çıktısında yanlışlıkla gösterilmesini azaltmak için çıktıyı hassas olarak işaretler."
+  },
+  "extra-500": {
+    "command": "precondition and postcondition",
+    "description": "İşlemden önce varsayımları veya kaynak değerlendirmesinden sonra garantileri doğrular."
+  }
+}

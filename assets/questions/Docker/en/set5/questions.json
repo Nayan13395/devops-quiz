@@ -1,0 +1,302 @@
+[
+  {
+    "category": "Docker",
+    "set": 5,
+    "question": "Why should a build use a BuildKit secret mount instead of storing a password in an ARG or ENV instruction?",
+    "options": [
+      "Secret mounts automatically rotate registry passwords",
+      "Secret mounts encrypt every resulting image layer",
+      "Secret mounts prevent the build from accessing any network",
+      "Secret mounts avoid persisting the supplied secret as an image ARG or ENV value"
+    ],
+    "answer": "Secret mounts avoid persisting the supplied secret as an image ARG or ENV value"
+  },
+  {
+    "category": "Docker",
+    "set": 5,
+    "question": "What is the purpose of a BuildKit cache mount in a RUN instruction?",
+    "options": [
+      "Replace the base image with an empty filesystem",
+      "Guarantee every RUN instruction executes without a cache",
+      "Reuse a build-tool cache across builds without making that mount the final image contents",
+      "Store runtime logs in the image registry"
+    ],
+    "answer": "Reuse a build-tool cache across builds without making that mount the final image contents"
+  },
+  {
+    "category": "Docker",
+    "set": 5,
+    "question": "Which build input change normally invalidates the cache for a COPY instruction and subsequent dependent steps?",
+    "options": [
+      "Editing an ordinary Dockerfile comment without changing instructions",
+      "Changing the contents of a copied source file",
+      "Changing only a copied file's modification timestamp",
+      "Changing a file excluded by .dockerignore"
+    ],
+    "answer": "Changing the contents of a copied source file"
+  },
+  {
+    "category": "Docker",
+    "set": 5,
+    "question": "What does the Dockerfile instruction 'FROM scratch' select?",
+    "options": [
+      "An empty starting point without a base-image filesystem",
+      "A minimal Debian installation",
+      "A running host's root filesystem",
+      "The most recently built local image"
+    ],
+    "answer": "An empty starting point without a base-image filesystem"
+  },
+  {
+    "category": "Docker",
+    "set": 5,
+    "question": "Which Dockerfile instruction adds key-value metadata to an image?",
+    "options": [
+      "ARG",
+      "EXPOSE",
+      "STOPSIGNAL",
+      "LABEL"
+    ],
+    "answer": "LABEL"
+  },
+  {
+    "category": "Docker",
+    "set": 5,
+    "question": "Which Dockerfile instruction changes the default signal sent when stopping a container?",
+    "options": [
+      "SHELL",
+      "ONBUILD",
+      "STOPSIGNAL",
+      "HEALTHCHECK"
+    ],
+    "answer": "STOPSIGNAL"
+  },
+  {
+    "category": "Docker",
+    "set": 5,
+    "question": "Why is exec-form ENTRYPOINT often preferred for a main server process?",
+    "options": [
+      "It prevents the server from returning a nonzero status",
+      "It avoids an extra shell between the server and container signals",
+      "It automatically creates a non-root user",
+      "It installs a process supervisor in the image"
+    ],
+    "answer": "It avoids an extra shell between the server and container signals"
+  },
+  {
+    "category": "Docker",
+    "set": 5,
+    "question": "What does 'docker run --init' add to a container?",
+    "options": [
+      "A small init process that forwards signals and reaps child processes",
+      "A full systemd installation",
+      "A second Docker daemon",
+      "An interactive login shell for every process"
+    ],
+    "answer": "A small init process that forwards signals and reaps child processes"
+  },
+  {
+    "category": "Docker",
+    "set": 5,
+    "question": "Which option runs a Linux container with all Linux capabilities dropped?",
+    "options": [
+      "--cap-add=ALL",
+      "--privileged",
+      "--security-opt seccomp=unconfined",
+      "--cap-drop=ALL"
+    ],
+    "answer": "--cap-drop=ALL"
+  },
+  {
+    "category": "Docker",
+    "set": 5,
+    "question": "What does rootless Docker primarily change?",
+    "options": [
+      "Images no longer need a registry",
+      "Containers no longer use Linux namespaces",
+      "The daemon and containers run without host root privileges",
+      "All containers share the host root filesystem"
+    ],
+    "answer": "The daemon and containers run without host root privileges"
+  },
+  {
+    "category": "Docker",
+    "set": 5,
+    "question": "Which Linux facility primarily limits and accounts for container resource usage?",
+    "options": [
+      "Linux capabilities",
+      "Control groups",
+      "Namespaces",
+      "Seccomp filters"
+    ],
+    "answer": "Control groups"
+  },
+  {
+    "category": "Docker",
+    "set": 5,
+    "question": "Which Linux facility gives containers isolated views of resources such as process IDs and network interfaces?",
+    "options": [
+      "Namespaces",
+      "Control groups",
+      "Seccomp filters",
+      "Linux capabilities"
+    ],
+    "answer": "Namespaces"
+  },
+  {
+    "category": "Docker",
+    "set": 5,
+    "question": "Which Docker network driver gives a Linux container the host's network namespace?",
+    "options": [
+      "bridge",
+      "overlay",
+      "none",
+      "host"
+    ],
+    "answer": "host"
+  },
+  {
+    "category": "Docker",
+    "set": 5,
+    "question": "Which Docker network driver leaves a container with only its loopback interface?",
+    "options": [
+      "host",
+      "overlay",
+      "none",
+      "bridge"
+    ],
+    "answer": "none"
+  },
+  {
+    "category": "Docker",
+    "set": 5,
+    "question": "Which Docker network driver is intended for container communication across multiple Docker hosts?",
+    "options": [
+      "none",
+      "overlay",
+      "bridge",
+      "host"
+    ],
+    "answer": "overlay"
+  },
+  {
+    "category": "Docker",
+    "set": 5,
+    "question": "What does '--network container:web' do for a new container?",
+    "options": [
+      "Shares web's network namespace",
+      "Copies web's filesystem layers",
+      "Attaches every host interface directly",
+      "Creates a new network named web"
+    ],
+    "answer": "Shares web's network namespace"
+  },
+  {
+    "category": "Docker",
+    "set": 5,
+    "question": "Why can mounting a directory over a nonempty container path make existing image files appear to disappear?",
+    "options": [
+      "Docker deletes the original image layers",
+      "Docker moves the files to the registry",
+      "The image is automatically rebuilt without those files",
+      "The mount obscures the files at that path while it is mounted"
+    ],
+    "answer": "The mount obscures the files at that path while it is mounted"
+  },
+  {
+    "category": "Docker",
+    "set": 5,
+    "question": "What does Docker normally do when an empty named volume is first mounted over a container directory that contains files, without volume-nocopy?",
+    "options": [
+      "Refuses to start because the directory is not empty",
+      "Converts the named volume into a bind mount",
+      "Copies the directory's existing files into the volume",
+      "Deletes the files from the image permanently"
+    ],
+    "answer": "Copies the directory's existing files into the volume"
+  },
+  {
+    "category": "Docker",
+    "set": 5,
+    "question": "Which command lists published port mappings for container web?",
+    "options": [
+      "docker wait web",
+      "docker port web",
+      "docker top web",
+      "docker diff web"
+    ],
+    "answer": "docker port web"
+  },
+  {
+    "category": "Docker",
+    "set": 5,
+    "question": "Which command retrieves just the last 20 lines of container web's logs?",
+    "options": [
+      "docker logs --tail 20 web",
+      "docker logs --since 20m web",
+      "docker logs --until 20m web",
+      "docker logs --timestamps web"
+    ],
+    "answer": "docker logs --tail 20 web"
+  },
+  {
+    "category": "Docker",
+    "set": 5,
+    "question": "What is the primary distinction between a Docker image and a container?",
+    "options": [
+      "An image is always running, while a container is always stopped",
+      "An image belongs to a network, while a container belongs only to a registry",
+      "An image stores only logs, while a container stores only metadata",
+      "An image is a read-only template, while a container is an instance with runtime state"
+    ],
+    "answer": "An image is a read-only template, while a container is an instance with runtime state"
+  },
+  {
+    "category": "Docker",
+    "set": 5,
+    "question": "What does a Docker context primarily identify for the CLI?",
+    "options": [
+      "The selected Dockerfile build stage",
+      "The default target platform of every image",
+      "Connection settings for a Docker daemon endpoint",
+      "The files and directories sent as an image build context"
+    ],
+    "answer": "Connection settings for a Docker daemon endpoint"
+  },
+  {
+    "category": "Docker",
+    "set": 5,
+    "question": "Which command logs the Docker client out of a registry?",
+    "options": [
+      "docker trust inspect",
+      "docker logout",
+      "docker login",
+      "docker context use"
+    ],
+    "answer": "docker logout"
+  },
+  {
+    "category": "Docker",
+    "set": 5,
+    "question": "Which option lets docker login read a password from standard input?",
+    "options": [
+      "--password-stdin",
+      "--username",
+      "--config",
+      "--context"
+    ],
+    "answer": "--password-stdin"
+  },
+  {
+    "category": "Docker",
+    "set": 5,
+    "question": "Which command lists the tasks belonging to a Docker Swarm service named api?",
+    "options": [
+      "docker service inspect api",
+      "docker service logs api",
+      "docker service scale api=3",
+      "docker service ps api"
+    ],
+    "answer": "docker service ps api"
+  }
+]

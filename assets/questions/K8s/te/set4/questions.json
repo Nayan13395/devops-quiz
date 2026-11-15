@@ -1,0 +1,302 @@
+[
+  {
+    "category": "Kubernetes",
+    "set": 4,
+    "question": "ఏ కమాండ్ ఒక deployment ను స్కేల్ చేస్తుంది?",
+    "options": [
+      "kubectl scale deployment",
+      "kubectl resize deployment",
+      "kubectl expand deployment",
+      "kubectl increase deployment"
+    ],
+    "answer": "kubectl scale deployment"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 4,
+    "question": "ఒక deployment ను 5 replicas కు ఏ కమాండ్ స్కేల్ చేస్తుంది?",
+    "options": [
+      "kubectl scale deployment --replicas=5",
+      "kubectl replicas 5",
+      "kubectl expand deployment",
+      "kubectl set replicas"
+    ],
+    "answer": "kubectl scale deployment --replicas=5"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 4,
+    "question": "ఏ కమాండ్ ఒక deployment ను రీస్టార్ట్ చేస్తుంది?",
+    "options": [
+      "kubectl rollout restart deployment",
+      "kubectl restart deployment",
+      "kubectl deployment restart",
+      "kubectl reload deployment"
+    ],
+    "answer": "kubectl rollout restart deployment"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 4,
+    "question": "ఒక deployment యొక్క rollout స్థితిని ఏ కమాండ్ తనిఖీ చేస్తుంది?",
+    "options": [
+      "kubectl rollout status",
+      "kubectl deployment status",
+      "kubectl rollout check",
+      "kubectl get rollout"
+    ],
+    "answer": "kubectl rollout status"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 4,
+    "question": "ఏ కమాండ్ ఒక deployment ను రోల్ బ్యాక్ చేస్తుంది?",
+    "options": [
+      "kubectl rollout undo",
+      "kubectl rollback",
+      "kubectl undo deployment",
+      "kubectl deployment rollback"
+    ],
+    "answer": "kubectl rollout undo"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 4,
+    "question": "rollout చరిత్రను ఏ కమాండ్ చూపిస్తుంది?",
+    "options": [
+      "kubectl rollout history",
+      "kubectl history",
+      "kubectl deployment history",
+      "kubectl show rollout"
+    ],
+    "answer": "kubectl rollout history"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 4,
+    "question": "deployment rollout ను ఏ కమాండ్ పాజ్ చేస్తుంది?",
+    "options": [
+      "kubectl rollout pause",
+      "kubectl pause deployment",
+      "kubectl stop rollout",
+      "kubectl hold deployment"
+    ],
+    "answer": "kubectl rollout pause"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 4,
+    "question": "పాజ్ చేసిన deployment rollout ను ఏ కమాండ్ తిరిగి కొనసాగిస్తుంది?",
+    "options": [
+      "kubectl rollout resume",
+      "kubectl resume deployment",
+      "kubectl continue rollout",
+      "kubectl restart rollout"
+    ],
+    "answer": "kubectl rollout resume"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 4,
+    "question": "నోడ్‌లో ప్రస్తుత Podలను తొలగించడానికి ప్రయత్నించకుండా కొత్తవి షెడ్యూల్ కాకుండా గుర్తించే కమాండ్ ఏది?",
+    "options": [
+      "kubectl cordon",
+      "kubectl uncordon",
+      "kubectl get node",
+      "kubectl describe node"
+    ],
+    "answer": "kubectl cordon"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 4,
+    "question": "ఒక node నుండి workloads ను సురక్షితంగా తొలగించే కమాండ్ ఏది?",
+    "options": [
+      "kubectl drain",
+      "kubectl cordon",
+      "kubectl delete node",
+      "kubectl migrate"
+    ],
+    "answer": "kubectl drain"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 4,
+    "question": "ఒక node ను మళ్లీ షెడ్యూల్ చేయదగినదిగా ఏ కమాండ్ చేస్తుంది?",
+    "options": [
+      "kubectl uncordon",
+      "kubectl enable",
+      "kubectl restart",
+      "kubectl activate"
+    ],
+    "answer": "kubectl uncordon"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 4,
+    "question": "node యొక్క వివరణాత్మక సమాచారాన్ని ఏ కమాండ్ చూపిస్తుంది?",
+    "options": [
+      "kubectl describe node",
+      "kubectl inspect node",
+      "kubectl info node",
+      "kubectl node show"
+    ],
+    "answer": "kubectl describe node"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 4,
+    "question": "లోకల్ పోర్ట్‌ను pod కు ఫార్వర్డ్ చేసే కమాండ్ ఏది?",
+    "options": [
+      "kubectl port-forward",
+      "kubectl tunnel",
+      "kubectl expose",
+      "kubectl connect"
+    ],
+    "answer": "kubectl port-forward"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 4,
+    "question": "pod కు లేదా pod నుండి ఫైళ్లను కాపీ చేసే కమాండ్ ఏది?",
+    "options": [
+      "kubectl cp",
+      "kubectl copy",
+      "kubectl transfer",
+      "kubectl sync"
+    ],
+    "answer": "kubectl cp"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 4,
+    "question": "నడుస్తున్న pod యొక్క YAML నిర్వచనాన్ని ఏ కమాండ్ చూపిస్తుంది?",
+    "options": [
+      "kubectl get pod -o yaml",
+      "kubectl show pod yaml",
+      "kubectl export pod",
+      "kubectl pod yaml"
+    ],
+    "answer": "kubectl get pod -o yaml"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 4,
+    "question": "site Deploymentలోని web కంటైనర్ ఇమేజ్‌ను nginx:1.27గా మార్చే కమాండ్ ఏది?",
+    "options": [
+      "kubectl set image deployment/site web=nginx:1.27",
+      "kubectl set env deployment/site web=nginx:1.27",
+      "kubectl annotate deployment/site web=nginx:1.27",
+      "kubectl label deployment/site web=nginx:1.27"
+    ],
+    "answer": "kubectl set image deployment/site web=nginx:1.27"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 4,
+    "question": "మార్పు అమలు చేయకుండా మానిఫెస్ట్‌ను ప్రస్తుతం ఉన్న కాన్ఫిగరేషన్‌తో పోల్చే కమాండ్ ఏది?",
+    "options": [
+      "kubectl apply -f app.yaml",
+      "kubectl replace -f app.yaml",
+      "kubectl delete -f app.yaml",
+      "kubectl diff -f app.yaml"
+    ],
+    "answer": "kubectl diff -f app.yaml"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 4,
+    "question": "కోరిన రిసోర్స్‌ను నిల్వ చేయకుండా API సర్వర్‌లో పరీక్షా అమలు చేసే kubectl ఆప్షన్ ఏది?",
+    "options": [
+      "--validate=false",
+      "--force",
+      "--dry-run=server",
+      "--dry-run=client"
+    ],
+    "answer": "--dry-run=server"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 4,
+    "question": "api Pod Ready కావడానికి గరిష్ఠంగా 60 సెకన్లు వేచి ఉండే కమాండ్ ఏది?",
+    "options": [
+      "kubectl get pod api --request-timeout=60s",
+      "kubectl wait --for=condition=Ready pod/api --timeout=60s",
+      "kubectl wait --for=delete pod/api --timeout=60s",
+      "kubectl logs api --since=60s"
+    ],
+    "answer": "kubectl wait --for=condition=Ready pod/api --timeout=60s"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 4,
+    "question": "దశలవారీ నవీకరణలో అందుబాటులో లేకపోవచ్చే ప్రతుల సంఖ్యను పరిమితం చేసే Deployment సెట్టింగ్ ఏది?",
+    "options": [
+      "maxUnavailable",
+      "maxSurge",
+      "revisionHistoryLimit",
+      "progressDeadlineSeconds"
+    ],
+    "answer": "maxUnavailable"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 4,
+    "question": "దశలవారీ నవీకరణలో కోరిన ప్రతుల సంఖ్యకు మించి తాత్కాలిక అదనపు Podలను అనుమతించే Deployment సెట్టింగ్ ఏది?",
+    "options": [
+      "maxUnavailable",
+      "minReadySeconds",
+      "revisionHistoryLimit",
+      "maxSurge"
+    ],
+    "answer": "maxSurge"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 4,
+    "question": "ఎంచుకున్న Podలలో ఒకేసారి స్వచ్ఛంద అంతరాయాలను పరిమితం చేసే రిసోర్స్ ఏది?",
+    "options": [
+      "LimitRange",
+      "NetworkPolicy",
+      "PodDisruptionBudget",
+      "ResourceQuota"
+    ],
+    "answer": "PodDisruptionBudget"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 4,
+    "question": "గమనించిన కొలమానాల ఆధారంగా వర్క్‌లోడ్ ప్రతుల సంఖ్యను సర్దే కంట్రోలర్ ఏది?",
+    "options": [
+      "CronJob",
+      "HorizontalPodAutoscaler",
+      "ReplicaSet",
+      "DaemonSet"
+    ],
+    "answer": "HorizontalPodAutoscaler"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 4,
+    "question": "kubectl top CPU, మెమరీ వినియోగాన్ని చూపాలంటే ఏమి అందుబాటులో ఉండాలి?",
+    "options": [
+      "సాధారణంగా Metrics Server అందించే రిసోర్స్ కొలమానాల API",
+      "ప్రతి నేమ్‌స్పేస్‌కు Ingress కంట్రోలర్",
+      "బ్లాక్ పరికరం ఉన్న డిఫాల్ట్ StorageClass",
+      "ప్రతి Podకు LoadBalancer Service"
+    ],
+    "answer": "సాధారణంగా Metrics Server అందించే రిసోర్స్ కొలమానాల API"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 4,
+    "question": "కనెక్ట్ చేసిన క్లస్టర్ మద్దతిచ్చే API రిసోర్స్ రకాలను చూపే కమాండ్ ఏది?",
+    "options": [
+      "kubectl api-versions",
+      "kubectl cluster-info",
+      "kubectl config view",
+      "kubectl api-resources"
+    ],
+    "answer": "kubectl api-resources"
+  }
+]

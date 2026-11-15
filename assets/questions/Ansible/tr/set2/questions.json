@@ -1,0 +1,302 @@
+[
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "Bir playbook'ta değişken tanımlamak için hangi anahtar sözcük kullanılır?",
+    "options": [
+      "vars",
+      "variables",
+      "var",
+      "define"
+    ],
+    "answer": "vars"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "Bir değişkene başvurmak için hangi sözdizimi kullanılır?",
+    "options": [
+      "{{ variable_name }}",
+      "$(variable_name)",
+      "${variable_name}",
+      "[variable_name]"
+    ],
+    "answer": "{{ variable_name }}"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "Çalıştırma sırasında mesaj göstermek için hangi modül kullanılır?",
+    "options": [
+      "debug",
+      "print",
+      "echo",
+      "message"
+    ],
+    "answer": "debug"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "Koşullu çalıştırma için hangi anahtar sözcük kullanılır?",
+    "options": [
+      "when",
+      "if",
+      "condition",
+      "check"
+    ],
+    "answer": "when"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "Bir görevi tekrarlamak için hangi anahtar sözcük kullanılır?",
+    "options": [
+      "loop",
+      "repeat",
+      "iterate",
+      "for"
+    ],
+    "answer": "loop"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "Varsayılan olarak geçerli döngü öğesini hangi değişken içerir?",
+    "options": [
+      "item",
+      "loopitem",
+      "current",
+      "value"
+    ],
+    "answer": "item"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "Hangi modül Jinja2 şablonlarından dosya oluşturur?",
+    "options": [
+      "template",
+      "copy",
+      "render",
+      "jinja"
+    ],
+    "answer": "template"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "Ansible hangi şablon motorunu kullanır?",
+    "options": [
+      "Jinja2",
+      "Mustache",
+      "Velocity",
+      "Smarty"
+    ],
+    "answer": "Jinja2"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "Hangi anahtar sözcük görev çıktısını bir değişkene kaydeder?",
+    "options": [
+      "register",
+      "save",
+      "output",
+      "store"
+    ],
+    "answer": "register"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "Hangi anahtar sözcük, bir görev başarısız sonuç döndürdükten sonra devam eder ancak sözdizimi veya bağlantı hatalarını bastırmaz?",
+    "options": [
+      "ignore_errors",
+      "skip_errors",
+      "continue",
+      "ignore_failures"
+    ],
+    "answer": "ignore_errors"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "Görevleri yalnızca bildirim yapıldığında çalıştırmak için hangi anahtar sözcük kullanılır?",
+    "options": [
+      "handlers",
+      "notify",
+      "trigger",
+      "events"
+    ],
+    "answer": "handlers"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "Hangi anahtar sözcük bir handler'ı tetikler?",
+    "options": [
+      "notify",
+      "handler",
+      "alert",
+      "call"
+    ],
+    "answer": "notify"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "Hangi anahtar sözcük başka bir playbook'u içe aktarır?",
+    "options": [
+      "import_playbook",
+      "include_playbook",
+      "load_playbook",
+      "playbook"
+    ],
+    "answer": "import_playbook"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "Hangi anahtar sözcük görevleri seçici çalıştırma için etiketler?",
+    "options": [
+      "tags",
+      "labels",
+      "groups",
+      "filter"
+    ],
+    "answer": "tags"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "Hangi seçenek yalnızca belirli etiketlere sahip görevleri çalıştırır?",
+    "options": [
+      "--tags",
+      "--skip-tags",
+      "--limit",
+      "--list-tags"
+    ],
+    "answer": "--tags"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "Değişiklik bildirmek için özel bir koşulu hangi görev anahtar sözcüğü tanımlar?",
+    "options": [
+      "changed_when",
+      "failed_when",
+      "until",
+      "when"
+    ],
+    "answer": "changed_when"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "Başarısızlık bildirmek için özel bir koşulu hangi görev anahtar sözcüğü tanımlar?",
+    "options": [
+      "changed_when",
+      "retries",
+      "delay",
+      "failed_when"
+    ],
+    "answer": "failed_when"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "Yeniden denemeler sırasında doğru olması gereken koşulu hangi görev anahtar sözcüğü belirtir?",
+    "options": [
+      "loop",
+      "notify",
+      "until",
+      "when"
+    ],
+    "answer": "until"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "Hangi modül, geçerli ana makine için adlandırılmış değişkenleri dosyadan yüklemek yerine görevin sağladığı değerlerden doğrudan tanımlar?",
+    "options": [
+      "ansible.builtin.add_host",
+      "ansible.builtin.set_fact",
+      "ansible.builtin.setup",
+      "ansible.builtin.include_vars"
+    ],
+    "answer": "ansible.builtin.set_fact"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "result adıyla kaydedilmiş bir görevin standart çıktısına hangi ifade erişir?",
+    "options": [
+      "result.stdout",
+      "result.stderr",
+      "result.rc",
+      "result.changed"
+    ],
+    "answer": "result.stdout"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "Bir değişkenin tanımlanıp tanımlanmadığını hangi Jinja2 testi denetler?",
+    "options": [
+      "is none",
+      "is string",
+      "is sequence",
+      "is defined"
+    ],
+    "answer": "is defined"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "Görevleri ortak yönergeler ve hata yönetimi kullanacak şekilde hangi Ansible anahtar sözcüğü gruplar?",
+    "options": [
+      "roles",
+      "handlers",
+      "block",
+      "loop"
+    ],
+    "answer": "block"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "Bir görev notify bildirimlerini genellikle ne zaman gönderir?",
+    "options": [
+      "Yalnızca playbook başladığında",
+      "Başarıyla tamamlanıp changed bildirdiğinde",
+      "Bir koşul nedeniyle her atlandığında",
+      "Modülü her unchanged bildirdiğinde"
+    ],
+    "answer": "Başarıyla tamamlanıp changed bildirdiğinde"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "Döngünün geçerli öğe değişkenini server olarak hangi ayar yeniden adlandırır?",
+    "options": [
+      "loop_control: {loop_var: server}",
+      "loop_control: {label: server}",
+      "loop_control: {index_var: server}",
+      "loop_control: {pause: 1}"
+    ],
+    "answer": "loop_control: {loop_var: server}"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "Yüksek öncelikli ek değişkenleri hangi komut satırı seçeneği sağlar?",
+    "options": [
+      "--tags",
+      "--limit",
+      "--start-at-task",
+      "--extra-vars"
+    ],
+    "answer": "--extra-vars"
+  }
+]

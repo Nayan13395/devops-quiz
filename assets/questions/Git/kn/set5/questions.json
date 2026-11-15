@@ -1,0 +1,302 @@
+[
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "release ಎಂಬ ಈಗಿರುವ ಶಾಖೆಗೆ ಸಂಪರ್ಕಿತ ವರ್ಕಿಂಗ್ ಟ್ರೀ ಸೇರಿಸುವ ಆಜ್ಞೆ ಯಾವುದು?",
+    "options": [
+      "git worktree prune",
+      "git worktree lock ..\\release",
+      "git worktree add ..\\release release",
+      "git worktree list"
+    ],
+    "answer": "git worktree add ..\\release release"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "ಮುಖ್ಯ ಯೋಜನೆಯ ಆವೃತ್ತಿ-ನಿಯಂತ್ರಿತ ಉಪಮಾಡ್ಯೂಲ್ ಪಾತ್ ಮತ್ತು URLಗಳನ್ನು ದಾಖಲಿಸುವ ಫೈಲ್ ಯಾವುದು?",
+    "options": [
+      ".gitmessage",
+      ".gitmodules",
+      ".gitignore",
+      ".gitattributes"
+    ],
+    "answer": ".gitmodules"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "ಒಳಗಿನ ಉಪಮಾಡ್ಯೂಲ್‌ಗಳೂ ಸೇರಿದಂತೆ ನೋಂದಾಯಿತ ಉಪಮಾಡ್ಯೂಲ್‌ಗಳನ್ನು ಆರಂಭಿಸಿ ಚೆಕ್‌ಔಟ್ ಮಾಡುವ ಆಜ್ಞೆ ಯಾವುದು?",
+    "options": [
+      "git submodule update --init --recursive",
+      "git submodule deinit --all",
+      "git submodule status",
+      "git submodule sync"
+    ],
+    "answer": "git submodule update --init --recursive"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "ಮುಖ್ಯ ಯೋಜನೆ ಕಮಿಟ್‌ನಲ್ಲಿ ಉಪಮಾಡ್ಯೂಲ್‌ಗಾಗಿ ಸಾಮಾನ್ಯವಾಗಿ ಏನು ದಾಖಲಿಸುತ್ತದೆ?",
+    "options": [
+      "ಉಪಮಾಡ್ಯೂಲ್‌ನ ಸಂಪೂರ್ಣ ಆಬ್ಜೆಕ್ಟ್ ಡೇಟಾಬೇಸ್",
+      "ಉಪಮಾಡ್ಯೂಲ್‌ನ ಪೂರ್ವನಿಯೋಜಿತ ಶಾಖೆಯ ಹೆಸರು ಮಾತ್ರ",
+      "ಉಪಮಾಡ್ಯೂಲ್‌ನ ಕಮಿಟ್ ಮಾಡದ ಬದಲಾವಣೆಗಳು ಮಾತ್ರ",
+      "ಉಪಮಾಡ್ಯೂಲ್‌ನ ನಿರ್ದಿಷ್ಟ ಕಮಿಟ್‌ಗೆ ಉಲ್ಲೇಖ"
+    ],
+    "answer": "ಉಪಮಾಡ್ಯೂಲ್‌ನ ನಿರ್ದಿಷ್ಟ ಕಮಿಟ್‌ಗೆ ಉಲ್ಲೇಖ"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "ಎಲ್ಲ ಉಲ್ಲೇಖಗಳು ಮತ್ತು ಅವುಗಳಿಂದ ತಲುಪಬಹುದಾದ ಇತಿಹಾಸ ಹೊಂದಿರುವ ಸಾಗಿಸಬಹುದಾದ ಬಂಡಲ್ ರಚಿಸುವ ಆಜ್ಞೆ ಯಾವುದು?",
+    "options": [
+      "git format-patch -1 HEAD",
+      "git diff --binary > backup.bundle",
+      "git bundle create backup.bundle --all",
+      "git archive --output=backup.bundle HEAD"
+    ],
+    "answer": "git bundle create backup.bundle --all"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "HEADನ ಟ್ರ್ಯಾಕ್ ಮಾಡಿದ ಫೈಲ್‌ಗಳನ್ನು Git ಇತಿಹಾಸವಿಲ್ಲದೆ ZIP ಆರ್ಕೈವ್ ಆಗಿ ರಫ್ತು ಮಾಡುವ ಆಜ್ಞೆ ಯಾವುದು?",
+    "options": [
+      "git format-patch --stdout HEAD > source.zip",
+      "git archive --format=zip --output=source.zip HEAD",
+      "git bundle create source.zip --all",
+      "git clone --bare . source.zip"
+    ],
+    "answer": "git archive --format=zip --output=source.zip HEAD"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "ಇತ್ತೀಚಿನ ಕಮಿಟ್ ಅನ್ನು ಇಮೇಲ್ ಶೈಲಿಯ ಪ್ಯಾಚ್ ಫೈಲ್ ಮಾಡುವ ಆಜ್ಞೆ ಯಾವುದು?",
+    "options": [
+      "git format-patch -1 HEAD",
+      "git diff HEAD",
+      "git show --stat HEAD",
+      "git log -1 --oneline"
+    ],
+    "answer": "git format-patch -1 HEAD"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "git format-patch ಸೃಷ್ಟಿಸಿದ ಇಮೇಲ್ ಪ್ಯಾಚ್‌ಗಳನ್ನು ಅನ್ವಯಿಸಿ ಕಮಿಟ್ ರಚಿಸುವ ಆಜ್ಞೆ ಯಾವುದು?",
+    "options": [
+      "git apply changes.patch",
+      "git diff changes.patch",
+      "git add changes.patch",
+      "git am changes.patch"
+    ],
+    "answer": "git am changes.patch"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "ಫೈಲ್ ಬದಲಿಸದೆ ಸಾಮಾನ್ಯ ಪ್ಯಾಚ್ ಅನ್ವಯಿಸಬಹುದೇ ಎಂದು ಪರೀಕ್ಷಿಸುವ ಆಜ್ಞೆ ಯಾವುದು?",
+    "options": [
+      "git am changes.patch",
+      "git add changes.patch",
+      "git apply --check changes.patch",
+      "git apply changes.patch"
+    ],
+    "answer": "git apply --check changes.patch"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "ಫೈಲ್ ಹೆಸರು ಇಲ್ಲದೆ ಅದರ ವಿಷಯ ಉಳಿಸುವ Git ಆಬ್ಜೆಕ್ಟ್ ಪ್ರಕಾರ ಯಾವುದು?",
+    "options": [
+      "ಟಿಪ್ಪಣಿಯುಳ್ಳ ಟ್ಯಾಗ್",
+      "Blob",
+      "Tree",
+      "ಕಮಿಟ್"
+    ],
+    "answer": "Blob"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "ಫೈಲ್ ಹೆಸರುಗಳು ಮತ್ತು ಬ್ಲಾಬ್ ಅಥವಾ ಉಪಟ್ರೀ ಉಲ್ಲೇಖಗಳನ್ನು ದಾಖಲಿಸುವ Git ಆಬ್ಜೆಕ್ಟ್ ಪ್ರಕಾರ ಯಾವುದು?",
+    "options": [
+      "Tree",
+      "Blob",
+      "ಕಮಿಟ್",
+      "ಟಿಪ್ಪಣಿಯುಳ್ಳ ಟ್ಯಾಗ್"
+    ],
+    "answer": "Tree"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "ತಿಳಿದಿರುವ ಆಬ್ಜೆಕ್ಟ್ IDಯ ಪ್ರಕಾರ ತಿಳಿಸುವ ಆಜ್ಞೆ ಯಾವುದು?",
+    "options": [
+      "git cat-file -s abc1234",
+      "git rev-parse abc1234",
+      "git log -1 abc1234",
+      "git cat-file -t abc1234"
+    ],
+    "answer": "git cat-file -t abc1234"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "HEADನ ಪೂರ್ಣ ಆಬ್ಜೆಕ್ಟ್ ID ತೋರಿಸುವ ಆಜ್ಞೆ ಯಾವುದು?",
+    "options": [
+      "git status --short",
+      "git branch --show-current",
+      "git rev-parse HEAD",
+      "git symbolic-ref HEAD"
+    ],
+    "answer": "git rev-parse HEAD"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "featureನಿಂದ ತಲುಪಬಹುದಾದ ಆದರೆ mainನಿಂದ ತಲುಪಲಾಗದ ಕಮಿಟ್‌ಗಳನ್ನು ಆಯ್ಕೆ ಮಾಡುವ ಪರಿಷ್ಕರಣೆ ವ್ಯಾಪ್ತಿ ಯಾವುದು?",
+    "options": [
+      "main^",
+      "main..feature",
+      "feature..main",
+      "main...feature"
+    ],
+    "answer": "main..feature"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "ಮರ್ಜ್ ಕಮಿಟ್‌ಗಳನ್ನು ಮಾತ್ರ ತೋರಿಸುವ git log ಆಯ್ಕೆ ಯಾವುದು?",
+    "options": [
+      "--merges",
+      "--no-merges",
+      "--first-parent",
+      "--reverse"
+    ],
+    "answer": "--merges"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "ಬದಲಾದ ಪಾತ್ ಮತ್ತು ಬದಲಾವಣೆ-ಸ್ಥಿತಿಯ ಅಕ್ಷರಗಳನ್ನು ತೋರಿಸುವ git diff ಆಯ್ಕೆ ಯಾವುದು?",
+    "options": [
+      "--name-only",
+      "--stat",
+      "--shortstat",
+      "--name-status"
+    ],
+    "answer": "--name-status"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "ಪಾತ್‌ಗಳಿಗೆ ಪಠ್ಯ ಸಾಮಾನ್ಯೀಕರಣದಂತಹ ಆವೃತ್ತಿ-ನಿಯಂತ್ರಿತ ಗುಣಗಳನ್ನು ನಿರ್ಧರಿಸುವ ಫೈಲ್ ಯಾವುದು?",
+    "options": [
+      ".gitmodules",
+      ".gitconfig",
+      ".gitattributes",
+      ".gitignore"
+    ],
+    "answer": ".gitattributes"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": ".gitattributesನ '*.sh text eol=lf' ನಿಯಮವು ಹೊಂದುವ ಪಠ್ಯ ಫೈಲ್‌ಗಳಿಗೆ ಏನು ಕೋರುತ್ತದೆ?",
+    "options": [
+      "ಖಾಲಿ ಸಾಲುಗಳನ್ನು ಸ್ವಯಂಚಾಲಿತವಾಗಿ ಅಳಿಸುವುದು",
+      "ವರ್ಕಿಂಗ್ ಟ್ರೀಯಲ್ಲಿ LF ಸಾಲು ಅಂತ್ಯಗಳು",
+      "ವರ್ಕಿಂಗ್ ಟ್ರೀಯಲ್ಲಿ CRLF ಸಾಲು ಅಂತ್ಯಗಳು",
+      "ಪಠ್ಯ ಪರಿವರ್ತನೆ ಇಲ್ಲದೆ ಬೈನರಿಯಾಗಿ ಪರಿಗಣಿಸುವುದು"
+    ],
+    "answer": "ವರ್ಕಿಂಗ್ ಟ್ರೀಯಲ್ಲಿ LF ಸಾಲು ಅಂತ್ಯಗಳು"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "ಪ್ರಸ್ತಾಪಿತ ಕಮಿಟ್-ಸಂದೇಶ ಫೈಲ್ ನೋಡಿ ಕಮಿಟ್ ತಿರಸ್ಕರಿಸಬಲ್ಲ ಹುಕ್ ಯಾವುದು?",
+    "options": [
+      "commit-msg",
+      "post-commit",
+      "post-checkout",
+      "post-merge"
+    ],
+    "answer": "commit-msg"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "Git ಹುಕ್‌ಗಳಿಗೆ ಕಸ್ಟಮ್ ಡೈರೆಕ್ಟರಿ ಆಯ್ಕೆ ಮಾಡುವ ಸೆಟ್ಟಿಂಗ್ ಯಾವುದು?",
+    "options": [
+      "core.worktree",
+      "core.excludesFile",
+      "core.attributesFile",
+      "core.hooksPath"
+    ],
+    "answer": "core.hooksPath"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "ಹಂಚಿಕೊಂಡ .gitignore ನಿಯಮ ಸೇರಿಸದೆ ಒಬ್ಬ ಡೆವಲಪರ್‌ಗೆ ಸ್ಥಳೀಯವಾಗಿ ಟ್ರ್ಯಾಕ್ ಮಾಡದ ಫೈಲ್ ನಿರ್ಲಕ್ಷಿಸಲು ಬಿಡುವ ಫೈಲ್ ಯಾವುದು?",
+    "options": [
+      ".git\\description",
+      ".git\\packed-refs",
+      ".git\\info\\exclude",
+      ".git\\HEAD"
+    ],
+    "answer": ".git\\info\\exclude"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "ಬೈಸೆಕ್ಟ್ ಅಧಿವೇಶನ ಮುಗಿಸಿ ಸಾಮಾನ್ಯವಾಗಿ ಮೂಲ ಶಾಖೆಗೆ ಹಿಂತಿರುಗಿಸುವ ಆಜ್ಞೆ ಯಾವುದು?",
+    "options": [
+      "git bisect log",
+      "git bisect reset",
+      "git bisect skip",
+      "git bisect good"
+    ],
+    "answer": "git bisect reset"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "ಪ್ಯಾಚ್ ಸರಣಿಯ ಎರಡು ಆವೃತ್ತಿಗಳನ್ನು ಹೋಲಿಸುವ ಆಜ್ಞೆ ಯಾವುದು?",
+    "options": [
+      "git range-diff main..old main..new",
+      "git diff old new",
+      "git log old..new",
+      "git merge-base old new"
+    ],
+    "answer": "git range-diff main..old main..new"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "ಕಮಿಟ್ ರಚಿಸುವಾಗ ಕೊನೆಯಲ್ಲಿ Signed-off-by ದಾಖಲೆಯನ್ನು ಸೇರಿಸುವ ಆಜ್ಞೆ ಯಾವುದು?",
+    "options": [
+      "git commit --gpg-sign",
+      "git commit --amend",
+      "git commit --no-verify",
+      "git commit --signoff"
+    ],
+    "answer": "git commit --signoff"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "git log -S'old_name' ಪೂರ್ವನಿಯೋಜಿತವಾಗಿ ಏನು ಹುಡುಕುತ್ತದೆ?",
+    "options": [
+      "ಸಂದೇಶದಲ್ಲಿ old_name ಇರುವ ಕಮಿಟ್‌ಗಳು",
+      "ಹೆಸರಿನಲ್ಲಿ old_name ಇರುವ ಶಾಖೆಗಳು",
+      "old_name ಬರುವ ಸಂಖ್ಯೆಯನ್ನು ಬದಲಿಸುವ ಕಮಿಟ್‌ಗಳು",
+      "ಲೇಖಕರ ಹೆಸರು old_name ಆಗಿರುವ ಕಮಿಟ್‌ಗಳು"
+    ],
+    "answer": "old_name ಬರುವ ಸಂಖ್ಯೆಯನ್ನು ಬದಲಿಸುವ ಕಮಿಟ್‌ಗಳು"
+  }
+]

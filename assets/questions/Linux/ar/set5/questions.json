@@ -1,0 +1,302 @@
+[
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "ماذا يمنع وضع توسع Bash بين اقتباسين مثل \"$name\"؟",
+    "options": [
+      "كل توسع للمعاملات داخل الاقتباسين",
+      "تغيير المتغير لاحقا",
+      "تلقي الأمر وسيطا فارغا",
+      "تقسيم القيمة الموسعة إلى كلمات وتوسيع أسماء المسارات"
+    ],
+    "answer": "تقسيم القيمة الموسعة إلى كلمات وتوسيع أسماء المسارات"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "ماذا يفعل وضع '$HOME' بين اقتباسين مفردين في Bash؟",
+    "options": [
+      "يوسع مجلد العمل السابق",
+      "يحذف علامة الدولار ويمرر HOME",
+      "يمرر النص الحرفي $HOME",
+      "يوسع المجلد الشخصي للمستخدم"
+    ],
+    "answer": "يمرر النص الحرفي $HOME"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "ماذا يُدرج استبدال الأوامر في Bash باستخدام $(command)؟",
+    "options": [
+      "حالة خروج الأمر كعدد عشري",
+      "خرج الأمر القياسي بعد إزالة محارف السطر الجديد في نهايته",
+      "معرّف عملية الأمر الرقمي",
+      "الخطأ القياسي للأمر فقط"
+    ],
+    "answer": "خرج الأمر القياسي بعد إزالة محارف السطر الجديد في نهايته"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "أي أمر Bash مدمج يقرأ أوامر ملف سكربت وينفذها في الصدفة الحالية؟",
+    "options": [
+      "source",
+      "exec",
+      "eval",
+      "export"
+    ],
+    "answer": "source"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "ماذا يفعل 'exec program' في سكربت Bash إذا نجح التنفيذ؟",
+    "options": [
+      "يبدأ program في الخلفية بينما تتابع الصدفة",
+      "يشغّل program مرتين ويقارن النتيجتين",
+      "يحمّل خرج program كشيفرة مصدر للصدفة",
+      "يستبدل عملية الصدفة بـ program"
+    ],
+    "answer": "يستبدل عملية الصدفة بـ program"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "مع تفعيل pipefail في Bash، ما حالة سلسلة الأوامر إذا فشل أمر أو أكثر؟",
+    "options": [
+      "صفر دائما إذا نجح الأمر الأخير",
+      "مجموع حالات خروج كل الأوامر",
+      "حالة آخر أمر من جهة اليمين أعاد قيمة غير صفرية",
+      "حالة الأمر الأول دائما"
+    ],
+    "answer": "حالة آخر أمر من جهة اليمين أعاد قيمة غير صفرية"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "أي أمر يتحقق من مجاميع SHA-256 في checksums.txt باستخدام GNU Coreutils؟",
+    "options": [
+      "cksum checksums.txt",
+      "sha256sum -c checksums.txt",
+      "sha256sum checksums.txt",
+      "md5sum -c checksums.txt"
+    ],
+    "answer": "sha256sum -c checksums.txt"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "أي أمر GNU tar ينشئ أرشيفا مضغوطا بـ gzip للمجلد logs؟",
+    "options": [
+      "tar -czf logs.tar.gz logs",
+      "tar -xzf logs.tar.gz",
+      "tar -tzf logs.tar.gz",
+      "gzip -d logs.tar.gz"
+    ],
+    "answer": "tar -czf logs.tar.gz logs"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "أي خيار tar يسرد محتوى الأرشيف دون استخراجه؟",
+    "options": [
+      "-x",
+      "-c",
+      "-r",
+      "-t"
+    ],
+    "answer": "-t"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "ما أثر بت setgid في مجلد Linux عادة على الملفات الجديدة داخله؟",
+    "options": [
+      "تصبح مملوكة للمستخدم root",
+      "لا يستطيع مالكها حذفها",
+      "ترث ملكية مجموعة المجلد",
+      "تصبح دائما قابلة للتنفيذ لكل المستخدمين"
+    ],
+    "answer": "ترث ملكية مجموعة المجلد"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "ماذا يقيد البت اللاصق في مجلد مشترك قابل للكتابة أساسا؟",
+    "options": [
+      "من يستطيع تخصيص كتل قرص في نظام الملفات",
+      "من يستطيع حذف ملفات المجلد أو إعادة تسميتها",
+      "من يستطيع قراءة كل ملفات المجلد",
+      "من يستطيع تنفيذ برامج خارج المجلد"
+    ],
+    "answer": "من يستطيع حذف ملفات المجلد أو إعادة تسميتها"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "أي أمر يعرض إدخالات قائمة التحكم في الوصول لملف؟",
+    "options": [
+      "getfacl file.txt",
+      "setfacl -b file.txt",
+      "getfattr -d file.txt",
+      "lsattr file.txt"
+    ],
+    "answer": "getfacl file.txt"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "أي ملف يحتوي عادة حسابات المستخدمين المحلية بدلا من بصمات كلمات المرور؟",
+    "options": [
+      "/etc/shadow",
+      "/etc/group",
+      "/etc/gshadow",
+      "/etc/passwd"
+    ],
+    "answer": "/etc/passwd"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "أي أمر يضيف alice إلى المجموعة الإضافية docker دون استبدال مجموعاتها الإضافية الحالية؟",
+    "options": [
+      "usermod -g docker alice",
+      "usermod -l docker alice",
+      "usermod -aG docker alice",
+      "usermod -G docker alice"
+    ],
+    "answer": "usermod -aG docker alice"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "أي أمر يقفل كلمة مرور مستخدم Linux لمنع المصادقة بكلمة المرور؟",
+    "options": [
+      "passwd -e alice",
+      "passwd -l alice",
+      "passwd -u alice",
+      "passwd -S alice"
+    ],
+    "answer": "passwd -l alice"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "أي أمر يستعلم من مصادر خدمات الأسماء المضبوطة عن إدخال passwd للمستخدم alice؟",
+    "options": [
+      "getent passwd alice",
+      "groups alice",
+      "id -u alice",
+      "whoami"
+    ],
+    "answer": "getent passwd alice"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "أي ملف يحدد عادة أنظمة الملفات المركبة تلقائيا عند الإقلاع؟",
+    "options": [
+      "/etc/hosts",
+      "/etc/shells",
+      "/etc/resolv.conf",
+      "/etc/fstab"
+    ],
+    "answer": "/etc/fstab"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "أي أمر يعرض UUID لأنظمة الملفات وسمات الأجهزة الكتلية الأخرى؟",
+    "options": [
+      "modinfo",
+      "lscpu",
+      "blkid",
+      "lsmod"
+    ],
+    "answer": "blkid"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "لماذا ينبغي عادة فك تركيب نظام الملفات قبل تشغيل fsck للإصلاح؟",
+    "options": [
+      "لأن الأنظمة المركبة لا تحتوي أبدا مساحة فارغة",
+      "لأن الكتابة المتزامنة قد تتعارض مع الإصلاح وتُتلف البيانات",
+      "لأن فك التركيب يشفّر تلقائيا جميع البيانات الوصفية",
+      "لأن fsck لا يدعم إلا أنظمة الملفات دون أسماء أجهزة"
+    ],
+    "answer": "لأن الكتابة المتزامنة قد تتعارض مع الإصلاح وتُتلف البيانات"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "أي أمر يعرض مساحات المبادلة النشطة؟",
+    "options": [
+      "swapon --show",
+      "swapoff -a",
+      "free -s 1",
+      "vmstat -d"
+    ],
+    "answer": "swapon --show"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "أي أمر يحمّل وحدة نواة Linux مع اعتمادياتها؟",
+    "options": [
+      "rmmod",
+      "lsmod",
+      "modinfo",
+      "modprobe"
+    ],
+    "answer": "modprobe"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "أي أمر systemd يمنع بدء وحدة بربطها بـ /dev/null؟",
+    "options": [
+      "systemctl stop app.service",
+      "systemctl reset-failed app.service",
+      "systemctl mask app.service",
+      "systemctl disable app.service"
+    ],
+    "answer": "systemctl mask app.service"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "أي خيار SSH يحدد ملف مفتاح خاص للمصادقة؟",
+    "options": [
+      "-R",
+      "-i",
+      "-p",
+      "-L"
+    ],
+    "answer": "-i"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "أي أمر ينسخ ملفا محليا بأمان إلى مجلد مستخدم بعيد عبر SSH؟",
+    "options": [
+      "scp report.txt alice@server:/home/alice/",
+      "ssh alice@server cat report.txt",
+      "sftp -b report.txt alice@server",
+      "ssh-keygen -f report.txt"
+    ],
+    "answer": "scp report.txt alice@server:/home/alice/"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "ماذا يطلب 'rsync -n'؟",
+    "options": [
+      "حذف ملفات الوجهة الغائبة عن المصدر",
+      "ضغط بيانات الملفات المنقولة",
+      "الحفاظ على جميع سمات نظام الملفات بصورة عودية",
+      "تشغيل تجريبي يبلغ بالتغييرات المقصودة دون إجرائها"
+    ],
+    "answer": "تشغيل تجريبي يبلغ بالتغييرات المقصودة دون إجرائها"
+  }
+]

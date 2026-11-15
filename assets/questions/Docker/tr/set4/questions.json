@@ -1,0 +1,302 @@
+[
+  {
+    "category": "Docker",
+    "set": 4,
+    "question": "Hangi komut Docker Hub'dan bir imaj indirir?",
+    "options": [
+      "docker pull",
+      "docker fetch",
+      "docker copy",
+      "docker get"
+    ],
+    "answer": "docker pull"
+  },
+  {
+    "category": "Docker",
+    "set": 4,
+    "question": "Hangi komut belirli bir imaj etiketini çeker?",
+    "options": [
+      "docker pull image:tag",
+      "docker pull --tag tag",
+      "docker pull -t tag",
+      "docker get image:tag"
+    ],
+    "answer": "docker pull image:tag"
+  },
+  {
+    "category": "Docker",
+    "set": 4,
+    "question": "Katmanları indirmeden imaj bildirimini hangi komut inceler?",
+    "options": [
+      "docker manifest inspect",
+      "docker pull --manifest",
+      "docker image manifest",
+      "docker show manifest"
+    ],
+    "answer": "docker manifest inspect"
+  },
+  {
+    "category": "Docker",
+    "set": 4,
+    "question": "Hangi komut imaj özetlerini (digest) listeler?",
+    "options": [
+      "docker images --digests",
+      "docker digest",
+      "docker image digest",
+      "docker inspect digest"
+    ],
+    "answer": "docker images --digests"
+  },
+  {
+    "category": "Docker",
+    "set": 4,
+    "question": "Docker Engine API 1.42 veya sonrasında, adlandırılmış olanlar dahil kullanılmayan tüm yerel birimleri hangi komut kaldırır?",
+    "options": [
+      "docker volume prune -a",
+      "docker volume clean",
+      "docker prune volumes",
+      "docker rm volume"
+    ],
+    "answer": "docker volume prune -a"
+  },
+  {
+    "category": "Docker",
+    "set": 4,
+    "question": "Kullanılmayan özel Docker ağlarını hangi komut kaldırır?",
+    "options": [
+      "docker network prune",
+      "docker prune network",
+      "docker clean network",
+      "docker rm network"
+    ],
+    "answer": "docker network prune"
+  },
+  {
+    "category": "Docker",
+    "set": 4,
+    "question": "Seçili Buildx oluşturucusunun derleme önbelleği disk kullanımını hangi komut gösterir?",
+    "options": [
+      "docker buildx du",
+      "docker build cache",
+      "docker cache usage",
+      "docker builder stats"
+    ],
+    "answer": "docker buildx du"
+  },
+  {
+    "category": "Docker",
+    "set": 4,
+    "question": "Hangi komut kullanılmayan derleme önbelleğini siler?",
+    "options": [
+      "docker builder prune",
+      "docker build clean",
+      "docker cache prune",
+      "docker prune build"
+    ],
+    "answer": "docker builder prune"
+  },
+  {
+    "category": "Docker",
+    "set": 4,
+    "question": "Uygun --platform listesi ve oluşturucu sağlandığında çok platformlu imaj derlemelerini hangi komut destekler?",
+    "options": [
+      "docker buildx build",
+      "docker build multi",
+      "docker build platform",
+      "docker image buildx"
+    ],
+    "answer": "docker buildx build"
+  },
+  {
+    "category": "Docker",
+    "set": 4,
+    "question": "Hangi komut kullanılabilir Buildx oluşturucularını (builder) listeler?",
+    "options": [
+      "docker buildx ls",
+      "docker buildx show",
+      "docker builder ls",
+      "docker buildx list"
+    ],
+    "answer": "docker buildx ls"
+  },
+  {
+    "category": "Docker",
+    "set": 4,
+    "question": "Hangi komut tüm Docker bağlamlarını (context) gösterir?",
+    "options": [
+      "docker context ls",
+      "docker contexts",
+      "docker context show",
+      "docker list context"
+    ],
+    "answer": "docker context ls"
+  },
+  {
+    "category": "Docker",
+    "set": 4,
+    "question": "Hangi komut farklı bir Docker bağlamına (context) geçiş yapar?",
+    "options": [
+      "docker context use",
+      "docker context switch",
+      "docker use context",
+      "docker context select"
+    ],
+    "answer": "docker context use"
+  },
+  {
+    "category": "Docker",
+    "set": 4,
+    "question": "Hangi komut bir Docker bağlamını (context) siler?",
+    "options": [
+      "docker context rm",
+      "docker context inspect",
+      "docker remove context",
+      "docker context use"
+    ],
+    "answer": "docker context rm"
+  },
+  {
+    "category": "Docker",
+    "set": 4,
+    "question": "Hangi Dockerfile talimatı temel imajı belirtir?",
+    "options": [
+      "FROM",
+      "BASE",
+      "IMAGE",
+      "START"
+    ],
+    "answer": "FROM"
+  },
+  {
+    "category": "Docker",
+    "set": 4,
+    "question": "Hangi Dockerfile talimatı ortam değişkenlerini ayarlar?",
+    "options": [
+      "ENV",
+      "SET",
+      "VAR",
+      "EXPORT"
+    ],
+    "answer": "ENV"
+  },
+  {
+    "category": "Docker",
+    "set": 4,
+    "question": "Compose dosyasında tanımlı hizmetleri arka planda hangi komut başlatır?",
+    "options": [
+      "docker compose up -d",
+      "docker compose create",
+      "docker compose config",
+      "docker compose down"
+    ],
+    "answer": "docker compose up -d"
+  },
+  {
+    "category": "Docker",
+    "set": 4,
+    "question": "Uygulama hizmeti tanımlarını hangi üst düzey Compose anahtarı içerir?",
+    "options": [
+      "volumes",
+      "networks",
+      "configs",
+      "services"
+    ],
+    "answer": "services"
+  },
+  {
+    "category": "Docker",
+    "set": 4,
+    "question": "Çözümlenmiş Compose yapılandırmasını hangi komut gösterip doğrular?",
+    "options": [
+      "docker compose images",
+      "docker compose top",
+      "docker compose config",
+      "docker compose ps"
+    ],
+    "answer": "docker compose config"
+  },
+  {
+    "category": "Docker",
+    "set": 4,
+    "question": "'docker compose down', --volumes olmadan normalde ne yapar?",
+    "options": [
+      "Yalnızca Compose yapılandırma dosyasını kaldırır",
+      "Adlandırılmış birimleri tutarak proje kapsayıcılarını ve ağlarını kaldırır",
+      "Ana makinedeki tüm imajları ve birimleri siler",
+      "Kapsayıcıları kaldırmadan duraklatır"
+    ],
+    "answer": "Adlandırılmış birimleri tutarak proje kapsayıcılarını ve ağlarını kaldırır"
+  },
+  {
+    "category": "Docker",
+    "set": 4,
+    "question": "Compose depends_on, service_healthy kullanıyorsa bağımlı hizmet başlamadan önce ne olmalıdır?",
+    "options": [
+      "Bağımlılık, yapılandırılmış sağlık denetimini geçmelidir",
+      "Bağımlılık başarıyla sonlanmalıdır",
+      "Kullanıma sunulan tüm bağlantı noktaları ana makinede yayımlanmalıdır",
+      "Bağımlılığın imajı kayıt deposuna gönderilmelidir"
+    ],
+    "answer": "Bağımlılık, yapılandırılmış sağlık denetimini geçmelidir"
+  },
+  {
+    "category": "Docker",
+    "set": 4,
+    "question": "linux/amd64 ve linux/arm64 gibi hedef platformları hangi Buildx seçeneği belirtir?",
+    "options": [
+      "--target",
+      "--builder",
+      "--progress",
+      "--platform"
+    ],
+    "answer": "--platform"
+  },
+  {
+    "category": "Docker",
+    "set": 4,
+    "question": "Adlandırılmış Dockerfile aşamasını derleme hedefi olarak hangi Buildx seçeneği seçer?",
+    "options": [
+      "--tag",
+      "--file",
+      "--target",
+      "--platform"
+    ],
+    "answer": "--target"
+  },
+  {
+    "category": "Docker",
+    "set": 4,
+    "question": "Derleme sonucunu doğrudan kayıt deposuna hangi Buildx derleme seçeneği gönderir?",
+    "options": [
+      "--pull",
+      "--push",
+      "--load",
+      "--no-cache"
+    ],
+    "answer": "--push"
+  },
+  {
+    "category": "Docker",
+    "set": 4,
+    "question": "'--no-cache' imaj derleme sırasında Docker'a ne söyler?",
+    "options": [
+      "Önbellekteki derleme sonuçlarını yeniden kullanma",
+      "Tüm yerel imajları kaldır",
+      "Kapsayıcının çalışma zamanı dosya sistemi önbelleğini kapat",
+      "Temel imajı indirmeyi atla"
+    ],
+    "answer": "Önbellekteki derleme sonuçlarını yeniden kullanma"
+  },
+  {
+    "category": "Docker",
+    "set": 4,
+    "question": "Adlandırılmış Docker biriminin ayrıntılarını hangi komut gösterir?",
+    "options": [
+      "docker volume ls",
+      "docker volume create data",
+      "docker volume prune",
+      "docker volume inspect data"
+    ],
+    "answer": "docker volume inspect data"
+  }
+]

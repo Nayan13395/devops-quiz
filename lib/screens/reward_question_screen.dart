@@ -1,9 +1,11 @@
+import '../l10n/game_localizations.dart';
 import 'dart:async';
 import 'dart:math';
 
 import 'package:flutter/material.dart';
 
 import '../models/question.dart';
+import '../widgets/save_question_button.dart';
 import '../services/game_sound_service.dart';
 import '../services/point_service.dart';
 import '../services/question_service.dart';
@@ -83,9 +85,13 @@ class _RewardQuestionScreenState extends State<RewardQuestionScreen> {
         _loading = false;
       });
 
-      ScaffoldMessenger.of(
-        context,
-      ).showSnackBar(SnackBar(content: Text('Unable to load question: $e')));
+      ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(
+          content: Text(
+            gameL10n(context).gameUiUnableToLoadQuestion((e).toString()),
+          ),
+        ),
+      );
     }
   }
 
@@ -226,7 +232,9 @@ class _RewardQuestionScreenState extends State<RewardQuestionScreen> {
                   // TITLE
                   // =========================================
                   Text(
-                    correct ? 'Correct Answer!' : 'Wrong Answer',
+                    correct
+                        ? gameL10n(context).gameUiCorrectAnswer
+                        : gameL10n(context).gameUiWrongAnswer,
                     textAlign: TextAlign.center,
                     style: const TextStyle(
                       fontSize: 28,
@@ -240,10 +248,10 @@ class _RewardQuestionScreenState extends State<RewardQuestionScreen> {
                   // CORRECT
                   // =========================================
                   if (correct) ...[
-                    const Text(
-                      'You claimed your reward!',
+                    Text(
+                      gameL10n(context).gameUiYouClaimedYourReward,
                       textAlign: TextAlign.center,
-                      style: TextStyle(fontSize: 17),
+                      style: const TextStyle(fontSize: 17),
                     ),
 
                     const SizedBox(height: 14),
@@ -260,10 +268,10 @@ class _RewardQuestionScreenState extends State<RewardQuestionScreen> {
 
                     const SizedBox(height: 5),
 
-                    const Text(
-                      'POINTS',
+                    Text(
+                      gameL10n(context).gameUiPOINTS,
                       textAlign: TextAlign.center,
-                      style: TextStyle(
+                      style: const TextStyle(
                         fontWeight: FontWeight.bold,
                         letterSpacing: 1.5,
                       ),
@@ -272,7 +280,7 @@ class _RewardQuestionScreenState extends State<RewardQuestionScreen> {
                     const SizedBox(height: 10),
 
                     Text(
-                      'Added to your total points.',
+                      gameL10n(context).gameUiAddedToYourTotalPoints,
                       textAlign: TextAlign.center,
                       style: TextStyle(color: colors.onSurfaceVariant),
                     ),
@@ -281,10 +289,10 @@ class _RewardQuestionScreenState extends State<RewardQuestionScreen> {
                   // WRONG
                   // =========================================
                   else ...[
-                    const Text(
-                      'The correct answer was:',
+                    Text(
+                      gameL10n(context).gameUiTheCorrectAnswerWas,
                       textAlign: TextAlign.center,
-                      style: TextStyle(fontSize: 16),
+                      style: const TextStyle(fontSize: 16),
                     ),
 
                     const SizedBox(height: 12),
@@ -302,7 +310,9 @@ class _RewardQuestionScreenState extends State<RewardQuestionScreen> {
                     const SizedBox(height: 24),
 
                     Text(
-                      '${widget.reward} point reward lost.',
+                      gameL10n(
+                        context,
+                      ).gameUiPointRewardLost((widget.reward).toString()),
                       textAlign: TextAlign.center,
                       style: const TextStyle(
                         fontSize: 18,
@@ -312,16 +322,16 @@ class _RewardQuestionScreenState extends State<RewardQuestionScreen> {
 
                     const SizedBox(height: 8),
 
-                    const Text(
-                      'Your existing points were not deducted.',
+                    Text(
+                      gameL10n(context).gameUiYourExistingPointsWereNotDeducted,
                       textAlign: TextAlign.center,
-                      style: TextStyle(fontSize: 15),
+                      style: const TextStyle(fontSize: 15),
                     ),
 
                     const SizedBox(height: 14),
 
                     Text(
-                      'Come back tomorrow and try again.',
+                      gameL10n(context).gameUiComeBackTomorrowAndTryAgain,
                       textAlign: TextAlign.center,
                       style: TextStyle(
                         fontSize: 15,
@@ -345,9 +355,9 @@ class _RewardQuestionScreenState extends State<RewardQuestionScreen> {
 
                         Navigator.pop(context, correct);
                       },
-                      child: const Text(
-                        'Done',
-                        style: TextStyle(
+                      child: Text(
+                        gameL10n(context).gameUiDone,
+                        style: const TextStyle(
                           fontSize: 16,
                           fontWeight: FontWeight.bold,
                         ),
@@ -407,7 +417,9 @@ class _RewardQuestionScreenState extends State<RewardQuestionScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text('🎯 ${widget.gameName}')),
+      appBar: AppBar(
+        title: Text('🎯 ${rewardGameName(context, widget.gameName)}'),
+      ),
       body: SafeArea(
         child: Center(
           child: ConstrainedBox(
@@ -415,7 +427,11 @@ class _RewardQuestionScreenState extends State<RewardQuestionScreen> {
             child: _loading
                 ? const Center(child: CircularProgressIndicator())
                 : _question == null
-                ? const Center(child: Text('Unable to load question.'))
+                ? Center(
+                    child: Text(
+                      gameL10n(context).gameUiUnableToLoadQuestion6407759,
+                    ),
+                  )
                 : SingleChildScrollView(
                     padding: const EdgeInsets.all(20),
                     child: _buildQuestion(),
@@ -451,12 +467,17 @@ class _RewardQuestionScreenState extends State<RewardQuestionScreen> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              const Text('Your Reward', textAlign: TextAlign.center),
+              Text(
+                gameL10n(context).gameUiYourReward677fa6e,
+                textAlign: TextAlign.center,
+              ),
 
               const SizedBox(height: 6),
 
               Text(
-                '⭐ ${widget.reward} POINTS',
+                gameL10n(
+                  context,
+                ).gameUiPOINTS09f868a((widget.reward).toString()),
                 textAlign: TextAlign.center,
                 style: TextStyle(
                   fontSize: 26,
@@ -467,8 +488,8 @@ class _RewardQuestionScreenState extends State<RewardQuestionScreen> {
 
               const SizedBox(height: 6),
 
-              const Text(
-                'Answer correctly to claim it!',
+              Text(
+                gameL10n(context).gameUiAnswerCorrectlyToClaimIt,
                 textAlign: TextAlign.center,
               ),
             ],
@@ -520,6 +541,7 @@ class _RewardQuestionScreenState extends State<RewardQuestionScreen> {
           ),
         ),
 
+        SaveQuestionButton(question: question),
         const SizedBox(height: 20),
 
         // ===============================================

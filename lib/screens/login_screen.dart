@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
+import '../l10n/app_localizations.dart';
 import 'welcome_screen.dart';
 
 class LoginScreen extends StatelessWidget {
@@ -36,8 +37,14 @@ class LoginScreen extends StatelessWidget {
     // Google Authentication will be connected
     // in the next step.
 
+    final l10n = AppLocalizations.of(context);
     ScaffoldMessenger.of(context).showSnackBar(
-      const SnackBar(content: Text('Google Sign-In will be available soon.')),
+      SnackBar(
+        content: Text(
+          l10n?.accountWelcomeGoogleSignInSoon ??
+              'Google Sign-In will be available soon.',
+        ),
+      ),
     );
   }
 
@@ -48,6 +55,7 @@ class LoginScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
+    final l10n = AppLocalizations.of(context);
 
     final colorScheme = theme.colorScheme;
 
@@ -86,7 +94,7 @@ class LoginScreen extends StatelessWidget {
                   // TITLE
                   // =========================================
                   Text(
-                    'Welcome to DevOps Quiz',
+                    l10n?.welcomeToDevOpsQuiz ?? 'Welcome to DevOps Quiz',
                     textAlign: TextAlign.center,
                     style: theme.textTheme.headlineMedium?.copyWith(
                       fontWeight: FontWeight.bold,
@@ -96,7 +104,8 @@ class LoginScreen extends StatelessWidget {
                   const SizedBox(height: 12),
 
                   Text(
-                    'Learn • Practice • Compete • Earn',
+                    l10n?.accountWelcomeLoginTagline ??
+                        'Learn • Practice • Compete • Earn',
                     textAlign: TextAlign.center,
                     style: theme.textTheme.bodyLarge?.copyWith(
                       color: colorScheme.onSurfaceVariant,
@@ -144,12 +153,17 @@ class LoginScreen extends StatelessWidget {
 
                           const SizedBox(width: 14),
 
-                          Text(
-                            'Continue with Google',
-                            style: TextStyle(
-                              fontSize: 16,
-                              fontWeight: FontWeight.w600,
-                              color: colorScheme.onSurface,
+                          Flexible(
+                            child: Text(
+                              l10n?.accountWelcomeContinueWithGoogle ??
+                                  'Continue with Google',
+                              maxLines: 1,
+                              overflow: TextOverflow.ellipsis,
+                              style: TextStyle(
+                                fontSize: 16,
+                                fontWeight: FontWeight.w600,
+                                color: colorScheme.onSurface,
+                              ),
                             ),
                           ),
                         ],
@@ -169,7 +183,7 @@ class LoginScreen extends StatelessWidget {
                       Padding(
                         padding: const EdgeInsets.symmetric(horizontal: 16),
                         child: Text(
-                          'OR',
+                          l10n?.accountWelcomeOr ?? 'OR',
                           style: TextStyle(
                             fontSize: 13,
                             fontWeight: FontWeight.bold,
@@ -195,9 +209,10 @@ class LoginScreen extends StatelessWidget {
                         _continueAsGuest(context);
                       },
                       icon: const Icon(Icons.person_outline_rounded),
-                      label: const Text(
-                        'Continue as Guest',
-                        style: TextStyle(
+                      label: Text(
+                        l10n?.accountWelcomeContinueAsGuest ??
+                            'Continue as Guest',
+                        style: const TextStyle(
                           fontSize: 16,
                           fontWeight: FontWeight.bold,
                         ),
@@ -216,7 +231,8 @@ class LoginScreen extends StatelessWidget {
                   // INFO
                   // =========================================
                   Text(
-                    'You can start as a guest and sign in later.',
+                    l10n?.accountWelcomeStartAsGuestAndSignInLater ??
+                        'You can start as a guest and sign in later.',
                     textAlign: TextAlign.center,
                     style: theme.textTheme.bodySmall?.copyWith(
                       color: colorScheme.onSurfaceVariant,

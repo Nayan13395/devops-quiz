@@ -1,0 +1,302 @@
+[
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "playbook માં variables વ્યાખ્યાયિત કરવા કયો keyword વપરાય છે?",
+    "options": [
+      "vars",
+      "variables",
+      "var",
+      "define"
+    ],
+    "answer": "vars"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "variable નો સંદર્ભ આપવા કયું syntax વપરાય છે?",
+    "options": [
+      "{{ variable_name }}",
+      "$(variable_name)",
+      "${variable_name}",
+      "[variable_name]"
+    ],
+    "answer": "{{ variable_name }}"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "execution દરમિયાન messages બતાવવા કયું module વપરાય છે?",
+    "options": [
+      "debug",
+      "print",
+      "echo",
+      "message"
+    ],
+    "answer": "debug"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "conditional execution માટે કયો keyword વપરાય છે?",
+    "options": [
+      "when",
+      "if",
+      "condition",
+      "check"
+    ],
+    "answer": "when"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "task પુનરાવર્તિત કરવા કયો keyword વપરાય છે?",
+    "options": [
+      "loop",
+      "repeat",
+      "iterate",
+      "for"
+    ],
+    "answer": "loop"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "મૂળભૂત રીતે, લૂપનો વર્તમાન ઘટક કયા ચલમાં હોય છે?",
+    "options": [
+      "item",
+      "loopitem",
+      "current",
+      "value"
+    ],
+    "answer": "item"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "Jinja2 templates માંથી files બનાવવા કયું module વપરાય છે?",
+    "options": [
+      "template",
+      "copy",
+      "render",
+      "jinja"
+    ],
+    "answer": "template"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "Ansible કયું templating engine વાપરે છે?",
+    "options": [
+      "Jinja2",
+      "Mustache",
+      "Velocity",
+      "Smarty"
+    ],
+    "answer": "Jinja2"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "task output ને variable માં register કરવા કયો keyword વપરાય છે?",
+    "options": [
+      "register",
+      "save",
+      "output",
+      "store"
+    ],
+    "answer": "register"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "કાર્ય નિષ્ફળ પરિણામ આપે પછી પણ કયો કીવર્ડ અમલ ચાલુ રાખે છે, પરંતુ વાક્યરચના કે કનેક્શનની ભૂલોને દબાવતો નથી?",
+    "options": [
+      "ignore_errors",
+      "skip_errors",
+      "continue",
+      "ignore_failures"
+    ],
+    "answer": "ignore_errors"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "notification મળ્યા પછી જ tasks ચલાવવા કયો keyword વપરાય છે?",
+    "options": [
+      "handlers",
+      "notify",
+      "trigger",
+      "events"
+    ],
+    "answer": "handlers"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "handler trigger કરવા કયો keyword વપરાય છે?",
+    "options": [
+      "notify",
+      "handler",
+      "alert",
+      "call"
+    ],
+    "answer": "notify"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "બીજો playbook import કરવા કયો keyword વપરાય છે?",
+    "options": [
+      "import_playbook",
+      "include_playbook",
+      "load_playbook",
+      "playbook"
+    ],
+    "answer": "import_playbook"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "પસંદગીયુક્ત execution માટે tasks ને tag કરવા કયો keyword વપરાય છે?",
+    "options": [
+      "tags",
+      "labels",
+      "groups",
+      "filter"
+    ],
+    "answer": "tags"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "ચોક્કસ tags ધરાવતા tasks જ ચલાવવા કયો option વપરાય છે?",
+    "options": [
+      "--tags",
+      "--skip-tags",
+      "--limit",
+      "--list-tags"
+    ],
+    "answer": "--tags"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "કાર્યનો કયો કીવર્ડ ફેરફાર નોંધાવવા માટે મનપસંદ શરત વ્યાખ્યાયિત કરે છે?",
+    "options": [
+      "changed_when",
+      "failed_when",
+      "until",
+      "when"
+    ],
+    "answer": "changed_when"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "કાર્યનો કયો કીવર્ડ નિષ્ફળતા નોંધાવવા માટે મનપસંદ શરત વ્યાખ્યાયિત કરે છે?",
+    "options": [
+      "changed_when",
+      "retries",
+      "delay",
+      "failed_when"
+    ],
+    "answer": "failed_when"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "કાર્યનો કયો કીવર્ડ પુનઃપ્રયાસો દરમિયાન સાચી થવી આવશ્યક હોય તેવી શરત નક્કી કરે છે?",
+    "options": [
+      "loop",
+      "notify",
+      "until",
+      "when"
+    ],
+    "answer": "until"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "કયું મોડ્યુલ વર્તમાન હોસ્ટ માટે નામવાળા ચલને ફાઇલમાંથી લોડ કરવાને બદલે કાર્ય દ્વારા આપેલાં મૂલ્યોમાંથી સીધા વ્યાખ્યાયિત કરે છે?",
+    "options": [
+      "ansible.builtin.add_host",
+      "ansible.builtin.set_fact",
+      "ansible.builtin.setup",
+      "ansible.builtin.include_vars"
+    ],
+    "answer": "ansible.builtin.set_fact"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "result તરીકે નોંધાયેલા કાર્યનું પ્રમાણભૂત આઉટપુટ કયા એક્સપ્રેશનથી મેળવી શકાય છે?",
+    "options": [
+      "result.stdout",
+      "result.stderr",
+      "result.rc",
+      "result.changed"
+    ],
+    "answer": "result.stdout"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "Jinja2ની કઈ કસોટી ચલ વ્યાખ્યાયિત થયું છે કે નહીં તે તપાસે છે?",
+    "options": [
+      "is none",
+      "is string",
+      "is sequence",
+      "is defined"
+    ],
+    "answer": "is defined"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "કયો Ansible કીવર્ડ કાર્યોને જૂથમાં ગોઠવે છે જેથી તેઓ નિર્દેશો અને ભૂલ સંભાળવાની વ્યવસ્થા વહેંચી શકે?",
+    "options": [
+      "roles",
+      "handlers",
+      "block",
+      "loop"
+    ],
+    "answer": "block"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "કાર્ય સામાન્ય રીતે તેની notify સૂચનાઓ ક્યારે મોકલે છે?",
+    "options": [
+      "ફક્ત પ્લેબુક શરૂ થાય ત્યારે",
+      "જ્યારે તે સફળતાપૂર્વક પૂરું થાય અને ફેરફાર થયાનું જણાવે",
+      "જ્યારે પણ કોઈ શરતને કારણે તે છોડવામાં આવે",
+      "જ્યારે પણ તેનું મોડ્યુલ કોઈ ફેરફાર ન થયાનું જણાવે"
+    ],
+    "answer": "જ્યારે તે સફળતાપૂર્વક પૂરું થાય અને ફેરફાર થયાનું જણાવે"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "કઈ સેટિંગ લૂપના વર્તમાન ઘટકના ચલનું નામ બદલીને server કરે છે?",
+    "options": [
+      "loop_control: {loop_var: server}",
+      "loop_control: {label: server}",
+      "loop_control: {index_var: server}",
+      "loop_control: {pause: 1}"
+    ],
+    "answer": "loop_control: {loop_var: server}"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "કયો કમાન્ડ-લાઇન વિકલ્પ ઊંચી અગ્રતા ધરાવતા વધારાના ચલ આપે છે?",
+    "options": [
+      "--tags",
+      "--limit",
+      "--start-at-task",
+      "--extra-vars"
+    ],
+    "answer": "--extra-vars"
+  }
+]

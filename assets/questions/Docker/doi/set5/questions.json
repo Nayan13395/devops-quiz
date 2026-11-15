@@ -1,0 +1,302 @@
+[
+  {
+    "category": "Docker",
+    "set": 5,
+    "question": "बिल्ड गी ARG जां ENV इंस्ट्रक्शन च पासवर्ड सैह्जने दी बजाय BuildKit secret mount कीऽ इस्तेमाल करना चाहिदा?",
+    "options": [
+      "Secret mount रजिस्ट्री पासवर्डें गी अपने-आप बदलदे न",
+      "Secret mount नतीजे आली हर इमेज लेयर गी एन्क्रिप्ट करदे न",
+      "Secret mount बिल्ड गी कुसै बी नेटवर्क तगर पुज्जने कोला रोकदे न",
+      "Secret mount दित्ते गेदे सीक्रेट गी इमेज ARG जां ENV वैल्यू दे तौर उप्पर सैह्जने कोला बचांदे न"
+    ],
+    "answer": "Secret mount दित्ते गेदे सीक्रेट गी इमेज ARG जां ENV वैल्यू दे तौर उप्पर सैह्जने कोला बचांदे न"
+  },
+  {
+    "category": "Docker",
+    "set": 5,
+    "question": "RUN इंस्ट्रक्शन च BuildKit cache mount दा के मकसद ऐ?",
+    "options": [
+      "बेस इमेज गी खाली फाइलसिस्टम कन्नै बदलना",
+      "इस गल्ल दी गारंटी देना जे हर RUN इंस्ट्रक्शन कैश दे बगैर चलै",
+      "बिल्ड-टूल कैश गी बिल्डें दे आर-पार दुबारा इस्तेमाल करना, पर उस माउंट गी आखरी इमेज दी सामग्री नेईं बनाना",
+      "रनटाइम लॉग गी इमेज रजिस्ट्री च सैह्जना"
+    ],
+    "answer": "बिल्ड-टूल कैश गी बिल्डें दे आर-पार दुबारा इस्तेमाल करना, पर उस माउंट गी आखरी इमेज दी सामग्री नेईं बनाना"
+  },
+  {
+    "category": "Docker",
+    "set": 5,
+    "question": "बिल्ड इनपुट दा कैह्ड़ा बदलाव आमतौर उप्पर COPY इंस्ट्रक्शन ते उसदे बाद दे निर्भर स्टेपें आस्ते कैश गी अमान्य करदा ऐ?",
+    "options": [
+      "इंस्ट्रक्शनें गी बदले बगैर आम Dockerfile कमेंट च तबदीली करना",
+      "कॉपी कीती दी सोर्स फाइल दी सामग्री बदलना",
+      "सिर्फ कॉपी कीती दी फाइल दा modification timestamp बदलना",
+      ".dockerignore कन्नै बाहर रक्खी दी फाइल गी बदलना"
+    ],
+    "answer": "कॉपी कीती दी सोर्स फाइल दी सामग्री बदलना"
+  },
+  {
+    "category": "Docker",
+    "set": 5,
+    "question": "Dockerfile इंस्ट्रक्शन 'FROM scratch' के चुनदी ऐ?",
+    "options": [
+      "बेस-इमेज फाइलसिस्टम दे बगैर इक खाली शुरुआती बिंदु",
+      "इक न्यूनतम Debian इंस्टॉलेशन",
+      "चलदे होस्ट दा रूट फाइलसिस्टम",
+      "सब्भते हाल च बनाई दी लोकल इमेज"
+    ],
+    "answer": "बेस-इमेज फाइलसिस्टम दे बगैर इक खाली शुरुआती बिंदु"
+  },
+  {
+    "category": "Docker",
+    "set": 5,
+    "question": "कैह्ड़ी Dockerfile इंस्ट्रक्शन इमेज च key-value मेटाडेटा जोड़दी ऐ?",
+    "options": [
+      "ARG",
+      "EXPOSE",
+      "STOPSIGNAL",
+      "LABEL"
+    ],
+    "answer": "LABEL"
+  },
+  {
+    "category": "Docker",
+    "set": 5,
+    "question": "कैह्ड़ी Dockerfile इंस्ट्रक्शन कंटेनर गी रोकदे वेले भेजे जाने आले डिफॉल्ट सिग्नल गी बदलदी ऐ?",
+    "options": [
+      "SHELL",
+      "ONBUILD",
+      "STOPSIGNAL",
+      "HEALTHCHECK"
+    ],
+    "answer": "STOPSIGNAL"
+  },
+  {
+    "category": "Docker",
+    "set": 5,
+    "question": "मुक्ख सर्वर प्रोसेस आस्ते exec-form ENTRYPOINT गी अक्सर कीऽ पसंद कीता जंदा ऐ?",
+    "options": [
+      "एह सर्वर गी नॉन-जीरो स्टेटस मोड़ने कोला रोकदा ऐ",
+      "एह सर्वर ते कंटेनर सिग्नलें दे बीच इक फालतू शैल कोला बचांदा ऐ",
+      "एह अपने-आप non-root यूज़र बनांदा ऐ",
+      "एह इमेज च प्रोसेस सुपरवाइज़र इंस्टॉल करदा ऐ"
+    ],
+    "answer": "एह सर्वर ते कंटेनर सिग्नलें दे बीच इक फालतू शैल कोला बचांदा ऐ"
+  },
+  {
+    "category": "Docker",
+    "set": 5,
+    "question": "'docker run --init' कंटेनर च के जोड़दा ऐ?",
+    "options": [
+      "इक छोटा init प्रोसेस जेह्ड़ा सिग्नलें गी अगाऽ भेजदा ऐ ते चाइल्ड प्रोसेसें गी समेटदा ऐ",
+      "इक पूरा systemd इंस्टॉलेशन",
+      "इक दूआ Docker डेमन",
+      "हर प्रोसेस आस्ते इक इंटरएक्टिव लॉगिन शैल"
+    ],
+    "answer": "इक छोटा init प्रोसेस जेह्ड़ा सिग्नलें गी अगाऽ भेजदा ऐ ते चाइल्ड प्रोसेसें गी समेटदा ऐ"
+  },
+  {
+    "category": "Docker",
+    "set": 5,
+    "question": "कैह्ड़ा ऑप्शन Linux कंटेनर गी सारी Linux capabilities हटाई के चलांदा ऐ?",
+    "options": [
+      "--cap-add=ALL",
+      "--privileged",
+      "--security-opt seccomp=unconfined",
+      "--cap-drop=ALL"
+    ],
+    "answer": "--cap-drop=ALL"
+  },
+  {
+    "category": "Docker",
+    "set": 5,
+    "question": "रूटलेस Docker मुक्ख तौर उप्पर के बदलदा ऐ?",
+    "options": [
+      "इमेजें गी ह्ली रजिस्ट्री दी लोड नेईं रेही",
+      "कंटेनर ह्ली Linux namespaces इस्तेमाल नेईं करदे",
+      "डेमन ते कंटेनर होस्ट रूट अधिकारें दे बगैर चलदे न",
+      "सारे कंटेनर होस्ट रूट फाइलसिस्टम गी सांझा करदे न"
+    ],
+    "answer": "डेमन ते कंटेनर होस्ट रूट अधिकारें दे बगैर चलदे न"
+  },
+  {
+    "category": "Docker",
+    "set": 5,
+    "question": "कैह्ड़ी Linux सुविधा मुक्ख तौर उप्पर कंटेनर दे रिसोर्स इस्तेमाल गी सीमत करदी ते उसदा हिसाब रखदी ऐ?",
+    "options": [
+      "Linux capabilities",
+      "Control groups",
+      "Namespaces",
+      "Seccomp filters"
+    ],
+    "answer": "Control groups"
+  },
+  {
+    "category": "Docker",
+    "set": 5,
+    "question": "कैह्ड़ी Linux सुविधा कंटेनरें गी प्रोसेस ID ते नेटवर्क इंटरफेस जेह्ड़े रिसोर्सें दे अलग-थलग नजारे दिंदी ऐ?",
+    "options": [
+      "Namespaces",
+      "Control groups",
+      "Seccomp filters",
+      "Linux capabilities"
+    ],
+    "answer": "Namespaces"
+  },
+  {
+    "category": "Docker",
+    "set": 5,
+    "question": "कैह्ड़ा Docker नेटवर्क ड्राइवर Linux कंटेनर गी होस्ट दा नेटवर्क namespace दिंदा ऐ?",
+    "options": [
+      "bridge",
+      "overlay",
+      "none",
+      "host"
+    ],
+    "answer": "host"
+  },
+  {
+    "category": "Docker",
+    "set": 5,
+    "question": "कैह्ड़ा Docker नेटवर्क ड्राइवर कंटेनर गी सिर्फ उसदे loopback इंटरफेस कन्नै छडदा ऐ?",
+    "options": [
+      "host",
+      "overlay",
+      "none",
+      "bridge"
+    ],
+    "answer": "none"
+  },
+  {
+    "category": "Docker",
+    "set": 5,
+    "question": "कैह्ड़ा Docker नेटवर्क ड्राइवर मते सारे Docker होस्टें दे आर-पार कंटेनर संचार आस्ते बनाया गेदा ऐ?",
+    "options": [
+      "none",
+      "overlay",
+      "bridge",
+      "host"
+    ],
+    "answer": "overlay"
+  },
+  {
+    "category": "Docker",
+    "set": 5,
+    "question": "'--network container:web' नमें कंटेनर आस्ते के करदा ऐ?",
+    "options": [
+      "web दा नेटवर्क namespace सांझा करदा ऐ",
+      "web दीयां फाइलसिस्टम लेयर कॉपी करदा ऐ",
+      "हर होस्ट इंटरफेस गी सिद्धा अटैच करदा ऐ",
+      "web नांऽ दा नमां नेटवर्क बनांदा ऐ"
+    ],
+    "answer": "web दा नेटवर्क namespace सांझा करदा ऐ"
+  },
+  {
+    "category": "Docker",
+    "set": 5,
+    "question": "कुसै खाली नेईं कंटेनर पाथ उप्पर डायरेक्टरी माउंट करने कन्नै इमेज दीयां मौजूदा फाइलां गायब होई गेदियां कीऽ लगदियां न?",
+    "options": [
+      "Docker असल इमेज लेयरें गी मटांदा ऐ",
+      "Docker फाइलें गी रजिस्ट्री च लेई जंदा ऐ",
+      "इमेज अपने-आप उनें फाइलें दे बगैर फिरी बनी जंदी ऐ",
+      "जदूं तकर माउंट रौंह्दा ऐ, उस पाथ उप्पर माउंट फाइलें गी ढकी दिंदा ऐ"
+    ],
+    "answer": "जदूं तकर माउंट रौंह्दा ऐ, उस पाथ उप्पर माउंट फाइलें गी ढकी दिंदा ऐ"
+  },
+  {
+    "category": "Docker",
+    "set": 5,
+    "question": "volume-nocopy दे बगैर, जदूं खाली नेम्ड वॉल्यूम पैहली बारी फाइलां आली कंटेनर डायरेक्टरी उप्पर माउंट कीता जंदा ऐ तां Docker आमतौर उप्पर के करदा ऐ?",
+    "options": [
+      "शुरू होने कोला इन्कार करदा ऐ कीजे डायरेक्टरी खाली नेईं ऐ",
+      "नेम्ड वॉल्यूम गी bind mount च बदली दिंदा ऐ",
+      "डायरेक्टरी दीयां मौजूदा फाइलां गी वॉल्यूम च कॉपी करदा ऐ",
+      "इमेज कोला फाइलां गी हमेशा आस्ते मटाई दिंदा ऐ"
+    ],
+    "answer": "डायरेक्टरी दीयां मौजूदा फाइलां गी वॉल्यूम च कॉपी करदा ऐ"
+  },
+  {
+    "category": "Docker",
+    "set": 5,
+    "question": "कैह्ड़ा कमांड कंटेनर web आस्ते पब्लिश कीते दे पोर्ट मैपिंग दी लिस्ट दिंदा ऐ?",
+    "options": [
+      "docker wait web",
+      "docker port web",
+      "docker top web",
+      "docker diff web"
+    ],
+    "answer": "docker port web"
+  },
+  {
+    "category": "Docker",
+    "set": 5,
+    "question": "कैह्ड़ा कमांड कंटेनर web दे लॉग दीयां सिर्फ आखरी 20 लाइनां हासल करदा ऐ?",
+    "options": [
+      "docker logs --tail 20 web",
+      "docker logs --since 20m web",
+      "docker logs --until 20m web",
+      "docker logs --timestamps web"
+    ],
+    "answer": "docker logs --tail 20 web"
+  },
+  {
+    "category": "Docker",
+    "set": 5,
+    "question": "Docker इमेज ते कंटेनर च मुक्ख फर्क के ऐ?",
+    "options": [
+      "इमेज हमेशा चलदी रौंह्दी ऐ, जदके कंटेनर हमेशा रुकेआ रौंह्दा ऐ",
+      "इमेज इक नेटवर्क दी ऐ, जदके कंटेनर सिर्फ रजिस्ट्री दा ऐ",
+      "इमेज सिर्फ लॉग सैह्जदी ऐ, जदके कंटेनर सिर्फ मेटाडेटा सैह्जदा ऐ",
+      "इमेज इक रीड-ओनली टेम्पलेट ऐ, जदके कंटेनर रनटाइम स्टेट आला इक इंस्टेंस ऐ"
+    ],
+    "answer": "इमेज इक रीड-ओनली टेम्पलेट ऐ, जदके कंटेनर रनटाइम स्टेट आला इक इंस्टेंस ऐ"
+  },
+  {
+    "category": "Docker",
+    "set": 5,
+    "question": "Docker कॉन्टेक्स्ट CLI आस्ते मुक्ख तौर उप्पर केह्दी पन्छान करदा ऐ?",
+    "options": [
+      "चुनोचा Dockerfile बिल्ड स्टेज",
+      "हर इमेज दा डिफॉल्ट टारगेट प्लेटफॉर्म",
+      "Docker डेमन एंडपॉइंट आस्ते कनेक्शन सैटिंग",
+      "इमेज बिल्ड कॉन्टेक्स्ट दे तौर उप्पर भेजियां जाने आलियां फाइलां ते डायरेक्टरियां"
+    ],
+    "answer": "Docker डेमन एंडपॉइंट आस्ते कनेक्शन सैटिंग"
+  },
+  {
+    "category": "Docker",
+    "set": 5,
+    "question": "कैह्ड़ा कमांड Docker क्लाइंट गी रजिस्ट्री कोला लॉग-आउट करदा ऐ?",
+    "options": [
+      "docker trust inspect",
+      "docker logout",
+      "docker login",
+      "docker context use"
+    ],
+    "answer": "docker logout"
+  },
+  {
+    "category": "Docker",
+    "set": 5,
+    "question": "कैह्ड़ा ऑप्शन docker login गी स्टैंडर्ड इनपुट कोला पासवर्ड पढ़ने दिंदा ऐ?",
+    "options": [
+      "--password-stdin",
+      "--username",
+      "--config",
+      "--context"
+    ],
+    "answer": "--password-stdin"
+  },
+  {
+    "category": "Docker",
+    "set": 5,
+    "question": "कैह्ड़ा कमांड api नांऽ दी Docker Swarm सर्विस दे टास्कें दी लिस्ट दिंदा ऐ?",
+    "options": [
+      "docker service inspect api",
+      "docker service logs api",
+      "docker service scale api=3",
+      "docker service ps api"
+    ],
+    "answer": "docker service ps api"
+  }
+]

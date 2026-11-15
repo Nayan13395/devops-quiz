@@ -1,0 +1,302 @@
+[
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "دون تجاوز على مستوى المهمة، ماذا يحدث لوحدة لا تدعم وضع الفحص عند التشغيل بهذا الوضع؟",
+    "options": [
+      "تجري الوحدة تغييراتها المعتادة دائما",
+      "تعمل الوحدة تلقائيا على localhost",
+      "تعاد محاولة الوحدة حتى تدعم وضع الفحص",
+      "تُتخطى الوحدة بدلا من إجراء تغييرات"
+    ],
+    "answer": "تُتخطى الوحدة بدلا من إجراء تغييرات"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "أي إعداد للمهمة يسمح بتغييرات فعلية حتى عند استدعاء playbook مع --check؟",
+    "options": [
+      "changed_when: false",
+      "ignore_errors: true",
+      "check_mode: false",
+      "diff: false"
+    ],
+    "answer": "check_mode: false"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "أي إجراء meta في Ansible ينفذ فورا المعالجات التي تلقت إشعارا بالفعل؟",
+    "options": [
+      "reset_connection",
+      "flush_handlers",
+      "clear_facts",
+      "end_play"
+    ],
+    "answer": "flush_handlers"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "إذا أخطرت مهمتان غيّرتا الحالة المعالج نفسه قبل تشغيله، فكم مرة يعمل عادة عند نقطة التشغيل؟",
+    "options": [
+      "مرة واحدة",
+      "مرتان",
+      "مرة لكل مجموعة جرد",
+      "لا يعمل لأن الإشعارات تتعارض"
+    ],
+    "answer": "مرة واحدة"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "ما الذي يحدد ترتيب تنفيذ المعالجات المبلّغة عند نقطة التشغيل نفسها؟",
+    "options": [
+      "الترتيب الأبجدي لأسمائها",
+      "ترتيب الأسماء في قائمة notify",
+      "ترتيب اتصال المضيفين المُدارين",
+      "ترتيب تعريفها في قسم handlers"
+    ],
+    "answer": "ترتيب تعريفها في قسم handlers"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "أي فشل يفعّل عادة مهام rescue داخل الكتلة؟",
+    "options": [
+      "وجود تعريف مهمة غير صالح في playbook",
+      "تعذر تحليل مستند YAML",
+      "إرجاع مهمة داخل الكتلة نتيجة فشل",
+      "تعذر الوصول إلى المضيف قبل تشغيل مهمته"
+    ],
+    "answer": "إرجاع مهمة داخل الكتلة نتيجة فشل"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "أي خطأ لا يخفيه ignore_errors في مهمة عادية؟",
+    "options": [
+      "شرط failed_when تُقيّم نتيجته إلى true",
+      "خطأ متغير غير معرّف",
+      "حالة خروج غير صفرية يبلغ عنها أمر",
+      "نتيجة وحدة محددة صراحة بأنها failed"
+    ],
+    "answer": "خطأ متغير غير معرّف"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "أي كلمة مفتاحية توقف play على جميع المضيفين بعد فشل غير معالج، عندما تنتهي الدفعة الحالية من تلك المهمة؟",
+    "options": [
+      "any_errors_fatal",
+      "ignore_unreachable",
+      "max_fail_percentage: 100",
+      "force_handlers"
+    ],
+    "answer": "any_errors_fatal"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "ما أثر force_handlers إذا فشلت مهمة لاحقة على مضيف يمكن الوصول إليه؟",
+    "options": [
+      "تعمل جميع المعالجات المعرّفة حتى دون إشعار",
+      "تُعاد محاولة جميع المهام الفاشلة تلقائيا",
+      "تعمل المعالجات قبل جميع المهام العادية",
+      "يمكن للمعالجات التي أُخطرت سابقا أن تعمل على ذلك المضيف"
+    ],
+    "answer": "يمكن للمعالجات التي أُخطرت سابقا أن تعمل على ذلك المضيف"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "أي إعداد للمهمة يمنع التسجيل المعتاد للوسائط والنتائج الحساسة؟",
+    "options": [
+      "check_mode: true",
+      "changed_when: false",
+      "no_log: true",
+      "diff: true"
+    ],
+    "answer": "no_log: true"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "أي إعداد للمهمة يخفي فروق محتوى الملفات حتى مع تفعيل --diff؟",
+    "options": [
+      "ignore_errors: true",
+      "diff: false",
+      "no_log: false",
+      "check_mode: false"
+    ],
+    "answer": "diff: false"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "أي قاموس يتيح الوصول إلى متغيرات مضيف آخر في الجرد؟",
+    "options": [
+      "hostvars",
+      "ansible_facts",
+      "environment",
+      "ansible_loop"
+    ],
+    "answer": "hostvars"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "أي متغير خاص يحتوي على اسم المضيف الحالي في الجرد؟",
+    "options": [
+      "ansible_host",
+      "ansible_user",
+      "ansible_playbook_python",
+      "inventory_hostname"
+    ],
+    "answer": "inventory_hostname"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "أي مجلد مجاور للجرد يُستخدم عادة للمتغيرات المشتركة بين مضيفي مجموعة؟",
+    "options": [
+      "roles",
+      "collections",
+      "group_vars",
+      "host_vars"
+    ],
+    "answer": "group_vars"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "أين تقرأ عملية البحث ansible.builtin.file الملف افتراضيا؟",
+    "options": [
+      "على المضيف المحدد بواسطة become_user",
+      "على عقدة التحكم",
+      "على كل مضيف مُدار",
+      "على أول مضيف في play"
+    ],
+    "answer": "على عقدة التحكم"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "أي مرشح يحوّل سلسلة YAML إلى بنية بيانات Ansible؟",
+    "options": [
+      "from_yaml",
+      "to_yaml",
+      "to_json",
+      "dict2items"
+    ],
+    "answer": "from_yaml"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "أي مرشح يحوّل قاموسا إلى قائمة قواميس مفتاح/قيمة؟",
+    "options": [
+      "items2dict",
+      "flatten",
+      "zip",
+      "dict2items"
+    ],
+    "answer": "dict2items"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "أي مرشح يزيل العناصر المكررة من قائمة؟",
+    "options": [
+      "reverse",
+      "flatten",
+      "unique",
+      "sort"
+    ],
+    "answer": "unique"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "أي وحدة تفحص التعبيرات وتفشل إذا لم تتحقق التأكيدات المحددة؟",
+    "options": [
+      "ansible.builtin.set_fact",
+      "ansible.builtin.assert",
+      "ansible.builtin.debug",
+      "ansible.builtin.pause"
+    ],
+    "answer": "ansible.builtin.assert"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "أي وحدة تدير سطرا محددا في ملف نصي باستخدام تعبير نمطي؟",
+    "options": [
+      "ansible.builtin.lineinfile",
+      "ansible.builtin.blockinfile",
+      "ansible.builtin.copy",
+      "ansible.builtin.slurp"
+    ],
+    "answer": "ansible.builtin.lineinfile"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "أي وحدة تطلب عنوان URL ويمكنها التحقق من رمز حالة HTTP المتوقع؟",
+    "options": [
+      "ansible.builtin.get_url",
+      "ansible.builtin.fetch",
+      "ansible.builtin.wait_for",
+      "ansible.builtin.uri"
+    ],
+    "answer": "ansible.builtin.uri"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "أي وحدة تنتظر حتى يصل منفذ TCP إلى الحالة المطلوبة؟",
+    "options": [
+      "ansible.builtin.async_status",
+      "ansible.builtin.ping",
+      "ansible.builtin.wait_for",
+      "ansible.builtin.pause"
+    ],
+    "answer": "ansible.builtin.wait_for"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "أي معامل يجعل ansible.builtin.command يتخطى التنفيذ إذا كان المسار المحدد موجودا؟",
+    "options": [
+      "stdin",
+      "creates",
+      "removes",
+      "chdir"
+    ],
+    "answer": "creates"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "أي إعداد في وحدة file ينشئ رابطا رمزيا؟",
+    "options": [
+      "state: link",
+      "state: directory",
+      "state: touch",
+      "state: hard"
+    ],
+    "answer": "state: link"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "أي وحدة تضيف مضيفا إلى الجرد في الذاكرة لاستخدامه في عمليات play اللاحقة؟",
+    "options": [
+      "ansible.builtin.group_by",
+      "ansible.builtin.set_fact",
+      "ansible.builtin.meta",
+      "ansible.builtin.add_host"
+    ],
+    "answer": "ansible.builtin.add_host"
+  }
+]

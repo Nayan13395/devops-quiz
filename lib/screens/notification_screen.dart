@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import '../l10n/notification_localizations.dart';
 import '../models/app_notification.dart';
 import '../services/daily_login_bonus_service.dart';
 import '../services/in_app_notification_service.dart';
@@ -28,21 +29,35 @@ class _NotificationScreenState extends State<NotificationScreen> {
   bool _loading = true;
   List<AppNotification> _notifications = [];
   final Set<String> _processingNotifications = {};
+  NotificationLocalizations? _l10n;
+  Locale? _locale;
 
   @override
-  void initState() {
-    super.initState();
-    _loadNotifications();
+  void didChangeDependencies() {
+    super.didChangeDependencies();
+    final locale = Localizations.localeOf(context);
+    if (_locale != locale) {
+      _locale = locale;
+      _loadNotifications(locale);
+    }
   }
 
-  Future<void> _loadNotifications() async {
+  Future<void> _loadNotifications([Locale? locale]) async {
     try {
       setState(() {
         _loading = true;
       });
 
-      final notifications =
-          await InAppNotificationService.getUnreadNotifications();
+      final selectedLocale =
+          locale ?? _locale ?? Localizations.localeOf(context);
+      final results = await Future.wait([
+        NotificationLocalizations.load(selectedLocale),
+        InAppNotificationService.getUnreadNotifications(
+          languageCode: selectedLocale.languageCode,
+        ),
+      ]);
+      final l10n = results[0] as NotificationLocalizations;
+      final notifications = results[1] as List<AppNotification>;
 
       debugPrint('Loaded ${notifications.length} unread notifications');
 
@@ -55,6 +70,7 @@ class _NotificationScreenState extends State<NotificationScreen> {
       if (!mounted) return;
 
       setState(() {
+        _l10n = l10n;
         _notifications = notifications;
         _loading = false;
       });
@@ -92,7 +108,7 @@ class _NotificationScreenState extends State<NotificationScreen> {
 
     ScaffoldMessenger.of(
       context,
-    ).showSnackBar(const SnackBar(content: Text('All notifications read.')));
+    ).showSnackBar(SnackBar(content: Text(_l10n!.text('screen.allRead'))));
   }
 
   // ✅ KEY METHOD FOR REDIRECTING
@@ -111,8 +127,8 @@ class _NotificationScreenState extends State<NotificationScreen> {
 
           if (bonus == null) {
             ScaffoldMessenger.of(context).showSnackBar(
-              const SnackBar(
-                content: Text('Today\'s reward was already claimed.'),
+              SnackBar(
+                content: Text(_l10n!.text('screen.rewardAlreadyClaimed')),
               ),
             );
           } else {
@@ -221,7 +237,9 @@ class _NotificationScreenState extends State<NotificationScreen> {
     } catch (error) {
       if (mounted) {
         ScaffoldMessenger.of(context).showSnackBar(
-          SnackBar(content: Text('Unable to open notification: $error')),
+          SnackBar(
+            content: Text(_l10n!.text('screen.openError', {'error': error})),
+          ),
         );
       }
     } finally {
@@ -236,13 +254,13 @@ class _NotificationScreenState extends State<NotificationScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Notifications'),
+        title: Text(_l10n?.text('screen.title') ?? ''),
         actions: [
           if (_unreadCount > 0)
             TextButton.icon(
               onPressed: _markAllAsRead,
               icon: const Icon(Icons.done_all_rounded, size: 18),
-              label: const Text('Read All'),
+              label: Text(_l10n!.text('screen.readAll')),
             ),
           const SizedBox(width: 8),
         ],
@@ -267,6 +285,7 @@ class _NotificationScreenState extends State<NotificationScreen> {
                       ),
                       onTap: () => _handleNotification(notification),
                       onMarkRead: () => _markAsRead(notification),
+                      l10n: _l10n!,
                     ),
                   ),
                 ],
@@ -308,14 +327,21 @@ class _NotificationScreenState extends State<NotificationScreen> {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                const Text(
-                  'Stay Updated',
-                  style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+                Text(
+                  _l10n!.text('screen.stayUpdated'),
+                  style: const TextStyle(
+                    fontSize: 20,
+                    fontWeight: FontWeight.bold,
+                  ),
                 ),
                 const SizedBox(height: 4),
                 Text(
-                  '$_unreadCount unread '
-                  '${_unreadCount == 1 ? 'notification' : 'notifications'}',
+                  _l10n!.text(
+                    _unreadCount == 1
+                        ? 'screen.unreadOne'
+                        : 'screen.unreadMany',
+                    {'count': _unreadCount},
+                  ),
                   style: TextStyle(color: colorScheme.onSurfaceVariant),
                 ),
               ],
@@ -348,16 +374,16 @@ class _NotificationScreenState extends State<NotificationScreen> {
                       color: colorScheme.primary.withValues(alpha: 0.6),
                     ),
                     const SizedBox(height: 20),
-                    const Text(
-                      'You\'re All Caught Up!',
-                      style: TextStyle(
+                    Text(
+                      _l10n!.text('screen.caughtUp'),
+                      style: const TextStyle(
                         fontSize: 23,
                         fontWeight: FontWeight.bold,
                       ),
                     ),
                     const SizedBox(height: 8),
                     Text(
-                      'New app updates, features, games and rewards will appear here.',
+                      _l10n!.text('screen.emptyMessage'),
                       textAlign: TextAlign.center,
                       style: TextStyle(
                         fontSize: 15,
@@ -380,12 +406,14 @@ class _NotificationCard extends StatelessWidget {
   final VoidCallback onTap;
   final VoidCallback onMarkRead;
   final bool isProcessing;
+  final NotificationLocalizations l10n;
 
   const _NotificationCard({
     required this.notification,
     required this.onTap,
     required this.onMarkRead,
     required this.isProcessing,
+    required this.l10n,
   });
 
   @override
@@ -500,7 +528,7 @@ class _NotificationCard extends StatelessWidget {
                             label: Text(notification.actionText!),
                           ),
                         IconButton(
-                          tooltip: 'Mark as read',
+                          tooltip: l10n.text('screen.markAsRead'),
                           visualDensity: VisualDensity.compact,
                           onPressed: isProcessing ? null : onMarkRead,
                           icon: const Icon(Icons.mark_email_read_outlined),
@@ -523,10 +551,10 @@ class _NotificationCard extends StatelessWidget {
     final notificationDate = DateTime(date.year, date.month, date.day);
     final difference = today.difference(notificationDate);
 
-    if (difference.inDays == 0) return 'Today';
-    if (difference.inDays == 1) return 'Yesterday';
+    if (difference.inDays == 0) return l10n.text('screen.today');
+    if (difference.inDays == 1) return l10n.text('screen.yesterday');
     if (difference.inDays > 1 && difference.inDays < 7) {
-      return '${difference.inDays} days ago';
+      return l10n.text('screen.daysAgo', {'count': difference.inDays});
     }
 
     return '${date.day.toString().padLeft(2, '0')}/'

@@ -1,0 +1,302 @@
+[
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "release എന്ന നിലവിലുള്ള ബ്രാഞ്ചിനായി ബന്ധിപ്പിച്ച വർക്കിങ് ട്രീ ചേർക്കുന്ന കമാൻഡ് ഏതാണ്?",
+    "options": [
+      "git worktree prune",
+      "git worktree lock ..\\release",
+      "git worktree add ..\\release release",
+      "git worktree list"
+    ],
+    "answer": "git worktree add ..\\release release"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "പ്രധാന പ്രോജക്റ്റിന്റെ പതിപ്പ്-നിയന്ത്രിത ഉപമൊഡ്യൂൾ പാതകളും URLകളും രേഖപ്പെടുത്തുന്ന ഫയൽ ഏതാണ്?",
+    "options": [
+      ".gitmessage",
+      ".gitmodules",
+      ".gitignore",
+      ".gitattributes"
+    ],
+    "answer": ".gitmodules"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "അകത്തുള്ളവ ഉൾപ്പെടെ രജിസ്റ്റർ ചെയ്ത ഉപമൊഡ്യൂളുകൾ ആരംഭിച്ച് ചെക്കൗട്ട് ചെയ്യുന്ന കമാൻഡ് ഏതാണ്?",
+    "options": [
+      "git submodule update --init --recursive",
+      "git submodule deinit --all",
+      "git submodule status",
+      "git submodule sync"
+    ],
+    "answer": "git submodule update --init --recursive"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "പ്രധാന പ്രോജക്റ്റ് ഒരു കമ്മിറ്റിൽ ഉപമൊഡ്യൂളിനായി സാധാരണയായി എന്താണ് രേഖപ്പെടുത്തുന്നത്?",
+    "options": [
+      "ഉപമൊഡ്യൂളിന്റെ മുഴുവൻ ഒബ്ജക്റ്റ് ഡാറ്റാബേസ്",
+      "ഉപമൊഡ്യൂളിന്റെ ഡിഫോൾട്ട് ബ്രാഞ്ചിന്റെ പേര് മാത്രം",
+      "ഉപമൊഡ്യൂളിന്റെ കമ്മിറ്റ് ചെയ്യാത്ത മാറ്റങ്ങൾ മാത്രം",
+      "ഉപമൊഡ്യൂളിലെ പ്രത്യേക കമ്മിറ്റിന്റെ റഫറൻസ്"
+    ],
+    "answer": "ഉപമൊഡ്യൂളിലെ പ്രത്യേക കമ്മിറ്റിന്റെ റഫറൻസ്"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "എല്ലാ റഫറൻസുകളും അവയിൽനിന്ന് എത്താവുന്ന ചരിത്രവും ഉൾപ്പെടുന്ന കൊണ്ടുപോകാവുന്ന ബണ്ടിൽ സൃഷ്ടിക്കുന്ന കമാൻഡ് ഏതാണ്?",
+    "options": [
+      "git format-patch -1 HEAD",
+      "git diff --binary > backup.bundle",
+      "git bundle create backup.bundle --all",
+      "git archive --output=backup.bundle HEAD"
+    ],
+    "answer": "git bundle create backup.bundle --all"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "HEADന്റെ ട്രാക്ക് ചെയ്യുന്ന ഫയലുകളെ Git ചരിത്രമില്ലാതെ ZIP ആർക്കൈവാക്കുന്ന കമാൻഡ് ഏതാണ്?",
+    "options": [
+      "git format-patch --stdout HEAD > source.zip",
+      "git archive --format=zip --output=source.zip HEAD",
+      "git bundle create source.zip --all",
+      "git clone --bare . source.zip"
+    ],
+    "answer": "git archive --format=zip --output=source.zip HEAD"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "അവസാന കമ്മിറ്റിനെ ഇമെയിൽ രൂപത്തിലുള്ള പാച്ച് ഫയലാക്കുന്ന കമാൻഡ് ഏതാണ്?",
+    "options": [
+      "git format-patch -1 HEAD",
+      "git diff HEAD",
+      "git show --stat HEAD",
+      "git log -1 --oneline"
+    ],
+    "answer": "git format-patch -1 HEAD"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "git format-patch സൃഷ്ടിച്ച ഇമെയിൽ പാച്ചുകൾ പ്രയോഗിച്ച് കമ്മിറ്റുകളാക്കുന്ന കമാൻഡ് ഏതാണ്?",
+    "options": [
+      "git apply changes.patch",
+      "git diff changes.patch",
+      "git add changes.patch",
+      "git am changes.patch"
+    ],
+    "answer": "git am changes.patch"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "ഫയലുകൾ മാറ്റാതെ സാധാരണ പാച്ച് പ്രയോഗിക്കാനാകുമോ എന്നു പരിശോധിക്കുന്ന കമാൻഡ് ഏതാണ്?",
+    "options": [
+      "git am changes.patch",
+      "git add changes.patch",
+      "git apply --check changes.patch",
+      "git apply changes.patch"
+    ],
+    "answer": "git apply --check changes.patch"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "ഫയൽ പേരില്ലാതെ ഉള്ളടക്കം സൂക്ഷിക്കുന്ന Git ഒബ്ജക്റ്റ് തരം ഏതാണ്?",
+    "options": [
+      "കുറിപ്പോടുകൂടിയ ടാഗ്",
+      "Blob",
+      "Tree",
+      "കമ്മിറ്റ്"
+    ],
+    "answer": "Blob"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "ഫയൽ പേരുകളും ബ്ലോബുകളുടെയോ ഉപട്രീകളുടെയോ റഫറൻസുകളും സൂക്ഷിക്കുന്ന Git ഒബ്ജക്റ്റ് തരം ഏതാണ്?",
+    "options": [
+      "Tree",
+      "Blob",
+      "കമ്മിറ്റ്",
+      "കുറിപ്പോടുകൂടിയ ടാഗ്"
+    ],
+    "answer": "Tree"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "അറിയാവുന്ന ഒബ്ജക്റ്റ് IDയുടെ തരം പറയുന്ന കമാൻഡ് ഏതാണ്?",
+    "options": [
+      "git cat-file -s abc1234",
+      "git rev-parse abc1234",
+      "git log -1 abc1234",
+      "git cat-file -t abc1234"
+    ],
+    "answer": "git cat-file -t abc1234"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "HEADന്റെ പൂർണ്ണ ഒബ്ജക്റ്റ് ID കാണിക്കുന്ന കമാൻഡ് ഏതാണ്?",
+    "options": [
+      "git status --short",
+      "git branch --show-current",
+      "git rev-parse HEAD",
+      "git symbolic-ref HEAD"
+    ],
+    "answer": "git rev-parse HEAD"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "featureൽനിന്ന് എത്താവുന്നതും mainൽനിന്ന് എത്താനാകാത്തതുമായ കമ്മിറ്റുകൾ തിരഞ്ഞെടുക്കുന്ന റിവിഷൻ പരിധി ഏതാണ്?",
+    "options": [
+      "main^",
+      "main..feature",
+      "feature..main",
+      "main...feature"
+    ],
+    "answer": "main..feature"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "മെർജ് കമ്മിറ്റുകൾ മാത്രം കാണിക്കുന്ന git log ഓപ്ഷൻ ഏതാണ്?",
+    "options": [
+      "--merges",
+      "--no-merges",
+      "--first-parent",
+      "--reverse"
+    ],
+    "answer": "--merges"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "മാറ്റിയ പാതകളും അവയുടെ മാറ്റ-സ്ഥിതി അക്ഷരങ്ങളും കാണിക്കുന്ന git diff ഓപ്ഷൻ ഏതാണ്?",
+    "options": [
+      "--name-only",
+      "--stat",
+      "--shortstat",
+      "--name-status"
+    ],
+    "answer": "--name-status"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "പാതകൾക്കുള്ള ടെക്സ്റ്റ് സാധാരണീകരണം പോലുള്ള പതിപ്പ്-നിയന്ത്രിത ഗുണങ്ങൾ നിർവചിക്കുന്ന ഫയൽ ഏതാണ്?",
+    "options": [
+      ".gitmodules",
+      ".gitconfig",
+      ".gitattributes",
+      ".gitignore"
+    ],
+    "answer": ".gitattributes"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": ".gitattributesന്റെ '*.sh text eol=lf' നിയമം പൊരുത്തപ്പെടുന്ന ടെക്സ്റ്റ് ഫയലുകൾക്ക് എന്താണ് ആവശ്യപ്പെടുന്നത്?",
+    "options": [
+      "ശൂന്യവരികളുടെ സ്വയമേവയുള്ള നീക്കം",
+      "വർക്കിങ് ട്രീയിൽ LF വരിയവസാനങ്ങൾ",
+      "വർക്കിങ് ട്രീയിൽ CRLF വരിയവസാനങ്ങൾ",
+      "ടെക്സ്റ്റ് പരിവർത്തനമില്ലാതെ ബൈനറിയായി കൈകാര്യം ചെയ്യൽ"
+    ],
+    "answer": "വർക്കിങ് ട്രീയിൽ LF വരിയവസാനങ്ങൾ"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "നിർദിഷ്ട കമ്മിറ്റ് സന്ദേശ ഫയൽ പരിശോധിച്ച് കമ്മിറ്റ് നിരസിക്കാവുന്ന ഹുക്ക് ഏതാണ്?",
+    "options": [
+      "commit-msg",
+      "post-commit",
+      "post-checkout",
+      "post-merge"
+    ],
+    "answer": "commit-msg"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "Git ഹുക്കുകൾക്ക് ഇഷ്ടാനുസൃത ഡയറക്ടറി തിരഞ്ഞെടുക്കുന്ന ക്രമീകരണം ഏതാണ്?",
+    "options": [
+      "core.worktree",
+      "core.excludesFile",
+      "core.attributesFile",
+      "core.hooksPath"
+    ],
+    "answer": "core.hooksPath"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "പങ്കിടുന്ന .gitignore നിയമം ചേർക്കാതെ ഒരു ഡെവലപ്പർക്ക് ട്രാക്ക് ചെയ്യാത്ത ഫയലുകൾ പ്രാദേശികമായി അവഗണിക്കാൻ അനുവദിക്കുന്ന ഫയൽ ഏതാണ്?",
+    "options": [
+      ".git\\description",
+      ".git\\packed-refs",
+      ".git\\info\\exclude",
+      ".git\\HEAD"
+    ],
+    "answer": ".git\\info\\exclude"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "ബൈസെക്റ്റ് സെഷനിൽനിന്ന് പുറത്തുവന്ന് സാധാരണയായി യഥാർത്ഥ ബ്രാഞ്ചിലേക്ക് മടങ്ങുന്ന കമാൻഡ് ഏതാണ്?",
+    "options": [
+      "git bisect log",
+      "git bisect reset",
+      "git bisect skip",
+      "git bisect good"
+    ],
+    "answer": "git bisect reset"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "പാച്ച് പരമ്പരയുടെ രണ്ട് പതിപ്പുകൾ താരതമ്യം ചെയ്യുന്ന കമാൻഡ് ഏതാണ്?",
+    "options": [
+      "git range-diff main..old main..new",
+      "git diff old new",
+      "git log old..new",
+      "git merge-base old new"
+    ],
+    "answer": "git range-diff main..old main..new"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "കമ്മിറ്റ് സൃഷ്ടിക്കുമ്പോൾ അവസാനം Signed-off-by ചേർക്കുന്ന കമാൻഡ് ഏതാണ്?",
+    "options": [
+      "git commit --gpg-sign",
+      "git commit --amend",
+      "git commit --no-verify",
+      "git commit --signoff"
+    ],
+    "answer": "git commit --signoff"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "git log -S'old_name' ഡിഫോൾട്ടായി എന്താണ് തിരയുന്നത്?",
+    "options": [
+      "സന്ദേശത്തിൽ old_name ഉള്ള കമ്മിറ്റുകൾ",
+      "പേരിൽ old_name ഉള്ള ബ്രാഞ്ചുകൾ",
+      "old_name വരുന്ന എണ്ണം മാറ്റുന്ന കമ്മിറ്റുകൾ",
+      "രചയിതാവിന്റെ പേര് old_name ആയ കമ്മിറ്റുകൾ"
+    ],
+    "answer": "old_name വരുന്ന എണ്ണം മാറ്റുന്ന കമ്മിറ്റുകൾ"
+  }
+]

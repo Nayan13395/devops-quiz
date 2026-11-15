@@ -1,3 +1,4 @@
+import '../l10n/game_localizations.dart';
 import 'dart:async';
 import 'dart:math';
 
@@ -118,9 +119,16 @@ class _HigherLowerScreenState extends State<HigherLowerScreen> {
         builder: (dialogContext) => AlertDialog(
           scrollable: true,
           icon: const Icon(Icons.trending_down_rounded, size: 46),
-          title: const Text('Game Over', textAlign: TextAlign.center),
+          title: Text(
+            gameL10n(context).gameUiGameOver,
+            textAlign: TextAlign.center,
+          ),
           content: Text(
-            'The number was $_lastNext.\nStreak: $_streak\nYou earned $_runPoints points!\n\nCome back tomorrow for another chance!',
+            gameL10n(context).gameUiTheNumberWasStreakYouEarnedPointsComeBack(
+              (_lastNext).toString(),
+              (_streak).toString(),
+              (_runPoints).toString(),
+            ),
             textAlign: TextAlign.center,
           ),
           actions: [
@@ -129,7 +137,7 @@ class _HigherLowerScreenState extends State<HigherLowerScreen> {
                 Navigator.pop(dialogContext);
                 Navigator.pop(context);
               },
-              child: const Text('Done'),
+              child: Text(gameL10n(context).gameUiDone),
             ),
           ],
         ),
@@ -144,7 +152,7 @@ class _HigherLowerScreenState extends State<HigherLowerScreen> {
     // Loading state
     if (_isLoading) {
       return Scaffold(
-        appBar: AppBar(title: const Text('Higher or Lower 📈')),
+        appBar: AppBar(title: Text(gameL10n(context).gameUiHigherOrLower)),
         body: const Center(child: CircularProgressIndicator()),
       );
     }
@@ -152,7 +160,7 @@ class _HigherLowerScreenState extends State<HigherLowerScreen> {
     // Already played today
     if (_hasPlayedToday) {
       return Scaffold(
-        appBar: AppBar(title: const Text('Higher or Lower 📈')),
+        appBar: AppBar(title: Text(gameL10n(context).gameUiHigherOrLower)),
         body: SafeArea(
           child: SingleChildScrollView(
             padding: const EdgeInsets.all(24),
@@ -175,9 +183,9 @@ class _HigherLowerScreenState extends State<HigherLowerScreen> {
                           color: colorScheme.primary,
                         ),
                         const SizedBox(height: 24),
-                        const Text(
-                          'Already Played Today!',
-                          style: TextStyle(
+                        Text(
+                          gameL10n(context).gameUiAlreadyPlayedToday,
+                          style: const TextStyle(
                             fontSize: 24,
                             fontWeight: FontWeight.bold,
                           ),
@@ -186,8 +194,16 @@ class _HigherLowerScreenState extends State<HigherLowerScreen> {
                         const SizedBox(height: 16),
                         Text(
                           _lastPlayedDate != null
-                              ? 'You played on ${_lastPlayedDate!.day}/${_lastPlayedDate!.month}/${_lastPlayedDate!.year}.\n\nCome back tomorrow to build a new streak!'
-                              : 'You have already played today.\n\nCome back tomorrow for another chance!',
+                              ? gameL10n(
+                                  context,
+                                ).gameUiYouPlayedOnComeBackTomorrowToBuildA(
+                                  (_lastPlayedDate!.day).toString(),
+                                  (_lastPlayedDate!.month).toString(),
+                                  (_lastPlayedDate!.year).toString(),
+                                )
+                              : gameL10n(
+                                  context,
+                                ).gameUiYouHaveAlreadyPlayedTodayComeBackTomorrowFor,
                           textAlign: TextAlign.center,
                           style: TextStyle(
                             fontSize: 16,
@@ -198,7 +214,7 @@ class _HigherLowerScreenState extends State<HigherLowerScreen> {
                         FilledButton.icon(
                           onPressed: () => Navigator.pop(context),
                           icon: const Icon(Icons.arrow_back_rounded),
-                          label: const Text('Back to Games'),
+                          label: Text(gameL10n(context).gameUiBackToGames),
                         ),
                       ],
                     ),
@@ -213,7 +229,7 @@ class _HigherLowerScreenState extends State<HigherLowerScreen> {
 
     // Game screen
     return Scaffold(
-      appBar: AppBar(title: const Text('Higher or Lower 📈')),
+      appBar: AppBar(title: Text(gameL10n(context).gameUiHigherOrLower)),
       body: SafeArea(
         child: LayoutBuilder(
           builder: (context, constraints) => SingleChildScrollView(
@@ -232,17 +248,31 @@ class _HigherLowerScreenState extends State<HigherLowerScreen> {
                           alignment: WrapAlignment.center,
                           spacing: 12,
                           children: [
-                            Chip(label: Text('🔥 Streak: $_streak')),
-                            Chip(label: Text('⭐ Points: $_runPoints')),
+                            Chip(
+                              label: Text(
+                                gameL10n(
+                                  context,
+                                ).gameUiStreak((_streak).toString()),
+                              ),
+                            ),
+                            Chip(
+                              label: Text(
+                                gameL10n(
+                                  context,
+                                ).gameUiPoints((_runPoints).toString()),
+                              ),
+                            ),
                           ],
                         ),
 
                         const SizedBox(height: 30),
 
-                        const Text(
-                          'Will the next number be higher or lower?',
+                        Text(
+                          gameL10n(
+                            context,
+                          ).gameUiWillTheNextNumberBeHigherOrLower,
                           textAlign: TextAlign.center,
-                          style: TextStyle(fontSize: 18),
+                          style: const TextStyle(fontSize: 18),
                         ),
 
                         const SizedBox(height: 20),
@@ -282,9 +312,9 @@ class _HigherLowerScreenState extends State<HigherLowerScreen> {
                                   icon: const Icon(
                                     Icons.arrow_downward_rounded,
                                   ),
-                                  label: const Text(
-                                    'Lower',
-                                    style: TextStyle(fontSize: 18),
+                                  label: Text(
+                                    gameL10n(context).gameUiLower,
+                                    style: const TextStyle(fontSize: 18),
                                   ),
                                 ),
                               ),
@@ -298,9 +328,9 @@ class _HigherLowerScreenState extends State<HigherLowerScreen> {
                                       ? null
                                       : () => _guess(true),
                                   icon: const Icon(Icons.arrow_upward_rounded),
-                                  label: const Text(
-                                    'Higher',
-                                    style: TextStyle(fontSize: 18),
+                                  label: Text(
+                                    gameL10n(context).gameUiHigher,
+                                    style: const TextStyle(fontSize: 18),
                                   ),
                                 ),
                               ),

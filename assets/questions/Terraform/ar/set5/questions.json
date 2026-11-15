@@ -1,0 +1,302 @@
+[
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "أي كتلة تصريحية تسجل تغير عنوان المورد كي يحافظ Terraform على الكائن الموجود؟",
+    "options": [
+      "removed",
+      "check",
+      "moved",
+      "import"
+    ],
+    "answer": "moved"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "أي وسيط في كتلة moved يحدد عنوان المورد الجديد؟",
+    "options": [
+      "provider",
+      "to",
+      "from",
+      "id"
+    ],
+    "answer": "to"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "أي كتلة تعلن كائن بنية تحتية موجودا لاستيراده أثناء apply؟",
+    "options": [
+      "import",
+      "moved",
+      "output",
+      "check"
+    ],
+    "answer": "import"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "أي إعداد في كتلة removed ينسى موردا دون تدمير كائنه الفعلي؟",
+    "options": [
+      "lifecycle { destroy = true }",
+      "lifecycle { create_before_destroy = true }",
+      "lifecycle { prevent_destroy = false }",
+      "lifecycle { destroy = false }"
+    ],
+    "answer": "lifecycle { destroy = false }"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "إذا وُسم متغير إدخال عادي بأنه sensitive، فماذا يحدث لقيمته في ملف الحالة المحلي؟",
+    "options": [
+      "تُستبعد دائما من الحالة",
+      "تُستبدل باسم المتغير قبل التخزين",
+      "قد تُخزن كنص صريح رغم إخفائها في خرج CLI المعتاد",
+      "يشفّرها علم sensitive تلقائيا"
+    ],
+    "answer": "قد تُخزن كنص صريح رغم إخفائها في خرج CLI المعتاد"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "أي صيغة لأمر output قد تكشف قيم مخرجات حساسة بشكل مقروء آليا؟",
+    "options": [
+      "terraform providers schema -json",
+      "terraform output -json",
+      "terraform output -help",
+      "terraform output -no-color"
+    ],
+    "answer": "terraform output -json"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "أي دالة تحوّل قيمة Terraform إلى سلسلة JSON؟",
+    "options": [
+      "jsonencode",
+      "jsondecode",
+      "yamldecode",
+      "file"
+    ],
+    "answer": "jsonencode"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "أي دالة تحلل سلسلة JSON إلى قيمة Terraform؟",
+    "options": [
+      "jsonencode",
+      "yamlencode",
+      "templatefile",
+      "jsondecode"
+    ],
+    "answer": "jsondecode"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "أي دالة تعالج ملف قالب باستخدام خريطة المتغيرات المعطاة؟",
+    "options": [
+      "fileset",
+      "filebase64",
+      "templatefile",
+      "file"
+    ],
+    "answer": "templatefile"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "أي دالة تعيد أول وسيط يُقيّم دون خطأ ديناميكي؟",
+    "options": [
+      "lookup",
+      "try",
+      "can",
+      "coalesce"
+    ],
+    "answer": "try"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "أي دالة تخبر بإمكانية تقييم تعبير دون خطأ ديناميكي؟",
+    "options": [
+      "can",
+      "try",
+      "contains",
+      "length"
+    ],
+    "answer": "can"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "إذا احتوت خريطتان ممررتان إلى merge على المفتاح نفسه، فأي قيمة تتغلب؟",
+    "options": [
+      "قيمة الوسيط الأسبق",
+      "تُدمج القيم دائما في قائمة",
+      "يسبب المفتاح المكرر خطأ دائما",
+      "قيمة الوسيط اللاحق"
+    ],
+    "answer": "قيمة الوسيط اللاحق"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "أي قيد لإصدار موفر يسمح بـ 5.4.x ولا يسمح بـ 5.5.0؟",
+    "options": [
+      ">= 5.4.0",
+      ">= 5.0, < 6.0",
+      "~> 5.4.0",
+      "~> 5.4"
+    ],
+    "answer": "~> 5.4.0"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "كيف يعامل Terraform عادة وسيط مورد قيمته null؟",
+    "options": [
+      "كطلب حذف المورد كله",
+      "كوسيط غير مذكور، تطبق عليه قيمه الافتراضية ومتطلباته",
+      "كسلسلة فارغة لدى كل الموفرين",
+      "كصفر عددي لدى كل الموفرين"
+    ],
+    "answer": "كوسيط غير مذكور، تطبق عليه قيمه الافتراضية ومتطلباته"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "أي تعبير يحدد مسار نظام الملفات للوحدة التي كُتب فيها؟",
+    "options": [
+      "path.module",
+      "path.root",
+      "path.cwd",
+      "terraform.workspace"
+    ],
+    "answer": "path.module"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "أي ميزة في كتلة terraform يُنصح بها لربط إعداد CLI مع HCP Terraform؟",
+    "options": [
+      "locals",
+      "moved",
+      "check",
+      "cloud"
+    ],
+    "answer": "cloud"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "ما قيم المستوى الأعلى التي يعرضها terraform_remote_state مباشرة من الحالة المشار إليها؟",
+    "options": [
+      "جميع بيانات اعتماد الموفرين",
+      "كل القيم المحلية للوحدات الفرعية",
+      "مخرجات الوحدة الجذرية",
+      "كل سمة مورد كمخرج في المستوى الأعلى"
+    ],
+    "answer": "مخرجات الوحدة الجذرية"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "أي قاعدة لدورة الحياة تطلب الاستبدال عند تغير مورد مُدار مشار إليه؟",
+    "options": [
+      "create_before_destroy",
+      "replace_triggered_by",
+      "ignore_changes",
+      "prevent_destroy"
+    ],
+    "answer": "replace_triggered_by"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "أي مورد مُدار مدمج يمنح قيمة إدخال عادية دورة حياة مورد دون تثبيت موفر مستقل؟",
+    "options": [
+      "terraform_data",
+      "terraform_remote_state",
+      "local_file",
+      "random_id"
+    ],
+    "answer": "terraform_data"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "ماذا يحدث إذا فشل تأكيد في كتلة check أثناء plan أو apply عادي؟",
+    "options": [
+      "يدمر Terraform الكائن المفحوص دائما",
+      "يزيل Terraform كتلة check بصمت",
+      "ينهي Terraform التنفيذ دائما قبل تحديث أي موارد",
+      "يعرض Terraform تحذيرا دون حظر العملية لمجرد هذا الفشل"
+    ],
+    "answer": "يعرض Terraform تحذيرا دون حظر العملية لمجرد هذا الفشل"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "ماذا يحدث إذا قُيّم شرط مسبق لدورة حياة مورد بأنه false؟",
+    "options": [
+      "يحوّل Terraform المورد إلى مصدر بيانات",
+      "يستبدل Terraform الشرط المسبق بتحذير فقط",
+      "يبلغ Terraform عن خطأ ويمنع العملية المعنية",
+      "يتجاهل Terraform الشرط المسبق حتى التشغيل التالي"
+    ],
+    "answer": "يبلغ Terraform عن خطأ ويمنع العملية المعنية"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "أي أمر ينفذ ملفات الاختبار الأصلية في Terraform؟",
+    "options": [
+      "terraform console",
+      "terraform test",
+      "terraform validate",
+      "terraform fmt"
+    ],
+    "answer": "terraform test"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "أي إعداد يجعل كتلة run في اختبار Terraform تنفذ plan بدلا من apply الافتراضي؟",
+    "options": [
+      "command = plan",
+      "command = validate",
+      "command = refresh",
+      "command = console"
+    ],
+    "answer": "command = plan"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "أي دالة تعيد مجموعة المسارات النسبية المطابقة لنمط glob داخل مجلد؟",
+    "options": [
+      "file",
+      "dirname",
+      "basename",
+      "fileset"
+    ],
+    "answer": "fileset"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "لماذا قد لا تكفي مساحات عمل CLI وحدها لفصل بيئات تتطلب ضوابط وصول مختلفة؟",
+    "options": [
+      "لأنها تمنع قيم إدخال مختلفة للمتغيرات",
+      "لأنها تفرض أسماء الموارد نفسها على كل البيئات",
+      "لأنها تشترك في إعداد الواجهة الخلفية وسياق المصادقة",
+      "لأنها تشترك دائما في لقطة حالة واحدة"
+    ],
+    "answer": "لأنها تشترك في إعداد الواجهة الخلفية وسياق المصادقة"
+  }
+]

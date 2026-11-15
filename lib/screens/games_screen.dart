@@ -1,3 +1,4 @@
+import '../l10n/game_localizations.dart';
 import 'package:flutter/material.dart';
 
 import 'lucky_slot_screen.dart';
@@ -30,25 +31,79 @@ class _GamesScreenState extends State<GamesScreen> {
   final TextEditingController _searchController = TextEditingController();
   String _query = '';
 
-  static const List<(String, String)> _searchableGames = [
-    ('Spin Wheel', 'Spin and win bonus points'),
-    ('Scratch Card', 'Scratch to reveal a reward'),
-    ('Lucky Slots', 'Roll the slots and win points'),
-    ('Mystery Deal', 'Pick a mystery box and answer'),
-    ('Memory Match', 'Match DevOps pairs'),
-    ('Word Guess', 'Guess DevOps words through levels'),
-    ('Find Words', 'Search a grid for hidden DevOps terms'),
-    ('Spot the Difference', 'Find five changes between two illustrated scenes'),
-    ('Jigsaw Puzzle', 'Rebuild original illustrated scenes across 100 puzzles'),
-    ('High or Low', 'Build a streak'),
-    ('True or False Blitz', 'Quick answer quiz'),
-    ('Command Match', 'Match commands to meanings'),
-    ('Port Master', 'Guess default ports'),
-    ('Tic-Tac-Toe', 'O X noughts and crosses computer'),
-    ('Connect Four', 'Drop four discs'),
-    ('Ludo', 'Race against bots'),
-    ('Chess', 'Chess board legal moves two players'),
-    ('Snake and Ladders', 'Dice board snakes ladders two players'),
+  List<(String, String)> get _searchableGames => [
+    (
+      gameL10n(context).gameUiSpinWheel,
+      gameL10n(context).gameUiSpinWinBonusPoints,
+    ),
+    (
+      gameL10n(context).gameUiScratchCard,
+      gameL10n(context).gameUiScratchToRevealYourReward,
+    ),
+    (
+      gameL10n(context).gameUiLuckySlots,
+      gameL10n(context).gameUiRollTheSlotsWinPoints,
+    ),
+    (
+      gameL10n(context).gameUiMysteryDeal,
+      gameL10n(context).gameUiPickAMysteryBoxAndAnswerCorrectlyToWin,
+    ),
+    (
+      gameL10n(context).gameUiMemoryMatch,
+      gameL10n(context).gameUiMatchDevOpsPairsToEarnPoints,
+    ),
+    (
+      gameL10n(context).gameUiWordGuess,
+      gameL10n(context).gameUiGuessTheDevOpsTermIn6Tries,
+    ),
+    (
+      gameL10n(context).gameUiFindWords,
+      gameL10n(context).gameUiSwipeToFindDevOpsWordsIn500Levels,
+    ),
+    (
+      gameL10n(context).gameUiSpotTheDifference,
+      gameL10n(context).gameUiFindFiveChangesBetweenTwoIllustratedScenesbfdf80c,
+    ),
+    (
+      gameL10n(context).gameUiJigsawPuzzle,
+      gameL10n(context).gameUiRebuildSharedHDAnimalAndNaturePictures53ccf61,
+    ),
+    (
+      gameL10n(context).gameUiHighOrLow,
+      gameL10n(context).gameUiBuildAStreakAndBankYourPoints,
+    ),
+    (
+      gameL10n(context).gameUiTrueOrFalseBlitzd3a29d7,
+      gameL10n(context).gameUiBeatTheClockWithQuickAnswers,
+    ),
+    (
+      gameL10n(context).gameUiCommandMatch670a76e,
+      gameL10n(context).gameUiMatchCommandsToWhatTheyDo,
+    ),
+    (
+      gameL10n(context).gameUiPortMaster8f5fd42,
+      gameL10n(context).gameUiGuessDefaultPortsWith3Lives,
+    ),
+    (
+      gameL10n(context).gameUiTicTacToe,
+      gameL10n(context).gameUiPlayOXAgainstTheComputer,
+    ),
+    (
+      gameL10n(context).gameUiConnectFour,
+      gameL10n(context).gameUiDropFourDiscsInARowToWin,
+    ),
+    (
+      gameL10n(context).gameUiLudo,
+      gameL10n(context).gameUiRaceYourPiecesAgainstThreeBots,
+    ),
+    (
+      gameL10n(context).gameUiChess,
+      gameL10n(context).gameUiPlayALegalTwoPlayerChessMatch,
+    ),
+    (
+      gameL10n(context).gameUiSnakeAndLadders,
+      gameL10n(context).gameUiRaceTo100ClimbLaddersAndDodgeSnakes,
+    ),
   ];
 
   bool _matchesSearch(String title, String description) {
@@ -79,7 +134,7 @@ class _GamesScreenState extends State<GamesScreen> {
     final ColorScheme colorScheme = Theme.of(context).colorScheme;
 
     return Scaffold(
-      appBar: AppBar(title: const Text('Games 🎮')),
+      appBar: AppBar(title: Text(gameL10n(context).gameUiGames)),
       body: SafeArea(
         child: LayoutBuilder(
           builder: (context, constraints) {
@@ -119,9 +174,9 @@ class _GamesScreenState extends State<GamesScreen> {
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            const Text(
-                              'Play & Earn',
-                              style: TextStyle(
+                            Text(
+                              gameL10n(context).gameUiPlayEarn,
+                              style: const TextStyle(
                                 fontSize: 26,
                                 fontWeight: FontWeight.bold,
                               ),
@@ -130,7 +185,9 @@ class _GamesScreenState extends State<GamesScreen> {
                             const SizedBox(height: 6),
 
                             Text(
-                              'Play games and earn bonus points!',
+                              gameL10n(
+                                context,
+                              ).gameUiPlayGamesAndEarnBonusPoints,
                               style: TextStyle(
                                 fontSize: 16,
                                 color: colorScheme.onSurfaceVariant,
@@ -145,12 +202,14 @@ class _GamesScreenState extends State<GamesScreen> {
                                   setState(() => _query = value),
                               textInputAction: TextInputAction.search,
                               decoration: InputDecoration(
-                                hintText: 'Search games',
+                                hintText: gameL10n(context).gameUiSearchGames,
                                 prefixIcon: const Icon(Icons.search_rounded),
                                 suffixIcon: _query.isEmpty
                                     ? null
                                     : IconButton(
-                                        tooltip: 'Clear search',
+                                        tooltip: gameL10n(
+                                          context,
+                                        ).gameUiClearSearch,
                                         onPressed: () {
                                           _searchController.clear();
                                           setState(() => _query = '');
@@ -179,7 +238,9 @@ class _GamesScreenState extends State<GamesScreen> {
                         hasScrollBody: false,
                         child: Center(
                           child: Text(
-                            'No games match "${_query.trim()}"',
+                            gameL10n(
+                              context,
+                            ).gameUiNoGamesMatch((_query.trim()).toString()),
                             textAlign: TextAlign.center,
                             style: TextStyle(
                               color: colorScheme.onSurfaceVariant,
@@ -197,24 +258,25 @@ class _GamesScreenState extends State<GamesScreen> {
 
                           mainAxisSpacing: 14,
 
-                          childAspectRatio: columnCount == 1
-                              ? 2.85
-                              : columnCount == 2
-                              ? 0.82
-                              : 0.90,
+                          mainAxisExtent:
+                              88 *
+                              (MediaQuery.textScalerOf(context).scale(16) / 16)
+                                  .clamp(1.0, double.infinity),
                         ),
                         delegate: SliverChildListDelegate([
                           // =================================
                           // SPIN WHEEL
                           // =================================
                           if (_matchesSearch(
-                            'Spin Wheel',
-                            'Spin & win bonus points.',
+                            gameL10n(context).gameUiSpinWheel,
+                            gameL10n(context).gameUiSpinWinBonusPoints,
                           ))
                             _GameTile(
                               icon: '🎡',
-                              title: 'Spin Wheel',
-                              description: 'Spin & win bonus points.',
+                              title: gameL10n(context).gameUiSpinWheel,
+                              description: gameL10n(
+                                context,
+                              ).gameUiSpinWinBonusPoints,
                               onTap: () {
                                 Navigator.push(
                                   context,
@@ -229,13 +291,15 @@ class _GamesScreenState extends State<GamesScreen> {
                           // SCRATCH CARD
                           // =================================
                           if (_matchesSearch(
-                            'Scratch Card',
-                            'Scratch to reveal your reward.',
+                            gameL10n(context).gameUiScratchCard,
+                            gameL10n(context).gameUiScratchToRevealYourReward,
                           ))
                             _GameTile(
                               icon: '🎟️',
-                              title: 'Scratch Card',
-                              description: 'Scratch to reveal your reward.',
+                              title: gameL10n(context).gameUiScratchCard,
+                              description: gameL10n(
+                                context,
+                              ).gameUiScratchToRevealYourReward,
                               onTap: () {
                                 Navigator.push(
                                   context,
@@ -250,13 +314,15 @@ class _GamesScreenState extends State<GamesScreen> {
                           // LUCKY SLOTS
                           // =================================
                           if (_matchesSearch(
-                            'Lucky Slots',
-                            'Roll the slots & win points.',
+                            gameL10n(context).gameUiLuckySlots,
+                            gameL10n(context).gameUiRollTheSlotsWinPoints,
                           ))
                             _GameTile(
                               icon: '🎰',
-                              title: 'Lucky Slots',
-                              description: 'Roll the slots & win points.',
+                              title: gameL10n(context).gameUiLuckySlots,
+                              description: gameL10n(
+                                context,
+                              ).gameUiRollTheSlotsWinPoints,
                               onTap: () {
                                 Navigator.push(
                                   context,
@@ -271,14 +337,17 @@ class _GamesScreenState extends State<GamesScreen> {
                           // MYSTERY DEAL
                           // =================================
                           if (_matchesSearch(
-                            'Mystery Deal',
-                            'Pick a mystery box and answer correctly to win points.',
+                            gameL10n(context).gameUiMysteryDeal,
+                            gameL10n(
+                              context,
+                            ).gameUiPickAMysteryBoxAndAnswerCorrectlyToWin,
                           ))
                             _GameTile(
                               icon: '💼',
-                              title: 'Mystery Deal',
-                              description:
-                                  'Pick a mystery box and answer correctly to win points.',
+                              title: gameL10n(context).gameUiMysteryDeal,
+                              description: gameL10n(
+                                context,
+                              ).gameUiPickAMysteryBoxAndAnswerCorrectlyToWin,
                               onTap: () {
                                 Navigator.push(
                                   context,
@@ -293,13 +362,17 @@ class _GamesScreenState extends State<GamesScreen> {
                           // MEMORY MATCH (NEW)
                           // =================================
                           if (_matchesSearch(
-                            'Memory Match',
-                            'Match DevOps pairs to earn points.',
+                            gameL10n(context).gameUiMemoryMatch,
+                            gameL10n(
+                              context,
+                            ).gameUiMatchDevOpsPairsToEarnPoints,
                           ))
                             _GameTile(
                               icon: '🧠',
-                              title: 'Memory Match',
-                              description: 'Match DevOps pairs to earn points.',
+                              title: gameL10n(context).gameUiMemoryMatch,
+                              description: gameL10n(
+                                context,
+                              ).gameUiMatchDevOpsPairsToEarnPoints,
                               onTap: () {
                                 Navigator.push(
                                   context,
@@ -314,13 +387,15 @@ class _GamesScreenState extends State<GamesScreen> {
                           // WORD GUESS (NEW)
                           // =================================
                           if (_matchesSearch(
-                            'Word Guess',
-                            'Guess the DevOps term in 6 tries.',
+                            gameL10n(context).gameUiWordGuess,
+                            gameL10n(context).gameUiGuessTheDevOpsTermIn6Tries,
                           ))
                             _GameTile(
                               icon: '🔤',
-                              title: 'Word Guess',
-                              description: 'Guess the DevOps term in 6 tries.',
+                              title: gameL10n(context).gameUiWordGuess,
+                              description: gameL10n(
+                                context,
+                              ).gameUiGuessTheDevOpsTermIn6Tries,
                               onTap: () {
                                 Navigator.push(
                                   context,
@@ -336,14 +411,17 @@ class _GamesScreenState extends State<GamesScreen> {
                           // FIND WORDS
                           // =================================
                           if (_matchesSearch(
-                            'Find Words',
-                            'Search a grid for hidden DevOps terms.',
+                            gameL10n(context).gameUiFindWords,
+                            gameL10n(
+                              context,
+                            ).gameUiSwipeToFindDevOpsWordsIn500Levels,
                           ))
                             _GameTile(
                               icon: '🔎',
-                              title: 'Find Words',
-                              description:
-                                  'Swipe to find DevOps words in 500 levels.',
+                              title: gameL10n(context).gameUiFindWords,
+                              description: gameL10n(
+                                context,
+                              ).gameUiSwipeToFindDevOpsWordsIn500Levels,
                               onTap: () {
                                 Navigator.push(
                                   context,
@@ -355,14 +433,17 @@ class _GamesScreenState extends State<GamesScreen> {
                             ),
 
                           if (_matchesSearch(
-                            'Spot the Difference',
-                            'Find five changes between two illustrated scenes.',
+                            gameL10n(context).gameUiSpotTheDifference,
+                            gameL10n(
+                              context,
+                            ).gameUiFindFiveChangesBetweenTwoIllustratedScenesbfdf80c,
                           ))
                             _GameTile(
                               icon: '👀',
-                              title: 'Spot the Difference',
-                              description:
-                                  'Find five changes between two illustrated scenes.',
+                              title: gameL10n(context).gameUiSpotTheDifference,
+                              description: gameL10n(
+                                context,
+                              ).gameUiFindFiveChangesBetweenTwoIllustratedScenesbfdf80c,
                               onTap: () => Navigator.push(
                                 context,
                                 MaterialPageRoute(
@@ -376,14 +457,17 @@ class _GamesScreenState extends State<GamesScreen> {
                           // JIGSAW PUZZLE
                           // =================================
                           if (_matchesSearch(
-                            'Jigsaw Puzzle',
-                            'Rebuild original illustrated scenes across 100 puzzles.',
+                            gameL10n(context).gameUiJigsawPuzzle,
+                            gameL10n(
+                              context,
+                            ).gameUiRebuildSharedHDAnimalAndNaturePictures53ccf61,
                           ))
                             _GameTile(
                               icon: '🧩',
-                              title: 'Jigsaw Puzzle',
-                              description:
-                                  'Rebuild original illustrated scenes across 100 puzzles.',
+                              title: gameL10n(context).gameUiJigsawPuzzle,
+                              description: gameL10n(
+                                context,
+                              ).gameUiRebuildSharedHDAnimalAndNaturePictures53ccf61,
                               onTap: () {
                                 Navigator.push(
                                   context,
@@ -398,14 +482,17 @@ class _GamesScreenState extends State<GamesScreen> {
                           // HIGHER OR LOWER (NEW)
                           // =================================
                           if (_matchesSearch(
-                            'High or Low',
-                            'Build a streak and bank your points.',
+                            gameL10n(context).gameUiHighOrLow,
+                            gameL10n(
+                              context,
+                            ).gameUiBuildAStreakAndBankYourPoints,
                           ))
                             _GameTile(
                               icon: '📈',
-                              title: 'High or Low',
-                              description:
-                                  'Build a streak and bank your points.',
+                              title: gameL10n(context).gameUiHighOrLow,
+                              description: gameL10n(
+                                context,
+                              ).gameUiBuildAStreakAndBankYourPoints,
                               onTap: () {
                                 Navigator.push(
                                   context,
@@ -420,13 +507,19 @@ class _GamesScreenState extends State<GamesScreen> {
                           // TRUE OR FALSE BLITZ (NEW)
                           // =================================
                           if (_matchesSearch(
-                            'True or False Blitz',
-                            'Beat the clock with quick answers.',
+                            gameL10n(context).gameUiTrueOrFalseBlitzd3a29d7,
+                            gameL10n(
+                              context,
+                            ).gameUiBeatTheClockWithQuickAnswers,
                           ))
                             _GameTile(
                               icon: '⚡',
-                              title: 'True or False Blitz 🆕',
-                              description: 'Beat the clock with quick answers.',
+                              title: gameL10n(
+                                context,
+                              ).gameUiTrueOrFalseBlitzd3a29d7,
+                              description: gameL10n(
+                                context,
+                              ).gameUiBeatTheClockWithQuickAnswers,
                               onTap: () {
                                 Navigator.push(
                                   context,
@@ -442,13 +535,17 @@ class _GamesScreenState extends State<GamesScreen> {
                           // COMMAND MATCH (NEW)
                           // =================================
                           if (_matchesSearch(
-                            'Command Match',
-                            'Match commands to what they do.',
+                            gameL10n(context).gameUiCommandMatch670a76e,
+                            gameL10n(context).gameUiMatchCommandsToWhatTheyDo,
                           ))
                             _GameTile(
                               icon: '🔗',
-                              title: 'Command Match 🆕',
-                              description: 'Match commands to what they do.',
+                              title: gameL10n(
+                                context,
+                              ).gameUiCommandMatch670a76e,
+                              description: gameL10n(
+                                context,
+                              ).gameUiMatchCommandsToWhatTheyDo,
                               onTap: () {
                                 Navigator.push(
                                   context,
@@ -463,13 +560,15 @@ class _GamesScreenState extends State<GamesScreen> {
                           // PORT MASTER (NEW)
                           // =================================
                           if (_matchesSearch(
-                            'Port Master',
-                            'Guess default ports with 3 lives.',
+                            gameL10n(context).gameUiPortMaster8f5fd42,
+                            gameL10n(context).gameUiGuessDefaultPortsWith3Lives,
                           ))
                             _GameTile(
                               icon: '🔌',
-                              title: 'Port Master 🆕',
-                              description: 'Guess default ports with 3 lives.',
+                              title: gameL10n(context).gameUiPortMaster8f5fd42,
+                              description: gameL10n(
+                                context,
+                              ).gameUiGuessDefaultPortsWith3Lives,
                               onTap: () {
                                 Navigator.push(
                                   context,
@@ -484,13 +583,15 @@ class _GamesScreenState extends State<GamesScreen> {
                           // TIC-TAC-TOE
                           // =================================
                           if (_matchesSearch(
-                            'Tic-Tac-Toe',
-                            'Play O/X against the computer.',
+                            gameL10n(context).gameUiTicTacToe,
+                            gameL10n(context).gameUiPlayOXAgainstTheComputer,
                           ))
                             _GameTile(
                               icon: '⭕',
-                              title: 'Tic-Tac-Toe',
-                              description: 'Play O/X against the computer.',
+                              title: gameL10n(context).gameUiTicTacToe,
+                              description: gameL10n(
+                                context,
+                              ).gameUiPlayOXAgainstTheComputer,
                               onTap: () {
                                 Navigator.push(
                                   context,
@@ -505,13 +606,15 @@ class _GamesScreenState extends State<GamesScreen> {
                           // CONNECT FOUR
                           // =================================
                           if (_matchesSearch(
-                            'Connect Four',
-                            'Drop four discs in a row to win.',
+                            gameL10n(context).gameUiConnectFour,
+                            gameL10n(context).gameUiDropFourDiscsInARowToWin,
                           ))
                             _GameTile(
                               icon: '🔴',
-                              title: 'Connect Four',
-                              description: 'Drop four discs in a row to win.',
+                              title: gameL10n(context).gameUiConnectFour,
+                              description: gameL10n(
+                                context,
+                              ).gameUiDropFourDiscsInARowToWin,
                               onTap: () {
                                 Navigator.push(
                                   context,
@@ -526,14 +629,17 @@ class _GamesScreenState extends State<GamesScreen> {
                           // LUDO
                           // =================================
                           if (_matchesSearch(
-                            'Ludo',
-                            'Race your pieces against three bots.',
+                            gameL10n(context).gameUiLudo,
+                            gameL10n(
+                              context,
+                            ).gameUiRaceYourPiecesAgainstThreeBots,
                           ))
                             _GameTile(
                               icon: '🎲',
-                              title: 'Ludo',
-                              description:
-                                  'Race your pieces against three bots.',
+                              title: gameL10n(context).gameUiLudo,
+                              description: gameL10n(
+                                context,
+                              ).gameUiRaceYourPiecesAgainstThreeBots,
                               onTap: () {
                                 Navigator.push(
                                   context,
@@ -544,14 +650,17 @@ class _GamesScreenState extends State<GamesScreen> {
                               },
                             ),
                           if (_matchesSearch(
-                            'Chess',
-                            'Local two-player chess with legal moves.',
+                            gameL10n(context).gameUiChess,
+                            gameL10n(
+                              context,
+                            ).gameUiPlayALegalTwoPlayerChessMatch,
                           ))
                             _GameTile(
                               icon: '♟️',
-                              title: 'Chess',
-                              description:
-                                  'Play a legal two-player chess match.',
+                              title: gameL10n(context).gameUiChess,
+                              description: gameL10n(
+                                context,
+                              ).gameUiPlayALegalTwoPlayerChessMatch,
                               onTap: () => Navigator.push(
                                 context,
                                 MaterialPageRoute(
@@ -560,14 +669,17 @@ class _GamesScreenState extends State<GamesScreen> {
                               ),
                             ),
                           if (_matchesSearch(
-                            'Snake and Ladders',
-                            'Two-player dice board game.',
+                            gameL10n(context).gameUiSnakeAndLadders,
+                            gameL10n(
+                              context,
+                            ).gameUiRaceTo100ClimbLaddersAndDodgeSnakes,
                           ))
                             _GameTile(
                               icon: '🪜',
-                              title: 'Snake and Ladders',
-                              description:
-                                  'Race to 100. Climb ladders and dodge snakes.',
+                              title: gameL10n(context).gameUiSnakeAndLadders,
+                              description: gameL10n(
+                                context,
+                              ).gameUiRaceTo100ClimbLaddersAndDodgeSnakes,
                               onTap: () => Navigator.push(
                                 context,
                                 MaterialPageRoute(
@@ -618,148 +730,57 @@ class _GameTile extends StatelessWidget {
       child: InkWell(
         onTap: onTap,
         borderRadius: BorderRadius.circular(20),
-        child: LayoutBuilder(
-          builder: (context, constraints) {
-            if (constraints.maxWidth < 360 || constraints.maxHeight < 260) {
-              return Padding(
-                padding: const EdgeInsets.symmetric(
-                  horizontal: 12,
-                  vertical: 8,
+        child: Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
+          child: Row(
+            children: [
+              Container(
+                width: 48,
+                height: 48,
+                alignment: Alignment.center,
+                decoration: BoxDecoration(
+                  color: colorScheme.primaryContainer,
+                  borderRadius: BorderRadius.circular(12),
                 ),
-                child: Row(
+                child: Text(icon, style: const TextStyle(fontSize: 28)),
+              ),
+              const SizedBox(width: 12),
+              Expanded(
+                child: Column(
+                  mainAxisSize: MainAxisSize.min,
+                  crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Container(
-                      width: 48,
-                      height: 48,
-                      alignment: Alignment.center,
-                      decoration: BoxDecoration(
-                        color: colorScheme.primaryContainer,
-                        borderRadius: BorderRadius.circular(12),
-                      ),
-                      child: Text(icon, style: const TextStyle(fontSize: 28)),
-                    ),
-                    const SizedBox(width: 12),
-                    Expanded(
-                      child: Column(
-                        mainAxisSize: MainAxisSize.min,
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Text(
-                            title,
-                            maxLines: 1,
-                            overflow: TextOverflow.ellipsis,
-                            style: const TextStyle(
-                              fontSize: 16,
-                              fontWeight: FontWeight.bold,
-                            ),
-                          ),
-                          const SizedBox(height: 4),
-                          Text(
-                            description,
-                            maxLines: 2,
-                            overflow: TextOverflow.ellipsis,
-                            style: TextStyle(
-                              fontSize: 12,
-                              height: 1.2,
-                              color: colorScheme.onSurfaceVariant,
-                            ),
-                          ),
-                        ],
+                    Text(
+                      title,
+                      maxLines: 1,
+                      overflow: TextOverflow.ellipsis,
+                      style: const TextStyle(
+                        fontSize: 16,
+                        fontWeight: FontWeight.bold,
                       ),
                     ),
-                    const SizedBox(width: 8),
-                    Icon(
-                      Icons.play_circle_fill_rounded,
-                      color: colorScheme.primary,
-                      size: 34,
+                    const SizedBox(height: 4),
+                    Text(
+                      description,
+                      maxLines: 2,
+                      overflow: TextOverflow.ellipsis,
+                      style: TextStyle(
+                        fontSize: 12,
+                        height: 1.2,
+                        color: colorScheme.onSurfaceVariant,
+                      ),
                     ),
                   ],
                 ),
-              );
-            }
-
-            return Padding(
-              padding: const EdgeInsets.all(14),
-              child: Column(
-                children: [
-                  // =============================================
-                  // Keep game icons and titles aligned in the card grid.
-                  // =============================================
-                  Align(
-                    alignment: Alignment.topRight,
-                    child: const SizedBox(height: 22),
-                  ),
-
-                  const Spacer(),
-
-                  // =============================================
-                  // GAME ICON
-                  // =============================================
-                  Container(
-                    width: 72,
-                    height: 72,
-                    alignment: Alignment.center,
-                    decoration: BoxDecoration(
-                      color: colorScheme.primaryContainer,
-                      borderRadius: BorderRadius.circular(20),
-                    ),
-                    child: Text(icon, style: const TextStyle(fontSize: 38)),
-                  ),
-
-                  const SizedBox(height: 14),
-
-                  // =============================================
-                  // GAME NAME
-                  // =============================================
-                  Text(
-                    title,
-                    textAlign: TextAlign.center,
-                    maxLines: 1,
-                    overflow: TextOverflow.ellipsis,
-                    style: const TextStyle(
-                      fontSize: 17,
-                      fontWeight: FontWeight.bold,
-                    ),
-                  ),
-
-                  const SizedBox(height: 7),
-
-                  // =============================================
-                  // DESCRIPTION
-                  // =============================================
-                  Text(
-                    description,
-                    textAlign: TextAlign.center,
-                    maxLines: 2, // ✅ Limit to 2 lines
-                    overflow: TextOverflow.ellipsis,
-                    style: TextStyle(
-                      fontSize: 12,
-                      height: 1.25,
-                      color: colorScheme.onSurfaceVariant,
-                    ),
-                  ),
-
-                  const Spacer(),
-
-                  // =============================================
-                  // PLAY
-                  // =============================================
-                  SizedBox(
-                    width: double.infinity,
-                    height: 38,
-                    child: ElevatedButton.icon(
-                      onPressed: onTap,
-                      icon: const Icon(Icons.play_arrow_rounded, size: 20),
-                      label: const Text(
-                        'Play',
-                        style: TextStyle(fontWeight: FontWeight.bold),
-                      ),
-                    ),
-                  ),
-                ],
               ),
-            );
-          },
+              const SizedBox(width: 8),
+              Icon(
+                Icons.play_circle_fill_rounded,
+                color: colorScheme.primary,
+                size: 34,
+              ),
+            ],
+          ),
         ),
       ),
     );

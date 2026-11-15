@@ -1,0 +1,302 @@
+[
+  {
+    "category": "Kubernetes",
+    "set": 4,
+    "question": "कः आदेशः deployment इत्यस्य मापनं (scale) करोति?",
+    "options": [
+      "kubectl scale deployment",
+      "kubectl resize deployment",
+      "kubectl expand deployment",
+      "kubectl increase deployment"
+    ],
+    "answer": "kubectl scale deployment"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 4,
+    "question": "कः आदेशः deployment इत्येतत् 5 replicas पर्यन्तं scale करोति?",
+    "options": [
+      "kubectl scale deployment --replicas=5",
+      "kubectl replicas 5",
+      "kubectl expand deployment",
+      "kubectl set replicas"
+    ],
+    "answer": "kubectl scale deployment --replicas=5"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 4,
+    "question": "कः आदेशः deployment पुनः आरभते (restart करोति)?",
+    "options": [
+      "kubectl rollout restart deployment",
+      "kubectl restart deployment",
+      "kubectl deployment restart",
+      "kubectl reload deployment"
+    ],
+    "answer": "kubectl rollout restart deployment"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 4,
+    "question": "कः आदेशः deployment इत्यस्य rollout स्थितिं परीक्षते?",
+    "options": [
+      "kubectl rollout status",
+      "kubectl deployment status",
+      "kubectl rollout check",
+      "kubectl get rollout"
+    ],
+    "answer": "kubectl rollout status"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 4,
+    "question": "कः आदेशः deployment पूर्वस्थितिं प्रति प्रत्यावर्तयति (roll back करोति)?",
+    "options": [
+      "kubectl rollout undo",
+      "kubectl rollback",
+      "kubectl undo deployment",
+      "kubectl deployment rollback"
+    ],
+    "answer": "kubectl rollout undo"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 4,
+    "question": "कः आदेशः rollout इतिहासं प्रदर्शयति?",
+    "options": [
+      "kubectl rollout history",
+      "kubectl history",
+      "kubectl deployment history",
+      "kubectl show rollout"
+    ],
+    "answer": "kubectl rollout history"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 4,
+    "question": "कः आदेशः deployment rollout विरमयति (pause करोति)?",
+    "options": [
+      "kubectl rollout pause",
+      "kubectl pause deployment",
+      "kubectl stop rollout",
+      "kubectl hold deployment"
+    ],
+    "answer": "kubectl rollout pause"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 4,
+    "question": "कः आदेशः विरामितं deployment rollout पुनः आरभते?",
+    "options": [
+      "kubectl rollout resume",
+      "kubectl resume deployment",
+      "kubectl continue rollout",
+      "kubectl restart rollout"
+    ],
+    "answer": "kubectl rollout resume"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 4,
+    "question": "विद्यमानान् Pod-घटकान् निष्कासयितुम् अयतमानः नोड् इत्येतद् अनियोज्यं कः आदेशः चिह्नयति?",
+    "options": [
+      "kubectl cordon",
+      "kubectl uncordon",
+      "kubectl get node",
+      "kubectl describe node"
+    ],
+    "answer": "kubectl cordon"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 4,
+    "question": "कः आदेशः node तः कार्यभारान् (workloads) सुरक्षितरूपेण निष्कासयति?",
+    "options": [
+      "kubectl drain",
+      "kubectl cordon",
+      "kubectl delete node",
+      "kubectl migrate"
+    ],
+    "answer": "kubectl drain"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 4,
+    "question": "कः आदेशः node पुनः निर्धार्यं (schedulable) करोति?",
+    "options": [
+      "kubectl uncordon",
+      "kubectl enable",
+      "kubectl restart",
+      "kubectl activate"
+    ],
+    "answer": "kubectl uncordon"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 4,
+    "question": "कः आदेशः node इत्यस्य विस्तृतां सूचनां प्रदर्शयति?",
+    "options": [
+      "kubectl describe node",
+      "kubectl inspect node",
+      "kubectl info node",
+      "kubectl node show"
+    ],
+    "answer": "kubectl describe node"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 4,
+    "question": "कः आदेशः स्थानीयं port pod प्रति अग्रेषयति (forward करोति)?",
+    "options": [
+      "kubectl port-forward",
+      "kubectl tunnel",
+      "kubectl expose",
+      "kubectl connect"
+    ],
+    "answer": "kubectl port-forward"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 4,
+    "question": "कः आदेशः pod प्रति अथवा pod तः सञ्चिकाः प्रतिलिपयति?",
+    "options": [
+      "kubectl cp",
+      "kubectl copy",
+      "kubectl transfer",
+      "kubectl sync"
+    ],
+    "answer": "kubectl cp"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 4,
+    "question": "कः आदेशः चलतः pod इत्यस्य YAML परिभाषां प्रदर्शयति?",
+    "options": [
+      "kubectl get pod -o yaml",
+      "kubectl show pod yaml",
+      "kubectl export pod",
+      "kubectl pod yaml"
+    ],
+    "answer": "kubectl get pod -o yaml"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 4,
+    "question": "site Deployment इत्यस्य web कण्टेनर्-प्रतिबिम्बं nginx:1.27 इति कः आदेशः नवीकरोति?",
+    "options": [
+      "kubectl set image deployment/site web=nginx:1.27",
+      "kubectl set env deployment/site web=nginx:1.27",
+      "kubectl annotate deployment/site web=nginx:1.27",
+      "kubectl label deployment/site web=nginx:1.27"
+    ],
+    "answer": "kubectl set image deployment/site web=nginx:1.27"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 4,
+    "question": "परिवर्तनम् अप्रयोज्य मैनिफेस्ट् विद्यमानविन्यासेन सह कः आदेशः तुलयति?",
+    "options": [
+      "kubectl apply -f app.yaml",
+      "kubectl replace -f app.yaml",
+      "kubectl delete -f app.yaml",
+      "kubectl diff -f app.yaml"
+    ],
+    "answer": "kubectl diff -f app.yaml"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 4,
+    "question": "अनुरोधितसंसाधनं स्थायिरूपेण अरक्षित्वा API सेवके परीक्षणनिष्पादनं कुर्वन् kubectl विकल्पः कः?",
+    "options": [
+      "--validate=false",
+      "--force",
+      "--dry-run=server",
+      "--dry-run=client"
+    ],
+    "answer": "--dry-run=server"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 4,
+    "question": "api Pod इत्यस्य Ready अवस्थायाः कृते अधिकतमं 60 सेकण्ड् प्रतीक्षमाणः आदेशः कः?",
+    "options": [
+      "kubectl get pod api --request-timeout=60s",
+      "kubectl wait --for=condition=Ready pod/api --timeout=60s",
+      "kubectl wait --for=delete pod/api --timeout=60s",
+      "kubectl logs api --since=60s"
+    ],
+    "answer": "kubectl wait --for=condition=Ready pod/api --timeout=60s"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 4,
+    "question": "क्रमिकनवीकरणे अनुपलब्धप्रतिरूपाणां सङ्ख्यां सीमयन् Deployment विन्यासः कः?",
+    "options": [
+      "maxUnavailable",
+      "maxSurge",
+      "revisionHistoryLimit",
+      "progressDeadlineSeconds"
+    ],
+    "answer": "maxUnavailable"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 4,
+    "question": "क्रमिकनवीकरणे इष्टप्रतिरूपसङ्ख्यातः अधिकान् तात्कालिकान् Pod-घटकान् अनुमन्यमानः Deployment विन्यासः कः?",
+    "options": [
+      "maxUnavailable",
+      "minReadySeconds",
+      "revisionHistoryLimit",
+      "maxSurge"
+    ],
+    "answer": "maxSurge"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 4,
+    "question": "चयनिते Pod-समूहे समकालिकान् ऐच्छिकव्यवधानान् सीमयत् संसाधनं किम्?",
+    "options": [
+      "LimitRange",
+      "NetworkPolicy",
+      "PodDisruptionBudget",
+      "ResourceQuota"
+    ],
+    "answer": "PodDisruptionBudget"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 4,
+    "question": "निरीक्षितमापनानुसारं कार्यभारप्रतिरूपसङ्ख्यां समायोजयन् नियन्त्रकः कः?",
+    "options": [
+      "CronJob",
+      "HorizontalPodAutoscaler",
+      "ReplicaSet",
+      "DaemonSet"
+    ],
+    "answer": "HorizontalPodAutoscaler"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 4,
+    "question": "kubectl top द्वारा CPU स्मृतिप्रयोगयोः प्रतिवेदनाय किम् उपलब्धं भवेत्?",
+    "options": [
+      "सामान्यतः Metrics Server प्रदत्ता संसाधनमापन-API",
+      "प्रत्येकनामक्षेत्राय Ingress नियन्त्रकः",
+      "खण्डोपकरणयुक्ता पूर्वनिर्धारिता StorageClass",
+      "प्रत्येकस्य Pod कृते LoadBalancer Service"
+    ],
+    "answer": "सामान्यतः Metrics Server प्रदत्ता संसाधनमापन-API"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 4,
+    "question": "संयुक्तसमूहे समर्थितान् API संसाधनप्रकारान् कः आदेशः दर्शयति?",
+    "options": [
+      "kubectl api-versions",
+      "kubectl cluster-info",
+      "kubectl config view",
+      "kubectl api-resources"
+    ],
+    "answer": "kubectl api-resources"
+  }
+]

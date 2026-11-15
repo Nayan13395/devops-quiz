@@ -1,0 +1,302 @@
+[
+  {
+    "category": "Networking",
+    "set": 5,
+    "question": "What is DNSSEC designed to provide for DNS data?",
+    "options": [
+      "Encryption of all DNS queries and responses",
+      "Authentication of clients before they may query a public zone",
+      "Guaranteed availability despite denial-of-service traffic",
+      "Data origin authentication and integrity"
+    ],
+    "answer": "Data origin authentication and integrity"
+  },
+  {
+    "category": "Networking",
+    "set": 5,
+    "question": "Which destination port is assigned to DNS over TLS?",
+    "options": [
+      "443",
+      "5353",
+      "853",
+      "53"
+    ],
+    "answer": "853"
+  },
+  {
+    "category": "Networking",
+    "set": 5,
+    "question": "What does a recursive resolver normally do when a UDP DNS response is truncated and a full answer is needed?",
+    "options": [
+      "Interprets truncation as proof the domain does not exist",
+      "Retries the query using TCP",
+      "Accepts the partial answer as complete",
+      "Requests each missing UDP fragment by its original packet offset"
+    ],
+    "answer": "Retries the query using TCP"
+  },
+  {
+    "category": "Networking",
+    "set": 5,
+    "question": "Which transport protocol carries QUIC packets?",
+    "options": [
+      "UDP",
+      "TCP",
+      "SCTP",
+      "ICMP"
+    ],
+    "answer": "UDP"
+  },
+  {
+    "category": "Networking",
+    "set": 5,
+    "question": "Which HTTP version runs over QUIC?",
+    "options": [
+      "HTTP/2",
+      "HTTP/1.1",
+      "HTTP/1.0",
+      "HTTP/3"
+    ],
+    "answer": "HTTP/3"
+  },
+  {
+    "category": "Networking",
+    "set": 5,
+    "question": "What does TCP head-of-line blocking mean for HTTP/2 streams on one connection?",
+    "options": [
+      "Only HTTP headers can be delayed by TCP loss",
+      "TCP loss affects only the stream containing the missing bytes",
+      "Lost TCP data can delay delivery for otherwise independent streams",
+      "Each stream must finish completely before another stream can be created"
+    ],
+    "answer": "Lost TCP data can delay delivery for otherwise independent streams"
+  },
+  {
+    "category": "Networking",
+    "set": 5,
+    "question": "What does a TCP SYN flood primarily try to exhaust on a server?",
+    "options": [
+      "Worker queues processing successfully authenticated application requests",
+      "Resources tracking incomplete connection handshakes",
+      "Buffers holding complete HTTP responses for established sessions",
+      "Storage occupied by TLS session ticket files"
+    ],
+    "answer": "Resources tracking incomplete connection handshakes"
+  },
+  {
+    "category": "Networking",
+    "set": 5,
+    "question": "What distinguishes unicast from multicast delivery?",
+    "options": [
+      "Unicast targets one recipient, while multicast targets a joined group",
+      "Unicast always uses UDP, while multicast always uses TCP",
+      "Unicast requires IPv6, while multicast requires IPv4",
+      "Unicast encrypts frames, while multicast compresses them"
+    ],
+    "answer": "Unicast targets one recipient, while multicast targets a joined group"
+  },
+  {
+    "category": "Networking",
+    "set": 5,
+    "question": "Which IPv4 range is reserved for multicast addressing?",
+    "options": [
+      "240.0.0.0/4",
+      "169.254.0.0/16",
+      "127.0.0.0/8",
+      "224.0.0.0/4"
+    ],
+    "answer": "224.0.0.0/4"
+  },
+  {
+    "category": "Networking",
+    "set": 5,
+    "question": "Which protocol communicates IPv4 multicast group membership between hosts and neighboring routers?",
+    "options": [
+      "OSPF",
+      "DHCP",
+      "IGMP",
+      "ARP"
+    ],
+    "answer": "IGMP"
+  },
+  {
+    "category": "Networking",
+    "set": 5,
+    "question": "What does anycast routing deliver a packet to when several sites advertise the same address?",
+    "options": [
+      "A randomly selected DNS server regardless of route",
+      "One instance selected by the routing system",
+      "Every instance simultaneously",
+      "Only the instance with the largest MAC address"
+    ],
+    "answer": "One instance selected by the routing system"
+  },
+  {
+    "category": "Networking",
+    "set": 5,
+    "question": "What is the role of an IEEE 802.1Q tag in an Ethernet frame?",
+    "options": [
+      "Identify the frame's VLAN",
+      "Replace the destination MAC address",
+      "Identify the IP subnet prefix length",
+      "Record how many routers the frame has crossed"
+    ],
+    "answer": "Identify the frame's VLAN"
+  },
+  {
+    "category": "Networking",
+    "set": 5,
+    "question": "What does Spanning Tree Protocol primarily prevent in a bridged Ethernet network?",
+    "options": [
+      "IP routing loops between autonomous systems",
+      "Duplicate IP address assignments by independent DHCP servers",
+      "Overlapping TCP port assignments on a host",
+      "Layer 2 forwarding loops"
+    ],
+    "answer": "Layer 2 forwarding loops"
+  },
+  {
+    "category": "Networking",
+    "set": 5,
+    "question": "How does a full-duplex Ethernet link carry traffic?",
+    "options": [
+      "Both endpoints must take turns after detecting collisions",
+      "One endpoint is permanently receive-only",
+      "Both endpoints can transmit at the same time",
+      "Only one endpoint can transmit until the link resets"
+    ],
+    "answer": "Both endpoints can transmit at the same time"
+  },
+  {
+    "category": "Networking",
+    "set": 5,
+    "question": "What is the purpose of link aggregation?",
+    "options": [
+      "Replicate every unicast frame onto every available uplink",
+      "Combine multiple physical links into one logical link",
+      "Combine multiple VLANs by removing their separate broadcast domains",
+      "Convert all connected switch ports into one shared half-duplex medium"
+    ],
+    "answer": "Combine multiple physical links into one logical link"
+  },
+  {
+    "category": "Networking",
+    "set": 5,
+    "question": "What does DSCP in an IP header help network devices classify?",
+    "options": [
+      "Traffic for differentiated quality-of-service treatment",
+      "Packets for fragment reassembly by identification number",
+      "Packets for loop prevention by remaining hop count",
+      "Connections for endpoint identification by port number"
+    ],
+    "answer": "Traffic for differentiated quality-of-service treatment"
+  },
+  {
+    "category": "Networking",
+    "set": 5,
+    "question": "What does jitter measure for a stream of network packets?",
+    "options": [
+      "Average packet transmission rate",
+      "Fraction of packets that are lost",
+      "Maximum packet payload length",
+      "Variation in packet delay"
+    ],
+    "answer": "Variation in packet delay"
+  },
+  {
+    "category": "Networking",
+    "set": 5,
+    "question": "Why can repeated retransmissions reduce an application's useful throughput?",
+    "options": [
+      "They force each router to double the outgoing link's capacity",
+      "They guarantee the receiver can increase its advertised window",
+      "They consume capacity without delivering additional unique application data",
+      "They reduce protocol overhead by removing transport headers"
+    ],
+    "answer": "They consume capacity without delivering additional unique application data"
+  },
+  {
+    "category": "Networking",
+    "set": 5,
+    "question": "What does Path MTU Discovery seek to determine?",
+    "options": [
+      "The number of packets a router can queue before dropping traffic",
+      "The largest packet size usable along a path without fragmentation",
+      "The maximum unacknowledged byte count a receiver can buffer",
+      "The minimum round-trip time required for congestion avoidance"
+    ],
+    "answer": "The largest packet size usable along a path without fragmentation"
+  },
+  {
+    "category": "Networking",
+    "set": 5,
+    "question": "Which socket endpoint tuple distinguishes a TCP connection from other TCP connections?",
+    "options": [
+      "Source IP, source port, destination IP, destination port",
+      "Source IP, destination IP, sequence number, acknowledgment number",
+      "Source port, destination port, window size, checksum",
+      "Source IP, source port, destination IP, IP hop limit"
+    ],
+    "answer": "Source IP, source port, destination IP, destination port"
+  },
+  {
+    "category": "Networking",
+    "set": 5,
+    "question": "What is an ephemeral port commonly used for?",
+    "options": [
+      "A permanently assigned well-known server port",
+      "A physical switch port dedicated to trunk traffic",
+      "A reserved destination port shared by all routing protocols",
+      "A temporary client-side transport endpoint"
+    ],
+    "answer": "A temporary client-side transport endpoint"
+  },
+  {
+    "category": "Networking",
+    "set": 5,
+    "question": "What does the HTTP Cache-Control directive no-store tell a cache?",
+    "options": [
+      "Store the response only in a private cache",
+      "Store the response until its declared freshness lifetime expires",
+      "Do not store the request or response covered by the directive",
+      "Store the response but revalidate before reuse"
+    ],
+    "answer": "Do not store the request or response covered by the directive"
+  },
+  {
+    "category": "Networking",
+    "set": 5,
+    "question": "What does an HTTP 304 response indicate after a conditional GET?",
+    "options": [
+      "The origin server could not resolve its own hostname",
+      "The cached representation may be reused under the validation result",
+      "The requested resource has moved permanently",
+      "The client must switch to a different transport protocol"
+    ],
+    "answer": "The cached representation may be reused under the validation result"
+  },
+  {
+    "category": "Networking",
+    "set": 5,
+    "question": "Which proxy header commonly records the original client IP when a reverse proxy forwards an HTTP request?",
+    "options": [
+      "X-Forwarded-For",
+      "Content-Type",
+      "Accept-Encoding",
+      "Cache-Control"
+    ],
+    "answer": "X-Forwarded-For"
+  },
+  {
+    "category": "Networking",
+    "set": 5,
+    "question": "Why should an application trust forwarded client-IP headers only from configured trusted proxies?",
+    "options": [
+      "TLS automatically authenticates the original client IP value inside every header",
+      "TCP checksums prove that the header names the original client",
+      "Every forwarding proxy cryptographically signs that header by default",
+      "Clients can forge those headers if the trust boundary is not enforced"
+    ],
+    "answer": "Clients can forge those headers if the trust boundary is not enforced"
+  }
+]

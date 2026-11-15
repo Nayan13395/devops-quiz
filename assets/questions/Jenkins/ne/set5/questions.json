@@ -1,0 +1,302 @@
+[
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "उही Pipeline एकसाथ चलाउनुभन्दा नयाँ सञ्चालन पङ्क्तिमा राख्ने Declarative विकल्प कुन हो?",
+    "options": [
+      "parallelsAlwaysFailFast()",
+      "disableConcurrentBuilds()",
+      "disableResume()",
+      "skipDefaultCheckout()"
+    ],
+    "answer": "disableConcurrentBuilds()"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "पुराना बिल्ड अभिलेख र आर्टिफ्याक्ट राख्ने नियम तोक्ने Declarative विकल्प कुन हो?",
+    "options": [
+      "buildDiscarder(logRotator(numToKeepStr: '10'))",
+      "timeout(time: 10, unit: 'MINUTES')",
+      "retry(10)",
+      "quietPeriod(10)"
+    ],
+    "answer": "buildDiscarder(logRotator(numToKeepStr: '10'))"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "Jenkins cron अभिव्यक्तिको H चिह्नले के दिन्छ?",
+    "options": [
+      "प्रयोगकर्ताको कम्प्युटरको हालको घण्टा",
+      "बिदामा मात्र चलाउने अनुरोध",
+      "नोड निष्क्रिय हुँदा मात्र चलाउने अनुरोध",
+      "तालिकाबद्ध भार फैलाउने कार्यनाममा आधारित स्थिर ह्यास"
+    ],
+    "answer": "तालिकाबद्ध भार फैलाउने कार्यनाममा आधारित स्थिर ह्यास"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "Jenkins को पाँच-खण्डे cron वाक्यरचनामा पाँचौँ खण्डले के जनाउँछ?",
+    "options": [
+      "दिनको घण्टा",
+      "महिनाको दिन",
+      "हप्ताको दिन",
+      "घण्टाको मिनेट"
+    ],
+    "answer": "हप्ताको दिन"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "अघिल्लो बिल्ड असफल वा अस्थिर भएपछि नयाँ बिल्ड सफल हुँदा चल्ने post सर्त कुन हो?",
+    "options": [
+      "unsuccessful",
+      "fixed",
+      "changed",
+      "regression"
+    ],
+    "answer": "fixed"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "अन्य post सर्त मूल्याङ्कनपछि चल्ने post सर्त कुन हो?",
+    "options": [
+      "cleanup",
+      "always",
+      "changed",
+      "success"
+    ],
+    "answer": "cleanup"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "चरणको एजेन्ट छुट्याउनुअघि सर्त मूल्याङ्कन गर्ने when विकल्प कुन हो?",
+    "options": [
+      "beforeInput false",
+      "beforeOptions false",
+      "branch 'main'",
+      "beforeAgent true"
+    ],
+    "answer": "beforeAgent true"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "Multibranch Pipeline मा नाम भएको ब्रान्चलाई लक्षित गर्ने when सर्त कुन हो?",
+    "options": [
+      "buildingTag()",
+      "changeRequest()",
+      "branch 'main'",
+      "tag 'main'"
+    ],
+    "answer": "branch 'main'"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "अपरेटिङ सिस्टम र ब्राउजरजस्ता अक्षका मानका संयोजन चलाउने Declarative संरचना कुन हो?",
+    "options": [
+      "environment",
+      "matrix",
+      "parallel",
+      "steps"
+    ],
+    "answer": "matrix"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "Declarative म्याट्रिक्सबाट नचाहिने संयोजन हटाउने खण्ड कुन हो?",
+    "options": [
+      "excludes",
+      "axes",
+      "stages",
+      "tools"
+    ],
+    "answer": "excludes"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "समानान्तर शाखा भएको चरणमा एउटा असफल हुँदा अरू रोक्ने सेटिङ कुन हो?",
+    "options": [
+      "beforeAgent true",
+      "reuseNode true",
+      "alwaysPull true",
+      "failFast true"
+    ],
+    "answer": "failFast true"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "बिल्ड अस्थिर भएपछि पछिका चरण छोड्ने Declarative विकल्प कुन हो?",
+    "options": [
+      "disableResume()",
+      "preserveStashes()",
+      "skipStagesAfterUnstable()",
+      "skipDefaultCheckout()"
+    ],
+    "answer": "skipStagesAfterUnstable()"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "असफलता लेखेर आफ्नो ब्लकपछिको कार्यान्वयन जारी राख्न दिने Pipeline चरण कुन हो?",
+    "options": [
+      "input",
+      "catchError",
+      "error",
+      "timeout"
+    ],
+    "answer": "catchError"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "प्रक्रिया सकिएपछि sh(script: 'check.sh', returnStatus: true) ले के फर्काउँछ?",
+    "options": [
+      "प्रक्रियाको सङ्ख्यात्मक निर्गमन कोड",
+      "पूरा मानक आउटपुट पाठ",
+      "शेलको प्रक्रिया ID",
+      "Jenkins प्रमाणीकरण विवरण अब्जेक्ट"
+    ],
+    "answer": "प्रक्रियाको सङ्ख्यात्मक निर्गमन कोड"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "सफल हुँदा sh(script: 'echo ready', returnStdout: true) ले के फर्काउँछ?",
+    "options": [
+      "सङ्ख्यात्मक बिल्ड नम्बर",
+      "म्यापका रूपमा शेलको वातावरण",
+      "एजेन्टको लेबल सूची",
+      "समातिएको मानक आउटपुट स्ट्रिङ"
+    ],
+    "answer": "समातिएको मानक आउटपुट स्ट्रिङ"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "हालको वर्कस्पेस डाइरेक्टरीको सामग्री उपतहसहित मेट्ने Pipeline चरण कुन हो?",
+    "options": [
+      "pwd",
+      "readFile",
+      "deleteDir",
+      "fileExists"
+    ],
+    "answer": "deleteDir"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "हालको वर्कस्पेसमा पाथ छ कि छैन जाँच्ने Pipeline चरण कुन हो?",
+    "options": [
+      "libraryResource",
+      "fileExists",
+      "readFile",
+      "writeFile"
+    ],
+    "answer": "fileExists"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "अर्को Jenkins कार्य सुरु गरी बिल्ड प्यारामिटर पठाउन सक्ने Pipeline चरण कुन हो?",
+    "options": [
+      "build",
+      "stage",
+      "node",
+      "checkout"
+    ],
+    "answer": "build"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "चरण पुनः सुरु गर्न पूरा भएका बिल्डका स्ट्यास राख्ने Declarative विकल्प कुन हो?",
+    "options": [
+      "disableResume()",
+      "skipDefaultCheckout()",
+      "quietPeriod(5)",
+      "preserveStashes()"
+    ],
+    "answer": "preserveStashes()"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "vars/deploy.groovy ले परिभाषित गरेको विश्वव्यापी deploy चलको मद्दत पाठ दिने Shared Library फाइल कुन हो?",
+    "options": [
+      "resources/deploy.txt",
+      "vars/main.groovy",
+      "vars/deploy.txt",
+      "src/deploy.groovy"
+    ],
+    "answer": "vars/deploy.txt"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "Jenkins Pipeline मा @NonCPS एनोटेसन भएको विधिको मुख्य सीमा के हो?",
+    "options": [
+      "यो Windows एजेन्टमा चल्नुपर्छ",
+      "यसले CPS-रूपान्तरित Pipeline चरण बोलाउनु हुँदैन",
+      "यसमा stage निर्देशन हुनैपर्छ",
+      "यसले सधैँ स्ट्रिङ फर्काउनुपर्छ"
+    ],
+    "answer": "यसले CPS-रूपान्तरित Pipeline चरण बोलाउनु हुँदैन"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "अस्वीकृत स्यान्डबक्सभित्रको Groovy कोडले मागेका हस्ताक्षर समीक्षा गर्ने Jenkins सुविधा कुन हो?",
+    "options": [
+      "प्रक्रियाभित्रको स्क्रिप्ट स्वीकृति",
+      "Credentials Store",
+      "Build Queue",
+      "SCM पोलिङ लग"
+    ],
+    "answer": "प्रक्रियाभित्रको स्क्रिप्ट स्वीकृति"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "बाँधिएको गोप्य चल शेलले नै विस्तार गर्ने स्क्रिप्टका लागि Groovy को कुन उद्धरण शैली उचित हुन्छ?",
+    "options": [
+      "गोप्य मान समावेश भएको दोहोरो उद्धरणयुक्त मान-प्रतिस्थापित Groovy स्ट्रिङ",
+      "गोप्य मान समावेश भएको तीन दोहोरो उद्धरणयुक्त मान-प्रतिस्थापित Groovy स्ट्रिङ",
+      "सादा पाठको गोप्य मान जोडेर बनाइएको Groovy स्ट्रिङ",
+      "एकल उद्धरणयुक्त Groovy स्ट्रिङ"
+    ],
+    "answer": "एकल उद्धरणयुक्त Groovy स्ट्रिङ"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "सम्बन्धित वेब अनुरोधका लागि Jenkins CSRF crumb को उद्देश्य के हो?",
+    "options": [
+      "अपलोडअघि बिल्ड आर्टिफ्याक्ट गुप्तीकरण गर्ने",
+      "बिल्ड चलाउने एजेन्ट छान्ने",
+      "अवस्था बदल्ने अनुरोध स्थापित प्रयोगकर्ता सत्रकै हो भनी प्रमाणित गर्न मद्दत गर्ने",
+      "सबै कार्यका अनुमति जाँच प्रतिस्थापन गर्ने"
+    ],
+    "answer": "अवस्था बदल्ने अनुरोध स्थापित प्रयोगकर्ता सत्रकै हो भनी प्रमाणित गर्न मद्दत गर्ने"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "विभिन्न कार्यबीच साझा परीक्षण उपकरण एक पटकमा एउटाले मात्र प्रयोग गर्न Pipeline ले के प्रयोग गर्नुपर्छ?",
+    "options": [
+      "skipDefaultCheckout विकल्प",
+      "Lockable Resources प्लगइनको lock चरण",
+      "timestamps विकल्प",
+      "buildDiscarder विकल्प"
+    ],
+    "answer": "Lockable Resources प्लगइनको lock चरण"
+  }
+]

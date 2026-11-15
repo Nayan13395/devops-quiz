@@ -1,0 +1,187 @@
+{
+  "task": "Remaining app work: parallel sessions",
+  "display_sources": [
+    "cli"
+  ],
+  "updated_at": "2026-11-15T02:51:32+05:30",
+  "status": "blocked",
+  "phase": "Parallel sessions: 0 running, 0 waiting, 1 completed, 2 blocked. Isolated copies; verified integration is serialized. Final regression and docs wait for dependencies.",
+  "scope": "Requested mode: separate task sessions with different models, autopilot and allow-all permissions. Isolate changes before parallel execution. Real-device and independent expert checks still require genuine external evidence.",
+  "queue_script": "tools\\run_parallel_tasks.py",
+  "queue_state": "tools\\pending_task_queue.json",
+  "completed_history": "tools\\completed_task_history.json",
+  "notes": [
+    "Non-APK CLI sessions are resuming. Game UI localization runs first; offline ATF/regression and documentation wait for dependencies. APK creation remains explicitly excluded.",
+    "Latest current-checkout ATF: 1076 passed and 5 failed (missing game localization entries, new scene captions, and two notification widget timeouts). The previous isolated regression summary is superseded.",
+    "APK percentage measures verified build milestones, not elapsed time or Gradle's internal progress. Chat-managed entries are excluded from this live view."
+  ],
+  "tasks": [
+    {
+      "id": "release-apk",
+      "name": "Release APK - paused (excluded)",
+      "execution_source": "cli",
+      "keep_visible": true,
+      "status": "blocked",
+      "detail": "Excluded from the current resumption at user request. APK milestone progress remains 50% / 100%; no APK has been generated. No build or APK environment repair will run.",
+      "checks": [
+        {
+          "name": "Reproduce and diagnose the release build error",
+          "done": true
+        },
+        {
+          "name": "Configure compatible Android SDK and Gradle versions",
+          "done": true
+        },
+        {
+          "name": "Complete release compilation and APK packaging",
+          "done": false
+        },
+        {
+          "name": "Verify the generated APK and publish its absolute path",
+          "done": false
+        }
+      ]
+    },
+    {
+      "id": "game-ui-localization",
+      "name": "Localize Games hub and game-screen controls",
+      "status": "done",
+      "detail": "done: gpt-5.6-sol; session 493cb536-d841-4855-a0a0-39c35c6e57ee. Completed Games hub and game-screen localization across all 31 non-English locales. Reconciled the refreshed catalog by replacing obsolete picture-label resolution with one localized, parameterized 3D Scene {number} message restricted to the current 3D Scene 1-100 Spot the Difference catalog; preserved the 300-image Jigsaw catalog, compact game cards, app font settings, technical tokens, storage identities, existing ARB messages, and prior work. Flutter localization generation, 53 multilingual/gameplay tests, Python translation-tool tests, ARB integrity checks, and targeted analysis pass. The obsolete UI-GAMES audit finding remains removed after verification. Full-workspace analysis reports 32 unrelated pre-existing warnings outside the scoped localization changes. Workspace: C:\\devops_quiz\\translator\\cache\\parallel_tasks\\9838b63f291f4063a0fd73805e800d25\\game-ui-localization\\workspace",
+      "checks": [
+        {
+          "name": "Move user-facing game text into localized resources",
+          "done": true
+        },
+        {
+          "name": "Check localized gameplay dialogs, layouts and language switching",
+          "done": true
+        }
+      ],
+      "validation_receipt": "C:\\devops_quiz\\translator\\cache\\parallel_tasks\\9838b63f291f4063a0fd73805e800d25\\game-ui-localization\\workspace\\parallel_task_result.json"
+    },
+    {
+      "id": "full-app-regression",
+      "name": "Run final whole-app regression and localization audit",
+      "status": "blocked",
+      "detail": "blocked: gemini-4-argon; session a772daba-11df-4b74-ac01-19ee4c31c83a. Session launch failed: [WinError 33] The process cannot access the file because another process has locked a portion of the file Workspace: C:\\devops_quiz\\translator\\cache\\parallel_tasks\\9838b63f291f4063a0fd73805e800d25\\full-app-regression\\workspace",
+      "checks": [
+        {
+          "name": "Pass the full current offline regression suite and publish its report",
+          "done": false
+        },
+        {
+          "name": "Rerun whole-app localization probes and record remaining accepted limitations",
+          "done": false
+        }
+      ]
+    },
+    {
+      "id": "jigsaw-hd-images-101-150",
+      "name": "Generate 50 HD jigsaw images 101-150 (3D style)",
+      "status": "in_progress",
+      "detail": "running: claude-opus-5.5; session chat c682d82c-210c-48ef-b215-1274f057f7a7. Autopilot, allow-all. Second batch of 50 unique 3D-style scenes saved directly to C:\\devops_quiz\\assets\\Jigsaw\\{N}.png (N=101..150), 1536x1024 high quality, no subject repeats from first batch.",
+      "checks": [
+        {
+          "name": "Generate and save 101.png-150.png in C:\\devops_quiz\\assets\\Jigsaw",
+          "done": false
+        },
+        {
+          "name": "Verify all 50 files exist",
+          "done": false
+        }
+      ]
+    },
+    {
+      "id": "jigsaw-hd-images-151-200",
+      "name": "Generate 50 HD jigsaw images 151-200 (4D style)",
+      "status": "in_progress",
+      "detail": "running: gpt-6.1-sol; session chat 7e9c1c60-d2d7-4aba-a3be-55cac4a030ac. Autopilot, allow-all. Second batch of 50 unique 4D-style scenes saved directly to C:\\devops_quiz\\assets\\Jigsaw\\{N}.png (N=151..200), 1536x1024 high quality, no subject repeats from first batch.",
+      "checks": [
+        {
+          "name": "Generate and save 151.png-200.png in C:\\devops_quiz\\assets\\Jigsaw",
+          "done": false
+        },
+        {
+          "name": "Verify all 50 files exist",
+          "done": false
+        }
+      ]
+    },
+    {
+      "id": "jigsaw-hd-images-201-250",
+      "name": "Generate 50 HD jigsaw images 201-250 (5D style)",
+      "status": "in_progress",
+      "detail": "running: gemini-4-carbon; session chat c0d086d6-c34f-4463-81bc-3ffe079c5d33. Autopilot, allow-all. Second batch of 50 unique 5D-style scenes saved directly to C:\\devops_quiz\\assets\\Jigsaw\\{N}.png (N=201..250), 1536x1024 high quality, no subject repeats from first batch.",
+      "checks": [
+        {
+          "name": "Generate and save 201.png-250.png in C:\\devops_quiz\\assets\\Jigsaw",
+          "done": false
+        },
+        {
+          "name": "Verify all 50 files exist",
+          "done": false
+        }
+      ]
+    },
+    {
+      "id": "jigsaw-hd-images-251-300",
+      "name": "Generate 50 HD jigsaw images 251-300 (6D style)",
+      "status": "in_progress",
+      "detail": "running: claude-sonnet-5.5; session chat 9b6d2be5-2ae6-4724-9c13-eaef84670b0c. Autopilot, allow-all. Second batch of 50 unique 6D-style scenes saved directly to C:\\devops_quiz\\assets\\Jigsaw\\{N}.png (N=251..300), 1536x1024 high quality, no subject repeats from first batch.",
+      "checks": [
+        {
+          "name": "Generate and save 251.png-300.png in C:\\devops_quiz\\assets\\Jigsaw",
+          "done": false
+        },
+        {
+          "name": "Verify all 50 files exist",
+          "done": false
+        }
+      ]
+    },
+    {
+      "id": "spot-difference-level-integration",
+      "name": "Replace spot-the-difference levels with new 3D image pairs",
+      "status": "in_progress",
+      "detail": "running: gpt-5.6-sol; session chat 747d6f72-259d-4832-8697-09a0ab6a913c. Autopilot, allow-all. Removes all old level definitions, recreates assets/spot_difference with level_001-level_100 left/right PNGs from C:\\devops_quiz\\assets\\spot the difference 1A-100B, computes difference regions programmatically (PIL/numpy clustering), regenerates lib/data/spot_picture_catalog.dart and manifest, validates with flutter analyze/tests.",
+      "checks": [
+        {
+          "name": "Copy 200 images into assets/spot_difference as level_NNN_left/right",
+          "done": false
+        },
+        {
+          "name": "Auto-detect difference regions per pair (~4-5 expected)",
+          "done": false
+        },
+        {
+          "name": "Regenerate spot_picture_catalog.dart and manifest with 100 new levels",
+          "done": false
+        },
+        {
+          "name": "Remove all old level definitions",
+          "done": false
+        },
+        {
+          "name": "flutter analyze and spot-difference tests pass",
+          "done": false
+        }
+      ]
+    },
+    {
+      "id": "refresh-docs-reports",
+      "name": "Refresh stale documentation and historical progress summaries",
+      "status": "blocked",
+      "detail": "blocked: gpt-5.6-sol; session 5da5b1b1-9f98-4dbf-939d-aadad285bf49. Session launch failed: [WinError 33] The process cannot access the file because another process has locked a portion of the file Workspace: C:\\devops_quiz\\translator\\cache\\parallel_tasks\\9838b63f291f4063a0fd73805e800d25\\refresh-docs-reports\\workspace",
+      "checks": [
+        {
+          "name": "Update README card coverage and completed translation instructions",
+          "done": false
+        },
+        {
+          "name": "Publish dated current reports and clearly label superseded historical findings",
+          "done": false
+        }
+      ]
+    }
+  ]
+}

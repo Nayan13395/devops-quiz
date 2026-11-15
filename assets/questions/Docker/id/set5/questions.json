@@ -1,0 +1,302 @@
+[
+  {
+    "category": "Docker",
+    "set": 5,
+    "question": "Mengapa build sebaiknya menggunakan mount rahasia BuildKit daripada menyimpan kata sandi dalam instruksi ARG atau ENV?",
+    "options": [
+      "Mount rahasia otomatis merotasi kata sandi registri",
+      "Mount rahasia mengenkripsi setiap lapisan image hasil build",
+      "Mount rahasia mencegah semua akses jaringan oleh build",
+      "Mount rahasia menghindari penyimpanan rahasia yang diberikan sebagai nilai ARG atau ENV image"
+    ],
+    "answer": "Mount rahasia menghindari penyimpanan rahasia yang diberikan sebagai nilai ARG atau ENV image"
+  },
+  {
+    "category": "Docker",
+    "set": 5,
+    "question": "Apa tujuan mount cache BuildKit dalam instruksi RUN?",
+    "options": [
+      "Mengganti image dasar dengan sistem berkas kosong",
+      "Menjamin setiap instruksi RUN berjalan tanpa cache",
+      "Menggunakan kembali cache alat antar-build tanpa menjadikan mount itu isi image akhir",
+      "Menyimpan log eksekusi dalam registri image"
+    ],
+    "answer": "Menggunakan kembali cache alat antar-build tanpa menjadikan mount itu isi image akhir"
+  },
+  {
+    "category": "Docker",
+    "set": 5,
+    "question": "Perubahan masukan build mana yang biasanya membatalkan cache instruksi COPY dan langkah berikutnya yang bergantung padanya?",
+    "options": [
+      "Menyunting komentar Dockerfile biasa tanpa mengubah instruksi",
+      "Mengubah isi berkas sumber yang disalin",
+      "Hanya mengubah cap waktu modifikasi berkas yang disalin",
+      "Mengubah berkas yang dikecualikan oleh .dockerignore"
+    ],
+    "answer": "Mengubah isi berkas sumber yang disalin"
+  },
+  {
+    "category": "Docker",
+    "set": 5,
+    "question": "Apa yang dipilih instruksi Dockerfile 'FROM scratch'?",
+    "options": [
+      "Titik awal kosong tanpa sistem berkas image dasar",
+      "Instalasi Debian minimal",
+      "Sistem berkas akar host yang sedang berjalan",
+      "Image yang paling baru dibangun secara lokal"
+    ],
+    "answer": "Titik awal kosong tanpa sistem berkas image dasar"
+  },
+  {
+    "category": "Docker",
+    "set": 5,
+    "question": "Instruksi Dockerfile mana yang menambahkan metadata kunci-nilai ke image?",
+    "options": [
+      "ARG",
+      "EXPOSE",
+      "STOPSIGNAL",
+      "LABEL"
+    ],
+    "answer": "LABEL"
+  },
+  {
+    "category": "Docker",
+    "set": 5,
+    "question": "Instruksi Dockerfile mana yang mengubah sinyal bawaan saat menghentikan kontainer?",
+    "options": [
+      "SHELL",
+      "ONBUILD",
+      "STOPSIGNAL",
+      "HEALTHCHECK"
+    ],
+    "answer": "STOPSIGNAL"
+  },
+  {
+    "category": "Docker",
+    "set": 5,
+    "question": "Mengapa ENTRYPOINT bentuk exec sering dipilih untuk proses server utama?",
+    "options": [
+      "Mencegah server mengembalikan status bukan nol",
+      "Menghindari shell tambahan di antara server dan sinyal kontainer",
+      "Otomatis membuat pengguna non-root",
+      "Memasang pengawas proses dalam image"
+    ],
+    "answer": "Menghindari shell tambahan di antara server dan sinyal kontainer"
+  },
+  {
+    "category": "Docker",
+    "set": 5,
+    "question": "Apa yang ditambahkan 'docker run --init' ke kontainer?",
+    "options": [
+      "Proses init kecil yang meneruskan sinyal dan mengambil status proses anak yang selesai",
+      "Instalasi systemd lengkap",
+      "Daemon Docker kedua",
+      "Shell masuk interaktif untuk setiap proses"
+    ],
+    "answer": "Proses init kecil yang meneruskan sinyal dan mengambil status proses anak yang selesai"
+  },
+  {
+    "category": "Docker",
+    "set": 5,
+    "question": "Opsi mana yang menjalankan kontainer Linux dengan semua kapabilitas Linux dilepas?",
+    "options": [
+      "--cap-add=ALL",
+      "--privileged",
+      "--security-opt seccomp=unconfined",
+      "--cap-drop=ALL"
+    ],
+    "answer": "--cap-drop=ALL"
+  },
+  {
+    "category": "Docker",
+    "set": 5,
+    "question": "Apa yang terutama diubah oleh Docker tanpa hak root?",
+    "options": [
+      "Image tidak lagi membutuhkan registri",
+      "Kontainer tidak lagi menggunakan ruang nama Linux",
+      "Daemon dan kontainer berjalan tanpa hak root pada host",
+      "Semua kontainer berbagi sistem berkas akar host"
+    ],
+    "answer": "Daemon dan kontainer berjalan tanpa hak root pada host"
+  },
+  {
+    "category": "Docker",
+    "set": 5,
+    "question": "Fasilitas Linux mana yang terutama membatasi dan mencatat penggunaan sumber daya kontainer?",
+    "options": [
+      "Kapabilitas Linux",
+      "Grup kontrol",
+      "Ruang nama",
+      "Filter Seccomp"
+    ],
+    "answer": "Grup kontrol"
+  },
+  {
+    "category": "Docker",
+    "set": 5,
+    "question": "Fasilitas Linux mana yang memberi kontainer tampilan sumber daya terisolasi, seperti ID proses dan antarmuka jaringan?",
+    "options": [
+      "Ruang nama",
+      "Grup kontrol",
+      "Filter Seccomp",
+      "Kapabilitas Linux"
+    ],
+    "answer": "Ruang nama"
+  },
+  {
+    "category": "Docker",
+    "set": 5,
+    "question": "Penggerak jaringan Docker mana yang memberi kontainer Linux ruang nama jaringan milik host?",
+    "options": [
+      "bridge",
+      "overlay",
+      "none",
+      "host"
+    ],
+    "answer": "host"
+  },
+  {
+    "category": "Docker",
+    "set": 5,
+    "question": "Penggerak jaringan Docker mana yang menyisakan hanya antarmuka loopback pada kontainer?",
+    "options": [
+      "host",
+      "overlay",
+      "none",
+      "bridge"
+    ],
+    "answer": "none"
+  },
+  {
+    "category": "Docker",
+    "set": 5,
+    "question": "Penggerak jaringan Docker mana yang ditujukan bagi komunikasi kontainer pada beberapa host Docker?",
+    "options": [
+      "none",
+      "overlay",
+      "bridge",
+      "host"
+    ],
+    "answer": "overlay"
+  },
+  {
+    "category": "Docker",
+    "set": 5,
+    "question": "Apa yang dilakukan '--network container:web' pada kontainer baru?",
+    "options": [
+      "Berbagi ruang nama jaringan web",
+      "Menyalin lapisan sistem berkas web",
+      "Menghubungkan langsung semua antarmuka host",
+      "Membuat jaringan baru bernama web"
+    ],
+    "answer": "Berbagi ruang nama jaringan web"
+  },
+  {
+    "category": "Docker",
+    "set": 5,
+    "question": "Mengapa memasang direktori pada jalur kontainer yang tidak kosong dapat membuat berkas image yang ada tampak hilang?",
+    "options": [
+      "Docker menghapus lapisan image asli",
+      "Docker memindahkan berkas ke registri",
+      "Image otomatis dibangun ulang tanpa berkas tersebut",
+      "Mount menutupi berkas pada jalur itu selama masih terpasang"
+    ],
+    "answer": "Mount menutupi berkas pada jalur itu selama masih terpasang"
+  },
+  {
+    "category": "Docker",
+    "set": 5,
+    "question": "Apa yang biasanya dilakukan Docker saat volume bernama yang kosong pertama kali dipasang pada direktori kontainer berisi berkas, tanpa volume-nocopy?",
+    "options": [
+      "Menolak memulai karena direktori tidak kosong",
+      "Mengubah volume bernama menjadi bind mount",
+      "Menyalin berkas yang sudah ada dalam direktori ke volume",
+      "Menghapus berkas secara permanen dari image"
+    ],
+    "answer": "Menyalin berkas yang sudah ada dalam direktori ke volume"
+  },
+  {
+    "category": "Docker",
+    "set": 5,
+    "question": "Perintah mana yang mencantumkan pemetaan port yang diterbitkan untuk kontainer web?",
+    "options": [
+      "docker wait web",
+      "docker port web",
+      "docker top web",
+      "docker diff web"
+    ],
+    "answer": "docker port web"
+  },
+  {
+    "category": "Docker",
+    "set": 5,
+    "question": "Perintah mana yang hanya mengambil 20 baris terakhir log kontainer web?",
+    "options": [
+      "docker logs --tail 20 web",
+      "docker logs --since 20m web",
+      "docker logs --until 20m web",
+      "docker logs --timestamps web"
+    ],
+    "answer": "docker logs --tail 20 web"
+  },
+  {
+    "category": "Docker",
+    "set": 5,
+    "question": "Apa perbedaan utama antara image Docker dan kontainer?",
+    "options": [
+      "Image selalu berjalan, sedangkan kontainer selalu berhenti",
+      "Image menjadi bagian jaringan, sedangkan kontainer hanya menjadi bagian registri",
+      "Image hanya menyimpan log, sedangkan kontainer hanya menyimpan metadata",
+      "Image adalah templat hanya-baca, sedangkan kontainer adalah instans dengan status eksekusi"
+    ],
+    "answer": "Image adalah templat hanya-baca, sedangkan kontainer adalah instans dengan status eksekusi"
+  },
+  {
+    "category": "Docker",
+    "set": 5,
+    "question": "Apa yang terutama ditunjukkan konteks Docker bagi CLI?",
+    "options": [
+      "Tahap build Dockerfile yang dipilih",
+      "Platform tujuan bawaan setiap image",
+      "Pengaturan koneksi untuk titik akhir daemon Docker",
+      "Berkas dan direktori yang dikirim sebagai konteks build image"
+    ],
+    "answer": "Pengaturan koneksi untuk titik akhir daemon Docker"
+  },
+  {
+    "category": "Docker",
+    "set": 5,
+    "question": "Perintah mana yang mengeluarkan klien Docker dari sesi masuk registri?",
+    "options": [
+      "docker trust inspect",
+      "docker logout",
+      "docker login",
+      "docker context use"
+    ],
+    "answer": "docker logout"
+  },
+  {
+    "category": "Docker",
+    "set": 5,
+    "question": "Opsi mana yang memungkinkan docker login membaca kata sandi dari masukan standar?",
+    "options": [
+      "--password-stdin",
+      "--username",
+      "--config",
+      "--context"
+    ],
+    "answer": "--password-stdin"
+  },
+  {
+    "category": "Docker",
+    "set": 5,
+    "question": "Perintah mana yang mencantumkan tugas milik layanan Docker Swarm bernama api?",
+    "options": [
+      "docker service inspect api",
+      "docker service logs api",
+      "docker service scale api=3",
+      "docker service ps api"
+    ],
+    "answer": "docker service ps api"
+  }
+]

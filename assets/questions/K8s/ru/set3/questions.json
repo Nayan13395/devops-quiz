@@ -1,0 +1,302 @@
+[
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "Какой компонент планирует размещение подов на узлах?",
+    "options": [
+      "kube-scheduler",
+      "kubelet",
+      "etcd",
+      "kube-proxy"
+    ],
+    "answer": "kube-scheduler"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "Какой компонент работает на каждом узле?",
+    "options": [
+      "kubelet",
+      "etcd",
+      "kube-apiserver",
+      "controller-manager"
+    ],
+    "answer": "kubelet"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "Какой компонент выступает фронтендом плоскости управления?",
+    "options": [
+      "kube-apiserver",
+      "kubelet",
+      "etcd",
+      "kube-proxy"
+    ],
+    "answer": "kube-apiserver"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "Какой компонент хранит состояние кластера?",
+    "options": [
+      "etcd",
+      "kubelet",
+      "CoreDNS",
+      "Ingress"
+    ],
+    "answer": "etcd"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "Какой компонент управляет сетевыми правилами на узлах?",
+    "options": [
+      "kube-proxy",
+      "kubelet",
+      "etcd",
+      "Scheduler"
+    ],
+    "answer": "kube-proxy"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "Какой DNS-сервис обычно используется в Kubernetes?",
+    "options": [
+      "CoreDNS",
+      "Bind",
+      "Route53",
+      "Consul"
+    ],
+    "answer": "CoreDNS"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "Какой объект является наименьшей развёртываемой единицей в Kubernetes?",
+    "options": [
+      "Pod",
+      "Cluster",
+      "Node",
+      "Service"
+    ],
+    "answer": "Pod"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "Какой объект управляет приложениями без сохранения состояния?",
+    "options": [
+      "Deployment",
+      "ConfigMap",
+      "Secret",
+      "Namespace"
+    ],
+    "answer": "Deployment"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "Какая нагрузка обеспечивает стабильные идентификаторы Pod и упорядоченное развёртывание приложений с состоянием?",
+    "options": [
+      "StatefulSet",
+      "Deployment",
+      "ReplicaSet",
+      "DaemonSet"
+    ],
+    "answer": "StatefulSet"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "Какой объект обеспечивает работу заданного числа реплик подов?",
+    "options": [
+      "ReplicaSet",
+      "Service",
+      "ConfigMap",
+      "Namespace"
+    ],
+    "answer": "ReplicaSet"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "Какой объект открывает поды для сетевого трафика?",
+    "options": [
+      "Service",
+      "Node",
+      "ReplicaSet",
+      "Volume"
+    ],
+    "answer": "Service"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "Какой объект управляет внешним доступом к сервисам?",
+    "options": [
+      "Ingress",
+      "Pod",
+      "ReplicaSet",
+      "Secret"
+    ],
+    "answer": "Ingress"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "Какой объект хранит конфигурационные данные?",
+    "options": [
+      "ConfigMap",
+      "Deployment",
+      "Ingress",
+      "Node"
+    ],
+    "answer": "ConfigMap"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "Какой объект хранит конфиденциальную информацию, например пароли?",
+    "options": [
+      "Secret",
+      "ConfigMap",
+      "Service",
+      "Namespace"
+    ],
+    "answer": "Secret"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "Какой объект предоставляет подам постоянное хранилище?",
+    "options": [
+      "PersistentVolume",
+      "ReplicaSet",
+      "Namespace",
+      "Service"
+    ],
+    "answer": "PersistentVolume"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "Какая проверка определяет готовность контейнера принимать трафик Service?",
+    "options": [
+      "Проверка поддержания соединения TCP",
+      "Readiness probe",
+      "Liveness probe",
+      "Проверка запуска"
+    ],
+    "answer": "Readiness probe"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "Что может произойти после превышения порога повторных ошибок проверки жизнеспособности?",
+    "options": [
+      "kubelet перезапускает контейнер согласно его политике перезапуска",
+      "Планировщик перемещает все Pod на новый узел",
+      "Сервер API удаляет Deployment",
+      "Service превращается в Service ExternalName"
+    ],
+    "answer": "kubelet перезапускает контейнер согласно его политике перезапуска"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "Что делает проверка запуска, пока приложение ещё запускается?",
+    "options": [
+      "Отключает все лимиты ресурсов контейнера",
+      "Запрещает загрузку образа",
+      "Резервирует отдельный узел плоскости управления",
+      "Откладывает проверки жизнеспособности и готовности до успешной проверки запуска"
+    ],
+    "answer": "Откладывает проверки жизнеспособности и готовности до успешной проверки запуска"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "Что верно для обычных init-контейнеров Pod?",
+    "options": [
+      "Они должны открывать порт Service",
+      "Они всегда работают на отдельных узлах",
+      "Они последовательно завершаются до запуска контейнеров приложения",
+      "Все они запускаются только после завершения контейнеров приложения"
+    ],
+    "answer": "Они последовательно завершаются до запуска контейнеров приложения"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "Какие ресурсы обычно разделяют контейнеры одного Pod?",
+    "options": [
+      "Отдельный IP Service для каждого контейнера",
+      "Сетевое пространство имён и IP-адрес Pod",
+      "Доступную для записи корневую файловую систему",
+      "Отдельный узел для каждого контейнера"
+    ],
+    "answer": "Сетевое пространство имён и IP-адрес Pod"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "Какое поле задаёт объём ресурсов, учитываемый планировщиком при размещении контейнера?",
+    "options": [
+      "resources.requests",
+      "resources.limits",
+      "securityContext",
+      "imagePullPolicy"
+    ],
+    "answer": "resources.requests"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "Что означает запрос CPU контейнера величиной 250m?",
+    "options": [
+      "Два с половиной CPU",
+      "Двадцать пять CPU",
+      "Двести пятьдесят CPU",
+      "Четверть CPU"
+    ],
+    "answer": "Четверть CPU"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "Каково типичное последствие превышения контейнером установленного лимита памяти?",
+    "options": [
+      "Его образ пересобирается с большей памятью",
+      "Его порт Service автоматически меняется",
+      "Он может быть завершён механизмом нехватки памяти",
+      "Его запрос памяти автоматически удваивается"
+    ],
+    "answer": "Он может быть завершён механизмом нехватки памяти"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "Какое поле Pod требует соответствия целевых узлов всем указанным меткам?",
+    "options": [
+      "dnsPolicy",
+      "nodeSelector",
+      "serviceAccountName",
+      "hostAliases"
+    ],
+    "answer": "nodeSelector"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "Гарантирует ли добавление допуска для taint узла размещение Pod на этом узле?",
+    "options": [
+      "Нет, сохраняются другие ограничения планирования и требования к доступным ресурсам",
+      "Да, это отменяет все ресурсные ограничения",
+      "Да, это обходит все правила привязки к узлам",
+      "Нет, допуски всегда запрещают размещение на узле с taint"
+    ],
+    "answer": "Нет, сохраняются другие ограничения планирования и требования к доступным ресурсам"
+  }
+]

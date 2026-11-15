@@ -1,0 +1,302 @@
+[
+  {
+    "category": "Ansible",
+    "set": 3,
+    "question": "ಅನ್ಸಿಬಲ್ ಪಾತ್ರ ಎಂದರೇನು?",
+    "options": [
+      "ಮರುಬಳಕೆ ಮಾಡಬಹುದಾದ ಕಾರ್ಯಗಳು ಮತ್ತು ಫೈಲ್‌ಗಳ ಸಂಗ್ರಹ",
+      "ಬಳಕೆದಾರ ಖಾತೆ",
+      "ಇನ್ವೆಂಟರಿ ಗುಂಪು",
+      "ಪ್ಲೇಬುಕ್ ವೇರಿಯೇಬಲ್"
+    ],
+    "answer": "ಮರುಬಳಕೆ ಮಾಡಬಹುದಾದ ಕಾರ್ಯಗಳು ಮತ್ತು ಫೈಲ್‌ಗಳ ಸಂಗ್ರಹ"
+  },
+  {
+    "category": "Ansible",
+    "set": 3,
+    "question": "ಯಾವ ಆಜ್ಞೆಯು ಹೊಸ ಪಾತ್ರ ರಚನೆಯನ್ನು ರಚಿಸುತ್ತದೆ?",
+    "options": [
+      "ansible-galaxy init",
+      "ansible role create",
+      "ansible init role",
+      "ansible-playbook init"
+    ],
+    "answer": "ansible-galaxy init"
+  },
+  {
+    "category": "Ansible",
+    "set": 3,
+    "question": "ಯಾವ ಡೈರೆಕ್ಟರಿಯು ಪಾತ್ರ ಕಾರ್ಯಗಳನ್ನು ಒಳಗೊಂಡಿದೆ?",
+    "options": [
+      "tasks",
+      "handlers",
+      "files",
+      "vars"
+    ],
+    "answer": "tasks"
+  },
+  {
+    "category": "Ansible",
+    "set": 3,
+    "question": "ಪಾತ್ರದಲ್ಲಿ ಯಾವ ಫೈಲ್ ಮುಖ್ಯ ಕಾರ್ಯ ಫೈಲ್ ಆಗಿದೆ?",
+    "options": [
+      "tasks/main.yml",
+      "tasks/tasks.yml",
+      "main/tasks.yml",
+      "role.yml"
+    ],
+    "answer": "tasks/main.yml"
+  },
+  {
+    "category": "Ansible",
+    "set": 3,
+    "question": "ಯಾವ ಡೈರೆಕ್ಟರಿಯು ರೋಲ್ ಹ್ಯಾಂಡ್ಲರ್‌ಗಳನ್ನು ಒಳಗೊಂಡಿದೆ?",
+    "options": [
+      "handlers",
+      "tasks",
+      "events",
+      "notify"
+    ],
+    "answer": "handlers"
+  },
+  {
+    "category": "Ansible",
+    "set": 3,
+    "question": "ಯಾವ ಡೈರೆಕ್ಟರಿಯು ಜಿಂಜಾ2 ಟೆಂಪ್ಲೇಟ್‌ಗಳನ್ನು ಪಾತ್ರದಲ್ಲಿ ಸಂಗ್ರಹಿಸುತ್ತದೆ?",
+    "options": [
+      "templates",
+      "files",
+      "jinja",
+      "render"
+    ],
+    "answer": "templates"
+  },
+  {
+    "category": "Ansible",
+    "set": 3,
+    "question": "ಯಾವ ಡೈರೆಕ್ಟರಿಯು ಸ್ಥಿರ ಫೈಲ್‌ಗಳನ್ನು ಪಾತ್ರದಲ್ಲಿ ಸಂಗ್ರಹಿಸುತ್ತದೆ?",
+    "options": [
+      "files",
+      "templates",
+      "static",
+      "resources"
+    ],
+    "answer": "files"
+  },
+  {
+    "category": "Ansible",
+    "set": 3,
+    "question": "ಯಾವ ಡೈರೆಕ್ಟರಿಯು ರೋಲ್ ವೇರಿಯೇಬಲ್‌ಗಳನ್ನು ಒಳಗೊಂಡಿದೆ?",
+    "options": [
+      "vars",
+      "variables",
+      "config",
+      "settings"
+    ],
+    "answer": "vars"
+  },
+  {
+    "category": "Ansible",
+    "set": 3,
+    "question": "ಯಾವ ಡೈರೆಕ್ಟರಿಯು ಡಿಫಾಲ್ಟ್ ವೇರಿಯೇಬಲ್‌ಗಳನ್ನು ಒಳಗೊಂಡಿದೆ?",
+    "options": [
+      "defaults",
+      "vars",
+      "config",
+      "settings"
+    ],
+    "answer": "defaults"
+  },
+  {
+    "category": "Ansible",
+    "set": 3,
+    "question": "ಒಂದು ಪ್ರತ್ಯೇಕ ಕಾರ್ಯದಿಂದ ರೋಲ್ ಅನ್ನು ಕರೆಯುವ ಬದಲು ರೋಲ್‌ಗಳ ಸ್ಥಿರ ಪಟ್ಟಿಯನ್ನು ಘೋಷಿಸುವ ಪ್ಲೇ-ಮಟ್ಟದ ಕೀವರ್ಡ್ ಯಾವುದು?",
+    "options": [
+      "roles",
+      "include_role",
+      "role",
+      "import_role"
+    ],
+    "answer": "roles"
+  },
+  {
+    "category": "Ansible",
+    "set": 3,
+    "question": "ಅನ್ಸಿಬಲ್ ಗ್ಯಾಲಕ್ಸಿ ಎಂದರೇನು?",
+    "options": [
+      "ಅನ್ಸಿಬಲ್ ರೋಲ್‌ಗಳು ಮತ್ತು ಕಲೆಕ್ಷನ್‌ಗಳ ರೆಪೊಸಿಟರಿ",
+      "ಮೇಲ್ವಿಚಾರಣಾ ಸಾಧನ",
+      "CI/CD ಪ್ಲಾಟ್‌ಫಾರ್ಮ್",
+      "ಇನ್ವೆಂಟರಿ ಮ್ಯಾನೇಜರ್"
+    ],
+    "answer": "ಅನ್ಸಿಬಲ್ ರೋಲ್‌ಗಳು ಮತ್ತು ಕಲೆಕ್ಷನ್‌ಗಳ ರೆಪೊಸಿಟರಿ"
+  },
+  {
+    "category": "Ansible",
+    "set": 3,
+    "question": "ಯಾವ ಆಜ್ಞೆಯು Galaxy ನಿಂದ ಪಾತ್ರವನ್ನು ಸ್ಥಾಪಿಸುತ್ತದೆ?",
+    "options": [
+      "ansible-galaxy install",
+      "ansible install role",
+      "ansible role add",
+      "ansible-galaxy add"
+    ],
+    "answer": "ansible-galaxy install"
+  },
+  {
+    "category": "Ansible",
+    "set": 3,
+    "question": "ಅನ್ಸಿಬಲ್ ವಾಲ್ಟ್ ಅನ್ನು ಯಾವುದಕ್ಕಾಗಿ ಬಳಸಲಾಗುತ್ತದೆ?",
+    "options": [
+      "ಸೂಕ್ಷ್ಮ ಡೇಟಾವನ್ನು ಎನ್‌ಕ್ರಿಪ್ಟ್ ಮಾಡುವುದು",
+      "ಇನ್ವೆಂಟರಿಗಳನ್ನು ನಿರ್ವಹಿಸುವುದು",
+      "ಪ್ಲೇಬುಕ್‌ಗಳನ್ನು ರನ್ ಮಾಡುವುದು",
+      "ರೋಲ್‌ಗಳನ್ನು ಸ್ಥಾಪಿಸುವುದು"
+    ],
+    "answer": "ಸೂಕ್ಷ್ಮ ಡೇಟಾವನ್ನು ಎನ್‌ಕ್ರಿಪ್ಟ್ ಮಾಡುವುದು"
+  },
+  {
+    "category": "Ansible",
+    "set": 3,
+    "question": "ಯಾವ ಆಜ್ಞೆಯು ಅಸ್ತಿತ್ವದಲ್ಲಿರುವ ಫೈಲ್ ಅನ್ನು ಎನ್ಕ್ರಿಪ್ಟ್ ಮಾಡುತ್ತದೆ?",
+    "options": [
+      "ansible-vault encrypt",
+      "ansible-vault secure",
+      "ansible-vault create",
+      "ansible-vault lock"
+    ],
+    "answer": "ansible-vault encrypt"
+  },
+  {
+    "category": "Ansible",
+    "set": 3,
+    "question": "ಅನ್ಸಿಬಲ್ ಸಂಗ್ರಹಣೆಗಳು ಯಾವುವು?",
+    "options": [
+      "ರೋಲ್‌ಗಳು, ಮಾಡ್ಯೂಲ್‌ಗಳು ಮತ್ತು ಪ್ಲಗಿನ್‌ಗಳನ್ನು ಒಳಗೊಂಡಿರುವ ಪ್ಯಾಕೇಜ್‌ಗಳು",
+      "ಇನ್ವೆಂಟರಿ ಗುಂಪುಗಳು",
+      "ಎನ್‌ಕ್ರಿಪ್ಟ್ ಮಾಡಿದ ಫೈಲ್‌ಗಳು",
+      "YAML ವೇರಿಯೇಬಲ್‌ಗಳು"
+    ],
+    "answer": "ರೋಲ್‌ಗಳು, ಮಾಡ್ಯೂಲ್‌ಗಳು ಮತ್ತು ಪ್ಲಗಿನ್‌ಗಳನ್ನು ಒಳಗೊಂಡಿರುವ ಪ್ಯಾಕೇಜ್‌ಗಳು"
+  },
+  {
+    "category": "Ansible",
+    "set": 3,
+    "question": "ಇತರ ರೋಲ್‌ಗಳ ಮೇಲಿನ ಅವಲಂಬನೆಗಳನ್ನು ಸಾಮಾನ್ಯವಾಗಿ ರೋಲ್‌ನ ಯಾವ ಫೈಲ್ ಘೋಷಿಸುತ್ತದೆ?",
+    "options": [
+      "vars/main.yml",
+      "meta/main.yml",
+      "defaults/main.yml",
+      "handlers/main.yml"
+    ],
+    "answer": "meta/main.yml"
+  },
+  {
+    "category": "Ansible",
+    "set": 3,
+    "question": "community.general ಎಂಬ ಕಲೆಕ್ಷನ್ ಅನ್ನು ಸ್ಥಾಪಿಸುವ ಆಜ್ಞೆ ಯಾವುದು?",
+    "options": [
+      "ansible-galaxy collection install community.general",
+      "ansible-galaxy role install community.general",
+      "ansible-galaxy collection build community.general",
+      "ansible-galaxy collection verify community.general"
+    ],
+    "answer": "ansible-galaxy collection install community.general"
+  },
+  {
+    "category": "Ansible",
+    "set": 3,
+    "question": "ansible.builtin.copy ಎಂಬ ಪೂರ್ಣ ಅರ್ಹತೆಯ ಕಲೆಕ್ಷನ್ ಹೆಸರು ಯಾವುದನ್ನು ಗುರುತಿಸುತ್ತದೆ?",
+    "options": [
+      "builtin ಎಂಬ ಹೋಸ್ಟ್ ಗುಂಪಿನೊಳಗಿನ copy ರೋಲ್",
+      "ಇನ್ವೆಂಟರಿಯ ಹೋಸ್ಟ್ ಹೆಸರು ಮತ್ತು ಅದರ ನಂತರ ಅದರ ಸಂಪರ್ಕದ ಪ್ರಕಾರ",
+      "Vault ಗುರುತು ಮತ್ತು ಅದರ ನಂತರ ಗೂಢಲಿಪೀಕರಿಸಿದ ಫೈಲ್‌ನ ಹೆಸರು",
+      "ansible ನಾಮಸ್ಥಳದ builtin ಕಲೆಕ್ಷನ್‌ನಲ್ಲಿರುವ copy ಮಾಡ್ಯೂಲ್"
+    ],
+    "answer": "ansible ನಾಮಸ್ಥಳದ builtin ಕಲೆಕ್ಷನ್‌ನಲ್ಲಿರುವ copy ಮಾಡ್ಯೂಲ್"
+  },
+  {
+    "category": "Ansible",
+    "set": 3,
+    "question": "ಗೂಢಲಿಪೀಕರಿಸಿದ Vault ಫೈಲ್ ಅನ್ನು ಡಿಸ್ಕ್‌ನಲ್ಲಿ ಶಾಶ್ವತವಾಗಿ ಡೀಕ್ರಿಪ್ಟ್ ಮಾಡದೆ ಪ್ರದರ್ಶಿಸುವ ಆಜ್ಞೆ ಯಾವುದು?",
+    "options": [
+      "ansible-vault edit secrets.yml",
+      "ansible-vault rekey secrets.yml",
+      "ansible-vault view secrets.yml",
+      "ansible-vault decrypt secrets.yml"
+    ],
+    "answer": "ansible-vault view secrets.yml"
+  },
+  {
+    "category": "Ansible",
+    "set": 3,
+    "question": "ಈಗಾಗಲೇ Vault ಮೂಲಕ ಗೂಢಲಿಪೀಕರಿಸಿರುವ ಫೈಲ್‌ನ್ನು ರಕ್ಷಿಸುವ ಪಾಸ್‌ವರ್ಡ್ ಬದಲಿಸುವ ಆಜ್ಞೆ ಯಾವುದು?",
+    "options": [
+      "ansible-vault create secrets.yml",
+      "ansible-vault rekey secrets.yml",
+      "ansible-vault view secrets.yml",
+      "ansible-vault encrypt secrets.yml"
+    ],
+    "answer": "ansible-vault rekey secrets.yml"
+  },
+  {
+    "category": "Ansible",
+    "set": 3,
+    "question": "ಪ್ಲೇಬುಕ್ ಚಲಾಯಿಸುವಾಗ Vault ಪಾಸ್‌ವರ್ಡ್ ಕೇಳುವ ಆಯ್ಕೆ ಯಾವುದು?",
+    "options": [
+      "--ask-vault-pass",
+      "--ask-pass",
+      "--ask-become-pass",
+      "--private-key"
+    ],
+    "answer": "--ask-vault-pass"
+  },
+  {
+    "category": "Ansible",
+    "set": 3,
+    "question": "ಕಾರ್ಯನಿರ್ವಹಣೆಯ ಸಮಯದಲ್ಲಿ ರೋಲ್ ಅನ್ನು ಕ್ರಿಯಾತ್ಮಕವಾಗಿ ಲೋಡ್ ಮಾಡುವ ಕಾರ್ಯ ಕ್ರಿಯೆ ಯಾವುದು?",
+    "options": [
+      "ansible.builtin.import_role",
+      "ansible.builtin.import_tasks",
+      "ansible.builtin.include_vars",
+      "ansible.builtin.include_role"
+    ],
+    "answer": "ansible.builtin.include_role"
+  },
+  {
+    "category": "Ansible",
+    "set": 3,
+    "question": "ಕಾರ್ಯಗಳನ್ನು ಹೊಂದಿರುವ ಫೈಲ್ ಅನ್ನು ಸ್ಥಿರವಾಗಿ ಆಮದು ಮಾಡಿಕೊಳ್ಳುವ ಕಾರ್ಯ ಕ್ರಿಯೆ ಯಾವುದು?",
+    "options": [
+      "ansible.builtin.include_vars",
+      "ansible.builtin.import_role",
+      "ansible.builtin.import_tasks",
+      "ansible.builtin.include_tasks"
+    ],
+    "answer": "ansible.builtin.import_tasks"
+  },
+  {
+    "category": "Ansible",
+    "set": 3,
+    "question": "ರೋಲ್‌ನ defaults ಮತ್ತು vars ಎರಡರಲ್ಲೂ ಒಂದೇ ಹೆಸರು ಕಾಣಿಸಿಕೊಂಡಾಗ ಯಾವ ಚರ ಮೂಲಕ್ಕೆ ಆದ್ಯತೆ ಸಿಗುತ್ತದೆ?",
+    "options": [
+      "ಎರಡೂ ವ್ಯಾಖ್ಯಾನಗಳು ಯಾವಾಗಲೂ ಸಿಂಟ್ಯಾಕ್ಸ್ ದೋಷ ಉಂಟುಮಾಡುತ್ತವೆ",
+      "ರೋಲ್‌ನ vars",
+      "ರೋಲ್‌ನ defaults",
+      "ಎರಡೂ ಮೌಲ್ಯಗಳನ್ನು ಯಾವಾಗಲೂ ಜೋಡಿಸಲಾಗುತ್ತದೆ"
+    ],
+    "answer": "ರೋಲ್‌ನ vars"
+  },
+  {
+    "category": "Ansible",
+    "set": 3,
+    "question": "ಒದಗಿಸಿದ ಸ್ಟ್ರಿಂಗ್‌ನಿಂದ ಗೂಢಲಿಪೀಕರಿಸಿದ ಚರವನ್ನು ರಚಿಸುವ ಆಜ್ಞೆ ಯಾವುದು?",
+    "options": [
+      "ansible-vault encrypt_string",
+      "ansible-vault encrypt",
+      "ansible-vault rekey",
+      "ansible-vault view"
+    ],
+    "answer": "ansible-vault encrypt_string"
+  }
+]

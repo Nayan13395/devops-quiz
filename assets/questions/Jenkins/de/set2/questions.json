@@ -1,0 +1,302 @@
+[
+  {
+    "category": "Jenkins",
+    "set": 2,
+    "question": "Welche Datei definiert eine Jenkins-Pipeline?",
+    "options": [
+      "Jenkinsfile",
+      "pipeline.yml",
+      "build.xml",
+      "job.conf"
+    ],
+    "answer": "Jenkinsfile"
+  },
+  {
+    "category": "Jenkins",
+    "set": 2,
+    "question": "Welcher Pipeline-Typ verwendet eine strukturierte Syntax?",
+    "options": [
+      "Declarative Pipeline",
+      "Scripted Pipeline",
+      "Freestyle Job",
+      "Maven Job"
+    ],
+    "answer": "Declarative Pipeline"
+  },
+  {
+    "category": "Jenkins",
+    "set": 2,
+    "question": "Welches Schlüsselwort startet eine Declarative Pipeline?",
+    "options": [
+      "pipeline",
+      "stage",
+      "agent",
+      "steps"
+    ],
+    "answer": "pipeline"
+  },
+  {
+    "category": "Jenkins",
+    "set": 2,
+    "question": "Welcher Abschnitt einer deklarativen Pipeline legt den Ausführungsort der Pipeline oder Phase fest?",
+    "options": [
+      "agent",
+      "node",
+      "executor",
+      "workspace"
+    ],
+    "answer": "agent"
+  },
+  {
+    "category": "Jenkins",
+    "set": 2,
+    "question": "Welcher Block enthält mehrere Stages?",
+    "options": [
+      "stages",
+      "steps",
+      "agent",
+      "tools"
+    ],
+    "answer": "stages"
+  },
+  {
+    "category": "Jenkins",
+    "set": 2,
+    "question": "Welcher Block stellt eine Phase in der Pipeline dar?",
+    "options": [
+      "stage",
+      "step",
+      "agent",
+      "job"
+    ],
+    "answer": "stage"
+  },
+  {
+    "category": "Jenkins",
+    "set": 2,
+    "question": "Welcher Block enthält die in einer Stage ausgeführten Befehle?",
+    "options": [
+      "steps",
+      "agent",
+      "pipeline",
+      "tools"
+    ],
+    "answer": "steps"
+  },
+  {
+    "category": "Jenkins",
+    "set": 2,
+    "question": "Welche Anweisung führt die Pipeline auf einem beliebigen verfügbaren Agent aus?",
+    "options": [
+      "agent any",
+      "node any",
+      "executor any",
+      "run any"
+    ],
+    "answer": "agent any"
+  },
+  {
+    "category": "Jenkins",
+    "set": 2,
+    "question": "Welcher Block definiert Umgebungsvariablen?",
+    "options": [
+      "environment",
+      "variables",
+      "env",
+      "settings"
+    ],
+    "answer": "environment"
+  },
+  {
+    "category": "Jenkins",
+    "set": 2,
+    "question": "Welcher Block legt Aktionen nach der Pipeline-Ausführung fest?",
+    "options": [
+      "post",
+      "after",
+      "cleanup",
+      "finally"
+    ],
+    "answer": "post"
+  },
+  {
+    "category": "Jenkins",
+    "set": 2,
+    "question": "Welcher Bedingungsblock steuert, ob eine Stage ausgeführt werden soll?",
+    "options": [
+      "when",
+      "if",
+      "condition",
+      "runif"
+    ],
+    "answer": "when"
+  },
+  {
+    "category": "Jenkins",
+    "set": 2,
+    "question": "Welche Funktion ermöglicht die gleichzeitige Ausführung mehrerer Stages?",
+    "options": [
+      "parallel",
+      "multi",
+      "concurrent",
+      "fork"
+    ],
+    "answer": "parallel"
+  },
+  {
+    "category": "Jenkins",
+    "set": 2,
+    "question": "Welcher Step führt Shell-Befehle auf Linux-Agents aus?",
+    "options": [
+      "sh",
+      "shell",
+      "bash",
+      "linux"
+    ],
+    "answer": "sh"
+  },
+  {
+    "category": "Jenkins",
+    "set": 2,
+    "question": "Welcher Pipeline-Schritt führt ausdrücklich ein Windows-Batchskript aus?",
+    "options": [
+      "bat",
+      "cmd",
+      "powershell",
+      "win"
+    ],
+    "answer": "bat"
+  },
+  {
+    "category": "Jenkins",
+    "set": 2,
+    "question": "Welche deklarative Direktive deklariert benutzerseitige Build-Eingaben wie Zeichenfolgenparameter?",
+    "options": [
+      "parameters",
+      "environment",
+      "tools",
+      "triggers"
+    ],
+    "answer": "parameters"
+  },
+  {
+    "category": "Jenkins",
+    "set": 2,
+    "question": "Welcher Ausdruck liest einen Build-Parameter namens TARGET im Jenkinsfile?",
+    "options": [
+      "currentBuild.TARGET",
+      "scm.TARGET",
+      "agent.TARGET",
+      "params.TARGET"
+    ],
+    "answer": "params.TARGET"
+  },
+  {
+    "category": "Jenkins",
+    "set": 2,
+    "question": "Welcher Pipeline-Schritt wartet auf eine menschliche Genehmigung?",
+    "options": [
+      "waitUntil",
+      "retry",
+      "input",
+      "sleep"
+    ],
+    "answer": "input"
+  },
+  {
+    "category": "Jenkins",
+    "set": 2,
+    "question": "Welcher Pipeline-Schritt veröffentlicht XML-Testergebnisse im JUnit-Format?",
+    "options": [
+      "writeFile",
+      "junit",
+      "archiveArtifacts",
+      "stash"
+    ],
+    "answer": "junit"
+  },
+  {
+    "category": "Jenkins",
+    "set": 2,
+    "question": "Welcher Pipeline-Schritt bewahrt passende Arbeitsdateien als Build-Artefakte auf?",
+    "options": [
+      "archiveArtifacts",
+      "stash",
+      "checkout",
+      "readFile"
+    ],
+    "answer": "archiveArtifacts"
+  },
+  {
+    "category": "Jenkins",
+    "set": 2,
+    "question": "Welche post-Bedingung läuft unabhängig vom Abschlussstatus der Pipeline?",
+    "options": [
+      "success",
+      "failure",
+      "unstable",
+      "always"
+    ],
+    "answer": "always"
+  },
+  {
+    "category": "Jenkins",
+    "set": 2,
+    "question": "Welche deklarative Direktive konfiguriert Werkzeuge wie eine benannte Maven-Installation?",
+    "options": [
+      "parameters",
+      "triggers",
+      "tools",
+      "environment"
+    ],
+    "answer": "tools"
+  },
+  {
+    "category": "Jenkins",
+    "set": 2,
+    "question": "Welcher Pipeline-Schritt begrenzt die Ausführungszeit seines Blocks?",
+    "options": [
+      "waitUntil",
+      "timeout",
+      "retry",
+      "sleep"
+    ],
+    "answer": "timeout"
+  },
+  {
+    "category": "Jenkins",
+    "set": 2,
+    "question": "Welcher Pipeline-Schritt wiederholt seinen Block bei einem Fehler bis zur angegebenen Versuchsanzahl?",
+    "options": [
+      "retry",
+      "timeout",
+      "sleep",
+      "input"
+    ],
+    "answer": "retry"
+  },
+  {
+    "category": "Jenkins",
+    "set": 2,
+    "question": "Welcher Block erlaubt Scripted-Pipeline-Code innerhalb eines deklarativen steps-Abschnitts?",
+    "options": [
+      "options",
+      "parameters",
+      "triggers",
+      "script"
+    ],
+    "answer": "script"
+  },
+  {
+    "category": "Jenkins",
+    "set": 2,
+    "question": "Was bewirkt agent none auf oberster Ebene einer deklarativen Pipeline?",
+    "options": [
+      "Alle Shell-Schritte automatisch auf dem Controller ausführen",
+      "Alle verfügbaren Agenten gleichzeitig zuweisen",
+      "Die Zuweisung eines globalen Agenten für die gesamte Pipeline vermeiden",
+      "Alle Agenten auf Phasenebene an der Ausführung hindern"
+    ],
+    "answer": "Die Zuweisung eines globalen Agenten für die gesamte Pipeline vermeiden"
+  }
+]

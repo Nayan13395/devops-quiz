@@ -1,0 +1,302 @@
+[
+  {
+    "category": "Bash Scripting",
+    "set": 5,
+    "question": "Какая строка в начале скрипта указывает системе запускать его с помощью Bash?",
+    "options": [
+      "//bash",
+      "#!/bin/bash",
+      "<?bash",
+      "#include bash"
+    ],
+    "answer": "#!/bin/bash"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 5,
+    "question": "Какая команда создаёт каталог вместе со всеми отсутствующими родительскими каталогами?",
+    "options": [
+      "mkdir -p",
+      "mkdir -r",
+      "mkdir -m",
+      "mkdir -v"
+    ],
+    "answer": "mkdir -p"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 5,
+    "question": "Как присвоить значение 5 переменной count в Bash?",
+    "options": [
+      "set count 5",
+      "$count=5",
+      "count=5",
+      "count = 5"
+    ],
+    "answer": "count=5"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 5,
+    "question": "Какой символ используется для чтения значения переменной с именем name?",
+    "options": [
+      "%name",
+      "$name",
+      "&name",
+      "#name"
+    ],
+    "answer": "$name"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 5,
+    "question": "Какая переменная содержит количество аргументов, переданных скрипту?",
+    "options": [
+      "$?",
+      "$#",
+      "$@",
+      "$$"
+    ],
+    "answer": "$#"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 5,
+    "question": "Какая переменная содержит код завершения последней команды?",
+    "options": [
+      "$?",
+      "$0",
+      "$#",
+      "$!"
+    ],
+    "answer": "$?"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 5,
+    "question": "Какой оператор запускает вторую команду, только если первая завершилась успешно?",
+    "options": [
+      "|",
+      "||",
+      ";",
+      "&&"
+    ],
+    "answer": "&&"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 5,
+    "question": "Какой оператор дописывает вывод в конец файла?",
+    "options": [
+      "<<",
+      ">>",
+      "|&",
+      ">"
+    ],
+    "answer": ">>"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 5,
+    "question": "Какое ключевое слово начинает условный блок в Bash?",
+    "options": [
+      "check",
+      "case-if",
+      "if",
+      "when"
+    ],
+    "answer": "if"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 5,
+    "question": "Какое ключевое слово завершает блок if в Bash?",
+    "options": [
+      "endif",
+      "fi",
+      "done",
+      "end"
+    ],
+    "answer": "fi"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 5,
+    "question": "Какой цикл перебирает список элементов?",
+    "options": [
+      "foreach item list",
+      "for item in list; do",
+      "each item in list",
+      "loop item in list"
+    ],
+    "answer": "for item in list; do"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 5,
+    "question": "Какая команда выводит текст в терминал?",
+    "options": [
+      "print",
+      "echo",
+      "say",
+      "out"
+    ],
+    "answer": "echo"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 5,
+    "question": "Какая проверка определяет, существует ли обычный файл?",
+    "options": [
+      "[ -e file ]",
+      "[ -r file ]",
+      "[ -d file ]",
+      "[ -f file ]"
+    ],
+    "answer": "[ -f file ]"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 5,
+    "question": "Какая проверка определяет, что строка пуста?",
+    "options": [
+      "[ -s \"$str\" ]",
+      "[ -e \"$str\" ]",
+      "[ -n \"$str\" ]",
+      "[ -z \"$str\" ]"
+    ],
+    "answer": "[ -z \"$str\" ]"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 5,
+    "question": "Какая команда считывает строку ввода в переменную?",
+    "options": [
+      "read",
+      "input",
+      "scan",
+      "get"
+    ],
+    "answer": "read"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 5,
+    "question": "Какой синтаксис сохраняет вывод команды в переменную?",
+    "options": [
+      "var=$(date)",
+      "var=[date]",
+      "var={date}",
+      "var=<date>"
+    ],
+    "answer": "var=$(date)"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 5,
+    "question": "Какая команда подсчитывает строки в файле data.txt в оболочке Bash?",
+    "options": [
+      "wc -l data.txt",
+      "ls -l data.txt",
+      "sort -l data.txt",
+      "cut -l data.txt"
+    ],
+    "answer": "wc -l data.txt"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 5,
+    "question": "Какая опция выводит каждую команду перед её выполнением?",
+    "options": [
+      "set -f",
+      "set -u",
+      "set -x",
+      "set -e"
+    ],
+    "answer": "set -x"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 5,
+    "question": "Какая переменная содержит имя запущенного скрипта?",
+    "options": [
+      "$*",
+      "$1",
+      "$0",
+      "$#"
+    ],
+    "answer": "$0"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 5,
+    "question": "Как определить функцию с именем greet в Bash?",
+    "options": [
+      "fn greet { echo hi }",
+      "function greet: echo hi",
+      "def greet(): echo hi",
+      "greet() { echo hi; }"
+    ],
+    "answer": "greet() { echo hi; }"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 5,
+    "question": "Какая команда подключает файл (source) в текущей оболочке?",
+    "options": [
+      "run file.sh",
+      "import file.sh",
+      "source file.sh",
+      "call file.sh"
+    ],
+    "answer": "source file.sh"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 5,
+    "question": "Какой подстановочный символ соответствует любому количеству символов в именах файлов?",
+    "options": [
+      "?",
+      "~",
+      "*",
+      "#"
+    ],
+    "answer": "*"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 5,
+    "question": "Какое ключевое слово используется для выбора среди множества шаблонов в Bash?",
+    "options": [
+      "select-when",
+      "match",
+      "case",
+      "switch"
+    ],
+    "answer": "case"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 5,
+    "question": "Какая команда выводит первые строки файла?",
+    "options": [
+      "cat -f",
+      "head",
+      "less -h",
+      "tail"
+    ],
+    "answer": "head"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 5,
+    "question": "Какой оператор перенаправляет стандартный поток ошибок в файл?",
+    "options": [
+      "0<",
+      "^>",
+      "2>",
+      "1>"
+    ],
+    "answer": "2>"
+  }
+]

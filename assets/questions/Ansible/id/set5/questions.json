@@ -1,0 +1,302 @@
+[
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "Tanpa pengaturan pengganti pada tingkat tugas, apa yang terjadi pada modul yang tidak mendukung mode pemeriksaan saat dijalankan dalam mode tersebut?",
+    "options": [
+      "Modul selalu melakukan perubahan normalnya",
+      "Modul otomatis dijalankan pada localhost",
+      "Modul dicoba ulang sampai mendukung mode pemeriksaan",
+      "Modul dilewati, bukan melakukan perubahan"
+    ],
+    "answer": "Modul dilewati, bukan melakukan perubahan"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "Pengaturan tugas mana yang mengizinkan perubahan nyata meskipun playbook dipanggil dengan --check?",
+    "options": [
+      "changed_when: false",
+      "ignore_errors: true",
+      "check_mode: false",
+      "diff: false"
+    ],
+    "answer": "check_mode: false"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "Aksi meta Ansible mana yang segera menjalankan penangan yang sudah menerima notifikasi?",
+    "options": [
+      "reset_connection",
+      "flush_handlers",
+      "clear_facts",
+      "end_play"
+    ],
+    "answer": "flush_handlers"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "Jika dua tugas yang berubah memberi notifikasi kepada penangan yang sama sebelum dijalankan, berapa kali penangan tersebut biasanya dijalankan pada titik itu?",
+    "options": [
+      "Sekali",
+      "Dua kali",
+      "Sekali per grup inventaris",
+      "Tidak pernah, karena notifikasinya bertentangan"
+    ],
+    "answer": "Sekali"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "Apa yang menentukan urutan eksekusi penangan yang diberi notifikasi untuk titik eksekusi yang sama?",
+    "options": [
+      "Urutan alfabet nama penangan",
+      "Urutan nama dalam daftar notify",
+      "Urutan terhubungnya host yang dikelola",
+      "Urutan definisinya dalam bagian handlers"
+    ],
+    "answer": "Urutan definisinya dalam bagian handlers"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "Kegagalan mana yang biasanya memicu tugas rescue dalam sebuah blok?",
+    "options": [
+      "Playbook berisi definisi tugas yang tidak valid",
+      "Dokumen YAML tidak dapat diurai",
+      "Tugas di dalam blok menghasilkan kegagalan",
+      "Host tidak dapat dijangkau sebelum tugasnya dapat dijalankan"
+    ],
+    "answer": "Tugas di dalam blok menghasilkan kegagalan"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "Kesalahan mana yang tidak disembunyikan oleh ignore_errors pada tugas biasa?",
+    "options": [
+      "Kondisi failed_when yang bernilai true",
+      "Kesalahan variabel yang belum didefinisikan",
+      "Status keluar bukan nol yang dilaporkan perintah",
+      "Hasil modul yang secara eksplisit ditandai failed"
+    ],
+    "answer": "Kesalahan variabel yang belum didefinisikan"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "Kata kunci mana yang menghentikan play di semua host setelah kegagalan tugas yang tidak ditangani, setelah kelompok saat ini menyelesaikan tugas tersebut?",
+    "options": [
+      "any_errors_fatal",
+      "ignore_unreachable",
+      "max_fail_percentage: 100",
+      "force_handlers"
+    ],
+    "answer": "any_errors_fatal"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "Apa pengaruh force_handlers jika tugas berikutnya gagal pada host yang dapat dijangkau?",
+    "options": [
+      "Semua penangan yang didefinisikan dijalankan meskipun tanpa notifikasi",
+      "Semua tugas yang gagal otomatis dicoba ulang",
+      "Penangan dijalankan sebelum semua tugas biasa",
+      "Penangan yang sudah diberi notifikasi masih dapat dijalankan pada host tersebut"
+    ],
+    "answer": "Penangan yang sudah diberi notifikasi masih dapat dijalankan pada host tersebut"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "Pengaturan tugas mana yang menyembunyikan pencatatan normal argumen dan hasil tugas yang sensitif?",
+    "options": [
+      "check_mode: true",
+      "changed_when: false",
+      "no_log: true",
+      "diff: true"
+    ],
+    "answer": "no_log: true"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "Pengaturan tugas mana yang menyembunyikan perbedaan isi berkas meskipun --diff diaktifkan?",
+    "options": [
+      "ignore_errors: true",
+      "diff: false",
+      "no_log: false",
+      "check_mode: false"
+    ],
+    "answer": "diff: false"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "Kamus mana yang memberikan akses ke variabel milik host inventaris lain?",
+    "options": [
+      "hostvars",
+      "ansible_facts",
+      "environment",
+      "ansible_loop"
+    ],
+    "answer": "hostvars"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "Variabel khusus mana yang berisi nama inventaris host saat ini?",
+    "options": [
+      "ansible_host",
+      "ansible_user",
+      "ansible_playbook_python",
+      "inventory_hostname"
+    ],
+    "answer": "inventory_hostname"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "Direktori mana di samping inventaris yang lazim digunakan untuk variabel bersama suatu grup host?",
+    "options": [
+      "roles",
+      "collections",
+      "group_vars",
+      "host_vars"
+    ],
+    "answer": "group_vars"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "Di mana lookup ansible.builtin.file membaca berkas secara bawaan?",
+    "options": [
+      "Pada host yang ditentukan oleh become_user",
+      "Pada simpul kontrol",
+      "Pada setiap host yang dikelola",
+      "Pada host pertama dalam play"
+    ],
+    "answer": "Pada simpul kontrol"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "Filter mana yang mengubah string YAML menjadi struktur data Ansible?",
+    "options": [
+      "from_yaml",
+      "to_yaml",
+      "to_json",
+      "dict2items"
+    ],
+    "answer": "from_yaml"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "Filter mana yang mengubah kamus menjadi daftar kamus kunci/nilai?",
+    "options": [
+      "items2dict",
+      "flatten",
+      "zip",
+      "dict2items"
+    ],
+    "answer": "dict2items"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "Filter mana yang menghapus elemen duplikat dari daftar?",
+    "options": [
+      "reverse",
+      "flatten",
+      "unique",
+      "sort"
+    ],
+    "answer": "unique"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "Modul mana yang memeriksa ekspresi dan gagal jika asersi yang ditentukan tidak terpenuhi?",
+    "options": [
+      "ansible.builtin.set_fact",
+      "ansible.builtin.assert",
+      "ansible.builtin.debug",
+      "ansible.builtin.pause"
+    ],
+    "answer": "ansible.builtin.assert"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "Modul mana yang mengelola baris tertentu dalam berkas teks menggunakan ekspresi reguler?",
+    "options": [
+      "ansible.builtin.lineinfile",
+      "ansible.builtin.blockinfile",
+      "ansible.builtin.copy",
+      "ansible.builtin.slurp"
+    ],
+    "answer": "ansible.builtin.lineinfile"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "Modul mana yang mengakses URL dan dapat memeriksa kode status HTTP yang diharapkan?",
+    "options": [
+      "ansible.builtin.get_url",
+      "ansible.builtin.fetch",
+      "ansible.builtin.wait_for",
+      "ansible.builtin.uri"
+    ],
+    "answer": "ansible.builtin.uri"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "Modul mana yang menunggu hingga port TCP mencapai keadaan yang diminta?",
+    "options": [
+      "ansible.builtin.async_status",
+      "ansible.builtin.ping",
+      "ansible.builtin.wait_for",
+      "ansible.builtin.pause"
+    ],
+    "answer": "ansible.builtin.wait_for"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "Parameter mana yang membuat ansible.builtin.command melewati eksekusi jika jalur yang ditentukan sudah ada?",
+    "options": [
+      "stdin",
+      "creates",
+      "removes",
+      "chdir"
+    ],
+    "answer": "creates"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "Pengaturan modul file mana yang membuat tautan simbolis?",
+    "options": [
+      "state: link",
+      "state: directory",
+      "state: touch",
+      "state: hard"
+    ],
+    "answer": "state: link"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "Modul mana yang dapat menambahkan host ke inventaris dalam memori untuk play berikutnya?",
+    "options": [
+      "ansible.builtin.group_by",
+      "ansible.builtin.set_fact",
+      "ansible.builtin.meta",
+      "ansible.builtin.add_host"
+    ],
+    "answer": "ansible.builtin.add_host"
+  }
+]

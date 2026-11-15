@@ -1,3 +1,4 @@
+import '../l10n/game_localizations.dart';
 import 'dart:async';
 import 'dart:math';
 
@@ -6,6 +7,7 @@ import 'package:flutter/material.dart';
 import '../services/point_service.dart';
 import '../services/game_player_names.dart';
 import '../services/game_sound_service.dart';
+import '../services/game_rewards.dart';
 import '../services/snake_ladders_service.dart';
 
 const List<Color> _snakeColors = [
@@ -48,14 +50,22 @@ class _SnakeLaddersScreenState extends State<SnakeLaddersScreen> {
   int get _currentPlayer => _game.currentPlayer;
   int? get _lastRoll => _game.lastRoll;
   bool get _finished => _game.finished;
-  String _playerName(int player) =>
-      player == 0 ? GamePlayerNames.playerOne() : _game.playerName(player);
+  String _playerName(int player) => gamePlayerName(
+    context,
+    player == 0 ? GamePlayerNames.playerOne() : _game.playerName(player),
+  );
 
   String get _status => _finished
-      ? '${_playerName(_currentPlayer)} wins!'
+      ? gameL10n(context).gameUiWins((_playerName(_currentPlayer)).toString())
       : _lastRoll == null
-      ? '${_playerName(0)} rolls first'
-      : '${_playerName(_currentPlayer)}${_lastRoll == 6 ? ' rolls again' : ' to roll'}';
+      ? gameL10n(context).gameUiRollsFirst((_playerName(0)).toString())
+      : _lastRoll == 6
+      ? gameL10n(
+          context,
+        ).gameUiRollsAgain((_playerName(_currentPlayer)).toString())
+      : gameL10n(
+          context,
+        ).gameUiToRoll((_playerName(_currentPlayer)).toString());
 
   @override
   void initState() {
@@ -115,10 +125,15 @@ class _SnakeLaddersScreenState extends State<SnakeLaddersScreen> {
 
   Future<void> _awardWin() async {
     try {
-      await PointService.addPoints(50, source: PointSource.game);
+      await PointService.addPoints(
+        GameRewards.levelCompletion,
+        source: PointSource.game,
+      );
       if (mounted) {
         ScaffoldMessenger.of(context).showSnackBar(
-          const SnackBar(content: Text('Snake and Ladders win: 50 points!')),
+          SnackBar(
+            content: Text(gameL10n(context).gameUiSnakeAndLaddersWin100Points),
+          ),
         );
       }
     } catch (error) {
@@ -142,16 +157,18 @@ class _SnakeLaddersScreenState extends State<SnakeLaddersScreen> {
       final restart = await showDialog<bool>(
         context: context,
         builder: (context) => AlertDialog(
-          title: const Text('Start a new game?'),
-          content: const Text('Changing players replaces the saved game.'),
+          title: Text(gameL10n(context).gameUiStartANewGame),
+          content: Text(
+            gameL10n(context).gameUiChangingPlayersReplacesTheSavedGame,
+          ),
           actions: [
             TextButton(
               onPressed: () => Navigator.pop(context, false),
-              child: const Text('Cancel'),
+              child: Text(gameL10n(context).gameUiCancel),
             ),
             FilledButton(
               onPressed: () => Navigator.pop(context, true),
-              child: const Text('New game'),
+              child: Text(gameL10n(context).gameUiNewGame),
             ),
           ],
         ),
@@ -173,16 +190,18 @@ class _SnakeLaddersScreenState extends State<SnakeLaddersScreen> {
       final restart = await showDialog<bool>(
         context: context,
         builder: (context) => AlertDialog(
-          title: const Text('Start a new level?'),
-          content: const Text('Changing levels replaces the saved game.'),
+          title: Text(gameL10n(context).gameUiStartANewLevel),
+          content: Text(
+            gameL10n(context).gameUiChangingLevelsReplacesTheSavedGame,
+          ),
           actions: [
             TextButton(
               onPressed: () => Navigator.pop(context, false),
-              child: const Text('Cancel'),
+              child: Text(gameL10n(context).gameUiCancel),
             ),
             FilledButton(
               onPressed: () => Navigator.pop(context, true),
-              child: const Text('Change level'),
+              child: Text(gameL10n(context).gameUiChangeLevel),
             ),
           ],
         ),
@@ -209,10 +228,10 @@ class _SnakeLaddersScreenState extends State<SnakeLaddersScreen> {
     final colors = Theme.of(context).colorScheme;
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Snake and Ladders'),
+        title: Text(gameL10n(context).gameUiSnakeAndLadders),
         actions: [
           IconButton(
-            tooltip: 'New game',
+            tooltip: gameL10n(context).gameUiNewGame,
             onPressed: _loading || _busy ? null : _reset,
             icon: const Icon(Icons.refresh_rounded),
           ),
@@ -237,29 +256,33 @@ class _SnakeLaddersScreenState extends State<SnakeLaddersScreen> {
                               ),
                               isExpanded: true,
                               initialValue: _game.mode,
-                              decoration: const InputDecoration(
-                                labelText: 'Players',
-                                prefixIcon: Icon(Icons.people_alt_outlined),
-                                border: OutlineInputBorder(),
+                              decoration: InputDecoration(
+                                labelText: gameL10n(context).gameUiPlayers,
+                                prefixIcon: const Icon(
+                                  Icons.people_alt_outlined,
+                                ),
+                                border: const OutlineInputBorder(),
                                 isDense: true,
                               ),
                               onChanged: _busy ? null : _chooseMode,
-                              items: const [
+                              items: [
                                 DropdownMenuItem(
                                   value: SnakeLaddersMode.twoPlayers,
-                                  child: Text('2 players'),
+                                  child: Text(gameL10n(context).gameUi2Players),
                                 ),
                                 DropdownMenuItem(
                                   value: SnakeLaddersMode.bot,
-                                  child: Text('Play against bot'),
+                                  child: Text(
+                                    gameL10n(context).gameUiPlayAgainstBot,
+                                  ),
                                 ),
                                 DropdownMenuItem(
                                   value: SnakeLaddersMode.threePlayers,
-                                  child: Text('3 players'),
+                                  child: Text(gameL10n(context).gameUi3Players),
                                 ),
                                 DropdownMenuItem(
                                   value: SnakeLaddersMode.fourPlayers,
-                                  child: Text('4 players'),
+                                  child: Text(gameL10n(context).gameUi4Players),
                                 ),
                               ],
                             ),
@@ -270,10 +293,10 @@ class _SnakeLaddersScreenState extends State<SnakeLaddersScreen> {
                               ),
                               isExpanded: true,
                               initialValue: _game.level,
-                              decoration: const InputDecoration(
-                                labelText: 'Level',
-                                prefixIcon: Icon(Icons.flag_outlined),
-                                border: OutlineInputBorder(),
+                              decoration: InputDecoration(
+                                labelText: gameL10n(context).gameUiLevel1709305,
+                                prefixIcon: const Icon(Icons.flag_outlined),
+                                border: const OutlineInputBorder(),
                                 isDense: true,
                               ),
                               onChanged: _busy ? null : _chooseLevel,
@@ -285,7 +308,11 @@ class _SnakeLaddersScreenState extends State<SnakeLaddersScreen> {
                                 )
                                   DropdownMenuItem(
                                     value: level,
-                                    child: Text('Level $level'),
+                                    child: Text(
+                                      gameL10n(
+                                        context,
+                                      ).gameUiLevel39140b8((level).toString()),
+                                    ),
                                   ),
                               ],
                             ),
@@ -298,8 +325,11 @@ class _SnakeLaddersScreenState extends State<SnakeLaddersScreen> {
                             ),
                             const SizedBox(height: 4),
                             Text(
-                              '${_positions.length} players · Level ${_game.level} / '
-                              '$snakeLaddersLevelCount',
+                              gameL10n(context).gameUiPlayersLevel(
+                                (_positions.length).toString(),
+                                (_game.level).toString(),
+                                (snakeLaddersLevelCount).toString(),
+                              ),
                               textAlign: TextAlign.center,
                               style: Theme.of(context).textTheme.bodySmall
                                   ?.copyWith(color: colors.onSurfaceVariant),
@@ -482,7 +512,11 @@ class _SnakeLaddersScreenState extends State<SnakeLaddersScreen> {
                                         : _rollDice,
                                     icon: const Icon(Icons.casino_rounded),
                                     label: Text(
-                                      '${_playerName(_currentPlayer)} · Roll',
+                                      gameL10n(context).gameUiRoll(
+                                        (_playerName(
+                                          _currentPlayer,
+                                        )).toString(),
+                                      ),
                                     ),
                                   ),
                                 ),
@@ -513,7 +547,10 @@ class _SnakeLaddersScreenState extends State<SnakeLaddersScreen> {
       left: center.dx + shift.dx - diameter / 2,
       top: center.dy + shift.dy - diameter / 2,
       child: Semantics(
-        label: '${_playerName(player)} on ${_positions[player]}',
+        label: gameL10n(context).gameUiOn(
+          (_playerName(player)).toString(),
+          (_positions[player]).toString(),
+        ),
         child: Container(
           key: ValueKey('snake-ladder-token-$player'),
           width: diameter,
@@ -799,7 +836,9 @@ class _PlayerPosition extends StatelessWidget {
       children: [
         CircleAvatar(radius: 7, backgroundColor: color),
         const SizedBox(width: 6),
-        Text('${name ?? (bot ? 'Bot' : 'P$player')}: $position'),
+        Text(
+          '${name ?? (bot ? gameL10n(context).gameUiBot : 'P$player')}: $position',
+        ),
       ],
     );
   }

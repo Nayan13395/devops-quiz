@@ -1,0 +1,302 @@
+[
+  {
+    "category": "Jenkins",
+    "set": 2,
+    "question": "¿Qué archivo se utiliza para definir una canalización de Jenkins?",
+    "options": [
+      "Jenkinsfile",
+      "pipeline.yml",
+      "build.xml",
+      "job.conf"
+    ],
+    "answer": "Jenkinsfile"
+  },
+  {
+    "category": "Jenkins",
+    "set": 2,
+    "question": "¿Qué tipo de pipeline usa una sintaxis estructurada?",
+    "options": [
+      "Declarative Pipeline",
+      "Scripted Pipeline",
+      "Freestyle Job",
+      "Maven Job"
+    ],
+    "answer": "Declarative Pipeline"
+  },
+  {
+    "category": "Jenkins",
+    "set": 2,
+    "question": "¿Qué palabra clave inicia un Declarative Pipeline?",
+    "options": [
+      "pipeline",
+      "stage",
+      "agent",
+      "steps"
+    ],
+    "answer": "pipeline"
+  },
+  {
+    "category": "Jenkins",
+    "set": 2,
+    "question": "¿Qué sección de una canalización declarativa especifica dónde se ejecutará la canalización o la etapa?",
+    "options": [
+      "agent",
+      "node",
+      "executor",
+      "workspace"
+    ],
+    "answer": "agent"
+  },
+  {
+    "category": "Jenkins",
+    "set": 2,
+    "question": "¿Qué bloque contiene varios stages?",
+    "options": [
+      "stages",
+      "steps",
+      "agent",
+      "tools"
+    ],
+    "answer": "stages"
+  },
+  {
+    "category": "Jenkins",
+    "set": 2,
+    "question": "¿Qué bloque representa una fase del pipeline?",
+    "options": [
+      "stage",
+      "step",
+      "agent",
+      "job"
+    ],
+    "answer": "stage"
+  },
+  {
+    "category": "Jenkins",
+    "set": 2,
+    "question": "¿Qué bloque contiene los comandos ejecutados en un stage?",
+    "options": [
+      "steps",
+      "agent",
+      "pipeline",
+      "tools"
+    ],
+    "answer": "steps"
+  },
+  {
+    "category": "Jenkins",
+    "set": 2,
+    "question": "¿Qué instrucción ejecuta el pipeline en cualquier agente disponible?",
+    "options": [
+      "agent any",
+      "node any",
+      "executor any",
+      "run any"
+    ],
+    "answer": "agent any"
+  },
+  {
+    "category": "Jenkins",
+    "set": 2,
+    "question": "¿Qué bloque define variables de entorno?",
+    "options": [
+      "environment",
+      "variables",
+      "env",
+      "settings"
+    ],
+    "answer": "environment"
+  },
+  {
+    "category": "Jenkins",
+    "set": 2,
+    "question": "¿Qué bloque especifica acciones después de la ejecución del pipeline?",
+    "options": [
+      "post",
+      "after",
+      "cleanup",
+      "finally"
+    ],
+    "answer": "post"
+  },
+  {
+    "category": "Jenkins",
+    "set": 2,
+    "question": "¿Qué bloque de condición controla si un stage debe ejecutarse?",
+    "options": [
+      "when",
+      "if",
+      "condition",
+      "runif"
+    ],
+    "answer": "when"
+  },
+  {
+    "category": "Jenkins",
+    "set": 2,
+    "question": "¿Qué característica permite ejecutar varios stages simultáneamente?",
+    "options": [
+      "parallel",
+      "multi",
+      "concurrent",
+      "fork"
+    ],
+    "answer": "parallel"
+  },
+  {
+    "category": "Jenkins",
+    "set": 2,
+    "question": "¿Qué step ejecuta comandos de shell en agentes Linux?",
+    "options": [
+      "sh",
+      "shell",
+      "bash",
+      "linux"
+    ],
+    "answer": "sh"
+  },
+  {
+    "category": "Jenkins",
+    "set": 2,
+    "question": "¿Qué paso de canalización ejecuta específicamente un script por lotes de Windows?",
+    "options": [
+      "bat",
+      "cmd",
+      "powershell",
+      "win"
+    ],
+    "answer": "bat"
+  },
+  {
+    "category": "Jenkins",
+    "set": 2,
+    "question": "¿Qué directiva declarativa declara entradas de construcción proporcionadas por el usuario, como un parámetro de cadena?",
+    "options": [
+      "parameters",
+      "environment",
+      "tools",
+      "triggers"
+    ],
+    "answer": "parameters"
+  },
+  {
+    "category": "Jenkins",
+    "set": 2,
+    "question": "¿Qué expresión lee un parámetro de construcción llamado TARGET en un Jenkinsfile?",
+    "options": [
+      "currentBuild.TARGET",
+      "scm.TARGET",
+      "agent.TARGET",
+      "params.TARGET"
+    ],
+    "answer": "params.TARGET"
+  },
+  {
+    "category": "Jenkins",
+    "set": 2,
+    "question": "¿Qué paso de canalización pausa la ejecución para obtener aprobación humana?",
+    "options": [
+      "waitUntil",
+      "retry",
+      "input",
+      "sleep"
+    ],
+    "answer": "input"
+  },
+  {
+    "category": "Jenkins",
+    "set": 2,
+    "question": "¿Qué paso de canalización publica resultados de pruebas XML con formato JUnit?",
+    "options": [
+      "writeFile",
+      "junit",
+      "archiveArtifacts",
+      "stash"
+    ],
+    "answer": "junit"
+  },
+  {
+    "category": "Jenkins",
+    "set": 2,
+    "question": "¿Qué paso de canalización conserva archivos coincidentes del espacio de trabajo como artefactos de construcción?",
+    "options": [
+      "archiveArtifacts",
+      "stash",
+      "checkout",
+      "readFile"
+    ],
+    "answer": "archiveArtifacts"
+  },
+  {
+    "category": "Jenkins",
+    "set": 2,
+    "question": "¿Qué condición post se ejecuta independientemente del estado final de la canalización?",
+    "options": [
+      "success",
+      "failure",
+      "unstable",
+      "always"
+    ],
+    "answer": "always"
+  },
+  {
+    "category": "Jenkins",
+    "set": 2,
+    "question": "¿Qué directiva declarativa configura herramientas, como una instalación de Maven con nombre?",
+    "options": [
+      "parameters",
+      "triggers",
+      "tools",
+      "environment"
+    ],
+    "answer": "tools"
+  },
+  {
+    "category": "Jenkins",
+    "set": 2,
+    "question": "¿Qué paso de canalización limita el tiempo empleado en ejecutar su bloque?",
+    "options": [
+      "waitUntil",
+      "timeout",
+      "retry",
+      "sleep"
+    ],
+    "answer": "timeout"
+  },
+  {
+    "category": "Jenkins",
+    "set": 2,
+    "question": "¿Qué paso de canalización vuelve a ejecutar su bloque cuando este lanza un error, hasta el número de intentos solicitado?",
+    "options": [
+      "retry",
+      "timeout",
+      "sleep",
+      "input"
+    ],
+    "answer": "retry"
+  },
+  {
+    "category": "Jenkins",
+    "set": 2,
+    "question": "¿Qué bloque permite código de canalización con scripts dentro de una sección declarativa steps?",
+    "options": [
+      "options",
+      "parameters",
+      "triggers",
+      "script"
+    ],
+    "answer": "script"
+  },
+  {
+    "category": "Jenkins",
+    "set": 2,
+    "question": "¿Qué hace agent none en el nivel superior de una canalización declarativa?",
+    "options": [
+      "Ejecutar automáticamente todos los pasos de shell en el controlador",
+      "Asignar todos los agentes disponibles a la vez",
+      "Evitar asignar un agente global a toda la canalización",
+      "Impedir la ejecución de todos los agentes definidos a nivel de etapa"
+    ],
+    "answer": "Evitar asignar un agente global a toda la canalización"
+  }
+]

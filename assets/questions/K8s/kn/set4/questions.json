@@ -1,0 +1,302 @@
+[
+  {
+    "category": "Kubernetes",
+    "set": 4,
+    "question": "ಡಿಪ್ಲಾಯ್‌ಮೆಂಟ್ ಅನ್ನು ಸ್ಕೇಲ್ ಮಾಡುವ ಕಮಾಂಡ್ ಯಾವುದು?",
+    "options": [
+      "kubectl scale deployment",
+      "kubectl resize deployment",
+      "kubectl expand deployment",
+      "kubectl increase deployment"
+    ],
+    "answer": "kubectl scale deployment"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 4,
+    "question": "ಡಿಪ್ಲಾಯ್‌ಮೆಂಟ್ ಅನ್ನು 5 ರೆಪ್ಲಿಕಾಗಳಿಗೆ ಸ್ಕೇಲ್ ಮಾಡುವ ಕಮಾಂಡ್ ಯಾವುದು?",
+    "options": [
+      "kubectl scale deployment --replicas=5",
+      "kubectl replicas 5",
+      "kubectl expand deployment",
+      "kubectl set replicas"
+    ],
+    "answer": "kubectl scale deployment --replicas=5"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 4,
+    "question": "ಡಿಪ್ಲಾಯ್‌ಮೆಂಟ್ ಅನ್ನು ಮರುಪ್ರಾರಂಭಿಸುವ ಕಮಾಂಡ್ ಯಾವುದು?",
+    "options": [
+      "kubectl rollout restart deployment",
+      "kubectl restart deployment",
+      "kubectl deployment restart",
+      "kubectl reload deployment"
+    ],
+    "answer": "kubectl rollout restart deployment"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 4,
+    "question": "ಡಿಪ್ಲಾಯ್‌ಮೆಂಟ್‌ನ ರೋಲೌಟ್ ಸ್ಥಿತಿಯನ್ನು ಪರಿಶೀಲಿಸುವ ಕಮಾಂಡ್ ಯಾವುದು?",
+    "options": [
+      "kubectl rollout status",
+      "kubectl deployment status",
+      "kubectl rollout check",
+      "kubectl get rollout"
+    ],
+    "answer": "kubectl rollout status"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 4,
+    "question": "ಡಿಪ್ಲಾಯ್‌ಮೆಂಟ್ ಅನ್ನು ರೋಲ್‌ಬ್ಯಾಕ್ ಮಾಡುವ ಕಮಾಂಡ್ ಯಾವುದು?",
+    "options": [
+      "kubectl rollout undo",
+      "kubectl rollback",
+      "kubectl undo deployment",
+      "kubectl deployment rollback"
+    ],
+    "answer": "kubectl rollout undo"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 4,
+    "question": "ರೋಲೌಟ್ ಇತಿಹಾಸವನ್ನು ತೋರಿಸುವ ಕಮಾಂಡ್ ಯಾವುದು?",
+    "options": [
+      "kubectl rollout history",
+      "kubectl history",
+      "kubectl deployment history",
+      "kubectl show rollout"
+    ],
+    "answer": "kubectl rollout history"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 4,
+    "question": "ಡಿಪ್ಲಾಯ್‌ಮೆಂಟ್ ರೋಲೌಟ್ ಅನ್ನು ವಿರಾಮಗೊಳಿಸುವ ಕಮಾಂಡ್ ಯಾವುದು?",
+    "options": [
+      "kubectl rollout pause",
+      "kubectl pause deployment",
+      "kubectl stop rollout",
+      "kubectl hold deployment"
+    ],
+    "answer": "kubectl rollout pause"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 4,
+    "question": "ವಿರಾಮಗೊಳಿಸಿದ ಡಿಪ್ಲಾಯ್‌ಮೆಂಟ್ ರೋಲೌಟ್ ಅನ್ನು ಪುನರಾರಂಭಿಸುವ ಕಮಾಂಡ್ ಯಾವುದು?",
+    "options": [
+      "kubectl rollout resume",
+      "kubectl resume deployment",
+      "kubectl continue rollout",
+      "kubectl restart rollout"
+    ],
+    "answer": "kubectl rollout resume"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 4,
+    "question": "ಈಗಿರುವ Podಗಳನ್ನು ಹೊರಹಾಕಲು ಯತ್ನಿಸದೆ ನೋಡ್‌ಗೆ ಹೊಸ Pod ನಿಯೋಜಿಸದಂತೆ ಗುರುತಿಸುವ ಆಜ್ಞೆ ಯಾವುದು?",
+    "options": [
+      "kubectl cordon",
+      "kubectl uncordon",
+      "kubectl get node",
+      "kubectl describe node"
+    ],
+    "answer": "kubectl cordon"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 4,
+    "question": "ನೋಡ್‌ನಿಂದ ವರ್ಕ್‌ಲೋಡ್‌ಗಳನ್ನು ಸುರಕ್ಷಿತವಾಗಿ ಹೊರಹಾಕುವ ಕಮಾಂಡ್ ಯಾವುದು?",
+    "options": [
+      "kubectl drain",
+      "kubectl cordon",
+      "kubectl delete node",
+      "kubectl migrate"
+    ],
+    "answer": "kubectl drain"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 4,
+    "question": "ನೋಡ್ ಅನ್ನು ಮತ್ತೆ ಶೆಡ್ಯೂಲ್ ಮಾಡಬಹುದಾದಂತೆ ಮಾಡುವ ಕಮಾಂಡ್ ಯಾವುದು?",
+    "options": [
+      "kubectl uncordon",
+      "kubectl enable",
+      "kubectl restart",
+      "kubectl activate"
+    ],
+    "answer": "kubectl uncordon"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 4,
+    "question": "ನೋಡ್‌ನ ವಿವರವಾದ ಮಾಹಿತಿಯನ್ನು ತೋರಿಸುವ ಕಮಾಂಡ್ ಯಾವುದು?",
+    "options": [
+      "kubectl describe node",
+      "kubectl inspect node",
+      "kubectl info node",
+      "kubectl node show"
+    ],
+    "answer": "kubectl describe node"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 4,
+    "question": "ಲೋಕಲ್ ಪೋರ್ಟ್ ಅನ್ನು ಪಾಡ್‌ಗೆ ಫಾರ್ವರ್ಡ್ ಮಾಡುವ ಕಮಾಂಡ್ ಯಾವುದು?",
+    "options": [
+      "kubectl port-forward",
+      "kubectl tunnel",
+      "kubectl expose",
+      "kubectl connect"
+    ],
+    "answer": "kubectl port-forward"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 4,
+    "question": "ಪಾಡ್‌ಗೆ ಅಥವಾ ಪಾಡ್‌ನಿಂದ ಫೈಲ್‌ಗಳನ್ನು ನಕಲಿಸುವ ಕಮಾಂಡ್ ಯಾವುದು?",
+    "options": [
+      "kubectl cp",
+      "kubectl copy",
+      "kubectl transfer",
+      "kubectl sync"
+    ],
+    "answer": "kubectl cp"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 4,
+    "question": "ಚಾಲನೆಯಲ್ಲಿರುವ ಪಾಡ್‌ನ YAML ವ್ಯಾಖ್ಯಾನವನ್ನು ತೋರಿಸುವ ಕಮಾಂಡ್ ಯಾವುದು?",
+    "options": [
+      "kubectl get pod -o yaml",
+      "kubectl show pod yaml",
+      "kubectl export pod",
+      "kubectl pod yaml"
+    ],
+    "answer": "kubectl get pod -o yaml"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 4,
+    "question": "site Deploymentನ web ಕಂಟೇನರ್ ಇಮೇಜ್ ಅನ್ನು nginx:1.27 ಮಾಡುವ ಆಜ್ಞೆ ಯಾವುದು?",
+    "options": [
+      "kubectl set image deployment/site web=nginx:1.27",
+      "kubectl set env deployment/site web=nginx:1.27",
+      "kubectl annotate deployment/site web=nginx:1.27",
+      "kubectl label deployment/site web=nginx:1.27"
+    ],
+    "answer": "kubectl set image deployment/site web=nginx:1.27"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 4,
+    "question": "ಬದಲಾವಣೆ ಅನ್ವಯಿಸದೆ ಮ್ಯಾನಿಫೆಸ್ಟ್ ಅನ್ನು ಸಕ್ರಿಯ ಸಂರಚನೆಗೆ ಹೋಲಿಸುವ ಆಜ್ಞೆ ಯಾವುದು?",
+    "options": [
+      "kubectl apply -f app.yaml",
+      "kubectl replace -f app.yaml",
+      "kubectl delete -f app.yaml",
+      "kubectl diff -f app.yaml"
+    ],
+    "answer": "kubectl diff -f app.yaml"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 4,
+    "question": "ಕೋರಿದ ರಿಸೋರ್ಸ್ ಉಳಿಸದೆ API ಸರ್ವರ್‌ನಲ್ಲಿ ಪ್ರಾಯೋಗಿಕ ಚಾಲನೆ ಮಾಡುವ kubectl ಆಯ್ಕೆ ಯಾವುದು?",
+    "options": [
+      "--validate=false",
+      "--force",
+      "--dry-run=server",
+      "--dry-run=client"
+    ],
+    "answer": "--dry-run=server"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 4,
+    "question": "api Pod Ready ಆಗಲು ಗರಿಷ್ಠ 60 ಸೆಕೆಂಡ್ ಕಾಯುವ ಆಜ್ಞೆ ಯಾವುದು?",
+    "options": [
+      "kubectl get pod api --request-timeout=60s",
+      "kubectl wait --for=condition=Ready pod/api --timeout=60s",
+      "kubectl wait --for=delete pod/api --timeout=60s",
+      "kubectl logs api --since=60s"
+    ],
+    "answer": "kubectl wait --for=condition=Ready pod/api --timeout=60s"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 4,
+    "question": "ಹಂತ ಹಂತದ ನವೀಕರಣದಲ್ಲಿ ಎಷ್ಟು ಪ್ರತಿಗಳು ಅಲಭ್ಯವಾಗಬಹುದು ಎಂದು ಮಿತಿಗೊಳಿಸುವ Deployment ಸೆಟ್ಟಿಂಗ್ ಯಾವುದು?",
+    "options": [
+      "maxUnavailable",
+      "maxSurge",
+      "revisionHistoryLimit",
+      "progressDeadlineSeconds"
+    ],
+    "answer": "maxUnavailable"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 4,
+    "question": "ಹಂತ ಹಂತದ ನವೀಕರಣದಲ್ಲಿ ಬೇಕಾದ ಪ್ರತಿಗಳಿಗಿಂತ ತಾತ್ಕಾಲಿಕ ಹೆಚ್ಚುವರಿ Podಗಳಿಗೆ ಬಿಡುವ Deployment ಸೆಟ್ಟಿಂಗ್ ಯಾವುದು?",
+    "options": [
+      "maxUnavailable",
+      "minReadySeconds",
+      "revisionHistoryLimit",
+      "maxSurge"
+    ],
+    "answer": "maxSurge"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 4,
+    "question": "ಆಯ್ದ Podಗಳ ಗುಂಪಿನಲ್ಲಿ ಏಕಕಾಲದ ಸ್ವಯಂಪ್ರೇರಿತ ಅಡಚಣೆ ಮಿತಿಗೊಳಿಸುವ ರಿಸೋರ್ಸ್ ಯಾವುದು?",
+    "options": [
+      "LimitRange",
+      "NetworkPolicy",
+      "PodDisruptionBudget",
+      "ResourceQuota"
+    ],
+    "answer": "PodDisruptionBudget"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 4,
+    "question": "ಗಮನಿಸಿದ ಮಾಪನಗಳ ಆಧಾರದಲ್ಲಿ ವರ್ಕ್‌ಲೋಡ್ ಪ್ರತಿಗಳ ಸಂಖ್ಯೆ ಬದಲಿಸುವ ಕಂಟ್ರೋಲರ್ ಯಾವುದು?",
+    "options": [
+      "CronJob",
+      "HorizontalPodAutoscaler",
+      "ReplicaSet",
+      "DaemonSet"
+    ],
+    "answer": "HorizontalPodAutoscaler"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 4,
+    "question": "kubectl top CPU ಮತ್ತು ಮೆಮೊರಿ ಬಳಕೆ ತೋರಿಸಲು ಏನು ಲಭ್ಯವಿರಬೇಕು?",
+    "options": [
+      "ಸಾಮಾನ್ಯವಾಗಿ Metrics Server ನೀಡುವ ಸಂಪನ್ಮೂಲ ಮಾಪನಗಳ API",
+      "ಪ್ರತಿ ನೇಮ್‌ಸ್ಪೇಸ್‌ಗೆ Ingress ಕಂಟ್ರೋಲರ್",
+      "ಬ್ಲಾಕ್ ಸಾಧನವಿರುವ ಪೂರ್ವನಿಯೋಜಿತ StorageClass",
+      "ಪ್ರತಿ Podಗೆ LoadBalancer Service"
+    ],
+    "answer": "ಸಾಮಾನ್ಯವಾಗಿ Metrics Server ನೀಡುವ ಸಂಪನ್ಮೂಲ ಮಾಪನಗಳ API"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 4,
+    "question": "ಸಂಪರ್ಕಿಸಿದ ಕ್ಲಸ್ಟರ್ ಬೆಂಬಲಿಸುವ API ರಿಸೋರ್ಸ್ ಪ್ರಕಾರ ತೋರಿಸುವ ಆಜ್ಞೆ ಯಾವುದು?",
+    "options": [
+      "kubectl api-versions",
+      "kubectl cluster-info",
+      "kubectl config view",
+      "kubectl api-resources"
+    ],
+    "answer": "kubectl api-resources"
+  }
+]

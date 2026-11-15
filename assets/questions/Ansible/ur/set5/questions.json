@@ -1,0 +1,302 @@
+[
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "کام کی سطح پر متبادل ترتیب نہ ہو تو جانچ کے موڈ میں چلانے کے دوران ایسے ماڈیول کے ساتھ کیا ہوتا ہے جو اس موڈ کی حمایت نہیں کرتا؟",
+    "options": [
+      "ماڈیول ہمیشہ اپنی معمول کی تبدیلیاں کرتا ہے",
+      "ماڈیول خود بخود localhost پر چلتا ہے",
+      "ماڈیول کو بار بار چلایا جاتا ہے جب تک وہ جانچ کے موڈ کی حمایت نہ کرنے لگے",
+      "تبدیلیاں کرنے کے بجائے ماڈیول کو چھوڑ دیا جاتا ہے"
+    ],
+    "answer": "تبدیلیاں کرنے کے بجائے ماڈیول کو چھوڑ دیا جاتا ہے"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "کام کی کون سی ترتیب اصل تبدیلیوں کی اجازت دیتی ہے، چاہے پلے بک --check کے ساتھ چلائی جائے؟",
+    "options": [
+      "changed_when: false",
+      "ignore_errors: true",
+      "check_mode: false",
+      "diff: false"
+    ],
+    "answer": "check_mode: false"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "Ansible کا کون سا meta عمل ان ہینڈلرز کو فوراً چلاتا ہے جنہیں پہلے ہی اطلاع دی جا چکی ہو؟",
+    "options": [
+      "reset_connection",
+      "flush_handlers",
+      "clear_facts",
+      "end_play"
+    ],
+    "answer": "flush_handlers"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "اگر تبدیلی کرنے والے دو کام ایک ہی ہینڈلر کو اس کے زیرِ التوا اجرا سے پہلے اطلاع دیں تو اس اجرا کے وقت ہینڈلر عموماً کتنی مرتبہ چلتا ہے؟",
+    "options": [
+      "ایک مرتبہ",
+      "دو مرتبہ",
+      "انوینٹری کے ہر گروہ کے لیے ایک مرتبہ",
+      "کوئی مرتبہ نہیں، کیونکہ اطلاعات میں ٹکراؤ ہوتا ہے"
+    ],
+    "answer": "ایک مرتبہ"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "ایک ہی موقع پر چلائے جانے والے مطلع شدہ ہینڈلرز کی ترتیب کس چیز سے طے ہوتی ہے؟",
+    "options": [
+      "ان کے ناموں کی حروفِ تہجی کے مطابق ترتیب",
+      "notify فہرست میں ناموں کی ترتیب",
+      "وہ ترتیب جس میں زیرِ انتظام میزبان منسلک ہوئے",
+      "handlers حصے میں ان کی تعریف کی ترتیب"
+    ],
+    "answer": "handlers حصے میں ان کی تعریف کی ترتیب"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "کون سی ناکامی عموماً کسی بلاک کے rescue کاموں کو چلاتی ہے؟",
+    "options": [
+      "پلے بک میں کام کی غلط تعریف موجود ہو",
+      "YAML دستاویز کو پارس نہ کیا جا سکے",
+      "بلاک کے اندر کوئی کام ناکام نتیجہ دے",
+      "کسی میزبان کا کام چلنے سے پہلے ہی اس سے رابطہ ناممکن ہو جائے"
+    ],
+    "answer": "بلاک کے اندر کوئی کام ناکام نتیجہ دے"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "عام کام پر ignore_errors کون سی خرابی نہیں دباتا؟",
+    "options": [
+      "failed_when کی شرط کا درست ثابت ہونا",
+      "غیر متعین متغیر کی خرابی",
+      "کمانڈ کی رپورٹ کردہ غیر صفر اختتامی حالت",
+      "ماڈیول کا نتیجہ جسے واضح طور پر ناکام قرار دیا گیا ہو"
+    ],
+    "answer": "غیر متعین متغیر کی خرابی"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "کون سا کلیدی لفظ کسی کام کی غیر سنبھالی گئی ناکامی پر موجودہ بیچ کا وہ کام مکمل ہونے کے بعد تمام میزبانوں پر پلے روک دیتا ہے؟",
+    "options": [
+      "any_errors_fatal",
+      "ignore_unreachable",
+      "max_fail_percentage: 100",
+      "force_handlers"
+    ],
+    "answer": "any_errors_fatal"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "قابلِ رسائی میزبان پر بعد کا کوئی کام ناکام ہو جائے تو force_handlers کا کیا اثر ہوتا ہے؟",
+    "options": [
+      "ہر متعین ہینڈلر اطلاع کے بغیر بھی چلتا ہے",
+      "تمام ناکام کاموں کی خود بخود دوبارہ کوشش ہوتی ہے",
+      "ہینڈلرز تمام عام کاموں سے پہلے چلتے ہیں",
+      "پہلے مطلع کیے گئے ہینڈلرز اب بھی اس میزبان پر چل سکتے ہیں"
+    ],
+    "answer": "پہلے مطلع کیے گئے ہینڈلرز اب بھی اس میزبان پر چل سکتے ہیں"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "کام کی کون سی ترتیب اس کے حساس آرگیومنٹس اور نتائج کی معمول کی لاگنگ روکتی ہے؟",
+    "options": [
+      "check_mode: true",
+      "changed_when: false",
+      "no_log: true",
+      "diff: true"
+    ],
+    "answer": "no_log: true"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "کام کی کون سی ترتیب --diff فعال ہونے کے باوجود فائل کے مواد کے فرق کو نہیں دکھاتی؟",
+    "options": [
+      "ignore_errors: true",
+      "diff: false",
+      "no_log: false",
+      "check_mode: false"
+    ],
+    "answer": "diff: false"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "کون سی ڈکشنری انوینٹری کے کسی دوسرے میزبان سے وابستہ متغیرات تک رسائی دیتی ہے؟",
+    "options": [
+      "hostvars",
+      "ansible_facts",
+      "environment",
+      "ansible_loop"
+    ],
+    "answer": "hostvars"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "کون سا خصوصی متغیر موجودہ میزبان کا انوینٹری نام رکھتا ہے؟",
+    "options": [
+      "ansible_host",
+      "ansible_user",
+      "ansible_playbook_python",
+      "inventory_hostname"
+    ],
+    "answer": "inventory_hostname"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "میزبان گروہ کے مشترکہ متغیرات کے لیے عموماً انوینٹری کے ساتھ موجود کون سی ڈائریکٹری استعمال ہوتی ہے؟",
+    "options": [
+      "roles",
+      "collections",
+      "group_vars",
+      "host_vars"
+    ],
+    "answer": "group_vars"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "ansible.builtin.file لک اپ طے شدہ طور پر فائل کہاں پڑھتا ہے؟",
+    "options": [
+      "become_user کے نام سے متعین میزبان پر",
+      "کنٹرول نوڈ پر",
+      "ہر زیرِ انتظام میزبان پر",
+      "پلے کے پہلے میزبان پر"
+    ],
+    "answer": "کنٹرول نوڈ پر"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "کون سا فلٹر YAML اسٹرنگ کو Ansible کے ڈیٹا ڈھانچے میں بدلتا ہے؟",
+    "options": [
+      "from_yaml",
+      "to_yaml",
+      "to_json",
+      "dict2items"
+    ],
+    "answer": "from_yaml"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "کون سا فلٹر ڈکشنری کو کلید/قدر کی ڈکشنریوں کی فہرست میں بدلتا ہے؟",
+    "options": [
+      "items2dict",
+      "flatten",
+      "zip",
+      "dict2items"
+    ],
+    "answer": "dict2items"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "کون سا فلٹر فہرست سے دہرائے گئے عناصر ہٹاتا ہے؟",
+    "options": [
+      "reverse",
+      "flatten",
+      "unique",
+      "sort"
+    ],
+    "answer": "unique"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "کون سا ماڈیول ایکسپریشنز جانچتا ہے اور مقررہ تصدیقی شرائط پوری نہ ہونے پر ناکام ہوتا ہے؟",
+    "options": [
+      "ansible.builtin.set_fact",
+      "ansible.builtin.assert",
+      "ansible.builtin.debug",
+      "ansible.builtin.pause"
+    ],
+    "answer": "ansible.builtin.assert"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "کون سا ماڈیول ریگولر ایکسپریشن استعمال کرکے متنی فائل کی کسی خاص سطر کا انتظام کرتا ہے؟",
+    "options": [
+      "ansible.builtin.lineinfile",
+      "ansible.builtin.blockinfile",
+      "ansible.builtin.copy",
+      "ansible.builtin.slurp"
+    ],
+    "answer": "ansible.builtin.lineinfile"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "کون سا ماڈیول URL کی درخواست کرتا ہے اور متوقع HTTP اسٹیٹس کوڈ جانچ سکتا ہے؟",
+    "options": [
+      "ansible.builtin.get_url",
+      "ansible.builtin.fetch",
+      "ansible.builtin.wait_for",
+      "ansible.builtin.uri"
+    ],
+    "answer": "ansible.builtin.uri"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "کون سا ماڈیول TCP پورٹ کی مطلوبہ حالت تک پہنچنے کا انتظار کرتا ہے؟",
+    "options": [
+      "ansible.builtin.async_status",
+      "ansible.builtin.ping",
+      "ansible.builtin.wait_for",
+      "ansible.builtin.pause"
+    ],
+    "answer": "ansible.builtin.wait_for"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "کون سا پیرامیٹر مقررہ پاتھ پہلے سے موجود ہونے پر ansible.builtin.command کو اجرا چھوڑنے پر آمادہ کرتا ہے؟",
+    "options": [
+      "stdin",
+      "creates",
+      "removes",
+      "chdir"
+    ],
+    "answer": "creates"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "file ماڈیول کی کون سی ترتیب علامتی لنک بناتی ہے؟",
+    "options": [
+      "state: link",
+      "state: directory",
+      "state: touch",
+      "state: hard"
+    ],
+    "answer": "state: link"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "کون سا ماڈیول بعد کے پلے کے لیے میموری میں موجود انوینٹری میں میزبان شامل کر سکتا ہے؟",
+    "options": [
+      "ansible.builtin.group_by",
+      "ansible.builtin.set_fact",
+      "ansible.builtin.meta",
+      "ansible.builtin.add_host"
+    ],
+    "answer": "ansible.builtin.add_host"
+  }
+]

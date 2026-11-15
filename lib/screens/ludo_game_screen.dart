@@ -1,3 +1,4 @@
+import '../l10n/game_localizations.dart';
 import 'dart:async';
 
 import 'package:flutter/material.dart';
@@ -290,9 +291,9 @@ class _LudoGameScreenState extends State<LudoGameScreen>
     await showDialog<void>(
       context: context,
       builder: (context) => AlertDialog(
-        title: const Text('Ludo match stats'),
+        title: Text(gameL10n(context).gameUiLudoMatchStats),
         content: stats.isEmpty
-            ? const Text('No completed matches yet.')
+            ? Text(gameL10n(context).gameUiNoCompletedMatchesYet)
             : SizedBox(
                 width: 360,
                 child: ListView(
@@ -302,9 +303,13 @@ class _LudoGameScreenState extends State<LudoGameScreen>
                       ListTile(
                         dense: true,
                         contentPadding: EdgeInsets.zero,
-                        title: Text(stat.name),
+                        title: Text(gamePlayerName(context, stat.name)),
                         subtitle: Text(
-                          'Played ${stat.played}  ·  Won ${stat.won}  ·  Lost ${stat.lost}',
+                          gameL10n(context).gameUiPlayedWonLost(
+                            (stat.played).toString(),
+                            (stat.won).toString(),
+                            (stat.lost).toString(),
+                          ),
                         ),
                       ),
                   ],
@@ -313,7 +318,7 @@ class _LudoGameScreenState extends State<LudoGameScreen>
         actions: [
           TextButton(
             onPressed: () => Navigator.pop(context),
-            child: const Text('Close'),
+            child: Text(gameL10n(context).gameUiClose),
           ),
         ],
       ),
@@ -325,7 +330,11 @@ class _LudoGameScreenState extends State<LudoGameScreen>
       await PointService.addPoints(50, source: PointSource.game);
       if (mounted) {
         ScaffoldMessenger.of(context).showSnackBar(
-          const SnackBar(content: Text('Ludo champion! You earned 50 points.')),
+          SnackBar(
+            content: Text(
+              gameL10n(context).gameUiLudoChampionYouEarned50Points,
+            ),
+          ),
         );
       }
     } catch (error) {
@@ -345,7 +354,7 @@ class _LudoGameScreenState extends State<LudoGameScreen>
       context: context,
       builder: (context) => StatefulBuilder(
         builder: (context, update) => AlertDialog(
-          title: const Text('New Ludo game'),
+          title: Text(gameL10n(context).gameUiNewLudoGame),
           content: Column(
             mainAxisSize: MainAxisSize.min,
             crossAxisAlignment: CrossAxisAlignment.stretch,
@@ -362,22 +371,26 @@ class _LudoGameScreenState extends State<LudoGameScreen>
               ),
               SwitchListTile(
                 contentPadding: EdgeInsets.zero,
-                title: const Text('Bot opponents'),
+                title: Text(gameL10n(context).gameUiBotOpponents),
                 value: bots,
                 onChanged: (value) => update(() => bots = value),
               ),
               if (old.state.rollCount > 0)
-                const Text('Starting a new match replaces your saved game.'),
+                Text(
+                  gameL10n(
+                    context,
+                  ).gameUiStartingANewMatchReplacesYourSavedGame,
+                ),
             ],
           ),
           actions: [
             TextButton(
               onPressed: () => Navigator.pop(context, false),
-              child: const Text('Cancel'),
+              child: Text(gameL10n(context).gameUiCancel),
             ),
             FilledButton(
               onPressed: () => Navigator.pop(context, true),
-              child: const Text('Start game'),
+              child: Text(gameL10n(context).gameUiStartGame),
             ),
           ],
         ),
@@ -432,7 +445,7 @@ class _LudoGameScreenState extends State<LudoGameScreen>
       context: context,
       builder: (context) => StatefulBuilder(
         builder: (context, update) => AlertDialog(
-          title: const Text('Player colours'),
+          title: Text(gameL10n(context).gameUiPlayerColours),
           content: SizedBox(
             width: 320,
             child: SingleChildScrollView(
@@ -446,7 +459,7 @@ class _LudoGameScreenState extends State<LudoGameScreen>
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            Text(players[seat].name),
+                            Text(gamePlayerName(context, players[seat].name)),
                             const SizedBox(height: 4),
                             Wrap(
                               spacing: 4,
@@ -457,7 +470,9 @@ class _LudoGameScreenState extends State<LudoGameScreen>
                                   colour++
                                 )
                                   Tooltip(
-                                    message: ludoColourNames[colour],
+                                    message: localizedLudoColourNames(
+                                      context,
+                                    )[colour],
                                     child: IconButton(
                                       key: ValueKey(
                                         'ludo-colour-$seat-$colour',
@@ -502,11 +517,11 @@ class _LudoGameScreenState extends State<LudoGameScreen>
           actions: [
             TextButton(
               onPressed: () => Navigator.pop(context, false),
-              child: const Text('Cancel'),
+              child: Text(gameL10n(context).gameUiCancel),
             ),
             FilledButton(
               onPressed: () => Navigator.pop(context, true),
-              child: const Text('Apply'),
+              child: Text(gameL10n(context).gameUiApply),
             ),
           ],
         ),
@@ -543,22 +558,22 @@ class _LudoGameScreenState extends State<LudoGameScreen>
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Ludo'),
+        title: Text(gameL10n(context).gameUiLudo),
         actions: [
           IconButton(
-            tooltip: 'Match stats',
+            tooltip: gameL10n(context).gameUiMatchStats,
             onPressed: _showMatchStats,
             icon: const Icon(Icons.leaderboard_outlined),
           ),
           IconButton(
-            tooltip: 'Player colours',
+            tooltip: gameL10n(context).gameUiPlayerColours,
             onPressed: _controller == null || _controller!.isAnimating
                 ? null
                 : _chooseColours,
             icon: const Icon(Icons.palette_outlined),
           ),
           IconButton(
-            tooltip: 'New game',
+            tooltip: gameL10n(context).gameUiNewGame,
             onPressed: _controller == null || _controller!.isAnimating
                 ? null
                 : _newGame,

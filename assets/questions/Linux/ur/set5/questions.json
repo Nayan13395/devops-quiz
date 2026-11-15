@@ -1,0 +1,302 @@
+[
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "Bash توسیع کو \"$name\" کی صورت میں اقتباس میں رکھنے سے کیا رکتا ہے؟",
+    "options": [
+      "اقتباس کے اندر پیرامیٹر کی ہر توسیع",
+      "متغیر میں بعد کی تبدیلی",
+      "کمانڈ کو خالی آرگیومنٹ ملنا",
+      "توسیع شدہ قدر کی الفاظ میں تقسیم اور پاتھ نام کی توسیع"
+    ],
+    "answer": "توسیع شدہ قدر کی الفاظ میں تقسیم اور پاتھ نام کی توسیع"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "Bash میں '$HOME' کو یکہرے اقتباس میں رکھنے سے کیا ہوتا ہے؟",
+    "options": [
+      "پچھلی ورکنگ ڈائریکٹری کی قدر آتی ہے",
+      "ڈالر کا نشان ہٹ کر HOME بھیجا جاتا ہے",
+      "لفظی متن $HOME بھیجا جاتا ہے",
+      "صارف کی ہوم ڈائریکٹری کی قدر آتی ہے"
+    ],
+    "answer": "لفظی متن $HOME بھیجا جاتا ہے"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "Bash میں $(command) کے ذریعے کمانڈ کی جگہ کیا شامل ہوتا ہے؟",
+    "options": [
+      "کمانڈ کی اختتامی حالت بطور اعشاری عدد",
+      "کمانڈ کی معیاری آؤٹ پٹ، آخر کے نئی سطر والے حروف ہٹا کر",
+      "کمانڈ کا عددی پراسیس ID",
+      "صرف کمانڈ کی معیاری خرابی"
+    ],
+    "answer": "کمانڈ کی معیاری آؤٹ پٹ، آخر کے نئی سطر والے حروف ہٹا کر"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "Bash کی کون سی اندرونی کمانڈ اسکرپٹ فائل سے کمانڈ پڑھ کر موجودہ شیل میں چلاتی ہے؟",
+    "options": [
+      "source",
+      "exec",
+      "eval",
+      "export"
+    ],
+    "answer": "source"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "Bash اسکرپٹ میں 'exec program' کامیابی کی صورت میں کیا کرتا ہے؟",
+    "options": [
+      "program کو پس منظر میں شروع کرتا ہے جبکہ شیل چلتا رہتا ہے",
+      "program دو بار چلا کر نتائج کا موازنہ کرتا ہے",
+      "program کی آؤٹ پٹ کو شیل کے ماخذ کوڈ کے طور پر لوڈ کرتا ہے",
+      "شیل پراسیس کی جگہ program لے لیتا ہے"
+    ],
+    "answer": "شیل پراسیس کی جگہ program لے لیتا ہے"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "Bash میں pipefail فعال ہو تو ایک یا زیادہ کمانڈ ناکام ہونے پر پائپ لائن کی حالت کیا ہوتی ہے؟",
+    "options": [
+      "آخری کمانڈ کامیاب ہو تو ہمیشہ صفر",
+      "تمام کمانڈوں کی اختتامی حالتوں کا مجموعہ",
+      "سب سے دائیں جانب کی اس کمانڈ کی اختتامی حالت جس نے غیر صفر حالت دی ہو",
+      "ہمیشہ پہلی کمانڈ کی حالت"
+    ],
+    "answer": "سب سے دائیں جانب کی اس کمانڈ کی اختتامی حالت جس نے غیر صفر حالت دی ہو"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "کون سی کمانڈ GNU Coreutils کے ذریعے checksums.txt میں درج SHA-256 چیک سم کی تصدیق کرتی ہے؟",
+    "options": [
+      "cksum checksums.txt",
+      "sha256sum -c checksums.txt",
+      "sha256sum checksums.txt",
+      "md5sum -c checksums.txt"
+    ],
+    "answer": "sha256sum -c checksums.txt"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "GNU tar کی کون سی کمانڈ logs ڈائریکٹری کا gzip سے دبایا گیا آرکائیو بناتی ہے؟",
+    "options": [
+      "tar -czf logs.tar.gz logs",
+      "tar -xzf logs.tar.gz",
+      "tar -tzf logs.tar.gz",
+      "gzip -d logs.tar.gz"
+    ],
+    "answer": "tar -czf logs.tar.gz logs"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "tar کا کون سا اختیار آرکائیو کا مواد نکالے بغیر اس کی فہرست دکھاتا ہے؟",
+    "options": [
+      "-x",
+      "-c",
+      "-r",
+      "-t"
+    ],
+    "answer": "-t"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "Linux ڈائریکٹری کا setgid بٹ اس کے اندر نئی بننے والی فائلوں پر عموماً کیا اثر ڈالتا ہے؟",
+    "options": [
+      "ان کی ملکیت root صارف کو ملتی ہے",
+      "ان کا مالک انہیں حذف نہیں کر سکتا",
+      "ان کو ڈائریکٹری کی گروہی ملکیت وراثت میں ملتی ہے",
+      "وہ ہمیشہ ہر صارف کے لیے قابلِ اجرا بن جاتی ہیں"
+    ],
+    "answer": "ان کو ڈائریکٹری کی گروہی ملکیت وراثت میں ملتی ہے"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "مشترکہ قابلِ تحریر ڈائریکٹری پر اسٹکی بٹ بنیادی طور پر کس چیز کو محدود کرتا ہے؟",
+    "options": [
+      "فائل سسٹم پر ڈسک بلاک کون مختص کر سکتا ہے",
+      "اس ڈائریکٹری میں فائلیں کون حذف یا ان کے نام تبدیل کر سکتا ہے",
+      "اس ڈائریکٹری کی ہر فائل کون پڑھ سکتا ہے",
+      "اس ڈائریکٹری کے باہر پروگرام کون چلا سکتا ہے"
+    ],
+    "answer": "اس ڈائریکٹری میں فائلیں کون حذف یا ان کے نام تبدیل کر سکتا ہے"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "کون سی کمانڈ فائل کی رسائی کنٹرول فہرست کے اندراجات دکھاتی ہے؟",
+    "options": [
+      "getfacl file.txt",
+      "setfacl -b file.txt",
+      "getfattr -d file.txt",
+      "lsattr file.txt"
+    ],
+    "answer": "getfacl file.txt"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "کون سی فائل میں عموماً پاس ورڈ ہیش کے بجائے مقامی صارف کھاتوں کے ریکارڈ ہوتے ہیں؟",
+    "options": [
+      "/etc/shadow",
+      "/etc/group",
+      "/etc/gshadow",
+      "/etc/passwd"
+    ],
+    "answer": "/etc/passwd"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "کون سی کمانڈ alice کے موجودہ اضافی گروہ بدلے بغیر اسے اضافی گروہ docker میں شامل کرتی ہے؟",
+    "options": [
+      "usermod -g docker alice",
+      "usermod -l docker alice",
+      "usermod -aG docker alice",
+      "usermod -G docker alice"
+    ],
+    "answer": "usermod -aG docker alice"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "کون سی کمانڈ Linux صارف کے پاس ورڈ کو پاس ورڈ پر مبنی توثیق کے لیے مقفل کرتی ہے؟",
+    "options": [
+      "passwd -e alice",
+      "passwd -l alice",
+      "passwd -u alice",
+      "passwd -S alice"
+    ],
+    "answer": "passwd -l alice"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "کون سی کمانڈ alice کے passwd اندراج کے لیے مقررہ نامی خدمت کے ماخذ سے معلومات مانگتی ہے؟",
+    "options": [
+      "getent passwd alice",
+      "groups alice",
+      "id -u alice",
+      "whoami"
+    ],
+    "answer": "getent passwd alice"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "کون سی فائل عموماً بوٹ کے وقت خود بخود ماؤنٹ کیے جانے والے فائل سسٹم متعین کرتی ہے؟",
+    "options": [
+      "/etc/hosts",
+      "/etc/shells",
+      "/etc/resolv.conf",
+      "/etc/fstab"
+    ],
+    "answer": "/etc/fstab"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "کون سی کمانڈ فائل سسٹم کے UUID اور بلاک آلات کے دیگر اوصاف دکھاتی ہے؟",
+    "options": [
+      "modinfo",
+      "lscpu",
+      "blkid",
+      "lsmod"
+    ],
+    "answer": "blkid"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "مرمت کرنے والا fsck عمل چلانے سے پہلے فائل سسٹم عموماً اَن ماؤنٹ کیوں کرنا چاہیے؟",
+    "options": [
+      "ماؤنٹ شدہ فائل سسٹم میں کبھی خالی جگہ نہیں ہوتی",
+      "ساتھ ساتھ فائل سسٹم پر لکھنے کا عمل مرمت سے ٹکرا کر ڈیٹا کو نقصان پہنچا سکتا ہے",
+      "اَن ماؤنٹ کرنے سے فائل سسٹم کا تمام میٹا ڈیٹا خود بخود رمز ہو جاتا ہے",
+      "fsck صرف ایسے فائل سسٹم کی حمایت کرتا ہے جن کے آلے کا نام نہ ہو"
+    ],
+    "answer": "ساتھ ساتھ فائل سسٹم پر لکھنے کا عمل مرمت سے ٹکرا کر ڈیٹا کو نقصان پہنچا سکتا ہے"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "کون سی کمانڈ فعال سواپ علاقے دکھاتی ہے؟",
+    "options": [
+      "swapon --show",
+      "swapoff -a",
+      "free -s 1",
+      "vmstat -d"
+    ],
+    "answer": "swapon --show"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "کون سی کمانڈ Linux کرنل ماڈیول کو اس کے انحصارات سمیت لوڈ کرتی ہے؟",
+    "options": [
+      "rmmod",
+      "lsmod",
+      "modinfo",
+      "modprobe"
+    ],
+    "answer": "modprobe"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "systemd کی کون سی کمانڈ یونٹ کو /dev/null سے جوڑ کر اس کا آغاز روکتی ہے؟",
+    "options": [
+      "systemctl stop app.service",
+      "systemctl reset-failed app.service",
+      "systemctl mask app.service",
+      "systemctl disable app.service"
+    ],
+    "answer": "systemctl mask app.service"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "SSH کا کون سا اختیار توثیق کے لیے نجی شناختی فائل منتخب کرتا ہے؟",
+    "options": [
+      "-R",
+      "-i",
+      "-p",
+      "-L"
+    ],
+    "answer": "-i"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "کون سی کمانڈ SSH کے ذریعے مقامی فائل کو دور دراز صارف کی ڈائریکٹری میں محفوظ انداز سے نقل کرتی ہے؟",
+    "options": [
+      "scp report.txt alice@server:/home/alice/",
+      "ssh alice@server cat report.txt",
+      "sftp -b report.txt alice@server",
+      "ssh-keygen -f report.txt"
+    ],
+    "answer": "scp report.txt alice@server:/home/alice/"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "'rsync -n' کس چیز کی درخواست کرتا ہے؟",
+    "options": [
+      "منزل کی وہ فائلیں حذف کرنا جو ماخذ میں موجود نہ ہوں",
+      "منتقل ہونے والے فائل ڈیٹا کو دبانا",
+      "تمام ذیلی سطحوں پر فائل سسٹم کے ہر وصف کو محفوظ رکھنا",
+      "آزمائشی اجرا جو مجوزہ تبدیلیاں کیے بغیر ان کی اطلاع دے"
+    ],
+    "answer": "آزمائشی اجرا جو مجوزہ تبدیلیاں کیے بغیر ان کی اطلاع دے"
+  }
+]

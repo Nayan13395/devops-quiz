@@ -1,0 +1,302 @@
+[
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "કયો આદેશ release નામની હાલની બ્રાન્ચ માટે જોડાયેલી વર્કિંગ ટ્રી ઉમેરે છે?",
+    "options": [
+      "git worktree prune",
+      "git worktree lock ..\\release",
+      "git worktree add ..\\release release",
+      "git worktree list"
+    ],
+    "answer": "git worktree add ..\\release release"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "કઈ ફાઇલ મુખ્ય પ્રોજેક્ટના આવૃત્તિ-નિયંત્રિત સબમોડ્યુલ પાથ અને URL નોંધે છે?",
+    "options": [
+      ".gitmessage",
+      ".gitmodules",
+      ".gitignore",
+      ".gitattributes"
+    ],
+    "answer": ".gitmodules"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "કયો આદેશ નોંધાયેલા સબમોડ્યુલને, અંદરના સબમોડ્યુલ સહિત, પ્રારંભિક રીતે ગોઠવીને ચેકઆઉટ કરે છે?",
+    "options": [
+      "git submodule update --init --recursive",
+      "git submodule deinit --all",
+      "git submodule status",
+      "git submodule sync"
+    ],
+    "answer": "git submodule update --init --recursive"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "મુખ્ય પ્રોજેક્ટ સામાન્ય રીતે કમિટમાં સબમોડ્યુલ માટે શું નોંધે છે?",
+    "options": [
+      "સબમોડ્યુલનો આખો ઑબ્જેક્ટ ડેટાબેઝ",
+      "ફક્ત સબમોડ્યુલની મૂળભૂત બ્રાન્ચનું નામ",
+      "ફક્ત સબમોડ્યુલના કમિટ ન કરેલા ફેરફારો",
+      "સબમોડ્યુલની ચોક્કસ કમિટનો સંદર્ભ"
+    ],
+    "answer": "સબમોડ્યુલની ચોક્કસ કમિટનો સંદર્ભ"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "કયો આદેશ બધા સંદર્ભો અને તેમના દ્વારા પહોંચી શકાય તેવો ઇતિહાસ ધરાવતું પોર્ટેબલ બંડલ બનાવે છે?",
+    "options": [
+      "git format-patch -1 HEAD",
+      "git diff --binary > backup.bundle",
+      "git bundle create backup.bundle --all",
+      "git archive --output=backup.bundle HEAD"
+    ],
+    "answer": "git bundle create backup.bundle --all"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "કયો આદેશ HEADની ટ્રૅક થતી ફાઇલોને Git ઇતિહાસ વિના ZIP આર્કાઇવમાં નિકાસ કરે છે?",
+    "options": [
+      "git format-patch --stdout HEAD > source.zip",
+      "git archive --format=zip --output=source.zip HEAD",
+      "git bundle create source.zip --all",
+      "git clone --bare . source.zip"
+    ],
+    "answer": "git archive --format=zip --output=source.zip HEAD"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "કયો આદેશ છેલ્લી કમિટને ઇમેઇલ જેવી પૅચ ફાઇલમાં ફેરવે છે?",
+    "options": [
+      "git format-patch -1 HEAD",
+      "git diff HEAD",
+      "git show --stat HEAD",
+      "git log -1 --oneline"
+    ],
+    "answer": "git format-patch -1 HEAD"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "કયો આદેશ git format-patchથી બનાવેલા ઇમેઇલ પૅચ લાગુ કરીને તેમની કમિટ બનાવે છે?",
+    "options": [
+      "git apply changes.patch",
+      "git diff changes.patch",
+      "git add changes.patch",
+      "git am changes.patch"
+    ],
+    "answer": "git am changes.patch"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "કયો આદેશ ફાઇલો બદલ્યા વિના સામાન્ય પૅચ લાગુ થઈ શકે છે કે નહીં તે તપાસે છે?",
+    "options": [
+      "git am changes.patch",
+      "git add changes.patch",
+      "git apply --check changes.patch",
+      "git apply changes.patch"
+    ],
+    "answer": "git apply --check changes.patch"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "Git ઑબ્જેક્ટનો કયો પ્રકાર ફાઇલના નામ વિના તેની સામગ્રી રાખે છે?",
+    "options": [
+      "ટિપ્પણીવાળો ટૅગ",
+      "Blob",
+      "Tree",
+      "કમિટ"
+    ],
+    "answer": "Blob"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "Git ઑબ્જેક્ટનો કયો પ્રકાર ફાઇલનાં નામ અને બ્લૉબ કે સબટ્રીના સંદર્ભ નોંધે છે?",
+    "options": [
+      "Tree",
+      "Blob",
+      "કમિટ",
+      "ટિપ્પણીવાળો ટૅગ"
+    ],
+    "answer": "Tree"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "કયો આદેશ જાણીતા ઑબ્જેક્ટ IDનો ઑબ્જેક્ટ પ્રકાર જણાવે છે?",
+    "options": [
+      "git cat-file -s abc1234",
+      "git rev-parse abc1234",
+      "git log -1 abc1234",
+      "git cat-file -t abc1234"
+    ],
+    "answer": "git cat-file -t abc1234"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "કયો આદેશ HEADનો સંપૂર્ણ ઑબ્જેક્ટ ID દર્શાવે છે?",
+    "options": [
+      "git status --short",
+      "git branch --show-current",
+      "git rev-parse HEAD",
+      "git symbolic-ref HEAD"
+    ],
+    "answer": "git rev-parse HEAD"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "કઈ રિવિઝન રેન્જ featureથી પહોંચી શકાય પણ mainથી નહીં એવી કમિટ પસંદ કરે છે?",
+    "options": [
+      "main^",
+      "main..feature",
+      "feature..main",
+      "main...feature"
+    ],
+    "answer": "main..feature"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "git logનો કયો વિકલ્પ ફક્ત મર્જ કમિટ દર્શાવે છે?",
+    "options": [
+      "--merges",
+      "--no-merges",
+      "--first-parent",
+      "--reverse"
+    ],
+    "answer": "--merges"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "git diffનો કયો વિકલ્પ બદલાયેલા પાથ અને તેમના ફેરફાર-સ્થિતિના અક્ષરો દર્શાવે છે?",
+    "options": [
+      "--name-only",
+      "--stat",
+      "--shortstat",
+      "--name-status"
+    ],
+    "answer": "--name-status"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "કઈ ફાઇલ પાથ માટે લખાણના સામાન્યકરણના નિયમો જેવા આવૃત્તિ-નિયંત્રિત ગુણધર્મો નક્કી કરે છે?",
+    "options": [
+      ".gitmodules",
+      ".gitconfig",
+      ".gitattributes",
+      ".gitignore"
+    ],
+    "answer": ".gitattributes"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": ".gitattributesનો '*.sh text eol=lf' નિયમ મેળ ખાતી ટેક્સ્ટ ફાઇલો માટે શું માંગે છે?",
+    "options": [
+      "ખાલી પંક્તિઓ આપમેળે કાઢવી",
+      "વર્કિંગ ટ્રીમાં LF પંક્તિ-અંત",
+      "વર્કિંગ ટ્રીમાં CRLF પંક્તિ-અંત",
+      "લખાણમાં રૂપાંતર કર્યા વિના બાઇનરી તરીકે ગણવું"
+    ],
+    "answer": "વર્કિંગ ટ્રીમાં LF પંક્તિ-અંત"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "કયો હૂક સૂચિત કમિટ-સંદેશ ફાઇલ તપાસીને કમિટ નકારી શકે છે?",
+    "options": [
+      "commit-msg",
+      "post-commit",
+      "post-checkout",
+      "post-merge"
+    ],
+    "answer": "commit-msg"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "કઈ ગોઠવણી Git હૂક માટે પોતાની પસંદગીની ડિરેક્ટરી નક્કી કરે છે?",
+    "options": [
+      "core.worktree",
+      "core.excludesFile",
+      "core.attributesFile",
+      "core.hooksPath"
+    ],
+    "answer": "core.hooksPath"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "કઈ ફાઇલ વિકાસકર્તાને સહિયારો .gitignore નિયમ ઉમેર્યા વિના ટ્રૅક ન થતી ફાઇલો સ્થાનિક રીતે અવગણવા દે છે?",
+    "options": [
+      ".git\\description",
+      ".git\\packed-refs",
+      ".git\\info\\exclude",
+      ".git\\HEAD"
+    ],
+    "answer": ".git\\info\\exclude"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "કયો આદેશ બાઇસેક્ટ સત્ર છોડે છે અને સામાન્ય રીતે મૂળ બ્રાન્ચ પર પાછો ફરે છે?",
+    "options": [
+      "git bisect log",
+      "git bisect reset",
+      "git bisect skip",
+      "git bisect good"
+    ],
+    "answer": "git bisect reset"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "કયો આદેશ પૅચ શ્રેણીની બે આવૃત્તિઓ સરખાવે છે?",
+    "options": [
+      "git range-diff main..old main..new",
+      "git diff old new",
+      "git log old..new",
+      "git merge-base old new"
+    ],
+    "answer": "git range-diff main..old main..new"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "કયો આદેશ કમિટ બનાવતી વખતે અંતે Signed-off-by નોંધ ઉમેરે છે?",
+    "options": [
+      "git commit --gpg-sign",
+      "git commit --amend",
+      "git commit --no-verify",
+      "git commit --signoff"
+    ],
+    "answer": "git commit --signoff"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "git log -S'old_name' મૂળભૂત રીતે શું શોધે છે?",
+    "options": [
+      "જેના સંદેશમાં old_name હોય તેવી કમિટ",
+      "જેના નામમાં old_name હોય તેવી બ્રાન્ચ",
+      "old_name આવવાની સંખ્યા બદલતી કમિટ",
+      "જેના લેખકનું નામ old_name હોય તેવી કમિટ"
+    ],
+    "answer": "old_name આવવાની સંખ્યા બદલતી કમિટ"
+  }
+]

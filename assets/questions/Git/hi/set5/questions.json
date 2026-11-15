@@ -1,0 +1,302 @@
+[
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "मौजूदा release ब्रांच के लिए जुड़ा कार्यशील ट्री कौन-सा कमांड जोड़ता है?",
+    "options": [
+      "git worktree prune",
+      "git worktree lock ..\\release",
+      "git worktree add ..\\release release",
+      "git worktree list"
+    ],
+    "answer": "git worktree add ..\\release release"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "मूल परियोजना के संस्करण-नियंत्रित सबमॉड्यूल पथ और URL किस फ़ाइल में होते हैं?",
+    "options": [
+      ".gitmessage",
+      ".gitmodules",
+      ".gitignore",
+      ".gitattributes"
+    ],
+    "answer": ".gitmodules"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "नेस्टेड सहित पंजीकृत सबमॉड्यूल आरंभ करके चेकआउट करने वाला कमांड कौन-सा है?",
+    "options": [
+      "git submodule update --init --recursive",
+      "git submodule deinit --all",
+      "git submodule status",
+      "git submodule sync"
+    ],
+    "answer": "git submodule update --init --recursive"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "मूल परियोजना सामान्यतः सबमॉड्यूल के लिए कमिट में क्या दर्ज करती है?",
+    "options": [
+      "सबमॉड्यूल का पूरा ऑब्जेक्ट डेटाबेस",
+      "केवल सबमॉड्यूल की डिफ़ॉल्ट ब्रांच का नाम",
+      "केवल सबमॉड्यूल के अनकमिट बदलाव",
+      "सबमॉड्यूल के किसी विशेष कमिट का संदर्भ"
+    ],
+    "answer": "सबमॉड्यूल के किसी विशेष कमिट का संदर्भ"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "सभी संदर्भ और उनसे पहुँच योग्य इतिहास वाला पोर्टेबल बंडल कौन-सा कमांड बनाता है?",
+    "options": [
+      "git format-patch -1 HEAD",
+      "git diff --binary > backup.bundle",
+      "git bundle create backup.bundle --all",
+      "git archive --output=backup.bundle HEAD"
+    ],
+    "answer": "git bundle create backup.bundle --all"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "HEAD की ट्रैक फ़ाइलें Git इतिहास के बिना ZIP में कौन-सा कमांड निर्यात करता है?",
+    "options": [
+      "git format-patch --stdout HEAD > source.zip",
+      "git archive --format=zip --output=source.zip HEAD",
+      "git bundle create source.zip --all",
+      "git clone --bare . source.zip"
+    ],
+    "answer": "git archive --format=zip --output=source.zip HEAD"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "सबसे हाल के कमिट को ईमेल-शैली पैच फ़ाइल में कौन-सा कमांड बदलता है?",
+    "options": [
+      "git format-patch -1 HEAD",
+      "git diff HEAD",
+      "git show --stat HEAD",
+      "git log -1 --oneline"
+    ],
+    "answer": "git format-patch -1 HEAD"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "git format-patch के ईमेल पैच लागू करके कमिट कौन-सा कमांड बनाता है?",
+    "options": [
+      "git apply changes.patch",
+      "git diff changes.patch",
+      "git add changes.patch",
+      "git am changes.patch"
+    ],
+    "answer": "git am changes.patch"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "फ़ाइलें बदले बिना सामान्य पैच लागू हो सकेगा या नहीं, कौन-सा कमांड जाँचता है?",
+    "options": [
+      "git am changes.patch",
+      "git add changes.patch",
+      "git apply --check changes.patch",
+      "git apply changes.patch"
+    ],
+    "answer": "git apply --check changes.patch"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "फ़ाइल नाम के बिना सामग्री रखने वाला Git ऑब्जेक्ट प्रकार कौन-सा है?",
+    "options": [
+      "टिप्पणी वाला टैग",
+      "Blob",
+      "Tree",
+      "Commit"
+    ],
+    "answer": "Blob"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "फ़ाइल नाम और blob या उप-ट्री संदर्भ रखने वाला Git ऑब्जेक्ट प्रकार कौन-सा है?",
+    "options": [
+      "Tree",
+      "Blob",
+      "Commit",
+      "टिप्पणी वाला टैग"
+    ],
+    "answer": "Tree"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "ज्ञात ऑब्जेक्ट ID का प्रकार कौन-सा कमांड बताता है?",
+    "options": [
+      "git cat-file -s abc1234",
+      "git rev-parse abc1234",
+      "git log -1 abc1234",
+      "git cat-file -t abc1234"
+    ],
+    "answer": "git cat-file -t abc1234"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "HEAD की पूरी ऑब्जेक्ट ID कौन-सा कमांड दिखाता है?",
+    "options": [
+      "git status --short",
+      "git branch --show-current",
+      "git rev-parse HEAD",
+      "git symbolic-ref HEAD"
+    ],
+    "answer": "git rev-parse HEAD"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "feature से पहुँच योग्य, लेकिन main से नहीं, कमिट कौन-सी संशोधन सीमा चुनती है?",
+    "options": [
+      "main^",
+      "main..feature",
+      "feature..main",
+      "main...feature"
+    ],
+    "answer": "main..feature"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "केवल मर्ज कमिट दिखाने वाला git log विकल्प कौन-सा है?",
+    "options": [
+      "--merges",
+      "--no-merges",
+      "--first-parent",
+      "--reverse"
+    ],
+    "answer": "--merges"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "बदले पथ और उनके बदलाव-स्थिति अक्षर दिखाने वाला git diff विकल्प कौन-सा है?",
+    "options": [
+      "--name-only",
+      "--stat",
+      "--shortstat",
+      "--name-status"
+    ],
+    "answer": "--name-status"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "पथों के टेक्स्ट सामान्यीकरण जैसे संस्करण-नियंत्रित गुण कौन-सी फ़ाइल परिभाषित करती है?",
+    "options": [
+      ".gitmodules",
+      ".gitconfig",
+      ".gitattributes",
+      ".gitignore"
+    ],
+    "answer": ".gitattributes"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": ".gitattributes का '*.sh text eol=lf' नियम मेल खाती टेक्स्ट फ़ाइलों के लिए क्या माँगता है?",
+    "options": [
+      "खाली पंक्तियों का स्वचालित हटाव",
+      "कार्यशील ट्री में LF पंक्ति-अंत",
+      "कार्यशील ट्री में CRLF पंक्ति-अंत",
+      "टेक्स्ट रूपांतरण बिना बाइनरी व्यवहार"
+    ],
+    "answer": "कार्यशील ट्री में LF पंक्ति-अंत"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "प्रस्तावित कमिट संदेश फ़ाइल देखकर कमिट अस्वीकार कर सकने वाला हुक कौन-सा है?",
+    "options": [
+      "commit-msg",
+      "post-commit",
+      "post-checkout",
+      "post-merge"
+    ],
+    "answer": "commit-msg"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "Git हुक के लिए कस्टम निर्देशिका कौन-सी सेटिंग चुनती है?",
+    "options": [
+      "core.worktree",
+      "core.excludesFile",
+      "core.attributesFile",
+      "core.hooksPath"
+    ],
+    "answer": "core.hooksPath"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "साझा .gitignore नियम जोड़े बिना एक डेवलपर को स्थानीय अनट्रैक फ़ाइलें अनदेखी करने देती फ़ाइल कौन-सी है?",
+    "options": [
+      ".git\\description",
+      ".git\\packed-refs",
+      ".git\\info\\exclude",
+      ".git\\HEAD"
+    ],
+    "answer": ".git\\info\\exclude"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "bisect सत्र समाप्त करके सामान्यतः मूल ब्रांच पर लौटने वाला कमांड कौन-सा है?",
+    "options": [
+      "git bisect log",
+      "git bisect reset",
+      "git bisect skip",
+      "git bisect good"
+    ],
+    "answer": "git bisect reset"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "पैच शृंखला के दो संस्करणों की तुलना कौन-सा कमांड करता है?",
+    "options": [
+      "git range-diff main..old main..new",
+      "git diff old new",
+      "git log old..new",
+      "git merge-base old new"
+    ],
+    "answer": "git range-diff main..old main..new"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "कमिट बनाते समय Signed-off-by पंक्ति कौन-सा कमांड जोड़ता है?",
+    "options": [
+      "git commit --gpg-sign",
+      "git commit --amend",
+      "git commit --no-verify",
+      "git commit --signoff"
+    ],
+    "answer": "git commit --signoff"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "git log -S'old_name' डिफ़ॉल्ट रूप से क्या खोजता है?",
+    "options": [
+      "वे कमिट जिनके संदेश में old_name है",
+      "वे ब्रांच जिनके नाम में old_name है",
+      "वे कमिट जो old_name के आने की संख्या बदलते हैं",
+      "वे कमिट जिनका लेखक old_name है"
+    ],
+    "answer": "वे कमिट जो old_name के आने की संख्या बदलते हैं"
+  }
+]

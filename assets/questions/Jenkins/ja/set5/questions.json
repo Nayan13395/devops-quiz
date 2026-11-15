@@ -1,0 +1,302 @@
+[
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "同じパイプラインを並行実行せず、新たな実行をキューに入れる宣言的オプションはどれか？",
+    "options": [
+      "parallelsAlwaysFailFast()",
+      "disableConcurrentBuilds()",
+      "disableResume()",
+      "skipDefaultCheckout()"
+    ],
+    "answer": "disableConcurrentBuilds()"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "古いビルド記録と成果物の保持規則を指定する宣言的オプションはどれか？",
+    "options": [
+      "buildDiscarder(logRotator(numToKeepStr: '10'))",
+      "timeout(time: 10, unit: 'MINUTES')",
+      "retry(10)",
+      "quietPeriod(10)"
+    ],
+    "answer": "buildDiscarder(logRotator(numToKeepStr: '10'))"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "Jenkins cron 式の H は何を提供するか？",
+    "options": [
+      "ユーザーのコンピューターの現在時刻の「時」の値",
+      "祝日だけ実行する指定",
+      "ノードがアイドル状態のときだけ実行する指定",
+      "予定負荷を分散する、ジョブ名に基づいた安定したハッシュ"
+    ],
+    "answer": "予定負荷を分散する、ジョブ名に基づいた安定したハッシュ"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "Jenkins の五フィールド cron 構文で五番目のフィールドは何か？",
+    "options": [
+      "一日の中の時",
+      "月の中の日",
+      "曜日",
+      "一時間の中の分"
+    ],
+    "answer": "曜日"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "前のビルドが失敗または不安定で、今回成功したときに動く post 条件はどれか？",
+    "options": [
+      "unsuccessful",
+      "fixed",
+      "changed",
+      "regression"
+    ],
+    "answer": "fixed"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "他の post 条件を評価した後に動く post 条件はどれか？",
+    "options": [
+      "cleanup",
+      "always",
+      "changed",
+      "success"
+    ],
+    "answer": "cleanup"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "ステージのエージェントを割り当てる前に条件を評価する when オプションはどれか？",
+    "options": [
+      "beforeInput false",
+      "beforeOptions false",
+      "branch 'main'",
+      "beforeAgent true"
+    ],
+    "answer": "beforeAgent true"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "マルチブランチパイプラインの特定ブランチを対象とする when 条件はどれか？",
+    "options": [
+      "buildingTag()",
+      "changeRequest()",
+      "branch 'main'",
+      "tag 'main'"
+    ],
+    "answer": "branch 'main'"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "OS やブラウザーなどの軸の組み合わせを実行する宣言的構造はどれか？",
+    "options": [
+      "environment",
+      "matrix",
+      "parallel",
+      "steps"
+    ],
+    "answer": "matrix"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "宣言的 matrix の不要な組み合わせを除外するセクションはどれか？",
+    "options": [
+      "excludes",
+      "axes",
+      "stages",
+      "tools"
+    ],
+    "answer": "excludes"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "並列分岐の一つが失敗したとき、他の分岐を止めるステージ設定はどれか？",
+    "options": [
+      "beforeAgent true",
+      "reuseNode true",
+      "alwaysPull true",
+      "failFast true"
+    ],
+    "answer": "failFast true"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "ビルドが不安定になった後のステージを飛ばす宣言的オプションはどれか？",
+    "options": [
+      "disableResume()",
+      "preserveStashes()",
+      "skipStagesAfterUnstable()",
+      "skipDefaultCheckout()"
+    ],
+    "answer": "skipStagesAfterUnstable()"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "失敗を記録しつつブロック後の実行を続けられるステップはどれか？",
+    "options": [
+      "input",
+      "catchError",
+      "error",
+      "timeout"
+    ],
+    "answer": "catchError"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "プロセス終了後に sh(script: 'check.sh', returnStatus: true) が返すものは何か？",
+    "options": [
+      "プロセスの数値終了コード",
+      "標準出力の全文",
+      "シェルのプロセス ID",
+      "Jenkins の認証情報オブジェクト"
+    ],
+    "answer": "プロセスの数値終了コード"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "sh(script: 'echo ready', returnStdout: true) が成功時に返すものは何か？",
+    "options": [
+      "数値のビルド番号",
+      "マップ形式のシェル環境",
+      "エージェントのラベル一覧",
+      "取得した標準出力の文字列"
+    ],
+    "answer": "取得した標準出力の文字列"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "現在のワークスペースの中身を再帰削除するステップはどれか？",
+    "options": [
+      "pwd",
+      "readFile",
+      "deleteDir",
+      "fileExists"
+    ],
+    "answer": "deleteDir"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "現在のワークスペースにパスが存在するか調べるステップはどれか？",
+    "options": [
+      "libraryResource",
+      "fileExists",
+      "readFile",
+      "writeFile"
+    ],
+    "answer": "fileExists"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "別の Jenkins ジョブを起動し、ビルドパラメーターも渡せるステップはどれか？",
+    "options": [
+      "build",
+      "stage",
+      "node",
+      "checkout"
+    ],
+    "answer": "build"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "ステージ再開のため完了したビルドの stash を保持する宣言的オプションはどれか？",
+    "options": [
+      "disableResume()",
+      "skipDefaultCheckout()",
+      "quietPeriod(5)",
+      "preserveStashes()"
+    ],
+    "answer": "preserveStashes()"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "vars/deploy.groovy が定義するグローバル変数 deploy のヘルプを置く共有ライブラリのファイルはどれか？",
+    "options": [
+      "resources/deploy.txt",
+      "vars/main.groovy",
+      "vars/deploy.txt",
+      "src/deploy.groovy"
+    ],
+    "answer": "vars/deploy.txt"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "Jenkins パイプラインの @NonCPS メソッドの主な制約はどれか？",
+    "options": [
+      "Windows エージェントで実行する必要がある",
+      "CPS 変換されたパイプラインステップを呼べない",
+      "stage ディレクティブを含める必要がある",
+      "常に文字列を返す必要がある"
+    ],
+    "answer": "CPS 変換されたパイプラインステップを呼べない"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "未承認のサンドボックス Groovy コードが要求する署名を審査する Jenkins 機能はどれか？",
+    "options": [
+      "プロセス内スクリプト承認",
+      "Credentials Store",
+      "ビルドキュー",
+      "SCM ポーリングログ"
+    ],
+    "answer": "プロセス内スクリプト承認"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "バインドされた秘密変数をシェル側で展開させるスクリプトに推奨する Groovy の引用形式はどれか？",
+    "options": [
+      "秘密を含むダブルクォートの Groovy 補間文字列",
+      "秘密を含む三重ダブルクォートの Groovy 補間文字列",
+      "平文の秘密を連結して作る Groovy 文字列",
+      "シングルクォートの Groovy 文字列"
+    ],
+    "answer": "シングルクォートの Groovy 文字列"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "関連する Web リクエストで Jenkins の CSRF crumb が果たす役割は何か？",
+    "options": [
+      "アップロード前に成果物を暗号化する",
+      "ビルドを実行するエージェントを選ぶ",
+      "状態変更要求が既存のユーザーセッションに属することの検証を助ける",
+      "全ジョブの認可確認に置き換わる"
+    ],
+    "answer": "状態変更要求が既存のユーザーセッションに属することの検証を助ける"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "異なるジョブ間で共有テスト機器への排他アクセスを調整するため、パイプラインが使うべきものはどれか？",
+    "options": [
+      "skipDefaultCheckout オプション",
+      "Lockable Resources プラグインの lock ステップ",
+      "timestamps オプション",
+      "buildDiscarder オプション"
+    ],
+    "answer": "Lockable Resources プラグインの lock ステップ"
+  }
+]

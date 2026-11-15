@@ -1,0 +1,302 @@
+[
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "کون سا اعلانیہ بلاک ریسورس پتے کی تبدیلی درج کرتا ہے تاکہ Terraform موجودہ آبجیکٹ برقرار رکھ سکے؟",
+    "options": [
+      "removed",
+      "check",
+      "moved",
+      "import"
+    ],
+    "answer": "moved"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "moved بلاک میں کون سا آرگیومنٹ ریسورس کا نیا پتہ بتاتا ہے؟",
+    "options": [
+      "provider",
+      "to",
+      "from",
+      "id"
+    ],
+    "answer": "to"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "کون سا بلاک اطلاق کے دوران درآمد کرنے کے لیے موجودہ انفراسٹرکچر آبجیکٹ کا اعلان کرتا ہے؟",
+    "options": [
+      "import",
+      "moved",
+      "output",
+      "check"
+    ],
+    "answer": "import"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "removed بلاک کی کون سی ترتیب اصل انفراسٹرکچر آبجیکٹ تباہ کیے بغیر ریسورس کو اسٹیٹ سے بھلا دیتی ہے؟",
+    "options": [
+      "lifecycle { destroy = true }",
+      "lifecycle { create_before_destroy = true }",
+      "lifecycle { prevent_destroy = false }",
+      "lifecycle { destroy = false }"
+    ],
+    "answer": "lifecycle { destroy = false }"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "عام اِن پٹ متغیر کو sensitive نشان زد کرنے پر مقامی اسٹیٹ فائل میں اس کی قدر کا کیا ہوتا ہے؟",
+    "options": [
+      "وہ ہمیشہ اسٹیٹ سے خارج رہتی ہے",
+      "محفوظ کرنے سے پہلے اس کی جگہ متغیر کا نام رکھ دیا جاتا ہے",
+      "عام CLI آؤٹ پٹ میں چھپائے جانے کے باوجود وہ سادہ متن میں محفوظ ہو سکتی ہے",
+      "sensitive فلیگ اسے خود بخود رمز کر دیتا ہے"
+    ],
+    "answer": "عام CLI آؤٹ پٹ میں چھپائے جانے کے باوجود وہ سادہ متن میں محفوظ ہو سکتی ہے"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "آؤٹ پٹ کمانڈ کا کون سا فارمیٹ حساس آؤٹ پٹ قدریں مشین کے لیے قابلِ مطالعہ شکل میں ظاہر کر سکتا ہے؟",
+    "options": [
+      "terraform providers schema -json",
+      "terraform output -json",
+      "terraform output -help",
+      "terraform output -no-color"
+    ],
+    "answer": "terraform output -json"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "کون سا فنکشن Terraform قدر کو JSON اسٹرنگ میں بدلتا ہے؟",
+    "options": [
+      "jsonencode",
+      "jsondecode",
+      "yamldecode",
+      "file"
+    ],
+    "answer": "jsonencode"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "کون سا فنکشن JSON اسٹرنگ پارس کرکے Terraform قدر بناتا ہے؟",
+    "options": [
+      "jsonencode",
+      "yamlencode",
+      "templatefile",
+      "jsondecode"
+    ],
+    "answer": "jsondecode"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "کون سا فنکشن متغیرات کے دیے گئے میپ سے سانچہ فائل کا متن تیار کرتا ہے؟",
+    "options": [
+      "fileset",
+      "filebase64",
+      "templatefile",
+      "file"
+    ],
+    "answer": "templatefile"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "کون سا فنکشن پہلا آرگیومنٹ واپس کرتا ہے جس کی قدر متحرک خرابی کے بغیر معلوم ہو سکے؟",
+    "options": [
+      "lookup",
+      "try",
+      "can",
+      "coalesce"
+    ],
+    "answer": "try"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "کون سا فنکشن بتاتا ہے کہ کسی ایکسپریشن کی قدر متحرک خرابی کے بغیر معلوم کی جا سکتی ہے یا نہیں؟",
+    "options": [
+      "can",
+      "try",
+      "contains",
+      "length"
+    ],
+    "answer": "can"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "merge کو دیے گئے دو میپ میں ایک ہی کلید ہو تو کون سی قدر غالب آتی ہے؟",
+    "options": [
+      "پہلے آرگیومنٹ کی قدر",
+      "قدریں ہمیشہ ملا کر فہرست بنا دی جاتی ہیں",
+      "دہرائی گئی کلید ہمیشہ خرابی پیدا کرتی ہے",
+      "بعد والے آرگیومنٹ کی قدر"
+    ],
+    "answer": "بعد والے آرگیومنٹ کی قدر"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "پرووائیڈر ورژن کی کون سی پابندی 5.4.x نسخوں کی اجازت دیتی ہے مگر 5.5.0 کی نہیں؟",
+    "options": [
+      ">= 5.4.0",
+      ">= 5.0, < 6.0",
+      "~> 5.4.0",
+      "~> 5.4"
+    ],
+    "answer": "~> 5.4.0"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "Terraform عموماً null دیے گئے ریسورس آرگیومنٹ کو کیا سمجھتا ہے؟",
+    "options": [
+      "پورا ریسورس حذف کرنے کی درخواست",
+      "چھوڑا گیا آرگیومنٹ، جس پر اس کی طے شدہ قدریں اور تقاضے لاگو ہوں",
+      "ہر پرووائیڈر میں خالی اسٹرنگ",
+      "ہر پرووائیڈر میں عددی صفر"
+    ],
+    "answer": "چھوڑا گیا آرگیومنٹ، جس پر اس کی طے شدہ قدریں اور تقاضے لاگو ہوں"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "کون سا ایکسپریشن اس ماڈیول کا فائل سسٹم پاتھ دیتا ہے جس میں وہ لکھا گیا ہو؟",
+    "options": [
+      "path.module",
+      "path.root",
+      "path.cwd",
+      "terraform.workspace"
+    ],
+    "answer": "path.module"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "CLI کنفیگریشن کو HCP Terraform سے جوڑنے کے لیے terraform بلاک کی کون سی خصوصیت تجویز کی جاتی ہے؟",
+    "options": [
+      "locals",
+      "moved",
+      "check",
+      "cloud"
+    ],
+    "answer": "cloud"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "terraform_remote_state حوالے میں دی گئی اسٹیٹ سے کون سی اعلیٰ سطح کی قدریں براہِ راست دستیاب کرتا ہے؟",
+    "options": [
+      "پرووائیڈر کی تمام اسناد",
+      "تمام ذیلی ماڈیولوں کی مقامی قدریں",
+      "بنیادی ماڈیول کی آؤٹ پٹس",
+      "ہر ریسورس وصف بطور اعلیٰ سطح کی آؤٹ پٹ"
+    ],
+    "answer": "بنیادی ماڈیول کی آؤٹ پٹس"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "دورِ حیات کا کون سا قاعدہ حوالہ دیے گئے زیرِ انتظام ریسورس میں تبدیلی پر متبادل بنانے کی درخواست کرتا ہے؟",
+    "options": [
+      "create_before_destroy",
+      "replace_triggered_by",
+      "ignore_changes",
+      "prevent_destroy"
+    ],
+    "answer": "replace_triggered_by"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "کون سا اندرونی زیرِ انتظام ریسورس الگ پرووائیڈر نصب کیے بغیر عام اِن پٹ قدر کو ریسورس کا دورِ حیات دیتا ہے؟",
+    "options": [
+      "terraform_data",
+      "terraform_remote_state",
+      "local_file",
+      "random_id"
+    ],
+    "answer": "terraform_data"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "عام منصوبہ بندی یا اطلاق کے دوران check بلاک کی کوئی تصدیقی شرط ناکام ہو تو کیا ہوتا ہے؟",
+    "options": [
+      "Terraform ہمیشہ جانچے گئے آبجیکٹ کو تباہ کرتا ہے",
+      "Terraform خاموشی سے check بلاک ہٹا دیتا ہے",
+      "Terraform کسی بھی ریسورس کو تازہ کرنے سے پہلے ہمیشہ بند ہو جاتا ہے",
+      "Terraform تنبیہ دیتا ہے مگر صرف اس ناکامی کی وجہ سے عمل نہیں روکتا"
+    ],
+    "answer": "Terraform تنبیہ دیتا ہے مگر صرف اس ناکامی کی وجہ سے عمل نہیں روکتا"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "ریسورس کے دورِ حیات کی پیشگی شرط false ہو تو کیا ہوتا ہے؟",
+    "options": [
+      "Terraform ریسورس کو ڈیٹا ماخذ میں بدل دیتا ہے",
+      "Terraform پیشگی شرط کی جگہ صرف تنبیہ رکھ دیتا ہے",
+      "Terraform خرابی بتاتا اور متعلقہ عمل روکتا ہے",
+      "Terraform اگلی بار چلنے تک پیشگی شرط نظرانداز کرتا ہے"
+    ],
+    "answer": "Terraform خرابی بتاتا اور متعلقہ عمل روکتا ہے"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "کون سی کمانڈ Terraform کی اپنی ٹیسٹ فائلیں چلاتی ہے؟",
+    "options": [
+      "terraform console",
+      "terraform test",
+      "terraform validate",
+      "terraform fmt"
+    ],
+    "answer": "terraform test"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "کون سی ترتیب Terraform ٹیسٹ کے run بلاک سے طے شدہ اطلاق کے بجائے منصوبہ بندی کرواتی ہے؟",
+    "options": [
+      "command = plan",
+      "command = validate",
+      "command = refresh",
+      "command = console"
+    ],
+    "answer": "command = plan"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "کون سا فنکشن ڈائریکٹری کے اندر گلوب نمونے سے ملنے والے نسبتی پاتھ کا مجموعہ واپس کرتا ہے؟",
+    "options": [
+      "file",
+      "dirname",
+      "basename",
+      "fileset"
+    ],
+    "answer": "fileset"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "مختلف رسائی کنٹرول درکار ہونے والے ماحول الگ کرنے کے لیے صرف CLI ورک اسپیس کیوں ناموزوں ہو سکتے ہیں؟",
+    "options": [
+      "وہ مختلف اِن پٹ متغیر قدریں استعمال کرنے سے روکتے ہیں",
+      "وہ ہر ماحول کو ایک ہی ریسورس نام استعمال کرنے پر مجبور کرتے ہیں",
+      "ان کی بیک اینڈ کنفیگریشن اور توثیق کا سیاق مشترک ہوتا ہے",
+      "ان کا ہمیشہ ایک ہی اسٹیٹ اسنیپ شاٹ ہوتا ہے"
+    ],
+    "answer": "ان کی بیک اینڈ کنفیگریشن اور توثیق کا سیاق مشترک ہوتا ہے"
+  }
+]

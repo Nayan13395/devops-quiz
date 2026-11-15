@@ -1,0 +1,302 @@
+[
+  {
+    "category": "Jenkins",
+    "set": 2,
+    "question": "Berkas apa yang digunakan untuk mendefinisikan pipeline Jenkins?",
+    "options": [
+      "Jenkinsfile",
+      "pipeline.yml",
+      "build.xml",
+      "job.conf"
+    ],
+    "answer": "Jenkinsfile"
+  },
+  {
+    "category": "Jenkins",
+    "set": 2,
+    "question": "Jenis pipeline mana yang menggunakan sintaks terstruktur?",
+    "options": [
+      "Declarative Pipeline",
+      "Scripted Pipeline",
+      "Freestyle Job",
+      "Maven Job"
+    ],
+    "answer": "Declarative Pipeline"
+  },
+  {
+    "category": "Jenkins",
+    "set": 2,
+    "question": "Kata kunci mana yang memulai Declarative Pipeline?",
+    "options": [
+      "pipeline",
+      "stage",
+      "agent",
+      "steps"
+    ],
+    "answer": "pipeline"
+  },
+  {
+    "category": "Jenkins",
+    "set": 2,
+    "question": "Bagian pipeline deklaratif mana yang menentukan tempat pipeline atau tahap dijalankan?",
+    "options": [
+      "agent",
+      "node",
+      "executor",
+      "workspace"
+    ],
+    "answer": "agent"
+  },
+  {
+    "category": "Jenkins",
+    "set": 2,
+    "question": "Blok mana yang berisi beberapa stage?",
+    "options": [
+      "stages",
+      "steps",
+      "agent",
+      "tools"
+    ],
+    "answer": "stages"
+  },
+  {
+    "category": "Jenkins",
+    "set": 2,
+    "question": "Blok mana yang mewakili satu fase dalam pipeline?",
+    "options": [
+      "stage",
+      "step",
+      "agent",
+      "job"
+    ],
+    "answer": "stage"
+  },
+  {
+    "category": "Jenkins",
+    "set": 2,
+    "question": "Blok mana yang berisi perintah yang dijalankan dalam sebuah stage?",
+    "options": [
+      "steps",
+      "agent",
+      "pipeline",
+      "tools"
+    ],
+    "answer": "steps"
+  },
+  {
+    "category": "Jenkins",
+    "set": 2,
+    "question": "Pernyataan mana yang menjalankan pipeline pada agent apa pun yang tersedia?",
+    "options": [
+      "agent any",
+      "node any",
+      "executor any",
+      "run any"
+    ],
+    "answer": "agent any"
+  },
+  {
+    "category": "Jenkins",
+    "set": 2,
+    "question": "Blok mana yang mendefinisikan variabel lingkungan?",
+    "options": [
+      "environment",
+      "variables",
+      "env",
+      "settings"
+    ],
+    "answer": "environment"
+  },
+  {
+    "category": "Jenkins",
+    "set": 2,
+    "question": "Blok mana yang menentukan tindakan setelah eksekusi pipeline?",
+    "options": [
+      "post",
+      "after",
+      "cleanup",
+      "finally"
+    ],
+    "answer": "post"
+  },
+  {
+    "category": "Jenkins",
+    "set": 2,
+    "question": "Blok kondisi mana yang mengontrol apakah sebuah stage harus dijalankan?",
+    "options": [
+      "when",
+      "if",
+      "condition",
+      "runif"
+    ],
+    "answer": "when"
+  },
+  {
+    "category": "Jenkins",
+    "set": 2,
+    "question": "Fitur mana yang memungkinkan beberapa stage berjalan secara bersamaan?",
+    "options": [
+      "parallel",
+      "multi",
+      "concurrent",
+      "fork"
+    ],
+    "answer": "parallel"
+  },
+  {
+    "category": "Jenkins",
+    "set": 2,
+    "question": "Step mana yang menjalankan perintah shell pada agent Linux?",
+    "options": [
+      "sh",
+      "shell",
+      "bash",
+      "linux"
+    ],
+    "answer": "sh"
+  },
+  {
+    "category": "Jenkins",
+    "set": 2,
+    "question": "Langkah pipeline mana yang khusus menjalankan skrip batch Windows?",
+    "options": [
+      "bat",
+      "cmd",
+      "powershell",
+      "win"
+    ],
+    "answer": "bat"
+  },
+  {
+    "category": "Jenkins",
+    "set": 2,
+    "question": "Direktif deklaratif mana yang mendeklarasikan masukan build dari pengguna, seperti parameter string?",
+    "options": [
+      "parameters",
+      "environment",
+      "tools",
+      "triggers"
+    ],
+    "answer": "parameters"
+  },
+  {
+    "category": "Jenkins",
+    "set": 2,
+    "question": "Ekspresi mana yang membaca parameter build bernama TARGET dalam Jenkinsfile?",
+    "options": [
+      "currentBuild.TARGET",
+      "scm.TARGET",
+      "agent.TARGET",
+      "params.TARGET"
+    ],
+    "answer": "params.TARGET"
+  },
+  {
+    "category": "Jenkins",
+    "set": 2,
+    "question": "Langkah pipeline mana yang menghentikan sementara eksekusi untuk meminta persetujuan manusia?",
+    "options": [
+      "waitUntil",
+      "retry",
+      "input",
+      "sleep"
+    ],
+    "answer": "input"
+  },
+  {
+    "category": "Jenkins",
+    "set": 2,
+    "question": "Langkah pipeline mana yang menerbitkan hasil pengujian XML berformat JUnit?",
+    "options": [
+      "writeFile",
+      "junit",
+      "archiveArtifacts",
+      "stash"
+    ],
+    "answer": "junit"
+  },
+  {
+    "category": "Jenkins",
+    "set": 2,
+    "question": "Langkah pipeline mana yang menyimpan berkas ruang kerja yang cocok sebagai artefak build?",
+    "options": [
+      "archiveArtifacts",
+      "stash",
+      "checkout",
+      "readFile"
+    ],
+    "answer": "archiveArtifacts"
+  },
+  {
+    "category": "Jenkins",
+    "set": 2,
+    "question": "Kondisi post mana yang berjalan tanpa memandang status penyelesaian pipeline?",
+    "options": [
+      "success",
+      "failure",
+      "unstable",
+      "always"
+    ],
+    "answer": "always"
+  },
+  {
+    "category": "Jenkins",
+    "set": 2,
+    "question": "Direktif deklaratif mana yang mengonfigurasi alat seperti instalasi Maven bernama?",
+    "options": [
+      "parameters",
+      "triggers",
+      "tools",
+      "environment"
+    ],
+    "answer": "tools"
+  },
+  {
+    "category": "Jenkins",
+    "set": 2,
+    "question": "Langkah pipeline mana yang membatasi waktu eksekusi bloknya?",
+    "options": [
+      "waitUntil",
+      "timeout",
+      "retry",
+      "sleep"
+    ],
+    "answer": "timeout"
+  },
+  {
+    "category": "Jenkins",
+    "set": 2,
+    "question": "Langkah pipeline mana yang mengulangi bloknya ketika blok tersebut melempar kesalahan, sampai jumlah percobaan yang diminta?",
+    "options": [
+      "retry",
+      "timeout",
+      "sleep",
+      "input"
+    ],
+    "answer": "retry"
+  },
+  {
+    "category": "Jenkins",
+    "set": 2,
+    "question": "Blok mana yang mengizinkan kode pipeline berskrip dalam bagian steps deklaratif?",
+    "options": [
+      "options",
+      "parameters",
+      "triggers",
+      "script"
+    ],
+    "answer": "script"
+  },
+  {
+    "category": "Jenkins",
+    "set": 2,
+    "question": "Apa yang dilakukan agent none pada tingkat teratas pipeline deklaratif?",
+    "options": [
+      "Menjalankan semua langkah shell secara otomatis pada pengontrol",
+      "Mengalokasikan semua agen yang tersedia sekaligus",
+      "Menghindari alokasi agen global untuk seluruh pipeline",
+      "Mencegah semua agen tingkat tahap berjalan"
+    ],
+    "answer": "Menghindari alokasi agen global untuk seluruh pipeline"
+  }
+]

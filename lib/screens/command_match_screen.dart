@@ -1,3 +1,5 @@
+import '../l10n/game_hint_localizations.dart';
+import '../l10n/game_localizations.dart';
 import 'dart:async';
 
 import 'package:flutter/material.dart';
@@ -51,10 +53,15 @@ class CommandMatchScreen extends StatelessWidget {
 
   static const String gameKey = 'command_match';
 
+  static List<(String command, String meaning)> get commandPairs =>
+      List.unmodifiable([
+        for (final pair in _pairs) (pair.command, pair.meaning),
+      ]);
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('Command Match 🔗')),
+      appBar: AppBar(title: Text(gameL10n(context).gameUiCommandMatch26b0e70)),
       body: const DailyGameGate(gameKey: gameKey, child: _MatchGame()),
     );
   }
@@ -155,18 +162,21 @@ class _MatchGameState extends State<_MatchGame> {
 
     await DailyGameGate.markPlayed(CommandMatchScreen.gameKey);
 
-    if (_points > 0)
+    if (_points > 0) {
       await PointService.addPoints(_points, source: PointSource.game);
+    }
 
     if (!mounted) return;
 
     await showGameResultDialog(
       context,
       icon: '🔗',
-      title: 'All Matched!',
-      message:
-          'Mistakes: $_mistakes\nYou earned $_points points!\n\n'
-          'Come back tomorrow for new commands!',
+      title: gameL10n(context).gameUiAllMatched,
+      message: gameL10n(context)
+          .gameUiMistakesYouEarnedPointsComeBackTomorrowForNew(
+            (_mistakes).toString(),
+            (_points).toString(),
+          ),
     );
   }
 
@@ -185,7 +195,14 @@ class _MatchGameState extends State<_MatchGame> {
                 alignment: WrapAlignment.center,
                 spacing: 12,
                 children: [
-                  Chip(label: Text('Round ${_round + 1} / $_rounds')),
+                  Chip(
+                    label: Text(
+                      gameL10n(context).gameUiRound(
+                        (_round + 1).toString(),
+                        (_rounds).toString(),
+                      ),
+                    ),
+                  ),
                   Chip(label: Text('⭐ $_points')),
                   Chip(label: Text('❌ $_mistakes')),
                 ],
@@ -193,8 +210,8 @@ class _MatchGameState extends State<_MatchGame> {
               const SizedBox(height: 8),
               Text(
                 _selectedCommand == null
-                    ? 'Tap a command, then tap its meaning.'
-                    : 'Now tap the matching meaning.',
+                    ? gameL10n(context).gameUiTapACommandThenTapItsMeaning
+                    : gameL10n(context).gameUiNowTapTheMatchingMeaning,
                 textAlign: TextAlign.center,
                 style: TextStyle(color: colors.onSurfaceVariant),
               ),
@@ -224,7 +241,7 @@ class _MatchGameState extends State<_MatchGame> {
                       children: [
                         for (final pair in _meanings)
                           _tile(
-                            text: pair.meaning,
+                            text: commandMatchMeaning(context, pair.meaning),
                             mono: false,
                             matched: _matched.contains(pair),
                             selected: false,

@@ -1,0 +1,302 @@
+[
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "在检查模式运行中，如果没有任务级覆盖设置，不支持检查模式的模块会怎样？",
+    "options": [
+      "模块始终执行正常变更",
+      "模块自动在 localhost 上运行",
+      "反复重试模块，直到它支持检查模式",
+      "跳过该模块，而不执行变更"
+    ],
+    "answer": "跳过该模块，而不执行变更"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "即使 playbook 使用 --check 调用，哪个任务设置仍允许实际变更？",
+    "options": [
+      "changed_when: false",
+      "ignore_errors: true",
+      "check_mode: false",
+      "diff: false"
+    ],
+    "answer": "check_mode: false"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "哪个 Ansible meta 动作立即运行已收到通知的处理程序？",
+    "options": [
+      "reset_connection",
+      "flush_handlers",
+      "clear_facts",
+      "end_play"
+    ],
+    "answer": "flush_handlers"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "两个已发生变更的任务在同一处理程序运行前通知它，该处理程序通常在执行点运行几次？",
+    "options": [
+      "一次",
+      "两次",
+      "每个清单组一次",
+      "零次，因为通知相互冲突"
+    ],
+    "answer": "一次"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "什么决定在同一执行点收到通知的处理程序的执行顺序？",
+    "options": [
+      "名称的字母顺序",
+      "notify 列表中的名称顺序",
+      "受管主机的连接顺序",
+      "在 handlers 部分中的定义顺序"
+    ],
+    "answer": "在 handlers 部分中的定义顺序"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "哪种失败通常会触发块的 rescue 任务？",
+    "options": [
+      "playbook 包含无效的任务定义",
+      "YAML 文档无法解析",
+      "块内的任务返回失败结果",
+      "主机在任务运行前变得不可达"
+    ],
+    "answer": "块内的任务返回失败结果"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "普通任务上的 ignore_errors 不会屏蔽哪种错误？",
+    "options": [
+      "failed_when 条件求值为 true",
+      "未定义变量错误",
+      "命令报告非零退出状态",
+      "模块结果明确标记为 failed"
+    ],
+    "answer": "未定义变量错误"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "哪个关键字使未处理的任务失败在当前批次完成该任务后，停止所有主机上的 play？",
+    "options": [
+      "any_errors_fatal",
+      "ignore_unreachable",
+      "max_fail_percentage: 100",
+      "force_handlers"
+    ],
+    "answer": "any_errors_fatal"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "可达主机上的后续任务失败时，force_handlers 有什么作用？",
+    "options": [
+      "所有已定义的处理程序即使未收到通知也会运行",
+      "自动重试所有失败的任务",
+      "处理程序先于所有普通任务运行",
+      "先前收到通知的处理程序仍可在该主机上运行"
+    ],
+    "answer": "先前收到通知的处理程序仍可在该主机上运行"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "哪个任务设置禁止正常记录敏感的任务参数和结果？",
+    "options": [
+      "check_mode: true",
+      "changed_when: false",
+      "no_log: true",
+      "diff: true"
+    ],
+    "answer": "no_log: true"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "即使启用了 --diff，哪个任务设置仍会隐藏文件内容差异？",
+    "options": [
+      "ignore_errors: true",
+      "diff: false",
+      "no_log: false",
+      "check_mode: false"
+    ],
+    "answer": "diff: false"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "哪个字典允许访问与另一台清单主机关联的变量？",
+    "options": [
+      "hostvars",
+      "ansible_facts",
+      "environment",
+      "ansible_loop"
+    ],
+    "answer": "hostvars"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "哪个魔术变量包含当前主机的清单名称？",
+    "options": [
+      "ansible_host",
+      "ansible_user",
+      "ansible_playbook_python",
+      "inventory_hostname"
+    ],
+    "answer": "inventory_hostname"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "通常使用清单旁的哪个目录保存主机组共享的变量？",
+    "options": [
+      "roles",
+      "collections",
+      "group_vars",
+      "host_vars"
+    ],
+    "answer": "group_vars"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "ansible.builtin.file 查找默认在哪里读取文件？",
+    "options": [
+      "在 become_user 指定的主机上",
+      "在控制节点上",
+      "在每台受管主机上",
+      "在 play 中的第一台主机上"
+    ],
+    "answer": "在控制节点上"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "哪个过滤器将 YAML 字符串转换为 Ansible 数据结构？",
+    "options": [
+      "from_yaml",
+      "to_yaml",
+      "to_json",
+      "dict2items"
+    ],
+    "answer": "from_yaml"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "哪个过滤器将字典转换为键/值字典的列表？",
+    "options": [
+      "items2dict",
+      "flatten",
+      "zip",
+      "dict2items"
+    ],
+    "answer": "dict2items"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "哪个过滤器删除列表中的重复元素？",
+    "options": [
+      "reverse",
+      "flatten",
+      "unique",
+      "sort"
+    ],
+    "answer": "unique"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "哪个模块检查表达式，并在指定断言不成立时失败？",
+    "options": [
+      "ansible.builtin.set_fact",
+      "ansible.builtin.assert",
+      "ansible.builtin.debug",
+      "ansible.builtin.pause"
+    ],
+    "answer": "ansible.builtin.assert"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "哪个模块使用正则表达式管理文本文件中的某一行？",
+    "options": [
+      "ansible.builtin.lineinfile",
+      "ansible.builtin.blockinfile",
+      "ansible.builtin.copy",
+      "ansible.builtin.slurp"
+    ],
+    "answer": "ansible.builtin.lineinfile"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "哪个模块请求 URL 并可检查预期的 HTTP 状态码？",
+    "options": [
+      "ansible.builtin.get_url",
+      "ansible.builtin.fetch",
+      "ansible.builtin.wait_for",
+      "ansible.builtin.uri"
+    ],
+    "answer": "ansible.builtin.uri"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "哪个模块等待 TCP 端口达到所需状态？",
+    "options": [
+      "ansible.builtin.async_status",
+      "ansible.builtin.ping",
+      "ansible.builtin.wait_for",
+      "ansible.builtin.pause"
+    ],
+    "answer": "ansible.builtin.wait_for"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "哪个参数使 ansible.builtin.command 在指定路径已存在时跳过执行？",
+    "options": [
+      "stdin",
+      "creates",
+      "removes",
+      "chdir"
+    ],
+    "answer": "creates"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "file 模块的哪个设置创建符号链接？",
+    "options": [
+      "state: link",
+      "state: directory",
+      "state: touch",
+      "state: hard"
+    ],
+    "answer": "state: link"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "哪个模块可将主机加入内存中的清单，供后续 play 使用？",
+    "options": [
+      "ansible.builtin.group_by",
+      "ansible.builtin.set_fact",
+      "ansible.builtin.meta",
+      "ansible.builtin.add_host"
+    ],
+    "answer": "ansible.builtin.add_host"
+  }
+]

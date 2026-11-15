@@ -8,11 +8,52 @@ import 'leaderboard_service.dart';
 enum PointSource { quiz, game, other }
 
 class PointService {
+  static final changes = ValueNotifier<int>(0);
   static const String _pointsKey = "total_points";
   static const String _quizPointsKey = 'quiz_points_earned';
   static const String _gamePointsKey = 'game_points_earned';
   static const String _leaderboardRewardsKey = 'leaderboard_rewards_applied';
   static final Map<String, Future<void>> _pendingReferralRewards = {};
+  static Future<void>? _balanceOperation;
+
+  static Future<T> _mutateBalance<T>(Future<T> Function() action) {
+    final next =
+        _balanceOperation?.then((_) => action()) ?? Future<T>.sync(action);
+    late final Future<void> tail;
+    tail = next.then<void>(
+      (_) {
+        if (identical(_balanceOperation, tail)) _balanceOperation = null;
+      },
+      onError: (Object error, StackTrace stack) {
+        debugPrint('Point balance update failed: $error\n$stack');
+        if (identical(_balanceOperation, tail)) _balanceOperation = null;
+      },
+    );
+    _balanceOperation = tail;
+    return next;
+  }
+
+  static Future<bool> spendPoints(int points) {
+    if (points <= 0) {
+      throw ArgumentError.value(points, 'points', 'Must be positive');
+    }
+    return _mutateBalance(() async {
+      final prefs = await SharedPreferences.getInstance();
+      if (await getTotalPoints() < points) return false;
+      // Leaderboard rewards remain in their receipt ledger; debit the wallet.
+      final balance = (prefs.getInt(_pointsKey) ?? 0) - points;
+      try {
+        if (!await prefs.setInt(_pointsKey, balance)) {
+          throw StateError('Could not save point balance');
+        }
+      } catch (_) {
+        await prefs.reload();
+        rethrow;
+      }
+      changes.value++;
+      return true;
+    });
+  }
 
   static Future<int> getTotalPoints() async {
     final prefs = await SharedPreferences.getInstance();
@@ -49,13 +90,14 @@ class PointService {
   static Future<void> addPoints(
     int points, {
     PointSource source = PointSource.other,
-  }) async {
+  }) => _mutateBalance(() async {
     final prefs = await SharedPreferences.getInstance();
 
     final total = (prefs.getInt(_pointsKey) ?? 0) + points;
 
     await prefs.setInt(_pointsKey, total);
     await _recordSource(prefs, points, source);
+    changes.value++;
 
     final leaderboard = LeaderboardService();
     await leaderboard.saveScore(points);
@@ -64,20 +106,21 @@ class PointService {
         debugPrint('Universal leaderboard update failed: $error');
       }),
     );
-  }
+  });
 
   static Future<void> addLocalPoints(
     int points, {
     PointSource source = PointSource.other,
-  }) async {
+  }) => _mutateBalance(() async {
     if (points <= 0) return;
 
     final prefs = await SharedPreferences.getInstance();
     final total = (prefs.getInt(_pointsKey) ?? 0) + points;
     await prefs.setInt(_pointsKey, total);
     await _recordSource(prefs, points, source);
+    changes.value++;
     await LeaderboardService().saveScore(points);
-  }
+  });
 
   static Future<void> applyReferralReward(String uid, int cumulativePoints) {
     if (uid.isEmpty || cumulativePoints < 0) return Future.value();
@@ -118,6 +161,7 @@ class PointService {
 
     rewards[date] = points;
     await prefs.setString(_leaderboardRewardsKey, jsonEncode(rewards));
+    changes.value++;
   }
 
   static Future<void> resetPoints() async {
@@ -126,5 +170,6 @@ class PointService {
     await prefs.remove(_quizPointsKey);
     await prefs.remove(_gamePointsKey);
     await prefs.remove(_leaderboardRewardsKey);
+    changes.value++;
   }
 }

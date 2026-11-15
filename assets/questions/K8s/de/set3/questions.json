@@ -1,0 +1,302 @@
+[
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "Welche Komponente plant Pods auf Nodes ein?",
+    "options": [
+      "kube-scheduler",
+      "kubelet",
+      "etcd",
+      "kube-proxy"
+    ],
+    "answer": "kube-scheduler"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "Welche Komponente läuft auf jedem Node?",
+    "options": [
+      "kubelet",
+      "etcd",
+      "kube-apiserver",
+      "controller-manager"
+    ],
+    "answer": "kubelet"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "Welche Komponente fungiert als Frontend der Control Plane?",
+    "options": [
+      "kube-apiserver",
+      "kubelet",
+      "etcd",
+      "kube-proxy"
+    ],
+    "answer": "kube-apiserver"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "Welche Komponente speichert den Cluster-Zustand?",
+    "options": [
+      "etcd",
+      "kubelet",
+      "CoreDNS",
+      "Ingress"
+    ],
+    "answer": "etcd"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "Welche Komponente verwaltet Netzwerkregeln auf den Nodes?",
+    "options": [
+      "kube-proxy",
+      "kubelet",
+      "etcd",
+      "Scheduler"
+    ],
+    "answer": "kube-proxy"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "Welcher DNS-Dienst wird in Kubernetes häufig verwendet?",
+    "options": [
+      "CoreDNS",
+      "Bind",
+      "Route53",
+      "Consul"
+    ],
+    "answer": "CoreDNS"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "Welches Objekt ist die kleinste bereitstellbare Einheit in Kubernetes?",
+    "options": [
+      "Pod",
+      "Cluster",
+      "Node",
+      "Service"
+    ],
+    "answer": "Pod"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "Welches Objekt verwaltet zustandslose Anwendungen?",
+    "options": [
+      "Deployment",
+      "ConfigMap",
+      "Secret",
+      "Namespace"
+    ],
+    "answer": "Deployment"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "Welcher Workload bietet stabile Pod-Identitäten und geordnete Bereitstellung für zustandsbehaftete Anwendungen?",
+    "options": [
+      "StatefulSet",
+      "Deployment",
+      "ReplicaSet",
+      "DaemonSet"
+    ],
+    "answer": "StatefulSet"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "Welches Objekt stellt sicher, dass eine festgelegte Anzahl von Pod-Replikaten läuft?",
+    "options": [
+      "ReplicaSet",
+      "Service",
+      "ConfigMap",
+      "Namespace"
+    ],
+    "answer": "ReplicaSet"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "Welches Objekt macht Pods für Netzwerkverkehr erreichbar?",
+    "options": [
+      "Service",
+      "Node",
+      "ReplicaSet",
+      "Volume"
+    ],
+    "answer": "Service"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "Welches Objekt verwaltet den externen Zugriff auf Services?",
+    "options": [
+      "Ingress",
+      "Pod",
+      "ReplicaSet",
+      "Secret"
+    ],
+    "answer": "Ingress"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "Welches Objekt speichert Konfigurationsdaten?",
+    "options": [
+      "ConfigMap",
+      "Deployment",
+      "Ingress",
+      "Node"
+    ],
+    "answer": "ConfigMap"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "Welches Objekt speichert sensible Informationen wie Passwörter?",
+    "options": [
+      "Secret",
+      "ConfigMap",
+      "Service",
+      "Namespace"
+    ],
+    "answer": "Secret"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "Welches Objekt stellt Pods persistenten Speicher bereit?",
+    "options": [
+      "PersistentVolume",
+      "ReplicaSet",
+      "Namespace",
+      "Service"
+    ],
+    "answer": "PersistentVolume"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "Welche Prüfung bestimmt, ob ein Container für Service-Verkehr bereit ist?",
+    "options": [
+      "TCP-Keepalive-Prüfung",
+      "Readiness probe",
+      "Liveness probe",
+      "Startprüfung"
+    ],
+    "answer": "Readiness probe"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "Was kann nach wiederholtem Fehlschlagen einer Liveness-Prüfung über den konfigurierten Schwellenwert hinaus geschehen?",
+    "options": [
+      "Das kubelet startet diesen Container gemäß seiner Neustartrichtlinie neu",
+      "Der Scheduler verschiebt jeden Pod auf einen neuen Knoten",
+      "Der API-Server löscht das Deployment",
+      "Der Service wird zu einem ExternalName-Service"
+    ],
+    "answer": "Das kubelet startet diesen Container gemäß seiner Neustartrichtlinie neu"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "Was bewirkt eine Startprüfung, während eine Anwendung noch startet?",
+    "options": [
+      "Sie deaktiviert alle Container-Ressourcengrenzen",
+      "Sie verhindert den Image-Abruf",
+      "Sie reserviert einen dedizierten Steuerungsebenenknoten",
+      "Sie verzögert Liveness- und Readiness-Prüfungen, bis die Startprüfung erfolgreich ist"
+    ],
+    "answer": "Sie verzögert Liveness- und Readiness-Prüfungen, bis die Startprüfung erfolgreich ist"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "Was gilt für gewöhnliche Init-Container in einem Pod?",
+    "options": [
+      "Sie müssen einen Service-Port bereitstellen",
+      "Sie laufen immer auf getrennten Knoten",
+      "Sie laufen vor dem Start der Anwendungscontainer der Reihe nach bis zum Abschluss",
+      "Sie laufen alle erst nach dem Ende der Anwendungscontainer"
+    ],
+    "answer": "Sie laufen vor dem Start der Anwendungscontainer der Reihe nach bis zum Abschluss"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "Welche Ressourcen teilen Container desselben Pods normalerweise?",
+    "options": [
+      "Eine separate Service-IP für jeden Container",
+      "Einen Netzwerk-Namensraum und eine Pod-IP-Adresse",
+      "Ein beschreibbares Root-Dateisystem",
+      "Einen eigenen Knoten für jeden Container"
+    ],
+    "answer": "Einen Netzwerk-Namensraum und eine Pod-IP-Adresse"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "Welches Feld deklariert die Ressourcenmenge, die der Scheduler bei der Containerplatzierung berücksichtigt?",
+    "options": [
+      "resources.requests",
+      "resources.limits",
+      "securityContext",
+      "imagePullPolicy"
+    ],
+    "answer": "resources.requests"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "Was bedeutet eine CPU-Anforderung von 250m für einen Container?",
+    "options": [
+      "Zweieinhalb CPUs",
+      "Fünfundzwanzig CPUs",
+      "Zweihundertfünfzig CPUs",
+      "Ein Viertel einer CPU"
+    ],
+    "answer": "Ein Viertel einer CPU"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "Was ist eine typische Folge, wenn ein Container seine durchgesetzte Speichergrenze überschreitet?",
+    "options": [
+      "Sein Image wird mit mehr Speicher neu gebaut",
+      "Sein Service-Port wird automatisch geändert",
+      "Er kann durch den Speichermangelmechanismus beendet werden",
+      "Seine Speicheranforderung wird automatisch verdoppelt"
+    ],
+    "answer": "Er kann durch den Speichermangelmechanismus beendet werden"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "Welches Pod-Feld verlangt, dass Zielknoten alle angegebenen Knotenlabels erfüllen?",
+    "options": [
+      "dnsPolicy",
+      "nodeSelector",
+      "serviceAccountName",
+      "hostAliases"
+    ],
+    "answer": "nodeSelector"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "Garantiert eine Tolerierung für den Taint eines Knotens, dass ein Pod auf diesem Knoten eingeplant wird?",
+    "options": [
+      "Nein, andere Planungsvorgaben und verfügbare Ressourcen gelten weiterhin",
+      "Ja, sie setzt jede Ressourcenbeschränkung außer Kraft",
+      "Ja, sie umgeht alle Knotenaffinitätsregeln",
+      "Nein, Tolerierungen verbieten stets die Platzierung auf dem Knoten mit Taint"
+    ],
+    "answer": "Nein, andere Planungsvorgaben und verfügbare Ressourcen gelten weiterhin"
+  }
+]

@@ -1,0 +1,302 @@
+[
+  {
+    "category": "Linux",
+    "set": 4,
+    "question": "¿Qué comando se usa para mover o renombrar archivos?",
+    "options": [
+      "mv",
+      "cp",
+      "ln",
+      "shift"
+    ],
+    "answer": "mv"
+  },
+  {
+    "category": "Linux",
+    "set": 4,
+    "question": "    ¿Qué comando cambia la propiedad de los archivos?",
+    "options": [
+      "chown",
+      "chmod",
+      "owner",
+      "setowner"
+    ],
+    "answer": "chown"
+  },
+  {
+    "category": "Linux",
+    "set": 4,
+    "question": "¿Qué comando muestra los permisos de un archivo en formato octal?",
+    "options": [
+      "stat -c %a",
+      "ls -perm",
+      "perm",
+      "showperm"
+    ],
+    "answer": "stat -c %a"
+  },
+  {
+    "category": "Linux",
+    "set": 4,
+    "question": "¿Qué comando muestra el tipo de archivo?",
+    "options": [
+      "file",
+      "type",
+      "kind",
+      "format"
+    ],
+    "answer": "file"
+  },
+  {
+    "category": "Linux",
+    "set": 4,
+    "question": "¿Qué comando muestra estadísticas detalladas de un archivo?",
+    "options": [
+      "stat",
+      "fileinfo",
+      "details",
+      "ls -stat"
+    ],
+    "answer": "stat"
+  },
+  {
+    "category": "Linux",
+    "set": 4,
+    "question": "¿Qué comando busca archivos por nombre directamente en árboles de directorios en lugar de utilizar una base de datos preexistente?",
+    "options": [
+      "find",
+      "search",
+      "locate",
+      "where"
+    ],
+    "answer": "find"
+  },
+  {
+    "category": "Linux",
+    "set": 4,
+    "question": "¿Qué comando busca en PATH y normalmente muestra la ruta del primer ejecutable coincidente?",
+    "options": [
+      "which",
+      "whereis",
+      "locate",
+      "find"
+    ],
+    "answer": "which"
+  },
+  {
+    "category": "Linux",
+    "set": 4,
+    "question": "¿Qué comando busca archivos usando una base de datos?",
+    "options": [
+      "locate",
+      "find",
+      "search",
+      "query"
+    ],
+    "answer": "locate"
+  },
+  {
+    "category": "Linux",
+    "set": 4,
+    "question": "¿Qué comando actualiza la base de datos de locate?",
+    "options": [
+      "updatedb",
+      "updatedatabase",
+      "refreshdb",
+      "syncdb"
+    ],
+    "answer": "updatedb"
+  },
+  {
+    "category": "Linux",
+    "set": 4,
+    "question": "¿Qué comando muestra las entradas crontab del usuario actual?",
+    "options": [
+      "crontab -l",
+      "cron -list",
+      "cronshow",
+      "jobs"
+    ],
+    "answer": "crontab -l"
+  },
+  {
+    "category": "Linux",
+    "set": 4,
+    "question": "¿Qué comando edita las tareas cron?",
+    "options": [
+      "crontab -e",
+      "cronedit",
+      "crontab",
+      "schedule"
+    ],
+    "answer": "crontab -e"
+  },
+  {
+    "category": "Linux",
+    "set": 4,
+    "question": "¿Qué comando programa una tarea de una sola vez?",
+    "options": [
+      "at",
+      "cron",
+      "task",
+      "schedule"
+    ],
+    "answer": "at"
+  },
+  {
+    "category": "Linux",
+    "set": 4,
+    "question": "¿Qué comando muestra los trabajos activos en el shell?",
+    "options": [
+      "jobs",
+      "ps",
+      "bg",
+      "fg"
+    ],
+    "answer": "jobs"
+  },
+  {
+    "category": "Linux",
+    "set": 4,
+    "question": "¿Qué comando integrado del shell reanuda en segundo plano un trabajo detenido?",
+    "options": [
+      "bg",
+      "fg",
+      "jobs",
+      "nohup"
+    ],
+    "answer": "bg"
+  },
+  {
+    "category": "Linux",
+    "set": 4,
+    "question": "¿Qué comando trae un proceso en segundo plano al primer plano?",
+    "options": [
+      "fg",
+      "bg",
+      "jobs",
+      "top"
+    ],
+    "answer": "fg"
+  },
+  {
+    "category": "Linux",
+    "set": 4,
+    "question": "¿Qué comando de systemd recarga las definiciones de archivos de unidades después de editar un archivo de servicio?",
+    "options": [
+      "systemctl daemon-reload",
+      "systemctl reload app.service",
+      "systemctl restart app.service",
+      "systemctl reset-failed app.service"
+    ],
+    "answer": "systemctl daemon-reload"
+  },
+  {
+    "category": "Linux",
+    "set": 4,
+    "question": "¿Qué hace 'systemctl disable app.service' sin --now?",
+    "options": [
+      "Detiene el servicio y elimina su archivo de unidad",
+      "Reinicia el servicio con los valores de fábrica",
+      "Impide todos los inicios manuales al enmascarar la unidad",
+      "Elimina los enlaces de habilitación sin detener necesariamente el servicio en ejecución"
+    ],
+    "answer": "Elimina los enlaces de habilitación sin detener necesariamente el servicio en ejecución"
+  },
+  {
+    "category": "Linux",
+    "set": 4,
+    "question": "¿Qué comando muestra las entradas del diario de app.service?",
+    "options": [
+      "systemctl show app.service",
+      "systemctl list-dependencies app.service",
+      "journalctl -u app.service",
+      "systemctl cat app.service"
+    ],
+    "answer": "journalctl -u app.service"
+  },
+  {
+    "category": "Linux",
+    "set": 4,
+    "question": "¿Qué opción de journalctl limita la salida al arranque actual?",
+    "options": [
+      "-k",
+      "-b",
+      "-f",
+      "-r"
+    ],
+    "answer": "-b"
+  },
+  {
+    "category": "Linux",
+    "set": 4,
+    "question": "En una crontab de usuario estándar de cinco campos, ¿qué campo aparece primero?",
+    "options": [
+      "Minuto",
+      "Hora",
+      "Día del mes",
+      "Día de la semana"
+    ],
+    "answer": "Minuto"
+  },
+  {
+    "category": "Linux",
+    "set": 4,
+    "question": "En una crontab de usuario estándar, ¿cuándo se ejecuta '0 2 * * *'?",
+    "options": [
+      "En el minuto 2 de cada hora",
+      "Cada dos minutos",
+      "A medianoche del segundo día de cada mes",
+      "A las 02:00 todos los días en la zona horaria aplicable a cron"
+    ],
+    "answer": "A las 02:00 todos los días en la zona horaria aplicable a cron"
+  },
+  {
+    "category": "Linux",
+    "set": 4,
+    "question": "¿Qué hace el comando integrado export de Bash con una variable del shell?",
+    "options": [
+      "La copia al entorno del shell padre",
+      "Convierte su valor en una variable de solo lectura",
+      "La pone a disposición del entorno de los procesos hijos que se inicien después",
+      "La escribe permanentemente en el perfil de todos los usuarios"
+    ],
+    "answer": "La pone a disposición del entorno de los procesos hijos que se inicien después"
+  },
+  {
+    "category": "Linux",
+    "set": 4,
+    "question": "¿Qué redirección de Bash añade la salida estándar al final de app.log?",
+    "options": [
+      "2> app.log",
+      ">> app.log",
+      "> app.log",
+      "< app.log"
+    ],
+    "answer": ">> app.log"
+  },
+  {
+    "category": "Linux",
+    "set": 4,
+    "question": "¿Qué redirección de Bash envía la salida de error estándar al mismo destino que la salida estándar?",
+    "options": [
+      "2>&1",
+      "1>&2",
+      "2>errors.log",
+      "<input.txt"
+    ],
+    "answer": "2>&1"
+  },
+  {
+    "category": "Linux",
+    "set": 4,
+    "question": "¿A qué se expande $? en Bash inmediatamente después de terminar un comando?",
+    "options": [
+      "Al identificador del proceso del shell actual",
+      "Al número de parámetros posicionales",
+      "Al identificador del proceso del trabajo en segundo plano más reciente",
+      "Al estado de salida de la última tubería ejecutada en primer plano"
+    ],
+    "answer": "Al estado de salida de la última tubería ejecutada en primer plano"
+  }
+]

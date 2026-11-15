@@ -1,4 +1,5 @@
 class Question {
+  final String? id;
   final String category;
   final int set;
   final String question;
@@ -7,12 +8,26 @@ class Question {
   List<String> shuffledOptions = [];
 
   Question({
+    this.id,
     required this.category,
     required this.set,
     required this.question,
     required this.options,
     required this.answer,
   });
+
+  Question withId(String id) {
+    final copy = Question(
+      id: id,
+      category: category,
+      set: set,
+      question: question,
+      options: options,
+      answer: answer,
+    );
+    copy.shuffledOptions = List<String>.from(shuffledOptions);
+    return copy;
+  }
 
   factory Question.fromJson(Map<String, dynamic> json) {
     final q = Question(

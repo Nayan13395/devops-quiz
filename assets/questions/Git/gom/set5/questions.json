@@ -1,0 +1,302 @@
+[
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "release नांवाच्या अस्तित्वांतल्या शाखेखातीर जोडिल्लो कार्य-वृक्ष घालपी आदेश खंयचो?",
+    "options": [
+      "git worktree prune",
+      "git worktree lock ..\\release",
+      "git worktree add ..\\release release",
+      "git worktree list"
+    ],
+    "answer": "git worktree add ..\\release release"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "मुखेल प्रकल्पाच्या आवृत्तीबद्ध उपमॉड्यूल वाटो आनी URL हांची नोंद खंयची फायल करता?",
+    "options": [
+      ".gitmessage",
+      ".gitmodules",
+      ".gitignore",
+      ".gitattributes"
+    ],
+    "answer": ".gitmodules"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "नोंदिल्ले उपमॉड्यूल, भितरले उपमॉड्यूल धरून, सुरू आनी चेकआउट करपी आदेश खंयचो?",
+    "options": [
+      "git submodule update --init --recursive",
+      "git submodule deinit --all",
+      "git submodule status",
+      "git submodule sync"
+    ],
+    "answer": "git submodule update --init --recursive"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "मुखेल प्रकल्प साधारण कमिटांत उपमॉड्यूलाखातीर किदें नोंदता?",
+    "options": [
+      "उपमॉड्यूलाचो पुराय वस्तू डेटाबेस",
+      "फकत उपमॉड्यूलाच्या पूर्वनिर्धारीत शाखेचें नांव",
+      "फकत उपमॉड्यूलाचे कमिट करूंक नाशिल्ले बदल",
+      "विशिश्ट उपमॉड्यूल कमिटाचो संदर्भ"
+    ],
+    "answer": "विशिश्ट उपमॉड्यूल कमिटाचो संदर्भ"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "सगळे संदर्भ आनी तातूंतल्यान पावप शक्य आशिल्लो इतिहास आशिल्लें व्हरपाजोगें बंडल तयार करपी आदेश खंयचो?",
+    "options": [
+      "git format-patch -1 HEAD",
+      "git diff --binary > backup.bundle",
+      "git bundle create backup.bundle --all",
+      "git archive --output=backup.bundle HEAD"
+    ],
+    "answer": "git bundle create backup.bundle --all"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "Git इतिहासाविणें HEAD च्यो ट्रॅक केल्ल्यो फायली ZIP संग्रह म्हूण निर्यात करपी आदेश खंयचो?",
+    "options": [
+      "git format-patch --stdout HEAD > source.zip",
+      "git archive --format=zip --output=source.zip HEAD",
+      "git bundle create source.zip --all",
+      "git clone --bare . source.zip"
+    ],
+    "answer": "git archive --format=zip --output=source.zip HEAD"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "निमाण्या कमिटाची ईमेल-पद्धतीची पॅच फायल करपी आदेश खंयचो?",
+    "options": [
+      "git format-patch -1 HEAD",
+      "git diff HEAD",
+      "git show --stat HEAD",
+      "git log -1 --oneline"
+    ],
+    "answer": "git format-patch -1 HEAD"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "git format-patch न केल्ले ईमेल पॅच लागू करून तातूंतल्यान कमिट तयार करपी आदेश खंयचो?",
+    "options": [
+      "git apply changes.patch",
+      "git diff changes.patch",
+      "git add changes.patch",
+      "git am changes.patch"
+    ],
+    "answer": "git am changes.patch"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "फायली बदलिनासतना साधो पॅच लागू जावंक शकता काय ना तें तपासपी आदेश खंयचो?",
+    "options": [
+      "git am changes.patch",
+      "git add changes.patch",
+      "git apply --check changes.patch",
+      "git apply changes.patch"
+    ],
+    "answer": "git apply --check changes.patch"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "फायलीचें नांव नासतना तिचो मजकूर सांठोवपी Git वस्तू प्रकार खंयचो?",
+    "options": [
+      "टिपणीयुक्त टॅग",
+      "Blob",
+      "Tree",
+      "कमिट"
+    ],
+    "answer": "Blob"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "फायलींचीं नांवां आनी ब्लॉब वा उपवृक्षांचे संदर्भ नोंदपी Git वस्तू प्रकार खंयचो?",
+    "options": [
+      "Tree",
+      "Blob",
+      "कमिट",
+      "टिपणीयुक्त टॅग"
+    ],
+    "answer": "Tree"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "खबर आशिल्ल्या वस्तू ID चो वस्तू प्रकार कळोवपी आदेश खंयचो?",
+    "options": [
+      "git cat-file -s abc1234",
+      "git rev-parse abc1234",
+      "git log -1 abc1234",
+      "git cat-file -t abc1234"
+    ],
+    "answer": "git cat-file -t abc1234"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "HEAD चो पुराय वस्तू ID छापपी आदेश खंयचो?",
+    "options": [
+      "git status --short",
+      "git branch --show-current",
+      "git rev-parse HEAD",
+      "git symbolic-ref HEAD"
+    ],
+    "answer": "git rev-parse HEAD"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "feature तून पावप शक्य पूण main तून पावप शक्य नाशिल्ले कमिट निवडपी आवृत्ती परिसर खंयचो?",
+    "options": [
+      "main^",
+      "main..feature",
+      "feature..main",
+      "main...feature"
+    ],
+    "answer": "main..feature"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "फकत मर्ज कमिट दाखोवपी git log पर्याय खंयचो?",
+    "options": [
+      "--merges",
+      "--no-merges",
+      "--first-parent",
+      "--reverse"
+    ],
+    "answer": "--merges"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "बदलिल्ल्यो वाटो आनी तांच्या बदल-स्थितीचीं अक्षरां छापपी git diff पर्याय खंयचो?",
+    "options": [
+      "--name-only",
+      "--stat",
+      "--shortstat",
+      "--name-status"
+    ],
+    "answer": "--name-status"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "वाटांखातीर मजकूर सामान्यीकरणाच्या नियमांसारखे आवृत्तीबद्ध गुणधर्म खंयची फायल थारायता?",
+    "options": [
+      ".gitmodules",
+      ".gitconfig",
+      ".gitattributes",
+      ".gitignore"
+    ],
+    "answer": ".gitattributes"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": ".gitattributes चो '*.sh text eol=lf' नियम जुळपी मजकूर फायलींखातीर किदें मागता?",
+    "options": [
+      "रिकाम्यो ओळी आपोआप काडून उडोवप",
+      "कार्य-वृक्षांत LF ओळ-शेवट",
+      "कार्य-वृक्षांत CRLF ओळ-शेवट",
+      "मजकूर रूपांतराविणें बायनरी म्हूण हाताळप"
+    ],
+    "answer": "कार्य-वृक्षांत LF ओळ-शेवट"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "सुचयल्ली कमिट-संदेश फायल तपासून कमिट न्हयकारूंक शकपी हुक खंयचो?",
+    "options": [
+      "commit-msg",
+      "post-commit",
+      "post-checkout",
+      "post-merge"
+    ],
+    "answer": "commit-msg"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "Git हुकांखातीर आपल्या गरजेची डिरेक्टरी निवडपी मांडावळ खंयची?",
+    "options": [
+      "core.worktree",
+      "core.excludesFile",
+      "core.attributesFile",
+      "core.hooksPath"
+    ],
+    "answer": "core.hooksPath"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "सांजो .gitignore नियम जोडिनासतना एका विकसकाक स्थानिकपणान ट्रॅक करूंक नाशिल्ल्या फायलींक दुर्लक्ष करू दिवपी फायल खंयची?",
+    "options": [
+      ".git\\description",
+      ".git\\packed-refs",
+      ".git\\info\\exclude",
+      ".git\\HEAD"
+    ],
+    "answer": ".git\\info\\exclude"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "बायसेक्ट सत्रांतल्यान भायर सरून साधारण मूळ शाखेक परत येवपी आदेश खंयचो?",
+    "options": [
+      "git bisect log",
+      "git bisect reset",
+      "git bisect skip",
+      "git bisect good"
+    ],
+    "answer": "git bisect reset"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "पॅच मालिकेच्या दोन आवृत्तींची तुळा करपी आदेश खंयचो?",
+    "options": [
+      "git range-diff main..old main..new",
+      "git diff old new",
+      "git log old..new",
+      "git merge-base old new"
+    ],
+    "answer": "git range-diff main..old main..new"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "कमिट तयार करतना शेवटाक Signed-off-by नोंद जोडपी आदेश खंयचो?",
+    "options": [
+      "git commit --gpg-sign",
+      "git commit --amend",
+      "git commit --no-verify",
+      "git commit --signoff"
+    ],
+    "answer": "git commit --signoff"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "git log -S'old_name' पूर्वनिर्धारीतपणान किदें सोदता?",
+    "options": [
+      "संदेशांत old_name आशिल्ले कमिट",
+      "नांवांत old_name आशिल्ल्यो शाखा",
+      "old_name कितले फावटीं येता ती संख्या बदलपी कमिट",
+      "लेखकाचें नांव old_name आशिल्ले कमिट"
+    ],
+    "answer": "old_name कितले फावटीं येता ती संख्या बदलपी कमिट"
+  }
+]

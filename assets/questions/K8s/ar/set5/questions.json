@@ -1,0 +1,302 @@
+[
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "ماذا تحتاج NetworkPolicy لتؤثر في حركة Pod؟",
+    "options": [
+      "Service من نوع LoadBalancer لكل Pod مختار",
+      "PersistentVolumeClaim في نطاق الأسماء نفسه",
+      "خادم API منفصل لكل سياسة",
+      "تنفيذ شبكي يفرض NetworkPolicy"
+    ],
+    "answer": "تنفيذ شبكي يفرض NetworkPolicy"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "كيف تجمع عدة NetworkPolicy تختار Pod نفسها حركة الدخول المسموحة؟",
+    "options": [
+      "تتجاوز أول سياسة منشأة كل السياسات اللاحقة",
+      "يجب أن تسمح كل سياسة بكل حزمة بصورة مستقلة",
+      "الحركة المسموحة هي اتحاد أذونات الدخول في جميع السياسات",
+      "تتجاوز آخر سياسة منشأة كل السياسات السابقة"
+    ],
+    "answer": "الحركة المسموحة هي اتحاد أذونات الدخول في جميع السياسات"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "أي كائن RBAC يعرّف الأذونات داخل نطاق أسماء؟",
+    "options": [
+      "ResourceQuota",
+      "Role",
+      "RoleBinding",
+      "ServiceAccount"
+    ],
+    "answer": "Role"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "أي كائن RBAC يمنح أذونات Role أو ClusterRole ضمن نطاق أسماء واحد؟",
+    "options": [
+      "RoleBinding",
+      "ClusterRoleBinding",
+      "ServiceAccount",
+      "LimitRange"
+    ],
+    "answer": "RoleBinding"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "أي هوية تُسند عادة للعمليات داخل Pod للوصول إلى Kubernetes API؟",
+    "options": [
+      "StorageClass",
+      "RuntimeClass",
+      "PriorityClass",
+      "ServiceAccount"
+    ],
+    "answer": "ServiceAccount"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "لماذا لا يكفي ترميز بيانات Secret بصيغة base64 لحمايتها ممن يستطيع قراءة الكائن؟",
+    "options": [
+      "لأن Base64 ينشر البيانات تلقائيا عبر DNS",
+      "لأن Base64 يتطلب مفتاحا خاصا مخزنا في Pod",
+      "لأن Base64 ترميز قابل للعكس وليس تشفيرا",
+      "لأن Base64 يمنع Kubernetes من تخزين البيانات"
+    ],
+    "answer": "لأن Base64 ترميز قابل للعكس وليس تشفيرا"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "أي حقل يمنع Kubernetes من تركيب بيانات اعتماد API تلقائيا داخل Pod؟",
+    "options": [
+      "shareProcessNamespace: false",
+      "automountServiceAccountToken: false",
+      "hostNetwork: false",
+      "enableServiceLinks: false"
+    ],
+    "answer": "automountServiceAccountToken: false"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "أي كائن يضع حدا لاستهلاك الموارد الكلي ضمن نطاق أسماء؟",
+    "options": [
+      "ResourceQuota",
+      "LimitRange",
+      "PriorityClass",
+      "PodDisruptionBudget"
+    ],
+    "answer": "ResourceQuota"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "أي كائن يمكنه تعيين طلبات وحدود موارد افتراضية للحاويات داخل نطاق أسماء؟",
+    "options": [
+      "ResourceQuota",
+      "HorizontalPodAutoscaler",
+      "RuntimeClass",
+      "LimitRange"
+    ],
+    "answer": "LimitRange"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "ماذا تفعل علامة finalizer على كائن Kubernetes بعد طلب حذفه؟",
+    "options": [
+      "تحذف كل الكائنات التابعة فورا",
+      "تحوّل الكائن إلى Secret غير قابل للتغيير",
+      "تبقي الكائن بانتظار الحذف حتى تزيل عملية التنظيف المطلوبة علامة finalizer",
+      "تمنع كل تحديثات الكائن المستقبلية"
+    ],
+    "answer": "تبقي الكائن بانتظار الحذف حتى تزيل عملية التنظيف المطلوبة علامة finalizer"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "أي حقل بيانات وصفية يربط الكائنات التابعة بمالكيها من أجل الجمع التلقائي؟",
+    "options": [
+      "managedFields",
+      "ownerReferences",
+      "annotations",
+      "labels"
+    ],
+    "answer": "ownerReferences"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "ماذا تضيف CustomResourceDefinition إلى العنقود؟",
+    "options": [
+      "نوع مورد مخصص جديد تقدمه Kubernetes API",
+      "متحكما عاملا للمصالحة لنوع موجود",
+      "منح أذونات RBAC لكل حساب خدمة",
+      "نسخة من كل نوع مورد مدمج"
+    ],
+    "answer": "نوع مورد مخصص جديد تقدمه Kubernetes API"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "ما الفرق بين مشغّل Kubernetes وتعريف مورد مخصص وحده؟",
+    "options": [
+      "لا يستطيع المشغّل إلا تخزين تعريفات المخطط",
+      "يلغي المشغّل الحاجة إلى خادم API",
+      "يغيّر المشغّل تنسيق خرج kubectl فقط",
+      "يشغّل المشغّل أيضا منطق المصالحة لإدارة التطبيق الممثَّل"
+    ],
+    "answer": "يشغّل المشغّل أيضا منطق المصالحة لإدارة التطبيق الممثَّل"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "أي آلية تستطيع رفض طلب API أو تعديله بعد المصادقة والتفويض وقبل الحفظ؟",
+    "options": [
+      "سحب صور الحاويات",
+      "توجيه نقاط نهاية Service",
+      "التحكم في القبول",
+      "جدولة Pod"
+    ],
+    "answer": "التحكم في القبول"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "ماذا يحدث إذا لم تحقق أي عقدة مؤهلة تقارب العقد الإلزامي لـ Pod؟",
+    "options": [
+      "يجدولها خادم API على كل عقدة",
+      "تبقى Pod غير مجدولة حتى تتوفر عقدة مناسبة أو تتغير القيود",
+      "يتجاهل المجدول القاعدة بعد محاولة واحدة",
+      "تصبح Pod تلقائيا DaemonSet"
+    ],
+    "answer": "تبقى Pod غير مجدولة حتى تتوفر عقدة مناسبة أو تتغير القيود"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "ما الذي يعبّر عنه تقارب العقد preferredDuringSchedulingIgnoredDuringExecution؟",
+    "options": [
+      "تفضيل للموضع لا يستبعد العقد غير المطابقة إذا كانت مؤهلة من جوانب أخرى",
+      "شرط إلزامي يمنع الوضع على عقد غير مطابقة",
+      "تعليمة بإخلاء Pod إذا تغيرت تسمية العقدة",
+      "طلب لتجاوز المجدول تماما"
+    ],
+    "answer": "تفضيل للموضع لا يستبعد العقد غير المطابقة إذا كانت مؤهلة من جوانب أخرى"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "ماذا يعني IgnoredDuringExecution إذا لم تعد تسميات العقدة تطابق قاعدة تقارب Pod العاملة؟",
+    "options": [
+      "يجب حذف Pod فورا",
+      "يُعاد تشغيل حاويات Pod تلقائيا",
+      "تعود تسميات العقدة تلقائيا إلى قيمها السابقة",
+      "القاعدة وحدها لا تُخلي Pod العاملة"
+    ],
+    "answer": "القاعدة وحدها لا تُخلي Pod العاملة"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "ماذا يحدث إذا حددت Pod قيمة spec.nodeName صراحة؟",
+    "options": [
+      "تنشئ عقدة بهذا الاسم",
+      "تعيد تسمية العقدة التي تشغّل Pod حاليا",
+      "تتجاوز المجدول وتُسند إلى العقدة المسماة",
+      "تطلب من المجدول ترتيب كل تسميات العقد المطابقة"
+    ],
+    "answer": "تتجاوز المجدول وتُسند إلى العقدة المسماة"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "ما غرض قيود التوزيع الطوبولوجي؟",
+    "options": [
+      "تشفير الحركة بين مكونات مستوى التحكم",
+      "التحكم في توزيع وحدات Pod المطابقة عبر النطاقات الطوبولوجية",
+      "نسخ ملفات الحاويات بين وحدات التخزين الدائمة",
+      "تخصيص عنوان IP عام واحد لكل نطاق أسماء"
+    ],
+    "answer": "التحكم في توزيع وحدات Pod المطابقة عبر النطاقات الطوبولوجية"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "أي تأثير taint يستطيع إخلاء وحدات Pod العاملة التي لا تتحمله؟",
+    "options": [
+      "NoExecute",
+      "NoSchedule",
+      "PreferNoSchedule",
+      "None"
+    ],
+    "answer": "NoExecute"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "أي إعداد securityContext للحاوية يفرض تشغيل حاوية Linux بمستخدم غير root؟",
+    "options": [
+      "readOnlyRootFilesystem: true",
+      "privileged: false",
+      "allowPrivilegeEscalation: false",
+      "runAsNonRoot: true"
+    ],
+    "answer": "runAsNonRoot: true"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "أي إعداد securityContext للحاوية يمنع عملية Linux من نيل امتيازات أكثر من العملية الأم؟",
+    "options": [
+      "readOnlyRootFilesystem: true",
+      "privileged: false",
+      "allowPrivilegeEscalation: false",
+      "runAsNonRoot: true"
+    ],
+    "answer": "allowPrivilegeEscalation: false"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "أي نوع حاوية يمكن إضافته إلى Pod موجودة للتشخيص دون تعديل حاويات تطبيقها؟",
+    "options": [
+      "حاوية تهيئة قابلة لإعادة التشغيل",
+      "حاوية مؤقتة",
+      "حاوية تهيئة عادية",
+      "حاوية تطبيق عادية"
+    ],
+    "answer": "حاوية مؤقتة"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "أي مورد يتتبع نقاط النهاية الشبكية لـ Service في مجموعات قابلة للتوسع؟",
+    "options": [
+      "EndpointSlice",
+      "IngressClass",
+      "NetworkPolicy",
+      "RuntimeClass"
+    ],
+    "answer": "EndpointSlice"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "ما المطلوب ليضبط مورد Ingress توجيه HTTP فعليا؟",
+    "options": [
+      "ConfigMap باسم ingress في كل نطاق أسماء",
+      "PersistentVolume لكل اسم مضيف",
+      "Job يعيد تشغيل كل وحدات Pod المختارة",
+      "متحكم Ingress ينفذ قواعده"
+    ],
+    "answer": "متحكم Ingress ينفذ قواعده"
+  }
+]

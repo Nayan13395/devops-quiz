@@ -1,0 +1,302 @@
+[
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "বিদ্যমান release শাখাৰ বাবে সংযুক্ত কাৰ্যৰত ট্ৰী যোগ কৰা আদেশ কোনটো?",
+    "options": [
+      "git worktree prune",
+      "git worktree lock ..\\release",
+      "git worktree add ..\\release release",
+      "git worktree list"
+    ],
+    "answer": "git worktree add ..\\release release"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "মূল প্ৰকল্পৰ সংস্কৰণ-নিয়ন্ত্ৰিত ছাবমডিউল পথ আৰু URL কোন ফাইলে লিখি ৰাখে?",
+    "options": [
+      ".gitmessage",
+      ".gitmodules",
+      ".gitignore",
+      ".gitattributes"
+    ],
+    "answer": ".gitmodules"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "ভিতৰত থকা ছাবমডিউলসহ সকলো পঞ্জীয়িত ছাবমডিউল আৰম্ভ কৰি চেকআউট কৰা আদেশ কোনটো?",
+    "options": [
+      "git submodule update --init --recursive",
+      "git submodule deinit --all",
+      "git submodule status",
+      "git submodule sync"
+    ],
+    "answer": "git submodule update --init --recursive"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "মূল প্ৰকল্পই সাধাৰণতে ছাবমডিউলৰ বাবে কমিটত কি লিখে?",
+    "options": [
+      "ছাবমডিউলৰ সম্পূৰ্ণ অবজেক্ট ডেটাবেছ",
+      "কেৱল ছাবমডিউলৰ ডিফল্ট শাখাৰ নাম",
+      "কেৱল ছাবমডিউলৰ কমিট নকৰা পৰিৱৰ্তন",
+      "ছাবমডিউলৰ এটা নিৰ্দিষ্ট কমিটৰ ৰেফাৰেন্স"
+    ],
+    "answer": "ছাবমডিউলৰ এটা নিৰ্দিষ্ট কমিটৰ ৰেফাৰেন্স"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "সকলো ৰেফাৰেন্স আৰু তাৰ পৰা পোৱা ইতিহাসসহ স্থানান্তৰযোগ্য বান্ডল সৃষ্টি কৰা আদেশ কোনটো?",
+    "options": [
+      "git format-patch -1 HEAD",
+      "git diff --binary > backup.bundle",
+      "git bundle create backup.bundle --all",
+      "git archive --output=backup.bundle HEAD"
+    ],
+    "answer": "git bundle create backup.bundle --all"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "Git ইতিহাস নোহোৱাকৈ HEAD-ৰ অনুসৰণ কৰা ফাইল ZIP-লৈ উলিওৱা আদেশ কোনটো?",
+    "options": [
+      "git format-patch --stdout HEAD > source.zip",
+      "git archive --format=zip --output=source.zip HEAD",
+      "git bundle create source.zip --all",
+      "git clone --bare . source.zip"
+    ],
+    "answer": "git archive --format=zip --output=source.zip HEAD"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "শেষ কমিটক ইমেইল-ধৰণৰ পেচ ফাইললৈ সলনি কৰা আদেশ কোনটো?",
+    "options": [
+      "git format-patch -1 HEAD",
+      "git diff HEAD",
+      "git show --stat HEAD",
+      "git log -1 --oneline"
+    ],
+    "answer": "git format-patch -1 HEAD"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "git format-patch-ৰ ইমেইল পেচ প্ৰয়োগ কৰি কমিট সৃষ্টি কৰা আদেশ কোনটো?",
+    "options": [
+      "git apply changes.patch",
+      "git diff changes.patch",
+      "git add changes.patch",
+      "git am changes.patch"
+    ],
+    "answer": "git am changes.patch"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "ফাইল সলনি নকৰাকৈ সাধাৰণ পেচ প্ৰয়োগ কৰিব পাৰি নে পৰীক্ষা কৰা আদেশ কোনটো?",
+    "options": [
+      "git am changes.patch",
+      "git add changes.patch",
+      "git apply --check changes.patch",
+      "git apply changes.patch"
+    ],
+    "answer": "git apply --check changes.patch"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "ফাইলৰ নাম বাদ দি বিষয়বস্তু ৰখা Git অবজেক্টৰ ধৰণ কোনটো?",
+    "options": [
+      "টীকাযুক্ত টেগ",
+      "Blob",
+      "Tree",
+      "Commit"
+    ],
+    "answer": "Blob"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "ফাইলৰ নাম আৰু blob বা উপবৃক্ষৰ ৰেফাৰেন্স ৰখা Git অবজেক্টৰ ধৰণ কোনটো?",
+    "options": [
+      "Tree",
+      "Blob",
+      "Commit",
+      "টীকাযুক্ত টেগ"
+    ],
+    "answer": "Tree"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "জনাজাত অবজেক্ট ID-ৰ ধৰণ দেখুওৱা আদেশ কোনটো?",
+    "options": [
+      "git cat-file -s abc1234",
+      "git rev-parse abc1234",
+      "git log -1 abc1234",
+      "git cat-file -t abc1234"
+    ],
+    "answer": "git cat-file -t abc1234"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "HEAD-ৰ সম্পূৰ্ণ অবজেক্ট ID দেখুওৱা আদেশ কোনটো?",
+    "options": [
+      "git status --short",
+      "git branch --show-current",
+      "git rev-parse HEAD",
+      "git symbolic-ref HEAD"
+    ],
+    "answer": "git rev-parse HEAD"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "feature-ৰ পৰা পোৱা যায় কিন্তু main-ৰ পৰা নাপায়—এনে কমিট বাছি লোৱা সীমা কোনটো?",
+    "options": [
+      "main^",
+      "main..feature",
+      "feature..main",
+      "main...feature"
+    ],
+    "answer": "main..feature"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "কেৱল মাৰ্জ কমিট দেখুওৱা git log বিকল্প কোনটো?",
+    "options": [
+      "--merges",
+      "--no-merges",
+      "--first-parent",
+      "--reverse"
+    ],
+    "answer": "--merges"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "সলনি হোৱা পথ আৰু পৰিৱৰ্তনৰ অৱস্থাৰ আখৰ দেখুওৱা git diff বিকল্প কোনটো?",
+    "options": [
+      "--name-only",
+      "--stat",
+      "--shortstat",
+      "--name-status"
+    ],
+    "answer": "--name-status"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "পথৰ টেক্সট স্বাভাৱিকীকৰণৰ দৰে সংস্কৰণ-নিয়ন্ত্ৰিত বৈশিষ্ট্য কোন ফাইলে নিৰ্ধাৰণ কৰে?",
+    "options": [
+      ".gitmodules",
+      ".gitconfig",
+      ".gitattributes",
+      ".gitignore"
+    ],
+    "answer": ".gitattributes"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": ".gitattributes-ৰ '*.sh text eol=lf'-এ মিল থকা টেক্সট ফাইলৰ বাবে কি বিচাৰে?",
+    "options": [
+      "খালী শাৰী স্বয়ংক্ৰিয়ভাৱে মচা",
+      "কাৰ্যৰত ট্ৰীত LF শাৰী-শেষ ব্যৱহাৰ",
+      "কাৰ্যৰত ট্ৰীত CRLF শাৰী-শেষ ব্যৱহাৰ",
+      "টেক্সট ৰূপান্তৰ নকৰাকৈ বাইনেৰী হিচাপে ব্যৱহাৰ"
+    ],
+    "answer": "কাৰ্যৰত ট্ৰীত LF শাৰী-শেষ ব্যৱহাৰ"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "প্ৰস্তাৱিত কমিট বাৰ্তাৰ ফাইল চাই কমিট নাকচ কৰিব পৰা হুক কোনটো?",
+    "options": [
+      "commit-msg",
+      "post-commit",
+      "post-checkout",
+      "post-merge"
+    ],
+    "answer": "commit-msg"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "Git হুকৰ বাবে নিজা ডাইৰেক্টৰী বাছি লোৱা ছেটিং কোনটো?",
+    "options": [
+      "core.worktree",
+      "core.excludesFile",
+      "core.attributesFile",
+      "core.hooksPath"
+    ],
+    "answer": "core.hooksPath"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "উমৈহতীয়া .gitignore নিয়ম নসলনোৱাকৈ এজন বিকাশকক স্থানীয় অনুসৰণ নকৰা ফাইল উপেক্ষা কৰিবলৈ দিয়া ফাইল কোনটো?",
+    "options": [
+      ".git\\description",
+      ".git\\packed-refs",
+      ".git\\info\\exclude",
+      ".git\\HEAD"
+    ],
+    "answer": ".git\\info\\exclude"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "bisect অধিবেশন শেষ কৰি সাধাৰণতে মূল শাখালৈ ঘূৰি যোৱা আদেশ কোনটো?",
+    "options": [
+      "git bisect log",
+      "git bisect reset",
+      "git bisect skip",
+      "git bisect good"
+    ],
+    "answer": "git bisect reset"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "পেচ শৃংখলাৰ দুটা সংস্কৰণ তুলনা কৰা আদেশ কোনটো?",
+    "options": [
+      "git range-diff main..old main..new",
+      "git diff old new",
+      "git log old..new",
+      "git merge-base old new"
+    ],
+    "answer": "git range-diff main..old main..new"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "কমিট বনাওঁতে Signed-off-by শাৰী যোগ কৰা আদেশ কোনটো?",
+    "options": [
+      "git commit --gpg-sign",
+      "git commit --amend",
+      "git commit --no-verify",
+      "git commit --signoff"
+    ],
+    "answer": "git commit --signoff"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "git log -S'old_name'-এ ডিফল্টভাৱে কি বিচাৰে?",
+    "options": [
+      "বাৰ্তাত old_name থকা কমিট",
+      "নামত old_name থকা শাখা",
+      "old_name-ৰ উপস্থিতিৰ সংখ্যা সলনি কৰা কমিট",
+      "লেখকৰ নাম old_name হোৱা কমিট"
+    ],
+    "answer": "old_name-ৰ উপস্থিতিৰ সংখ্যা সলনি কৰা কমিট"
+  }
+]

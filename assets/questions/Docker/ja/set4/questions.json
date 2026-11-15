@@ -1,0 +1,302 @@
+[
+  {
+    "category": "Docker",
+    "set": 4,
+    "question": "Docker Hubからイメージをダウンロードするコマンドはどれですか?",
+    "options": [
+      "docker pull",
+      "docker fetch",
+      "docker copy",
+      "docker get"
+    ],
+    "answer": "docker pull"
+  },
+  {
+    "category": "Docker",
+    "set": 4,
+    "question": "特定のイメージタグをプルするコマンドはどれですか?",
+    "options": [
+      "docker pull image:tag",
+      "docker pull --tag tag",
+      "docker pull -t tag",
+      "docker get image:tag"
+    ],
+    "answer": "docker pull image:tag"
+  },
+  {
+    "category": "Docker",
+    "set": 4,
+    "question": "イメージ層をダウンロードせずマニフェストを調べるコマンドはどれか？",
+    "options": [
+      "docker manifest inspect",
+      "docker pull --manifest",
+      "docker image manifest",
+      "docker show manifest"
+    ],
+    "answer": "docker manifest inspect"
+  },
+  {
+    "category": "Docker",
+    "set": 4,
+    "question": "イメージのダイジェストを一覧表示するコマンドはどれですか?",
+    "options": [
+      "docker images --digests",
+      "docker digest",
+      "docker image digest",
+      "docker inspect digest"
+    ],
+    "answer": "docker images --digests"
+  },
+  {
+    "category": "Docker",
+    "set": 4,
+    "question": "Docker Engine API 1.42 以降で、名前付きも含め未使用の全ローカルボリュームを削除するコマンドはどれか？",
+    "options": [
+      "docker volume prune -a",
+      "docker volume clean",
+      "docker prune volumes",
+      "docker rm volume"
+    ],
+    "answer": "docker volume prune -a"
+  },
+  {
+    "category": "Docker",
+    "set": 4,
+    "question": "未使用のカスタム Docker ネットワークを削除するコマンドはどれか？",
+    "options": [
+      "docker network prune",
+      "docker prune network",
+      "docker clean network",
+      "docker rm network"
+    ],
+    "answer": "docker network prune"
+  },
+  {
+    "category": "Docker",
+    "set": 4,
+    "question": "選択した Buildx ビルダーのビルドキャッシュ使用量を表示するコマンドはどれか？",
+    "options": [
+      "docker buildx du",
+      "docker build cache",
+      "docker cache usage",
+      "docker builder stats"
+    ],
+    "answer": "docker buildx du"
+  },
+  {
+    "category": "Docker",
+    "set": 4,
+    "question": "未使用のビルドキャッシュを削除するコマンドはどれですか?",
+    "options": [
+      "docker builder prune",
+      "docker build clean",
+      "docker cache prune",
+      "docker prune build"
+    ],
+    "answer": "docker builder prune"
+  },
+  {
+    "category": "Docker",
+    "set": 4,
+    "question": "適切な --platform リストとビルダーによりマルチプラットフォームのイメージを作れるコマンドはどれか？",
+    "options": [
+      "docker buildx build",
+      "docker build multi",
+      "docker build platform",
+      "docker image buildx"
+    ],
+    "answer": "docker buildx build"
+  },
+  {
+    "category": "Docker",
+    "set": 4,
+    "question": "利用可能なBuildxビルダーを一覧表示するコマンドはどれですか?",
+    "options": [
+      "docker buildx ls",
+      "docker buildx show",
+      "docker builder ls",
+      "docker buildx list"
+    ],
+    "answer": "docker buildx ls"
+  },
+  {
+    "category": "Docker",
+    "set": 4,
+    "question": "すべてのDockerコンテキストを表示するコマンドはどれですか?",
+    "options": [
+      "docker context ls",
+      "docker contexts",
+      "docker context show",
+      "docker list context"
+    ],
+    "answer": "docker context ls"
+  },
+  {
+    "category": "Docker",
+    "set": 4,
+    "question": "別のDockerコンテキストに切り替えるコマンドはどれですか?",
+    "options": [
+      "docker context use",
+      "docker context switch",
+      "docker use context",
+      "docker context select"
+    ],
+    "answer": "docker context use"
+  },
+  {
+    "category": "Docker",
+    "set": 4,
+    "question": "Dockerコンテキストを削除するコマンドはどれですか?",
+    "options": [
+      "docker context rm",
+      "docker context inspect",
+      "docker remove context",
+      "docker context use"
+    ],
+    "answer": "docker context rm"
+  },
+  {
+    "category": "Docker",
+    "set": 4,
+    "question": "ベースイメージを指定するDockerfile命令はどれですか?",
+    "options": [
+      "FROM",
+      "BASE",
+      "IMAGE",
+      "START"
+    ],
+    "answer": "FROM"
+  },
+  {
+    "category": "Docker",
+    "set": 4,
+    "question": "環境変数を設定するDockerfile命令はどれですか?",
+    "options": [
+      "ENV",
+      "SET",
+      "VAR",
+      "EXPORT"
+    ],
+    "answer": "ENV"
+  },
+  {
+    "category": "Docker",
+    "set": 4,
+    "question": "Compose ファイルのサービスをバックグラウンド起動するコマンドはどれか？",
+    "options": [
+      "docker compose up -d",
+      "docker compose create",
+      "docker compose config",
+      "docker compose down"
+    ],
+    "answer": "docker compose up -d"
+  },
+  {
+    "category": "Docker",
+    "set": 4,
+    "question": "アプリのサービス定義を含む Compose の最上位キーはどれか？",
+    "options": [
+      "volumes",
+      "networks",
+      "configs",
+      "services"
+    ],
+    "answer": "services"
+  },
+  {
+    "category": "Docker",
+    "set": 4,
+    "question": "解決済みの Compose 設定を表示して検証するコマンドはどれか？",
+    "options": [
+      "docker compose images",
+      "docker compose top",
+      "docker compose config",
+      "docker compose ps"
+    ],
+    "answer": "docker compose config"
+  },
+  {
+    "category": "Docker",
+    "set": 4,
+    "question": "--volumes なしの 'docker compose down' は通常何をするか？",
+    "options": [
+      "Compose 設定ファイルだけを削除する",
+      "名前付きボリュームを残し、プロジェクトのコンテナとネットワークを削除する",
+      "ホストの全イメージとボリュームを削除する",
+      "コンテナを削除せず一時停止する"
+    ],
+    "answer": "名前付きボリュームを残し、プロジェクトのコンテナとネットワークを削除する"
+  },
+  {
+    "category": "Docker",
+    "set": 4,
+    "question": "Compose の depends_on が service_healthy を使うとき、依存側のサービス起動前に何が必要か？",
+    "options": [
+      "依存先が設定されたヘルスチェックに合格する",
+      "依存先が正常終了する",
+      "公開予定の全ポートをホストに公開する",
+      "依存先のイメージをレジストリへ送る"
+    ],
+    "answer": "依存先が設定されたヘルスチェックに合格する"
+  },
+  {
+    "category": "Docker",
+    "set": 4,
+    "question": "linux/amd64 や linux/arm64 などの対象を指定する Buildx オプションはどれか？",
+    "options": [
+      "--target",
+      "--builder",
+      "--progress",
+      "--platform"
+    ],
+    "answer": "--platform"
+  },
+  {
+    "category": "Docker",
+    "set": 4,
+    "question": "Dockerfile の名前付きステージをビルド対象に選ぶ Buildx オプションはどれか？",
+    "options": [
+      "--tag",
+      "--file",
+      "--target",
+      "--platform"
+    ],
+    "answer": "--target"
+  },
+  {
+    "category": "Docker",
+    "set": 4,
+    "question": "結果を直接レジストリへ送る Buildx ビルドオプションはどれか？",
+    "options": [
+      "--pull",
+      "--push",
+      "--load",
+      "--no-cache"
+    ],
+    "answer": "--push"
+  },
+  {
+    "category": "Docker",
+    "set": 4,
+    "question": "イメージのビルドで '--no-cache' は Docker に何を指示するか？",
+    "options": [
+      "キャッシュ済みのビルド結果を再利用しない",
+      "全ローカルイメージを削除する",
+      "実行中コンテナのファイルシステムキャッシュを無効にする",
+      "ベースイメージの取得を省略する"
+    ],
+    "answer": "キャッシュ済みのビルド結果を再利用しない"
+  },
+  {
+    "category": "Docker",
+    "set": 4,
+    "question": "名前付き Docker ボリュームの詳細を表示するコマンドはどれか？",
+    "options": [
+      "docker volume ls",
+      "docker volume create data",
+      "docker volume prune",
+      "docker volume inspect data"
+    ],
+    "answer": "docker volume inspect data"
+  }
+]

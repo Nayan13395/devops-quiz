@@ -1,0 +1,302 @@
+[
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "أي أمر يضيف شجرة عمل مرتبطة لفرع موجود باسم release؟",
+    "options": [
+      "git worktree prune",
+      "git worktree lock ..\\release",
+      "git worktree add ..\\release release",
+      "git worktree list"
+    ],
+    "answer": "git worktree add ..\\release release"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "أي ملف يسجل المسارات وعناوين URL الخاضعة للإصدارات للوحدات الفرعية في المشروع الأعلى؟",
+    "options": [
+      ".gitmessage",
+      ".gitmodules",
+      ".gitignore",
+      ".gitattributes"
+    ],
+    "answer": ".gitmodules"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "أي أمر يهيئ الوحدات الفرعية المسجلة ويستخرجها، بما فيها المتداخلة؟",
+    "options": [
+      "git submodule update --init --recursive",
+      "git submodule deinit --all",
+      "git submodule status",
+      "git submodule sync"
+    ],
+    "answer": "git submodule update --init --recursive"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "ماذا يسجل المشروع الأعلى عادة للوحدة الفرعية داخل الإيداع؟",
+    "options": [
+      "قاعدة بيانات كائنات الوحدة الفرعية بالكامل",
+      "اسم الفرع الافتراضي للوحدة الفرعية فقط",
+      "تغييرات الوحدة الفرعية غير المودعة فقط",
+      "مرجعا إلى إيداع محدد في الوحدة الفرعية"
+    ],
+    "answer": "مرجعا إلى إيداع محدد في الوحدة الفرعية"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "أي أمر ينشئ حزمة قابلة للنقل تضم جميع المراجع والتاريخ الذي يمكن الوصول إليه منها؟",
+    "options": [
+      "git format-patch -1 HEAD",
+      "git diff --binary > backup.bundle",
+      "git bundle create backup.bundle --all",
+      "git archive --output=backup.bundle HEAD"
+    ],
+    "answer": "git bundle create backup.bundle --all"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "أي أمر يصدر ملفات HEAD المتتبعة إلى أرشيف ZIP دون تاريخ Git؟",
+    "options": [
+      "git format-patch --stdout HEAD > source.zip",
+      "git archive --format=zip --output=source.zip HEAD",
+      "git bundle create source.zip --all",
+      "git clone --bare . source.zip"
+    ],
+    "answer": "git archive --format=zip --output=source.zip HEAD"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "أي أمر يحوّل أحدث إيداع إلى ملف رقعة بتنسيق البريد الإلكتروني؟",
+    "options": [
+      "git format-patch -1 HEAD",
+      "git diff HEAD",
+      "git show --stat HEAD",
+      "git log -1 --oneline"
+    ],
+    "answer": "git format-patch -1 HEAD"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "أي أمر يطبق رقع البريد المنشأة بـ git format-patch وينشئ إيداعات منها؟",
+    "options": [
+      "git apply changes.patch",
+      "git diff changes.patch",
+      "git add changes.patch",
+      "git am changes.patch"
+    ],
+    "answer": "git am changes.patch"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "أي أمر يتحقق من إمكانية تطبيق رقعة عادية دون تغيير الملفات؟",
+    "options": [
+      "git am changes.patch",
+      "git add changes.patch",
+      "git apply --check changes.patch",
+      "git apply changes.patch"
+    ],
+    "answer": "git apply --check changes.patch"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "أي نوع كائنات Git يخزن محتوى الملف دون اسمه؟",
+    "options": [
+      "وسم مشروح",
+      "Blob",
+      "Tree",
+      "Commit"
+    ],
+    "answer": "Blob"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "أي نوع كائنات Git يسجل أسماء الملفات ومراجع كائنات blob أو الأشجار الفرعية؟",
+    "options": [
+      "Tree",
+      "Blob",
+      "Commit",
+      "وسم مشروح"
+    ],
+    "answer": "Tree"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "أي أمر يعرض نوع الكائن لمعرّف كائن معلوم؟",
+    "options": [
+      "git cat-file -s abc1234",
+      "git rev-parse abc1234",
+      "git log -1 abc1234",
+      "git cat-file -t abc1234"
+    ],
+    "answer": "git cat-file -t abc1234"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "أي أمر يطبع معرّف الكائن الكامل لـ HEAD؟",
+    "options": [
+      "git status --short",
+      "git branch --show-current",
+      "git rev-parse HEAD",
+      "git symbolic-ref HEAD"
+    ],
+    "answer": "git rev-parse HEAD"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "أي نطاق مراجعات يختار الإيداعات التي يمكن الوصول إليها من feature لا من main؟",
+    "options": [
+      "main^",
+      "main..feature",
+      "feature..main",
+      "main...feature"
+    ],
+    "answer": "main..feature"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "أي خيار في git log يعرض إيداعات الدمج فقط؟",
+    "options": [
+      "--merges",
+      "--no-merges",
+      "--first-parent",
+      "--reverse"
+    ],
+    "answer": "--merges"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "أي خيار في git diff يعرض المسارات المتغيرة وحروف حالات تغييرها؟",
+    "options": [
+      "--name-only",
+      "--stat",
+      "--shortstat",
+      "--name-status"
+    ],
+    "answer": "--name-status"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "أي ملف يعرّف سمات خاضعة للإصدارات مثل قواعد توحيد النص للمسارات؟",
+    "options": [
+      ".gitmodules",
+      ".gitconfig",
+      ".gitattributes",
+      ".gitignore"
+    ],
+    "answer": ".gitattributes"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "ماذا تطلب قاعدة .gitattributes المسماة '*.sh text eol=lf' للملفات النصية المطابقة؟",
+    "options": [
+      "حذف الأسطر الفارغة تلقائيا",
+      "نهايات أسطر LF في شجرة العمل",
+      "نهايات أسطر CRLF في شجرة العمل",
+      "المعاملة كبيانات ثنائية دون تحويل نصي"
+    ],
+    "answer": "نهايات أسطر LF في شجرة العمل"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "أي خطاف يستطيع رفض إيداع بفحص ملف رسالة الإيداع المقترحة؟",
+    "options": [
+      "commit-msg",
+      "post-commit",
+      "post-checkout",
+      "post-merge"
+    ],
+    "answer": "commit-msg"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "أي إعداد يختار مجلدا مخصصا لخطافات Git؟",
+    "options": [
+      "core.worktree",
+      "core.excludesFile",
+      "core.attributesFile",
+      "core.hooksPath"
+    ],
+    "answer": "core.hooksPath"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "أي ملف يسمح لمطور بتجاهل ملفات غير متتبعة محليا دون إضافة قاعدة .gitignore مشتركة؟",
+    "options": [
+      ".git\\description",
+      ".git\\packed-refs",
+      ".git\\info\\exclude",
+      ".git\\HEAD"
+    ],
+    "answer": ".git\\info\\exclude"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "أي أمر ينهي جلسة bisect ويعود عادة إلى الفرع الأصلي؟",
+    "options": [
+      "git bisect log",
+      "git bisect reset",
+      "git bisect skip",
+      "git bisect good"
+    ],
+    "answer": "git bisect reset"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "أي أمر يقارن نسختين من سلسلة رقع؟",
+    "options": [
+      "git range-diff main..old main..new",
+      "git diff old new",
+      "git log old..new",
+      "git merge-base old new"
+    ],
+    "answer": "git range-diff main..old main..new"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "أي أمر يضيف سطر Signed-off-by عند إنشاء إيداع؟",
+    "options": [
+      "git commit --gpg-sign",
+      "git commit --amend",
+      "git commit --no-verify",
+      "git commit --signoff"
+    ],
+    "answer": "git commit --signoff"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "ماذا يبحث git log -S'old_name' عنه افتراضيا؟",
+    "options": [
+      "إيداعات تحتوي رسائلها على old_name",
+      "فروع تحتوي أسماؤها على old_name",
+      "إيداعات تغيّر عدد مرات ظهور old_name",
+      "إيداعات اسم مؤلفها old_name"
+    ],
+    "answer": "إيداعات تغيّر عدد مرات ظهور old_name"
+  }
+]

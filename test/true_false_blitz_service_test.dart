@@ -51,6 +51,10 @@ void main() {
           );
           expect(sourceQuestion.options, contains(falseStatement.answer));
           expect(falseStatement.answer, isNot(sourceQuestion.answer));
+          expect(falseStatement.sourceQuestion.id, sourceQuestion.id);
+          expect(falseStatement.sourceQuestion.answer, sourceQuestion.answer);
+          expect(falseStatement.sourceQuestion.options, sourceQuestion.options);
+          expect(falseStatement.sourceQuestion.id, isNotNull);
         }
       }
     },

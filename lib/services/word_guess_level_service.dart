@@ -1,3 +1,8 @@
+import 'package:flutter/widgets.dart';
+
+import '../l10n/app_localizations.dart';
+import '../l10n/game_hint_localizations.dart';
+
 enum WordGuessDifficulty { easy, medium, hard }
 
 class WordGuessLevel {
@@ -10,6 +15,11 @@ class WordGuessLevel {
   final String word;
   final String hint;
   final WordGuessDifficulty difficulty;
+
+  String localizedHint(BuildContext context) => wordGuessHint(context, hint);
+
+  String localizedHintForL10n(AppLocalizations l10n) =>
+      gameHintTextForL10n(l10n, hint);
 }
 
 class WordGuessLevelService {
@@ -138,8 +148,8 @@ class WordGuessLevelService {
       difficulty: WordGuessDifficulty.easy,
     ),
     WordGuessLevel(
-      word: 'SUDO',
-      hint: 'Runs a command with elevated privileges.',
+      word: 'ROOT',
+      hint: 'Privileged administrator account on Unix-like systems.',
       difficulty: WordGuessDifficulty.easy,
     ),
     WordGuessLevel(
@@ -571,9 +581,12 @@ class WordGuessLevelService {
     ('ALPN', 'TLS extension negotiating an application-layer protocol.'),
     ('GREP', 'Searches text lines for a matching pattern.'),
     ('SED', 'Stream editor commonly used for text substitutions.'),
-    ('AWK', 'Pattern-processing language for working with text fields.'),
+    (
+      'LSCPU',
+      'Linux command displaying processor architecture and core details.',
+    ),
     ('FIND', 'Searches a directory tree using file predicates.'),
-    ('XARGS', 'Builds command arguments from standard input.'),
+    ('LSBLK', 'Linux command listing block devices and their relationships.'),
     ('SORT', 'Orders lines of text.'),
     ('UNIQ', 'Filters adjacent duplicate lines.'),
     ('HEAD', 'Prints the beginning of a file.'),
@@ -605,9 +618,9 @@ class WordGuessLevelService {
     ('UNAME', 'Prints system and kernel information.'),
     ('WHOAMI', 'Prints the effective current user name.'),
     ('UMASK', 'Sets the permission mask used when creating files.'),
-    ('CHROOT', 'Runs a command with a different apparent root directory.'),
+    ('USERMOD', 'Linux command that modifies an existing user account.'),
     ('CRONTAB', 'Edits or lists scheduled recurring shell jobs.'),
-    ('SYSCTL', 'Reads or changes kernel parameters.'),
+    ('FINDMNT', 'Linux command displaying mounted filesystem information.'),
     ('MOUNT', 'Attaches a filesystem to the directory tree.'),
     ('SIGTERM', 'Unix signal requesting graceful process termination.'),
     ('FSTAB', 'System table describing filesystems to mount.'),
@@ -623,10 +636,13 @@ class WordGuessLevelService {
     ('STAT', 'Displays detailed file metadata.'),
     ('LSOF', 'Lists open files and the processes holding them.'),
     ('NETSTAT', 'Displays network connections and routing information.'),
-    ('TCPDUMP', 'Command-line packet capture and inspection utility.'),
+    (
+      'CHECKSUM',
+      'Calculated value used to detect changes or corruption in data.',
+    ),
     ('PING', 'Tests network reachability using echo requests.'),
     ('TRACEROUTE', 'Shows intermediate hops toward a network destination.'),
-    ('DIG', 'Command-line utility for querying DNS records.'),
+    ('RESOLVER', 'DNS component that looks up answers to name queries.'),
     ('NSLOOKUP', 'Looks up DNS names and addresses.'),
     ('TELNET', 'Legacy unencrypted remote terminal protocol.'),
     ('TFTP', 'Simple UDP-based file transfer protocol.'),
@@ -755,10 +771,7 @@ class WordGuessLevelService {
     ('VALIDATE', 'Checks configuration syntax and internal consistency.'),
     ('FMT', 'Terraform command applying canonical configuration formatting.'),
     ('INIT', 'Initializes Terraform providers and the working directory.'),
-    (
-      'PROVISIONERS',
-      'Terraform mechanisms for running setup commands on resources.',
-    ),
+    ('EXECUTOR', 'Jenkins worker slot that can run a build.'),
     ('DEPENDENCIES', 'Relationships requiring one component before another.'),
     ('DRIFT', 'Difference between declared and actual infrastructure state.'),
     ('LOCKING', 'Prevents concurrent writers from changing shared state.'),
@@ -1005,10 +1018,7 @@ class WordGuessLevelService {
     ('TOKEN', 'Credential or symbol representing authorization or identity.'),
     ('OAUTH', 'Authorization framework allowing delegated access.'),
     ('SAML', 'XML-based standard commonly used for enterprise single sign-on.'),
-    (
-      'SNI',
-      'TLS extension allowing a client to specify its requested hostname.',
-    ),
+    ('CMDLET', 'A specialized command used in PowerShell pipelines.'),
     (
       'ALGORITHM',
       'Defined sequence of steps for solving a computational problem.',

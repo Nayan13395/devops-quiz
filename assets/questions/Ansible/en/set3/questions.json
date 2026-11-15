@@ -1,0 +1,302 @@
+[
+  {
+    "category": "Ansible",
+    "set": 3,
+    "question": "What is an Ansible Role?",
+    "options": [
+      "A reusable collection of tasks and files",
+      "A user account",
+      "An inventory group",
+      "A playbook variable"
+    ],
+    "answer": "A reusable collection of tasks and files"
+  },
+  {
+    "category": "Ansible",
+    "set": 3,
+    "question": "Which command creates a new role structure?",
+    "options": [
+      "ansible-galaxy init",
+      "ansible role create",
+      "ansible init role",
+      "ansible-playbook init"
+    ],
+    "answer": "ansible-galaxy init"
+  },
+  {
+    "category": "Ansible",
+    "set": 3,
+    "question": "Which directory contains role tasks?",
+    "options": [
+      "tasks",
+      "handlers",
+      "files",
+      "vars"
+    ],
+    "answer": "tasks"
+  },
+  {
+    "category": "Ansible",
+    "set": 3,
+    "question": "Which file is the main task file in a role?",
+    "options": [
+      "tasks/main.yml",
+      "tasks/tasks.yml",
+      "main/tasks.yml",
+      "role.yml"
+    ],
+    "answer": "tasks/main.yml"
+  },
+  {
+    "category": "Ansible",
+    "set": 3,
+    "question": "Which directory contains role handlers?",
+    "options": [
+      "handlers",
+      "tasks",
+      "events",
+      "notify"
+    ],
+    "answer": "handlers"
+  },
+  {
+    "category": "Ansible",
+    "set": 3,
+    "question": "Which directory stores Jinja2 templates in a role?",
+    "options": [
+      "templates",
+      "files",
+      "jinja",
+      "render"
+    ],
+    "answer": "templates"
+  },
+  {
+    "category": "Ansible",
+    "set": 3,
+    "question": "Which directory stores static files in a role?",
+    "options": [
+      "files",
+      "templates",
+      "static",
+      "resources"
+    ],
+    "answer": "files"
+  },
+  {
+    "category": "Ansible",
+    "set": 3,
+    "question": "Which directory contains role variables?",
+    "options": [
+      "vars",
+      "variables",
+      "config",
+      "settings"
+    ],
+    "answer": "vars"
+  },
+  {
+    "category": "Ansible",
+    "set": 3,
+    "question": "Which directory contains default variables?",
+    "options": [
+      "defaults",
+      "vars",
+      "config",
+      "settings"
+    ],
+    "answer": "defaults"
+  },
+  {
+    "category": "Ansible",
+    "set": 3,
+    "question": "Which play-level keyword declares a static list of roles, rather than invoking a role from an individual task?",
+    "options": [
+      "roles",
+      "include_role",
+      "role",
+      "import_role"
+    ],
+    "answer": "roles"
+  },
+  {
+    "category": "Ansible",
+    "set": 3,
+    "question": "What is Ansible Galaxy?",
+    "options": [
+      "Repository for Ansible roles and collections",
+      "Monitoring tool",
+      "CI/CD platform",
+      "Inventory manager"
+    ],
+    "answer": "Repository for Ansible roles and collections"
+  },
+  {
+    "category": "Ansible",
+    "set": 3,
+    "question": "Which command installs a role from Galaxy?",
+    "options": [
+      "ansible-galaxy install",
+      "ansible install role",
+      "ansible role add",
+      "ansible-galaxy add"
+    ],
+    "answer": "ansible-galaxy install"
+  },
+  {
+    "category": "Ansible",
+    "set": 3,
+    "question": "What is Ansible Vault used for?",
+    "options": [
+      "Encrypt sensitive data",
+      "Manage inventories",
+      "Run playbooks",
+      "Install roles"
+    ],
+    "answer": "Encrypt sensitive data"
+  },
+  {
+    "category": "Ansible",
+    "set": 3,
+    "question": "Which command encrypts an existing file?",
+    "options": [
+      "ansible-vault encrypt",
+      "ansible-vault secure",
+      "ansible-vault create",
+      "ansible-vault lock"
+    ],
+    "answer": "ansible-vault encrypt"
+  },
+  {
+    "category": "Ansible",
+    "set": 3,
+    "question": "What are Ansible Collections?",
+    "options": [
+      "Packages containing roles, modules and plugins",
+      "Inventory groups",
+      "Encrypted files",
+      "YAML variables"
+    ],
+    "answer": "Packages containing roles, modules and plugins"
+  },
+  {
+    "category": "Ansible",
+    "set": 3,
+    "question": "Which role file normally declares dependencies on other roles?",
+    "options": [
+      "vars/main.yml",
+      "meta/main.yml",
+      "defaults/main.yml",
+      "handlers/main.yml"
+    ],
+    "answer": "meta/main.yml"
+  },
+  {
+    "category": "Ansible",
+    "set": 3,
+    "question": "Which command installs a collection named community.general?",
+    "options": [
+      "ansible-galaxy collection install community.general",
+      "ansible-galaxy role install community.general",
+      "ansible-galaxy collection build community.general",
+      "ansible-galaxy collection verify community.general"
+    ],
+    "answer": "ansible-galaxy collection install community.general"
+  },
+  {
+    "category": "Ansible",
+    "set": 3,
+    "question": "What does the fully qualified collection name ansible.builtin.copy identify?",
+    "options": [
+      "A copy role inside a host group named builtin",
+      "An inventory hostname followed by its connection type",
+      "A Vault identifier followed by an encrypted filename",
+      "The copy module in the builtin collection of the ansible namespace"
+    ],
+    "answer": "The copy module in the builtin collection of the ansible namespace"
+  },
+  {
+    "category": "Ansible",
+    "set": 3,
+    "question": "Which command displays an encrypted Vault file without permanently decrypting it on disk?",
+    "options": [
+      "ansible-vault edit secrets.yml",
+      "ansible-vault rekey secrets.yml",
+      "ansible-vault view secrets.yml",
+      "ansible-vault decrypt secrets.yml"
+    ],
+    "answer": "ansible-vault view secrets.yml"
+  },
+  {
+    "category": "Ansible",
+    "set": 3,
+    "question": "Which command changes the password protecting an existing Vault-encrypted file?",
+    "options": [
+      "ansible-vault create secrets.yml",
+      "ansible-vault rekey secrets.yml",
+      "ansible-vault view secrets.yml",
+      "ansible-vault encrypt secrets.yml"
+    ],
+    "answer": "ansible-vault rekey secrets.yml"
+  },
+  {
+    "category": "Ansible",
+    "set": 3,
+    "question": "Which option prompts for a Vault password when running a playbook?",
+    "options": [
+      "--ask-vault-pass",
+      "--ask-pass",
+      "--ask-become-pass",
+      "--private-key"
+    ],
+    "answer": "--ask-vault-pass"
+  },
+  {
+    "category": "Ansible",
+    "set": 3,
+    "question": "Which task action dynamically loads a role at execution time?",
+    "options": [
+      "ansible.builtin.import_role",
+      "ansible.builtin.import_tasks",
+      "ansible.builtin.include_vars",
+      "ansible.builtin.include_role"
+    ],
+    "answer": "ansible.builtin.include_role"
+  },
+  {
+    "category": "Ansible",
+    "set": 3,
+    "question": "Which task action statically imports a file containing tasks?",
+    "options": [
+      "ansible.builtin.include_vars",
+      "ansible.builtin.import_role",
+      "ansible.builtin.import_tasks",
+      "ansible.builtin.include_tasks"
+    ],
+    "answer": "ansible.builtin.import_tasks"
+  },
+  {
+    "category": "Ansible",
+    "set": 3,
+    "question": "Which variable source takes precedence when the same name appears in role defaults and role vars?",
+    "options": [
+      "The two definitions always cause a syntax error",
+      "Role vars",
+      "Role defaults",
+      "The two values are always concatenated"
+    ],
+    "answer": "Role vars"
+  },
+  {
+    "category": "Ansible",
+    "set": 3,
+    "question": "Which command creates an encrypted variable from a supplied string?",
+    "options": [
+      "ansible-vault encrypt_string",
+      "ansible-vault encrypt",
+      "ansible-vault rekey",
+      "ansible-vault view"
+    ],
+    "answer": "ansible-vault encrypt_string"
+  }
+]

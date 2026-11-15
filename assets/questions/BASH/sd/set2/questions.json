@@ -1,0 +1,302 @@
+[
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "ڪهڙو نحو date جي آئوٽ پٽ کي now نالي ويريبل ۾ محفوظ ڪري ٿو؟",
+    "options": [
+      "now=$(date)",
+      "now=date",
+      "now:=$(date)",
+      "date->now"
+    ],
+    "answer": "now=$(date)"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "ڪهڙو خاص پيراميٽر اسڪرپٽ جو نالو ظاهر ڪري ٿو؟",
+    "options": [
+      "$0",
+      "$1",
+      "$#",
+      "$@"
+    ],
+    "answer": "$0"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "ڪهڙو خاص پيراميٽر تازي پس منظر ۾ هلندڙ ڪمانڊ جي process ID ۾ تبديل ٿئي ٿو؟",
+    "options": [
+      "$!",
+      "$$",
+      "$?",
+      "$#"
+    ],
+    "answer": "$!"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "ڪهڙو خاص پيراميٽر پوزيشنل آرگيومينٽس جو تعداد ظاهر ڪري ٿو؟",
+    "options": [
+      "$#",
+      "$@",
+      "$*",
+      "$$"
+    ],
+    "answer": "$#"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "ڪهڙو خاص پيراميٽر سڀني پوزيشنل آرگيومينٽس کي الڳ لفظن طور پکيڙي ٿو؟",
+    "options": [
+      "$@",
+      "$*",
+      "$#",
+      "$0"
+    ],
+    "answer": "$@"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "ڪهڙو Bash بلٽ ان پهرين پوزيشنل پيراميٽر کي ڇڏي ڏئي ٿو ۽ باقي کي هڪ هڪ جاءِ هيٺ ڪري ڇڏي ٿو؟",
+    "options": [
+      "shift",
+      "unshift",
+      "pop",
+      "rotate"
+    ],
+    "answer": "shift"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "ڪهڙو خاص پيراميٽر موجوده شيل جي process ID کي ظاهر ڪري ٿو؟",
+    "options": [
+      "$$",
+      "$!",
+      "$?",
+      "$0"
+    ],
+    "answer": "$$"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "ڪهڙو خاص پيراميٽر آخري ڪمانڊ جي ايگزٽ اسٽيٽس کي ظاهر ڪري ٿو؟",
+    "options": [
+      "$?",
+      "$!",
+      "$$",
+      "$#"
+    ],
+    "answer": "$?"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "جيڪڏهن var مقرر ٿيل نه هجي يا خالي هجي ته ڪهڙو expansion ڊفالٽ قدر موٽائي ٿو؟",
+    "options": [
+      "${var:-default}",
+      "${var:=default}",
+      "${var:+default}",
+      "${var:?default}"
+    ],
+    "answer": "${var:-default}"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "ڪهڙو expansion var مان 3 ڪردار ڪڍي ٿو، آفسيٽ 2 کان شروع ڪندي؟",
+    "options": [
+      "${var:2:3}",
+      "${var:3:2}",
+      "${var[2,3]}",
+      "${var#2:3}"
+    ],
+    "answer": "${var:2:3}"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "ڪهڙو expansion var جي قدر جي ڊيگهه موٽائي ٿو؟",
+    "options": [
+      "${#var}",
+      "${len(var)}",
+      "${var:length}",
+      "${var#length}"
+    ],
+    "answer": "${#var}"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "ڪهڙو expansion var جي قدر کي وڏن اکرن ۾ تبديل ڪري ٿو؟",
+    "options": [
+      "${var^^}",
+      "${var,,}",
+      "${var!!}",
+      "${var##}"
+    ],
+    "answer": "${var^^}"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "ڪهڙو expansion var مان سڀ کان ڊگهو ملندڙ prefix pattern هٽائي ڇڏي ٿو؟",
+    "options": [
+      "${var##pattern}",
+      "${var#pattern}",
+      "${var%%pattern}",
+      "${var%pattern}"
+    ],
+    "answer": "${var##pattern}"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "ڪهڙو expansion var ۾ pattern جي صرف پهرين ملندڙ جاءِ کي تبديل ڪري ٿو؟",
+    "options": [
+      "${var/pattern/replacement}",
+      "${var//pattern/replacement}",
+      "${var#pattern}",
+      "${var%pattern}"
+    ],
+    "answer": "${var/pattern/replacement}"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "جيڪڏهن var مقرر ٿيل نه هجي يا خالي هجي ته ڪهڙو expansion غلطي جو پيغام ڇپائي ۽ غير انٽرايڪٽو اسڪرپٽ کي روڪي ڇڏي ٿو؟",
+    "options": [
+      "${var:?message}",
+      "${var:-message}",
+      "${var:+message}",
+      "${var:=message}"
+    ],
+    "answer": "${var:?message}"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "Bash ۾ ڪهڙو نحو arithmetic expansion ڪري ٿو؟",
+    "options": [
+      "$((5 + 3))",
+      "$(5 + 3)",
+      "${5 + 3}",
+      "$[5 + 3]"
+    ],
+    "answer": "$((5 + 3))"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "ڪهڙو ڪمانڊ count ويريبل کي هڪ سان وڌائي ٿو؟",
+    "options": [
+      "let count++",
+      "count++",
+      "increment count",
+      "add count"
+    ],
+    "answer": "let count++"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "ڪهڙو ڪمانڊ 8 ڇپائي ٿو جڏهن 5 ۽ 3 گڏيا وڃن؟",
+    "options": [
+      "expr 5 + 3",
+      "expr 5+3",
+      "expr5 + 3",
+      "expr add 5 3"
+    ],
+    "answer": "expr 5 + 3"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "ڪهڙو ڪمانڊ count کي integer ويريبل طور ڊڪليئر ڪري ٿو؟",
+    "options": [
+      "declare -i count",
+      "declare int count",
+      "integer count",
+      "set count integer"
+    ],
+    "answer": "declare -i count"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "ڪهڙو ڪمانڊ ويريبل کي صرف پڙهڻ لاءِ بڻائي ٿو؟",
+    "options": [
+      "readonly var",
+      "lock var",
+      "const var",
+      "final var"
+    ],
+    "answer": "readonly var"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "ڪهڙو ڪمانڊ ويريبل کي شيل environment مان هٽائي ٿو؟",
+    "options": [
+      "unset var",
+      "delete var",
+      "remove var",
+      "clear var"
+    ],
+    "answer": "unset var"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "ڪهڙو ڪمانڊ ويريبل کي child processes لاءِ دستياب بڻائي ٿو؟",
+    "options": [
+      "export var",
+      "share var",
+      "env var",
+      "publish var"
+    ],
+    "answer": "export var"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "ڪهڙو آپشن آئوٽ پٽ ريڊائريڪشن کي موجود فائل اوور رائيٽ ڪرڻ کان روڪي ٿو؟",
+    "options": [
+      "set -o noclobber",
+      "set -o nooverwrite",
+      "set -o protect",
+      "set -o safe"
+    ],
+    "answer": "set -o noclobber"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "ڪهڙو Bash ويريبل شيل شروع ٿيڻ کان وٺي گذريل سيڪنڊن جو تعداد رکي ٿو؟",
+    "options": [
+      "$SECONDS",
+      "$RANDOM",
+      "$LINENO",
+      "$UID"
+    ],
+    "answer": "$SECONDS"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "ڪهڙو Bash expansion alt صرف تڏهن بدلائي ٿو جڏهن var مقرر ٿيل ۽ غير خالي هجي؟",
+    "options": [
+      "${var:+alt}",
+      "${var:-alt}",
+      "${var:=alt}",
+      "${var:?alt}"
+    ],
+    "answer": "${var:+alt}"
+  }
+]

@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import '../widgets/app_tour.dart';
+import '../services/app_tour_service.dart';
 import '../widgets/app_drawer.dart';
 import '../widgets/category_button.dart';
 import 'set_screen.dart';
@@ -16,7 +18,9 @@ import '../widgets/whats_new_dialog.dart';
 import 'scripting_screen.dart';
 
 class CategoryScreen extends StatefulWidget {
-  const CategoryScreen({super.key});
+  const CategoryScreen({super.key, this.replayTour = false});
+
+  final bool replayTour;
 
   @override
   State<CategoryScreen> createState() => _CategoryScreenState();
@@ -25,14 +29,30 @@ class CategoryScreen extends StatefulWidget {
 class _CategoryScreenState extends State<CategoryScreen> {
   final TextEditingController _searchController = TextEditingController();
   String _categoryQuery = '';
+  final _scaffoldKey = GlobalKey<ScaffoldState>();
+  final _searchTourKey = GlobalKey();
+  final _categoryTourKey = GlobalKey();
+  final _menuTourKey = GlobalKey();
+  final _learningTourKey = GlobalKey();
+  final _gamesTourKey = GlobalKey();
+  final _achievementsTourKey = GlobalKey();
+  final _settingsTourKey = GlobalKey();
 
   @override
   void initState() {
     super.initState();
 
     WidgetsBinding.instance.addPostFrameCallback((_) async {
+      if (widget.replayTour) {
+        await _showTour();
+        return;
+      }
       final result = await StreakService.checkDailyReward();
-      await NotificationService.instance.scheduleStreakSaveReminder();
+      try {
+        await NotificationService.instance.scheduleStreakSaveReminder();
+      } catch (error, stack) {
+        debugPrint('Streak reminder scheduling failed: $error\n$stack');
+      }
 
       if (!mounted) return;
 
@@ -46,8 +66,85 @@ class _CategoryScreenState extends State<CategoryScreen> {
 
       if (!mounted) return;
 
-      await UpdateService.checkForUpdate(context);
+      await _showTour();
+      if (mounted) await UpdateService.checkForUpdate(context);
     });
+  }
+
+  Future<void> _showTour() async {
+    try {
+      if (!widget.replayTour && !await AppTourService.shouldShow()) return;
+    } catch (error, stack) {
+      debugPrint('Reading app tour preference failed: $error\n$stack');
+      if (mounted) {
+        ScaffoldMessenger.of(context).showSnackBar(
+          SnackBar(content: Text(AppLocalizations.of(context)!.savedDataError)),
+        );
+      }
+      return;
+    }
+    if (!mounted || ModalRoute.of(context)?.isCurrent != true) return;
+    FocusScope.of(context).unfocus();
+    setState(() {
+      _searchController.clear();
+      _categoryQuery = '';
+    });
+    final l10n = AppLocalizations.of(context)!;
+    Future<void> closeDrawer() async {
+      _scaffoldKey.currentState?.closeDrawer();
+      await Future<void>.delayed(const Duration(milliseconds: 300));
+    }
+
+    Future<void> openDrawer() async {
+      _scaffoldKey.currentState?.openDrawer();
+      await Future<void>.delayed(const Duration(milliseconds: 300));
+    }
+
+    await showAppTour(context, [
+      AppTourStep(
+        target: _searchTourKey,
+        title: l10n.selectCategory,
+        description: l10n.tourSearch,
+        prepare: closeDrawer,
+      ),
+      AppTourStep(
+        target: _categoryTourKey,
+        title: l10n.startQuiz,
+        description: l10n.tourCategory,
+        prepare: closeDrawer,
+      ),
+      AppTourStep(
+        target: _menuTourKey,
+        title: l10n.tourMenuTitle,
+        description: l10n.tourMenu,
+        prepare: closeDrawer,
+      ),
+      AppTourStep(
+        target: _learningTourKey,
+        title: l10n.learning,
+        description: l10n.tourLearning,
+        prepare: openDrawer,
+      ),
+      AppTourStep(
+        target: _gamesTourKey,
+        title: l10n.games,
+        description: l10n.tourGames,
+        prepare: openDrawer,
+      ),
+      AppTourStep(
+        target: _achievementsTourKey,
+        title: l10n.achievements,
+        description: l10n.tourAchievements,
+        prepare: openDrawer,
+      ),
+      AppTourStep(
+        target: _settingsTourKey,
+        title: l10n.settings,
+        description: l10n.tourSettings,
+        prepare: openDrawer,
+      ),
+    ], replay: widget.replayTour);
+    if (mounted) _scaffoldKey.currentState?.closeDrawer();
   }
 
   @override
@@ -70,9 +167,21 @@ class _CategoryScreenState extends State<CategoryScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      drawer: const AppDrawer(),
+      key: _scaffoldKey,
+      drawer: AppDrawer(
+        learningTourKey: _learningTourKey,
+        gamesTourKey: _gamesTourKey,
+        achievementsTourKey: _achievementsTourKey,
+        settingsTourKey: _settingsTourKey,
+      ),
 
       appBar: AppBar(
+        leading: IconButton(
+          key: _menuTourKey,
+          tooltip: MaterialLocalizations.of(context).openAppDrawerTooltip,
+          icon: const Icon(Icons.menu),
+          onPressed: () => _scaffoldKey.currentState?.openDrawer(),
+        ),
         title: Text(AppLocalizations.of(context)!.selectCategory),
 
         // ===================================================
@@ -93,6 +202,7 @@ class _CategoryScreenState extends State<CategoryScreen> {
             Padding(
               padding: const EdgeInsets.only(top: 12, bottom: 4),
               child: TextField(
+                key: _searchTourKey,
                 controller: _searchController,
                 textInputAction: TextInputAction.search,
                 decoration: InputDecoration(
@@ -124,6 +234,7 @@ class _CategoryScreenState extends State<CategoryScreen> {
                         const StreakCard(),
 
                         CategoryButton(
+                          key: _categoryTourKey,
                           title: 'DevOps',
                           onTap: () => Navigator.push(
                             context,

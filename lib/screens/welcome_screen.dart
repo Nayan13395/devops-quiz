@@ -15,6 +15,8 @@ import '../services/notification_service.dart';
 import '../services/national_day_service.dart';
 import '../services/user_profile_service.dart';
 import '../services/user_session_service.dart';
+import '../widgets/animated_devops_logo.dart';
+import '../widgets/animated_welcome_greeting.dart';
 import '../widgets/app_drawer.dart';
 import '../widgets/daily_login_bonus_dialog.dart';
 import '../widgets/developer_birthday_dialog.dart';
@@ -270,11 +272,13 @@ class _WelcomeScreenState extends State<WelcomeScreen>
         debugPrint('WELCOME SCREEN: GoogleAuthService returned NULL user.');
 
         ScaffoldMessenger.of(context).showSnackBar(
-          const SnackBar(
+          SnackBar(
             content: Text(
-              'Google Sign-In completed, but no user account was returned.',
+              AppLocalizations.of(
+                context,
+              )!.accountWelcomeGoogleNoUserReturned,
             ),
-            duration: Duration(seconds: 8),
+            duration: const Duration(seconds: 8),
           ),
         );
 
@@ -321,15 +325,16 @@ class _WelcomeScreenState extends State<WelcomeScreen>
       // USER NAME
       // =====================================================
 
+      final l10n = AppLocalizations.of(context)!;
       String firstName = UserProfileService.firstName.trim();
 
-      if (firstName.isEmpty) {
+      if (firstName.isEmpty || firstName == 'Guest') {
         final String displayName = user.displayName?.trim() ?? '';
 
         if (displayName.isNotEmpty) {
           firstName = displayName.split(' ').first;
         } else {
-          firstName = 'User';
+          firstName = l10n.accountWelcomeUser;
         }
       }
 
@@ -337,9 +342,9 @@ class _WelcomeScreenState extends State<WelcomeScreen>
       // WELCOME MESSAGE
       // =====================================================
 
-      ScaffoldMessenger.of(
-        context,
-      ).showSnackBar(SnackBar(content: Text('Welcome, $firstName!')));
+      ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(content: Text(l10n.accountWelcomeUserToast(firstName))),
+      );
 
       // =====================================================
       // OPEN CATEGORY SCREEN
@@ -368,45 +373,43 @@ class _WelcomeScreenState extends State<WelcomeScreen>
         return;
       }
 
+      final l10n = AppLocalizations.of(context)!;
       String message;
 
       switch (e.code) {
         case 'account-exists-with-different-credential':
-          message =
-              'This email already has an account using another sign-in method.';
+          message = l10n.accountWelcomeErrorEmailExists;
           break;
 
         case 'credential-already-in-use':
-          message = 'This Google account is already linked to another account.';
+          message = l10n.accountWelcomeErrorCredentialInUse;
           break;
 
         case 'invalid-credential':
-          message =
-              'The Google authentication credential is invalid or expired.';
+          message = l10n.accountWelcomeErrorInvalidCredential;
           break;
 
         case 'user-disabled':
-          message = 'This account has been disabled.';
+          message = l10n.accountWelcomeErrorUserDisabled;
           break;
 
         case 'operation-not-allowed':
-          message = 'Google Sign-In is currently not enabled.';
+          message = l10n.accountWelcomeErrorOperationNotAllowed;
           break;
 
         case 'network-request-failed':
-          message =
-              'Network error. Please check your internet connection and try again.';
+          message = l10n.accountWelcomeErrorNetwork;
           break;
 
         case 'too-many-requests':
-          message = 'Too many sign-in attempts. Please wait and try again.';
+          message = l10n.accountWelcomeErrorTooManyRequests;
           break;
 
         default:
-          message =
-              'Google Sign-In failed.\n\n'
-              'Code: ${e.code}\n'
-              '${e.message ?? "No additional error information."}';
+          message = l10n.accountWelcomeErrorGoogleSignInFailed(
+            e.code,
+            e.message ?? l10n.accountWelcomeErrorNoAdditionalInfo,
+          );
       }
 
       ScaffoldMessenger.of(context).showSnackBar(
@@ -437,7 +440,11 @@ class _WelcomeScreenState extends State<WelcomeScreen>
 
       ScaffoldMessenger.of(context).showSnackBar(
         SnackBar(
-          content: Text('Google Sign-In error:\n$e'),
+          content: Text(
+            AppLocalizations.of(
+              context,
+            )!.accountWelcomeErrorGoogleSignInGeneric('$e'),
+          ),
           duration: const Duration(seconds: 12),
         ),
       );
@@ -487,8 +494,10 @@ class _WelcomeScreenState extends State<WelcomeScreen>
       }
 
       ScaffoldMessenger.of(context).showSnackBar(
-        const SnackBar(
-          content: Text('Unable to continue as guest. Please try again.'),
+        SnackBar(
+          content: Text(
+            AppLocalizations.of(context)!.accountWelcomeErrorContinueAsGuest,
+          ),
         ),
       );
     }
@@ -510,63 +519,16 @@ class _WelcomeScreenState extends State<WelcomeScreen>
   // =========================================================
 
   Widget _buildGreeting(BuildContext context) {
-    final ColorScheme colorScheme = Theme.of(context).colorScheme;
-
-    // =======================================================
-    // GOOGLE USER
-    // =======================================================
-
+    final l10n = AppLocalizations.of(context)!;
+    String? greeting;
     if (_loginType == 'google' && UserProfileService.isGoogleUser) {
-      final String firstName = UserProfileService.firstName;
-
-      return Column(
-        children: [
-          Text(
-            'Hi $firstName',
-            textAlign: TextAlign.center,
-            style: TextStyle(
-              fontSize: 28,
-              fontWeight: FontWeight.bold,
-              color: colorScheme.onSurface,
-            ),
-          ),
-
-          const SizedBox(height: 8),
-
-          Text(
-            AppLocalizations.of(context)!.welcomeToDevOpsQuiz,
-            textAlign: TextAlign.center,
-            style: TextStyle(fontSize: 20, color: colorScheme.onSurfaceVariant),
-          ),
-        ],
-      );
+      greeting = l10n.hiUser(UserProfileService.firstName);
+    } else if (_loginType == 'guest') {
+      greeting = l10n.accountWelcomeGreetingGuest;
     }
-
-    // =======================================================
-    // GUEST / FIRST LAUNCH
-    // =======================================================
-
-    return Column(
-      children: [
-        if (_loginType == 'guest')
-          Text(
-            'Welcome',
-            textAlign: TextAlign.center,
-            style: TextStyle(
-              fontSize: 28,
-              fontWeight: FontWeight.bold,
-              color: colorScheme.onSurface,
-            ),
-          ),
-
-        if (_loginType == 'guest') const SizedBox(height: 8),
-
-        Text(
-          AppLocalizations.of(context)!.welcomeToDevOpsQuiz,
-          textAlign: TextAlign.center,
-          style: TextStyle(fontSize: 20, color: colorScheme.onSurfaceVariant),
-        ),
-      ],
+    return AnimatedWelcomeGreeting(
+      greeting: greeting,
+      message: l10n.welcomeToDevOpsQuiz,
     );
   }
 
@@ -576,6 +538,7 @@ class _WelcomeScreenState extends State<WelcomeScreen>
 
   Widget _buildLoginOptions(BuildContext context) {
     final ColorScheme colorScheme = Theme.of(context).colorScheme;
+    final l10n = AppLocalizations.of(context)!;
 
     return ConstrainedBox(
       constraints: const BoxConstraints(maxWidth: 380),
@@ -598,21 +561,21 @@ class _WelcomeScreenState extends State<WelcomeScreen>
                 ),
               ),
               child: _googleSignInLoading
-                  ? const Row(
+                  ? Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        SizedBox(
+                        const SizedBox(
                           width: 22,
                           height: 22,
                           child: CircularProgressIndicator(strokeWidth: 2),
                         ),
-                        SizedBox(width: 14),
+                        const SizedBox(width: 14),
                         Flexible(
                           child: Text(
-                            'Signing in...',
+                            l10n.accountWelcomeSigningIn,
                             maxLines: 1,
                             overflow: TextOverflow.ellipsis,
-                            style: TextStyle(
+                            style: const TextStyle(
                               fontSize: 16,
                               fontWeight: FontWeight.w600,
                             ),
@@ -646,12 +609,12 @@ class _WelcomeScreenState extends State<WelcomeScreen>
 
                         const SizedBox(width: 14),
 
-                        const Flexible(
+                        Flexible(
                           child: Text(
-                            'Continue with Google',
+                            l10n.accountWelcomeContinueWithGoogle,
                             maxLines: 1,
                             overflow: TextOverflow.ellipsis,
-                            style: TextStyle(
+                            style: const TextStyle(
                               fontSize: 16,
                               fontWeight: FontWeight.w600,
                             ),
@@ -674,7 +637,7 @@ class _WelcomeScreenState extends State<WelcomeScreen>
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 16),
                 child: Text(
-                  'OR',
+                  l10n.accountWelcomeOr,
                   style: TextStyle(
                     fontSize: 12,
                     fontWeight: FontWeight.bold,
@@ -698,9 +661,12 @@ class _WelcomeScreenState extends State<WelcomeScreen>
             child: ElevatedButton.icon(
               onPressed: _googleSignInLoading ? null : _continueAsGuest,
               icon: const Icon(Icons.person_outline_rounded),
-              label: const Text(
-                'Continue as Guest',
-                style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+              label: Text(
+                l10n.accountWelcomeContinueAsGuest,
+                style: const TextStyle(
+                  fontSize: 16,
+                  fontWeight: FontWeight.bold,
+                ),
               ),
               style: ElevatedButton.styleFrom(
                 shape: RoundedRectangleBorder(
@@ -713,7 +679,7 @@ class _WelcomeScreenState extends State<WelcomeScreen>
           const SizedBox(height: 14),
 
           Text(
-            'You can sign in later from your profile.',
+            l10n.accountWelcomeSignInLaterFromProfile,
             textAlign: TextAlign.center,
             style: TextStyle(fontSize: 12, color: colorScheme.onSurfaceVariant),
           ),
@@ -728,6 +694,7 @@ class _WelcomeScreenState extends State<WelcomeScreen>
 
   Widget _buildStartQuizButton(BuildContext context) {
     final ColorScheme colorScheme = Theme.of(context).colorScheme;
+    final l10n = AppLocalizations.of(context)!;
 
     final bool googleUser =
         _loginType == 'google' && UserProfileService.isGoogleUser;
@@ -757,7 +724,7 @@ class _WelcomeScreenState extends State<WelcomeScreen>
             onPressed: _startQuiz,
             icon: const Icon(Icons.play_arrow_rounded),
             label: Text(
-              AppLocalizations.of(context)!.startQuiz,
+              l10n.startQuiz,
               style: const TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
             ),
           ),
@@ -770,7 +737,7 @@ class _WelcomeScreenState extends State<WelcomeScreen>
           const SizedBox(height: 14),
 
           Text(
-            'Playing as Guest',
+            l10n.accountWelcomePlayingAsGuest,
             style: TextStyle(fontSize: 12, color: colorScheme.onSurfaceVariant),
           ),
         ],
@@ -797,15 +764,17 @@ class _WelcomeScreenState extends State<WelcomeScreen>
 
   @override
   Widget build(BuildContext context) {
+    final l10n = AppLocalizations.of(context)!;
     return Scaffold(
       drawer: const AppDrawer(),
 
       appBar: AppBar(
-        title: const Text('DevOps Quiz'),
+        title: Text(l10n.appName),
         actions: [
           IconButton(
-            tooltip:
-                'Country / region${_countryCode == null ? '' : ': $_countryCode'}',
+            tooltip: _countryCode == null
+                ? l10n.accountWelcomeCountryRegion
+                : l10n.accountWelcomeCountryRegionSelected(_countryCode!),
             onPressed: _countries.isEmpty ? null : _chooseCelebrationCountry,
             icon: const Icon(Icons.public_rounded),
           ),
@@ -840,7 +809,10 @@ class _WelcomeScreenState extends State<WelcomeScreen>
               if (!isWide) {
                 return Center(
                   child: SingleChildScrollView(
-                    padding: const EdgeInsets.all(24),
+                    padding: const EdgeInsets.symmetric(
+                      horizontal: 12,
+                      vertical: 24,
+                    ),
                     child: _buildCenterColumn(context),
                   ),
                 );
@@ -855,7 +827,10 @@ class _WelcomeScreenState extends State<WelcomeScreen>
                     flex: 2,
                     child: Center(
                       child: SingleChildScrollView(
-                        padding: const EdgeInsets.all(24),
+                        padding: const EdgeInsets.symmetric(
+                          horizontal: 12,
+                          vertical: 24,
+                        ),
                         child: _buildCenterColumn(context),
                       ),
                     ),
@@ -875,50 +850,63 @@ class _WelcomeScreenState extends State<WelcomeScreen>
   // =========================================================
 
   Widget _buildCenterColumn(BuildContext context) {
-    final logoWidth = math.min(MediaQuery.sizeOf(context).width * 0.75, 420.0);
+    final logoWidth = math.min(MediaQuery.sizeOf(context).width * 0.98, 720.0);
 
     return ConstrainedBox(
-      constraints: const BoxConstraints(maxWidth: 460),
+      constraints: const BoxConstraints(maxWidth: 720),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           // =============================================
           // LOGO
           // =============================================
-          _AnimatedDevOpsLogo(width: logoWidth),
+          AnimatedDevOpsLogo(width: logoWidth),
 
           const SizedBox(height: 25),
 
-          // =============================================
-          // APP NAME
-          // =============================================
-          const Text(
-            'DevOps Quiz',
-            textAlign: TextAlign.center,
-            style: TextStyle(fontSize: 40, fontWeight: FontWeight.bold),
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 12),
+            child: ConstrainedBox(
+              constraints: const BoxConstraints(maxWidth: 560),
+              child: Column(
+                children: [
+                  // =============================================
+                  // APP NAME
+                  // =============================================
+                  Text(
+                    AppLocalizations.of(context)!.appName,
+                    textAlign: TextAlign.center,
+                    style: const TextStyle(
+                      fontSize: 30,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+
+                  const SizedBox(height: 16),
+
+                  // =============================================
+                  // GREETING
+                  // =============================================
+                  _buildGreeting(context),
+
+                  const SizedBox(height: 35),
+
+                  // =============================================
+                  // SESSION
+                  // =============================================
+                  if (_sessionLoading)
+                    const SizedBox(
+                      height: 56,
+                      child: Center(child: CircularProgressIndicator()),
+                    )
+                  else if (!_hasSelectedLoginMethod)
+                    _buildLoginOptions(context)
+                  else
+                    _buildStartQuizButton(context),
+                ],
+              ),
+            ),
           ),
-
-          const SizedBox(height: 20),
-
-          // =============================================
-          // GREETING
-          // =============================================
-          _buildGreeting(context),
-
-          const SizedBox(height: 35),
-
-          // =============================================
-          // SESSION
-          // =============================================
-          if (_sessionLoading)
-            const SizedBox(
-              height: 56,
-              child: Center(child: CircularProgressIndicator()),
-            )
-          else if (!_hasSelectedLoginMethod)
-            _buildLoginOptions(context)
-          else
-            _buildStartQuizButton(context),
         ],
       ),
     );
@@ -929,6 +917,7 @@ class _WelcomeScreenState extends State<WelcomeScreen>
   // =========================================================
 
   Widget _buildFeaturesPanel(BuildContext context) {
+    final l10n = AppLocalizations.of(context)!;
     return Padding(
       padding: const EdgeInsets.all(32),
       child: Card(
@@ -939,30 +928,39 @@ class _WelcomeScreenState extends State<WelcomeScreen>
           child: Column(
             mainAxisSize: MainAxisSize.min,
             crossAxisAlignment: CrossAxisAlignment.start,
-            children: const [
+            children: [
               Text(
-                'Why DevOps Quiz?',
-                style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
+                l10n.accountWelcomeWhyDevOpsQuiz,
+                style: const TextStyle(
+                  fontSize: 22,
+                  fontWeight: FontWeight.bold,
+                ),
               ),
-              SizedBox(height: 16),
+              const SizedBox(height: 16),
               _FeatureRow(
                 icon: Icons.quiz_rounded,
-                text: '3000+ practice questions',
+                text: l10n.accountWelcomeFeatureQuestions,
               ),
               _FeatureRow(
                 icon: Icons.translate_rounded,
-                text: 'Multi-language support',
+                text: l10n.accountWelcomeFeatureLanguages,
               ),
               _FeatureRow(
                 icon: Icons.local_fire_department_rounded,
-                text: 'Streaks & Leaderboards',
+                text: l10n.accountWelcomeFeatureStreaks,
               ),
               _FeatureRow(
                 icon: Icons.emoji_events_rounded,
-                text: 'Games & Challenges',
+                text: l10n.accountWelcomeFeatureGames,
               ),
-              _FeatureRow(icon: Icons.cloud_rounded, text: 'Cloud & DevOps'),
-              _FeatureRow(icon: Icons.star_rounded, text: 'Bonus & Rewards'),
+              _FeatureRow(
+                icon: Icons.cloud_rounded,
+                text: l10n.accountWelcomeFeatureCloud,
+              ),
+              _FeatureRow(
+                icon: Icons.star_rounded,
+                text: l10n.accountWelcomeFeatureRewards,
+              ),
             ],
           ),
         ),
@@ -975,6 +973,7 @@ class _WelcomeScreenState extends State<WelcomeScreen>
   // =========================================================
 
   Widget _buildPlayStorePanel(BuildContext context) {
+    final l10n = AppLocalizations.of(context)!;
     return Padding(
       padding: const EdgeInsets.all(32),
       child: Card(
@@ -992,13 +991,16 @@ class _WelcomeScreenState extends State<WelcomeScreen>
                 color: Theme.of(context).colorScheme.primary,
               ),
               const SizedBox(height: 12),
-              const Text(
-                'Practice on the go',
-                style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
+              Text(
+                l10n.accountWelcomePracticeOnTheGo,
+                style: const TextStyle(
+                  fontSize: 22,
+                  fontWeight: FontWeight.bold,
+                ),
               ),
               const SizedBox(height: 8),
               Text(
-                'Install the Android app and learn offline, anywhere.',
+                l10n.accountWelcomeInstallAndroidPromo,
                 textAlign: TextAlign.center,
                 style: TextStyle(
                   color: Theme.of(context).colorScheme.onSurfaceVariant,
@@ -1034,62 +1036,6 @@ class _FeatureRow extends StatelessWidget {
           const SizedBox(width: 12),
           Expanded(child: Text(text, style: const TextStyle(fontSize: 16))),
         ],
-      ),
-    );
-  }
-}
-
-// ============================================================
-// ANIMATED DEVOPS LOGO
-// ============================================================
-
-class _AnimatedDevOpsLogo extends StatefulWidget {
-  const _AnimatedDevOpsLogo({required this.width});
-
-  final double width;
-
-  @override
-  State<_AnimatedDevOpsLogo> createState() => _AnimatedDevOpsLogoState();
-}
-
-class _AnimatedDevOpsLogoState extends State<_AnimatedDevOpsLogo>
-    with SingleTickerProviderStateMixin {
-  late final AnimationController _scaleController;
-  late final Animation<double> _scale;
-
-  @override
-  void initState() {
-    super.initState();
-
-    _scaleController = AnimationController(
-      vsync: this,
-      duration: const Duration(milliseconds: 2200),
-    )..repeat(reverse: true);
-
-    _scale = Tween<double>(begin: 1.0, end: 1.02).animate(
-      CurvedAnimation(parent: _scaleController, curve: Curves.easeInOut),
-    );
-  }
-
-  @override
-  void dispose() {
-    _scaleController.dispose();
-    super.dispose();
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    return ScaleTransition(
-      scale: _scale,
-      child: SizedBox(
-        width: widget.width,
-        child: AspectRatio(
-          aspectRatio: 1765 / 900,
-          child: Image.asset(
-            'assets/images/devops_logo.png',
-            fit: BoxFit.contain,
-          ),
-        ),
       ),
     );
   }

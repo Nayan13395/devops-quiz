@@ -1,0 +1,302 @@
+[
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "Welche deklarative Option reiht einen neuen Lauf ein, statt gleichzeitige Läufe derselben Pipeline zuzulassen?",
+    "options": [
+      "parallelsAlwaysFailFast()",
+      "disableConcurrentBuilds()",
+      "disableResume()",
+      "skipDefaultCheckout()"
+    ],
+    "answer": "disableConcurrentBuilds()"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "Welche deklarative Option legt Aufbewahrungsregeln für alte Build-Datensätze und Artefakte fest?",
+    "options": [
+      "buildDiscarder(logRotator(numToKeepStr: '10'))",
+      "timeout(time: 10, unit: 'MINUTES')",
+      "retry(10)",
+      "quietPeriod(10)"
+    ],
+    "answer": "buildDiscarder(logRotator(numToKeepStr: '10'))"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "Was bewirkt das Symbol H in einem Jenkins-Cron-Ausdruck?",
+    "options": [
+      "Die aktuelle Stunde auf dem Benutzercomputer",
+      "Die Anforderung, nur an Feiertagen zu laufen",
+      "Die Anforderung, nur bei einem unbeschäftigten Knoten zu laufen",
+      "Einen stabilen Hash des Jobnamens zur Verteilung der geplanten Last"
+    ],
+    "answer": "Einen stabilen Hash des Jobnamens zur Verteilung der geplanten Last"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "Was bezeichnet das fünfte Feld in Jenkins' fünfteiliger Cron-Syntax?",
+    "options": [
+      "Stunde des Tages",
+      "Tag des Monats",
+      "Wochentag",
+      "Minute der Stunde"
+    ],
+    "answer": "Wochentag"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "Welche post-Bedingung läuft, wenn ein Build nach einem fehlgeschlagenen oder instabilen Vorgänger erfolgreich ist?",
+    "options": [
+      "unsuccessful",
+      "fixed",
+      "changed",
+      "regression"
+    ],
+    "answer": "fixed"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "Welche post-Bedingung läuft nach der Auswertung der anderen post-Bedingungen?",
+    "options": [
+      "cleanup",
+      "always",
+      "changed",
+      "success"
+    ],
+    "answer": "cleanup"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "Welche when-Option wertet eine Phasenbedingung vor der Agentenzuweisung für diese Phase aus?",
+    "options": [
+      "beforeInput false",
+      "beforeOptions false",
+      "branch 'main'",
+      "beforeAgent true"
+    ],
+    "answer": "beforeAgent true"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "Welche when-Bedingung wählt einen benannten Branch in einer Multibranch-Pipeline?",
+    "options": [
+      "buildingTag()",
+      "changeRequest()",
+      "branch 'main'",
+      "tag 'main'"
+    ],
+    "answer": "branch 'main'"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "Welches deklarative Konstrukt führt Kombinationen von Achsenwerten wie Betriebssystem und Browser aus?",
+    "options": [
+      "environment",
+      "matrix",
+      "parallel",
+      "steps"
+    ],
+    "answer": "matrix"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "Welcher Abschnitt entfernt unerwünschte Kombinationen aus einer deklarativen Matrix?",
+    "options": [
+      "excludes",
+      "axes",
+      "stages",
+      "tools"
+    ],
+    "answer": "excludes"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "Welche Einstellung einer Phase mit parallelen Zweigen stoppt die anderen Zweige, wenn einer fehlschlägt?",
+    "options": [
+      "beforeAgent true",
+      "reuseNode true",
+      "alwaysPull true",
+      "failFast true"
+    ],
+    "answer": "failFast true"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "Welche deklarative Option überspringt spätere Phasen, sobald der Build instabil wird?",
+    "options": [
+      "disableResume()",
+      "preserveStashes()",
+      "skipStagesAfterUnstable()",
+      "skipDefaultCheckout()"
+    ],
+    "answer": "skipStagesAfterUnstable()"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "Welcher Pipeline-Schritt erfasst einen Fehler, lässt die Ausführung nach seinem Block aber weiterlaufen?",
+    "options": [
+      "input",
+      "catchError",
+      "error",
+      "timeout"
+    ],
+    "answer": "catchError"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "Was liefert sh(script: 'check.sh', returnStatus: true) nach Prozessende?",
+    "options": [
+      "Den numerischen Prozess-Exitcode",
+      "Den vollständigen Standardausgabetext",
+      "Die Prozess-ID der Shell",
+      "Ein Jenkins-Anmeldedatenobjekt"
+    ],
+    "answer": "Den numerischen Prozess-Exitcode"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "Was liefert sh(script: 'echo ready', returnStdout: true) bei Erfolg?",
+    "options": [
+      "Die numerische Build-Nummer",
+      "Die Shell-Umgebung als Map",
+      "Die Label-Liste des Agenten",
+      "Die erfasste Standardausgabe als Zeichenfolge"
+    ],
+    "answer": "Die erfasste Standardausgabe als Zeichenfolge"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "Welcher Pipeline-Schritt löscht den Inhalt des aktuellen Arbeitsverzeichnisses rekursiv?",
+    "options": [
+      "pwd",
+      "readFile",
+      "deleteDir",
+      "fileExists"
+    ],
+    "answer": "deleteDir"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "Welcher Pipeline-Schritt prüft, ob ein Pfad im aktuellen Arbeitsverzeichnis existiert?",
+    "options": [
+      "libraryResource",
+      "fileExists",
+      "readFile",
+      "writeFile"
+    ],
+    "answer": "fileExists"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "Welcher Pipeline-Schritt startet einen anderen Jenkins-Job und kann Build-Parameter übergeben?",
+    "options": [
+      "build",
+      "stage",
+      "node",
+      "checkout"
+    ],
+    "answer": "build"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "Welche deklarative Option bewahrt Stashes abgeschlossener Builds für Phasenneustarts auf?",
+    "options": [
+      "disableResume()",
+      "skipDefaultCheckout()",
+      "quietPeriod(5)",
+      "preserveStashes()"
+    ],
+    "answer": "preserveStashes()"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "Welche Datei einer gemeinsam genutzten Bibliothek liefert Hilfetext für die durch vars/deploy.groovy definierte globale Variable deploy?",
+    "options": [
+      "resources/deploy.txt",
+      "vars/main.groovy",
+      "vars/deploy.txt",
+      "src/deploy.groovy"
+    ],
+    "answer": "vars/deploy.txt"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "Welche wesentliche Einschränkung gilt für eine mit @NonCPS annotierte Methode in einer Jenkins-Pipeline?",
+    "options": [
+      "Sie muss auf einem Windows-Agenten laufen",
+      "Sie darf keine CPS-transformierten Pipeline-Schritte aufrufen",
+      "Sie muss eine stage-Direktive enthalten",
+      "Sie muss immer eine Zeichenfolge zurückgeben"
+    ],
+    "answer": "Sie darf keine CPS-transformierten Pipeline-Schritte aufrufen"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "Welche Jenkins-Einrichtung prüft Signaturen, die nicht genehmigter Groovy-Code in der Sandbox anfordert?",
+    "options": [
+      "Prozessinterne Skriptgenehmigung",
+      "Credentials Store",
+      "Build Queue",
+      "SCM-Abfrageprotokoll"
+    ],
+    "answer": "Prozessinterne Skriptgenehmigung"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "Welche Groovy-Anführungszeichen werden für ein Shell-Skript empfohlen, in dem die Shell eine gebundene Geheimnisvariable expandiert?",
+    "options": [
+      "Eine interpolierte Groovy-Zeichenfolge in doppelten Anführungszeichen mit dem Geheimnis",
+      "Eine interpolierte Groovy-Zeichenfolge in dreifach doppelten Anführungszeichen mit dem Geheimnis",
+      "Eine durch Verkettung des Klartextgeheimnisses gebildete Groovy-Zeichenfolge",
+      "Eine Groovy-Zeichenfolge in einfachen Anführungszeichen"
+    ],
+    "answer": "Eine Groovy-Zeichenfolge in einfachen Anführungszeichen"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "Wozu dient ein Jenkins-CSRF-Crumb bei relevanten Webanfragen?",
+    "options": [
+      "Ein Build-Artefakt vor dem Hochladen verschlüsseln",
+      "Den Agenten zur Build-Ausführung auswählen",
+      "Dabei helfen zu prüfen, ob eine zustandsändernde Anfrage zu einer bestehenden Benutzersitzung gehört",
+      "Autorisierungsprüfungen für alle Jobs ersetzen"
+    ],
+    "answer": "Dabei helfen zu prüfen, ob eine zustandsändernde Anfrage zu einer bestehenden Benutzersitzung gehört"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "Was sollte eine Pipeline für exklusiven Zugriff auf ein gemeinsam genutztes Testgerät über verschiedene Jobs hinweg verwenden?",
+    "options": [
+      "Die Option skipDefaultCheckout",
+      "Den Schritt lock aus dem Lockable Resources plugin",
+      "Die Option timestamps",
+      "Die Option buildDiscarder"
+    ],
+    "answer": "Den Schritt lock aus dem Lockable Resources plugin"
+  }
+]

@@ -1,0 +1,302 @@
+[
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "ਪਲੇਬੁੱਕ ਵਿੱਚ ਵੇਰੀਏਬਲਾਂ ਨੂੰ ਪਰਿਭਾਸ਼ਿਤ ਕਰਨ ਲਈ ਕਿਹੜਾ ਕੀਵਰਡ ਵਰਤਿਆ ਜਾਂਦਾ ਹੈ?",
+    "options": [
+      "vars",
+      "variables",
+      "var",
+      "define"
+    ],
+    "answer": "vars"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "ਵੇਰੀਏਬਲ ਦਾ ਹਵਾਲਾ ਦੇਣ ਲਈ ਕਿਹੜਾ ਸੰਟੈਕਸ ਵਰਤਿਆ ਜਾਂਦਾ ਹੈ?",
+    "options": [
+      "{{ variable_name }}",
+      "$(variable_name)",
+      "${variable_name}",
+      "[variable_name]"
+    ],
+    "answer": "{{ variable_name }}"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "ਐਗਜ਼ੀਕਿਊਸ਼ਨ ਦੌਰਾਨ ਸੰਦੇਸ਼ਾਂ ਨੂੰ ਪ੍ਰਦਰਸ਼ਿਤ ਕਰਨ ਲਈ ਕਿਹੜਾ ਮੋਡੀਊਲ ਵਰਤਿਆ ਜਾਂਦਾ ਹੈ?",
+    "options": [
+      "debug",
+      "print",
+      "echo",
+      "message"
+    ],
+    "answer": "debug"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "ਕੰਡੀਸ਼ਨਲ ਐਗਜ਼ੀਕਿਊਸ਼ਨ ਲਈ ਕਿਹੜਾ ਕੀਵਰਡ ਵਰਤਿਆ ਜਾਂਦਾ ਹੈ?",
+    "options": [
+      "when",
+      "if",
+      "condition",
+      "check"
+    ],
+    "answer": "when"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "ਕਿਸੇ ਕੰਮ ਨੂੰ ਦੁਹਰਾਉਣ ਲਈ ਕਿਹੜਾ ਕੀਵਰਡ ਵਰਤਿਆ ਜਾਂਦਾ ਹੈ?",
+    "options": [
+      "loop",
+      "repeat",
+      "iterate",
+      "for"
+    ],
+    "answer": "loop"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "ਮੂਲ ਰੂਪ ਵਿੱਚ, ਲੂਪ ਦੀ ਮੌਜੂਦਾ ਇਕਾਈ ਕਿਹੜੇ ਵੇਰੀਏਬਲ ਵਿੱਚ ਹੁੰਦੀ ਹੈ?",
+    "options": [
+      "item",
+      "loopitem",
+      "current",
+      "value"
+    ],
+    "answer": "item"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "ਕਿਹੜਾ ਮੋਡੀਊਲ Jinja2 ਟੈਂਪਲੇਟਸ ਤੋਂ ਫਾਈਲਾਂ ਬਣਾਉਂਦਾ ਹੈ?",
+    "options": [
+      "template",
+      "copy",
+      "render",
+      "jinja"
+    ],
+    "answer": "template"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "Ansible ਕਿਹੜਾ ਟੈਂਪਲੇਟਿੰਗ ਇੰਜਣ ਵਰਤਦਾ ਹੈ?",
+    "options": [
+      "Jinja2",
+      "Mustache",
+      "Velocity",
+      "Smarty"
+    ],
+    "answer": "Jinja2"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "ਕਿਹੜਾ ਕੀਵਰਡ ਟਾਸਕ ਆਉਟਪੁੱਟ ਨੂੰ ਇੱਕ ਵੇਰੀਏਬਲ ਵਿੱਚ ਰਜਿਸਟਰ ਕਰਦਾ ਹੈ?",
+    "options": [
+      "register",
+      "save",
+      "output",
+      "store"
+    ],
+    "answer": "register"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "ਕਿਹੜਾ ਕੀਵਰਡ ਟਾਸਕ ਵੱਲੋਂ ਅਸਫਲ ਨਤੀਜਾ ਦੇਣ ਤੋਂ ਬਾਅਦ ਵੀ ਅੱਗੇ ਚੱਲਣ ਦਿੰਦਾ ਹੈ, ਪਰ ਸਿੰਟੈਕਸ ਜਾਂ ਕਨੈਕਸ਼ਨ ਦੀਆਂ ਗਲਤੀਆਂ ਨਹੀਂ ਦਬਾਉਂਦਾ?",
+    "options": [
+      "ignore_errors",
+      "skip_errors",
+      "continue",
+      "ignore_failures"
+    ],
+    "answer": "ignore_errors"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "ਸਿਰਫ਼ ਸੂਚਿਤ ਕੀਤੇ ਜਾਣ 'ਤੇ ਹੀ ਕਾਰਜਾਂ ਨੂੰ ਚਲਾਉਣ ਲਈ ਕਿਹੜਾ ਕੀਵਰਡ ਵਰਤਿਆ ਜਾਂਦਾ ਹੈ?",
+    "options": [
+      "handlers",
+      "notify",
+      "trigger",
+      "events"
+    ],
+    "answer": "handlers"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "ਕਿਹੜਾ ਕੀਵਰਡ ਹੈਂਡਲਰ ਨੂੰ ਚਾਲੂ ਕਰਦਾ ਹੈ?",
+    "options": [
+      "notify",
+      "handler",
+      "alert",
+      "call"
+    ],
+    "answer": "notify"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "ਕਿਹੜਾ ਕੀਵਰਡ ਕਿਸੇ ਹੋਰ ਪਲੇਬੁੱਕ ਨੂੰ ਆਯਾਤ ਕਰਦਾ ਹੈ?",
+    "options": [
+      "import_playbook",
+      "include_playbook",
+      "load_playbook",
+      "playbook"
+    ],
+    "answer": "import_playbook"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "ਚੋਣਵੇਂ ਐਗਜ਼ੀਕਿਊਸ਼ਨ ਲਈ ਕਿਹੜਾ ਕੀਵਰਡ ਟਾਸਕਾਂ ਨੂੰ ਟੈਗ ਕਰਦਾ ਹੈ?",
+    "options": [
+      "tags",
+      "labels",
+      "groups",
+      "filter"
+    ],
+    "answer": "tags"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "ਕਿਹੜਾ ਵਿਕਲਪ ਸਿਰਫ਼ ਖਾਸ ਟੈਗਾਂ ਵਾਲੇ ਕਾਰਜਾਂ ਨੂੰ ਚਲਾਉਂਦਾ ਹੈ?",
+    "options": [
+      "--tags",
+      "--skip-tags",
+      "--limit",
+      "--list-tags"
+    ],
+    "answer": "--tags"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "ਕਿਹੜਾ ਟਾਸਕ ਕੀਵਰਡ ਤਬਦੀਲੀ ਦੀ ਰਿਪੋਰਟ ਕਰਨ ਲਈ ਮਨਚਾਹੀ ਸ਼ਰਤ ਪਰਿਭਾਸ਼ਿਤ ਕਰਦਾ ਹੈ?",
+    "options": [
+      "changed_when",
+      "failed_when",
+      "until",
+      "when"
+    ],
+    "answer": "changed_when"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "ਕਿਹੜਾ ਟਾਸਕ ਕੀਵਰਡ ਅਸਫਲਤਾ ਦੀ ਰਿਪੋਰਟ ਕਰਨ ਲਈ ਮਨਚਾਹੀ ਸ਼ਰਤ ਪਰਿਭਾਸ਼ਿਤ ਕਰਦਾ ਹੈ?",
+    "options": [
+      "changed_when",
+      "retries",
+      "delay",
+      "failed_when"
+    ],
+    "answer": "failed_when"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "ਕਿਹੜਾ ਟਾਸਕ ਕੀਵਰਡ ਉਹ ਸ਼ਰਤ ਨਿਰਧਾਰਤ ਕਰਦਾ ਹੈ ਜੋ ਮੁੜ ਕੋਸ਼ਿਸ਼ਾਂ ਦੌਰਾਨ ਸੱਚ ਹੋਣੀ ਚਾਹੀਦੀ ਹੈ?",
+    "options": [
+      "loop",
+      "notify",
+      "until",
+      "when"
+    ],
+    "answer": "until"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "ਕਿਹੜਾ ਮੋਡੀਊਲ ਮੌਜੂਦਾ ਹੋਸਟ ਲਈ ਨਾਮ ਵਾਲੇ ਵੇਰੀਏਬਲਾਂ ਨੂੰ ਫਾਈਲ ਤੋਂ ਲੋਡ ਕਰਨ ਦੀ ਬਜਾਏ ਟਾਸਕ ਵੱਲੋਂ ਦਿੱਤੇ ਮੁੱਲਾਂ ਤੋਂ ਸਿੱਧਾ ਪਰਿਭਾਸ਼ਿਤ ਕਰਦਾ ਹੈ?",
+    "options": [
+      "ansible.builtin.add_host",
+      "ansible.builtin.set_fact",
+      "ansible.builtin.setup",
+      "ansible.builtin.include_vars"
+    ],
+    "answer": "ansible.builtin.set_fact"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "result ਵਜੋਂ ਦਰਜ ਕੀਤੇ ਟਾਸਕ ਦਾ ਮਿਆਰੀ ਆਉਟਪੁੱਟ ਕਿਹੜਾ ਐਕਸਪ੍ਰੈਸ਼ਨ ਪ੍ਰਾਪਤ ਕਰਦਾ ਹੈ?",
+    "options": [
+      "result.stdout",
+      "result.stderr",
+      "result.rc",
+      "result.changed"
+    ],
+    "answer": "result.stdout"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "ਕਿਹੜਾ Jinja2 ਟੈਸਟ ਜਾਂਚਦਾ ਹੈ ਕਿ ਵੇਰੀਏਬਲ ਪਰਿਭਾਸ਼ਿਤ ਕੀਤਾ ਗਿਆ ਹੈ ਜਾਂ ਨਹੀਂ?",
+    "options": [
+      "is none",
+      "is string",
+      "is sequence",
+      "is defined"
+    ],
+    "answer": "is defined"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "ਕਿਹੜਾ Ansible ਕੀਵਰਡ ਟਾਸਕਾਂ ਨੂੰ ਇਕੱਠਾ ਕਰਦਾ ਹੈ ਤਾਂ ਜੋ ਉਹ ਨਿਰਦੇਸ਼ ਅਤੇ ਗਲਤੀ ਸੰਭਾਲਣ ਦੀ ਵਿਵਸਥਾ ਸਾਂਝੀ ਕਰ ਸਕਣ?",
+    "options": [
+      "roles",
+      "handlers",
+      "block",
+      "loop"
+    ],
+    "answer": "block"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "ਟਾਸਕ ਆਮ ਤੌਰ 'ਤੇ ਆਪਣੀਆਂ notify ਸੂਚਨਾਵਾਂ ਕਦੋਂ ਭੇਜਦਾ ਹੈ?",
+    "options": [
+      "ਸਿਰਫ਼ ਪਲੇਬੁੱਕ ਸ਼ੁਰੂ ਹੋਣ ਵੇਲੇ",
+      "ਜਦੋਂ ਉਹ ਸਫਲਤਾਪੂਰਵਕ ਪੂਰਾ ਹੁੰਦਾ ਹੈ ਅਤੇ ਤਬਦੀਲੀ ਹੋਣ ਦੀ ਰਿਪੋਰਟ ਕਰਦਾ ਹੈ",
+      "ਜਦੋਂ ਵੀ ਕਿਸੇ ਸ਼ਰਤ ਕਾਰਨ ਉਸਨੂੰ ਛੱਡ ਦਿੱਤਾ ਜਾਂਦਾ ਹੈ",
+      "ਜਦੋਂ ਵੀ ਉਸਦਾ ਮੋਡੀਊਲ ਕੋਈ ਤਬਦੀਲੀ ਨਾ ਹੋਣ ਦੀ ਰਿਪੋਰਟ ਕਰਦਾ ਹੈ"
+    ],
+    "answer": "ਜਦੋਂ ਉਹ ਸਫਲਤਾਪੂਰਵਕ ਪੂਰਾ ਹੁੰਦਾ ਹੈ ਅਤੇ ਤਬਦੀਲੀ ਹੋਣ ਦੀ ਰਿਪੋਰਟ ਕਰਦਾ ਹੈ"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "ਕਿਹੜੀ ਸੈਟਿੰਗ ਲੂਪ ਦੀ ਮੌਜੂਦਾ ਇਕਾਈ ਦੇ ਵੇਰੀਏਬਲ ਦਾ ਨਾਮ server ਕਰਦੀ ਹੈ?",
+    "options": [
+      "loop_control: {loop_var: server}",
+      "loop_control: {label: server}",
+      "loop_control: {index_var: server}",
+      "loop_control: {pause: 1}"
+    ],
+    "answer": "loop_control: {loop_var: server}"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "ਕਿਹੜਾ ਕਮਾਂਡ-ਲਾਈਨ ਵਿਕਲਪ ਉੱਚ ਤਰਜੀਹ ਵਾਲੇ ਵਾਧੂ ਵੇਰੀਏਬਲ ਦਿੰਦਾ ਹੈ?",
+    "options": [
+      "--tags",
+      "--limit",
+      "--start-at-task",
+      "--extra-vars"
+    ],
+    "answer": "--extra-vars"
+  }
+]

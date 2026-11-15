@@ -1,3 +1,4 @@
+import '../l10n/game_localizations.dart';
 import 'dart:async';
 import 'dart:math';
 
@@ -6,6 +7,7 @@ import '../widgets/level_picker_dialog.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 import '../services/game_sound_service.dart';
+import '../services/game_rewards.dart';
 import '../services/point_service.dart';
 
 class MemoryMatchScreen extends StatefulWidget {
@@ -160,14 +162,6 @@ class _MemoryMatchScreenState extends State<MemoryMatchScreen> {
     });
   }
 
-  int _pointsForMoves() {
-    final parMoves = _pairCount + 2;
-    if (_moves <= parMoves) return 100;
-    if (_moves <= parMoves + 2) return 60;
-    if (_moves <= parMoves + 4) return 30;
-    return 15;
-  }
-
   Future<void> _tapCard(int index) async {
     if (_lock || _finished || _isPreviewing) return;
     if (_matched.contains(index) || _flipped.contains(index)) return;
@@ -214,7 +208,7 @@ class _MemoryMatchScreenState extends State<MemoryMatchScreen> {
   Future<void> _finish() async {
     setState(() => _finished = true);
 
-    final points = _pointsForMoves();
+    const points = GameRewards.levelCompletion;
     final completedLevel = _level;
     final isFirstClear =
         !_allLevelsCompleted && completedLevel == _highestUnlockedLevel;
@@ -241,14 +235,25 @@ class _MemoryMatchScreenState extends State<MemoryMatchScreen> {
         icon: const Icon(Icons.emoji_events_rounded, size: 46),
         title: Text(
           completedLevel == totalLevels
-              ? 'All $totalLevels levels complete!'
-              : 'Level $completedLevel complete!',
+              ? gameL10n(
+                  context,
+                ).gameUiAllLevelsComplete((totalLevels).toString())
+              : gameL10n(
+                  context,
+                ).gameUiLevelComplete((completedLevel).toString()),
           textAlign: TextAlign.center,
         ),
         content: Text(
           isFirstClear
-              ? 'Completed in $_moves moves.\nYou earned $points points!'
-              : 'Completed in $_moves moves.\nThis level was already cleared.',
+              ? gameL10n(context).gameUiCompletedInMovesYouEarnedPoints(
+                  (_moves).toString(),
+                  (points).toString(),
+                )
+              : gameL10n(
+                  context,
+                ).gameUiCompletedInMovesThisLevelWasAlreadyCleared(
+                  (_moves).toString(),
+                ),
           textAlign: TextAlign.center,
         ),
         actions: [
@@ -259,7 +264,7 @@ class _MemoryMatchScreenState extends State<MemoryMatchScreen> {
                 _startLevel(completedLevel + 1);
               },
               icon: const Icon(Icons.arrow_forward_rounded),
-              label: const Text('Next level'),
+              label: Text(gameL10n(context).gameUiNextLevel),
             )
           else
             FilledButton(
@@ -267,7 +272,7 @@ class _MemoryMatchScreenState extends State<MemoryMatchScreen> {
                 Navigator.pop(dialogContext);
                 Navigator.pop(context);
               },
-              child: const Text('Done'),
+              child: Text(gameL10n(context).gameUiDone),
             ),
         ],
       ),
@@ -285,14 +290,14 @@ class _MemoryMatchScreenState extends State<MemoryMatchScreen> {
     // 1. Loading state
     if (_isLoading) {
       return Scaffold(
-        appBar: AppBar(title: const Text('Memory Match 🧠')),
+        appBar: AppBar(title: Text(gameL10n(context).gameUiMemoryMatch6b3eaaf)),
         body: const Center(child: CircularProgressIndicator()),
       );
     }
 
     if (_allLevelsCompleted) {
       return Scaffold(
-        appBar: AppBar(title: const Text('Memory Match 🧠')),
+        appBar: AppBar(title: Text(gameL10n(context).gameUiMemoryMatch6b3eaaf)),
         body: Center(
           child: Padding(
             padding: const EdgeInsets.all(24),
@@ -312,9 +317,9 @@ class _MemoryMatchScreenState extends State<MemoryMatchScreen> {
                       color: colorScheme.primary,
                     ),
                     const SizedBox(height: 24),
-                    const Text(
-                      'All 100 levels complete!',
-                      style: TextStyle(
+                    Text(
+                      gameL10n(context).gameUiAll100LevelsComplete,
+                      style: const TextStyle(
                         fontSize: 24,
                         fontWeight: FontWeight.bold,
                       ),
@@ -322,7 +327,9 @@ class _MemoryMatchScreenState extends State<MemoryMatchScreen> {
                     ),
                     const SizedBox(height: 16),
                     Text(
-                      'You completed every Memory Match level. Well played!',
+                      gameL10n(
+                        context,
+                      ).gameUiYouCompletedEveryMemoryMatchLevelWellPlayed,
                       textAlign: TextAlign.center,
                       style: TextStyle(
                         fontSize: 16,
@@ -333,7 +340,7 @@ class _MemoryMatchScreenState extends State<MemoryMatchScreen> {
                     FilledButton.icon(
                       onPressed: () => Navigator.pop(context),
                       icon: const Icon(Icons.arrow_back_rounded),
-                      label: const Text('Back to Games'),
+                      label: Text(gameL10n(context).gameUiBackToGames),
                     ),
                   ],
                 ),
@@ -347,10 +354,10 @@ class _MemoryMatchScreenState extends State<MemoryMatchScreen> {
     // Active game state
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Memory Match 🧠'),
+        title: Text(gameL10n(context).gameUiMemoryMatch6b3eaaf),
         actions: [
           IconButton(
-            tooltip: 'Choose level',
+            tooltip: gameL10n(context).gameUiChooseLevel,
             onPressed: _chooseLevel,
             icon: const Icon(Icons.grid_view_rounded),
           ),
@@ -359,7 +366,7 @@ class _MemoryMatchScreenState extends State<MemoryMatchScreen> {
               child: Padding(
                 padding: const EdgeInsets.only(right: 16),
                 child: Text(
-                  'Moves: $_moves',
+                  gameL10n(context).gameUiMoves((_moves).toString()),
                   style: const TextStyle(
                     fontSize: 16,
                     fontWeight: FontWeight.w600,
@@ -380,12 +387,17 @@ class _MemoryMatchScreenState extends State<MemoryMatchScreen> {
                   children: [
                     Expanded(
                       child: Text(
-                        'Level $_level of $totalLevels',
+                        gameL10n(context).gameUiLevelOf(
+                          (_level).toString(),
+                          (totalLevels).toString(),
+                        ),
                         style: Theme.of(context).textTheme.titleMedium
                             ?.copyWith(fontWeight: FontWeight.w700),
                       ),
                     ),
-                    Text('$_pairCount pairs'),
+                    Text(
+                      gameL10n(context).gameUiPairs((_pairCount).toString()),
+                    ),
                   ],
                 ),
                 const SizedBox(height: 6),
@@ -401,7 +413,9 @@ class _MemoryMatchScreenState extends State<MemoryMatchScreen> {
                     child: Column(
                       children: [
                         Text(
-                          'Memorize Level $_level',
+                          gameL10n(
+                            context,
+                          ).gameUiMemorizeLevel((_level).toString()),
                           style: TextStyle(
                             fontSize: 18,
                             fontWeight: FontWeight.bold,
@@ -432,7 +446,9 @@ class _MemoryMatchScreenState extends State<MemoryMatchScreen> {
                   Padding(
                     padding: const EdgeInsets.only(bottom: 16),
                     child: Text(
-                      'Find $_pairCount matching pairs',
+                      gameL10n(
+                        context,
+                      ).gameUiFindMatchingPairs((_pairCount).toString()),
                       textAlign: TextAlign.center,
                       style: const TextStyle(fontSize: 16),
                     ),
@@ -487,7 +503,9 @@ class _MemoryMatchScreenState extends State<MemoryMatchScreen> {
                                     child: Image.asset(
                                       'assets/icon/app_icon.png',
                                       fit: BoxFit.contain,
-                                      semanticLabel: 'DevOps Quiz logo',
+                                      semanticLabel: gameL10n(
+                                        context,
+                                      ).gameUiDevOpsQuizLogo,
                                     ),
                                   ),
                           ),

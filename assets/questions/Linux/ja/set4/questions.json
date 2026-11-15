@@ -1,0 +1,302 @@
+[
+  {
+    "category": "Linux",
+    "set": 4,
+    "question": "ファイルを移動または名前変更するコマンドはどれですか?",
+    "options": [
+      "mv",
+      "cp",
+      "ln",
+      "shift"
+    ],
+    "answer": "mv"
+  },
+  {
+    "category": "Linux",
+    "set": 4,
+    "question": "ファイルの所有権を変更するコマンドはどれですか?",
+    "options": [
+      "chown",
+      "chmod",
+      "owner",
+      "setowner"
+    ],
+    "answer": "chown"
+  },
+  {
+    "category": "Linux",
+    "set": 4,
+    "question": "ファイルのパーミッションを八進数形式で表示するコマンドはどれですか?",
+    "options": [
+      "stat -c %a",
+      "ls -perm",
+      "perm",
+      "showperm"
+    ],
+    "answer": "stat -c %a"
+  },
+  {
+    "category": "Linux",
+    "set": 4,
+    "question": "ファイルの種類を表示するコマンドはどれですか?",
+    "options": [
+      "file",
+      "type",
+      "kind",
+      "format"
+    ],
+    "answer": "file"
+  },
+  {
+    "category": "Linux",
+    "set": 4,
+    "question": "ファイルの詳細な統計情報を表示するコマンドはどれですか?",
+    "options": [
+      "stat",
+      "fileinfo",
+      "details",
+      "ls -stat"
+    ],
+    "answer": "stat"
+  },
+  {
+    "category": "Linux",
+    "set": 4,
+    "question": "事前作成のデータベースではなく、ディレクトリを直接たどって名前で検索するコマンドはどれか？",
+    "options": [
+      "find",
+      "search",
+      "locate",
+      "where"
+    ],
+    "answer": "find"
+  },
+  {
+    "category": "Linux",
+    "set": 4,
+    "question": "PATH を調べ、通常最初に見つかる実行ファイルのパスを表示するコマンドはどれか？",
+    "options": [
+      "which",
+      "whereis",
+      "locate",
+      "find"
+    ],
+    "answer": "which"
+  },
+  {
+    "category": "Linux",
+    "set": 4,
+    "question": "データベースを使ってファイルを検索するコマンドはどれですか?",
+    "options": [
+      "locate",
+      "find",
+      "search",
+      "query"
+    ],
+    "answer": "locate"
+  },
+  {
+    "category": "Linux",
+    "set": 4,
+    "question": "locateのデータベースを更新するコマンドはどれですか?",
+    "options": [
+      "updatedb",
+      "updatedatabase",
+      "refreshdb",
+      "syncdb"
+    ],
+    "answer": "updatedb"
+  },
+  {
+    "category": "Linux",
+    "set": 4,
+    "question": "現在のユーザーの crontab を表示するコマンドはどれか？",
+    "options": [
+      "crontab -l",
+      "cron -list",
+      "cronshow",
+      "jobs"
+    ],
+    "answer": "crontab -l"
+  },
+  {
+    "category": "Linux",
+    "set": 4,
+    "question": "cronジョブを編集するコマンドはどれですか?",
+    "options": [
+      "crontab -e",
+      "cronedit",
+      "crontab",
+      "schedule"
+    ],
+    "answer": "crontab -e"
+  },
+  {
+    "category": "Linux",
+    "set": 4,
+    "question": "一回限りのタスクをスケジュールするコマンドはどれですか?",
+    "options": [
+      "at",
+      "cron",
+      "task",
+      "schedule"
+    ],
+    "answer": "at"
+  },
+  {
+    "category": "Linux",
+    "set": 4,
+    "question": "シェル内のアクティブなジョブを表示するコマンドはどれですか?",
+    "options": [
+      "jobs",
+      "ps",
+      "bg",
+      "fg"
+    ],
+    "answer": "jobs"
+  },
+  {
+    "category": "Linux",
+    "set": 4,
+    "question": "停止中のジョブをバックグラウンドで再開するシェル組み込みはどれか？",
+    "options": [
+      "bg",
+      "fg",
+      "jobs",
+      "nohup"
+    ],
+    "answer": "bg"
+  },
+  {
+    "category": "Linux",
+    "set": 4,
+    "question": "バックグラウンドのプロセスをフォアグラウンドに戻すコマンドはどれですか?",
+    "options": [
+      "fg",
+      "bg",
+      "jobs",
+      "top"
+    ],
+    "answer": "fg"
+  },
+  {
+    "category": "Linux",
+    "set": 4,
+    "question": "サービスファイル編集後にユニット定義を読み直す systemd コマンドはどれか？",
+    "options": [
+      "systemctl daemon-reload",
+      "systemctl reload app.service",
+      "systemctl restart app.service",
+      "systemctl reset-failed app.service"
+    ],
+    "answer": "systemctl daemon-reload"
+  },
+  {
+    "category": "Linux",
+    "set": 4,
+    "question": "--now なしの 'systemctl disable app.service' は何をするか？",
+    "options": [
+      "サービスを止め、ユニットファイルを消す",
+      "出荷時設定でサービスを再起動する",
+      "ユニットをマスクし、全手動起動を防ぐ",
+      "有効化リンクを削除するが、実行中サービスを必ずしも止めない"
+    ],
+    "answer": "有効化リンクを削除するが、実行中サービスを必ずしも止めない"
+  },
+  {
+    "category": "Linux",
+    "set": 4,
+    "question": "app.service のジャーナルを表示するコマンドはどれか？",
+    "options": [
+      "systemctl show app.service",
+      "systemctl list-dependencies app.service",
+      "journalctl -u app.service",
+      "systemctl cat app.service"
+    ],
+    "answer": "journalctl -u app.service"
+  },
+  {
+    "category": "Linux",
+    "set": 4,
+    "question": "現在の起動分だけに出力を絞る journalctl オプションはどれか？",
+    "options": [
+      "-k",
+      "-b",
+      "-f",
+      "-r"
+    ],
+    "answer": "-b"
+  },
+  {
+    "category": "Linux",
+    "set": 4,
+    "question": "標準の五フィールドユーザー crontab で最初のフィールドはどれか？",
+    "options": [
+      "分",
+      "時",
+      "月の中の日",
+      "曜日"
+    ],
+    "answer": "分"
+  },
+  {
+    "category": "Linux",
+    "set": 4,
+    "question": "標準ユーザー crontab の '0 2 * * *' はいつ実行されるか？",
+    "options": [
+      "毎時 2 分",
+      "二分おき",
+      "毎月二日目の午前零時",
+      "cron の適用タイムゾーンで毎日 02:00"
+    ],
+    "answer": "cron の適用タイムゾーンで毎日 02:00"
+  },
+  {
+    "category": "Linux",
+    "set": 4,
+    "question": "Bash の export 組み込みはシェル変数に何をするか？",
+    "options": [
+      "親シェルの環境へコピーする",
+      "その値を読み取り専用にする",
+      "以後起動する子プロセスの環境で使えるようにする",
+      "全ユーザーのプロファイルへ恒久保存する"
+    ],
+    "answer": "以後起動する子プロセスの環境で使えるようにする"
+  },
+  {
+    "category": "Linux",
+    "set": 4,
+    "question": "標準出力を app.log の末尾へ追加する Bash リダイレクトはどれか？",
+    "options": [
+      "2> app.log",
+      ">> app.log",
+      "> app.log",
+      "< app.log"
+    ],
+    "answer": ">> app.log"
+  },
+  {
+    "category": "Linux",
+    "set": 4,
+    "question": "標準エラーを標準出力と同じ宛先へ送る Bash リダイレクトはどれか？",
+    "options": [
+      "2>&1",
+      "1>&2",
+      "2>errors.log",
+      "<input.txt"
+    ],
+    "answer": "2>&1"
+  },
+  {
+    "category": "Linux",
+    "set": 4,
+    "question": "コマンド終了直後の Bash の $? は何に展開されるか？",
+    "options": [
+      "現在のシェルのプロセス ID",
+      "位置パラメーターの数",
+      "最新のバックグラウンドジョブのプロセス ID",
+      "最後に実行したフォアグラウンドパイプラインの終了状態"
+    ],
+    "answer": "最後に実行したフォアグラウンドパイプラインの終了状態"
+  }
+]

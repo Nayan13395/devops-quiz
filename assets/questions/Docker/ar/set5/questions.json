@@ -1,0 +1,302 @@
+[
+  {
+    "category": "Docker",
+    "set": 5,
+    "question": "لماذا ينبغي استخدام تركيب أسرار BuildKit بدلا من حفظ كلمة مرور في ARG أو ENV؟",
+    "options": [
+      "تركيبات الأسرار تغيّر كلمات مرور السجلات تلقائيا",
+      "تركيبات الأسرار تشفّر كل طبقة صورة ناتجة",
+      "تركيبات الأسرار تمنع أي وصول شبكي أثناء البناء",
+      "تركيبات الأسرار تمنع بقاء السر كقيمة ARG أو ENV في الصورة"
+    ],
+    "answer": "تركيبات الأسرار تمنع بقاء السر كقيمة ARG أو ENV في الصورة"
+  },
+  {
+    "category": "Docker",
+    "set": 5,
+    "question": "ما غرض تركيب ذاكرة BuildKit المؤقتة في تعليمة RUN؟",
+    "options": [
+      "استبدال الصورة الأساسية بنظام ملفات فارغ",
+      "ضمان تنفيذ كل RUN دون ذاكرة مؤقتة",
+      "إعادة استخدام ذاكرة أداة البناء بين عمليات البناء دون تضمين التركيب في الصورة النهائية",
+      "تخزين سجلات التشغيل في سجل الصور"
+    ],
+    "answer": "إعادة استخدام ذاكرة أداة البناء بين عمليات البناء دون تضمين التركيب في الصورة النهائية"
+  },
+  {
+    "category": "Docker",
+    "set": 5,
+    "question": "أي تغيير في مدخلات البناء يبطل عادة ذاكرة COPY المؤقتة والخطوات اللاحقة المعتمدة عليها؟",
+    "options": [
+      "تحرير تعليق عادي في Dockerfile دون تغيير التعليمات",
+      "تغيير محتوى ملف مصدر منسوخ",
+      "تغيير وقت تعديل ملف منسوخ فقط",
+      "تغيير ملف مستبعد بواسطة .dockerignore"
+    ],
+    "answer": "تغيير محتوى ملف مصدر منسوخ"
+  },
+  {
+    "category": "Docker",
+    "set": 5,
+    "question": "ماذا تختار تعليمة Dockerfile 'FROM scratch'؟",
+    "options": [
+      "نقطة بدء فارغة دون نظام ملفات لصورة أساسية",
+      "تثبيتا مصغرا من Debian",
+      "نظام الملفات الجذري لمضيف يعمل",
+      "أحدث صورة بُنيت محليا"
+    ],
+    "answer": "نقطة بدء فارغة دون نظام ملفات لصورة أساسية"
+  },
+  {
+    "category": "Docker",
+    "set": 5,
+    "question": "أي تعليمة Dockerfile تضيف بيانات وصفية من مفاتيح وقيم إلى الصورة؟",
+    "options": [
+      "ARG",
+      "EXPOSE",
+      "STOPSIGNAL",
+      "LABEL"
+    ],
+    "answer": "LABEL"
+  },
+  {
+    "category": "Docker",
+    "set": 5,
+    "question": "أي تعليمة Dockerfile تغيّر الإشارة الافتراضية عند إيقاف الحاوية؟",
+    "options": [
+      "SHELL",
+      "ONBUILD",
+      "STOPSIGNAL",
+      "HEALTHCHECK"
+    ],
+    "answer": "STOPSIGNAL"
+  },
+  {
+    "category": "Docker",
+    "set": 5,
+    "question": "لماذا تُفضّل غالبا صيغة exec لـ ENTRYPOINT لعملية الخادم الرئيسية؟",
+    "options": [
+      "تمنع الخادم من إرجاع حالة غير صفرية",
+      "تتجنب وجود صدفة إضافية بين الخادم وإشارات الحاوية",
+      "تنشئ تلقائيا مستخدما غير root",
+      "تثبت مشرف عمليات داخل الصورة"
+    ],
+    "answer": "تتجنب وجود صدفة إضافية بين الخادم وإشارات الحاوية"
+  },
+  {
+    "category": "Docker",
+    "set": 5,
+    "question": "ماذا يضيف 'docker run --init' إلى الحاوية؟",
+    "options": [
+      "عملية init صغيرة تمرر الإشارات وتجمع حالات العمليات الفرعية المنتهية",
+      "تثبيتا كاملا من systemd",
+      "خدمة Docker خلفية ثانية",
+      "صدفة دخول تفاعلية لكل عملية"
+    ],
+    "answer": "عملية init صغيرة تمرر الإشارات وتجمع حالات العمليات الفرعية المنتهية"
+  },
+  {
+    "category": "Docker",
+    "set": 5,
+    "question": "أي خيار يشغّل حاوية Linux بعد إسقاط جميع قدرات Linux؟",
+    "options": [
+      "--cap-add=ALL",
+      "--privileged",
+      "--security-opt seccomp=unconfined",
+      "--cap-drop=ALL"
+    ],
+    "answer": "--cap-drop=ALL"
+  },
+  {
+    "category": "Docker",
+    "set": 5,
+    "question": "ما الذي يغيّره Docker دون صلاحيات root أساسا؟",
+    "options": [
+      "الصور لم تعد تحتاج إلى سجل",
+      "الحاويات لم تعد تستخدم نطاقات أسماء Linux",
+      "الخدمة الخلفية والحاويات تعمل دون صلاحيات root على المضيف",
+      "كل الحاويات تشارك نظام الملفات الجذري للمضيف"
+    ],
+    "answer": "الخدمة الخلفية والحاويات تعمل دون صلاحيات root على المضيف"
+  },
+  {
+    "category": "Docker",
+    "set": 5,
+    "question": "أي آلية Linux تحد استخدام موارد الحاويات وتقيسه أساسا؟",
+    "options": [
+      "قدرات Linux",
+      "مجموعات التحكم",
+      "نطاقات الأسماء",
+      "مرشحات Seccomp"
+    ],
+    "answer": "مجموعات التحكم"
+  },
+  {
+    "category": "Docker",
+    "set": 5,
+    "question": "أي آلية Linux تمنح الحاويات رؤى معزولة لموارد مثل معرّفات العمليات وواجهات الشبكة؟",
+    "options": [
+      "نطاقات الأسماء",
+      "مجموعات التحكم",
+      "مرشحات Seccomp",
+      "قدرات Linux"
+    ],
+    "answer": "نطاقات الأسماء"
+  },
+  {
+    "category": "Docker",
+    "set": 5,
+    "question": "أي مشغل شبكة Docker يمنح حاوية Linux نطاق أسماء الشبكة الخاص بالمضيف؟",
+    "options": [
+      "bridge",
+      "overlay",
+      "none",
+      "host"
+    ],
+    "answer": "host"
+  },
+  {
+    "category": "Docker",
+    "set": 5,
+    "question": "أي مشغل شبكة Docker يترك الحاوية بواجهة الاسترجاع وحدها؟",
+    "options": [
+      "host",
+      "overlay",
+      "none",
+      "bridge"
+    ],
+    "answer": "none"
+  },
+  {
+    "category": "Docker",
+    "set": 5,
+    "question": "أي مشغل شبكة Docker مخصص لاتصال الحاويات عبر عدة مضيفي Docker؟",
+    "options": [
+      "none",
+      "overlay",
+      "bridge",
+      "host"
+    ],
+    "answer": "overlay"
+  },
+  {
+    "category": "Docker",
+    "set": 5,
+    "question": "ماذا يفعل '--network container:web' لحاوية جديدة؟",
+    "options": [
+      "يشارك نطاق أسماء الشبكة مع web",
+      "ينسخ طبقات نظام ملفات web",
+      "يربط كل واجهات المضيف مباشرة",
+      "ينشئ شبكة جديدة باسم web"
+    ],
+    "answer": "يشارك نطاق أسماء الشبكة مع web"
+  },
+  {
+    "category": "Docker",
+    "set": 5,
+    "question": "لماذا قد تبدو ملفات الصورة وكأنها اختفت عند تركيب مجلد على مسار غير فارغ في الحاوية؟",
+    "options": [
+      "لأن Docker يحذف طبقات الصورة الأصلية",
+      "لأن Docker ينقل الملفات إلى السجل",
+      "لأن الصورة تُبنى تلقائيا دون تلك الملفات",
+      "لأن التركيب يحجب ملفات ذلك المسار ما دام قائما"
+    ],
+    "answer": "لأن التركيب يحجب ملفات ذلك المسار ما دام قائما"
+  },
+  {
+    "category": "Docker",
+    "set": 5,
+    "question": "ماذا يفعل Docker عادة عند تركيب وحدة تخزين مسماة فارغة أول مرة فوق مجلد حاوية يحتوي ملفات، دون volume-nocopy؟",
+    "options": [
+      "يرفض البدء لأن المجلد غير فارغ",
+      "يحوّل وحدة التخزين المسماة إلى تركيب ربط",
+      "ينسخ ملفات المجلد الحالية إلى وحدة التخزين",
+      "يحذف الملفات من الصورة نهائيا"
+    ],
+    "answer": "ينسخ ملفات المجلد الحالية إلى وحدة التخزين"
+  },
+  {
+    "category": "Docker",
+    "set": 5,
+    "question": "أي أمر يسرد تعيينات المنافذ المنشورة للحاوية web؟",
+    "options": [
+      "docker wait web",
+      "docker port web",
+      "docker top web",
+      "docker diff web"
+    ],
+    "answer": "docker port web"
+  },
+  {
+    "category": "Docker",
+    "set": 5,
+    "question": "أي أمر يسترجع آخر 20 سطرا فقط من سجلات web؟",
+    "options": [
+      "docker logs --tail 20 web",
+      "docker logs --since 20m web",
+      "docker logs --until 20m web",
+      "docker logs --timestamps web"
+    ],
+    "answer": "docker logs --tail 20 web"
+  },
+  {
+    "category": "Docker",
+    "set": 5,
+    "question": "ما الفرق الأساسي بين صورة Docker والحاوية؟",
+    "options": [
+      "الصورة تعمل دائما والحاوية متوقفة دائما",
+      "الصورة تنتمي لشبكة والحاوية تنتمي لسجل فقط",
+      "الصورة تخزن السجلات فقط والحاوية تخزن البيانات الوصفية فقط",
+      "الصورة قالب للقراءة فقط، والحاوية نسخة ذات حالة تشغيل"
+    ],
+    "answer": "الصورة قالب للقراءة فقط، والحاوية نسخة ذات حالة تشغيل"
+  },
+  {
+    "category": "Docker",
+    "set": 5,
+    "question": "ماذا يحدد سياق Docker أساسا لواجهة CLI؟",
+    "options": [
+      "مرحلة بناء Dockerfile المختارة",
+      "المنصة المستهدفة الافتراضية لكل صورة",
+      "إعدادات الاتصال بنقطة نهاية خدمة Docker الخلفية",
+      "الملفات والمجلدات المرسلة كسياق لبناء الصورة"
+    ],
+    "answer": "إعدادات الاتصال بنقطة نهاية خدمة Docker الخلفية"
+  },
+  {
+    "category": "Docker",
+    "set": 5,
+    "question": "أي أمر يسجل خروج عميل Docker من سجل؟",
+    "options": [
+      "docker trust inspect",
+      "docker logout",
+      "docker login",
+      "docker context use"
+    ],
+    "answer": "docker logout"
+  },
+  {
+    "category": "Docker",
+    "set": 5,
+    "question": "أي خيار يتيح لـ docker login قراءة كلمة مرور من الإدخال القياسي؟",
+    "options": [
+      "--password-stdin",
+      "--username",
+      "--config",
+      "--context"
+    ],
+    "answer": "--password-stdin"
+  },
+  {
+    "category": "Docker",
+    "set": 5,
+    "question": "أي أمر يسرد مهام خدمة Docker Swarm المسماة api؟",
+    "options": [
+      "docker service inspect api",
+      "docker service logs api",
+      "docker service scale api=3",
+      "docker service ps api"
+    ],
+    "answer": "docker service ps api"
+  }
+]

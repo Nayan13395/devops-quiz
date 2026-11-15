@@ -1,0 +1,302 @@
+[
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "ടാസ്ക് തലത്തിൽ വേറൊരു ക്രമീകരണമില്ലെങ്കിൽ ചെക്ക് മോഡിൽ പ്രവർത്തിപ്പിക്കുമ്പോൾ അതിനെ പിന്തുണയ്ക്കാത്ത മൊഡ്യൂളിന് എന്തു സംഭവിക്കും?",
+    "options": [
+      "മൊഡ്യൂൾ എല്ലായ്പ്പോഴും സാധാരണ മാറ്റങ്ങൾ വരുത്തും",
+      "മൊഡ്യൂൾ സ്വയമേവ localhostൽ പ്രവർത്തിക്കും",
+      "ചെക്ക് മോഡ് പിന്തുണയ്ക്കുന്നതുവരെ മൊഡ്യൂൾ വീണ്ടും ശ്രമിക്കും",
+      "മാറ്റങ്ങൾ വരുത്തുന്നതിനു പകരം മൊഡ്യൂൾ ഒഴിവാക്കപ്പെടും"
+    ],
+    "answer": "മാറ്റങ്ങൾ വരുത്തുന്നതിനു പകരം മൊഡ്യൂൾ ഒഴിവാക്കപ്പെടും"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "പ്ലേബുക്ക് --check ഉപയോഗിച്ച് പ്രവർത്തിപ്പിച്ചാലും യഥാർത്ഥ മാറ്റങ്ങൾ അനുവദിക്കുന്ന ടാസ്ക് ക്രമീകരണം ഏതാണ്?",
+    "options": [
+      "changed_when: false",
+      "ignore_errors: true",
+      "check_mode: false",
+      "diff: false"
+    ],
+    "answer": "check_mode: false"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "നേരത്തേ അറിയിപ്പ് ലഭിച്ച ഹാൻഡ്‌ലറുകളെ ഉടൻ പ്രവർത്തിപ്പിക്കുന്ന Ansible meta നടപടി ഏതാണ്?",
+    "options": [
+      "reset_connection",
+      "flush_handlers",
+      "clear_facts",
+      "end_play"
+    ],
+    "answer": "flush_handlers"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "മാറ്റം വരുത്തിയ രണ്ട് ടാസ്കുകൾ ഒരേ ഹാൻഡ്‌ലറിനെ അതിന്റെ ശേഷിക്കുന്ന നിർവഹണത്തിന് മുമ്പ് അറിയിച്ചാൽ, ആ നിർവഹണസമയത്ത് അത് സാധാരണയായി എത്ര തവണ പ്രവർത്തിക്കും?",
+    "options": [
+      "ഒരിക്കൽ",
+      "രണ്ടുതവണ",
+      "ഓരോ ഇൻവെന്ററി ഗ്രൂപ്പിനും ഒരിക്കൽ",
+      "അറിയിപ്പുകൾ തമ്മിൽ പൊരുത്തക്കേടുള്ളതിനാൽ ഒരിക്കൽപോലുമില്ല"
+    ],
+    "answer": "ഒരിക്കൽ"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "ഒരേ അവസരത്തിൽ ശേഷിക്കുന്ന നിർവഹണം നടത്തുന്ന അറിയിപ്പ് ലഭിച്ച ഹാൻഡ്‌ലറുകളുടെ ക്രമം നിശ്ചയിക്കുന്നത് എന്താണ്?",
+    "options": [
+      "അവയുടെ പേരുകളുടെ അക്ഷരക്രമം",
+      "notify പട്ടികയിലെ പേരുകളുടെ ക്രമം",
+      "നിയന്ത്രിത ഹോസ്റ്റുകൾ കണക്റ്റ് ചെയ്ത ക്രമം",
+      "handlers വിഭാഗത്തിലെ അവയുടെ നിർവചനക്രമം"
+    ],
+    "answer": "handlers വിഭാഗത്തിലെ അവയുടെ നിർവചനക്രമം"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "ഒരു ബ്ലോക്കിന്റെ rescue ടാസ്കുകൾ സാധാരണയായി തുടങ്ങിക്കുന്നത് ഏത് പരാജയമാണ്?",
+    "options": [
+      "പ്ലേബുക്കിൽ അസാധുവായ ടാസ്ക് നിർവചനം ഉള്ളത്",
+      "YAML രേഖ പാർസ് ചെയ്യാനാകാത്തത്",
+      "ബ്ലോക്കിനുള്ളിലെ ഒരു ടാസ്ക് പരാജയഫലം നൽകുന്നത്",
+      "ടാസ്ക് പ്രവർത്തിക്കുന്നതിന് മുമ്പ് ഹോസ്റ്റ് ലഭ്യമല്ലാതാകുന്നത്"
+    ],
+    "answer": "ബ്ലോക്കിനുള്ളിലെ ഒരു ടാസ്ക് പരാജയഫലം നൽകുന്നത്"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "സാധാരണ ടാസ്കിൽ ignore_errors മറയ്ക്കാത്ത പിശക് ഏതാണ്?",
+    "options": [
+      "failed_when നിബന്ധന true ആകുന്നത്",
+      "നിർവചിക്കാത്ത വേരിയബിളിന്റെ പിശക്",
+      "കമാൻഡ് റിപ്പോർട്ട് ചെയ്ത പൂജ്യമല്ലാത്ത എക്സിറ്റ് നില",
+      "പരാജയമെന്ന് വ്യക്തമായി അടയാളപ്പെടുത്തിയ മൊഡ്യൂൾ ഫലം"
+    ],
+    "answer": "നിർവചിക്കാത്ത വേരിയബിളിന്റെ പിശക്"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "കൈകാര്യം ചെയ്യാത്ത ടാസ്ക് പരാജയമുണ്ടായാൽ നിലവിലെ ബാച്ച് ആ ടാസ്ക് പൂർത്തിയാക്കിയ ശേഷം എല്ലാ ഹോസ്റ്റുകളിലും പ്ലേ നിർത്തുന്ന കീവേഡ് ഏതാണ്?",
+    "options": [
+      "any_errors_fatal",
+      "ignore_unreachable",
+      "max_fail_percentage: 100",
+      "force_handlers"
+    ],
+    "answer": "any_errors_fatal"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "ലഭ്യമായ ഹോസ്റ്റിൽ പിന്നീടുള്ള ടാസ്ക് പരാജയപ്പെട്ടാൽ force_handlersന്റെ ഫലം എന്താണ്?",
+    "options": [
+      "നിർവചിച്ച എല്ലാ ഹാൻഡ്‌ലറുകളും അറിയിപ്പില്ലാതെയും പ്രവർത്തിക്കും",
+      "പരാജയപ്പെട്ട എല്ലാ ടാസ്കുകളും സ്വയമേവ വീണ്ടും ശ്രമിക്കും",
+      "എല്ലാ സാധാരണ ടാസ്കുകൾക്കും മുമ്പ് ഹാൻഡ്‌ലറുകൾ പ്രവർത്തിക്കും",
+      "നേരത്തേ അറിയിപ്പ് ലഭിച്ച ഹാൻഡ്‌ലറുകൾക്ക് ആ ഹോസ്റ്റിൽ തുടർന്നും പ്രവർത്തിക്കാം"
+    ],
+    "answer": "നേരത്തേ അറിയിപ്പ് ലഭിച്ച ഹാൻഡ്‌ലറുകൾക്ക് ആ ഹോസ്റ്റിൽ തുടർന്നും പ്രവർത്തിക്കാം"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "രഹസ്യസ്വഭാവമുള്ള ടാസ്ക് ആർഗ്യുമെന്റുകളുടെയും ഫലങ്ങളുടെയും സാധാരണ ലോഗിങ് തടയുന്ന ക്രമീകരണം ഏതാണ്?",
+    "options": [
+      "check_mode: true",
+      "changed_when: false",
+      "no_log: true",
+      "diff: true"
+    ],
+    "answer": "no_log: true"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "--diff പ്രവർത്തനക്ഷമമാണെങ്കിലും ഫയൽ ഉള്ളടക്ക വ്യത്യാസങ്ങൾ മറയ്ക്കുന്ന ടാസ്ക് ക്രമീകരണം ഏതാണ്?",
+    "options": [
+      "ignore_errors: true",
+      "diff: false",
+      "no_log: false",
+      "check_mode: false"
+    ],
+    "answer": "diff: false"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "മറ്റൊരു ഇൻവെന്ററി ഹോസ്റ്റുമായി ബന്ധപ്പെട്ട വേരിയബിളുകൾ ലഭ്യമാക്കുന്ന ഡിക്ഷണറി ഏതാണ്?",
+    "options": [
+      "hostvars",
+      "ansible_facts",
+      "environment",
+      "ansible_loop"
+    ],
+    "answer": "hostvars"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "നിലവിലെ ഹോസ്റ്റിന്റെ ഇൻവെന്ററി പേര് അടങ്ങിയ പ്രത്യേക വേരിയബിൾ ഏതാണ്?",
+    "options": [
+      "ansible_host",
+      "ansible_user",
+      "ansible_playbook_python",
+      "inventory_hostname"
+    ],
+    "answer": "inventory_hostname"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "ഹോസ്റ്റ് ഗ്രൂപ്പ് പങ്കിടുന്ന വേരിയബിളുകൾക്കായി സാധാരണയായി ഇൻവെന്ററിക്കരികിൽ ഉപയോഗിക്കുന്ന ഡയറക്ടറി ഏതാണ്?",
+    "options": [
+      "roles",
+      "collections",
+      "group_vars",
+      "host_vars"
+    ],
+    "answer": "group_vars"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "ansible.builtin.file ലുക്കപ്പ് ഡിഫോൾട്ടായി ഫയൽ എവിടെയാണ് വായിക്കുന്നത്?",
+    "options": [
+      "become_user പേര് നൽകുന്ന ഹോസ്റ്റിൽ",
+      "കൺട്രോൾ നോഡിൽ",
+      "നിയന്ത്രിതമായ ഓരോ ഹോസ്റ്റിലും",
+      "പ്ലേയിലെ ആദ്യ ഹോസ്റ്റിൽ"
+    ],
+    "answer": "കൺട്രോൾ നോഡിൽ"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "YAML സ്ട്രിങ്ങിനെ Ansible ഡാറ്റാ ഘടനയാക്കുന്ന ഫിൽട്ടർ ഏതാണ്?",
+    "options": [
+      "from_yaml",
+      "to_yaml",
+      "to_json",
+      "dict2items"
+    ],
+    "answer": "from_yaml"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "ഡിക്ഷണറിയെ കീ/മൂല്യ ഡിക്ഷണറികളുടെ പട്ടികയാക്കുന്ന ഫിൽട്ടർ ഏതാണ്?",
+    "options": [
+      "items2dict",
+      "flatten",
+      "zip",
+      "dict2items"
+    ],
+    "answer": "dict2items"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "പട്ടികയിലെ ആവർത്തിക്കുന്ന ഇനങ്ങൾ നീക്കുന്ന ഫിൽട്ടർ ഏതാണ്?",
+    "options": [
+      "reverse",
+      "flatten",
+      "unique",
+      "sort"
+    ],
+    "answer": "unique"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "എക്സ്പ്രഷനുകൾ പരിശോധിച്ച് നിർദിഷ്ട സ്ഥിരീകരണ നിബന്ധനകൾ പാലിക്കാത്തപ്പോൾ പരാജയപ്പെടുന്ന മൊഡ്യൂൾ ഏതാണ്?",
+    "options": [
+      "ansible.builtin.set_fact",
+      "ansible.builtin.assert",
+      "ansible.builtin.debug",
+      "ansible.builtin.pause"
+    ],
+    "answer": "ansible.builtin.assert"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "റെഗുലർ എക്സ്പ്രഷൻ ഉപയോഗിച്ച് ടെക്സ്റ്റ് ഫയലിലെ പ്രത്യേക വരി നിയന്ത്രിക്കുന്ന മൊഡ്യൂൾ ഏതാണ്?",
+    "options": [
+      "ansible.builtin.lineinfile",
+      "ansible.builtin.blockinfile",
+      "ansible.builtin.copy",
+      "ansible.builtin.slurp"
+    ],
+    "answer": "ansible.builtin.lineinfile"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "URL അഭ്യർത്ഥിച്ച് പ്രതീക്ഷിക്കുന്ന HTTP നില കോഡ് പരിശോധിക്കാവുന്ന മൊഡ്യൂൾ ഏതാണ്?",
+    "options": [
+      "ansible.builtin.get_url",
+      "ansible.builtin.fetch",
+      "ansible.builtin.wait_for",
+      "ansible.builtin.uri"
+    ],
+    "answer": "ansible.builtin.uri"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "TCP പോർട്ട് ആവശ്യപ്പെട്ട നിലയിലെത്തുന്നതുവരെ കാത്തിരിക്കുന്ന മൊഡ്യൂൾ ഏതാണ്?",
+    "options": [
+      "ansible.builtin.async_status",
+      "ansible.builtin.ping",
+      "ansible.builtin.wait_for",
+      "ansible.builtin.pause"
+    ],
+    "answer": "ansible.builtin.wait_for"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "നിർദിഷ്ട പാത നേരത്തേയുണ്ടെങ്കിൽ ansible.builtin.commandന്റെ നിർവഹണം ഒഴിവാക്കുന്ന പാരാമീറ്റർ ഏതാണ്?",
+    "options": [
+      "stdin",
+      "creates",
+      "removes",
+      "chdir"
+    ],
+    "answer": "creates"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "സിംബോളിക് ലിങ്ക് സൃഷ്ടിക്കുന്ന file മൊഡ്യൂൾ ക്രമീകരണം ഏതാണ്?",
+    "options": [
+      "state: link",
+      "state: directory",
+      "state: touch",
+      "state: hard"
+    ],
+    "answer": "state: link"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "പിന്നീടുള്ള പ്ലേകൾക്കായി മെമ്മറിയിലെ ഇൻവെന്ററിയിലേക്ക് ഹോസ്റ്റ് ചേർക്കാവുന്ന മൊഡ്യൂൾ ഏതാണ്?",
+    "options": [
+      "ansible.builtin.group_by",
+      "ansible.builtin.set_fact",
+      "ansible.builtin.meta",
+      "ansible.builtin.add_host"
+    ],
+    "answer": "ansible.builtin.add_host"
+  }
+]

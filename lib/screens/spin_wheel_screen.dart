@@ -1,3 +1,4 @@
+import '../l10n/game_localizations.dart';
 import 'dart:async';
 import 'dart:math';
 
@@ -181,12 +182,18 @@ class _SpinWheelScreenState extends State<SpinWheelScreen>
             style: TextStyle(fontSize: 55),
           ),
 
-          title: const Text('Wheel Stopped!', textAlign: TextAlign.center),
+          title: Text(
+            gameL10n(context).gameUiWheelStopped,
+            textAlign: TextAlign.center,
+          ),
 
           content: Column(
             mainAxisSize: MainAxisSize.min,
             children: [
-              const Text('Your reward is', style: TextStyle(fontSize: 17)),
+              Text(
+                gameL10n(context).gameUiYourRewardIs,
+                style: const TextStyle(fontSize: 17),
+              ),
 
               const SizedBox(height: 10),
 
@@ -201,9 +208,9 @@ class _SpinWheelScreenState extends State<SpinWheelScreen>
 
               const SizedBox(height: 5),
 
-              const Text(
-                'POINTS',
-                style: TextStyle(
+              Text(
+                gameL10n(context).gameUiPOINTS,
+                style: const TextStyle(
                   fontSize: 15,
                   fontWeight: FontWeight.bold,
                   letterSpacing: 1.5,
@@ -219,17 +226,19 @@ class _SpinWheelScreenState extends State<SpinWheelScreen>
                   color: Theme.of(context).colorScheme.primaryContainer,
                   borderRadius: BorderRadius.circular(14),
                 ),
-                child: const Text(
-                  'Answer 1 quiz question correctly to claim this reward.',
+                child: Text(
+                  gameL10n(
+                    context,
+                  ).gameUiAnswer1QuizQuestionCorrectlyToClaimThisReward,
                   textAlign: TextAlign.center,
-                  style: TextStyle(fontWeight: FontWeight.w600),
+                  style: const TextStyle(fontWeight: FontWeight.w600),
                 ),
               ),
 
               const SizedBox(height: 10),
 
               Text(
-                'Wrong answer = reward lost.',
+                gameL10n(context).gameUiWrongAnswerRewardLost,
                 textAlign: TextAlign.center,
                 style: TextStyle(
                   fontSize: 13,
@@ -257,9 +266,9 @@ class _SpinWheelScreenState extends State<SpinWheelScreen>
                   );
                 },
                 icon: const Icon(Icons.quiz_outlined),
-                label: const Text(
-                  'Answer Question',
-                  style: TextStyle(fontWeight: FontWeight.bold),
+                label: Text(
+                  gameL10n(context).gameUiAnswerQuestion,
+                  style: const TextStyle(fontWeight: FontWeight.bold),
                 ),
               ),
             ),
@@ -297,7 +306,7 @@ class _SpinWheelScreenState extends State<SpinWheelScreen>
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('🎡 Spin Wheel')),
+      appBar: AppBar(title: Text(gameL10n(context).gameUiSpinWheele449982)),
 
       body: loading
           ? const Center(child: CircularProgressIndicator())
@@ -316,9 +325,9 @@ class _SpinWheelScreenState extends State<SpinWheelScreen>
                         // =====================================
                         // TITLE
                         // =====================================
-                        const Text(
-                          'Daily Spin',
-                          style: TextStyle(
+                        Text(
+                          gameL10n(context).gameUiDailySpin,
+                          style: const TextStyle(
                             fontSize: 28,
                             fontWeight: FontWeight.bold,
                           ),
@@ -328,8 +337,12 @@ class _SpinWheelScreenState extends State<SpinWheelScreen>
 
                         Text(
                           canSpin
-                              ? 'Spin the wheel, then answer a question to claim your reward!'
-                              : 'You have already used today\'s spin.',
+                              ? gameL10n(
+                                  context,
+                                ).gameUiSpinTheWheelThenAnswerAQuestionToClaim
+                              : gameL10n(
+                                  context,
+                                ).gameUiYouHaveAlreadyUsedTodaySSpin,
 
                           textAlign: TextAlign.center,
 
@@ -401,10 +414,10 @@ class _SpinWheelScreenState extends State<SpinWheelScreen>
 
                             label: Text(
                               spinning
-                                  ? 'Spinning...'
+                                  ? gameL10n(context).gameUiSpinning
                                   : canSpin
-                                  ? 'SPIN NOW'
-                                  : 'COME BACK TOMORROW',
+                                  ? gameL10n(context).gameUiSPINNOW
+                                  : gameL10n(context).gameUiCOMEBACKTOMORROW,
 
                               style: const TextStyle(
                                 fontSize: 17,
@@ -430,7 +443,9 @@ class _SpinWheelScreenState extends State<SpinWheelScreen>
                               borderRadius: BorderRadius.circular(14),
                             ),
                             child: Text(
-                              'Today\'s reward: ⭐ $lastReward points',
+                              gameL10n(context).gameUiTodaySRewardPoints(
+                                (lastReward).toString(),
+                              ),
                               textAlign: TextAlign.center,
                               style: const TextStyle(
                                 fontSize: 17,
@@ -454,9 +469,9 @@ class _SpinWheelScreenState extends State<SpinWheelScreen>
                               Navigator.pop(context);
                             },
                             icon: const Icon(Icons.arrow_back_rounded),
-                            label: const Text(
-                              'Back to Games',
-                              style: TextStyle(
+                            label: Text(
+                              gameL10n(context).gameUiBackToGames,
+                              style: const TextStyle(
                                 fontSize: 16,
                                 fontWeight: FontWeight.bold,
                               ),
@@ -494,6 +509,8 @@ class _Wheel extends StatelessWidget {
       child: CustomPaint(
         painter: _WheelPainter(
           rewards: rewards,
+          label: gameL10n(context).gameUiSPIN,
+          textDirection: Directionality.of(context),
           primaryColor: Theme.of(context).colorScheme.primary,
           secondaryColor: Theme.of(context).colorScheme.secondaryContainer,
           surfaceColor: Theme.of(context).colorScheme.surface,
@@ -509,6 +526,8 @@ class _Wheel extends StatelessWidget {
 
 class _WheelPainter extends CustomPainter {
   final List<int> rewards;
+  final String label;
+  final TextDirection textDirection;
 
   final Color primaryColor;
   final Color secondaryColor;
@@ -516,6 +535,8 @@ class _WheelPainter extends CustomPainter {
 
   _WheelPainter({
     required this.rewards,
+    required this.label,
+    required this.textDirection,
     required this.primaryColor,
     required this.secondaryColor,
     required this.surfaceColor,
@@ -601,18 +622,18 @@ class _WheelPainter extends CustomPainter {
     canvas.drawCircle(center, 30, Paint()..color = primaryColor);
 
     final centerText = TextPainter(
-      text: const TextSpan(
-        text: 'SPIN',
-        style: TextStyle(
+      text: TextSpan(
+        text: label,
+        style: const TextStyle(
           color: Colors.white,
           fontSize: 14,
           fontWeight: FontWeight.bold,
         ),
       ),
-      textDirection: TextDirection.ltr,
+      textDirection: textDirection,
     );
 
-    centerText.layout();
+    centerText.layout(maxWidth: 54);
 
     centerText.paint(
       canvas,
@@ -626,6 +647,8 @@ class _WheelPainter extends CustomPainter {
   @override
   bool shouldRepaint(covariant _WheelPainter oldDelegate) {
     return oldDelegate.primaryColor != primaryColor ||
-        oldDelegate.secondaryColor != secondaryColor;
+        oldDelegate.secondaryColor != secondaryColor ||
+        oldDelegate.label != label ||
+        oldDelegate.textDirection != textDirection;
   }
 }

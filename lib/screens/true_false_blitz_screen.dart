@@ -1,3 +1,4 @@
+import '../l10n/game_localizations.dart';
 import 'dart:async';
 
 import 'package:flutter/material.dart';
@@ -6,6 +7,7 @@ import '../services/game_sound_service.dart';
 import '../services/point_service.dart';
 import '../services/true_false_blitz_service.dart';
 import '../widgets/daily_game_gate.dart';
+import '../widgets/save_question_button.dart';
 
 class TrueFalseBlitzScreen extends StatelessWidget {
   const TrueFalseBlitzScreen({super.key});
@@ -16,7 +18,9 @@ class TrueFalseBlitzScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     final locale = Localizations.localeOf(context);
     return Scaffold(
-      appBar: AppBar(title: const Text('True or False Blitz ⚡')),
+      appBar: AppBar(
+        title: Text(gameL10n(context).gameUiTrueOrFalseBlitz437a7d8),
+      ),
       body: DailyGameGate(
         gameKey: gameKey,
         child: _BlitzGame(locale: locale),
@@ -162,11 +166,15 @@ class _BlitzGameState extends State<_BlitzGame> {
     await showGameResultDialog(
       context,
       icon: '⚡',
-      title: 'Time\'s Up!',
-      message:
-          'Correct answers: $_correct\nBest streak: $_best\n'
-          '${_best >= 5 ? 'Streak bonus: +20\n' : ''}'
-          'You earned $points points!\n\nCome back tomorrow for another round!',
+      title: gameL10n(context).gameUiTimeSUp,
+      message: gameL10n(context)
+          .gameUiCorrectAnswersBestStreakYouEarnedPointsComeBack(
+            (_correct).toString(),
+            (_best).toString(),
+            (_best >= 5 ? gameL10n(context).gameUiStreakBonus20 : '')
+                .toString(),
+            (points).toString(),
+          ),
     );
   }
 
@@ -200,10 +208,10 @@ class _BlitzGameState extends State<_BlitzGame> {
       children: [
         const Text('⚡', style: TextStyle(fontSize: 64)),
         const SizedBox(height: 12),
-        const Text(
-          'Is the shown answer true or false?',
+        Text(
+          gameL10n(context).gameUiIsTheShownAnswerTrueOrFalse,
           textAlign: TextAlign.center,
-          style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
+          style: const TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
         ),
         const SizedBox(height: 12),
         if (_loadingQuestions)
@@ -215,18 +223,22 @@ class _BlitzGameState extends State<_BlitzGame> {
           )
         else
           Text(
-            '${_deck.length} questions across '
-            '${_deck.map((statement) => statement.category).toSet().length} '
-            'categories',
+            gameL10n(context).gameUiQuestionsAcrossCategories(
+              (_deck.length).toString(),
+              (_deck.map((statement) => statement.category).toSet().length)
+                  .toString(),
+            ),
             key: const ValueKey('blitz-question-coverage'),
             textAlign: TextAlign.center,
             style: TextStyle(fontSize: 14, color: colors.onSurfaceVariant),
           ),
         const SizedBox(height: 12),
         Text(
-          'You have $_roundSeconds seconds. Each correct answer earns '
-          '$_pointsPerAnswer points. A wrong answer costs $_wrongPenalty '
-          'seconds. Reach a streak of 5 for a +20 bonus.',
+          gameL10n(context).gameUiYouHaveSecondsEachCorrectAnswerEarnsPointsA(
+            (_roundSeconds).toString(),
+            (_pointsPerAnswer).toString(),
+            (_wrongPenalty).toString(),
+          ),
           textAlign: TextAlign.center,
           style: TextStyle(fontSize: 15, color: colors.onSurfaceVariant),
         ),
@@ -235,7 +247,7 @@ class _BlitzGameState extends State<_BlitzGame> {
           children: [
             const Icon(Icons.timer_outlined),
             const SizedBox(width: 8),
-            const Expanded(child: Text('Round timer')),
+            Expanded(child: Text(gameL10n(context).gameUiRoundTimer)),
             Text(
               '${_roundSeconds ~/ 60}:${(_roundSeconds % 60).toString().padLeft(2, '0')}',
               key: const ValueKey('blitz-timer-duration'),
@@ -249,14 +261,14 @@ class _BlitzGameState extends State<_BlitzGame> {
           max: _maxSeconds.toDouble(),
           divisions: 11,
           value: _roundSeconds.toDouble(),
-          label: '$_roundSeconds seconds',
+          label: gameL10n(context).gameUiSeconds((_roundSeconds).toString()),
           onChanged: (value) => setState(() => _roundSeconds = value.round()),
         ),
         const SizedBox(height: 12),
         FilledButton.icon(
           onPressed: _loadingQuestions || _deck.isEmpty ? null : _start,
           icon: const Icon(Icons.play_arrow_rounded),
-          label: const Text('Start'),
+          label: Text(gameL10n(context).gameUiStart),
         ),
       ],
     );
@@ -326,6 +338,8 @@ class _BlitzGameState extends State<_BlitzGame> {
                 textAlign: TextAlign.center,
                 style: const TextStyle(fontSize: 18),
               ),
+              if (current != null)
+                SaveQuestionButton(question: current.sourceQuestion),
             ],
           ),
         ),
@@ -342,7 +356,10 @@ class _BlitzGameState extends State<_BlitzGame> {
                   ),
                   onPressed: _finished ? null : () => _answer(true),
                   icon: const Icon(Icons.check_rounded),
-                  label: const Text('True', style: TextStyle(fontSize: 18)),
+                  label: Text(
+                    gameL10n(context).gameUiTrue,
+                    style: const TextStyle(fontSize: 18),
+                  ),
                 ),
               ),
             ),
@@ -357,7 +374,10 @@ class _BlitzGameState extends State<_BlitzGame> {
                   ),
                   onPressed: _finished ? null : () => _answer(false),
                   icon: const Icon(Icons.close_rounded),
-                  label: const Text('False', style: TextStyle(fontSize: 18)),
+                  label: Text(
+                    gameL10n(context).gameUiFalse,
+                    style: const TextStyle(fontSize: 18),
+                  ),
                 ),
               ),
             ),

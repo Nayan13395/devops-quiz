@@ -1,0 +1,302 @@
+[
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "既存の release ブランチ用にリンクされた作業ツリーを追加するコマンドはどれか？",
+    "options": [
+      "git worktree prune",
+      "git worktree lock ..\\release",
+      "git worktree add ..\\release release",
+      "git worktree list"
+    ],
+    "answer": "git worktree add ..\\release release"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "親プロジェクトのバージョン管理されたサブモジュールのパスと URL を記録するファイルはどれか？",
+    "options": [
+      ".gitmessage",
+      ".gitmodules",
+      ".gitignore",
+      ".gitattributes"
+    ],
+    "answer": ".gitmodules"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "入れ子も含め登録済みサブモジュールを初期化してチェックアウトするコマンドはどれか？",
+    "options": [
+      "git submodule update --init --recursive",
+      "git submodule deinit --all",
+      "git submodule status",
+      "git submodule sync"
+    ],
+    "answer": "git submodule update --init --recursive"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "親プロジェクトは通常、サブモジュールについて何をコミットに記録するか？",
+    "options": [
+      "サブモジュールの全オブジェクトデータベース",
+      "サブモジュールのデフォルトブランチ名だけ",
+      "サブモジュールの未コミット変更だけ",
+      "特定のサブモジュールコミットへの参照"
+    ],
+    "answer": "特定のサブモジュールコミットへの参照"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "全参照と到達可能な履歴を含む持ち運び可能なバンドルを作るコマンドはどれか？",
+    "options": [
+      "git format-patch -1 HEAD",
+      "git diff --binary > backup.bundle",
+      "git bundle create backup.bundle --all",
+      "git archive --output=backup.bundle HEAD"
+    ],
+    "answer": "git bundle create backup.bundle --all"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "HEAD の追跡ファイルを Git 履歴なしの ZIP に出力するコマンドはどれか？",
+    "options": [
+      "git format-patch --stdout HEAD > source.zip",
+      "git archive --format=zip --output=source.zip HEAD",
+      "git bundle create source.zip --all",
+      "git clone --bare . source.zip"
+    ],
+    "answer": "git archive --format=zip --output=source.zip HEAD"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "最新コミットをメール形式のパッチファイルにするコマンドはどれか？",
+    "options": [
+      "git format-patch -1 HEAD",
+      "git diff HEAD",
+      "git show --stat HEAD",
+      "git log -1 --oneline"
+    ],
+    "answer": "git format-patch -1 HEAD"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "git format-patch のメールパッチを適用してコミットを作るコマンドはどれか？",
+    "options": [
+      "git apply changes.patch",
+      "git diff changes.patch",
+      "git add changes.patch",
+      "git am changes.patch"
+    ],
+    "answer": "git am changes.patch"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "ファイルを変えず、通常のパッチが適用可能か調べるコマンドはどれか？",
+    "options": [
+      "git am changes.patch",
+      "git add changes.patch",
+      "git apply --check changes.patch",
+      "git apply changes.patch"
+    ],
+    "answer": "git apply --check changes.patch"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "ファイル名を含まず内容を保存する Git オブジェクト型はどれか？",
+    "options": [
+      "注釈付きタグ",
+      "Blob",
+      "Tree",
+      "コミット"
+    ],
+    "answer": "Blob"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "ファイル名と blob またはサブツリーへの参照を記録する Git オブジェクト型はどれか？",
+    "options": [
+      "Tree",
+      "Blob",
+      "コミット",
+      "注釈付きタグ"
+    ],
+    "answer": "Tree"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "既知のオブジェクト ID の型を表示するコマンドはどれか？",
+    "options": [
+      "git cat-file -s abc1234",
+      "git rev-parse abc1234",
+      "git log -1 abc1234",
+      "git cat-file -t abc1234"
+    ],
+    "answer": "git cat-file -t abc1234"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "HEAD の完全なオブジェクト ID を表示するコマンドはどれか？",
+    "options": [
+      "git status --short",
+      "git branch --show-current",
+      "git rev-parse HEAD",
+      "git symbolic-ref HEAD"
+    ],
+    "answer": "git rev-parse HEAD"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "feature から到達でき、main からは到達できないコミットを選ぶ範囲はどれか？",
+    "options": [
+      "main^",
+      "main..feature",
+      "feature..main",
+      "main...feature"
+    ],
+    "answer": "main..feature"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "マージコミットだけを表示する git log オプションはどれか？",
+    "options": [
+      "--merges",
+      "--no-merges",
+      "--first-parent",
+      "--reverse"
+    ],
+    "answer": "--merges"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "変更パスと変更種別の文字を表示する git diff オプションはどれか？",
+    "options": [
+      "--name-only",
+      "--stat",
+      "--shortstat",
+      "--name-status"
+    ],
+    "answer": "--name-status"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "パスのテキスト正規化規則など、バージョン管理された属性を定義するファイルはどれか？",
+    "options": [
+      ".gitmodules",
+      ".gitconfig",
+      ".gitattributes",
+      ".gitignore"
+    ],
+    "answer": ".gitattributes"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": ".gitattributes の '*.sh text eol=lf' は一致するテキストファイルに何を指定するか？",
+    "options": [
+      "空行の自動削除",
+      "作業ツリーで LF 改行を使う",
+      "作業ツリーで CRLF 改行を使う",
+      "テキスト変換なしのバイナリ扱い"
+    ],
+    "answer": "作業ツリーで LF 改行を使う"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "コミットメッセージ案のファイルを調べてコミットを拒否できるフックはどれか？",
+    "options": [
+      "commit-msg",
+      "post-commit",
+      "post-checkout",
+      "post-merge"
+    ],
+    "answer": "commit-msg"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "Git フック用の独自ディレクトリを選ぶ設定はどれか？",
+    "options": [
+      "core.worktree",
+      "core.excludesFile",
+      "core.attributesFile",
+      "core.hooksPath"
+    ],
+    "answer": "core.hooksPath"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "共有 .gitignore に追加せず、個人だけで未追跡ファイルを無視できるファイルはどれか？",
+    "options": [
+      ".git\\description",
+      ".git\\packed-refs",
+      ".git\\info\\exclude",
+      ".git\\HEAD"
+    ],
+    "answer": ".git\\info\\exclude"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "bisect セッションを終了し、通常は元のブランチに戻るコマンドはどれか？",
+    "options": [
+      "git bisect log",
+      "git bisect reset",
+      "git bisect skip",
+      "git bisect good"
+    ],
+    "answer": "git bisect reset"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "パッチシリーズの二つの版を比較するコマンドはどれか？",
+    "options": [
+      "git range-diff main..old main..new",
+      "git diff old new",
+      "git log old..new",
+      "git merge-base old new"
+    ],
+    "answer": "git range-diff main..old main..new"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "コミット作成時に Signed-off-by 行を付けるコマンドはどれか？",
+    "options": [
+      "git commit --gpg-sign",
+      "git commit --amend",
+      "git commit --no-verify",
+      "git commit --signoff"
+    ],
+    "answer": "git commit --signoff"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "git log -S'old_name' はデフォルトで何を探すか？",
+    "options": [
+      "メッセージに old_name を含むコミット",
+      "名前に old_name を含むブランチ",
+      "old_name の出現回数を変えるコミット",
+      "作成者の名前が old_name のコミット"
+    ],
+    "answer": "old_name の出現回数を変えるコミット"
+  }
+]

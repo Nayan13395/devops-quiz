@@ -16,6 +16,8 @@ import 'package:devops_quiz/screens/true_false_blitz_screen.dart';
 import 'package:devops_quiz/screens/snake_ladders_screen.dart';
 import 'package:devops_quiz/screens/word_guess_levels_screen.dart';
 import 'package:devops_quiz/services/achievement_service.dart';
+import 'package:devops_quiz/services/snake_ladders_service.dart';
+import 'package:devops_quiz/services/chess_save_service.dart';
 import 'package:devops_quiz/services/certificate_service.dart';
 import 'package:devops_quiz/services/daily_login_bonus_service.dart';
 import 'package:devops_quiz/services/festival_calendar_service.dart';
@@ -34,6 +36,8 @@ import 'package:shared_preferences/shared_preferences.dart';
 
 Widget gameApp(Widget home, {double textScale = 1.3}) {
   return MaterialApp(
+    localizationsDelegates: AppLocalizations.localizationsDelegates,
+    supportedLocales: AppLocalizations.supportedLocales,
     builder: (context, child) => MediaQuery(
       data: MediaQuery.of(
         context,
@@ -46,6 +50,10 @@ Widget gameApp(Widget home, {double textScale = 1.3}) {
 
 void main() {
   TestWidgetsFlutterBinding.ensureInitialized();
+  setUp(() {
+    rootBundle.clear();
+    SharedPreferences.setMockInitialValues({'game_sound_enabled': false});
+  });
 
   // ==========================================================
   // QUESTION DATA
@@ -134,11 +142,11 @@ void main() {
     final levels = WordGuessLevelService.levels;
     final words = levels.map((level) => level.word).toSet();
 
-    expect(levels, hasLength(100));
-    expect(words, hasLength(100));
+    expect(levels, hasLength(500));
+    expect(words, hasLength(500));
     expect(levels.first.word, 'GIT');
     expect(levels[1].word, 'AWS');
-    expect(levels.last.word, 'KUBERNETES');
+    expect(levels[99].word, 'KUBERNETES');
     expect(levels.first.difficulty, WordGuessDifficulty.easy);
     expect(levels[33].difficulty, WordGuessDifficulty.easy);
     expect(levels[34].difficulty, WordGuessDifficulty.medium);
@@ -152,16 +160,14 @@ void main() {
   testWidgets('Word Guess advances and awards 100 points without hints', (
     tester,
   ) async {
-    SharedPreferences.setMockInitialValues({});
+    SharedPreferences.setMockInitialValues({'game_sound_enabled': false});
     await tester.pumpWidget(
       gameApp(const WordGuessLevelsScreen(), textScale: 1),
     );
     await tester.pumpAndSettle();
 
-    expect(find.text('Level 1/100'), findsOneWidget);
-    await tester.tap(find.byKey(const ValueKey('word-guess-key-G')));
+    expect(find.text('Level 1/500'), findsOneWidget);
     await tester.tap(find.byKey(const ValueKey('word-guess-key-I')));
-    await tester.tap(find.byKey(const ValueKey('word-guess-key-T')));
     await tester.tap(find.byKey(const ValueKey('word-guess-enter')));
     await tester.pumpAndSettle();
 
@@ -169,42 +175,49 @@ void main() {
     expect(await PointService.getTotalPoints(), 100);
     await tester.tap(find.text('Next Level'));
     await tester.pumpAndSettle();
-    expect(find.text('Level 2/100'), findsOneWidget);
+    expect(find.text('Level 2/500'), findsOneWidget);
   });
 
   testWidgets('Word Guess hint reveals a letter and deducts 20 points', (
     tester,
   ) async {
-    SharedPreferences.setMockInitialValues({});
+    SharedPreferences.setMockInitialValues({
+      'total_points': 20,
+      'game_sound_enabled': false,
+    });
     await tester.pumpWidget(
       gameApp(const WordGuessLevelsScreen(), textScale: 1),
     );
     await tester.pumpAndSettle();
 
     await tester.tap(find.byKey(const ValueKey('word-guess-hint')));
-    await tester.tap(find.byKey(const ValueKey('word-guess-key-I')));
-    await tester.tap(find.byKey(const ValueKey('word-guess-key-T')));
+    await tester.pumpAndSettle();
+    expect(await PointService.getTotalPoints(), 0);
     await tester.tap(find.byKey(const ValueKey('word-guess-enter')));
     await tester.pumpAndSettle();
 
     expect(find.text('Level 1 Complete!'), findsOneWidget);
     expect(
-      find.textContaining('You earned 80 points after 1 hint.'),
+      find.textContaining('You earned 100 points after 1 hint.'),
       findsOneWidget,
     );
-    expect(await PointService.getTotalPoints(), 80);
+    expect(await PointService.getTotalPoints(), 100);
   });
 
   test(
     'Linux Set 5 has 25 unique questions not repeated in earlier sets',
     () async {
-      final data =
+      final data = <dynamic>[];
+      for (var set = 1; set <= QuestionService.setsPerCategory; set++) {
+        data.addAll(
           jsonDecode(
                 await rootBundle.loadString(
-                  'assets/questions/Linux/linux_en.json',
+                  QuestionService.assetPath('Linux', 'en', set),
                 ),
               )
-              as List;
+              as List,
+        );
+      }
       final questions = data.cast<Map<String, dynamic>>();
       String normalize(String question) =>
           question.trim().replaceAll(RegExp(r'\s+'), ' ').toLowerCase();
@@ -223,20 +236,23 @@ void main() {
     },
   );
 
-  test('untranslated sets and languages fall back to English', () async {
-    final hindi = await QuestionService().loadQuestions(
-      const Locale('hi'),
-      'Linux',
-    );
-    final spanish = await QuestionService().loadQuestions(
-      const Locale('es'),
-      'Linux',
-    );
+  test(
+    'localized sets are loaded from their own language directories',
+    () async {
+      final hindi = await QuestionService().loadQuestions(
+        const Locale('hi'),
+        'Linux',
+      );
+      final spanish = await QuestionService().loadQuestions(
+        const Locale('es'),
+        'Linux',
+      );
 
-    expect(hindi.where((q) => q.set == 1), isNotEmpty);
-    expect(hindi.where((q) => q.set == 5), isNotEmpty);
-    expect(spanish.where((q) => q.set == 5), isNotEmpty);
-  });
+      expect(hindi.where((q) => q.set == 1), isNotEmpty);
+      expect(hindi.where((q) => q.set == 5), isNotEmpty);
+      expect(spanish.where((q) => q.set == 5), isNotEmpty);
+    },
+  );
 
   test('all supported UI locales are recognized for question banks', () async {
     final supported = LanguageProvider.languages.map(
@@ -651,18 +667,18 @@ void main() {
 
       for (final window in windows) {
         expect(
-          FestivalCalendarService.activeOn(window.startsOn)?.kind,
-          window.kind,
+          FestivalCalendarService.activeWindowsOn(window.startsOn),
+          contains(window),
         );
         expect(
-          FestivalCalendarService.activeOn(window.endsOn)?.kind,
-          window.kind,
+          FestivalCalendarService.activeWindowsOn(window.endsOn),
+          contains(window),
         );
         expect(
-          FestivalCalendarService.activeOn(
+          FestivalCalendarService.activeWindowsOn(
             window.endsOn.add(const Duration(days: 1)),
-          )?.kind,
-          isNot(window.kind),
+          ),
+          isNot(contains(window)),
         );
       }
 
@@ -786,7 +802,7 @@ void main() {
         .map((language) => language.code)
         .toList();
 
-    expect(codes, hasLength(30));
+    expect(codes, hasLength(32));
     expect(
       AppLocalizations.supportedLocales.map((l) => l.languageCode).toSet(),
       codes.toSet(),
@@ -824,7 +840,7 @@ void main() {
       const CommandMatchScreen(),
       'Tap a command, then tap its meaning.',
     ),
-    ('port master', const PortMasterScreen(), 'Default port of'),
+    ('port master', const PortMasterScreen(), 'Save question'),
     ('tic-tac-toe', const TicTacToeScreen(), 'Your turn'),
     ('connect four', const ConnectFourScreen(), 'Red to move'),
     ('ludo', const LudoGameScreen(), 'Ludo'),
@@ -851,9 +867,15 @@ void main() {
       addTearDown(tester.view.resetDevicePixelRatio);
 
       for (final (name, screen, marker) in newGames) {
+        await tester.pumpWidget(const SizedBox());
+        await tester.pump();
         SharedPreferences.setMockInitialValues({});
         await tester.pumpWidget(gameApp(screen));
-        await tester.pumpAndSettle();
+        try {
+          await tester.pumpAndSettle();
+        } catch (error) {
+          fail('$name did not settle at $size: $error');
+        }
 
         expect(find.text(marker), findsOneWidget, reason: '$name at $size');
         expect(tester.takeException(), isNull, reason: '$name at $size');
@@ -915,6 +937,10 @@ void main() {
   });
 
   testWidgets('chess board accepts a legal opening move', (tester) async {
+    tester.view.devicePixelRatio = 1;
+    tester.view.physicalSize = const Size(800, 1000);
+    addTearDown(tester.view.resetPhysicalSize);
+    addTearDown(tester.view.resetDevicePixelRatio);
     await tester.pumpWidget(gameApp(const ChessScreen(), textScale: 1));
     await tester.pumpAndSettle();
 
@@ -923,13 +949,19 @@ void main() {
     await tester.pumpAndSettle();
 
     expect(find.text('Black to move'), findsOneWidget);
-    expect(find.textContaining('e4'), findsOneWidget);
+    final saved = (await ChessSaveService.load())!;
+    expect(saved.game.get('e4'), isNotNull);
+    expect(saved.game.get('e2'), isNull);
     expect(tester.takeException(), isNull);
   });
 
   testWidgets('Snake and Ladders applies ladder jumps', (tester) async {
+    final game = SnakeLaddersGame.create(now: DateTime.utc(2026, 1, 1));
+    final ladder = game.ladders.entries.first;
+    game.positions[0] = ladder.key - 1;
+    await SnakeLaddersService.save(game);
     await tester.pumpWidget(
-      gameApp(SnakeLaddersScreen(diceRoller: () => 4), textScale: 1),
+      gameApp(SnakeLaddersScreen(diceRoller: () => 1), textScale: 1),
     );
     await tester.pumpAndSettle();
     await tester.ensureVisible(find.byKey(const ValueKey('snake-ladder-roll')));
@@ -937,8 +969,8 @@ void main() {
     await tester.tap(find.byKey(const ValueKey('snake-ladder-roll')));
     await tester.pumpAndSettle();
 
-    expect(find.text('P1: 25'), findsOneWidget);
-    expect(find.textContaining('climbed a ladder to 25'), findsOneWidget);
+    expect(find.text('P1: ${ladder.value}'), findsOneWidget);
+    expect((await SnakeLaddersService.load())!.positions[0], ladder.value);
     expect(tester.takeException(), isNull);
   });
 

@@ -3,34 +3,78 @@ import 'dart:math';
 import 'package:shared_preferences/shared_preferences.dart';
 
 import 'point_service.dart';
+import 'game_rewards.dart';
+
+typedef JigsawPieceEdges = ({int top, int right, int bottom, int left});
 
 class JigsawPuzzleService {
   JigsawPuzzleService._();
 
-  static const int levelCount = 100;
-  static const int rewardPerLevel = 100;
-  static const String _completedKey = 'jigsaw_completed_levels_v1';
-  static const String _selectedKey = 'jigsaw_selected_level_v1';
+  static final int levelCount = artworkAssets.length;
+  static const int rewardPerLevel = GameRewards.levelCompletion;
+  static const String _completedKey = 'jigsaw_completed_levels_v3';
+  static const String _selectedKey = 'jigsaw_selected_level_v3';
 
-  static bool usesJigsawPieces(int level) => level >= 21 && level <= levelCount;
+  static final List<String> artworkAssets = List.unmodifiable([
+    for (var level = 1; level <= 300; level++) 'assets/Jigsaw/$level.webp',
+  ]);
+
+  static String artworkFor(int level) {
+    if (level < 1 || level > levelCount) {
+      throw RangeError.range(level, 1, levelCount, 'level');
+    }
+    return artworkAssets[level - 1];
+  }
 
   static int gridSizeFor(int level) {
     if (level < 1 || level > levelCount) {
       throw RangeError.range(level, 1, levelCount, 'level');
     }
-    if (level <= 20) return 3;
-    if (level <= 75) return 4;
+    if (level <= 15) return 2;
+    if (level <= 100) return 3;
+    if (level <= 200) return 4;
     return 5;
   }
 
-  static List<int> shuffledTiles(int level) {
+  static int _edgeDirection(int level, int row, int column, int orientation) {
+    final seed =
+        level * 73856093 ^
+        row * 19349663 ^
+        column * 83492791 ^
+        orientation * 2654435761;
+    return Random(seed).nextBool() ? 1 : -1;
+  }
+
+  static JigsawPieceEdges pieceEdgesFor(int level, int tile) {
+    final grid = gridSizeFor(level);
+    if (tile < 0 || tile >= grid * grid) {
+      throw RangeError.range(tile, 0, grid * grid - 1, 'tile');
+    }
+    final row = tile ~/ grid;
+    final column = tile % grid;
+    return (
+      top: row == 0 ? 0 : -_edgeDirection(level, row - 1, column, 0),
+      right: column == grid - 1 ? 0 : _edgeDirection(level, row, column, 1),
+      bottom: row == grid - 1 ? 0 : _edgeDirection(level, row, column, 0),
+      left: column == 0 ? 0 : -_edgeDirection(level, row, column - 1, 1),
+    );
+  }
+
+  /// Returns a derangement of the tiles: no piece ever starts on its
+  /// correct slot. Pass [random] (e.g. an unseeded [Random]) to get a
+  /// different arrangement each call, as the shuffle button does.
+  static List<int> shuffledTiles(int level, {Random? random}) {
     final count = gridSizeFor(level);
-    final tiles = List<int>.generate(count * count, (index) => index);
-    tiles.shuffle(Random(0x4A165A + level * 7919));
-    if (isSolved(tiles)) {
-      final temporary = tiles[0];
-      tiles[0] = tiles[1];
-      tiles[1] = temporary;
+    final total = count * count;
+    final tiles = List<int>.generate(total, (index) => index);
+    final rng = random ?? Random(0x4A165A + level * 7919);
+    // Sattolo's algorithm produces a single-cycle permutation, which
+    // guarantees that no tile remains at its solved position.
+    for (var i = total - 1; i > 0; i--) {
+      final j = rng.nextInt(i);
+      final temporary = tiles[i];
+      tiles[i] = tiles[j];
+      tiles[j] = temporary;
     }
     return List.unmodifiable(tiles);
   }

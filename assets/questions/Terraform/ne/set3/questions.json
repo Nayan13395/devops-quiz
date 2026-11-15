@@ -1,0 +1,302 @@
+[
+  {
+    "category": "Terraform",
+    "set": 3,
+    "question": "कुन Terraform सुविधाले पुनः प्रयोग गर्न मिल्ने इन्फ्रास्ट्रक्चर कम्पोनेन्टहरू अनुमति दिन्छ?",
+    "options": [
+      "मोड्युलहरू (Modules)",
+      "प्रोभाइडरहरू (Providers)",
+      "भेरिएबलहरू (Variables)",
+      "आउटपुटहरू (Outputs)"
+    ],
+    "answer": "मोड्युलहरू (Modules)"
+  },
+  {
+    "category": "Terraform",
+    "set": 3,
+    "question": "मोड्युल कल गर्न कुन ब्लक प्रयोग गरिन्छ?",
+    "options": [
+      "module",
+      "import",
+      "resource",
+      "provider"
+    ],
+    "answer": "module"
+  },
+  {
+    "category": "Terraform",
+    "set": 3,
+    "question": "कुन आर्गुमेन्टले मोड्युलको स्रोत स्थान निर्दिष्ट गर्छ?",
+    "options": [
+      "source",
+      "path",
+      "location",
+      "module_source"
+    ],
+    "answer": "source"
+  },
+  {
+    "category": "Terraform",
+    "set": 3,
+    "question": "कुन Terraform Registry ले सार्वजनिक मोड्युलहरू होस्ट गर्छ?",
+    "options": [
+      "Terraform Registry",
+      "Docker Hub",
+      "GitHub Packages",
+      "AWS Marketplace"
+    ],
+    "answer": "Terraform Registry"
+  },
+  {
+    "category": "Terraform",
+    "set": 3,
+    "question": "कुन ब्याकएन्डले Terraform स्टेट Amazon S3 मा भण्डारण गर्छ?",
+    "options": [
+      "s3",
+      "aws",
+      "bucket",
+      "remote"
+    ],
+    "answer": "s3"
+  },
+  {
+    "category": "Terraform",
+    "set": 3,
+    "question": "S3 ब्याकएन्डको अहिले अप्रचलित तालिका-आधारित स्टेट लकिङका लागि कुन AWS सेवा प्रयोग हुन्थ्यो?",
+    "options": [
+      "DynamoDB",
+      "RDS",
+      "EFS",
+      "Lambda"
+    ],
+    "answer": "DynamoDB"
+  },
+  {
+    "category": "Terraform",
+    "set": 3,
+    "question": "पहिले Terraform Cloud भनिने HCP Terraform मा स्टेट राख्न सक्ने पुरानो ब्याकएन्ड प्रकार कुन हो?",
+    "options": [
+      "remote",
+      "cloud",
+      "terraform",
+      "tfc"
+    ],
+    "answer": "remote"
+  },
+  {
+    "category": "Terraform",
+    "set": 3,
+    "question": "स्टेट लकिङको उद्देश्य के हो?",
+    "options": [
+      "एकैसाथ हुने परिवर्तनहरू रोक्नु",
+      "स्टेट फाइल इन्क्रिप्ट गर्नु",
+      "स्टेटको ब्याकअप लिनु",
+      "स्टेट कम्प्रेस गर्नु"
+    ],
+    "answer": "एकैसाथ हुने परिवर्तनहरू रोक्नु"
+  },
+  {
+    "category": "Terraform",
+    "set": 3,
+    "question": "कुन कमाण्डले रिमोट स्टेटलाई लोकल मेसिनमा तान्छ?",
+    "options": [
+      "terraform state pull",
+      "terraform pull",
+      "terraform get-state",
+      "terraform state download"
+    ],
+    "answer": "terraform state pull"
+  },
+  {
+    "category": "Terraform",
+    "set": 3,
+    "question": "कुन कमाण्डले स्टेटलाई ब्याकएन्डमा पठाउँछ?",
+    "options": [
+      "terraform state push",
+      "terraform push",
+      "terraform upload",
+      "terraform state upload"
+    ],
+    "answer": "terraform state push"
+  },
+  {
+    "category": "Terraform",
+    "set": 3,
+    "question": "कुन ब्याकएन्ड प्रकारले स्टेट लोकल डिस्कमा भण्डारण गर्छ?",
+    "options": [
+      "local",
+      "file",
+      "disk",
+      "host"
+    ],
+    "answer": "local"
+  },
+  {
+    "category": "Terraform",
+    "set": 3,
+    "question": "कुन कमाण्डले रिसोर्स नमेटिकन स्टेटबाट हटाउँछ?",
+    "options": [
+      "terraform state rm",
+      "terraform rm",
+      "terraform destroy",
+      "terraform remove"
+    ],
+    "answer": "terraform state rm"
+  },
+  {
+    "category": "Terraform",
+    "set": 3,
+    "question": "कुन कमाण्डले स्टेटभित्र रिसोर्सहरू सार्छ?",
+    "options": [
+      "terraform state mv",
+      "terraform move",
+      "terraform mv",
+      "terraform state move"
+    ],
+    "answer": "terraform state mv"
+  },
+  {
+    "category": "Terraform",
+    "set": 3,
+    "question": "कुन डाटा सोर्सले अर्को स्टेट फाइलबाट आउटपुटहरू पढ्छ?",
+    "options": [
+      "terraform_remote_state",
+      "remote_state",
+      "state_data",
+      "terraform_state"
+    ],
+    "answer": "terraform_remote_state"
+  },
+  {
+    "category": "Terraform",
+    "set": 3,
+    "question": "कुन फाइलले प्रोभाइडर संस्करणहरू लक गर्छ?",
+    "options": [
+      ".terraform.lock.hcl",
+      "terraform.lock",
+      "providers.lock",
+      "terraform.providers"
+    ],
+    "answer": ".terraform.lock.hcl"
+  },
+  {
+    "category": "Terraform",
+    "set": 3,
+    "question": "रजिस्ट्रीबाट स्थापित मोड्युलको संस्करण छान्ने आर्गुमेन्ट कुन हो?",
+    "options": [
+      "version",
+      "ref",
+      "revision",
+      "required_version"
+    ],
+    "answer": "version"
+  },
+  {
+    "category": "Terraform",
+    "set": 3,
+    "question": "network नामको बाल मोड्युलको vpc_id आउटपुट पढ्ने अभिव्यक्ति कुन हो?",
+    "options": [
+      "var.network.vpc_id",
+      "local.network.vpc_id",
+      "data.network.vpc_id",
+      "module.network.vpc_id"
+    ],
+    "answer": "module.network.vpc_id"
+  },
+  {
+    "category": "Terraform",
+    "set": 3,
+    "question": "थप प्रोभाइडर कन्फिगरेसनलाई नाम दिने प्रोभाइडर ब्लक आर्गुमेन्ट कुन हो?",
+    "options": [
+      "version",
+      "count",
+      "alias",
+      "source"
+    ],
+    "answer": "alias"
+  },
+  {
+    "category": "Terraform",
+    "set": 3,
+    "question": "उपनाम भएको निश्चित प्रोभाइडर कन्फिगरेसन छान्ने रिसोर्स मेटा-आर्गुमेन्ट कुन हो?",
+    "options": [
+      "for_each",
+      "provider",
+      "providers",
+      "depends_on"
+    ],
+    "answer": "provider"
+  },
+  {
+    "category": "Terraform",
+    "set": 3,
+    "question": "बाल मोड्युलमा निश्चित प्रोभाइडर कन्फिगरेसन पठाउने मोड्युल-कल आर्गुमेन्ट कुन हो?",
+    "options": [
+      "providers",
+      "provider",
+      "required_providers",
+      "configuration_aliases"
+    ],
+    "answer": "providers"
+  },
+  {
+    "category": "Terraform",
+    "set": 3,
+    "question": "ब्याकएन्ड कन्फिगरेसन बदलिएपछि विद्यमान स्टेट सार्न खोज्ने terraform init विकल्प कुन हो?",
+    "options": [
+      "-reconfigure",
+      "-upgrade",
+      "-get=false",
+      "-migrate-state"
+    ],
+    "answer": "-migrate-state"
+  },
+  {
+    "category": "Terraform",
+    "set": 3,
+    "question": "स्टेट सार्न नखोजी पुरानो ब्याकएन्ड कन्फिगरेसन बेवास्ता गर्ने terraform init विकल्प कुन हो?",
+    "options": [
+      "-upgrade",
+      "-lock=false",
+      "-reconfigure",
+      "-migrate-state"
+    ],
+    "answer": "-reconfigure"
+  },
+  {
+    "category": "Terraform",
+    "set": 3,
+    "question": "staging नामको CLI वर्कस्पेस बनाएर छान्ने कमान्ड कुन हो?",
+    "options": [
+      "terraform workspace list",
+      "terraform workspace new staging",
+      "terraform workspace select staging",
+      "terraform workspace show"
+    ],
+    "answer": "terraform workspace new staging"
+  },
+  {
+    "category": "Terraform",
+    "set": 3,
+    "question": "हालको CLI वर्कस्पेस नाम देखाउने कमान्ड कुन हो?",
+    "options": [
+      "terraform workspace show",
+      "terraform workspace list",
+      "terraform workspace select default",
+      "terraform state list"
+    ],
+    "answer": "terraform workspace show"
+  },
+  {
+    "category": "Terraform",
+    "set": 3,
+    "question": "S3 को आफ्नै लकफाइल-आधारित स्टेट लकिङ सक्षम गर्ने S3 ब्याकएन्ड आर्गुमेन्ट कुन हो?",
+    "options": [
+      "encrypt = true",
+      "workspace_key_prefix = \"env\"",
+      "skip_region_validation = true",
+      "use_lockfile = true"
+    ],
+    "answer": "use_lockfile = true"
+  }
+]

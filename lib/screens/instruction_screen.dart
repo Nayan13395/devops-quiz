@@ -99,6 +99,12 @@ class _InstructionScreenState extends State<InstructionScreen> {
                           "📌 ${AppLocalizations.of(context)!.instruction7}",
                           style: const TextStyle(fontSize: 18),
                         ),
+                        const SizedBox(height: 10),
+
+                        Text(
+                          "📌 ${AppLocalizations.of(context)!.instruction8}",
+                          style: const TextStyle(fontSize: 18),
+                        ),
 
                         const Spacer(),
 

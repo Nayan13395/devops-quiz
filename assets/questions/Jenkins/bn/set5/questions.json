@@ -1,0 +1,302 @@
+[
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "একই পাইপলাইনের সমান্তরাল রানের বদলে নতুন রান সারিতে রাখে কোন ঘোষণামূলক বিকল্প?",
+    "options": [
+      "parallelsAlwaysFailFast()",
+      "disableConcurrentBuilds()",
+      "disableResume()",
+      "skipDefaultCheckout()"
+    ],
+    "answer": "disableConcurrentBuilds()"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "পুরোনো বিল্ড রেকর্ড ও আর্টিফ্যাক্টের সংরক্ষণনীতি ঠিক করে কোন ঘোষণামূলক বিকল্প?",
+    "options": [
+      "buildDiscarder(logRotator(numToKeepStr: '10'))",
+      "timeout(time: 10, unit: 'MINUTES')",
+      "retry(10)",
+      "quietPeriod(10)"
+    ],
+    "answer": "buildDiscarder(logRotator(numToKeepStr: '10'))"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "Jenkins cron-এর H চিহ্ন কী দেয়?",
+    "options": [
+      "ব্যবহারকারীর কম্পিউটারের বর্তমান সময়ের ঘণ্টার অংশ",
+      "শুধু ছুটির দিনে চালানোর নির্দেশ",
+      "শুধু নোড অব্যবহৃত থাকলে চালানোর নির্দেশ",
+      "নির্ধারিত লোড ছড়াতে জবের নামভিত্তিক স্থির হ্যাশ"
+    ],
+    "answer": "নির্ধারিত লোড ছড়াতে জবের নামভিত্তিক স্থির হ্যাশ"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "Jenkins-এর পাঁচ-ক্ষেত্র cron-এ পঞ্চম ক্ষেত্র কী?",
+    "options": [
+      "দিনের ঘণ্টা",
+      "মাসের দিন",
+      "সপ্তাহের দিন",
+      "ঘণ্টার মিনিট"
+    ],
+    "answer": "সপ্তাহের দিন"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "আগের বিল্ড ব্যর্থ বা অস্থির ছিল, এখন সফল হলে কোন post শর্ত চলে?",
+    "options": [
+      "unsuccessful",
+      "fixed",
+      "changed",
+      "regression"
+    ],
+    "answer": "fixed"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "অন্য post শর্তগুলো যাচাইয়ের পরে চলে কোন post শর্ত?",
+    "options": [
+      "cleanup",
+      "always",
+      "changed",
+      "success"
+    ],
+    "answer": "cleanup"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "স্টেজ এজেন্ট বরাদ্দের আগে শর্ত পরীক্ষা করে কোন when বিকল্প?",
+    "options": [
+      "beforeInput false",
+      "beforeOptions false",
+      "branch 'main'",
+      "beforeAgent true"
+    ],
+    "answer": "beforeAgent true"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "মাল্টিব্রাঞ্চ পাইপলাইনে নামযুক্ত শাখা বেছে নেয় কোন when শর্ত?",
+    "options": [
+      "buildingTag()",
+      "changeRequest()",
+      "branch 'main'",
+      "tag 'main'"
+    ],
+    "answer": "branch 'main'"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "অপারেটিং সিস্টেম ও ব্রাউজারের মতো অক্ষের মানের সমন্বয় চালায় কোন ঘোষণামূলক কাঠামো?",
+    "options": [
+      "environment",
+      "matrix",
+      "parallel",
+      "steps"
+    ],
+    "answer": "matrix"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "ঘোষণামূলক ম্যাট্রিক্স থেকে অবাঞ্ছিত সমন্বয় সরায় কোন অংশ?",
+    "options": [
+      "excludes",
+      "axes",
+      "stages",
+      "tools"
+    ],
+    "answer": "excludes"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "সমান্তরাল শাখার একটি ব্যর্থ হলে অন্যগুলো থামায় কোন স্টেজ সেটিং?",
+    "options": [
+      "beforeAgent true",
+      "reuseNode true",
+      "alwaysPull true",
+      "failFast true"
+    ],
+    "answer": "failFast true"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "বিল্ড অস্থির হলে পরের স্টেজ বাদ দেয় কোন ঘোষণামূলক বিকল্প?",
+    "options": [
+      "disableResume()",
+      "preserveStashes()",
+      "skipStagesAfterUnstable()",
+      "skipDefaultCheckout()"
+    ],
+    "answer": "skipStagesAfterUnstable()"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "ব্যর্থতা লিখেও নিজের ব্লকের পরে চালানো চালিয়ে যেতে দেয় কোন ধাপ?",
+    "options": [
+      "input",
+      "catchError",
+      "error",
+      "timeout"
+    ],
+    "answer": "catchError"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "প্রক্রিয়া শেষ হলে sh(script: 'check.sh', returnStatus: true) কী ফেরায়?",
+    "options": [
+      "প্রক্রিয়ার সংখ্যাসূচক প্রস্থান কোড",
+      "সম্পূর্ণ মানক আউটপুট পাঠ্য",
+      "শেলের প্রক্রিয়া ID",
+      "Jenkins ক্রেডেনশিয়াল অবজেক্ট"
+    ],
+    "answer": "প্রক্রিয়ার সংখ্যাসূচক প্রস্থান কোড"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "sh(script: 'echo ready', returnStdout: true) সফল হলে কী ফেরায়?",
+    "options": [
+      "সংখ্যাসূচক বিল্ড নম্বর",
+      "ম্যাপ হিসেবে শেলের পরিবেশ",
+      "এজেন্টের লেবেলের তালিকা",
+      "ধরা মানক আউটপুট স্ট্রিং"
+    ],
+    "answer": "ধরা মানক আউটপুট স্ট্রিং"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "বর্তমান ওয়ার্কস্পেস ডিরেক্টরির সবকিছু উপডিরেক্টরিসহ মুছে দেয় কোন ধাপ?",
+    "options": [
+      "pwd",
+      "readFile",
+      "deleteDir",
+      "fileExists"
+    ],
+    "answer": "deleteDir"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "বর্তমান ওয়ার্কস্পেসে পথ আছে কি না দেখে কোন ধাপ?",
+    "options": [
+      "libraryResource",
+      "fileExists",
+      "readFile",
+      "writeFile"
+    ],
+    "answer": "fileExists"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "অন্য Jenkins জব চালিয়ে বিল্ড প্যারামিটারও দিতে পারে কোন ধাপ?",
+    "options": [
+      "build",
+      "stage",
+      "node",
+      "checkout"
+    ],
+    "answer": "build"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "স্টেজ আবার শুরু করতে সম্পূর্ণ বিল্ডের stash রাখে কোন ঘোষণামূলক বিকল্প?",
+    "options": [
+      "disableResume()",
+      "skipDefaultCheckout()",
+      "quietPeriod(5)",
+      "preserveStashes()"
+    ],
+    "answer": "preserveStashes()"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "vars/deploy.groovy নির্ধারিত গ্লোবাল ভেরিয়েবল deploy-এর সাহায্য পাঠ্য থাকে যৌথ লাইব্রেরির কোন ফাইলে?",
+    "options": [
+      "resources/deploy.txt",
+      "vars/main.groovy",
+      "vars/deploy.txt",
+      "src/deploy.groovy"
+    ],
+    "answer": "vars/deploy.txt"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "Jenkins পাইপলাইনের @NonCPS মেথডের প্রধান সীমা কী?",
+    "options": [
+      "এটি Windows এজেন্টে চলতে হবে",
+      "এটি CPS-রূপান্তরিত পাইপলাইন ধাপ ডাকতে পারবে না",
+      "এতে stage নির্দেশ থাকতে হবে",
+      "এটি সবসময় স্ট্রিং ফেরাবে"
+    ],
+    "answer": "এটি CPS-রূপান্তরিত পাইপলাইন ধাপ ডাকতে পারবে না"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "স্যান্ডবক্সের অননুমোদিত Groovy কোডের চাওয়া স্বাক্ষর কোন Jenkins সুবিধা পরীক্ষা করে?",
+    "options": [
+      "প্রক্রিয়ার ভেতরের স্ক্রিপ্ট অনুমোদন",
+      "Credentials Store",
+      "Build Queue",
+      "SCM পোলিং লগ"
+    ],
+    "answer": "প্রক্রিয়ার ভেতরের স্ক্রিপ্ট অনুমোদন"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "শেলকে বাঁধা গোপন ভেরিয়েবল প্রসারিত করতে দেওয়া স্ক্রিপ্টে কোন Groovy উদ্ধৃতি ব্যবহার করা উচিত?",
+    "options": [
+      "গোপন মানসহ ডাবল-কোট করা Groovy ইন্টারপোলেটেড স্ট্রিং",
+      "গোপন মানসহ তিনটি ডাবল-কোটের Groovy ইন্টারপোলেটেড স্ট্রিং",
+      "খোলা পাঠ্যের গোপন মান জুড়ে তৈরি Groovy স্ট্রিং",
+      "সিঙ্গল-কোট করা Groovy স্ট্রিং"
+    ],
+    "answer": "সিঙ্গল-কোট করা Groovy স্ট্রিং"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "সংশ্লিষ্ট ওয়েব অনুরোধে Jenkins CSRF crumb-এর কাজ কী?",
+    "options": [
+      "আপলোডের আগে বিল্ড আর্টিফ্যাক্ট এনক্রিপ্ট করা",
+      "বিল্ড চালানোর এজেন্ট নির্বাচন",
+      "অবস্থা বদলের অনুরোধ প্রতিষ্ঠিত ব্যবহারকারী সেশনের কি না যাচাইয়ে সাহায্য করা",
+      "সব জবের অনুমোদন পরীক্ষার বিকল্প হওয়া"
+    ],
+    "answer": "অবস্থা বদলের অনুরোধ প্রতিষ্ঠিত ব্যবহারকারী সেশনের কি না যাচাইয়ে সাহায্য করা"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "আলাদা জবের মধ্যে যৌথ টেস্ট যন্ত্রে একচেটিয়া প্রবেশ নিয়ন্ত্রণে পাইপলাইন কী ব্যবহার করবে?",
+    "options": [
+      "skipDefaultCheckout বিকল্প",
+      "Lockable Resources প্লাগইনের lock ধাপ",
+      "timestamps বিকল্প",
+      "buildDiscarder বিকল্প"
+    ],
+    "answer": "Lockable Resources প্লাগইনের lock ধাপ"
+  }
+]

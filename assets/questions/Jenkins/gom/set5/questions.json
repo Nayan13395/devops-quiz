@@ -1,0 +1,302 @@
+[
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "त्याच Pipeline च्यो फेरी एकाच वेळार चलू दिवचे बदला नवी फेरी रांगेत दवरपी Declarative पर्याय खंयचो?",
+    "options": [
+      "parallelsAlwaysFailFast()",
+      "disableConcurrentBuilds()",
+      "disableResume()",
+      "skipDefaultCheckout()"
+    ],
+    "answer": "disableConcurrentBuilds()"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "पोरण्यो बिल्ड नोंदी आनी आर्टिफॅक्ट राखपाचे नियम दिवपी Declarative पर्याय खंयचो?",
+    "options": [
+      "buildDiscarder(logRotator(numToKeepStr: '10'))",
+      "timeout(time: 10, unit: 'MINUTES')",
+      "retry(10)",
+      "quietPeriod(10)"
+    ],
+    "answer": "buildDiscarder(logRotator(numToKeepStr: '10'))"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "Jenkins cron अभिव्यक्तींत H चिन्न किदें दिता?",
+    "options": [
+      "वापरप्याच्या संगणकाचेर सद्या चालू आशिल्लो वर",
+      "फकत सुट्टीच्या दिसांनी चलोवपाची मागणी",
+      "नोड रिकामो आसल्यारच चलोवपाची मागणी",
+      "नेमिल्लो भार वांटपाखातीर वापरपी, कामाच्या नांवाचेर आदारीत स्थिर हॅश"
+    ],
+    "answer": "नेमिल्लो भार वांटपाखातीर वापरपी, कामाच्या नांवाचेर आदारीत स्थिर हॅश"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "Jenkins च्या पांच-क्षेत्रांच्या cron वाक्यरचनेंत पांचवें क्षेत्र किदें दाखयता?",
+    "options": [
+      "दिसांतलो वर",
+      "म्हयन्यांतलो दीस",
+      "सप्तकांतलो दीस",
+      "वरांतलें मिनीट"
+    ],
+    "answer": "सप्तकांतलो दीस"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "आदलो बिल्ड अपेशी वा अस्थिर आसल्या उपरांत सद्याचो बिल्ड येसस्वी जाल्यार चलपी post अट खंयची?",
+    "options": [
+      "unsuccessful",
+      "fixed",
+      "changed",
+      "regression"
+    ],
+    "answer": "fixed"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "हेर post अटी तपासून जाल्या उपरांत चलपी post अट खंयची?",
+    "options": [
+      "cleanup",
+      "always",
+      "changed",
+      "success"
+    ],
+    "answer": "cleanup"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "टप्प्याचो एजंट नेमचे पयलीं त्या टप्प्याची अट तपासपी when पर्याय खंयचो?",
+    "options": [
+      "beforeInput false",
+      "beforeOptions false",
+      "branch 'main'",
+      "beforeAgent true"
+    ],
+    "answer": "beforeAgent true"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "Multibranch Pipeline मदीं नांव दिल्ल्या शाखेक लक्ष्य करपी when अट खंयची?",
+    "options": [
+      "buildingTag()",
+      "changeRequest()",
+      "branch 'main'",
+      "tag 'main'"
+    ],
+    "answer": "branch 'main'"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "कार्यप्रणाली आनी ब्राउजर सारख्या अक्ष-मोलांचीं संयोगां चलोवपी Declarative रचना खंयची?",
+    "options": [
+      "environment",
+      "matrix",
+      "parallel",
+      "steps"
+    ],
+    "answer": "matrix"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "Declarative matrix तून नाका आशिल्लीं संयोगां काडपी विभाग खंयचो?",
+    "options": [
+      "excludes",
+      "axes",
+      "stages",
+      "tools"
+    ],
+    "answer": "excludes"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "समांतर शाखा आशिल्ल्या टप्प्यांत एक शाखा अपेशी जाल्यार हेर शाखा थांबोवपी मांडावळ खंयची?",
+    "options": [
+      "beforeAgent true",
+      "reuseNode true",
+      "alwaysPull true",
+      "failFast true"
+    ],
+    "answer": "failFast true"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "बिल्ड अस्थिर जाल्यार फुडले टप्पे वगळपी Declarative पर्याय खंयचो?",
+    "options": [
+      "disableResume()",
+      "preserveStashes()",
+      "skipStagesAfterUnstable()",
+      "skipDefaultCheckout()"
+    ],
+    "answer": "skipStagesAfterUnstable()"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "अपेश नोंदोवन, आपल्या भितरल्या कोडा उपरांतची कार्यवाही चालू उरू दिवपी Pipeline पावल खंयचें?",
+    "options": [
+      "input",
+      "catchError",
+      "error",
+      "timeout"
+    ],
+    "answer": "catchError"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "प्रक्रिया सोंपल्या उपरांत sh(script: 'check.sh', returnStatus: true) किदें परत दिता?",
+    "options": [
+      "प्रक्रियेचो अंकी निर्गमन कोड",
+      "पुराय प्रमाणित-निर्गम मजकूर",
+      "शेलाचो प्रक्रिया ID",
+      "Jenkins प्रमाणीकरण तपशील वस्तू"
+    ],
+    "answer": "प्रक्रियेचो अंकी निर्गमन कोड"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "येसस्वी जाल्यार sh(script: 'echo ready', returnStdout: true) किदें परत दिता?",
+    "options": [
+      "अंकी बिल्ड क्रमांक",
+      "नकाशो म्हूण शेलाचें वातावरण",
+      "एजंटाची लेबल वळेरी",
+      "धरून दवरिल्ली प्रमाणित-निर्गम अक्षरमाळ"
+    ],
+    "answer": "धरून दवरिल्ली प्रमाणित-निर्गम अक्षरमाळ"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "सद्याच्या कार्यक्षेत्र डिरेक्टरीचो आशय सगळ्या भितरल्या पांवड्यांनी काडून उडोवपी Pipeline पावल खंयचें?",
+    "options": [
+      "pwd",
+      "readFile",
+      "deleteDir",
+      "fileExists"
+    ],
+    "answer": "deleteDir"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "सद्याच्या कार्यक्षेत्रांत वाट अस्तित्वांत आसा काय ना तें तपासपी Pipeline पावल खंयचें?",
+    "options": [
+      "libraryResource",
+      "fileExists",
+      "readFile",
+      "writeFile"
+    ],
+    "answer": "fileExists"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "दुसरें Jenkins काम सुरू करून ताका बिल्ड प्राचल दिवंक शकपी Pipeline पावल खंयचें?",
+    "options": [
+      "build",
+      "stage",
+      "node",
+      "checkout"
+    ],
+    "answer": "build"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "टप्पे परत सुरू करपाखातीर सोंपिल्ल्या बिल्डांतले स्टॅश राखपी Declarative पर्याय खंयचो?",
+    "options": [
+      "disableResume()",
+      "skipDefaultCheckout()",
+      "quietPeriod(5)",
+      "preserveStashes()"
+    ],
+    "answer": "preserveStashes()"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "vars/deploy.groovy न थारयल्ल्या deploy सर्वत्र वापरपाच्या चलाखातीर मजत मजकूर दिवपी Shared Library फायल खंयची?",
+    "options": [
+      "resources/deploy.txt",
+      "vars/main.groovy",
+      "vars/deploy.txt",
+      "src/deploy.groovy"
+    ],
+    "answer": "vars/deploy.txt"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "Jenkins Pipeline मदीं @NonCPS चिन्न दिल्ल्या पद्धतीची मुखेल मर्यादा किदें?",
+    "options": [
+      "ती Windows एजंटाचेर चलप गरजेचें आसा",
+      "तिणें CPS-रूपांतरीत Pipeline पावलांक आपोवंक जायना",
+      "तिचें भितर stage निर्देश आसप गरजेचें आसा",
+      "तिणें सदांच अक्षरमाळ परत दिवंक जाय"
+    ],
+    "answer": "तिणें CPS-रूपांतरीत Pipeline पावलांक आपोवंक जायना"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "मान्य करूंक नाशिल्ल्या सॅन्डबॉक्सांतल्या Groovy कोडान मागिल्ल्यो स्वाक्षरी तपासपी Jenkins सुविधा खंयची?",
+    "options": [
+      "प्रक्रिये भितर स्क्रिप्ट मंजुरी",
+      "Credentials Store",
+      "Build Queue",
+      "SCM तपासणी नोंद"
+    ],
+    "answer": "प्रक्रिये भितर स्क्रिप्ट मंजुरी"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "जोडिल्ल्या गुपीत चलाचें विस्तारण शेलाक करू दिवपी शेल स्क्रिप्टाखातीर Groovy उद्धरणचिन्नांची खंयची पद्धत सुचयतात?",
+    "options": [
+      "गुपीत मोल मजकुरा मदीं बसयल्ली, दुहेरी उद्धरणचिन्नांनी घेरिल्ली Groovy अक्षरमाळ",
+      "गुपीत मोल मजकुरा मदीं बसयल्ली, तीन दुहेरी उद्धरणचिन्नांनी घेरिल्ली Groovy अक्षरमाळ",
+      "साध्या मजकुरांतली गुपीत म्हायती जोडून तयार केल्ली Groovy अक्षरमाळ",
+      "एकेरी उद्धरणचिन्नांनी घेरिल्ली Groovy अक्षरमाळ"
+    ],
+    "answer": "एकेरी उद्धरणचिन्नांनी घेरिल्ली Groovy अक्षरमाळ"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "संबंदीत वेब मागण्यांखातीर Jenkins CSRF crumb चो हेतू किदें?",
+    "options": [
+      "अपलोड करचे पयलीं बिल्ड आर्टिफॅक्टाचें कूटबद्धीकरण करप",
+      "बिल्ड चलोवपी एजंट निवडप",
+      "स्थिती बदलपी मागणी स्थापन जाल्ल्या वापरपी सत्राची आसा हें तपासपाक मजत करप",
+      "सगळ्या कामांच्या अधिकार तपासण्यांची सुवात घेवप"
+    ],
+    "answer": "स्थिती बदलपी मागणी स्थापन जाल्ल्या वापरपी सत्राची आसा हें तपासपाक मजत करप"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "वेगवेगळ्या कामांमदीं सांजें चांचणी उपकरण एकावेळार एकल्याकच वापरू दिवपाखातीर Pipeline न किदें वापरचें?",
+    "options": [
+      "skipDefaultCheckout पर्याय",
+      "Lockable Resources प्लगिनांतलें lock पावल",
+      "timestamps पर्याय",
+      "buildDiscarder पर्याय"
+    ],
+    "answer": "Lockable Resources प्लगिनांतलें lock पावल"
+  }
+]

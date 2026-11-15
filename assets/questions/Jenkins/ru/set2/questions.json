@@ -1,0 +1,302 @@
+[
+  {
+    "category": "Jenkins",
+    "set": 2,
+    "question": "Какой файл используется для определения конвейера Jenkins?",
+    "options": [
+      "Jenkinsfile",
+      "pipeline.yml",
+      "build.xml",
+      "job.conf"
+    ],
+    "answer": "Jenkinsfile"
+  },
+  {
+    "category": "Jenkins",
+    "set": 2,
+    "question": "Какой тип конвейера использует структурированный синтаксис?",
+    "options": [
+      "Declarative Pipeline",
+      "Scripted Pipeline",
+      "Freestyle Job",
+      "Maven Job"
+    ],
+    "answer": "Declarative Pipeline"
+  },
+  {
+    "category": "Jenkins",
+    "set": 2,
+    "question": "Какое ключевое слово начинает Declarative Pipeline?",
+    "options": [
+      "pipeline",
+      "stage",
+      "agent",
+      "steps"
+    ],
+    "answer": "pipeline"
+  },
+  {
+    "category": "Jenkins",
+    "set": 2,
+    "question": "Какой раздел декларативного конвейера определяет место выполнения конвейера или стадии?",
+    "options": [
+      "agent",
+      "node",
+      "executor",
+      "workspace"
+    ],
+    "answer": "agent"
+  },
+  {
+    "category": "Jenkins",
+    "set": 2,
+    "question": "Какой блок содержит несколько этапов?",
+    "options": [
+      "stages",
+      "steps",
+      "agent",
+      "tools"
+    ],
+    "answer": "stages"
+  },
+  {
+    "category": "Jenkins",
+    "set": 2,
+    "question": "Какой блок представляет фазу в конвейере?",
+    "options": [
+      "stage",
+      "step",
+      "agent",
+      "job"
+    ],
+    "answer": "stage"
+  },
+  {
+    "category": "Jenkins",
+    "set": 2,
+    "question": "Какой блок содержит команды, выполняемые на этапе?",
+    "options": [
+      "steps",
+      "agent",
+      "pipeline",
+      "tools"
+    ],
+    "answer": "steps"
+  },
+  {
+    "category": "Jenkins",
+    "set": 2,
+    "question": "Какая инструкция запускает конвейер на любом доступном агенте?",
+    "options": [
+      "agent any",
+      "node any",
+      "executor any",
+      "run any"
+    ],
+    "answer": "agent any"
+  },
+  {
+    "category": "Jenkins",
+    "set": 2,
+    "question": "Какой блок определяет переменные окружения?",
+    "options": [
+      "environment",
+      "variables",
+      "env",
+      "settings"
+    ],
+    "answer": "environment"
+  },
+  {
+    "category": "Jenkins",
+    "set": 2,
+    "question": "Какой блок задаёт действия после выполнения конвейера?",
+    "options": [
+      "post",
+      "after",
+      "cleanup",
+      "finally"
+    ],
+    "answer": "post"
+  },
+  {
+    "category": "Jenkins",
+    "set": 2,
+    "question": "Какой условный блок определяет, должен ли выполняться этап?",
+    "options": [
+      "when",
+      "if",
+      "condition",
+      "runif"
+    ],
+    "answer": "when"
+  },
+  {
+    "category": "Jenkins",
+    "set": 2,
+    "question": "Какая возможность позволяет выполнять несколько этапов одновременно?",
+    "options": [
+      "parallel",
+      "multi",
+      "concurrent",
+      "fork"
+    ],
+    "answer": "parallel"
+  },
+  {
+    "category": "Jenkins",
+    "set": 2,
+    "question": "Какой шаг выполняет команды оболочки на агентах Linux?",
+    "options": [
+      "sh",
+      "shell",
+      "bash",
+      "linux"
+    ],
+    "answer": "sh"
+  },
+  {
+    "category": "Jenkins",
+    "set": 2,
+    "question": "Какой шаг конвейера специально выполняет пакетный сценарий Windows?",
+    "options": [
+      "bat",
+      "cmd",
+      "powershell",
+      "win"
+    ],
+    "answer": "bat"
+  },
+  {
+    "category": "Jenkins",
+    "set": 2,
+    "question": "Какая декларативная директива объявляет пользовательские входы сборки, например строковый параметр?",
+    "options": [
+      "parameters",
+      "environment",
+      "tools",
+      "triggers"
+    ],
+    "answer": "parameters"
+  },
+  {
+    "category": "Jenkins",
+    "set": 2,
+    "question": "Какое выражение читает параметр сборки TARGET в Jenkinsfile?",
+    "options": [
+      "currentBuild.TARGET",
+      "scm.TARGET",
+      "agent.TARGET",
+      "params.TARGET"
+    ],
+    "answer": "params.TARGET"
+  },
+  {
+    "category": "Jenkins",
+    "set": 2,
+    "question": "Какой шаг конвейера приостанавливает выполнение для одобрения человеком?",
+    "options": [
+      "waitUntil",
+      "retry",
+      "input",
+      "sleep"
+    ],
+    "answer": "input"
+  },
+  {
+    "category": "Jenkins",
+    "set": 2,
+    "question": "Какой шаг конвейера публикует XML-результаты тестов JUnit?",
+    "options": [
+      "writeFile",
+      "junit",
+      "archiveArtifacts",
+      "stash"
+    ],
+    "answer": "junit"
+  },
+  {
+    "category": "Jenkins",
+    "set": 2,
+    "question": "Какой шаг сохраняет подходящие файлы рабочей области как артефакты сборки?",
+    "options": [
+      "archiveArtifacts",
+      "stash",
+      "checkout",
+      "readFile"
+    ],
+    "answer": "archiveArtifacts"
+  },
+  {
+    "category": "Jenkins",
+    "set": 2,
+    "question": "Какое условие post выполняется независимо от результата конвейера?",
+    "options": [
+      "success",
+      "failure",
+      "unstable",
+      "always"
+    ],
+    "answer": "always"
+  },
+  {
+    "category": "Jenkins",
+    "set": 2,
+    "question": "Какая декларативная директива настраивает инструменты, например именованную установку Maven?",
+    "options": [
+      "parameters",
+      "triggers",
+      "tools",
+      "environment"
+    ],
+    "answer": "tools"
+  },
+  {
+    "category": "Jenkins",
+    "set": 2,
+    "question": "Какой шаг ограничивает время выполнения своего блока?",
+    "options": [
+      "waitUntil",
+      "timeout",
+      "retry",
+      "sleep"
+    ],
+    "answer": "timeout"
+  },
+  {
+    "category": "Jenkins",
+    "set": 2,
+    "question": "Какой шаг повторяет свой блок при исключении до заданного числа попыток?",
+    "options": [
+      "retry",
+      "timeout",
+      "sleep",
+      "input"
+    ],
+    "answer": "retry"
+  },
+  {
+    "category": "Jenkins",
+    "set": 2,
+    "question": "Какой блок допускает код скриптового конвейера внутри декларативной секции steps?",
+    "options": [
+      "options",
+      "parameters",
+      "triggers",
+      "script"
+    ],
+    "answer": "script"
+  },
+  {
+    "category": "Jenkins",
+    "set": 2,
+    "question": "Что делает agent none на верхнем уровне декларативного конвейера?",
+    "options": [
+      "Автоматически выполняет все команды оболочки на контроллере",
+      "Выделяет сразу всех доступных агентов",
+      "Не выделяет глобального агента на весь конвейер",
+      "Запрещает выполнение всех агентов уровня стадии"
+    ],
+    "answer": "Не выделяет глобального агента на весь конвейер"
+  }
+]

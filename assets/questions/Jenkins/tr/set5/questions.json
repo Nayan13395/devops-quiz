@@ -1,0 +1,302 @@
+[
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "Aynı işlem hattının eşzamanlı çalışmasına izin vermek yerine yeni yürütmeyi hangi bildirimsel seçenek sıraya alır?",
+    "options": [
+      "parallelsAlwaysFailFast()",
+      "disableConcurrentBuilds()",
+      "disableResume()",
+      "skipDefaultCheckout()"
+    ],
+    "answer": "disableConcurrentBuilds()"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "Eski derleme kayıtları ve artefaktlar için saklama kurallarını hangi bildirimsel seçenek belirtir?",
+    "options": [
+      "buildDiscarder(logRotator(numToKeepStr: '10'))",
+      "timeout(time: 10, unit: 'MINUTES')",
+      "retry(10)",
+      "quietPeriod(10)"
+    ],
+    "answer": "buildDiscarder(logRotator(numToKeepStr: '10'))"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "Jenkins cron ifadesindeki H simgesi ne sağlar?",
+    "options": [
+      "Kullanıcının bilgisayarındaki geçerli saati",
+      "Yalnızca tatil günlerinde çalıştırma isteğini",
+      "Yalnızca düğüm boşta olduğunda çalıştırma isteğini",
+      "Zamanlanmış yükü dağıtmak için iş adına dayalı kararlı bir karma değerini"
+    ],
+    "answer": "Zamanlanmış yükü dağıtmak için iş adına dayalı kararlı bir karma değerini"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "Jenkins'in beş alanlı cron sözdiziminde beşinci alan neyi temsil eder?",
+    "options": [
+      "Günün saatini",
+      "Ayın gününü",
+      "Haftanın gününü",
+      "Saatin dakikasını"
+    ],
+    "answer": "Haftanın gününü"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "Önceki derleme başarısız veya kararsızken yeni derleme başarılı olursa hangi post koşulu çalışır?",
+    "options": [
+      "unsuccessful",
+      "fixed",
+      "changed",
+      "regression"
+    ],
+    "answer": "fixed"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "Diğer post koşulları değerlendirildikten sonra hangi post koşulu çalışır?",
+    "options": [
+      "cleanup",
+      "always",
+      "changed",
+      "success"
+    ],
+    "answer": "cleanup"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "Aşamanın aracısını ayırmadan önce koşulunu hangi when seçeneği değerlendirir?",
+    "options": [
+      "beforeInput false",
+      "beforeOptions false",
+      "branch 'main'",
+      "beforeAgent true"
+    ],
+    "answer": "beforeAgent true"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "Çok dallı işlem hattında adlandırılmış dalı hangi when koşulu hedefler?",
+    "options": [
+      "buildingTag()",
+      "changeRequest()",
+      "branch 'main'",
+      "tag 'main'"
+    ],
+    "answer": "branch 'main'"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "İşletim sistemi ve tarayıcı gibi eksen değerlerinin birleşimlerini hangi bildirimsel yapı çalıştırır?",
+    "options": [
+      "environment",
+      "matrix",
+      "parallel",
+      "steps"
+    ],
+    "answer": "matrix"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "Bildirimsel matristen istenmeyen birleşimleri hangi bölüm çıkarır?",
+    "options": [
+      "excludes",
+      "axes",
+      "stages",
+      "tools"
+    ],
+    "answer": "excludes"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "Paralel dallar içeren aşamada bir dal başarısız olduğunda diğerlerini hangi ayar durdurur?",
+    "options": [
+      "beforeAgent true",
+      "reuseNode true",
+      "alwaysPull true",
+      "failFast true"
+    ],
+    "answer": "failFast true"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "Derleme kararsız hale gelince sonraki aşamaları hangi bildirimsel seçenek atlar?",
+    "options": [
+      "disableResume()",
+      "preserveStashes()",
+      "skipStagesAfterUnstable()",
+      "skipDefaultCheckout()"
+    ],
+    "answer": "skipStagesAfterUnstable()"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "Başarısızlığı kaydedip kendi bloğundan sonra devam edilmesine hangi işlem hattı adımı izin verir?",
+    "options": [
+      "input",
+      "catchError",
+      "error",
+      "timeout"
+    ],
+    "answer": "catchError"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "Süreç bittikten sonra sh(script: 'check.sh', returnStatus: true) ne döndürür?",
+    "options": [
+      "Sayısal süreç çıkış kodunu",
+      "Standart çıktının tüm metnini",
+      "Kabuğun süreç kimliğini",
+      "Jenkins kimlik bilgisi nesnesini"
+    ],
+    "answer": "Sayısal süreç çıkış kodunu"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "Başarılı olduğunda sh(script: 'echo ready', returnStdout: true) ne döndürür?",
+    "options": [
+      "Sayısal derleme numarasını",
+      "Kabuğun ortamını eşleme olarak",
+      "Aracının etiket listesini",
+      "Yakalanan standart çıktı dizgesini"
+    ],
+    "answer": "Yakalanan standart çıktı dizgesini"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "Geçerli çalışma alanı dizininin içeriğini özyinelemeli olarak hangi işlem hattı adımı siler?",
+    "options": [
+      "pwd",
+      "readFile",
+      "deleteDir",
+      "fileExists"
+    ],
+    "answer": "deleteDir"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "Geçerli çalışma alanında yolun varlığını hangi işlem hattı adımı denetler?",
+    "options": [
+      "libraryResource",
+      "fileExists",
+      "readFile",
+      "writeFile"
+    ],
+    "answer": "fileExists"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "Başka bir Jenkins işini tetikleyip derleme parametreleri geçebilen işlem hattı adımı hangisidir?",
+    "options": [
+      "build",
+      "stage",
+      "node",
+      "checkout"
+    ],
+    "answer": "build"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "Aşamaları yeniden başlatmak için tamamlanan derlemelerin stash verilerini hangi bildirimsel seçenek saklar?",
+    "options": [
+      "disableResume()",
+      "skipDefaultCheckout()",
+      "quietPeriod(5)",
+      "preserveStashes()"
+    ],
+    "answer": "preserveStashes()"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "Paylaşılan kitaplıkta vars/deploy.groovy tarafından tanımlanan deploy genel değişkenine hangi dosya yardım metni sağlar?",
+    "options": [
+      "resources/deploy.txt",
+      "vars/main.groovy",
+      "vars/deploy.txt",
+      "src/deploy.groovy"
+    ],
+    "answer": "vars/deploy.txt"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "Jenkins işlem hattında @NonCPS ile işaretlenmiş yöntemin temel kısıtı nedir?",
+    "options": [
+      "Windows aracısında çalışmalıdır",
+      "CPS dönüşümü uygulanmış işlem hattı adımlarını çağıramaz",
+      "stage yönergesi içermelidir",
+      "Her zaman dizge döndürmelidir"
+    ],
+    "answer": "CPS dönüşümü uygulanmış işlem hattı adımlarını çağıramaz"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "Onaylanmamış, korumalı alandaki Groovy kodunun istediği imzaları Jenkins'in hangi özelliği inceler?",
+    "options": [
+      "Süreç içi betik onayı",
+      "Credentials Store",
+      "Build Queue",
+      "SCM yoklama günlüğü"
+    ],
+    "answer": "Süreç içi betik onayı"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "Bağlı gizli değişkeni kabuğun genişletmesini sağlayan kabuk betiği için hangi Groovy tırnak biçimi önerilir?",
+    "options": [
+      "Gizli bilgiyi içeren çift tırnaklı, değişken yerleştirmeli Groovy dizgesi",
+      "Gizli bilgiyi içeren üçlü çift tırnaklı, değişken yerleştirmeli Groovy dizgesi",
+      "Düz metin gizli bilginin birleştirilmesiyle oluşmuş Groovy dizgesi",
+      "Tek tırnaklı Groovy dizgesi"
+    ],
+    "answer": "Tek tırnaklı Groovy dizgesi"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "İlgili web istekleri için Jenkins CSRF crumb belirtecinin amacı nedir?",
+    "options": [
+      "Yüklemeden önce derleme artefaktını şifrelemek",
+      "Derlemeyi yürütecek aracıyı seçmek",
+      "Durum değiştiren isteğin kurulmuş bir kullanıcı oturumuna ait olduğunu doğrulamaya yardımcı olmak",
+      "Tüm işlerde yetkilendirme denetimlerinin yerini almak"
+    ],
+    "answer": "Durum değiştiren isteğin kurulmuş bir kullanıcı oturumuna ait olduğunu doğrulamaya yardımcı olmak"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "Farklı işler arasında paylaşılan test aygıtına özel erişimi koordine etmek için işlem hattı ne kullanmalıdır?",
+    "options": [
+      "skipDefaultCheckout seçeneği",
+      "Lockable Resources eklentisinin lock adımı",
+      "timestamps seçeneği",
+      "buildDiscarder seçeneği"
+    ],
+    "answer": "Lockable Resources eklentisinin lock adımı"
+  }
+]

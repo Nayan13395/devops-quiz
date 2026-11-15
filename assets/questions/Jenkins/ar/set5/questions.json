@@ -1,0 +1,302 @@
+[
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "أي خيار تصريحي يضع تشغيلا جديدا في الصف بدلا من السماح بالتشغيل المتزامن للمسار نفسه؟",
+    "options": [
+      "parallelsAlwaysFailFast()",
+      "disableConcurrentBuilds()",
+      "disableResume()",
+      "skipDefaultCheckout()"
+    ],
+    "answer": "disableConcurrentBuilds()"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "أي خيار تصريحي يحدد قواعد الاحتفاظ بسجلات البناء القديمة ونتاجاته؟",
+    "options": [
+      "buildDiscarder(logRotator(numToKeepStr: '10'))",
+      "timeout(time: 10, unit: 'MINUTES')",
+      "retry(10)",
+      "quietPeriod(10)"
+    ],
+    "answer": "buildDiscarder(logRotator(numToKeepStr: '10'))"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "ماذا يوفر الرمز H في تعبير cron لدى Jenkins؟",
+    "options": [
+      "الساعة الحالية على حاسوب المستخدم",
+      "طلب التشغيل في العطلات فقط",
+      "طلب التشغيل حين تكون العقدة خاملة فقط",
+      "تجزئة ثابتة تعتمد على اسم الوظيفة لتوزيع الحمل المجدول"
+    ],
+    "answer": "تجزئة ثابتة تعتمد على اسم الوظيفة لتوزيع الحمل المجدول"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "في صيغة cron ذات الحقول الخمسة في Jenkins، ماذا يمثل الحقل الخامس؟",
+    "options": [
+      "ساعة اليوم",
+      "يوم الشهر",
+      "يوم الأسبوع",
+      "دقيقة الساعة"
+    ],
+    "answer": "يوم الأسبوع"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "أي شرط post يعمل إذا نجح البناء بعد بناء سابق فاشل أو غير مستقر؟",
+    "options": [
+      "unsuccessful",
+      "fixed",
+      "changed",
+      "regression"
+    ],
+    "answer": "fixed"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "أي شرط post يعمل بعد تقييم بقية شروط post؟",
+    "options": [
+      "cleanup",
+      "always",
+      "changed",
+      "success"
+    ],
+    "answer": "cleanup"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "أي خيار when يقيّم شرط المرحلة قبل تخصيص وكيلها؟",
+    "options": [
+      "beforeInput false",
+      "beforeOptions false",
+      "branch 'main'",
+      "beforeAgent true"
+    ],
+    "answer": "beforeAgent true"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "أي شرط when يستهدف فرعا مسمى في مسار متعدد الفروع؟",
+    "options": [
+      "buildingTag()",
+      "changeRequest()",
+      "branch 'main'",
+      "tag 'main'"
+    ],
+    "answer": "branch 'main'"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "أي بنية تصريحية تنفذ تراكيب قيم محاور مثل نظام التشغيل والمتصفح؟",
+    "options": [
+      "environment",
+      "matrix",
+      "parallel",
+      "steps"
+    ],
+    "answer": "matrix"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "أي قسم يستبعد التراكيب غير المرغوبة من مصفوفة تصريحية؟",
+    "options": [
+      "excludes",
+      "axes",
+      "stages",
+      "tools"
+    ],
+    "answer": "excludes"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "أي إعداد لمرحلة ذات فروع متوازية يوقف البقية عند فشل فرع؟",
+    "options": [
+      "beforeAgent true",
+      "reuseNode true",
+      "alwaysPull true",
+      "failFast true"
+    ],
+    "answer": "failFast true"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "أي خيار تصريحي يتخطى المراحل التالية عند صيرورة البناء غير مستقر؟",
+    "options": [
+      "disableResume()",
+      "preserveStashes()",
+      "skipStagesAfterUnstable()",
+      "skipDefaultCheckout()"
+    ],
+    "answer": "skipStagesAfterUnstable()"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "أي خطوة تسجل فشلا مع السماح بالاستمرار بعد كتلتها؟",
+    "options": [
+      "input",
+      "catchError",
+      "error",
+      "timeout"
+    ],
+    "answer": "catchError"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "ماذا تعيد sh(script: 'check.sh', returnStatus: true) بعد خروج العملية؟",
+    "options": [
+      "رمز خروج العملية الرقمي",
+      "نص الخرج القياسي كاملا",
+      "معرّف عملية الصدفة",
+      "كائن بيانات اعتماد Jenkins"
+    ],
+    "answer": "رمز خروج العملية الرقمي"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "ماذا تعيد sh(script: 'echo ready', returnStdout: true) عند النجاح؟",
+    "options": [
+      "رقم البناء",
+      "بيئة الصدفة على هيئة خريطة",
+      "قائمة تسميات الوكيل",
+      "سلسلة الخرج القياسي الملتقطة"
+    ],
+    "answer": "سلسلة الخرج القياسي الملتقطة"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "أي خطوة تحذف محتويات مجلد العمل الحالي تكراريا عبر المجلدات الفرعية؟",
+    "options": [
+      "pwd",
+      "readFile",
+      "deleteDir",
+      "fileExists"
+    ],
+    "answer": "deleteDir"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "أي خطوة تتحقق من وجود مسار في مساحة العمل الحالية؟",
+    "options": [
+      "libraryResource",
+      "fileExists",
+      "readFile",
+      "writeFile"
+    ],
+    "answer": "fileExists"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "أي خطوة تشغّل وظيفة Jenkins أخرى ويمكنها تمرير معاملات البناء؟",
+    "options": [
+      "build",
+      "stage",
+      "node",
+      "checkout"
+    ],
+    "answer": "build"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "أي خيار تصريحي يحتفظ ببيانات stash من البناء المكتمل لإعادة تشغيل المراحل؟",
+    "options": [
+      "disableResume()",
+      "skipDefaultCheckout()",
+      "quietPeriod(5)",
+      "preserveStashes()"
+    ],
+    "answer": "preserveStashes()"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "أي ملف في المكتبة المشتركة يوفر المساعدة للمتغير العام deploy المعرّف في vars/deploy.groovy؟",
+    "options": [
+      "resources/deploy.txt",
+      "vars/main.groovy",
+      "vars/deploy.txt",
+      "src/deploy.groovy"
+    ],
+    "answer": "vars/deploy.txt"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "ما القيد الرئيسي لدالة موسومة بـ @NonCPS في مسار Jenkins؟",
+    "options": [
+      "يجب تشغيلها على وكيل Windows",
+      "يجب ألا تستدعي خطوات المسار المحولة بواسطة CPS",
+      "يجب أن تحتوي على توجيه stage",
+      "يجب أن تعيد سلسلة نصية دائما"
+    ],
+    "answer": "يجب ألا تستدعي خطوات المسار المحولة بواسطة CPS"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "أي ميزة في Jenkins تراجع التواقيع التي تطلبها شيفرة Groovy غير المعتمدة في البيئة المعزولة؟",
+    "options": [
+      "اعتماد السكربتات داخل العملية",
+      "Credentials Store",
+      "Build Queue",
+      "سجل استقصاء SCM"
+    ],
+    "answer": "اعتماد السكربتات داخل العملية"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "أي أسلوب اقتباس Groovy يُنصح به لسكربت يترك للصدفة توسيع متغير سر مرتبط؟",
+    "options": [
+      "سلسلة Groovy ذات استيفاء للمتغيرات بين علامتي اقتباس مزدوجتين تحتوي السر",
+      "سلسلة Groovy ذات استيفاء للمتغيرات باقتباسات مزدوجة ثلاثية تحتوي السر",
+      "سلسلة Groovy ناتجة عن وصل السر كنص صريح",
+      "سلسلة Groovy بين علامتي اقتباس مفردتين"
+    ],
+    "answer": "سلسلة Groovy بين علامتي اقتباس مفردتين"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "ما غرض رمز CSRF crumb في Jenkins لطلبات الويب المعنية؟",
+    "options": [
+      "تشفير نتاج بناء قبل رفعه",
+      "اختيار الوكيل الذي ينفذ البناء",
+      "المساعدة في التحقق من أن طلب تغيير الحالة يعود إلى جلسة مستخدم قائمة",
+      "استبدال فحوص التفويض لجميع الوظائف"
+    ],
+    "answer": "المساعدة في التحقق من أن طلب تغيير الحالة يعود إلى جلسة مستخدم قائمة"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "ماذا ينبغي أن يستخدم مسار التنفيذ لتنسيق وصول حصري إلى جهاز اختبار مشترك بين وظائف مختلفة؟",
+    "options": [
+      "الخيار skipDefaultCheckout",
+      "خطوة lock من إضافة Lockable Resources",
+      "الخيار timestamps",
+      "الخيار buildDiscarder"
+    ],
+    "answer": "خطوة lock من إضافة Lockable Resources"
+  }
+]

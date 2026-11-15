@@ -1,0 +1,302 @@
+[
+  {
+    "category": "Perl",
+    "set": 4,
+    "question": "Quelle syntaxe crée une référence vers @items ?",
+    "options": [
+      "\\@items",
+      "$items",
+      "@items",
+      "%items"
+    ],
+    "answer": "\\@items"
+  },
+  {
+    "category": "Perl",
+    "set": 4,
+    "question": "Quelle syntaxe crée une référence de tableau anonyme ?",
+    "options": [
+      "[1, 2, 3]",
+      "{1, 2, 3}",
+      "(1, 2, 3)",
+      "<1, 2, 3>"
+    ],
+    "answer": "[1, 2, 3]"
+  },
+  {
+    "category": "Perl",
+    "set": 4,
+    "question": "Quelle syntaxe crée une référence de hash anonyme ?",
+    "options": [
+      "{a => 1}",
+      "[a => 1]",
+      "(a => 1)",
+      "<a => 1>"
+    ],
+    "answer": "{a => 1}"
+  },
+  {
+    "category": "Perl",
+    "set": 4,
+    "question": "Quel opérateur est utilisé pour appeler une méthode sur un objet ?",
+    "options": [
+      "->",
+      "=>",
+      "::",
+      "."
+    ],
+    "answer": "->"
+  },
+  {
+    "category": "Perl",
+    "set": 4,
+    "question": "Quelle fonction associe une référence à une classe ?",
+    "options": [
+      "bless",
+      "create",
+      "new",
+      "object"
+    ],
+    "answer": "bless"
+  },
+  {
+    "category": "Perl",
+    "set": 4,
+    "question": "Quel est le nom conventionnel d'un constructeur Perl ?",
+    "options": [
+      "new",
+      "init",
+      "create",
+      "constructor"
+    ],
+    "answer": "new"
+  },
+  {
+    "category": "Perl",
+    "set": 4,
+    "question": "Quel jeton contient le nom du package courant ?",
+    "options": [
+      "__PACKAGE__",
+      "__FILE__",
+      "__LINE__",
+      "__SUB__"
+    ],
+    "answer": "__PACKAGE__"
+  },
+  {
+    "category": "Perl",
+    "set": 4,
+    "question": "Quel mot-clé déclare un package ?",
+    "options": [
+      "package",
+      "module",
+      "namespace",
+      "class"
+    ],
+    "answer": "package"
+  },
+  {
+    "category": "Perl",
+    "set": 4,
+    "question": "Quelle syntaxe déréférence une référence de tableau nommée $ref ?",
+    "options": [
+      "@$ref",
+      "$$ref",
+      "%$ref",
+      "$ref[]"
+    ],
+    "answer": "@$ref"
+  },
+  {
+    "category": "Perl",
+    "set": 4,
+    "question": "Quelle syntaxe accède au premier élément d'une référence de tableau $ref ?",
+    "options": [
+      "$ref->[0]",
+      "$ref->{0}",
+      "$ref[0]",
+      "$ref(0)"
+    ],
+    "answer": "$ref->[0]"
+  },
+  {
+    "category": "Perl",
+    "set": 4,
+    "question": "Quelle syntaxe accède à une clé dans une référence de hash $ref ?",
+    "options": [
+      "$ref->{key}",
+      "$ref->[key]",
+      "$ref{key}",
+      "$ref:key"
+    ],
+    "answer": "$ref->{key}"
+  },
+  {
+    "category": "Perl",
+    "set": 4,
+    "question": "Quelle fonction renvoie le type d'une référence ?",
+    "options": [
+      "ref",
+      "type",
+      "typeof",
+      "reftype"
+    ],
+    "answer": "ref"
+  },
+  {
+    "category": "Perl",
+    "set": 4,
+    "question": "Quelle instruction active la fonctionnalité say ?",
+    "options": [
+      "use feature 'say';",
+      "use say;",
+      "feature say;",
+      "enable say;"
+    ],
+    "answer": "use feature 'say';"
+  },
+  {
+    "category": "Perl",
+    "set": 4,
+    "question": "Quelle fonction intégrée affiche avec un retour à la ligne lorsque la fonctionnalité est activée ?",
+    "options": [
+      "say",
+      "print",
+      "write",
+      "echo"
+    ],
+    "answer": "say"
+  },
+  {
+    "category": "Perl",
+    "set": 4,
+    "question": "Quelle syntaxe lit une ligne depuis le filehandle $fh ?",
+    "options": [
+      "<$fh>",
+      "fetch $fh",
+      "read $fh",
+      "get $fh"
+    ],
+    "answer": "<$fh>"
+  },
+  {
+    "category": "Perl",
+    "set": 4,
+    "question": "Quelle fonction évalue une chaîne comme du code Perl ?",
+    "options": [
+      "eval",
+      "exec",
+      "system",
+      "do"
+    ],
+    "answer": "eval"
+  },
+  {
+    "category": "Perl",
+    "set": 4,
+    "question": "Quelle variable contient une erreur après eval ?",
+    "options": [
+      "$@",
+      "$!",
+      "$?",
+      "$_"
+    ],
+    "answer": "$@"
+  },
+  {
+    "category": "Perl",
+    "set": 4,
+    "question": "Quelle variable contient le statut d'attente de la dernière commande externe exécutée ?",
+    "options": [
+      "$?",
+      "$!",
+      "$@",
+      "$_"
+    ],
+    "answer": "$?"
+  },
+  {
+    "category": "Perl",
+    "set": 4,
+    "question": "Quelle syntaxe capture la sortie d'une commande externe ?",
+    "options": [
+      "qx{command}",
+      "system command",
+      "exec command",
+      "open command"
+    ],
+    "answer": "qx{command}"
+  },
+  {
+    "category": "Perl",
+    "set": 4,
+    "question": "Quelle fonction exécute une commande externe et attend sa fin ?",
+    "options": [
+      "system",
+      "exec",
+      "qx",
+      "spawn"
+    ],
+    "answer": "system"
+  },
+  {
+    "category": "Perl",
+    "set": 4,
+    "question": "Quelle fonction change le répertoire de travail courant ?",
+    "options": [
+      "chdir",
+      "cd",
+      "mkdir",
+      "rmdir"
+    ],
+    "answer": "chdir"
+  },
+  {
+    "category": "Perl",
+    "set": 4,
+    "question": "Quelle fonction renvoie l'heure epoch courante ?",
+    "options": [
+      "time",
+      "now",
+      "epoch",
+      "clock"
+    ],
+    "answer": "time"
+  },
+  {
+    "category": "Perl",
+    "set": 4,
+    "question": "Quelle fonction convertit l'heure epoch en composantes de l'heure locale ?",
+    "options": [
+      "localtime",
+      "gmtime",
+      "strftime",
+      "date"
+    ],
+    "answer": "localtime"
+  },
+  {
+    "category": "Perl",
+    "set": 4,
+    "question": "Quelle fonction suspend l'exécution pendant un nombre de secondes ?",
+    "options": [
+      "sleep",
+      "wait",
+      "pause",
+      "delay"
+    ],
+    "answer": "sleep"
+  },
+  {
+    "category": "Perl",
+    "set": 4,
+    "question": "Quel hash contient les variables d'environnement ?",
+    "options": [
+      "%ENV",
+      "@ENV",
+      "$ENV",
+      "ENV"
+    ],
+    "answer": "%ENV"
+  }
+]

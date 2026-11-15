@@ -1,0 +1,302 @@
+[
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "Terraform যেন পুরোনো বস্তু রাখতে পারে, তার জন্য রিসোর্সের ঠিকানা বদল লেখে কোন ঘোষণামূলক ব্লক?",
+    "options": [
+      "removed",
+      "check",
+      "moved",
+      "import"
+    ],
+    "answer": "moved"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "moved ব্লকে নতুন রিসোর্স ঠিকানা বলে কোন আর্গুমেন্ট?",
+    "options": [
+      "provider",
+      "to",
+      "from",
+      "id"
+    ],
+    "answer": "to"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "apply-এর সময় আমদানি করা হবে এমন বিদ্যমান অবকাঠামোর বস্তু ঘোষণা করে কোন ব্লক?",
+    "options": [
+      "import",
+      "moved",
+      "output",
+      "check"
+    ],
+    "answer": "import"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "বাস্তব অবকাঠামোর বস্তু ধ্বংস না করে রিসোর্স ভুলে যায় removed ব্লকের কোন সেটিং?",
+    "options": [
+      "lifecycle { destroy = true }",
+      "lifecycle { create_before_destroy = true }",
+      "lifecycle { prevent_destroy = false }",
+      "lifecycle { destroy = false }"
+    ],
+    "answer": "lifecycle { destroy = false }"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "সাধারণ ইনপুট ভেরিয়েবল sensitive চিহ্নিত হলে স্থানীয় স্টেট ফাইলে তার মান কী হয়?",
+    "options": [
+      "তা সবসময় স্টেটের বাইরে থাকে",
+      "সংরক্ষণের আগে ভেরিয়েবলের নাম দিয়ে বদলানো হয়",
+      "সাধারণ CLI আউটপুটে লুকানো থাকলেও খোলা পাঠ্য হিসেবে রাখা যেতে পারে",
+      "sensitive ফ্ল্যাগ স্বয়ংক্রিয়ভাবে এনক্রিপ্ট করে"
+    ],
+    "answer": "সাধারণ CLI আউটপুটে লুকানো থাকলেও খোলা পাঠ্য হিসেবে রাখা যেতে পারে"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "সংবেদনশীল আউটপুট মান মেশিন-পাঠযোগ্যভাবে প্রকাশ করতে পারে output-এর কোন বিন্যাস?",
+    "options": [
+      "terraform providers schema -json",
+      "terraform output -json",
+      "terraform output -help",
+      "terraform output -no-color"
+    ],
+    "answer": "terraform output -json"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "Terraform মানকে JSON স্ট্রিং করে কোন ফাংশন?",
+    "options": [
+      "jsonencode",
+      "jsondecode",
+      "yamldecode",
+      "file"
+    ],
+    "answer": "jsonencode"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "JSON স্ট্রিং থেকে Terraform মান পার্স করে কোন ফাংশন?",
+    "options": [
+      "jsonencode",
+      "yamlencode",
+      "templatefile",
+      "jsondecode"
+    ],
+    "answer": "jsondecode"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "দেওয়া ভেরিয়েবল ম্যাপ দিয়ে টেমপ্লেট ফাইল প্রস্তুত করে কোন ফাংশন?",
+    "options": [
+      "fileset",
+      "filebase64",
+      "templatefile",
+      "file"
+    ],
+    "answer": "templatefile"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "গতিশীল ত্রুটি ছাড়া মূল্যায়িত প্রথম আর্গুমেন্ট ফেরায় কোন ফাংশন?",
+    "options": [
+      "lookup",
+      "try",
+      "can",
+      "coalesce"
+    ],
+    "answer": "try"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "এক্সপ্রেশন গতিশীল ত্রুটি ছাড়া মূল্যায়ন করা যাবে কি না জানায় কোন ফাংশন?",
+    "options": [
+      "can",
+      "try",
+      "contains",
+      "length"
+    ],
+    "answer": "can"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "merge-এর দুটি ম্যাপে একই কী থাকলে কোন মান জেতে?",
+    "options": [
+      "আগের আর্গুমেন্টের মান",
+      "সবসময় মানগুলো তালিকায় মেশে",
+      "পুনরাবৃত্ত কী সবসময় ত্রুটি দেয়",
+      "পরের আর্গুমেন্টের মান"
+    ],
+    "answer": "পরের আর্গুমেন্টের মান"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "5.4.x মঞ্জুর কিন্তু 5.5.0 অমঞ্জুর করে কোন প্রোভাইডার সংস্করণ শর্ত?",
+    "options": [
+      ">= 5.4.0",
+      ">= 5.0, < 6.0",
+      "~> 5.4.0",
+      "~> 5.4"
+    ],
+    "answer": "~> 5.4.0"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "রিসোর্স আর্গুমেন্টে null দিলে Terraform সাধারণত কী ধরে?",
+    "options": [
+      "সম্পূর্ণ রিসোর্স মুছতে অনুরোধ",
+      "আর্গুমেন্ট দেওয়া হয়নি; তার ডিফল্ট ও আবশ্যক শর্ত প্রযোজ্য",
+      "সব প্রোভাইডারে খালি স্ট্রিং",
+      "সব প্রোভাইডারে সংখ্যাসূচক শূন্য"
+    ],
+    "answer": "আর্গুমেন্ট দেওয়া হয়নি; তার ডিফল্ট ও আবশ্যক শর্ত প্রযোজ্য"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "নিজে যে মডিউলে লেখা আছে তার ফাইল-সিস্টেম পথ দেয় কোন এক্সপ্রেশন?",
+    "options": [
+      "path.module",
+      "path.root",
+      "path.cwd",
+      "terraform.workspace"
+    ],
+    "answer": "path.module"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "CLI সেটিংকে HCP Terraform-এর সঙ্গে যুক্ত করতে terraform ব্লকের কোন সুবিধা প্রস্তাবিত?",
+    "options": [
+      "locals",
+      "moved",
+      "check",
+      "cloud"
+    ],
+    "answer": "cloud"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "উল্লিখিত স্টেট থেকে terraform_remote_state সরাসরি কোন শীর্ষ-স্তরের মান দেয়?",
+    "options": [
+      "সব প্রোভাইডারের ক্রেডেনশিয়াল",
+      "সব উপমডিউলের স্থানীয় মান",
+      "মূল মডিউলের আউটপুট",
+      "প্রতি রিসোর্স বৈশিষ্ট্যকে শীর্ষ-স্তরের আউটপুট হিসেবে"
+    ],
+    "answer": "মূল মডিউলের আউটপুট"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "উল্লিখিত পরিচালিত রিসোর্স বদলালে প্রতিস্থাপন চায় কোন জীবনচক্র নিয়ম?",
+    "options": [
+      "create_before_destroy",
+      "replace_triggered_by",
+      "ignore_changes",
+      "prevent_destroy"
+    ],
+    "answer": "replace_triggered_by"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "আলাদা প্রোভাইডার না বসিয়ে সাধারণ ইনপুট মানকে রিসোর্সের জীবনচক্র দেয় কোন অন্তর্নির্মিত পরিচালিত রিসোর্স?",
+    "options": [
+      "terraform_data",
+      "terraform_remote_state",
+      "local_file",
+      "random_id"
+    ],
+    "answer": "terraform_data"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "সাধারণ plan বা apply-এ check ব্লকের শর্ত ব্যর্থ হলে কী হয়?",
+    "options": [
+      "Terraform সবসময় পরীক্ষিত বস্তু ধ্বংস করে",
+      "Terraform নীরবে check ব্লক মুছে দেয়",
+      "Terraform কোনো রিসোর্স নবায়নের আগেই সবসময় বেরিয়ে যায়",
+      "Terraform সতর্কবার্তা দেয়, কিন্তু শুধু এই ব্যর্থতায় কাজ বন্ধ করে না"
+    ],
+    "answer": "Terraform সতর্কবার্তা দেয়, কিন্তু শুধু এই ব্যর্থতায় কাজ বন্ধ করে না"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "রিসোর্সের জীবনচক্রের পূর্বশর্ত false হলে কী হয়?",
+    "options": [
+      "Terraform রিসোর্সকে ডেটা সোর্সে বদলায়",
+      "Terraform পূর্বশর্তকে শুধু সতর্কবার্তায় বদলায়",
+      "Terraform ত্রুটি জানিয়ে সংশ্লিষ্ট কাজ আটকায়",
+      "Terraform পরের রান পর্যন্ত পূর্বশর্ত উপেক্ষা করে"
+    ],
+    "answer": "Terraform ত্রুটি জানিয়ে সংশ্লিষ্ট কাজ আটকায়"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "Terraform-এর নিজস্ব টেস্ট ফাইল চালায় কোন কমান্ড?",
+    "options": [
+      "terraform console",
+      "terraform test",
+      "terraform validate",
+      "terraform fmt"
+    ],
+    "answer": "terraform test"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "Terraform টেস্টের run ব্লকে ডিফল্ট apply-এর বদলে plan করায় কোন সেটিং?",
+    "options": [
+      "command = plan",
+      "command = validate",
+      "command = refresh",
+      "command = console"
+    ],
+    "answer": "command = plan"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "ডিরেক্টরির নিচে glob-এর সঙ্গে মেলা আপেক্ষিক পথগুলো দেয় কোন ফাংশন?",
+    "options": [
+      "file",
+      "dirname",
+      "basename",
+      "fileset"
+    ],
+    "answer": "fileset"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "ভিন্ন প্রবেশ নিয়ন্ত্রণ চায় এমন পরিবেশ আলাদা করতে শুধু CLI ওয়ার্কস্পেস কেন যথেষ্ট নাও হতে পারে?",
+    "options": [
+      "তারা ভিন্ন ইনপুট ভেরিয়েবল মান ব্যবহার করতে দেয় না",
+      "তারা সব পরিবেশে একই রিসোর্স নাম বাধ্যতামূলক করে",
+      "তারা একই ব্যাকএন্ড সেটিং ও যাচাইয়ের প্রসঙ্গ ভাগ করে",
+      "তারা সবসময় একই স্টেট স্ন্যাপশট ভাগ করে"
+    ],
+    "answer": "তারা একই ব্যাকএন্ড সেটিং ও যাচাইয়ের প্রসঙ্গ ভাগ করে"
+  }
+]

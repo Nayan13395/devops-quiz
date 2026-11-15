@@ -1,0 +1,302 @@
+[
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "既存オブジェクトを Terraform が保持できるようにリソースアドレス変更を記録する宣言的ブロックはどれか？",
+    "options": [
+      "removed",
+      "check",
+      "moved",
+      "import"
+    ],
+    "answer": "moved"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "moved ブロックで新しいリソースアドレスを指定する引数はどれか？",
+    "options": [
+      "provider",
+      "to",
+      "from",
+      "id"
+    ],
+    "answer": "to"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "apply 中に取り込む既存インフラのオブジェクトを宣言するブロックはどれか？",
+    "options": [
+      "import",
+      "moved",
+      "output",
+      "check"
+    ],
+    "answer": "import"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "実際のインフラを破棄せずリソースを状態から外す removed ブロック設定はどれか？",
+    "options": [
+      "lifecycle { destroy = true }",
+      "lifecycle { create_before_destroy = true }",
+      "lifecycle { prevent_destroy = false }",
+      "lifecycle { destroy = false }"
+    ],
+    "answer": "lifecycle { destroy = false }"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "通常の入力変数を sensitive としたとき、ローカル状態ファイルの値はどうなるか？",
+    "options": [
+      "常に状態から除外される",
+      "保存前に変数名へ置き換わる",
+      "通常の CLI 出力では隠されても平文で保存されうる",
+      "sensitive フラグが自動で暗号化する"
+    ],
+    "answer": "通常の CLI 出力では隠されても平文で保存されうる"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "機械可読形式で機密出力を明らかにしうる output コマンド形式はどれか？",
+    "options": [
+      "terraform providers schema -json",
+      "terraform output -json",
+      "terraform output -help",
+      "terraform output -no-color"
+    ],
+    "answer": "terraform output -json"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "Terraform の値を JSON 文字列にする関数はどれか？",
+    "options": [
+      "jsonencode",
+      "jsondecode",
+      "yamldecode",
+      "file"
+    ],
+    "answer": "jsonencode"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "JSON 文字列を Terraform の値に変換する関数はどれか？",
+    "options": [
+      "jsonencode",
+      "yamlencode",
+      "templatefile",
+      "jsondecode"
+    ],
+    "answer": "jsondecode"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "指定変数マップでテンプレートファイルを展開する関数はどれか？",
+    "options": [
+      "fileset",
+      "filebase64",
+      "templatefile",
+      "file"
+    ],
+    "answer": "templatefile"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "動的エラーなしで評価できた最初の引数を返す関数はどれか？",
+    "options": [
+      "lookup",
+      "try",
+      "can",
+      "coalesce"
+    ],
+    "answer": "try"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "式を動的エラーなしで評価できるか返す関数はどれか？",
+    "options": [
+      "can",
+      "try",
+      "contains",
+      "length"
+    ],
+    "answer": "can"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "merge に渡す二つのマップに同じキーがある場合、どの値が使われるか？",
+    "options": [
+      "先の引数の値",
+      "値は必ずリストにまとめられる",
+      "キーの重複は必ずエラーになる",
+      "後の引数の値"
+    ],
+    "answer": "後の引数の値"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "5.4.x を許可し、5.5.0 は許可しないプロバイダーのバージョン制約はどれか？",
+    "options": [
+      ">= 5.4.0",
+      ">= 5.0, < 6.0",
+      "~> 5.4.0",
+      "~> 5.4"
+    ],
+    "answer": "~> 5.4.0"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "リソース引数に null を設定すると Terraform は通常どう扱うか？",
+    "options": [
+      "リソース全体の削除要求とみなす",
+      "引数の省略とみなし、デフォルト値や必須条件を適用する",
+      "すべてのプロバイダーで空文字列とみなす",
+      "すべてのプロバイダーで数値ゼロとみなす"
+    ],
+    "answer": "引数の省略とみなし、デフォルト値や必須条件を適用する"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "記述されたモジュールのファイルシステム上のパスを示す式はどれか？",
+    "options": [
+      "path.module",
+      "path.root",
+      "path.cwd",
+      "terraform.workspace"
+    ],
+    "answer": "path.module"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "CLI 設定を HCP Terraform に接続する際に推奨する terraform ブロック機能はどれか？",
+    "options": [
+      "locals",
+      "moved",
+      "check",
+      "cloud"
+    ],
+    "answer": "cloud"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "terraform_remote_state が参照先状態から直接公開するトップレベル値はどれか？",
+    "options": [
+      "全プロバイダーの認証情報",
+      "全子モジュールのローカル値",
+      "ルートモジュールの出力",
+      "全リソース属性をトップレベル出力として"
+    ],
+    "answer": "ルートモジュールの出力"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "参照先の管理対象リソースの変更で置換を要求するライフサイクルルールはどれか？",
+    "options": [
+      "create_before_destroy",
+      "replace_triggered_by",
+      "ignore_changes",
+      "prevent_destroy"
+    ],
+    "answer": "replace_triggered_by"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "別のプロバイダーを導入せず普通の入力値にリソースのライフサイクルを与える組み込みリソースはどれか？",
+    "options": [
+      "terraform_data",
+      "terraform_remote_state",
+      "local_file",
+      "random_id"
+    ],
+    "answer": "terraform_data"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "通常の plan または apply 中に check ブロックのアサーションが失敗するとどうなるか？",
+    "options": [
+      "Terraform は必ず対象を破棄する",
+      "Terraform は通知なく check ブロックを消す",
+      "Terraform はどのリソースも更新せず必ず終了する",
+      "Terraform は警告し、その失敗だけでは操作を止めない"
+    ],
+    "answer": "Terraform は警告し、その失敗だけでは操作を止めない"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "リソースのライフサイクル前提条件が false になるとどうなるか？",
+    "options": [
+      "Terraform はリソースをデータソースに変える",
+      "Terraform は前提条件を警告だけに変える",
+      "Terraform はエラーを報告し、関連操作を止める",
+      "Terraform は次の実行まで前提条件を無視する"
+    ],
+    "answer": "Terraform はエラーを報告し、関連操作を止める"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "Terraform のネイティブテストファイルを実行するコマンドはどれか？",
+    "options": [
+      "terraform console",
+      "terraform test",
+      "terraform validate",
+      "terraform fmt"
+    ],
+    "answer": "terraform test"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "Terraform テストの run ブロックで、標準の apply ではなく plan を行う設定はどれか？",
+    "options": [
+      "command = plan",
+      "command = validate",
+      "command = refresh",
+      "command = console"
+    ],
+    "answer": "command = plan"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "ディレクトリ下で glob に一致する相対パスの集合を返す関数はどれか？",
+    "options": [
+      "file",
+      "dirname",
+      "basename",
+      "fileset"
+    ],
+    "answer": "fileset"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "異なるアクセス制御が必要な環境を分けるのに、CLI ワークスペースだけでは不適切な場合がある理由は何か？",
+    "options": [
+      "入力変数に異なる値を設定できないため",
+      "全環境で同じリソース名を強制するため",
+      "同じバックエンド設定と認証コンテキストを共有するため",
+      "必ず一つの状態スナップショットを共有するため"
+    ],
+    "answer": "同じバックエンド設定と認証コンテキストを共有するため"
+  }
+]

@@ -1,0 +1,302 @@
+[
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "Pod ट्रैफ़िक पर प्रभाव के लिए NetworkPolicy को क्या चाहिए?",
+    "options": [
+      "हर चुने Pod के लिए LoadBalancer Service",
+      "उसी नेमस्पेस में PersistentVolumeClaim",
+      "हर नीति के लिए अलग API सर्वर",
+      "NetworkPolicy लागू करने वाला नेटवर्क कार्यान्वयन"
+    ],
+    "answer": "NetworkPolicy लागू करने वाला नेटवर्क कार्यान्वयन"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "एक ही Pod चुनने वाली कई NetworkPolicy अपना अनुमत आने वाला ट्रैफ़िक कैसे मिलाती हैं?",
+    "options": [
+      "सबसे पहले बनी नीति बाद की सभी नीतियों पर प्राथमिकता रखती है",
+      "हर नीति को हर पैकेट की अलग अनुमति देनी चाहिए",
+      "अनुमत ट्रैफ़िक उनकी प्रवेश अनुमतियों का संघ होता है",
+      "सबसे बाद बनी नीति पहले की सभी नीतियों पर प्राथमिकता रखती है"
+    ],
+    "answer": "अनुमत ट्रैफ़िक उनकी प्रवेश अनुमतियों का संघ होता है"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "नेमस्पेस के अंदर अनुमतियाँ कौन-सा RBAC ऑब्जेक्ट परिभाषित करता है?",
+    "options": [
+      "ResourceQuota",
+      "Role",
+      "RoleBinding",
+      "ServiceAccount"
+    ],
+    "answer": "Role"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "एक नेमस्पेस में Role या ClusterRole की अनुमतियाँ कौन-सा RBAC ऑब्जेक्ट देता है?",
+    "options": [
+      "RoleBinding",
+      "ClusterRoleBinding",
+      "ServiceAccount",
+      "LimitRange"
+    ],
+    "answer": "RoleBinding"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "Kubernetes API पहुँच के लिए Pod की प्रक्रियाओं को सामान्यतः कौन-सी पहचान दी जाती है?",
+    "options": [
+      "StorageClass",
+      "RuntimeClass",
+      "PriorityClass",
+      "ServiceAccount"
+    ],
+    "answer": "ServiceAccount"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "Secret डेटा की base64 कोडिंग उसे ऑब्जेक्ट पढ़ सकने वाले से क्यों नहीं बचाती?",
+    "options": [
+      "Base64 डेटा DNS से स्वतः प्रकाशित करता है",
+      "Base64 को Pod में सहेजी निजी कुंजी चाहिए",
+      "Base64 उलटी जा सकने वाली कोडिंग है, एन्क्रिप्शन नहीं",
+      "Base64 Kubernetes को डेटा रखने से रोकता है"
+    ],
+    "answer": "Base64 उलटी जा सकने वाली कोडिंग है, एन्क्रिप्शन नहीं"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "Kubernetes द्वारा Pod में API क्रेडेंशियल स्वतः माउंट करना कौन-सा फ़ील्ड रोक सकता है?",
+    "options": [
+      "shareProcessNamespace: false",
+      "automountServiceAccountToken: false",
+      "hostNetwork: false",
+      "enableServiceLinks: false"
+    ],
+    "answer": "automountServiceAccountToken: false"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "नेमस्पेस में कुल संसाधन खपत कौन-सा ऑब्जेक्ट सीमित करता है?",
+    "options": [
+      "ResourceQuota",
+      "LimitRange",
+      "PriorityClass",
+      "PodDisruptionBudget"
+    ],
+    "answer": "ResourceQuota"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "नेमस्पेस के कंटेनरों को डिफ़ॉल्ट संसाधन अनुरोध और सीमाएँ कौन-सा ऑब्जेक्ट दे सकता है?",
+    "options": [
+      "ResourceQuota",
+      "HorizontalPodAutoscaler",
+      "RuntimeClass",
+      "LimitRange"
+    ],
+    "answer": "LimitRange"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "Kubernetes ऑब्जेक्ट हटाने का अनुरोध आने के बाद उसका finalizer क्या करता है?",
+    "options": [
+      "हर निर्भर ऑब्जेक्ट तुरंत हटा देता है",
+      "ऑब्जेक्ट को अपरिवर्तनीय Secret बनाता है",
+      "आवश्यक सफ़ाई से finalizer हटने तक ऑब्जेक्ट को हटने की प्रतीक्षा में रखता है",
+      "ऑब्जेक्ट के सभी भावी अपडेट रोकता है"
+    ],
+    "answer": "आवश्यक सफ़ाई से finalizer हटने तक ऑब्जेक्ट को हटने की प्रतीक्षा में रखता है"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "स्वचालित सफ़ाई के लिए निर्भर ऑब्जेक्टों को मालिकों से कौन-सा मेटाडेटा फ़ील्ड जोड़ता है?",
+    "options": [
+      "managedFields",
+      "ownerReferences",
+      "annotations",
+      "labels"
+    ],
+    "answer": "ownerReferences"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "CustomResourceDefinition क्लस्टर में क्या जोड़ती है?",
+    "options": [
+      "Kubernetes API द्वारा दिया नया कस्टम संसाधन प्रकार",
+      "मौजूदा प्रकार के लिए चलता समंजन नियंत्रक",
+      "हर सेवा खाते को RBAC अनुमति",
+      "हर अंतर्निहित संसाधन प्रकार का एक इंस्टेंस"
+    ],
+    "answer": "Kubernetes API द्वारा दिया नया कस्टम संसाधन प्रकार"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "केवल कस्टम संसाधन परिभाषा और Kubernetes ऑपरेटर में क्या अंतर है?",
+    "options": [
+      "ऑपरेटर केवल स्कीमा परिभाषाएँ रख सकता है",
+      "ऑपरेटर API सर्वर की जरूरत हटाता है",
+      "ऑपरेटर केवल kubectl का आउटपुट प्रारूप बदलता है",
+      "ऑपरेटर दर्शाए गए अनुप्रयोग को सँभालने का समंजन तर्क भी चलाता है"
+    ],
+    "answer": "ऑपरेटर दर्शाए गए अनुप्रयोग को सँभालने का समंजन तर्क भी चलाता है"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "प्रमाणीकरण और प्राधिकरण के बाद, लेकिन सहेजने से पहले API अनुरोध कौन-सी व्यवस्था अस्वीकार या बदल सकती है?",
+    "options": [
+      "कंटेनर इमेज खींचना",
+      "Service एंडपॉइंट रूटिंग",
+      "प्रवेश नियंत्रण",
+      "Pod निर्धारण"
+    ],
+    "answer": "प्रवेश नियंत्रण"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "कोई उपयुक्त नोड Pod की अनिवार्य नोड एफ़िनिटी पूरी न करे तो क्या होता है?",
+    "options": [
+      "API सर्वर उसे हर नोड पर रखता है",
+      "उपयुक्त नोड आने या नियम बदलने तक Pod अनिर्धारित रहता है",
+      "शेड्यूलर एक कोशिश के बाद नियम छोड़ता है",
+      "Pod स्वतः DaemonSet बन जाता है"
+    ],
+    "answer": "उपयुक्त नोड आने या नियम बदलने तक Pod अनिर्धारित रहता है"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "preferredDuringSchedulingIgnoredDuringExecution नोड एफ़िनिटी क्या बताती है?",
+    "options": [
+      "स्थान की पसंद, जो अन्यथा उपयुक्त गैर-मिलते नोडों को नहीं हटाती",
+      "गैर-मिलते नोडों पर रखना रोकने वाली अनिवार्य शर्त",
+      "नोड लेबल बदले तो Pod हटाने का निर्देश",
+      "शेड्यूलर पूरी तरह छोड़ने का अनुरोध"
+    ],
+    "answer": "स्थान की पसंद, जो अन्यथा उपयुक्त गैर-मिलते नोडों को नहीं हटाती"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "चलते Pod की नोड एफ़िनिटी से नोड लेबल न मिलें तो IgnoredDuringExecution का क्या अर्थ है?",
+    "options": [
+      "Pod तुरंत हटाना चाहिए",
+      "Pod के कंटेनर स्वतः फिर शुरू होते हैं",
+      "नोड के लेबल स्वतः पुराने मान हो जाते हैं",
+      "केवल यह नियम चलते Pod को नहीं हटाता"
+    ],
+    "answer": "केवल यह नियम चलते Pod को नहीं हटाता"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "Pod स्पष्ट रूप से spec.nodeName तय करे तो क्या होता है?",
+    "options": [
+      "उस नाम का नोड बनाता है",
+      "Pod चला रहे नोड का नाम बदलता है",
+      "शेड्यूलर छोड़कर उसी नाम वाले नोड को सौंपा जाता है",
+      "शेड्यूलर से सभी मिलते नोड लेबल की रैंकिंग माँगता है"
+    ],
+    "answer": "शेड्यूलर छोड़कर उसी नाम वाले नोड को सौंपा जाता है"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "टोपोलॉजी फैलाव नियमों का उद्देश्य क्या है?",
+    "options": [
+      "कंट्रोल-प्लेन घटकों के बीच ट्रैफ़िक एन्क्रिप्ट करना",
+      "मेल खाते Pod का टोपोलॉजी डोमेन में वितरण नियंत्रित करना",
+      "स्थायी वॉल्यूमों के बीच कंटेनर फ़ाइलें कॉपी करना",
+      "हर नेमस्पेस को एक सार्वजनिक IP देना"
+    ],
+    "answer": "मेल खाते Pod का टोपोलॉजी डोमेन में वितरण नियंत्रित करना"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "बिना टॉलरेशन के पहले से चलते Pod हटाने वाला taint प्रभाव कौन-सा है?",
+    "options": [
+      "NoExecute",
+      "NoSchedule",
+      "PreferNoSchedule",
+      "None"
+    ],
+    "answer": "NoExecute"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "Linux कंटेनर को गैर-root उपयोगकर्ता की तरह चलाना कौन-सी securityContext सेटिंग अनिवार्य करती है?",
+    "options": [
+      "readOnlyRootFilesystem: true",
+      "privileged: false",
+      "allowPrivilegeEscalation: false",
+      "runAsNonRoot: true"
+    ],
+    "answer": "runAsNonRoot: true"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "Linux प्रक्रिया को जनक से अधिक अधिकार पाने से कौन-सी कंटेनर securityContext सेटिंग रोकती है?",
+    "options": [
+      "readOnlyRootFilesystem: true",
+      "privileged: false",
+      "allowPrivilegeEscalation: false",
+      "runAsNonRoot: true"
+    ],
+    "answer": "allowPrivilegeEscalation: false"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "अनुप्रयोग कंटेनर बदले बिना समस्या जाँचने के लिए मौजूदा Pod में कौन-सा कंटेनर जोड़ा जा सकता है?",
+    "options": [
+      "दोबारा शुरू हो सकने वाला init कंटेनर",
+      "अस्थायी कंटेनर",
+      "सामान्य init कंटेनर",
+      "सामान्य अनुप्रयोग कंटेनर"
+    ],
+    "answer": "अस्थायी कंटेनर"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "Service के नेटवर्क एंडपॉइंट विस्तार योग्य समूहों में कौन-सा संसाधन ट्रैक करता है?",
+    "options": [
+      "EndpointSlice",
+      "IngressClass",
+      "NetworkPolicy",
+      "RuntimeClass"
+    ],
+    "answer": "EndpointSlice"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "Ingress संसाधन वास्तव में HTTP रूटिंग सेट करे, इसके लिए क्या चाहिए?",
+    "options": [
+      "हर नेमस्पेस में ingress नाम की ConfigMap",
+      "हर होस्टनाम के लिए PersistentVolume",
+      "सभी चुने Pod फिर शुरू करने वाला Job",
+      "नियम लागू करने वाला Ingress नियंत्रक"
+    ],
+    "answer": "नियम लागू करने वाला Ingress नियंत्रक"
+  }
+]

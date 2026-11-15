@@ -1,0 +1,302 @@
+[
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "将 Bash 展开写成 \"$name\" 的引号形式会防止什么？",
+    "options": [
+      "引号内的所有参数展开",
+      "变量以后被修改",
+      "命令接收到空参数",
+      "对展开结果进行单词分割和路径名展开"
+    ],
+    "answer": "对展开结果进行单词分割和路径名展开"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "在 Bash 中用单引号写 '$HOME' 有什么作用？",
+    "options": [
+      "展开为上一个工作目录",
+      "删除美元符号并传递 HOME",
+      "传递字面文本 $HOME",
+      "展开为用户主目录"
+    ],
+    "answer": "传递字面文本 $HOME"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "Bash 命令替换 $(command) 插入什么？",
+    "options": [
+      "以十进制数表示的命令退出状态",
+      "移除末尾换行后的命令标准输出",
+      "命令的数字进程 ID",
+      "仅命令的标准错误"
+    ],
+    "answer": "移除末尾换行后的命令标准输出"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "哪个 Bash 内置命令在当前 shell 中读取并执行脚本文件里的命令？",
+    "options": [
+      "source",
+      "exec",
+      "eval",
+      "export"
+    ],
+    "answer": "source"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "Bash 脚本中的 'exec program' 执行成功时会做什么？",
+    "options": [
+      "将 program 作为后台作业启动，同时 shell 继续运行",
+      "运行 program 两次并比较结果",
+      "将 program 的输出作为 shell 源码加载",
+      "用 program 替换 shell 进程"
+    ],
+    "answer": "用 program 替换 shell 进程"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "启用 Bash pipefail 后，如果一个或多个命令失败，管道的状态是什么？",
+    "options": [
+      "只要最后一个命令成功，就始终为零",
+      "所有命令退出状态的总和",
+      "最右侧返回非零值的命令的状态",
+      "始终为第一个命令的状态"
+    ],
+    "answer": "最右侧返回非零值的命令的状态"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "哪个命令使用 GNU Coreutils 验证 checksums.txt 中记录的 SHA-256 校验和？",
+    "options": [
+      "cksum checksums.txt",
+      "sha256sum -c checksums.txt",
+      "sha256sum checksums.txt",
+      "md5sum -c checksums.txt"
+    ],
+    "answer": "sha256sum -c checksums.txt"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "哪个 GNU tar 命令为 logs 目录创建 gzip 压缩归档？",
+    "options": [
+      "tar -czf logs.tar.gz logs",
+      "tar -xzf logs.tar.gz",
+      "tar -tzf logs.tar.gz",
+      "gzip -d logs.tar.gz"
+    ],
+    "answer": "tar -czf logs.tar.gz logs"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "tar 的哪个选项列出归档内容，而不解压？",
+    "options": [
+      "-x",
+      "-c",
+      "-r",
+      "-t"
+    ],
+    "answer": "-t"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "Linux 目录上的 setgid 位通常对其中新建的文件有什么影响？",
+    "options": [
+      "文件归 root 用户所有",
+      "文件所有者无法删除它们",
+      "文件继承目录的所属组",
+      "文件总会变成所有用户都可执行"
+    ],
+    "answer": "文件继承目录的所属组"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "共享可写目录上的粘滞位主要限制什么？",
+    "options": [
+      "谁能在文件系统中分配磁盘块",
+      "谁能删除或重命名该目录中的文件",
+      "谁能读取该目录中的每个文件",
+      "谁能执行该目录之外的程序"
+    ],
+    "answer": "谁能删除或重命名该目录中的文件"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "哪个命令显示文件的访问控制列表条目？",
+    "options": [
+      "getfacl file.txt",
+      "setfacl -b file.txt",
+      "getfattr -d file.txt",
+      "lsattr file.txt"
+    ],
+    "answer": "getfacl file.txt"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "哪个文件通常包含本地用户账户记录，而不是密码哈希？",
+    "options": [
+      "/etc/shadow",
+      "/etc/group",
+      "/etc/gshadow",
+      "/etc/passwd"
+    ],
+    "answer": "/etc/passwd"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "哪个命令将 alice 加入补充组 docker，而不替换她现有的补充组？",
+    "options": [
+      "usermod -g docker alice",
+      "usermod -l docker alice",
+      "usermod -aG docker alice",
+      "usermod -G docker alice"
+    ],
+    "answer": "usermod -aG docker alice"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "哪个命令锁定 Linux 用户的密码，禁止基于密码的认证？",
+    "options": [
+      "passwd -e alice",
+      "passwd -l alice",
+      "passwd -u alice",
+      "passwd -S alice"
+    ],
+    "answer": "passwd -l alice"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "哪个命令向已配置的名称服务来源查询 alice 的 passwd 条目？",
+    "options": [
+      "getent passwd alice",
+      "groups alice",
+      "id -u alice",
+      "whoami"
+    ],
+    "answer": "getent passwd alice"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "哪个文件通常定义启动时自动挂载的文件系统？",
+    "options": [
+      "/etc/hosts",
+      "/etc/shells",
+      "/etc/resolv.conf",
+      "/etc/fstab"
+    ],
+    "answer": "/etc/fstab"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "哪个命令显示文件系统 UUID 和其他块设备属性？",
+    "options": [
+      "modinfo",
+      "lscpu",
+      "blkid",
+      "lsmod"
+    ],
+    "answer": "blkid"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "为什么运行修复性的 fsck 操作前通常应卸载文件系统？",
+    "options": [
+      "已挂载的文件系统从来没有可用空间",
+      "并发文件系统写入可能与修复冲突并损坏数据",
+      "卸载会自动加密所有文件系统元数据",
+      "fsck 只支持没有设备名称的文件系统"
+    ],
+    "answer": "并发文件系统写入可能与修复冲突并损坏数据"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "哪个命令显示正在使用的交换空间？",
+    "options": [
+      "swapon --show",
+      "swapoff -a",
+      "free -s 1",
+      "vmstat -d"
+    ],
+    "answer": "swapon --show"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "哪个命令加载 Linux 内核模块及其依赖？",
+    "options": [
+      "rmmod",
+      "lsmod",
+      "modinfo",
+      "modprobe"
+    ],
+    "answer": "modprobe"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "哪个 systemd 命令通过将单元链接到 /dev/null 来阻止其启动？",
+    "options": [
+      "systemctl stop app.service",
+      "systemctl reset-failed app.service",
+      "systemctl mask app.service",
+      "systemctl disable app.service"
+    ],
+    "answer": "systemctl mask app.service"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "SSH 的哪个选项选择用于认证的私钥身份文件？",
+    "options": [
+      "-R",
+      "-i",
+      "-p",
+      "-L"
+    ],
+    "answer": "-i"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "哪个命令通过 SSH 将本地文件安全复制到远程用户的目录？",
+    "options": [
+      "scp report.txt alice@server:/home/alice/",
+      "ssh alice@server cat report.txt",
+      "sftp -b report.txt alice@server",
+      "ssh-keygen -f report.txt"
+    ],
+    "answer": "scp report.txt alice@server:/home/alice/"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "'rsync -n' 请求什么？",
+    "options": [
+      "删除目标中存在但源中不存在的文件",
+      "压缩传输的文件数据",
+      "递归保留所有文件系统属性",
+      "只报告拟进行的修改，而不实际修改的试运行"
+    ],
+    "answer": "只报告拟进行的修改，而不实际修改的试运行"
+  }
+]

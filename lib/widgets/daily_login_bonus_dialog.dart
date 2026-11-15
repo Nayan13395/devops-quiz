@@ -1,10 +1,13 @@
 import 'package:flutter/material.dart';
 
+import '../l10n/game_localizations.dart';
+
 Future<void> showDailyLoginBonusDialog(BuildContext context, int bonus) {
   return showDialog<void>(
     context: context,
     barrierDismissible: false,
     builder: (dialogContext) {
+      final l10n = gameL10n(dialogContext);
       final size = MediaQuery.sizeOf(dialogContext);
 
       final bool smallScreen = size.height < 750;
@@ -47,7 +50,7 @@ Future<void> showDailyLoginBonusDialog(BuildContext context, int bonus) {
                 // TITLE
                 // =========================
                 Text(
-                  'Daily Login Bonus',
+                  l10n.sharedDialogDailyLoginBonus,
                   textAlign: TextAlign.center,
                   style: TextStyle(
                     fontSize: smallScreen ? 22 : 25,
@@ -58,7 +61,7 @@ Future<void> showDailyLoginBonusDialog(BuildContext context, int bonus) {
                 SizedBox(height: smallScreen ? 5 : 8),
 
                 Text(
-                  'Thanks for coming back!',
+                  l10n.sharedDialogThanksForComingBack,
                   textAlign: TextAlign.center,
                   style: TextStyle(
                     fontSize: smallScreen ? 14 : 15,
@@ -109,8 +112,8 @@ Future<void> showDailyLoginBonusDialog(BuildContext context, int bonus) {
 
                       const SizedBox(height: 2),
 
-                      const Text(
-                        'POINTS',
+                      Text(
+                        l10n.gameUiPOINTS,
                         style: TextStyle(
                           fontSize: 13,
                           fontWeight: FontWeight.w600,
@@ -127,8 +130,7 @@ Future<void> showDailyLoginBonusDialog(BuildContext context, int bonus) {
                 // MESSAGE
                 // =========================
                 Text(
-                  'Your daily reward has been added '
-                  'to your total points.',
+                  l10n.sharedDialogDailyRewardAdded,
                   textAlign: TextAlign.center,
                   style: TextStyle(
                     fontSize: smallScreen ? 14 : 15,
@@ -150,9 +152,9 @@ Future<void> showDailyLoginBonusDialog(BuildContext context, int bonus) {
                       Navigator.pop(dialogContext);
                     },
                     icon: const Icon(Icons.celebration_outlined),
-                    label: const Text(
-                      'Awesome!',
-                      style: TextStyle(
+                    label: Text(
+                      l10n.sharedDialogAwesome,
+                      style: const TextStyle(
                         fontSize: 16,
                         fontWeight: FontWeight.bold,
                       ),

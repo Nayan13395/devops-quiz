@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../l10n/achievement_localizations.dart';
+import '../l10n/app_localizations.dart';
 import '../models/achievement.dart';
 import '../services/achievement_service.dart';
 
@@ -34,93 +36,107 @@ class _AchievementScreenState extends State<AchievementScreen> {
 
   @override
   Widget build(BuildContext context) {
+    final colors = Theme.of(context).colorScheme;
+    final l10n = AppLocalizations.of(context)!;
     return Scaffold(
-      appBar: AppBar(title: const Text("🏆 Achievements")),
-
+      appBar: AppBar(title: Text(l10n.achievements)),
       body: loading
           ? const Center(child: CircularProgressIndicator())
           : SafeArea(
               top: false,
               bottom: true,
               child: ListView.builder(
-                padding: const EdgeInsets.fromLTRB(
-                  12,
-                  12,
-                  12,
-
-                  // Important:
-                  // Extra space after last achievement.
-                  40,
-                ),
+                padding: const EdgeInsets.fromLTRB(12, 7, 12, 40),
                 itemCount: achievements.length,
                 itemBuilder: (context, index) {
                   final achievement = achievements[index];
+                  final text = achievementText(context, achievement);
+                  final progress = achievement.unlocked
+                      ? 1.0
+                      : achievement.progress.clamp(0.0, 1.0);
 
-                  return Padding(
-                    padding: const EdgeInsets.only(bottom: 8),
-                    child: Card(
-                      margin: EdgeInsets.zero,
-                      elevation: achievement.unlocked ? 8 : 2,
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(18),
+                  return Card(
+                    key: ValueKey('achievement-card-${achievement.id}'),
+                    elevation: 1,
+                    color: colors.surface,
+                    margin: const EdgeInsets.symmetric(vertical: 5),
+                    clipBehavior: Clip.antiAlias,
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(14),
+                      side: BorderSide(
+                        color: colors.outlineVariant.withValues(alpha: 0.55),
                       ),
-                      child: Padding(
-                        padding: const EdgeInsets.symmetric(vertical: 6),
-                        child: ListTile(
-                          contentPadding: const EdgeInsets.symmetric(
-                            horizontal: 18,
-                            vertical: 8,
-                          ),
-
-                          leading: SizedBox(
-                            width: 52,
-                            child: Center(
-                              child: Text(
-                                achievement.icon,
-                                textAlign: TextAlign.center,
-                                style: const TextStyle(fontSize: 34),
-                              ),
+                    ),
+                    child: Padding(
+                      padding: const EdgeInsets.all(14),
+                      child: Row(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Container(
+                            key: ValueKey('achievement-icon-${achievement.id}'),
+                            width: 48,
+                            height: 48,
+                            alignment: Alignment.center,
+                            decoration: BoxDecoration(
+                              color: colors.primaryContainer,
+                              borderRadius: BorderRadius.circular(13),
                             ),
-                          ),
-
-                          title: Text(
-                            achievement.title,
-                            maxLines: 2,
-                            overflow: TextOverflow.visible,
-                            style: TextStyle(
-                              fontSize: 18,
-                              fontWeight: FontWeight.bold,
-                              color: achievement.unlocked
-                                  ? Colors.green
-                                  : Colors.grey,
-                            ),
-                          ),
-
-                          subtitle: Padding(
-                            padding: const EdgeInsets.only(top: 4),
                             child: Text(
-                              achievement.description,
-                              maxLines: 3,
-                              overflow: TextOverflow.visible,
-                              style: const TextStyle(
-                                fontSize: 15,
-                                height: 1.25,
-                              ),
+                              achievement.icon,
+                              textAlign: TextAlign.center,
+                              style: const TextStyle(fontSize: 28),
                             ),
                           ),
-
-                          trailing: achievement.unlocked
-                              ? const Icon(
-                                  Icons.check_circle,
-                                  color: Colors.green,
-                                  size: 28,
-                                )
-                              : const Icon(
-                                  Icons.lock,
-                                  color: Colors.grey,
-                                  size: 26,
+                          const SizedBox(width: 14),
+                          Expanded(
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Text(
+                                  text.title,
+                                  style: Theme.of(context).textTheme.titleMedium
+                                      ?.copyWith(fontWeight: FontWeight.w600),
                                 ),
-                        ),
+                                const SizedBox(height: 4),
+                                Text(
+                                  text.description,
+                                  style: Theme.of(context).textTheme.bodyMedium
+                                      ?.copyWith(
+                                        color: colors.onSurfaceVariant,
+                                        height: 1.25,
+                                      ),
+                                ),
+                                if (!achievement.unlocked) ...[
+                                  const SizedBox(height: 10),
+                                  LinearProgressIndicator(
+                                    key: ValueKey(
+                                      'achievement-progress-${achievement.id}',
+                                    ),
+                                    value: progress,
+                                    minHeight: 5,
+                                    borderRadius: BorderRadius.circular(3),
+                                    backgroundColor:
+                                        colors.surfaceContainerHighest,
+                                  ),
+                                ],
+                              ],
+                            ),
+                          ),
+                          const SizedBox(width: 12),
+                          Padding(
+                            padding: const EdgeInsets.only(top: 10),
+                            child: Icon(
+                              achievement.unlocked
+                                  ? Icons.check_circle_rounded
+                                  : Icons.lock_outline_rounded,
+                              color: achievement.unlocked
+                                  ? colors.primary
+                                  : colors.onSurfaceVariant,
+                              size: 26,
+                              semanticLabel: text.title,
+                            ),
+                          ),
+                        ],
                       ),
                     ),
                   );

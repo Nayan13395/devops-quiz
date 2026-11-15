@@ -1,0 +1,302 @@
+[
+  {
+    "category": "Docker",
+    "set": 2,
+    "question": "कुन कमाण्डले Docker को भर्सन दिन्छ?",
+    "options": [
+      "docker --version",
+      "docker run",
+      "docker ps",
+      "docker pull"
+    ],
+    "answer": "docker --version"
+  },
+  {
+    "category": "Docker",
+    "set": 2,
+    "question": "कुन कमाण्डले Docker भर्सनलाई JSON ढाँचामा देखाउँछ?",
+    "options": [
+      "docker version --format json",
+      "docker version -j",
+      "docker version --json",
+      "docker info --json"
+    ],
+    "answer": "docker version --format json"
+  },
+  {
+    "category": "Docker",
+    "set": 2,
+    "question": "कुन कमाण्डले कन्टेनर ID हरू मात्र सूचीबद्ध गर्छ?",
+    "options": [
+      "docker ps -q",
+      "docker ps --ids",
+      "docker ps -i",
+      "docker ps --size"
+    ],
+    "answer": "docker ps -q"
+  },
+  {
+    "category": "Docker",
+    "set": 2,
+    "question": "कुन कमाण्डले रोकिएका सहित सबै कन्टेनरहरू सूचीबद्ध गर्छ?",
+    "options": [
+      "docker ps -a",
+      "docker ps --size",
+      "docker containers",
+      "docker list"
+    ],
+    "answer": "docker ps -a"
+  },
+  {
+    "category": "Docker",
+    "set": 2,
+    "question": "कुन कमाण्डले कन्टेनर सुरु नगरी बनाउँछ?",
+    "options": [
+      "docker create",
+      "docker run",
+      "docker build",
+      "docker start"
+    ],
+    "answer": "docker create"
+  },
+  {
+    "category": "Docker",
+    "set": 2,
+    "question": "कुन कमाण्डले अवस्थित रोकिएको कन्टेनरलाई सुरु गर्छ?",
+    "options": [
+      "docker start",
+      "docker run",
+      "docker create",
+      "docker exec"
+    ],
+    "answer": "docker start"
+  },
+  {
+    "category": "Docker",
+    "set": 2,
+    "question": "कुन कमाण्डले चलिरहेको कन्टेनरलाई सौम्य रूपमा रोक्छ?",
+    "options": [
+      "docker stop",
+      "docker kill",
+      "docker pause",
+      "docker halt"
+    ],
+    "answer": "docker stop"
+  },
+  {
+    "category": "Docker",
+    "set": 2,
+    "question": "कुन कमाण्डले कन्टेनरलाई जबरजस्ती बन्द गर्छ?",
+    "options": [
+      "docker kill",
+      "docker stop",
+      "docker terminate",
+      "docker end"
+    ],
+    "answer": "docker kill"
+  },
+  {
+    "category": "Docker",
+    "set": 2,
+    "question": "कुन कमाण्डले कन्टेनरलाई पुनः सुरु गर्छ?",
+    "options": [
+      "docker restart",
+      "docker reset",
+      "docker reload",
+      "docker rerun"
+    ],
+    "answer": "docker restart"
+  },
+  {
+    "category": "Docker",
+    "set": 2,
+    "question": "कुन कमाण्डले चलिरहेको कन्टेनरलाई पज गर्छ?",
+    "options": [
+      "docker pause",
+      "docker stop",
+      "docker hold",
+      "docker freeze"
+    ],
+    "answer": "docker pause"
+  },
+  {
+    "category": "Docker",
+    "set": 2,
+    "question": "कुन कमाण्डले पज गरिएको कन्टेनरलाई पुनः सुचारु गर्छ?",
+    "options": [
+      "docker unpause",
+      "docker resume",
+      "docker start",
+      "docker restart"
+    ],
+    "answer": "docker unpause"
+  },
+  {
+    "category": "Docker",
+    "set": 2,
+    "question": "कुन कमाण्डले कन्टेनर हटाउँछ?",
+    "options": [
+      "docker rm",
+      "docker stop",
+      "docker delete",
+      "docker clear"
+    ],
+    "answer": "docker rm"
+  },
+  {
+    "category": "Docker",
+    "set": 2,
+    "question": "कुन कमाण्डले Docker इमेज हटाउँछ?",
+    "options": [
+      "docker rmi",
+      "docker rm",
+      "docker erase",
+      "docker clean"
+    ],
+    "answer": "docker rmi"
+  },
+  {
+    "category": "Docker",
+    "set": 2,
+    "question": "कुन कमाण्डले इमेजको इतिहास देखाउँछ?",
+    "options": [
+      "docker history",
+      "docker layers",
+      "docker image show",
+      "docker inspect"
+    ],
+    "answer": "docker history"
+  },
+  {
+    "category": "Docker",
+    "set": 2,
+    "question": "APP_ENV वातावरणीय चलको मान prod राख्ने docker run विकल्प कुन हो?",
+    "options": [
+      "--name APP_ENV=prod",
+      "--hostname APP_ENV=prod",
+      "-e APP_ENV=prod",
+      "--label APP_ENV=prod"
+    ],
+    "answer": "-e APP_ENV=prod"
+  },
+  {
+    "category": "Docker",
+    "set": 2,
+    "question": "कन्टेनरको मूल फाइलसिस्टम पढ्न मात्र मिल्ने बनाउने विकल्प कुन हो?",
+    "options": [
+      "--init",
+      "--read-only",
+      "--privileged",
+      "--tty"
+    ],
+    "answer": "--read-only"
+  },
+  {
+    "category": "Docker",
+    "set": 2,
+    "question": "शून्यबाहेक निर्गमनपछि कन्टेनर पुनः सुरु गर्ने तर सफल निर्गमनपछि नगर्ने नीति कुन हो?",
+    "options": [
+      "on-failure",
+      "always",
+      "unless-stopped",
+      "no"
+    ],
+    "answer": "on-failure"
+  },
+  {
+    "category": "Docker",
+    "set": 2,
+    "question": "नयाँ कन्टेनरको मेमोरी 512 MiB मा सीमित गर्ने कमान्ड कुन हो?",
+    "options": [
+      "docker run --memory-reservation 512m alpine",
+      "docker run --memory-swap 512m alpine",
+      "docker run --shm-size 512m alpine",
+      "docker run --memory 512m alpine"
+    ],
+    "answer": "docker run --memory 512m alpine"
+  },
+  {
+    "category": "Docker",
+    "set": 2,
+    "question": "कन्टेनरको CPU कोटा आधा CPU बराबर राख्ने विकल्प कुन हो?",
+    "options": [
+      "--cpuset-cpus 0",
+      "--cpu-period 50000",
+      "--cpus 0.5",
+      "--cpu-shares 512"
+    ],
+    "answer": "--cpus 0.5"
+  },
+  {
+    "category": "Docker",
+    "set": 2,
+    "question": "होस्टको निश्चित डाइरेक्टरी कन्टेनरभित्र सीधै उपलब्ध गराउने माउन्ट प्रकार कुन हो?",
+    "options": [
+      "tmpfs माउन्ट",
+      "बाइन्ड माउन्ट",
+      "नेम्ड भोल्युम",
+      "नाम नभएको भोल्युम"
+    ],
+    "answer": "बाइन्ड माउन्ट"
+  },
+  {
+    "category": "Docker",
+    "set": 2,
+    "question": "Linux मा फाइललाई साधारण डिस्क फाइलको सट्टा होस्ट मेमोरीमा राख्ने माउन्ट प्रकार कुन हो?",
+    "options": [
+      "tmpfs माउन्ट",
+      "बाइन्ड माउन्ट",
+      "नेम्ड भोल्युम",
+      "नाम नभएको भोल्युम"
+    ],
+    "answer": "tmpfs माउन्ट"
+  },
+  {
+    "category": "Docker",
+    "set": 2,
+    "question": "web नामको विद्यमान कन्टेनरलाई backend नामको नेटवर्कमा जोड्ने कमान्ड कुन हो?",
+    "options": [
+      "docker network disconnect backend web",
+      "docker network inspect backend web",
+      "docker network rm backend web",
+      "docker network connect backend web"
+    ],
+    "answer": "docker network connect backend web"
+  },
+  {
+    "category": "Docker",
+    "set": 2,
+    "question": "प्रयोगकर्ताले बनाएको ब्रिजलाई Docker को पूर्वनिर्धारित ब्रिजबाट छुट्याउने नेटवर्क-ड्राइभर सुविधा कुन हो?",
+    "options": [
+      "कन्फिगरेसनविना धेरै होस्टबीच स्वचालित राउटिङ",
+      "खुलाइएका हरेक पोर्टको स्वचालित प्रकाशन",
+      "कन्टेनरबीच नामबाट स्वचालित DNS समाधान",
+      "कन्टेनरको सबै ट्राफिकको स्वचालित गुप्तीकरण"
+    ],
+    "answer": "कन्टेनरबीच नामबाट स्वचालित DNS समाधान"
+  },
+  {
+    "category": "Docker",
+    "set": 2,
+    "question": "कन्टेनरको नाम oldweb बाट newweb बनाउने कमान्ड कुन हो?",
+    "options": [
+      "docker network connect oldweb newweb",
+      "docker rename oldweb newweb",
+      "docker tag oldweb newweb",
+      "docker cp oldweb newweb"
+    ],
+    "answer": "docker rename oldweb newweb"
+  },
+  {
+    "category": "Docker",
+    "set": 2,
+    "question": "web कन्टेनर रोकिने प्रतीक्षा गरी निर्गमन कोड देखाउने कमान्ड कुन हो?",
+    "options": [
+      "docker wait web",
+      "docker logs web",
+      "docker top web",
+      "docker attach web"
+    ],
+    "answer": "docker wait web"
+  }
+]

@@ -1,0 +1,302 @@
+[
+  {
+    "category": "Docker",
+    "set": 5,
+    "question": "ARG や ENV にパスワードを保存せず BuildKit のシークレットマウントを使う理由は何か？",
+    "options": [
+      "レジストリのパスワードを自動更新するため",
+      "生成される全イメージ層を暗号化するため",
+      "ビルドのあらゆるネットワークアクセスを防ぐため",
+      "渡した秘密をイメージの ARG や ENV の値として残さないため"
+    ],
+    "answer": "渡した秘密をイメージの ARG や ENV の値として残さないため"
+  },
+  {
+    "category": "Docker",
+    "set": 5,
+    "question": "RUN 命令で BuildKit キャッシュマウントを使う目的は何か？",
+    "options": [
+      "ベースイメージを空のファイルシステムに変える",
+      "全 RUN 命令を必ずキャッシュなしで実行する",
+      "マウント内容を最終イメージにせず、ツールのキャッシュをビルド間で再利用する",
+      "実行ログをイメージレジストリへ保存する"
+    ],
+    "answer": "マウント内容を最終イメージにせず、ツールのキャッシュをビルド間で再利用する"
+  },
+  {
+    "category": "Docker",
+    "set": 5,
+    "question": "通常 COPY と後続の依存ステップのキャッシュを無効にするビルド入力の変更はどれか？",
+    "options": [
+      "命令を変えず普通の Dockerfile コメントを編集する",
+      "コピーする元ファイルの内容を変える",
+      "コピーするファイルの更新時刻だけを変える",
+      ".dockerignore で除外したファイルを変える"
+    ],
+    "answer": "コピーする元ファイルの内容を変える"
+  },
+  {
+    "category": "Docker",
+    "set": 5,
+    "question": "Dockerfile の 'FROM scratch' は何を選ぶか？",
+    "options": [
+      "ベースイメージのファイルシステムを持たない空の出発点",
+      "最小限の Debian インストール",
+      "実行中ホストのルートファイルシステム",
+      "最後にローカルで作ったイメージ"
+    ],
+    "answer": "ベースイメージのファイルシステムを持たない空の出発点"
+  },
+  {
+    "category": "Docker",
+    "set": 5,
+    "question": "キーと値のメタデータをイメージに追加する Dockerfile 命令はどれか？",
+    "options": [
+      "ARG",
+      "EXPOSE",
+      "STOPSIGNAL",
+      "LABEL"
+    ],
+    "answer": "LABEL"
+  },
+  {
+    "category": "Docker",
+    "set": 5,
+    "question": "コンテナ停止時の標準シグナルを変える Dockerfile 命令はどれか？",
+    "options": [
+      "SHELL",
+      "ONBUILD",
+      "STOPSIGNAL",
+      "HEALTHCHECK"
+    ],
+    "answer": "STOPSIGNAL"
+  },
+  {
+    "category": "Docker",
+    "set": 5,
+    "question": "主サーバープロセスで exec 形式の ENTRYPOINT をよく使う理由は何か？",
+    "options": [
+      "サーバーが非ゼロ終了するのを防ぐ",
+      "サーバーとコンテナのシグナルの間に余分なシェルを挟まない",
+      "非 root ユーザーを自動作成する",
+      "イメージにプロセス監督ツールを入れる"
+    ],
+    "answer": "サーバーとコンテナのシグナルの間に余分なシェルを挟まない"
+  },
+  {
+    "category": "Docker",
+    "set": 5,
+    "question": "'docker run --init' がコンテナに追加するものは何か？",
+    "options": [
+      "シグナルを転送し、終了した子プロセスを回収する小さな init プロセス",
+      "完全な systemd インストール",
+      "二つ目の Docker デーモン",
+      "全プロセス用の対話ログインシェル"
+    ],
+    "answer": "シグナルを転送し、終了した子プロセスを回収する小さな init プロセス"
+  },
+  {
+    "category": "Docker",
+    "set": 5,
+    "question": "すべての Linux ケーパビリティを外して Linux コンテナを実行するオプションはどれか？",
+    "options": [
+      "--cap-add=ALL",
+      "--privileged",
+      "--security-opt seccomp=unconfined",
+      "--cap-drop=ALL"
+    ],
+    "answer": "--cap-drop=ALL"
+  },
+  {
+    "category": "Docker",
+    "set": 5,
+    "question": "rootless Docker が主に変えるものは何か？",
+    "options": [
+      "イメージにレジストリが不要になる",
+      "コンテナが Linux 名前空間を使わなくなる",
+      "デーモンとコンテナがホストの root 権限なしで動く",
+      "全コンテナがホストのルートファイルシステムを共有する"
+    ],
+    "answer": "デーモンとコンテナがホストの root 権限なしで動く"
+  },
+  {
+    "category": "Docker",
+    "set": 5,
+    "question": "コンテナの資源使用を主に制限・計測する Linux の仕組みはどれか？",
+    "options": [
+      "Linux ケーパビリティ",
+      "コントロールグループ",
+      "名前空間",
+      "Seccomp フィルター"
+    ],
+    "answer": "コントロールグループ"
+  },
+  {
+    "category": "Docker",
+    "set": 5,
+    "question": "プロセス ID やネットワークインターフェースなどの独立した見え方をコンテナに与える Linux の仕組みはどれか？",
+    "options": [
+      "名前空間",
+      "コントロールグループ",
+      "Seccomp フィルター",
+      "Linux ケーパビリティ"
+    ],
+    "answer": "名前空間"
+  },
+  {
+    "category": "Docker",
+    "set": 5,
+    "question": "Linux コンテナにホストのネットワーク名前空間を使わせる Docker ネットワークドライバーはどれか？",
+    "options": [
+      "bridge",
+      "overlay",
+      "none",
+      "host"
+    ],
+    "answer": "host"
+  },
+  {
+    "category": "Docker",
+    "set": 5,
+    "question": "ループバックだけをコンテナに残す Docker ネットワークドライバーはどれか？",
+    "options": [
+      "host",
+      "overlay",
+      "none",
+      "bridge"
+    ],
+    "answer": "none"
+  },
+  {
+    "category": "Docker",
+    "set": 5,
+    "question": "複数の Docker ホストをまたぐコンテナ通信向けのネットワークドライバーはどれか？",
+    "options": [
+      "none",
+      "overlay",
+      "bridge",
+      "host"
+    ],
+    "answer": "overlay"
+  },
+  {
+    "category": "Docker",
+    "set": 5,
+    "question": "'--network container:web' は新しいコンテナに何をするか？",
+    "options": [
+      "web のネットワーク名前空間を共有する",
+      "web のファイルシステム層をコピーする",
+      "ホストの全インターフェースを直接接続する",
+      "web という新しいネットワークを作る"
+    ],
+    "answer": "web のネットワーク名前空間を共有する"
+  },
+  {
+    "category": "Docker",
+    "set": 5,
+    "question": "空でないコンテナ内パスにディレクトリをマウントすると、既存イメージのファイルが消えたように見えるのはなぜか？",
+    "options": [
+      "Docker が元のイメージ層を削除するため",
+      "Docker がファイルをレジストリへ移すため",
+      "ファイルを除いたイメージに自動再ビルドされるため",
+      "マウント中は元のパスのファイルが覆い隠されるため"
+    ],
+    "answer": "マウント中は元のパスのファイルが覆い隠されるため"
+  },
+  {
+    "category": "Docker",
+    "set": 5,
+    "question": "volume-nocopy なしで、空の名前付きボリュームをファイル入りコンテナディレクトリに初めてマウントすると Docker は通常どうするか？",
+    "options": [
+      "ディレクトリが空でないので起動を拒否する",
+      "名前付きボリュームをバインドマウントに変える",
+      "ディレクトリ内の既存ファイルをボリュームへコピーする",
+      "イメージのファイルを恒久的に削除する"
+    ],
+    "answer": "ディレクトリ内の既存ファイルをボリュームへコピーする"
+  },
+  {
+    "category": "Docker",
+    "set": 5,
+    "question": "web コンテナの公開ポート対応を一覧にするコマンドはどれか？",
+    "options": [
+      "docker wait web",
+      "docker port web",
+      "docker top web",
+      "docker diff web"
+    ],
+    "answer": "docker port web"
+  },
+  {
+    "category": "Docker",
+    "set": 5,
+    "question": "web コンテナのログを最後の 20 行だけ取得するコマンドはどれか？",
+    "options": [
+      "docker logs --tail 20 web",
+      "docker logs --since 20m web",
+      "docker logs --until 20m web",
+      "docker logs --timestamps web"
+    ],
+    "answer": "docker logs --tail 20 web"
+  },
+  {
+    "category": "Docker",
+    "set": 5,
+    "question": "Docker イメージとコンテナの主な違いはどれか？",
+    "options": [
+      "イメージは常に実行中でコンテナは常に停止中",
+      "イメージはネットワークに属し、コンテナはレジストリだけに属する",
+      "イメージはログだけ、コンテナはメタデータだけを保存する",
+      "イメージは読み取り専用のテンプレートで、コンテナは実行状態を持つ実体"
+    ],
+    "answer": "イメージは読み取り専用のテンプレートで、コンテナは実行状態を持つ実体"
+  },
+  {
+    "category": "Docker",
+    "set": 5,
+    "question": "Docker コンテキストは CLI にとって主に何を示すか？",
+    "options": [
+      "選択された Dockerfile ビルドステージ",
+      "全イメージの標準対象プラットフォーム",
+      "Docker デーモンの接続先設定",
+      "ビルドコンテキストとして送るファイルとディレクトリ"
+    ],
+    "answer": "Docker デーモンの接続先設定"
+  },
+  {
+    "category": "Docker",
+    "set": 5,
+    "question": "Docker クライアントをレジストリからログアウトさせるコマンドはどれか？",
+    "options": [
+      "docker trust inspect",
+      "docker logout",
+      "docker login",
+      "docker context use"
+    ],
+    "answer": "docker logout"
+  },
+  {
+    "category": "Docker",
+    "set": 5,
+    "question": "docker login が標準入力からパスワードを読めるオプションはどれか？",
+    "options": [
+      "--password-stdin",
+      "--username",
+      "--config",
+      "--context"
+    ],
+    "answer": "--password-stdin"
+  },
+  {
+    "category": "Docker",
+    "set": 5,
+    "question": "api という Docker Swarm サービスのタスクを一覧にするコマンドはどれか？",
+    "options": [
+      "docker service inspect api",
+      "docker service logs api",
+      "docker service scale api=3",
+      "docker service ps api"
+    ],
+    "answer": "docker service ps api"
+  }
+]

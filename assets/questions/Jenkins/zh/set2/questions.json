@@ -1,0 +1,302 @@
+[
+  {
+    "category": "Jenkins",
+    "set": 2,
+    "question": "哪个文件用于定义 Jenkins 流水线？",
+    "options": [
+      "Jenkinsfile",
+      "pipeline.yml",
+      "build.xml",
+      "job.conf"
+    ],
+    "answer": "Jenkinsfile"
+  },
+  {
+    "category": "Jenkins",
+    "set": 2,
+    "question": "哪种流水线使用结构化语法?",
+    "options": [
+      "声明式流水线",
+      "脚本式流水线",
+      "Freestyle 作业",
+      "Maven 作业"
+    ],
+    "answer": "声明式流水线"
+  },
+  {
+    "category": "Jenkins",
+    "set": 2,
+    "question": "哪个关键字用于开始声明式流水线?",
+    "options": [
+      "pipeline",
+      "stage",
+      "agent",
+      "steps"
+    ],
+    "answer": "pipeline"
+  },
+  {
+    "category": "Jenkins",
+    "set": 2,
+    "question": "声明式流水线的哪个部分指定流水线或阶段的执行位置？",
+    "options": [
+      "agent",
+      "node",
+      "executor",
+      "workspace"
+    ],
+    "answer": "agent"
+  },
+  {
+    "category": "Jenkins",
+    "set": 2,
+    "question": "哪个块包含多个阶段?",
+    "options": [
+      "stages",
+      "steps",
+      "agent",
+      "tools"
+    ],
+    "answer": "stages"
+  },
+  {
+    "category": "Jenkins",
+    "set": 2,
+    "question": "哪个块表示流水线中的一个阶段?",
+    "options": [
+      "stage",
+      "step",
+      "agent",
+      "job"
+    ],
+    "answer": "stage"
+  },
+  {
+    "category": "Jenkins",
+    "set": 2,
+    "question": "哪个块包含在阶段中执行的命令?",
+    "options": [
+      "steps",
+      "agent",
+      "pipeline",
+      "tools"
+    ],
+    "answer": "steps"
+  },
+  {
+    "category": "Jenkins",
+    "set": 2,
+    "question": "哪条语句在任意可用代理上运行流水线?",
+    "options": [
+      "agent any",
+      "node any",
+      "executor any",
+      "run any"
+    ],
+    "answer": "agent any"
+  },
+  {
+    "category": "Jenkins",
+    "set": 2,
+    "question": "哪个块用于定义环境变量?",
+    "options": [
+      "environment",
+      "variables",
+      "env",
+      "settings"
+    ],
+    "answer": "environment"
+  },
+  {
+    "category": "Jenkins",
+    "set": 2,
+    "question": "哪个块指定流水线执行之后的操作?",
+    "options": [
+      "post",
+      "after",
+      "cleanup",
+      "finally"
+    ],
+    "answer": "post"
+  },
+  {
+    "category": "Jenkins",
+    "set": 2,
+    "question": "哪个条件块控制阶段是否应运行?",
+    "options": [
+      "when",
+      "if",
+      "condition",
+      "runif"
+    ],
+    "answer": "when"
+  },
+  {
+    "category": "Jenkins",
+    "set": 2,
+    "question": "哪个功能允许多个阶段同时运行?",
+    "options": [
+      "parallel",
+      "multi",
+      "concurrent",
+      "fork"
+    ],
+    "answer": "parallel"
+  },
+  {
+    "category": "Jenkins",
+    "set": 2,
+    "question": "哪个步骤在 Linux 代理上执行 shell 命令?",
+    "options": [
+      "sh",
+      "shell",
+      "bash",
+      "linux"
+    ],
+    "answer": "sh"
+  },
+  {
+    "category": "Jenkins",
+    "set": 2,
+    "question": "哪个流水线步骤专门执行 Windows 批处理脚本？",
+    "options": [
+      "bat",
+      "cmd",
+      "powershell",
+      "win"
+    ],
+    "answer": "bat"
+  },
+  {
+    "category": "Jenkins",
+    "set": 2,
+    "question": "哪个声明式指令声明用户提供的构建输入，例如字符串参数？",
+    "options": [
+      "parameters",
+      "environment",
+      "tools",
+      "triggers"
+    ],
+    "answer": "parameters"
+  },
+  {
+    "category": "Jenkins",
+    "set": 2,
+    "question": "哪个表达式在 Jenkinsfile 中读取名为 TARGET 的构建参数？",
+    "options": [
+      "currentBuild.TARGET",
+      "scm.TARGET",
+      "agent.TARGET",
+      "params.TARGET"
+    ],
+    "answer": "params.TARGET"
+  },
+  {
+    "category": "Jenkins",
+    "set": 2,
+    "question": "哪个流水线步骤暂停执行以等待人工批准？",
+    "options": [
+      "waitUntil",
+      "retry",
+      "input",
+      "sleep"
+    ],
+    "answer": "input"
+  },
+  {
+    "category": "Jenkins",
+    "set": 2,
+    "question": "哪个流水线步骤发布 JUnit 格式的 XML 测试结果？",
+    "options": [
+      "writeFile",
+      "junit",
+      "archiveArtifacts",
+      "stash"
+    ],
+    "answer": "junit"
+  },
+  {
+    "category": "Jenkins",
+    "set": 2,
+    "question": "哪个流水线步骤将匹配的工作空间文件保留为构建产物？",
+    "options": [
+      "archiveArtifacts",
+      "stash",
+      "checkout",
+      "readFile"
+    ],
+    "answer": "archiveArtifacts"
+  },
+  {
+    "category": "Jenkins",
+    "set": 2,
+    "question": "哪个 post 条件无论流水线以何种状态结束都会执行？",
+    "options": [
+      "success",
+      "failure",
+      "unstable",
+      "always"
+    ],
+    "answer": "always"
+  },
+  {
+    "category": "Jenkins",
+    "set": 2,
+    "question": "哪个声明式指令配置工具，例如指定名称的 Maven 安装？",
+    "options": [
+      "parameters",
+      "triggers",
+      "tools",
+      "environment"
+    ],
+    "answer": "tools"
+  },
+  {
+    "category": "Jenkins",
+    "set": 2,
+    "question": "哪个流水线步骤限制其代码块的执行时间？",
+    "options": [
+      "waitUntil",
+      "timeout",
+      "retry",
+      "sleep"
+    ],
+    "answer": "timeout"
+  },
+  {
+    "category": "Jenkins",
+    "set": 2,
+    "question": "哪个流水线步骤在其代码块抛出错误时重新执行，最多达到指定的尝试次数？",
+    "options": [
+      "retry",
+      "timeout",
+      "sleep",
+      "input"
+    ],
+    "answer": "retry"
+  },
+  {
+    "category": "Jenkins",
+    "set": 2,
+    "question": "哪个块允许在声明式 steps 部分中使用脚本式流水线代码？",
+    "options": [
+      "options",
+      "parameters",
+      "triggers",
+      "script"
+    ],
+    "answer": "script"
+  },
+  {
+    "category": "Jenkins",
+    "set": 2,
+    "question": "声明式流水线顶层的 agent none 有什么作用？",
+    "options": [
+      "自动在控制器上运行所有 shell 步骤",
+      "一次分配所有可用代理",
+      "避免为整个流水线分配全局代理",
+      "阻止所有阶段级代理运行"
+    ],
+    "answer": "避免为整个流水线分配全局代理"
+  }
+]

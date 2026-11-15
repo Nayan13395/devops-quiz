@@ -1,0 +1,302 @@
+[
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "કાર્ય-સ્તરે અલગ ગોઠવણી ન હોય તો ચેક મોડમાં ચલાવતી વખતે ચેક મોડને સમર્થન ન આપતા મોડ્યુલનું શું થાય છે?",
+    "options": [
+      "મોડ્યુલ હંમેશાં તેના સામાન્ય ફેરફારો કરે છે",
+      "મોડ્યુલ આપમેળે localhost પર ચાલે છે",
+      "મોડ્યુલ ચેક મોડને સમર્થન આપે ત્યાં સુધી તેને ફરી ચલાવવાના પ્રયત્નો થાય છે",
+      "ફેરફારો કરવાને બદલે મોડ્યુલને છોડવામાં આવે છે"
+    ],
+    "answer": "ફેરફારો કરવાને બદલે મોડ્યુલને છોડવામાં આવે છે"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "પ્લેબુક --check સાથે ચલાવવામાં આવી હોય ત્યારે પણ કાર્યની કઈ સેટિંગ વાસ્તવિક ફેરફારો કરવા દે છે?",
+    "options": [
+      "changed_when: false",
+      "ignore_errors: true",
+      "check_mode: false",
+      "diff: false"
+    ],
+    "answer": "check_mode: false"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "કઈ Ansible meta ક્રિયા પહેલેથી સૂચના મળેલા હેન્ડલરને તરત ચલાવે છે?",
+    "options": [
+      "reset_connection",
+      "flush_handlers",
+      "clear_facts",
+      "end_play"
+    ],
+    "answer": "flush_handlers"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "બદલાવ કરનારાં બે કાર્યો એક જ હેન્ડલરને તેના બાકી અમલ પહેલાં સૂચના આપે તો તે અમલના સમયે હેન્ડલર સામાન્ય રીતે કેટલી વાર ચાલે છે?",
+    "options": [
+      "એક વાર",
+      "બે વાર",
+      "ઇન્વેન્ટરીના દરેક જૂથ દીઠ એક વાર",
+      "એક પણ વાર નહીં, કારણ કે સૂચનાઓ વચ્ચે સંઘર્ષ થાય છે"
+    ],
+    "answer": "એક વાર"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "એક જ સમયે બાકી અમલ થનારા સૂચિત હેન્ડલરનો અમલક્રમ શેનાથી નક્કી થાય છે?",
+    "options": [
+      "તેમનાં નામોનો અક્ષરક્રમ",
+      "notify યાદીમાં નામોનો ક્રમ",
+      "સંચાલિત હોસ્ટ જોડાયા તે ક્રમ",
+      "handlers વિભાગમાં તેમની વ્યાખ્યાનો ક્રમ"
+    ],
+    "answer": "handlers વિભાગમાં તેમની વ્યાખ્યાનો ક્રમ"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "કઈ નિષ્ફળતા સામાન્ય રીતે બ્લૉકનાં rescue કાર્યોને શરૂ કરે છે?",
+    "options": [
+      "પ્લેબુકમાં કાર્યની અમાન્ય વ્યાખ્યા હોય",
+      "YAML દસ્તાવેજનું પાર્સિંગ થઈ ન શકે",
+      "બ્લૉકમાંનું કાર્ય નિષ્ફળ પરિણામ આપે",
+      "હોસ્ટનું કાર્ય ચાલે તે પહેલાં જ હોસ્ટનો સંપર્ક અશક્ય બને"
+    ],
+    "answer": "બ્લૉકમાંનું કાર્ય નિષ્ફળ પરિણામ આપે"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "સામાન્ય કાર્ય પર ignore_errors કઈ ભૂલને દબાવતું નથી?",
+    "options": [
+      "failed_whenની શરત સાચી ઠરવી",
+      "અવ્યાખ્યાયિત ચલની ભૂલ",
+      "આદેશે જણાવેલી શૂન્યથી જુદી નિર્ગમન સ્થિતિ",
+      "સ્પષ્ટપણે નિષ્ફળ તરીકે ચિહ્નિત થયેલું મોડ્યુલ પરિણામ"
+    ],
+    "answer": "અવ્યાખ્યાયિત ચલની ભૂલ"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "કાર્યની ન સંભાળાયેલી નિષ્ફળતા પર વર્તમાન બેચ તે કાર્ય પૂરું કરે પછી બધા હોસ્ટ પર પ્લે રોકતો કીવર્ડ કયો છે?",
+    "options": [
+      "any_errors_fatal",
+      "ignore_unreachable",
+      "max_fail_percentage: 100",
+      "force_handlers"
+    ],
+    "answer": "any_errors_fatal"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "સંપર્ક કરી શકાય તેવા હોસ્ટ પર પછીનું કાર્ય નિષ્ફળ જાય ત્યારે force_handlersની શું અસર થાય છે?",
+    "options": [
+      "દરેક વ્યાખ્યાયિત હેન્ડલર સૂચના વિના પણ ચાલે છે",
+      "બધા નિષ્ફળ કાર્યોના આપમેળે પુનઃપ્રયાસ થાય છે",
+      "હેન્ડલર કોઈપણ નિયમિત કાર્ય પહેલાં ચાલે છે",
+      "અગાઉ સૂચના મળેલા હેન્ડલર હજી પણ તે હોસ્ટ પર ચાલી શકે છે"
+    ],
+    "answer": "અગાઉ સૂચના મળેલા હેન્ડલર હજી પણ તે હોસ્ટ પર ચાલી શકે છે"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "કાર્યની કઈ સેટિંગ સંવેદનશીલ આર્ગ્યુમેન્ટ અને પરિણામોનું સામાન્ય લૉગિંગ અટકાવે છે?",
+    "options": [
+      "check_mode: true",
+      "changed_when: false",
+      "no_log: true",
+      "diff: true"
+    ],
+    "answer": "no_log: true"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "--diff સક્ષમ હોય ત્યારે પણ કાર્યની કઈ સેટિંગ ફાઇલના લખાણના તફાવતો દર્શાવવાનું અટકાવે છે?",
+    "options": [
+      "ignore_errors: true",
+      "diff: false",
+      "no_log: false",
+      "check_mode: false"
+    ],
+    "answer": "diff: false"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "કઈ ડિક્શનરી ઇન્વેન્ટરીના બીજા હોસ્ટ સાથે સંકળાયેલા ચલ ઉપલબ્ધ કરાવે છે?",
+    "options": [
+      "hostvars",
+      "ansible_facts",
+      "environment",
+      "ansible_loop"
+    ],
+    "answer": "hostvars"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "કયા વિશેષ ચલમાં વર્તમાન હોસ્ટનું ઇન્વેન્ટરી નામ હોય છે?",
+    "options": [
+      "ansible_host",
+      "ansible_user",
+      "ansible_playbook_python",
+      "inventory_hostname"
+    ],
+    "answer": "inventory_hostname"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "હોસ્ટ જૂથમાં વહેંચાયેલા ચલ માટે સામાન્ય રીતે ઇન્વેન્ટરીની બાજુની કઈ ડિરેક્ટરી વપરાય છે?",
+    "options": [
+      "roles",
+      "collections",
+      "group_vars",
+      "host_vars"
+    ],
+    "answer": "group_vars"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "ansible.builtin.file લુકઅપ મૂળભૂત રીતે ફાઇલ ક્યાં વાંચે છે?",
+    "options": [
+      "become_user દ્વારા નામ આપેલા હોસ્ટ પર",
+      "નિયંત્રણ નોડ પર",
+      "દરેક સંચાલિત હોસ્ટ પર",
+      "પ્લેના પ્રથમ હોસ્ટ પર"
+    ],
+    "answer": "નિયંત્રણ નોડ પર"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "કયું ફિલ્ટર YAML સ્ટ્રિંગને Ansible ડેટા માળખામાં ફેરવે છે?",
+    "options": [
+      "from_yaml",
+      "to_yaml",
+      "to_json",
+      "dict2items"
+    ],
+    "answer": "from_yaml"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "કયું ફિલ્ટર ડિક્શનરીને કી/મૂલ્ય ડિક્શનરીઓની યાદીમાં ફેરવે છે?",
+    "options": [
+      "items2dict",
+      "flatten",
+      "zip",
+      "dict2items"
+    ],
+    "answer": "dict2items"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "કયું ફિલ્ટર યાદીમાંથી પુનરાવર્તિત ઘટકો દૂર કરે છે?",
+    "options": [
+      "reverse",
+      "flatten",
+      "unique",
+      "sort"
+    ],
+    "answer": "unique"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "કયું મોડ્યુલ એક્સપ્રેશન તપાસે છે અને નિર્દિષ્ટ ખાતરીની શરતો પૂર્ણ ન થાય ત્યારે નિષ્ફળ જાય છે?",
+    "options": [
+      "ansible.builtin.set_fact",
+      "ansible.builtin.assert",
+      "ansible.builtin.debug",
+      "ansible.builtin.pause"
+    ],
+    "answer": "ansible.builtin.assert"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "કયું મોડ્યુલ રેગ્યુલર એક્સપ્રેશન દ્વારા ટેક્સ્ટ ફાઇલની ચોક્કસ પંક્તિનું સંચાલન કરે છે?",
+    "options": [
+      "ansible.builtin.lineinfile",
+      "ansible.builtin.blockinfile",
+      "ansible.builtin.copy",
+      "ansible.builtin.slurp"
+    ],
+    "answer": "ansible.builtin.lineinfile"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "કયું મોડ્યુલ URL માટે વિનંતી મોકલે છે અને અપેક્ષિત HTTP સ્થિતિ કોડ ચકાસી શકે છે?",
+    "options": [
+      "ansible.builtin.get_url",
+      "ansible.builtin.fetch",
+      "ansible.builtin.wait_for",
+      "ansible.builtin.uri"
+    ],
+    "answer": "ansible.builtin.uri"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "કયું મોડ્યુલ TCP પોર્ટ માગેલી સ્થિતિમાં પહોંચે ત્યાં સુધી રાહ જુએ છે?",
+    "options": [
+      "ansible.builtin.async_status",
+      "ansible.builtin.ping",
+      "ansible.builtin.wait_for",
+      "ansible.builtin.pause"
+    ],
+    "answer": "ansible.builtin.wait_for"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "નિર્દિષ્ટ પાથ પહેલેથી અસ્તિત્વમાં હોય ત્યારે કયો પેરામીટર ansible.builtin.commandને અમલ છોડવા કહે છે?",
+    "options": [
+      "stdin",
+      "creates",
+      "removes",
+      "chdir"
+    ],
+    "answer": "creates"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "file મોડ્યુલની કઈ સેટિંગ સાંકેતિક લિંક બનાવે છે?",
+    "options": [
+      "state: link",
+      "state: directory",
+      "state: touch",
+      "state: hard"
+    ],
+    "answer": "state: link"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "કયું મોડ્યુલ પછીના પ્લે માટે મેમરીમાં રહેલી ઇન્વેન્ટરીમાં હોસ્ટ ઉમેરી શકે છે?",
+    "options": [
+      "ansible.builtin.group_by",
+      "ansible.builtin.set_fact",
+      "ansible.builtin.meta",
+      "ansible.builtin.add_host"
+    ],
+    "answer": "ansible.builtin.add_host"
+  }
+]

@@ -1,0 +1,302 @@
+[
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "Bash の展開を \"$name\" と引用すると何を防ぐか？",
+    "options": [
+      "引用内の全パラメーター展開",
+      "その後の変数の変更",
+      "コマンドへの空引数の受け渡し",
+      "展開した値の単語分割とパス名展開"
+    ],
+    "answer": "展開した値の単語分割とパス名展開"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "Bash で '$HOME' をシングルクォートするとどうなるか？",
+    "options": [
+      "前の作業ディレクトリに展開する",
+      "ドル記号を除き HOME を渡す",
+      "文字列 $HOME をそのまま渡す",
+      "ユーザーのホームに展開する"
+    ],
+    "answer": "文字列 $HOME をそのまま渡す"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "Bash の $(command) によるコマンド置換は何を挿入するか？",
+    "options": [
+      "コマンドの終了状態を十進数として",
+      "末尾の改行を除いたコマンドの標準出力",
+      "コマンドの数値プロセス ID",
+      "コマンドの標準エラーだけ"
+    ],
+    "answer": "末尾の改行を除いたコマンドの標準出力"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "現在のシェルでスクリプトのコマンドを読み実行する Bash 組み込みはどれか？",
+    "options": [
+      "source",
+      "exec",
+      "eval",
+      "export"
+    ],
+    "answer": "source"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "Bash スクリプトの 'exec program' が成功すると何をするか？",
+    "options": [
+      "シェルを継続しつつ program をバックグラウンドジョブとして起動する",
+      "program を二度実行して結果を比較する",
+      "program の出力をシェルのソースとして読む",
+      "シェルプロセスを program に置き換える"
+    ],
+    "answer": "シェルプロセスを program に置き換える"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "Bash pipefail 有効時、一つ以上のコマンドが失敗したパイプラインの状態は何か？",
+    "options": [
+      "最後のコマンドが成功なら常にゼロ",
+      "全コマンドの終了状態の合計",
+      "非ゼロを返した最も右のコマンドの状態",
+      "常に最初のコマンドの状態"
+    ],
+    "answer": "非ゼロを返した最も右のコマンドの状態"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "GNU Coreutils で checksums.txt の SHA-256 を検証するコマンドはどれか？",
+    "options": [
+      "cksum checksums.txt",
+      "sha256sum -c checksums.txt",
+      "sha256sum checksums.txt",
+      "md5sum -c checksums.txt"
+    ],
+    "answer": "sha256sum -c checksums.txt"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "logs ディレクトリの gzip 圧縮アーカイブを作る GNU tar コマンドはどれか？",
+    "options": [
+      "tar -czf logs.tar.gz logs",
+      "tar -xzf logs.tar.gz",
+      "tar -tzf logs.tar.gz",
+      "gzip -d logs.tar.gz"
+    ],
+    "answer": "tar -czf logs.tar.gz logs"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "展開せずアーカイブの中身を一覧にする tar オプションはどれか？",
+    "options": [
+      "-x",
+      "-c",
+      "-r",
+      "-t"
+    ],
+    "answer": "-t"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "Linux ディレクトリの setgid ビットは内部に新しく作るファイルに通常どう作用するか？",
+    "options": [
+      "所有者が root になる",
+      "所有者でも削除できなくなる",
+      "ディレクトリの所有グループを継承する",
+      "必ず全ユーザーが実行できるようになる"
+    ],
+    "answer": "ディレクトリの所有グループを継承する"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "共有書き込み可能ディレクトリの sticky bit が主に制限するものは何か？",
+    "options": [
+      "誰がファイルシステムのディスクブロックを割り当てられるか",
+      "誰がその中のファイルを削除・改名できるか",
+      "誰がその中の全ファイルを読めるか",
+      "誰がその外のプログラムを実行できるか"
+    ],
+    "answer": "誰がその中のファイルを削除・改名できるか"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "ファイルのアクセス制御リストを表示するコマンドはどれか？",
+    "options": [
+      "getfacl file.txt",
+      "setfacl -b file.txt",
+      "getfattr -d file.txt",
+      "lsattr file.txt"
+    ],
+    "answer": "getfacl file.txt"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "パスワードハッシュではなくローカルユーザーの記録を通常含むファイルはどれか？",
+    "options": [
+      "/etc/shadow",
+      "/etc/group",
+      "/etc/gshadow",
+      "/etc/passwd"
+    ],
+    "answer": "/etc/passwd"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "既存の補助グループを置き換えず alice を docker グループに追加するコマンドはどれか？",
+    "options": [
+      "usermod -g docker alice",
+      "usermod -l docker alice",
+      "usermod -aG docker alice",
+      "usermod -G docker alice"
+    ],
+    "answer": "usermod -aG docker alice"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "パスワード認証をさせないよう Linux ユーザーのパスワードをロックするコマンドはどれか？",
+    "options": [
+      "passwd -e alice",
+      "passwd -l alice",
+      "passwd -u alice",
+      "passwd -S alice"
+    ],
+    "answer": "passwd -l alice"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "設定済みの名前サービスの情報源から alice の passwd エントリを取得するコマンドはどれか？",
+    "options": [
+      "getent passwd alice",
+      "groups alice",
+      "id -u alice",
+      "whoami"
+    ],
+    "answer": "getent passwd alice"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "起動時に自動マウントするファイルシステムを通常定義するファイルはどれか？",
+    "options": [
+      "/etc/hosts",
+      "/etc/shells",
+      "/etc/resolv.conf",
+      "/etc/fstab"
+    ],
+    "answer": "/etc/fstab"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "ファイルシステムの UUID やブロックデバイス属性を表示するコマンドはどれか？",
+    "options": [
+      "modinfo",
+      "lscpu",
+      "blkid",
+      "lsmod"
+    ],
+    "answer": "blkid"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "修復を行う fsck の前に通常アンマウントすべき理由は何か？",
+    "options": [
+      "マウント中のファイルシステムには空きがないため",
+      "同時書き込みが修復と競合してデータを破損しうるため",
+      "アンマウントが全メタデータを自動暗号化するため",
+      "fsck はデバイス名のないファイルシステムだけを扱うため"
+    ],
+    "answer": "同時書き込みが修復と競合してデータを破損しうるため"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "使用中のスワップ領域を表示するコマンドはどれか？",
+    "options": [
+      "swapon --show",
+      "swapoff -a",
+      "free -s 1",
+      "vmstat -d"
+    ],
+    "answer": "swapon --show"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "依存関係も含め Linux カーネルモジュールを読み込むコマンドはどれか？",
+    "options": [
+      "rmmod",
+      "lsmod",
+      "modinfo",
+      "modprobe"
+    ],
+    "answer": "modprobe"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "/dev/null にリンクしてユニットの起動を防ぐ systemd コマンドはどれか？",
+    "options": [
+      "systemctl stop app.service",
+      "systemctl reset-failed app.service",
+      "systemctl mask app.service",
+      "systemctl disable app.service"
+    ],
+    "answer": "systemctl mask app.service"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "認証用の秘密鍵ファイルを選ぶ SSH オプションはどれか？",
+    "options": [
+      "-R",
+      "-i",
+      "-p",
+      "-L"
+    ],
+    "answer": "-i"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "SSH でローカルファイルをリモートユーザーのディレクトリへ安全にコピーするコマンドはどれか？",
+    "options": [
+      "scp report.txt alice@server:/home/alice/",
+      "ssh alice@server cat report.txt",
+      "sftp -b report.txt alice@server",
+      "ssh-keygen -f report.txt"
+    ],
+    "answer": "scp report.txt alice@server:/home/alice/"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "'rsync -n' が要求するものはどれか？",
+    "options": [
+      "送信元にない宛先ファイルの削除",
+      "転送するファイルデータの圧縮",
+      "全ファイルシステム属性の再帰的保持",
+      "実際には変更せず、予定の変更を報告する試行"
+    ],
+    "answer": "実際には変更せず、予定の変更を報告する試行"
+  }
+]

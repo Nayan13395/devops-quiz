@@ -1,0 +1,302 @@
+[
+  {
+    "category": "Terraform",
+    "set": 4,
+    "question": "Welcher Befehl prüft die Terraform-Formatierung, ohne Dateien umzuschreiben?",
+    "options": [
+      "terraform fmt -check",
+      "terraform validate",
+      "terraform fmt -write=true",
+      "terraform plan"
+    ],
+    "answer": "terraform fmt -check"
+  },
+  {
+    "category": "Terraform",
+    "set": 4,
+    "question": "Welcher Befehl prüft die interne Syntax und Konsistenz einer Terraform-Konfiguration, ohne Änderungen zu planen oder entfernte Dienste zu validieren?",
+    "options": [
+      "terraform validate",
+      "terraform plan",
+      "terraform check",
+      "terraform verify"
+    ],
+    "answer": "terraform validate"
+  },
+  {
+    "category": "Terraform",
+    "set": 4,
+    "question": "Welcher Befehl erzeugt einen visuellen Abhängigkeitsgraphen?",
+    "options": [
+      "terraform graph",
+      "terraform map",
+      "terraform diagram",
+      "terraform tree"
+    ],
+    "answer": "terraform graph"
+  },
+  {
+    "category": "Terraform",
+    "set": 4,
+    "question": "Welches Terraform-Feature hilft, Konfigurationsabweichungen (Drift) zu erkennen?",
+    "options": [
+      "terraform plan",
+      "terraform fmt",
+      "terraform output",
+      "terraform console"
+    ],
+    "answer": "terraform plan"
+  },
+  {
+    "category": "Terraform",
+    "set": 4,
+    "question": "Welcher Befehl öffnet eine interaktive Terraform-Konsole?",
+    "options": [
+      "terraform console",
+      "terraform shell",
+      "terraform repl",
+      "terraform interactive"
+    ],
+    "answer": "terraform console"
+  },
+  {
+    "category": "Terraform",
+    "set": 4,
+    "question": "Welcher ältere Befehl aktualisiert den Zustand anhand realer Infrastruktur und ist zugunsten von refresh-only-Abläufen mit plan/apply veraltet?",
+    "options": [
+      "terraform refresh",
+      "terraform sync",
+      "terraform update",
+      "terraform pull"
+    ],
+    "answer": "terraform refresh"
+  },
+  {
+    "category": "Terraform",
+    "set": 4,
+    "question": "Welche Dateierweiterung wird für Terraform-Variablendefinitionen verwendet?",
+    "options": [
+      ".tfvars",
+      ".vars",
+      ".tfvar",
+      ".terraform"
+    ],
+    "answer": ".tfvars"
+  },
+  {
+    "category": "Terraform",
+    "set": 4,
+    "question": "Welcher Befehl wendet Werte aus einer bestimmten tfvars-Datei an?",
+    "options": [
+      "terraform apply -var-file",
+      "terraform apply -vars",
+      "terraform apply -tfvars",
+      "terraform apply -file"
+    ],
+    "answer": "terraform apply -var-file"
+  },
+  {
+    "category": "Terraform",
+    "set": 4,
+    "question": "Welches Terraform-Feature hilft beim Erstellen dynamischer Blöcke?",
+    "options": [
+      "dynamic",
+      "foreach",
+      "loop",
+      "template"
+    ],
+    "answer": "dynamic"
+  },
+  {
+    "category": "Terraform",
+    "set": 4,
+    "question": "Welche Funktion zerlegt eine Zeichenfolge in eine Liste?",
+    "options": [
+      "split",
+      "join",
+      "slice",
+      "parse"
+    ],
+    "answer": "split"
+  },
+  {
+    "category": "Terraform",
+    "set": 4,
+    "question": "Welche Funktion führt mehrere Maps zusammen?",
+    "options": [
+      "merge",
+      "concat",
+      "combine",
+      "append"
+    ],
+    "answer": "merge"
+  },
+  {
+    "category": "Terraform",
+    "set": 4,
+    "question": "Welches Terraform-Feature ermöglicht die bedingte Erstellung von Ressourcen?",
+    "options": [
+      "count",
+      "depends_on",
+      "provider",
+      "workspace"
+    ],
+    "answer": "count"
+  },
+  {
+    "category": "Terraform",
+    "set": 4,
+    "question": "Welcher Befehl zeigt ohne weitere Argumente den neuesten Zustand einschließlich Ressourcenattributen lesbar an?",
+    "options": [
+      "terraform show",
+      "terraform state list",
+      "terraform state show",
+      "terraform output"
+    ],
+    "answer": "terraform show"
+  },
+  {
+    "category": "Terraform",
+    "set": 4,
+    "question": "Welches Terraform-Feature stellt sicher, dass Ressourcen in der richtigen Reihenfolge erstellt werden?",
+    "options": [
+      "Abhängigkeitsgraph",
+      "Count",
+      "Workspace",
+      "Output"
+    ],
+    "answer": "Abhängigkeitsgraph"
+  },
+  {
+    "category": "Terraform",
+    "set": 4,
+    "question": "Welcher Befehl zeigt die von der Konfiguration verwendeten Provider an?",
+    "options": [
+      "terraform providers",
+      "terraform provider list",
+      "terraform show providers",
+      "terraform plugin list"
+    ],
+    "answer": "terraform providers"
+  },
+  {
+    "category": "Terraform",
+    "set": 4,
+    "question": "Welche Planoption fordert den Ersatz einer bestimmten verwalteten Ressourceninstanz an?",
+    "options": [
+      "-destroy",
+      "-replace=aws_instance.web",
+      "-target=aws_instance.web",
+      "-refresh=false"
+    ],
+    "answer": "-replace=aws_instance.web"
+  },
+  {
+    "category": "Terraform",
+    "set": 4,
+    "question": "Welchen Exitcode liefert ein erfolgreiches terraform plan mit -detailed-exitcode, wenn es Änderungen erkennt?",
+    "options": [
+      "2",
+      "0",
+      "1",
+      "3"
+    ],
+    "answer": "2"
+  },
+  {
+    "category": "Terraform",
+    "set": 4,
+    "question": "Welcher Planmodus schlägt nur Zustands- und Ausgabeaktualisierungen für bereits außerhalb von Terraform vorgenommene Änderungen vor?",
+    "options": [
+      "-destroy",
+      "-refresh=false",
+      "-target=aws_instance.web",
+      "-refresh-only"
+    ],
+    "answer": "-refresh-only"
+  },
+  {
+    "category": "Terraform",
+    "set": 4,
+    "question": "Welche Lebenszyklusregel fordert die Erstellung eines Ersatzes vor der Zerstörung des alten Objekts an?",
+    "options": [
+      "ignore_changes",
+      "replace_triggered_by",
+      "create_before_destroy",
+      "prevent_destroy"
+    ],
+    "answer": "create_before_destroy"
+  },
+  {
+    "category": "Terraform",
+    "set": 4,
+    "question": "Welche Lebenszyklusregel lehnt Zerstörungspläne für eine Ressource ab, solange sie in deren Konfiguration verbleibt?",
+    "options": [
+      "replace_triggered_by",
+      "prevent_destroy",
+      "create_before_destroy",
+      "ignore_changes"
+    ],
+    "answer": "prevent_destroy"
+  },
+  {
+    "category": "Terraform",
+    "set": 4,
+    "question": "Welche Lebenszyklusregel überlässt bestimmte Ressourcenattribute einem anderen System, ohne Terraform-Aktualisierungen dafür zu planen?",
+    "options": [
+      "ignore_changes",
+      "prevent_destroy",
+      "create_before_destroy",
+      "replace_triggered_by"
+    ],
+    "answer": "ignore_changes"
+  },
+  {
+    "category": "Terraform",
+    "set": 4,
+    "question": "Welche Option von terraform init erlaubt Provider-Upgrades innerhalb der konfigurierten Versionsbeschränkungen?",
+    "options": [
+      "-reconfigure",
+      "-backend=false",
+      "-lockfile=readonly",
+      "-upgrade"
+    ],
+    "answer": "-upgrade"
+  },
+  {
+    "category": "Terraform",
+    "set": 4,
+    "question": "Welcher Befehl zeigt die gespeicherten Attribute der Ressourcenadresse aws_instance.web?",
+    "options": [
+      "terraform import aws_instance.web i-1234567890abcdef0",
+      "terraform state rm aws_instance.web",
+      "terraform state show aws_instance.web",
+      "terraform state list aws_instance.web"
+    ],
+    "answer": "terraform state show aws_instance.web"
+  },
+  {
+    "category": "Terraform",
+    "set": 4,
+    "question": "Welche Umgebungsvariable aktiviert ausführliche Terraform-Diagnoseprotokolle?",
+    "options": [
+      "TF_IN_AUTOMATION",
+      "TF_LOG",
+      "TF_INPUT",
+      "TF_WORKSPACE"
+    ],
+    "answer": "TF_LOG"
+  },
+  {
+    "category": "Terraform",
+    "set": 4,
+    "question": "Welche Option von terraform apply begrenzt gleichzeitige Ressourcenoperationen auf fünf?",
+    "options": [
+      "-parallelism=5",
+      "-lock-timeout=5s",
+      "-refresh=false",
+      "-auto-approve"
+    ],
+    "answer": "-parallelism=5"
+  }
+]

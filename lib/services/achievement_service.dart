@@ -1,5 +1,6 @@
 import 'dart:convert';
 
+import 'package:flutter/foundation.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 import '../models/achievement.dart';
@@ -9,6 +10,8 @@ import 'point_service.dart';
 import 'streak_service.dart';
 
 class AchievementService {
+  static final changes = ValueNotifier<int>(0);
+  static Future<List<Achievement>>? _pendingCheck;
   static const String _achievementKey = "achievements";
   static const String _quizCountKey = "quiz_count";
 
@@ -417,10 +420,11 @@ class AchievementService {
   }
 
   static Future<Map<String, int>> _metrics({required int quizCount}) async {
+    final earnedPoints = await PointService.getEarnedPoints();
     return {
       'quiz': quizCount,
       'streak': await StreakService.getCurrentStreak(),
-      'points': await PointService.getTotalPoints(),
+      'points': earnedPoints[PointSource.quiz] ?? 0,
       'daily': await DailyQuizService.totalCompleted(),
       'sets': await CertificateService.totalSetsCompleted(),
       'cert': await CertificateService.certificateCount(),
@@ -463,10 +467,40 @@ class AchievementService {
   static Future<List<Achievement>> checkAchievements({
     required int score,
     required int totalQuestions,
+  }) => _scheduleCheck(score: score, totalQuestions: totalQuestions);
+
+  /// Evaluate non-quiz progress without counting an extra quiz or perfect score.
+  static Future<List<Achievement>> checkProgress() => _scheduleCheck();
+
+  static Future<List<Achievement>> _scheduleCheck({
+    int? score,
+    int? totalQuestions,
+  }) {
+    final previous = _pendingCheck;
+    if (previous != null) {
+      return previous.then(
+        (_) => _scheduleCheck(score: score, totalQuestions: totalQuestions),
+        onError: (Object error, StackTrace stack) {
+          debugPrint('Previous achievement check failed: $error\n$stack');
+          return _scheduleCheck(score: score, totalQuestions: totalQuestions);
+        },
+      );
+    }
+    final operation = _check(score: score, totalQuestions: totalQuestions);
+    final tracked = operation.whenComplete(() => _pendingCheck = null);
+    _pendingCheck = tracked;
+    return tracked;
+  }
+
+  static Future<List<Achievement>> _check({
+    int? score,
+    int? totalQuestions,
   }) async {
     final unlocked = await _getUnlockedIds();
 
-    final quizCount = await incrementQuizCount();
+    final quizCount = score == null
+        ? await getQuizCount()
+        : await incrementQuizCount();
 
     final metrics = await _metrics(quizCount: quizCount);
 
@@ -478,7 +512,10 @@ class AchievementService {
       bool shouldUnlock = false;
 
       if (achievement.id == "perfect_score") {
-        shouldUnlock = score == totalQuestions;
+        shouldUnlock =
+            totalQuestions != null &&
+            totalQuestions > 0 &&
+            score == totalQuestions;
       } else {
         final metric = _metricFor(achievement.id);
 
@@ -499,6 +536,7 @@ class AchievementService {
     }
 
     await _saveUnlockedIds(unlocked);
+    if (newlyUnlocked.isNotEmpty) changes.value++;
 
     return newlyUnlocked;
   }

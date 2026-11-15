@@ -1,3 +1,4 @@
+import '../l10n/game_localizations.dart';
 import 'dart:async';
 import 'dart:math';
 
@@ -150,12 +151,18 @@ class _ScratchCardScreenState extends State<ScratchCardScreen> {
             style: TextStyle(fontSize: 55),
           ),
 
-          title: const Text('Reward Revealed!', textAlign: TextAlign.center),
+          title: Text(
+            gameL10n(context).gameUiRewardRevealed,
+            textAlign: TextAlign.center,
+          ),
 
           content: Column(
             mainAxisSize: MainAxisSize.min,
             children: [
-              const Text('You found', style: TextStyle(fontSize: 17)),
+              Text(
+                gameL10n(context).gameUiYouFound,
+                style: const TextStyle(fontSize: 17),
+              ),
 
               const SizedBox(height: 10),
 
@@ -170,9 +177,9 @@ class _ScratchCardScreenState extends State<ScratchCardScreen> {
 
               const SizedBox(height: 5),
 
-              const Text(
-                'POINTS',
-                style: TextStyle(
+              Text(
+                gameL10n(context).gameUiPOINTS,
+                style: const TextStyle(
                   fontSize: 15,
                   fontWeight: FontWeight.bold,
                   letterSpacing: 1.5,
@@ -189,7 +196,9 @@ class _ScratchCardScreenState extends State<ScratchCardScreen> {
                   borderRadius: BorderRadius.circular(14),
                 ),
                 child: Text(
-                  'Answer 1 quiz question correctly to claim this reward.',
+                  gameL10n(
+                    context,
+                  ).gameUiAnswer1QuizQuestionCorrectlyToClaimThisReward,
                   textAlign: TextAlign.center,
                   style: TextStyle(
                     fontWeight: FontWeight.w600,
@@ -201,7 +210,7 @@ class _ScratchCardScreenState extends State<ScratchCardScreen> {
               const SizedBox(height: 10),
 
               Text(
-                'Wrong answer = reward lost.',
+                gameL10n(context).gameUiWrongAnswerRewardLost,
                 textAlign: TextAlign.center,
                 style: TextStyle(fontSize: 13, color: colors.onSurfaceVariant),
               ),
@@ -226,9 +235,9 @@ class _ScratchCardScreenState extends State<ScratchCardScreen> {
                   );
                 },
                 icon: const Icon(Icons.quiz_outlined),
-                label: const Text(
-                  'Answer Question',
-                  style: TextStyle(fontWeight: FontWeight.bold),
+                label: Text(
+                  gameL10n(context).gameUiAnswerQuestion,
+                  style: const TextStyle(fontWeight: FontWeight.bold),
                 ),
               ),
             ),
@@ -258,7 +267,10 @@ class _ScratchCardScreenState extends State<ScratchCardScreen> {
 
     return Scaffold(
       appBar: AppBar(
-        title: const Text('🎟️ Scratch Card', textAlign: TextAlign.center),
+        title: Text(
+          gameL10n(context).gameUiScratchCarda7407ad,
+          textAlign: TextAlign.center,
+        ),
       ),
 
       body: loading
@@ -282,10 +294,10 @@ class _ScratchCardScreenState extends State<ScratchCardScreen> {
                           // =====================================
                           // TITLE
                           // =====================================
-                          const Text(
-                            'Daily Scratch',
+                          Text(
+                            gameL10n(context).gameUiDailyScratch,
                             textAlign: TextAlign.center,
-                            style: TextStyle(
+                            style: const TextStyle(
                               fontSize: 28,
                               fontWeight: FontWeight.bold,
                             ),
@@ -295,8 +307,12 @@ class _ScratchCardScreenState extends State<ScratchCardScreen> {
 
                           Text(
                             canScratch
-                                ? 'Scratch the card to reveal today\'s reward!'
-                                : 'You have already used today\'s scratch card.',
+                                ? gameL10n(
+                                    context,
+                                  ).gameUiScratchTheCardToRevealTodaySReward
+                                : gameL10n(
+                                    context,
+                                  ).gameUiYouHaveAlreadyUsedTodaySScratchCard,
                             textAlign: TextAlign.center,
                             style: TextStyle(
                               fontSize: 16,
@@ -325,7 +341,9 @@ class _ScratchCardScreenState extends State<ScratchCardScreen> {
                                 borderRadius: BorderRadius.circular(14),
                               ),
                               child: Text(
-                                'Today\'s reward: ⭐ $reward points',
+                                gameL10n(
+                                  context,
+                                ).gameUiTodaySRewardPoints((reward).toString()),
                                 textAlign: TextAlign.center,
                                 style: TextStyle(
                                   fontSize: 17,
@@ -349,9 +367,9 @@ class _ScratchCardScreenState extends State<ScratchCardScreen> {
                                 Navigator.pop(context);
                               },
                               icon: const Icon(Icons.arrow_back_rounded),
-                              label: const Text(
-                                'Back to Games',
-                                style: TextStyle(
+                              label: Text(
+                                gameL10n(context).gameUiBackToGames,
+                                style: const TextStyle(
                                   fontSize: 16,
                                   fontWeight: FontWeight.bold,
                                 ),
@@ -396,15 +414,15 @@ class _ScratchCardScreenState extends State<ScratchCardScreen> {
 
             const SizedBox(height: 12),
 
-            const Text(
-              'Already Scratched',
-              style: TextStyle(fontSize: 21, fontWeight: FontWeight.bold),
+            Text(
+              gameL10n(context).gameUiAlreadyScratched,
+              style: const TextStyle(fontSize: 21, fontWeight: FontWeight.bold),
             ),
 
             const SizedBox(height: 8),
 
             Text(
-              'Come back tomorrow for another reward.',
+              gameL10n(context).gameUiComeBackTomorrowForAnotherReward,
               textAlign: TextAlign.center,
               style: TextStyle(color: colors.onSurfaceVariant),
             ),
@@ -433,7 +451,10 @@ class _ScratchCardScreenState extends State<ScratchCardScreen> {
 
             const SizedBox(height: 10),
 
-            const Text('You revealed', style: TextStyle(fontSize: 17)),
+            Text(
+              gameL10n(context).gameUiYouRevealed,
+              style: const TextStyle(fontSize: 17),
+            ),
 
             const SizedBox(height: 6),
 
@@ -449,7 +470,7 @@ class _ScratchCardScreenState extends State<ScratchCardScreen> {
             const SizedBox(height: 4),
 
             Text(
-              'POINTS',
+              gameL10n(context).gameUiPOINTS,
               style: TextStyle(
                 fontWeight: FontWeight.bold,
                 color: colors.onPrimaryContainer,
@@ -498,7 +519,7 @@ class _ScratchCardScreenState extends State<ScratchCardScreen> {
                       const SizedBox(height: 4),
 
                       Text(
-                        'POINTS',
+                        gameL10n(context).gameUiPOINTS,
                         style: TextStyle(
                           fontWeight: FontWeight.bold,
                           color: colors.onPrimaryContainer,
@@ -549,10 +570,10 @@ class _ScratchCardScreenState extends State<ScratchCardScreen> {
                                 color: Colors.black.withValues(alpha: 0.62),
                                 borderRadius: BorderRadius.circular(12),
                               ),
-                              child: const Text(
-                                'SCRATCH HERE  👆',
+                              child: Text(
+                                gameL10n(context).gameUiSCRATCHHERE,
                                 textAlign: TextAlign.center,
-                                style: TextStyle(
+                                style: const TextStyle(
                                   color: Colors.white,
                                   fontSize: 18,
                                   fontWeight: FontWeight.w800,

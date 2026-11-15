@@ -1,0 +1,302 @@
+[
+  {
+    "category": "Ansible",
+    "set": 1,
+    "question": "Untuk apa Ansible terutama digunakan?",
+    "options": [
+      "Manajemen Konfigurasi",
+      "Kontainerisasi",
+      "Manajemen Basis Data",
+      "Pemantauan"
+    ],
+    "answer": "Manajemen Konfigurasi"
+  },
+  {
+    "category": "Ansible",
+    "set": 1,
+    "question": "Ansible ditulis dalam bahasa apa?",
+    "options": [
+      "Python",
+      "Java",
+      "Go",
+      "Ruby"
+    ],
+    "answer": "Python"
+  },
+  {
+    "category": "Ansible",
+    "set": 1,
+    "question": "File mana yang berisi host yang dikelola di Ansible?",
+    "options": [
+      "File Inventaris",
+      "Playbook",
+      "Role",
+      "Modul"
+    ],
+    "answer": "File Inventaris"
+  },
+  {
+    "category": "Ansible",
+    "set": 1,
+    "question": "Di mana lokasi file inventaris default?",
+    "options": [
+      "/etc/ansible/hosts",
+      "/etc/hosts",
+      "/ansible/hosts",
+      "/usr/ansible/hosts"
+    ],
+    "answer": "/etc/ansible/hosts"
+  },
+  {
+    "category": "Ansible",
+    "set": 1,
+    "question": "Perintah mana yang memeriksa versi Ansible?",
+    "options": [
+      "ansible --version",
+      "ansible version",
+      "ansible -v",
+      "ansible check"
+    ],
+    "answer": "ansible --version"
+  },
+  {
+    "category": "Ansible",
+    "set": 1,
+    "question": "Protokol apa yang biasanya digunakan plugin koneksi bawaan Ansible untuk host Linux?",
+    "options": [
+      "SSH",
+      "FTP",
+      "Telnet",
+      "HTTP"
+    ],
+    "answer": "SSH"
+  },
+  {
+    "category": "Ansible",
+    "set": 1,
+    "question": "Apa itu Ansible Playbook?",
+    "options": [
+      "File YAML yang berisi tugas otomatisasi",
+      "File inventaris",
+      "Skrip Python",
+      "File konfigurasi"
+    ],
+    "answer": "File YAML yang berisi tugas otomatisasi"
+  },
+  {
+    "category": "Ansible",
+    "set": 1,
+    "question": "Perintah mana yang menjalankan playbook Ansible?",
+    "options": [
+      "ansible-playbook",
+      "ansible-run",
+      "ansible-execute",
+      "ansible-start"
+    ],
+    "answer": "ansible-playbook"
+  },
+  {
+    "category": "Ansible",
+    "set": 1,
+    "question": "Kata kunci mana yang mendefinisikan host target dalam playbook?",
+    "options": [
+      "hosts",
+      "servers",
+      "nodes",
+      "targets"
+    ],
+    "answer": "hosts"
+  },
+  {
+    "category": "Ansible",
+    "set": 1,
+    "question": "Kata kunci mana yang mendefinisikan tugas dalam playbook?",
+    "options": [
+      "tasks",
+      "actions",
+      "jobs",
+      "steps"
+    ],
+    "answer": "tasks"
+  },
+  {
+    "category": "Ansible",
+    "set": 1,
+    "question": "Modul mana yang menyalin file ke host jarak jauh?",
+    "options": [
+      "copy",
+      "fetch",
+      "file",
+      "transfer"
+    ],
+    "answer": "copy"
+  },
+  {
+    "category": "Ansible",
+    "set": 1,
+    "question": "Modul mana yang mengelola layanan?",
+    "options": [
+      "service",
+      "systemctl",
+      "daemon",
+      "process"
+    ],
+    "answer": "service"
+  },
+  {
+    "category": "Ansible",
+    "set": 1,
+    "question": "Perintah mana yang memeriksa konektivitas Ansible dan ketersediaan Python yang dapat digunakan pada semua host POSIX tujuan?",
+    "options": [
+      "ansible all -m ping",
+      "ansible ping",
+      "ansible test",
+      "ansible connect"
+    ],
+    "answer": "ansible all -m ping"
+  },
+  {
+    "category": "Ansible",
+    "set": 1,
+    "question": "Format yang mudah dibaca apa yang lazim digunakan untuk menulis playbook Ansible?",
+    "options": [
+      "YAML",
+      "JSON",
+      "XML",
+      "INI"
+    ],
+    "answer": "YAML"
+  },
+  {
+    "category": "Ansible",
+    "set": 1,
+    "question": "File mana yang mengonfigurasi pengaturan Ansible?",
+    "options": [
+      "ansible.cfg",
+      "ansible.conf",
+      "config.yml",
+      "ansible.ini"
+    ],
+    "answer": "ansible.cfg"
+  },
+  {
+    "category": "Ansible",
+    "set": 1,
+    "question": "Modul Ansible mana yang mengumpulkan fakta tentang host yang dikelola?",
+    "options": [
+      "ansible.builtin.stat",
+      "ansible.builtin.debug",
+      "ansible.builtin.assert",
+      "ansible.builtin.setup"
+    ],
+    "answer": "ansible.builtin.setup"
+  },
+  {
+    "category": "Ansible",
+    "set": 1,
+    "question": "Pengaturan tugas mana yang mengaktifkan peningkatan hak akses di Ansible?",
+    "options": [
+      "run_once: true",
+      "delegate_facts: true",
+      "become: true",
+      "check_mode: true"
+    ],
+    "answer": "become: true"
+  },
+  {
+    "category": "Ansible",
+    "set": 1,
+    "question": "Variabel inventaris mana yang menentukan pengguna untuk masuk ke suatu host?",
+    "options": [
+      "ansible_connection",
+      "ansible_user",
+      "ansible_host",
+      "ansible_port"
+    ],
+    "answer": "ansible_user"
+  },
+  {
+    "category": "Ansible",
+    "set": 1,
+    "question": "Opsi mana yang memilih berkas inventaris saat menjalankan ansible-playbook?",
+    "options": [
+      "-i inventory.ini",
+      "-e inventory.ini",
+      "--limit inventory.ini",
+      "--tags inventory.ini"
+    ],
+    "answer": "-i inventory.ini"
+  },
+  {
+    "category": "Ansible",
+    "set": 1,
+    "question": "Modul mana yang memastikan sebuah direktori ada pada host yang dikelola?",
+    "options": [
+      "ansible.builtin.fetch",
+      "ansible.builtin.slurp",
+      "ansible.builtin.template",
+      "ansible.builtin.file"
+    ],
+    "answer": "ansible.builtin.file"
+  },
+  {
+    "category": "Ansible",
+    "set": 1,
+    "question": "Modul mana yang mengambil berkas jarak jauh dan menyimpannya pada simpul kontrol?",
+    "options": [
+      "ansible.builtin.get_url",
+      "ansible.builtin.unarchive",
+      "ansible.builtin.fetch",
+      "ansible.builtin.copy"
+    ],
+    "answer": "ansible.builtin.fetch"
+  },
+  {
+    "category": "Ansible",
+    "set": 1,
+    "question": "Modul mana yang menyediakan antarmuka umum untuk pengelola paket host tujuan?",
+    "options": [
+      "ansible.builtin.package_facts",
+      "ansible.builtin.package",
+      "ansible.builtin.service",
+      "ansible.builtin.command"
+    ],
+    "answer": "ansible.builtin.package"
+  },
+  {
+    "category": "Ansible",
+    "set": 1,
+    "question": "Pernyataan mana yang menjelaskan pengelolaan host Linux tanpa agen yang biasanya dilakukan Ansible?",
+    "options": [
+      "Tidak perlu memasang agen Ansible permanen pada setiap host yang dikelola",
+      "Setiap host yang dikelola harus menjalankan layanan penjadwal Ansible",
+      "Setiap host yang dikelola harus menjalankan server Galaxy",
+      "Setiap host yang dikelola harus terhubung ke broker pesan Ansible"
+    ],
+    "answer": "Tidak perlu memasang agen Ansible permanen pada setiap host yang dikelola"
+  },
+  {
+    "category": "Ansible",
+    "set": 1,
+    "question": "Modul mana yang menjalankan perintah melalui shell jarak jauh ketika operator shell diperlukan?",
+    "options": [
+      "ansible.builtin.command",
+      "ansible.builtin.script",
+      "ansible.builtin.debug",
+      "ansible.builtin.shell"
+    ],
+    "answer": "ansible.builtin.shell"
+  },
+  {
+    "category": "Ansible",
+    "set": 1,
+    "question": "Variabel inventaris mana yang memungkinkan nama web1 terhubung ke alamat IP yang berbeda?",
+    "options": [
+      "ansible_user",
+      "ansible_port",
+      "ansible_host",
+      "inventory_hostname"
+    ],
+    "answer": "ansible_host"
+  }
+]

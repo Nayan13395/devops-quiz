@@ -1,0 +1,302 @@
+[
+  {
+    "category": "Ansible",
+    "set": 4,
+    "question": "什么是 AWX?",
+    "options": [
+      "为 Ansible 提供的开源 Web 界面、REST API 和任务引擎",
+      "Ansible 的公共集合注册中心",
+      "Ansible 的命令行加密工具",
+      "Python 包管理器"
+    ],
+    "answer": "为 Ansible 提供的开源 Web 界面、REST API 和任务引擎"
+  },
+  {
+    "category": "Ansible",
+    "set": 4,
+    "question": "Red Hat Ansible Automation Platform 的哪个组件取代了 Ansible Tower？",
+    "options": [
+      "Automation controller",
+      "Automation hub",
+      "Event-Driven Ansible",
+      "Automation mesh"
+    ],
+    "answer": "Automation controller"
+  },
+  {
+    "category": "Ansible",
+    "set": 4,
+    "question": "什么是动态 Inventory?",
+    "options": [
+      "从云 API 或 CMDB 等外部来源生成的清单",
+      "手动维护的主机文件",
+      "按定义就是加密的清单文件",
+      "角色中的处理程序列表"
+    ],
+    "answer": "从云 API 或 CMDB 等外部来源生成的清单"
+  },
+  {
+    "category": "Ansible",
+    "set": 4,
+    "question": "哪个命令用于检查 playbook 语法?",
+    "options": [
+      "ansible-playbook --syntax-check",
+      "ansible-playbook --validate",
+      "ansible-playbook check",
+      "ansible validate"
+    ],
+    "answer": "ansible-playbook --syntax-check"
+  },
+  {
+    "category": "Ansible",
+    "set": 4,
+    "question": "哪个选项用于对 playbook 进行试运行?",
+    "options": [
+      "--check",
+      "--dry",
+      "--test",
+      "--simulate"
+    ],
+    "answer": "--check"
+  },
+  {
+    "category": "Ansible",
+    "set": 4,
+    "question": "哪个选项用于显示受管文件的差异?",
+    "options": [
+      "--diff",
+      "--compare",
+      "--changes",
+      "--show-diff"
+    ],
+    "answer": "--diff"
+  },
+  {
+    "category": "Ansible",
+    "set": 4,
+    "question": "Ansible 默认的执行策略是什么?",
+    "options": [
+      "linear",
+      "free",
+      "parallel",
+      "serial"
+    ],
+    "answer": "linear"
+  },
+  {
+    "category": "Ansible",
+    "set": 4,
+    "question": "哪个选项将 playbook 的执行限制在选定的主机上?",
+    "options": [
+      "--limit",
+      "--hosts",
+      "--target",
+      "--group"
+    ],
+    "answer": "--limit"
+  },
+  {
+    "category": "Ansible",
+    "set": 4,
+    "question": "哪种插件类型控制任务执行行为?",
+    "options": [
+      "Strategy 插件",
+      "Filter 插件",
+      "Callback 插件",
+      "Lookup 插件"
+    ],
+    "answer": "Strategy 插件"
+  },
+  {
+    "category": "Ansible",
+    "set": 4,
+    "question": "哪种插件用于从外部来源获取数据?",
+    "options": [
+      "Lookup 插件",
+      "Callback 插件",
+      "Connection 插件",
+      "Action 插件"
+    ],
+    "answer": "Lookup 插件"
+  },
+  {
+    "category": "Ansible",
+    "set": 4,
+    "question": "哪种插件用于修改变量数据?",
+    "options": [
+      "Filter 插件",
+      "Lookup 插件",
+      "Action 插件",
+      "Connection 插件"
+    ],
+    "answer": "Filter 插件"
+  },
+  {
+    "category": "Ansible",
+    "set": 4,
+    "question": "哪个模块用于管理 Docker 容器?",
+    "options": [
+      "docker_container",
+      "docker",
+      "container",
+      "docker_manage"
+    ],
+    "answer": "docker_container"
+  },
+  {
+    "category": "Ansible",
+    "set": 4,
+    "question": "哪个模块用于管理 Kubernetes 资源?",
+    "options": [
+      "k8s",
+      "kubectl",
+      "kubernetes",
+      "cluster"
+    ],
+    "answer": "k8s"
+  },
+  {
+    "category": "Ansible",
+    "set": 4,
+    "question": "Ansible 中的幂等性是什么?",
+    "options": [
+      "重复运行任务而不改变期望状态",
+      "加密 playbook",
+      "创建 inventory",
+      "管理 role"
+    ],
+    "answer": "重复运行任务而不改变期望状态"
+  },
+  {
+    "category": "Ansible",
+    "set": 4,
+    "question": "哪个命令用于列出所有可用的 Ansible 模块?",
+    "options": [
+      "ansible-doc -l",
+      "ansible modules",
+      "ansible-list",
+      "ansible-help modules"
+    ],
+    "answer": "ansible-doc -l"
+  },
+  {
+    "category": "Ansible",
+    "set": 4,
+    "question": "哪个 play 关键字将主机分批以进行滚动更新？",
+    "options": [
+      "throttle",
+      "order",
+      "serial",
+      "forks"
+    ],
+    "answer": "serial"
+  },
+  {
+    "category": "Ansible",
+    "set": 4,
+    "question": "哪种执行策略允许每台主机继续执行，而无需等待其他主机完成当前任务？",
+    "options": [
+      "serial",
+      "free",
+      "linear",
+      "debug"
+    ],
+    "answer": "free"
+  },
+  {
+    "category": "Ansible",
+    "set": 4,
+    "question": "ansible-playbook 的哪个选项设置并行工作进程的最大数量？",
+    "options": [
+      "--forks",
+      "--limit",
+      "--timeout",
+      "--step"
+    ],
+    "answer": "--forks"
+  },
+  {
+    "category": "Ansible",
+    "set": 4,
+    "question": "哪个任务关键字在指定主机上执行任务，而不是在当前清单主机上执行？",
+    "options": [
+      "remote_user",
+      "become_user",
+      "connection",
+      "delegate_to"
+    ],
+    "answer": "delegate_to"
+  },
+  {
+    "category": "Ansible",
+    "set": 4,
+    "question": "配置 serial 后，run_once 对任务通常意味着什么？",
+    "options": [
+      "对 play 中的每台主机执行一次",
+      "仅在所有处理程序完成后执行",
+      "对每个 serial 批次执行一次",
+      "对每个清单组执行一次"
+    ],
+    "answer": "对每个 serial 批次执行一次"
+  },
+  {
+    "category": "Ansible",
+    "set": 4,
+    "question": "哪个 play 关键字禁用自动事实收集？",
+    "options": [
+      "any_errors_fatal: false",
+      "gather_facts: false",
+      "check_mode: false",
+      "become: false"
+    ],
+    "answer": "gather_facts: false"
+  },
+  {
+    "category": "Ansible",
+    "set": 4,
+    "question": "哪个命令打印清单的组层次结构？",
+    "options": [
+      "ansible-inventory --graph",
+      "ansible-inventory --list",
+      "ansible-inventory --host web1",
+      "ansible-config dump"
+    ],
+    "answer": "ansible-inventory --graph"
+  },
+  {
+    "category": "Ansible",
+    "set": 4,
+    "question": "哪种插件类型自定义任务事件报告和执行输出？",
+    "options": [
+      "连接插件",
+      "清单插件",
+      "缓存插件",
+      "回调插件"
+    ],
+    "answer": "回调插件"
+  },
+  {
+    "category": "Ansible",
+    "set": 4,
+    "question": "同时指定 async 时，哪个设置允许启动异步任务而不等待其完成？",
+    "options": [
+      "delay: 0",
+      "throttle: 1",
+      "poll: 0",
+      "retries: 0"
+    ],
+    "answer": "poll: 0"
+  },
+  {
+    "category": "Ansible",
+    "set": 4,
+    "question": "哪个模块检查先前启动的异步作业的状态？",
+    "options": [
+      "ansible.builtin.setup",
+      "ansible.builtin.async_status",
+      "ansible.builtin.wait_for",
+      "ansible.builtin.stat"
+    ],
+    "answer": "ansible.builtin.async_status"
+  }
+]

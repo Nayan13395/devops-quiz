@@ -1,0 +1,302 @@
+[
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "哪个组件负责将 Pod 调度到节点上?",
+    "options": [
+      "kube-scheduler",
+      "kubelet",
+      "etcd",
+      "kube-proxy"
+    ],
+    "answer": "kube-scheduler"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "哪个组件运行在每个节点上?",
+    "options": [
+      "kubelet",
+      "etcd",
+      "kube-apiserver",
+      "controller-manager"
+    ],
+    "answer": "kubelet"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "哪个组件充当控制平面的前端?",
+    "options": [
+      "kube-apiserver",
+      "kubelet",
+      "etcd",
+      "kube-proxy"
+    ],
+    "answer": "kube-apiserver"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "哪个组件存储集群状态?",
+    "options": [
+      "etcd",
+      "kubelet",
+      "CoreDNS",
+      "Ingress"
+    ],
+    "answer": "etcd"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "哪个组件管理节点上的网络规则?",
+    "options": [
+      "kube-proxy",
+      "kubelet",
+      "etcd",
+      "Scheduler"
+    ],
+    "answer": "kube-proxy"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "Kubernetes 中常用的 DNS 服务是哪个?",
+    "options": [
+      "CoreDNS",
+      "Bind",
+      "Route53",
+      "Consul"
+    ],
+    "answer": "CoreDNS"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "哪个对象是 Kubernetes 中最小的可部署单元?",
+    "options": [
+      "Pod",
+      "Cluster",
+      "Node",
+      "Service"
+    ],
+    "answer": "Pod"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "哪个对象用于管理无状态应用?",
+    "options": [
+      "Deployment",
+      "ConfigMap",
+      "Secret",
+      "Namespace"
+    ],
+    "answer": "Deployment"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "哪种工作负载为有状态应用提供稳定的 Pod 身份和有序部署？",
+    "options": [
+      "StatefulSet",
+      "Deployment",
+      "ReplicaSet",
+      "DaemonSet"
+    ],
+    "answer": "StatefulSet"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "哪个对象确保运行指定数量的 Pod 副本?",
+    "options": [
+      "ReplicaSet",
+      "Service",
+      "ConfigMap",
+      "Namespace"
+    ],
+    "answer": "ReplicaSet"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "哪个对象将 Pod 暴露给网络流量?",
+    "options": [
+      "Service",
+      "Node",
+      "ReplicaSet",
+      "Volume"
+    ],
+    "answer": "Service"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "哪个对象管理对服务的外部访问?",
+    "options": [
+      "Ingress",
+      "Pod",
+      "ReplicaSet",
+      "Secret"
+    ],
+    "answer": "Ingress"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "哪个对象用于存储配置数据?",
+    "options": [
+      "ConfigMap",
+      "Deployment",
+      "Ingress",
+      "Node"
+    ],
+    "answer": "ConfigMap"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "哪个对象用于存储密码等敏感信息?",
+    "options": [
+      "Secret",
+      "ConfigMap",
+      "Service",
+      "Namespace"
+    ],
+    "answer": "Secret"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "哪个对象为 Pod 提供持久化存储?",
+    "options": [
+      "PersistentVolume",
+      "ReplicaSet",
+      "Namespace",
+      "Service"
+    ],
+    "answer": "PersistentVolume"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "哪个探针判断容器是否已准备好接收 Service 流量？",
+    "options": [
+      "TCP 保活探针",
+      "Readiness probe",
+      "Liveness probe",
+      "启动探针"
+    ],
+    "answer": "Readiness probe"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "存活探针连续失败并超过配置的阈值后，可能发生什么？",
+    "options": [
+      "kubelet 根据容器的重启策略重启该容器",
+      "调度器将所有 Pod 移到新节点",
+      "API 服务器删除 Deployment",
+      "Service 变成 ExternalName Service"
+    ],
+    "answer": "kubelet 根据容器的重启策略重启该容器"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "应用仍在启动时，启动探针有什么作用？",
+    "options": [
+      "禁用所有容器资源限制",
+      "阻止拉取镜像",
+      "保留一个专用控制平面节点",
+      "在启动探针成功之前，延后存活探针和就绪探针检查"
+    ],
+    "answer": "在启动探针成功之前，延后存活探针和就绪探针检查"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "关于 Pod 中的普通初始化容器，哪项是正确的？",
+    "options": [
+      "它们必须暴露 Service 端口",
+      "它们总是在不同节点上运行",
+      "它们按顺序运行至完成，然后才启动应用容器",
+      "它们都只在应用容器退出后运行"
+    ],
+    "answer": "它们按顺序运行至完成，然后才启动应用容器"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "同一 Pod 中的容器通常共享哪些资源？",
+    "options": [
+      "每个容器独有的 Service IP",
+      "网络命名空间和 Pod IP 地址",
+      "可写的根文件系统",
+      "每个容器独有的节点"
+    ],
+    "answer": "网络命名空间和 Pod IP 地址"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "哪个字段声明调度器评估容器放置位置时使用的资源量？",
+    "options": [
+      "resources.requests",
+      "resources.limits",
+      "securityContext",
+      "imagePullPolicy"
+    ],
+    "answer": "resources.requests"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "容器的 CPU 请求为 250m 表示什么？",
+    "options": [
+      "两个半 CPU",
+      "二十五个 CPU",
+      "二百五十个 CPU",
+      "一个 CPU 的四分之一"
+    ],
+    "answer": "一个 CPU 的四分之一"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "容器超过强制执行的内存限制时，通常可能有什么后果？",
+    "options": [
+      "镜像被重建以提供更多内存",
+      "Service 端口被自动更改",
+      "可能被内存不足机制终止",
+      "内存请求自动翻倍"
+    ],
+    "answer": "可能被内存不足机制终止"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "Pod 的哪个字段要求目标节点匹配所有指定的节点标签？",
+    "options": [
+      "dnsPolicy",
+      "nodeSelector",
+      "serviceAccountName",
+      "hostAliases"
+    ],
+    "answer": "nodeSelector"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "为节点污点添加容忍度是否保证 Pod 会被调度到该节点？",
+    "options": [
+      "不会，其他调度约束和可用资源要求仍然适用",
+      "会，它会覆盖所有资源约束",
+      "会，它会绕过所有节点亲和性规则",
+      "不会，容忍度始终禁止放置到带污点的节点"
+    ],
+    "answer": "不会，其他调度约束和可用资源要求仍然适用"
+  }
+]

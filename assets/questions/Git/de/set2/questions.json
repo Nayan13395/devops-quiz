@@ -1,0 +1,302 @@
+[
+  {
+    "category": "Git",
+    "set": 2,
+    "question": "Welcher Befehl erstellt einen lokalen Branch namens topic, ohne zu ihm zu wechseln?",
+    "options": [
+      "git branch topic",
+      "git checkout topic",
+      "git merge topic",
+      "git switch topic"
+    ],
+    "answer": "git branch topic"
+  },
+  {
+    "category": "Git",
+    "set": 2,
+    "question": "Welcher Befehl listet alle lokalen Branches auf?",
+    "options": [
+      "git branch",
+      "git status",
+      "git log",
+      "git show"
+    ],
+    "answer": "git branch"
+  },
+  {
+    "category": "Git",
+    "set": 2,
+    "question": "Welcher Befehl wechselt zu einem anderen Branch?",
+    "options": [
+      "git checkout",
+      "git merge",
+      "git push",
+      "git clone"
+    ],
+    "answer": "git checkout"
+  },
+  {
+    "category": "Git",
+    "set": 2,
+    "question": "Welcher Befehl erstellt einen neuen Branch und wechselt zu ihm?",
+    "options": [
+      "git checkout -b",
+      "git branch -n",
+      "git switch",
+      "git merge"
+    ],
+    "answer": "git checkout -b"
+  },
+  {
+    "category": "Git",
+    "set": 2,
+    "question": "Welcher Befehl führt einen Branch in den aktuellen Branch zusammen?",
+    "options": [
+      "git merge",
+      "git join",
+      "git combine",
+      "git attach"
+    ],
+    "answer": "git merge"
+  },
+  {
+    "category": "Git",
+    "set": 2,
+    "question": "Welcher Befehl löscht einen lokalen Branch?",
+    "options": [
+      "git branch -d",
+      "git rm branch",
+      "git delete",
+      "git remove branch"
+    ],
+    "answer": "git branch -d"
+  },
+  {
+    "category": "Git",
+    "set": 2,
+    "question": "Welcher Befehl löscht einen Branch erzwungen?",
+    "options": [
+      "git branch -D",
+      "git branch -f",
+      "git rm -f",
+      "git delete -f"
+    ],
+    "answer": "git branch -D"
+  },
+  {
+    "category": "Git",
+    "set": 2,
+    "question": "Welcher Befehl zeigt alle Branches einschließlich der Remote-Branches an?",
+    "options": [
+      "git branch -a",
+      "git show branches",
+      "git list branches",
+      "git status"
+    ],
+    "answer": "git branch -a"
+  },
+  {
+    "category": "Git",
+    "set": 2,
+    "question": "Welcher Befehl sichert nicht committete Änderungen vorübergehend?",
+    "options": [
+      "git stash",
+      "git save",
+      "git backup",
+      "git hold"
+    ],
+    "answer": "git stash"
+  },
+  {
+    "category": "Git",
+    "set": 2,
+    "question": "Welcher Befehl listet gestashte Änderungen auf?",
+    "options": [
+      "git stash list",
+      "git stash show",
+      "git stash view",
+      "git list stash"
+    ],
+    "answer": "git stash list"
+  },
+  {
+    "category": "Git",
+    "set": 2,
+    "question": "Welcher Befehl stellt den neuesten Stash wieder her?",
+    "options": [
+      "git stash pop",
+      "git stash restore",
+      "git stash pull",
+      "git stash apply latest"
+    ],
+    "answer": "git stash pop"
+  },
+  {
+    "category": "Git",
+    "set": 2,
+    "question": "Welcher Befehl wendet einen Stash an, ohne ihn zu entfernen?",
+    "options": [
+      "git stash apply",
+      "git stash pop",
+      "git stash use",
+      "git stash merge"
+    ],
+    "answer": "git stash apply"
+  },
+  {
+    "category": "Git",
+    "set": 2,
+    "question": "Welcher Befehl erstellt einen Tag?",
+    "options": [
+      "git tag",
+      "git label",
+      "git mark",
+      "git version"
+    ],
+    "answer": "git tag"
+  },
+  {
+    "category": "Git",
+    "set": 2,
+    "question": "Welcher Befehl wechselt Branches mit der neueren Git-Syntax?",
+    "options": [
+      "git switch",
+      "git branch",
+      "git merge",
+      "git pull"
+    ],
+    "answer": "git switch"
+  },
+  {
+    "category": "Git",
+    "set": 2,
+    "question": "Welcher Befehl benennt den aktuellen Branch in release um?",
+    "options": [
+      "git branch -m release",
+      "git branch -d release",
+      "git branch -a release",
+      "git branch --contains release"
+    ],
+    "answer": "git branch -m release"
+  },
+  {
+    "category": "Git",
+    "set": 2,
+    "question": "Was geschieht bei einem Fast-Forward-Merge?",
+    "options": [
+      "Jeder Commit beider Branches wird neu geschrieben",
+      "Der Quellbranch wird automatisch gelöscht",
+      "Ein neuer Stamm-Commit ersetzt beide Verläufe",
+      "Der aktuelle Branch-Zeiger wird ohne neuen Merge-Commit vorgerückt"
+    ],
+    "answer": "Der aktuelle Branch-Zeiger wird ohne neuen Merge-Commit vorgerückt"
+  },
+  {
+    "category": "Git",
+    "set": 2,
+    "question": "Welcher Befehl erstellt einen Merge-Commit, auch wenn feature per Fast-Forward integriert werden könnte?",
+    "options": [
+      "git merge --squash feature",
+      "git merge --abort",
+      "git merge --no-ff feature",
+      "git merge --ff-only feature"
+    ],
+    "answer": "git merge --no-ff feature"
+  },
+  {
+    "category": "Git",
+    "set": 2,
+    "question": "Welcher Befehl listet alle lokalen Branches auf, deren Verlauf den Commit abc1234 enthält?",
+    "options": [
+      "git show abc1234",
+      "git branch --contains abc1234",
+      "git branch --no-contains abc1234",
+      "git branch --points-at abc1234"
+    ],
+    "answer": "git branch --contains abc1234"
+  },
+  {
+    "category": "Git",
+    "set": 2,
+    "question": "Welcher Befehl nimmt unversionierte, aber nicht ignorierte Dateien in einen neuen Stash auf?",
+    "options": [
+      "git stash push -u",
+      "git stash push -a",
+      "git stash push --staged",
+      "git stash list"
+    ],
+    "answer": "git stash push -u"
+  },
+  {
+    "category": "Git",
+    "set": 2,
+    "question": "Welcher Befehl löscht nur den Stash-Eintrag stash@{2}?",
+    "options": [
+      "git stash clear",
+      "git stash pop",
+      "git stash show 'stash@{2}'",
+      "git stash drop 'stash@{2}'"
+    ],
+    "answer": "git stash drop 'stash@{2}'"
+  },
+  {
+    "category": "Git",
+    "set": 2,
+    "question": "Welcher Befehl erstellt einen annotierten Tag namens v1.0 mit einer Nachricht?",
+    "options": [
+      "git tag -d v1.0",
+      "git tag -l v1.0",
+      "git tag -a v1.0 -m \"Release 1.0\"",
+      "git tag v1.0"
+    ],
+    "answer": "git tag -a v1.0 -m \"Release 1.0\""
+  },
+  {
+    "category": "Git",
+    "set": 2,
+    "question": "Welcher Befehl listet vorhandene Tags auf, deren Namen mit v2 beginnen?",
+    "options": [
+      "git remote -v",
+      "git tag --list 'v2*'",
+      "git branch --list 'v2*'",
+      "git log --grep='v2*'"
+    ],
+    "answer": "git tag --list 'v2*'"
+  },
+  {
+    "category": "Git",
+    "set": 2,
+    "question": "Was bedeutet ein losgelöster HEAD?",
+    "options": [
+      "HEAD verweist direkt auf einen Commit statt auf einen Branch",
+      "Das Repository enthält keine Commits",
+      "Das Arbeitsverzeichnis enthält keine versionierten Dateien",
+      "Das entfernte Repository ist nicht verfügbar"
+    ],
+    "answer": "HEAD verweist direkt auf einen Commit statt auf einen Branch"
+  },
+  {
+    "category": "Git",
+    "set": 2,
+    "question": "Welcher Befehl markiert app.py nach dem Beheben eines Merge-Konflikts im Index als aufgelöst?",
+    "options": [
+      "git diff app.py",
+      "git log -- app.py",
+      "git restore --staged app.py",
+      "git add app.py"
+    ],
+    "answer": "git add app.py"
+  },
+  {
+    "category": "Git",
+    "set": 2,
+    "question": "Welcher Befehl versucht, einen laufenden konfliktbehafteten Merge abzubrechen und den vorherigen Zustand wiederherzustellen?",
+    "options": [
+      "git merge --no-commit",
+      "git merge --ff-only",
+      "git merge --abort",
+      "git merge --continue"
+    ],
+    "answer": "git merge --abort"
+  }
+]

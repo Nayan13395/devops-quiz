@@ -1,0 +1,302 @@
+[
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "ਕਿਹੜਾ ਸਿੰਟੈਕਸ date ਦੇ ਆਊਟਪੁੱਟ ਨੂੰ now ਨਾਮਕ ਵੇਰੀਏਬਲ ਵਿੱਚ ਸਟੋਰ ਕਰਦਾ ਹੈ?",
+    "options": [
+      "now=$(date)",
+      "now=date",
+      "now:=$(date)",
+      "date->now"
+    ],
+    "answer": "now=$(date)"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "ਕਿਹੜਾ ਵਿਸ਼ੇਸ਼ ਪੈਰਾਮੀਟਰ ਸਕ੍ਰਿਪਟ ਦੇ ਨਾਮ ਨੂੰ ਦਰਸਾਉਂਦਾ ਹੈ?",
+    "options": [
+      "$0",
+      "$1",
+      "$#",
+      "$@"
+    ],
+    "answer": "$0"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "ਕਿਹੜਾ ਵਿਸ਼ੇਸ਼ ਪੈਰਾਮੀਟਰ ਸਭ ਤੋਂ ਹਾਲੀਆ ਬੈਕਗ੍ਰਾਊਂਡ ਕਮਾਂਡ ਦੀ ਪ੍ਰਕਿਰਿਆ ID ਵਿੱਚ ਫੈਲਦਾ ਹੈ?",
+    "options": [
+      "$!",
+      "$$",
+      "$?",
+      "$#"
+    ],
+    "answer": "$!"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "ਕਿਹੜਾ ਵਿਸ਼ੇਸ਼ ਪੈਰਾਮੀਟਰ positional ਆਰਗੂਮੈਂਟਾਂ ਦੀ ਗਿਣਤੀ ਨੂੰ ਦਰਸਾਉਂਦਾ ਹੈ?",
+    "options": [
+      "$#",
+      "$@",
+      "$*",
+      "$$"
+    ],
+    "answer": "$#"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "ਕਿਹੜਾ ਵਿਸ਼ੇਸ਼ ਪੈਰਾਮੀਟਰ ਸਾਰੇ positional ਆਰਗੂਮੈਂਟਾਂ ਨੂੰ ਵੱਖਰੇ ਸ਼ਬਦਾਂ ਵਜੋਂ ਫੈਲਾਉਂਦਾ ਹੈ?",
+    "options": [
+      "$@",
+      "$*",
+      "$#",
+      "$0"
+    ],
+    "answer": "$@"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "ਕਿਹੜੀ Bash builtin ਪਹਿਲੇ positional ਪੈਰਾਮੀਟਰ ਨੂੰ ਹਟਾ ਦਿੰਦੀ ਹੈ ਅਤੇ ਬਾਕੀਆਂ ਨੂੰ ਇੱਕ ਸਥਾਨ ਹੇਠਾਂ ਖਿਸਕਾ ਦਿੰਦੀ ਹੈ?",
+    "options": [
+      "shift",
+      "unshift",
+      "pop",
+      "rotate"
+    ],
+    "answer": "shift"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "ਕਿਹੜਾ ਵਿਸ਼ੇਸ਼ ਪੈਰਾਮੀਟਰ ਮੌਜੂਦਾ ਸ਼ੈੱਲ ਦੀ ਪ੍ਰਕਿਰਿਆ ID ਨੂੰ ਦਰਸਾਉਂਦਾ ਹੈ?",
+    "options": [
+      "$$",
+      "$!",
+      "$?",
+      "$0"
+    ],
+    "answer": "$$"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "ਕਿਹੜਾ ਵਿਸ਼ੇਸ਼ ਪੈਰਾਮੀਟਰ ਆਖਰੀ ਕਮਾਂਡ ਦੀ exit status ਨੂੰ ਦਰਸਾਉਂਦਾ ਹੈ?",
+    "options": [
+      "$?",
+      "$!",
+      "$$",
+      "$#"
+    ],
+    "answer": "$?"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "ਜੇ var unset ਜਾਂ ਖਾਲੀ ਹੋਵੇ ਤਾਂ ਕਿਹੜਾ ਐਕਸਪੈਂਸ਼ਨ ਡਿਫਾਲਟ ਮੁੱਲ ਵਾਪਸ ਕਰਦਾ ਹੈ?",
+    "options": [
+      "${var:-default}",
+      "${var:=default}",
+      "${var:+default}",
+      "${var:?default}"
+    ],
+    "answer": "${var:-default}"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "ਕਿਹੜਾ ਐਕਸਪੈਂਸ਼ਨ var ਵਿੱਚੋਂ 3 ਅੱਖਰ ਕੱਢਦਾ ਹੈ, ਜੋ offset 2 ਤੋਂ ਸ਼ੁਰੂ ਹੁੰਦੇ ਹਨ?",
+    "options": [
+      "${var:2:3}",
+      "${var:3:2}",
+      "${var[2,3]}",
+      "${var#2:3}"
+    ],
+    "answer": "${var:2:3}"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "ਕਿਹੜਾ ਐਕਸਪੈਂਸ਼ਨ var ਦੇ ਮੁੱਲ ਦੀ ਲੰਬਾਈ ਵਾਪਸ ਕਰਦਾ ਹੈ?",
+    "options": [
+      "${#var}",
+      "${len(var)}",
+      "${var:length}",
+      "${var#length}"
+    ],
+    "answer": "${#var}"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "ਕਿਹੜਾ ਐਕਸਪੈਂਸ਼ਨ var ਦੇ ਮੁੱਲ ਨੂੰ ਵੱਡੇ ਅੱਖਰਾਂ (uppercase) ਵਿੱਚ ਬਦਲਦਾ ਹੈ?",
+    "options": [
+      "${var^^}",
+      "${var,,}",
+      "${var!!}",
+      "${var##}"
+    ],
+    "answer": "${var^^}"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "ਕਿਹੜਾ ਐਕਸਪੈਂਸ਼ਨ var ਵਿੱਚੋਂ ਸਭ ਤੋਂ ਲੰਬੇ ਮੇਲ ਖਾਂਦੇ prefix pattern ਨੂੰ ਹਟਾਉਂਦਾ ਹੈ?",
+    "options": [
+      "${var##pattern}",
+      "${var#pattern}",
+      "${var%%pattern}",
+      "${var%pattern}"
+    ],
+    "answer": "${var##pattern}"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "ਕਿਹੜਾ ਐਕਸਪੈਂਸ਼ਨ var ਵਿੱਚ pattern ਦੇ ਸਿਰਫ਼ ਪਹਿਲੇ ਮੇਲ ਨੂੰ ਬਦਲਦਾ ਹੈ?",
+    "options": [
+      "${var/pattern/replacement}",
+      "${var//pattern/replacement}",
+      "${var#pattern}",
+      "${var%pattern}"
+    ],
+    "answer": "${var/pattern/replacement}"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "ਜੇ var unset ਜਾਂ ਖਾਲੀ ਹੋਵੇ ਤਾਂ ਕਿਹੜਾ ਐਕਸਪੈਂਸ਼ਨ ਗਲਤੀ ਸੁਨੇਹਾ ਪ੍ਰਿੰਟ ਕਰਦਾ ਹੈ ਅਤੇ ਗੈਰ-ਇੰਟਰਐਕਟਿਵ ਸਕ੍ਰਿਪਟ ਨੂੰ ਰੋਕ ਦਿੰਦਾ ਹੈ?",
+    "options": [
+      "${var:?message}",
+      "${var:-message}",
+      "${var:+message}",
+      "${var:=message}"
+    ],
+    "answer": "${var:?message}"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "Bash ਵਿੱਚ ਕਿਹੜਾ ਸਿੰਟੈਕਸ ਅੰਕਗਣਿਤਕ ਐਕਸਪੈਂਸ਼ਨ ਕਰਦਾ ਹੈ?",
+    "options": [
+      "$((5 + 3))",
+      "$(5 + 3)",
+      "${5 + 3}",
+      "$[5 + 3]"
+    ],
+    "answer": "$((5 + 3))"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "ਕਿਹੜੀ ਕਮਾਂਡ ਵੇਰੀਏਬਲ count ਨੂੰ ਇੱਕ ਨਾਲ ਵਧਾਉਂਦੀ ਹੈ?",
+    "options": [
+      "let count++",
+      "count++",
+      "increment count",
+      "add count"
+    ],
+    "answer": "let count++"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "ਕਿਹੜੀ ਕਮਾਂਡ 8 ਪ੍ਰਿੰਟ ਕਰਦੀ ਹੈ, ਜਦੋਂ 5 ਅਤੇ 3 ਜੋੜੇ ਜਾਂਦੇ ਹਨ?",
+    "options": [
+      "expr 5 + 3",
+      "expr 5+3",
+      "expr5 + 3",
+      "expr add 5 3"
+    ],
+    "answer": "expr 5 + 3"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "ਕਿਹੜੀ ਕਮਾਂਡ count ਨੂੰ ਪੂਰਨ ਅੰਕ (integer) ਵੇਰੀਏਬਲ ਵਜੋਂ ਘੋਸ਼ਿਤ ਕਰਦੀ ਹੈ?",
+    "options": [
+      "declare -i count",
+      "declare int count",
+      "integer count",
+      "set count integer"
+    ],
+    "answer": "declare -i count"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "ਕਿਹੜੀ ਕਮਾਂਡ ਵੇਰੀਏਬਲ ਨੂੰ ਸਿਰਫ਼-ਪੜ੍ਹਨਯੋਗ (read-only) ਬਣਾਉਂਦੀ ਹੈ?",
+    "options": [
+      "readonly var",
+      "lock var",
+      "const var",
+      "final var"
+    ],
+    "answer": "readonly var"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "ਕਿਹੜੀ ਕਮਾਂਡ ਸ਼ੈੱਲ ਐਨਵਾਇਰਮੈਂਟ ਵਿੱਚੋਂ ਵੇਰੀਏਬਲ ਨੂੰ ਹਟਾਉਂਦੀ ਹੈ?",
+    "options": [
+      "unset var",
+      "delete var",
+      "remove var",
+      "clear var"
+    ],
+    "answer": "unset var"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "ਕਿਹੜੀ ਕਮਾਂਡ ਵੇਰੀਏਬਲ ਨੂੰ ਚਾਈਲਡ ਪ੍ਰਕਿਰਿਆਵਾਂ ਲਈ ਉਪਲਬਧ ਕਰਾਉਂਦੀ ਹੈ?",
+    "options": [
+      "export var",
+      "share var",
+      "env var",
+      "publish var"
+    ],
+    "answer": "export var"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "ਕਿਹੜਾ ਵਿਕਲਪ ਆਊਟਪੁੱਟ ਰੀਡਾਇਰੈਕਸ਼ਨ ਨੂੰ ਮੌਜੂਦਾ ਫਾਈਲ ਓਵਰਰਾਈਟ ਕਰਨ ਤੋਂ ਰੋਕਦਾ ਹੈ?",
+    "options": [
+      "set -o noclobber",
+      "set -o nooverwrite",
+      "set -o protect",
+      "set -o safe"
+    ],
+    "answer": "set -o noclobber"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "ਕਿਹੜਾ Bash ਵੇਰੀਏਬਲ ਸ਼ੈੱਲ ਸ਼ੁਰੂ ਹੋਣ ਤੋਂ ਬਾਅਦ ਦੇ ਸਕਿੰਟਾਂ ਦੀ ਗਿਣਤੀ ਰੱਖਦਾ ਹੈ?",
+    "options": [
+      "$SECONDS",
+      "$RANDOM",
+      "$LINENO",
+      "$UID"
+    ],
+    "answer": "$SECONDS"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "ਕਿਹੜਾ Bash ਐਕਸਪੈਂਸ਼ਨ alt ਨੂੰ ਤਾਂ ਹੀ ਬਦਲਦਾ ਹੈ ਜੇ var ਸੈੱਟ ਹੋਵੇ ਅਤੇ ਖਾਲੀ ਨਾ ਹੋਵੇ?",
+    "options": [
+      "${var:+alt}",
+      "${var:-alt}",
+      "${var:=alt}",
+      "${var:?alt}"
+    ],
+    "answer": "${var:+alt}"
+  }
+]

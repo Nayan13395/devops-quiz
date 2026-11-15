@@ -1,0 +1,302 @@
+[
+  {
+    "category": "Linux",
+    "set": 4,
+    "question": "Dosyaları taşımak veya yeniden adlandırmak için hangi komut kullanılır?",
+    "options": [
+      "mv",
+      "cp",
+      "ln",
+      "shift"
+    ],
+    "answer": "mv"
+  },
+  {
+    "category": "Linux",
+    "set": 4,
+    "question": "Hangi komut dosya sahipliğini değiştirir?",
+    "options": [
+      "chown",
+      "chmod",
+      "owner",
+      "setowner"
+    ],
+    "answer": "chown"
+  },
+  {
+    "category": "Linux",
+    "set": 4,
+    "question": "Hangi komut dosya izinlerini sekizlik (octal) biçimde görüntüler?",
+    "options": [
+      "stat -c %a",
+      "ls -perm",
+      "perm",
+      "showperm"
+    ],
+    "answer": "stat -c %a"
+  },
+  {
+    "category": "Linux",
+    "set": 4,
+    "question": "Hangi komut dosya türünü görüntüler?",
+    "options": [
+      "file",
+      "type",
+      "kind",
+      "format"
+    ],
+    "answer": "file"
+  },
+  {
+    "category": "Linux",
+    "set": 4,
+    "question": "Hangi komut ayrıntılı dosya istatistiklerini görüntüler?",
+    "options": [
+      "stat",
+      "fileinfo",
+      "details",
+      "ls -stat"
+    ],
+    "answer": "stat"
+  },
+  {
+    "category": "Linux",
+    "set": 4,
+    "question": "Hazır veritabanı yerine dizin ağaçlarında doğrudan dosya adına göre hangi komut arama yapar?",
+    "options": [
+      "find",
+      "search",
+      "locate",
+      "where"
+    ],
+    "answer": "find"
+  },
+  {
+    "category": "Linux",
+    "set": 4,
+    "question": "PATH içinde arayıp normalde eşleşen ilk yürütülebilir dosyanın yolunu hangi komut gösterir?",
+    "options": [
+      "which",
+      "whereis",
+      "locate",
+      "find"
+    ],
+    "answer": "which"
+  },
+  {
+    "category": "Linux",
+    "set": 4,
+    "question": "Hangi komut dosyaları bir veritabanı kullanarak arar?",
+    "options": [
+      "locate",
+      "find",
+      "search",
+      "query"
+    ],
+    "answer": "locate"
+  },
+  {
+    "category": "Linux",
+    "set": 4,
+    "question": "Hangi komut locate veritabanını günceller?",
+    "options": [
+      "updatedb",
+      "updatedatabase",
+      "refreshdb",
+      "syncdb"
+    ],
+    "answer": "updatedb"
+  },
+  {
+    "category": "Linux",
+    "set": 4,
+    "question": "Geçerli kullanıcının crontab girdilerini hangi komut gösterir?",
+    "options": [
+      "crontab -l",
+      "cron -list",
+      "cronshow",
+      "jobs"
+    ],
+    "answer": "crontab -l"
+  },
+  {
+    "category": "Linux",
+    "set": 4,
+    "question": "Hangi komut cron işlerini düzenler?",
+    "options": [
+      "crontab -e",
+      "cronedit",
+      "crontab",
+      "schedule"
+    ],
+    "answer": "crontab -e"
+  },
+  {
+    "category": "Linux",
+    "set": 4,
+    "question": "Hangi komut tek seferlik bir görevi zamanlar?",
+    "options": [
+      "at",
+      "cron",
+      "task",
+      "schedule"
+    ],
+    "answer": "at"
+  },
+  {
+    "category": "Linux",
+    "set": 4,
+    "question": "Hangi komut kabuktaki etkin işleri görüntüler?",
+    "options": [
+      "jobs",
+      "ps",
+      "bg",
+      "fg"
+    ],
+    "answer": "jobs"
+  },
+  {
+    "category": "Linux",
+    "set": 4,
+    "question": "Durdurulmuş işi arka planda hangi yerleşik kabuk komutu sürdürür?",
+    "options": [
+      "bg",
+      "fg",
+      "jobs",
+      "nohup"
+    ],
+    "answer": "bg"
+  },
+  {
+    "category": "Linux",
+    "set": 4,
+    "question": "Hangi komut arka plandaki bir işlemi ön plana getirir?",
+    "options": [
+      "fg",
+      "bg",
+      "jobs",
+      "top"
+    ],
+    "answer": "fg"
+  },
+  {
+    "category": "Linux",
+    "set": 4,
+    "question": "Hizmet dosyası düzenlendikten sonra birim dosyası tanımlarını hangi systemd komutu yeniden yükler?",
+    "options": [
+      "systemctl daemon-reload",
+      "systemctl reload app.service",
+      "systemctl restart app.service",
+      "systemctl reset-failed app.service"
+    ],
+    "answer": "systemctl daemon-reload"
+  },
+  {
+    "category": "Linux",
+    "set": 4,
+    "question": "'systemctl disable app.service', --now olmadan ne yapar?",
+    "options": [
+      "Hizmeti durdurup birim dosyasını siler",
+      "Hizmeti fabrika ayarlarıyla yeniden başlatır",
+      "Birimi maskeleyerek tüm elle başlatmaları engeller",
+      "Çalışan hizmeti mutlaka durdurmadan etkinleştirme bağlantılarını kaldırır"
+    ],
+    "answer": "Çalışan hizmeti mutlaka durdurmadan etkinleştirme bağlantılarını kaldırır"
+  },
+  {
+    "category": "Linux",
+    "set": 4,
+    "question": "app.service günlük girdilerini hangi komut gösterir?",
+    "options": [
+      "systemctl show app.service",
+      "systemctl list-dependencies app.service",
+      "journalctl -u app.service",
+      "systemctl cat app.service"
+    ],
+    "answer": "journalctl -u app.service"
+  },
+  {
+    "category": "Linux",
+    "set": 4,
+    "question": "Çıktıyı geçerli açılışla hangi journalctl seçeneği sınırlar?",
+    "options": [
+      "-k",
+      "-b",
+      "-f",
+      "-r"
+    ],
+    "answer": "-b"
+  },
+  {
+    "category": "Linux",
+    "set": 4,
+    "question": "Standart beş alanlı kullanıcı crontab kaydında ilk alan hangisidir?",
+    "options": [
+      "Dakika",
+      "Saat",
+      "Ayın günü",
+      "Haftanın günü"
+    ],
+    "answer": "Dakika"
+  },
+  {
+    "category": "Linux",
+    "set": 4,
+    "question": "Standart kullanıcı crontab içinde '0 2 * * *' ne zaman çalışır?",
+    "options": [
+      "Her saatin 2. dakikasında",
+      "İki dakikada bir",
+      "Her ayın ikinci gününde gece yarısı",
+      "cron için geçerli saat diliminde her gün 02:00 saatinde"
+    ],
+    "answer": "cron için geçerli saat diliminde her gün 02:00 saatinde"
+  },
+  {
+    "category": "Linux",
+    "set": 4,
+    "question": "Bash yerleşik export komutu kabuk değişkenine ne yapar?",
+    "options": [
+      "Onu üst kabuğun ortamına kopyalar",
+      "Değerini salt okunur değişkene dönüştürür",
+      "Sonradan başlatılan alt süreçlerin ortamında kullanılabilir hale getirir",
+      "Her kullanıcının profiline kalıcı olarak yazar"
+    ],
+    "answer": "Sonradan başlatılan alt süreçlerin ortamında kullanılabilir hale getirir"
+  },
+  {
+    "category": "Linux",
+    "set": 4,
+    "question": "Standart çıktıyı app.log sonuna hangi Bash yönlendirmesi ekler?",
+    "options": [
+      "2> app.log",
+      ">> app.log",
+      "> app.log",
+      "< app.log"
+    ],
+    "answer": ">> app.log"
+  },
+  {
+    "category": "Linux",
+    "set": 4,
+    "question": "Standart hatayı standart çıktıyla aynı hedefe hangi Bash yönlendirmesi gönderir?",
+    "options": [
+      "2>&1",
+      "1>&2",
+      "2>errors.log",
+      "<input.txt"
+    ],
+    "answer": "2>&1"
+  },
+  {
+    "category": "Linux",
+    "set": 4,
+    "question": "Komut biter bitmez Bash içinde $? neye genişler?",
+    "options": [
+      "Geçerli kabuğun süreç kimliğine",
+      "Konumsal parametre sayısına",
+      "En son arka plan işinin süreç kimliğine",
+      "En son yürütülen ön plan işlem hattının çıkış durumuna"
+    ],
+    "answer": "En son yürütülen ön plan işlem hattının çıkış durumuna"
+  }
+]

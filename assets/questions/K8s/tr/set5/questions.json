@@ -1,0 +1,302 @@
+[
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "NetworkPolicy nesnesinin Pod trafiğini etkilemesi için ne gerekir?",
+    "options": [
+      "Seçilen her Pod için LoadBalancer Service",
+      "Aynı ad alanında PersistentVolumeClaim",
+      "Her ilke için ayrı API sunucusu",
+      "NetworkPolicy kurallarını uygulayan bir ağ uygulaması"
+    ],
+    "answer": "NetworkPolicy kurallarını uygulayan bir ağ uygulaması"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "Aynı Pod'u seçen birden fazla NetworkPolicy izin verilen giriş trafiğini nasıl birleştirir?",
+    "options": [
+      "İlk oluşturulan ilke sonraki tüm ilkeleri geçersiz kılar",
+      "Her ilke her pakete ayrı ayrı izin vermelidir",
+      "İzin verilen trafik, giriş izinlerinin birleşimidir",
+      "Son oluşturulan ilke önceki tüm ilkeleri geçersiz kılar"
+    ],
+    "answer": "İzin verilen trafik, giriş izinlerinin birleşimidir"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "Bir ad alanı içindeki izinleri hangi RBAC nesnesi tanımlar?",
+    "options": [
+      "ResourceQuota",
+      "Role",
+      "RoleBinding",
+      "ServiceAccount"
+    ],
+    "answer": "Role"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "Role veya ClusterRole izinlerini tek ad alanında hangi RBAC nesnesi verir?",
+    "options": [
+      "RoleBinding",
+      "ClusterRoleBinding",
+      "ServiceAccount",
+      "LimitRange"
+    ],
+    "answer": "RoleBinding"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "Kubernetes API erişimi için Pod içinde çalışan süreçlere normalde hangi kimlik atanır?",
+    "options": [
+      "StorageClass",
+      "RuntimeClass",
+      "PriorityClass",
+      "ServiceAccount"
+    ],
+    "answer": "ServiceAccount"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "Secret verisini base64 ile kodlamak, nesneyi okuyabilen kişiye karşı neden yeterli koruma sağlamaz?",
+    "options": [
+      "Base64 veriyi otomatik olarak DNS üzerinden yayımlar",
+      "Base64 Pod içinde saklanan özel anahtar gerektirir",
+      "Base64 geri çevrilebilir kodlamadır, şifreleme değildir",
+      "Base64 Kubernetes'in veriyi saklamasını engeller"
+    ],
+    "answer": "Base64 geri çevrilebilir kodlamadır, şifreleme değildir"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "Kubernetes'in API kimlik bilgilerini Pod içine otomatik bağlamasını hangi alan engelleyebilir?",
+    "options": [
+      "shareProcessNamespace: false",
+      "automountServiceAccountToken: false",
+      "hostNetwork: false",
+      "enableServiceLinks: false"
+    ],
+    "answer": "automountServiceAccountToken: false"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "Ad alanındaki toplam kaynak tüketimini hangi nesne sınırlar?",
+    "options": [
+      "ResourceQuota",
+      "LimitRange",
+      "PriorityClass",
+      "PodDisruptionBudget"
+    ],
+    "answer": "ResourceQuota"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "Ad alanındaki kapsayıcılara varsayılan kaynak istekleri ve sınırlarını hangi nesne atayabilir?",
+    "options": [
+      "ResourceQuota",
+      "HorizontalPodAutoscaler",
+      "RuntimeClass",
+      "LimitRange"
+    ],
+    "answer": "LimitRange"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "Kubernetes nesnesindeki sonlandırıcı, silme istendikten sonra ne yapar?",
+    "options": [
+      "Her bağımlı nesneyi hemen siler",
+      "Nesneyi değişmez Secret nesnesine dönüştürür",
+      "Gerekli temizleme sonlandırıcıyı kaldırana kadar nesneyi silinmeyi bekler durumda tutar",
+      "Nesnenin sonraki tüm güncellemelerini engeller"
+    ],
+    "answer": "Gerekli temizleme sonlandırıcıyı kaldırana kadar nesneyi silinmeyi bekler durumda tutar"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "Çöp toplama için bağımlı nesneleri sahiplerine hangi metaveri alanı bağlar?",
+    "options": [
+      "managedFields",
+      "ownerReferences",
+      "annotations",
+      "labels"
+    ],
+    "answer": "ownerReferences"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "CustomResourceDefinition kümeye ne ekler?",
+    "options": [
+      "Kubernetes API tarafından sunulan yeni özel kaynak türünü",
+      "Mevcut tür için çalışan bir uzlaştırma denetleyicisini",
+      "Her hizmet hesabına RBAC izin atamasını",
+      "Her yerleşik kaynak türünün bir örneğini"
+    ],
+    "answer": "Kubernetes API tarafından sunulan yeni özel kaynak türünü"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "Kubernetes operatörünü yalnızca özel kaynak tanımından ne ayırır?",
+    "options": [
+      "Operatör yalnızca şema tanımlarını saklayabilir",
+      "Operatör API sunucusu gereksinimini kaldırır",
+      "Operatör yalnızca kubectl çıktı biçimini değiştirir",
+      "Operatör temsil edilen uygulamayı yönetmek için uzlaştırma mantığını da çalıştırır"
+    ],
+    "answer": "Operatör temsil edilen uygulamayı yönetmek için uzlaştırma mantığını da çalıştırır"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "Kimlik doğrulama ve yetkilendirmeden sonra, kalıcı kayıttan önce API isteğini hangi mekanizma reddedebilir veya değiştirebilir?",
+    "options": [
+      "Kapsayıcı imajı indirme",
+      "Service uç noktası yönlendirmesi",
+      "Kabul denetimi",
+      "Pod zamanlama"
+    ],
+    "answer": "Kabul denetimi"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "Uygun hiçbir düğüm Pod'un zorunlu düğüm yakınlığını sağlamazsa ne olur?",
+    "options": [
+      "API sunucusu onu her düğüme yerleştirir",
+      "Uygun düğüm bulunana veya kısıtlar değişene kadar Pod zamanlanmadan kalır",
+      "Zamanlayıcı bir denemeden sonra kuralı yok sayar",
+      "Pod otomatik olarak DaemonSet haline gelir"
+    ],
+    "answer": "Uygun düğüm bulunana veya kısıtlar değişene kadar Pod zamanlanmadan kalır"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "preferredDuringSchedulingIgnoredDuringExecution düğüm yakınlığı ne ifade eder?",
+    "options": [
+      "Diğer açılardan uygun, eşleşmeyen düğümleri dışlamayan yerleşim tercihi",
+      "Eşleşmeyen düğümlere yerleşmeyi engelleyen zorunlu gereksinim",
+      "Düğüm etiketi değişirse Pod'u tahliye etme yönergesi",
+      "Zamanlayıcıyı tamamen atlama isteği"
+    ],
+    "answer": "Diğer açılardan uygun, eşleşmeyen düğümleri dışlamayan yerleşim tercihi"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "Düğüm etiketleri çalışan Pod'un yakınlık kuralına artık uymuyorsa IgnoredDuringExecution ne demektir?",
+    "options": [
+      "Pod hemen silinmelidir",
+      "Pod'un kapsayıcıları otomatik yeniden başlar",
+      "Düğüm etiketleri otomatik eski haline döner",
+      "Kural tek başına çalışan Pod'u tahliye etmez"
+    ],
+    "answer": "Kural tek başına çalışan Pod'u tahliye etmez"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "Pod açıkça spec.nodeName ayarlarsa ne olur?",
+    "options": [
+      "O adla bir düğüm oluşturur",
+      "Pod'u çalıştıran düğümü yeniden adlandırır",
+      "Zamanlayıcıyı atlayıp adı verilen düğüme atanır",
+      "Zamanlayıcıdan eşleşen tüm düğüm etiketlerini sıralamasını ister"
+    ],
+    "answer": "Zamanlayıcıyı atlayıp adı verilen düğüme atanır"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "Topoloji yayılım kısıtlarının amacı nedir?",
+    "options": [
+      "Denetim düzlemi bileşenleri arasındaki trafiği şifrelemek",
+      "Eşleşen Pod'ların topoloji alanlarına dağılımını denetlemek",
+      "Kapsayıcı dosyalarını kalıcı birimler arasında kopyalamak",
+      "Her ad alanına bir genel IP ayırmak"
+    ],
+    "answer": "Eşleşen Pod'ların topoloji alanlarına dağılımını denetlemek"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "Toleransı olmayan, zaten çalışan Pod'ları hangi taint etkisi tahliye edebilir?",
+    "options": [
+      "NoExecute",
+      "NoSchedule",
+      "PreferNoSchedule",
+      "None"
+    ],
+    "answer": "NoExecute"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "Linux kapsayıcısının root olmayan kullanıcıyla çalışmasını hangi kapsayıcı securityContext ayarı zorunlu kılar?",
+    "options": [
+      "readOnlyRootFilesystem: true",
+      "privileged: false",
+      "allowPrivilegeEscalation: false",
+      "runAsNonRoot: true"
+    ],
+    "answer": "runAsNonRoot: true"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "Linux sürecinin üst sürecinden daha fazla yetki kazanmasını hangi securityContext ayarı engeller?",
+    "options": [
+      "readOnlyRootFilesystem: true",
+      "privileged: false",
+      "allowPrivilegeEscalation: false",
+      "runAsNonRoot: true"
+    ],
+    "answer": "allowPrivilegeEscalation: false"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "Uygulama kapsayıcılarını değiştirmeden sorun gidermek için mevcut Pod'a hangi kapsayıcı türü eklenebilir?",
+    "options": [
+      "Yeniden başlatılabilir init kapsayıcısı",
+      "Geçici kapsayıcı",
+      "Normal init kapsayıcısı",
+      "Normal uygulama kapsayıcısı"
+    ],
+    "answer": "Geçici kapsayıcı"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "Service ağ uç noktalarını ölçeklenebilir gruplarda hangi kaynak izler?",
+    "options": [
+      "EndpointSlice",
+      "IngressClass",
+      "NetworkPolicy",
+      "RuntimeClass"
+    ],
+    "answer": "EndpointSlice"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "Ingress kaynağının gerçekten HTTP yönlendirmesini yapılandırması için ne gerekir?",
+    "options": [
+      "Her ad alanında ingress adlı ConfigMap",
+      "Her ana makine adı için PersistentVolume",
+      "Seçilen tüm Pod'ları yeniden başlatan Job",
+      "Kurallarını uygulayan bir Ingress denetleyicisi"
+    ],
+    "answer": "Kurallarını uygulayan bir Ingress denetleyicisi"
+  }
+]

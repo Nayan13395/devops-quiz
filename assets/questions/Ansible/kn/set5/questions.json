@@ -1,0 +1,302 @@
+[
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "ಕಾರ್ಯ ಮಟ್ಟದಲ್ಲಿ ಬೇರೊಂದು ಸೆಟ್ಟಿಂಗ್ ಇಲ್ಲದಿದ್ದರೆ ಚೆಕ್ ಮೋಡ್‌ನಲ್ಲಿ ಅದಕ್ಕೆ ಬೆಂಬಲವಿಲ್ಲದ ಮಾಡ್ಯೂಲ್‌ಗೆ ಏನಾಗುತ್ತದೆ?",
+    "options": [
+      "ಮಾಡ್ಯೂಲ್ ಯಾವಾಗಲೂ ತನ್ನ ಸಾಮಾನ್ಯ ಬದಲಾವಣೆಗಳನ್ನು ಮಾಡುತ್ತದೆ",
+      "ಮಾಡ್ಯೂಲ್ ಸ್ವಯಂಚಾಲಿತವಾಗಿ localhostನಲ್ಲಿ ಚಲಿಸುತ್ತದೆ",
+      "ಚೆಕ್ ಮೋಡ್‌ಗೆ ಬೆಂಬಲಿಸುವವರೆಗೆ ಮಾಡ್ಯೂಲ್ ಅನ್ನು ಮತ್ತೆ ಪ್ರಯತ್ನಿಸಲಾಗುತ್ತದೆ",
+      "ಬದಲಾವಣೆ ಮಾಡುವ ಬದಲು ಮಾಡ್ಯೂಲ್ ಅನ್ನು ಬಿಟ್ಟುಬಿಡಲಾಗುತ್ತದೆ"
+    ],
+    "answer": "ಬದಲಾವಣೆ ಮಾಡುವ ಬದಲು ಮಾಡ್ಯೂಲ್ ಅನ್ನು ಬಿಟ್ಟುಬಿಡಲಾಗುತ್ತದೆ"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "ಪ್ಲೇಬುಕ್ ಅನ್ನು --check ಜೊತೆಗೆ ಚಲಾಯಿಸಿದರೂ ನಿಜವಾದ ಬದಲಾವಣೆಗಳಿಗೆ ಬಿಡುವ ಕಾರ್ಯ ಸೆಟ್ಟಿಂಗ್ ಯಾವುದು?",
+    "options": [
+      "changed_when: false",
+      "ignore_errors: true",
+      "check_mode: false",
+      "diff: false"
+    ],
+    "answer": "check_mode: false"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "ಈಗಾಗಲೇ ಸೂಚನೆ ಪಡೆದ ಹ್ಯಾಂಡ್ಲರ್‌ಗಳನ್ನು ತಕ್ಷಣ ಚಲಾಯಿಸುವ Ansible meta ಕ್ರಿಯೆ ಯಾವುದು?",
+    "options": [
+      "reset_connection",
+      "flush_handlers",
+      "clear_facts",
+      "end_play"
+    ],
+    "answer": "flush_handlers"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "ಬದಲಾವಣೆ ಮಾಡಿದ ಎರಡು ಕಾರ್ಯಗಳು ಒಂದೇ ಹ್ಯಾಂಡ್ಲರ್‌ನ ಬಾಕಿ ಕಾರ್ಯನಿರ್ವಹಣೆಗೆ ಮೊದಲು ಅದಕ್ಕೆ ಸೂಚಿಸಿದರೆ, ಆ ಸಮಯದಲ್ಲಿ ಹ್ಯಾಂಡ್ಲರ್ ಸಾಮಾನ್ಯವಾಗಿ ಎಷ್ಟು ಬಾರಿ ಚಲಿಸುತ್ತದೆ?",
+    "options": [
+      "ಒಮ್ಮೆ",
+      "ಎರಡು ಬಾರಿ",
+      "ಪ್ರತಿ ಇನ್ವೆಂಟರಿ ಗುಂಪಿಗೆ ಒಮ್ಮೆ",
+      "ಸೂಚನೆಗಳು ಸಂಘರ್ಷಿಸುವುದರಿಂದ ಒಂದೂ ಬಾರಿ ಅಲ್ಲ"
+    ],
+    "answer": "ಒಮ್ಮೆ"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "ಒಂದೇ ಸಮಯದಲ್ಲಿ ಬಾಕಿ ಕಾರ್ಯನಿರ್ವಹಣೆಗೆ ಬರುವ ಸೂಚನೆ ಪಡೆದ ಹ್ಯಾಂಡ್ಲರ್‌ಗಳ ಕ್ರಮವನ್ನು ಯಾವುದು ನಿರ್ಧರಿಸುತ್ತದೆ?",
+    "options": [
+      "ಅವುಗಳ ಹೆಸರುಗಳ ಅಕ್ಷರಕ್ರಮ",
+      "notify ಪಟ್ಟಿಯಲ್ಲಿನ ಹೆಸರುಗಳ ಕ್ರಮ",
+      "ನಿರ್ವಹಿತ ಹೋಸ್ಟ್‌ಗಳು ಸಂಪರ್ಕಗೊಂಡ ಕ್ರಮ",
+      "handlers ವಿಭಾಗದಲ್ಲಿ ಅವುಗಳ ವ್ಯಾಖ್ಯಾನದ ಕ್ರಮ"
+    ],
+    "answer": "handlers ವಿಭಾಗದಲ್ಲಿ ಅವುಗಳ ವ್ಯಾಖ್ಯಾನದ ಕ್ರಮ"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "ಬ್ಲಾಕ್‌ನ rescue ಕಾರ್ಯಗಳನ್ನು ಸಾಮಾನ್ಯವಾಗಿ ಯಾವ ವೈಫಲ್ಯ ಪ್ರಾರಂಭಿಸುತ್ತದೆ?",
+    "options": [
+      "ಪ್ಲೇಬುಕ್‌ನಲ್ಲಿ ಅಮಾನ್ಯ ಕಾರ್ಯ ವ್ಯಾಖ್ಯಾನ ಇರುವುದು",
+      "YAML ದಸ್ತಾವೇಜನ್ನು ಪಾರ್ಸ್ ಮಾಡಲು ಆಗದಿರುವುದು",
+      "ಬ್ಲಾಕ್‌ನೊಳಗಿನ ಕಾರ್ಯ ವಿಫಲ ಫಲಿತಾಂಶ ನೀಡುವುದು",
+      "ಕಾರ್ಯ ಚಲಿಸುವ ಮೊದಲೇ ಹೋಸ್ಟ್ ಸಂಪರ್ಕಕ್ಕೆ ಸಿಗದಿರುವುದು"
+    ],
+    "answer": "ಬ್ಲಾಕ್‌ನೊಳಗಿನ ಕಾರ್ಯ ವಿಫಲ ಫಲಿತಾಂಶ ನೀಡುವುದು"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "ಸಾಮಾನ್ಯ ಕಾರ್ಯದಲ್ಲಿ ignore_errors ಯಾವ ದೋಷವನ್ನು ಅಡಗಿಸುವುದಿಲ್ಲ?",
+    "options": [
+      "failed_when ಷರತ್ತು true ಆಗುವುದು",
+      "ವ್ಯಾಖ್ಯಾನಿಸದ ಚರದ ದೋಷ",
+      "ಆಜ್ಞೆ ವರದಿ ಮಾಡಿದ ಶೂನ್ಯವಲ್ಲದ ನಿರ್ಗಮನ ಸ್ಥಿತಿ",
+      "ಸ್ಪಷ್ಟವಾಗಿ ವಿಫಲ ಎಂದು ಗುರುತಿಸಿದ ಮಾಡ್ಯೂಲ್ ಫಲಿತಾಂಶ"
+    ],
+    "answer": "ವ್ಯಾಖ್ಯಾನಿಸದ ಚರದ ದೋಷ"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "ನಿಭಾಯಿಸದ ಕಾರ್ಯ ವೈಫಲ್ಯ ಬಂದಾಗ ಪ್ರಸ್ತುತ ಬ್ಯಾಚ್ ಆ ಕಾರ್ಯ ಮುಗಿಸಿದ ನಂತರ ಎಲ್ಲ ಹೋಸ್ಟ್‌ಗಳಲ್ಲಿ ಪ್ಲೇ ನಿಲ್ಲಿಸುವ ಕೀವರ್ಡ್ ಯಾವುದು?",
+    "options": [
+      "any_errors_fatal",
+      "ignore_unreachable",
+      "max_fail_percentage: 100",
+      "force_handlers"
+    ],
+    "answer": "any_errors_fatal"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "ಸಂಪರ್ಕಿಸಬಹುದಾದ ಹೋಸ್ಟ್‌ನಲ್ಲಿ ಮುಂದಿನ ಕಾರ್ಯ ವಿಫಲವಾದರೆ force_handlers ಪರಿಣಾಮ ಏನು?",
+    "options": [
+      "ವ್ಯಾಖ್ಯಾನಿಸಿದ ಪ್ರತಿ ಹ್ಯಾಂಡ್ಲರ್ ಸೂಚನೆ ಇಲ್ಲದಿದ್ದರೂ ಚಲಿಸುತ್ತದೆ",
+      "ಎಲ್ಲ ವಿಫಲ ಕಾರ್ಯಗಳನ್ನು ಸ್ವಯಂಚಾಲಿತವಾಗಿ ಮತ್ತೆ ಪ್ರಯತ್ನಿಸಲಾಗುತ್ತದೆ",
+      "ಎಲ್ಲ ಸಾಮಾನ್ಯ ಕಾರ್ಯಗಳಿಗಿಂತ ಮೊದಲು ಹ್ಯಾಂಡ್ಲರ್‌ಗಳು ಚಲಿಸುತ್ತವೆ",
+      "ಮೊದಲೇ ಸೂಚನೆ ಪಡೆದ ಹ್ಯಾಂಡ್ಲರ್‌ಗಳು ಆ ಹೋಸ್ಟ್‌ನಲ್ಲಿ ಇನ್ನೂ ಚಲಿಸಬಹುದು"
+    ],
+    "answer": "ಮೊದಲೇ ಸೂಚನೆ ಪಡೆದ ಹ್ಯಾಂಡ್ಲರ್‌ಗಳು ಆ ಹೋಸ್ಟ್‌ನಲ್ಲಿ ಇನ್ನೂ ಚಲಿಸಬಹುದು"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "ಕಾರ್ಯದ ಗೌಪ್ಯ ಆರ್ಗ್ಯುಮೆಂಟ್‌ಗಳು ಮತ್ತು ಫಲಿತಾಂಶಗಳ ಸಾಮಾನ್ಯ ಲಾಗಿಂಗ್ ತಡೆಯುವ ಸೆಟ್ಟಿಂಗ್ ಯಾವುದು?",
+    "options": [
+      "check_mode: true",
+      "changed_when: false",
+      "no_log: true",
+      "diff: true"
+    ],
+    "answer": "no_log: true"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "--diff ಸಕ್ರಿಯವಿದ್ದರೂ ಫೈಲ್ ವಿಷಯದ ವ್ಯತ್ಯಾಸಗಳನ್ನು ಮರೆಮಾಡುವ ಕಾರ್ಯ ಸೆಟ್ಟಿಂಗ್ ಯಾವುದು?",
+    "options": [
+      "ignore_errors: true",
+      "diff: false",
+      "no_log: false",
+      "check_mode: false"
+    ],
+    "answer": "diff: false"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "ಬೇರೆ ಇನ್ವೆಂಟರಿ ಹೋಸ್ಟ್‌ಗೆ ಸಂಬಂಧಿಸಿದ ಚರಗಳನ್ನು ಒದಗಿಸುವ ಡಿಕ್ಷನರಿ ಯಾವುದು?",
+    "options": [
+      "hostvars",
+      "ansible_facts",
+      "environment",
+      "ansible_loop"
+    ],
+    "answer": "hostvars"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "ಪ್ರಸ್ತುತ ಹೋಸ್ಟ್‌ನ ಇನ್ವೆಂಟರಿ ಹೆಸರನ್ನು ಹೊಂದಿರುವ ವಿಶೇಷ ಚರ ಯಾವುದು?",
+    "options": [
+      "ansible_host",
+      "ansible_user",
+      "ansible_playbook_python",
+      "inventory_hostname"
+    ],
+    "answer": "inventory_hostname"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "ಹೋಸ್ಟ್ ಗುಂಪು ಹಂಚಿಕೊಳ್ಳುವ ಚರಗಳಿಗಾಗಿ ಸಾಮಾನ್ಯವಾಗಿ ಇನ್ವೆಂಟರಿ ಪಕ್ಕದ ಯಾವ ಡೈರೆಕ್ಟರಿ ಬಳಸಲಾಗುತ್ತದೆ?",
+    "options": [
+      "roles",
+      "collections",
+      "group_vars",
+      "host_vars"
+    ],
+    "answer": "group_vars"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "ansible.builtin.file ಲುಕ್‌ಅಪ್ ಪೂರ್ವನಿಯೋಜಿತವಾಗಿ ಫೈಲ್ ಅನ್ನು ಎಲ್ಲಿ ಓದುತ್ತದೆ?",
+    "options": [
+      "become_user ಹೆಸರಿಸಿದ ಹೋಸ್ಟ್‌ನಲ್ಲಿ",
+      "ನಿಯಂತ್ರಣ ನೋಡ್‌ನಲ್ಲಿ",
+      "ಪ್ರತಿ ನಿರ್ವಹಿತ ಹೋಸ್ಟ್‌ನಲ್ಲಿ",
+      "ಪ್ಲೇಯ ಮೊದಲ ಹೋಸ್ಟ್‌ನಲ್ಲಿ"
+    ],
+    "answer": "ನಿಯಂತ್ರಣ ನೋಡ್‌ನಲ್ಲಿ"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "YAML ಸ್ಟ್ರಿಂಗ್ ಅನ್ನು Ansible ದತ್ತಾಂಶ ರಚನೆಯಾಗಿ ಬದಲಿಸುವ ಫಿಲ್ಟರ್ ಯಾವುದು?",
+    "options": [
+      "from_yaml",
+      "to_yaml",
+      "to_json",
+      "dict2items"
+    ],
+    "answer": "from_yaml"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "ಡಿಕ್ಷನರಿಯನ್ನು ಕೀ/ಮೌಲ್ಯ ಡಿಕ್ಷನರಿಗಳ ಪಟ್ಟಿಯಾಗಿ ಬದಲಿಸುವ ಫಿಲ್ಟರ್ ಯಾವುದು?",
+    "options": [
+      "items2dict",
+      "flatten",
+      "zip",
+      "dict2items"
+    ],
+    "answer": "dict2items"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "ಪಟ್ಟಿಯಿಂದ ಮರುಕಳಿಸುವ ಅಂಶಗಳನ್ನು ತೆಗೆದುಹಾಕುವ ಫಿಲ್ಟರ್ ಯಾವುದು?",
+    "options": [
+      "reverse",
+      "flatten",
+      "unique",
+      "sort"
+    ],
+    "answer": "unique"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "ಅಭಿವ್ಯಕ್ತಿಗಳನ್ನು ಪರಿಶೀಲಿಸಿ ನಿಗದಿತ ದೃಢೀಕರಣ ಷರತ್ತುಗಳು ಈಡೇರದಿದ್ದರೆ ವಿಫಲವಾಗುವ ಮಾಡ್ಯೂಲ್ ಯಾವುದು?",
+    "options": [
+      "ansible.builtin.set_fact",
+      "ansible.builtin.assert",
+      "ansible.builtin.debug",
+      "ansible.builtin.pause"
+    ],
+    "answer": "ansible.builtin.assert"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "ರೆಗ್ಯುಲರ್ ಎಕ್ಸ್‌ಪ್ರೆಶನ್ ಬಳಸಿ ಪಠ್ಯ ಫೈಲ್‌ನ ನಿರ್ದಿಷ್ಟ ಸಾಲನ್ನು ನಿರ್ವಹಿಸುವ ಮಾಡ್ಯೂಲ್ ಯಾವುದು?",
+    "options": [
+      "ansible.builtin.lineinfile",
+      "ansible.builtin.blockinfile",
+      "ansible.builtin.copy",
+      "ansible.builtin.slurp"
+    ],
+    "answer": "ansible.builtin.lineinfile"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "URL ವಿನಂತಿ ಮಾಡಿ ನಿರೀಕ್ಷಿತ HTTP ಸ್ಥಿತಿ ಕೋಡ್ ಪರಿಶೀಲಿಸಬಲ್ಲ ಮಾಡ್ಯೂಲ್ ಯಾವುದು?",
+    "options": [
+      "ansible.builtin.get_url",
+      "ansible.builtin.fetch",
+      "ansible.builtin.wait_for",
+      "ansible.builtin.uri"
+    ],
+    "answer": "ansible.builtin.uri"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "TCP ಪೋರ್ಟ್ ಕೋರಿದ ಸ್ಥಿತಿಗೆ ಬರುವವರೆಗೆ ಕಾಯುವ ಮಾಡ್ಯೂಲ್ ಯಾವುದು?",
+    "options": [
+      "ansible.builtin.async_status",
+      "ansible.builtin.ping",
+      "ansible.builtin.wait_for",
+      "ansible.builtin.pause"
+    ],
+    "answer": "ansible.builtin.wait_for"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "ನಿರ್ದಿಷ್ಟ ಪಾತ್ ಈಗಾಗಲೇ ಇದ್ದರೆ ansible.builtin.command ಕಾರ್ಯನಿರ್ವಹಣೆಯನ್ನು ಬಿಟ್ಟುಬಿಡುವ ಪ್ಯಾರಾಮೀಟರ್ ಯಾವುದು?",
+    "options": [
+      "stdin",
+      "creates",
+      "removes",
+      "chdir"
+    ],
+    "answer": "creates"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "ಸಾಂಕೇತಿಕ ಲಿಂಕ್ ರಚಿಸುವ file ಮಾಡ್ಯೂಲ್ ಸೆಟ್ಟಿಂಗ್ ಯಾವುದು?",
+    "options": [
+      "state: link",
+      "state: directory",
+      "state: touch",
+      "state: hard"
+    ],
+    "answer": "state: link"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "ಮುಂದಿನ ಪ್ಲೇಗಳಿಗಾಗಿ ಮೆಮೊರಿಯ ಇನ್ವೆಂಟರಿಗೆ ಹೋಸ್ಟ್ ಸೇರಿಸಬಲ್ಲ ಮಾಡ್ಯೂಲ್ ಯಾವುದು?",
+    "options": [
+      "ansible.builtin.group_by",
+      "ansible.builtin.set_fact",
+      "ansible.builtin.meta",
+      "ansible.builtin.add_host"
+    ],
+    "answer": "ansible.builtin.add_host"
+  }
+]

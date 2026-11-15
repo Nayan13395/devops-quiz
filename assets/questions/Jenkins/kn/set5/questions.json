@@ -1,0 +1,302 @@
+[
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "ಒಂದೇ Pipelineನ ಏಕಕಾಲದ ಚಾಲನೆಗೆ ಬದಲಾಗಿ ಹೊಸ ಚಾಲನೆಯನ್ನು ಸರದಿಯಲ್ಲಿ ಇಡುವ Declarative ಆಯ್ಕೆ ಯಾವುದು?",
+    "options": [
+      "parallelsAlwaysFailFast()",
+      "disableConcurrentBuilds()",
+      "disableResume()",
+      "skipDefaultCheckout()"
+    ],
+    "answer": "disableConcurrentBuilds()"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "ಹಳೆಯ ಬಿಲ್ಡ್ ದಾಖಲೆ ಮತ್ತು ಆರ್ಟಿಫ್ಯಾಕ್ಟ್ ಉಳಿಸುವ ನಿಯಮ ನೀಡುವ Declarative ಆಯ್ಕೆ ಯಾವುದು?",
+    "options": [
+      "buildDiscarder(logRotator(numToKeepStr: '10'))",
+      "timeout(time: 10, unit: 'MINUTES')",
+      "retry(10)",
+      "quietPeriod(10)"
+    ],
+    "answer": "buildDiscarder(logRotator(numToKeepStr: '10'))"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "Jenkins cron ಅಭಿವ್ಯಕ್ತಿಯ H ಚಿಹ್ನೆ ಏನು ಒದಗಿಸುತ್ತದೆ?",
+    "options": [
+      "ಬಳಕೆದಾರರ ಕಂಪ್ಯೂಟರಿನ ಪ್ರಸ್ತುತ ಗಂಟೆ",
+      "ರಜಾದಿನಗಳಲ್ಲಿ ಮಾತ್ರ ಚಲಾಯಿಸುವ ವಿನಂತಿ",
+      "ನೋಡ್ ನಿಷ್ಕ್ರಿಯವಾಗಿದ್ದಾಗ ಮಾತ್ರ ಚಲಾಯಿಸುವ ವಿನಂತಿ",
+      "ನಿಗದಿತ ಕೆಲಸದ ಭಾರ ಹರಡುವ ಕೆಲಸದ ಹೆಸರನ್ನು ಆಧರಿಸಿದ ಸ್ಥಿರ ಹ್ಯಾಶ್"
+    ],
+    "answer": "ನಿಗದಿತ ಕೆಲಸದ ಭಾರ ಹರಡುವ ಕೆಲಸದ ಹೆಸರನ್ನು ಆಧರಿಸಿದ ಸ್ಥಿರ ಹ್ಯಾಶ್"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "Jenkinsನ ಐದು-ಕ್ಷೇತ್ರದ cron ವಾಕ್ಯರಚನೆಯಲ್ಲಿ ಐದನೇ ಕ್ಷೇತ್ರ ಏನು ಸೂಚಿಸುತ್ತದೆ?",
+    "options": [
+      "ದಿನದ ಗಂಟೆ",
+      "ತಿಂಗಳ ದಿನ",
+      "ವಾರದ ದಿನ",
+      "ಗಂಟೆಯ ನಿಮಿಷ"
+    ],
+    "answer": "ವಾರದ ದಿನ"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "ಹಿಂದಿನ ಬಿಲ್ಡ್ ವಿಫಲ ಅಥವಾ ಅಸ್ಥಿರವಾದ ನಂತರ ಬಿಲ್ಡ್ ಯಶಸ್ವಿಯಾದಾಗ ಚಲಿಸುವ post ಷರತ್ತು ಯಾವುದು?",
+    "options": [
+      "unsuccessful",
+      "fixed",
+      "changed",
+      "regression"
+    ],
+    "answer": "fixed"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "ಬೇರೆ post ಷರತ್ತುಗಳ ಮೌಲ್ಯಮಾಪನದ ನಂತರ ಚಲಿಸುವ post ಷರತ್ತು ಯಾವುದು?",
+    "options": [
+      "cleanup",
+      "always",
+      "changed",
+      "success"
+    ],
+    "answer": "cleanup"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "ಹಂತದ ಏಜೆಂಟ್ ಹಂಚುವ ಮೊದಲು ಅದರ ಷರತ್ತು ಮೌಲ್ಯಮಾಪನ ಮಾಡುವ when ಆಯ್ಕೆ ಯಾವುದು?",
+    "options": [
+      "beforeInput false",
+      "beforeOptions false",
+      "branch 'main'",
+      "beforeAgent true"
+    ],
+    "answer": "beforeAgent true"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "Multibranch Pipelineನಲ್ಲಿ ಹೆಸರಿರುವ ಶಾಖೆಯನ್ನು ಗುರಿಯಾಗಿಸುವ when ಷರತ್ತು ಯಾವುದು?",
+    "options": [
+      "buildingTag()",
+      "changeRequest()",
+      "branch 'main'",
+      "tag 'main'"
+    ],
+    "answer": "branch 'main'"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "ಆಪರೇಟಿಂಗ್ ಸಿಸ್ಟಮ್ ಮತ್ತು ಬ್ರೌಸರ್‌ನಂತಹ ಅಕ್ಷಗಳ ಮೌಲ್ಯಗಳ ಸಂಯೋಜನೆಗಳನ್ನು ಚಲಾಯಿಸುವ Declarative ರಚನೆ ಯಾವುದು?",
+    "options": [
+      "environment",
+      "matrix",
+      "parallel",
+      "steps"
+    ],
+    "answer": "matrix"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "Declarative ಮ್ಯಾಟ್ರಿಕ್ಸ್‌ನಿಂದ ಬೇಡದ ಸಂಯೋಜನೆ ತೆಗೆಯುವ ವಿಭಾಗ ಯಾವುದು?",
+    "options": [
+      "excludes",
+      "axes",
+      "stages",
+      "tools"
+    ],
+    "answer": "excludes"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "ಸಮಾನಾಂತರ ಶಾಖೆಗಳಿರುವ ಹಂತದಲ್ಲಿ ಒಂದು ವಿಫಲವಾದಾಗ ಇತರ ಶಾಖೆ ನಿಲ್ಲಿಸುವ ಸೆಟ್ಟಿಂಗ್ ಯಾವುದು?",
+    "options": [
+      "beforeAgent true",
+      "reuseNode true",
+      "alwaysPull true",
+      "failFast true"
+    ],
+    "answer": "failFast true"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "ಬಿಲ್ಡ್ ಅಸ್ಥಿರವಾದಾಗ ಮುಂದಿನ ಹಂತಗಳನ್ನು ಬಿಟ್ಟುಬಿಡುವ Declarative ಆಯ್ಕೆ ಯಾವುದು?",
+    "options": [
+      "disableResume()",
+      "preserveStashes()",
+      "skipStagesAfterUnstable()",
+      "skipDefaultCheckout()"
+    ],
+    "answer": "skipStagesAfterUnstable()"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "ವೈಫಲ್ಯ ದಾಖಲಿಸಿ ತನ್ನ ಬ್ಲಾಕ್ ನಂತರದ ಕಾರ್ಯನಿರ್ವಹಣೆ ಮುಂದುವರಿಸಲು ಬಿಡುವ Pipeline ಹಂತ ಯಾವುದು?",
+    "options": [
+      "input",
+      "catchError",
+      "error",
+      "timeout"
+    ],
+    "answer": "catchError"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "ಪ್ರಕ್ರಿಯೆ ಮುಗಿದ ನಂತರ sh(script: 'check.sh', returnStatus: true) ಏನು ನೀಡುತ್ತದೆ?",
+    "options": [
+      "ಪ್ರಕ್ರಿಯೆಯ ಸಂಖ್ಯಾತ್ಮಕ ನಿರ್ಗಮನ ಕೋಡ್",
+      "ಸಂಪೂರ್ಣ ಪ್ರಮಾಣಿತ ಔಟ್‌ಪುಟ್ ಪಠ್ಯ",
+      "ಶೆಲ್‌ನ ಪ್ರಕ್ರಿಯೆ ID",
+      "Jenkins ದೃಢೀಕರಣ ವಿವರಗಳ ಆಬ್ಜೆಕ್ಟ್"
+    ],
+    "answer": "ಪ್ರಕ್ರಿಯೆಯ ಸಂಖ್ಯಾತ್ಮಕ ನಿರ್ಗಮನ ಕೋಡ್"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "ಯಶಸ್ವಿಯಾದಾಗ sh(script: 'echo ready', returnStdout: true) ಏನು ನೀಡುತ್ತದೆ?",
+    "options": [
+      "ಸಂಖ್ಯಾತ್ಮಕ ಬಿಲ್ಡ್ ಸಂಖ್ಯೆ",
+      "ಮ್ಯಾಪ್ ಆಗಿ ಶೆಲ್ ಪರಿಸರ",
+      "ಏಜೆಂಟ್‌ನ ಲೇಬಲ್ ಪಟ್ಟಿ",
+      "ಪಡೆದ ಪ್ರಮಾಣಿತ ಔಟ್‌ಪುಟ್ ಸ್ಟ್ರಿಂಗ್"
+    ],
+    "answer": "ಪಡೆದ ಪ್ರಮಾಣಿತ ಔಟ್‌ಪುಟ್ ಸ್ಟ್ರಿಂಗ್"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "ಪ್ರಸ್ತುತ ವರ್ಕ್‌ಸ್ಪೇಸ್ ಡೈರೆಕ್ಟರಿಯ ವಿಷಯವನ್ನು ಉಪಹಂತಗಳೊಂದಿಗೆ ಅಳಿಸುವ Pipeline ಹಂತ ಯಾವುದು?",
+    "options": [
+      "pwd",
+      "readFile",
+      "deleteDir",
+      "fileExists"
+    ],
+    "answer": "deleteDir"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "ಪ್ರಸ್ತುತ ವರ್ಕ್‌ಸ್ಪೇಸ್‌ನಲ್ಲಿ ಪಾತ್ ಇದೆಯೇ ಎಂದು ಪರಿಶೀಲಿಸುವ Pipeline ಹಂತ ಯಾವುದು?",
+    "options": [
+      "libraryResource",
+      "fileExists",
+      "readFile",
+      "writeFile"
+    ],
+    "answer": "fileExists"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "ಮತ್ತೊಂದು Jenkins ಕೆಲಸ ಪ್ರಾರಂಭಿಸಿ ಬಿಲ್ಡ್ ಪ್ಯಾರಾಮೀಟರ್ ಕೊಡಬಲ್ಲ Pipeline ಹಂತ ಯಾವುದು?",
+    "options": [
+      "build",
+      "stage",
+      "node",
+      "checkout"
+    ],
+    "answer": "build"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "ಹಂತಗಳನ್ನು ಮರುಪ್ರಾರಂಭಿಸಲು ಮುಗಿದ ಬಿಲ್ಡ್‌ಗಳ ಸ್ಟ್ಯಾಶ್‌ಗಳನ್ನು ಉಳಿಸುವ Declarative ಆಯ್ಕೆ ಯಾವುದು?",
+    "options": [
+      "disableResume()",
+      "skipDefaultCheckout()",
+      "quietPeriod(5)",
+      "preserveStashes()"
+    ],
+    "answer": "preserveStashes()"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "vars/deploy.groovy ವ್ಯಾಖ್ಯಾನಿಸಿದ ಜಾಗತಿಕ deploy ಚರಕ್ಕೆ ಸಹಾಯ ಪಠ್ಯ ನೀಡುವ Shared Library ಫೈಲ್ ಯಾವುದು?",
+    "options": [
+      "resources/deploy.txt",
+      "vars/main.groovy",
+      "vars/deploy.txt",
+      "src/deploy.groovy"
+    ],
+    "answer": "vars/deploy.txt"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "Jenkins Pipelineನಲ್ಲಿ @NonCPS ಅನೋಟೇಶನ್ ಇರುವ ಮೆಥಡ್‌ನ ಪ್ರಮುಖ ಮಿತಿ ಏನು?",
+    "options": [
+      "ಅದು Windows ಏಜೆಂಟ್‌ನಲ್ಲಿ ಚಲಿಸಬೇಕು",
+      "ಅದು CPS-ಪರಿವರ್ತಿತ Pipeline ಹಂತಗಳನ್ನು ಕರೆಯಬಾರದು",
+      "ಅದು stage ನಿರ್ದೇಶನ ಹೊಂದಿರಬೇಕು",
+      "ಅದು ಯಾವಾಗಲೂ ಸ್ಟ್ರಿಂಗ್ ನೀಡಬೇಕು"
+    ],
+    "answer": "ಅದು CPS-ಪರಿವರ್ತಿತ Pipeline ಹಂತಗಳನ್ನು ಕರೆಯಬಾರದು"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "ಅನುಮೋದಿಸದ ಸ್ಯಾಂಡ್‌ಬಾಕ್ಸ್ Groovy ಕೋಡ್ ಕೇಳಿದ ಸಿಗ್ನೇಚರ್‌ಗಳನ್ನು ಪರಿಶೀಲಿಸುವ Jenkins ಸೌಲಭ್ಯ ಯಾವುದು?",
+    "options": [
+      "ಪ್ರಕ್ರಿಯೆಯೊಳಗಿನ ಸ್ಕ್ರಿಪ್ಟ್ ಅನುಮೋದನೆ",
+      "Credentials Store",
+      "Build Queue",
+      "SCM ಪೋಲಿಂಗ್ ಲಾಗ್"
+    ],
+    "answer": "ಪ್ರಕ್ರಿಯೆಯೊಳಗಿನ ಸ್ಕ್ರಿಪ್ಟ್ ಅನುಮೋದನೆ"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "ಬಂಧಿಸಿದ ರಹಸ್ಯ ಚರವನ್ನು ಶೆಲ್ ವಿಸ್ತರಿಸಲು ಬಿಡುವ ಸ್ಕ್ರಿಪ್ಟ್‌ಗೆ ಯಾವ Groovy ಉದ್ಧರಣ ಶೈಲಿ ಶಿಫಾರಸು ಮಾಡಲಾಗಿದೆ?",
+    "options": [
+      "ರಹಸ್ಯ ಸೇರಿಸಿದ ಡಬಲ್-ಕೋಟೆಡ್ ಮೌಲ್ಯ ಪ್ರತಿಸ್ಥಾಪನೆಯ Groovy ಸ್ಟ್ರಿಂಗ್",
+      "ರಹಸ್ಯ ಸೇರಿಸಿದ ಟ್ರಿಪಲ್-ಡಬಲ್-ಕೋಟೆಡ್ ಮೌಲ್ಯ ಪ್ರತಿಸ್ಥಾಪನೆಯ Groovy ಸ್ಟ್ರಿಂಗ್",
+      "ಸರಳ ಪಠ್ಯದ ರಹಸ್ಯ ಜೋಡಿಸಿ ರಚಿಸಿದ Groovy ಸ್ಟ್ರಿಂಗ್",
+      "ಸಿಂಗಲ್-ಕೋಟೆಡ್ Groovy ಸ್ಟ್ರಿಂಗ್"
+    ],
+    "answer": "ಸಿಂಗಲ್-ಕೋಟೆಡ್ Groovy ಸ್ಟ್ರಿಂಗ್"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "ಸಂಬಂಧಿತ ವೆಬ್ ವಿನಂತಿಗಳಿಗೆ Jenkins CSRF crumbನ ಉದ್ದೇಶವೇನು?",
+    "options": [
+      "ಅಪ್‌ಲೋಡ್ ಮೊದಲು ಬಿಲ್ಡ್ ಆರ್ಟಿಫ್ಯಾಕ್ಟ್ ಗೂಢಲಿಪೀಕರಿಸುವುದು",
+      "ಬಿಲ್ಡ್ ಚಲಾಯಿಸುವ ಏಜೆಂಟ್ ಆರಿಸುವುದು",
+      "ಸ್ಥಿತಿ ಬದಲಿಸುವ ವಿನಂತಿ ಸ್ಥಾಪಿತ ಬಳಕೆದಾರ ಅಧಿವೇಶನದ್ದೇ ಎಂದು ಪರಿಶೀಲಿಸಲು ನೆರವಾಗುವುದು",
+      "ಎಲ್ಲ ಕೆಲಸಗಳ ಅನುಮತಿ ಪರಿಶೀಲನೆಗಳನ್ನು ಬದಲಿಸುವುದು"
+    ],
+    "answer": "ಸ್ಥಿತಿ ಬದಲಿಸುವ ವಿನಂತಿ ಸ್ಥಾಪಿತ ಬಳಕೆದಾರ ಅಧಿವೇಶನದ್ದೇ ಎಂದು ಪರಿಶೀಲಿಸಲು ನೆರವಾಗುವುದು"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "ವಿಭಿನ್ನ ಕೆಲಸಗಳ ನಡುವೆ ಹಂಚಿದ ಪರೀಕ್ಷಾ ಸಾಧನವನ್ನು ಏಕಕಾಲದಲ್ಲಿ ಒಂದೇ ಕೆಲಸ ಬಳಸುವಂತೆ ಮಾಡಲು Pipeline ಏನು ಬಳಸಬೇಕು?",
+    "options": [
+      "skipDefaultCheckout ಆಯ್ಕೆ",
+      "Lockable Resources ಪ್ಲಗಿನ್‌ನ lock ಹಂತ",
+      "timestamps ಆಯ್ಕೆ",
+      "buildDiscarder ಆಯ್ಕೆ"
+    ],
+    "answer": "Lockable Resources ಪ್ಲಗಿನ್‌ನ lock ಹಂತ"
+  }
+]

@@ -1,0 +1,302 @@
+[
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "NetworkPolicy が Pod の通信に作用するために必要なものは何か？",
+    "options": [
+      "選択した各 Pod の LoadBalancer Service",
+      "同じ名前空間の PersistentVolumeClaim",
+      "ポリシーごとに別の API サーバー",
+      "NetworkPolicy を実施するネットワーク実装"
+    ],
+    "answer": "NetworkPolicy を実施するネットワーク実装"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "同じ Pod を選ぶ複数の NetworkPolicy の受信許可はどう組み合わされるか？",
+    "options": [
+      "最初のポリシーが後のポリシーをすべて上書きする",
+      "各ポリシーがそれぞれ全パケットを許可する必要がある",
+      "許可される通信は各受信許可の和集合",
+      "最後のポリシーが前のポリシーをすべて上書きする"
+    ],
+    "answer": "許可される通信は各受信許可の和集合"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "名前空間内の権限を定義する RBAC オブジェクトはどれか？",
+    "options": [
+      "ResourceQuota",
+      "Role",
+      "RoleBinding",
+      "ServiceAccount"
+    ],
+    "answer": "Role"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "一つの名前空間で Role または ClusterRole の権限を与える RBAC オブジェクトはどれか？",
+    "options": [
+      "RoleBinding",
+      "ClusterRoleBinding",
+      "ServiceAccount",
+      "LimitRange"
+    ],
+    "answer": "RoleBinding"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "Pod 内プロセスの Kubernetes API アクセスに通常割り当てる認証主体は何か？",
+    "options": [
+      "StorageClass",
+      "RuntimeClass",
+      "PriorityClass",
+      "ServiceAccount"
+    ],
+    "answer": "ServiceAccount"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "Secret のデータを base64 化しても、そのオブジェクトを読める人から保護できないのはなぜか？",
+    "options": [
+      "Base64 がデータを DNS で自動公開するため",
+      "Base64 には Pod に保存した秘密鍵が必要なため",
+      "Base64 は可逆な符号化であり暗号化ではないため",
+      "Base64 が Kubernetes によるデータ保存を妨げるため"
+    ],
+    "answer": "Base64 は可逆な符号化であり暗号化ではないため"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "Kubernetes が Pod に API 認証情報を自動マウントしないようにするフィールドはどれか？",
+    "options": [
+      "shareProcessNamespace: false",
+      "automountServiceAccountToken: false",
+      "hostNetwork: false",
+      "enableServiceLinks: false"
+    ],
+    "answer": "automountServiceAccountToken: false"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "名前空間全体のリソース消費を制限するオブジェクトはどれか？",
+    "options": [
+      "ResourceQuota",
+      "LimitRange",
+      "PriorityClass",
+      "PodDisruptionBudget"
+    ],
+    "answer": "ResourceQuota"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "名前空間内コンテナの標準のリソース要求・上限を設定できるオブジェクトはどれか？",
+    "options": [
+      "ResourceQuota",
+      "HorizontalPodAutoscaler",
+      "RuntimeClass",
+      "LimitRange"
+    ],
+    "answer": "LimitRange"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "Kubernetes オブジェクトの finalizer は削除要求後に何をするか？",
+    "options": [
+      "依存する全オブジェクトを直ちに削除する",
+      "オブジェクトを変更不能な Secret に変える",
+      "必要な後処理が finalizer を外すまで削除待ちを維持する",
+      "以後の全更新を禁止する"
+    ],
+    "answer": "必要な後処理が finalizer を外すまで削除待ちを維持する"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "ガベージコレクションのため依存オブジェクトを所有者に結び付けるメタデータはどれか？",
+    "options": [
+      "managedFields",
+      "ownerReferences",
+      "annotations",
+      "labels"
+    ],
+    "answer": "ownerReferences"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "CustomResourceDefinition がクラスターに追加するものは何か？",
+    "options": [
+      "Kubernetes API で提供する新しいカスタムリソース型",
+      "既存型のために動く調整コントローラー",
+      "全サービスアカウントへの RBAC 権限",
+      "全組み込みリソース型のインスタンス"
+    ],
+    "answer": "Kubernetes API で提供する新しいカスタムリソース型"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "カスタムリソース定義だけの場合と Kubernetes Operator の違いは何か？",
+    "options": [
+      "Operator はスキーマ定義の保存しかできない",
+      "Operator は API サーバーを不要にする",
+      "Operator は kubectl の出力形式だけを変える",
+      "Operator は対象アプリを管理する調整ロジックも実行する"
+    ],
+    "answer": "Operator は対象アプリを管理する調整ロジックも実行する"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "認証・認可の後、保存の前に API 要求を拒否または変更できる仕組みはどれか？",
+    "options": [
+      "コンテナイメージの取得",
+      "Service エンドポイントのルーティング",
+      "アドミッション制御",
+      "Pod のスケジューリング"
+    ],
+    "answer": "アドミッション制御"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "必須のノードアフィニティを満たす適格ノードがないと Pod はどうなるか？",
+    "options": [
+      "API サーバーが全ノードに配置する",
+      "適切なノードが現れるか制約が変わるまで未配置のまま",
+      "スケジューラーは一度試すと規則を無視する",
+      "自動的に DaemonSet に変わる"
+    ],
+    "answer": "適切なノードが現れるか制約が変わるまで未配置のまま"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "preferredDuringSchedulingIgnoredDuringExecution のノードアフィニティは何を表すか？",
+    "options": [
+      "他の条件を満たす不一致ノードは排除しない配置の希望",
+      "不一致ノードへの配置を禁止する必須条件",
+      "ノードラベルが変わったら Pod を退去させる指示",
+      "スケジューラーを完全に迂回する要求"
+    ],
+    "answer": "他の条件を満たす不一致ノードは排除しない配置の希望"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "実行中 Pod のアフィニティ規則にノードラベルが合わなくなったとき、IgnoredDuringExecution は何を意味するか？",
+    "options": [
+      "Pod を直ちに削除する",
+      "Pod のコンテナを自動再起動する",
+      "ノードラベルを自動で元に戻す",
+      "その規則だけでは実行中 Pod を退去させない"
+    ],
+    "answer": "その規則だけでは実行中 Pod を退去させない"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "Pod が spec.nodeName を明示するとどうなるか？",
+    "options": [
+      "その名前のノードを作る",
+      "現在実行中のノードの名前を変える",
+      "スケジューラーを迂回し、その名前のノードに割り当てる",
+      "一致する全ノードラベルの順位付けを求める"
+    ],
+    "answer": "スケジューラーを迂回し、その名前のノードに割り当てる"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "トポロジー分散制約の目的は何か？",
+    "options": [
+      "コントロールプレーン間の通信を暗号化する",
+      "一致する Pod のトポロジードメイン間の分散を制御する",
+      "永続ボリューム間でコンテナのファイルをコピーする",
+      "各名前空間に一つのパブリック IP を割り当てる"
+    ],
+    "answer": "一致する Pod のトポロジードメイン間の分散を制御する"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "taint を許容しない実行中 Pod を退去させられる taint の効果はどれか？",
+    "options": [
+      "NoExecute",
+      "NoSchedule",
+      "PreferNoSchedule",
+      "None"
+    ],
+    "answer": "NoExecute"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "Linux コンテナを非 root で実行するよう要求する securityContext 設定はどれか？",
+    "options": [
+      "readOnlyRootFilesystem: true",
+      "privileged: false",
+      "allowPrivilegeEscalation: false",
+      "runAsNonRoot: true"
+    ],
+    "answer": "runAsNonRoot: true"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "Linux プロセスが親より高い権限を得るのを防ぐ securityContext 設定はどれか？",
+    "options": [
+      "readOnlyRootFilesystem: true",
+      "privileged: false",
+      "allowPrivilegeEscalation: false",
+      "runAsNonRoot: true"
+    ],
+    "answer": "allowPrivilegeEscalation: false"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "アプリコンテナを変えず既存 Pod に追加して調査できるコンテナはどれか？",
+    "options": [
+      "再起動可能な init コンテナ",
+      "一時コンテナ",
+      "通常の init コンテナ",
+      "通常のアプリコンテナ"
+    ],
+    "answer": "一時コンテナ"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "Service のネットワーク端点を拡張可能なグループで追跡するリソースはどれか？",
+    "options": [
+      "EndpointSlice",
+      "IngressClass",
+      "NetworkPolicy",
+      "RuntimeClass"
+    ],
+    "answer": "EndpointSlice"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "Ingress リソースが実際に HTTP ルーティングを設定するのに必要なものは何か？",
+    "options": [
+      "各名前空間の ingress という ConfigMap",
+      "ホスト名ごとの PersistentVolume",
+      "選択した全 Pod を再起動する Job",
+      "その規則を実装する Ingress コントローラー"
+    ],
+    "answer": "その規則を実装する Ingress コントローラー"
+  }
+]

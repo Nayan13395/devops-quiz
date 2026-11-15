@@ -1,0 +1,302 @@
+[
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "कुस डिक्लेरेटिव ब्लॉक कन्नै रिसोर्स पते दा बदलाव दर्ज कीता जंदा ऐ, तां जे Terraform मौजूदा ऑब्जेक्ट गी बचाई सकै?",
+    "options": [
+      "removed",
+      "check",
+      "moved",
+      "import"
+    ],
+    "answer": "moved"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "moved ब्लॉक च कुस आर्गुमेंट कन्नै नमां रिसोर्स पता दस्सेआ जंदा ऐ?",
+    "options": [
+      "provider",
+      "to",
+      "from",
+      "id"
+    ],
+    "answer": "to"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "कुस ब्लॉक कन्नै apply ऑपरेशन दौरान इंपोर्ट कीते जाने आले मौजूदा इन्फ्रास्ट्रक्चर ऑब्जेक्ट दी घोशणा कीती जंदी ऐ?",
+    "options": [
+      "import",
+      "moved",
+      "output",
+      "check"
+    ],
+    "answer": "import"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "removed-ब्लॉक दी कुस सेटिंग कन्नै रिसोर्स गी भुल्ली जंदा ऐ, पर उसदा असली इन्फ्रास्ट्रक्चर ऑब्जेक्ट नष्ट नेईं होंदा?",
+    "options": [
+      "lifecycle { destroy = true }",
+      "lifecycle { create_before_destroy = true }",
+      "lifecycle { prevent_destroy = false }",
+      "lifecycle { destroy = false }"
+    ],
+    "answer": "lifecycle { destroy = false }"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "जदूं कुसै आम इनपुट वेरिएबल गी sensitive चिह्नत कीता जंदा ऐ, तां लोकल स्टेट फाइल च उसदे मान दा केह् होंदा ऐ?",
+    "options": [
+      "ओह् हमेशा स्टेट थमां बाह्र रौंहदा ऐ",
+      "सैह्जने थमां पैह्लें उसदी थाहर उसदा वेरिएबल नांऽ रखी दित्ता जंदा ऐ",
+      "आम CLI आउटपुट च छिपाई दित्ता जंदा ऐ, फ्ही बी ओह् सादे टेक्स्ट च सैह्जेआ जाई सकदा ऐ",
+      "sensitive फ्लैग कन्नै ओह् अपने-आप इन्क्रिप्ट होई जंदा ऐ"
+    ],
+    "answer": "आम CLI आउटपुट च छिपाई दित्ता जंदा ऐ, फ्ही बी ओह् सादे टेक्स्ट च सैह्जेआ जाई सकदा ऐ"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "कुस output कमांड फॉर्मैट कन्नै संवेदनशील आउटपुट मान मशीन-पढ़ने जोग रूप च उजागर होई सकदे न?",
+    "options": [
+      "terraform providers schema -json",
+      "terraform output -json",
+      "terraform output -help",
+      "terraform output -no-color"
+    ],
+    "answer": "terraform output -json"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "कुस फंक्शन कन्नै Terraform मान JSON स्ट्रिंग च बदलेआ जंदा ऐ?",
+    "options": [
+      "jsonencode",
+      "jsondecode",
+      "yamldecode",
+      "file"
+    ],
+    "answer": "jsonencode"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "कुस फंक्शन कन्नै JSON स्ट्रिंग गी Terraform मान च पार्स कीता जंदा ऐ?",
+    "options": [
+      "jsonencode",
+      "yamlencode",
+      "templatefile",
+      "jsondecode"
+    ],
+    "answer": "jsondecode"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "कुस फंक्शन कन्नै दित्ते गेदे वेरिएबलें दे map दा इस्तेमाल करियै टेम्पलेट फाइल रेंडर कीती जंदी ऐ?",
+    "options": [
+      "fileset",
+      "filebase64",
+      "templatefile",
+      "file"
+    ],
+    "answer": "templatefile"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "कुस फंक्शन कन्नै ओह् पैहला आर्गुमेंट मिलदा ऐ जेह्ड़ा बिना डायनैमिक एरर दे इवैल्युएट होंदा ऐ?",
+    "options": [
+      "lookup",
+      "try",
+      "can",
+      "coalesce"
+    ],
+    "answer": "try"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "कुस फंक्शन कन्नै पता लगदा ऐ जे कोई एक्सप्रेशन बिना डायनैमिक एरर दे इवैल्युएट होई सकदा ऐ जां नेईं?",
+    "options": [
+      "can",
+      "try",
+      "contains",
+      "length"
+    ],
+    "answer": "can"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "जेकर merge गी दित्तियां दो maps च इक्को key होऐ, तां कुस दा मान चलदा ऐ?",
+    "options": [
+      "पैहले आर्गुमेंट दा मान",
+      "मान हमेशा इक लिस्ट च मिलाई दित्ते जंदे न",
+      "दुहराई गेदी key कन्नै हमेशा एरर आंदा ऐ",
+      "बाद आले आर्गुमेंट दा मान"
+    ],
+    "answer": "बाद आले आर्गुमेंट दा मान"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "कुस प्रोवाइडर वर्ज़न पाबंदी कन्नै 5.4.x रिलीज़ दी इजाज़त होंदी ऐ, पर 5.5.0 दी नेईं?",
+    "options": [
+      ">= 5.4.0",
+      ">= 5.0, < 6.0",
+      "~> 5.4.0",
+      "~> 5.4"
+    ],
+    "answer": "~> 5.4.0"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "Terraform आमतौर उप्पर null मान दित्ते गेदे रिसोर्स आर्गुमेंट गी केह् समझदा ऐ?",
+    "options": [
+      "पूरे रिसोर्स गी मेटने दी मंग",
+      "छड्डेआ गेदा आर्गुमेंट, जेह्ड़ा उस आर्गुमेंट दे डिफॉल्ट ते जरूरतें दे अधीन होंदा ऐ",
+      "हर प्रोवाइडर च खाली स्ट्रिंग",
+      "हर प्रोवाइडर च संख्यात्मक जीरो"
+    ],
+    "answer": "छड्डेआ गेदा आर्गुमेंट, जेह्ड़ा उस आर्गुमेंट दे डिफॉल्ट ते जरूरतें दे अधीन होंदा ऐ"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "कुस एक्सप्रेशन कन्नै उस मॉड्यूल दा फाइलसिस्टम पाथ मिलदा ऐ जिस च ओह् लिखेआ गेदा ऐ?",
+    "options": [
+      "path.module",
+      "path.root",
+      "path.cwd",
+      "terraform.workspace"
+    ],
+    "answer": "path.module"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "CLI कॉन्फ़िगरेशन गी HCP Terraform कन्नै जोड़ने आस्तै terraform ब्लॉक दी कुस सुविधा दी सलाह दित्ती जंदी ऐ?",
+    "options": [
+      "locals",
+      "moved",
+      "check",
+      "cloud"
+    ],
+    "answer": "cloud"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "terraform_remote_state हवाले दित्ती गेदी स्टेट थमां कुस सिरले-स्तर दे मान सिद्धे उजागर करदा ऐ?",
+    "options": [
+      "सारे प्रोवाइडर क्रेडेंशियल",
+      "सारे चाइल्ड-मॉड्यूल लोकल मान",
+      "रूट-मॉड्यूल आउटपुट",
+      "हर रिसोर्स एट्रिब्यूट सिरले-स्तर दे आउटपुट दे तौर उप्पर"
+    ],
+    "answer": "रूट-मॉड्यूल आउटपुट"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "कुस lifecycle नियम कन्नै तदूं बदलाव दी मंग कीती जंदी ऐ जदूं कोई हवाले दित्ता गेदा मैनेज्ड रिसोर्स बदलदा ऐ?",
+    "options": [
+      "create_before_destroy",
+      "replace_triggered_by",
+      "ignore_changes",
+      "prevent_destroy"
+    ],
+    "answer": "replace_triggered_by"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "कुस बिल्ट-इन मैनेज्ड रिसोर्स कन्नै अलग प्रोवाइडर इंस्टाल कीते बिना आम इनपुट मान गी रिसोर्स लाइफसाइकल मिलदा ऐ?",
+    "options": [
+      "terraform_data",
+      "terraform_remote_state",
+      "local_file",
+      "random_id"
+    ],
+    "answer": "terraform_data"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "आम plan जां apply दौरान check ब्लॉक दा कोई assertion फेल होई जाऐ तां केह् होंदा ऐ?",
+    "options": [
+      "Terraform हमेशा चैक कीते गेदे ऑब्जेक्ट गी नष्ट करी दिंदा ऐ",
+      "Terraform चुपचाप check ब्लॉक हटाई दिंदा ऐ",
+      "Terraform हमेशा कुसै रिसोर्स गी रिफ्रेश करने थमां पैह्लें गै बाह्र निकली जंदा ऐ",
+      "Terraform चेतावनी दिंदा ऐ, ते सिर्फ उस फेलियर करी ऑपरेशन गी रोकदा नेईं"
+    ],
+    "answer": "Terraform चेतावनी दिंदा ऐ, ते सिर्फ उस फेलियर करी ऑपरेशन गी रोकदा नेईं"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "जदूं रिसोर्स lifecycle precondition false इवैल्युएट होंदी ऐ तां केह् होंदा ऐ?",
+    "options": [
+      "Terraform रिसोर्स गी डेटा सोर्स च बदली दिंदा ऐ",
+      "Terraform precondition दी थाहर सिर्फ चेतावनी लाई दिंदा ऐ",
+      "Terraform एरर दस्सदा ऐ ते संबंधत ऑपरेशन गी रोकदा ऐ",
+      "Terraform अगली रन तकर precondition गी अनदिक्खा करदा ऐ"
+    ],
+    "answer": "Terraform एरर दस्सदा ऐ ते संबंधत ऑपरेशन गी रोकदा ऐ"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "कुस कमांड कन्नै Terraform दियां नेटिव टेस्ट फाइलां चलाइयां जंदियां न?",
+    "options": [
+      "terraform console",
+      "terraform test",
+      "terraform validate",
+      "terraform fmt"
+    ],
+    "answer": "terraform test"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "कुस सेटिंग कन्नै Terraform टेस्ट च run ब्लॉक डिफॉल्ट apply दी जगह plan करदा ऐ?",
+    "options": [
+      "command = plan",
+      "command = validate",
+      "command = refresh",
+      "command = console"
+    ],
+    "answer": "command = plan"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "कुस फंक्शन कन्नै डायरेक्टरी दे अंदर glob पैटर्न कन्नै मेल खांदे रिलेटिव पाथें दा संग्रह मिलदा ऐ?",
+    "options": [
+      "file",
+      "dirname",
+      "basename",
+      "fileset"
+    ],
+    "answer": "fileset"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "वक्ख-वक्ख एक्सेस कंट्रोल आली एनवायरनमेंटें गी वक्ख करने आस्तै सिर्फ CLI वर्कस्पेस अनुपयुक्त क्यों होई सकदे न?",
+    "options": [
+      "ओह् वक्ख-वक्ख इनपुट-वेरिएबल मानें दे इस्तेमाल गी रोकदे न",
+      "ओह् हर एनवायरनमेंट गी इक्को जिह्ने रिसोर्स नांऽ इस्तेमाल करने आस्तै मजबूर करदे न",
+      "ओह् इक्को बैकएंड कॉन्फ़िगरेशन ते ऑथेंटिकेशन संदर्भ साझा करदे न",
+      "ओह् हमेशा इक्को स्टेट स्नैपशॉट साझा करदे न"
+    ],
+    "answer": "ओह् इक्को बैकएंड कॉन्फ़िगरेशन ते ऑथेंटिकेशन संदर्भ साझा करदे न"
+  }
+]

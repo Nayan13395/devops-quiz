@@ -1,0 +1,302 @@
+[
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "कुस syntax कन्नै date दा आउटपुट now नांऽ दे वेरिएबल च सैंभेआ जंदा ऐ?",
+    "options": [
+      "now=$(date)",
+      "now=date",
+      "now:=$(date)",
+      "date->now"
+    ],
+    "answer": "now=$(date)"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "कुस special parameter कन्नै स्क्रिप्ट दा नांऽ दस्सेआ जंदा ऐ?",
+    "options": [
+      "$0",
+      "$1",
+      "$#",
+      "$@"
+    ],
+    "answer": "$0"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "कुस special parameter कन्नै सब थमां ताजा बैकग्राउंड कमांड दी process ID expand होंदी ऐ?",
+    "options": [
+      "$!",
+      "$$",
+      "$?",
+      "$#"
+    ],
+    "answer": "$!"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "कुस special parameter कन्नै positional arguments दी गिनतरी दस्सी जंदी ऐ?",
+    "options": [
+      "$#",
+      "$@",
+      "$*",
+      "$$"
+    ],
+    "answer": "$#"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "कुस special parameter कन्नै सारे positional arguments बख-बख शब्दें दे रूप च expand होंदे न?",
+    "options": [
+      "$@",
+      "$*",
+      "$#",
+      "$0"
+    ],
+    "answer": "$@"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "कुस Bash builtin कन्नै पैहला positional parameter हटाई दित्ता जंदा ऐ ते बाकी सारे इक्क थाह पिच्छें खिसकाई दित्ते जंदे न?",
+    "options": [
+      "shift",
+      "unshift",
+      "pop",
+      "rotate"
+    ],
+    "answer": "shift"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "कुस special parameter कन्नै मौजूदा शैल दी process ID दस्सी जंदी ऐ?",
+    "options": [
+      "$$",
+      "$!",
+      "$?",
+      "$0"
+    ],
+    "answer": "$$"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "कुस special parameter कन्नै पिछली कमांड दी exit status दस्सी जंदी ऐ?",
+    "options": [
+      "$?",
+      "$!",
+      "$$",
+      "$#"
+    ],
+    "answer": "$?"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "जेकर var unset जां खाली ऐ तां कुस expansion कन्नै डिफाल्ट मान मिलदा ऐ?",
+    "options": [
+      "${var:-default}",
+      "${var:=default}",
+      "${var:+default}",
+      "${var:?default}"
+    ],
+    "answer": "${var:-default}"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "कुस expansion कन्नै var थमां 3 अक्खर कड्ढे जंदे न, जेह्ड़े offset 2 थमां शुरू होंदे न?",
+    "options": [
+      "${var:2:3}",
+      "${var:3:2}",
+      "${var[2,3]}",
+      "${var#2:3}"
+    ],
+    "answer": "${var:2:3}"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "कुस expansion कन्नै var दे मान दी लंबाई मिलदी ऐ?",
+    "options": [
+      "${#var}",
+      "${len(var)}",
+      "${var:length}",
+      "${var#length}"
+    ],
+    "answer": "${#var}"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "कुस expansion कन्नै var दा मान बड्डे अक्खरें (uppercase) च बदलोंदा ऐ?",
+    "options": [
+      "${var^^}",
+      "${var,,}",
+      "${var!!}",
+      "${var##}"
+    ],
+    "answer": "${var^^}"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "कुस expansion कन्नै var थमां सब थमां लम्मा मेल खांदा prefix pattern हटाया जंदा ऐ?",
+    "options": [
+      "${var##pattern}",
+      "${var#pattern}",
+      "${var%%pattern}",
+      "${var%pattern}"
+    ],
+    "answer": "${var##pattern}"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "कुस expansion कन्नै var च pattern दा सिर्फ पैहला मेल बदलोंदा ऐ?",
+    "options": [
+      "${var/pattern/replacement}",
+      "${var//pattern/replacement}",
+      "${var#pattern}",
+      "${var%pattern}"
+    ],
+    "answer": "${var/pattern/replacement}"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "जेकर var unset जां खाली ऐ तां कुस expansion कन्नै error संदेश छपदा ऐ ते non-interactive स्क्रिप्ट बंद होई जंदी ऐ?",
+    "options": [
+      "${var:?message}",
+      "${var:-message}",
+      "${var:+message}",
+      "${var:=message}"
+    ],
+    "answer": "${var:?message}"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "Bash च arithmetic expansion कुस syntax कन्नै कीती जंदी ऐ?",
+    "options": [
+      "$((5 + 3))",
+      "$(5 + 3)",
+      "${5 + 3}",
+      "$[5 + 3]"
+    ],
+    "answer": "$((5 + 3))"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "कुस कमांड कन्नै वेरिएबल count गी इक्क कन्नै बधाया जंदा ऐ?",
+    "options": [
+      "let count++",
+      "count++",
+      "increment count",
+      "add count"
+    ],
+    "answer": "let count++"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "कुस कमांड कन्नै 8 छपदा ऐ, जदूं 5 ते 3 जोड़े जंदे न?",
+    "options": [
+      "expr 5 + 3",
+      "expr 5+3",
+      "expr5 + 3",
+      "expr add 5 3"
+    ],
+    "answer": "expr 5 + 3"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "कुस कमांड कन्नै count गी integer वेरिएबल दे रूप च declare कीता जंदा ऐ?",
+    "options": [
+      "declare -i count",
+      "declare int count",
+      "integer count",
+      "set count integer"
+    ],
+    "answer": "declare -i count"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "कुस कमांड कन्नै वेरिएबल read-only बनदा ऐ?",
+    "options": [
+      "readonly var",
+      "lock var",
+      "const var",
+      "final var"
+    ],
+    "answer": "readonly var"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "कुस कमांड कन्नै वेरिएबल गी शैल environment थमां हटाया जंदा ऐ?",
+    "options": [
+      "unset var",
+      "delete var",
+      "remove var",
+      "clear var"
+    ],
+    "answer": "unset var"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "कुस कमांड कन्नै वेरिएबल child processes लेई उपलब्ध होंदा ऐ?",
+    "options": [
+      "export var",
+      "share var",
+      "env var",
+      "publish var"
+    ],
+    "answer": "export var"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "कुस option कन्नै output redirection मौजूदा फाइल गी overwrite नेईं करदी?",
+    "options": [
+      "set -o noclobber",
+      "set -o nooverwrite",
+      "set -o protect",
+      "set -o safe"
+    ],
+    "answer": "set -o noclobber"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "कुस Bash वेरिएबल च शैल शुरू होने थमां लेइयै बीती दे सकिंटें दी गिनतरी होंदी ऐ?",
+    "options": [
+      "$SECONDS",
+      "$RANDOM",
+      "$LINENO",
+      "$UID"
+    ],
+    "answer": "$SECONDS"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "कुस Bash expansion कन्नै alt सिर्फ तदूं बदली जंदा ऐ जदूं var set ते खाली नेईं होऐ?",
+    "options": [
+      "${var:+alt}",
+      "${var:-alt}",
+      "${var:=alt}",
+      "${var:?alt}"
+    ],
+    "answer": "${var:+alt}"
+  }
+]

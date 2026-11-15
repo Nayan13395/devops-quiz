@@ -1,0 +1,302 @@
+[
+  {
+    "category": "Docker",
+    "set": 4,
+    "question": "Quelle commande télécharge une image depuis Docker Hub ?",
+    "options": [
+      "docker pull",
+      "docker fetch",
+      "docker copy",
+      "docker get"
+    ],
+    "answer": "docker pull"
+  },
+  {
+    "category": "Docker",
+    "set": 4,
+    "question": "Quelle commande télécharge une étiquette d'image spécifique ?",
+    "options": [
+      "docker pull image:tag",
+      "docker pull --tag tag",
+      "docker pull -t tag",
+      "docker get image:tag"
+    ],
+    "answer": "docker pull image:tag"
+  },
+  {
+    "category": "Docker",
+    "set": 4,
+    "question": "Quelle commande inspecte un manifeste d'image sans télécharger ses couches ?",
+    "options": [
+      "docker manifest inspect",
+      "docker pull --manifest",
+      "docker image manifest",
+      "docker show manifest"
+    ],
+    "answer": "docker manifest inspect"
+  },
+  {
+    "category": "Docker",
+    "set": 4,
+    "question": "Quelle commande liste les condensés (digests) des images ?",
+    "options": [
+      "docker images --digests",
+      "docker digest",
+      "docker image digest",
+      "docker inspect digest"
+    ],
+    "answer": "docker images --digests"
+  },
+  {
+    "category": "Docker",
+    "set": 4,
+    "question": "Avec Docker Engine API 1.42 ou version ultérieure, quelle commande supprime tous les volumes locaux inutilisés, y compris les volumes nommés ?",
+    "options": [
+      "docker volume prune -a",
+      "docker volume clean",
+      "docker prune volumes",
+      "docker rm volume"
+    ],
+    "answer": "docker volume prune -a"
+  },
+  {
+    "category": "Docker",
+    "set": 4,
+    "question": "Quelle commande supprime les réseaux Docker personnalisés inutilisés ?",
+    "options": [
+      "docker network prune",
+      "docker prune network",
+      "docker clean network",
+      "docker rm network"
+    ],
+    "answer": "docker network prune"
+  },
+  {
+    "category": "Docker",
+    "set": 4,
+    "question": "Quelle commande affiche l'espace disque du cache de construction du builder Buildx sélectionné ?",
+    "options": [
+      "docker buildx du",
+      "docker build cache",
+      "docker cache usage",
+      "docker builder stats"
+    ],
+    "answer": "docker buildx du"
+  },
+  {
+    "category": "Docker",
+    "set": 4,
+    "question": "Quelle commande supprime le cache de construction inutilisé ?",
+    "options": [
+      "docker builder prune",
+      "docker build clean",
+      "docker cache prune",
+      "docker prune build"
+    ],
+    "answer": "docker builder prune"
+  },
+  {
+    "category": "Docker",
+    "set": 4,
+    "question": "Quelle commande permet des constructions d'images multiplateformes avec une liste --platform et un builder adaptés ?",
+    "options": [
+      "docker buildx build",
+      "docker build multi",
+      "docker build platform",
+      "docker image buildx"
+    ],
+    "answer": "docker buildx build"
+  },
+  {
+    "category": "Docker",
+    "set": 4,
+    "question": "Quelle commande liste les builders Buildx disponibles ?",
+    "options": [
+      "docker buildx ls",
+      "docker buildx show",
+      "docker builder ls",
+      "docker buildx list"
+    ],
+    "answer": "docker buildx ls"
+  },
+  {
+    "category": "Docker",
+    "set": 4,
+    "question": "Quelle commande affiche tous les contextes Docker ?",
+    "options": [
+      "docker context ls",
+      "docker contexts",
+      "docker context show",
+      "docker list context"
+    ],
+    "answer": "docker context ls"
+  },
+  {
+    "category": "Docker",
+    "set": 4,
+    "question": "Quelle commande bascule vers un autre contexte Docker ?",
+    "options": [
+      "docker context use",
+      "docker context switch",
+      "docker use context",
+      "docker context select"
+    ],
+    "answer": "docker context use"
+  },
+  {
+    "category": "Docker",
+    "set": 4,
+    "question": "Quelle commande supprime un contexte Docker ?",
+    "options": [
+      "docker context rm",
+      "docker context inspect",
+      "docker remove context",
+      "docker context use"
+    ],
+    "answer": "docker context rm"
+  },
+  {
+    "category": "Docker",
+    "set": 4,
+    "question": "Quelle instruction Dockerfile spécifie l'image de base ?",
+    "options": [
+      "FROM",
+      "BASE",
+      "IMAGE",
+      "START"
+    ],
+    "answer": "FROM"
+  },
+  {
+    "category": "Docker",
+    "set": 4,
+    "question": "Quelle instruction Dockerfile définit des variables d'environnement ?",
+    "options": [
+      "ENV",
+      "SET",
+      "VAR",
+      "EXPORT"
+    ],
+    "answer": "ENV"
+  },
+  {
+    "category": "Docker",
+    "set": 4,
+    "question": "Quelle commande démarre en arrière-plan les services définis dans un fichier Compose ?",
+    "options": [
+      "docker compose up -d",
+      "docker compose create",
+      "docker compose config",
+      "docker compose down"
+    ],
+    "answer": "docker compose up -d"
+  },
+  {
+    "category": "Docker",
+    "set": 4,
+    "question": "Quelle clé Compose de premier niveau contient les définitions des services applicatifs ?",
+    "options": [
+      "volumes",
+      "networks",
+      "configs",
+      "services"
+    ],
+    "answer": "services"
+  },
+  {
+    "category": "Docker",
+    "set": 4,
+    "question": "Quelle commande affiche et valide la configuration Compose résolue ?",
+    "options": [
+      "docker compose images",
+      "docker compose top",
+      "docker compose config",
+      "docker compose ps"
+    ],
+    "answer": "docker compose config"
+  },
+  {
+    "category": "Docker",
+    "set": 4,
+    "question": "Que fait normalement 'docker compose down' sans --volumes ?",
+    "options": [
+      "Il supprime uniquement le fichier de configuration Compose",
+      "Il supprime les conteneurs et réseaux du projet tout en conservant les volumes nommés",
+      "Il supprime toutes les images et tous les volumes de l'hôte",
+      "Il met les conteneurs en pause sans les supprimer"
+    ],
+    "answer": "Il supprime les conteneurs et réseaux du projet tout en conservant les volumes nommés"
+  },
+  {
+    "category": "Docker",
+    "set": 4,
+    "question": "Lorsque depends_on de Compose utilise service_healthy, que doit-il se produire avant le démarrage du service dépendant ?",
+    "options": [
+      "La dépendance doit réussir sa vérification de santé configurée",
+      "La dépendance doit se terminer avec succès",
+      "Chaque port exposé doit être publié sur l'hôte",
+      "L'image de la dépendance doit être poussée vers un registre"
+    ],
+    "answer": "La dépendance doit réussir sa vérification de santé configurée"
+  },
+  {
+    "category": "Docker",
+    "set": 4,
+    "question": "Quelle option Buildx indique les plateformes cibles telles que linux/amd64 et linux/arm64 ?",
+    "options": [
+      "--target",
+      "--builder",
+      "--progress",
+      "--platform"
+    ],
+    "answer": "--platform"
+  },
+  {
+    "category": "Docker",
+    "set": 4,
+    "question": "Quelle option Buildx sélectionne une étape Dockerfile nommée comme cible de construction ?",
+    "options": [
+      "--tag",
+      "--file",
+      "--target",
+      "--platform"
+    ],
+    "answer": "--target"
+  },
+  {
+    "category": "Docker",
+    "set": 4,
+    "question": "Quelle option de construction Buildx pousse directement le résultat vers un registre ?",
+    "options": [
+      "--pull",
+      "--push",
+      "--load",
+      "--no-cache"
+    ],
+    "answer": "--push"
+  },
+  {
+    "category": "Docker",
+    "set": 4,
+    "question": "Que demande '--no-cache' à Docker pendant la construction d'une image ?",
+    "options": [
+      "Ne pas réutiliser les résultats de construction en cache",
+      "Supprimer toutes les images locales",
+      "Désactiver le cache du système de fichiers du conteneur à l'exécution",
+      "Ne pas télécharger l'image de base"
+    ],
+    "answer": "Ne pas réutiliser les résultats de construction en cache"
+  },
+  {
+    "category": "Docker",
+    "set": 4,
+    "question": "Quelle commande affiche les détails d'un volume Docker nommé ?",
+    "options": [
+      "docker volume ls",
+      "docker volume create data",
+      "docker volume prune",
+      "docker volume inspect data"
+    ],
+    "answer": "docker volume inspect data"
+  }
+]

@@ -1,0 +1,302 @@
+[
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "What does quoting a Bash expansion as \"$name\" prevent?",
+    "options": [
+      "All parameter expansion inside the quotes",
+      "The variable from being changed later",
+      "The command from receiving an empty argument",
+      "Word splitting and pathname expansion of the expanded value"
+    ],
+    "answer": "Word splitting and pathname expansion of the expanded value"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "What does single-quoting '$HOME' do in Bash?",
+    "options": [
+      "Expands the previous working directory",
+      "Removes the dollar sign and passes HOME",
+      "Passes the literal text $HOME",
+      "Expands the user's home directory"
+    ],
+    "answer": "Passes the literal text $HOME"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "What does Bash command substitution using $(command) insert?",
+    "options": [
+      "The command's exit status as a decimal number",
+      "The command's standard output with trailing newlines removed",
+      "The command's numeric process ID",
+      "The command's standard error only"
+    ],
+    "answer": "The command's standard output with trailing newlines removed"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "Which Bash builtin reads and executes commands from a script file in the current shell?",
+    "options": [
+      "source",
+      "exec",
+      "eval",
+      "export"
+    ],
+    "answer": "source"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "What does 'exec program' do in a Bash script when execution succeeds?",
+    "options": [
+      "Starts program as a background job while the shell continues",
+      "Runs program twice and compares the results",
+      "Loads program's output as shell source code",
+      "Replaces the shell process with program"
+    ],
+    "answer": "Replaces the shell process with program"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "With Bash pipefail enabled, what is a pipeline's status if one or more commands fail?",
+    "options": [
+      "Always zero if the last command succeeds",
+      "The sum of all commands' exit statuses",
+      "The status of the rightmost command that returned nonzero",
+      "Always the status of the first command"
+    ],
+    "answer": "The status of the rightmost command that returned nonzero"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "Which command verifies SHA-256 checksums recorded in checksums.txt using GNU Coreutils?",
+    "options": [
+      "cksum checksums.txt",
+      "sha256sum -c checksums.txt",
+      "sha256sum checksums.txt",
+      "md5sum -c checksums.txt"
+    ],
+    "answer": "sha256sum -c checksums.txt"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "Which GNU tar command creates a gzip-compressed archive of directory logs?",
+    "options": [
+      "tar -czf logs.tar.gz logs",
+      "tar -xzf logs.tar.gz",
+      "tar -tzf logs.tar.gz",
+      "gzip -d logs.tar.gz"
+    ],
+    "answer": "tar -czf logs.tar.gz logs"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "Which tar option lists archive contents without extracting them?",
+    "options": [
+      "-x",
+      "-c",
+      "-r",
+      "-t"
+    ],
+    "answer": "-t"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "What does the setgid bit on a Linux directory normally cause for newly created files inside it?",
+    "options": [
+      "They are owned by the root user",
+      "They cannot be removed by their owner",
+      "They inherit the directory's group ownership",
+      "They always become executable by every user"
+    ],
+    "answer": "They inherit the directory's group ownership"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "What does the sticky bit on a shared writable directory primarily restrict?",
+    "options": [
+      "Who may allocate disk blocks on the filesystem",
+      "Who may delete or rename files in that directory",
+      "Who may read every file in that directory",
+      "Who may execute programs outside that directory"
+    ],
+    "answer": "Who may delete or rename files in that directory"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "Which command shows access-control-list entries for a file?",
+    "options": [
+      "getfacl file.txt",
+      "setfacl -b file.txt",
+      "getfattr -d file.txt",
+      "lsattr file.txt"
+    ],
+    "answer": "getfacl file.txt"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "Which file normally contains local user account records rather than password hashes?",
+    "options": [
+      "/etc/shadow",
+      "/etc/group",
+      "/etc/gshadow",
+      "/etc/passwd"
+    ],
+    "answer": "/etc/passwd"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "Which command appends alice to supplementary group docker without replacing her existing supplementary groups?",
+    "options": [
+      "usermod -g docker alice",
+      "usermod -l docker alice",
+      "usermod -aG docker alice",
+      "usermod -G docker alice"
+    ],
+    "answer": "usermod -aG docker alice"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "Which command locks a Linux user's password for password-based authentication?",
+    "options": [
+      "passwd -e alice",
+      "passwd -l alice",
+      "passwd -u alice",
+      "passwd -S alice"
+    ],
+    "answer": "passwd -l alice"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "Which command queries the configured name-service sources for alice's passwd entry?",
+    "options": [
+      "getent passwd alice",
+      "groups alice",
+      "id -u alice",
+      "whoami"
+    ],
+    "answer": "getent passwd alice"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "Which file normally defines filesystems to mount automatically at boot?",
+    "options": [
+      "/etc/hosts",
+      "/etc/shells",
+      "/etc/resolv.conf",
+      "/etc/fstab"
+    ],
+    "answer": "/etc/fstab"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "Which command displays filesystem UUIDs and other block-device attributes?",
+    "options": [
+      "modinfo",
+      "lscpu",
+      "blkid",
+      "lsmod"
+    ],
+    "answer": "blkid"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "Why should a filesystem normally be unmounted before running a repairing fsck operation?",
+    "options": [
+      "Mounted filesystems never contain free space",
+      "Concurrent filesystem writes can conflict with repairs and damage data",
+      "Unmounting automatically encrypts all filesystem metadata",
+      "fsck only supports filesystems without device names"
+    ],
+    "answer": "Concurrent filesystem writes can conflict with repairs and damage data"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "Which command displays active swap areas?",
+    "options": [
+      "swapon --show",
+      "swapoff -a",
+      "free -s 1",
+      "vmstat -d"
+    ],
+    "answer": "swapon --show"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "Which command loads a Linux kernel module along with its dependencies?",
+    "options": [
+      "rmmod",
+      "lsmod",
+      "modinfo",
+      "modprobe"
+    ],
+    "answer": "modprobe"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "Which systemd command prevents a unit from being started by linking it to /dev/null?",
+    "options": [
+      "systemctl stop app.service",
+      "systemctl reset-failed app.service",
+      "systemctl mask app.service",
+      "systemctl disable app.service"
+    ],
+    "answer": "systemctl mask app.service"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "Which SSH option selects a private identity file for authentication?",
+    "options": [
+      "-R",
+      "-i",
+      "-p",
+      "-L"
+    ],
+    "answer": "-i"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "Which command securely copies a local file to a remote user's directory over SSH?",
+    "options": [
+      "scp report.txt alice@server:/home/alice/",
+      "ssh alice@server cat report.txt",
+      "sftp -b report.txt alice@server",
+      "ssh-keygen -f report.txt"
+    ],
+    "answer": "scp report.txt alice@server:/home/alice/"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "What does 'rsync -n' request?",
+    "options": [
+      "Deletion of destination files absent from the source",
+      "Compression of transferred file data",
+      "Recursive preservation of every filesystem attribute",
+      "A dry run that reports intended changes without making them"
+    ],
+    "answer": "A dry run that reports intended changes without making them"
+  }
+]

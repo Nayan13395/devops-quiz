@@ -1,0 +1,302 @@
+[
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "विद्यमान release शाखेसाठी जोडलेला कार्यरत ट्री बनवणारा आदेश कोणता?",
+    "options": [
+      "git worktree prune",
+      "git worktree lock ..\\release",
+      "git worktree add ..\\release release",
+      "git worktree list"
+    ],
+    "answer": "git worktree add ..\\release release"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "मूळ प्रकल्पाचे आवृत्ती-नियंत्रित सबमॉड्यूल पथ आणि URL कोणती फाइल नोंदवते?",
+    "options": [
+      ".gitmessage",
+      ".gitmodules",
+      ".gitignore",
+      ".gitattributes"
+    ],
+    "answer": ".gitmodules"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "आतील सबमॉड्यूलसह सर्व नोंदणीकृत सबमॉड्यूल आरंभून चेकआउट करणारा आदेश कोणता?",
+    "options": [
+      "git submodule update --init --recursive",
+      "git submodule deinit --all",
+      "git submodule status",
+      "git submodule sync"
+    ],
+    "answer": "git submodule update --init --recursive"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "मूळ प्रकल्प सहसा सबमॉड्यूलसाठी कमिटमध्ये काय नोंदवतो?",
+    "options": [
+      "सबमॉड्यूलचा संपूर्ण ऑब्जेक्ट डेटाबेस",
+      "फक्त सबमॉड्यूलच्या डीफॉल्ट शाखेचे नाव",
+      "फक्त सबमॉड्यूलचे कमिट न केलेले बदल",
+      "सबमॉड्यूलच्या ठरावीक कमिटचा संदर्भ"
+    ],
+    "answer": "सबमॉड्यूलच्या ठरावीक कमिटचा संदर्भ"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "सर्व संदर्भ आणि त्यांच्यापासून पोहोचणारा इतिहास असलेले वाहून नेता येणारे बंडल कोणता आदेश बनवतो?",
+    "options": [
+      "git format-patch -1 HEAD",
+      "git diff --binary > backup.bundle",
+      "git bundle create backup.bundle --all",
+      "git archive --output=backup.bundle HEAD"
+    ],
+    "answer": "git bundle create backup.bundle --all"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "HEAD च्या ट्रॅक होणाऱ्या फाइल Git इतिहासाविना ZIP मध्ये पाठवणारा आदेश कोणता?",
+    "options": [
+      "git format-patch --stdout HEAD > source.zip",
+      "git archive --format=zip --output=source.zip HEAD",
+      "git bundle create source.zip --all",
+      "git clone --bare . source.zip"
+    ],
+    "answer": "git archive --format=zip --output=source.zip HEAD"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "ताज्या कमिटचे ईमेल-स्वरूपातील पॅच फाइलमध्ये रूपांतर करणारा आदेश कोणता?",
+    "options": [
+      "git format-patch -1 HEAD",
+      "git diff HEAD",
+      "git show --stat HEAD",
+      "git log -1 --oneline"
+    ],
+    "answer": "git format-patch -1 HEAD"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "git format-patch चे ईमेल पॅच लागू करून कमिट करणारा आदेश कोणता?",
+    "options": [
+      "git apply changes.patch",
+      "git diff changes.patch",
+      "git add changes.patch",
+      "git am changes.patch"
+    ],
+    "answer": "git am changes.patch"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "फाइल न बदलता सामान्य पॅच लागू होईल का ते तपासणारा आदेश कोणता?",
+    "options": [
+      "git am changes.patch",
+      "git add changes.patch",
+      "git apply --check changes.patch",
+      "git apply changes.patch"
+    ],
+    "answer": "git apply --check changes.patch"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "फाइलचे नाव न ठेवता तिचा मजकूर साठवणारा Git ऑब्जेक्ट प्रकार कोणता?",
+    "options": [
+      "टिप्पणी असलेला टॅग",
+      "Blob",
+      "Tree",
+      "Commit"
+    ],
+    "answer": "Blob"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "फाइल नावे आणि blob किंवा उपवृक्षांचे संदर्भ ठेवणारा Git ऑब्जेक्ट प्रकार कोणता?",
+    "options": [
+      "Tree",
+      "Blob",
+      "Commit",
+      "टिप्पणी असलेला टॅग"
+    ],
+    "answer": "Tree"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "माहीत असलेल्या ऑब्जेक्ट ID चा प्रकार दाखवणारा आदेश कोणता?",
+    "options": [
+      "git cat-file -s abc1234",
+      "git rev-parse abc1234",
+      "git log -1 abc1234",
+      "git cat-file -t abc1234"
+    ],
+    "answer": "git cat-file -t abc1234"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "HEAD चा पूर्ण ऑब्जेक्ट ID छापणारा आदेश कोणता?",
+    "options": [
+      "git status --short",
+      "git branch --show-current",
+      "git rev-parse HEAD",
+      "git symbolic-ref HEAD"
+    ],
+    "answer": "git rev-parse HEAD"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "feature पासून पोहोचता येणारे पण main पासून नाही असे कमिट निवडणारी मर्यादा कोणती?",
+    "options": [
+      "main^",
+      "main..feature",
+      "feature..main",
+      "main...feature"
+    ],
+    "answer": "main..feature"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "फक्त मर्ज कमिट दाखवणारा git log पर्याय कोणता?",
+    "options": [
+      "--merges",
+      "--no-merges",
+      "--first-parent",
+      "--reverse"
+    ],
+    "answer": "--merges"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "बदललेले पथ आणि बदल-स्थितीची अक्षरे दाखवणारा git diff पर्याय कोणता?",
+    "options": [
+      "--name-only",
+      "--stat",
+      "--shortstat",
+      "--name-status"
+    ],
+    "answer": "--name-status"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "पथांसाठी मजकूर सामान्यीकरणासारखे आवृत्ती-नियंत्रित गुणधर्म कोणती फाइल ठरवते?",
+    "options": [
+      ".gitmodules",
+      ".gitconfig",
+      ".gitattributes",
+      ".gitignore"
+    ],
+    "answer": ".gitattributes"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": ".gitattributes मधील '*.sh text eol=lf' नियम जुळणाऱ्या मजकूर फाइलसाठी काय मागतो?",
+    "options": [
+      "रिकाम्या ओळी आपोआप हटवणे",
+      "कार्यरत ट्रीमध्ये LF ओळ-अंत",
+      "कार्यरत ट्रीमध्ये CRLF ओळ-अंत",
+      "मजकूर रूपांतराविना बायनरी वागणूक"
+    ],
+    "answer": "कार्यरत ट्रीमध्ये LF ओळ-अंत"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "प्रस्तावित कमिट संदेशाची फाइल तपासून कमिट नाकारू शकणारा हुक कोणता?",
+    "options": [
+      "commit-msg",
+      "post-commit",
+      "post-checkout",
+      "post-merge"
+    ],
+    "answer": "commit-msg"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "Git हुकसाठी स्वतःची डिरेक्टरी निवडणारे सेटिंग कोणते?",
+    "options": [
+      "core.worktree",
+      "core.excludesFile",
+      "core.attributesFile",
+      "core.hooksPath"
+    ],
+    "answer": "core.hooksPath"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "सामायिक .gitignore नियम न वाढवता एका विकासकाला स्थानिक ट्रॅक नसलेल्या फाइल दुर्लक्षित करू देणारी फाइल कोणती?",
+    "options": [
+      ".git\\description",
+      ".git\\packed-refs",
+      ".git\\info\\exclude",
+      ".git\\HEAD"
+    ],
+    "answer": ".git\\info\\exclude"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "bisect सत्र संपवून सहसा मूळ शाखेत परतणारा आदेश कोणता?",
+    "options": [
+      "git bisect log",
+      "git bisect reset",
+      "git bisect skip",
+      "git bisect good"
+    ],
+    "answer": "git bisect reset"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "पॅच मालिकेच्या दोन आवृत्त्यांची तुलना करणारा आदेश कोणता?",
+    "options": [
+      "git range-diff main..old main..new",
+      "git diff old new",
+      "git log old..new",
+      "git merge-base old new"
+    ],
+    "answer": "git range-diff main..old main..new"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "कमिट बनवताना Signed-off-by ओळ जोडणारा आदेश कोणता?",
+    "options": [
+      "git commit --gpg-sign",
+      "git commit --amend",
+      "git commit --no-verify",
+      "git commit --signoff"
+    ],
+    "answer": "git commit --signoff"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "git log -S'old_name' डीफॉल्टने काय शोधतो?",
+    "options": [
+      "संदेशात old_name असलेले कमिट",
+      "नावात old_name असलेल्या शाखा",
+      "old_name च्या उपस्थितीची संख्या बदलणारे कमिट",
+      "लेखकाचे नाव old_name असलेले कमिट"
+    ],
+    "answer": "old_name च्या उपस्थितीची संख्या बदलणारे कमिट"
+  }
+]

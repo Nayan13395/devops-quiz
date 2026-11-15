@@ -1,0 +1,302 @@
+[
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "సాధారణ Bash ఫంక్షన్‌ను నిర్వచించే సింటాక్స్ ఏది?",
+    "options": [
+      "myfunc() { echo hi; }",
+      "def myfunc: echo hi",
+      "function = myfunc",
+      "myfunc -> echo hi"
+    ],
+    "answer": "myfunc() { echo hi; }"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "myfunc అనే ఫంక్షన్‌ను పిలిచే కమాండ్ ఏది?",
+    "options": [
+      "myfunc",
+      "call myfunc",
+      "run myfunc",
+      "execute myfunc"
+    ],
+    "answer": "myfunc"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "ఫంక్షన్ లోపల మాత్రమే కనిపించే వేరియబుల్‌ను ప్రకటించే కీవర్డ్ ఏది?",
+    "options": [
+      "local",
+      "private",
+      "internal",
+      "hidden"
+    ],
+    "answer": "local"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "ఫంక్షన్ నుండి 0 exit status ను తిరిగి ఇచ్చే కమాండ్ ఏది?",
+    "options": [
+      "return 0",
+      "exit function 0",
+      "stop 0",
+      "end 0"
+    ],
+    "answer": "return 0"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "ఫంక్షన్ లోపల, ఫంక్షన్‌కు పంపిన ఆర్గ్యుమెంట్ల సంఖ్యను ఏ పారామీటర్ ఇస్తుంది?",
+    "options": [
+      "$#",
+      "$@",
+      "$0",
+      "$1"
+    ],
+    "answer": "$#"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "మూడు ఎలిమెంట్లతో indexed array ను సృష్టించే సింటాక్స్ ఏది?",
+    "options": [
+      "arr=(one two three)",
+      "array arr one two three",
+      "arr[one two three]",
+      "set arr one two three"
+    ],
+    "answer": "arr=(one two three)"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "arr లోని index 2 వద్ద ఉన్న ఎలిమెంట్‌ను యాక్సెస్ చేసే సింటాక్స్ ఏది?",
+    "options": [
+      "${arr[2]}",
+      "${arr:2}",
+      "$arr[2]",
+      "arr{2}"
+    ],
+    "answer": "${arr[2]}"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "arr లోని ఎలిమెంట్ల సంఖ్యను ఇచ్చే ఎక్స్‌పాన్షన్ ఏది?",
+    "options": [
+      "${#arr[@]}",
+      "${#arr}",
+      "${arr:length}",
+      "${arr[@]#}"
+    ],
+    "answer": "${#arr[@]}"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "arr కు newitem ను జోడించే సింటాక్స్ ఏది?",
+    "options": [
+      "arr+=(newitem)",
+      "arr=newitem",
+      "arr.push(newitem)",
+      "add arr newitem"
+    ],
+    "answer": "arr+=(newitem)"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "arr లోని అన్ని ఎలిమెంట్లను తిరిగి ఇచ్చే ఎక్స్‌పాన్షన్ ఏది?",
+    "options": [
+      "${arr[@]}",
+      "${arr[0]}",
+      "${arr[all]}",
+      "${arr}"
+    ],
+    "answer": "${arr[@]}"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "associative array ను ప్రకటించే కమాండ్ ఏది?",
+    "options": [
+      "declare -A map",
+      "declare -a map",
+      "array -A map",
+      "assoc map"
+    ],
+    "answer": "declare -A map"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "స్టాండర్డ్ అవుట్‌పుట్ మరియు స్టాండర్డ్ ఎర్రర్ రెండింటినీ output.log కు పంపే రీడైరెక్షన్ ఏది?",
+    "options": [
+      "command &> output.log",
+      "command > output.log",
+      "command 2> output.log",
+      "command < output.log"
+    ],
+    "answer": "command &> output.log"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "కమాండ్ యొక్క మొత్తం అవుట్‌పుట్‌ను విస్మరించే రీడైరెక్షన్ ఏది?",
+    "options": [
+      "command > /dev/null",
+      "command > null",
+      "command > empty",
+      "command > discard"
+    ],
+    "answer": "command > /dev/null"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "ఒక కమాండ్ అవుట్‌పుట్‌ను మరొక కమాండ్‌కు ఇన్‌పుట్‌గా పంపే ఆపరేటర్ ఏది?",
+    "options": [
+      "|",
+      ">",
+      "<",
+      "&"
+    ],
+    "answer": "|"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "కమాండ్‌ను బ్యాక్‌గ్రౌండ్‌లో అమలు చేసే చిహ్నం ఏది?",
+    "options": [
+      "&",
+      "&&",
+      "|",
+      ";"
+    ],
+    "answer": "&"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "బ్యాక్‌గ్రౌండ్ జాబ్‌లు పూర్తయ్యే వరకు వేచి ఉండే builtin ఏది?",
+    "options": [
+      "wait",
+      "hold",
+      "pause",
+      "sleep"
+    ],
+    "answer": "wait"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "script.sh ను ప్రస్తుత షెల్ ఎన్విరాన్‌మెంట్‌లో అమలు చేసే కమాండ్ ఏది?",
+    "options": [
+      "source script.sh",
+      "bash script.sh",
+      "./script.sh",
+      "sh script.sh"
+    ],
+    "answer": "source script.sh"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "here document ను ప్రారంభించే ఆపరేటర్ ఏది?",
+    "options": [
+      "<<",
+      ">>",
+      "<",
+      ">"
+    ],
+    "answer": "<<"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "సురక్షితమైన తాత్కాలిక ఫైల్‌ను సృష్టించే కమాండ్ ఏది?",
+    "options": [
+      "mktemp",
+      "tempfile",
+      "touch tmp",
+      "newfile"
+    ],
+    "answer": "mktemp"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "స్క్రిప్ట్‌కు SIGINT వచ్చినప్పుడు cleanup ను అమలు చేసే కమాండ్ ఏది?",
+    "options": [
+      "trap 'cleanup' SIGINT",
+      "handle SIGINT cleanup",
+      "signal SIGINT cleanup",
+      "catch SIGINT cleanup"
+    ],
+    "answer": "trap 'cleanup' SIGINT"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "వినియోగదారు Ctrl+C నొక్కినప్పుడు సాధారణంగా ఏ సిగ్నల్ పంపబడుతుంది?",
+    "options": [
+      "SIGINT",
+      "SIGTERM",
+      "SIGKILL",
+      "SIGHUP"
+    ],
+    "answer": "SIGINT"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "ఏదైనా కమాండ్ విఫలమైనప్పుడు స్క్రిప్ట్ వెంటనే నిష్క్రమించేలా చేసే ఆప్షన్ ఏది?",
+    "options": [
+      "set -e",
+      "set -x",
+      "set -u",
+      "set -o pipefail"
+    ],
+    "answer": "set -e"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "సెట్ చేయని వేరియబుల్‌ను ప్రస్తావించినప్పుడు ఎర్రర్ వచ్చేలా చేసే ఆప్షన్ ఏది?",
+    "options": [
+      "set -u",
+      "set -e",
+      "set -x",
+      "set -a"
+    ],
+    "answer": "set -u"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "డీబగ్గింగ్ కోసం ప్రతి కమాండ్‌ను అమలు చేసే ముందు ప్రింట్ చేసే ఆప్షన్ ఏది?",
+    "options": [
+      "set -x",
+      "set -e",
+      "set -u",
+      "set -v"
+    ],
+    "answer": "set -x"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "ప్రస్తుతం నిర్వచించబడిన షెల్ ఫంక్షన్లను జాబితా చేసే కమాండ్ ఏది?",
+    "options": [
+      "declare -f",
+      "declare -A",
+      "functions",
+      "listfunc"
+    ],
+    "answer": "declare -f"
+  }
+]

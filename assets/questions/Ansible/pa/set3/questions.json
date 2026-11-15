@@ -1,0 +1,302 @@
+[
+  {
+    "category": "Ansible",
+    "set": 3,
+    "question": "Ansible ਰੋਲ ਕੀ ਹੈ?",
+    "options": [
+      "ਟਾਸਕਾਂ ਅਤੇ ਫਾਈਲਾਂ ਦਾ ਮੁੜ ਵਰਤੋਂ ਯੋਗ ਸੰਗ੍ਰਹਿ",
+      "ਇੱਕ ਯੂਜ਼ਰ ਖਾਤਾ",
+      "ਇੱਕ ਇਨਵੈਂਟਰੀ ਗਰੁੱਪ",
+      "ਇੱਕ ਪਲੇਬੁੱਕ ਵੇਰੀਏਬਲ"
+    ],
+    "answer": "ਟਾਸਕਾਂ ਅਤੇ ਫਾਈਲਾਂ ਦਾ ਮੁੜ ਵਰਤੋਂ ਯੋਗ ਸੰਗ੍ਰਹਿ"
+  },
+  {
+    "category": "Ansible",
+    "set": 3,
+    "question": "ਕਿਹੜੀ ਕਮਾਂਡ ਇੱਕ ਨਵਾਂ ਰੋਲ ਢਾਂਚਾ ਬਣਾਉਂਦੀ ਹੈ?",
+    "options": [
+      "ansible-galaxy init",
+      "ansible role create",
+      "ansible init role",
+      "ansible-playbook init"
+    ],
+    "answer": "ansible-galaxy init"
+  },
+  {
+    "category": "Ansible",
+    "set": 3,
+    "question": "ਕਿਹੜੀ ਡਾਇਰੈਕਟਰੀ ਵਿੱਚ ਰੋਲ ਟਾਸਕ ਸ਼ਾਮਲ ਹਨ?",
+    "options": [
+      "tasks",
+      "handlers",
+      "files",
+      "vars"
+    ],
+    "answer": "tasks"
+  },
+  {
+    "category": "Ansible",
+    "set": 3,
+    "question": "ਇੱਕ ਰੋਲ ਵਿੱਚ ਕਿਹੜੀ ਫਾਈਲ ਮੁੱਖ ਟਾਸਕ ਫਾਈਲ ਹੈ?",
+    "options": [
+      "tasks/main.yml",
+      "tasks/tasks.yml",
+      "main/tasks.yml",
+      "role.yml"
+    ],
+    "answer": "tasks/main.yml"
+  },
+  {
+    "category": "Ansible",
+    "set": 3,
+    "question": "ਕਿਹੜੀ ਡਾਇਰੈਕਟਰੀ ਵਿੱਚ ਰੋਲ ਹੈਂਡਲਰ ਸ਼ਾਮਲ ਹਨ?",
+    "options": [
+      "handlers",
+      "tasks",
+      "events",
+      "notify"
+    ],
+    "answer": "handlers"
+  },
+  {
+    "category": "Ansible",
+    "set": 3,
+    "question": "ਕਿਹੜੀ ਡਾਇਰੈਕਟਰੀ Jinja2 ਟੈਂਪਲੇਟਸ ਨੂੰ ਇੱਕ ਰੋਲ ਵਿੱਚ ਸਟੋਰ ਕਰਦੀ ਹੈ?",
+    "options": [
+      "templates",
+      "files",
+      "jinja",
+      "render"
+    ],
+    "answer": "templates"
+  },
+  {
+    "category": "Ansible",
+    "set": 3,
+    "question": "ਕਿਹੜੀ ਡਾਇਰੈਕਟਰੀ ਇੱਕ ਰੋਲ ਵਿੱਚ ਸਥਿਰ ਫਾਈਲਾਂ ਨੂੰ ਸਟੋਰ ਕਰਦੀ ਹੈ?",
+    "options": [
+      "files",
+      "templates",
+      "static",
+      "resources"
+    ],
+    "answer": "files"
+  },
+  {
+    "category": "Ansible",
+    "set": 3,
+    "question": "ਕਿਹੜੀ ਡਾਇਰੈਕਟਰੀ ਵਿੱਚ ਰੋਲ ਵੇਰੀਏਬਲ ਹਨ?",
+    "options": [
+      "vars",
+      "variables",
+      "config",
+      "settings"
+    ],
+    "answer": "vars"
+  },
+  {
+    "category": "Ansible",
+    "set": 3,
+    "question": "ਕਿਹੜੀ ਡਾਇਰੈਕਟਰੀ ਵਿੱਚ ਡਿਫੌਲਟ ਵੇਰੀਏਬਲ ਹਨ?",
+    "options": [
+      "defaults",
+      "vars",
+      "config",
+      "settings"
+    ],
+    "answer": "defaults"
+  },
+  {
+    "category": "Ansible",
+    "set": 3,
+    "question": "ਕਿਸੇ ਵੱਖਰੇ ਟਾਸਕ ਤੋਂ ਰੋਲ ਚਲਾਉਣ ਦੀ ਬਜਾਏ ਕਿਹੜਾ ਪਲੇ-ਪੱਧਰ ਦਾ ਕੀਵਰਡ ਰੋਲਾਂ ਦੀ ਸਥਿਰ ਸੂਚੀ ਘੋਸ਼ਿਤ ਕਰਦਾ ਹੈ?",
+    "options": [
+      "roles",
+      "include_role",
+      "role",
+      "import_role"
+    ],
+    "answer": "roles"
+  },
+  {
+    "category": "Ansible",
+    "set": 3,
+    "question": "Ansible Galaxy ਕੀ ਹੈ?",
+    "options": [
+      "Ansible ਰੋਲਾਂ ਅਤੇ ਸੰਗ੍ਰਹਿਆਂ ਦੀ ਰਿਪੋਜ਼ਟਰੀ",
+      "ਨਿਗਰਾਨੀ ਟੂਲ",
+      "CI/CD ਪਲੇਟਫਾਰਮ",
+      "ਇਨਵੈਂਟਰੀ ਮੈਨੇਜਰ"
+    ],
+    "answer": "Ansible ਰੋਲਾਂ ਅਤੇ ਸੰਗ੍ਰਹਿਆਂ ਦੀ ਰਿਪੋਜ਼ਟਰੀ"
+  },
+  {
+    "category": "Ansible",
+    "set": 3,
+    "question": "ਕਿਹੜੀ ਕਮਾਂਡ Galaxy ਤੋਂ ਰੋਲ ਇੰਸਟਾਲ ਕਰਦੀ ਹੈ?",
+    "options": [
+      "ansible-galaxy install",
+      "ansible install role",
+      "ansible role add",
+      "ansible-galaxy add"
+    ],
+    "answer": "ansible-galaxy install"
+  },
+  {
+    "category": "Ansible",
+    "set": 3,
+    "question": "Ansible Vault ਕਿਸ ਲਈ ਵਰਤਿਆ ਜਾਂਦਾ ਹੈ?",
+    "options": [
+      "ਸੰਵੇਦਨਸ਼ੀਲ ਡੇਟਾ ਨੂੰ ਐਨਕ੍ਰਿਪਟ ਕਰਨਾ",
+      "ਇਨਵੈਂਟਰੀਆਂ ਦਾ ਪ੍ਰਬੰਧਨ ਕਰਨਾ",
+      "ਪਲੇਬੁੱਕ ਚਲਾਉਣਾ",
+      "ਰੋਲ ਇੰਸਟਾਲ ਕਰਨਾ"
+    ],
+    "answer": "ਸੰਵੇਦਨਸ਼ੀਲ ਡੇਟਾ ਨੂੰ ਐਨਕ੍ਰਿਪਟ ਕਰਨਾ"
+  },
+  {
+    "category": "Ansible",
+    "set": 3,
+    "question": "ਕਿਹੜੀ ਕਮਾਂਡ ਇੱਕ ਮੌਜੂਦਾ ਫਾਈਲ ਨੂੰ ਐਨਕ੍ਰਿਪਟ ਕਰਦੀ ਹੈ?",
+    "options": [
+      "ansible-vault encrypt",
+      "ansible-vault secure",
+      "ansible-vault create",
+      "ansible-vault lock"
+    ],
+    "answer": "ansible-vault encrypt"
+  },
+  {
+    "category": "Ansible",
+    "set": 3,
+    "question": "Ansible ਕਲੈਕਸ਼ਨਾਂ ਕੀ ਹਨ?",
+    "options": [
+      "ਰੋਲ, ਮੋਡੀਊਲ ਅਤੇ ਪਲੱਗਇਨ ਵਾਲੇ ਪੈਕੇਜ",
+      "ਇਨਵੈਂਟਰੀ ਗਰੁੱਪ",
+      "ਐਨਕ੍ਰਿਪਟ ਕੀਤੀਆਂ ਫਾਈਲਾਂ",
+      "YAML ਵੇਰੀਏਬਲ"
+    ],
+    "answer": "ਰੋਲ, ਮੋਡੀਊਲ ਅਤੇ ਪਲੱਗਇਨ ਵਾਲੇ ਪੈਕੇਜ"
+  },
+  {
+    "category": "Ansible",
+    "set": 3,
+    "question": "ਰੋਲ ਦੀ ਕਿਹੜੀ ਫਾਈਲ ਆਮ ਤੌਰ 'ਤੇ ਹੋਰ ਰੋਲਾਂ ਉੱਤੇ ਨਿਰਭਰਤਾਵਾਂ ਘੋਸ਼ਿਤ ਕਰਦੀ ਹੈ?",
+    "options": [
+      "vars/main.yml",
+      "meta/main.yml",
+      "defaults/main.yml",
+      "handlers/main.yml"
+    ],
+    "answer": "meta/main.yml"
+  },
+  {
+    "category": "Ansible",
+    "set": 3,
+    "question": "ਕਿਹੜੀ ਕਮਾਂਡ community.general ਨਾਮ ਦੀ ਕਲੈਕਸ਼ਨ ਸਥਾਪਿਤ ਕਰਦੀ ਹੈ?",
+    "options": [
+      "ansible-galaxy collection install community.general",
+      "ansible-galaxy role install community.general",
+      "ansible-galaxy collection build community.general",
+      "ansible-galaxy collection verify community.general"
+    ],
+    "answer": "ansible-galaxy collection install community.general"
+  },
+  {
+    "category": "Ansible",
+    "set": 3,
+    "question": "ਪੂਰੀ ਤਰ੍ਹਾਂ ਯੋਗ ਕਲੈਕਸ਼ਨ ਨਾਮ ansible.builtin.copy ਕਿਸ ਦੀ ਪਛਾਣ ਕਰਦਾ ਹੈ?",
+    "options": [
+      "builtin ਨਾਮ ਦੇ ਹੋਸਟ ਸਮੂਹ ਵਿੱਚ copy ਰੋਲ",
+      "ਇਨਵੈਂਟਰੀ ਦਾ ਹੋਸਟਨਾਮ ਅਤੇ ਉਸ ਤੋਂ ਬਾਅਦ ਉਸਦੀ ਕਨੈਕਸ਼ਨ ਕਿਸਮ",
+      "Vault ਪਛਾਣਕਰਤਾ ਅਤੇ ਉਸ ਤੋਂ ਬਾਅਦ ਇਨਕ੍ਰਿਪਟ ਕੀਤੀ ਫਾਈਲ ਦਾ ਨਾਮ",
+      "ansible ਨੇਮਸਪੇਸ ਦੀ builtin ਕਲੈਕਸ਼ਨ ਵਿੱਚ copy ਮੋਡੀਊਲ"
+    ],
+    "answer": "ansible ਨੇਮਸਪੇਸ ਦੀ builtin ਕਲੈਕਸ਼ਨ ਵਿੱਚ copy ਮੋਡੀਊਲ"
+  },
+  {
+    "category": "Ansible",
+    "set": 3,
+    "question": "ਕਿਹੜੀ ਕਮਾਂਡ ਇਨਕ੍ਰਿਪਟ ਕੀਤੀ Vault ਫਾਈਲ ਨੂੰ ਡਿਸਕ ਉੱਤੇ ਪੱਕੇ ਤੌਰ 'ਤੇ ਡਿਕ੍ਰਿਪਟ ਕੀਤੇ ਬਿਨਾਂ ਦਿਖਾਉਂਦੀ ਹੈ?",
+    "options": [
+      "ansible-vault edit secrets.yml",
+      "ansible-vault rekey secrets.yml",
+      "ansible-vault view secrets.yml",
+      "ansible-vault decrypt secrets.yml"
+    ],
+    "answer": "ansible-vault view secrets.yml"
+  },
+  {
+    "category": "Ansible",
+    "set": 3,
+    "question": "ਕਿਹੜੀ ਕਮਾਂਡ ਮੌਜੂਦਾ Vault-ਇਨਕ੍ਰਿਪਟ ਕੀਤੀ ਫਾਈਲ ਦੀ ਰੱਖਿਆ ਕਰਨ ਵਾਲਾ ਪਾਸਵਰਡ ਬਦਲਦੀ ਹੈ?",
+    "options": [
+      "ansible-vault create secrets.yml",
+      "ansible-vault rekey secrets.yml",
+      "ansible-vault view secrets.yml",
+      "ansible-vault encrypt secrets.yml"
+    ],
+    "answer": "ansible-vault rekey secrets.yml"
+  },
+  {
+    "category": "Ansible",
+    "set": 3,
+    "question": "ਪਲੇਬੁੱਕ ਚਲਾਉਣ ਵੇਲੇ ਕਿਹੜਾ ਵਿਕਲਪ Vault ਪਾਸਵਰਡ ਮੰਗਦਾ ਹੈ?",
+    "options": [
+      "--ask-vault-pass",
+      "--ask-pass",
+      "--ask-become-pass",
+      "--private-key"
+    ],
+    "answer": "--ask-vault-pass"
+  },
+  {
+    "category": "Ansible",
+    "set": 3,
+    "question": "ਕਿਹੜੀ ਟਾਸਕ ਕਾਰਵਾਈ ਚੱਲਣ ਸਮੇਂ ਰੋਲ ਨੂੰ ਗਤੀਸ਼ੀਲ ਢੰਗ ਨਾਲ ਲੋਡ ਕਰਦੀ ਹੈ?",
+    "options": [
+      "ansible.builtin.import_role",
+      "ansible.builtin.import_tasks",
+      "ansible.builtin.include_vars",
+      "ansible.builtin.include_role"
+    ],
+    "answer": "ansible.builtin.include_role"
+  },
+  {
+    "category": "Ansible",
+    "set": 3,
+    "question": "ਕਿਹੜੀ ਟਾਸਕ ਕਾਰਵਾਈ ਟਾਸਕਾਂ ਵਾਲੀ ਫਾਈਲ ਨੂੰ ਸਥਿਰ ਢੰਗ ਨਾਲ ਆਯਾਤ ਕਰਦੀ ਹੈ?",
+    "options": [
+      "ansible.builtin.include_vars",
+      "ansible.builtin.import_role",
+      "ansible.builtin.import_tasks",
+      "ansible.builtin.include_tasks"
+    ],
+    "answer": "ansible.builtin.import_tasks"
+  },
+  {
+    "category": "Ansible",
+    "set": 3,
+    "question": "ਰੋਲ ਦੇ defaults ਅਤੇ vars ਵਿੱਚ ਇੱਕੋ ਨਾਮ ਹੋਣ 'ਤੇ ਵੇਰੀਏਬਲ ਦੇ ਕਿਹੜੇ ਸਰੋਤ ਨੂੰ ਤਰਜੀਹ ਮਿਲਦੀ ਹੈ?",
+    "options": [
+      "ਦੋਵੇਂ ਪਰਿਭਾਸ਼ਾਵਾਂ ਹਮੇਸ਼ਾ ਸਿੰਟੈਕਸ ਦੀ ਗਲਤੀ ਪੈਦਾ ਕਰਦੀਆਂ ਹਨ",
+      "ਰੋਲ ਦੇ vars",
+      "ਰੋਲ ਦੇ defaults",
+      "ਦੋਵੇਂ ਮੁੱਲ ਹਮੇਸ਼ਾ ਜੋੜ ਦਿੱਤੇ ਜਾਂਦੇ ਹਨ"
+    ],
+    "answer": "ਰੋਲ ਦੇ vars"
+  },
+  {
+    "category": "Ansible",
+    "set": 3,
+    "question": "ਕਿਹੜੀ ਕਮਾਂਡ ਦਿੱਤੀ ਸਟ੍ਰਿੰਗ ਤੋਂ ਇਨਕ੍ਰਿਪਟ ਕੀਤਾ ਵੇਰੀਏਬਲ ਬਣਾਉਂਦੀ ਹੈ?",
+    "options": [
+      "ansible-vault encrypt_string",
+      "ansible-vault encrypt",
+      "ansible-vault rekey",
+      "ansible-vault view"
+    ],
+    "answer": "ansible-vault encrypt_string"
+  }
+]

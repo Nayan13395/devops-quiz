@@ -7,6 +7,7 @@ import 'package:flutter_timezone/flutter_timezone.dart';
 import 'package:timezone/data/latest.dart' as tz;
 import 'package:timezone/timezone.dart' as tz;
 
+import '../l10n/notification_localizations.dart';
 import 'streak_service.dart';
 
 class NotificationMessage {
@@ -26,109 +27,6 @@ class NotificationService extends WidgetsBindingObserver {
 
   Timer? _streakReminderRefreshTimer;
   bool _lifecycleObserverAttached = false;
-
-  static const List<NotificationMessage> _messages = [
-    NotificationMessage(
-      title: "🚀 Ready for Today's Quiz?",
-      body: "Answer today's DevOps questions and grow your skills!",
-    ),
-    NotificationMessage(
-      title: "🏆 Keep Your Streak Alive!",
-      body: "Complete today's quiz and continue your winning streak!",
-    ),
-    NotificationMessage(
-      title: "💡 Learn Something New",
-      body: "Discover a new DevOps concept today.",
-    ),
-    NotificationMessage(
-      title: "⚡ Sharpen Your DevOps Skills",
-      body: "Practice a few questions and level up your knowledge.",
-    ),
-    NotificationMessage(
-      title: "🎯 Daily Challenge Awaits",
-      body: "Today's DevOps questions are ready for you.",
-    ),
-    NotificationMessage(
-      title: "🔥 Earn More Points",
-      body: "Every correct answer gets you closer to the top!",
-    ),
-    NotificationMessage(
-      title: "📚 Practice Makes Perfect",
-      body: "Improve your Docker, Kubernetes and Linux skills.",
-    ),
-    NotificationMessage(
-      title: "🐧 Linux Challenge",
-      body: "Ready to test your Linux knowledge today?",
-    ),
-    NotificationMessage(
-      title: "🐳 Docker Time!",
-      body: "Container skills begin with one simple question.",
-    ),
-    NotificationMessage(
-      title: "☸ Kubernetes Practice",
-      body: "Can you answer today's Kubernetes questions?",
-    ),
-    NotificationMessage(
-      title: "⚙️ Terraform Challenge",
-      body: "Build your Infrastructure as Code expertise.",
-    ),
-    NotificationMessage(
-      title: "☁️ Cloud Skills Matter",
-      body: "Keep improving your cloud knowledge today.",
-    ),
-    NotificationMessage(
-      title: "🎉 New Achievement Awaits",
-      body: "Complete today's quiz and unlock new achievements.",
-    ),
-    NotificationMessage(
-      title: "💯 Can You Score Full Marks?",
-      body: "Take today's challenge and aim for a perfect score.",
-    ),
-    NotificationMessage(
-      title: "🚀 Become a DevOps Expert",
-      body: "One quiz every day builds real expertise.",
-    ),
-    NotificationMessage(
-      title: "🧠 Learn One New Thing",
-      body: "Today's quiz could teach you something valuable.",
-    ),
-    NotificationMessage(
-      title: "🏅 Climb the Leaderboard",
-      body: "Earn points and move closer to the top.",
-    ),
-    NotificationMessage(
-      title: "📖 Daily DevOps Practice",
-      body: "A few questions today can make a big difference.",
-    ),
-    NotificationMessage(
-      title: "⚙️ Automation Starts Here",
-      body: "Improve your DevOps automation knowledge today.",
-    ),
-    NotificationMessage(
-      title: "🌐 Cloud & DevOps Quiz",
-      body: "Ready for another round of learning?",
-    ),
-    NotificationMessage(
-      title: "🚀 Keep Growing",
-      body: "Consistency is the fastest way to master DevOps.",
-    ),
-    NotificationMessage(
-      title: "🎓 Knowledge Check",
-      body: "See how much you've learned with today's quiz.",
-    ),
-    NotificationMessage(
-      title: "💪 Build Better Skills",
-      body: "Complete today's quiz and keep improving.",
-    ),
-    NotificationMessage(
-      title: "📈 Small Progress Every Day",
-      body: "Practice today and become better than yesterday.",
-    ),
-    NotificationMessage(
-      title: "⭐ Ready for Another Challenge?",
-      body: "Your next DevOps quiz is waiting!",
-    ),
-  ];
 
   static const int _streakReminderNotificationId = 4;
 
@@ -246,10 +144,11 @@ class NotificationService extends WidgetsBindingObserver {
       // CREATE NOTIFICATION CHANNEL
       // ===========================================
 
-      const AndroidNotificationChannel channel = AndroidNotificationChannel(
+      final l10n = await NotificationLocalizations.loadSelected();
+      final AndroidNotificationChannel channel = AndroidNotificationChannel(
         'daily_quiz_channel',
-        'Daily Quiz Notifications',
-        description: 'Daily quiz reminder notifications',
+        l10n.text('channel.name'),
+        description: l10n.text('channel.description'),
         importance: Importance.high,
       );
 
@@ -298,11 +197,12 @@ class NotificationService extends WidgetsBindingObserver {
       return;
     }
 
-    const AndroidNotificationDetails androidDetails =
+    final l10n = await NotificationLocalizations.loadSelected();
+    final AndroidNotificationDetails androidDetails =
         AndroidNotificationDetails(
           'daily_quiz_channel',
-          'Daily Quiz Notifications',
-          channelDescription: 'Daily quiz reminder notifications',
+          l10n.text('channel.name'),
+          channelDescription: l10n.text('channel.description'),
           importance: Importance.high,
           priority: Priority.high,
         );
@@ -310,9 +210,9 @@ class NotificationService extends WidgetsBindingObserver {
     try {
       await flutterLocalNotificationsPlugin.show(
         id: 998,
-        title: '🚀 Update available',
-        body: 'DevOps Quiz $version is ready on Google Play. Update now!',
-        notificationDetails: const NotificationDetails(android: androidDetails),
+        title: l10n.text('system.updateTitle'),
+        body: l10n.text('system.updateBody', {'version': version}),
+        notificationDetails: NotificationDetails(android: androidDetails),
       );
     } catch (e) {
       debugPrint('Update notification failed: $e');
@@ -328,24 +228,25 @@ class NotificationService extends WidgetsBindingObserver {
       return;
     }
 
-    const AndroidNotificationDetails androidDetails =
+    final l10n = await NotificationLocalizations.loadSelected();
+    final AndroidNotificationDetails androidDetails =
         AndroidNotificationDetails(
           'daily_quiz_channel',
-          'Daily Quiz Notifications',
-          channelDescription: 'Daily quiz reminder notifications',
+          l10n.text('channel.name'),
+          channelDescription: l10n.text('channel.description'),
           importance: Importance.high,
           priority: Priority.high,
         );
 
-    const NotificationDetails details = NotificationDetails(
+    final NotificationDetails details = NotificationDetails(
       android: androidDetails,
     );
 
     try {
       await flutterLocalNotificationsPlugin.show(
         id: 999,
-        title: 'DevOps Quiz',
-        body: 'Test notification',
+        title: l10n.text('system.testTitle'),
+        body: l10n.text('system.testBody'),
         notificationDetails: details,
       );
     } catch (e) {
@@ -363,6 +264,7 @@ class NotificationService extends WidgetsBindingObserver {
     }
 
     try {
+      final l10n = await NotificationLocalizations.loadSelected();
       final tz.TZDateTime testTime = tz.TZDateTime.now(
         tz.local,
       ).add(const Duration(seconds: 30));
@@ -371,14 +273,14 @@ class NotificationService extends WidgetsBindingObserver {
 
       await flutterLocalNotificationsPlugin.zonedSchedule(
         id: 100,
-        title: 'Test Notification',
-        body: 'This notification should appear after 30 seconds.',
+        title: l10n.text('system.scheduledTestTitle'),
+        body: l10n.text('system.scheduledTestBody'),
         scheduledDate: testTime,
-        notificationDetails: const NotificationDetails(
+        notificationDetails: NotificationDetails(
           android: AndroidNotificationDetails(
             'daily_quiz_channel',
-            'Daily Quiz Notifications',
-            channelDescription: 'Daily quiz reminder notifications',
+            l10n.text('channel.name'),
+            channelDescription: l10n.text('channel.description'),
             importance: Importance.high,
             priority: Priority.high,
           ),
@@ -429,40 +331,50 @@ class NotificationService extends WidgetsBindingObserver {
   // MESSAGE FOR TODAY
   // =========================================================
 
-  NotificationMessage messageForToday(int offset) {
-    // Use the timezone-aware local date.
+  Future<NotificationMessage> messageForToday(
+    int offset, {
+    String? languageCode,
+    DateTime? now,
+  }) async {
+    final current = now ?? tz.TZDateTime.now(tz.local);
 
-    final tz.TZDateTime now = tz.TZDateTime.now(tz.local);
+    final DateTime startOfYear = DateTime(current.year, 1, 1);
 
-    final DateTime startOfYear = DateTime(now.year, 1, 1);
-
-    final DateTime today = DateTime(now.year, now.month, now.day);
+    final DateTime today = DateTime(current.year, current.month, current.day);
 
     final int dayNumber = today.difference(startOfYear).inDays;
 
-    return _messages[(dayNumber + offset) % _messages.length];
+    final l10n = await NotificationLocalizations.loadSelected(
+      languageCode: languageCode,
+    );
+    final messages = l10n.dailyMessages;
+    final message = messages[(dayNumber + offset) % messages.length];
+    return NotificationMessage(title: message.title, body: message.body);
   }
 
   // =========================================================
   // DAILY NOTIFICATIONS
   // =========================================================
 
-  Future<void> scheduleDailyNotifications() async {
+  Future<void> scheduleDailyNotifications({String? languageCode}) async {
     if (kIsWeb) {
       return;
     }
 
     try {
-      const AndroidNotificationDetails androidDetails =
+      final l10n = await NotificationLocalizations.loadSelected(
+        languageCode: languageCode,
+      );
+      final AndroidNotificationDetails androidDetails =
           AndroidNotificationDetails(
             'daily_quiz_channel',
-            'Daily Quiz Notifications',
-            channelDescription: 'Daily quiz reminder notifications',
+            l10n.text('channel.name'),
+            channelDescription: l10n.text('channel.description'),
             importance: Importance.high,
             priority: Priority.high,
           );
 
-      const NotificationDetails details = NotificationDetails(
+      final NotificationDetails details = NotificationDetails(
         android: androidDetails,
       );
 
@@ -480,11 +392,20 @@ class NotificationService extends WidgetsBindingObserver {
       // PICK TODAY'S MESSAGES
       // ===========================================
 
-      final NotificationMessage morning = messageForToday(0);
+      final NotificationMessage morning = await messageForToday(
+        0,
+        languageCode: languageCode,
+      );
 
-      final NotificationMessage afternoon = messageForToday(1);
+      final NotificationMessage afternoon = await messageForToday(
+        1,
+        languageCode: languageCode,
+      );
 
-      final NotificationMessage evening = messageForToday(2);
+      final NotificationMessage evening = await messageForToday(
+        2,
+        languageCode: languageCode,
+      );
 
       // ===========================================
       // CALCULATE LOCAL TIMES
@@ -600,6 +521,7 @@ class NotificationService extends WidgetsBindingObserver {
       );
 
       if (await StreakService.hasStreakToSave()) {
+        final l10n = await NotificationLocalizations.loadSelected();
         final now = tz.TZDateTime.now(tz.local);
         final reminderTime = tz.TZDateTime(
           tz.local,
@@ -612,15 +534,14 @@ class NotificationService extends WidgetsBindingObserver {
 
         await flutterLocalNotificationsPlugin.zonedSchedule(
           id: _streakReminderNotificationId,
-          title: '🔥 Your streak is at risk',
-          body:
-              'Open DevOps Quiz before the day ends to keep your streak alive.',
+          title: l10n.text('system.streakTitle'),
+          body: l10n.text('system.streakBody'),
           scheduledDate: reminderTime,
-          notificationDetails: const NotificationDetails(
+          notificationDetails: NotificationDetails(
             android: AndroidNotificationDetails(
               'daily_quiz_channel',
-              'Daily Quiz Notifications',
-              channelDescription: 'Daily quiz and streak reminders',
+              l10n.text('channel.name'),
+              channelDescription: l10n.text('channel.description'),
               importance: Importance.high,
               priority: Priority.high,
             ),

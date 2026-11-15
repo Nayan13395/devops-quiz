@@ -1,0 +1,4002 @@
+{
+  "linux-001": {
+    "command": "cat",
+    "description": "Concatène et affiche le contenu des fichiers."
+  },
+  "linux-002": {
+    "command": "grep",
+    "description": "Recherche un motif précis dans les fichiers."
+  },
+  "linux-003": {
+    "command": "chmod",
+    "description": "Modifie les autorisations d'accès d'un fichier ou d'un répertoire."
+  },
+  "linux-004": {
+    "command": "chown",
+    "description": "Modifie le propriétaire d'un fichier ou d'un répertoire."
+  },
+  "linux-005": {
+    "command": "ls",
+    "description": "Liste le contenu d'un répertoire."
+  },
+  "linux-006": {
+    "command": "cd",
+    "description": "Change le répertoire de travail courant."
+  },
+  "linux-007": {
+    "command": "pwd",
+    "description": "Affiche le chemin du répertoire de travail courant."
+  },
+  "linux-008": {
+    "command": "mkdir",
+    "description": "Crée un répertoire."
+  },
+  "linux-009": {
+    "command": "rm",
+    "description": "Supprime des fichiers ou des répertoires."
+  },
+  "linux-010": {
+    "command": "cp",
+    "description": "Copie des fichiers ou des répertoires."
+  },
+  "linux-011": {
+    "command": "mv",
+    "description": "Déplace ou renomme des fichiers et des répertoires."
+  },
+  "linux-012": {
+    "command": "ps",
+    "description": "Affiche les processus en cours d'exécution."
+  },
+  "linux-013": {
+    "command": "top",
+    "description": "Affiche en temps réel les processus et les ressources du système."
+  },
+  "linux-014": {
+    "command": "df",
+    "description": "Affiche l'utilisation de l'espace disque."
+  },
+  "linux-015": {
+    "command": "free",
+    "description": "Affiche l'utilisation de la mémoire du système."
+  },
+  "linux-016": {
+    "command": "systemctl status",
+    "description": "Affiche l'état courant et les entrées de journal récentes d'un service systemd."
+  },
+  "linux-017": {
+    "command": "journalctl",
+    "description": "Lit les journaux systemd, avec des filtres pour chaque service."
+  },
+  "linux-018": {
+    "command": "find",
+    "description": "Parcourt une arborescence de répertoires pour trouver des fichiers répondant à des critères comme le nom ou le type."
+  },
+  "linux-019": {
+    "command": "tail",
+    "description": "Affiche les dernières lignes d'un fichier et peut suivre les nouvelles lignes à mesure qu'elles sont ajoutées."
+  },
+  "linux-020": {
+    "command": "Quelle commande affiche les 5 dernières lignes d'un fichier ?",
+    "description": "tail -n 5"
+  },
+  "linux-021": {
+    "command": "Quelle commande affiche la taille d'un répertoire ?",
+    "description": "du -sh"
+  },
+  "linux-022": {
+    "command": "Quelle commande compte uniquement le nombre de lignes d'un fichier ?",
+    "description": "wc -l"
+  },
+  "linux-023": {
+    "command": "Quelle commande affiche la durée de fonctionnement du système ?",
+    "description": "uptime"
+  },
+  "git-001": {
+    "command": "git clone",
+    "description": "Crée une copie locale d'un dépôt distant."
+  },
+  "git-002": {
+    "command": "git init",
+    "description": "Initialise un nouveau dépôt Git."
+  },
+  "git-003": {
+    "command": "git add",
+    "description": "Place les modifications dans l'index pour le prochain commit."
+  },
+  "git-004": {
+    "command": "git commit",
+    "description": "Enregistre dans le dépôt les modifications placées dans l'index."
+  },
+  "git-005": {
+    "command": "git push",
+    "description": "Envoie les commits locaux vers un dépôt distant."
+  },
+  "git-006": {
+    "command": "git pull",
+    "description": "Récupère et fusionne les modifications d'un dépôt distant."
+  },
+  "git-007": {
+    "command": "git branch",
+    "description": "Liste, crée ou supprime des branches."
+  },
+  "git-008": {
+    "command": "git checkout",
+    "description": "Change de branche ou restaure des fichiers de l'arbre de travail."
+  },
+  "git-009": {
+    "command": "git merge",
+    "description": "Réunit deux historiques de développement ou plus."
+  },
+  "git-010": {
+    "command": "git status",
+    "description": "Affiche l'état de l'arbre de travail."
+  },
+  "git-011": {
+    "command": "git diff",
+    "description": "Affiche les différences entre l'arbre de travail et l'index ; --staged affiche les modifications indexées pour le prochain commit."
+  },
+  "git-012": {
+    "command": "git stash",
+    "description": "Sauvegarde temporairement les modifications des fichiers suivis et rétablit un arbre de travail propre ; utilisez -u pour inclure les fichiers non suivis."
+  },
+  "git-013": {
+    "command": "Qu'est-ce que Git ?",
+    "description": "Système de contrôle de version"
+  },
+  "git-014": {
+    "command": "Quelle commande affiche l'historique des commits ?",
+    "description": "git log"
+  },
+  "git-015": {
+    "command": "Quelle commande affiche l'historique des commits sur une seule ligne ?",
+    "description": "git log --oneline"
+  },
+  "git-016": {
+    "command": "Quelle commande définit Alex comme nom global d'auteur des commits Git ?",
+    "description": "git config --global user.name \"Alex\""
+  },
+  "git-017": {
+    "command": "Quelle commande définit alex@example.com comme adresse globale d'auteur des commits Git ?",
+    "description": "git config --global user.email \"alex@example.com\""
+  },
+  "git-018": {
+    "command": "Quel fichier est utilisé pour ignorer des fichiers dans Git ?",
+    "description": ".gitignore"
+  },
+  "git-019": {
+    "command": "À la racine du dépôt, quelle commande indexe tous les ajouts, modifications et suppressions non ignorés sans créer de commit ?",
+    "description": "git add ."
+  },
+  "git-020": {
+    "command": "Quelle option permet de fournir directement un message de commit en ligne de commande ?",
+    "description": "git commit -m"
+  },
+  "git-021": {
+    "command": "Quelle commande supprime un fichier suivi ?",
+    "description": "git rm"
+  },
+  "git-022": {
+    "command": "Quelle commande définit user.name uniquement pour le dépôt courant ?",
+    "description": "git config --local user.name \"Alex\""
+  },
+  "git-023": {
+    "command": "Quelle commande indexe interactivement des blocs de modifications sélectionnés ?",
+    "description": "git add -p"
+  },
+  "docker-001": {
+    "command": "docker build",
+    "description": "Construit une image à partir d'un Dockerfile."
+  },
+  "docker-002": {
+    "command": "docker run",
+    "description": "Exécute une commande dans un nouveau conteneur."
+  },
+  "docker-003": {
+    "command": "docker ps",
+    "description": "Liste les conteneurs en cours d'exécution."
+  },
+  "docker-004": {
+    "command": "docker images",
+    "description": "Liste les images Docker locales."
+  },
+  "docker-005": {
+    "command": "docker stop",
+    "description": "Arrête un ou plusieurs conteneurs en cours d'exécution."
+  },
+  "docker-006": {
+    "command": "docker rm",
+    "description": "Supprime un ou plusieurs conteneurs."
+  },
+  "docker-007": {
+    "command": "docker rmi",
+    "description": "Supprime une ou plusieurs images."
+  },
+  "docker-008": {
+    "command": "docker exec",
+    "description": "Exécute une commande dans un conteneur en cours d'exécution."
+  },
+  "docker-009": {
+    "command": "docker logs",
+    "description": "Récupère les journaux d'un conteneur."
+  },
+  "docker-010": {
+    "command": "docker-compose up",
+    "description": "Crée et démarre les conteneurs à partir de docker-compose.yml."
+  },
+  "docker-011": {
+    "command": "docker inspect",
+    "description": "Affiche des informations JSON détaillées sur des objets Docker tels que les conteneurs et les images."
+  },
+  "docker-012": {
+    "command": "docker stats",
+    "description": "Affiche en direct l'utilisation des ressources des conteneurs, dont le CPU et la mémoire ; --no-stream affiche un seul instantané."
+  },
+  "docker-013": {
+    "command": "Quelle commande exécute un conteneur en mode détaché ?",
+    "description": "docker run -d"
+  },
+  "docker-014": {
+    "command": "Quelle commande maintient l'entrée standard ouverte et alloue un pseudo-TTY à un nouveau conteneur ?",
+    "description": "docker run -it"
+  },
+  "docker-015": {
+    "command": "Quelle commande liste toutes les images, y compris les images intermédiaires ?",
+    "description": "docker images -a"
+  },
+  "docker-016": {
+    "command": "Quelle commande supprime tous les conteneurs arrêtés ?",
+    "description": "docker container prune"
+  },
+  "docker-017": {
+    "command": "Quelle commande supprime toutes les images inutilisées ?",
+    "description": "docker image prune -a"
+  },
+  "docker-018": {
+    "command": "Quelle commande affiche les processus en cours d'exécution dans un conteneur ?",
+    "description": "docker top"
+  },
+  "docker-019": {
+    "command": "Quelle commande crée un réseau Docker ?",
+    "description": "docker network create"
+  },
+  "docker-020": {
+    "command": "Quelle commande liste les réseaux Docker ?",
+    "description": "docker network ls"
+  },
+  "docker-021": {
+    "command": "Quelle commande crée un volume Docker ?",
+    "description": "docker volume create"
+  },
+  "docker-022": {
+    "command": "Quelle commande liste les volumes Docker ?",
+    "description": "docker volume ls"
+  },
+  "docker-023": {
+    "command": "Quelle commande affiche les informations système de Docker ?",
+    "description": "docker info"
+  },
+  "k8s-001": {
+    "command": "kubectl get pods",
+    "description": "Liste les pods de l'espace de noms courant."
+  },
+  "k8s-002": {
+    "command": "kubectl apply",
+    "description": "Applique une configuration à une ressource à partir d'un nom de fichier."
+  },
+  "k8s-003": {
+    "command": "kubectl delete",
+    "description": "Supprime des ressources par nom ou à partir de noms de fichiers."
+  },
+  "k8s-004": {
+    "command": "kubectl describe",
+    "description": "Affiche des informations détaillées sur une ressource précise."
+  },
+  "k8s-005": {
+    "command": "kubectl logs",
+    "description": "Affiche les journaux d'un conteneur dans un pod."
+  },
+  "k8s-006": {
+    "command": "kubectl exec",
+    "description": "Exécute une commande dans un conteneur."
+  },
+  "k8s-007": {
+    "command": "kubectl get nodes",
+    "description": "Liste tous les nœuds du cluster."
+  },
+  "k8s-008": {
+    "command": "kubectl get services",
+    "description": "Liste tous les services de l'espace de noms courant."
+  },
+  "k8s-009": {
+    "command": "kubectl scale",
+    "description": "Définit une nouvelle taille pour un Deployment ou un ReplicaSet."
+  },
+  "k8s-010": {
+    "command": "kubectl port-forward",
+    "description": "Transfère des ports locaux vers un pod."
+  },
+  "k8s-011": {
+    "command": "kubectl rollout status",
+    "description": "Surveille la progression du déploiement d'une ressource jusqu'à son achèvement ou l'expiration du délai."
+  },
+  "k8s-012": {
+    "command": "Quelle commande liste les pods de tous les namespaces ?",
+    "description": "kubectl get pods -A"
+  },
+  "k8s-013": {
+    "command": "Quelle commande décrit un pod ?",
+    "description": "kubectl describe pod"
+  },
+  "k8s-014": {
+    "command": "Quelle commande affiche les journaux d'un pod en continu ?",
+    "description": "kubectl logs -f"
+  },
+  "k8s-015": {
+    "command": "Quelle commande supprime un pod ?",
+    "description": "kubectl delete pod"
+  },
+  "k8s-016": {
+    "command": "Quelle commande crée un deployment ?",
+    "description": "kubectl create deployment"
+  },
+  "k8s-017": {
+    "command": "Quelle commande liste les deployments ?",
+    "description": "kubectl get deployments"
+  },
+  "k8s-018": {
+    "command": "Quelle commande affiche les informations du cluster ?",
+    "description": "kubectl cluster-info"
+  },
+  "k8s-019": {
+    "command": "Quelle commande applique une configuration à partir d'un fichier YAML ?",
+    "description": "kubectl apply -f"
+  },
+  "k8s-020": {
+    "command": "Quelle commande crée des ressources à partir d'un fichier YAML ?",
+    "description": "kubectl create -f"
+  },
+  "k8s-021": {
+    "command": "Quelle commande supprime les ressources définies dans un fichier YAML ?",
+    "description": "kubectl delete -f"
+  },
+  "k8s-022": {
+    "command": "Quelle option kubectl sélectionne le namespace payments pour une requête ?",
+    "description": "-n payments"
+  },
+  "k8s-023": {
+    "command": "Quelle commande affiche le nom du contexte kubeconfig courant ?",
+    "description": "kubectl config current-context"
+  },
+  "networking-001": {
+    "command": "curl",
+    "description": "Transfère des données depuis ou vers un serveur."
+  },
+  "networking-002": {
+    "command": "ping",
+    "description": "Teste si un hôte est joignable sur un réseau IP."
+  },
+  "networking-003": {
+    "command": "ssh",
+    "description": "Se connecte de manière sécurisée à une machine distante."
+  },
+  "networking-004": {
+    "command": "netstat",
+    "description": "Affiche les connexions réseau et les tables de routage."
+  },
+  "networking-005": {
+    "command": "nslookup",
+    "description": "Interroge les serveurs de noms de domaine Internet."
+  },
+  "networking-006": {
+    "command": "dig",
+    "description": "Effectue des recherches DNS et affiche les réponses."
+  },
+  "networking-007": {
+    "command": "traceroute",
+    "description": "Affiche le chemin emprunté par les paquets vers un hôte réseau."
+  },
+  "networking-008": {
+    "command": "iptables",
+    "description": "Configure les règles de filtrage des paquets IP sous Linux."
+  },
+  "networking-009": {
+    "command": "telnet",
+    "description": "Communique de manière interactive avec un autre hôte."
+  },
+  "networking-010": {
+    "command": "nc (netcat)",
+    "description": "Lit et écrit des données via des connexions réseau."
+  },
+  "networking-011": {
+    "command": "Que signifie IP ?",
+    "description": "Internet Protocol"
+  },
+  "networking-012": {
+    "command": "Quel protocole est utilisé pour transférer des pages web ?",
+    "description": "HTTP"
+  },
+  "networking-013": {
+    "command": "Quel port HTTPS utilise-t-il par défaut ?",
+    "description": "443"
+  },
+  "networking-014": {
+    "command": "Quel port HTTP utilise-t-il par défaut ?",
+    "description": "80"
+  },
+  "networking-015": {
+    "command": "Quel port SSH utilise-t-il par défaut ?",
+    "description": "22"
+  },
+  "networking-016": {
+    "command": "Que fait le DNS ?",
+    "description": "Résout les noms de domaine en adresses IP"
+  },
+  "networking-017": {
+    "command": "Quelle couche du modèle OSI gère le routage ?",
+    "description": "Couche réseau"
+  },
+  "networking-018": {
+    "command": "Quel protocole est utilisé pour envoyer des e-mails ?",
+    "description": "SMTP"
+  },
+  "networking-019": {
+    "command": "Laquelle de ces adresses est une adresse de bouclage IPv4 ?",
+    "description": "127.0.0.1"
+  },
+  "networking-020": {
+    "command": "Quel protocole est orienté connexion ?",
+    "description": "TCP"
+  },
+  "networking-021": {
+    "command": "Quel protocole est sans connexion ?",
+    "description": "UDP"
+  },
+  "networking-022": {
+    "command": "Quelle commande affiche les informations de routage ?",
+    "description": "ip route"
+  },
+  "networking-023": {
+    "command": "Quelle commande affiche les interfaces réseau sous Linux ?",
+    "description": "ip addr"
+  },
+  "networking-024": {
+    "command": "Combien de bits contient une adresse IPv4 ?",
+    "description": "32"
+  },
+  "jenkins-001": {
+    "command": "Jenkinsfile",
+    "description": "Fichier texte contenant la définition d'un Pipeline Jenkins."
+  },
+  "jenkins-002": {
+    "command": "Pipeline",
+    "description": "Suite de plugins prenant en charge les pipelines de livraison continue."
+  },
+  "jenkins-003": {
+    "command": "Agent",
+    "description": "Indique où le Pipeline ou l'étape sera exécuté."
+  },
+  "jenkins-004": {
+    "command": "Stage",
+    "description": "Définit un sous-ensemble de tâches conceptuellement distinct."
+  },
+  "jenkins-005": {
+    "command": "Node",
+    "description": "Machine capable d'exécuter un Pipeline."
+  },
+  "jenkins-006": {
+    "command": "Build Trigger",
+    "description": "Mécanismes qui déclenchent un build Jenkins."
+  },
+  "jenkins-007": {
+    "command": "Artifact",
+    "description": "Fichier généré par un processus de build."
+  },
+  "jenkins-008": {
+    "command": "Post actions",
+    "description": "Actions effectuées après la fin d'une étape ou d'un pipeline."
+  },
+  "jenkins-009": {
+    "command": "Credentials",
+    "description": "Secrets stockés de manière sécurisée et utilisés dans les jobs Jenkins."
+  },
+  "jenkins-010": {
+    "command": "Qu'est-ce que Jenkins ?",
+    "description": "Outil CI/CD"
+  },
+  "jenkins-011": {
+    "command": "Dans quel langage Jenkins est-il écrit ?",
+    "description": "Java"
+  },
+  "jenkins-012": {
+    "command": "Quel port Jenkins utilise-t-il par défaut ?",
+    "description": "8080"
+  },
+  "jenkins-013": {
+    "command": "Qu'est-ce qu'un Job Jenkins ?",
+    "description": "Tâche automatisée"
+  },
+  "jenkins-014": {
+    "command": "Quel plugin intègre Jenkins avec Git ?",
+    "description": "Git Plugin"
+  },
+  "jenkins-015": {
+    "command": "À quoi Jenkins sert-il principalement ?",
+    "description": "Automatisation"
+  },
+  "jenkins-016": {
+    "command": "Que signifie CI ?",
+    "description": "Intégration continue"
+  },
+  "jenkins-017": {
+    "command": "Que signifie CD en DevOps ?",
+    "description": "Livraison continue"
+  },
+  "jenkins-018": {
+    "command": "Quel menu permet d'installer des plugins Jenkins ?",
+    "description": "Manage Jenkins"
+  },
+  "jenkins-019": {
+    "command": "Quelle est la variable du répertoire personnel de Jenkins ?",
+    "description": "JENKINS_HOME"
+  },
+  "jenkins-020": {
+    "command": "Quel bouton lance manuellement un job Jenkins ?",
+    "description": "Build Now"
+  },
+  "jenkins-021": {
+    "command": "Quel système de gestion de code source est le plus couramment intégré à Jenkins ?",
+    "description": "Git"
+  },
+  "jenkins-022": {
+    "command": "Que faut-il pour exécuter le contrôleur Jenkins lui-même, indépendamment des outils requis par les tâches de construction ?",
+    "description": "Un environnement d'exécution Java pris en charge, fourni par un JRE ou un JDK"
+  },
+  "jenkins-023": {
+    "command": "Quel type de job Jenkins est le plus couramment utilisé pour les tâches simples ?",
+    "description": "Freestyle Project"
+  },
+  "jenkins-024": {
+    "command": "À quoi sert un espace de travail Jenkins ?",
+    "description": "Aux fichiers extraits ou générés pendant l'exécution d'une tâche"
+  },
+  "terraform-001": {
+    "command": "terraform init",
+    "description": "Initialise un répertoire de travail contenant des fichiers Terraform."
+  },
+  "terraform-002": {
+    "command": "terraform plan",
+    "description": "Crée un plan d'exécution indiquant les actions que Terraform effectuera."
+  },
+  "terraform-003": {
+    "command": "terraform apply",
+    "description": "Applique les modifications pour atteindre l'état souhaité."
+  },
+  "terraform-004": {
+    "command": "terraform destroy",
+    "description": "Détruit l'infrastructure gérée par Terraform."
+  },
+  "terraform-005": {
+    "command": "terraform fmt",
+    "description": "Réécrit les fichiers Terraform dans un format canonique."
+  },
+  "terraform-006": {
+    "command": "terraform validate",
+    "description": "Valide les fichiers de configuration d'un répertoire."
+  },
+  "terraform-007": {
+    "command": "terraform state",
+    "description": "Gestion avancée de l'état (liste et déplacement de ressources)."
+  },
+  "terraform-008": {
+    "command": "Provider",
+    "description": "Plugin permettant à Terraform d'interagir avec les fournisseurs de cloud."
+  },
+  "terraform-009": {
+    "command": "Resource",
+    "description": "Définit un objet d'infrastructure que Terraform crée et gère."
+  },
+  "terraform-010": {
+    "command": "Variable",
+    "description": "Accepte des valeurs d'entrée pour qu'un module Terraform puisse être réutilisé avec des paramètres différents."
+  },
+  "terraform-011": {
+    "command": "terraform output",
+    "description": "Lit les valeurs de sortie du module racine dans l'état Terraform."
+  },
+  "terraform-012": {
+    "command": "Qu'est-ce que Terraform ?",
+    "description": "Outil d'Infrastructure as Code"
+  },
+  "terraform-013": {
+    "command": "Qui a développé Terraform ?",
+    "description": "HashiCorp"
+  },
+  "terraform-014": {
+    "command": "Quel langage sous-tend la syntaxe de configuration native de Terraform, par opposition à son alternative JSON ?",
+    "description": "HCL"
+  },
+  "terraform-015": {
+    "command": "Quelle extension de fichier est couramment utilisée pour les fichiers Terraform ?",
+    "description": ".tf"
+  },
+  "terraform-016": {
+    "command": "Quel fichier stocke l'état Terraform localement ?",
+    "description": "terraform.tfstate"
+  },
+  "terraform-017": {
+    "command": "Quelle commande affiche la version de Terraform ?",
+    "description": "terraform version"
+  },
+  "terraform-018": {
+    "command": "Quelle approche Terraform suit-il ?",
+    "description": "Déclarative"
+  },
+  "terraform-019": {
+    "command": "Quelle commande affiche les valeurs de sortie du module racine depuis l'état ?",
+    "description": "terraform output"
+  },
+  "terraform-020": {
+    "command": "Quelle expression lit une variable d'entrée nommée region ?",
+    "description": "var.region"
+  },
+  "terraform-021": {
+    "command": "Quelle expression lit une valeur locale nommée prefix ?",
+    "description": "local.prefix"
+  },
+  "terraform-022": {
+    "command": "Quel argument du bloc terraform contraint la version de la CLI Terraform ?",
+    "description": "required_version"
+  },
+  "terraform-023": {
+    "command": "Quel bloc au sein de terraform déclare les adresses sources des fournisseurs et leurs contraintes de version ?",
+    "description": "required_providers"
+  },
+  "terraform-024": {
+    "command": "Que fournit principalement un fournisseur Terraform ?",
+    "description": "Des types de ressources et des sources de données pour interagir avec une API ou un service"
+  },
+  "ansible-001": {
+    "command": "ansible",
+    "description": "Exécute une tâche ponctuelle sur les hôtes d'un inventaire Ansible."
+  },
+  "ansible-002": {
+    "command": "ansible-playbook",
+    "description": "Exécute les tâches d'automatisation définies dans un playbook Ansible."
+  },
+  "ansible-003": {
+    "command": "Inventory",
+    "description": "Liste les hôtes et les groupes d'hôtes gérés par Ansible."
+  },
+  "ansible-004": {
+    "command": "Playbook",
+    "description": "Définit les tâches d'automatisation et les hôtes cibles en YAML."
+  },
+  "ansible-005": {
+    "command": "Module",
+    "description": "Effectue une opération Ansible précise, comme installer un paquet ou copier un fichier."
+  },
+  "ansible-006": {
+    "command": "Task",
+    "description": "Appelle un module Ansible avec des arguments pour effectuer une étape d'automatisation."
+  },
+  "ansible-007": {
+    "command": "Role",
+    "description": "Organise les tâches, les gestionnaires, les variables et les fichiers Ansible dans une structure de répertoires réutilisable."
+  },
+  "ansible-008": {
+    "command": "Vault",
+    "description": "Conserve les données sensibles, comme les mots de passe, dans des fichiers chiffrés."
+  },
+  "ansible-009": {
+    "command": "Handler",
+    "description": "Tâche qui ne s'exécute que lorsqu'une autre tâche la notifie."
+  },
+  "ansible-010": {
+    "command": "Facts",
+    "description": "Variables contenant des informations sur les systèmes distants."
+  },
+  "ansible-011": {
+    "command": "À quoi sert principalement Ansible ?",
+    "description": "Gestion de configuration"
+  },
+  "ansible-012": {
+    "command": "Dans quel langage Ansible est-il écrit ?",
+    "description": "Python"
+  },
+  "ansible-013": {
+    "command": "Quel fichier contient les hôtes gérés dans Ansible ?",
+    "description": "Fichier d'inventaire"
+  },
+  "ansible-014": {
+    "command": "Quel est l'emplacement par défaut du fichier d'inventaire ?",
+    "description": "/etc/ansible/hosts"
+  },
+  "ansible-015": {
+    "command": "Quelle commande vérifie la version d'Ansible ?",
+    "description": "ansible --version"
+  },
+  "ansible-016": {
+    "command": "Quel protocole le plugin de connexion par défaut d'Ansible utilise-t-il normalement pour les hôtes Linux ?",
+    "description": "SSH"
+  },
+  "ansible-017": {
+    "command": "Qu'est-ce qu'un Playbook Ansible ?",
+    "description": "Fichier YAML contenant des tâches d'automatisation"
+  },
+  "ansible-018": {
+    "command": "Quel mot-clé définit les hôtes cibles dans un playbook ?",
+    "description": "hosts"
+  },
+  "ansible-019": {
+    "command": "Quel mot-clé définit les tâches dans un playbook ?",
+    "description": "tasks"
+  },
+  "ansible-020": {
+    "command": "Quel module copie des fichiers vers des hôtes distants ?",
+    "description": "copy"
+  },
+  "ansible-021": {
+    "command": "Quel module gère les services ?",
+    "description": "service"
+  },
+  "ansible-022": {
+    "command": "Quelle commande vérifie la connectivité Ansible et la disponibilité d'un Python utilisable sur tous les hôtes POSIX ciblés ?",
+    "description": "ansible all -m ping"
+  },
+  "ansible-023": {
+    "command": "Quel format facilement lisible utilise-t-on habituellement pour écrire les playbooks Ansible ?",
+    "description": "YAML"
+  },
+  "ansible-024": {
+    "command": "Quel fichier configure les paramètres d'Ansible ?",
+    "description": "ansible.cfg"
+  },
+  "bash-001": {
+    "command": "#!/bin/bash",
+    "description": "Ligne shebang indiquant au système d'utiliser l'interpréteur Bash."
+  },
+  "bash-002": {
+    "command": "echo",
+    "description": "Affiche une ligne de texte ou la valeur d'une variable."
+  },
+  "bash-003": {
+    "command": "if [ condition ]",
+    "description": "Instruction conditionnelle de base dans les scripts Bash."
+  },
+  "bash-004": {
+    "command": "Quelle commande exécute script.sh s'il dispose déjà de la permission d'exécution ?",
+    "description": "./script.sh"
+  },
+  "bash-005": {
+    "command": "Quelle commande exécute explicitement script.sh avec Bash ?",
+    "description": "bash script.sh"
+  },
+  "bash-006": {
+    "command": "Quel symbole débute un commentaire sur une seule ligne dans un script Bash ?",
+    "description": "#"
+  },
+  "bash-007": {
+    "command": "Quelle commande rend script.sh exécutable ?",
+    "description": "chmod +x script.sh"
+  },
+  "bash-008": {
+    "command": "Quelle commande interne lit une saisie de l'utilisateur ?",
+    "description": "read"
+  },
+  "bash-009": {
+    "command": "Quel symbole sert à développer la valeur d'une variable ?",
+    "description": "$"
+  },
+  "bash-010": {
+    "command": "Quelle affectation de variable est valide en Bash ?",
+    "description": "name=John"
+  },
+  "bash-011": {
+    "command": "Quelle commande affiche le code de retour de la commande précédente ?",
+    "description": "echo $?"
+  },
+  "bash-012": {
+    "command": "Qu'indique généralement un code de retour égal à 0 ?",
+    "description": "Succès"
+  },
+  "bash-013": {
+    "command": "Quel symbole sépare plusieurs commandes sur une même ligne ?",
+    "description": ";"
+  },
+  "bash-014": {
+    "command": "Quelle extension de fichier est couramment utilisée pour les scripts shell ?",
+    "description": ".sh"
+  },
+  "bash-015": {
+    "command": "Quelle commande affiche les variables d'environnement ?",
+    "description": "env"
+  },
+  "bash-016": {
+    "command": "Quelle commande affiche le shell par défaut de l'utilisateur courant ?",
+    "description": "echo $SHELL"
+  },
+  "bash-017": {
+    "command": "Quel caractère échappe le caractère suivant en Bash ?",
+    "description": "Barre oblique inverse"
+  },
+  "bash-018": {
+    "command": "Quel style de guillemets empêche l'expansion des variables et la substitution de commandes ?",
+    "description": "Apostrophes simples"
+  },
+  "bash-019": {
+    "command": "Quel style de guillemets permet l'expansion des variables tout en préservant les espaces ?",
+    "description": "Guillemets doubles"
+  },
+  "bash-020": {
+    "command": "Quel opérateur redirige la sortie standard et écrase un fichier ?",
+    "description": ">"
+  },
+  "bash-021": {
+    "command": "Quelle commande affiche le répertoire de travail courant ?",
+    "description": "pwd"
+  },
+  "bash-022": {
+    "command": "Quel flux standard est utilisé pour les messages d'erreur ?",
+    "description": "stderr"
+  },
+  "bash-023": {
+    "command": "Quel descripteur de fichier représente l'entrée standard ?",
+    "description": "0"
+  },
+  "bash-024": {
+    "command": "Quelle commande efface l'écran du terminal ?",
+    "description": "clear"
+  },
+  "python-001": {
+    "command": "print()",
+    "description": "Affiche des données dans la console."
+  },
+  "python-002": {
+    "command": "import",
+    "description": "Importe un module ou des fonctions précises dans le script."
+  },
+  "python-003": {
+    "command": "def",
+    "description": "Définit un bloc de code réutilisable (fonction)."
+  },
+  "python-004": {
+    "command": "pip install",
+    "description": "Installe des paquets Python depuis PyPI."
+  },
+  "python-005": {
+    "command": "virtualenv",
+    "description": "Crée un environnement Python isolé."
+  },
+  "python-006": {
+    "command": "Quel symbole débute un commentaire en Python ?",
+    "description": "#"
+  },
+  "python-007": {
+    "command": "Quelle fonction native lit la saisie de l'utilisateur ?",
+    "description": "input()"
+  },
+  "python-008": {
+    "command": "Quelle extension de fichier est utilisée pour les fichiers source Python ?",
+    "description": ".py"
+  },
+  "python-009": {
+    "command": "Quel opérateur vérifie l'égalité ?",
+    "description": "=="
+  },
+  "python-010": {
+    "command": "Quel opérateur affecte une valeur ?",
+    "description": "="
+  },
+  "python-011": {
+    "command": "Quelle instruction crée une variable nommée x de valeur 5 ?",
+    "description": "x = 5"
+  },
+  "python-012": {
+    "command": "Quelle fonction native renvoie le type de données d'un objet ?",
+    "description": "type()"
+  },
+  "python-013": {
+    "command": "Quelle fonction native convertit une valeur en entier ?",
+    "description": "int()"
+  },
+  "python-014": {
+    "command": "Quelle fonction native convertit une valeur en chaîne de caractères ?",
+    "description": "str()"
+  },
+  "python-015": {
+    "command": "Quelle fonction native renvoie la longueur d'une séquence ?",
+    "description": "len()"
+  },
+  "python-016": {
+    "command": "Quelle fonction native génère une séquence de nombres ?",
+    "description": "range()"
+  },
+  "python-017": {
+    "command": "Quel mot-clé démarre une boucle qui parcourt une séquence ?",
+    "description": "for"
+  },
+  "python-018": {
+    "command": "Quel mot-clé répète du code tant qu'une condition est vraie ?",
+    "description": "while"
+  },
+  "python-019": {
+    "command": "Quelle clause rattachée à une boucle for ou while de Python ne s'exécute que si la boucle se termine sans rencontrer break ?",
+    "description": "else"
+  },
+  "python-020": {
+    "command": "En Python, quel mot-clé ignore l'itération courante de la boucle ?",
+    "description": "continue"
+  },
+  "python-021": {
+    "command": "Quel mot-clé Python permet à une fonction imbriquée de réaffecter une variable de la fonction englobante ?",
+    "description": "nonlocal"
+  },
+  "python-022": {
+    "command": "Quel mot-clé débute la gestion des exceptions ?",
+    "description": "try"
+  },
+  "python-023": {
+    "command": "Quelle fonction native Python renvoie l'identité unique d'un objet ?",
+    "description": "id()"
+  },
+  "python-024": {
+    "command": "Quelle syntaxe crée un dictionnaire ?",
+    "description": "{'name': 'John'}"
+  },
+  "perl-001": {
+    "command": "Quelle commande exécute un script Perl depuis la ligne de commande ?",
+    "description": "perl script.pl"
+  },
+  "perl-002": {
+    "command": "Quelle ligne shebang est couramment utilisée pour les scripts Perl ?",
+    "description": "#!/usr/bin/perl"
+  },
+  "perl-003": {
+    "command": "Quel symbole débute un commentaire sur une seule ligne en Perl ?",
+    "description": "#"
+  },
+  "perl-004": {
+    "command": "Quelle fonction intégrée affiche une sortie ?",
+    "description": "print"
+  },
+  "perl-005": {
+    "command": "Quel caractère termine généralement une instruction Perl ?",
+    "description": ";"
+  },
+  "perl-006": {
+    "command": "Quel sigil désigne une variable scalaire ?",
+    "description": "$"
+  },
+  "perl-007": {
+    "command": "Quelle fonction Perl renvoie la position d'une sous-chaîne dans une chaîne ?",
+    "description": "index"
+  },
+  "perl-008": {
+    "command": "Quelle fonction Perl renvoie la valeur absolue d'un nombre ?",
+    "description": "abs"
+  },
+  "perl-009": {
+    "command": "Quelle fonction renvoie la longueur d'une chaîne ?",
+    "description": "length"
+  },
+  "perl-010": {
+    "command": "Quelle fonction supprime un retour à la ligne final d'une chaîne ?",
+    "description": "chomp"
+  },
+  "perl-011": {
+    "command": "Quelle fonction découpe une chaîne en liste ?",
+    "description": "split"
+  },
+  "perl-012": {
+    "command": "Quelle fonction assemble les éléments d'une liste en une chaîne ?",
+    "description": "join"
+  },
+  "perl-013": {
+    "command": "Quel opérateur concatène des chaînes ?",
+    "description": "."
+  },
+  "perl-014": {
+    "command": "Quel opérateur répète une chaîne ?",
+    "description": "x"
+  },
+  "perl-015": {
+    "command": "Quelle fonction ouvre un fichier ?",
+    "description": "open"
+  },
+  "perl-016": {
+    "command": "En Perl, quel mode de fichier ouvre un fichier en lecture ?",
+    "description": "<"
+  },
+  "perl-017": {
+    "command": "Quelle fonction Perl supprime un fichier du système de fichiers ?",
+    "description": "unlink"
+  },
+  "perl-018": {
+    "command": "Quel opérateur de test de fichier Perl vérifie si un chemin existe ?",
+    "description": "-e"
+  },
+  "perl-019": {
+    "command": "Quel filehandle intégré représente l'entrée standard ?",
+    "description": "STDIN"
+  },
+  "perl-020": {
+    "command": "Quel filehandle intégré représente la sortie standard ?",
+    "description": "STDOUT"
+  },
+  "perl-021": {
+    "command": "Quel filehandle intégré représente la sortie d'erreur standard ?",
+    "description": "STDERR"
+  },
+  "perl-022": {
+    "command": "Quelle fonction ferme un filehandle ouvert ?",
+    "description": "close"
+  },
+  "perl-023": {
+    "command": "Quelle variable spéciale est la variable d'entrée par défaut ?",
+    "description": "$_"
+  },
+  "perl-024": {
+    "command": "Quelle variable spéciale contient la dernière correspondance de motif réussie ?",
+    "description": "$&"
+  },
+  "powershell-001": {
+    "command": "Quelle cmdlet affiche l'emplacement actuel ?",
+    "description": "Get-Location"
+  },
+  "powershell-002": {
+    "command": "Quelle cmdlet liste les fichiers et les répertoires ?",
+    "description": "Get-ChildItem"
+  },
+  "powershell-003": {
+    "command": "Quelle cmdlet change le répertoire courant ?",
+    "description": "Set-Location"
+  },
+  "powershell-004": {
+    "command": "Quelle cmdlet affiche le contenu d'un fichier ?",
+    "description": "Get-Content"
+  },
+  "powershell-005": {
+    "command": "Quelle cmdlet crée un nouveau fichier ou répertoire ?",
+    "description": "New-Item"
+  },
+  "powershell-006": {
+    "command": "Quelle cmdlet copie des fichiers et des répertoires ?",
+    "description": "Copy-Item"
+  },
+  "powershell-007": {
+    "command": "Quelle cmdlet déplace des fichiers et des répertoires ?",
+    "description": "Move-Item"
+  },
+  "powershell-008": {
+    "command": "Quelle cmdlet supprime des fichiers et des répertoires ?",
+    "description": "Remove-Item"
+  },
+  "powershell-009": {
+    "command": "Quelle cmdlet renomme un fichier ?",
+    "description": "Rename-Item"
+  },
+  "powershell-010": {
+    "command": "Quel symbole débute un commentaire sur une seule ligne en PowerShell ?",
+    "description": "#"
+  },
+  "powershell-011": {
+    "command": "Quelle cmdlet PowerShell ajoute du texte à la fin d'un fichier ?",
+    "description": "Add-Content"
+  },
+  "powershell-012": {
+    "command": "Quel symbole est utilisé devant un nom de variable ?",
+    "description": "$"
+  },
+  "powershell-013": {
+    "command": "Quelle cmdlet affiche l'historique des commandes ?",
+    "description": "Get-History"
+  },
+  "powershell-014": {
+    "command": "Quelle cmdlet efface l'écran de la console ?",
+    "description": "Clear-Host"
+  },
+  "powershell-015": {
+    "command": "Quelle cmdlet affiche les informations d'aide ?",
+    "description": "Get-Help"
+  },
+  "powershell-016": {
+    "command": "Quelle cmdlet met à jour les fichiers d'aide locaux ?",
+    "description": "Update-Help"
+  },
+  "powershell-017": {
+    "command": "Quelle cmdlet liste les commandes disponibles ?",
+    "description": "Get-Command"
+  },
+  "powershell-018": {
+    "command": "Quelle cmdlet affiche les propriétés et les méthodes d'un objet ?",
+    "description": "Get-Member"
+  },
+  "powershell-019": {
+    "command": "Quelle variable automatique contient les informations détaillées sur la version de PowerShell ?",
+    "description": "$PSVersionTable"
+  },
+  "powershell-020": {
+    "command": "Quelle cmdlet liste les alias ?",
+    "description": "Get-Alias"
+  },
+  "powershell-021": {
+    "command": "Quelle cmdlet affiche la stratégie d'exécution actuelle ?",
+    "description": "Get-ExecutionPolicy"
+  },
+  "powershell-022": {
+    "command": "Quelle cmdlet modifie la stratégie d'exécution ?",
+    "description": "Set-ExecutionPolicy"
+  },
+  "powershell-023": {
+    "command": "Quelle stratégie d'exécution bloque par défaut l'exécution des scripts ?",
+    "description": "Restricted"
+  },
+  "powershell-024": {
+    "command": "Quelle stratégie d'exécution autorise l'exécution des scripts créés localement ?",
+    "description": "RemoteSigned"
+  },
+  "javascript-001": {
+    "command": "Qu'est-ce que JavaScript ?",
+    "description": "Langage de programmation"
+  },
+  "javascript-002": {
+    "command": "Quel mot-clé déclare une variable à portée de bloc ?",
+    "description": "let"
+  },
+  "javascript-003": {
+    "command": "Quel mot-clé déclare une constante ?",
+    "description": "const"
+  },
+  "javascript-004": {
+    "command": "Quel symbole débute un commentaire sur une seule ligne ?",
+    "description": "//"
+  },
+  "javascript-005": {
+    "command": "Quel opérateur JavaScript vérifie si un objet est une instance d'un constructeur donné ?",
+    "description": "instanceof"
+  },
+  "javascript-006": {
+    "command": "Quelle valeur représente volontairement l'absence de valeur ?",
+    "description": "null"
+  },
+  "javascript-007": {
+    "command": "Quelle valeur est renvoyée lorsqu'une variable est déclarée mais non assignée ?",
+    "description": "undefined"
+  },
+  "javascript-008": {
+    "command": "Lequel des types de données suivants n'est pas primitif ?",
+    "description": "object"
+  },
+  "javascript-009": {
+    "command": "Quelle fonction convertit une chaîne en entier ?",
+    "description": "parseInt()"
+  },
+  "javascript-010": {
+    "command": "Quelle fonction convertit une chaîne en nombre à virgule flottante ?",
+    "description": "parseFloat()"
+  },
+  "javascript-011": {
+    "command": "Quel opérateur vérifie l'égalité de la valeur et du type ?",
+    "description": "==="
+  },
+  "javascript-012": {
+    "command": "Quel opérateur vérifie l'égalité des valeurs avec conversion de type ?",
+    "description": "=="
+  },
+  "javascript-013": {
+    "command": "Quel opérateur renvoie le reste d'une division ?",
+    "description": "%"
+  },
+  "javascript-014": {
+    "command": "Quelle fonction affiche une boîte de message dans le navigateur ?",
+    "description": "alert()"
+  },
+  "javascript-015": {
+    "command": "Quelle méthode écrit une sortie dans la console du navigateur ?",
+    "description": "console.log()"
+  },
+  "javascript-016": {
+    "command": "Quelle balise HTML sert à inclure du code JavaScript ?",
+    "description": "<script>"
+  },
+  "javascript-017": {
+    "command": "Quel mot-clé définit une fonction ?",
+    "description": "function"
+  },
+  "javascript-018": {
+    "command": "Quelle instruction quitte immédiatement une boucle ?",
+    "description": "break"
+  },
+  "javascript-019": {
+    "command": "Quelle instruction ignore l'itération courante de la boucle ?",
+    "description": "continue"
+  },
+  "javascript-020": {
+    "command": "Quelle boucle exécute son code au moins une fois ?",
+    "description": "do...while"
+  },
+  "javascript-021": {
+    "command": "Quelle boucle est couramment utilisée pour parcourir les éléments d'un tableau ?",
+    "description": "for"
+  },
+  "javascript-022": {
+    "command": "Quelle instruction exécute du code selon une condition ?",
+    "description": "if"
+  },
+  "javascript-023": {
+    "command": "Quel mot-clé démarre la gestion des erreurs ?",
+    "description": "try"
+  },
+  "javascript-024": {
+    "command": "Quelle instruction lève une erreur manuellement ?",
+    "description": "throw"
+  },
+  "ruby-001": {
+    "command": "Quel type de langage est Ruby ?",
+    "description": "Langage de programmation orienté objet"
+  },
+  "ruby-002": {
+    "command": "Qui a créé Ruby ?",
+    "description": "Yukihiro Matsumoto"
+  },
+  "ruby-003": {
+    "command": "Quelle extension de fichier est utilisée pour les scripts Ruby ?",
+    "description": ".rb"
+  },
+  "ruby-004": {
+    "command": "Quelle commande exécute un script Ruby ?",
+    "description": "ruby filename.rb"
+  },
+  "ruby-005": {
+    "command": "Quel symbole débute un commentaire sur une seule ligne en Ruby ?",
+    "description": "#"
+  },
+  "ruby-006": {
+    "command": "Quel mot-clé débute un commentaire multiligne en Ruby ?",
+    "description": "=begin"
+  },
+  "ruby-007": {
+    "command": "Quel mot-clé définit une méthode en Ruby ?",
+    "description": "def"
+  },
+  "ruby-008": {
+    "command": "Quel mot-clé termine la définition d'une méthode ?",
+    "description": "end"
+  },
+  "ruby-009": {
+    "command": "Quelle méthode affiche une sortie avec un saut de ligne ?",
+    "description": "puts"
+  },
+  "ruby-010": {
+    "command": "Quelle méthode affiche une sortie sans ajouter de saut de ligne ?",
+    "description": "print"
+  },
+  "ruby-011": {
+    "command": "Quelle méthode lit une ligne depuis l'entrée standard ?",
+    "description": "gets"
+  },
+  "ruby-012": {
+    "command": "En Ruby, quelle méthode convertit un objet en chaîne de caractères ?",
+    "description": "to_s"
+  },
+  "ruby-013": {
+    "command": "En Ruby, quelle méthode convertit une chaîne de caractères en entier ?",
+    "description": "to_i"
+  },
+  "ruby-014": {
+    "command": "Quelle méthode convertit une chaîne de caractères en nombre flottant ?",
+    "description": "to_f"
+  },
+  "ruby-015": {
+    "command": "Quelle méthode renvoie la classe d'un objet ?",
+    "description": "class"
+  },
+  "ruby-016": {
+    "command": "Quelle méthode vérifie si un objet est d'un type de classe donné ?",
+    "description": "is_a?"
+  },
+  "ruby-017": {
+    "command": "Quelle méthode vérifie si un objet répond à une méthode ?",
+    "description": "respond_to?"
+  },
+  "ruby-018": {
+    "command": "Quelle méthode renvoie un identifiant unique pour un objet ?",
+    "description": "object_id"
+  },
+  "ruby-019": {
+    "command": "Quel opérateur vérifie l'égalité de valeur en Ruby ?",
+    "description": "=="
+  },
+  "ruby-020": {
+    "command": "Quel opérateur est couramment utilisé par les instructions case pour la comparaison ?",
+    "description": "==="
+  },
+  "ruby-021": {
+    "command": "Quel opérateur est utilisé pour la comparaison et le tri ?",
+    "description": "<=>"
+  },
+  "ruby-022": {
+    "command": "Comment les constantes sont-elles déclarées en Ruby ?",
+    "description": "En commençant le nom par une majuscule"
+  },
+  "ruby-023": {
+    "command": "Quel préfixe indique une variable d'instance ?",
+    "description": "@"
+  },
+  "ruby-024": {
+    "command": "Quel opérateur élève un nombre à une puissance en Ruby ?",
+    "description": "**"
+  },
+  "aws-001": {
+    "command": "aws cli",
+    "description": "Outil unifié de gestion des services AWS depuis la CLI."
+  },
+  "aws-002": {
+    "command": "IAM",
+    "description": "Contrôle de manière sécurisée l'accès aux ressources AWS."
+  },
+  "aws-003": {
+    "command": "S3",
+    "description": "Stockage d'objets conçu pour stocker et récupérer tout type de données."
+  },
+  "aws-004": {
+    "command": "EC2",
+    "description": "Fournit une capacité de calcul évolutive dans le cloud."
+  },
+  "aws-005": {
+    "command": "VPC",
+    "description": "Provisionne une partie logiquement isolée du cloud."
+  },
+  "aws-006": {
+    "command": "Quel service AWS est principalement utilisé pour lancer des serveurs virtuels ?",
+    "description": "Amazon EC2"
+  },
+  "aws-007": {
+    "command": "Quel service de stockage AWS est conçu pour le stockage d'objets ?",
+    "description": "Amazon S3"
+  },
+  "aws-008": {
+    "command": "Quel service AWS gère les identités et les autorisations des utilisateurs ?",
+    "description": "AWS IAM"
+  },
+  "aws-009": {
+    "command": "Quel service AWS fournit du calcul sans serveur ?",
+    "description": "AWS Lambda"
+  },
+  "aws-010": {
+    "command": "Quel service AWS est une base de données relationnelle gérée ?",
+    "description": "Amazon RDS"
+  },
+  "aws-011": {
+    "command": "Quelle base de données AWS est entièrement gérée et NoSQL ?",
+    "description": "Amazon DynamoDB"
+  },
+  "aws-012": {
+    "command": "Quel service AWS aide à surveiller les applications et les ressources AWS ?",
+    "description": "Amazon CloudWatch"
+  },
+  "aws-013": {
+    "command": "Quel service AWS enregistre l'activité des API à des fins d'audit ?",
+    "description": "CloudTrail"
+  },
+  "aws-014": {
+    "command": "Quel service réseau AWS fournit un réseau virtuel isolé ?",
+    "description": "Amazon VPC"
+  },
+  "aws-015": {
+    "command": "Quel service AWS fournit la gestion DNS ?",
+    "description": "Route 53"
+  },
+  "aws-016": {
+    "command": "Quel service AWS répartit le trafic entre plusieurs instances EC2 ?",
+    "description": "Elastic Load Balancer"
+  },
+  "aws-017": {
+    "command": "Quel service AWS ajuste automatiquement le nombre d'instances EC2 en fonction de la demande ?",
+    "description": "Auto Scaling"
+  },
+  "aws-018": {
+    "command": "Quel service AWS est utilisé pour déployer une infrastructure sous forme de code ?",
+    "description": "AWS CloudFormation"
+  },
+  "aws-019": {
+    "command": "Quel service AWS est un réseau de diffusion de contenu (CDN) ?",
+    "description": "Amazon CloudFront"
+  },
+  "aws-020": {
+    "command": "Quel service AWS fournit un Kubernetes géré ?",
+    "description": "Amazon EKS"
+  },
+  "aws-021": {
+    "command": "Quel service AWS fournit une orchestration gérée de conteneurs Docker ?",
+    "description": "Amazon ECS"
+  },
+  "aws-022": {
+    "command": "Quel service AWS stocke de manière sécurisée des secrets tels que les mots de passe et les clés d'API ?",
+    "description": "AWS Secrets Manager"
+  },
+  "aws-023": {
+    "command": "Quel service AWS gère les clés de chiffrement ?",
+    "description": "AWS KMS"
+  },
+  "aws-024": {
+    "command": "Quel service AWS protège les applications contre les attaques DDoS ?",
+    "description": "AWS Shield"
+  },
+  "azure-001": {
+    "command": "Quel service Microsoft Azure est utilisé pour créer des machines virtuelles ?",
+    "description": "Azure Virtual Machines"
+  },
+  "azure-002": {
+    "command": "Quel service Azure fournit un stockage d'objets pour les données non structurées ?",
+    "description": "Azure Blob Storage"
+  },
+  "azure-003": {
+    "command": "Quel service Azure est utilisé pour la gestion des identités et des accès ?",
+    "description": "Microsoft Entra ID"
+  },
+  "azure-004": {
+    "command": "Quel service Azure fournit de l'informatique serverless ?",
+    "description": "Azure Functions"
+  },
+  "azure-005": {
+    "command": "Quel service Azure fournit une base de données relationnelle managée pour SQL Server ?",
+    "description": "Azure SQL Database"
+  },
+  "azure-006": {
+    "command": "Quel service de base de données Azure est NoSQL et distribué à l'échelle mondiale ?",
+    "description": "Azure Cosmos DB"
+  },
+  "azure-007": {
+    "command": "Quel service Azure est utilisé pour surveiller les applications et l'infrastructure ?",
+    "description": "Azure Monitor"
+  },
+  "azure-008": {
+    "command": "Quel service Azure collecte la télémétrie des applications web ?",
+    "description": "Application Insights"
+  },
+  "azure-009": {
+    "command": "Quel service réseau Azure crée un réseau privé isolé ?",
+    "description": "Azure Virtual Network"
+  },
+  "azure-010": {
+    "command": "Quel service Azure fournit l'hébergement DNS ?",
+    "description": "Azure DNS"
+  },
+  "azure-011": {
+    "command": "Quel service Azure répartit le trafic entrant entre plusieurs machines virtuelles ?",
+    "description": "Azure Load Balancer"
+  },
+  "azure-012": {
+    "command": "Quel service Azure fournit un équilibrage de charge global de couche 7 ?",
+    "description": "Azure Front Door"
+  },
+  "azure-013": {
+    "command": "Quel service Azure fournit Kubernetes managé ?",
+    "description": "Azure Kubernetes Service (AKS)"
+  },
+  "azure-014": {
+    "command": "Quel service Azure exécute des conteneurs sans gérer de serveurs ?",
+    "description": "Azure Container Instances"
+  },
+  "azure-015": {
+    "command": "Quel service Azure héberge des applications web sans gérer l'infrastructure ?",
+    "description": "Azure App Service"
+  },
+  "azure-016": {
+    "command": "Quel service Azure stocke de manière sécurisée les secrets, les clés et les certificats ?",
+    "description": "Azure Key Vault"
+  },
+  "azure-017": {
+    "command": "Quel service Azure fournit une connectivité privée dédiée à Microsoft Azure ?",
+    "description": "Azure ExpressRoute"
+  },
+  "azure-018": {
+    "command": "Quel service Azure fournit un accès distant sécurisé aux machines virtuelles via le portail Azure ?",
+    "description": "Azure Bastion"
+  },
+  "azure-019": {
+    "command": "Quel service Azure est utilisé pour sauvegarder les machines virtuelles Azure et d'autres charges de travail ?",
+    "description": "Azure Backup"
+  },
+  "azure-020": {
+    "command": "Quel service Azure est utilisé pour la reprise d'activité après sinistre des machines virtuelles ?",
+    "description": "Azure Site Recovery"
+  },
+  "azure-021": {
+    "command": "Quel service Azure est utilisé pour créer et appliquer des politiques de gouvernance ?",
+    "description": "Azure Policy"
+  },
+  "azure-022": {
+    "command": "Quel service Azure étend la gestion d'Azure aux environnements locaux et multicloud ?",
+    "description": "Azure Arc"
+  },
+  "azure-023": {
+    "command": "Quel composant Azure DevOps est utilisé pour l'intégration continue et le déploiement continu (CI/CD) ?",
+    "description": "Azure Pipelines"
+  },
+  "azure-024": {
+    "command": "Quel service Azure DevOps fournit des dépôts Git ?",
+    "description": "Azure Repos"
+  },
+  "gcp-001": {
+    "command": "Quel service Google Cloud est utilisé pour créer et gérer des machines virtuelles ?",
+    "description": "Compute Engine"
+  },
+  "gcp-002": {
+    "command": "Quel service Google Cloud fournit du stockage d'objets ?",
+    "description": "Cloud Storage"
+  },
+  "gcp-003": {
+    "command": "Quel service Google Cloud fournit des fonctions serverless ?",
+    "description": "Cloud Functions"
+  },
+  "gcp-004": {
+    "command": "Quel service Google Cloud est utilisé pour exécuter des clusters Kubernetes ?",
+    "description": "Google Kubernetes Engine (GKE)"
+  },
+  "gcp-005": {
+    "command": "Quel service Google Cloud fournit une base de données relationnelle entièrement gérée ?",
+    "description": "Cloud SQL"
+  },
+  "gcp-006": {
+    "command": "Quelle base de données Google Cloud est une base de données relationnelle distribuée à l'échelle mondiale ?",
+    "description": "Cloud Spanner"
+  },
+  "gcp-007": {
+    "command": "Quelle base de données documentaire NoSQL de Google Cloud est serverless ?",
+    "description": "Firestore"
+  },
+  "gcp-008": {
+    "command": "Quel service Google Cloud est utilisé pour l'analyse de données à l'échelle du pétaoctet ?",
+    "description": "BigQuery"
+  },
+  "gcp-009": {
+    "command": "Quel service Google Cloud fournit la surveillance et l'observabilité ?",
+    "description": "Cloud Monitoring"
+  },
+  "gcp-010": {
+    "command": "Quel service Google Cloud collecte les journaux d'application ?",
+    "description": "Cloud Logging"
+  },
+  "gcp-011": {
+    "command": "Quel service Google Cloud gère les utilisateurs, les rôles et les autorisations ?",
+    "description": "Cloud Identity and IAM"
+  },
+  "gcp-012": {
+    "command": "Quel service Google Cloud crée des réseaux privés isolés ?",
+    "description": "Virtual Private Cloud (VPC)"
+  },
+  "gcp-013": {
+    "command": "Quel service Google Cloud fournit l'hébergement DNS ?",
+    "description": "Cloud DNS"
+  },
+  "gcp-014": {
+    "command": "Quel service Google Cloud répartit le trafic entre plusieurs machines virtuelles ?",
+    "description": "Cloud Load Balancing"
+  },
+  "gcp-015": {
+    "command": "Quel service Google Cloud accélère la diffusion de contenu dans le monde entier ?",
+    "description": "Cloud CDN"
+  },
+  "gcp-016": {
+    "command": "Quel service Google Cloud protège les applications web contre les attaques DDoS et les exploits web courants ?",
+    "description": "Cloud Armor"
+  },
+  "gcp-017": {
+    "command": "Quel service Google Cloud fournit l'exécution de conteneurs gérée sans avoir à gérer l'infrastructure ?",
+    "description": "Cloud Run"
+  },
+  "gcp-018": {
+    "command": "Quel service Google Cloud est une plateforme entièrement gérée pour créer des applications web ?",
+    "description": "App Engine"
+  },
+  "gcp-019": {
+    "command": "Quel service Google Cloud stocke de manière sécurisée les secrets, mots de passe et clés d'API ?",
+    "description": "Secret Manager"
+  },
+  "gcp-020": {
+    "command": "Quel service Google Cloud gère les clés de chiffrement ?",
+    "description": "Cloud KMS"
+  },
+  "gcp-021": {
+    "command": "Quel service Google Cloud fournit une connectivité privée dédiée à Google Cloud ?",
+    "description": "Cloud Interconnect"
+  },
+  "gcp-022": {
+    "command": "Quel service Google Cloud fournit une connectivité chiffrée et sécurisée entre les réseaux sur site et GCP ?",
+    "description": "Cloud VPN"
+  },
+  "gcp-023": {
+    "command": "Quel service Google Cloud fournit un accès Internet sortant aux instances privées sans adresses IP externes ?",
+    "description": "Cloud NAT"
+  },
+  "gcp-024": {
+    "command": "Quel service Google Cloud échange dynamiquement des routes entre les VPC et les réseaux sur site ?",
+    "description": "Cloud Router"
+  },
+  "oracle-001": {
+    "command": "Quel service Oracle Cloud Infrastructure est utilisé pour créer des machines virtuelles ?",
+    "description": "Compute"
+  },
+  "oracle-002": {
+    "command": "Quel service OCI fournit un stockage d'objets évolutif ?",
+    "description": "Object Storage"
+  },
+  "oracle-003": {
+    "command": "Quel service de stockage OCI fournit un stockage en mode bloc persistant ?",
+    "description": "Block Volumes"
+  },
+  "oracle-004": {
+    "command": "Quel service OCI fournit un stockage de fichiers NFS partagé ?",
+    "description": "File Storage"
+  },
+  "oracle-005": {
+    "command": "Comment s'appelle le service de réseau virtuel d'OCI ?",
+    "description": "Virtual Cloud Network (VCN)"
+  },
+  "oracle-006": {
+    "command": "Quel service OCI gère les utilisateurs, les groupes et les politiques ?",
+    "description": "Identity and Access Management (IAM)"
+  },
+  "oracle-007": {
+    "command": "Quelle fonctionnalité OCI organise logiquement les ressources cloud ?",
+    "description": "Compartments"
+  },
+  "oracle-008": {
+    "command": "Quelle fonctionnalité OCI définit les autorisations des utilisateurs et des groupes ?",
+    "description": "Policies"
+  },
+  "oracle-009": {
+    "command": "Quel service OCI répartit le trafic entrant ?",
+    "description": "Load Balancer"
+  },
+  "oracle-010": {
+    "command": "Quel service OCI fournit une connectivité privée dédiée ?",
+    "description": "FastConnect"
+  },
+  "oracle-011": {
+    "command": "Quel service OCI fournit une connectivité IPSec ?",
+    "description": "Site-to-Site VPN"
+  },
+  "oracle-012": {
+    "command": "Quel composant OCI connecte les VCN aux réseaux sur site ?",
+    "description": "Dynamic Routing Gateway (DRG)"
+  },
+  "oracle-013": {
+    "command": "Quelle base de données OCI est autogérée ?",
+    "description": "Autonomous Database"
+  },
+  "oracle-014": {
+    "command": "Quel service OCI gère les clusters Kubernetes ?",
+    "description": "Container Engine for Kubernetes (OKE)"
+  },
+  "oracle-015": {
+    "command": "Quel service OCI fournit une exécution sans serveur ?",
+    "description": "Functions"
+  },
+  "oracle-016": {
+    "command": "Quel service OCI publie et sécurise les API ?",
+    "description": "API Gateway"
+  },
+  "oracle-017": {
+    "command": "Quel service OCI prend en charge les pipelines CI/CD ?",
+    "description": "DevOps"
+  },
+  "oracle-018": {
+    "command": "Quel service OCI gère les déploiements Terraform ?",
+    "description": "Resource Manager"
+  },
+  "oracle-019": {
+    "command": "Quel service OCI collecte les métriques ?",
+    "description": "Monitoring"
+  },
+  "oracle-020": {
+    "command": "Quel service OCI stocke les journaux ?",
+    "description": "Logging"
+  },
+  "oracle-021": {
+    "command": "Quel service OCI envoie des alertes ?",
+    "description": "Notifications"
+  },
+  "oracle-022": {
+    "command": "Quel service OCI réagit aux événements des ressources ?",
+    "description": "Events"
+  },
+  "oracle-023": {
+    "command": "Quel service OCI stocke les secrets et les clés de chiffrement ?",
+    "description": "Vault"
+  },
+  "oracle-024": {
+    "command": "Quel service OCI surveille la posture de sécurité ?",
+    "description": "Cloud Guard"
+  },
+  "ibm-001": {
+    "command": "Quel service IBM Cloud est utilisé pour créer des serveurs virtuels ?",
+    "description": "Virtual Servers for VPC"
+  },
+  "ibm-002": {
+    "command": "Quel service IBM Cloud fournit du stockage objet ?",
+    "description": "Cloud Object Storage"
+  },
+  "ibm-003": {
+    "command": "Quel est le service de réseau virtuel isolé d'IBM Cloud ?",
+    "description": "Virtual Private Cloud (VPC)"
+  },
+  "ibm-004": {
+    "command": "Quel service IBM Cloud gère les utilisateurs et les accès ?",
+    "description": "IBM Cloud IAM"
+  },
+  "ibm-005": {
+    "command": "Quel service IBM Cloud fournit un Kubernetes managé ?",
+    "description": "IBM Cloud Kubernetes Service"
+  },
+  "ibm-006": {
+    "command": "Quel service IBM Cloud fournit un Red Hat OpenShift managé ?",
+    "description": "Red Hat OpenShift on IBM Cloud"
+  },
+  "ibm-007": {
+    "command": "Quelle commande vous connecte à IBM Cloud depuis la ligne de commande ?",
+    "description": "ibmcloud login"
+  },
+  "ibm-008": {
+    "command": "Quel service IBM Cloud exécute des conteneurs sans gérer l'infrastructure ?",
+    "description": "IBM Cloud Code Engine"
+  },
+  "ibm-009": {
+    "command": "Quel service IBM Cloud répartit le trafic entrant ?",
+    "description": "Load Balancer"
+  },
+  "ibm-010": {
+    "command": "Quel service IBM Cloud fournit une connectivité sécurisée de site à site ?",
+    "description": "VPN for VPC"
+  },
+  "ibm-011": {
+    "command": "Quel service IBM Cloud fournit une connectivité privée dédiée vers les réseaux sur site ?",
+    "description": "Direct Link"
+  },
+  "ibm-012": {
+    "command": "Quelle offre IBM Cloud fournit des bases de données managées ?",
+    "description": "IBM Cloud Databases"
+  },
+  "ibm-013": {
+    "command": "Quelle base de données IBM Cloud est basée sur Db2 ?",
+    "description": "Db2 on Cloud"
+  },
+  "ibm-014": {
+    "command": "Quel service IBM Cloud fournit la supervision de l'infrastructure ?",
+    "description": "IBM Cloud Monitoring"
+  },
+  "ibm-015": {
+    "command": "Quel service IBM Cloud centralise les journaux ?",
+    "description": "IBM Log Analysis"
+  },
+  "ibm-016": {
+    "command": "Quel service IBM Cloud stocke les secrets de manière sécurisée ?",
+    "description": "Secrets Manager"
+  },
+  "ibm-017": {
+    "command": "Quel service IBM Cloud gère les clés de chiffrement ?",
+    "description": "Key Protect"
+  },
+  "ibm-018": {
+    "command": "Quel service IBM Cloud propose une gestion de clés reposant sur un HSM ?",
+    "description": "Hyper Protect Crypto Services"
+  },
+  "ibm-019": {
+    "command": "Quel service IBM Cloud stocke les images de conteneurs ?",
+    "description": "Container Registry"
+  },
+  "ibm-020": {
+    "command": "Quel service IBM Cloud gère les déploiements Terraform ?",
+    "description": "Schematics"
+  },
+  "ibm-021": {
+    "command": "Quel service IBM Cloud envoie des notifications ?",
+    "description": "Event Notifications"
+  },
+  "ibm-022": {
+    "command": "Quel service IBM Cloud fournit un CDN et une protection contre les attaques DDoS ?",
+    "description": "Cloud Internet Services"
+  },
+  "ibm-023": {
+    "command": "Quelle plateforme d'IA d'IBM fournit des services d'IA ?",
+    "description": "watsonx"
+  },
+  "ibm-024": {
+    "command": "Quelle offre IBM fournit des logiciels d'entreprise sur Kubernetes ?",
+    "description": "Cloud Pak"
+  },
+  "multicloud-001": {
+    "command": "Quelle stratégie cloud utilise les services de deux fournisseurs de cloud public ou plus ?",
+    "description": "Multi-Cloud"
+  },
+  "multicloud-002": {
+    "command": "Quelle stratégie cloud combine les clouds publics et privés ?",
+    "description": "Cloud hybride"
+  },
+  "multicloud-003": {
+    "command": "Quel outil est couramment utilisé pour l'Infrastructure as Code multicloud ?",
+    "description": "Terraform"
+  },
+  "multicloud-004": {
+    "command": "Quel projet CNCF est largement utilisé pour orchestrer des conteneurs entre plusieurs clouds ?",
+    "description": "Kubernetes"
+  },
+  "multicloud-005": {
+    "command": "Quel protocole est couramment utilisé pour exposer les API cloud ?",
+    "description": "REST"
+  },
+  "multicloud-006": {
+    "command": "Quelle pratique aide à éviter le verrouillage fournisseur ?",
+    "description": "Utiliser des standards ouverts"
+  },
+  "multicloud-007": {
+    "command": "Quel outil est largement utilisé pour la conteneurisation chez les différents fournisseurs cloud ?",
+    "description": "Docker"
+  },
+  "multicloud-008": {
+    "command": "Quel protocole permet l'identité fédérée entre plusieurs clouds ?",
+    "description": "SAML"
+  },
+  "multicloud-009": {
+    "command": "Quel standard d'authentification est couramment utilisé pour les API cloud ?",
+    "description": "OAuth 2.0"
+  },
+  "multicloud-010": {
+    "command": "Quel modèle de service cloud fournit des machines virtuelles ?",
+    "description": "IaaS"
+  },
+  "multicloud-011": {
+    "command": "Quel modèle de service cloud fournit des plateformes d'applications gérées ?",
+    "description": "PaaS"
+  },
+  "multicloud-012": {
+    "command": "Quel modèle de service cloud fournit des logiciels via Internet ?",
+    "description": "SaaS"
+  },
+  "multicloud-013": {
+    "command": "Quelle approche de supervision collecte les métriques de plusieurs fournisseurs cloud ?",
+    "description": "Surveillance centralisée"
+  },
+  "multicloud-014": {
+    "command": "Quelle approche de journalisation agrège les journaux de tous les fournisseurs cloud ?",
+    "description": "Journalisation centralisée"
+  },
+  "multicloud-015": {
+    "command": "Quelle technique réseau connecte de manière sécurisée plusieurs environnements cloud ?",
+    "description": "VPN"
+  },
+  "multicloud-016": {
+    "command": "Quel service réseau fournit une connectivité dédiée entre les clouds ?",
+    "description": "Direct Connect/ExpressRoute/Interconnect"
+  },
+  "multicloud-017": {
+    "command": "Quelle technologie est couramment utilisée pour la découverte de services dans Kubernetes ?",
+    "description": "DNS"
+  },
+  "multicloud-018": {
+    "command": "Quel outil est largement utilisé pour le CI/CD sur plusieurs clouds ?",
+    "description": "Jenkins"
+  },
+  "multicloud-019": {
+    "command": "Quelle plateforme de supervision open source prend en charge les environnements multicloud ?",
+    "description": "Prometheus"
+  },
+  "multicloud-020": {
+    "command": "Quelle plateforme de visualisation fonctionne couramment avec Prometheus ?",
+    "description": "Grafana"
+  },
+  "multicloud-021": {
+    "command": "Quel principe de sécurité n'accorde que les autorisations nécessaires ?",
+    "description": "Moindre privilège"
+  },
+  "multicloud-022": {
+    "command": "Quelle pratique chiffre les données au repos et en transit ?",
+    "description": "Chiffrement"
+  },
+  "multicloud-023": {
+    "command": "Quelle architecture cloud améliore la disponibilité entre plusieurs fournisseurs ?",
+    "description": "Redondance"
+  },
+  "multicloud-024": {
+    "command": "Quelle approche de déploiement répartit les charges de travail entre plusieurs clouds ?",
+    "description": "Active-Active"
+  },
+  "hybridcloud-001": {
+    "command": "Qu'est-ce qu'un Hybrid Cloud ?",
+    "description": "Une combinaison d'environnements cloud public et privé"
+  },
+  "hybridcloud-002": {
+    "command": "Quel modèle de déploiement combine une infrastructure sur site avec un cloud public ?",
+    "description": "Hybrid Cloud"
+  },
+  "hybridcloud-003": {
+    "command": "Quelle technologie est couramment utilisée pour connecter de manière sécurisée un centre de données sur site à un cloud public ?",
+    "description": "VPN"
+  },
+  "hybridcloud-004": {
+    "command": "Quel service AWS étend l'infrastructure AWS aux environnements sur site ?",
+    "description": "AWS Outposts"
+  },
+  "hybridcloud-005": {
+    "command": "Quel service Microsoft Azure permet de gérer des ressources hybrides et multicloud ?",
+    "description": "Azure Arc"
+  },
+  "hybridcloud-006": {
+    "command": "Quelle plateforme Google Cloud aide à gérer des clusters Kubernetes dans des environnements hybrides ?",
+    "description": "Anthos"
+  },
+  "hybridcloud-007": {
+    "command": "Quel service IBM Cloud étend les services cloud à n'importe quel environnement ?",
+    "description": "IBM Cloud Satellite"
+  },
+  "hybridcloud-008": {
+    "command": "Quelle offre Oracle Cloud fournit des services cloud au sein du centre de données d'un client ?",
+    "description": "OCI Dedicated Region"
+  },
+  "hybridcloud-009": {
+    "command": "Quelle plateforme d'orchestration de conteneurs est la plus couramment utilisée dans les environnements Hybrid Cloud ?",
+    "description": "Kubernetes"
+  },
+  "hybridcloud-010": {
+    "command": "Quelle plateforme open source est largement utilisée pour exécuter Kubernetes en entreprise dans un Hybrid Cloud ?",
+    "description": "OpenShift"
+  },
+  "hybridcloud-011": {
+    "command": "Quel outil d'Infrastructure as Code est couramment utilisé dans les environnements Hybrid Cloud ?",
+    "description": "Terraform"
+  },
+  "hybridcloud-012": {
+    "command": "Quel outil de gestion de configuration est couramment utilisé dans les déploiements Hybrid Cloud ?",
+    "description": "Ansible"
+  },
+  "hybridcloud-013": {
+    "command": "Quel outil CI/CD est fréquemment utilisé pour les déploiements Hybrid Cloud ?",
+    "description": "Jenkins"
+  },
+  "hybridcloud-014": {
+    "command": "Quel est le principal avantage d'un Hybrid Cloud ?",
+    "description": "La flexibilité d'exécuter les charges de travail là où elles conviennent le mieux"
+  },
+  "hybridcloud-015": {
+    "command": "Quel service réseau fournit une connectivité dédiée entre l'infrastructure sur site et AWS ?",
+    "description": "AWS Direct Connect"
+  },
+  "hybridcloud-016": {
+    "command": "Quel service réseau Azure fournit une connectivité privée vers Azure ?",
+    "description": "Azure ExpressRoute"
+  },
+  "hybridcloud-017": {
+    "command": "Quel service réseau Google Cloud fournit une connectivité dédiée vers Google Cloud ?",
+    "description": "Cloud Interconnect"
+  },
+  "hybridcloud-018": {
+    "command": "Quel service réseau Oracle Cloud fournit une connectivité privée dédiée ?",
+    "description": "OCI FastConnect"
+  },
+  "hybridcloud-019": {
+    "command": "Quel service IBM Cloud fournit une connectivité réseau privée dédiée ?",
+    "description": "IBM Cloud Direct Link"
+  },
+  "hybridcloud-020": {
+    "command": "Quelle méthode d'authentification est couramment utilisée pour l'authentification unique (Single Sign-On) en Hybrid Cloud ?",
+    "description": "SAML"
+  },
+  "hybridcloud-021": {
+    "command": "Quel protocole est couramment utilisé pour l'authentification des API dans les applications Hybrid Cloud ?",
+    "description": "OAuth 2.0"
+  },
+  "hybridcloud-022": {
+    "command": "Quelle architecture améliore la disponibilité des applications entre les environnements sur site et cloud ?",
+    "description": "Active-Active"
+  },
+  "hybridcloud-023": {
+    "command": "Quelle plateforme de supervision est couramment utilisée dans les environnements Kubernetes Hybrid Cloud ?",
+    "description": "Prometheus"
+  },
+  "hybridcloud-024": {
+    "command": "Quel outil de visualisation est couramment associé à Prometheus ?",
+    "description": "Grafana"
+  },
+  "extra-001": {
+    "command": "ansible-vault encrypt",
+    "description": "Chiffre un fichier existant avec le mot de passe de coffre configuré."
+  },
+  "extra-002": {
+    "command": "ansible-vault decrypt",
+    "description": "Déchiffre un fichier protégé par coffre pour une inspection locale contrôlée."
+  },
+  "extra-003": {
+    "command": "ansible-vault encrypt_string",
+    "description": "Chiffre une valeur afin de la stocker directement dans un fichier de variables."
+  },
+  "extra-004": {
+    "command": "ansible-vault rekey",
+    "description": "Change le mot de passe protégeant un fichier de coffre chiffré."
+  },
+  "extra-005": {
+    "command": "ansible-inventory --graph",
+    "description": "Affiche les groupes de l'inventaire et leurs relations avec les hôtes."
+  },
+  "extra-006": {
+    "command": "ansible-inventory --list",
+    "description": "Affiche l'inventaire résolu en JSON, y compris les variables de groupe."
+  },
+  "extra-007": {
+    "command": "ansible-config dump --only-changed",
+    "description": "Affiche les valeurs de configuration qui diffèrent des valeurs par défaut d'Ansible."
+  },
+  "extra-008": {
+    "command": "ansible-doc ansible.builtin.copy",
+    "description": "Affiche la documentation d'un module et les paramètres pris en charge."
+  },
+  "extra-009": {
+    "command": "ansible-galaxy collection install",
+    "description": "Installe des modules et des plugins réutilisables à partir d'une collection."
+  },
+  "extra-010": {
+    "command": "ansible-galaxy collection list",
+    "description": "Liste les collections installées dans les chemins Ansible actifs."
+  },
+  "extra-011": {
+    "command": "ansible-playbook --check",
+    "description": "Exécute un playbook en mode vérification pour prévisualiser de nombreuses modifications en attente."
+  },
+  "extra-012": {
+    "command": "ansible-playbook --diff",
+    "description": "Affiche les modifications de fichiers prises en charge avec le résultat du playbook."
+  },
+  "extra-013": {
+    "command": "ansible-playbook --limit",
+    "description": "Restreint l'exécution d'un playbook à un motif d'hôte ou de groupe."
+  },
+  "extra-014": {
+    "command": "ansible-playbook --tags",
+    "description": "Exécute uniquement les tâches sélectionnées par les étiquettes qui leur sont attribuées."
+  },
+  "extra-015": {
+    "command": "ansible-playbook --skip-tags",
+    "description": "Exclut des tâches étiquetées de l'exécution d'un playbook."
+  },
+  "extra-016": {
+    "command": "ansible-playbook --list-tasks",
+    "description": "Liste les tâches correspondant au playbook et aux options de sélection courantes."
+  },
+  "extra-017": {
+    "command": "ansible-playbook --list-hosts",
+    "description": "Liste les hôtes qu'un playbook ciblerait sans exécuter de tâches."
+  },
+  "extra-018": {
+    "command": "ansible.builtin.assert",
+    "description": "Fait échouer un play lorsqu'une condition requise est fausse."
+  },
+  "extra-019": {
+    "command": "delegate_to",
+    "description": "Exécute une tâche sur un hôte autre que l'hôte courant de l'inventaire."
+  },
+  "extra-020": {
+    "command": "serial",
+    "description": "Exécute un play sur les hôtes par lots afin de limiter l'impact du déploiement."
+  },
+  "extra-021": {
+    "command": "any_errors_fatal",
+    "description": "Arrête le play sur tous les hôtes après une erreur fatale dans une tâche."
+  },
+  "extra-022": {
+    "command": "block / rescue / always",
+    "description": "Regroupe des tâches et définit les opérations de récupération et de nettoyage en cas d'échec."
+  },
+  "extra-023": {
+    "command": "changed_when",
+    "description": "Redéfinit si une tâche signale un résultat comme modifié."
+  },
+  "extra-024": {
+    "command": "ansible.builtin.meta: flush_handlers",
+    "description": "Exécute immédiatement les gestionnaires notifiés au lieu d'attendre la fin du play."
+  },
+  "extra-025": {
+    "command": "aws sts get-caller-identity",
+    "description": "Confirme le compte AWS, l'utilisateur ou le rôle endossé actif."
+  },
+  "extra-026": {
+    "command": "aws sts assume-role",
+    "description": "Demande des identifiants temporaires pour un rôle IAM de confiance."
+  },
+  "extra-027": {
+    "command": "S3 bucket versioning",
+    "description": "Conserve les versions antérieures des objets pour permettre la récupération après un écrasement accidentel."
+  },
+  "extra-028": {
+    "command": "S3 lifecycle rule",
+    "description": "Change automatiquement la classe de stockage des objets ou les fait expirer selon leur âge ou des filtres."
+  },
+  "extra-029": {
+    "command": "S3 presigned URL",
+    "description": "Accorde un accès limité dans le temps à un objet sans partager d'identifiants de longue durée."
+  },
+  "extra-030": {
+    "command": "S3 server-side encryption",
+    "description": "Chiffre les objets stockés avec des clés gérées par S3 ou par le client."
+  },
+  "extra-031": {
+    "command": "EC2 IMDSv2",
+    "description": "Utilise des jetons de session pour réduire l'exposition des identifiants des métadonnées d'instance."
+  },
+  "extra-032": {
+    "command": "Security group vs network ACL",
+    "description": "Les groupes de sécurité sont des règles avec état au niveau de l'instance ; les ACL réseau sont des règles sans état au niveau du sous-réseau."
+  },
+  "extra-033": {
+    "command": "Application Load Balancer target health",
+    "description": "Indique si les cibles enregistrées réussissent les contrôles d'intégrité configurés."
+  },
+  "extra-034": {
+    "command": "Auto Scaling instance refresh",
+    "description": "Remplace progressivement les instances d'un groupe après une modification du modèle de lancement."
+  },
+  "extra-035": {
+    "command": "EBS volume snapshot",
+    "description": "Crée une sauvegarde à un instant donné d'un volume de stockage en blocs."
+  },
+  "extra-036": {
+    "command": "CloudWatch metric alarm",
+    "description": "Change d'état lorsqu'une métrique franchit un seuil configuré."
+  },
+  "extra-037": {
+    "command": "CloudTrail event lookup",
+    "description": "Recherche dans les événements de gestion enregistrés un principal, une ressource ou une action."
+  },
+  "extra-038": {
+    "command": "SQS visibility timeout",
+    "description": "Masque temporairement un message reçu pendant qu'un consommateur le traite."
+  },
+  "extra-039": {
+    "command": "SQS dead-letter queue",
+    "description": "Recueille les messages qui dépassent la limite de tentatives de traitement d'une file source."
+  },
+  "extra-040": {
+    "command": "SNS message filter policy",
+    "description": "Distribue les messages d'un topic uniquement lorsque leurs attributs correspondent au filtre d'un abonnement."
+  },
+  "extra-041": {
+    "command": "Lambda reserved concurrency",
+    "description": "Limite les exécutions simultanées et réserve de la capacité pour une fonction."
+  },
+  "extra-042": {
+    "command": "API Gateway stage variables",
+    "description": "Fournit aux intégrations des valeurs propres à chaque étape sans modifier les routes."
+  },
+  "extra-043": {
+    "command": "RDS Multi-AZ deployment",
+    "description": "Maintient une base de données de secours pour la disponibilité ; ce n'est pas un réplica destiné à répartir les lectures."
+  },
+  "extra-044": {
+    "command": "RDS read replica",
+    "description": "Sert le trafic de lecture à partir d'une instance de base de données répliquée de manière asynchrone."
+  },
+  "extra-045": {
+    "command": "DynamoDB partition key",
+    "description": "Répartit les éléments entre les partitions et doit distribuer uniformément la charge des requêtes."
+  },
+  "extra-046": {
+    "command": "DynamoDB conditional write",
+    "description": "N'applique une écriture que si une condition sur l'élément est vraie."
+  },
+  "extra-047": {
+    "command": "KMS key rotation",
+    "description": "Renouvelle le matériau cryptographique tout en conservant un identifiant de clé stable pour les appelants."
+  },
+  "extra-048": {
+    "command": "IAM permission boundary",
+    "description": "Définit les autorisations maximales que les politiques d'identité peuvent accorder à un principal."
+  },
+  "extra-049": {
+    "command": "az account show",
+    "description": "Affiche le contexte de l'abonnement et du locataire actifs pour Azure CLI."
+  },
+  "extra-050": {
+    "command": "az account set",
+    "description": "Sélectionne l'abonnement utilisé par les commandes CLI suivantes."
+  },
+  "extra-051": {
+    "command": "Resource lock",
+    "description": "Empêche la suppression ou la modification des périmètres de ressources protégés."
+  },
+  "extra-052": {
+    "command": "Managed identity",
+    "description": "Permet à une charge de travail Azure d'obtenir des jetons Entra sans secrets client stockés."
+  },
+  "extra-053": {
+    "command": "Azure RBAC role assignment",
+    "description": "Attribue un rôle intégré ou personnalisé à un périmètre choisi."
+  },
+  "extra-054": {
+    "command": "Key Vault secret version",
+    "description": "Conserve des révisions de secrets adressables et permet une rotation contrôlée."
+  },
+  "extra-055": {
+    "command": "Key Vault soft delete",
+    "description": "Conserve les objets supprimés d'un coffre pour permettre leur récupération pendant la période de rétention."
+  },
+  "extra-056": {
+    "command": "Private endpoint",
+    "description": "Associe un service PaaS à une IP privée dans un réseau virtuel."
+  },
+  "extra-057": {
+    "command": "Private DNS zone link",
+    "description": "Permet la résolution des enregistrements DNS de points de terminaison privés dans les réseaux virtuels liés."
+  },
+  "extra-058": {
+    "command": "NSG flow logs",
+    "description": "Enregistre les décisions relatives aux flux réseau pour les groupes de sécurité réseau pris en charge."
+  },
+  "extra-059": {
+    "command": "Application Gateway probe",
+    "description": "Vérifie l'intégrité du backend à l'aide d'un chemin, d'un hôte et d'un intervalle configurés."
+  },
+  "extra-060": {
+    "command": "Front Door origin health",
+    "description": "Vérifie si les origines satisfont la sonde d'intégrité configurée."
+  },
+  "extra-061": {
+    "command": "Blob lifecycle management",
+    "description": "Déplace les blobs ou les fait expirer selon leur âge, leur préfixe ou leur niveau d'accès."
+  },
+  "extra-062": {
+    "command": "Blob soft delete",
+    "description": "Conserve les blobs supprimés pour permettre leur restauration pendant une durée configurée."
+  },
+  "extra-063": {
+    "command": "Azure SQL point-in-time restore",
+    "description": "Crée une copie de base de données à partir d'un instant antérieur compris dans la période de rétention."
+  },
+  "extra-064": {
+    "command": "Cosmos DB request units",
+    "description": "Représentent une capacité de débit normalisée pour les opérations de base de données."
+  },
+  "extra-065": {
+    "command": "Azure Monitor alert rule",
+    "description": "Évalue des métriques ou des journaux et déclenche un groupe d'actions lorsque les conditions sont remplies."
+  },
+  "extra-066": {
+    "command": "Log Analytics workspace query",
+    "description": "Utilise Kusto Query Language pour analyser la télémétrie collectée."
+  },
+  "extra-067": {
+    "command": "App Service deployment slot",
+    "description": "Fournit une cible de déploiement distincte pouvant être permutée avec la production."
+  },
+  "extra-068": {
+    "command": "Container Apps revision",
+    "description": "Représente une version immuable d'une application pouvant recevoir du trafic."
+  },
+  "extra-069": {
+    "command": "AKS node pool taint",
+    "description": "Restreint l'ordonnancement pour que seuls les pods dotés des tolérances appropriées soient placés sur un pool spécialisé."
+  },
+  "extra-070": {
+    "command": "Bicep what-if",
+    "description": "Prévisualise les modifications des ressources Azure avant l'application d'un déploiement."
+  },
+  "extra-071": {
+    "command": "Azure Policy compliance",
+    "description": "Affiche les ressources conformes ou contraires aux définitions de politique attribuées."
+  },
+  "extra-072": {
+    "command": "Service Bus dead-letter queue",
+    "description": "Stocke les messages qui ne peuvent pas être remis ou traités correctement."
+  },
+  "extra-073": {
+    "command": "set -o pipefail",
+    "description": "Signale l'échec du pipeline lorsqu'une de ses commandes échoue."
+  },
+  "extra-074": {
+    "command": "trap cleanup EXIT",
+    "description": "Exécute la logique de nettoyage à la fermeture d'un shell, y compris après une erreur."
+  },
+  "extra-075": {
+    "command": "mktemp -d",
+    "description": "Crée un répertoire temporaire unique pour isoler les fichiers intermédiaires."
+  },
+  "extra-076": {
+    "command": "read -r",
+    "description": "Lit l'entrée sans interpréter les barres obliques inverses comme des séquences d'échappement."
+  },
+  "extra-077": {
+    "command": "mapfile -t",
+    "description": "Charge une entrée délimitée par des sauts de ligne dans un tableau Bash indexé."
+  },
+  "extra-078": {
+    "command": "[[ -v variable ]]",
+    "description": "Vérifie si une variable shell a été définie, même si sa valeur est vide."
+  },
+  "extra-079": {
+    "command": "printf %q",
+    "description": "Protège une valeur par échappement pour la représenter sans risque en entrée du shell."
+  },
+  "extra-080": {
+    "command": "parameter defaulting",
+    "description": "Utilise une valeur de repli lorsqu'une variable est non définie ou vide."
+  },
+  "extra-081": {
+    "command": "parameter substring",
+    "description": "Extrait une portion de chaîne avec l'expansion de paramètres Bash."
+  },
+  "extra-082": {
+    "command": "parameter substitution",
+    "description": "Remplace le texte correspondant sans lancer de processus externe."
+  },
+  "extra-083": {
+    "command": "process substitution",
+    "description": "Transmet la sortie d'une commande à un programme comme une entrée de type fichier."
+  },
+  "extra-084": {
+    "command": "here-string",
+    "description": "Fournit une chaîne à une commande via l'entrée standard."
+  },
+  "extra-085": {
+    "command": "getopts",
+    "description": "Analyse les options courtes de ligne de commande dans une boucle shell portable."
+  },
+  "extra-086": {
+    "command": "wait -n",
+    "description": "Attend la fin de l'un des jobs en arrière-plan avant de lancer d'autres travaux."
+  },
+  "extra-087": {
+    "command": "jobs -pr",
+    "description": "Liste les identifiants de processus des jobs en arrière-plan lancés par ce shell et encore en cours d'exécution."
+  },
+  "extra-088": {
+    "command": "exec command",
+    "description": "Remplace le processus shell courant par une commande."
+  },
+  "extra-089": {
+    "command": "command -v",
+    "description": "Trouve l'exécutable que le shell lancerait pour un nom de commande."
+  },
+  "extra-090": {
+    "command": "umask",
+    "description": "Définit les bits d'autorisation retirés par défaut aux fichiers et répertoires nouvellement créés."
+  },
+  "extra-091": {
+    "command": "noclobber",
+    "description": "Empêche par défaut qu'une redirection de sortie écrase un fichier existant."
+  },
+  "extra-092": {
+    "command": "flock",
+    "description": "Fournit un verrouillage coopératif pour éviter le chevauchement d'exécutions simultanées d'un script."
+  },
+  "extra-093": {
+    "command": "timeout",
+    "description": "Arrête une commande qui dépasse la durée autorisée."
+  },
+  "extra-094": {
+    "command": "xargs -0",
+    "description": "Transmet sans risque des noms de fichiers délimités par NUL à une autre commande."
+  },
+  "extra-095": {
+    "command": "find -print0",
+    "description": "Émet des noms de fichiers séparés par des caractères NUL pour gérer les espaces et les sauts de ligne."
+  },
+  "extra-096": {
+    "command": "set -u",
+    "description": "Traite l'expansion d'une variable non définie comme une erreur."
+  },
+  "extra-097": {
+    "command": "docker buildx imagetools inspect",
+    "description": "Inspecte le manifeste d'une image multiplateforme et les plateformes publiées."
+  },
+  "extra-098": {
+    "command": "docker buildx build --platform",
+    "description": "Construit une image pour une ou plusieurs architectures CPU."
+  },
+  "extra-099": {
+    "command": "docker image inspect",
+    "description": "Affiche les métadonnées d'une image, telles que les couches, l'architecture et le point d'entrée."
+  },
+  "extra-100": {
+    "command": "docker image history",
+    "description": "Liste les couches de l'image et les commandes qui les ont créées."
+  },
+  "extra-101": {
+    "command": "docker system df",
+    "description": "Indique l'espace disque utilisé par les images, les conteneurs, les volumes et le cache de build."
+  },
+  "extra-102": {
+    "command": "docker builder prune",
+    "description": "Supprime le cache de build inutilisé pour libérer du stockage local."
+  },
+  "extra-103": {
+    "command": "docker volume inspect",
+    "description": "Affiche le point de montage, le pilote et les étiquettes d'un volume Docker."
+  },
+  "extra-104": {
+    "command": "docker network inspect",
+    "description": "Affiche les conteneurs connectés, les paramètres IPAM et les détails du pilote réseau."
+  },
+  "extra-105": {
+    "command": "docker stats --no-stream",
+    "description": "Capture un instantané de l'utilisation des ressources des conteneurs en cours d'exécution."
+  },
+  "extra-106": {
+    "command": "docker events --since",
+    "description": "Diffuse les événements du cycle de vie des conteneurs à partir d'un instant choisi."
+  },
+  "extra-107": {
+    "command": "docker exec --workdir",
+    "description": "Exécute une commande dans un conteneur depuis un répertoire choisi."
+  },
+  "extra-108": {
+    "command": "docker cp",
+    "description": "Copie des fichiers entre un chemin local et le système de fichiers d'un conteneur."
+  },
+  "extra-109": {
+    "command": "docker wait",
+    "description": "Attend l'arrêt d'un conteneur et affiche son code de sortie."
+  },
+  "extra-110": {
+    "command": "docker inspect health status",
+    "description": "Lit l'état du contrôle d'intégrité configuré et les résultats des sondes récentes."
+  },
+  "extra-111": {
+    "command": "HEALTHCHECK start-period",
+    "description": "Laisse à une application le temps de s'initialiser avant de comptabiliser les échecs."
+  },
+  "extra-112": {
+    "command": "read-only root filesystem",
+    "description": "Empêche les écritures dans le système de fichiers racine du conteneur pendant son exécution."
+  },
+  "extra-113": {
+    "command": "docker run --init",
+    "description": "Ajoute un petit processus d'initialisation pour transmettre les signaux et récupérer les processus enfants terminés."
+  },
+  "extra-114": {
+    "command": "docker run --cap-drop",
+    "description": "Retire les capacités Linux dont le processus n'a pas besoin."
+  },
+  "extra-115": {
+    "command": "docker run --security-opt",
+    "description": "Applique des paramètres de sécurité à l'exécution, comme un profil seccomp."
+  },
+  "extra-116": {
+    "command": "docker run --pids-limit",
+    "description": "Limite le nombre de processus qu'un conteneur peut créer."
+  },
+  "extra-117": {
+    "command": "docker compose config",
+    "description": "Affiche et valide la configuration Compose fusionnée."
+  },
+  "extra-118": {
+    "command": "docker compose profiles",
+    "description": "Active des services optionnels uniquement lorsque leur profil nommé est sélectionné."
+  },
+  "extra-119": {
+    "command": "docker compose up --wait",
+    "description": "Attend que les services soient sains ou en cours d'exécution avant de rendre la main."
+  },
+  "extra-120": {
+    "command": "container stop timeout",
+    "description": "Envoie un signal d'arrêt propre et attend avant de terminer de force un conteneur."
+  },
+  "extra-121": {
+    "command": "gcloud config get-value project",
+    "description": "Affiche le projet utilisé par les commandes qui n'en précisent pas explicitement."
+  },
+  "extra-122": {
+    "command": "gcloud auth list",
+    "description": "Liste les comptes authentifiés et identifie le principal actif."
+  },
+  "extra-123": {
+    "command": "gcloud projects get-iam-policy",
+    "description": "Lit les attributions IAM au niveau du projet pour examiner les accès."
+  },
+  "extra-124": {
+    "command": "IAM service account impersonation",
+    "description": "Permet à un principal autorisé d'obtenir des identifiants de courte durée pour un compte de service."
+  },
+  "extra-125": {
+    "command": "Cloud Storage object versioning",
+    "description": "Conserve les anciennes générations d'un objet après son remplacement ou sa suppression."
+  },
+  "extra-126": {
+    "command": "Cloud Storage retention policy",
+    "description": "Empêche la suppression ou le remplacement des objets jusqu'à l'expiration d'une période de rétention."
+  },
+  "extra-127": {
+    "command": "Cloud Run revision traffic",
+    "description": "Répartit les requêtes entre les révisions d'un service pour des déploiements progressifs."
+  },
+  "extra-128": {
+    "command": "Cloud Run min instances",
+    "description": "Maintient un nombre configuré d'instances prêtes afin de réduire les démarrages à froid."
+  },
+  "extra-129": {
+    "command": "GKE Workload Identity",
+    "description": "Fournit aux charges de travail Kubernetes des identifiants Google de courte durée sans fichiers de clés."
+  },
+  "extra-130": {
+    "command": "GKE node taint",
+    "description": "Réserve des nœuds aux pods qui déclarent une tolérance correspondante."
+  },
+  "extra-131": {
+    "command": "Pub/Sub dead-letter topic",
+    "description": "Dirige les messages dont la remise échoue à répétition vers un topic distinct pour inspection."
+  },
+  "extra-132": {
+    "command": "Pub/Sub acknowledgment deadline",
+    "description": "Définit le délai dont dispose un abonné pour accuser réception d'un message récupéré."
+  },
+  "extra-133": {
+    "command": "BigQuery partition pruning",
+    "description": "Réduit les données analysées en filtrant sur la colonne de partitionnement."
+  },
+  "extra-134": {
+    "command": "BigQuery dry run",
+    "description": "Estime le nombre d'octets traités par une requête sans l'exécuter."
+  },
+  "extra-135": {
+    "command": "Cloud SQL automated backups",
+    "description": "Crée des sauvegardes planifiées de base de données avec une rétention configurable."
+  },
+  "extra-136": {
+    "command": "Cloud SQL point-in-time recovery",
+    "description": "Restaure une base de données à un instant choisi à l'aide des sauvegardes et des journaux de transactions."
+  },
+  "extra-137": {
+    "command": "Cloud Logging exclusion",
+    "description": "Exclut du stockage les entrées de journal correspondantes lors de leur ingestion."
+  },
+  "extra-138": {
+    "command": "Cloud Monitoring uptime check",
+    "description": "Sonde un point de terminaison joignable et enregistre sa disponibilité et sa latence."
+  },
+  "extra-139": {
+    "command": "VPC flow logs",
+    "description": "Enregistre un échantillonnage des flux réseau pour les sous-réseaux pris en charge."
+  },
+  "extra-140": {
+    "command": "Cloud NAT",
+    "description": "Fournit un accès sortant à Internet aux instances privées sans adresses IP externes."
+  },
+  "extra-141": {
+    "command": "Artifact Registry cleanup policy",
+    "description": "Supprime les versions de paquets obsolètes selon leur âge, leurs étiquettes ou des règles de conservation."
+  },
+  "extra-142": {
+    "command": "Secret Manager version disable",
+    "description": "Empêche l'accès à une version de secret sans supprimer son historique."
+  },
+  "extra-143": {
+    "command": "KMS key version rotation",
+    "description": "Crée un nouveau matériau de clé cryptographique tout en conservant les versions antérieures pour le déchiffrement."
+  },
+  "extra-144": {
+    "command": "Organization Policy constraint",
+    "description": "Applique aux projets et aux dossiers des garde-fous gérés de manière centralisée."
+  },
+  "extra-145": {
+    "command": "git switch -c",
+    "description": "Crée une branche et y bascule en une seule opération."
+  },
+  "extra-146": {
+    "command": "git restore --staged",
+    "description": "Retire des chemins de l'index tout en conservant leurs modifications dans l'arbre de travail."
+  },
+  "extra-147": {
+    "command": "git restore --source",
+    "description": "Remplace un chemin de l'arbre de travail par le contenu d'un commit choisi."
+  },
+  "extra-148": {
+    "command": "git diff --check",
+    "description": "Détecte les erreurs d'espacement, comme les espaces en fin de ligne, ainsi que les marqueurs de conflit."
+  },
+  "extra-149": {
+    "command": "git diff --stat",
+    "description": "Résume les fichiers modifiés et le nombre de lignes sans afficher le correctif complet."
+  },
+  "extra-150": {
+    "command": "git log --graph",
+    "description": "Dessine un graphe ASCII des branches, des fusions et des commits."
+  },
+  "extra-151": {
+    "command": "git show --stat",
+    "description": "Affiche le résumé d'un commit et les fichiers qu'il a modifiés."
+  },
+  "extra-152": {
+    "command": "git blame -L",
+    "description": "Affiche le commit et l'auteur associés à chaque ligne source sélectionnée."
+  },
+  "extra-153": {
+    "command": "git bisect",
+    "description": "Utilise une recherche dichotomique pour trouver le commit ayant introduit une régression."
+  },
+  "extra-154": {
+    "command": "git cherry-pick -x",
+    "description": "Applique un commit et consigne son empreinte d'origine dans le message du nouveau commit."
+  },
+  "extra-155": {
+    "command": "git revert",
+    "description": "Crée un commit qui annule les modifications d'un commit antérieur."
+  },
+  "extra-156": {
+    "command": "git reflog",
+    "description": "Liste les déplacements récents des références locales, y compris les commits qui ne figurent plus sur une branche."
+  },
+  "extra-157": {
+    "command": "git clean -nd",
+    "description": "Prévisualise les fichiers non suivis qu'une opération de nettoyage supprimerait."
+  },
+  "extra-158": {
+    "command": "git stash push --include-untracked",
+    "description": "Stocke temporairement le travail suivi et non suivi sans créer de commit."
+  },
+  "extra-159": {
+    "command": "git stash branch",
+    "description": "Crée une branche et y réapplique une remise sélectionnée."
+  },
+  "extra-160": {
+    "command": "git worktree add",
+    "description": "Extrait une autre branche dans un répertoire de travail distinct."
+  },
+  "extra-161": {
+    "command": "git submodule update --init",
+    "description": "Initialise et extrait les révisions des sous-modules enregistrées dans le dépôt parent."
+  },
+  "extra-162": {
+    "command": "git config --show-origin",
+    "description": "Indique quel fichier de configuration a fourni un paramètre Git."
+  },
+  "extra-163": {
+    "command": "git commit --fixup",
+    "description": "Crée un commit destiné à être fusionné automatiquement dans un commit cible."
+  },
+  "extra-164": {
+    "command": "git rebase --autosquash",
+    "description": "Place les commits fixup et squash à côté de leur cible pendant un rebasage."
+  },
+  "extra-165": {
+    "command": "git format-patch",
+    "description": "Exporte des commits sous forme de fichiers de correctif compatibles avec le format de boîte aux lettres."
+  },
+  "extra-166": {
+    "command": "git am",
+    "description": "Applique des fichiers de correctif et crée des commits à partir de leurs métadonnées."
+  },
+  "extra-167": {
+    "command": "git verify-commit",
+    "description": "Vérifie la signature d'un commit à l'aide des clés de confiance configurées."
+  },
+  "extra-168": {
+    "command": "git fsck --full",
+    "description": "Vérifie la connectivité des objets du dépôt et signale les objets inaccessibles."
+  },
+  "extra-169": {
+    "command": "identity federation",
+    "description": "Permet aux charges de travail d'échanger des assertions d'identité de confiance entre environnements sans secrets statiques."
+  },
+  "extra-170": {
+    "command": "private connectivity failover",
+    "description": "Maintient un VPN ou un circuit secondaire disponible en cas de défaillance de la connectivité privée principale."
+  },
+  "extra-171": {
+    "command": "split-horizon DNS",
+    "description": "Renvoie des réponses DNS différentes aux clients internes et externes pour un même nom."
+  },
+  "extra-172": {
+    "command": "centralized certificate lifecycle",
+    "description": "Émet, renouvelle et révoque les certificats de manière cohérente entre les environnements."
+  },
+  "extra-173": {
+    "command": "cross-environment secrets rotation",
+    "description": "Renouvelle les identifiants aux deux emplacements pendant que les clients effectuent une transition sûre."
+  },
+  "extra-174": {
+    "command": "data residency boundary",
+    "description": "Conserve les données réglementées et les sauvegardes dans les zones géographiques approuvées."
+  },
+  "extra-175": {
+    "command": "WAN latency budget",
+    "description": "Définit le délai réseau acceptable pour les dépendances applicatives synchrones."
+  },
+  "extra-176": {
+    "command": "egress control plane",
+    "description": "Centralise les routes sortantes, l'inspection et les politiques entre les sites et les clouds."
+  },
+  "extra-177": {
+    "command": "configuration drift detection",
+    "description": "Compare les paramètres déployés à l'état souhaité déclaré dans chaque environnement."
+  },
+  "extra-178": {
+    "command": "hybrid observability correlation",
+    "description": "Utilise des identifiants cohérents de service et de trace pour relier la télémétrie entre les plateformes."
+  },
+  "extra-179": {
+    "command": "site-to-cloud route advertisement",
+    "description": "Annonce les préfixes privés approuvés entre les routeurs sur site et les passerelles cloud."
+  },
+  "extra-180": {
+    "command": "active-passive workload failover",
+    "description": "Transfère le trafic vers un environnement secondaire prêt après une défaillance vérifiée de l'environnement principal."
+  },
+  "extra-181": {
+    "command": "active-active data consistency",
+    "description": "Définit la gestion des conflits lorsque les deux sites acceptent simultanément des écritures."
+  },
+  "extra-182": {
+    "command": "hybrid backup immutability",
+    "description": "Protège les copies de sauvegarde contre les modifications effectuées avec des identifiants de production compromis."
+  },
+  "extra-183": {
+    "command": "local dependency cache",
+    "description": "Maintient les artefacts requis disponibles pendant une interruption de la connectivité cloud."
+  },
+  "extra-184": {
+    "command": "edge workload update ring",
+    "description": "Déploie les mises à jour logicielles sur les sites distants par vagues contrôlées."
+  },
+  "extra-185": {
+    "command": "policy translation",
+    "description": "Associe des exigences équivalentes d'accès et de réseau aux contrôles natifs de chaque plateforme."
+  },
+  "extra-186": {
+    "command": "hybrid service ownership",
+    "description": "Attribue un responsable opérationnel à chaque dépendance traversant les frontières des plateformes."
+  },
+  "extra-187": {
+    "command": "cross-cloud identity mapping",
+    "description": "Associe les identités externes à des rôles de moindre privilège dans un autre cloud."
+  },
+  "extra-188": {
+    "command": "clock synchronization",
+    "description": "Synchronise les hôtes avec des sources de temps fiables pour les journaux, les certificats et l'authentification."
+  },
+  "extra-189": {
+    "command": "hybrid deployment contract",
+    "description": "Définit des versions et des interfaces compatibles pour les composants publiés indépendamment."
+  },
+  "extra-190": {
+    "command": "regional traffic steering",
+    "description": "Dirige les utilisateurs vers un environnement proche et sain à l'aide de mesures d'intégrité et de latence."
+  },
+  "extra-191": {
+    "command": "offline operation mode",
+    "description": "Précise les fonctions qui restent disponibles lorsque les services distants sont injoignables."
+  },
+  "extra-192": {
+    "command": "hybrid disaster recovery test",
+    "description": "Démontre que les procédures de récupération fonctionnent pour les dépendances du centre de données comme du cloud."
+  },
+  "extra-193": {
+    "command": "ibmcloud target",
+    "description": "Sélectionne le compte, la région et le groupe de ressources pour les opérations CLI suivantes."
+  },
+  "extra-194": {
+    "command": "ibmcloud resource groups",
+    "description": "Liste les groupes de ressources qui organisent les services et les périmètres d'accès."
+  },
+  "extra-195": {
+    "command": "ibmcloud iam user-policies",
+    "description": "Affiche les politiques attribuées directement à une identité utilisateur."
+  },
+  "extra-196": {
+    "command": "IBM Cloud API key rotation",
+    "description": "Remplace un identifiant et met à jour les charges de travail dépendantes avant sa révocation."
+  },
+  "extra-197": {
+    "command": "VPC security group",
+    "description": "Contrôle avec suivi d'état le trafic entrant et sortant des interfaces VPC."
+  },
+  "extra-198": {
+    "command": "VPC network ACL",
+    "description": "Applique des règles sans état d'autorisation et de refus au niveau du sous-réseau."
+  },
+  "extra-199": {
+    "command": "VPC floating IP",
+    "description": "Associe une adresse publique à une interface réseau VPC prise en charge."
+  },
+  "extra-200": {
+    "command": "VPC VPN gateway",
+    "description": "Connecte un VPC à un réseau distant via un tunnel IPsec."
+  },
+  "extra-201": {
+    "command": "Cloud Object Storage HMAC key",
+    "description": "Fournit des identifiants compatibles S3 aux clients de stockage d'objets pris en charge."
+  },
+  "extra-202": {
+    "command": "Cloud Object Storage retention",
+    "description": "Protège les objets contre la suppression ou l'écrasement pendant une période définie."
+  },
+  "extra-203": {
+    "command": "Kubernetes worker pool",
+    "description": "Regroupe les nœuds de travail du cluster partageant une configuration de machine et de zone."
+  },
+  "extra-204": {
+    "command": "Kubernetes cluster autoscaler",
+    "description": "Ajuste le nombre de nœuds de travail selon les pods qui ne peuvent pas être ordonnancés."
+  },
+  "extra-205": {
+    "command": "Code Engine job",
+    "description": "Exécute une charge de travail finie jusqu'à son terme plutôt que de servir un point de terminaison en continu."
+  },
+  "extra-206": {
+    "command": "Code Engine project",
+    "description": "Fournit un périmètre isolé pour les applications, les jobs, les builds et la configuration."
+  },
+  "extra-207": {
+    "command": "Secrets Manager secret group",
+    "description": "Organise les secrets et la politique d'accès au sein d'une instance de gestionnaire de secrets."
+  },
+  "extra-208": {
+    "command": "Secrets Manager rotation policy",
+    "description": "Planifie la rotation des types de secrets pris en charge et des services connectés."
+  },
+  "extra-209": {
+    "command": "Activity Tracker event",
+    "description": "Enregistre l'activité du compte à des fins d'audit, d'investigation et d'alerte."
+  },
+  "extra-210": {
+    "command": "Log Analysis parsing rule",
+    "description": "Extrait des champs structurés des messages de journal applicatifs lors de l'ingestion."
+  },
+  "extra-211": {
+    "command": "Key Protect root key",
+    "description": "Protège les clés de chiffrement des données utilisées par les services intégrés."
+  },
+  "extra-212": {
+    "command": "Key Protect key rotation",
+    "description": "Renouvelle le matériau de clé cryptographique tout en préservant les références gérées."
+  },
+  "extra-213": {
+    "command": "Cloud Internet Services origin pool",
+    "description": "Regroupe les origines backend pour une répartition du trafic fondée sur leur intégrité."
+  },
+  "extra-214": {
+    "command": "Cloud Internet Services WAF rule",
+    "description": "Bloque ou soumet à un défi les requêtes correspondant à un motif d'attaque web."
+  },
+  "extra-215": {
+    "command": "Schematics workspace",
+    "description": "Exécute l'automatisation Terraform dans des environnements d'exécution gérés par IBM Cloud."
+  },
+  "extra-216": {
+    "command": "Schematics action",
+    "description": "Exécute une action opérationnelle sur les ressources gérées par un espace de travail."
+  },
+  "extra-217": {
+    "command": "Object.hasOwn",
+    "description": "Vérifie si un objet contient directement une propriété sans consulter le prototype."
+  },
+  "extra-218": {
+    "command": "structuredClone",
+    "description": "Crée une copie profonde des valeurs structurées prises en charge."
+  },
+  "extra-219": {
+    "command": "Array.toSorted",
+    "description": "Renvoie une copie triée sans modifier le tableau d'origine."
+  },
+  "extra-220": {
+    "command": "Array.flatMap",
+    "description": "Transforme chaque élément et aplatit le tableau obtenu d'un niveau."
+  },
+  "extra-221": {
+    "command": "Array.some",
+    "description": "Vérifie si au moins un élément du tableau satisfait un prédicat."
+  },
+  "extra-222": {
+    "command": "Array.every",
+    "description": "Vérifie si tous les éléments du tableau satisfont un prédicat."
+  },
+  "extra-223": {
+    "command": "Map.groupBy",
+    "description": "Regroupe les valeurs d'un itérable selon une clé renvoyée par une fonction de rappel."
+  },
+  "extra-224": {
+    "command": "Promise.allSettled",
+    "description": "Attend toutes les promesses et conserve les résultats des résolutions et des rejets."
+  },
+  "extra-225": {
+    "command": "AbortController",
+    "description": "Signale une annulation à fetch et aux autres opérations asynchrones prenant en charge l'annulation."
+  },
+  "extra-226": {
+    "command": "fetch response.ok",
+    "description": "Vérifie si le code d'état d'une réponse HTTP appartient à la plage de réussite."
+  },
+  "extra-227": {
+    "command": "URLSearchParams",
+    "description": "Construit et analyse les chaînes de requête URL avec un encodage correct."
+  },
+  "extra-228": {
+    "command": "import.meta.env",
+    "description": "Lit les valeurs d'environnement fournies par l'outil de build dans les systèmes de modules pris en charge."
+  },
+  "extra-229": {
+    "command": "dynamic import",
+    "description": "Charge un module à la demande et renvoie une promesse pour ses exports."
+  },
+  "extra-230": {
+    "command": "top-level await",
+    "description": "Permet aux modules pris en charge d'attendre directement une initialisation asynchrone."
+  },
+  "extra-231": {
+    "command": "WeakMap",
+    "description": "Stocke des métadonnées indexées par des objets sans maintenir ces clés en vie uniquement par l'intermédiaire de la table."
+  },
+  "extra-232": {
+    "command": "WeakSet",
+    "description": "Suit l'appartenance d'objets à un ensemble sans empêcher le ramasse-miettes de récupérer ses entrées."
+  },
+  "extra-233": {
+    "command": "Object.freeze",
+    "description": "Empêche la modification des propriétés propres d'un objet pendant l'exécution."
+  },
+  "extra-234": {
+    "command": "nullish coalescing",
+    "description": "N'utilise une valeur de repli que pour null ou undefined, en conservant les valeurs valides évaluées comme fausses."
+  },
+  "extra-235": {
+    "command": "optional chaining",
+    "description": "Lit sans risque des valeurs imbriquées lorsqu'une référence précédente peut être null ou undefined."
+  },
+  "extra-236": {
+    "command": "Error cause",
+    "description": "Joint l'exception d'origine lorsqu'une erreur est encapsulée avec du contexte."
+  },
+  "extra-237": {
+    "command": "TextEncoder",
+    "description": "Encode des chaînes JavaScript en octets UTF-8."
+  },
+  "extra-238": {
+    "command": "crypto.randomUUID",
+    "description": "Crée un UUID à l'aide de la source aléatoire cryptographique de la plateforme."
+  },
+  "extra-239": {
+    "command": "ReadableStream",
+    "description": "Traite progressivement les données reçues en flux au lieu de mettre toute la réponse en mémoire tampon."
+  },
+  "extra-240": {
+    "command": "Object.fromEntries",
+    "description": "Construit un objet à partir d'un itérable de paires clé-valeur."
+  },
+  "extra-241": {
+    "command": "pipeline options timeout",
+    "description": "Arrête un pipeline ou une étape après la durée configurée."
+  },
+  "extra-242": {
+    "command": "pipeline options disableConcurrentBuilds",
+    "description": "Empêche le chevauchement d'exécutions d'un même job de pipeline."
+  },
+  "extra-243": {
+    "command": "when branch",
+    "description": "Exécute une étape déclarative uniquement lorsque la branche courante correspond."
+  },
+  "extra-244": {
+    "command": "when changeset",
+    "description": "Exécute une étape uniquement lorsque les fichiers modifiés correspondent à un motif."
+  },
+  "extra-245": {
+    "command": "input step",
+    "description": "Suspend un pipeline dans l'attente de la décision d'une personne autorisée."
+  },
+  "extra-246": {
+    "command": "stash and unstash",
+    "description": "Transfère les fichiers sélectionnés entre des étapes exécutées sur des agents différents."
+  },
+  "extra-247": {
+    "command": "archiveArtifacts",
+    "description": "Conserve les sorties du build avec l'enregistrement du build Jenkins."
+  },
+  "extra-248": {
+    "command": "junit publisher",
+    "description": "Publie les résultats des tests en XML et marque les builds comme instables en cas d'échec."
+  },
+  "extra-249": {
+    "command": "credentials binding",
+    "description": "Expose les identifiants stockés à un bloc délimité sous forme de variables d'environnement."
+  },
+  "extra-250": {
+    "command": "withEnv",
+    "description": "Ajoute ou remplace des valeurs d'environnement pour un bloc limité du pipeline."
+  },
+  "extra-251": {
+    "command": "agent label",
+    "description": "Planifie un pipeline ou une étape sur un agent Jenkins correspondant."
+  },
+  "extra-252": {
+    "command": "matrix axis",
+    "description": "Exécute une étape pour les combinaisons de valeurs d'environnement déclarées."
+  },
+  "extra-253": {
+    "command": "parallel stages",
+    "description": "Exécute simultanément des étapes déclaratives indépendantes."
+  },
+  "extra-254": {
+    "command": "post always",
+    "description": "Exécute les étapes de nettoyage ou de compte rendu quel que soit le résultat du pipeline."
+  },
+  "extra-255": {
+    "command": "post unsuccessful",
+    "description": "Exécute la logique de récupération ou de notification en cas de résultat en échec ou instable."
+  },
+  "extra-256": {
+    "command": "retry step",
+    "description": "Répète un bloc lorsqu'une opération échoue de manière transitoire."
+  },
+  "extra-257": {
+    "command": "warnError",
+    "description": "Marque une étape comme instable tout en permettant au pipeline de continuer."
+  },
+  "extra-258": {
+    "command": "lockable resource",
+    "description": "Sérialise l'accès des pipelines à une ressource partagée."
+  },
+  "extra-259": {
+    "command": "milestone step",
+    "description": "Empêche les builds plus anciens de dépasser un build plus récent."
+  },
+  "extra-260": {
+    "command": "build job step",
+    "description": "Déclenche un autre job Jenkins avec des paramètres et une attente facultative."
+  },
+  "extra-261": {
+    "command": "copyArtifacts",
+    "description": "Copie les artefacts sélectionnés d'un autre build dans l'espace de travail courant."
+  },
+  "extra-262": {
+    "command": "pipeline shared library",
+    "description": "Regroupe des étapes de pipeline réutilisables et des variables globales pour plusieurs jobs."
+  },
+  "extra-263": {
+    "command": "Replay build",
+    "description": "Réexécute un pipeline avec des modifications temporaires du script pour un débogage contrôlé."
+  },
+  "extra-264": {
+    "command": "build discard policy",
+    "description": "Limite l'historique des builds et les artefacts conservés pour maîtriser la croissance du stockage."
+  },
+  "extra-265": {
+    "command": "kubectl rollout history",
+    "description": "Affiche les révisions créées par le déploiement d'un Deployment."
+  },
+  "extra-266": {
+    "command": "kubectl rollout undo",
+    "description": "Rétablit une révision antérieure d'une charge de travail lorsque le retour arrière est sûr."
+  },
+  "extra-267": {
+    "command": "kubectl rollout pause",
+    "description": "Suspend le déploiement d'un Deployment pendant l'examen des modifications."
+  },
+  "extra-268": {
+    "command": "kubectl rollout resume",
+    "description": "Reprend un déploiement précédemment suspendu."
+  },
+  "extra-269": {
+    "command": "kubectl auth can-i",
+    "description": "Vérifie si l'identité courante peut effectuer une action API précise."
+  },
+  "extra-270": {
+    "command": "kubectl api-resources",
+    "description": "Liste les types de ressources servis par le serveur API ainsi que leur portée."
+  },
+  "extra-271": {
+    "command": "kubectl explain",
+    "description": "Lit la documentation du schéma pour un champ de ressource."
+  },
+  "extra-272": {
+    "command": "kubectl wait",
+    "description": "Attend qu'une condition de ressource devienne vraie ou qu'un délai expire."
+  },
+  "extra-273": {
+    "command": "kubectl plugin list",
+    "description": "Liste les plugins kubectl exécutables trouvés dans le PATH courant."
+  },
+  "extra-274": {
+    "command": "kubectl diff",
+    "description": "Montre comment un manifeste modifierait le cluster actif avant de l'appliquer."
+  },
+  "extra-275": {
+    "command": "kubectl apply --server-side",
+    "description": "Utilise la propriété des champs côté serveur et la détection des conflits pour les mises à jour."
+  },
+  "extra-276": {
+    "command": "PodDisruptionBudget",
+    "description": "Limite les interruptions volontaires pour maintenir suffisamment de réplicas disponibles."
+  },
+  "extra-277": {
+    "command": "startup probe",
+    "description": "Laisse du temps aux conteneurs à démarrage lent avant le début des contrôles de vivacité."
+  },
+  "extra-278": {
+    "command": "readiness probe",
+    "description": "Retire un pod des points de terminaison du service tant qu'il ne peut pas accepter de trafic."
+  },
+  "extra-279": {
+    "command": "liveness probe",
+    "description": "Redémarre un conteneur lorsque son processus n'est plus sain."
+  },
+  "extra-280": {
+    "command": "topology spread constraints",
+    "description": "Répartit les pods entre les zones ou les nœuds pour réduire les défaillances corrélées."
+  },
+  "extra-281": {
+    "command": "Pod priority class",
+    "description": "Influe sur l'ordre d'ordonnancement et la préemption éventuelle en cas de pression sur les ressources."
+  },
+  "extra-282": {
+    "command": "resource quota",
+    "description": "Plafonne la consommation totale de ressources dans un espace de noms."
+  },
+  "extra-283": {
+    "command": "LimitRange",
+    "description": "Définit les valeurs par défaut et maximales des demandes ou limites de ressources pour les objets d'un espace de noms."
+  },
+  "extra-284": {
+    "command": "EndpointSlice",
+    "description": "Stocke les données de points de terminaison backend de manière évolutive pour les Services Kubernetes."
+  },
+  "extra-285": {
+    "command": "IngressClass",
+    "description": "Sélectionne le contrôleur chargé de mettre en œuvre une ressource Ingress."
+  },
+  "extra-286": {
+    "command": "NetworkPolicy egress",
+    "description": "Restreint les destinations auxquelles les pods sélectionnés peuvent se connecter."
+  },
+  "extra-287": {
+    "command": "init container",
+    "description": "Exécute les tâches de préparation jusqu'à leur terme avant le démarrage des conteneurs applicatifs."
+  },
+  "extra-288": {
+    "command": "ephemeral container",
+    "description": "Ajoute un conteneur temporaire de débogage à un pod existant."
+  },
+  "extra-289": {
+    "command": "lsof -i",
+    "description": "Liste les processus utilisant des sockets réseau correspondant à un port ou à un protocole."
+  },
+  "extra-290": {
+    "command": "ss -lntp",
+    "description": "Affiche les sockets TCP en écoute, les adresses numériques et les processus propriétaires."
+  },
+  "extra-291": {
+    "command": "ip route get",
+    "description": "Affiche la route et l'adresse source que le noyau utiliserait pour une destination."
+  },
+  "extra-292": {
+    "command": "ip neigh",
+    "description": "Affiche le cache local des voisins utilisé pour la résolution d'adresses."
+  },
+  "extra-293": {
+    "command": "ethtool",
+    "description": "Inspecte ou configure les propriétés prises en charge des interfaces réseau."
+  },
+  "extra-294": {
+    "command": "iostat -xz",
+    "description": "Fournit les métriques d'utilisation et de latence des périphériques issues du paquet sysstat."
+  },
+  "extra-295": {
+    "command": "vmstat",
+    "description": "Résume la mémoire, les processus, la pagination, les E/S en blocs et l'activité CPU."
+  },
+  "extra-296": {
+    "command": "pidstat",
+    "description": "Fournit les statistiques de CPU, de mémoire ou d'E/S par processus."
+  },
+  "extra-297": {
+    "command": "strace -p",
+    "description": "Trace les appels système d'un processus existant à des fins de diagnostic."
+  },
+  "extra-298": {
+    "command": "ltrace",
+    "description": "Trace les appels d'un processus aux fonctions des bibliothèques partagées."
+  },
+  "extra-299": {
+    "command": "perf top",
+    "description": "Affiche en direct les fonctions auxquelles sont attribués les échantillons CPU du système."
+  },
+  "extra-300": {
+    "command": "systemd-analyze blame",
+    "description": "Liste les unités de démarrage classées selon leur durée d'exécution au démarrage."
+  },
+  "extra-301": {
+    "command": "systemctl cat",
+    "description": "Affiche un fichier d'unité avec les surcharges de ses fichiers complémentaires."
+  },
+  "extra-302": {
+    "command": "journalctl -u -S",
+    "description": "Filtre le journal d'une unité systemd par service et heure de début."
+  },
+  "extra-303": {
+    "command": "loginctl list-sessions",
+    "description": "Liste les sessions de connexion actives gérées par systemd-logind."
+  },
+  "extra-304": {
+    "command": "getfacl",
+    "description": "Lit les listes de contrôle d'accès POSIX au-delà des bits de base propriétaire, groupe et mode."
+  },
+  "extra-305": {
+    "command": "setfacl -m",
+    "description": "Ajoute ou modifie une entrée de liste de contrôle d'accès sur un objet du système de fichiers."
+  },
+  "extra-306": {
+    "command": "find -mmin",
+    "description": "Trouve les fichiers modifiés au cours d'un nombre donné de minutes."
+  },
+  "extra-307": {
+    "command": "stat -c",
+    "description": "Affiche des métadonnées de fichier sélectionnées, comme le mode, le propriétaire, la taille et les horodatages."
+  },
+  "extra-308": {
+    "command": "du -xhd1",
+    "description": "Résume l'espace utilisé par les répertoires sans franchir les limites des systèmes de fichiers."
+  },
+  "extra-309": {
+    "command": "tar --exclude",
+    "description": "Crée une archive en excluant les fichiers ou répertoires correspondants."
+  },
+  "extra-310": {
+    "command": "flock -n",
+    "description": "Acquiert un verrou coopératif non bloquant avant d'exécuter une tâche critique."
+  },
+  "extra-311": {
+    "command": "renice",
+    "description": "Modifie la priorité d'ordonnancement d'un processus en cours d'exécution."
+  },
+  "extra-312": {
+    "command": "ulimit -n",
+    "description": "Lit ou modifie la limite des descripteurs de fichiers du processus shell."
+  },
+  "extra-313": {
+    "command": "portable container image",
+    "description": "Utilise des formats d'image compatibles OCI transférables entre les registres pris en charge."
+  },
+  "extra-314": {
+    "command": "workload identity federation",
+    "description": "Échange des assertions d'identité externes de confiance contre des identifiants cloud de courte durée."
+  },
+  "extra-315": {
+    "command": "cloud resource tagging standard",
+    "description": "Utilise des étiquettes cohérentes de propriétaire, d'environnement, de centre de coûts et de catégorie de données."
+  },
+  "extra-316": {
+    "command": "provider lockfile",
+    "description": "Verrouille les sommes de contrôle des paquets de fournisseurs pour que les équipes installent des binaires de fournisseurs vérifiés."
+  },
+  "extra-317": {
+    "command": "cross-cloud DNS delegation",
+    "description": "Délègue des sous-domaines pour que chaque plateforme puisse gérer ses propres enregistrements de service."
+  },
+  "extra-318": {
+    "command": "global traffic failover",
+    "description": "Dirige les requêtes vers un fournisseur sain lorsqu'un point de terminaison principal devient indisponible."
+  },
+  "extra-319": {
+    "command": "cloud egress cost review",
+    "description": "Identifie les frais dus aux données quittant un fournisseur, une région ou une zone."
+  },
+  "extra-320": {
+    "command": "portable health endpoint",
+    "description": "Expose des signaux équivalents de disponibilité et de vivacité sur les différentes plateformes d'hébergement."
+  },
+  "extra-321": {
+    "command": "cross-provider log correlation",
+    "description": "Propage les identifiants de trace pour permettre le suivi des requêtes d'un fournisseur à l'autre."
+  },
+  "extra-322": {
+    "command": "cloud-neutral backup format",
+    "description": "Stocke les données récupérables dans des formats qui ne sont pas liés à un seul service géré."
+  },
+  "extra-323": {
+    "command": "service-level objective portability",
+    "description": "Définit des objectifs de disponibilité et de latence indépendamment des métriques propres aux fournisseurs."
+  },
+  "extra-324": {
+    "command": "cloud policy as code",
+    "description": "Valide les garde-fous communs dans la CI avant la création des ressources des fournisseurs."
+  },
+  "extra-325": {
+    "command": "secret provider abstraction",
+    "description": "Permet aux applications d'utiliser les valeurs secrètes par une interface stable."
+  },
+  "extra-326": {
+    "command": "artifact promotion by digest",
+    "description": "Promeut des identifiants d'artefacts immuables au lieu de reconstruire les artefacts pour chaque environnement."
+  },
+  "extra-327": {
+    "command": "cross-cloud certificate renewal",
+    "description": "Coordonne l'émission et le déploiement des certificats entre des systèmes d'entrée indépendants."
+  },
+  "extra-328": {
+    "command": "multi-provider quota planning",
+    "description": "Suit les quotas de service et les limites de capacité avant d'étendre les ressources chez plusieurs fournisseurs."
+  },
+  "extra-329": {
+    "command": "cloud incident runbook",
+    "description": "Documente les étapes de récupération propres à chaque fournisseur pour un objectif de service commun."
+  },
+  "extra-330": {
+    "command": "data transfer minimization",
+    "description": "Maintient le calcul à proximité des données pour réduire la latence et les frais entre clouds."
+  },
+  "extra-331": {
+    "command": "immutable deployment artifact",
+    "description": "Utilise un artefact de build signé et versionné comme unité de livraison."
+  },
+  "extra-332": {
+    "command": "provider outage dependency map",
+    "description": "Associe les services aux régions des fournisseurs et aux dépendances partagées du plan de contrôle."
+  },
+  "extra-333": {
+    "command": "cloud configuration drift",
+    "description": "Compare les paramètres réels à une configuration souhaitée placée sous gestion de versions."
+  },
+  "extra-334": {
+    "command": "portable deployment manifest",
+    "description": "Sépare les paramètres des charges de travail des liaisons d'infrastructure propres aux fournisseurs."
+  },
+  "extra-335": {
+    "command": "cross-cloud restore exercise",
+    "description": "Teste la récupération chez un autre fournisseur au lieu de supposer que les sauvegardes sont utilisables."
+  },
+  "extra-336": {
+    "command": "shared responsibility matrix",
+    "description": "Clarifie les contrôles de sécurité relevant du fournisseur et de l'équipe de la charge de travail."
+  },
+  "extra-337": {
+    "command": "TCP three-way handshake",
+    "description": "Établit une connexion TCP à l'aide des segments SYN, SYN-ACK et ACK."
+  },
+  "extra-338": {
+    "command": "TCP retransmission",
+    "description": "Retransmet les données non acquittées après une perte ou un délai excessif."
+  },
+  "extra-339": {
+    "command": "MTU path discovery",
+    "description": "Détermine la taille maximale des paquets pouvant transiter sans fragmentation."
+  },
+  "extra-340": {
+    "command": "DNS CNAME record",
+    "description": "Définit un nom DNS comme alias d'un autre nom plutôt que directement d'une adresse."
+  },
+  "extra-341": {
+    "command": "DNS negative caching",
+    "description": "Met en cache l'absence d'un nom ou d'un enregistrement pendant une période définie."
+  },
+  "extra-342": {
+    "command": "DNS split horizon",
+    "description": "Renvoie des enregistrements différents selon la vue du résolveur du client."
+  },
+  "extra-343": {
+    "command": "BGP local preference",
+    "description": "Choisit les routes sortantes préférées au sein d'un système autonome."
+  },
+  "extra-344": {
+    "command": "BGP AS path prepending",
+    "description": "Fait paraître un chemin annoncé plus long afin d'influencer la sélection de route distante."
+  },
+  "extra-345": {
+    "command": "BGP graceful restart",
+    "description": "Maintient l'acheminement pendant le redémarrage d'un processus de routage lorsque les pairs le prennent en charge."
+  },
+  "extra-346": {
+    "command": "VLAN trunk",
+    "description": "Transporte plusieurs VLAN étiquetés sur une seule liaison Ethernet physique."
+  },
+  "extra-347": {
+    "command": "802.1Q native VLAN",
+    "description": "Transporte le trafic non étiqueté sur un trunk et doit être identique aux deux extrémités."
+  },
+  "extra-348": {
+    "command": "LACP port channel",
+    "description": "Regroupe des liaisons physiques en une liaison logique négociée pour la redondance et la capacité."
+  },
+  "extra-349": {
+    "command": "ARP cache",
+    "description": "Associe les adresses IPv4 aux adresses de couche liaison sur un réseau local."
+  },
+  "extra-350": {
+    "command": "IPv6 neighbor discovery",
+    "description": "Utilise les messages ICMPv6 pour la résolution d'adresses et la découverte des routeurs."
+  },
+  "extra-351": {
+    "command": "NAT port exhaustion",
+    "description": "Se produit lorsqu'un équipement NAT manque de ports source libres pour les flux simultanés."
+  },
+  "extra-352": {
+    "command": "TLS SNI",
+    "description": "Permet à un client d'indiquer le nom d'hôte demandé pendant la négociation TLS."
+  },
+  "extra-353": {
+    "command": "TLS ALPN",
+    "description": "Négocie un protocole applicatif tel que HTTP/2 lors de l'établissement de TLS."
+  },
+  "extra-354": {
+    "command": "HTTP CONNECT proxy",
+    "description": "Crée un tunnel à travers un proxy HTTP, généralement pour le trafic TLS."
+  },
+  "extra-355": {
+    "command": "reverse proxy buffering",
+    "description": "Contrôle si un intermédiaire met en mémoire tampon les corps des requêtes ou des réponses."
+  },
+  "extra-356": {
+    "command": "Anycast routing",
+    "description": "Annonce une même adresse depuis plusieurs emplacements afin que le routage sélectionne un site proche."
+  },
+  "extra-357": {
+    "command": "ECMP",
+    "description": "Répartit les flux entre plusieurs routes de coût égal."
+  },
+  "extra-358": {
+    "command": "network flow logs",
+    "description": "Enregistre un échantillonnage des détails du trafic : source, destination, port et autorisation ou refus."
+  },
+  "extra-359": {
+    "command": "ICMP destination unreachable",
+    "description": "Signale qu'un hôte, un réseau, un protocole, un port ou une route est injoignable."
+  },
+  "extra-360": {
+    "command": "packet capture ring buffer",
+    "description": "Effectue une rotation des fichiers de capture pour limiter l'espace disque utilisé par les diagnostics de longue durée."
+  },
+  "extra-361": {
+    "command": "oci iam region-subscription list",
+    "description": "Liste les régions activées pour la location courante."
+  },
+  "extra-362": {
+    "command": "OCI compartment hierarchy",
+    "description": "Organise les ressources et applique la portée des politiques IAM au sein d'une location."
+  },
+  "extra-363": {
+    "command": "OCI dynamic group",
+    "description": "Sélectionne les principaux de ressources à l'aide de règles de correspondance sur les compartiments ou les ressources."
+  },
+  "extra-364": {
+    "command": "OCI resource principal",
+    "description": "Permet à une charge de travail OCI d'appeler les services autorisés sans clé API utilisateur stockée."
+  },
+  "extra-365": {
+    "command": "OCI Vault secret version",
+    "description": "Stocke le contenu versionné des secrets pour les applications et les intégrations."
+  },
+  "extra-366": {
+    "command": "OCI Vault key rotation",
+    "description": "Crée de nouvelles versions de clés tout en conservant les anciennes pour les opérations de déchiffrement."
+  },
+  "extra-367": {
+    "command": "Object Storage retention rule",
+    "description": "Protège les objets contre la suppression ou l'écrasement pendant une durée configurée."
+  },
+  "extra-368": {
+    "command": "Object Storage pre-authenticated request",
+    "description": "Accorde un accès limité en portée et dans le temps aux objets ou buckets sélectionnés."
+  },
+  "extra-369": {
+    "command": "VCN route rule",
+    "description": "Dirige le trafic correspondant à une destination vers une passerelle ou un prochain saut privé."
+  },
+  "extra-370": {
+    "command": "Network Security Group",
+    "description": "Applique des règles de réseau virtuel aux VNIC sélectionnées plutôt qu'à un sous-réseau entier."
+  },
+  "extra-371": {
+    "command": "OCI service gateway",
+    "description": "Fournit un accès privé depuis un VCN aux services Oracle pris en charge."
+  },
+  "extra-372": {
+    "command": "OCI NAT gateway",
+    "description": "Permet aux ressources de sous-réseaux privés d'établir des connexions publiques sans exposition entrante."
+  },
+  "extra-373": {
+    "command": "Load Balancer backend set",
+    "description": "Regroupe des serveurs backend avec une politique et une configuration de contrôle d'intégrité."
+  },
+  "extra-374": {
+    "command": "Compute instance pool",
+    "description": "Gère un groupe d'instances de calcul similaires réparties entre des domaines de panne."
+  },
+  "extra-375": {
+    "command": "Block Volume backup policy",
+    "description": "Planifie les sauvegardes de volumes à l'aide d'une politique réutilisable."
+  },
+  "extra-376": {
+    "command": "File Storage export set",
+    "description": "Définit l'accès réseau et les options d'export des systèmes de fichiers."
+  },
+  "extra-377": {
+    "command": "OKE node pool",
+    "description": "Définit le profil de machine, l'image, le sous-réseau et les paramètres de mise à l'échelle des nœuds de travail d'un cluster."
+  },
+  "extra-378": {
+    "command": "OKE workload identity",
+    "description": "Autorise les comptes de service Kubernetes à accéder aux ressources OCI en tant que principaux."
+  },
+  "extra-379": {
+    "command": "Autonomous Database wallet",
+    "description": "Contient les éléments de connexion client pour un accès à la base de données protégé par TLS."
+  },
+  "extra-380": {
+    "command": "Database Data Guard",
+    "description": "Maintient une base de données de secours pour la reprise après sinistre et les changements de rôle."
+  },
+  "extra-381": {
+    "command": "Logging service search",
+    "description": "Interroge les journaux OCI centralisés pour examiner les événements des ressources et des applications."
+  },
+  "extra-382": {
+    "command": "Monitoring alarm",
+    "description": "Évalue une requête de métrique et envoie des notifications lorsqu'un seuil est franchi."
+  },
+  "extra-383": {
+    "command": "Resource Manager stack drift",
+    "description": "Compare les ressources déployées à la configuration Terraform d'une pile."
+  },
+  "extra-384": {
+    "command": "Cloud Guard responder recipe",
+    "description": "Définit des actions automatiques ou manuelles lorsqu'une règle de détection identifie un risque."
+  },
+  "extra-385": {
+    "command": "strict and warnings",
+    "description": "Active les vérifications à la compilation et des diagnostics utiles à l'exécution."
+  },
+  "extra-386": {
+    "command": "defined-or operator",
+    "description": "N'utilise une valeur de repli que lorsqu'une valeur est indéfinie, et non lorsqu'elle vaut zéro ou est vide."
+  },
+  "extra-387": {
+    "command": "three-argument open",
+    "description": "Ouvre un fichier avec un mode explicite et évite l'analyse ambiguë à deux arguments."
+  },
+  "extra-388": {
+    "command": "autodie",
+    "description": "Transforme automatiquement les échecs courants des appels système en exceptions."
+  },
+  "extra-389": {
+    "command": "File::Temp",
+    "description": "Crée des fichiers et des répertoires temporaires avec des noms uniques sûrs."
+  },
+  "extra-390": {
+    "command": "Getopt::Long",
+    "description": "Analyse les options longues de ligne de commande et les affecte à des variables."
+  },
+  "extra-391": {
+    "command": "JSON::PP decode_json",
+    "description": "Analyse un document JSON en références Perl à l'aide du module standard JSON::PP."
+  },
+  "extra-392": {
+    "command": "JSON::PP encode_json",
+    "description": "Sérialise les structures de données Perl en octets JSON compacts."
+  },
+  "extra-393": {
+    "command": "File::Basename",
+    "description": "Extrait d'un chemin le répertoire, le nom de fichier et le suffixe."
+  },
+  "extra-394": {
+    "command": "File::Path make_path",
+    "description": "Crée des répertoires imbriqués et signale les erreurs du système de fichiers."
+  },
+  "extra-395": {
+    "command": "File::Find",
+    "description": "Parcourt une arborescence de répertoires et appelle une fonction de rappel pour chaque entrée."
+  },
+  "extra-396": {
+    "command": "IPC::Open3",
+    "description": "Exécute un processus enfant avec des descripteurs distincts pour stdin, stdout et stderr."
+  },
+  "extra-397": {
+    "command": "system list form",
+    "description": "Exécute un programme sans faire appel à un shell pour interpréter les arguments."
+  },
+  "extra-398": {
+    "command": "Time::HiRes alarm",
+    "description": "Définit une alarme d'une précision inférieure à la seconde pour les opérations limitées dans le temps."
+  },
+  "extra-399": {
+    "command": "POSIX strftime",
+    "description": "Formate un horodatage selon un motif donné indépendant des paramètres régionaux."
+  },
+  "extra-400": {
+    "command": "Digest::SHA",
+    "description": "Calcule des empreintes cryptographiques pour des fichiers ou des flux de données."
+  },
+  "extra-401": {
+    "command": "List::Util max",
+    "description": "Trouve la plus grande valeur d'une liste de valeurs numériques."
+  },
+  "extra-402": {
+    "command": "List::Util any",
+    "description": "Vérifie si un élément quelconque d'une liste satisfait un prédicat."
+  },
+  "extra-403": {
+    "command": "Try::Tiny",
+    "description": "Gère les exceptions avec des blocs compacts try, catch et finally."
+  },
+  "extra-404": {
+    "command": "Test::More subtests",
+    "description": "Regroupe des assertions liées et fournit un résultat de test imbriqué clair."
+  },
+  "extra-405": {
+    "command": "Test::Warnings",
+    "description": "Vérifie que le code émet les avertissements attendus pendant un test."
+  },
+  "extra-406": {
+    "command": "DBI placeholders",
+    "description": "Lie les valeurs séparément du texte SQL pour éviter les injections et les erreurs de guillemets."
+  },
+  "extra-407": {
+    "command": "DBI transaction",
+    "description": "Regroupe les écritures en base de données pour qu'elles soient validées ensemble ou annulées en cas d'échec."
+  },
+  "extra-408": {
+    "command": "Encode decode",
+    "description": "Convertit des chaînes d'octets en chaînes de caractères avec un encodage explicite."
+  },
+  "extra-409": {
+    "command": "Get-Command -All",
+    "description": "Liste toutes les commandes dont le nom correspond, y compris les commandes masquées."
+  },
+  "extra-410": {
+    "command": "Get-Member",
+    "description": "Inspecte les propriétés et les méthodes disponibles sur les objets du pipeline."
+  },
+  "extra-411": {
+    "command": "Select-Object -ExpandProperty",
+    "description": "Émet directement la valeur d'une propriété au lieu d'encapsuler l'objet source."
+  },
+  "extra-412": {
+    "command": "Where-Object property shorthand",
+    "description": "Filtre les objets avec une syntaxe de comparaison concise dans les versions de PowerShell prises en charge."
+  },
+  "extra-413": {
+    "command": "ForEach-Object -Parallel",
+    "description": "Traite simultanément les éléments du pipeline dans les versions de PowerShell prises en charge."
+  },
+  "extra-414": {
+    "command": "Start-Job",
+    "description": "Exécute un travail dans un job d'arrière-plan distinct au sein de la session courante."
+  },
+  "extra-415": {
+    "command": "Receive-Job -Keep",
+    "description": "Lit la sortie d'un job sans la retirer de son historique."
+  },
+  "extra-416": {
+    "command": "Try / Catch / Finally",
+    "description": "Gère les erreurs bloquantes et garantit que le code de nettoyage peut s'exécuter."
+  },
+  "extra-417": {
+    "command": "ErrorAction Stop",
+    "description": "Transforme de nombreuses erreurs non bloquantes en erreurs bloquantes pour qu'un bloc catch puisse les traiter."
+  },
+  "extra-418": {
+    "command": "Set-StrictMode",
+    "description": "Détecte les variables non initialisées et d'autres erreurs courantes de script."
+  },
+  "extra-419": {
+    "command": "ConvertFrom-Json -AsHashtable",
+    "description": "Analyse du JSON en table de hachage modifiable dans les versions de PowerShell prises en charge."
+  },
+  "extra-420": {
+    "command": "ConvertTo-Json -Depth",
+    "description": "Sérialise les objets imbriqués jusqu'à une profondeur choisie."
+  },
+  "extra-421": {
+    "command": "Invoke-RestMethod -StatusCodeVariable",
+    "description": "Capture le code d'état HTTP pendant l'analyse d'une réponse REST."
+  },
+  "extra-422": {
+    "command": "Test-NetConnection",
+    "description": "Vérifie la résolution DNS et la connectivité TCP vers un point de terminaison distant."
+  },
+  "extra-423": {
+    "command": "Get-FileHash",
+    "description": "Calcule l'empreinte d'un fichier pour les contrôles d'intégrité et la comparaison d'artefacts."
+  },
+  "extra-424": {
+    "command": "Compare-Object",
+    "description": "Affiche les différences entre deux collections ou entre des propriétés d'objets."
+  },
+  "extra-425": {
+    "command": "Import-Csv",
+    "description": "Charge des lignes délimitées sous forme d'objets dont les en-têtes deviennent les noms des propriétés."
+  },
+  "extra-426": {
+    "command": "Export-Clixml",
+    "description": "Sérialise les objets PowerShell en conservant les informations de type."
+  },
+  "extra-427": {
+    "command": "PSSession",
+    "description": "Maintient une connexion PowerShell distante réutilisable pour plusieurs commandes."
+  },
+  "extra-428": {
+    "command": "Register-ArgumentCompleter",
+    "description": "Ajoute une complétion personnalisée par tabulation pour une commande ou un paramètre."
+  },
+  "extra-429": {
+    "command": "SupportsShouldProcess",
+    "description": "Active le comportement standard de -WhatIf et -Confirm dans les fonctions avancées."
+  },
+  "extra-430": {
+    "command": "SecureString",
+    "description": "Représente le texte sensible en mémoire à l'aide d'un type de chaîne protégé."
+  },
+  "extra-431": {
+    "command": "Resolve-Path",
+    "description": "Développe un chemin en emplacement absolu qualifié par son fournisseur."
+  },
+  "extra-432": {
+    "command": "pathlib.Path.rglob",
+    "description": "Recherche récursivement les chemins correspondant à un motif glob."
+  },
+  "extra-433": {
+    "command": "pathlib.Path.replace",
+    "description": "Remplace atomiquement un chemin de destination lorsque le système de fichiers le permet."
+  },
+  "extra-434": {
+    "command": "subprocess.run check",
+    "description": "Lève CalledProcessError lorsqu'un processus appelé se termine en échec."
+  },
+  "extra-435": {
+    "command": "subprocess timeout",
+    "description": "Cesse d'attendre et lève TimeoutExpired lorsqu'un processus dépasse sa limite."
+  },
+  "extra-436": {
+    "command": "contextlib.ExitStack",
+    "description": "Gère un nombre dynamique de gestionnaires de contexte avec une seule portée de nettoyage."
+  },
+  "extra-437": {
+    "command": "dataclasses.field default_factory",
+    "description": "Crée une nouvelle valeur mutable par défaut pour chaque instance de dataclass."
+  },
+  "extra-438": {
+    "command": "typing.Protocol",
+    "description": "Décrit des interfaces structurelles sans exiger d'héritage explicite."
+  },
+  "extra-439": {
+    "command": "functools.cache",
+    "description": "Mémorise les résultats des fonctions lorsque les arguments sont hachables."
+  },
+  "extra-440": {
+    "command": "functools.partial",
+    "description": "Crée un objet appelable dont certains arguments sont préconfigurés."
+  },
+  "extra-441": {
+    "command": "itertools.batched",
+    "description": "Regroupe un itérable en tuples de taille fixe dans les versions de Python prises en charge."
+  },
+  "extra-442": {
+    "command": "collections.Counter",
+    "description": "Compte les valeurs hachables et fournit des opérations pratiques sur les fréquences."
+  },
+  "extra-443": {
+    "command": "collections.defaultdict",
+    "description": "Crée les valeurs manquantes d'une table associative avec une fonction de fabrique."
+  },
+  "extra-444": {
+    "command": "contextlib.suppress",
+    "description": "Ignore les types d'exceptions sélectionnés dans un bloc de contexte restreint."
+  },
+  "extra-445": {
+    "command": "logging LoggerAdapter",
+    "description": "Ajoute des champs contextuels aux enregistrements de journal d'un journaliseur encapsulé."
+  },
+  "extra-446": {
+    "command": "logging QueueHandler",
+    "description": "Déplace le traitement des journaux vers un thread ou un processus d'écoute par l'intermédiaire d'une file."
+  },
+  "extra-447": {
+    "command": "asyncio.TaskGroup",
+    "description": "Exécute des tâches liées avec une gestion structurée de l'annulation et des exceptions."
+  },
+  "extra-448": {
+    "command": "asyncio.Semaphore",
+    "description": "Limite le nombre de coroutines pouvant entrer dans une section gourmande en ressources."
+  },
+  "extra-449": {
+    "command": "yield from",
+    "description": "Délègue l'itération et le contrôle du générateur à un sous-générateur."
+  },
+  "extra-450": {
+    "command": "memoryview",
+    "description": "Fournit une vue des données d'un tampon sans copier les octets sous-jacents."
+  },
+  "extra-451": {
+    "command": "zip strict",
+    "description": "Lève ValueError lorsque les itérables combinés par zip ont des longueurs différentes."
+  },
+  "extra-452": {
+    "command": "enum StrEnum",
+    "description": "Définit des membres d'énumération à valeurs textuelles dans les versions de Python prises en charge."
+  },
+  "extra-453": {
+    "command": "tomllib",
+    "description": "Analyse TOML avec la bibliothèque standard dans les versions de Python prises en charge."
+  },
+  "extra-454": {
+    "command": "unittest.mock autospec",
+    "description": "Contraint les simulacres à respecter la signature et les attributs disponibles de l'objet réel."
+  },
+  "extra-455": {
+    "command": "Enumerable#filter_map",
+    "description": "Transforme les valeurs et supprime les résultats nil en un seul passage."
+  },
+  "extra-456": {
+    "command": "Enumerable#tally",
+    "description": "Compte les occurrences de chaque valeur dans un énumérable."
+  },
+  "extra-457": {
+    "command": "Enumerable#each_slice",
+    "description": "Produit des groupes successifs de taille fixe à partir d'un énumérable."
+  },
+  "extra-458": {
+    "command": "Hash#fetch",
+    "description": "Lit une clé avec une valeur par défaut explicite ou lève une exception si aucune valeur par défaut n'est fournie."
+  },
+  "extra-459": {
+    "command": "Hash#transform_values",
+    "description": "Renvoie une table de hachage dont chaque valeur est transformée tout en conservant les clés."
+  },
+  "extra-460": {
+    "command": "Hash#compact",
+    "description": "Renvoie une copie dont les entrées de valeur nil ont été supprimées."
+  },
+  "extra-461": {
+    "command": "String#delete_prefix",
+    "description": "Supprime un préfixe correspondant sans modifier la chaîne d'origine."
+  },
+  "extra-462": {
+    "command": "String#match?",
+    "description": "Vérifie si une chaîne correspond à une expression régulière sans produire de résultat MatchData."
+  },
+  "extra-463": {
+    "command": "Regexp named captures",
+    "description": "Capture les champs pertinents par nom plutôt que par position numérique."
+  },
+  "extra-464": {
+    "command": "safe navigation operator",
+    "description": "Appelle une méthode uniquement lorsque le récepteur n'est pas nil."
+  },
+  "extra-465": {
+    "command": "Data.define",
+    "description": "Crée des objets-valeurs immuables avec des membres nommés dans les versions de Ruby prises en charge."
+  },
+  "extra-466": {
+    "command": "Struct keyword_init",
+    "description": "Crée un enregistrement léger initialisé avec des arguments nommés."
+  },
+  "extra-467": {
+    "command": "Enumerable#lazy",
+    "description": "Construit une chaîne d'évaluation paresseuse qui ne traite les valeurs que lorsqu'elles sont demandées."
+  },
+  "extra-468": {
+    "command": "Fiber scheduler",
+    "description": "Permet aux opérations d'E/S prises en charge de céder la main de manière coopérative sous le contrôle d'un ordonnanceur."
+  },
+  "extra-469": {
+    "command": "Timeout.timeout",
+    "description": "Lève une exception lorsqu'un bloc dépasse une durée configurée."
+  },
+  "extra-470": {
+    "command": "Open3.capture3",
+    "description": "Exécute un sous-processus et capture séparément stdout, stderr et son état."
+  },
+  "extra-471": {
+    "command": "Tempfile.create",
+    "description": "Crée un fichier temporaire avec nettoyage automatique après le bloc."
+  },
+  "extra-472": {
+    "command": "JSON.parse symbolize_names",
+    "description": "Analyse les clés d'objets JSON comme des symboles lorsque cela convient à l'application."
+  },
+  "extra-473": {
+    "command": "Logger tagged context",
+    "description": "Ajoute des identifiants de requête ou de job aux lignes de journal pour permettre la corrélation."
+  },
+  "extra-474": {
+    "command": "ActiveSupport retry_on",
+    "description": "Relance les jobs pour certaines exceptions selon une stratégie configurée d'espacement des tentatives."
+  },
+  "extra-475": {
+    "command": "RSpec shared examples",
+    "description": "Réutilise un contrat de comportement pour plusieurs implémentations."
+  },
+  "extra-476": {
+    "command": "Rake file task",
+    "description": "Définit une tâche qui ne s'exécute que si un fichier est absent ou plus ancien que ses prérequis."
+  },
+  "extra-477": {
+    "command": "Bundler deployment mode",
+    "description": "Installe les dépendances verrouillées dans une structure de déploiement prévisible."
+  },
+  "extra-478": {
+    "command": "terraform providers lock",
+    "description": "Écrit les sommes de contrôle des fournisseurs pour les plateformes sélectionnées dans le fichier de verrouillage des dépendances."
+  },
+  "extra-479": {
+    "command": "terraform fmt -check",
+    "description": "Échoue lorsque les fichiers Terraform ne respectent pas le formatage canonique."
+  },
+  "extra-480": {
+    "command": "terraform providers schema",
+    "description": "Affiche les schémas des fournisseurs pour inspecter les attributs des ressources et des sources de données."
+  },
+  "extra-481": {
+    "command": "terraform graph",
+    "description": "Produit un graphe de dépendances pouvant être rendu avec Graphviz."
+  },
+  "extra-482": {
+    "command": "terraform state list",
+    "description": "Liste les adresses des ressources actuellement suivies dans le fichier d'état."
+  },
+  "extra-483": {
+    "command": "terraform state show",
+    "description": "Affiche les attributs stockés pour une adresse de ressource."
+  },
+  "extra-484": {
+    "command": "terraform state mv",
+    "description": "Déplace une adresse dans l'état après une refactorisation sûre de la configuration."
+  },
+  "extra-485": {
+    "command": "terraform state rm",
+    "description": "Cesse de suivre une ressource sans détruire l'infrastructure réelle."
+  },
+  "extra-486": {
+    "command": "terraform import",
+    "description": "Associe un objet distant existant à une adresse de ressource Terraform."
+  },
+  "extra-487": {
+    "command": "terraform force-unlock",
+    "description": "Supprime un verrou d'état périmé uniquement après avoir confirmé qu'aucune opération n'est active."
+  },
+  "extra-488": {
+    "command": "terraform console",
+    "description": "Évalue des expressions Terraform par rapport à la configuration courante."
+  },
+  "extra-489": {
+    "command": "terraform output -raw",
+    "description": "Affiche une seule valeur de sortie sans les guillemets JSON."
+  },
+  "extra-490": {
+    "command": "terraform plan -target",
+    "description": "Planifie un sous-ensemble limité de dépendances ; cela ne doit pas remplacer un plan complet à examiner."
+  },
+  "extra-491": {
+    "command": "terraform apply -replace",
+    "description": "Planifie le remplacement d'une ressource sélectionnée au lieu d'utiliser la procédure taint obsolète."
+  },
+  "extra-492": {
+    "command": "terraform moved block",
+    "description": "Déclare un changement d'adresse de ressource afin que la migration de l'état ait lieu pendant la planification."
+  },
+  "extra-493": {
+    "command": "terraform check block",
+    "description": "Évalue une assertion non bloquante sur l'infrastructure résultante."
+  },
+  "extra-494": {
+    "command": "terraform test",
+    "description": "Exécute des tests natifs de configuration avec un comportement simulé ou réel des fournisseurs."
+  },
+  "extra-495": {
+    "command": "terraform_data resource",
+    "description": "Fournit une ressource tenant compte du cycle de vie pour les déclencheurs et la migration des provisionneurs."
+  },
+  "extra-496": {
+    "command": "terraform_data triggers_replace",
+    "description": "Remplace une instance terraform_data lorsque les valeurs sélectionnées changent."
+  },
+  "extra-497": {
+    "command": "provider alias",
+    "description": "Configure plusieurs instances d'un fournisseur pour des comptes ou des régions distincts."
+  },
+  "extra-498": {
+    "command": "configuration_aliases",
+    "description": "Déclare les alias de fournisseurs qu'un module enfant attend de son appelant."
+  },
+  "extra-499": {
+    "command": "sensitive output",
+    "description": "Marque une sortie comme sensible pour réduire les affichages accidentels dans la sortie CLI."
+  },
+  "extra-500": {
+    "command": "precondition and postcondition",
+    "description": "Valide les hypothèses avant une opération ou les garanties après l'évaluation d'une ressource."
+  }
+}

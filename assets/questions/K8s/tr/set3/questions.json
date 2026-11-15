@@ -1,0 +1,302 @@
+[
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "Hangi bileşen pod'ları node'lara zamanlar (schedule eder)?",
+    "options": [
+      "kube-scheduler",
+      "kubelet",
+      "etcd",
+      "kube-proxy"
+    ],
+    "answer": "kube-scheduler"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "Hangi bileşen her node üzerinde çalışır?",
+    "options": [
+      "kubelet",
+      "etcd",
+      "kube-apiserver",
+      "controller-manager"
+    ],
+    "answer": "kubelet"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "Hangi bileşen kontrol düzleminin (control plane) ön yüzü olarak görev yapar?",
+    "options": [
+      "kube-apiserver",
+      "kubelet",
+      "etcd",
+      "kube-proxy"
+    ],
+    "answer": "kube-apiserver"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "Hangi bileşen küme durumunu saklar?",
+    "options": [
+      "etcd",
+      "kubelet",
+      "CoreDNS",
+      "Ingress"
+    ],
+    "answer": "etcd"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "Hangi bileşen node'lardaki ağ kurallarını yönetir?",
+    "options": [
+      "kube-proxy",
+      "kubelet",
+      "etcd",
+      "Scheduler"
+    ],
+    "answer": "kube-proxy"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "Kubernetes'te yaygın olarak hangi DNS servisi kullanılır?",
+    "options": [
+      "CoreDNS",
+      "Bind",
+      "Route53",
+      "Consul"
+    ],
+    "answer": "CoreDNS"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "Kubernetes'te dağıtılabilen en küçük birim hangi nesnedir?",
+    "options": [
+      "Pod",
+      "Cluster",
+      "Node",
+      "Service"
+    ],
+    "answer": "Pod"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "Hangi nesne durumsuz (stateless) uygulamaları yönetir?",
+    "options": [
+      "Deployment",
+      "ConfigMap",
+      "Secret",
+      "Namespace"
+    ],
+    "answer": "Deployment"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "Durum bilgili uygulamalar için kararlı Pod kimlikleri ve sıralı dağıtımı hangi iş yükü sağlar?",
+    "options": [
+      "StatefulSet",
+      "Deployment",
+      "ReplicaSet",
+      "DaemonSet"
+    ],
+    "answer": "StatefulSet"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "Hangi nesne belirtilen sayıda pod kopyasının çalışmasını sağlar?",
+    "options": [
+      "ReplicaSet",
+      "Service",
+      "ConfigMap",
+      "Namespace"
+    ],
+    "answer": "ReplicaSet"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "Hangi nesne pod'ları ağ trafiğine açar?",
+    "options": [
+      "Service",
+      "Node",
+      "ReplicaSet",
+      "Volume"
+    ],
+    "answer": "Service"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "Hangi nesne service'lere dışarıdan erişimi yönetir?",
+    "options": [
+      "Ingress",
+      "Pod",
+      "ReplicaSet",
+      "Secret"
+    ],
+    "answer": "Ingress"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "Hangi nesne yapılandırma verilerini saklar?",
+    "options": [
+      "ConfigMap",
+      "Deployment",
+      "Ingress",
+      "Node"
+    ],
+    "answer": "ConfigMap"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "Hangi nesne parola gibi hassas bilgileri saklar?",
+    "options": [
+      "Secret",
+      "ConfigMap",
+      "Service",
+      "Namespace"
+    ],
+    "answer": "Secret"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "Hangi nesne pod'lara kalıcı depolama sağlar?",
+    "options": [
+      "PersistentVolume",
+      "ReplicaSet",
+      "Namespace",
+      "Service"
+    ],
+    "answer": "PersistentVolume"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "Kapsayıcının Service trafiğini almaya hazır olduğunu hangi yoklama belirler?",
+    "options": [
+      "TCP bağlantıyı canlı tutma yoklaması",
+      "Readiness probe",
+      "Liveness probe",
+      "Başlangıç yoklaması"
+    ],
+    "answer": "Readiness probe"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "Canlılık yoklaması yapılandırılmış eşiği aşacak kadar art arda başarısız olursa ne olabilir?",
+    "options": [
+      "kubelet, kapsayıcıyı yeniden başlatma ilkesine göre yeniden başlatır",
+      "Zamanlayıcı her Pod'u yeni düğüme taşır",
+      "API sunucusu Deployment nesnesini siler",
+      "Service, ExternalName türüne dönüşür"
+    ],
+    "answer": "kubelet, kapsayıcıyı yeniden başlatma ilkesine göre yeniden başlatır"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "Uygulama henüz başlarken başlangıç yoklaması ne yapar?",
+    "options": [
+      "Tüm kapsayıcı kaynak sınırlarını devre dışı bırakır",
+      "İmajın indirilmesini engeller",
+      "Ayrılmış bir denetim düzlemi düğümü rezerve eder",
+      "Başlangıç yoklaması başarılı olana kadar canlılık ve hazırlık yoklamalarını geciktirir"
+    ],
+    "answer": "Başlangıç yoklaması başarılı olana kadar canlılık ve hazırlık yoklamalarını geciktirir"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "Pod'daki sıradan init kapsayıcıları hakkında hangisi doğrudur?",
+    "options": [
+      "Service bağlantı noktası açmaları gerekir",
+      "Her zaman ayrı düğümlerde çalışırlar",
+      "Uygulama kapsayıcıları başlamadan önce sırayla tamamlanana kadar çalışırlar",
+      "Hepsi yalnızca uygulama kapsayıcıları sonlandıktan sonra çalışır"
+    ],
+    "answer": "Uygulama kapsayıcıları başlamadan önce sırayla tamamlanana kadar çalışırlar"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "Aynı Pod'daki kapsayıcılar normalde hangi kaynakları paylaşır?",
+    "options": [
+      "Her kapsayıcı için ayrı Service IP'sini",
+      "Ağ ad alanını ve Pod IP adresini",
+      "Yazılabilir kök dosya sistemini",
+      "Her kapsayıcı için farklı düğümü"
+    ],
+    "answer": "Ağ ad alanını ve Pod IP adresini"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "Zamanlayıcının kapsayıcı yerleşimini değerlendirirken kullandığı kaynak miktarını hangi alan bildirir?",
+    "options": [
+      "resources.requests",
+      "resources.limits",
+      "securityContext",
+      "imagePullPolicy"
+    ],
+    "answer": "resources.requests"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "Kapsayıcının 250m CPU isteği neyi temsil eder?",
+    "options": [
+      "İki buçuk CPU",
+      "Yirmi beş CPU",
+      "İki yüz elli CPU",
+      "Çeyrek CPU"
+    ],
+    "answer": "Çeyrek CPU"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "Kapsayıcının uygulanan bellek sınırını aşmasının tipik sonucu nedir?",
+    "options": [
+      "İmajı daha fazla bellekle yeniden oluşturulur",
+      "Service bağlantı noktası otomatik değiştirilir",
+      "Bellek yetersizliği mekanizması tarafından sonlandırılabilir",
+      "Bellek isteği otomatik iki katına çıkarılır"
+    ],
+    "answer": "Bellek yetersizliği mekanizması tarafından sonlandırılabilir"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "Hedef düğümlerin belirtilen tüm düğüm etiketlerine uymasını hangi Pod alanı zorunlu kılar?",
+    "options": [
+      "dnsPolicy",
+      "nodeSelector",
+      "serviceAccountName",
+      "hostAliases"
+    ],
+    "answer": "nodeSelector"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "Bir düğümün taint değerine tolerans eklemek, Pod'un o düğüme yerleştirilmesini garanti eder mi?",
+    "options": [
+      "Hayır, diğer zamanlama kısıtları ve kullanılabilir kaynaklar da geçerlidir",
+      "Evet, tüm kaynak kısıtlarını geçersiz kılar",
+      "Evet, tüm düğüm yakınlık kurallarını atlar",
+      "Hayır, toleranslar taint bulunan düğüme yerleşmeyi her zaman yasaklar"
+    ],
+    "answer": "Hayır, diğer zamanlama kısıtları ve kullanılabilir kaynaklar da geçerlidir"
+  }
+]

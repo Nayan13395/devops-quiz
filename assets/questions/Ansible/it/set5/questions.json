@@ -1,0 +1,302 @@
+[
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "Senza un'impostazione alternativa a livello di attività, che cosa accade a un modulo che non supporta la modalità di verifica durante un'esecuzione in tale modalità?",
+    "options": [
+      "Il modulo applica sempre le normali modifiche",
+      "Il modulo viene eseguito automaticamente su localhost",
+      "Il modulo viene ritentato finché non supporta la modalità di verifica",
+      "Il modulo viene saltato invece di apportare modifiche"
+    ],
+    "answer": "Il modulo viene saltato invece di apportare modifiche"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "Quale impostazione dell'attività permette modifiche reali anche quando il playbook è invocato con --check?",
+    "options": [
+      "changed_when: false",
+      "ignore_errors: true",
+      "check_mode: false",
+      "diff: false"
+    ],
+    "answer": "check_mode: false"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "Quale azione meta di Ansible esegue immediatamente i gestori che hanno già ricevuto una notifica?",
+    "options": [
+      "reset_connection",
+      "flush_handlers",
+      "clear_facts",
+      "end_play"
+    ],
+    "answer": "flush_handlers"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "Se due attività modificate notificano lo stesso gestore prima della sua esecuzione, quante volte viene normalmente eseguito in quel punto?",
+    "options": [
+      "Una volta",
+      "Due volte",
+      "Una volta per gruppo dell'inventario",
+      "Nessuna volta, perché le notifiche sono in conflitto"
+    ],
+    "answer": "Una volta"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "Che cosa determina l'ordine di esecuzione dei gestori notificati per lo stesso punto di esecuzione?",
+    "options": [
+      "L'ordine alfabetico dei loro nomi",
+      "L'ordine dei nomi nell'elenco notify",
+      "L'ordine in cui gli host gestiti si sono collegati",
+      "L'ordine di definizione nella sezione handlers"
+    ],
+    "answer": "L'ordine di definizione nella sezione handlers"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "Quale errore attiva normalmente le attività rescue di un blocco?",
+    "options": [
+      "Il playbook contiene una definizione di attività non valida",
+      "Il documento YAML non può essere analizzato",
+      "Un'attività all'interno del blocco restituisce un risultato non riuscito",
+      "Un host diventa irraggiungibile prima che la sua attività possa essere eseguita"
+    ],
+    "answer": "Un'attività all'interno del blocco restituisce un risultato non riuscito"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "Quale errore non viene nascosto da ignore_errors in un'attività ordinaria?",
+    "options": [
+      "Una condizione failed_when che restituisce true",
+      "Un errore dovuto a una variabile non definita",
+      "Uno stato di uscita diverso da zero segnalato da un comando",
+      "Un risultato di modulo esplicitamente contrassegnato come failed"
+    ],
+    "answer": "Un errore dovuto a una variabile non definita"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "Quale parola chiave interrompe il play su tutti gli host in caso di errore non gestito, dopo che il lotto corrente ha terminato quella attività?",
+    "options": [
+      "any_errors_fatal",
+      "ignore_unreachable",
+      "max_fail_percentage: 100",
+      "force_handlers"
+    ],
+    "answer": "any_errors_fatal"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "Qual è l'effetto di force_handlers se un'attività successiva fallisce su un host raggiungibile?",
+    "options": [
+      "Tutti i gestori definiti vengono eseguiti anche senza notifica",
+      "Tutte le attività fallite vengono ritentate automaticamente",
+      "I gestori vengono eseguiti prima di tutte le attività normali",
+      "I gestori già notificati possono ancora essere eseguiti su quell'host"
+    ],
+    "answer": "I gestori già notificati possono ancora essere eseguiti su quell'host"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "Quale impostazione dell'attività sopprime la normale registrazione di argomenti e risultati sensibili?",
+    "options": [
+      "check_mode: true",
+      "changed_when: false",
+      "no_log: true",
+      "diff: true"
+    ],
+    "answer": "no_log: true"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "Quale impostazione dell'attività sopprime le differenze di contenuto dei file anche quando --diff è abilitato?",
+    "options": [
+      "ignore_errors: true",
+      "diff: false",
+      "no_log: false",
+      "check_mode: false"
+    ],
+    "answer": "diff: false"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "Quale dizionario permette di accedere alle variabili associate a un altro host dell'inventario?",
+    "options": [
+      "hostvars",
+      "ansible_facts",
+      "environment",
+      "ansible_loop"
+    ],
+    "answer": "hostvars"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "Quale variabile magica contiene il nome di inventario dell'host corrente?",
+    "options": [
+      "ansible_host",
+      "ansible_user",
+      "ansible_playbook_python",
+      "inventory_hostname"
+    ],
+    "answer": "inventory_hostname"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "Quale directory accanto all'inventario viene normalmente usata per le variabili condivise da un gruppo di host?",
+    "options": [
+      "roles",
+      "collections",
+      "group_vars",
+      "host_vars"
+    ],
+    "answer": "group_vars"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "Dove legge un file, per impostazione predefinita, il lookup ansible.builtin.file?",
+    "options": [
+      "Sull'host indicato da become_user",
+      "Sul nodo di controllo",
+      "Su ogni host gestito",
+      "Sul primo host del play"
+    ],
+    "answer": "Sul nodo di controllo"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "Quale filtro converte una stringa YAML in una struttura dati Ansible?",
+    "options": [
+      "from_yaml",
+      "to_yaml",
+      "to_json",
+      "dict2items"
+    ],
+    "answer": "from_yaml"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "Quale filtro converte un dizionario in un elenco di dizionari chiave/valore?",
+    "options": [
+      "items2dict",
+      "flatten",
+      "zip",
+      "dict2items"
+    ],
+    "answer": "dict2items"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "Quale filtro elimina gli elementi duplicati da un elenco?",
+    "options": [
+      "reverse",
+      "flatten",
+      "unique",
+      "sort"
+    ],
+    "answer": "unique"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "Quale modulo controlla espressioni e fallisce se le asserzioni specificate non sono soddisfatte?",
+    "options": [
+      "ansible.builtin.set_fact",
+      "ansible.builtin.assert",
+      "ansible.builtin.debug",
+      "ansible.builtin.pause"
+    ],
+    "answer": "ansible.builtin.assert"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "Quale modulo gestisce una determinata riga di un file di testo tramite un'espressione regolare?",
+    "options": [
+      "ansible.builtin.lineinfile",
+      "ansible.builtin.blockinfile",
+      "ansible.builtin.copy",
+      "ansible.builtin.slurp"
+    ],
+    "answer": "ansible.builtin.lineinfile"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "Quale modulo interroga un URL e può controllare il codice di stato HTTP previsto?",
+    "options": [
+      "ansible.builtin.get_url",
+      "ansible.builtin.fetch",
+      "ansible.builtin.wait_for",
+      "ansible.builtin.uri"
+    ],
+    "answer": "ansible.builtin.uri"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "Quale modulo attende che una porta TCP raggiunga lo stato richiesto?",
+    "options": [
+      "ansible.builtin.async_status",
+      "ansible.builtin.ping",
+      "ansible.builtin.wait_for",
+      "ansible.builtin.pause"
+    ],
+    "answer": "ansible.builtin.wait_for"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "Quale parametro fa saltare l'esecuzione di ansible.builtin.command quando un percorso specificato esiste già?",
+    "options": [
+      "stdin",
+      "creates",
+      "removes",
+      "chdir"
+    ],
+    "answer": "creates"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "Quale impostazione del modulo file crea un collegamento simbolico?",
+    "options": [
+      "state: link",
+      "state: directory",
+      "state: touch",
+      "state: hard"
+    ],
+    "answer": "state: link"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "Quale modulo può aggiungere un host all'inventario in memoria per i play successivi?",
+    "options": [
+      "ansible.builtin.group_by",
+      "ansible.builtin.set_fact",
+      "ansible.builtin.meta",
+      "ansible.builtin.add_host"
+    ],
+    "answer": "ansible.builtin.add_host"
+  }
+]

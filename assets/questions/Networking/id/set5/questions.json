@@ -1,0 +1,302 @@
+[
+  {
+    "category": "Networking",
+    "set": 5,
+    "question": "Apa yang dirancang untuk diberikan DNSSEC bagi data DNS?",
+    "options": [
+      "Enkripsi semua kueri dan respons DNS",
+      "Autentikasi klien sebelum boleh mengirim kueri ke zona publik",
+      "Ketersediaan terjamin meskipun ada lalu lintas penolakan layanan",
+      "Autentikasi asal data dan integritas"
+    ],
+    "answer": "Autentikasi asal data dan integritas"
+  },
+  {
+    "category": "Networking",
+    "set": 5,
+    "question": "Port tujuan apa yang ditetapkan untuk DNS melalui TLS?",
+    "options": [
+      "443",
+      "5353",
+      "853",
+      "53"
+    ],
+    "answer": "853"
+  },
+  {
+    "category": "Networking",
+    "set": 5,
+    "question": "Apa yang biasanya dilakukan resolver rekursif ketika respons DNS UDP terpotong dan jawaban lengkap diperlukan?",
+    "options": [
+      "Menganggap pemotongan sebagai bukti bahwa domain tidak ada",
+      "Mengulangi kueri melalui TCP",
+      "Menerima jawaban sebagian sebagai jawaban lengkap",
+      "Meminta setiap fragmen UDP yang hilang menggunakan offset paket aslinya"
+    ],
+    "answer": "Mengulangi kueri melalui TCP"
+  },
+  {
+    "category": "Networking",
+    "set": 5,
+    "question": "Protokol transport mana yang membawa paket QUIC?",
+    "options": [
+      "UDP",
+      "TCP",
+      "SCTP",
+      "ICMP"
+    ],
+    "answer": "UDP"
+  },
+  {
+    "category": "Networking",
+    "set": 5,
+    "question": "Versi HTTP mana yang berjalan di atas QUIC?",
+    "options": [
+      "HTTP/2",
+      "HTTP/1.1",
+      "HTTP/1.0",
+      "HTTP/3"
+    ],
+    "answer": "HTTP/3"
+  },
+  {
+    "category": "Networking",
+    "set": 5,
+    "question": "Apa arti pemblokiran kepala antrean TCP bagi aliran HTTP/2 dalam satu koneksi?",
+    "options": [
+      "Hanya header HTTP yang dapat tertunda akibat kehilangan TCP",
+      "Kehilangan TCP hanya memengaruhi aliran yang berisi byte yang hilang",
+      "Data TCP yang hilang dapat menunda pengiriman aliran yang seharusnya independen",
+      "Setiap aliran harus selesai sepenuhnya sebelum aliran lain dapat dibuat"
+    ],
+    "answer": "Data TCP yang hilang dapat menunda pengiriman aliran yang seharusnya independen"
+  },
+  {
+    "category": "Networking",
+    "set": 5,
+    "question": "Apa yang terutama hendak dihabiskan serangan banjir TCP SYN pada server?",
+    "options": [
+      "Antrean pekerja yang memproses permintaan aplikasi yang berhasil diautentikasi",
+      "Sumber daya untuk melacak jabat tangan koneksi yang belum lengkap",
+      "Buffer berisi respons HTTP lengkap untuk sesi yang sudah terbentuk",
+      "Penyimpanan yang digunakan berkas tiket sesi TLS"
+    ],
+    "answer": "Sumber daya untuk melacak jabat tangan koneksi yang belum lengkap"
+  },
+  {
+    "category": "Networking",
+    "set": 5,
+    "question": "Apa perbedaan pengiriman unicast dan multicast?",
+    "options": [
+      "Unicast ditujukan kepada satu penerima, sedangkan multicast kepada grup yang diikuti penerima",
+      "Unicast selalu menggunakan UDP, sedangkan multicast selalu menggunakan TCP",
+      "Unicast membutuhkan IPv6, sedangkan multicast membutuhkan IPv4",
+      "Unicast mengenkripsi frame, sedangkan multicast memampatkannya"
+    ],
+    "answer": "Unicast ditujukan kepada satu penerima, sedangkan multicast kepada grup yang diikuti penerima"
+  },
+  {
+    "category": "Networking",
+    "set": 5,
+    "question": "Rentang IPv4 mana yang dicadangkan untuk pengalamatan multicast?",
+    "options": [
+      "240.0.0.0/4",
+      "169.254.0.0/16",
+      "127.0.0.0/8",
+      "224.0.0.0/4"
+    ],
+    "answer": "224.0.0.0/4"
+  },
+  {
+    "category": "Networking",
+    "set": 5,
+    "question": "Protokol mana yang menyampaikan keanggotaan grup multicast IPv4 antara host dan router tetangga?",
+    "options": [
+      "OSPF",
+      "DHCP",
+      "IGMP",
+      "ARP"
+    ],
+    "answer": "IGMP"
+  },
+  {
+    "category": "Networking",
+    "set": 5,
+    "question": "Ke mana perutean anycast mengirim paket ketika beberapa lokasi mengumumkan alamat yang sama?",
+    "options": [
+      "Ke server DNS yang dipilih acak tanpa memandang rute",
+      "Ke satu instans yang dipilih sistem perutean",
+      "Ke semua instans sekaligus",
+      "Hanya ke instans dengan alamat MAC terbesar"
+    ],
+    "answer": "Ke satu instans yang dipilih sistem perutean"
+  },
+  {
+    "category": "Networking",
+    "set": 5,
+    "question": "Apa fungsi tag IEEE 802.1Q pada frame Ethernet?",
+    "options": [
+      "Mengidentifikasi VLAN frame",
+      "Mengganti alamat MAC tujuan",
+      "Mengidentifikasi panjang prefiks subnet IP",
+      "Mencatat jumlah router yang telah dilewati frame"
+    ],
+    "answer": "Mengidentifikasi VLAN frame"
+  },
+  {
+    "category": "Networking",
+    "set": 5,
+    "question": "Apa yang terutama dicegah Spanning Tree Protocol pada jaringan Ethernet dengan bridge?",
+    "options": [
+      "Lingkaran perutean IP antarsistem otonom",
+      "Pemberian alamat IP duplikat oleh server DHCP yang independen",
+      "Pemberian port TCP yang tumpang tindih pada host",
+      "Lingkaran penerusan lapisan 2"
+    ],
+    "answer": "Lingkaran penerusan lapisan 2"
+  },
+  {
+    "category": "Networking",
+    "set": 5,
+    "question": "Bagaimana tautan Ethernet dupleks penuh membawa lalu lintas?",
+    "options": [
+      "Kedua ujung harus bergantian setelah mendeteksi tabrakan",
+      "Satu ujung secara permanen hanya dapat menerima",
+      "Kedua ujung dapat mengirim secara bersamaan",
+      "Hanya satu ujung dapat mengirim sampai tautan direset"
+    ],
+    "answer": "Kedua ujung dapat mengirim secara bersamaan"
+  },
+  {
+    "category": "Networking",
+    "set": 5,
+    "question": "Apa tujuan agregasi tautan?",
+    "options": [
+      "Menyalin setiap frame unicast ke semua uplink yang tersedia",
+      "Menggabungkan beberapa tautan fisik menjadi satu tautan logis",
+      "Menggabungkan beberapa VLAN dengan menghapus domain broadcast yang terpisah",
+      "Mengubah semua port switch yang terhubung menjadi satu media setengah dupleks bersama"
+    ],
+    "answer": "Menggabungkan beberapa tautan fisik menjadi satu tautan logis"
+  },
+  {
+    "category": "Networking",
+    "set": 5,
+    "question": "Apa yang dapat diklasifikasikan perangkat jaringan dengan bantuan DSCP pada header IP?",
+    "options": [
+      "Lalu lintas untuk perlakuan kualitas layanan yang berbeda",
+      "Paket untuk perakitan fragmen berdasarkan nomor identifikasi",
+      "Paket untuk pencegahan lingkaran berdasarkan jumlah hop tersisa",
+      "Koneksi untuk identifikasi ujung berdasarkan nomor port"
+    ],
+    "answer": "Lalu lintas untuk perlakuan kualitas layanan yang berbeda"
+  },
+  {
+    "category": "Networking",
+    "set": 5,
+    "question": "Apa yang diukur jitter pada aliran paket jaringan?",
+    "options": [
+      "Laju transmisi paket rata-rata",
+      "Proporsi paket yang hilang",
+      "Panjang muatan paket maksimum",
+      "Variasi keterlambatan paket"
+    ],
+    "answer": "Variasi keterlambatan paket"
+  },
+  {
+    "category": "Networking",
+    "set": 5,
+    "question": "Mengapa retransmisi berulang dapat menurunkan laju data berguna suatu aplikasi?",
+    "options": [
+      "Retransmisi memaksa setiap router menggandakan kapasitas tautan keluar",
+      "Retransmisi menjamin penerima dapat memperbesar jendela yang diumumkan",
+      "Retransmisi menghabiskan kapasitas tanpa mengirim data aplikasi unik tambahan",
+      "Retransmisi mengurangi beban protokol dengan membuang header transport"
+    ],
+    "answer": "Retransmisi menghabiskan kapasitas tanpa mengirim data aplikasi unik tambahan"
+  },
+  {
+    "category": "Networking",
+    "set": 5,
+    "question": "Apa yang hendak ditentukan oleh Path MTU Discovery?",
+    "options": [
+      "Jumlah paket yang dapat diantrekan router sebelum membuang lalu lintas",
+      "Ukuran paket terbesar yang dapat digunakan di sepanjang jalur tanpa fragmentasi",
+      "Jumlah byte tanpa konfirmasi maksimum yang dapat ditampung penerima",
+      "Waktu pulang-pergi minimum untuk menghindari kemacetan"
+    ],
+    "answer": "Ukuran paket terbesar yang dapat digunakan di sepanjang jalur tanpa fragmentasi"
+  },
+  {
+    "category": "Networking",
+    "set": 5,
+    "question": "Tupel ujung socket mana yang membedakan sebuah koneksi TCP dari koneksi TCP lain?",
+    "options": [
+      "IP sumber, port sumber, IP tujuan, port tujuan",
+      "IP sumber, IP tujuan, nomor urut, nomor konfirmasi",
+      "Port sumber, port tujuan, ukuran jendela, checksum",
+      "IP sumber, port sumber, IP tujuan, batas hop IP"
+    ],
+    "answer": "IP sumber, port sumber, IP tujuan, port tujuan"
+  },
+  {
+    "category": "Networking",
+    "set": 5,
+    "question": "Untuk apa port sementara biasanya digunakan?",
+    "options": [
+      "Port server terkenal yang ditetapkan secara permanen",
+      "Port fisik switch yang dikhususkan untuk lalu lintas trunk",
+      "Port tujuan cadangan yang dipakai bersama oleh semua protokol perutean",
+      "Ujung transport sementara di sisi klien"
+    ],
+    "answer": "Ujung transport sementara di sisi klien"
+  },
+  {
+    "category": "Networking",
+    "set": 5,
+    "question": "Apa yang diperintahkan direktif HTTP Cache-Control no-store kepada cache?",
+    "options": [
+      "Simpan respons hanya dalam cache privat",
+      "Simpan respons sampai masa kesegaran yang dinyatakan berakhir",
+      "Jangan simpan permintaan atau respons yang dicakup direktif",
+      "Simpan respons tetapi validasi ulang sebelum digunakan kembali"
+    ],
+    "answer": "Jangan simpan permintaan atau respons yang dicakup direktif"
+  },
+  {
+    "category": "Networking",
+    "set": 5,
+    "question": "Apa arti respons HTTP 304 setelah GET bersyarat?",
+    "options": [
+      "Server asal tidak dapat meresolusi nama host-nya sendiri",
+      "Representasi dalam cache dapat digunakan kembali sesuai hasil validasi",
+      "Sumber daya yang diminta telah dipindahkan secara permanen",
+      "Klien harus beralih ke protokol transport lain"
+    ],
+    "answer": "Representasi dalam cache dapat digunakan kembali sesuai hasil validasi"
+  },
+  {
+    "category": "Networking",
+    "set": 5,
+    "question": "Header proksi mana yang umumnya mencatat IP klien asli saat proksi balik meneruskan permintaan HTTP?",
+    "options": [
+      "X-Forwarded-For",
+      "Content-Type",
+      "Accept-Encoding",
+      "Cache-Control"
+    ],
+    "answer": "X-Forwarded-For"
+  },
+  {
+    "category": "Networking",
+    "set": 5,
+    "question": "Mengapa aplikasi hanya boleh memercayai header IP klien yang diteruskan oleh proksi tepercaya yang dikonfigurasi?",
+    "options": [
+      "TLS otomatis mengautentikasi nilai IP klien asli di setiap header",
+      "Checksum TCP membuktikan bahwa header menyebut klien asli",
+      "Setiap proksi penerus menandatangani header itu secara kriptografis secara bawaan",
+      "Klien dapat memalsukan header tersebut jika batas kepercayaan tidak ditegakkan"
+    ],
+    "answer": "Klien dapat memalsukan header tersebut jika batas kepercayaan tidak ditegakkan"
+  }
+]

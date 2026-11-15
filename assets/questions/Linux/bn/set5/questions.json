@@ -1,0 +1,302 @@
+[
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "Bash-এর বিস্তারকে \"$name\" লিখলে কী আটকায়?",
+    "options": [
+      "উদ্ধৃতির মধ্যে সব প্যারামিটার বিস্তার",
+      "পরে ভেরিয়েবলের পরিবর্তন",
+      "কমান্ডে খালি আর্গুমেন্ট যাওয়া",
+      "বিস্তৃত মানের শব্দভাগ ও পথনাম বিস্তার"
+    ],
+    "answer": "বিস্তৃত মানের শব্দভাগ ও পথনাম বিস্তার"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "Bash-এ '$HOME' সিঙ্গল-কোট করলে কী হয়?",
+    "options": [
+      "আগের কাজের ডিরেক্টরিতে প্রসারিত হয়",
+      "ডলার চিহ্ন সরিয়ে HOME পাঠায়",
+      "আক্ষরিক $HOME পাঠায়",
+      "ব্যবহারকারীর হোম ডিরেক্টরিতে প্রসারিত হয়"
+    ],
+    "answer": "আক্ষরিক $HOME পাঠায়"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "Bash-এর $(command) কমান্ড প্রতিস্থাপন কী বসায়?",
+    "options": [
+      "কমান্ডের প্রস্থান অবস্থা দশমিক সংখ্যায়",
+      "শেষের নতুন লাইনের চিহ্ন বাদ দেওয়া মানক আউটপুট",
+      "কমান্ডের সংখ্যাসূচক প্রক্রিয়া ID",
+      "শুধু কমান্ডের মানক ত্রুটি"
+    ],
+    "answer": "শেষের নতুন লাইনের চিহ্ন বাদ দেওয়া মানক আউটপুট"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "বর্তমান শেলেই স্ক্রিপ্ট ফাইলের কমান্ড পড়ে চালায় কোন Bash অন্তর্নির্মিত কমান্ড?",
+    "options": [
+      "source",
+      "exec",
+      "eval",
+      "export"
+    ],
+    "answer": "source"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "Bash স্ক্রিপ্টে 'exec program' সফল হলে কী করে?",
+    "options": [
+      "শেল চলতে থাকে আর program ব্যাকগ্রাউন্ডে শুরু হয়",
+      "program দুবার চালিয়ে ফল তুলনা করে",
+      "program-এর আউটপুট শেলের সোর্স কোড হিসেবে পড়ে",
+      "শেল প্রক্রিয়াকে program দিয়ে বদলায়"
+    ],
+    "answer": "শেল প্রক্রিয়াকে program দিয়ে বদলায়"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "Bash pipefail সক্রিয় থাকলে এক বা একাধিক কমান্ড ব্যর্থ হলে পাইপলাইনের অবস্থা কী?",
+    "options": [
+      "শেষ কমান্ড সফল হলে সবসময় শূন্য",
+      "সব কমান্ডের প্রস্থান অবস্থার যোগফল",
+      "ডানদিকের শেষ অশূন্য ফল দেওয়া কমান্ডের অবস্থা",
+      "সবসময় প্রথম কমান্ডের অবস্থা"
+    ],
+    "answer": "ডানদিকের শেষ অশূন্য ফল দেওয়া কমান্ডের অবস্থা"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "GNU Coreutils দিয়ে checksums.txt-এর SHA-256 চেকসাম যাচাই করে কোন কমান্ড?",
+    "options": [
+      "cksum checksums.txt",
+      "sha256sum -c checksums.txt",
+      "sha256sum checksums.txt",
+      "md5sum -c checksums.txt"
+    ],
+    "answer": "sha256sum -c checksums.txt"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "logs ডিরেক্টরির gzip-সংকুচিত আর্কাইভ বানায় কোন GNU tar কমান্ড?",
+    "options": [
+      "tar -czf logs.tar.gz logs",
+      "tar -xzf logs.tar.gz",
+      "tar -tzf logs.tar.gz",
+      "gzip -d logs.tar.gz"
+    ],
+    "answer": "tar -czf logs.tar.gz logs"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "বের না করে আর্কাইভের ভেতরের তালিকা দেয় কোন tar বিকল্প?",
+    "options": [
+      "-x",
+      "-c",
+      "-r",
+      "-t"
+    ],
+    "answer": "-t"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "Linux ডিরেক্টরির setgid বিট ভেতরে নতুন বানানো ফাইলে সাধারণত কী করে?",
+    "options": [
+      "মালিক হয় root ব্যবহারকারী",
+      "মালিকও ফাইল মুছতে পারে না",
+      "ফাইল ডিরেক্টরির গোষ্ঠী মালিকানা পায়",
+      "সব ব্যবহারকারীর জন্য সর্বদা চালানোযোগ্য হয়"
+    ],
+    "answer": "ফাইল ডিরেক্টরির গোষ্ঠী মালিকানা পায়"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "যৌথ লেখাযোগ্য ডিরেক্টরির স্টিকি বিট প্রধানত কী সীমিত করে?",
+    "options": [
+      "কে ফাইল সিস্টেমে ডিস্ক ব্লক বরাদ্দ করতে পারে",
+      "কে ডিরেক্টরির ফাইল মুছতে বা নাম বদলাতে পারে",
+      "কে ডিরেক্টরির প্রতিটি ফাইল পড়তে পারে",
+      "কে ডিরেক্টরির বাইরের প্রোগ্রাম চালাতে পারে"
+    ],
+    "answer": "কে ডিরেক্টরির ফাইল মুছতে বা নাম বদলাতে পারে"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "ফাইলের প্রবেশ নিয়ন্ত্রণ তালিকার এন্ট্রি দেখায় কোন কমান্ড?",
+    "options": [
+      "getfacl file.txt",
+      "setfacl -b file.txt",
+      "getfattr -d file.txt",
+      "lsattr file.txt"
+    ],
+    "answer": "getfacl file.txt"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "পাসওয়ার্ড হ্যাশের বদলে স্থানীয় ব্যবহারকারী অ্যাকাউন্ট রাখে সাধারণত কোন ফাইল?",
+    "options": [
+      "/etc/shadow",
+      "/etc/group",
+      "/etc/gshadow",
+      "/etc/passwd"
+    ],
+    "answer": "/etc/passwd"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "আগের অতিরিক্ত গোষ্ঠী না বদলে alice-কে docker অতিরিক্ত গোষ্ঠীতে যোগ করে কোন কমান্ড?",
+    "options": [
+      "usermod -g docker alice",
+      "usermod -l docker alice",
+      "usermod -aG docker alice",
+      "usermod -G docker alice"
+    ],
+    "answer": "usermod -aG docker alice"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "পাসওয়ার্ড-ভিত্তিক পরিচয় যাচাই আটকাতে Linux ব্যবহারকারীর পাসওয়ার্ড লক করে কোন কমান্ড?",
+    "options": [
+      "passwd -e alice",
+      "passwd -l alice",
+      "passwd -u alice",
+      "passwd -S alice"
+    ],
+    "answer": "passwd -l alice"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "কনফিগার করা নাম-পরিষেবা উৎসে alice-এর passwd এন্ট্রি চায় কোন কমান্ড?",
+    "options": [
+      "getent passwd alice",
+      "groups alice",
+      "id -u alice",
+      "whoami"
+    ],
+    "answer": "getent passwd alice"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "বুটে স্বয়ংক্রিয়ভাবে মাউন্ট হওয়া ফাইল সিস্টেম সাধারণত কোন ফাইলে থাকে?",
+    "options": [
+      "/etc/hosts",
+      "/etc/shells",
+      "/etc/resolv.conf",
+      "/etc/fstab"
+    ],
+    "answer": "/etc/fstab"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "ফাইল সিস্টেমের UUID এবং অন্য ব্লক-যন্ত্র বৈশিষ্ট্য দেখায় কোন কমান্ড?",
+    "options": [
+      "modinfo",
+      "lscpu",
+      "blkid",
+      "lsmod"
+    ],
+    "answer": "blkid"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "মেরামতকারী fsck চালানোর আগে ফাইল সিস্টেম সাধারণত আনমাউন্ট করা উচিত কেন?",
+    "options": [
+      "মাউন্ট করা ফাইল সিস্টেমে কখনো খালি জায়গা থাকে না",
+      "একসঙ্গে লেখা মেরামতের সঙ্গে বিরোধ করে তথ্য নষ্ট করতে পারে",
+      "আনমাউন্ট করলে সব ফাইল-সিস্টেম মেটাডেটা স্বয়ংক্রিয়ভাবে এনক্রিপ্ট হয়",
+      "fsck শুধু যন্ত্রের নাম ছাড়া ফাইল সিস্টেম সমর্থন করে"
+    ],
+    "answer": "একসঙ্গে লেখা মেরামতের সঙ্গে বিরোধ করে তথ্য নষ্ট করতে পারে"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "সক্রিয় সোয়াপ এলাকা দেখায় কোন কমান্ড?",
+    "options": [
+      "swapon --show",
+      "swapoff -a",
+      "free -s 1",
+      "vmstat -d"
+    ],
+    "answer": "swapon --show"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "নির্ভরতাসহ Linux কার্নেল মডিউল লোড করে কোন কমান্ড?",
+    "options": [
+      "rmmod",
+      "lsmod",
+      "modinfo",
+      "modprobe"
+    ],
+    "answer": "modprobe"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "ইউনিটকে /dev/null-এ যুক্ত করে শুরু হওয়া আটকায় কোন systemd কমান্ড?",
+    "options": [
+      "systemctl stop app.service",
+      "systemctl reset-failed app.service",
+      "systemctl mask app.service",
+      "systemctl disable app.service"
+    ],
+    "answer": "systemctl mask app.service"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "যাচাইয়ের জন্য ব্যক্তিগত চাবির ফাইল বেছে নেয় কোন SSH বিকল্প?",
+    "options": [
+      "-R",
+      "-i",
+      "-p",
+      "-L"
+    ],
+    "answer": "-i"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "SSH দিয়ে স্থানীয় ফাইল দূরবর্তী ব্যবহারকারীর ডিরেক্টরিতে নিরাপদে পাঠায় কোন কমান্ড?",
+    "options": [
+      "scp report.txt alice@server:/home/alice/",
+      "ssh alice@server cat report.txt",
+      "sftp -b report.txt alice@server",
+      "ssh-keygen -f report.txt"
+    ],
+    "answer": "scp report.txt alice@server:/home/alice/"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "'rsync -n' কী চায়?",
+    "options": [
+      "উৎসে নেই এমন গন্তব্য ফাইল মুছে ফেলা",
+      "পাঠানো ফাইলের ডেটা সংকুচিত করা",
+      "সব ফাইল-সিস্টেম বৈশিষ্ট্য উপডিরেক্টরিসহ রাখা",
+      "বাস্তবে পরিবর্তন না করে সম্ভাব্য পরিবর্তনের বিবরণ দেওয়া পরীক্ষামূলক চালনা"
+    ],
+    "answer": "বাস্তবে পরিবর্তন না করে সম্ভাব্য পরিবর্তনের বিবরণ দেওয়া পরীক্ষামূলক চালনা"
+  }
+]

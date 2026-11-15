@@ -1,0 +1,302 @@
+[
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "Bash विस्तार को \"$name\" जैसे उद्धरण में रखने से क्या रुकता है?",
+    "options": [
+      "उद्धरण के भीतर हर पैरामीटर विस्तार",
+      "बाद में चर का बदलना",
+      "कमांड को खाली तर्क मिलना",
+      "विस्तारित मान का शब्द-विभाजन और पथनाम विस्तार"
+    ],
+    "answer": "विस्तारित मान का शब्द-विभाजन और पथनाम विस्तार"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "Bash में '$HOME' को एकहरे उद्धरण में रखने से क्या होता है?",
+    "options": [
+      "पिछली कार्यशील निर्देशिका का विस्तार",
+      "डॉलर चिह्न हटाकर HOME देना",
+      "ज्यों का त्यों $HOME टेक्स्ट देना",
+      "उपयोगकर्ता की होम निर्देशिका का विस्तार"
+    ],
+    "answer": "ज्यों का त्यों $HOME टेक्स्ट देना"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "Bash में $(command) से कमांड प्रतिस्थापन क्या डालता है?",
+    "options": [
+      "दशमलव संख्या के रूप में कमांड का निकास स्टेटस",
+      "अंतिम नई पंक्तियाँ हटाकर कमांड का मानक आउटपुट",
+      "कमांड की संख्यात्मक प्रक्रिया ID",
+      "केवल कमांड की मानक त्रुटि"
+    ],
+    "answer": "अंतिम नई पंक्तियाँ हटाकर कमांड का मानक आउटपुट"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "स्क्रिप्ट फ़ाइल के कमांड वर्तमान शेल में पढ़कर चलाने वाला Bash अंतर्निहित कमांड कौन-सा है?",
+    "options": [
+      "source",
+      "exec",
+      "eval",
+      "export"
+    ],
+    "answer": "source"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "Bash स्क्रिप्ट में 'exec program' सफल हो तो क्या करता है?",
+    "options": [
+      "शेल चलता रहता है और program पृष्ठभूमि जॉब बनता है",
+      "program दो बार चलाकर परिणाम मिलाता है",
+      "program का आउटपुट शेल स्रोत कोड की तरह लोड करता है",
+      "शेल प्रक्रिया को program से बदलता है"
+    ],
+    "answer": "शेल प्रक्रिया को program से बदलता है"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "Bash pipefail चालू हो और एक या अधिक कमांड विफल हों तो पाइपलाइन स्टेटस क्या होगा?",
+    "options": [
+      "अंतिम कमांड सफल हो तो हमेशा शून्य",
+      "सभी कमांड निकास स्टेटस का योग",
+      "सबसे दाएँ गैर-शून्य लौटाने वाले कमांड का स्टेटस",
+      "हमेशा पहले कमांड का स्टेटस"
+    ],
+    "answer": "सबसे दाएँ गैर-शून्य लौटाने वाले कमांड का स्टेटस"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "GNU Coreutils से checksums.txt के SHA-256 चेकसम कौन-सा कमांड सत्यापित करता है?",
+    "options": [
+      "cksum checksums.txt",
+      "sha256sum -c checksums.txt",
+      "sha256sum checksums.txt",
+      "md5sum -c checksums.txt"
+    ],
+    "answer": "sha256sum -c checksums.txt"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "logs निर्देशिका का gzip-संपीड़ित आर्काइव कौन-सा GNU tar कमांड बनाता है?",
+    "options": [
+      "tar -czf logs.tar.gz logs",
+      "tar -xzf logs.tar.gz",
+      "tar -tzf logs.tar.gz",
+      "gzip -d logs.tar.gz"
+    ],
+    "answer": "tar -czf logs.tar.gz logs"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "बिना निकाले आर्काइव सामग्री दिखाने वाला tar विकल्प कौन-सा है?",
+    "options": [
+      "-x",
+      "-c",
+      "-r",
+      "-t"
+    ],
+    "answer": "-t"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "Linux निर्देशिका का setgid बिट अंदर बनी नई फ़ाइलों पर सामान्यतः क्या करता है?",
+    "options": [
+      "वे root उपयोगकर्ता की हो जाती हैं",
+      "उनका मालिक उन्हें हटा नहीं सकता",
+      "वे निर्देशिका का समूह स्वामित्व पाती हैं",
+      "वे हमेशा हर उपयोगकर्ता के लिए निष्पादन योग्य हो जाती हैं"
+    ],
+    "answer": "वे निर्देशिका का समूह स्वामित्व पाती हैं"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "साझा लिखने योग्य निर्देशिका का स्टिकी बिट मुख्यतः क्या सीमित करता है?",
+    "options": [
+      "फ़ाइल प्रणाली में कौन डिस्क ब्लॉक आवंटित कर सकता है",
+      "निर्देशिका में कौन फ़ाइल हटा या उसका नाम बदल सकता है",
+      "निर्देशिका की सभी फ़ाइलें कौन पढ़ सकता है",
+      "निर्देशिका के बाहर प्रोग्राम कौन चला सकता है"
+    ],
+    "answer": "निर्देशिका में कौन फ़ाइल हटा या उसका नाम बदल सकता है"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "फ़ाइल की पहुँच नियंत्रण सूची कौन-सा कमांड दिखाता है?",
+    "options": [
+      "getfacl file.txt",
+      "setfacl -b file.txt",
+      "getfattr -d file.txt",
+      "lsattr file.txt"
+    ],
+    "answer": "getfacl file.txt"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "पासवर्ड हैश के बजाय स्थानीय उपयोगकर्ता खाता रिकॉर्ड सामान्यतः किस फ़ाइल में होते हैं?",
+    "options": [
+      "/etc/shadow",
+      "/etc/group",
+      "/etc/gshadow",
+      "/etc/passwd"
+    ],
+    "answer": "/etc/passwd"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "पुराने सहायक समूह बदले बिना alice को docker सहायक समूह में कौन-सा कमांड जोड़ता है?",
+    "options": [
+      "usermod -g docker alice",
+      "usermod -l docker alice",
+      "usermod -aG docker alice",
+      "usermod -G docker alice"
+    ],
+    "answer": "usermod -aG docker alice"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "पासवर्ड-आधारित प्रमाणीकरण के लिए Linux उपयोगकर्ता का पासवर्ड कौन-सा कमांड लॉक करता है?",
+    "options": [
+      "passwd -e alice",
+      "passwd -l alice",
+      "passwd -u alice",
+      "passwd -S alice"
+    ],
+    "answer": "passwd -l alice"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "alice की passwd प्रविष्टि के लिए सेट किए नाम-सेवा स्रोतों को कौन-सा कमांड पूछता है?",
+    "options": [
+      "getent passwd alice",
+      "groups alice",
+      "id -u alice",
+      "whoami"
+    ],
+    "answer": "getent passwd alice"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "बूट पर स्वतः माउंट होने वाली फ़ाइल प्रणालियाँ सामान्यतः कौन-सी फ़ाइल बताती है?",
+    "options": [
+      "/etc/hosts",
+      "/etc/shells",
+      "/etc/resolv.conf",
+      "/etc/fstab"
+    ],
+    "answer": "/etc/fstab"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "फ़ाइल-सिस्टम UUID और अन्य ब्लॉक-उपकरण गुण कौन-सा कमांड दिखाता है?",
+    "options": [
+      "modinfo",
+      "lscpu",
+      "blkid",
+      "lsmod"
+    ],
+    "answer": "blkid"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "मरम्मत करने वाला fsck चलाने से पहले फ़ाइल प्रणाली सामान्यतः अनमाउंट क्यों करनी चाहिए?",
+    "options": [
+      "माउंट की गई प्रणालियों में खाली स्थान कभी नहीं होता",
+      "साथ में लिखना मरम्मत से टकराकर डेटा बिगाड़ सकता है",
+      "अनमाउंट सभी फ़ाइल-सिस्टम मेटाडेटा स्वतः एन्क्रिप्ट करता है",
+      "fsck केवल उपकरण नामों के बिना फ़ाइल प्रणालियाँ समर्थित करता है"
+    ],
+    "answer": "साथ में लिखना मरम्मत से टकराकर डेटा बिगाड़ सकता है"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "सक्रिय स्वैप क्षेत्र कौन-सा कमांड दिखाता है?",
+    "options": [
+      "swapon --show",
+      "swapoff -a",
+      "free -s 1",
+      "vmstat -d"
+    ],
+    "answer": "swapon --show"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "निर्भरताओं सहित Linux कर्नेल मॉड्यूल कौन-सा कमांड लोड करता है?",
+    "options": [
+      "rmmod",
+      "lsmod",
+      "modinfo",
+      "modprobe"
+    ],
+    "answer": "modprobe"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "यूनिट को /dev/null से जोड़कर उसका आरंभ कौन-सा systemd कमांड रोकता है?",
+    "options": [
+      "systemctl stop app.service",
+      "systemctl reset-failed app.service",
+      "systemctl mask app.service",
+      "systemctl disable app.service"
+    ],
+    "answer": "systemctl mask app.service"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "प्रमाणीकरण के लिए निजी पहचान फ़ाइल कौन-सा SSH विकल्प चुनता है?",
+    "options": [
+      "-R",
+      "-i",
+      "-p",
+      "-L"
+    ],
+    "answer": "-i"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "SSH से स्थानीय फ़ाइल दूरस्थ उपयोगकर्ता की निर्देशिका में सुरक्षित कौन-सा कमांड कॉपी करता है?",
+    "options": [
+      "scp report.txt alice@server:/home/alice/",
+      "ssh alice@server cat report.txt",
+      "sftp -b report.txt alice@server",
+      "ssh-keygen -f report.txt"
+    ],
+    "answer": "scp report.txt alice@server:/home/alice/"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "'rsync -n' क्या अनुरोध करता है?",
+    "options": [
+      "स्रोत में अनुपस्थित गंतव्य फ़ाइलें हटाना",
+      "स्थानांतरित फ़ाइल डेटा का संपीड़न",
+      "हर फ़ाइल-सिस्टम गुण का पुनरावर्ती संरक्षण",
+      "असल बदलाव किए बिना नियोजित बदलाव दिखाने वाला परीक्षण रन"
+    ],
+    "answer": "असल बदलाव किए बिना नियोजित बदलाव दिखाने वाला परीक्षण रन"
+  }
+]

@@ -1,0 +1,302 @@
+[
+  {
+    "category": "Linux",
+    "set": 4,
+    "question": "Which command is used to move or rename files?",
+    "options": [
+      "mv",
+      "cp",
+      "ln",
+      "shift"
+    ],
+    "answer": "mv"
+  },
+  {
+    "category": "Linux",
+    "set": 4,
+    "question": "Which command changes file ownership?",
+    "options": [
+      "chown",
+      "chmod",
+      "owner",
+      "setowner"
+    ],
+    "answer": "chown"
+  },
+  {
+    "category": "Linux",
+    "set": 4,
+    "question": "Which command displays file permissions in octal format?",
+    "options": [
+      "stat -c %a",
+      "ls -perm",
+      "perm",
+      "showperm"
+    ],
+    "answer": "stat -c %a"
+  },
+  {
+    "category": "Linux",
+    "set": 4,
+    "question": "Which command displays the file type?",
+    "options": [
+      "file",
+      "type",
+      "kind",
+      "format"
+    ],
+    "answer": "file"
+  },
+  {
+    "category": "Linux",
+    "set": 4,
+    "question": "Which command displays detailed file statistics?",
+    "options": [
+      "stat",
+      "fileinfo",
+      "details",
+      "ls -stat"
+    ],
+    "answer": "stat"
+  },
+  {
+    "category": "Linux",
+    "set": 4,
+    "question": "Which command searches directory trees directly for files by name rather than using a prebuilt database?",
+    "options": [
+      "find",
+      "search",
+      "locate",
+      "where"
+    ],
+    "answer": "find"
+  },
+  {
+    "category": "Linux",
+    "set": 4,
+    "question": "Which command searches PATH and normally prints the first matching executable's path?",
+    "options": [
+      "which",
+      "whereis",
+      "locate",
+      "find"
+    ],
+    "answer": "which"
+  },
+  {
+    "category": "Linux",
+    "set": 4,
+    "question": "Which command searches files using a database?",
+    "options": [
+      "locate",
+      "find",
+      "search",
+      "query"
+    ],
+    "answer": "locate"
+  },
+  {
+    "category": "Linux",
+    "set": 4,
+    "question": "Which command updates the locate database?",
+    "options": [
+      "updatedb",
+      "updatedatabase",
+      "refreshdb",
+      "syncdb"
+    ],
+    "answer": "updatedb"
+  },
+  {
+    "category": "Linux",
+    "set": 4,
+    "question": "Which command displays the current user's crontab entries?",
+    "options": [
+      "crontab -l",
+      "cron -list",
+      "cronshow",
+      "jobs"
+    ],
+    "answer": "crontab -l"
+  },
+  {
+    "category": "Linux",
+    "set": 4,
+    "question": "Which command edits cron jobs?",
+    "options": [
+      "crontab -e",
+      "cronedit",
+      "crontab",
+      "schedule"
+    ],
+    "answer": "crontab -e"
+  },
+  {
+    "category": "Linux",
+    "set": 4,
+    "question": "Which command schedules a one-time task?",
+    "options": [
+      "at",
+      "cron",
+      "task",
+      "schedule"
+    ],
+    "answer": "at"
+  },
+  {
+    "category": "Linux",
+    "set": 4,
+    "question": "Which command displays active jobs in the shell?",
+    "options": [
+      "jobs",
+      "ps",
+      "bg",
+      "fg"
+    ],
+    "answer": "jobs"
+  },
+  {
+    "category": "Linux",
+    "set": 4,
+    "question": "Which shell builtin resumes a stopped job in the background?",
+    "options": [
+      "bg",
+      "fg",
+      "jobs",
+      "nohup"
+    ],
+    "answer": "bg"
+  },
+  {
+    "category": "Linux",
+    "set": 4,
+    "question": "Which command brings a background process to the foreground?",
+    "options": [
+      "fg",
+      "bg",
+      "jobs",
+      "top"
+    ],
+    "answer": "fg"
+  },
+  {
+    "category": "Linux",
+    "set": 4,
+    "question": "Which systemd command reloads unit-file definitions after a service file has been edited?",
+    "options": [
+      "systemctl daemon-reload",
+      "systemctl reload app.service",
+      "systemctl restart app.service",
+      "systemctl reset-failed app.service"
+    ],
+    "answer": "systemctl daemon-reload"
+  },
+  {
+    "category": "Linux",
+    "set": 4,
+    "question": "What does 'systemctl disable app.service' do without --now?",
+    "options": [
+      "Stops the service and deletes its unit file",
+      "Restarts the service with factory defaults",
+      "Prevents all manual starts by masking the unit",
+      "Removes enablement links without necessarily stopping the running service"
+    ],
+    "answer": "Removes enablement links without necessarily stopping the running service"
+  },
+  {
+    "category": "Linux",
+    "set": 4,
+    "question": "Which command displays journal entries for app.service?",
+    "options": [
+      "systemctl show app.service",
+      "systemctl list-dependencies app.service",
+      "journalctl -u app.service",
+      "systemctl cat app.service"
+    ],
+    "answer": "journalctl -u app.service"
+  },
+  {
+    "category": "Linux",
+    "set": 4,
+    "question": "Which journalctl option restricts output to the current boot?",
+    "options": [
+      "-k",
+      "-b",
+      "-f",
+      "-r"
+    ],
+    "answer": "-b"
+  },
+  {
+    "category": "Linux",
+    "set": 4,
+    "question": "In a standard five-field user crontab, which field comes first?",
+    "options": [
+      "Minute",
+      "Hour",
+      "Day of month",
+      "Day of week"
+    ],
+    "answer": "Minute"
+  },
+  {
+    "category": "Linux",
+    "set": 4,
+    "question": "In a standard user crontab, when does '0 2 * * *' run?",
+    "options": [
+      "At minute 2 of every hour",
+      "Every two minutes",
+      "At midnight on the second day of each month",
+      "At 02:00 every day in cron's applicable timezone"
+    ],
+    "answer": "At 02:00 every day in cron's applicable timezone"
+  },
+  {
+    "category": "Linux",
+    "set": 4,
+    "question": "What does the Bash export builtin do to a shell variable?",
+    "options": [
+      "Copies it into the parent shell's environment",
+      "Converts its value into a read-only variable",
+      "Makes it available in the environment of subsequently launched child processes",
+      "Writes it permanently into every user's profile"
+    ],
+    "answer": "Makes it available in the environment of subsequently launched child processes"
+  },
+  {
+    "category": "Linux",
+    "set": 4,
+    "question": "Which Bash redirection appends standard output to app.log?",
+    "options": [
+      "2> app.log",
+      ">> app.log",
+      "> app.log",
+      "< app.log"
+    ],
+    "answer": ">> app.log"
+  },
+  {
+    "category": "Linux",
+    "set": 4,
+    "question": "Which Bash redirection sends standard error to the same destination as standard output?",
+    "options": [
+      "2>&1",
+      "1>&2",
+      "2>errors.log",
+      "<input.txt"
+    ],
+    "answer": "2>&1"
+  },
+  {
+    "category": "Linux",
+    "set": 4,
+    "question": "What does $? expand to in Bash immediately after a command finishes?",
+    "options": [
+      "The process ID of the current shell",
+      "The number of positional parameters",
+      "The process ID of the most recent background job",
+      "The exit status of the most recently executed foreground pipeline"
+    ],
+    "answer": "The exit status of the most recently executed foreground pipeline"
+  }
+]

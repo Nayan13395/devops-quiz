@@ -1,0 +1,302 @@
+[
+  {
+    "category": "Terraform",
+    "set": 2,
+    "question": "Terraform에서 입력 변수를 정의하는 데 사용하는 블록은 무엇입니까?",
+    "options": [
+      "variable",
+      "input",
+      "vars",
+      "parameter"
+    ],
+    "answer": "variable"
+  },
+  {
+    "category": "Terraform",
+    "set": 2,
+    "question": "로컬 값을 정의하는 데 사용하는 블록은 무엇입니까?",
+    "options": [
+      "locals",
+      "local",
+      "values",
+      "variables"
+    ],
+    "answer": "locals"
+  },
+  {
+    "category": "Terraform",
+    "set": 2,
+    "question": "기존 인프라 정보를 가져오는 데 사용하는 블록은 무엇입니까?",
+    "options": [
+      "data",
+      "resource",
+      "provider",
+      "output"
+    ],
+    "answer": "data"
+  },
+  {
+    "category": "Terraform",
+    "set": 2,
+    "question": "정수를 받아 그만큼 리소스 인스턴스를 만드는 메타 인수는?",
+    "options": [
+      "count",
+      "for_each",
+      "repeat",
+      "loop"
+    ],
+    "answer": "count"
+  },
+  {
+    "category": "Terraform",
+    "set": 2,
+    "question": "맵이나 문자열 집합으로 리소스 인스턴스를 만드는 메타 인수는?",
+    "options": [
+      "for_each",
+      "count",
+      "each",
+      "loop"
+    ],
+    "answer": "for_each"
+  },
+  {
+    "category": "Terraform",
+    "set": 2,
+    "question": "조건식에 사용되는 연산자는 무엇입니까?",
+    "options": [
+      "? :",
+      "if",
+      "switch",
+      "case"
+    ],
+    "answer": "? :"
+  },
+  {
+    "category": "Terraform",
+    "set": 2,
+    "question": "리스트의 길이를 반환하는 함수는 무엇입니까?",
+    "options": [
+      "length()",
+      "count()",
+      "size()",
+      "len()"
+    ],
+    "answer": "length()"
+  },
+  {
+    "category": "Terraform",
+    "set": 2,
+    "question": "문자열을 대문자로 바꾸는 함수는?",
+    "options": [
+      "upper()",
+      "toupper()",
+      "capitalize()",
+      "upcase()"
+    ],
+    "answer": "upper()"
+  },
+  {
+    "category": "Terraform",
+    "set": 2,
+    "question": "목록 요소를 문자열로 연결하는 함수는?",
+    "options": [
+      "join()",
+      "concat()",
+      "merge()",
+      "append()"
+    ],
+    "answer": "join()"
+  },
+  {
+    "category": "Terraform",
+    "set": 2,
+    "question": "별도 인수로 받은 둘 이상의 목록을 하나로 합치는 함수는?",
+    "options": [
+      "concat()",
+      "join()",
+      "merge()",
+      "flatten()"
+    ],
+    "answer": "concat()"
+  },
+  {
+    "category": "Terraform",
+    "set": 2,
+    "question": "Terraform에서 암시적 종속성이란 무엇입니까?",
+    "options": [
+      "자동으로 감지되는 종속성",
+      "수동 종속성",
+      "공급자 종속성",
+      "상태 종속성"
+    ],
+    "answer": "자동으로 감지되는 종속성"
+  },
+  {
+    "category": "Terraform",
+    "set": 2,
+    "question": "명시적 종속성을 만드는 인수는 무엇입니까?",
+    "options": [
+      "depends_on",
+      "dependency",
+      "require",
+      "depends"
+    ],
+    "answer": "depends_on"
+  },
+  {
+    "category": "Terraform",
+    "set": 2,
+    "question": "속성값은 표시하지 않고 상태의 리소스 주소를 나열하는 명령은?",
+    "options": [
+      "terraform state list",
+      "terraform state show",
+      "terraform show",
+      "terraform state resources"
+    ],
+    "answer": "terraform state list"
+  },
+  {
+    "category": "Terraform",
+    "set": 2,
+    "question": "기존 인프라를 Terraform 상태로 가져오는 명령어는 무엇입니까?",
+    "options": [
+      "terraform import",
+      "terraform load",
+      "terraform sync",
+      "terraform attach"
+    ],
+    "answer": "terraform import"
+  },
+  {
+    "category": "Terraform",
+    "set": 2,
+    "question": "true 또는 false만 받는 입력 변수 유형은?",
+    "options": [
+      "bool",
+      "string",
+      "number",
+      "list(string)"
+    ],
+    "answer": "bool"
+  },
+  {
+    "category": "Terraform",
+    "set": 2,
+    "question": "문자열 키에서 문자열 값으로의 매핑을 나타내는 입력 변수 유형은?",
+    "options": [
+      "list(string)",
+      "set(string)",
+      "tuple([string])",
+      "map(string)"
+    ],
+    "answer": "map(string)"
+  },
+  {
+    "category": "Terraform",
+    "set": 2,
+    "question": "호출자가 값을 정하지 않았을 때 값을 제공하는 변수 인수는?",
+    "options": [
+      "nullable",
+      "sensitive",
+      "default",
+      "description"
+    ],
+    "answer": "default"
+  },
+  {
+    "category": "Terraform",
+    "set": 2,
+    "question": "변수 선언 안에서 값이 사용자 정의 규칙을 만족하는지 확인하는 블록은?",
+    "options": [
+      "connection",
+      "validation",
+      "lifecycle",
+      "provisioner"
+    ],
+    "answer": "validation"
+  },
+  {
+    "category": "Terraform",
+    "set": 2,
+    "question": "입력 변수 region의 값을 제공하는 환경 변수는?",
+    "options": [
+      "TF_VAR_region",
+      "TF_LOG_region",
+      "TF_CLI_ARGS_region",
+      "TF_DATA_DIR_region"
+    ],
+    "answer": "TF_VAR_region"
+  },
+  {
+    "category": "Terraform",
+    "set": 2,
+    "question": "CLI가 루트 모듈의 변수 정의 파일로 자동 읽는 파일은?",
+    "options": [
+      "production.tfvars",
+      "production.vars",
+      "production.hcl",
+      "production.auto.tfvars"
+    ],
+    "answer": "production.auto.tfvars"
+  },
+  {
+    "category": "Terraform",
+    "set": 2,
+    "question": "count를 쓰는 리소스에서 현재 인스턴스의 영부터 시작하는 인덱스를 주는 표현식은?",
+    "options": [
+      "each.value",
+      "self.index",
+      "count.index",
+      "each.key"
+    ],
+    "answer": "count.index"
+  },
+  {
+    "category": "Terraform",
+    "set": 2,
+    "question": "맵과 for_each를 쓰는 리소스에서 현재 요소의 값을 읽는 표현식은?",
+    "options": [
+      "self.value",
+      "each.value",
+      "each.key",
+      "count.index"
+    ],
+    "answer": "each.value"
+  },
+  {
+    "category": "Terraform",
+    "set": 2,
+    "question": "첫 등장 순서를 유지하면서 목록의 중복 요소를 없애는 함수는?",
+    "options": [
+      "distinct",
+      "sort",
+      "reverse",
+      "flatten"
+    ],
+    "answer": "distinct"
+  },
+  {
+    "category": "Terraform",
+    "set": 2,
+    "question": "목록의 직접 중첩된 목록 계층을 제거하는 함수는?",
+    "options": [
+      "concat",
+      "merge",
+      "join",
+      "flatten"
+    ],
+    "answer": "flatten"
+  },
+  {
+    "category": "Terraform",
+    "set": 2,
+    "question": "각 이름을 대문자로 바꿔 새 목록을 만드는 표현식은?",
+    "options": [
+      "[for name in var.names : length(name)]",
+      "[for name in var.names : trimspace(name)]",
+      "[for name in var.names : upper(name)]",
+      "[for name in var.names : lower(name)]"
+    ],
+    "answer": "[for name in var.names : upper(name)]"
+  }
+]

@@ -1,0 +1,302 @@
+[
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "Quale comando aggiunge un albero di lavoro collegato per un branch esistente chiamato release?",
+    "options": [
+      "git worktree prune",
+      "git worktree lock ..\\release",
+      "git worktree add ..\\release release",
+      "git worktree list"
+    ],
+    "answer": "git worktree add ..\\release release"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "Quale file registra i percorsi e gli URL versionati dei sottomoduli di un superprogetto?",
+    "options": [
+      ".gitmessage",
+      ".gitmodules",
+      ".gitignore",
+      ".gitattributes"
+    ],
+    "answer": ".gitmodules"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "Quale comando inizializza ed estrae i sottomoduli registrati, inclusi quelli annidati?",
+    "options": [
+      "git submodule update --init --recursive",
+      "git submodule deinit --all",
+      "git submodule status",
+      "git submodule sync"
+    ],
+    "answer": "git submodule update --init --recursive"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "Che cosa registra normalmente un superprogetto per un sottomodulo in un commit?",
+    "options": [
+      "L'intero database degli oggetti del sottomodulo",
+      "Solo il nome del branch predefinito del sottomodulo",
+      "Solo le modifiche del sottomodulo non ancora incluse in un commit",
+      "Un riferimento a uno specifico commit del sottomodulo"
+    ],
+    "answer": "Un riferimento a uno specifico commit del sottomodulo"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "Quale comando crea un bundle portabile contenente tutti i riferimenti e la loro cronologia raggiungibile?",
+    "options": [
+      "git format-patch -1 HEAD",
+      "git diff --binary > backup.bundle",
+      "git bundle create backup.bundle --all",
+      "git archive --output=backup.bundle HEAD"
+    ],
+    "answer": "git bundle create backup.bundle --all"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "Quale comando esporta i file tracciati di HEAD come archivio ZIP senza la cronologia Git?",
+    "options": [
+      "git format-patch --stdout HEAD > source.zip",
+      "git archive --format=zip --output=source.zip HEAD",
+      "git bundle create source.zip --all",
+      "git clone --bare . source.zip"
+    ],
+    "answer": "git archive --format=zip --output=source.zip HEAD"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "Quale comando trasforma l'ultimo commit in un file di patch in formato email?",
+    "options": [
+      "git format-patch -1 HEAD",
+      "git diff HEAD",
+      "git show --stat HEAD",
+      "git log -1 --oneline"
+    ],
+    "answer": "git format-patch -1 HEAD"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "Quale comando applica le patch email create da git format-patch e ne ricava dei commit?",
+    "options": [
+      "git apply changes.patch",
+      "git diff changes.patch",
+      "git add changes.patch",
+      "git am changes.patch"
+    ],
+    "answer": "git am changes.patch"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "Quale comando verifica se una patch ordinaria può essere applicata senza modificare i file?",
+    "options": [
+      "git am changes.patch",
+      "git add changes.patch",
+      "git apply --check changes.patch",
+      "git apply changes.patch"
+    ],
+    "answer": "git apply --check changes.patch"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "Quale tipo di oggetto Git memorizza il contenuto di un file senza il nome?",
+    "options": [
+      "Tag annotato",
+      "Blob",
+      "Tree",
+      "Commit"
+    ],
+    "answer": "Blob"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "Quale tipo di oggetto Git registra nomi di file e riferimenti a blob o sottoalberi?",
+    "options": [
+      "Tree",
+      "Blob",
+      "Commit",
+      "Tag annotato"
+    ],
+    "answer": "Tree"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "Quale comando indica il tipo di oggetto di un identificatore di oggetto noto?",
+    "options": [
+      "git cat-file -s abc1234",
+      "git rev-parse abc1234",
+      "git log -1 abc1234",
+      "git cat-file -t abc1234"
+    ],
+    "answer": "git cat-file -t abc1234"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "Quale comando mostra l'identificatore di oggetto completo di HEAD?",
+    "options": [
+      "git status --short",
+      "git branch --show-current",
+      "git rev-parse HEAD",
+      "git symbolic-ref HEAD"
+    ],
+    "answer": "git rev-parse HEAD"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "Quale intervallo di revisioni seleziona i commit raggiungibili da feature ma non da main?",
+    "options": [
+      "main^",
+      "main..feature",
+      "feature..main",
+      "main...feature"
+    ],
+    "answer": "main..feature"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "Quale opzione di git log mostra solo i commit di merge?",
+    "options": [
+      "--merges",
+      "--no-merges",
+      "--first-parent",
+      "--reverse"
+    ],
+    "answer": "--merges"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "Quale opzione di git diff mostra i percorsi modificati e le lettere del relativo stato di modifica?",
+    "options": [
+      "--name-only",
+      "--stat",
+      "--shortstat",
+      "--name-status"
+    ],
+    "answer": "--name-status"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "Quale file definisce attributi versionati come le regole di normalizzazione del testo per i percorsi?",
+    "options": [
+      ".gitmodules",
+      ".gitconfig",
+      ".gitattributes",
+      ".gitignore"
+    ],
+    "answer": ".gitattributes"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "Che cosa richiede la regola .gitattributes '*.sh text eol=lf' per i file di testo corrispondenti?",
+    "options": [
+      "L'eliminazione automatica delle righe vuote",
+      "Terminatori di riga LF nell'albero di lavoro",
+      "Terminatori di riga CRLF nell'albero di lavoro",
+      "Trattamento binario senza conversione del testo"
+    ],
+    "answer": "Terminatori di riga LF nell'albero di lavoro"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "Quale hook può rifiutare un commit esaminando il file del messaggio proposto?",
+    "options": [
+      "commit-msg",
+      "post-commit",
+      "post-checkout",
+      "post-merge"
+    ],
+    "answer": "commit-msg"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "Quale impostazione seleziona una directory personalizzata per gli hook Git?",
+    "options": [
+      "core.worktree",
+      "core.excludesFile",
+      "core.attributesFile",
+      "core.hooksPath"
+    ],
+    "answer": "core.hooksPath"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "Quale file permette a un singolo sviluppatore di ignorare localmente file non tracciati senza aggiungere una regola .gitignore condivisa?",
+    "options": [
+      ".git\\description",
+      ".git\\packed-refs",
+      ".git\\info\\exclude",
+      ".git\\HEAD"
+    ],
+    "answer": ".git\\info\\exclude"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "Quale comando termina una sessione bisect e normalmente torna al branch originale?",
+    "options": [
+      "git bisect log",
+      "git bisect reset",
+      "git bisect skip",
+      "git bisect good"
+    ],
+    "answer": "git bisect reset"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "Quale comando confronta due versioni di una serie di patch?",
+    "options": [
+      "git range-diff main..old main..new",
+      "git diff old new",
+      "git log old..new",
+      "git merge-base old new"
+    ],
+    "answer": "git range-diff main..old main..new"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "Quale comando aggiunge una riga Signed-off-by quando crea un commit?",
+    "options": [
+      "git commit --gpg-sign",
+      "git commit --amend",
+      "git commit --no-verify",
+      "git commit --signoff"
+    ],
+    "answer": "git commit --signoff"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "Che cosa cerca git log -S'old_name' per impostazione predefinita?",
+    "options": [
+      "Commit il cui messaggio contiene old_name",
+      "Branch i cui nomi contengono old_name",
+      "Commit che modificano il numero di occorrenze di old_name",
+      "Commit il cui autore si chiama old_name"
+    ],
+    "answer": "Commit che modificano il numero di occorrenze di old_name"
+  }
+]

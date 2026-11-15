@@ -1,0 +1,302 @@
+[
+  {
+    "category": "Ansible",
+    "set": 1,
+    "question": "À quoi sert principalement Ansible ?",
+    "options": [
+      "Gestion de configuration",
+      "Conteneurisation",
+      "Gestion de bases de données",
+      "Supervision"
+    ],
+    "answer": "Gestion de configuration"
+  },
+  {
+    "category": "Ansible",
+    "set": 1,
+    "question": "Dans quel langage Ansible est-il écrit ?",
+    "options": [
+      "Python",
+      "Java",
+      "Go",
+      "Ruby"
+    ],
+    "answer": "Python"
+  },
+  {
+    "category": "Ansible",
+    "set": 1,
+    "question": "Quel fichier contient les hôtes gérés dans Ansible ?",
+    "options": [
+      "Fichier d'inventaire",
+      "Playbook",
+      "Rôle",
+      "Module"
+    ],
+    "answer": "Fichier d'inventaire"
+  },
+  {
+    "category": "Ansible",
+    "set": 1,
+    "question": "Quel est l'emplacement par défaut du fichier d'inventaire ?",
+    "options": [
+      "/etc/ansible/hosts",
+      "/etc/hosts",
+      "/ansible/hosts",
+      "/usr/ansible/hosts"
+    ],
+    "answer": "/etc/ansible/hosts"
+  },
+  {
+    "category": "Ansible",
+    "set": 1,
+    "question": "Quelle commande vérifie la version d'Ansible ?",
+    "options": [
+      "ansible --version",
+      "ansible version",
+      "ansible -v",
+      "ansible check"
+    ],
+    "answer": "ansible --version"
+  },
+  {
+    "category": "Ansible",
+    "set": 1,
+    "question": "Quel protocole le plugin de connexion par défaut d'Ansible utilise-t-il normalement pour les hôtes Linux ?",
+    "options": [
+      "SSH",
+      "FTP",
+      "Telnet",
+      "HTTP"
+    ],
+    "answer": "SSH"
+  },
+  {
+    "category": "Ansible",
+    "set": 1,
+    "question": "Qu'est-ce qu'un Playbook Ansible ?",
+    "options": [
+      "Fichier YAML contenant des tâches d'automatisation",
+      "Fichier d'inventaire",
+      "Script Python",
+      "Fichier de configuration"
+    ],
+    "answer": "Fichier YAML contenant des tâches d'automatisation"
+  },
+  {
+    "category": "Ansible",
+    "set": 1,
+    "question": "Quelle commande exécute un playbook Ansible ?",
+    "options": [
+      "ansible-playbook",
+      "ansible-run",
+      "ansible-execute",
+      "ansible-start"
+    ],
+    "answer": "ansible-playbook"
+  },
+  {
+    "category": "Ansible",
+    "set": 1,
+    "question": "Quel mot-clé définit les hôtes cibles dans un playbook ?",
+    "options": [
+      "hosts",
+      "servers",
+      "nodes",
+      "targets"
+    ],
+    "answer": "hosts"
+  },
+  {
+    "category": "Ansible",
+    "set": 1,
+    "question": "Quel mot-clé définit les tâches dans un playbook ?",
+    "options": [
+      "tasks",
+      "actions",
+      "jobs",
+      "steps"
+    ],
+    "answer": "tasks"
+  },
+  {
+    "category": "Ansible",
+    "set": 1,
+    "question": "Quel module copie des fichiers vers des hôtes distants ?",
+    "options": [
+      "copy",
+      "fetch",
+      "file",
+      "transfer"
+    ],
+    "answer": "copy"
+  },
+  {
+    "category": "Ansible",
+    "set": 1,
+    "question": "Quel module gère les services ?",
+    "options": [
+      "service",
+      "systemctl",
+      "daemon",
+      "process"
+    ],
+    "answer": "service"
+  },
+  {
+    "category": "Ansible",
+    "set": 1,
+    "question": "Quelle commande vérifie la connectivité Ansible et la disponibilité d'un Python utilisable sur tous les hôtes POSIX ciblés ?",
+    "options": [
+      "ansible all -m ping",
+      "ansible ping",
+      "ansible test",
+      "ansible connect"
+    ],
+    "answer": "ansible all -m ping"
+  },
+  {
+    "category": "Ansible",
+    "set": 1,
+    "question": "Quel format facilement lisible utilise-t-on habituellement pour écrire les playbooks Ansible ?",
+    "options": [
+      "YAML",
+      "JSON",
+      "XML",
+      "INI"
+    ],
+    "answer": "YAML"
+  },
+  {
+    "category": "Ansible",
+    "set": 1,
+    "question": "Quel fichier configure les paramètres d'Ansible ?",
+    "options": [
+      "ansible.cfg",
+      "ansible.conf",
+      "config.yml",
+      "ansible.ini"
+    ],
+    "answer": "ansible.cfg"
+  },
+  {
+    "category": "Ansible",
+    "set": 1,
+    "question": "Quel module Ansible collecte des faits sur un hôte géré ?",
+    "options": [
+      "ansible.builtin.stat",
+      "ansible.builtin.debug",
+      "ansible.builtin.assert",
+      "ansible.builtin.setup"
+    ],
+    "answer": "ansible.builtin.setup"
+  },
+  {
+    "category": "Ansible",
+    "set": 1,
+    "question": "Quel paramètre de tâche active l'élévation des privilèges dans Ansible ?",
+    "options": [
+      "run_once: true",
+      "delegate_facts: true",
+      "become: true",
+      "check_mode: true"
+    ],
+    "answer": "become: true"
+  },
+  {
+    "category": "Ansible",
+    "set": 1,
+    "question": "Quelle variable d'inventaire définit l'utilisateur de connexion à un hôte ?",
+    "options": [
+      "ansible_connection",
+      "ansible_user",
+      "ansible_host",
+      "ansible_port"
+    ],
+    "answer": "ansible_user"
+  },
+  {
+    "category": "Ansible",
+    "set": 1,
+    "question": "Quelle option sélectionne un fichier d'inventaire lors de l'exécution d'ansible-playbook ?",
+    "options": [
+      "-i inventory.ini",
+      "-e inventory.ini",
+      "--limit inventory.ini",
+      "--tags inventory.ini"
+    ],
+    "answer": "-i inventory.ini"
+  },
+  {
+    "category": "Ansible",
+    "set": 1,
+    "question": "Quel module garantit l'existence d'un répertoire sur un hôte géré ?",
+    "options": [
+      "ansible.builtin.fetch",
+      "ansible.builtin.slurp",
+      "ansible.builtin.template",
+      "ansible.builtin.file"
+    ],
+    "answer": "ansible.builtin.file"
+  },
+  {
+    "category": "Ansible",
+    "set": 1,
+    "question": "Quel module récupère un fichier distant et l'enregistre sur le nœud de contrôle ?",
+    "options": [
+      "ansible.builtin.get_url",
+      "ansible.builtin.unarchive",
+      "ansible.builtin.fetch",
+      "ansible.builtin.copy"
+    ],
+    "answer": "ansible.builtin.fetch"
+  },
+  {
+    "category": "Ansible",
+    "set": 1,
+    "question": "Quel module fournit une interface générique au gestionnaire de paquets de l'hôte cible ?",
+    "options": [
+      "ansible.builtin.package_facts",
+      "ansible.builtin.package",
+      "ansible.builtin.service",
+      "ansible.builtin.command"
+    ],
+    "answer": "ansible.builtin.package"
+  },
+  {
+    "category": "Ansible",
+    "set": 1,
+    "question": "Quelle affirmation décrit la gestion habituelle sans agent des hôtes Linux par Ansible ?",
+    "options": [
+      "Il n'est pas nécessaire d'installer un agent Ansible permanent sur chaque hôte géré",
+      "Chaque hôte géré doit exécuter un service d'ordonnancement Ansible",
+      "Chaque hôte géré doit exécuter le serveur Galaxy",
+      "Chaque hôte géré doit se connecter à un courtier de messages Ansible"
+    ],
+    "answer": "Il n'est pas nécessaire d'installer un agent Ansible permanent sur chaque hôte géré"
+  },
+  {
+    "category": "Ansible",
+    "set": 1,
+    "question": "Quel module exécute une commande via un shell distant lorsque des opérateurs de shell sont nécessaires ?",
+    "options": [
+      "ansible.builtin.command",
+      "ansible.builtin.script",
+      "ansible.builtin.debug",
+      "ansible.builtin.shell"
+    ],
+    "answer": "ansible.builtin.shell"
+  },
+  {
+    "category": "Ansible",
+    "set": 1,
+    "question": "Quelle variable d'inventaire permet au nom web1 de se connecter à une autre adresse IP ?",
+    "options": [
+      "ansible_user",
+      "ansible_port",
+      "ansible_host",
+      "inventory_hostname"
+    ],
+    "answer": "ansible_host"
+  }
+]

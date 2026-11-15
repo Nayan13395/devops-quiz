@@ -1,3 +1,4 @@
+import '../l10n/game_localizations.dart';
 import 'dart:async';
 import 'dart:math';
 
@@ -104,7 +105,13 @@ class _MysteryDealScreenState extends State<MysteryDealScreen> {
       });
 
       ScaffoldMessenger.of(context).showSnackBar(
-        SnackBar(content: Text('Unable to check Mystery Deal status: $e')),
+        SnackBar(
+          content: Text(
+            gameL10n(
+              context,
+            ).gameUiUnableToCheckMysteryDealStatus((e).toString()),
+          ),
+        ),
       );
     }
   }
@@ -178,7 +185,7 @@ class _MysteryDealScreenState extends State<MysteryDealScreen> {
                 SizedBox(
                   width: double.infinity,
                   child: Text(
-                    'Box ${_selectedBox! + 1}',
+                    gameL10n(context).gameUiBox((_selectedBox! + 1).toString()),
                     textAlign: TextAlign.center,
                     style: const TextStyle(
                       fontSize: 24,
@@ -193,7 +200,7 @@ class _MysteryDealScreenState extends State<MysteryDealScreen> {
                 // YOU FOUND
                 // ===========================================
                 Text(
-                  'You found',
+                  gameL10n(context).gameUiYouFound,
                   textAlign: TextAlign.center,
                   style: TextStyle(
                     fontSize: 16,
@@ -209,7 +216,9 @@ class _MysteryDealScreenState extends State<MysteryDealScreen> {
                 SizedBox(
                   width: double.infinity,
                   child: Text(
-                    '${_selectedReward!} POINTS',
+                    gameL10n(
+                      context,
+                    ).gameUiPOINTSeb9559c((_selectedReward!).toString()),
                     textAlign: TextAlign.center,
                     style: TextStyle(
                       fontSize: 32,
@@ -235,8 +244,9 @@ class _MysteryDealScreenState extends State<MysteryDealScreen> {
                     borderRadius: BorderRadius.circular(16),
                   ),
                   child: Text(
-                    'Answer 1 quiz question correctly '
-                    'to claim this reward.',
+                    gameL10n(
+                      context,
+                    ).gameUiAnswer1QuizQuestionCorrectlyToClaimThisReward,
                     textAlign: TextAlign.center,
                     style: TextStyle(
                       fontSize: 15,
@@ -249,7 +259,7 @@ class _MysteryDealScreenState extends State<MysteryDealScreen> {
                 const SizedBox(height: 14),
 
                 Text(
-                  'Wrong answer = reward lost.',
+                  gameL10n(context).gameUiWrongAnswerRewardLost,
                   textAlign: TextAlign.center,
                   style: TextStyle(
                     fontSize: 13,
@@ -273,9 +283,12 @@ class _MysteryDealScreenState extends State<MysteryDealScreen> {
                   _openRewardQuestion();
                 },
                 icon: const Icon(Icons.quiz_outlined),
-                label: const Text(
-                  'Start Question',
-                  style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+                label: Text(
+                  gameL10n(context).gameUiStartQuestion,
+                  style: const TextStyle(
+                    fontSize: 16,
+                    fontWeight: FontWeight.bold,
+                  ),
                 ),
               ),
             ),
@@ -321,7 +334,7 @@ class _MysteryDealScreenState extends State<MysteryDealScreen> {
 
     if (_checkingDailyStatus) {
       return Scaffold(
-        appBar: AppBar(title: const Text('💼 Mystery Deal')),
+        appBar: AppBar(title: Text(gameL10n(context).gameUiMysteryDeal9c9a14e)),
         body: const Center(child: CircularProgressIndicator()),
       );
     }
@@ -331,7 +344,7 @@ class _MysteryDealScreenState extends State<MysteryDealScreen> {
     }
 
     return Scaffold(
-      appBar: AppBar(title: const Text('💼 Mystery Deal')),
+      appBar: AppBar(title: Text(gameL10n(context).gameUiMysteryDeal9c9a14e)),
       body: SafeArea(
         child: LayoutBuilder(
           builder: (context, constraints) {
@@ -358,7 +371,7 @@ class _MysteryDealScreenState extends State<MysteryDealScreen> {
     final bool won = _lastWon == true;
 
     return Scaffold(
-      appBar: AppBar(title: const Text('💼 Mystery Deal')),
+      appBar: AppBar(title: Text(gameL10n(context).gameUiMysteryDeal9c9a14e)),
       body: SafeArea(
         child: Center(
           child: SingleChildScrollView(
@@ -372,17 +385,21 @@ class _MysteryDealScreenState extends State<MysteryDealScreen> {
 
                   const SizedBox(height: 18),
 
-                  const Text(
-                    'Mystery Deal Completed!',
+                  Text(
+                    gameL10n(context).gameUiMysteryDealCompleted,
                     textAlign: TextAlign.center,
-                    style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
+                    style: const TextStyle(
+                      fontSize: 25,
+                      fontWeight: FontWeight.bold,
+                    ),
                   ),
 
                   const SizedBox(height: 10),
 
                   Text(
-                    'You have already played '
-                    'Mystery Deal today.',
+                    gameL10n(
+                      context,
+                    ).gameUiYouHaveAlreadyPlayedMysteryDealToday,
                     textAlign: TextAlign.center,
                     style: TextStyle(
                       fontSize: 16,
@@ -405,7 +422,9 @@ class _MysteryDealScreenState extends State<MysteryDealScreen> {
                       child: Column(
                         children: [
                           Text(
-                            won ? 'Today you won' : 'Today\'s reward',
+                            won
+                                ? gameL10n(context).gameUiTodayYouWon
+                                : gameL10n(context).gameUiTodaySReward,
                             style: TextStyle(
                               color: won
                                   ? colors.onPrimaryContainer
@@ -417,8 +436,12 @@ class _MysteryDealScreenState extends State<MysteryDealScreen> {
 
                           Text(
                             won
-                                ? '+$_lastReward POINTS'
-                                : '$_lastReward POINTS LOST',
+                                ? gameL10n(context).gameUiPOINTS09ad970(
+                                    (_lastReward).toString(),
+                                  )
+                                : gameL10n(
+                                    context,
+                                  ).gameUiPOINTSLOST((_lastReward).toString()),
                             textAlign: TextAlign.center,
                             style: TextStyle(
                               fontSize: 25,
@@ -436,8 +459,9 @@ class _MysteryDealScreenState extends State<MysteryDealScreen> {
                   const SizedBox(height: 22),
 
                   Text(
-                    'Come back tomorrow for '
-                    'another mystery box!',
+                    gameL10n(
+                      context,
+                    ).gameUiComeBackTomorrowForAnotherMysteryBox,
                     textAlign: TextAlign.center,
                     style: TextStyle(
                       fontSize: 15,
@@ -457,9 +481,9 @@ class _MysteryDealScreenState extends State<MysteryDealScreen> {
                         Navigator.pop(context);
                       },
                       icon: const Icon(Icons.arrow_back_rounded),
-                      label: const Text(
-                        'Back to Games',
-                        style: TextStyle(
+                      label: Text(
+                        gameL10n(context).gameUiBackToGames,
+                        style: const TextStyle(
                           fontSize: 16,
                           fontWeight: FontWeight.bold,
                         ),
@@ -492,17 +516,16 @@ class _MysteryDealScreenState extends State<MysteryDealScreen> {
 
     return Column(
       children: [
-        const Text(
-          'Choose Your Mystery Box',
+        Text(
+          gameL10n(context).gameUiChooseYourMysteryBox,
           textAlign: TextAlign.center,
-          style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
+          style: const TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
         ),
 
         const SizedBox(height: 8),
 
         Text(
-          'Each box contains a hidden reward '
-          'between 10 and 1000 points.',
+          gameL10n(context).gameUiEachBoxContainsAHiddenRewardBetween10And,
           textAlign: TextAlign.center,
           style: TextStyle(fontSize: 15, color: colors.onSurfaceVariant),
         ),
@@ -510,7 +533,7 @@ class _MysteryDealScreenState extends State<MysteryDealScreen> {
         const SizedBox(height: 8),
 
         Text(
-          'Pick only one box!',
+          gameL10n(context).gameUiPickOnlyOneBox,
           textAlign: TextAlign.center,
           style: TextStyle(
             fontSize: 14,
@@ -566,9 +589,9 @@ class _MysteryDealScreenState extends State<MysteryDealScreen> {
               Navigator.pop(context);
             },
             icon: const Icon(Icons.arrow_back_rounded),
-            label: const Text(
-              'Back to Games',
-              style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+            label: Text(
+              gameL10n(context).gameUiBackToGames,
+              style: const TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
             ),
           ),
         ),

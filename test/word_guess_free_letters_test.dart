@@ -1,11 +1,25 @@
 import 'package:devops_quiz/screens/word_guess_levels_screen.dart';
 import 'package:devops_quiz/services/word_guess_level_service.dart';
+import 'package:devops_quiz/services/point_service.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 void main() {
   TestWidgetsFlutterBinding.ensureInitialized();
+
+  testWidgets('hint requires funds and never reveals a free letter', (
+    tester,
+  ) async {
+    SharedPreferences.setMockInitialValues({'game_sound_enabled': false});
+    await tester.pumpWidget(const MaterialApp(home: WordGuessLevelsScreen()));
+    await tester.pumpAndSettle();
+    await tester.tap(find.byKey(const ValueKey('word-guess-hint')));
+    await tester.pumpAndSettle();
+    expect(find.text('You need 20 points to use a hint.'), findsOneWidget);
+    expect(_slotLetter(tester, 1), '');
+    expect(await PointService.getTotalPoints(), 0);
+  });
 
   testWidgets('short word free letters stay fixed in their slots', (
     tester,

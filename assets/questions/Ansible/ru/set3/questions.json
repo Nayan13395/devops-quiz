@@ -1,0 +1,302 @@
+[
+  {
+    "category": "Ansible",
+    "set": 3,
+    "question": "Что такое роль Ansible?",
+    "options": [
+      "Переиспользуемый набор задач и файлов",
+      "Учётная запись пользователя",
+      "Группа инвентаря",
+      "Переменная playbook"
+    ],
+    "answer": "Переиспользуемый набор задач и файлов"
+  },
+  {
+    "category": "Ansible",
+    "set": 3,
+    "question": "Какая команда создаёт структуру новой роли?",
+    "options": [
+      "ansible-galaxy init",
+      "ansible role create",
+      "ansible init role",
+      "ansible-playbook init"
+    ],
+    "answer": "ansible-galaxy init"
+  },
+  {
+    "category": "Ansible",
+    "set": 3,
+    "question": "В каком каталоге находятся задачи роли?",
+    "options": [
+      "tasks",
+      "handlers",
+      "files",
+      "vars"
+    ],
+    "answer": "tasks"
+  },
+  {
+    "category": "Ansible",
+    "set": 3,
+    "question": "Какой файл является основным файлом задач в роли?",
+    "options": [
+      "tasks/main.yml",
+      "tasks/tasks.yml",
+      "main/tasks.yml",
+      "role.yml"
+    ],
+    "answer": "tasks/main.yml"
+  },
+  {
+    "category": "Ansible",
+    "set": 3,
+    "question": "В каком каталоге находятся обработчики роли?",
+    "options": [
+      "handlers",
+      "tasks",
+      "events",
+      "notify"
+    ],
+    "answer": "handlers"
+  },
+  {
+    "category": "Ansible",
+    "set": 3,
+    "question": "В каком каталоге хранятся шаблоны Jinja2 в роли?",
+    "options": [
+      "templates",
+      "files",
+      "jinja",
+      "render"
+    ],
+    "answer": "templates"
+  },
+  {
+    "category": "Ansible",
+    "set": 3,
+    "question": "В каком каталоге хранятся статические файлы в роли?",
+    "options": [
+      "files",
+      "templates",
+      "static",
+      "resources"
+    ],
+    "answer": "files"
+  },
+  {
+    "category": "Ansible",
+    "set": 3,
+    "question": "В каком каталоге находятся переменные роли?",
+    "options": [
+      "vars",
+      "variables",
+      "config",
+      "settings"
+    ],
+    "answer": "vars"
+  },
+  {
+    "category": "Ansible",
+    "set": 3,
+    "question": "В каком каталоге находятся переменные по умолчанию?",
+    "options": [
+      "defaults",
+      "vars",
+      "config",
+      "settings"
+    ],
+    "answer": "defaults"
+  },
+  {
+    "category": "Ansible",
+    "set": 3,
+    "question": "Какое ключевое слово на уровне play объявляет статический список ролей, а не вызывает роль из отдельной задачи?",
+    "options": [
+      "roles",
+      "include_role",
+      "role",
+      "import_role"
+    ],
+    "answer": "roles"
+  },
+  {
+    "category": "Ansible",
+    "set": 3,
+    "question": "Что такое Ansible Galaxy?",
+    "options": [
+      "Репозиторий ролей и коллекций Ansible",
+      "Инструмент мониторинга",
+      "Платформа CI/CD",
+      "Менеджер инвентаря"
+    ],
+    "answer": "Репозиторий ролей и коллекций Ansible"
+  },
+  {
+    "category": "Ansible",
+    "set": 3,
+    "question": "Какая команда устанавливает роль из Galaxy?",
+    "options": [
+      "ansible-galaxy install",
+      "ansible install role",
+      "ansible role add",
+      "ansible-galaxy add"
+    ],
+    "answer": "ansible-galaxy install"
+  },
+  {
+    "category": "Ansible",
+    "set": 3,
+    "question": "Для чего используется Ansible Vault?",
+    "options": [
+      "Шифрование конфиденциальных данных",
+      "Управление инвентарями",
+      "Запуск playbook",
+      "Установка ролей"
+    ],
+    "answer": "Шифрование конфиденциальных данных"
+  },
+  {
+    "category": "Ansible",
+    "set": 3,
+    "question": "Какая команда шифрует существующий файл?",
+    "options": [
+      "ansible-vault encrypt",
+      "ansible-vault secure",
+      "ansible-vault create",
+      "ansible-vault lock"
+    ],
+    "answer": "ansible-vault encrypt"
+  },
+  {
+    "category": "Ansible",
+    "set": 3,
+    "question": "Что такое коллекции Ansible (Collections)?",
+    "options": [
+      "Пакеты, содержащие роли, модули и плагины",
+      "Группы инвентаря",
+      "Зашифрованные файлы",
+      "Переменные YAML"
+    ],
+    "answer": "Пакеты, содержащие роли, модули и плагины"
+  },
+  {
+    "category": "Ansible",
+    "set": 3,
+    "question": "Какой файл роли обычно объявляет зависимости от других ролей?",
+    "options": [
+      "vars/main.yml",
+      "meta/main.yml",
+      "defaults/main.yml",
+      "handlers/main.yml"
+    ],
+    "answer": "meta/main.yml"
+  },
+  {
+    "category": "Ansible",
+    "set": 3,
+    "question": "Какая команда устанавливает коллекцию community.general?",
+    "options": [
+      "ansible-galaxy collection install community.general",
+      "ansible-galaxy role install community.general",
+      "ansible-galaxy collection build community.general",
+      "ansible-galaxy collection verify community.general"
+    ],
+    "answer": "ansible-galaxy collection install community.general"
+  },
+  {
+    "category": "Ansible",
+    "set": 3,
+    "question": "Что обозначает полное имя коллекции ansible.builtin.copy?",
+    "options": [
+      "Роль copy в группе узлов builtin",
+      "Имя узла инвентаря, за которым следует тип подключения",
+      "Идентификатор Vault, за которым следует имя зашифрованного файла",
+      "Модуль copy коллекции builtin в пространстве имён ansible"
+    ],
+    "answer": "Модуль copy коллекции builtin в пространстве имён ansible"
+  },
+  {
+    "category": "Ansible",
+    "set": 3,
+    "question": "Какая команда показывает зашифрованный файл Vault, не оставляя его на диске в расшифрованном виде?",
+    "options": [
+      "ansible-vault edit secrets.yml",
+      "ansible-vault rekey secrets.yml",
+      "ansible-vault view secrets.yml",
+      "ansible-vault decrypt secrets.yml"
+    ],
+    "answer": "ansible-vault view secrets.yml"
+  },
+  {
+    "category": "Ansible",
+    "set": 3,
+    "question": "Какая команда меняет пароль существующего файла, зашифрованного Vault?",
+    "options": [
+      "ansible-vault create secrets.yml",
+      "ansible-vault rekey secrets.yml",
+      "ansible-vault view secrets.yml",
+      "ansible-vault encrypt secrets.yml"
+    ],
+    "answer": "ansible-vault rekey secrets.yml"
+  },
+  {
+    "category": "Ansible",
+    "set": 3,
+    "question": "Какая опция запрашивает пароль Vault при выполнении плейбука?",
+    "options": [
+      "--ask-vault-pass",
+      "--ask-pass",
+      "--ask-become-pass",
+      "--private-key"
+    ],
+    "answer": "--ask-vault-pass"
+  },
+  {
+    "category": "Ansible",
+    "set": 3,
+    "question": "Какое действие задачи динамически загружает роль во время выполнения?",
+    "options": [
+      "ansible.builtin.import_role",
+      "ansible.builtin.import_tasks",
+      "ansible.builtin.include_vars",
+      "ansible.builtin.include_role"
+    ],
+    "answer": "ansible.builtin.include_role"
+  },
+  {
+    "category": "Ansible",
+    "set": 3,
+    "question": "Какое действие задачи статически импортирует файл с задачами?",
+    "options": [
+      "ansible.builtin.include_vars",
+      "ansible.builtin.import_role",
+      "ansible.builtin.import_tasks",
+      "ansible.builtin.include_tasks"
+    ],
+    "answer": "ansible.builtin.import_tasks"
+  },
+  {
+    "category": "Ansible",
+    "set": 3,
+    "question": "Какой источник переменных имеет приоритет, если одно имя встречается в значениях по умолчанию и переменных роли?",
+    "options": [
+      "Два определения всегда вызывают синтаксическую ошибку",
+      "Переменные роли",
+      "Значения роли по умолчанию",
+      "Два значения всегда объединяются"
+    ],
+    "answer": "Переменные роли"
+  },
+  {
+    "category": "Ansible",
+    "set": 3,
+    "question": "Какая команда создаёт зашифрованную переменную из переданной строки?",
+    "options": [
+      "ansible-vault encrypt_string",
+      "ansible-vault encrypt",
+      "ansible-vault rekey",
+      "ansible-vault view"
+    ],
+    "answer": "ansible-vault encrypt_string"
+  }
+]

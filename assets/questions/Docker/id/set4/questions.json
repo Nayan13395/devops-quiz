@@ -1,0 +1,302 @@
+[
+  {
+    "category": "Docker",
+    "set": 4,
+    "question": "Perintah mana yang mengunduh image dari Docker Hub?",
+    "options": [
+      "docker pull",
+      "docker fetch",
+      "docker copy",
+      "docker get"
+    ],
+    "answer": "docker pull"
+  },
+  {
+    "category": "Docker",
+    "set": 4,
+    "question": "Perintah mana yang menarik (pull) tag image tertentu?",
+    "options": [
+      "docker pull image:tag",
+      "docker pull --tag tag",
+      "docker pull -t tag",
+      "docker get image:tag"
+    ],
+    "answer": "docker pull image:tag"
+  },
+  {
+    "category": "Docker",
+    "set": 4,
+    "question": "Perintah mana yang memeriksa manifes image tanpa mengunduh lapisan image?",
+    "options": [
+      "docker manifest inspect",
+      "docker pull --manifest",
+      "docker image manifest",
+      "docker show manifest"
+    ],
+    "answer": "docker manifest inspect"
+  },
+  {
+    "category": "Docker",
+    "set": 4,
+    "question": "Perintah mana yang menampilkan daftar digest image?",
+    "options": [
+      "docker images --digests",
+      "docker digest",
+      "docker image digest",
+      "docker inspect digest"
+    ],
+    "answer": "docker images --digests"
+  },
+  {
+    "category": "Docker",
+    "set": 4,
+    "question": "Dengan Docker Engine API 1.42 atau yang lebih baru, perintah mana yang menghapus semua volume lokal tidak terpakai, termasuk volume bernama?",
+    "options": [
+      "docker volume prune -a",
+      "docker volume clean",
+      "docker prune volumes",
+      "docker rm volume"
+    ],
+    "answer": "docker volume prune -a"
+  },
+  {
+    "category": "Docker",
+    "set": 4,
+    "question": "Perintah mana yang menghapus jaringan Docker khusus yang tidak terpakai?",
+    "options": [
+      "docker network prune",
+      "docker prune network",
+      "docker clean network",
+      "docker rm network"
+    ],
+    "answer": "docker network prune"
+  },
+  {
+    "category": "Docker",
+    "set": 4,
+    "question": "Perintah mana yang menampilkan penggunaan disk cache build untuk pembangun Buildx yang dipilih?",
+    "options": [
+      "docker buildx du",
+      "docker build cache",
+      "docker cache usage",
+      "docker builder stats"
+    ],
+    "answer": "docker buildx du"
+  },
+  {
+    "category": "Docker",
+    "set": 4,
+    "question": "Perintah mana yang menghapus cache build yang tidak terpakai?",
+    "options": [
+      "docker builder prune",
+      "docker build clean",
+      "docker cache prune",
+      "docker prune build"
+    ],
+    "answer": "docker builder prune"
+  },
+  {
+    "category": "Docker",
+    "set": 4,
+    "question": "Perintah mana yang mendukung pembuatan image multiplatform jika diberi daftar --platform dan pembangun yang sesuai?",
+    "options": [
+      "docker buildx build",
+      "docker build multi",
+      "docker build platform",
+      "docker image buildx"
+    ],
+    "answer": "docker buildx build"
+  },
+  {
+    "category": "Docker",
+    "set": 4,
+    "question": "Perintah mana yang menampilkan daftar builder Buildx yang tersedia?",
+    "options": [
+      "docker buildx ls",
+      "docker buildx show",
+      "docker builder ls",
+      "docker buildx list"
+    ],
+    "answer": "docker buildx ls"
+  },
+  {
+    "category": "Docker",
+    "set": 4,
+    "question": "Perintah mana yang menampilkan semua context Docker?",
+    "options": [
+      "docker context ls",
+      "docker contexts",
+      "docker context show",
+      "docker list context"
+    ],
+    "answer": "docker context ls"
+  },
+  {
+    "category": "Docker",
+    "set": 4,
+    "question": "Perintah mana yang beralih ke context Docker yang berbeda?",
+    "options": [
+      "docker context use",
+      "docker context switch",
+      "docker use context",
+      "docker context select"
+    ],
+    "answer": "docker context use"
+  },
+  {
+    "category": "Docker",
+    "set": 4,
+    "question": "Perintah mana yang menghapus sebuah context Docker?",
+    "options": [
+      "docker context rm",
+      "docker context inspect",
+      "docker remove context",
+      "docker context use"
+    ],
+    "answer": "docker context rm"
+  },
+  {
+    "category": "Docker",
+    "set": 4,
+    "question": "Instruksi Dockerfile mana yang menentukan base image?",
+    "options": [
+      "FROM",
+      "BASE",
+      "IMAGE",
+      "START"
+    ],
+    "answer": "FROM"
+  },
+  {
+    "category": "Docker",
+    "set": 4,
+    "question": "Instruksi Dockerfile mana yang mengatur variabel lingkungan?",
+    "options": [
+      "ENV",
+      "SET",
+      "VAR",
+      "EXPORT"
+    ],
+    "answer": "ENV"
+  },
+  {
+    "category": "Docker",
+    "set": 4,
+    "question": "Perintah mana yang memulai layanan dalam berkas Compose di latar belakang?",
+    "options": [
+      "docker compose up -d",
+      "docker compose create",
+      "docker compose config",
+      "docker compose down"
+    ],
+    "answer": "docker compose up -d"
+  },
+  {
+    "category": "Docker",
+    "set": 4,
+    "question": "Kunci tingkat teratas Compose mana yang berisi definisi layanan aplikasi?",
+    "options": [
+      "volumes",
+      "networks",
+      "configs",
+      "services"
+    ],
+    "answer": "services"
+  },
+  {
+    "category": "Docker",
+    "set": 4,
+    "question": "Perintah mana yang menampilkan dan memvalidasi konfigurasi Compose yang telah diuraikan?",
+    "options": [
+      "docker compose images",
+      "docker compose top",
+      "docker compose config",
+      "docker compose ps"
+    ],
+    "answer": "docker compose config"
+  },
+  {
+    "category": "Docker",
+    "set": 4,
+    "question": "Apa yang biasanya dilakukan 'docker compose down' tanpa --volumes?",
+    "options": [
+      "Hanya menghapus berkas konfigurasi Compose",
+      "Menghapus kontainer dan jaringan proyek sambil mempertahankan volume bernama",
+      "Menghapus semua image dan volume host",
+      "Menjeda kontainer tanpa menghapusnya"
+    ],
+    "answer": "Menghapus kontainer dan jaringan proyek sambil mempertahankan volume bernama"
+  },
+  {
+    "category": "Docker",
+    "set": 4,
+    "question": "Jika depends_on Compose menggunakan service_healthy, apa yang harus terjadi sebelum layanan yang bergantung padanya dimulai?",
+    "options": [
+      "Dependensi harus lulus pemeriksaan kesehatan yang dikonfigurasi",
+      "Dependensi harus berakhir dengan sukses",
+      "Setiap port yang diekspos harus diterbitkan pada host",
+      "Image dependensi harus dikirim ke registri"
+    ],
+    "answer": "Dependensi harus lulus pemeriksaan kesehatan yang dikonfigurasi"
+  },
+  {
+    "category": "Docker",
+    "set": 4,
+    "question": "Opsi Buildx mana yang menentukan platform tujuan seperti linux/amd64 dan linux/arm64?",
+    "options": [
+      "--target",
+      "--builder",
+      "--progress",
+      "--platform"
+    ],
+    "answer": "--platform"
+  },
+  {
+    "category": "Docker",
+    "set": 4,
+    "question": "Opsi Buildx mana yang memilih tahap Dockerfile bernama sebagai target build?",
+    "options": [
+      "--tag",
+      "--file",
+      "--target",
+      "--platform"
+    ],
+    "answer": "--target"
+  },
+  {
+    "category": "Docker",
+    "set": 4,
+    "question": "Opsi build Buildx mana yang langsung mengirim hasil build ke registri?",
+    "options": [
+      "--pull",
+      "--push",
+      "--load",
+      "--no-cache"
+    ],
+    "answer": "--push"
+  },
+  {
+    "category": "Docker",
+    "set": 4,
+    "question": "Apa yang diperintahkan '--no-cache' kepada Docker saat membangun image?",
+    "options": [
+      "Jangan gunakan kembali hasil build yang disimpan dalam cache",
+      "Hapus semua image lokal",
+      "Nonaktifkan cache sistem berkas kontainer saat eksekusi",
+      "Lewati pengunduhan image dasar"
+    ],
+    "answer": "Jangan gunakan kembali hasil build yang disimpan dalam cache"
+  },
+  {
+    "category": "Docker",
+    "set": 4,
+    "question": "Perintah mana yang menampilkan rincian volume Docker bernama?",
+    "options": [
+      "docker volume ls",
+      "docker volume create data",
+      "docker volume prune",
+      "docker volume inspect data"
+    ],
+    "answer": "docker volume inspect data"
+  }
+]

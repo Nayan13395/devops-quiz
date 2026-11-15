@@ -5,13 +5,20 @@ import 'package:shared_preferences/shared_preferences.dart';
 
 import '../language_provider.dart';
 import '../theme_provider.dart';
+import '../font_provider.dart';
 import '../l10n/app_localizations.dart';
-import '../services/game_sound_service.dart';
+import '../l10n/achievement_localizations.dart';
+import '../widgets/sound_settings.dart';
+import '../services/font_service.dart';
 import '../services/google_auth_service.dart';
+import '../services/notification_service.dart';
 import '../services/user_profile_service.dart';
 import '../services/user_session_service.dart';
+import 'font_screen.dart';
 import 'theme_screen.dart';
+import 'saved_data_screen.dart';
 import 'welcome_screen.dart';
+import 'category_screen.dart';
 
 class SettingsScreen extends StatefulWidget {
   const SettingsScreen({super.key});
@@ -22,7 +29,6 @@ class SettingsScreen extends StatefulWidget {
 
 class _SettingsScreenState extends State<SettingsScreen> {
   bool _isLoading = true;
-  bool _soundEnabled = true;
   String? _loginType;
   String _userName = 'User';
   String _userEmail = '';
@@ -32,34 +38,27 @@ class _SettingsScreenState extends State<SettingsScreen> {
   void initState() {
     super.initState();
     _loadUserData();
-    _loadSoundSetting();
-  }
-
-  Future<void> _loadSoundSetting() async {
-    final enabled = await GameSoundService.isEnabled();
-    if (mounted) setState(() => _soundEnabled = enabled);
-  }
-
-  Future<void> _setSoundEnabled(bool enabled) async {
-    setState(() => _soundEnabled = enabled);
-    await GameSoundService.setEnabled(enabled);
   }
 
   Future<void> _loadUserData() async {
     try {
       final type = await UserSessionService.getLoginType();
+      _loginType = type;
 
       setState(() {
-        _loginType = type;
-        _userName = UserProfileService.firstName.isNotEmpty
+        _userName =
+            type == 'google' &&
+                UserProfileService.isGoogleUser &&
+                UserProfileService.firstName.isNotEmpty
             ? UserProfileService.firstName
-            : 'Guest User';
-        _userEmail = UserProfileService.email.isNotEmpty
+            : '';
+        _userEmail = type == 'google' && UserProfileService.email.isNotEmpty
             ? UserProfileService.email
             : '';
 
         // Safely load photo URL, ensuring it's not an empty string
-        _userPhoto = UserProfileService.photoUrl?.isNotEmpty == true
+        _userPhoto =
+            type == 'google' && UserProfileService.photoUrl?.isNotEmpty == true
             ? UserProfileService.photoUrl
             : null;
 
@@ -84,13 +83,16 @@ class _SettingsScreenState extends State<SettingsScreen> {
       if (!mounted) return;
 
       if (user != null) {
+        final localizations = AppLocalizations.of(context)!;
         setState(() {
           _loginType = 'google';
 
           // Prefer UserProfileService, fallback to Firebase user object
-          _userName = UserProfileService.firstName.isNotEmpty
+          _userName =
+              UserProfileService.isGoogleUser &&
+                  UserProfileService.firstName.isNotEmpty
               ? UserProfileService.firstName
-              : (user.displayName?.split(' ').first ?? 'User');
+              : (user.displayName?.split(' ').first ?? '');
 
           _userEmail = UserProfileService.email.isNotEmpty
               ? UserProfileService.email
@@ -105,22 +107,31 @@ class _SettingsScreenState extends State<SettingsScreen> {
         });
 
         ScaffoldMessenger.of(context).showSnackBar(
-          const SnackBar(
-            content: Text('Google account connected successfully! 🎉'),
+          SnackBar(
+            content: Text(localizations.accountWelcomeGoogleConnected),
             backgroundColor: Colors.green,
           ),
         );
       } else {
         setState(() => _isLoading = false);
-        ScaffoldMessenger.of(
-          context,
-        ).showSnackBar(const SnackBar(content: Text('Sign-in was cancelled.')));
+        ScaffoldMessenger.of(context).showSnackBar(
+          SnackBar(
+            content: Text(
+              AppLocalizations.of(context)!.accountWelcomeSignInCancelled,
+            ),
+          ),
+        );
       }
     } catch (e) {
       setState(() => _isLoading = false);
-      ScaffoldMessenger.of(
-        context,
-      ).showSnackBar(SnackBar(content: Text('Failed to connect: $e')));
+      if (!mounted) return;
+      ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(
+          content: Text(
+            AppLocalizations.of(context)!.accountWelcomeConnectFailed('$e'),
+          ),
+        ),
+      );
     }
   }
 
@@ -129,11 +140,11 @@ class _SettingsScreenState extends State<SettingsScreen> {
   // =========================================================
 
   Future<void> _signOut() async {
+    final localizations = AppLocalizations.of(context)!;
     final bool confirm = await _showConfirmDialog(
-      title: 'Sign Out?',
-      message:
-          'Are you sure you want to sign out? You will need to sign in again to access your saved progress.',
-      confirmText: 'Sign Out',
+      title: localizations.accountWelcomeSignOutTitle,
+      message: localizations.accountWelcomeSignOutMessage,
+      confirmText: localizations.accountWelcomeSignOut,
       isDestructive: false,
     );
 
@@ -154,9 +165,14 @@ class _SettingsScreenState extends State<SettingsScreen> {
       );
     } catch (e) {
       setState(() => _isLoading = false);
-      ScaffoldMessenger.of(
-        context,
-      ).showSnackBar(SnackBar(content: Text('Sign out failed: $e')));
+      if (!mounted) return;
+      ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(
+          content: Text(
+            AppLocalizations.of(context)!.accountWelcomeSignOutFailed('$e'),
+          ),
+        ),
+      );
     }
   }
 
@@ -165,11 +181,11 @@ class _SettingsScreenState extends State<SettingsScreen> {
   // =========================================================
 
   Future<void> _resetApp() async {
+    final localizations = AppLocalizations.of(context)!;
     final bool confirm = await _showConfirmDialog(
-      title: '⚠️ Reset App Data?',
-      message:
-          'This will permanently delete ALL your points, streaks, game history, and settings. You will be signed out and returned to the start screen. This cannot be undone.',
-      confirmText: 'Reset Everything',
+      title: localizations.accountWelcomeResetAppTitle,
+      message: localizations.accountWelcomeResetAppMessage,
+      confirmText: localizations.accountWelcomeResetEverything,
       isDestructive: true,
     );
 
@@ -198,9 +214,14 @@ class _SettingsScreenState extends State<SettingsScreen> {
       );
     } catch (e) {
       setState(() => _isLoading = false);
-      ScaffoldMessenger.of(
-        context,
-      ).showSnackBar(SnackBar(content: Text('Reset failed: $e')));
+      if (!mounted) return;
+      ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(
+          content: Text(
+            AppLocalizations.of(context)!.accountWelcomeResetFailed('$e'),
+          ),
+        ),
+      );
     }
   }
 
@@ -214,6 +235,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
     required String confirmText,
     required bool isDestructive,
   }) async {
+    final cancelText = AppLocalizations.of(context)!.accountWelcomeCancel;
     final result = await showDialog<bool>(
       context: context,
       builder: (context) => AlertDialog(
@@ -229,7 +251,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
         actions: [
           TextButton(
             onPressed: () => Navigator.pop(context, false),
-            child: const Text('Cancel'),
+            child: Text(cancelText),
           ),
           FilledButton(
             onPressed: () => Navigator.pop(context, true),
@@ -301,7 +323,11 @@ class _SettingsScreenState extends State<SettingsScreen> {
                   ),
                   const SizedBox(height: 16),
                   Text(
-                    _userName,
+                    isGuest
+                        ? localizations.accountWelcomeGuest
+                        : (_userName.isNotEmpty && _userName != 'User'
+                              ? _userName
+                              : localizations.accountWelcomeUser),
                     style: const TextStyle(
                       fontSize: 22,
                       fontWeight: FontWeight.bold,
@@ -309,7 +335,9 @@ class _SettingsScreenState extends State<SettingsScreen> {
                   ),
                   const SizedBox(height: 4),
                   Text(
-                    isGuest ? 'Playing as Guest' : _userEmail,
+                    isGuest
+                        ? localizations.accountWelcomePlayingAsGuest
+                        : _userEmail,
                     style: TextStyle(
                       color: colorScheme.onSurfaceVariant,
                       fontSize: 14,
@@ -330,7 +358,9 @@ class _SettingsScreenState extends State<SettingsScreen> {
                             fontSize: 16,
                           ),
                         ),
-                        label: const Text('Connect Google Account'),
+                        label: Text(
+                          localizations.accountWelcomeConnectGoogleAccount,
+                        ),
                       ),
                     )
                   else if (isGoogle)
@@ -339,7 +369,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
                       child: OutlinedButton.icon(
                         onPressed: _signOut,
                         icon: const Icon(Icons.logout_rounded),
-                        label: const Text('Sign Out'),
+                        label: Text(localizations.accountWelcomeSignOut),
                         style: OutlinedButton.styleFrom(
                           foregroundColor: Colors.red,
                           side: const BorderSide(color: Colors.red),
@@ -403,7 +433,9 @@ class _SettingsScreenState extends State<SettingsScreen> {
                           fontWeight: FontWeight.w600,
                         ),
                       ),
-                      subtitle: Text(themeProvider.currentTheme.name),
+                      subtitle: Text(
+                        themeDisplayName(context, themeProvider.currentTheme),
+                      ),
                       trailing: const Icon(Icons.arrow_forward_ios, size: 18),
                       onTap: () {
                         Navigator.push(
@@ -417,21 +449,42 @@ class _SettingsScreenState extends State<SettingsScreen> {
                   },
                 ),
                 const Divider(height: 1),
-                SwitchListTile.adaptive(
-                  key: const ValueKey('settings-game-sounds'),
-                  contentPadding: const EdgeInsets.symmetric(
-                    horizontal: 20,
-                    vertical: 6,
-                  ),
-                  secondary: const Icon(Icons.volume_up_outlined, size: 28),
-                  title: const Text(
-                    'Game sounds',
-                    style: TextStyle(fontSize: 18, fontWeight: FontWeight.w600),
-                  ),
-                  subtitle: const Text('Sound effects for game actions'),
-                  value: _soundEnabled,
-                  onChanged: _setSoundEnabled,
+                Builder(
+                  builder: (context) {
+                    final fontProvider = Provider.of<FontProvider?>(context);
+                    if (fontProvider == null) return const SizedBox.shrink();
+                    final font = fontProvider.selectedFont;
+                    return ListTile(
+                      key: const ValueKey('settings-change-font'),
+                      contentPadding: const EdgeInsets.symmetric(
+                        horizontal: 20,
+                        vertical: 6,
+                      ),
+                      leading: const Icon(
+                        Icons.font_download_outlined,
+                        size: 28,
+                      ),
+                      title: Text(
+                        localizations.fontSettingsTitle,
+                        style: const TextStyle(
+                          fontSize: 18,
+                          fontWeight: FontWeight.w600,
+                        ),
+                      ),
+                      subtitle: Text(
+                        font.label(localizations),
+                        style: FontService.previewStyle(context, font),
+                      ),
+                      trailing: const Icon(Icons.arrow_forward_ios, size: 18),
+                      onTap: () => Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (_) => const FontScreen()),
+                      ),
+                    );
+                  },
                 ),
+                const Divider(height: 1),
+                const SoundSettings(),
               ],
             ),
           ),
@@ -450,6 +503,30 @@ class _SettingsScreenState extends State<SettingsScreen> {
             child: Column(
               children: [
                 ListTile(
+                  key: const ValueKey('settings-app-tour'),
+                  leading: const Icon(Icons.help_outline_rounded, size: 28),
+                  title: Text(localizations.appTour),
+                  trailing: const Icon(Icons.arrow_forward_ios, size: 18),
+                  onTap: () => Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (_) => const CategoryScreen(replayTour: true),
+                    ),
+                  ),
+                ),
+                const Divider(height: 1),
+                ListTile(
+                  key: const ValueKey('settings-save-data'),
+                  leading: const Icon(Icons.bookmarks_outlined, size: 28),
+                  title: Text(localizations.saveData),
+                  trailing: const Icon(Icons.arrow_forward_ios, size: 18),
+                  onTap: () => Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (_) => const SavedDataScreen()),
+                  ),
+                ),
+                const Divider(height: 1),
+                ListTile(
                   contentPadding: const EdgeInsets.symmetric(
                     horizontal: 20,
                     vertical: 6,
@@ -459,16 +536,16 @@ class _SettingsScreenState extends State<SettingsScreen> {
                     color: Colors.red,
                     size: 28,
                   ),
-                  title: const Text(
-                    'Reset App Data',
-                    style: TextStyle(
+                  title: Text(
+                    localizations.accountWelcomeResetAppData,
+                    style: const TextStyle(
                       fontSize: 18,
                       fontWeight: FontWeight.w600,
                       color: Colors.red,
                     ),
                   ),
-                  subtitle: const Text(
-                    'Clear all points, streaks, and settings',
+                  subtitle: Text(
+                    localizations.accountWelcomeResetAppDataSubtitle,
                   ),
                   trailing: const Icon(
                     Icons.arrow_forward_ios,
@@ -487,7 +564,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
           // FOOTER
           // ============================================
           Text(
-            'DevOps Quiz App',
+            localizations.accountWelcomeFooter,
             textAlign: TextAlign.center,
             style: TextStyle(color: colorScheme.onSurfaceVariant, fontSize: 12),
           ),
@@ -536,17 +613,24 @@ class _SettingsScreenState extends State<SettingsScreen> {
                     title: Text(language.nativeName),
                     subtitle: LanguageProvider.isUiAvailable(language.code)
                         ? null
-                        : const Text('Translation not available yet'),
+                        : Text(
+                            localizations.accountWelcomeTranslationNotAvailable,
+                          ),
                     secondary: Text(
                       language.flag,
                       style: const TextStyle(fontSize: 24),
                     ),
                     onChanged: LanguageProvider.isUiAvailable(language.code)
-                        ? (value) {
+                        ? (value) async {
                             if (value != null) {
-                              context.read<LanguageProvider>().changeLanguage(
-                                value,
-                              );
+                              await context
+                                  .read<LanguageProvider>()
+                                  .changeLanguage(value);
+                              await NotificationService.instance
+                                  .scheduleDailyNotifications(
+                                    languageCode: value,
+                                  );
+                              if (!dialogContext.mounted) return;
                               Navigator.pop(dialogContext);
                             }
                           }

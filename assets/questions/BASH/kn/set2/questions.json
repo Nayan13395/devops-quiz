@@ -1,0 +1,302 @@
+[
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "date ನ ಔಟ್‌ಪುಟ್ ಅನ್ನು now ಎಂಬ ವೇರಿಯಬಲ್‌ನಲ್ಲಿ ಸಂಗ್ರಹಿಸುವ ಸಿಂಟ್ಯಾಕ್ಸ್ ಯಾವುದು?",
+    "options": [
+      "now=$(date)",
+      "now=date",
+      "now:=$(date)",
+      "date->now"
+    ],
+    "answer": "now=$(date)"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "ಸ್ಕ್ರಿಪ್ಟ್ ಹೆಸರನ್ನು ಯಾವ ವಿಶೇಷ ಪ್ಯಾರಾಮೀಟರ್ ಪ್ರತಿನಿಧಿಸುತ್ತದೆ?",
+    "options": [
+      "$0",
+      "$1",
+      "$#",
+      "$@"
+    ],
+    "answer": "$0"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "ಇತ್ತೀಚಿನ ಹಿನ್ನೆಲೆ (background) ಕಮಾಂಡ್‌ನ ಪ್ರಕ್ರಿಯೆ ID ಗೆ ವಿಸ್ತರಿಸುವ ವಿಶೇಷ ಪ್ಯಾರಾಮೀಟರ್ ಯಾವುದು?",
+    "options": [
+      "$!",
+      "$$",
+      "$?",
+      "$#"
+    ],
+    "answer": "$!"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "ಪೊಸಿಷನಲ್ ಆರ್ಗ್ಯುಮೆಂಟ್‌ಗಳ ಸಂಖ್ಯೆಯನ್ನು ಯಾವ ವಿಶೇಷ ಪ್ಯಾರಾಮೀಟರ್ ಪ್ರತಿನಿಧಿಸುತ್ತದೆ?",
+    "options": [
+      "$#",
+      "$@",
+      "$*",
+      "$$"
+    ],
+    "answer": "$#"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "ಎಲ್ಲಾ ಪೊಸಿಷನಲ್ ಆರ್ಗ್ಯುಮೆಂಟ್‌ಗಳನ್ನು ಪ್ರತ್ಯೇಕ ಪದಗಳಾಗಿ ವಿಸ್ತರಿಸುವ ವಿಶೇಷ ಪ್ಯಾರಾಮೀಟರ್ ಯಾವುದು?",
+    "options": [
+      "$@",
+      "$*",
+      "$#",
+      "$0"
+    ],
+    "answer": "$@"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "ಮೊದಲ ಪೊಸಿಷನಲ್ ಪ್ಯಾರಾಮೀಟರ್ ಅನ್ನು ತೆಗೆದುಹಾಕಿ ಉಳಿದವುಗಳನ್ನು ಒಂದು ಸ್ಥಾನ ಕೆಳಗೆ ಸರಿಸುವ ಬಿಲ್ಟ್‌ಇನ್ ಯಾವುದು?",
+    "options": [
+      "shift",
+      "unshift",
+      "pop",
+      "rotate"
+    ],
+    "answer": "shift"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "ಪ್ರಸ್ತುತ ಶೆಲ್‌ನ ಪ್ರಕ್ರಿಯೆ ID ಅನ್ನು ಯಾವ ವಿಶೇಷ ಪ್ಯಾರಾಮೀಟರ್ ಪ್ರತಿನಿಧಿಸುತ್ತದೆ?",
+    "options": [
+      "$$",
+      "$!",
+      "$?",
+      "$0"
+    ],
+    "answer": "$$"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "ಕೊನೆಯ ಕಮಾಂಡ್‌ನ ಎಕ್ಸಿಟ್ ಸ್ಟೇಟಸ್ ಅನ್ನು ಯಾವ ವಿಶೇಷ ಪ್ಯಾರಾಮೀಟರ್ ಪ್ರತಿನಿಧಿಸುತ್ತದೆ?",
+    "options": [
+      "$?",
+      "$!",
+      "$$",
+      "$#"
+    ],
+    "answer": "$?"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "var ಸೆಟ್ ಆಗದಿದ್ದರೆ ಅಥವಾ ಖಾಲಿಯಾಗಿದ್ದರೆ ಡೀಫಾಲ್ಟ್ ಮೌಲ್ಯವನ್ನು ಹಿಂತಿರುಗಿಸುವ ವಿಸ್ತರಣೆ ಯಾವುದು?",
+    "options": [
+      "${var:-default}",
+      "${var:=default}",
+      "${var:+default}",
+      "${var:?default}"
+    ],
+    "answer": "${var:-default}"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "var ನಿಂದ 3 ಅಕ್ಷರಗಳನ್ನು 2 ನೇ ಆಫ್‌ಸೆಟ್‌ನಿಂದ ಪ್ರಾರಂಭಿಸಿ ಹೊರತೆಗೆಯುವ ವಿಸ್ತರಣೆ ಯಾವುದು?",
+    "options": [
+      "${var:2:3}",
+      "${var:3:2}",
+      "${var[2,3]}",
+      "${var#2:3}"
+    ],
+    "answer": "${var:2:3}"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "var ನ ಮೌಲ್ಯದ ಉದ್ದವನ್ನು ಹಿಂತಿರುಗಿಸುವ ವಿಸ್ತರಣೆ ಯಾವುದು?",
+    "options": [
+      "${#var}",
+      "${len(var)}",
+      "${var:length}",
+      "${var#length}"
+    ],
+    "answer": "${#var}"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "var ನ ಮೌಲ್ಯವನ್ನು ದೊಡ್ಡಕ್ಷರಕ್ಕೆ (uppercase) ಪರಿವರ್ತಿಸುವ ವಿಸ್ತರಣೆ ಯಾವುದು?",
+    "options": [
+      "${var^^}",
+      "${var,,}",
+      "${var!!}",
+      "${var##}"
+    ],
+    "answer": "${var^^}"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "var ನಿಂದ ಅತಿ ಉದ್ದದ ಹೊಂದಾಣಿಕೆಯ ಪ್ರಿಫಿಕ್ಸ್ ಪ್ಯಾಟರ್ನ್ ಅನ್ನು ತೆಗೆದುಹಾಕುವ ವಿಸ್ತರಣೆ ಯಾವುದು?",
+    "options": [
+      "${var##pattern}",
+      "${var#pattern}",
+      "${var%%pattern}",
+      "${var%pattern}"
+    ],
+    "answer": "${var##pattern}"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "var ನಲ್ಲಿ pattern ನ ಮೊದಲ ಹೊಂದಾಣಿಕೆಯನ್ನು ಮಾತ್ರ ಬದಲಾಯಿಸುವ ವಿಸ್ತರಣೆ ಯಾವುದು?",
+    "options": [
+      "${var/pattern/replacement}",
+      "${var//pattern/replacement}",
+      "${var#pattern}",
+      "${var%pattern}"
+    ],
+    "answer": "${var/pattern/replacement}"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "var ಸೆಟ್ ಆಗದಿದ್ದರೆ ಅಥವಾ ಖಾಲಿಯಾಗಿದ್ದರೆ ದೋಷ ಸಂದೇಶವನ್ನು ಮುದ್ರಿಸಿ ಇಂಟರಾಕ್ಟಿವ್ ಅಲ್ಲದ ಸ್ಕ್ರಿಪ್ಟ್ ಅನ್ನು ಸ್ಥಗಿತಗೊಳಿಸುವ ವಿಸ್ತರಣೆ ಯಾವುದು?",
+    "options": [
+      "${var:?message}",
+      "${var:-message}",
+      "${var:+message}",
+      "${var:=message}"
+    ],
+    "answer": "${var:?message}"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "Bash ನಲ್ಲಿ ಅರಿಥ್‌ಮೆಟಿಕ್ ವಿಸ್ತರಣೆಯನ್ನು ನಿರ್ವಹಿಸುವ ಸಿಂಟ್ಯಾಕ್ಸ್ ಯಾವುದು?",
+    "options": [
+      "$((5 + 3))",
+      "$(5 + 3)",
+      "${5 + 3}",
+      "$[5 + 3]"
+    ],
+    "answer": "$((5 + 3))"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "count ವೇರಿಯಬಲ್ ಅನ್ನು ಒಂದರಿಂದ ಹೆಚ್ಚಿಸುವ ಕಮಾಂಡ್ ಯಾವುದು?",
+    "options": [
+      "let count++",
+      "count++",
+      "increment count",
+      "add count"
+    ],
+    "answer": "let count++"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "8 ಅನ್ನು ಮುದ್ರಿಸುವ, 5 ಮತ್ತು 3 ಅನ್ನು ಕೂಡಿಸುವ ಕಮಾಂಡ್ ಯಾವುದು?",
+    "options": [
+      "expr 5 + 3",
+      "expr 5+3",
+      "expr5 + 3",
+      "expr add 5 3"
+    ],
+    "answer": "expr 5 + 3"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "count ಅನ್ನು ಪೂರ್ಣಾಂಕ (integer) ವೇರಿಯಬಲ್ ಆಗಿ ಘೋಷಿಸುವ ಕಮಾಂಡ್ ಯಾವುದು?",
+    "options": [
+      "declare -i count",
+      "declare int count",
+      "integer count",
+      "set count integer"
+    ],
+    "answer": "declare -i count"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "ವೇರಿಯಬಲ್ ಅನ್ನು ಓದಲು-ಮಾತ್ರ (read-only) ಮಾಡುವ ಕಮಾಂಡ್ ಯಾವುದು?",
+    "options": [
+      "readonly var",
+      "lock var",
+      "const var",
+      "final var"
+    ],
+    "answer": "readonly var"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "ಶೆಲ್ ಎನ್ವಿರಾನ್ಮೆಂಟ್‌ನಿಂದ ವೇರಿಯಬಲ್ ಅನ್ನು ತೆಗೆದುಹಾಕುವ ಕಮಾಂಡ್ ಯಾವುದು?",
+    "options": [
+      "unset var",
+      "delete var",
+      "remove var",
+      "clear var"
+    ],
+    "answer": "unset var"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "ವೇರಿಯಬಲ್ ಅನ್ನು ಚೈಲ್ಡ್ ಪ್ರಕ್ರಿಯೆಗಳಿಗೆ ಲಭ್ಯವಾಗಿಸುವ ಕಮಾಂಡ್ ಯಾವುದು?",
+    "options": [
+      "export var",
+      "share var",
+      "env var",
+      "publish var"
+    ],
+    "answer": "export var"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "ಔಟ್‌ಪುಟ್ ಮರುನಿರ್ದೇಶನವು ಅಸ್ತಿತ್ವದಲ್ಲಿರುವ ಫೈಲ್ ಅನ್ನು ಓವರ್‌ರೈಟ್ ಮಾಡುವುದನ್ನು ತಡೆಯುವ ಆಯ್ಕೆ ಯಾವುದು?",
+    "options": [
+      "set -o noclobber",
+      "set -o nooverwrite",
+      "set -o protect",
+      "set -o safe"
+    ],
+    "answer": "set -o noclobber"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "ಶೆಲ್ ಪ್ರಾರಂಭವಾದಾಗಿನಿಂದ ಕಳೆದ ಸೆಕೆಂಡ್‌ಗಳ ಸಂಖ್ಯೆಯನ್ನು ಹೊಂದಿರುವ Bash ವೇರಿಯಬಲ್ ಯಾವುದು?",
+    "options": [
+      "$SECONDS",
+      "$RANDOM",
+      "$LINENO",
+      "$UID"
+    ],
+    "answer": "$SECONDS"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "var ಸೆಟ್ ಆಗಿದ್ದು ಖಾಲಿಯಿಲ್ಲದಿದ್ದರೆ ಮಾತ್ರ alt ಅನ್ನು ಬದಲಿಯಾಗಿ ಬಳಸುವ Bash ವಿಸ್ತರಣೆ ಯಾವುದು?",
+    "options": [
+      "${var:+alt}",
+      "${var:-alt}",
+      "${var:=alt}",
+      "${var:?alt}"
+    ],
+    "answer": "${var:+alt}"
+  }
+]

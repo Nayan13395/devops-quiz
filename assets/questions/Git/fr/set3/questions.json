@@ -1,0 +1,302 @@
+[
+  {
+    "category": "Git",
+    "set": 3,
+    "question": "Quelle commande envoie les commits locaux vers un dépôt distant ?",
+    "options": [
+      "git push",
+      "git pull",
+      "git fetch",
+      "git clone"
+    ],
+    "answer": "git push"
+  },
+  {
+    "category": "Git",
+    "set": 3,
+    "question": "Quelle commande récupère origin/main et l'intègre à la branche courante par fusion plutôt que par rebasage ?",
+    "options": [
+      "git pull --no-rebase origin main",
+      "git fetch origin main",
+      "git pull --rebase origin main",
+      "git merge origin/main"
+    ],
+    "answer": "git pull --no-rebase origin main"
+  },
+  {
+    "category": "Git",
+    "set": 3,
+    "question": "Quelle commande télécharge les modifications distantes sans les fusionner ?",
+    "options": [
+      "git fetch",
+      "git pull",
+      "git clone",
+      "git push"
+    ],
+    "answer": "git fetch"
+  },
+  {
+    "category": "Git",
+    "set": 3,
+    "question": "Quelle commande ajoute un dépôt distant ?",
+    "options": [
+      "git remote add",
+      "git add remote",
+      "git remote create",
+      "git add origin"
+    ],
+    "answer": "git remote add"
+  },
+  {
+    "category": "Git",
+    "set": 3,
+    "question": "Quelle commande liste les dépôts distants configurés ?",
+    "options": [
+      "git remote -v",
+      "git remotes",
+      "git show remote",
+      "git remote list"
+    ],
+    "answer": "git remote -v"
+  },
+  {
+    "category": "Git",
+    "set": 3,
+    "question": "Quelle commande définit la branche de suivi en amont (upstream) ?",
+    "options": [
+      "git push -u origin main",
+      "git push main",
+      "git track main",
+      "git remote main"
+    ],
+    "answer": "git push -u origin main"
+  },
+  {
+    "category": "Git",
+    "set": 3,
+    "question": "Quelle commande affiche les branches distantes ?",
+    "options": [
+      "git branch -r",
+      "git branch",
+      "git remote show",
+      "git fetch"
+    ],
+    "answer": "git branch -r"
+  },
+  {
+    "category": "Git",
+    "set": 3,
+    "question": "Quelle commande supprime un dépôt distant ?",
+    "options": [
+      "git remote remove",
+      "git delete remote",
+      "git remote delete",
+      "git rm remote"
+    ],
+    "answer": "git remote remove"
+  },
+  {
+    "category": "Git",
+    "set": 3,
+    "question": "Qu'est-ce que GitHub ?",
+    "options": [
+      "Plateforme d'hébergement de dépôts Git",
+      "Base de données",
+      "Distribution Linux",
+      "Langage de programmation"
+    ],
+    "answer": "Plateforme d'hébergement de dépôts Git"
+  },
+  {
+    "category": "Git",
+    "set": 3,
+    "question": "Qu'est-ce qu'une Pull Request ?",
+    "options": [
+      "Demande de fusion de modifications",
+      "Cloner un dépôt",
+      "Supprimer une branche",
+      "Créer un tag"
+    ],
+    "answer": "Demande de fusion de modifications"
+  },
+  {
+    "category": "Git",
+    "set": 3,
+    "question": "Qu'est-ce qu'un Fork dans GitHub ?",
+    "options": [
+      "Copie personnelle d'un dépôt",
+      "Branche",
+      "Tag",
+      "Commit"
+    ],
+    "answer": "Copie personnelle d'un dépôt"
+  },
+  {
+    "category": "Git",
+    "set": 3,
+    "question": "Quel nom de dépôt distant est couramment utilisé par défaut ?",
+    "options": [
+      "origin",
+      "main",
+      "master",
+      "upstream"
+    ],
+    "answer": "origin"
+  },
+  {
+    "category": "Git",
+    "set": 3,
+    "question": "À quoi sert GitHub Actions ?",
+    "options": [
+      "Automatisation CI/CD",
+      "Sauvegarde de base de données",
+      "Réseau",
+      "Environnement d'exécution de conteneurs"
+    ],
+    "answer": "Automatisation CI/CD"
+  },
+  {
+    "category": "Git",
+    "set": 3,
+    "question": "Où sont stockés les workflows GitHub Actions ?",
+    "options": [
+      ".github/workflows",
+      ".github/actions",
+      "workflows/",
+      ".git/workflows"
+    ],
+    "answer": ".github/workflows"
+  },
+  {
+    "category": "Git",
+    "set": 3,
+    "question": "Quel format de fichier est utilisé pour les workflows GitHub Actions ?",
+    "options": [
+      "YAML",
+      "JSON",
+      "XML",
+      "TXT"
+    ],
+    "answer": "YAML"
+  },
+  {
+    "category": "Git",
+    "set": 3,
+    "question": "Quelle commande modifie l'URL de récupération d'origin sans créer de nouveau dépôt distant ?",
+    "options": [
+      "git remote set-url origin https://example.com/team/app.git",
+      "git remote add origin https://example.com/team/app.git",
+      "git remote rename origin upstream",
+      "git remote remove origin"
+    ],
+    "answer": "git remote set-url origin https://example.com/team/app.git"
+  },
+  {
+    "category": "Git",
+    "set": 3,
+    "question": "Quelle commande supprime les branches de suivi distant obsolètes tout en récupérant origin ?",
+    "options": [
+      "git fetch --no-tags origin",
+      "git fetch --depth=1 origin",
+      "git fetch --dry-run origin",
+      "git fetch --prune origin"
+    ],
+    "answer": "git fetch --prune origin"
+  },
+  {
+    "category": "Git",
+    "set": 3,
+    "question": "Quelle commande demande la suppression de la branche distante old-feature sur origin ?",
+    "options": [
+      "git remote remove origin",
+      "git fetch origin old-feature",
+      "git push origin --delete old-feature",
+      "git branch -d old-feature"
+    ],
+    "answer": "git push origin --delete old-feature"
+  },
+  {
+    "category": "Git",
+    "set": 3,
+    "question": "Quelle commande pousse uniquement l'étiquette locale v1.0 vers origin ?",
+    "options": [
+      "git fetch origin tag v1.0",
+      "git push origin tag v1.0",
+      "git push origin --tags",
+      "git push origin main"
+    ],
+    "answer": "git push origin tag v1.0"
+  },
+  {
+    "category": "Git",
+    "set": 3,
+    "question": "Quelle commande interroge les références de branches annoncées par origin sans récupérer leurs objets ?",
+    "options": [
+      "git ls-remote --heads origin",
+      "git branch -r",
+      "git remote -v",
+      "git fetch origin"
+    ],
+    "answer": "git ls-remote --heads origin"
+  },
+  {
+    "category": "Git",
+    "set": 3,
+    "question": "Quelle commande récupère origin puis rebase la branche courante sur origin/main ?",
+    "options": [
+      "git pull --no-rebase origin main",
+      "git fetch origin main",
+      "git push origin main",
+      "git pull --rebase origin main"
+    ],
+    "answer": "git pull --rebase origin main"
+  },
+  {
+    "category": "Git",
+    "set": 3,
+    "question": "Quelle commande clone un dépôt avec un historique limité à une profondeur d'un commit ?",
+    "options": [
+      "git clone --bare https://example.com/app.git",
+      "git clone --no-checkout https://example.com/app.git",
+      "git clone --depth 1 https://example.com/app.git",
+      "git clone --mirror https://example.com/app.git"
+    ],
+    "answer": "git clone --depth 1 https://example.com/app.git"
+  },
+  {
+    "category": "Git",
+    "set": 3,
+    "question": "Qu'omet un clone créé avec --bare ?",
+    "options": [
+      "L'historique des commits du dépôt",
+      "Un arbre de travail extrait",
+      "La base d'objets du dépôt",
+      "Toutes les références de branches"
+    ],
+    "answer": "Un arbre de travail extrait"
+  },
+  {
+    "category": "Git",
+    "set": 3,
+    "question": "Quelle commande définit origin/main comme branche amont de main sans pousser de commits ?",
+    "options": [
+      "git branch --set-upstream-to=origin/main main",
+      "git push origin main",
+      "git remote set-head origin main",
+      "git branch --unset-upstream main"
+    ],
+    "answer": "git branch --set-upstream-to=origin/main main"
+  },
+  {
+    "category": "Git",
+    "set": 3,
+    "question": "Avec --force-with-lease=refs/heads/main:<expected>, quand une mise à jour de main distant est-elle rejetée ?",
+    "options": [
+      "Chaque fois que la mise à jour serait une avance rapide",
+      "Chaque fois que la branche locale contient plus d'un commit",
+      "Chaque fois que la poussée utilise HTTPS",
+      "Lorsque main distant n'a plus l'identifiant d'objet attendu"
+    ],
+    "answer": "Lorsque main distant n'a plus l'identifiant d'objet attendu"
+  }
+]

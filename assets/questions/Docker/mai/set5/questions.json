@@ -1,0 +1,302 @@
+[
+  {
+    "category": "Docker",
+    "set": 5,
+    "question": "बिल्डमे पासवर्डकेँ ARG वा ENV इंस्ट्रक्शनमे सहेजबाक बदला BuildKit secret mount किएक प्रयोग करबाक चाही?",
+    "options": [
+      "Secret mount रजिस्ट्री पासवर्ड सभकेँ स्वचालित रूपसँ रोटेट करैत अछि",
+      "Secret mount परिणामी प्रत्येक इमेज लेयरकेँ एन्क्रिप्ट करैत अछि",
+      "Secret mount बिल्डकेँ कोनो नेटवर्क एक्सेस करबासँ रोकैत अछि",
+      "Secret mount देल गेल सीक्रेटकेँ इमेजक ARG वा ENV मानक रूपमे स्थायी होमएसँ बचबैत अछि"
+    ],
+    "answer": "Secret mount देल गेल सीक्रेटकेँ इमेजक ARG वा ENV मानक रूपमे स्थायी होमएसँ बचबैत अछि"
+  },
+  {
+    "category": "Docker",
+    "set": 5,
+    "question": "RUN इंस्ट्रक्शनमे BuildKit cache mount क उद्देश्य की अछि?",
+    "options": [
+      "बेस इमेजकेँ खाली फाइलसिस्टमसँ बदलब",
+      "सुनिश्चित करब जे प्रत्येक RUN इंस्ट्रक्शन बिना कैशक चलय",
+      "ओहि माउंटकेँ अंतिम इमेजक सामग्री बनौने बिना बिल्डसभक बीच बिल्ड-टूल कैशक पुनः प्रयोग करब",
+      "रनटाइम लॉग सभकेँ इमेज रजिस्ट्रीमे सहेजब"
+    ],
+    "answer": "ओहि माउंटकेँ अंतिम इमेजक सामग्री बनौने बिना बिल्डसभक बीच बिल्ड-टूल कैशक पुनः प्रयोग करब"
+  },
+  {
+    "category": "Docker",
+    "set": 5,
+    "question": "बिल्ड इनपुटमे कोन बदलाव सामान्यतया COPY इंस्ट्रक्शन आ बादक आश्रित स्टेप सभक कैशकेँ अमान्य करैत अछि?",
+    "options": [
+      "इंस्ट्रक्शन बदलने बिना सामान्य Dockerfile कमेंट सम्पादित करब",
+      "कॉपी कएल स्रोत फाइलक सामग्री बदलब",
+      "मात्र कॉपी कएल फाइलक मॉडिफिकेशन टाइमस्टैम्प बदलब",
+      ".dockerignore द्वारा बहार राखल फाइल बदलब"
+    ],
+    "answer": "कॉपी कएल स्रोत फाइलक सामग्री बदलब"
+  },
+  {
+    "category": "Docker",
+    "set": 5,
+    "question": "Dockerfile इंस्ट्रक्शन 'FROM scratch' की चुनैत अछि?",
+    "options": [
+      "बेस-इमेज फाइलसिस्टम बिना एकटा खाली प्रारंभिक बिंदु",
+      "न्यूनतम Debian इंस्टॉलेशन",
+      "चलि रहल होस्टक रूट फाइलसिस्टम",
+      "सभसँ हालमे बनाओल गेल लोकल इमेज"
+    ],
+    "answer": "बेस-इमेज फाइलसिस्टम बिना एकटा खाली प्रारंभिक बिंदु"
+  },
+  {
+    "category": "Docker",
+    "set": 5,
+    "question": "कोन Dockerfile इंस्ट्रक्शन इमेजमे key-value मेटाडेटा जोड़ैत अछि?",
+    "options": [
+      "ARG",
+      "EXPOSE",
+      "STOPSIGNAL",
+      "LABEL"
+    ],
+    "answer": "LABEL"
+  },
+  {
+    "category": "Docker",
+    "set": 5,
+    "question": "कोन Dockerfile इंस्ट्रक्शन कंटेनर रोकैत काल पठाओल जाएबला डिफ़ॉल्ट सिग्नल बदलैत अछि?",
+    "options": [
+      "SHELL",
+      "ONBUILD",
+      "STOPSIGNAL",
+      "HEALTHCHECK"
+    ],
+    "answer": "STOPSIGNAL"
+  },
+  {
+    "category": "Docker",
+    "set": 5,
+    "question": "मुख्य सर्वर प्रोसेसक लेल exec-form ENTRYPOINT केँ प्रायः किएक पसंद कएल जाइत अछि?",
+    "options": [
+      "ई सर्वरकेँ शून्येतर स्टेटस लौटबासँ रोकैत अछि",
+      "ई सर्वर आ कंटेनर सिग्नल सभक बीच अतिरिक्त शेलसँ बचबैत अछि",
+      "ई स्वचालित रूपसँ non-root यूजर बनबैत अछि",
+      "ई इमेजमे प्रोसेस सुपरवाइजर इंस्टॉल करैत अछि"
+    ],
+    "answer": "ई सर्वर आ कंटेनर सिग्नल सभक बीच अतिरिक्त शेलसँ बचबैत अछि"
+  },
+  {
+    "category": "Docker",
+    "set": 5,
+    "question": "'docker run --init' कंटेनरमे की जोड़ैत अछि?",
+    "options": [
+      "एकटा छोट init प्रोसेस जे सिग्नल फॉरवर्ड करैत अछि आ चाइल्ड प्रोसेस सभकेँ रीप करैत अछि",
+      "एकटा पूर्ण systemd इंस्टॉलेशन",
+      "दोसर Docker डेमन",
+      "प्रत्येक प्रोसेसक लेल इंटरैक्टिव लॉगिन शेल"
+    ],
+    "answer": "एकटा छोट init प्रोसेस जे सिग्नल फॉरवर्ड करैत अछि आ चाइल्ड प्रोसेस सभकेँ रीप करैत अछि"
+  },
+  {
+    "category": "Docker",
+    "set": 5,
+    "question": "कोन विकल्प Linux कंटेनरकेँ सभ Linux capabilities हटाकेँ चलबैत अछि?",
+    "options": [
+      "--cap-add=ALL",
+      "--privileged",
+      "--security-opt seccomp=unconfined",
+      "--cap-drop=ALL"
+    ],
+    "answer": "--cap-drop=ALL"
+  },
+  {
+    "category": "Docker",
+    "set": 5,
+    "question": "Rootless Docker मुख्य रूपसँ की बदलैत अछि?",
+    "options": [
+      "इमेज सभकेँ आब रजिस्ट्रीक आवश्यकता नहि रहैत अछि",
+      "कंटेनर सभ आब Linux namespaces क प्रयोग नहि करैत अछि",
+      "डेमन आ कंटेनर सभ होस्टक root विशेषाधिकार बिना चलैत अछि",
+      "सभ कंटेनर होस्टक रूट फाइलसिस्टम साझा करैत अछि"
+    ],
+    "answer": "डेमन आ कंटेनर सभ होस्टक root विशेषाधिकार बिना चलैत अछि"
+  },
+  {
+    "category": "Docker",
+    "set": 5,
+    "question": "कोन Linux सुविधा मुख्य रूपसँ कंटेनरक रिसोर्स उपयोगकेँ सीमित करैत अछि आ ओकर हिसाब रखैत अछि?",
+    "options": [
+      "Linux capabilities",
+      "Control groups",
+      "Namespaces",
+      "Seccomp filters"
+    ],
+    "answer": "Control groups"
+  },
+  {
+    "category": "Docker",
+    "set": 5,
+    "question": "कोन Linux सुविधा कंटेनर सभकेँ प्रोसेस ID आ नेटवर्क इंटरफेस जकाँ रिसोर्स सभक पृथक दृश्य दैत अछि?",
+    "options": [
+      "Namespaces",
+      "Control groups",
+      "Seccomp filters",
+      "Linux capabilities"
+    ],
+    "answer": "Namespaces"
+  },
+  {
+    "category": "Docker",
+    "set": 5,
+    "question": "कोन Docker नेटवर्क ड्राइवर Linux कंटेनरकेँ होस्टक नेटवर्क namespace दैत अछि?",
+    "options": [
+      "bridge",
+      "overlay",
+      "none",
+      "host"
+    ],
+    "answer": "host"
+  },
+  {
+    "category": "Docker",
+    "set": 5,
+    "question": "कोन Docker नेटवर्क ड्राइवर कंटेनरकेँ मात्र अपन loopback इंटरफेस संग छोड़ैत अछि?",
+    "options": [
+      "host",
+      "overlay",
+      "none",
+      "bridge"
+    ],
+    "answer": "none"
+  },
+  {
+    "category": "Docker",
+    "set": 5,
+    "question": "कोन Docker नेटवर्क ड्राइवर कएकटा Docker होस्ट सभक बीच कंटेनर संचारक लेल बनाओल गेल अछि?",
+    "options": [
+      "none",
+      "overlay",
+      "bridge",
+      "host"
+    ],
+    "answer": "overlay"
+  },
+  {
+    "category": "Docker",
+    "set": 5,
+    "question": "नव कंटेनरक लेल '--network container:web' की करैत अछि?",
+    "options": [
+      "web क नेटवर्क namespace साझा करैत अछि",
+      "web क फाइलसिस्टम लेयर सभ कॉपी करैत अछि",
+      "प्रत्येक होस्ट इंटरफेसकेँ सीधे अटैच करैत अछि",
+      "web नामक नव नेटवर्क बनबैत अछि"
+    ],
+    "answer": "web क नेटवर्क namespace साझा करैत अछि"
+  },
+  {
+    "category": "Docker",
+    "set": 5,
+    "question": "गैर-खाली कंटेनर पाथपर डायरेक्टरी माउंट केलासँ इमेजक विद्यमान फाइल सभ किएक गायब भेल जकाँ देखा सकैत अछि?",
+    "options": [
+      "Docker मूल इमेज लेयर सभकेँ मेटा दैत अछि",
+      "Docker फाइल सभकेँ रजिस्ट्रीमे हटा दैत अछि",
+      "इमेज ओहि फाइल सभक बिना स्वचालित रूपसँ फेरसँ बनि जाइत अछि",
+      "माउंट रहबा धरि ओहि पाथपर रहल फाइल सभकेँ ओझल क' दैत अछि"
+    ],
+    "answer": "माउंट रहबा धरि ओहि पाथपर रहल फाइल सभकेँ ओझल क' दैत अछि"
+  },
+  {
+    "category": "Docker",
+    "set": 5,
+    "question": "volume-nocopy क बिना, जखन खाली नामित वॉल्यूम पहिल बेर फाइल सभ बला कंटेनर डायरेक्टरीपर माउंट कएल जाइत अछि, तखन Docker सामान्यतया की करैत अछि?",
+    "options": [
+      "डायरेक्टरी खाली नहि अछि तेँ शुरू होमएसँ मना क' दैत अछि",
+      "नामित वॉल्यूमकेँ bind mount मे बदलि दैत अछि",
+      "डायरेक्टरीक विद्यमान फाइल सभकेँ वॉल्यूममे कॉपी करैत अछि",
+      "इमेजसँ फाइल सभकेँ स्थायी रूपसँ मेटा दैत अछि"
+    ],
+    "answer": "डायरेक्टरीक विद्यमान फाइल सभकेँ वॉल्यूममे कॉपी करैत अछि"
+  },
+  {
+    "category": "Docker",
+    "set": 5,
+    "question": "कोन कमांड कंटेनर web क प्रकाशित पोर्ट मैपिंग सभक सूची देखबैत अछि?",
+    "options": [
+      "docker wait web",
+      "docker port web",
+      "docker top web",
+      "docker diff web"
+    ],
+    "answer": "docker port web"
+  },
+  {
+    "category": "Docker",
+    "set": 5,
+    "question": "कोन कमांड कंटेनर web क लॉगक मात्र अंतिम 20 पंक्ति प्राप्त करैत अछि?",
+    "options": [
+      "docker logs --tail 20 web",
+      "docker logs --since 20m web",
+      "docker logs --until 20m web",
+      "docker logs --timestamps web"
+    ],
+    "answer": "docker logs --tail 20 web"
+  },
+  {
+    "category": "Docker",
+    "set": 5,
+    "question": "Docker इमेज आ कंटेनरक बीच मुख्य अंतर की अछि?",
+    "options": [
+      "इमेज सदिखन चलैत रहैत अछि, जखन कि कंटेनर सदिखन रुकल रहैत अछि",
+      "इमेज नेटवर्कक हिस्सा होइत अछि, जखन कि कंटेनर मात्र रजिस्ट्रीक हिस्सा होइत अछि",
+      "इमेज मात्र लॉग सहेजैत अछि, जखन कि कंटेनर मात्र मेटाडेटा सहेजैत अछि",
+      "इमेज रीड-ओनली टेम्पलेट अछि, जखन कि कंटेनर रनटाइम स्टेट बला इंस्टेंस अछि"
+    ],
+    "answer": "इमेज रीड-ओनली टेम्पलेट अछि, जखन कि कंटेनर रनटाइम स्टेट बला इंस्टेंस अछि"
+  },
+  {
+    "category": "Docker",
+    "set": 5,
+    "question": "Docker कंटेक्स्ट CLI क लेल मुख्य रूपसँ की पहचानैत अछि?",
+    "options": [
+      "चुनल गेल Dockerfile बिल्ड स्टेज",
+      "प्रत्येक इमेजक डिफ़ॉल्ट लक्षित प्लेटफ़ॉर्म",
+      "Docker डेमन एंडपॉइंटक कनेक्शन सेटिंग",
+      "इमेज बिल्ड कंटेक्स्टक रूपमे पठाओल गेल फाइल आ डायरेक्टरी सभ"
+    ],
+    "answer": "Docker डेमन एंडपॉइंटक कनेक्शन सेटिंग"
+  },
+  {
+    "category": "Docker",
+    "set": 5,
+    "question": "कोन कमांड Docker क्लाइंटकेँ रजिस्ट्रीसँ लॉग आउट करैत अछि?",
+    "options": [
+      "docker trust inspect",
+      "docker logout",
+      "docker login",
+      "docker context use"
+    ],
+    "answer": "docker logout"
+  },
+  {
+    "category": "Docker",
+    "set": 5,
+    "question": "कोन विकल्प docker login केँ स्टैंडर्ड इनपुटसँ पासवर्ड पढ़बाक अनुमति दैत अछि?",
+    "options": [
+      "--password-stdin",
+      "--username",
+      "--config",
+      "--context"
+    ],
+    "answer": "--password-stdin"
+  },
+  {
+    "category": "Docker",
+    "set": 5,
+    "question": "कोन कमांड api नामक Docker Swarm सर्विससँ संबंधित टास्क सभक सूची देखबैत अछि?",
+    "options": [
+      "docker service inspect api",
+      "docker service logs api",
+      "docker service scale api=3",
+      "docker service ps api"
+    ],
+    "answer": "docker service ps api"
+  }
+]

@@ -1,0 +1,302 @@
+[
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "Qual opção declarativa enfileira uma nova execução em vez de permitir execuções simultâneas do mesmo pipeline?",
+    "options": [
+      "parallelsAlwaysFailFast()",
+      "disableConcurrentBuilds()",
+      "disableResume()",
+      "skipDefaultCheckout()"
+    ],
+    "answer": "disableConcurrentBuilds()"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "Qual opção declarativa especifica regras de retenção para registros e artefatos de compilações antigas?",
+    "options": [
+      "buildDiscarder(logRotator(numToKeepStr: '10'))",
+      "timeout(time: 10, unit: 'MINUTES')",
+      "retry(10)",
+      "quietPeriod(10)"
+    ],
+    "answer": "buildDiscarder(logRotator(numToKeepStr: '10'))"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "O que o símbolo H fornece em uma expressão cron do Jenkins?",
+    "options": [
+      "A hora atual no computador do usuário",
+      "Uma solicitação para executar apenas em feriados",
+      "Uma solicitação para executar apenas quando um nó estiver ocioso",
+      "Um hash estável baseado no nome do trabalho para distribuir a carga agendada"
+    ],
+    "answer": "Um hash estável baseado no nome do trabalho para distribuir a carga agendada"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "Na sintaxe cron de cinco campos do Jenkins, o que o quinto campo representa?",
+    "options": [
+      "Hora do dia",
+      "Dia do mês",
+      "Dia da semana",
+      "Minuto da hora"
+    ],
+    "answer": "Dia da semana"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "Qual condição post é executada quando uma compilação tem sucesso após a anterior falhar ou ficar instável?",
+    "options": [
+      "unsuccessful",
+      "fixed",
+      "changed",
+      "regression"
+    ],
+    "answer": "fixed"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "Qual condição post é executada depois que as outras condições post foram avaliadas?",
+    "options": [
+      "cleanup",
+      "always",
+      "changed",
+      "success"
+    ],
+    "answer": "cleanup"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "Qual opção when avalia a condição de um estágio antes de alocar seu agente?",
+    "options": [
+      "beforeInput false",
+      "beforeOptions false",
+      "branch 'main'",
+      "beforeAgent true"
+    ],
+    "answer": "beforeAgent true"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "Qual condição when seleciona um branch nomeado em um pipeline multibranch?",
+    "options": [
+      "buildingTag()",
+      "changeRequest()",
+      "branch 'main'",
+      "tag 'main'"
+    ],
+    "answer": "branch 'main'"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "Qual estrutura declarativa executa combinações de valores de eixos, como sistema operacional e navegador?",
+    "options": [
+      "environment",
+      "matrix",
+      "parallel",
+      "steps"
+    ],
+    "answer": "matrix"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "Qual seção remove combinações indesejadas de uma matriz declarativa?",
+    "options": [
+      "excludes",
+      "axes",
+      "stages",
+      "tools"
+    ],
+    "answer": "excludes"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "Qual configuração de um estágio com ramos paralelos interrompe os demais quando um falha?",
+    "options": [
+      "beforeAgent true",
+      "reuseNode true",
+      "alwaysPull true",
+      "failFast true"
+    ],
+    "answer": "failFast true"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "Qual opção declarativa ignora os estágios seguintes quando a compilação se torna instável?",
+    "options": [
+      "disableResume()",
+      "preserveStashes()",
+      "skipStagesAfterUnstable()",
+      "skipDefaultCheckout()"
+    ],
+    "answer": "skipStagesAfterUnstable()"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "Qual etapa de pipeline registra uma falha e permite continuar a execução após seu bloco?",
+    "options": [
+      "input",
+      "catchError",
+      "error",
+      "timeout"
+    ],
+    "answer": "catchError"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "O que sh(script: 'check.sh', returnStatus: true) retorna depois que o processo termina?",
+    "options": [
+      "O código numérico de saída do processo",
+      "O texto completo da saída padrão",
+      "O identificador do processo do shell",
+      "Um objeto de credenciais do Jenkins"
+    ],
+    "answer": "O código numérico de saída do processo"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "O que sh(script: 'echo ready', returnStdout: true) retorna em caso de sucesso?",
+    "options": [
+      "O número da compilação",
+      "O ambiente do shell como um mapa",
+      "A lista de etiquetas do agente",
+      "A string capturada da saída padrão"
+    ],
+    "answer": "A string capturada da saída padrão"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "Qual etapa de pipeline exclui recursivamente o conteúdo do diretório de trabalho atual?",
+    "options": [
+      "pwd",
+      "readFile",
+      "deleteDir",
+      "fileExists"
+    ],
+    "answer": "deleteDir"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "Qual etapa de pipeline verifica se um caminho existe no espaço de trabalho atual?",
+    "options": [
+      "libraryResource",
+      "fileExists",
+      "readFile",
+      "writeFile"
+    ],
+    "answer": "fileExists"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "Qual etapa de pipeline aciona outro trabalho do Jenkins e pode passar parâmetros de compilação?",
+    "options": [
+      "build",
+      "stage",
+      "node",
+      "checkout"
+    ],
+    "answer": "build"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "Qual opção declarativa mantém stashes de compilações concluídas para reiniciar estágios?",
+    "options": [
+      "disableResume()",
+      "skipDefaultCheckout()",
+      "quietPeriod(5)",
+      "preserveStashes()"
+    ],
+    "answer": "preserveStashes()"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "Qual arquivo de uma biblioteca compartilhada fornece o texto de ajuda da variável global deploy definida por vars/deploy.groovy?",
+    "options": [
+      "resources/deploy.txt",
+      "vars/main.groovy",
+      "vars/deploy.txt",
+      "src/deploy.groovy"
+    ],
+    "answer": "vars/deploy.txt"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "Qual é uma restrição importante de um método anotado com @NonCPS em um pipeline do Jenkins?",
+    "options": [
+      "Ele deve ser executado em um agente Windows",
+      "Ele não deve chamar etapas de pipeline transformadas por CPS",
+      "Ele deve conter uma diretiva stage",
+      "Ele sempre deve retornar uma string"
+    ],
+    "answer": "Ele não deve chamar etapas de pipeline transformadas por CPS"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "Qual recurso do Jenkins revisa assinaturas solicitadas por código Groovy não aprovado executado na sandbox?",
+    "options": [
+      "Aprovação de scripts executados dentro do processo",
+      "Credentials Store",
+      "Build Queue",
+      "Log de consultas ao SCM"
+    ],
+    "answer": "Aprovação de scripts executados dentro do processo"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "Qual estilo de aspas do Groovy é recomendado para um script que deixa o shell expandir uma variável secreta vinculada?",
+    "options": [
+      "Uma string Groovy interpolada entre aspas duplas contendo o segredo",
+      "Uma string Groovy interpolada entre aspas duplas triplas contendo o segredo",
+      "Uma string Groovy formada pela concatenação do segredo em texto simples",
+      "Uma string Groovy entre aspas simples"
+    ],
+    "answer": "Uma string Groovy entre aspas simples"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "Qual é a finalidade de um crumb CSRF do Jenkins nas solicitações web relevantes?",
+    "options": [
+      "Criptografar um artefato de compilação antes do envio",
+      "Selecionar o agente que executa uma compilação",
+      "Ajudar a verificar se uma solicitação que altera o estado pertence a uma sessão de usuário estabelecida",
+      "Substituir as verificações de autorização de todos os trabalhos"
+    ],
+    "answer": "Ajudar a verificar se uma solicitação que altera o estado pertence a uma sessão de usuário estabelecida"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "O que um pipeline deve usar para coordenar acesso exclusivo a um dispositivo de teste compartilhado entre trabalhos diferentes?",
+    "options": [
+      "A opção skipDefaultCheckout",
+      "A etapa lock do plugin Lockable Resources",
+      "A opção timestamps",
+      "A opção buildDiscarder"
+    ],
+    "answer": "A etapa lock do plugin Lockable Resources"
+  }
+]

@@ -1,0 +1,302 @@
+[
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "Quel composant planifie les pods sur les nœuds ?",
+    "options": [
+      "kube-scheduler",
+      "kubelet",
+      "etcd",
+      "kube-proxy"
+    ],
+    "answer": "kube-scheduler"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "Quel composant s'exécute sur chaque nœud ?",
+    "options": [
+      "kubelet",
+      "etcd",
+      "kube-apiserver",
+      "controller-manager"
+    ],
+    "answer": "kubelet"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "Quel composant joue le rôle de point d'entrée du plan de contrôle ?",
+    "options": [
+      "kube-apiserver",
+      "kubelet",
+      "etcd",
+      "kube-proxy"
+    ],
+    "answer": "kube-apiserver"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "Quel composant stocke l'état du cluster ?",
+    "options": [
+      "etcd",
+      "kubelet",
+      "CoreDNS",
+      "Ingress"
+    ],
+    "answer": "etcd"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "Quel composant gère les règles réseau sur les nœuds ?",
+    "options": [
+      "kube-proxy",
+      "kubelet",
+      "etcd",
+      "Scheduler"
+    ],
+    "answer": "kube-proxy"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "Quel service DNS est couramment utilisé dans Kubernetes ?",
+    "options": [
+      "CoreDNS",
+      "Bind",
+      "Route53",
+      "Consul"
+    ],
+    "answer": "CoreDNS"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "Quel objet est la plus petite unité déployable dans Kubernetes ?",
+    "options": [
+      "Pod",
+      "Cluster",
+      "Node",
+      "Service"
+    ],
+    "answer": "Pod"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "Quel objet gère les applications sans état ?",
+    "options": [
+      "Deployment",
+      "ConfigMap",
+      "Secret",
+      "Namespace"
+    ],
+    "answer": "Deployment"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "Quel type de charge de travail fournit des identités de Pods stables et un déploiement ordonné pour les applications avec état ?",
+    "options": [
+      "StatefulSet",
+      "Deployment",
+      "ReplicaSet",
+      "DaemonSet"
+    ],
+    "answer": "StatefulSet"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "Quel objet garantit qu'un nombre spécifié de réplicas de pods est en cours d'exécution ?",
+    "options": [
+      "ReplicaSet",
+      "Service",
+      "ConfigMap",
+      "Namespace"
+    ],
+    "answer": "ReplicaSet"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "Quel objet expose les pods au trafic réseau ?",
+    "options": [
+      "Service",
+      "Node",
+      "ReplicaSet",
+      "Volume"
+    ],
+    "answer": "Service"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "Quel objet gère l'accès externe aux services ?",
+    "options": [
+      "Ingress",
+      "Pod",
+      "ReplicaSet",
+      "Secret"
+    ],
+    "answer": "Ingress"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "Quel objet stocke les données de configuration ?",
+    "options": [
+      "ConfigMap",
+      "Deployment",
+      "Ingress",
+      "Node"
+    ],
+    "answer": "ConfigMap"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "Quel objet stocke les informations sensibles comme les mots de passe ?",
+    "options": [
+      "Secret",
+      "ConfigMap",
+      "Service",
+      "Namespace"
+    ],
+    "answer": "Secret"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "Quel objet fournit un stockage persistant aux pods ?",
+    "options": [
+      "PersistentVolume",
+      "ReplicaSet",
+      "Namespace",
+      "Service"
+    ],
+    "answer": "PersistentVolume"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "Quelle sonde détermine si un conteneur est prêt à recevoir le trafic d'un Service ?",
+    "options": [
+      "Sonde de maintien de connexion TCP",
+      "Readiness probe",
+      "Liveness probe",
+      "Sonde de démarrage"
+    ],
+    "answer": "Readiness probe"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "Que peut-il se produire après des échecs répétés d'une sonde de vitalité au-delà du seuil configuré ?",
+    "options": [
+      "Le kubelet redémarre ce conteneur selon sa politique de redémarrage",
+      "L'ordonnanceur déplace tous les Pods vers un nouveau nœud",
+      "Le serveur API supprime le Deployment",
+      "Le Service devient un Service ExternalName"
+    ],
+    "answer": "Le kubelet redémarre ce conteneur selon sa politique de redémarrage"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "Que fait une sonde de démarrage pendant le lancement de l'application ?",
+    "options": [
+      "Elle désactive toutes les limites de ressources des conteneurs",
+      "Elle empêche le téléchargement de l'image",
+      "Elle réserve un nœud dédié du plan de contrôle",
+      "Elle retarde les sondes de vitalité et de disponibilité jusqu'à sa réussite"
+    ],
+    "answer": "Elle retarde les sondes de vitalité et de disponibilité jusqu'à sa réussite"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "Quelle affirmation est vraie au sujet des conteneurs d'initialisation ordinaires d'un Pod ?",
+    "options": [
+      "Ils doivent exposer un port de Service",
+      "Ils s'exécutent toujours sur des nœuds distincts",
+      "Ils s'exécutent jusqu'à leur terme dans l'ordre avant le lancement des conteneurs applicatifs",
+      "Ils s'exécutent tous uniquement après la fin des conteneurs applicatifs"
+    ],
+    "answer": "Ils s'exécutent jusqu'à leur terme dans l'ordre avant le lancement des conteneurs applicatifs"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "Quelles ressources les conteneurs d'un même Pod partagent-ils normalement ?",
+    "options": [
+      "Une IP de Service distincte pour chaque conteneur",
+      "Un espace de noms réseau et une adresse IP de Pod",
+      "Un système de fichiers racine inscriptible",
+      "Un nœud distinct pour chaque conteneur"
+    ],
+    "answer": "Un espace de noms réseau et une adresse IP de Pod"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "Quel champ déclare la quantité de ressources utilisée par l'ordonnanceur pour décider du placement d'un conteneur ?",
+    "options": [
+      "resources.requests",
+      "resources.limits",
+      "securityContext",
+      "imagePullPolicy"
+    ],
+    "answer": "resources.requests"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "Que représente une demande de CPU de 250m pour un conteneur ?",
+    "options": [
+      "Deux CPU et demi",
+      "Vingt-cinq CPU",
+      "Deux cent cinquante CPU",
+      "Un quart de CPU"
+    ],
+    "answer": "Un quart de CPU"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "Quelle conséquence est typique lorsqu'un conteneur dépasse sa limite mémoire imposée ?",
+    "options": [
+      "Son image est reconstruite avec plus de mémoire",
+      "Son port de Service est automatiquement modifié",
+      "Il peut être arrêté par le mécanisme de manque de mémoire",
+      "Sa demande de mémoire est automatiquement doublée"
+    ],
+    "answer": "Il peut être arrêté par le mécanisme de manque de mémoire"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "Quel champ de Pod exige que les nœuds cibles correspondent à toutes les étiquettes de nœud indiquées ?",
+    "options": [
+      "dnsPolicy",
+      "nodeSelector",
+      "serviceAccountName",
+      "hostAliases"
+    ],
+    "answer": "nodeSelector"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "L'ajout d'une tolérance au taint d'un nœud garantit-il la planification d'un Pod sur ce nœud ?",
+    "options": [
+      "Non, les autres contraintes de placement et les ressources disponibles s'appliquent toujours",
+      "Oui, cela annule toutes les contraintes de ressources",
+      "Oui, cela contourne toutes les règles d'affinité de nœud",
+      "Non, les tolérances interdisent toujours le placement sur le nœud portant le taint"
+    ],
+    "answer": "Non, les autres contraintes de placement et les ressources disponibles s'appliquent toujours"
+  }
+]

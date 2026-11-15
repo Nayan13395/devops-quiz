@@ -1,0 +1,302 @@
+[
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "ഒരു ലളിതമായ Bash function നിർവചിക്കുന്ന syntax ഏതാണ്?",
+    "options": [
+      "myfunc() { echo hi; }",
+      "def myfunc: echo hi",
+      "function = myfunc",
+      "myfunc -> echo hi"
+    ],
+    "answer": "myfunc() { echo hi; }"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "myfunc എന്ന function വിളിക്കുന്ന കമാൻഡ് ഏതാണ്?",
+    "options": [
+      "myfunc",
+      "call myfunc",
+      "run myfunc",
+      "execute myfunc"
+    ],
+    "answer": "myfunc"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "ഒരു function-നുള്ളിൽ മാത്രം ദൃശ്യമാകുന്ന വേരിയബിൾ declare ചെയ്യുന്ന keyword ഏതാണ്?",
+    "options": [
+      "local",
+      "private",
+      "internal",
+      "hidden"
+    ],
+    "answer": "local"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "ഒരു function-ൽ നിന്ന് exit status 0 തിരികെ നൽകുന്ന കമാൻഡ് ഏതാണ്?",
+    "options": [
+      "return 0",
+      "exit function 0",
+      "stop 0",
+      "end 0"
+    ],
+    "answer": "return 0"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "ഒരു function-നുള്ളിൽ, function-ലേക്ക് നൽകിയ arguments-ന്റെ എണ്ണം തരുന്ന parameter ഏതാണ്?",
+    "options": [
+      "$#",
+      "$@",
+      "$0",
+      "$1"
+    ],
+    "answer": "$#"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "മൂന്ന് ഘടകങ്ങളുള്ള indexed array ഉണ്ടാക്കുന്ന syntax ഏതാണ്?",
+    "options": [
+      "arr=(one two three)",
+      "array arr one two three",
+      "arr[one two three]",
+      "set arr one two three"
+    ],
+    "answer": "arr=(one two three)"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "arr-ന്റെ index 2-ലെ ഘടകം ആക്സസ് ചെയ്യുന്ന syntax ഏതാണ്?",
+    "options": [
+      "${arr[2]}",
+      "${arr:2}",
+      "$arr[2]",
+      "arr{2}"
+    ],
+    "answer": "${arr[2]}"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "arr-ലെ ഘടകങ്ങളുടെ എണ്ണം നൽകുന്ന expansion ഏതാണ്?",
+    "options": [
+      "${#arr[@]}",
+      "${#arr}",
+      "${arr:length}",
+      "${arr[@]#}"
+    ],
+    "answer": "${#arr[@]}"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "arr-ലേക്ക് newitem append ചെയ്യുന്ന syntax ഏതാണ്?",
+    "options": [
+      "arr+=(newitem)",
+      "arr=newitem",
+      "arr.push(newitem)",
+      "add arr newitem"
+    ],
+    "answer": "arr+=(newitem)"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "arr-ന്റെ എല്ലാ ഘടകങ്ങളും നൽകുന്ന expansion ഏതാണ്?",
+    "options": [
+      "${arr[@]}",
+      "${arr[0]}",
+      "${arr[all]}",
+      "${arr}"
+    ],
+    "answer": "${arr[@]}"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "associative array declare ചെയ്യുന്ന കമാൻഡ് ഏതാണ്?",
+    "options": [
+      "declare -A map",
+      "declare -a map",
+      "array -A map",
+      "assoc map"
+    ],
+    "answer": "declare -A map"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "standard output-ഉം standard error-ഉം output.log-ലേക്ക് അയയ്ക്കുന്ന redirection ഏതാണ്?",
+    "options": [
+      "command &> output.log",
+      "command > output.log",
+      "command 2> output.log",
+      "command < output.log"
+    ],
+    "answer": "command &> output.log"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "കമാൻഡിന്റെ എല്ലാ ഔട്ട്പുട്ടും ഉപേക്ഷിക്കുന്ന redirection ഏതാണ്?",
+    "options": [
+      "command > /dev/null",
+      "command > null",
+      "command > empty",
+      "command > discard"
+    ],
+    "answer": "command > /dev/null"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "ഒരു കമാൻഡിന്റെ ഔട്ട്പുട്ട് മറ്റൊന്നിന്റെ ഇൻപുട്ടായി അയയ്ക്കുന്ന ഓപ്പറേറ്റർ ഏതാണ്?",
+    "options": [
+      "|",
+      ">",
+      "<",
+      "&"
+    ],
+    "answer": "|"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "ഒരു കമാൻഡ് background-ൽ പ്രവർത്തിപ്പിക്കുന്ന ചിഹ്നം ഏതാണ്?",
+    "options": [
+      "&",
+      "&&",
+      "|",
+      ";"
+    ],
+    "answer": "&"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "background jobs പൂർത്തിയാകുന്നതുവരെ കാത്തിരിക്കുന്ന builtin ഏതാണ്?",
+    "options": [
+      "wait",
+      "hold",
+      "pause",
+      "sleep"
+    ],
+    "answer": "wait"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "നിലവിലെ shell environment-ൽ script.sh പ്രവർത്തിപ്പിക്കുന്ന കമാൻഡ് ഏതാണ്?",
+    "options": [
+      "source script.sh",
+      "bash script.sh",
+      "./script.sh",
+      "sh script.sh"
+    ],
+    "answer": "source script.sh"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "here document ആരംഭിക്കുന്ന ഓപ്പറേറ്റർ ഏതാണ്?",
+    "options": [
+      "<<",
+      ">>",
+      "<",
+      ">"
+    ],
+    "answer": "<<"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "സുരക്ഷിതമായ ഒരു temporary ഫയൽ ഉണ്ടാക്കുന്ന കമാൻഡ് ഏതാണ്?",
+    "options": [
+      "mktemp",
+      "tempfile",
+      "touch tmp",
+      "newfile"
+    ],
+    "answer": "mktemp"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "സ്ക്രിപ്റ്റിന് SIGINT ലഭിക്കുമ്പോൾ cleanup പ്രവർത്തിപ്പിക്കുന്ന കമാൻഡ് ഏതാണ്?",
+    "options": [
+      "trap 'cleanup' SIGINT",
+      "handle SIGINT cleanup",
+      "signal SIGINT cleanup",
+      "catch SIGINT cleanup"
+    ],
+    "answer": "trap 'cleanup' SIGINT"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "ഉപയോക്താവ് Ctrl+C അമർത്തുമ്പോൾ സാധാരണയായി അയയ്ക്കുന്ന signal ഏതാണ്?",
+    "options": [
+      "SIGINT",
+      "SIGTERM",
+      "SIGKILL",
+      "SIGHUP"
+    ],
+    "answer": "SIGINT"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "ഒരു കമാൻഡ് പരാജയപ്പെടുമ്പോൾ സ്ക്രിപ്റ്റ് ഉടൻ അവസാനിപ്പിക്കുന്ന ഓപ്ഷൻ ഏതാണ്?",
+    "options": [
+      "set -e",
+      "set -x",
+      "set -u",
+      "set -o pipefail"
+    ],
+    "answer": "set -e"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "unset ആയ വേരിയബിൾ റഫറൻസ് ചെയ്യുമ്പോൾ പിശക് ഉണ്ടാക്കുന്ന ഓപ്ഷൻ ഏതാണ്?",
+    "options": [
+      "set -u",
+      "set -e",
+      "set -x",
+      "set -a"
+    ],
+    "answer": "set -u"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "debugging-നായി ഓരോ കമാൻഡും എക്സിക്യൂട്ട് ചെയ്യുന്നതിന് മുമ്പ് പ്രിന്റ് ചെയ്യുന്ന ഓപ്ഷൻ ഏതാണ്?",
+    "options": [
+      "set -x",
+      "set -e",
+      "set -u",
+      "set -v"
+    ],
+    "answer": "set -x"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "നിലവിൽ നിർവചിച്ചിട്ടുള്ള shell functions ലിസ്റ്റ് ചെയ്യുന്ന കമാൻഡ് ഏതാണ്?",
+    "options": [
+      "declare -f",
+      "declare -A",
+      "functions",
+      "listfunc"
+    ],
+    "answer": "declare -f"
+  }
+]

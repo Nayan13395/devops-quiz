@@ -1,0 +1,302 @@
+[
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "哪个声明式选项将新运行排队，而不是允许同一流水线并发运行？",
+    "options": [
+      "parallelsAlwaysFailFast()",
+      "disableConcurrentBuilds()",
+      "disableResume()",
+      "skipDefaultCheckout()"
+    ],
+    "answer": "disableConcurrentBuilds()"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "哪个声明式选项指定旧构建记录和产物的保留规则？",
+    "options": [
+      "buildDiscarder(logRotator(numToKeepStr: '10'))",
+      "timeout(time: 10, unit: 'MINUTES')",
+      "retry(10)",
+      "quietPeriod(10)"
+    ],
+    "answer": "buildDiscarder(logRotator(numToKeepStr: '10'))"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "Jenkins cron 表达式中的 H 符号有什么作用？",
+    "options": [
+      "表示用户计算机上的当前小时",
+      "请求仅在节假日运行",
+      "请求仅在节点空闲时运行",
+      "提供基于任务名称的稳定哈希值，用于分散计划负载"
+    ],
+    "answer": "提供基于任务名称的稳定哈希值，用于分散计划负载"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "Jenkins 的五字段 cron 语法中，第五个字段表示什么？",
+    "options": [
+      "一天中的小时",
+      "一个月中的日期",
+      "一周中的星期",
+      "一小时中的分钟"
+    ],
+    "answer": "一周中的星期"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "前一次构建失败或不稳定，而本次构建成功时，哪个 post 条件会执行？",
+    "options": [
+      "unsuccessful",
+      "fixed",
+      "changed",
+      "regression"
+    ],
+    "answer": "fixed"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "哪个 post 条件在其他 post 条件求值后执行？",
+    "options": [
+      "cleanup",
+      "always",
+      "changed",
+      "success"
+    ],
+    "answer": "cleanup"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "哪个 when 选项在分配阶段代理之前求值阶段条件？",
+    "options": [
+      "beforeInput false",
+      "beforeOptions false",
+      "branch 'main'",
+      "beforeAgent true"
+    ],
+    "answer": "beforeAgent true"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "哪个 when 条件用于匹配多分支流水线中的指定分支？",
+    "options": [
+      "buildingTag()",
+      "changeRequest()",
+      "branch 'main'",
+      "tag 'main'"
+    ],
+    "answer": "branch 'main'"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "哪个声明式结构执行操作系统和浏览器等轴值的组合？",
+    "options": [
+      "environment",
+      "matrix",
+      "parallel",
+      "steps"
+    ],
+    "answer": "matrix"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "哪个部分从声明式矩阵中删除不需要的组合？",
+    "options": [
+      "excludes",
+      "axes",
+      "stages",
+      "tools"
+    ],
+    "answer": "excludes"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "包含并行分支的阶段使用哪个设置，在一个分支失败时停止其他分支？",
+    "options": [
+      "beforeAgent true",
+      "reuseNode true",
+      "alwaysPull true",
+      "failFast true"
+    ],
+    "answer": "failFast true"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "哪个声明式选项在构建变为不稳定后跳过后续阶段？",
+    "options": [
+      "disableResume()",
+      "preserveStashes()",
+      "skipStagesAfterUnstable()",
+      "skipDefaultCheckout()"
+    ],
+    "answer": "skipStagesAfterUnstable()"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "哪个流水线步骤记录失败，同时允许其代码块之后继续执行？",
+    "options": [
+      "input",
+      "catchError",
+      "error",
+      "timeout"
+    ],
+    "answer": "catchError"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "进程退出后，sh(script: 'check.sh', returnStatus: true) 返回什么？",
+    "options": [
+      "进程的数字退出码",
+      "完整的标准输出文本",
+      "shell 的进程 ID",
+      "Jenkins 凭据对象"
+    ],
+    "answer": "进程的数字退出码"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "sh(script: 'echo ready', returnStdout: true) 成功时返回什么？",
+    "options": [
+      "数字构建编号",
+      "以映射形式返回 shell 环境",
+      "代理的标签列表",
+      "捕获的标准输出字符串"
+    ],
+    "answer": "捕获的标准输出字符串"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "哪个流水线步骤递归删除当前工作空间目录的内容？",
+    "options": [
+      "pwd",
+      "readFile",
+      "deleteDir",
+      "fileExists"
+    ],
+    "answer": "deleteDir"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "哪个流水线步骤检查当前工作空间中是否存在某个路径？",
+    "options": [
+      "libraryResource",
+      "fileExists",
+      "readFile",
+      "writeFile"
+    ],
+    "answer": "fileExists"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "哪个流水线步骤触发另一个 Jenkins 任务，并可传递构建参数？",
+    "options": [
+      "build",
+      "stage",
+      "node",
+      "checkout"
+    ],
+    "answer": "build"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "哪个声明式选项保留已完成构建的 stash，以便重新启动阶段？",
+    "options": [
+      "disableResume()",
+      "skipDefaultCheckout()",
+      "quietPeriod(5)",
+      "preserveStashes()"
+    ],
+    "answer": "preserveStashes()"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "共享库中的哪个文件为 vars/deploy.groovy 定义的全局变量 deploy 提供帮助文本？",
+    "options": [
+      "resources/deploy.txt",
+      "vars/main.groovy",
+      "vars/deploy.txt",
+      "src/deploy.groovy"
+    ],
+    "answer": "vars/deploy.txt"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "Jenkins 流水线中带 @NonCPS 注解的方法有什么重要限制？",
+    "options": [
+      "必须在 Windows 代理上运行",
+      "不得调用经过 CPS 转换的流水线步骤",
+      "必须包含 stage 指令",
+      "必须始终返回字符串"
+    ],
+    "answer": "不得调用经过 CPS 转换的流水线步骤"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "Jenkins 的哪个功能审查尚未批准的沙箱 Groovy 代码请求的签名？",
+    "options": [
+      "进程内脚本审批",
+      "Credentials Store",
+      "Build Queue",
+      "SCM 轮询日志"
+    ],
+    "answer": "进程内脚本审批"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "若 shell 脚本让 shell 自行展开已绑定的秘密变量，建议使用哪种 Groovy 引号形式？",
+    "options": [
+      "包含秘密的双引号 Groovy 插值字符串",
+      "包含秘密的三重双引号 Groovy 插值字符串",
+      "通过拼接明文秘密形成的 Groovy 字符串",
+      "单引号 Groovy 字符串"
+    ],
+    "answer": "单引号 Groovy 字符串"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "Jenkins CSRF crumb 对相关 Web 请求有什么作用？",
+    "options": [
+      "在上传前加密构建产物",
+      "选择执行构建的代理",
+      "帮助验证改变状态的请求属于已建立的用户会话",
+      "替代所有任务的授权检查"
+    ],
+    "answer": "帮助验证改变状态的请求属于已建立的用户会话"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "流水线应使用什么来协调不同任务对共享测试设备的独占访问？",
+    "options": [
+      "skipDefaultCheckout 选项",
+      "Lockable Resources 插件的 lock 步骤",
+      "timestamps 选项",
+      "buildDiscarder 选项"
+    ],
+    "answer": "Lockable Resources 插件的 lock 步骤"
+  }
+]

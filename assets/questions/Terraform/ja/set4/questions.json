@@ -1,0 +1,302 @@
+[
+  {
+    "category": "Terraform",
+    "set": 4,
+    "question": "ファイルを書き換えずに Terraform の書式を確認するコマンドはどれか？",
+    "options": [
+      "terraform fmt -check",
+      "terraform validate",
+      "terraform fmt -write=true",
+      "terraform plan"
+    ],
+    "answer": "terraform fmt -check"
+  },
+  {
+    "category": "Terraform",
+    "set": 4,
+    "question": "変更計画や外部サービス検証をせず、Terraform 設定の内部構文と整合性を調べるコマンドはどれか？",
+    "options": [
+      "terraform validate",
+      "terraform plan",
+      "terraform check",
+      "terraform verify"
+    ],
+    "answer": "terraform validate"
+  },
+  {
+    "category": "Terraform",
+    "set": 4,
+    "question": "視覚的な依存関係グラフを生成するコマンドはどれですか?",
+    "options": [
+      "terraform graph",
+      "terraform map",
+      "terraform diagram",
+      "terraform tree"
+    ],
+    "answer": "terraform graph"
+  },
+  {
+    "category": "Terraform",
+    "set": 4,
+    "question": "構成のドリフトを検出するのに役立つTerraformの機能はどれですか?",
+    "options": [
+      "terraform plan",
+      "terraform fmt",
+      "terraform output",
+      "terraform console"
+    ],
+    "answer": "terraform plan"
+  },
+  {
+    "category": "Terraform",
+    "set": 4,
+    "question": "対話型のTerraformコンソールを開くコマンドはどれですか?",
+    "options": [
+      "terraform console",
+      "terraform shell",
+      "terraform repl",
+      "terraform interactive"
+    ],
+    "answer": "terraform console"
+  },
+  {
+    "category": "Terraform",
+    "set": 4,
+    "question": "実際のインフラから状態を更新し、現在は refresh-only の plan/apply が推奨される旧コマンドはどれか？",
+    "options": [
+      "terraform refresh",
+      "terraform sync",
+      "terraform update",
+      "terraform pull"
+    ],
+    "answer": "terraform refresh"
+  },
+  {
+    "category": "Terraform",
+    "set": 4,
+    "question": "Terraformの変数定義に使用されるファイル拡張子はどれですか?",
+    "options": [
+      ".tfvars",
+      ".vars",
+      ".tfvar",
+      ".terraform"
+    ],
+    "answer": ".tfvars"
+  },
+  {
+    "category": "Terraform",
+    "set": 4,
+    "question": "特定のtfvarsファイルの値を適用するコマンドはどれですか?",
+    "options": [
+      "terraform apply -var-file",
+      "terraform apply -vars",
+      "terraform apply -tfvars",
+      "terraform apply -file"
+    ],
+    "answer": "terraform apply -var-file"
+  },
+  {
+    "category": "Terraform",
+    "set": 4,
+    "question": "動的ブロックの作成に役立つTerraformの機能はどれですか?",
+    "options": [
+      "dynamic",
+      "foreach",
+      "loop",
+      "template"
+    ],
+    "answer": "dynamic"
+  },
+  {
+    "category": "Terraform",
+    "set": 4,
+    "question": "文字列をリストに分割する関数はどれか？",
+    "options": [
+      "split",
+      "join",
+      "slice",
+      "parse"
+    ],
+    "answer": "split"
+  },
+  {
+    "category": "Terraform",
+    "set": 4,
+    "question": "複数のマップをマージする関数はどれですか?",
+    "options": [
+      "merge",
+      "concat",
+      "combine",
+      "append"
+    ],
+    "answer": "merge"
+  },
+  {
+    "category": "Terraform",
+    "set": 4,
+    "question": "条件付きでリソースを作成できるTerraformの機能はどれですか?",
+    "options": [
+      "count",
+      "depends_on",
+      "provider",
+      "workspace"
+    ],
+    "answer": "count"
+  },
+  {
+    "category": "Terraform",
+    "set": 4,
+    "question": "追加引数なしで、最新状態をリソース属性も含む読みやすい形で表示するコマンドはどれか？",
+    "options": [
+      "terraform show",
+      "terraform state list",
+      "terraform state show",
+      "terraform output"
+    ],
+    "answer": "terraform show"
+  },
+  {
+    "category": "Terraform",
+    "set": 4,
+    "question": "リソースが正しい順序で作成されるようにするTerraformの機能はどれですか?",
+    "options": [
+      "依存関係グラフ",
+      "Count",
+      "ワークスペース",
+      "出力"
+    ],
+    "answer": "依存関係グラフ"
+  },
+  {
+    "category": "Terraform",
+    "set": 4,
+    "question": "構成で使用されているプロバイダーを表示するコマンドはどれですか?",
+    "options": [
+      "terraform providers",
+      "terraform provider list",
+      "terraform show providers",
+      "terraform plugin list"
+    ],
+    "answer": "terraform providers"
+  },
+  {
+    "category": "Terraform",
+    "set": 4,
+    "question": "特定の管理対象リソースインスタンスの置換を求める計画オプションはどれか？",
+    "options": [
+      "-destroy",
+      "-replace=aws_instance.web",
+      "-target=aws_instance.web",
+      "-refresh=false"
+    ],
+    "answer": "-replace=aws_instance.web"
+  },
+  {
+    "category": "Terraform",
+    "set": 4,
+    "question": "-detailed-exitcode で terraform plan が成功し変更を検出した場合、終了コードはどれか？",
+    "options": [
+      "2",
+      "0",
+      "1",
+      "3"
+    ],
+    "answer": "2"
+  },
+  {
+    "category": "Terraform",
+    "set": 4,
+    "question": "Terraform 外で既に行われた変更に合わせ、状態と出力だけの更新を提案する計画モードはどれか？",
+    "options": [
+      "-destroy",
+      "-refresh=false",
+      "-target=aws_instance.web",
+      "-refresh-only"
+    ],
+    "answer": "-refresh-only"
+  },
+  {
+    "category": "Terraform",
+    "set": 4,
+    "question": "古いオブジェクトを破棄する前に代替を作るライフサイクルルールはどれか？",
+    "options": [
+      "ignore_changes",
+      "replace_triggered_by",
+      "create_before_destroy",
+      "prevent_destroy"
+    ],
+    "answer": "create_before_destroy"
+  },
+  {
+    "category": "Terraform",
+    "set": 4,
+    "question": "設定に残っている限りリソース破棄の計画を拒否するライフサイクルルールはどれか？",
+    "options": [
+      "replace_triggered_by",
+      "prevent_destroy",
+      "create_before_destroy",
+      "ignore_changes"
+    ],
+    "answer": "prevent_destroy"
+  },
+  {
+    "category": "Terraform",
+    "set": 4,
+    "question": "指定属性を別システムが管理できるよう、Terraform がその属性の更新を計画しないルールはどれか？",
+    "options": [
+      "ignore_changes",
+      "prevent_destroy",
+      "create_before_destroy",
+      "replace_triggered_by"
+    ],
+    "answer": "ignore_changes"
+  },
+  {
+    "category": "Terraform",
+    "set": 4,
+    "question": "設定したバージョン制約内でプロバイダー更新を許す terraform init オプションはどれか？",
+    "options": [
+      "-reconfigure",
+      "-backend=false",
+      "-lockfile=readonly",
+      "-upgrade"
+    ],
+    "answer": "-upgrade"
+  },
+  {
+    "category": "Terraform",
+    "set": 4,
+    "question": "aws_instance.web の保存済み属性を表示するコマンドはどれか？",
+    "options": [
+      "terraform import aws_instance.web i-1234567890abcdef0",
+      "terraform state rm aws_instance.web",
+      "terraform state show aws_instance.web",
+      "terraform state list aws_instance.web"
+    ],
+    "answer": "terraform state show aws_instance.web"
+  },
+  {
+    "category": "Terraform",
+    "set": 4,
+    "question": "Terraform の詳細診断ログを有効にする環境変数はどれか？",
+    "options": [
+      "TF_IN_AUTOMATION",
+      "TF_LOG",
+      "TF_INPUT",
+      "TF_WORKSPACE"
+    ],
+    "answer": "TF_LOG"
+  },
+  {
+    "category": "Terraform",
+    "set": 4,
+    "question": "同時リソース操作を五つに制限する terraform apply オプションはどれか？",
+    "options": [
+      "-parallelism=5",
+      "-lock-timeout=5s",
+      "-refresh=false",
+      "-auto-approve"
+    ],
+    "answer": "-parallelism=5"
+  }
+]

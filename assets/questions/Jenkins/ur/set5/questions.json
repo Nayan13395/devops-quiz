@@ -1,0 +1,302 @@
+[
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "Declarative کا کون سا اختیار ایک ہی Pipeline کے بیک وقت اجرا کے بجائے نئے اجرا کو قطار میں رکھتا ہے؟",
+    "options": [
+      "parallelsAlwaysFailFast()",
+      "disableConcurrentBuilds()",
+      "disableResume()",
+      "skipDefaultCheckout()"
+    ],
+    "answer": "disableConcurrentBuilds()"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "Declarative کا کون سا اختیار پرانے بلڈ ریکارڈ اور آرٹیفیکٹ رکھنے کے قواعد بتاتا ہے؟",
+    "options": [
+      "buildDiscarder(logRotator(numToKeepStr: '10'))",
+      "timeout(time: 10, unit: 'MINUTES')",
+      "retry(10)",
+      "quietPeriod(10)"
+    ],
+    "answer": "buildDiscarder(logRotator(numToKeepStr: '10'))"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "Jenkins کے cron ایکسپریشن میں H علامت کیا فراہم کرتی ہے؟",
+    "options": [
+      "صارف کے کمپیوٹر پر موجودہ گھنٹہ",
+      "صرف چھٹیوں پر چلنے کی درخواست",
+      "صرف نوڈ فارغ ہونے پر چلنے کی درخواست",
+      "کام کے نام پر مبنی مستقل ہیش، جو مقررہ کاموں کا بوجھ پھیلاتا ہے"
+    ],
+    "answer": "کام کے نام پر مبنی مستقل ہیش، جو مقررہ کاموں کا بوجھ پھیلاتا ہے"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "Jenkins کی پانچ خانوں والی cron نحو میں پانچواں خانہ کیا ظاہر کرتا ہے؟",
+    "options": [
+      "دن کا گھنٹہ",
+      "مہینے کا دن",
+      "ہفتے کا دن",
+      "گھنٹے کا منٹ"
+    ],
+    "answer": "ہفتے کا دن"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "پچھلا بلڈ ناکام یا غیر مستحکم ہونے کے بعد نیا بلڈ کامیاب ہو تو post کی کون سی شرط چلتی ہے؟",
+    "options": [
+      "unsuccessful",
+      "fixed",
+      "changed",
+      "regression"
+    ],
+    "answer": "fixed"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "دیگر post شرائط جانچنے کے بعد post کی کون سی شرط چلتی ہے؟",
+    "options": [
+      "cleanup",
+      "always",
+      "changed",
+      "success"
+    ],
+    "answer": "cleanup"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "when کا کون سا اختیار مرحلے کا ایجنٹ مختص کرنے سے پہلے اس کی شرط جانچتا ہے؟",
+    "options": [
+      "beforeInput false",
+      "beforeOptions false",
+      "branch 'main'",
+      "beforeAgent true"
+    ],
+    "answer": "beforeAgent true"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "when کی کون سی شرط Multibranch Pipeline میں نام والی برانچ کو ہدف بناتی ہے؟",
+    "options": [
+      "buildingTag()",
+      "changeRequest()",
+      "branch 'main'",
+      "tag 'main'"
+    ],
+    "answer": "branch 'main'"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "Declarative کی کون سی ساخت آپریٹنگ سسٹم اور براؤزر جیسے محوروں کی قدروں کے امتزاج چلاتی ہے؟",
+    "options": [
+      "environment",
+      "matrix",
+      "parallel",
+      "steps"
+    ],
+    "answer": "matrix"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "کون سا حصہ Declarative میٹرکس سے ناپسندیدہ امتزاج ہٹاتا ہے؟",
+    "options": [
+      "excludes",
+      "axes",
+      "stages",
+      "tools"
+    ],
+    "answer": "excludes"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "متوازی شاخوں والے مرحلے کی کون سی ترتیب ایک شاخ ناکام ہونے پر دیگر شاخیں روکتی ہے؟",
+    "options": [
+      "beforeAgent true",
+      "reuseNode true",
+      "alwaysPull true",
+      "failFast true"
+    ],
+    "answer": "failFast true"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "Declarative کا کون سا اختیار بلڈ غیر مستحکم ہوتے ہی بعد کے مراحل چھوڑ دیتا ہے؟",
+    "options": [
+      "disableResume()",
+      "preserveStashes()",
+      "skipStagesAfterUnstable()",
+      "skipDefaultCheckout()"
+    ],
+    "answer": "skipStagesAfterUnstable()"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "Pipeline کا کون سا قدم ناکامی درج کرتے ہوئے اپنے بلاک کے بعد اجرا جاری رہنے دیتا ہے؟",
+    "options": [
+      "input",
+      "catchError",
+      "error",
+      "timeout"
+    ],
+    "answer": "catchError"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "پراسیس ختم ہونے پر sh(script: 'check.sh', returnStatus: true) کیا واپس کرتا ہے؟",
+    "options": [
+      "پراسیس کا عددی اختتامی کوڈ",
+      "معیاری آؤٹ پٹ کا مکمل متن",
+      "شیل کا پراسیس ID",
+      "Jenkins اسناد کا آبجیکٹ"
+    ],
+    "answer": "پراسیس کا عددی اختتامی کوڈ"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "کامیابی پر sh(script: 'echo ready', returnStdout: true) کیا واپس کرتا ہے؟",
+    "options": [
+      "عددی بلڈ نمبر",
+      "شیل کا ماحول بطور میپ",
+      "ایجنٹ کے لیبل کی فہرست",
+      "حاصل کی گئی معیاری آؤٹ پٹ اسٹرنگ"
+    ],
+    "answer": "حاصل کی گئی معیاری آؤٹ پٹ اسٹرنگ"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "Pipeline کا کون سا قدم موجودہ ورک اسپیس ڈائریکٹری کا مواد تمام ذیلی سطحوں سمیت حذف کرتا ہے؟",
+    "options": [
+      "pwd",
+      "readFile",
+      "deleteDir",
+      "fileExists"
+    ],
+    "answer": "deleteDir"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "Pipeline کا کون سا قدم جانچتا ہے کہ موجودہ ورک اسپیس میں پاتھ موجود ہے؟",
+    "options": [
+      "libraryResource",
+      "fileExists",
+      "readFile",
+      "writeFile"
+    ],
+    "answer": "fileExists"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "Pipeline کا کون سا قدم دوسرا Jenkins کام شروع کرتا ہے اور بلڈ پیرامیٹر دے سکتا ہے؟",
+    "options": [
+      "build",
+      "stage",
+      "node",
+      "checkout"
+    ],
+    "answer": "build"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "Declarative کا کون سا اختیار مراحل دوبارہ شروع کرنے کے لیے مکمل بلڈ کے اسٹیش محفوظ رکھتا ہے؟",
+    "options": [
+      "disableResume()",
+      "skipDefaultCheckout()",
+      "quietPeriod(5)",
+      "preserveStashes()"
+    ],
+    "answer": "preserveStashes()"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "Shared Library کی کون سی فائل vars/deploy.groovy سے متعین عالمی متغیر deploy کے لیے مدد کا متن دیتی ہے؟",
+    "options": [
+      "resources/deploy.txt",
+      "vars/main.groovy",
+      "vars/deploy.txt",
+      "src/deploy.groovy"
+    ],
+    "answer": "vars/deploy.txt"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "Jenkins Pipeline میں @NonCPS سے نشان زد میتھڈ کی اہم پابندی کیا ہے؟",
+    "options": [
+      "اسے Windows ایجنٹ پر چلنا چاہیے",
+      "اسے CPS سے تبدیل شدہ Pipeline قدم نہیں بلانے چاہییں",
+      "اس میں stage ہدایت ہونا لازم ہے",
+      "اسے ہمیشہ اسٹرنگ واپس کرنی چاہیے"
+    ],
+    "answer": "اسے CPS سے تبدیل شدہ Pipeline قدم نہیں بلانے چاہییں"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "Jenkins کی کون سی سہولت غیر منظور شدہ سینڈ باکس میں چلنے والے Groovy کوڈ کے درخواست کردہ دستخطوں کا جائزہ لیتی ہے؟",
+    "options": [
+      "اندرونِ پراسیس اسکرپٹ منظوری",
+      "Credentials Store",
+      "Build Queue",
+      "SCM پولنگ لاگ"
+    ],
+    "answer": "اندرونِ پراسیس اسکرپٹ منظوری"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "ایسی شیل اسکرپٹ کے لیے Groovy کا کون سا اقتباسی انداز تجویز کیا جاتا ہے جس میں شیل خود منسلک راز کے متغیر کی قدر کھولے؟",
+    "options": [
+      "راز شامل کرنے والی دہرے اقتباس کی قدر بٹھائی گئی Groovy اسٹرنگ",
+      "راز شامل کرنے والی تین دہرے اقتباس کی قدر بٹھائی گئی Groovy اسٹرنگ",
+      "سادہ متن والے راز کو جوڑ کر بنائی گئی Groovy اسٹرنگ",
+      "یکہرے اقتباس والی Groovy اسٹرنگ"
+    ],
+    "answer": "یکہرے اقتباس والی Groovy اسٹرنگ"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "متعلقہ ویب درخواستوں کے لیے Jenkins CSRF crumb کا کیا مقصد ہے؟",
+    "options": [
+      "اپ لوڈ سے پہلے بلڈ آرٹیفیکٹ رمز کرنا",
+      "بلڈ چلانے والا ایجنٹ منتخب کرنا",
+      "یہ تصدیق کرنے میں مدد دینا کہ حالت بدلنے والی درخواست قائم شدہ صارف نشست سے تعلق رکھتی ہے",
+      "تمام کاموں کے لیے اجازت کی جانچ کی جگہ لینا"
+    ],
+    "answer": "یہ تصدیق کرنے میں مدد دینا کہ حالت بدلنے والی درخواست قائم شدہ صارف نشست سے تعلق رکھتی ہے"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "مختلف کاموں کے درمیان مشترکہ ٹیسٹ آلے تک ایک وقت میں صرف ایک کی رسائی کے لیے Pipeline کو کیا استعمال کرنا چاہیے؟",
+    "options": [
+      "skipDefaultCheckout اختیار",
+      "Lockable Resources پلگ اِن کا lock قدم",
+      "timestamps اختیار",
+      "buildDiscarder اختیار"
+    ],
+    "answer": "Lockable Resources پلگ اِن کا lock قدم"
+  }
+]

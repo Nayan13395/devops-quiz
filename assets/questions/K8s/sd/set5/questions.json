@@ -1,0 +1,302 @@
+[
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "Pod ٽريفڪ تي اثر ڪرڻ لاءِ NetworkPolicy کي ڇا گهرجي؟",
+    "options": [
+      "هر چونڊيل Pod لاءِ LoadBalancer Service",
+      "ساڳئي نيم اسپيس ۾ PersistentVolumeClaim",
+      "هر پاليسي لاءِ الڳ API سرور",
+      "NetworkPolicy لاڳو ڪندڙ نيٽ ورڪ عمل"
+    ],
+    "answer": "NetworkPolicy لاڳو ڪندڙ نيٽ ورڪ عمل"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "ساڳيو Pod چونڊيندڙ گهڻيون NetworkPolicies پنهنجي اجازت ڏنل ايندڙ ٽريفڪ ڪيئن ملائن ٿيون؟",
+    "options": [
+      "پهرين ٺهيل پاليسي پوءِ وارين سڀني تي غالب ٿئي ٿي",
+      "هر پاليسي کي هر پيڪٽ الڳ اجازت ڏيڻ گهرجي",
+      "اجازت ڏنل ٽريفڪ انهن جي ايندڙ ٽريفڪ جي اجازتن جو گڏيل مجموعو آهي",
+      "آخري ٺهيل پاليسي سڀني اڳين تي غالب ٿئي ٿي"
+    ],
+    "answer": "اجازت ڏنل ٽريفڪ انهن جي ايندڙ ٽريفڪ جي اجازتن جو گڏيل مجموعو آهي"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "ڪهڙو RBAC آبجيڪٽ نيم اسپيس اندر اجازتون ڄاڻائي ٿو؟",
+    "options": [
+      "ResourceQuota",
+      "Role",
+      "RoleBinding",
+      "ServiceAccount"
+    ],
+    "answer": "Role"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "ڪهڙو RBAC آبجيڪٽ هڪ نيم اسپيس ۾ Role يا ClusterRole جون اجازتون ڏئي ٿو؟",
+    "options": [
+      "RoleBinding",
+      "ClusterRoleBinding",
+      "ServiceAccount",
+      "LimitRange"
+    ],
+    "answer": "RoleBinding"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "Kubernetes API تائين رسائي لاءِ Pod جي عملن کي عام طور ڪهڙي سڃاڻپ ڏني وڃي ٿي؟",
+    "options": [
+      "StorageClass",
+      "RuntimeClass",
+      "PriorityClass",
+      "ServiceAccount"
+    ],
+    "answer": "ServiceAccount"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "Secret ڊيٽا کي base64 ڪرڻ ان شخص کان بچائڻ لاءِ ڪافي ڇو ناهي جيڪو آبجيڪٽ پڙهي سگهي؟",
+    "options": [
+      "Base64 ڊيٽا پاڻمرادو DNS ذريعي شايع ڪري ٿو",
+      "Base64 کي Pod ۾ رکيل نجي ڪنجي گهرجي",
+      "Base64 واپس کولي سگهجندڙ انڪوڊنگ آهي، رمزڪاري نه",
+      "Base64 Kubernetes کي ڊيٽا رکڻ روڪي ٿو"
+    ],
+    "answer": "Base64 واپس کولي سگهجندڙ انڪوڊنگ آهي، رمزڪاري نه"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "ڪهڙو خانو Kubernetes کي Pod ۾ API توثيقي تفصيل پاڻمرادو مائونٽ ڪرڻ روڪي سگهي ٿو؟",
+    "options": [
+      "shareProcessNamespace: false",
+      "automountServiceAccountToken: false",
+      "hostNetwork: false",
+      "enableServiceLinks: false"
+    ],
+    "answer": "automountServiceAccountToken: false"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "ڪهڙو آبجيڪٽ نيم اسپيس ۾ وسيلن جو ڪل استعمال محدود ڪري ٿو؟",
+    "options": [
+      "ResourceQuota",
+      "LimitRange",
+      "PriorityClass",
+      "PodDisruptionBudget"
+    ],
+    "answer": "ResourceQuota"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "ڪهڙو آبجيڪٽ نيم اسپيس جي ڪنٽينرن کي وسيلن جون ڊفالٽ درخواستون ۽ حدون ڏئي سگهي ٿو؟",
+    "options": [
+      "ResourceQuota",
+      "HorizontalPodAutoscaler",
+      "RuntimeClass",
+      "LimitRange"
+    ],
+    "answer": "LimitRange"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "مٽائڻ جي درخواست کان پوءِ Kubernetes آبجيڪٽ جو finalizer ڇا ڪري ٿو؟",
+    "options": [
+      "هر ڀاڙيل آبجيڪٽ فوراً مٽائي ٿو",
+      "آبجيڪٽ کي اڻبدلجندڙ Secret بڻائي ٿو",
+      "گهربل صفائي سان finalizer هٽڻ تائين آبجيڪٽ مٽائڻ رهيل رکي ٿو",
+      "آبجيڪٽ جون سڀ ايندڙ اپڊيٽون روڪي ٿو"
+    ],
+    "answer": "گهربل صفائي سان finalizer هٽڻ تائين آبجيڪٽ مٽائڻ رهيل رکي ٿو"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "ميٽا ڊيٽا جو ڪهڙو خانو بيڪار آبجيڪٽ صاف ڪرڻ لاءِ ڀاڙيل آبجيڪٽ مالڪن سان جوڙي ٿو؟",
+    "options": [
+      "managedFields",
+      "ownerReferences",
+      "annotations",
+      "labels"
+    ],
+    "answer": "ownerReferences"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "CustomResourceDefinition ڪلسٽر ۾ ڇا وجهي ٿي؟",
+    "options": [
+      "Kubernetes API جي ڏنل نئين ڪسٽم ريسورس قسم",
+      "موجوده قسم لاءِ حالت ملائيندڙ هلندڙ ڪنٽرولر",
+      "هر سروس کاتي کي RBAC اجازت",
+      "هر اندروني ريسورس قسم جو مثال"
+    ],
+    "answer": "Kubernetes API جي ڏنل نئين ڪسٽم ريسورس قسم"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "Kubernetes آپريٽر کي رڳو ڪسٽم ريسورس تعريف کان ڇا ڌار ڪري ٿو؟",
+    "options": [
+      "آپريٽر رڳو اسڪيما تعريفون رکي سگهي ٿو",
+      "آپريٽر API سرور جي ضرورت ختم ڪري ٿو",
+      "آپريٽر رڳو kubectl جو آئوٽ پُٽ فارميٽ بدلائي ٿو",
+      "آپريٽر ڄاڻايل ايپليڪيشن سنڀالڻ لاءِ حالت ملائڻ جو منطق به هلائي ٿو"
+    ],
+    "answer": "آپريٽر ڄاڻايل ايپليڪيشن سنڀالڻ لاءِ حالت ملائڻ جو منطق به هلائي ٿو"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "توثيق ۽ اجازت کان پوءِ پر محفوظ ڪرڻ کان اڳ ڪهڙو نظام API درخواست رد يا بدلائي سگهي ٿو؟",
+    "options": [
+      "ڪنٽينر اميج ڇڪڻ",
+      "Service آخري نقطن جي رائوٽنگ",
+      "داخلا ڪنٽرول",
+      "Pod شيڊيولنگ"
+    ],
+    "answer": "داخلا ڪنٽرول"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "ڪو لائق نوڊ Pod جي لازمي نوڊ افينيٽي پوري نه ڪري ته ڇا ٿئي ٿو؟",
+    "options": [
+      "API سرور ان کي هر نوڊ تي رکي ٿو",
+      "مناسب نوڊ ملڻ يا پابنديون بدلجڻ تائين Pod شيڊيول نٿو ٿئي",
+      "شيڊيولر هڪ ڪوشش کان پوءِ قاعدو نظرانداز ڪري ٿو",
+      "Pod پاڻمرادو DaemonSet بڻجي ٿو"
+    ],
+    "answer": "مناسب نوڊ ملڻ يا پابنديون بدلجڻ تائين Pod شيڊيول نٿو ٿئي"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "preferredDuringSchedulingIgnoredDuringExecution نوڊ افينيٽي ڇا ڄاڻائي ٿي؟",
+    "options": [
+      "رکڻ جي ترجيح جيڪا ٻين لحاظن کان لائق پر نه ملندڙ نوڊن کي ٻاهر نٿي ڪري",
+      "لازمي گهرج جيڪا نه ملندڙ نوڊن تي رکڻ روڪي ٿي",
+      "نوڊ ليبل بدلجڻ تي Pod ڪڍڻ جي هدايت",
+      "شيڊيولر کي مڪمل ڇڏي ڏيڻ جي درخواست"
+    ],
+    "answer": "رکڻ جي ترجيح جيڪا ٻين لحاظن کان لائق پر نه ملندڙ نوڊن کي ٻاهر نٿي ڪري"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "نوڊ جا ليبل هلندڙ Pod جي نوڊ افينيٽي قاعدي سان ملڻ بند ڪن ته IgnoredDuringExecution جي معنيٰ ڇا آهي؟",
+    "options": [
+      "Pod فوراً مٽائڻ گهرجي",
+      "Pod جا ڪنٽينر پاڻمرادو وري شروع ٿين ٿا",
+      "نوڊ جا ليبل پاڻمرادو اڳوڻا ٿين ٿا",
+      "رڳو اهو قاعدو هلندڙ Pod نٿو ڪڍي"
+    ],
+    "answer": "رڳو اهو قاعدو هلندڙ Pod نٿو ڪڍي"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "Pod صاف طور spec.nodeName ڏئي ته ڇا ٿئي ٿو؟",
+    "options": [
+      "اهو ان نالي جو نوڊ ٺاهي ٿو",
+      "اهو هاڻي Pod هلائيندڙ نوڊ جو نالو بدلائي ٿو",
+      "اهو شيڊيولر کي ڇڏي ان نالي واري نوڊ کي ڏنو وڃي ٿو",
+      "اهو شيڊيولر کي سڀ ملندڙ نوڊ ليبل ترتيب ڏيڻ لاءِ چوي ٿو"
+    ],
+    "answer": "اهو شيڊيولر کي ڇڏي ان نالي واري نوڊ کي ڏنو وڃي ٿو"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "ٽوپولاجي پکيڙ جي پابندين جو مقصد ڇا آهي؟",
+    "options": [
+      "ڪنٽرول-پلين حصن جي وچ واري ٽريفڪ رمز ڪرڻ",
+      "ملندڙ Pod ٽوپولاجي علائقن ۾ ڪيئن ورهائجن، اهو سنڀالڻ",
+      "مستقل واليومن وچ ۾ ڪنٽينر فائلون ڪاپي ڪرڻ",
+      "هر نيم اسپيس کي هڪ عوامي IP ڏيڻ"
+    ],
+    "answer": "ملندڙ Pod ٽوپولاجي علائقن ۾ ڪيئن ورهائجن، اهو سنڀالڻ"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "taint جو ڪهڙو اثر اڳ هلندڙ اهڙا Pod ڪڍي سگهي ٿو جيڪي ان taint کي نه سهن؟",
+    "options": [
+      "NoExecute",
+      "NoSchedule",
+      "PreferNoSchedule",
+      "None"
+    ],
+    "answer": "NoExecute"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "ڪنٽينر جي ڪهڙي securityContext سيٽنگ Linux ڪنٽينر کي غير-root استعمال ڪندڙ طور هلڻ لازم ڪري ٿي؟",
+    "options": [
+      "readOnlyRootFilesystem: true",
+      "privileged: false",
+      "allowPrivilegeEscalation: false",
+      "runAsNonRoot: true"
+    ],
+    "answer": "runAsNonRoot: true"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "ڪنٽينر جي ڪهڙي securityContext سيٽنگ Linux عمل کي والد کان وڌيڪ اختيار وٺڻ روڪي ٿي؟",
+    "options": [
+      "readOnlyRootFilesystem: true",
+      "privileged: false",
+      "allowPrivilegeEscalation: false",
+      "runAsNonRoot: true"
+    ],
+    "answer": "allowPrivilegeEscalation: false"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "مسئلو ڳولڻ لاءِ موجوده Pod جي ايپليڪيشن ڪنٽينرن کي بدلائڻ کان سواءِ ڪهڙي قسم جو ڪنٽينر وڌائي سگهجي ٿو؟",
+    "options": [
+      "وري شروع ٿي سگهندڙ init ڪنٽينر",
+      "عارضي ڪنٽينر",
+      "عام init ڪنٽينر",
+      "عام ايپليڪيشن ڪنٽينر"
+    ],
+    "answer": "عارضي ڪنٽينر"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "ڪهڙو ريسورس Service جا نيٽ ورڪ آخري نقطا وڌائي سگهجندڙ گروهن ۾ رکي ٿو؟",
+    "options": [
+      "EndpointSlice",
+      "IngressClass",
+      "NetworkPolicy",
+      "RuntimeClass"
+    ],
+    "answer": "EndpointSlice"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "Ingress ريسورس کي واقعي HTTP رائوٽنگ ترتيب ڏيڻ لاءِ ڇا گهرجي؟",
+    "options": [
+      "هر نيم اسپيس ۾ ingress نالي ConfigMap",
+      "هر هوسٽ نالي لاءِ PersistentVolume",
+      "سڀ چونڊيل Pod وري شروع ڪندڙ Job",
+      "ان جا قاعدا لاڳو ڪندڙ Ingress ڪنٽرولر"
+    ],
+    "answer": "ان جا قاعدا لاڳو ڪندڙ Ingress ڪنٽرولر"
+  }
+]

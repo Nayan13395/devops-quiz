@@ -1,0 +1,302 @@
+[
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "Какая декларативная опция ставит новый запуск в очередь вместо параллельных запусков одного конвейера?",
+    "options": [
+      "parallelsAlwaysFailFast()",
+      "disableConcurrentBuilds()",
+      "disableResume()",
+      "skipDefaultCheckout()"
+    ],
+    "answer": "disableConcurrentBuilds()"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "Какая декларативная опция задаёт правила хранения старых записей сборок и артефактов?",
+    "options": [
+      "buildDiscarder(logRotator(numToKeepStr: '10'))",
+      "timeout(time: 10, unit: 'MINUTES')",
+      "retry(10)",
+      "quietPeriod(10)"
+    ],
+    "answer": "buildDiscarder(logRotator(numToKeepStr: '10'))"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "Что задаёт символ H в выражении cron Jenkins?",
+    "options": [
+      "Текущий час на компьютере пользователя",
+      "Требование запуска только по праздникам",
+      "Требование запуска только при свободном узле",
+      "Стабильный хеш имени задания для распределения плановой нагрузки"
+    ],
+    "answer": "Стабильный хеш имени задания для распределения плановой нагрузки"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "Что обозначает пятое поле в пятичастной записи cron Jenkins?",
+    "options": [
+      "Час суток",
+      "День месяца",
+      "День недели",
+      "Минуту часа"
+    ],
+    "answer": "День недели"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "Какое условие post выполняется при успешной сборке после неудачной или нестабильной?",
+    "options": [
+      "unsuccessful",
+      "fixed",
+      "changed",
+      "regression"
+    ],
+    "answer": "fixed"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "Какое условие post выполняется после оценки остальных условий post?",
+    "options": [
+      "cleanup",
+      "always",
+      "changed",
+      "success"
+    ],
+    "answer": "cleanup"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "Какая опция when проверяет условие стадии до выделения её агента?",
+    "options": [
+      "beforeInput false",
+      "beforeOptions false",
+      "branch 'main'",
+      "beforeAgent true"
+    ],
+    "answer": "beforeAgent true"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "Какое условие when выбирает именованную ветку многоветочного конвейера?",
+    "options": [
+      "buildingTag()",
+      "changeRequest()",
+      "branch 'main'",
+      "tag 'main'"
+    ],
+    "answer": "branch 'main'"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "Какая декларативная конструкция запускает сочетания значений осей, например ОС и браузера?",
+    "options": [
+      "environment",
+      "matrix",
+      "parallel",
+      "steps"
+    ],
+    "answer": "matrix"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "Какой раздел исключает нежелательные сочетания из декларативной матрицы?",
+    "options": [
+      "excludes",
+      "axes",
+      "stages",
+      "tools"
+    ],
+    "answer": "excludes"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "Какая настройка стадии с параллельными ветвями останавливает остальные при отказе одной?",
+    "options": [
+      "beforeAgent true",
+      "reuseNode true",
+      "alwaysPull true",
+      "failFast true"
+    ],
+    "answer": "failFast true"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "Какая декларативная опция пропускает последующие стадии после перехода сборки в нестабильное состояние?",
+    "options": [
+      "disableResume()",
+      "preserveStashes()",
+      "skipStagesAfterUnstable()",
+      "skipDefaultCheckout()"
+    ],
+    "answer": "skipStagesAfterUnstable()"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "Какой шаг фиксирует ошибку, разрешая продолжение после своего блока?",
+    "options": [
+      "input",
+      "catchError",
+      "error",
+      "timeout"
+    ],
+    "answer": "catchError"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "Что возвращает sh(script: 'check.sh', returnStatus: true) после завершения процесса?",
+    "options": [
+      "Числовой код выхода процесса",
+      "Полный текст стандартного вывода",
+      "ID процесса оболочки",
+      "Объект учётных данных Jenkins"
+    ],
+    "answer": "Числовой код выхода процесса"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "Что возвращает sh(script: 'echo ready', returnStdout: true) при успехе?",
+    "options": [
+      "Числовой номер сборки",
+      "Окружение оболочки в виде словаря",
+      "Список меток агента",
+      "Строку перехваченного стандартного вывода"
+    ],
+    "answer": "Строку перехваченного стандартного вывода"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "Какой шаг рекурсивно удаляет содержимое текущей рабочей области?",
+    "options": [
+      "pwd",
+      "readFile",
+      "deleteDir",
+      "fileExists"
+    ],
+    "answer": "deleteDir"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "Какой шаг проверяет наличие пути в текущей рабочей области?",
+    "options": [
+      "libraryResource",
+      "fileExists",
+      "readFile",
+      "writeFile"
+    ],
+    "answer": "fileExists"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "Какой шаг запускает другое задание Jenkins и может передавать параметры сборки?",
+    "options": [
+      "build",
+      "stage",
+      "node",
+      "checkout"
+    ],
+    "answer": "build"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "Какая декларативная опция сохраняет stash завершённых сборок для перезапуска стадий?",
+    "options": [
+      "disableResume()",
+      "skipDefaultCheckout()",
+      "quietPeriod(5)",
+      "preserveStashes()"
+    ],
+    "answer": "preserveStashes()"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "Какой файл общей библиотеки содержит справку для глобальной переменной deploy из vars/deploy.groovy?",
+    "options": [
+      "resources/deploy.txt",
+      "vars/main.groovy",
+      "vars/deploy.txt",
+      "src/deploy.groovy"
+    ],
+    "answer": "vars/deploy.txt"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "Каково основное ограничение метода с аннотацией @NonCPS в конвейере Jenkins?",
+    "options": [
+      "Он должен выполняться на агенте Windows",
+      "Он не должен вызывать шаги конвейера с CPS-преобразованием",
+      "Он должен содержать директиву stage",
+      "Он всегда должен возвращать строку"
+    ],
+    "answer": "Он не должен вызывать шаги конвейера с CPS-преобразованием"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "Какой механизм Jenkins проверяет сигнатуры, запрошенные неодобренным Groovy-кодом в песочнице?",
+    "options": [
+      "Одобрение сценариев внутри процесса",
+      "Credentials Store",
+      "Build Queue",
+      "Журнал опроса SCM"
+    ],
+    "answer": "Одобрение сценариев внутри процесса"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "Какие кавычки Groovy рекомендуются для сценария, в котором оболочка сама подставляет связанную секретную переменную?",
+    "options": [
+      "Интерполируемая строка Groovy с секретом в двойных кавычках",
+      "Интерполируемая строка Groovy с секретом в тройных двойных кавычках",
+      "Строка Groovy, созданная конкатенацией открытого секрета",
+      "Строка Groovy в одинарных кавычках"
+    ],
+    "answer": "Строка Groovy в одинарных кавычках"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "Для чего нужен CSRF crumb Jenkins в соответствующих веб-запросах?",
+    "options": [
+      "Шифровать артефакт перед загрузкой",
+      "Выбирать агента для сборки",
+      "Помогать проверить принадлежность изменяющего состояние запроса установленному сеансу пользователя",
+      "Заменять проверки авторизации всех заданий"
+    ],
+    "answer": "Помогать проверить принадлежность изменяющего состояние запроса установленному сеансу пользователя"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "Что должен использовать конвейер для согласования исключительного доступа разных заданий к общему тестовому устройству?",
+    "options": [
+      "Опцию skipDefaultCheckout",
+      "Шаг lock плагина Lockable Resources",
+      "Опцию timestamps",
+      "Опцию buildDiscarder"
+    ],
+    "answer": "Шаг lock плагина Lockable Resources"
+  }
+]

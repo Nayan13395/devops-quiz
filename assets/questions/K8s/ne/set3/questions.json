@@ -1,0 +1,302 @@
+[
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "कुन component ले nodes मा pods schedule गर्छ?",
+    "options": [
+      "kube-scheduler",
+      "kubelet",
+      "etcd",
+      "kube-proxy"
+    ],
+    "answer": "kube-scheduler"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "कुन component हरेक node मा चल्छ?",
+    "options": [
+      "kubelet",
+      "etcd",
+      "kube-apiserver",
+      "controller-manager"
+    ],
+    "answer": "kubelet"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "कुन component ले control plane को front-end को रूपमा काम गर्छ?",
+    "options": [
+      "kube-apiserver",
+      "kubelet",
+      "etcd",
+      "kube-proxy"
+    ],
+    "answer": "kube-apiserver"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "कुन component ले cluster को अवस्था (state) भण्डारण गर्छ?",
+    "options": [
+      "etcd",
+      "kubelet",
+      "CoreDNS",
+      "Ingress"
+    ],
+    "answer": "etcd"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "कुन component ले nodes मा networking नियमहरू व्यवस्थापन गर्छ?",
+    "options": [
+      "kube-proxy",
+      "kubelet",
+      "etcd",
+      "Scheduler"
+    ],
+    "answer": "kube-proxy"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "Kubernetes मा सामान्यतया कुन DNS सेवा प्रयोग गरिन्छ?",
+    "options": [
+      "CoreDNS",
+      "Bind",
+      "Route53",
+      "Consul"
+    ],
+    "answer": "CoreDNS"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "Kubernetes मा सबैभन्दा सानो deploy गर्न मिल्ने इकाई कुन object हो?",
+    "options": [
+      "Pod",
+      "Cluster",
+      "Node",
+      "Service"
+    ],
+    "answer": "Pod"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "कुन object ले stateless एपहरू व्यवस्थापन गर्छ?",
+    "options": [
+      "Deployment",
+      "ConfigMap",
+      "Secret",
+      "Namespace"
+    ],
+    "answer": "Deployment"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "अवस्था राख्ने एप्लिकेसनलाई स्थिर Pod पहिचान र क्रमिक तैनाथी दिने वर्कलोड कुन हो?",
+    "options": [
+      "StatefulSet",
+      "Deployment",
+      "ReplicaSet",
+      "DaemonSet"
+    ],
+    "answer": "StatefulSet"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "कुन object ले तोकिएको संख्यामा pod replicas चलिरहेको सुनिश्चित गर्छ?",
+    "options": [
+      "ReplicaSet",
+      "Service",
+      "ConfigMap",
+      "Namespace"
+    ],
+    "answer": "ReplicaSet"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "कुन object ले pods लाई network traffic को लागि खुला गर्छ?",
+    "options": [
+      "Service",
+      "Node",
+      "ReplicaSet",
+      "Volume"
+    ],
+    "answer": "Service"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "कुन object ले services मा बाहिरी पहुँच व्यवस्थापन गर्छ?",
+    "options": [
+      "Ingress",
+      "Pod",
+      "ReplicaSet",
+      "Secret"
+    ],
+    "answer": "Ingress"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "कुन object ले configuration डाटा भण्डारण गर्छ?",
+    "options": [
+      "ConfigMap",
+      "Deployment",
+      "Ingress",
+      "Node"
+    ],
+    "answer": "ConfigMap"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "कुन object ले पासवर्ड जस्ता संवेदनशील जानकारी भण्डारण गर्छ?",
+    "options": [
+      "Secret",
+      "ConfigMap",
+      "Service",
+      "Namespace"
+    ],
+    "answer": "Secret"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "कुन object ले pods लाई स्थायी भण्डारण (persistent storage) प्रदान गर्छ?",
+    "options": [
+      "PersistentVolume",
+      "ReplicaSet",
+      "Namespace",
+      "Service"
+    ],
+    "answer": "PersistentVolume"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "कन्टेनर Service ट्राफिक लिन तयार छ कि छैन कुन जाँचले निर्धारण गर्छ?",
+    "options": [
+      "TCP जडान जीवित राख्ने जाँच",
+      "Readiness probe",
+      "Liveness probe",
+      "सुरुआती जाँच"
+    ],
+    "answer": "Readiness probe"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "जीवितताको जाँच तोकिएको सीमाभन्दा बढी पटक असफल भए के हुन सक्छ?",
+    "options": [
+      "kubelet ले पुनःसुरुआत नीतिअनुसार त्यो कन्टेनर पुनः चलाउँछ",
+      "शेड्युलरले हरेक Pod नयाँ नोडमा सार्छ",
+      "API सर्भरले Deployment मेट्छ",
+      "Service एउटा ExternalName Service बन्छ"
+    ],
+    "answer": "kubelet ले पुनःसुरुआत नीतिअनुसार त्यो कन्टेनर पुनः चलाउँछ"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "एप्लिकेसन सुरु हुँदै गर्दा सुरुआती जाँचले के गर्छ?",
+    "options": [
+      "कन्टेनरका सबै स्रोत सीमा बन्द गर्छ",
+      "इमेज तान्न रोक्छ",
+      "समर्पित कन्ट्रोल-प्लेन नोड आरक्षित गर्छ",
+      "सुरुआती जाँच सफल नभएसम्म जीवितता र तयारीको जाँच ढिलो गराउँछ"
+    ],
+    "answer": "सुरुआती जाँच सफल नभएसम्म जीवितता र तयारीको जाँच ढिलो गराउँछ"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "Pod का साधारण init कन्टेनरबारे कुन कुरा सही हो?",
+    "options": [
+      "तिनले Service पोर्ट खुलाउनैपर्छ",
+      "ती सधैँ अलग नोडमा चल्छन्",
+      "एप्लिकेसन कन्टेनर सुरु हुनुअघि ती क्रमअनुसार पूरा हुन्छन्",
+      "ती सबै एप्लिकेसन कन्टेनर समाप्त भएपछि मात्र चल्छन्"
+    ],
+    "answer": "एप्लिकेसन कन्टेनर सुरु हुनुअघि ती क्रमअनुसार पूरा हुन्छन्"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "एउटै Pod का कन्टेनरले सामान्यतया कुन स्रोत साझा गर्छन्?",
+    "options": [
+      "हरेक कन्टेनरका लागि अलग Service IP",
+      "नेटवर्क नेमस्पेस र Pod IP ठेगाना",
+      "लेख्न मिल्ने मूल फाइलसिस्टम",
+      "हरेक कन्टेनरका लागि अलग नोड"
+    ],
+    "answer": "नेटवर्क नेमस्पेस र Pod IP ठेगाना"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "कन्टेनरको स्थान छान्दा शेड्युलरले प्रयोग गर्ने स्रोत परिमाण कुन क्षेत्रले घोषणा गर्छ?",
+    "options": [
+      "resources.requests",
+      "resources.limits",
+      "securityContext",
+      "imagePullPolicy"
+    ],
+    "answer": "resources.requests"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "कन्टेनरको CPU अनुरोध 250m ले कति जनाउँछ?",
+    "options": [
+      "साढे दुई CPU",
+      "पच्चीस CPU",
+      "दुई सय पचास CPU",
+      "एउटा CPU को एक चौथाइ"
+    ],
+    "answer": "एउटा CPU को एक चौथाइ"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "कन्टेनरले लागू गरिएको मेमोरी सीमा नाघ्दा सामान्य परिणाम के हुन्छ?",
+    "options": [
+      "यसको इमेज धेरै मेमोरीसहित पुनः बन्छ",
+      "यसको Service पोर्ट स्वतः बदलिन्छ",
+      "मेमोरी अभाव व्यवस्थाले यसलाई समाप्त गर्न सक्छ",
+      "यसको मेमोरी अनुरोध स्वतः दोब्बर हुन्छ"
+    ],
+    "answer": "मेमोरी अभाव व्यवस्थाले यसलाई समाप्त गर्न सक्छ"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "लक्ष्य नोडमा तोकिएका सबै नोड लेबल मिल्नुपर्ने बनाउने Pod क्षेत्र कुन हो?",
+    "options": [
+      "dnsPolicy",
+      "nodeSelector",
+      "serviceAccountName",
+      "hostAliases"
+    ],
+    "answer": "nodeSelector"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "नोडको taint का लागि toleration थप्दा Pod त्यही नोडमा राखिने ग्यारेन्टी हुन्छ?",
+    "options": [
+      "हुँदैन, अन्य शेड्युलिङ सीमा र उपलब्ध स्रोत अझै लागू हुन्छन्",
+      "हुन्छ, यसले स्रोतका हरेक सीमा हटाउँछ",
+      "हुन्छ, यसले सबै नोड अफिनिटी नियम छल्छ",
+      "हुँदैन, tolerations ले taint भएको नोडमा राख्न सधैँ रोक्छन्"
+    ],
+    "answer": "हुँदैन, अन्य शेड्युलिङ सीमा र उपलब्ध स्रोत अझै लागू हुन्छन्"
+  }
+]

@@ -1,0 +1,302 @@
+[
+  {
+    "category": "Ansible",
+    "set": 1,
+    "question": "ما الاستخدام الأساسي لـ Ansible؟",
+    "options": [
+      "إدارة التكوين",
+      "الحاويات",
+      "إدارة قواعد البيانات",
+      "المراقبة"
+    ],
+    "answer": "إدارة التكوين"
+  },
+  {
+    "category": "Ansible",
+    "set": 1,
+    "question": "بأي لغة كُتب Ansible؟",
+    "options": [
+      "Python",
+      "Java",
+      "Go",
+      "Ruby"
+    ],
+    "answer": "Python"
+  },
+  {
+    "category": "Ansible",
+    "set": 1,
+    "question": "أي ملف يحتوي على المضيفين المُدارين في Ansible؟",
+    "options": [
+      "ملف Inventory",
+      "Playbook",
+      "Role",
+      "Module"
+    ],
+    "answer": "ملف Inventory"
+  },
+  {
+    "category": "Ansible",
+    "set": 1,
+    "question": "ما المسار الافتراضي لملف Inventory؟",
+    "options": [
+      "/etc/ansible/hosts",
+      "/etc/hosts",
+      "/ansible/hosts",
+      "/usr/ansible/hosts"
+    ],
+    "answer": "/etc/ansible/hosts"
+  },
+  {
+    "category": "Ansible",
+    "set": 1,
+    "question": "أي أمر يتحقق من إصدار Ansible؟",
+    "options": [
+      "ansible --version",
+      "ansible version",
+      "ansible -v",
+      "ansible check"
+    ],
+    "answer": "ansible --version"
+  },
+  {
+    "category": "Ansible",
+    "set": 1,
+    "question": "ما البروتوكول الذي تستخدمه عادة إضافة الاتصال الافتراضية في Ansible لمضيفي Linux؟",
+    "options": [
+      "SSH",
+      "FTP",
+      "Telnet",
+      "HTTP"
+    ],
+    "answer": "SSH"
+  },
+  {
+    "category": "Ansible",
+    "set": 1,
+    "question": "ما هو Ansible Playbook؟",
+    "options": [
+      "ملف YAML يحتوي على مهام الأتمتة",
+      "ملف Inventory",
+      "سكريبت Python",
+      "ملف تكوين"
+    ],
+    "answer": "ملف YAML يحتوي على مهام الأتمتة"
+  },
+  {
+    "category": "Ansible",
+    "set": 1,
+    "question": "أي أمر يشغّل Ansible playbook؟",
+    "options": [
+      "ansible-playbook",
+      "ansible-run",
+      "ansible-execute",
+      "ansible-start"
+    ],
+    "answer": "ansible-playbook"
+  },
+  {
+    "category": "Ansible",
+    "set": 1,
+    "question": "أي كلمة مفتاحية تحدد المضيفين المستهدفين في playbook؟",
+    "options": [
+      "hosts",
+      "servers",
+      "nodes",
+      "targets"
+    ],
+    "answer": "hosts"
+  },
+  {
+    "category": "Ansible",
+    "set": 1,
+    "question": "أي كلمة مفتاحية تحدد المهام في playbook؟",
+    "options": [
+      "tasks",
+      "actions",
+      "jobs",
+      "steps"
+    ],
+    "answer": "tasks"
+  },
+  {
+    "category": "Ansible",
+    "set": 1,
+    "question": "أي وحدة (module) تنسخ الملفات إلى المضيفين البعيدين؟",
+    "options": [
+      "copy",
+      "fetch",
+      "file",
+      "transfer"
+    ],
+    "answer": "copy"
+  },
+  {
+    "category": "Ansible",
+    "set": 1,
+    "question": "أي وحدة (module) تدير الخدمات؟",
+    "options": [
+      "service",
+      "systemctl",
+      "daemon",
+      "process"
+    ],
+    "answer": "service"
+  },
+  {
+    "category": "Ansible",
+    "set": 1,
+    "question": "أي أمر يتحقق من اتصال Ansible وتوفر Python صالح للاستخدام على جميع مضيفي POSIX المستهدفين؟",
+    "options": [
+      "ansible all -m ping",
+      "ansible ping",
+      "ansible test",
+      "ansible connect"
+    ],
+    "answer": "ansible all -m ping"
+  },
+  {
+    "category": "Ansible",
+    "set": 1,
+    "question": "ما التنسيق السهل القراءة المستخدم عادة لكتابة ملفات playbook في Ansible؟",
+    "options": [
+      "YAML",
+      "JSON",
+      "XML",
+      "INI"
+    ],
+    "answer": "YAML"
+  },
+  {
+    "category": "Ansible",
+    "set": 1,
+    "question": "أي ملف يضبط إعدادات Ansible؟",
+    "options": [
+      "ansible.cfg",
+      "ansible.conf",
+      "config.yml",
+      "ansible.ini"
+    ],
+    "answer": "ansible.cfg"
+  },
+  {
+    "category": "Ansible",
+    "set": 1,
+    "question": "أي وحدة في Ansible تجمع الحقائق عن مضيف مُدار؟",
+    "options": [
+      "ansible.builtin.stat",
+      "ansible.builtin.debug",
+      "ansible.builtin.assert",
+      "ansible.builtin.setup"
+    ],
+    "answer": "ansible.builtin.setup"
+  },
+  {
+    "category": "Ansible",
+    "set": 1,
+    "question": "أي إعداد للمهمة يفعّل رفع الصلاحيات في Ansible؟",
+    "options": [
+      "run_once: true",
+      "delegate_facts: true",
+      "become: true",
+      "check_mode: true"
+    ],
+    "answer": "become: true"
+  },
+  {
+    "category": "Ansible",
+    "set": 1,
+    "question": "أي متغير في الجرد يحدد مستخدم تسجيل الدخول إلى المضيف؟",
+    "options": [
+      "ansible_connection",
+      "ansible_user",
+      "ansible_host",
+      "ansible_port"
+    ],
+    "answer": "ansible_user"
+  },
+  {
+    "category": "Ansible",
+    "set": 1,
+    "question": "أي خيار يحدد ملف الجرد عند تشغيل ansible-playbook؟",
+    "options": [
+      "-i inventory.ini",
+      "-e inventory.ini",
+      "--limit inventory.ini",
+      "--tags inventory.ini"
+    ],
+    "answer": "-i inventory.ini"
+  },
+  {
+    "category": "Ansible",
+    "set": 1,
+    "question": "أي وحدة تضمن وجود مجلد على المضيف المُدار؟",
+    "options": [
+      "ansible.builtin.fetch",
+      "ansible.builtin.slurp",
+      "ansible.builtin.template",
+      "ansible.builtin.file"
+    ],
+    "answer": "ansible.builtin.file"
+  },
+  {
+    "category": "Ansible",
+    "set": 1,
+    "question": "أي وحدة تجلب ملفا بعيدا وتحفظه على عقدة التحكم؟",
+    "options": [
+      "ansible.builtin.get_url",
+      "ansible.builtin.unarchive",
+      "ansible.builtin.fetch",
+      "ansible.builtin.copy"
+    ],
+    "answer": "ansible.builtin.fetch"
+  },
+  {
+    "category": "Ansible",
+    "set": 1,
+    "question": "أي وحدة توفر واجهة عامة لمدير حزم المضيف المستهدف؟",
+    "options": [
+      "ansible.builtin.package_facts",
+      "ansible.builtin.package",
+      "ansible.builtin.service",
+      "ansible.builtin.command"
+    ],
+    "answer": "ansible.builtin.package"
+  },
+  {
+    "category": "Ansible",
+    "set": 1,
+    "question": "أي عبارة تصف إدارة Ansible المعتادة لمضيفي Linux دون وكلاء؟",
+    "options": [
+      "لا يلزم تثبيت وكيل Ansible دائم على كل مضيف مُدار",
+      "يجب أن يشغّل كل مضيف مُدار خدمة جدولة Ansible",
+      "يجب أن يشغّل كل مضيف مُدار خادم Galaxy",
+      "يجب أن يتصل كل مضيف مُدار بوسيط رسائل Ansible"
+    ],
+    "answer": "لا يلزم تثبيت وكيل Ansible دائم على كل مضيف مُدار"
+  },
+  {
+    "category": "Ansible",
+    "set": 1,
+    "question": "أي وحدة تنفذ أمرا عبر صدفة بعيدة عند الحاجة إلى معاملات الصدفة؟",
+    "options": [
+      "ansible.builtin.command",
+      "ansible.builtin.script",
+      "ansible.builtin.debug",
+      "ansible.builtin.shell"
+    ],
+    "answer": "ansible.builtin.shell"
+  },
+  {
+    "category": "Ansible",
+    "set": 1,
+    "question": "أي متغير في الجرد يتيح للاسم web1 الاتصال بعنوان IP مختلف؟",
+    "options": [
+      "ansible_user",
+      "ansible_port",
+      "ansible_host",
+      "inventory_hostname"
+    ],
+    "answer": "ansible_host"
+  }
+]

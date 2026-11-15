@@ -1,0 +1,302 @@
+[
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "Что требуется NetworkPolicy, чтобы влиять на трафик Pod?",
+    "options": [
+      "Service LoadBalancer для каждого выбранного Pod",
+      "PersistentVolumeClaim в том же пространстве имён",
+      "Отдельный сервер API для каждой политики",
+      "Сетевая реализация, обеспечивающая соблюдение NetworkPolicy"
+    ],
+    "answer": "Сетевая реализация, обеспечивающая соблюдение NetworkPolicy"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "Как несколько NetworkPolicy, выбирающих один Pod, объединяют разрешённый входящий трафик?",
+    "options": [
+      "Первая созданная политика отменяет все последующие",
+      "Каждая политика должна независимо разрешать каждый пакет",
+      "Разрешённый трафик является объединением их входящих разрешений",
+      "Последняя созданная политика отменяет все предыдущие"
+    ],
+    "answer": "Разрешённый трафик является объединением их входящих разрешений"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "Какой объект RBAC определяет разрешения внутри пространства имён?",
+    "options": [
+      "ResourceQuota",
+      "Role",
+      "RoleBinding",
+      "ServiceAccount"
+    ],
+    "answer": "Role"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "Какой объект RBAC предоставляет права Role или ClusterRole в одном пространстве имён?",
+    "options": [
+      "RoleBinding",
+      "ClusterRoleBinding",
+      "ServiceAccount",
+      "LimitRange"
+    ],
+    "answer": "RoleBinding"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "Какая учётная запись обычно назначается процессам Pod для доступа к API Kubernetes?",
+    "options": [
+      "StorageClass",
+      "RuntimeClass",
+      "PriorityClass",
+      "ServiceAccount"
+    ],
+    "answer": "ServiceAccount"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "Почему кодирование данных Secret в base64 не защищает от того, кто может прочитать объект?",
+    "options": [
+      "Base64 автоматически публикует данные через DNS",
+      "Base64 требует закрытый ключ, сохранённый в Pod",
+      "Base64 — обратимое кодирование, а не шифрование",
+      "Base64 запрещает Kubernetes сохранять данные"
+    ],
+    "answer": "Base64 — обратимое кодирование, а не шифрование"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "Какое поле может запретить автоматическое монтирование учётных данных API в Pod Kubernetes?",
+    "options": [
+      "shareProcessNamespace: false",
+      "automountServiceAccountToken: false",
+      "hostNetwork: false",
+      "enableServiceLinks: false"
+    ],
+    "answer": "automountServiceAccountToken: false"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "Какой объект ограничивает суммарное потребление ресурсов пространства имён?",
+    "options": [
+      "ResourceQuota",
+      "LimitRange",
+      "PriorityClass",
+      "PodDisruptionBudget"
+    ],
+    "answer": "ResourceQuota"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "Какой объект может назначить контейнерам пространства имён запросы и лимиты ресурсов по умолчанию?",
+    "options": [
+      "ResourceQuota",
+      "HorizontalPodAutoscaler",
+      "RuntimeClass",
+      "LimitRange"
+    ],
+    "answer": "LimitRange"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "Что делает финализатор объекта Kubernetes после запроса удаления?",
+    "options": [
+      "Немедленно удаляет все зависимые объекты",
+      "Превращает объект в неизменяемый Secret",
+      "Оставляет объект ожидающим удаления до удаления финализатора после необходимой очистки",
+      "Запрещает все будущие обновления объекта"
+    ],
+    "answer": "Оставляет объект ожидающим удаления до удаления финализатора после необходимой очистки"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "Какое поле метаданных связывает зависимые объекты с владельцами для сборки мусора?",
+    "options": [
+      "managedFields",
+      "ownerReferences",
+      "annotations",
+      "labels"
+    ],
+    "answer": "ownerReferences"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "Что CustomResourceDefinition добавляет в кластер?",
+    "options": [
+      "Новый пользовательский тип ресурса, обслуживаемый API Kubernetes",
+      "Работающий контроллер согласования для существующего типа",
+      "Разрешения RBAC каждой служебной учётной записи",
+      "Экземпляр каждого встроенного типа ресурса"
+    ],
+    "answer": "Новый пользовательский тип ресурса, обслуживаемый API Kubernetes"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "Чем оператор Kubernetes отличается от одной лишь пользовательской схемы ресурса?",
+    "options": [
+      "Оператор может только хранить определения схем",
+      "Оператор устраняет необходимость сервера API",
+      "Оператор меняет только формат вывода kubectl",
+      "Оператор также запускает логику согласования для управления представленным приложением"
+    ],
+    "answer": "Оператор также запускает логику согласования для управления представленным приложением"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "Какой механизм отклоняет или изменяет запрос API после аутентификации и авторизации, но до сохранения?",
+    "options": [
+      "Загрузка образов контейнеров",
+      "Маршрутизация конечных точек Service",
+      "Контроль допуска",
+      "Планирование Pod"
+    ],
+    "answer": "Контроль допуска"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "Что происходит, если ни один подходящий узел не удовлетворяет обязательной привязке Pod к узлам?",
+    "options": [
+      "Сервер API размещает его на каждом узле",
+      "Pod остаётся нераспределённым до появления подходящего узла или изменения ограничений",
+      "Планировщик игнорирует правило после одной попытки",
+      "Pod автоматически становится DaemonSet"
+    ],
+    "answer": "Pod остаётся нераспределённым до появления подходящего узла или изменения ограничений"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "Что выражает привязка к узлам preferredDuringSchedulingIgnoredDuringExecution?",
+    "options": [
+      "Предпочтение размещения, не исключающее прочие подходящие узлы без совпадения",
+      "Обязательное требование, запрещающее размещение на несовпадающих узлах",
+      "Указание выселить Pod при изменении метки узла",
+      "Запрос полного обхода планировщика"
+    ],
+    "answer": "Предпочтение размещения, не исключающее прочие подходящие узлы без совпадения"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "Что означает IgnoredDuringExecution, если метки узла перестают соответствовать правилу привязки работающего Pod?",
+    "options": [
+      "Pod должен быть немедленно удалён",
+      "Контейнеры Pod автоматически перезапускаются",
+      "Метки узла автоматически возвращаются к прежним значениям",
+      "Само правило не выселяет работающий Pod"
+    ],
+    "answer": "Само правило не выселяет работающий Pod"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "Что происходит при явном задании spec.nodeName в Pod?",
+    "options": [
+      "Создаётся узел с таким именем",
+      "Переименовывается узел, на котором сейчас работает Pod",
+      "Планировщик обходится, и Pod назначается указанному узлу",
+      "Планировщик получает запрос ранжировать все совпадающие метки узлов"
+    ],
+    "answer": "Планировщик обходится, и Pod назначается указанному узлу"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "Для чего нужны ограничения топологического распределения?",
+    "options": [
+      "Шифровать трафик между компонентами плоскости управления",
+      "Управлять распределением соответствующих Pod по топологическим доменам",
+      "Копировать файлы контейнеров между постоянными томами",
+      "Выделять публичный IP каждому пространству имён"
+    ],
+    "answer": "Управлять распределением соответствующих Pod по топологическим доменам"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "Какой эффект taint выселяет уже работающие Pod без соответствующего допуска?",
+    "options": [
+      "NoExecute",
+      "NoSchedule",
+      "PreferNoSchedule",
+      "None"
+    ],
+    "answer": "NoExecute"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "Какая настройка securityContext контейнера требует запуска контейнера Linux не от root?",
+    "options": [
+      "readOnlyRootFilesystem: true",
+      "privileged: false",
+      "allowPrivilegeEscalation: false",
+      "runAsNonRoot: true"
+    ],
+    "answer": "runAsNonRoot: true"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "Какая настройка securityContext запрещает процессу Linux получать больше привилегий, чем у родителя?",
+    "options": [
+      "readOnlyRootFilesystem: true",
+      "privileged: false",
+      "allowPrivilegeEscalation: false",
+      "runAsNonRoot: true"
+    ],
+    "answer": "allowPrivilegeEscalation: false"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "Какой тип контейнера можно добавить к существующему Pod для диагностики без изменения его контейнеров приложения?",
+    "options": [
+      "Перезапускаемый init-контейнер",
+      "Эфемерный контейнер",
+      "Обычный init-контейнер",
+      "Обычный контейнер приложения"
+    ],
+    "answer": "Эфемерный контейнер"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "Какой ресурс отслеживает сетевые конечные точки Service в масштабируемых группах?",
+    "options": [
+      "EndpointSlice",
+      "IngressClass",
+      "NetworkPolicy",
+      "RuntimeClass"
+    ],
+    "answer": "EndpointSlice"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "Что нужно, чтобы ресурс Ingress действительно настраивал маршрутизацию HTTP?",
+    "options": [
+      "ConfigMap с именем ingress в каждом пространстве имён",
+      "PersistentVolume для каждого имени узла",
+      "Job, перезапускающий все выбранные Pod",
+      "Контроллер Ingress, реализующий его правила"
+    ],
+    "answer": "Контроллер Ingress, реализующий его правила"
+  }
+]

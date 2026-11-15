@@ -1,0 +1,302 @@
+[
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "Opsi deklaratif mana yang mengantrekan eksekusi baru alih-alih mengizinkan eksekusi pipeline yang sama secara bersamaan?",
+    "options": [
+      "parallelsAlwaysFailFast()",
+      "disableConcurrentBuilds()",
+      "disableResume()",
+      "skipDefaultCheckout()"
+    ],
+    "answer": "disableConcurrentBuilds()"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "Opsi deklaratif mana yang menentukan aturan penyimpanan catatan dan artefak build lama?",
+    "options": [
+      "buildDiscarder(logRotator(numToKeepStr: '10'))",
+      "timeout(time: 10, unit: 'MINUTES')",
+      "retry(10)",
+      "quietPeriod(10)"
+    ],
+    "answer": "buildDiscarder(logRotator(numToKeepStr: '10'))"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "Apa fungsi simbol H dalam ekspresi cron Jenkins?",
+    "options": [
+      "Jam saat ini pada komputer pengguna",
+      "Permintaan untuk berjalan hanya pada hari libur",
+      "Permintaan untuk berjalan hanya saat simpul tidak sibuk",
+      "Hash stabil berdasarkan nama pekerjaan untuk menyebarkan beban terjadwal"
+    ],
+    "answer": "Hash stabil berdasarkan nama pekerjaan untuk menyebarkan beban terjadwal"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "Dalam sintaks cron Jenkins yang terdiri dari lima kolom, apa arti kolom kelima?",
+    "options": [
+      "Jam dalam sehari",
+      "Tanggal dalam bulan",
+      "Hari dalam minggu",
+      "Menit dalam jam"
+    ],
+    "answer": "Hari dalam minggu"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "Kondisi post mana yang berjalan ketika build berhasil setelah build sebelumnya gagal atau tidak stabil?",
+    "options": [
+      "unsuccessful",
+      "fixed",
+      "changed",
+      "regression"
+    ],
+    "answer": "fixed"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "Kondisi post mana yang berjalan setelah kondisi post lain dievaluasi?",
+    "options": [
+      "cleanup",
+      "always",
+      "changed",
+      "success"
+    ],
+    "answer": "cleanup"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "Opsi when mana yang mengevaluasi kondisi tahap sebelum mengalokasikan agen tahap tersebut?",
+    "options": [
+      "beforeInput false",
+      "beforeOptions false",
+      "branch 'main'",
+      "beforeAgent true"
+    ],
+    "answer": "beforeAgent true"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "Kondisi when mana yang memilih cabang bernama dalam pipeline multicabang?",
+    "options": [
+      "buildingTag()",
+      "changeRequest()",
+      "branch 'main'",
+      "tag 'main'"
+    ],
+    "answer": "branch 'main'"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "Konstruksi deklaratif mana yang menjalankan kombinasi nilai sumbu seperti sistem operasi dan peramban?",
+    "options": [
+      "environment",
+      "matrix",
+      "parallel",
+      "steps"
+    ],
+    "answer": "matrix"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "Bagian mana yang menghapus kombinasi tak diinginkan dari matriks deklaratif?",
+    "options": [
+      "excludes",
+      "axes",
+      "stages",
+      "tools"
+    ],
+    "answer": "excludes"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "Pengaturan mana pada tahap bercabang paralel yang menghentikan cabang lain jika satu cabang gagal?",
+    "options": [
+      "beforeAgent true",
+      "reuseNode true",
+      "alwaysPull true",
+      "failFast true"
+    ],
+    "answer": "failFast true"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "Opsi deklaratif mana yang melewati tahap berikutnya saat build menjadi tidak stabil?",
+    "options": [
+      "disableResume()",
+      "preserveStashes()",
+      "skipStagesAfterUnstable()",
+      "skipDefaultCheckout()"
+    ],
+    "answer": "skipStagesAfterUnstable()"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "Langkah pipeline mana yang mencatat kegagalan tetapi membolehkan eksekusi berlanjut setelah bloknya?",
+    "options": [
+      "input",
+      "catchError",
+      "error",
+      "timeout"
+    ],
+    "answer": "catchError"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "Apa yang dikembalikan sh(script: 'check.sh', returnStatus: true) setelah proses berakhir?",
+    "options": [
+      "Kode keluar proses berupa angka",
+      "Seluruh teks keluaran standar",
+      "ID proses shell",
+      "Objek kredensial Jenkins"
+    ],
+    "answer": "Kode keluar proses berupa angka"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "Apa yang dikembalikan sh(script: 'echo ready', returnStdout: true) saat berhasil?",
+    "options": [
+      "Nomor build",
+      "Lingkungan shell dalam bentuk peta",
+      "Daftar label agen",
+      "String keluaran standar yang ditangkap"
+    ],
+    "answer": "String keluaran standar yang ditangkap"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "Langkah pipeline mana yang menghapus isi direktori ruang kerja saat ini secara rekursif?",
+    "options": [
+      "pwd",
+      "readFile",
+      "deleteDir",
+      "fileExists"
+    ],
+    "answer": "deleteDir"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "Langkah pipeline mana yang memeriksa apakah suatu jalur ada dalam ruang kerja saat ini?",
+    "options": [
+      "libraryResource",
+      "fileExists",
+      "readFile",
+      "writeFile"
+    ],
+    "answer": "fileExists"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "Langkah pipeline mana yang memicu pekerjaan Jenkins lain dan dapat meneruskan parameter build?",
+    "options": [
+      "build",
+      "stage",
+      "node",
+      "checkout"
+    ],
+    "answer": "build"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "Opsi deklaratif mana yang menyimpan stash dari build selesai untuk memulai ulang tahap?",
+    "options": [
+      "disableResume()",
+      "skipDefaultCheckout()",
+      "quietPeriod(5)",
+      "preserveStashes()"
+    ],
+    "answer": "preserveStashes()"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "Berkas mana dalam pustaka bersama yang menyediakan teks bantuan bagi variabel global deploy yang didefinisikan oleh vars/deploy.groovy?",
+    "options": [
+      "resources/deploy.txt",
+      "vars/main.groovy",
+      "vars/deploy.txt",
+      "src/deploy.groovy"
+    ],
+    "answer": "vars/deploy.txt"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "Apa pembatasan utama metode beranotasi @NonCPS dalam pipeline Jenkins?",
+    "options": [
+      "Metode harus berjalan pada agen Windows",
+      "Metode tidak boleh memanggil langkah pipeline yang ditransformasi CPS",
+      "Metode harus berisi direktif stage",
+      "Metode harus selalu mengembalikan string"
+    ],
+    "answer": "Metode tidak boleh memanggil langkah pipeline yang ditransformasi CPS"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "Fasilitas Jenkins mana yang meninjau tanda tangan yang diminta kode Groovy belum disetujui dalam sandbox?",
+    "options": [
+      "Persetujuan skrip dalam proses",
+      "Credentials Store",
+      "Build Queue",
+      "Log pemeriksaan SCM"
+    ],
+    "answer": "Persetujuan skrip dalam proses"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "Gaya kutip Groovy mana yang disarankan untuk skrip yang membiarkan shell mengekspansi variabel rahasia yang diikat?",
+    "options": [
+      "String Groovy terinterpolasi dengan tanda kutip ganda yang berisi rahasia",
+      "String Groovy terinterpolasi dengan tiga tanda kutip ganda yang berisi rahasia",
+      "String Groovy yang dibentuk dengan menggabungkan rahasia teks biasa",
+      "String Groovy dengan tanda kutip tunggal"
+    ],
+    "answer": "String Groovy dengan tanda kutip tunggal"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "Apa tujuan crumb CSRF Jenkins untuk permintaan web yang terkait?",
+    "options": [
+      "Mengenkripsi artefak build sebelum diunggah",
+      "Memilih agen yang menjalankan build",
+      "Membantu memastikan permintaan pengubah status berasal dari sesi pengguna yang telah terbentuk",
+      "Menggantikan pemeriksaan otorisasi semua pekerjaan"
+    ],
+    "answer": "Membantu memastikan permintaan pengubah status berasal dari sesi pengguna yang telah terbentuk"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "Apa yang sebaiknya digunakan pipeline untuk mengatur akses eksklusif ke perangkat uji bersama di berbagai pekerjaan?",
+    "options": [
+      "Opsi skipDefaultCheckout",
+      "Langkah lock dari plugin Lockable Resources",
+      "Opsi timestamps",
+      "Opsi buildDiscarder"
+    ],
+    "answer": "Langkah lock dari plugin Lockable Resources"
+  }
+]

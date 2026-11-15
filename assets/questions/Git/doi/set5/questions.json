@@ -1,0 +1,302 @@
+[
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "कैह्ड़ा कमांड release नां दी मौजूदा ब्रांच आस्तै लिंक कीती गेदी वर्किंग ट्री जोड़दा ऐ?",
+    "options": [
+      "git worktree prune",
+      "git worktree lock ..\\release",
+      "git worktree add ..\\release release",
+      "git worktree list"
+    ],
+    "answer": "git worktree add ..\\release release"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "कैह्ड़ी फाइल सुपरप्रोजेक्ट दे वर्जन कीते गेदे सबमॉड्यूल पाथें ते URLs गी रिकॉर्ड करदी ऐ?",
+    "options": [
+      ".gitmessage",
+      ".gitmodules",
+      ".gitignore",
+      ".gitattributes"
+    ],
+    "answer": ".gitmodules"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "कैह्ड़ा कमांड नेस्टेड समेत रजिस्टर कीते गेदे सबमॉड्यूलें गी इनिशियलाइज़ करदा ऐ ते चेकआउट करदा ऐ?",
+    "options": [
+      "git submodule update --init --recursive",
+      "git submodule deinit --all",
+      "git submodule status",
+      "git submodule sync"
+    ],
+    "answer": "git submodule update --init --recursive"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "सुपरप्रोजेक्ट आमतौर पर कमिट च सबमॉड्यूल आस्तै केह् रिकॉर्ड करदा ऐ?",
+    "options": [
+      "सबमॉड्यूल दा पूरा ऑब्जेक्ट डेटाबेस",
+      "सिर्फ सबमॉड्यूल दी डिफॉल्ट ब्रांच दा नां",
+      "सिर्फ सबमॉड्यूल दे बिना कमिट कीते गेदे बदलाव",
+      "सबमॉड्यूल दे इक खास कमिट दा रेफरेंस"
+    ],
+    "answer": "सबमॉड्यूल दे इक खास कमिट दा रेफरेंस"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "कैह्ड़ा कमांड सारे रेफरेंसें ते उंदी पुज्जने जोग हिस्ट्री आली पोर्टेबल बंडल बनांदा ऐ?",
+    "options": [
+      "git format-patch -1 HEAD",
+      "git diff --binary > backup.bundle",
+      "git bundle create backup.bundle --all",
+      "git archive --output=backup.bundle HEAD"
+    ],
+    "answer": "git bundle create backup.bundle --all"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "कैह्ड़ा कमांड HEAD दियां ट्रैक कीतियां गेदियां फाइलां गी Git हिस्ट्री दे बगैर ZIP आर्काइव दे तौर पर एक्सपोर्ट करदा ऐ?",
+    "options": [
+      "git format-patch --stdout HEAD > source.zip",
+      "git archive --format=zip --output=source.zip HEAD",
+      "git bundle create source.zip --all",
+      "git clone --bare . source.zip"
+    ],
+    "answer": "git archive --format=zip --output=source.zip HEAD"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "कैह्ड़ा कमांड सब थमां नमें कमिट गी ईमेल-शैली दी पैच फाइल च बदलदा ऐ?",
+    "options": [
+      "git format-patch -1 HEAD",
+      "git diff HEAD",
+      "git show --stat HEAD",
+      "git log -1 --oneline"
+    ],
+    "answer": "git format-patch -1 HEAD"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "कैह्ड़ा कमांड git format-patch दे बनाए गेदे ईमेल पैच लागू करदा ऐ ते उंदे कोला कमिट बनांदा ऐ?",
+    "options": [
+      "git apply changes.patch",
+      "git diff changes.patch",
+      "git add changes.patch",
+      "git am changes.patch"
+    ],
+    "answer": "git am changes.patch"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "कैह्ड़ा कमांड जांचदा ऐ जे कोई सादा पैच फाइलें गी बदले बिना लागू होई सकदा ऐ जां नेईं?",
+    "options": [
+      "git am changes.patch",
+      "git add changes.patch",
+      "git apply --check changes.patch",
+      "git apply changes.patch"
+    ],
+    "answer": "git apply --check changes.patch"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "कैह्ड़ा Git ऑब्जेक्ट टाइप फाइल दे नां दे बगैर फाइल दी सामग्री स्टोर करदा ऐ?",
+    "options": [
+      "एनोटेटेड टैग",
+      "Blob",
+      "Tree",
+      "Commit"
+    ],
+    "answer": "Blob"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "कैह्ड़ा Git ऑब्जेक्ट टाइप फाइलें दे नां ते blobs जां सबट्री दे रेफरेंस रिकॉर्ड करदा ऐ?",
+    "options": [
+      "Tree",
+      "Blob",
+      "Commit",
+      "एनोटेटेड टैग"
+    ],
+    "answer": "Tree"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "कैह्ड़ा कमांड किसे जाने-पन्छाने ऑब्जेक्ट ID दा ऑब्जेक्ट टाइप दस्सदा ऐ?",
+    "options": [
+      "git cat-file -s abc1234",
+      "git rev-parse abc1234",
+      "git log -1 abc1234",
+      "git cat-file -t abc1234"
+    ],
+    "answer": "git cat-file -t abc1234"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "कैह्ड़ा कमांड HEAD दा पूरा ऑब्जेक्ट ID छापदा ऐ?",
+    "options": [
+      "git status --short",
+      "git branch --show-current",
+      "git rev-parse HEAD",
+      "git symbolic-ref HEAD"
+    ],
+    "answer": "git rev-parse HEAD"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "कैह्ड़ी रिविजन रेंज उनें कमिटें गी चुनदी ऐ जेह्ड़े feature थमां पुज्जने जोग न पर main थमां नेईं?",
+    "options": [
+      "main^",
+      "main..feature",
+      "feature..main",
+      "main...feature"
+    ],
+    "answer": "main..feature"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "कैह्ड़ा git log ऑप्शन सिर्फ मर्ज कमिट दस्सदा ऐ?",
+    "options": [
+      "--merges",
+      "--no-merges",
+      "--first-parent",
+      "--reverse"
+    ],
+    "answer": "--merges"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "कैह्ड़ा git diff ऑप्शन बदले गेदे पाथ ते उंदे बदलाव-स्थिति दे अक्खर छापदा ऐ?",
+    "options": [
+      "--name-only",
+      "--stat",
+      "--shortstat",
+      "--name-status"
+    ],
+    "answer": "--name-status"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "कैह्ड़ी फाइल पाथें आस्तै टेक्स्ट नॉर्मलाइज़ेशन नियम जनेह् वर्जन कीते गेदे एट्रिब्यूट परिभाशित करदी ऐ?",
+    "options": [
+      ".gitmodules",
+      ".gitconfig",
+      ".gitattributes",
+      ".gitignore"
+    ],
+    "answer": ".gitattributes"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "मेल खांदियां टेक्स्ट फाइलें आस्तै .gitattributes नियम '*.sh text eol=lf' केह् मंगदा ऐ?",
+    "options": [
+      "खाली लाइनें दा अपने-आप मिटाव",
+      "वर्किंग ट्री च LF लाइन एंडिंग",
+      "वर्किंग ट्री च CRLF लाइन एंडिंग",
+      "टेक्स्ट कन्वर्ज़न दे बगैर बाइनरी दे तौर पर बरतना"
+    ],
+    "answer": "वर्किंग ट्री च LF लाइन एंडिंग"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "कैह्ड़ा हुक प्रस्तावित कमिट-मैसेज फाइल दी जांच करियै कमिट गी रद्द करी सकदा ऐ?",
+    "options": [
+      "commit-msg",
+      "post-commit",
+      "post-checkout",
+      "post-merge"
+    ],
+    "answer": "commit-msg"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "कैह्ड़ी कनफिगरेशन सेटिंग Git हुक्स आस्तै कस्टम डायरेक्टरी चुनदी ऐ?",
+    "options": [
+      "core.worktree",
+      "core.excludesFile",
+      "core.attributesFile",
+      "core.hooksPath"
+    ],
+    "answer": "core.hooksPath"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "कैह्ड़ी फाइल इक डेवलपर गी साझा .gitignore नियम जोड़े बिना अनट्रैक फाइलें गी लोकल तौर पर नजरअंदाज करन दिंदी ऐ?",
+    "options": [
+      ".git\\description",
+      ".git\\packed-refs",
+      ".git\\info\\exclude",
+      ".git\\HEAD"
+    ],
+    "answer": ".git\\info\\exclude"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "कैह्ड़ा कमांड bisect सेशन चा बाह्र निकलदा ऐ ते आमतौर पर मूल ब्रांच पर वापस लेई जंदा ऐ?",
+    "options": [
+      "git bisect log",
+      "git bisect reset",
+      "git bisect skip",
+      "git bisect good"
+    ],
+    "answer": "git bisect reset"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "कैह्ड़ा कमांड पैच सीरीज़ दे दो वर्ज़नें दी तुलना करदा ऐ?",
+    "options": [
+      "git range-diff main..old main..new",
+      "git diff old new",
+      "git log old..new",
+      "git merge-base old new"
+    ],
+    "answer": "git range-diff main..old main..new"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "कैह्ड़ा कमांड कमिट बनान बेल्लै Signed-off-by ट्रेलर जोड़दा ऐ?",
+    "options": [
+      "git commit --gpg-sign",
+      "git commit --amend",
+      "git commit --no-verify",
+      "git commit --signoff"
+    ],
+    "answer": "git commit --signoff"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "git log -S'old_name' डिफॉल्ट तौर पर केह् खोजदा ऐ?",
+    "options": [
+      "ओह् कमिट, जिंदे मैसेज च old_name ऐ",
+      "ओह् ब्रांचां, जिंदे नां च old_name ऐ",
+      "ओह् कमिट, जेह्ड़े old_name दे होने दी गिनतरी गी बदलदे न",
+      "ओह् कमिट, जिंदे लेखक दा नां old_name ऐ"
+    ],
+    "answer": "ओह् कमिट, जेह्ड़े old_name दे होने दी गिनतरी गी बदलदे न"
+  }
+]

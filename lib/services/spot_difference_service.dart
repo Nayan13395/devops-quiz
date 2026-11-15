@@ -3,223 +3,162 @@ import 'dart:math' as math;
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
-enum DifferenceFeature {
-  cloud,
-  sun,
-  antenna,
-  windows,
-  tree,
-  flower,
-  flag,
-  fan,
-  roof,
-  door,
-  dish,
-  chimney,
-}
+import '../data/spot_picture_catalog.dart';
+import 'game_rewards.dart';
+
+enum DifferenceFeature { first, second, third, fourth, fifth }
 
 class SpotDifferenceSpot {
   const SpotDifferenceSpot({
     required this.feature,
     required this.left,
     required this.right,
+    required this.radius,
     required this.label,
   });
 
   final DifferenceFeature feature;
   final Offset left;
   final Offset right;
+  final Size radius;
   final String label;
+
+  double hitDistance(Offset point, {required bool rightImage}) {
+    final center = rightImage ? right : left;
+    final dx = (point.dx - center.dx) / radius.width;
+    final dy = (point.dy - center.dy) / radius.height;
+    return dx * dx + dy * dy;
+  }
 }
 
 class SpotDifferenceLevel {
   const SpotDifferenceLevel({
     required this.number,
     required this.title,
-    required this.sceneIndex,
-    required this.palette,
+    required this.difficulty,
+    required this.leftAsset,
+    required this.rightAsset,
+    required this.aspectRatio,
     required this.differences,
   });
 
   final int number;
   final String title;
-  final int sceneIndex;
-  final int palette;
+  final String difficulty;
+  final String leftAsset;
+  final String rightAsset;
+  final double aspectRatio;
   final List<SpotDifferenceSpot> differences;
+
+  SpotDifferenceSpot? spotAt(Offset point, {required bool rightImage}) {
+    if (point.dx < 0 || point.dy < 0 || point.dx > 1 || point.dy > 1) {
+      return null;
+    }
+    SpotDifferenceSpot? closest;
+    double distance = double.infinity;
+    for (final spot in differences) {
+      final candidate = spot.hitDistance(point, rightImage: rightImage);
+      if (candidate <= 1 && candidate < distance) {
+        closest = spot;
+        distance = candidate;
+      }
+    }
+    return closest;
+  }
 }
 
 class SpotDifferenceService {
   SpotDifferenceService._();
 
-  static const int levelCount = 100;
-  static const int differencesPerLevel = 5;
-  static const int rewardPerLevel = 50;
-  static const int hintPenalty = 10;
-  static const String _completedKey = 'spot_difference_completed_levels_v1';
+  static final int levelCount = levels.length;
+  static const int rewardPerLevel = GameRewards.levelCompletion;
+  static const int hintPenalty = GameRewards.hintCost;
+  static const String _completedAssetsKey =
+      'spot_difference_completed_assets_v3';
 
-  static const List<SpotDifferenceSpot> _features = [
-    SpotDifferenceSpot(
-      feature: DifferenceFeature.cloud,
-      left: Offset(0.20, 0.23),
-      right: Offset(0.20, 0.23),
-      label: 'Cloud shape',
-    ),
-    SpotDifferenceSpot(
-      feature: DifferenceFeature.sun,
-      left: Offset(0.82, 0.17),
-      right: Offset(0.75, 0.21),
-      label: 'Sun position',
-    ),
-    SpotDifferenceSpot(
-      feature: DifferenceFeature.antenna,
-      left: Offset(0.66, 0.34),
-      right: Offset(0.66, 0.34),
-      label: 'Antenna',
-    ),
-    SpotDifferenceSpot(
-      feature: DifferenceFeature.windows,
-      left: Offset(0.59, 0.60),
-      right: Offset(0.59, 0.60),
-      label: 'Window',
-    ),
-    SpotDifferenceSpot(
-      feature: DifferenceFeature.tree,
-      left: Offset(0.82, 0.68),
-      right: Offset(0.82, 0.68),
-      label: 'Tree branch',
-    ),
-    SpotDifferenceSpot(
-      feature: DifferenceFeature.flower,
-      left: Offset(0.19, 0.82),
-      right: Offset(0.19, 0.82),
-      label: 'Flower petal',
-    ),
-    SpotDifferenceSpot(
-      feature: DifferenceFeature.flag,
-      left: Offset(0.49, 0.28),
-      right: Offset(0.49, 0.28),
-      label: 'Flag color',
-    ),
-    SpotDifferenceSpot(
-      feature: DifferenceFeature.fan,
-      left: Offset(0.65, 0.57),
-      right: Offset(0.65, 0.57),
-      label: 'Server fan',
-    ),
-    SpotDifferenceSpot(
-      feature: DifferenceFeature.roof,
-      left: Offset(0.22, 0.39),
-      right: Offset(0.22, 0.39),
-      label: 'Roof color',
-    ),
-    SpotDifferenceSpot(
-      feature: DifferenceFeature.door,
-      left: Offset(0.22, 0.69),
-      right: Offset(0.22, 0.69),
-      label: 'Door',
-    ),
-    SpotDifferenceSpot(
-      feature: DifferenceFeature.dish,
-      left: Offset(0.66, 0.34),
-      right: Offset(0.66, 0.34),
-      label: 'Satellite dish',
-    ),
-    SpotDifferenceSpot(
-      feature: DifferenceFeature.chimney,
-      left: Offset(0.29, 0.28),
-      right: Offset(0.29, 0.28),
-      label: 'Chimney',
-    ),
-  ];
-
-  static const List<String> _sceneStyles = [
-    'Golden hour',
-    'Breezy morning',
-    'After the rain',
-    'Summer afternoon',
-    'Clear skies',
-    'Soft sunset',
-    'Fresh spring day',
-    'Cloud watching',
-    'Evening glow',
-    'Garden morning',
-  ];
-
-  static const List<String> _scenePlaces = [
-    'Cloudside Campus',
-    'Antenna Avenue',
-    'Sunny Server Farm',
-    'Garden Gateway',
-    'Blue-Sky Datacenter',
-    'Rooftop Observatory',
-    'Flower Field Station',
-    'Windy Hill Servers',
-    'Sunset Cloud Station',
-    'Lakeside Network Hub',
-  ];
-
-  static List<List<int>> _buildDifferenceSets() {
-    final combinations = <List<int>>[];
-    void addCombinations(int start, List<int> current) {
-      if (current.length == differencesPerLevel) {
-        combinations.add(List.unmodifiable(current));
-        return;
-      }
-      for (
-        int index = start;
-        index <= _features.length - (differencesPerLevel - current.length);
-        index++
-      ) {
-        current.add(index);
-        addCombinations(index + 1, current);
-        current.removeLast();
-      }
-    }
-
-    addCombinations(0, []);
-    combinations.shuffle(math.Random(0x5D1FF));
-    return combinations.take(levelCount).toList(growable: false);
-  }
-
-  static final List<List<int>> _differenceSets = _buildDifferenceSets();
-
-  static final List<SpotDifferenceLevel> levels = [
-    for (int level = 1; level <= levelCount; level++)
+  static final List<SpotDifferenceLevel> levels = List.unmodifiable([
+    for (final (index, data) in spotPictureCatalog.indexed)
       SpotDifferenceLevel(
-        number: level,
-        title:
-            '${_sceneStyles[(level - 1) % _sceneStyles.length]} · '
-            '${_scenePlaces[(level - 1) ~/ _scenePlaces.length]}',
-        sceneIndex: (level - 1) ~/ _scenePlaces.length,
-        palette: (level - 1) % _sceneStyles.length,
+        number: index + 1,
+        title: data.title,
+        difficulty: data.difficulty,
+        leftAsset: data.leftAsset,
+        rightAsset: data.rightAsset,
+        aspectRatio: data.aspectRatio,
         differences: [
-          for (final featureIndex in _differenceSets[level - 1])
-            _features[featureIndex],
+          for (final (spotIndex, spot) in data.spots.indexed)
+            SpotDifferenceSpot(
+              feature: DifferenceFeature.values[spotIndex],
+              left: Offset(spot.x, spot.y),
+              right: Offset(spot.x, spot.y),
+              radius: Size(spot.rx * math.sqrt2, spot.ry * math.sqrt2),
+              label: spot.label,
+            ),
         ],
       ),
-  ];
+  ]);
 
   static bool isUnlocked(int level, Set<int> completed) =>
-      level == 1 || completed.contains(level - 1);
+      level >= 1 &&
+      level <= levelCount &&
+      (level == 1 ||
+          completed.contains(level) ||
+          completed.contains(level - 1));
+
+  static int nextUncompletedLevel(Set<int> completed) =>
+      levels
+          .where((level) => !completed.contains(level.number))
+          .firstOrNull
+          ?.number ??
+      levelCount;
+
+  static Set<int> _completedNumbers(Set<String> assets) => {
+    for (final level in levels)
+      if (assets.contains(level.leftAsset)) level.number,
+  };
+
+  static Future<void> _saveCompletedAssets(
+    SharedPreferences prefs,
+    Set<String> assets,
+  ) async {
+    try {
+      if (!await prefs.setStringList(
+        _completedAssetsKey,
+        assets.toList()..sort(),
+      )) {
+        throw StateError('Could not save Spot the Difference progress');
+      }
+    } catch (_) {
+      await prefs.reload();
+      rethrow;
+    }
+  }
+
+  static Future<Set<String>> _loadCompletedAssets(
+    SharedPreferences prefs,
+  ) async {
+    final stored = prefs.getStringList(_completedAssetsKey);
+    if (stored != null) return stored.toSet();
+    final assets = <String>{};
+    await _saveCompletedAssets(prefs, assets);
+    return assets;
+  }
 
   static Future<Set<int>> loadCompletedLevels() async {
     final prefs = await SharedPreferences.getInstance();
-    return {
-      for (final value in prefs.getStringList(_completedKey) ?? const [])
-        if (int.tryParse(value) case final int level)
-          if (level >= 1 && level <= levelCount) level,
-    };
+    return _completedNumbers(await _loadCompletedAssets(prefs));
   }
 
   static Future<bool> completeLevel(int level) async {
     if (level < 1 || level > levelCount) return false;
     final prefs = await SharedPreferences.getInstance();
-    final completed = await loadCompletedLevels();
-    if (!isUnlocked(level, completed) || !completed.add(level)) return false;
-    await prefs.setStringList(
-      _completedKey,
-      (completed.toList()..sort()).map((value) => '$value').toList(),
-    );
+    final assets = await _loadCompletedAssets(prefs);
+    final completed = _completedNumbers(assets);
+    if (!isUnlocked(level, completed) ||
+        !assets.add(levels[level - 1].leftAsset)) {
+      return false;
+    }
+    await _saveCompletedAssets(prefs, assets);
     return true;
   }
 }

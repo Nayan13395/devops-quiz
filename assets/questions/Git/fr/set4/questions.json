@@ -1,0 +1,302 @@
+[
+  {
+    "category": "Git",
+    "set": 4,
+    "question": "Quelle commande rejoue des commits au-dessus d'une autre branche ?",
+    "options": [
+      "git rebase",
+      "git merge",
+      "git clone",
+      "git pull"
+    ],
+    "answer": "git rebase"
+  },
+  {
+    "category": "Git",
+    "set": 4,
+    "question": "Quelle commande copie un commit spécifique vers une autre branche ?",
+    "options": [
+      "git cherry-pick",
+      "git copy",
+      "git merge",
+      "git commit"
+    ],
+    "answer": "git cherry-pick"
+  },
+  {
+    "category": "Git",
+    "set": 4,
+    "question": "Quelle commande annule des commits en créant un nouveau commit ?",
+    "options": [
+      "git revert",
+      "git reset",
+      "git remove",
+      "git undo"
+    ],
+    "answer": "git revert"
+  },
+  {
+    "category": "Git",
+    "set": 4,
+    "question": "Quelle commande déplace HEAD vers un commit précédent ?",
+    "options": [
+      "git reset",
+      "git revert",
+      "git branch",
+      "git stash"
+    ],
+    "answer": "git reset"
+  },
+  {
+    "category": "Git",
+    "set": 4,
+    "question": "Quelle commande affiche les journaux de références ?",
+    "options": [
+      "git reflog",
+      "git log",
+      "git show",
+      "git history"
+    ],
+    "answer": "git reflog"
+  },
+  {
+    "category": "Git",
+    "set": 4,
+    "question": "Quelle commande démarre un rebase interactif ?",
+    "options": [
+      "git rebase -i",
+      "git rebase",
+      "git edit",
+      "git rebase --start"
+    ],
+    "answer": "git rebase -i"
+  },
+  {
+    "category": "Git",
+    "set": 4,
+    "question": "Quelle commande trouve le commit qui a introduit un bogue ?",
+    "options": [
+      "git bisect",
+      "git log",
+      "git diff",
+      "git inspect"
+    ],
+    "answer": "git bisect"
+  },
+  {
+    "category": "Git",
+    "set": 4,
+    "question": "Quel mode de reset conserve les modifications indexées ?",
+    "options": [
+      "--soft",
+      "--hard",
+      "--mixed",
+      "--keep"
+    ],
+    "answer": "--soft"
+  },
+  {
+    "category": "Git",
+    "set": 4,
+    "question": "Quel mode de réinitialisation remet l'index et les fichiers suivis de l'arbre de travail au commit choisi, en abandonnant leurs modifications locales ?",
+    "options": [
+      "--hard",
+      "--soft",
+      "--mixed",
+      "--safe"
+    ],
+    "answer": "--hard"
+  },
+  {
+    "category": "Git",
+    "set": 4,
+    "question": "Quelle commande nettoie les fichiers non suivis ?",
+    "options": [
+      "git clean",
+      "git rm",
+      "git reset",
+      "git purge"
+    ],
+    "answer": "git clean"
+  },
+  {
+    "category": "Git",
+    "set": 4,
+    "question": "Quelle option effectue une simulation (dry run) pour git clean ?",
+    "options": [
+      "git clean -n",
+      "git clean -d",
+      "git clean -f",
+      "git clean -x"
+    ],
+    "answer": "git clean -n"
+  },
+  {
+    "category": "Git",
+    "set": 4,
+    "question": "Qu'affiche git blame ?",
+    "options": [
+      "Qui a modifié chaque ligne",
+      "La taille du dépôt",
+      "Les branches",
+      "Les tags"
+    ],
+    "answer": "Qui a modifié chaque ligne"
+  },
+  {
+    "category": "Git",
+    "set": 4,
+    "question": "Quelle commande vérifie l'intégrité du dépôt ?",
+    "options": [
+      "git fsck",
+      "git verify",
+      "git check",
+      "git validate"
+    ],
+    "answer": "git fsck"
+  },
+  {
+    "category": "Git",
+    "set": 4,
+    "question": "Que fait git gc ?",
+    "options": [
+      "Nettoyage et optimisation du dépôt",
+      "Supprimer le dépôt",
+      "Créer une branche",
+      "Pousser des commits"
+    ],
+    "answer": "Nettoyage et optimisation du dépôt"
+  },
+  {
+    "category": "Git",
+    "set": 4,
+    "question": "À quoi sert Git LFS ?",
+    "options": [
+      "Gérer les fichiers volumineux",
+      "Gestion des branches",
+      "Conflits de fusion",
+      "CI/CD"
+    ],
+    "answer": "Gérer les fichiers volumineux"
+  },
+  {
+    "category": "Git",
+    "set": 4,
+    "question": "Quelle commande reprend un rebasage après résolution et indexation des conflits ?",
+    "options": [
+      "git rebase --quit",
+      "git rebase --continue",
+      "git rebase --abort",
+      "git rebase --skip"
+    ],
+    "answer": "git rebase --continue"
+  },
+  {
+    "category": "Git",
+    "set": 4,
+    "question": "Quelle commande annule un rebasage et restaure l'état initial de la branche ?",
+    "options": [
+      "git rebase --abort",
+      "git rebase --continue",
+      "git rebase --skip",
+      "git rebase --edit-todo"
+    ],
+    "answer": "git rebase --abort"
+  },
+  {
+    "category": "Git",
+    "set": 4,
+    "question": "Quelle commande applique les modifications du commit abc1234 sans créer immédiatement de commit ?",
+    "options": [
+      "git show abc1234",
+      "git revert abc1234",
+      "git merge --ff-only abc1234",
+      "git cherry-pick --no-commit abc1234"
+    ],
+    "answer": "git cherry-pick --no-commit abc1234"
+  },
+  {
+    "category": "Git",
+    "set": 4,
+    "question": "Quelle instruction de rebasage interactif combine un commit avec le précédent et permet de modifier leur message commun ?",
+    "options": [
+      "reword",
+      "edit",
+      "squash",
+      "drop"
+    ],
+    "answer": "squash"
+  },
+  {
+    "category": "Git",
+    "set": 4,
+    "question": "Quel effet git reset --mixed HEAD~1 a-t-il sur le contenu des fichiers suivis de l'arbre de travail ?",
+    "options": [
+      "Il crée un nouveau commit inverse",
+      "Il conserve le contenu tout en réinitialisant l'index et en déplaçant HEAD",
+      "Il supprime tous les fichiers non suivis",
+      "Il indexe toutes les modifications de l'arbre de travail"
+    ],
+    "answer": "Il conserve le contenu tout en réinitialisant l'index et en déplaçant HEAD"
+  },
+  {
+    "category": "Git",
+    "set": 4,
+    "question": "Quelle commande recherche le texte TODO dans les fichiers suivis ?",
+    "options": [
+      "git grep TODO",
+      "git log --grep=TODO",
+      "git show TODO",
+      "git tag --list TODO"
+    ],
+    "answer": "git grep TODO"
+  },
+  {
+    "category": "Git",
+    "set": 4,
+    "question": "Quelle commande recherche le mot timeout dans les messages de commit ?",
+    "options": [
+      "git grep timeout",
+      "git diff --word-diff",
+      "git branch --contains timeout",
+      "git log --grep=timeout"
+    ],
+    "answer": "git log --grep=timeout"
+  },
+  {
+    "category": "Git",
+    "set": 4,
+    "question": "Quelle commande affiche le deuxième parent d'un commit de fusion situé à HEAD ?",
+    "options": [
+      "git show HEAD^",
+      "git show HEAD~1",
+      "git show HEAD^2",
+      "git show HEAD~2"
+    ],
+    "answer": "git show HEAD^2"
+  },
+  {
+    "category": "Git",
+    "set": 4,
+    "question": "Quelle commande identifie un meilleur ancêtre commun de main et feature ?",
+    "options": [
+      "git branch --merged main",
+      "git merge-base main feature",
+      "git diff main feature",
+      "git log main feature"
+    ],
+    "answer": "git merge-base main feature"
+  },
+  {
+    "category": "Git",
+    "set": 4,
+    "question": "Quelle commande prévisualise la suppression des répertoires et fichiers non suivis ?",
+    "options": [
+      "git clean -nd",
+      "git clean -fd",
+      "git clean -fx",
+      "git clean -f"
+    ],
+    "answer": "git clean -nd"
+  }
+]

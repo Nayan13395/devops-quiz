@@ -1,0 +1,302 @@
+[
+  {
+    "category": "Jenkins",
+    "set": 3,
+    "question": "Qual è il ruolo principale di un Jenkins Controller (Master)?",
+    "options": [
+      "Gestire e pianificare le build",
+      "Archiviare immagini Docker",
+      "Eseguire pod Kubernetes",
+      "Ospitare il codice sorgente"
+    ],
+    "answer": "Gestire e pianificare le build"
+  },
+  {
+    "category": "Jenkins",
+    "set": 3,
+    "question": "Che cos'è un Jenkins Agent?",
+    "options": [
+      "Una macchina che esegue le build",
+      "Un plugin di Jenkins",
+      "Un repository di codice sorgente",
+      "Uno strumento di monitoraggio"
+    ],
+    "answer": "Una macchina che esegue le build"
+  },
+  {
+    "category": "Jenkins",
+    "set": 3,
+    "question": "Quale termine descrive una macchina nell'ambiente Jenkins che può ospitare esecutori, inclusa una macchina agente?",
+    "options": [
+      "Node",
+      "Executor",
+      "Workspace",
+      "Pipeline"
+    ],
+    "answer": "Node"
+  },
+  {
+    "category": "Jenkins",
+    "set": 3,
+    "question": "A cosa servono le Label in Jenkins?",
+    "options": [
+      "Indirizzare agent specifici",
+      "Rinominare i job",
+      "Archiviare le credenziali",
+      "Configurare i plugin"
+    ],
+    "answer": "Indirizzare agent specifici"
+  },
+  {
+    "category": "Jenkins",
+    "set": 3,
+    "question": "Che cos'è la Distributed Build in Jenkins?",
+    "options": [
+      "Eseguire job su più agent",
+      "Eseguire container Docker",
+      "Creare più pipeline",
+      "Usare più repository"
+    ],
+    "answer": "Eseguire job su più agent"
+  },
+  {
+    "category": "Jenkins",
+    "set": 3,
+    "question": "Che cos'è un Executor in Jenkins?",
+    "options": [
+      "Uno slot che esegue una build",
+      "Un gestore di plugin",
+      "Un artefatto di build",
+      "Uno stage della pipeline"
+    ],
+    "answer": "Uno slot che esegue una build"
+  },
+  {
+    "category": "Jenkins",
+    "set": 3,
+    "question": "Dove vengono gestite le credenziali in Jenkins?",
+    "options": [
+      "Credentials Store",
+      "Build History",
+      "Workspace",
+      "Pipeline Syntax"
+    ],
+    "answer": "Credentials Store"
+  },
+  {
+    "category": "Jenkins",
+    "set": 3,
+    "question": "Quale tipo di credenziale memorizza password o token API?",
+    "options": [
+      "Secret Text",
+      "Username",
+      "Certificate",
+      "Workspace"
+    ],
+    "answer": "Secret Text"
+  },
+  {
+    "category": "Jenkins",
+    "set": 3,
+    "question": "Quale tipo di credenziale fornisce una chiave privata per l'accesso a Git tramite SSH?",
+    "options": [
+      "SSH Private Key",
+      "Secret Text",
+      "Certificate",
+      "Token File"
+    ],
+    "answer": "SSH Private Key"
+  },
+  {
+    "category": "Jenkins",
+    "set": 3,
+    "question": "Quale sezione viene usata per gestire gli utenti di Jenkins?",
+    "options": [
+      "Manage Users",
+      "Build Queue",
+      "Plugin Manager",
+      "Workspace"
+    ],
+    "answer": "Manage Users"
+  },
+  {
+    "category": "Jenkins",
+    "set": 3,
+    "question": "Quale strategia di autorizzazione assegna permessi mediante una matrice di utenti o gruppi e permessi?",
+    "options": [
+      "Matrix Authorization",
+      "Role Plugin",
+      "Anonymous Access",
+      "LDAP"
+    ],
+    "answer": "Matrix Authorization"
+  },
+  {
+    "category": "Jenkins",
+    "set": 3,
+    "question": "Quale servizio può essere integrato per l'autenticazione centralizzata?",
+    "options": [
+      "LDAP",
+      "Docker",
+      "Git",
+      "Maven"
+    ],
+    "answer": "LDAP"
+  },
+  {
+    "category": "Jenkins",
+    "set": 3,
+    "question": "Di cosa va eseguito il backup per preservare la configurazione di Jenkins?",
+    "options": [
+      "JENKINS_HOME",
+      "Solo il workspace",
+      "Solo i log di build",
+      "Solo i plugin"
+    ],
+    "answer": "JENKINS_HOME"
+  },
+  {
+    "category": "Jenkins",
+    "set": 3,
+    "question": "Quale pannello Jenkins elenca le compilazioni in attesa di essere pianificate per l'esecuzione?",
+    "options": [
+      "Build Queue",
+      "Workspace",
+      "Dashboard",
+      "Artifacts"
+    ],
+    "answer": "Build Queue"
+  },
+  {
+    "category": "Jenkins",
+    "set": 3,
+    "question": "Quale menu viene usato per gestire gli agent di Jenkins?",
+    "options": [
+      "Manage Nodes",
+      "Build Queue",
+      "Plugin Manager",
+      "System Log"
+    ],
+    "answer": "Manage Nodes"
+  },
+  {
+    "category": "Jenkins",
+    "set": 3,
+    "question": "Quale passo della pipeline associa credenziali memorizzate a variabili per la durata di un blocco?",
+    "options": [
+      "withCredentials",
+      "withEnv",
+      "withContext",
+      "wrap"
+    ],
+    "answer": "withCredentials"
+  },
+  {
+    "category": "Jenkins",
+    "set": 3,
+    "question": "Quale valore dovrebbe normalmente usare un Jenkinsfile per fare riferimento a un segreto memorizzato?",
+    "options": [
+      "La sua password in chiaro",
+      "I suoi byte di archiviazione crittografati",
+      "Il cookie di accesso del proprietario",
+      "Il suo identificatore di credenziale"
+    ],
+    "answer": "Il suo identificatore di credenziale"
+  },
+  {
+    "category": "Jenkins",
+    "set": 3,
+    "question": "Che cosa garantisce il mascheramento di una credenziale nell'output della console?",
+    "options": [
+      "La crittografia automatica di ogni artefatto prodotto",
+      "La revoca automatica dopo ogni compilazione",
+      "Solo un occultamento per quanto possibile nei log, non protezione dal codice di compilazione malevolo",
+      "La prevenzione completa dell'esfiltrazione di segreti da parte della compilazione"
+    ],
+    "answer": "Solo un occultamento per quanto possibile nei log, non protezione dal codice di compilazione malevolo"
+  },
+  {
+    "category": "Jenkins",
+    "set": 3,
+    "question": "Quale impostazione del nodo integrato impedisce alle compilazioni normali di usare gli esecutori del controller?",
+    "options": [
+      "Aumentare il periodo di conservazione dell'area di lavoro",
+      "Impostare a zero il numero di esecutori",
+      "Impostare a dieci il numero di esecutori",
+      "Assegnargli la stessa etichetta di tutti gli agenti"
+    ],
+    "answer": "Impostare a zero il numero di esecutori"
+  },
+  {
+    "category": "Jenkins",
+    "set": 3,
+    "question": "Che cosa contiene env.BUILD_NUMBER in una pipeline?",
+    "options": [
+      "Il numero di compilazione del job corrente",
+      "La versione del controller Jenkins",
+      "La porta TCP dell'agente",
+      "Il numero di fasi della pipeline"
+    ],
+    "answer": "Il numero di compilazione del job corrente"
+  },
+  {
+    "category": "Jenkins",
+    "set": 3,
+    "question": "Qual è lo scopo del periodo di attesa di un job Jenkins?",
+    "options": [
+      "Limitare il tempo totale di esecuzione della compilazione",
+      "Conservare solo i record delle compilazioni riuscite",
+      "Disabilitare tutti i log della console",
+      "Ritardare l'avvio di una compilazione pianificata per un intervallo configurato"
+    ],
+    "answer": "Ritardare l'avvio di una compilazione pianificata per un intervallo configurato"
+  },
+  {
+    "category": "Jenkins",
+    "set": 3,
+    "question": "Quale passo della pipeline cambia la directory di lavoro per i passi del proprio blocco?",
+    "options": [
+      "node",
+      "stage",
+      "dir",
+      "pwd"
+    ],
+    "answer": "dir"
+  },
+  {
+    "category": "Jenkins",
+    "set": 3,
+    "question": "Quale passo della pipeline restituisce il percorso della directory di lavoro corrente?",
+    "options": [
+      "fileExists",
+      "pwd",
+      "dir",
+      "readFile"
+    ],
+    "answer": "pwd"
+  },
+  {
+    "category": "Jenkins",
+    "set": 3,
+    "question": "Quale passo della pipeline imposta temporaneamente variabili d'ambiente per il proprio blocco?",
+    "options": [
+      "withEnv",
+      "withCredentials",
+      "readFile",
+      "checkout"
+    ],
+    "answer": "withEnv"
+  },
+  {
+    "category": "Jenkins",
+    "set": 3,
+    "question": "Che cosa impedisce normalmente la messa temporanea offline di un agente?",
+    "options": [
+      "L'accesso a tutti i log delle compilazioni terminate",
+      "Tutte le compilazioni su ogni altro agente",
+      "La lettura dell'elenco dei plugin del controller",
+      "L'assegnazione di nuove compilazioni a quell'agente"
+    ],
+    "answer": "L'assegnazione di nuove compilazioni a quell'agente"
+  }
+]

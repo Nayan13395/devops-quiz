@@ -1,0 +1,302 @@
+[
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "NetworkPolicy 要影响 Pod 流量，需要什么？",
+    "options": [
+      "为每个所选 Pod 提供 LoadBalancer Service",
+      "同一命名空间中的 PersistentVolumeClaim",
+      "为每条策略提供独立 API 服务器",
+      "能够执行 NetworkPolicy 的网络实现"
+    ],
+    "answer": "能够执行 NetworkPolicy 的网络实现"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "多个 NetworkPolicy 选择同一个 Pod 时，如何合并允许的入站流量？",
+    "options": [
+      "最先创建的策略覆盖所有后续策略",
+      "每条策略必须各自允许每个数据包",
+      "允许的流量是各策略入站许可的并集",
+      "最后创建的策略覆盖所有先前策略"
+    ],
+    "answer": "允许的流量是各策略入站许可的并集"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "哪个 RBAC 对象定义命名空间内的权限？",
+    "options": [
+      "ResourceQuota",
+      "Role",
+      "RoleBinding",
+      "ServiceAccount"
+    ],
+    "answer": "Role"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "哪个 RBAC 对象在一个命名空间内授予 Role 或 ClusterRole 的权限？",
+    "options": [
+      "RoleBinding",
+      "ClusterRoleBinding",
+      "ServiceAccount",
+      "LimitRange"
+    ],
+    "answer": "RoleBinding"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "Pod 内运行的进程通常被分配哪种身份来访问 Kubernetes API？",
+    "options": [
+      "StorageClass",
+      "RuntimeClass",
+      "PriorityClass",
+      "ServiceAccount"
+    ],
+    "answer": "ServiceAccount"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "为什么仅将 Secret 数据编码为 base64，无法防止能读取该对象的人获取数据？",
+    "options": [
+      "Base64 会自动通过 DNS 发布数据",
+      "Base64 需要存储在 Pod 中的私钥",
+      "Base64 是可逆编码，不是加密",
+      "Base64 会阻止 Kubernetes 存储数据"
+    ],
+    "answer": "Base64 是可逆编码，不是加密"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "哪个字段可阻止 Kubernetes 将 API 凭据自动挂载到 Pod 中？",
+    "options": [
+      "shareProcessNamespace: false",
+      "automountServiceAccountToken: false",
+      "hostNetwork: false",
+      "enableServiceLinks: false"
+    ],
+    "answer": "automountServiceAccountToken: false"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "哪个对象限制命名空间内的资源总消耗？",
+    "options": [
+      "ResourceQuota",
+      "LimitRange",
+      "PriorityClass",
+      "PodDisruptionBudget"
+    ],
+    "answer": "ResourceQuota"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "哪个对象可以为命名空间中的容器设置默认资源请求和限制？",
+    "options": [
+      "ResourceQuota",
+      "HorizontalPodAutoscaler",
+      "RuntimeClass",
+      "LimitRange"
+    ],
+    "answer": "LimitRange"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "请求删除 Kubernetes 对象后，对象上的终结器有什么作用？",
+    "options": [
+      "立即删除所有依赖对象",
+      "将对象转换为不可变的 Secret",
+      "让对象保持待删除状态，直到必要的清理完成并移除终结器",
+      "阻止对象今后的所有更新"
+    ],
+    "answer": "让对象保持待删除状态，直到必要的清理完成并移除终结器"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "哪个元数据字段将依赖对象关联到其所有者，以便垃圾回收？",
+    "options": [
+      "managedFields",
+      "ownerReferences",
+      "annotations",
+      "labels"
+    ],
+    "answer": "ownerReferences"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "CustomResourceDefinition 为集群添加什么？",
+    "options": [
+      "由 Kubernetes API 提供服务的新自定义资源类型",
+      "为现有类型运行的协调控制器",
+      "向每个服务账户授予 RBAC 权限",
+      "每种内置资源类型的一个实例"
+    ],
+    "answer": "由 Kubernetes API 提供服务的新自定义资源类型"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "Kubernetes Operator 与单独的自定义资源定义有什么区别？",
+    "options": [
+      "Operator 只能存储模式定义",
+      "Operator 使 API 服务器不再必要",
+      "Operator 仅更改 kubectl 的输出格式",
+      "Operator 还运行协调逻辑，以管理所表示的应用"
+    ],
+    "answer": "Operator 还运行协调逻辑，以管理所表示的应用"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "哪个机制可在身份认证和授权之后、持久保存之前拒绝或修改 API 请求？",
+    "options": [
+      "容器镜像拉取",
+      "Service 端点路由",
+      "准入控制",
+      "Pod 调度"
+    ],
+    "answer": "准入控制"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "如果没有合格节点满足 Pod 的强制节点亲和性要求，会怎样？",
+    "options": [
+      "API 服务器将其调度到每个节点",
+      "Pod 保持未调度，直到合适节点可用或约束改变",
+      "调度器尝试一次后就忽略该规则",
+      "Pod 自动变为 DaemonSet"
+    ],
+    "answer": "Pod 保持未调度，直到合适节点可用或约束改变"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "节点亲和性 preferredDuringSchedulingIgnoredDuringExecution 表示什么？",
+    "options": [
+      "一种放置偏好，不排除虽不匹配但其他方面合格的节点",
+      "禁止放置到不匹配节点的强制要求",
+      "节点标签变化时驱逐 Pod 的指令",
+      "完全绕过调度器的请求"
+    ],
+    "answer": "一种放置偏好，不排除虽不匹配但其他方面合格的节点"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "如果节点标签不再匹配运行中 Pod 的节点亲和性规则，IgnoredDuringExecution 意味着什么？",
+    "options": [
+      "必须立即删除 Pod",
+      "Pod 的容器会自动重启",
+      "节点标签会自动恢复原值",
+      "该规则本身不会驱逐正在运行的 Pod"
+    ],
+    "answer": "该规则本身不会驱逐正在运行的 Pod"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "Pod 显式设置 spec.nodeName 时会发生什么？",
+    "options": [
+      "创建该名称的节点",
+      "重命名当前运行 Pod 的节点",
+      "绕过调度器，直接分配给指定节点",
+      "要求调度器对所有匹配的节点标签排序"
+    ],
+    "answer": "绕过调度器，直接分配给指定节点"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "拓扑分布约束有什么用途？",
+    "options": [
+      "加密控制平面组件之间的流量",
+      "控制匹配的 Pod 如何分布到各拓扑域",
+      "在持久卷之间复制容器文件",
+      "为每个命名空间分配一个公有 IP"
+    ],
+    "answer": "控制匹配的 Pod 如何分布到各拓扑域"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "哪种污点效果会驱逐已运行但不容忍该污点的 Pod？",
+    "options": [
+      "NoExecute",
+      "NoSchedule",
+      "PreferNoSchedule",
+      "None"
+    ],
+    "answer": "NoExecute"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "容器 securityContext 中的哪个设置要求 Linux 容器以非 root 用户运行？",
+    "options": [
+      "readOnlyRootFilesystem: true",
+      "privileged: false",
+      "allowPrivilegeEscalation: false",
+      "runAsNonRoot: true"
+    ],
+    "answer": "runAsNonRoot: true"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "哪个容器 securityContext 设置阻止 Linux 进程获得比父进程更多的权限？",
+    "options": [
+      "readOnlyRootFilesystem: true",
+      "privileged: false",
+      "allowPrivilegeEscalation: false",
+      "runAsNonRoot: true"
+    ],
+    "answer": "allowPrivilegeEscalation: false"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "哪种容器可加入现有 Pod 用于排障，而不修改其应用容器？",
+    "options": [
+      "可重启的初始化容器",
+      "临时容器",
+      "普通初始化容器",
+      "普通应用容器"
+    ],
+    "answer": "临时容器"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "哪个资源以可扩展的分组跟踪 Service 的网络端点？",
+    "options": [
+      "EndpointSlice",
+      "IngressClass",
+      "NetworkPolicy",
+      "RuntimeClass"
+    ],
+    "answer": "EndpointSlice"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "要让 Ingress 资源真正配置 HTTP 路由，需要什么？",
+    "options": [
+      "每个命名空间中都有名为 ingress 的 ConfigMap",
+      "为每个主机名提供一个 PersistentVolume",
+      "一个重启所有所选 Pod 的 Job",
+      "实现其规则的 Ingress 控制器"
+    ],
+    "answer": "实现其规则的 Ingress 控制器"
+  }
+]

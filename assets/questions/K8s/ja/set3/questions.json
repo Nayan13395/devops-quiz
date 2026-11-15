@@ -1,0 +1,302 @@
+[
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "ノードへの Pod のスケジューリングを行うコンポーネントはどれですか?",
+    "options": [
+      "kube-scheduler",
+      "kubelet",
+      "etcd",
+      "kube-proxy"
+    ],
+    "answer": "kube-scheduler"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "すべてのノード上で実行されるコンポーネントはどれですか?",
+    "options": [
+      "kubelet",
+      "etcd",
+      "kube-apiserver",
+      "controller-manager"
+    ],
+    "answer": "kubelet"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "コントロールプレーンのフロントエンドとして機能するコンポーネントはどれですか?",
+    "options": [
+      "kube-apiserver",
+      "kubelet",
+      "etcd",
+      "kube-proxy"
+    ],
+    "answer": "kube-apiserver"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "クラスターの状態を保存するコンポーネントはどれですか?",
+    "options": [
+      "etcd",
+      "kubelet",
+      "CoreDNS",
+      "Ingress"
+    ],
+    "answer": "etcd"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "ノード上のネットワークルールを管理するコンポーネントはどれですか?",
+    "options": [
+      "kube-proxy",
+      "kubelet",
+      "etcd",
+      "スケジューラー"
+    ],
+    "answer": "kube-proxy"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "Kubernetes で一般的に使用される DNS サービスはどれですか?",
+    "options": [
+      "CoreDNS",
+      "Bind",
+      "Route53",
+      "Consul"
+    ],
+    "answer": "CoreDNS"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "Kubernetes でデプロイ可能な最小単位のオブジェクトはどれですか?",
+    "options": [
+      "Pod",
+      "クラスター",
+      "ノード",
+      "Service"
+    ],
+    "answer": "Pod"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "ステートレスなアプリケーションを管理するオブジェクトはどれですか?",
+    "options": [
+      "Deployment",
+      "ConfigMap",
+      "Secret",
+      "Namespace"
+    ],
+    "answer": "Deployment"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "状態を持つアプリに安定した Pod の識別と順序付き展開を提供するワークロードはどれか？",
+    "options": [
+      "StatefulSet",
+      "Deployment",
+      "ReplicaSet",
+      "DaemonSet"
+    ],
+    "answer": "StatefulSet"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "指定された数の Pod レプリカが実行されていることを保証するオブジェクトはどれですか?",
+    "options": [
+      "ReplicaSet",
+      "Service",
+      "ConfigMap",
+      "Namespace"
+    ],
+    "answer": "ReplicaSet"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "Pod をネットワークトラフィックに公開するオブジェクトはどれですか?",
+    "options": [
+      "Service",
+      "ノード",
+      "ReplicaSet",
+      "ボリューム"
+    ],
+    "answer": "Service"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "Service への外部アクセスを管理するオブジェクトはどれですか?",
+    "options": [
+      "Ingress",
+      "Pod",
+      "ReplicaSet",
+      "Secret"
+    ],
+    "answer": "Ingress"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "設定データを保存するオブジェクトはどれですか?",
+    "options": [
+      "ConfigMap",
+      "Deployment",
+      "Ingress",
+      "ノード"
+    ],
+    "answer": "ConfigMap"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "パスワードなどの機密情報を保存するオブジェクトはどれですか?",
+    "options": [
+      "Secret",
+      "ConfigMap",
+      "Service",
+      "Namespace"
+    ],
+    "answer": "Secret"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "Pod に永続ストレージを提供するオブジェクトはどれですか?",
+    "options": [
+      "PersistentVolume",
+      "ReplicaSet",
+      "Namespace",
+      "Service"
+    ],
+    "answer": "PersistentVolume"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "コンテナが Service の通信を受け入れられるか判断するプローブはどれか？",
+    "options": [
+      "TCP 接続維持プローブ",
+      "Readiness probe",
+      "Liveness probe",
+      "起動プローブ"
+    ],
+    "answer": "Readiness probe"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "生存確認プローブが設定した回数を超えて失敗すると何が起こりうるか？",
+    "options": [
+      "kubelet が再起動方針に従いそのコンテナを再起動する",
+      "スケジューラーが全 Pod を新しいノードへ移す",
+      "API サーバーが Deployment を削除する",
+      "Service が ExternalName Service になる"
+    ],
+    "answer": "kubelet が再起動方針に従いそのコンテナを再起動する"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "アプリの起動中、起動プローブは何をするか？",
+    "options": [
+      "コンテナの全リソース制限を無効にする",
+      "イメージの取得を妨げる",
+      "専用のコントロールプレーンノードを確保する",
+      "起動プローブの成功まで生存確認と準備確認を待たせる"
+    ],
+    "answer": "起動プローブの成功まで生存確認と準備確認を待たせる"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "Pod の通常の init コンテナについて正しいものはどれか？",
+    "options": [
+      "Service ポートの公開が必須",
+      "必ず別ノードで動く",
+      "アプリのコンテナが始まる前に、順番に完了まで実行する",
+      "全アプリコンテナ終了後にだけ実行する"
+    ],
+    "answer": "アプリのコンテナが始まる前に、順番に完了まで実行する"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "同じ Pod のコンテナが通常共有するリソースはどれか？",
+    "options": [
+      "コンテナごとに異なる Service IP",
+      "ネットワーク名前空間と Pod IP",
+      "書き込み可能なルートファイルシステム",
+      "コンテナごとに異なるノード"
+    ],
+    "answer": "ネットワーク名前空間と Pod IP"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "コンテナの配置判断でスケジューラーが使うリソース量を宣言するフィールドはどれか？",
+    "options": [
+      "resources.requests",
+      "resources.limits",
+      "securityContext",
+      "imagePullPolicy"
+    ],
+    "answer": "resources.requests"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "コンテナの CPU 要求 250m は何を表すか？",
+    "options": [
+      "二つ半の CPU",
+      "二十五個の CPU",
+      "二百五十個の CPU",
+      "CPU の四分の一"
+    ],
+    "answer": "CPU の四分の一"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "コンテナが強制されるメモリ上限を超えたとき、一般的に起きうることは何か？",
+    "options": [
+      "イメージが大きなメモリで再構築される",
+      "Service のポートが自動変更される",
+      "メモリ不足の仕組みで終了させられることがある",
+      "メモリ要求が自動で二倍になる"
+    ],
+    "answer": "メモリ不足の仕組みで終了させられることがある"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "ノードが指定したすべてのラベルに一致することを要求する Pod フィールドはどれか？",
+    "options": [
+      "dnsPolicy",
+      "nodeSelector",
+      "serviceAccountName",
+      "hostAliases"
+    ],
+    "answer": "nodeSelector"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "ノードの taint に対する許容設定を足すと、そのノードへの Pod 配置は保証されるか？",
+    "options": [
+      "いいえ。他の配置制約と利用可能なリソースも考慮される",
+      "はい。すべてのリソース制約を上書きする",
+      "はい。全ノードアフィニティ規則を無視する",
+      "いいえ。許容設定は常に taint のあるノードへの配置を禁止する"
+    ],
+    "answer": "いいえ。他の配置制約と利用可能なリソースも考慮される"
+  }
+]

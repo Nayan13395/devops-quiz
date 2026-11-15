@@ -1,0 +1,302 @@
+[
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "কাৰ্য-স্তৰত পৃথক ছেটিং নাথাকিলে পৰীক্ষা মোড সমৰ্থন নকৰা মডিউল সেই মোডত কেনেকৈ চলিব?",
+    "options": [
+      "ই সদায় স্বাভাৱিক পৰিৱৰ্তন কৰে",
+      "ই স্বয়ংক্ৰিয়ভাৱে localhost-ত চলে",
+      "পৰীক্ষা মোড সমৰ্থন কৰালৈ পুনৰ চেষ্টা কৰা হয়",
+      "পৰিৱৰ্তন কৰাৰ সলনি মডিউলটো বাদ দিয়া হয়"
+    ],
+    "answer": "পৰিৱৰ্তন কৰাৰ সলনি মডিউলটো বাদ দিয়া হয়"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "--check-ৰে প্লেবুক চলালেও প্ৰকৃত পৰিৱৰ্তন কৰিবলৈ দিয়া কাৰ্যৰ ছেটিং কোনটো?",
+    "options": [
+      "changed_when: false",
+      "ignore_errors: true",
+      "check_mode: false",
+      "diff: false"
+    ],
+    "answer": "check_mode: false"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "আগতে জাননী পোৱা হেণ্ডলাৰ লগে লগে চলোৱা Ansible meta ক্ৰিয়া কোনটো?",
+    "options": [
+      "reset_connection",
+      "flush_handlers",
+      "clear_facts",
+      "end_play"
+    ],
+    "answer": "flush_handlers"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "পৰিৱৰ্তন কৰা দুটা কাৰ্যই একেটা হেণ্ডলাৰ চলাৰ আগতে জাননী দিলে সেই চলোৱাৰ বিন্দুত ই সাধাৰণতে কিমানবাৰ চলে?",
+    "options": [
+      "এবাৰ",
+      "দুবাৰ",
+      "প্ৰতি ইনভেণ্টৰী গোটত এবাৰ",
+      "জাননীৰ সংঘাতৰ বাবে এবাৰো নচলে"
+    ],
+    "answer": "এবাৰ"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "একে চলোৱাৰ বিন্দুৰ বাবে জাননী পোৱা হেণ্ডলাৰৰ ক্ৰম কিহে নিৰ্ধাৰণ কৰে?",
+    "options": [
+      "নামৰ বৰ্ণানুক্ৰম",
+      "notify তালিকাত নামৰ ক্ৰম",
+      "পৰিচালিত হোষ্টবোৰ সংযুক্ত হোৱাৰ ক্ৰম",
+      "handlers অংশত সংজ্ঞাৰ ক্ৰম"
+    ],
+    "answer": "handlers অংশত সংজ্ঞাৰ ক্ৰম"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "কোন বিফলতাই সাধাৰণতে ব্লকৰ rescue কাৰ্য চলায়?",
+    "options": [
+      "প্লেবুকত অবৈধ কাৰ্য-সংজ্ঞা থকা",
+      "YAML নথি পাৰ্ছ কৰিব নোৱৰা",
+      "ব্লকৰ ভিতৰৰ কাৰ্যই বিফল ফল ঘূৰাই দিয়া",
+      "কাৰ্য চলাৰ আগতে হোষ্টত উপনীত হ’ব নোৱৰা"
+    ],
+    "answer": "ব্লকৰ ভিতৰৰ কাৰ্যই বিফল ফল ঘূৰাই দিয়া"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "সাধাৰণ কাৰ্যত ignore_errors-এ কোন ভুল লুকুৱাব নোৱাৰে?",
+    "options": [
+      "failed_when চৰ্ত true হোৱা",
+      "সংজ্ঞা নথকা চলকৰ ভুল",
+      "আদেশে জনোৱা শূন্যৰ বাহিৰৰ প্ৰস্থান অৱস্থা",
+      "মডিউলৰ ফল স্পষ্টভাৱে failed চিহ্নিত হোৱা"
+    ],
+    "answer": "সংজ্ঞা নথকা চলকৰ ভুল"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "সম্ভাল নোলোৱা কাৰ্যৰ বিফলতাত বৰ্তমান বেচে সেই কাৰ্য শেষ কৰিলে সকলো হোষ্টৰ play বন্ধ কৰা কীৱৰ্ড কোনটো?",
+    "options": [
+      "any_errors_fatal",
+      "ignore_unreachable",
+      "max_fail_percentage: 100",
+      "force_handlers"
+    ],
+    "answer": "any_errors_fatal"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "উপলব্ধ হোষ্টত পিছৰ কাৰ্য বিফল হ’লে force_handlers-ৰ প্ৰভাৱ কি?",
+    "options": [
+      "সকলো সংজ্ঞায়িত হেণ্ডলাৰ জাননী নাপালেও চলে",
+      "সকলো বিফল কাৰ্য স্বয়ংক্ৰিয়ভাৱে পুনৰ চেষ্টা হয়",
+      "সাধাৰণ কাৰ্যৰ আগতে হেণ্ডলাৰ চলে",
+      "আগতে জাননী পোৱা হেণ্ডলাৰ সেই হোষ্টত এতিয়াও চলিব পাৰে"
+    ],
+    "answer": "আগতে জাননী পোৱা হেণ্ডলাৰ সেই হোষ্টত এতিয়াও চলিব পাৰে"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "সংবেদনশীল কাৰ্যৰ যুক্তি আৰু ফলৰ সাধাৰণ লগিং বন্ধ কৰা ছেটিং কোনটো?",
+    "options": [
+      "check_mode: true",
+      "changed_when: false",
+      "no_log: true",
+      "diff: true"
+    ],
+    "answer": "no_log: true"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "--diff সক্ৰিয় থাকিলেও ফাইলৰ বিষয়বস্তুৰ পাৰ্থক্য লুকুওৱা ছেটিং কোনটো?",
+    "options": [
+      "ignore_errors: true",
+      "diff: false",
+      "no_log: false",
+      "check_mode: false"
+    ],
+    "answer": "diff: false"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "অন্য ইনভেণ্টৰী হোষ্টৰ চলক কোন অভিধানত পোৱা যায়?",
+    "options": [
+      "hostvars",
+      "ansible_facts",
+      "environment",
+      "ansible_loop"
+    ],
+    "answer": "hostvars"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "বৰ্তমান হোষ্টৰ ইনভেণ্টৰী নাম কোন বিশেষ চলকত থাকে?",
+    "options": [
+      "ansible_host",
+      "ansible_user",
+      "ansible_playbook_python",
+      "inventory_hostname"
+    ],
+    "answer": "inventory_hostname"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "হোষ্ট গোটে ভাগ কৰা চলকৰ বাবে ইনভেণ্টৰীৰ কাষত সাধাৰণতে কোন ডাইৰেক্টৰী ব্যৱহাৰ হয়?",
+    "options": [
+      "roles",
+      "collections",
+      "group_vars",
+      "host_vars"
+    ],
+    "answer": "group_vars"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "ansible.builtin.file লুকআপে ডিফল্টভাৱে ক’ৰ পৰা ফাইল পঢ়ে?",
+    "options": [
+      "become_user-এ নিৰ্ধাৰণ কৰা হোষ্টৰ পৰা",
+      "নিয়ন্ত্ৰণ নোডৰ পৰা",
+      "প্ৰতিটো পৰিচালিত হোষ্টৰ পৰা",
+      "play-ৰ প্ৰথম হোষ্টৰ পৰা"
+    ],
+    "answer": "নিয়ন্ত্ৰণ নোডৰ পৰা"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "YAML ষ্ট্ৰিংক Ansible ডেটা গঠনলৈ সলনি কৰা ফিল্টাৰ কোনটো?",
+    "options": [
+      "from_yaml",
+      "to_yaml",
+      "to_json",
+      "dict2items"
+    ],
+    "answer": "from_yaml"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "অভিধানক চাবি/মান অভিধানৰ তালিকালৈ সলনি কৰা ফিল্টাৰ কোনটো?",
+    "options": [
+      "items2dict",
+      "flatten",
+      "zip",
+      "dict2items"
+    ],
+    "answer": "dict2items"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "তালিকাৰ পুনৰাবৃত্ত উপাদান আঁতৰোৱা ফিল্টাৰ কোনটো?",
+    "options": [
+      "reverse",
+      "flatten",
+      "unique",
+      "sort"
+    ],
+    "answer": "unique"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "অভিব্যক্তি পৰীক্ষা কৰি নিৰ্দিষ্ট প্ৰতিপাদন পূৰণ নহ’লে বিফল হোৱা মডিউল কোনটো?",
+    "options": [
+      "ansible.builtin.set_fact",
+      "ansible.builtin.assert",
+      "ansible.builtin.debug",
+      "ansible.builtin.pause"
+    ],
+    "answer": "ansible.builtin.assert"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "নিয়মিত অভিব্যক্তিৰে টেক্সট ফাইলৰ নিৰ্দিষ্ট শাৰী পৰিচালনা কৰা মডিউল কোনটো?",
+    "options": [
+      "ansible.builtin.lineinfile",
+      "ansible.builtin.blockinfile",
+      "ansible.builtin.copy",
+      "ansible.builtin.slurp"
+    ],
+    "answer": "ansible.builtin.lineinfile"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "URL অনুৰোধ কৰি আশা কৰা HTTP অৱস্থা কোড পৰীক্ষা কৰিব পৰা মডিউল কোনটো?",
+    "options": [
+      "ansible.builtin.get_url",
+      "ansible.builtin.fetch",
+      "ansible.builtin.wait_for",
+      "ansible.builtin.uri"
+    ],
+    "answer": "ansible.builtin.uri"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "TCP প’ৰ্ট বিচৰা অৱস্থাত উপনীত হোৱালৈ ৰোৱা মডিউল কোনটো?",
+    "options": [
+      "ansible.builtin.async_status",
+      "ansible.builtin.ping",
+      "ansible.builtin.wait_for",
+      "ansible.builtin.pause"
+    ],
+    "answer": "ansible.builtin.wait_for"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "নিৰ্দিষ্ট পথ আগতেই থাকিলে ansible.builtin.command চলোৱা বাদ দিয়া পৰামিতি কোনটো?",
+    "options": [
+      "stdin",
+      "creates",
+      "removes",
+      "chdir"
+    ],
+    "answer": "creates"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "প্ৰতীকী লিংক সৃষ্টি কৰা file মডিউলৰ ছেটিং কোনটো?",
+    "options": [
+      "state: link",
+      "state: directory",
+      "state: touch",
+      "state: hard"
+    ],
+    "answer": "state: link"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "পিছৰ play-ৰ বাবে মেমৰীৰ ইনভেণ্টৰীত হোষ্ট যোগ কৰিব পৰা মডিউল কোনটো?",
+    "options": [
+      "ansible.builtin.group_by",
+      "ansible.builtin.set_fact",
+      "ansible.builtin.meta",
+      "ansible.builtin.add_host"
+    ],
+    "answer": "ansible.builtin.add_host"
+  }
+]

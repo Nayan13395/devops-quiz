@@ -1,0 +1,302 @@
+[
+  {
+    "category": "Ansible",
+    "set": 3,
+    "question": "什么是 Ansible Role?",
+    "options": [
+      "可复用的任务和文件集合",
+      "用户账户",
+      "Inventory 组",
+      "Playbook 变量"
+    ],
+    "answer": "可复用的任务和文件集合"
+  },
+  {
+    "category": "Ansible",
+    "set": 3,
+    "question": "哪个命令用于创建新的 role 结构?",
+    "options": [
+      "ansible-galaxy init",
+      "ansible role create",
+      "ansible init role",
+      "ansible-playbook init"
+    ],
+    "answer": "ansible-galaxy init"
+  },
+  {
+    "category": "Ansible",
+    "set": 3,
+    "question": "哪个目录包含 role 的任务?",
+    "options": [
+      "tasks",
+      "handlers",
+      "files",
+      "vars"
+    ],
+    "answer": "tasks"
+  },
+  {
+    "category": "Ansible",
+    "set": 3,
+    "question": "role 中哪个文件是主任务文件?",
+    "options": [
+      "tasks/main.yml",
+      "tasks/tasks.yml",
+      "main/tasks.yml",
+      "role.yml"
+    ],
+    "answer": "tasks/main.yml"
+  },
+  {
+    "category": "Ansible",
+    "set": 3,
+    "question": "哪个目录包含 role 的 handlers?",
+    "options": [
+      "handlers",
+      "tasks",
+      "events",
+      "notify"
+    ],
+    "answer": "handlers"
+  },
+  {
+    "category": "Ansible",
+    "set": 3,
+    "question": "role 中哪个目录用于存放 Jinja2 模板?",
+    "options": [
+      "templates",
+      "files",
+      "jinja",
+      "render"
+    ],
+    "answer": "templates"
+  },
+  {
+    "category": "Ansible",
+    "set": 3,
+    "question": "role 中哪个目录用于存放静态文件?",
+    "options": [
+      "files",
+      "templates",
+      "static",
+      "resources"
+    ],
+    "answer": "files"
+  },
+  {
+    "category": "Ansible",
+    "set": 3,
+    "question": "哪个目录包含 role 变量?",
+    "options": [
+      "vars",
+      "variables",
+      "config",
+      "settings"
+    ],
+    "answer": "vars"
+  },
+  {
+    "category": "Ansible",
+    "set": 3,
+    "question": "哪个目录包含默认变量?",
+    "options": [
+      "defaults",
+      "vars",
+      "config",
+      "settings"
+    ],
+    "answer": "defaults"
+  },
+  {
+    "category": "Ansible",
+    "set": 3,
+    "question": "哪个 play 级关键字声明静态角色列表，而不是从单个任务中调用角色？",
+    "options": [
+      "roles",
+      "include_role",
+      "role",
+      "import_role"
+    ],
+    "answer": "roles"
+  },
+  {
+    "category": "Ansible",
+    "set": 3,
+    "question": "什么是 Ansible Galaxy?",
+    "options": [
+      "Ansible role 和 collection 的仓库",
+      "监控工具",
+      "CI/CD 平台",
+      "Inventory 管理器"
+    ],
+    "answer": "Ansible role 和 collection 的仓库"
+  },
+  {
+    "category": "Ansible",
+    "set": 3,
+    "question": "哪个命令用于从 Galaxy 安装 role?",
+    "options": [
+      "ansible-galaxy install",
+      "ansible install role",
+      "ansible role add",
+      "ansible-galaxy add"
+    ],
+    "answer": "ansible-galaxy install"
+  },
+  {
+    "category": "Ansible",
+    "set": 3,
+    "question": "Ansible Vault 用于什么?",
+    "options": [
+      "加密敏感数据",
+      "管理 inventory",
+      "运行 playbook",
+      "安装 role"
+    ],
+    "answer": "加密敏感数据"
+  },
+  {
+    "category": "Ansible",
+    "set": 3,
+    "question": "哪个命令用于加密现有文件?",
+    "options": [
+      "ansible-vault encrypt",
+      "ansible-vault secure",
+      "ansible-vault create",
+      "ansible-vault lock"
+    ],
+    "answer": "ansible-vault encrypt"
+  },
+  {
+    "category": "Ansible",
+    "set": 3,
+    "question": "什么是 Ansible Collection?",
+    "options": [
+      "包含 role、模块和插件的软件包",
+      "Inventory 组",
+      "加密文件",
+      "YAML 变量"
+    ],
+    "answer": "包含 role、模块和插件的软件包"
+  },
+  {
+    "category": "Ansible",
+    "set": 3,
+    "question": "角色中的哪个文件通常声明对其他角色的依赖？",
+    "options": [
+      "vars/main.yml",
+      "meta/main.yml",
+      "defaults/main.yml",
+      "handlers/main.yml"
+    ],
+    "answer": "meta/main.yml"
+  },
+  {
+    "category": "Ansible",
+    "set": 3,
+    "question": "哪个命令安装名为 community.general 的集合？",
+    "options": [
+      "ansible-galaxy collection install community.general",
+      "ansible-galaxy role install community.general",
+      "ansible-galaxy collection build community.general",
+      "ansible-galaxy collection verify community.general"
+    ],
+    "answer": "ansible-galaxy collection install community.general"
+  },
+  {
+    "category": "Ansible",
+    "set": 3,
+    "question": "完全限定的集合名称 ansible.builtin.copy 标识什么？",
+    "options": [
+      "名为 builtin 的主机组中的 copy 角色",
+      "清单主机名及其后面的连接类型",
+      "Vault 标识符及其后面的加密文件名",
+      "ansible 命名空间中 builtin 集合的 copy 模块"
+    ],
+    "answer": "ansible 命名空间中 builtin 集合的 copy 模块"
+  },
+  {
+    "category": "Ansible",
+    "set": 3,
+    "question": "哪个命令显示加密的 Vault 文件，而不将磁盘上的文件永久解密？",
+    "options": [
+      "ansible-vault edit secrets.yml",
+      "ansible-vault rekey secrets.yml",
+      "ansible-vault view secrets.yml",
+      "ansible-vault decrypt secrets.yml"
+    ],
+    "answer": "ansible-vault view secrets.yml"
+  },
+  {
+    "category": "Ansible",
+    "set": 3,
+    "question": "哪个命令更改保护现有 Vault 加密文件的密码？",
+    "options": [
+      "ansible-vault create secrets.yml",
+      "ansible-vault rekey secrets.yml",
+      "ansible-vault view secrets.yml",
+      "ansible-vault encrypt secrets.yml"
+    ],
+    "answer": "ansible-vault rekey secrets.yml"
+  },
+  {
+    "category": "Ansible",
+    "set": 3,
+    "question": "运行 playbook 时，哪个选项提示输入 Vault 密码？",
+    "options": [
+      "--ask-vault-pass",
+      "--ask-pass",
+      "--ask-become-pass",
+      "--private-key"
+    ],
+    "answer": "--ask-vault-pass"
+  },
+  {
+    "category": "Ansible",
+    "set": 3,
+    "question": "哪个任务动作在执行时动态加载角色？",
+    "options": [
+      "ansible.builtin.import_role",
+      "ansible.builtin.import_tasks",
+      "ansible.builtin.include_vars",
+      "ansible.builtin.include_role"
+    ],
+    "answer": "ansible.builtin.include_role"
+  },
+  {
+    "category": "Ansible",
+    "set": 3,
+    "question": "哪个任务动作静态导入包含任务的文件？",
+    "options": [
+      "ansible.builtin.include_vars",
+      "ansible.builtin.import_role",
+      "ansible.builtin.import_tasks",
+      "ansible.builtin.include_tasks"
+    ],
+    "answer": "ansible.builtin.import_tasks"
+  },
+  {
+    "category": "Ansible",
+    "set": 3,
+    "question": "同一变量名同时出现在角色默认值和角色变量中时，哪个来源优先？",
+    "options": [
+      "这两个定义总会导致语法错误",
+      "角色变量",
+      "角色默认值",
+      "这两个值总会被拼接"
+    ],
+    "answer": "角色变量"
+  },
+  {
+    "category": "Ansible",
+    "set": 3,
+    "question": "哪个命令根据提供的字符串创建加密变量？",
+    "options": [
+      "ansible-vault encrypt_string",
+      "ansible-vault encrypt",
+      "ansible-vault rekey",
+      "ansible-vault view"
+    ],
+    "answer": "ansible-vault encrypt_string"
+  }
+]

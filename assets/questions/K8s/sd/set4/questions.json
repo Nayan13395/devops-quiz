@@ -1,0 +1,302 @@
+[
+  {
+    "category": "Kubernetes",
+    "set": 4,
+    "question": "ڪهڙو حڪم deployment کي اسڪيل ڪري ٿو؟",
+    "options": [
+      "kubectl scale deployment",
+      "kubectl resize deployment",
+      "kubectl expand deployment",
+      "kubectl increase deployment"
+    ],
+    "answer": "kubectl scale deployment"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 4,
+    "question": "ڪهڙو حڪم deployment کي 5 replicas تائين اسڪيل ڪري ٿو؟",
+    "options": [
+      "kubectl scale deployment --replicas=5",
+      "kubectl replicas 5",
+      "kubectl expand deployment",
+      "kubectl set replicas"
+    ],
+    "answer": "kubectl scale deployment --replicas=5"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 4,
+    "question": "ڪهڙو حڪم deployment کي ري اسٽارٽ ڪري ٿو؟",
+    "options": [
+      "kubectl rollout restart deployment",
+      "kubectl restart deployment",
+      "kubectl deployment restart",
+      "kubectl reload deployment"
+    ],
+    "answer": "kubectl rollout restart deployment"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 4,
+    "question": "ڪهڙو حڪم deployment جي rollout جي حالت چيڪ ڪري ٿو؟",
+    "options": [
+      "kubectl rollout status",
+      "kubectl deployment status",
+      "kubectl rollout check",
+      "kubectl get rollout"
+    ],
+    "answer": "kubectl rollout status"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 4,
+    "question": "ڪهڙو حڪم deployment کي رول بيڪ ڪري ٿو؟",
+    "options": [
+      "kubectl rollout undo",
+      "kubectl rollback",
+      "kubectl undo deployment",
+      "kubectl deployment rollback"
+    ],
+    "answer": "kubectl rollout undo"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 4,
+    "question": "ڪهڙو حڪم rollout جي تاريخ ڏيکاري ٿو؟",
+    "options": [
+      "kubectl rollout history",
+      "kubectl history",
+      "kubectl deployment history",
+      "kubectl show rollout"
+    ],
+    "answer": "kubectl rollout history"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 4,
+    "question": "ڪهڙو حڪم deployment rollout کي روڪي ٿو؟",
+    "options": [
+      "kubectl rollout pause",
+      "kubectl pause deployment",
+      "kubectl stop rollout",
+      "kubectl hold deployment"
+    ],
+    "answer": "kubectl rollout pause"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 4,
+    "question": "ڪهڙو حڪم روڪيل deployment rollout کي ٻيهر شروع ڪري ٿو؟",
+    "options": [
+      "kubectl rollout resume",
+      "kubectl resume deployment",
+      "kubectl continue rollout",
+      "kubectl restart rollout"
+    ],
+    "answer": "kubectl rollout resume"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 4,
+    "question": "ڪهڙو حڪم موجوده Pod ڪڍڻ کان سواءِ نوڊ تي نوان Pod شيڊيول ٿيڻ روڪي ٿو؟",
+    "options": [
+      "kubectl cordon",
+      "kubectl uncordon",
+      "kubectl get node",
+      "kubectl describe node"
+    ],
+    "answer": "kubectl cordon"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 4,
+    "question": "ڪهڙو حڪم node تان workloads کي محفوظ طريقي سان ڪڍي ٿو؟",
+    "options": [
+      "kubectl drain",
+      "kubectl cordon",
+      "kubectl delete node",
+      "kubectl migrate"
+    ],
+    "answer": "kubectl drain"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 4,
+    "question": "ڪهڙو حڪم node کي ٻيهر schedulable بڻائي ٿو؟",
+    "options": [
+      "kubectl uncordon",
+      "kubectl enable",
+      "kubectl restart",
+      "kubectl activate"
+    ],
+    "answer": "kubectl uncordon"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 4,
+    "question": "ڪهڙو حڪم node جي تفصيلي معلومات ڏيکاري ٿو؟",
+    "options": [
+      "kubectl describe node",
+      "kubectl inspect node",
+      "kubectl info node",
+      "kubectl node show"
+    ],
+    "answer": "kubectl describe node"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 4,
+    "question": "ڪهڙو حڪم مقامي پورٽ کي pod ڏانهن فارورڊ ڪري ٿو؟",
+    "options": [
+      "kubectl port-forward",
+      "kubectl tunnel",
+      "kubectl expose",
+      "kubectl connect"
+    ],
+    "answer": "kubectl port-forward"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 4,
+    "question": "ڪهڙو حڪم pod ۾ يا pod مان فائلون ڪاپي ڪري ٿو؟",
+    "options": [
+      "kubectl cp",
+      "kubectl copy",
+      "kubectl transfer",
+      "kubectl sync"
+    ],
+    "answer": "kubectl cp"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 4,
+    "question": "ڪهڙو حڪم هلندڙ pod جي YAML وصف ڏيکاري ٿو؟",
+    "options": [
+      "kubectl get pod -o yaml",
+      "kubectl show pod yaml",
+      "kubectl export pod",
+      "kubectl pod yaml"
+    ],
+    "answer": "kubectl get pod -o yaml"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 4,
+    "question": "ڪهڙو حڪم site Deployment ۾ web ڪنٽينر جي اميج nginx:1.27 ڪري ٿو؟",
+    "options": [
+      "kubectl set image deployment/site web=nginx:1.27",
+      "kubectl set env deployment/site web=nginx:1.27",
+      "kubectl annotate deployment/site web=nginx:1.27",
+      "kubectl label deployment/site web=nginx:1.27"
+    ],
+    "answer": "kubectl set image deployment/site web=nginx:1.27"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 4,
+    "question": "ڪهڙو حڪم تبديلي لاڳو ڪرڻ کان سواءِ مينيفيسٽ کي هلندڙ ترتيب سان ڀيٽي ٿو؟",
+    "options": [
+      "kubectl apply -f app.yaml",
+      "kubectl replace -f app.yaml",
+      "kubectl delete -f app.yaml",
+      "kubectl diff -f app.yaml"
+    ],
+    "answer": "kubectl diff -f app.yaml"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 4,
+    "question": "kubectl جو ڪهڙو اختيار گهريل ريسورس رکڻ کان سواءِ API سرور تي آزمائشي هلڻ ڪري ٿو؟",
+    "options": [
+      "--validate=false",
+      "--force",
+      "--dry-run=server",
+      "--dry-run=client"
+    ],
+    "answer": "--dry-run=server"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 4,
+    "question": "ڪهڙو حڪم api Pod جي Ready ٿيڻ لاءِ وڌ ۾ وڌ 60 سيڪنڊ انتظار ڪري ٿو؟",
+    "options": [
+      "kubectl get pod api --request-timeout=60s",
+      "kubectl wait --for=condition=Ready pod/api --timeout=60s",
+      "kubectl wait --for=delete pod/api --timeout=60s",
+      "kubectl logs api --since=60s"
+    ],
+    "answer": "kubectl wait --for=condition=Ready pod/api --timeout=60s"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 4,
+    "question": "Deployment جي ڪهڙي سيٽنگ مرحليوار اپڊيٽ ۾ غيرموجود ڪاپين جو انگ محدود ڪري ٿي؟",
+    "options": [
+      "maxUnavailable",
+      "maxSurge",
+      "revisionHistoryLimit",
+      "progressDeadlineSeconds"
+    ],
+    "answer": "maxUnavailable"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 4,
+    "question": "Deployment جي ڪهڙي سيٽنگ مرحليوار اپڊيٽ ۾ گهربل انگ کان وڌيڪ عارضي Pod رکڻ ڏئي ٿي؟",
+    "options": [
+      "maxUnavailable",
+      "minReadySeconds",
+      "revisionHistoryLimit",
+      "maxSurge"
+    ],
+    "answer": "maxSurge"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 4,
+    "question": "ڪهڙو ريسورس چونڊيل Pod ۾ گڏ ٿيندڙ اختياري رڪاوٽون محدود ڪري ٿو؟",
+    "options": [
+      "LimitRange",
+      "NetworkPolicy",
+      "PodDisruptionBudget",
+      "ResourceQuota"
+    ],
+    "answer": "PodDisruptionBudget"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 4,
+    "question": "ڪهڙو ڪنٽرولر ڏٺل ماپن موجب ورڪ لوڊ ڪاپين جو انگ بدلائي ٿو؟",
+    "options": [
+      "CronJob",
+      "HorizontalPodAutoscaler",
+      "ReplicaSet",
+      "DaemonSet"
+    ],
+    "answer": "HorizontalPodAutoscaler"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 4,
+    "question": "kubectl top کي CPU ۽ ميموري استعمال ٻڌائڻ لاءِ ڇا گهرجي؟",
+    "options": [
+      "وسيلن جي ماپن واري API، جيڪا عام طور Metrics Server ڏئي ٿو",
+      "هر نيم اسپيس لاءِ Ingress ڪنٽرولر",
+      "بلاڪ ڊوائيس واري ڊفالٽ StorageClass",
+      "هر Pod لاءِ LoadBalancer Service"
+    ],
+    "answer": "وسيلن جي ماپن واري API، جيڪا عام طور Metrics Server ڏئي ٿو"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 4,
+    "question": "ڪهڙو حڪم ڳنڍيل ڪلسٽر جا مدد ڪيل API ريسورس قسم ڏيکاري ٿو؟",
+    "options": [
+      "kubectl api-versions",
+      "kubectl cluster-info",
+      "kubectl config view",
+      "kubectl api-resources"
+    ],
+    "answer": "kubectl api-resources"
+  }
+]

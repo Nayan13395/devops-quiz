@@ -1,0 +1,302 @@
+[
+  {
+    "category": "Terraform",
+    "set": 3,
+    "question": "Hangi Terraform özelliği yeniden kullanılabilir altyapı bileşenlerine olanak tanır?",
+    "options": [
+      "Modüller",
+      "Sağlayıcılar",
+      "Değişkenler",
+      "Çıktılar"
+    ],
+    "answer": "Modüller"
+  },
+  {
+    "category": "Terraform",
+    "set": 3,
+    "question": "Bir modülü çağırmak için hangi blok kullanılır?",
+    "options": [
+      "module",
+      "import",
+      "resource",
+      "provider"
+    ],
+    "answer": "module"
+  },
+  {
+    "category": "Terraform",
+    "set": 3,
+    "question": "Hangi argüman bir modülün kaynak konumunu belirtir?",
+    "options": [
+      "source",
+      "path",
+      "location",
+      "module_source"
+    ],
+    "answer": "source"
+  },
+  {
+    "category": "Terraform",
+    "set": 3,
+    "question": "Hangi Terraform Registry herkese açık modülleri barındırır?",
+    "options": [
+      "Terraform Registry",
+      "Docker Hub",
+      "GitHub Packages",
+      "AWS Marketplace"
+    ],
+    "answer": "Terraform Registry"
+  },
+  {
+    "category": "Terraform",
+    "set": 3,
+    "question": "Hangi backend Terraform durumunu Amazon S3'te saklar?",
+    "options": [
+      "s3",
+      "aws",
+      "bucket",
+      "remote"
+    ],
+    "answer": "s3"
+  },
+  {
+    "category": "Terraform",
+    "set": 3,
+    "question": "S3 arka ucunun artık kullanımdan kaldırılmış tablo tabanlı durum kilitlemesinde hangi AWS hizmeti kullanılıyordu?",
+    "options": [
+      "DynamoDB",
+      "RDS",
+      "EFS",
+      "Lambda"
+    ],
+    "answer": "DynamoDB"
+  },
+  {
+    "category": "Terraform",
+    "set": 3,
+    "question": "Eski adı Terraform Cloud olan HCP Terraform içinde durumu hangi eski arka uç türü saklayabilir?",
+    "options": [
+      "remote",
+      "cloud",
+      "terraform",
+      "tfc"
+    ],
+    "answer": "remote"
+  },
+  {
+    "category": "Terraform",
+    "set": 3,
+    "question": "Durum kilitlemenin amacı nedir?",
+    "options": [
+      "Eşzamanlı değişiklikleri önlemek",
+      "Durum dosyasını şifrelemek",
+      "Durumu yedeklemek",
+      "Durumu sıkıştırmak"
+    ],
+    "answer": "Eşzamanlı değişiklikleri önlemek"
+  },
+  {
+    "category": "Terraform",
+    "set": 3,
+    "question": "Hangi komut uzak durumu yerel makineye çeker?",
+    "options": [
+      "terraform state pull",
+      "terraform pull",
+      "terraform get-state",
+      "terraform state download"
+    ],
+    "answer": "terraform state pull"
+  },
+  {
+    "category": "Terraform",
+    "set": 3,
+    "question": "Hangi komut durumu bir backend'e gönderir?",
+    "options": [
+      "terraform state push",
+      "terraform push",
+      "terraform upload",
+      "terraform state upload"
+    ],
+    "answer": "terraform state push"
+  },
+  {
+    "category": "Terraform",
+    "set": 3,
+    "question": "Hangi backend türü durumu yerel diskte saklar?",
+    "options": [
+      "local",
+      "file",
+      "disk",
+      "host"
+    ],
+    "answer": "local"
+  },
+  {
+    "category": "Terraform",
+    "set": 3,
+    "question": "Hangi komut bir kaynağı silmeden durumdan kaldırır?",
+    "options": [
+      "terraform state rm",
+      "terraform rm",
+      "terraform destroy",
+      "terraform remove"
+    ],
+    "answer": "terraform state rm"
+  },
+  {
+    "category": "Terraform",
+    "set": 3,
+    "question": "Hangi komut kaynakları durum içinde taşır?",
+    "options": [
+      "terraform state mv",
+      "terraform move",
+      "terraform mv",
+      "terraform state move"
+    ],
+    "answer": "terraform state mv"
+  },
+  {
+    "category": "Terraform",
+    "set": 3,
+    "question": "Hangi veri kaynağı başka bir durum dosyasındaki çıktıları okur?",
+    "options": [
+      "terraform_remote_state",
+      "remote_state",
+      "state_data",
+      "terraform_state"
+    ],
+    "answer": "terraform_remote_state"
+  },
+  {
+    "category": "Terraform",
+    "set": 3,
+    "question": "Hangi dosya sağlayıcı sürümlerini kilitler?",
+    "options": [
+      ".terraform.lock.hcl",
+      "terraform.lock",
+      "providers.lock",
+      "terraform.providers"
+    ],
+    "answer": ".terraform.lock.hcl"
+  },
+  {
+    "category": "Terraform",
+    "set": 3,
+    "question": "Kayıt sisteminden kurulan modülün sürümünü hangi argüman seçer?",
+    "options": [
+      "version",
+      "ref",
+      "revision",
+      "required_version"
+    ],
+    "answer": "version"
+  },
+  {
+    "category": "Terraform",
+    "set": 3,
+    "question": "network adlı alt modülün vpc_id çıktısını hangi ifade okur?",
+    "options": [
+      "var.network.vpc_id",
+      "local.network.vpc_id",
+      "data.network.vpc_id",
+      "module.network.vpc_id"
+    ],
+    "answer": "module.network.vpc_id"
+  },
+  {
+    "category": "Terraform",
+    "set": 3,
+    "question": "provider bloğunun hangi argümanı ek bir sağlayıcı yapılandırmasını adlandırır?",
+    "options": [
+      "version",
+      "count",
+      "alias",
+      "source"
+    ],
+    "answer": "alias"
+  },
+  {
+    "category": "Terraform",
+    "set": 3,
+    "question": "Belirli bir takma adlı sağlayıcı yapılandırmasını hangi kaynak meta argümanı seçer?",
+    "options": [
+      "for_each",
+      "provider",
+      "providers",
+      "depends_on"
+    ],
+    "answer": "provider"
+  },
+  {
+    "category": "Terraform",
+    "set": 3,
+    "question": "Belirli sağlayıcı yapılandırmalarını alt modüle hangi modül çağrısı argümanı geçirir?",
+    "options": [
+      "providers",
+      "provider",
+      "required_providers",
+      "configuration_aliases"
+    ],
+    "answer": "providers"
+  },
+  {
+    "category": "Terraform",
+    "set": 3,
+    "question": "Arka uç yapılandırması değişince mevcut durumu taşımayı hangi terraform init seçeneği dener?",
+    "options": [
+      "-reconfigure",
+      "-upgrade",
+      "-get=false",
+      "-migrate-state"
+    ],
+    "answer": "-migrate-state"
+  },
+  {
+    "category": "Terraform",
+    "set": 3,
+    "question": "Durumunu taşımayı denemeden önceki arka uç yapılandırmasını hangi terraform init seçeneği yok sayar?",
+    "options": [
+      "-upgrade",
+      "-lock=false",
+      "-reconfigure",
+      "-migrate-state"
+    ],
+    "answer": "-reconfigure"
+  },
+  {
+    "category": "Terraform",
+    "set": 3,
+    "question": "staging adlı CLI çalışma alanını hangi komut oluşturup seçer?",
+    "options": [
+      "terraform workspace list",
+      "terraform workspace new staging",
+      "terraform workspace select staging",
+      "terraform workspace show"
+    ],
+    "answer": "terraform workspace new staging"
+  },
+  {
+    "category": "Terraform",
+    "set": 3,
+    "question": "Geçerli CLI çalışma alanının adını hangi komut gösterir?",
+    "options": [
+      "terraform workspace show",
+      "terraform workspace list",
+      "terraform workspace select default",
+      "terraform state list"
+    ],
+    "answer": "terraform workspace show"
+  },
+  {
+    "category": "Terraform",
+    "set": 3,
+    "question": "Yerleşik S3 kilit dosyası tabanlı durum kilitlemesini hangi S3 arka uç argümanı etkinleştirir?",
+    "options": [
+      "encrypt = true",
+      "workspace_key_prefix = \"env\"",
+      "skip_region_validation = true",
+      "use_lockfile = true"
+    ],
+    "answer": "use_lockfile = true"
+  }
+]

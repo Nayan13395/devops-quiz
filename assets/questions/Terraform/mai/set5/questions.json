@@ -1,0 +1,302 @@
+[
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "कोन घोषणात्मक ब्लॉक रिसोर्स एड्रेसक बदलाव केँ दर्ज करैत अछि जाहिसँ Terraform विद्यमान ऑब्जेक्ट केँ सुरक्षित राखि सकय?",
+    "options": [
+      "removed",
+      "check",
+      "moved",
+      "import"
+    ],
+    "answer": "moved"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "moved ब्लॉक मे कोन आर्ग्युमेंट नव रिसोर्स एड्रेस निर्दिष्ट करैत अछि?",
+    "options": [
+      "provider",
+      "to",
+      "from",
+      "id"
+    ],
+    "answer": "to"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "कोन ब्लॉक apply ऑपरेशनक दौरान इम्पोर्ट कएल जाय वला विद्यमान इन्फ्रास्ट्रक्चर ऑब्जेक्ट केँ घोषित करैत अछि?",
+    "options": [
+      "import",
+      "moved",
+      "output",
+      "check"
+    ],
+    "answer": "import"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "कोन removed-ब्लॉक सेटिंग कोनो रिसोर्स केँ बिना ओकर वास्तविक इन्फ्रास्ट्रक्चर ऑब्जेक्ट केँ नष्ट केने बिसरि जाइत अछि?",
+    "options": [
+      "lifecycle { destroy = true }",
+      "lifecycle { create_before_destroy = true }",
+      "lifecycle { prevent_destroy = false }",
+      "lifecycle { destroy = false }"
+    ],
+    "answer": "lifecycle { destroy = false }"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "जखन कोनो सामान्य इनपुट वेरिएबल केँ sensitive चिह्नित कएल जाइत अछि, तखन लोकल स्टेट फाइल मे ओकर मान केँ की होइत अछि?",
+    "options": [
+      "ओ सदिखन स्टेटसँ बाहर राखल जाइत अछि",
+      "भंडारणसँ पहिने ओकरा वेरिएबलक नामसँ बदलल जाइत अछि",
+      "सामान्य CLI आउटपुट मे रेडैक्ट कएल गेलो पर ओ प्लेनटेक्स्ट मे स्टोर भऽ सकैत अछि",
+      "sensitive फ्लैग द्वारा ओ स्वतः एन्क्रिप्ट भऽ जाइत अछि"
+    ],
+    "answer": "सामान्य CLI आउटपुट मे रेडैक्ट कएल गेलो पर ओ प्लेनटेक्स्ट मे स्टोर भऽ सकैत अछि"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "कोन output कमांड फॉर्मेट sensitive आउटपुट मान सभ केँ मशीन-पठनीय रूप मे प्रकट कऽ सकैत अछि?",
+    "options": [
+      "terraform providers schema -json",
+      "terraform output -json",
+      "terraform output -help",
+      "terraform output -no-color"
+    ],
+    "answer": "terraform output -json"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "कोन फंक्शन Terraform मान केँ JSON स्ट्रिंग मे बदलैत अछि?",
+    "options": [
+      "jsonencode",
+      "jsondecode",
+      "yamldecode",
+      "file"
+    ],
+    "answer": "jsonencode"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "कोन फंक्शन JSON स्ट्रिंग केँ Terraform मान मे पार्स करैत अछि?",
+    "options": [
+      "jsonencode",
+      "yamlencode",
+      "templatefile",
+      "jsondecode"
+    ],
+    "answer": "jsondecode"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "कोन फंक्शन देल गेल वेरिएबल सभक map क प्रयोग कए टेम्पलेट फाइल केँ रेंडर करैत अछि?",
+    "options": [
+      "fileset",
+      "filebase64",
+      "templatefile",
+      "file"
+    ],
+    "answer": "templatefile"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "कोन फंक्शन पहिल ओहि आर्ग्युमेंट केँ लौटबैत अछि जे बिना डायनेमिक त्रुटिक मूल्यांकित होइत अछि?",
+    "options": [
+      "lookup",
+      "try",
+      "can",
+      "coalesce"
+    ],
+    "answer": "try"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "कोन फंक्शन रिपोर्ट करैत अछि जे कोनो एक्सप्रेशनक मूल्यांकन बिना डायनेमिक त्रुटिक भऽ सकैत अछि वा नहि?",
+    "options": [
+      "can",
+      "try",
+      "contains",
+      "length"
+    ],
+    "answer": "can"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "यदि merge केँ पास कएल गेल दू map मे एकहि key अछि, तँ कोन मान जीतैत अछि?",
+    "options": [
+      "पहिलुका आर्ग्युमेंटक मान",
+      "मान सभ सदिखन एक लिस्ट मे जोड़ल जाइत अछि",
+      "दोहराओल key सदिखन त्रुटि उत्पन्न करैत अछि",
+      "बादक आर्ग्युमेंटक मान"
+    ],
+    "answer": "बादक आर्ग्युमेंटक मान"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "कोन प्रोवाइडर वर्जन कंस्ट्रेंट 5.4.x रिलीज सभ केँ अनुमति दैत अछि मुदा 5.5.0 केँ नहि?",
+    "options": [
+      ">= 5.4.0",
+      ">= 5.0, < 6.0",
+      "~> 5.4.0",
+      "~> 5.4"
+    ],
+    "answer": "~> 5.4.0"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "जखन कोनो रिसोर्स आर्ग्युमेंट केँ null असाइन कएल जाइत अछि तँ Terraform सामान्यतया ओकरा की मानैत अछि?",
+    "options": [
+      "संपूर्ण रिसोर्स केँ डिलीट करबाक अनुरोध",
+      "छोड़ल गेल आर्ग्युमेंट, जे ओहि आर्ग्युमेंटक डिफ़ॉल्ट आ आवश्यकता सभक अधीन अछि",
+      "प्रत्येक प्रोवाइडर मे खाली स्ट्रिंग",
+      "प्रत्येक प्रोवाइडर मे संख्यात्मक शून्य"
+    ],
+    "answer": "छोड़ल गेल आर्ग्युमेंट, जे ओहि आर्ग्युमेंटक डिफ़ॉल्ट आ आवश्यकता सभक अधीन अछि"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "कोन एक्सप्रेशन ओहि मॉड्यूलक फाइलसिस्टम पाथक नाम दैत अछि जतय ओ लिखल गेल अछि?",
+    "options": [
+      "path.module",
+      "path.root",
+      "path.cwd",
+      "terraform.workspace"
+    ],
+    "answer": "path.module"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "CLI कॉन्फ़िगरेशन केँ HCP Terraform सँ जोड़बाक लेल terraform ब्लॉकक कोन फीचर अनुशंसित अछि?",
+    "options": [
+      "locals",
+      "moved",
+      "check",
+      "cloud"
+    ],
+    "answer": "cloud"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "terraform_remote_state संदर्भित स्टेटसँ सोझे कोन शीर्ष-स्तरीय मान सभ उपलब्ध करबैत अछि?",
+    "options": [
+      "सभ प्रोवाइडर क्रेडेंशियल",
+      "सभ चाइल्ड-मॉड्यूल लोकल वैल्यू",
+      "रूट-मॉड्यूल आउटपुट",
+      "प्रत्येक रिसोर्स एट्रिब्यूट शीर्ष-स्तरीय आउटपुटक रूप मे"
+    ],
+    "answer": "रूट-मॉड्यूल आउटपुट"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "कोन lifecycle नियम तखन प्रतिस्थापनक अनुरोध करैत अछि जखन कोनो संदर्भित managed रिसोर्स बदलैत अछि?",
+    "options": [
+      "create_before_destroy",
+      "replace_triggered_by",
+      "ignore_changes",
+      "prevent_destroy"
+    ],
+    "answer": "replace_triggered_by"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "कोन बिल्ट-इन managed रिसोर्स बिना अलग प्रोवाइडर इंस्टॉल केने सामान्य इनपुट मान केँ रिसोर्स लाइफसाइकिल दैत अछि?",
+    "options": [
+      "terraform_data",
+      "terraform_remote_state",
+      "local_file",
+      "random_id"
+    ],
+    "answer": "terraform_data"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "सामान्य plan वा apply क दौरान check ब्लॉक मे कोनो assertion असफल भेला पर की होइत अछि?",
+    "options": [
+      "Terraform सदिखन जाँचल गेल ऑब्जेक्ट केँ नष्ट करैत अछि",
+      "Terraform चुपचाप check ब्लॉक केँ हटा दैत अछि",
+      "Terraform सदिखन कोनो रिसोर्स केँ रिफ्रेश करबासँ पहिने बाहर निकलि जाइत अछि",
+      "Terraform चेतावनी रिपोर्ट करैत अछि आ मात्र ओहि असफलताक कारणेँ ऑपरेशन केँ नहि रोकैत अछि"
+    ],
+    "answer": "Terraform चेतावनी रिपोर्ट करैत अछि आ मात्र ओहि असफलताक कारणेँ ऑपरेशन केँ नहि रोकैत अछि"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "जखन रिसोर्स lifecycle precondition false मूल्यांकित होइत अछि तँ की होइत अछि?",
+    "options": [
+      "Terraform रिसोर्स केँ डेटा सोर्स मे बदलि दैत अछि",
+      "Terraform precondition केँ मात्र चेतावनीसँ बदलि दैत अछि",
+      "Terraform त्रुटि रिपोर्ट करैत अछि आ संबंधित ऑपरेशन केँ रोकैत अछि",
+      "Terraform अगिला रन धरि precondition केँ अनदेखा करैत अछि"
+    ],
+    "answer": "Terraform त्रुटि रिपोर्ट करैत अछि आ संबंधित ऑपरेशन केँ रोकैत अछि"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "कोन कमांड Terraform केर नेटिव टेस्ट फाइल सभ केँ चलबैत अछि?",
+    "options": [
+      "terraform console",
+      "terraform test",
+      "terraform validate",
+      "terraform fmt"
+    ],
+    "answer": "terraform test"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "कोन सेटिंग Terraform टेस्ट मे run ब्लॉक केँ डिफ़ॉल्ट apply क बदला plan करबैत अछि?",
+    "options": [
+      "command = plan",
+      "command = validate",
+      "command = refresh",
+      "command = console"
+    ],
+    "answer": "command = plan"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "कोन फंक्शन कोनो डायरेक्टरीक अंतर्गत glob पैटर्नसँ मेल खाऽ वला सापेक्ष पाथ सभक संग्रह लौटबैत अछि?",
+    "options": [
+      "file",
+      "dirname",
+      "basename",
+      "fileset"
+    ],
+    "answer": "fileset"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "भिन्न एक्सेस कंट्रोल चाहऽ वला एनवायरनमेंट सभ केँ अलग करबाक लेल मात्र CLI वर्कस्पेस किएक अनुपयुक्त भऽ सकैत अछि?",
+    "options": [
+      "ओ भिन्न इनपुट-वेरिएबल मान सभक प्रयोग केँ रोकैत अछि",
+      "ओ प्रत्येक एनवायरनमेंट केँ एकहि रिसोर्स नाम प्रयोग करबाक लेल बाध्य करैत अछि",
+      "ओ एकहि बैकएंड कॉन्फ़िगरेशन आ ऑथेंटिकेशन संदर्भ साझा करैत अछि",
+      "ओ सदिखन एक स्टेट स्नैपशॉट साझा करैत अछि"
+    ],
+    "answer": "ओ एकहि बैकएंड कॉन्फ़िगरेशन आ ऑथेंटिकेशन संदर्भ साझा करैत अछि"
+  }
+]

@@ -1,0 +1,302 @@
+[
+  {
+    "category": "Linux",
+    "set": 4,
+    "question": "哪个命令用于移动或重命名文件？",
+    "options": [
+      "mv",
+      "cp",
+      "ln",
+      "shift"
+    ],
+    "answer": "mv"
+  },
+  {
+    "category": "Linux",
+    "set": 4,
+    "question": "哪个命令更改文件所有权？",
+    "options": [
+      "chown",
+      "chmod",
+      "owner",
+      "setowner"
+    ],
+    "answer": "chown"
+  },
+  {
+    "category": "Linux",
+    "set": 4,
+    "question": "哪个命令以八进制格式显示文件权限？",
+    "options": [
+      "stat -c %a",
+      "ls -perm",
+      "perm",
+      "showperm"
+    ],
+    "answer": "stat -c %a"
+  },
+  {
+    "category": "Linux",
+    "set": 4,
+    "question": "哪个命令显示文件类型？",
+    "options": [
+      "file",
+      "type",
+      "kind",
+      "format"
+    ],
+    "answer": "file"
+  },
+  {
+    "category": "Linux",
+    "set": 4,
+    "question": "哪个命令显示详细的文件统计信息？",
+    "options": [
+      "stat",
+      "fileinfo",
+      "details",
+      "ls -stat"
+    ],
+    "answer": "stat"
+  },
+  {
+    "category": "Linux",
+    "set": 4,
+    "question": "哪个命令直接在目录树中按名称查找文件，而不使用预先建立的数据库？",
+    "options": [
+      "find",
+      "search",
+      "locate",
+      "where"
+    ],
+    "answer": "find"
+  },
+  {
+    "category": "Linux",
+    "set": 4,
+    "question": "哪个命令搜索 PATH，并通常打印第一个匹配的可执行文件路径？",
+    "options": [
+      "which",
+      "whereis",
+      "locate",
+      "find"
+    ],
+    "answer": "which"
+  },
+  {
+    "category": "Linux",
+    "set": 4,
+    "question": "哪个命令使用数据库搜索文件？",
+    "options": [
+      "locate",
+      "find",
+      "search",
+      "query"
+    ],
+    "answer": "locate"
+  },
+  {
+    "category": "Linux",
+    "set": 4,
+    "question": "哪个命令更新 locate 数据库？",
+    "options": [
+      "updatedb",
+      "updatedatabase",
+      "refreshdb",
+      "syncdb"
+    ],
+    "answer": "updatedb"
+  },
+  {
+    "category": "Linux",
+    "set": 4,
+    "question": "哪个命令显示当前用户的 crontab 条目？",
+    "options": [
+      "crontab -l",
+      "cron -list",
+      "cronshow",
+      "jobs"
+    ],
+    "answer": "crontab -l"
+  },
+  {
+    "category": "Linux",
+    "set": 4,
+    "question": "哪个命令编辑 cron 作业？",
+    "options": [
+      "crontab -e",
+      "cronedit",
+      "crontab",
+      "schedule"
+    ],
+    "answer": "crontab -e"
+  },
+  {
+    "category": "Linux",
+    "set": 4,
+    "question": "哪个命令调度一次性任务？",
+    "options": [
+      "at",
+      "cron",
+      "task",
+      "schedule"
+    ],
+    "answer": "at"
+  },
+  {
+    "category": "Linux",
+    "set": 4,
+    "question": "哪个命令显示 shell 中的活动作业？",
+    "options": [
+      "jobs",
+      "ps",
+      "bg",
+      "fg"
+    ],
+    "answer": "jobs"
+  },
+  {
+    "category": "Linux",
+    "set": 4,
+    "question": "哪个 shell 内置命令在后台恢复已停止的作业？",
+    "options": [
+      "bg",
+      "fg",
+      "jobs",
+      "nohup"
+    ],
+    "answer": "bg"
+  },
+  {
+    "category": "Linux",
+    "set": 4,
+    "question": "哪个命令将后台进程调到前台？",
+    "options": [
+      "fg",
+      "bg",
+      "jobs",
+      "top"
+    ],
+    "answer": "fg"
+  },
+  {
+    "category": "Linux",
+    "set": 4,
+    "question": "编辑服务文件后，哪个 systemd 命令重新加载单元文件定义？",
+    "options": [
+      "systemctl daemon-reload",
+      "systemctl reload app.service",
+      "systemctl restart app.service",
+      "systemctl reset-failed app.service"
+    ],
+    "answer": "systemctl daemon-reload"
+  },
+  {
+    "category": "Linux",
+    "set": 4,
+    "question": "'systemctl disable app.service' 不带 --now 时做什么？",
+    "options": [
+      "停止服务并删除其单元文件",
+      "使用出厂默认设置重启服务",
+      "通过屏蔽单元阻止所有手动启动",
+      "删除启用链接，但不一定停止正在运行的服务"
+    ],
+    "answer": "删除启用链接，但不一定停止正在运行的服务"
+  },
+  {
+    "category": "Linux",
+    "set": 4,
+    "question": "哪个命令显示 app.service 的日志条目？",
+    "options": [
+      "systemctl show app.service",
+      "systemctl list-dependencies app.service",
+      "journalctl -u app.service",
+      "systemctl cat app.service"
+    ],
+    "answer": "journalctl -u app.service"
+  },
+  {
+    "category": "Linux",
+    "set": 4,
+    "question": "journalctl 的哪个选项将输出限制为本次启动？",
+    "options": [
+      "-k",
+      "-b",
+      "-f",
+      "-r"
+    ],
+    "answer": "-b"
+  },
+  {
+    "category": "Linux",
+    "set": 4,
+    "question": "标准五字段用户 crontab 中，哪个字段在最前面？",
+    "options": [
+      "分钟",
+      "小时",
+      "月内日期",
+      "星期几"
+    ],
+    "answer": "分钟"
+  },
+  {
+    "category": "Linux",
+    "set": 4,
+    "question": "标准用户 crontab 中的 '0 2 * * *' 何时运行？",
+    "options": [
+      "每小时的第 2 分钟",
+      "每两分钟",
+      "每月第二天的午夜",
+      "按 cron 适用的时区，每天 02:00"
+    ],
+    "answer": "按 cron 适用的时区，每天 02:00"
+  },
+  {
+    "category": "Linux",
+    "set": 4,
+    "question": "Bash 内置命令 export 对 shell 变量做什么？",
+    "options": [
+      "将其复制到父 shell 的环境中",
+      "将其值变成只读变量",
+      "使其出现在随后启动的子进程环境中",
+      "将其永久写入每个用户的配置文件"
+    ],
+    "answer": "使其出现在随后启动的子进程环境中"
+  },
+  {
+    "category": "Linux",
+    "set": 4,
+    "question": "哪个 Bash 重定向将标准输出追加到 app.log？",
+    "options": [
+      "2> app.log",
+      ">> app.log",
+      "> app.log",
+      "< app.log"
+    ],
+    "answer": ">> app.log"
+  },
+  {
+    "category": "Linux",
+    "set": 4,
+    "question": "哪个 Bash 重定向将标准错误发送到与标准输出相同的目的地？",
+    "options": [
+      "2>&1",
+      "1>&2",
+      "2>errors.log",
+      "<input.txt"
+    ],
+    "answer": "2>&1"
+  },
+  {
+    "category": "Linux",
+    "set": 4,
+    "question": "命令刚结束后，Bash 中的 $? 展开为什么？",
+    "options": [
+      "当前 shell 的进程 ID",
+      "位置参数的数量",
+      "最近一个后台作业的进程 ID",
+      "最近执行的前台管道的退出状态"
+    ],
+    "answer": "最近执行的前台管道的退出状态"
+  }
+]

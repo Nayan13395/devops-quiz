@@ -1,0 +1,302 @@
+[
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "ڪهڙو حڪم release نالي موجوده برانچ لاءِ ڳنڍيل ورڪنگ ٽري شامل ڪري ٿو؟",
+    "options": [
+      "git worktree prune",
+      "git worktree lock ..\\release",
+      "git worktree add ..\\release release",
+      "git worktree list"
+    ],
+    "answer": "git worktree add ..\\release release"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "ڪهڙي فائل مکيه منصوبي جا ورزن موجب سنڀاليل سب ماڊيول پٿ ۽ URL رکي ٿي؟",
+    "options": [
+      ".gitmessage",
+      ".gitmodules",
+      ".gitignore",
+      ".gitattributes"
+    ],
+    "answer": ".gitmodules"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "ڪهڙو حڪم درج ٿيل سب ماڊيول، اندروني سب ماڊيولن سميت، شروعاتي ترتيب ڏئي چيڪ آئوٽ ڪري ٿو؟",
+    "options": [
+      "git submodule update --init --recursive",
+      "git submodule deinit --all",
+      "git submodule status",
+      "git submodule sync"
+    ],
+    "answer": "git submodule update --init --recursive"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "مکيه منصوبو ڪمٽ ۾ سب ماڊيول لاءِ عام طور ڇا رکي ٿو؟",
+    "options": [
+      "سب ماڊيول جو سڄو آبجيڪٽ ڊيٽابيس",
+      "رڳو سب ماڊيول جي ڊفالٽ برانچ جو نالو",
+      "رڳو سب ماڊيول جون اڻڪمٽ تبديليون",
+      "سب ماڊيول جي خاص ڪمٽ جو حوالو"
+    ],
+    "answer": "سب ماڊيول جي خاص ڪمٽ جو حوالو"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "ڪهڙو حڪم سڀ حوالا ۽ انهن مان پهچڻ جوڳي تاريخ رکندڙ کڻي وڃڻ جوڳو بنڊل ٺاهي ٿو؟",
+    "options": [
+      "git format-patch -1 HEAD",
+      "git diff --binary > backup.bundle",
+      "git bundle create backup.bundle --all",
+      "git archive --output=backup.bundle HEAD"
+    ],
+    "answer": "git bundle create backup.bundle --all"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "ڪهڙو حڪم HEAD جون ٽريڪ ڪيل فائلون Git تاريخ کان سواءِ ZIP آرڪائيو ۾ ڪڍي ٿو؟",
+    "options": [
+      "git format-patch --stdout HEAD > source.zip",
+      "git archive --format=zip --output=source.zip HEAD",
+      "git bundle create source.zip --all",
+      "git clone --bare . source.zip"
+    ],
+    "answer": "git archive --format=zip --output=source.zip HEAD"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "ڪهڙو حڪم آخري ڪمٽ کي اي ميل نموني جي پيچ فائل بڻائي ٿو؟",
+    "options": [
+      "git format-patch -1 HEAD",
+      "git diff HEAD",
+      "git show --stat HEAD",
+      "git log -1 --oneline"
+    ],
+    "answer": "git format-patch -1 HEAD"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "ڪهڙو حڪم git format-patch جا اي ميل پيچ لاڳو ڪري ڪمٽ ٺاهي ٿو؟",
+    "options": [
+      "git apply changes.patch",
+      "git diff changes.patch",
+      "git add changes.patch",
+      "git am changes.patch"
+    ],
+    "answer": "git am changes.patch"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "ڪهڙو حڪم فائلون بدلائڻ کان سواءِ جانچي ٿو ته سادو پيچ لاڳو ٿي سگهي ٿو؟",
+    "options": [
+      "git am changes.patch",
+      "git add changes.patch",
+      "git apply --check changes.patch",
+      "git apply changes.patch"
+    ],
+    "answer": "git apply --check changes.patch"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "Git آبجيڪٽ جي ڪهڙي قسم فائل نالي کان سواءِ مواد رکي ٿي؟",
+    "options": [
+      "وضاحتي ٽيگ",
+      "Blob",
+      "Tree",
+      "commit"
+    ],
+    "answer": "Blob"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "Git آبجيڪٽ جي ڪهڙي قسم فائل نالا ۽ بلاب يا سب ٽري جا حوالا رکي ٿي؟",
+    "options": [
+      "Tree",
+      "Blob",
+      "commit",
+      "وضاحتي ٽيگ"
+    ],
+    "answer": "Tree"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "ڪهڙو حڪم ڄاتل آبجيڪٽ ID جي قسم ٻڌائي ٿو؟",
+    "options": [
+      "git cat-file -s abc1234",
+      "git rev-parse abc1234",
+      "git log -1 abc1234",
+      "git cat-file -t abc1234"
+    ],
+    "answer": "git cat-file -t abc1234"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "ڪهڙو حڪم HEAD جو پورو آبجيڪٽ ID ڏيکاري ٿو؟",
+    "options": [
+      "git status --short",
+      "git branch --show-current",
+      "git rev-parse HEAD",
+      "git symbolic-ref HEAD"
+    ],
+    "answer": "git rev-parse HEAD"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "ڪهڙي رويزن حد feature مان پهچڻ جوڳا پر main مان نه پهچندڙ ڪمٽ چونڊي ٿي؟",
+    "options": [
+      "main^",
+      "main..feature",
+      "feature..main",
+      "main...feature"
+    ],
+    "answer": "main..feature"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "git log جو ڪهڙو اختيار رڳو مرج ڪمٽ ڏيکاري ٿو؟",
+    "options": [
+      "--merges",
+      "--no-merges",
+      "--first-parent",
+      "--reverse"
+    ],
+    "answer": "--merges"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "git diff جو ڪهڙو اختيار بدليل پٿ ۽ تبديليءَ جي حالت جا اکر ڏيکاري ٿو؟",
+    "options": [
+      "--name-only",
+      "--stat",
+      "--shortstat",
+      "--name-status"
+    ],
+    "answer": "--name-status"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "ڪهڙي فائل پٿن لاءِ متن هڪجهڙو ڪرڻ جهڙا ورزن موجب سنڀاليل وصف مقرر ڪري ٿي؟",
+    "options": [
+      ".gitmodules",
+      ".gitconfig",
+      ".gitattributes",
+      ".gitignore"
+    ],
+    "answer": ".gitattributes"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": ".gitattributes جو '*.sh text eol=lf' قاعدو ملندڙ متني فائلن لاءِ ڇا گهري ٿو؟",
+    "options": [
+      "خالي سٽون پاڻمرادو مٽائڻ",
+      "ورڪنگ ٽري ۾ LF سٽ پڄاڻي",
+      "ورڪنگ ٽري ۾ CRLF سٽ پڄاڻي",
+      "متن بدلائڻ کان سواءِ بائنري طور ورتاءُ"
+    ],
+    "answer": "ورڪنگ ٽري ۾ LF سٽ پڄاڻي"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "ڪهڙو هُڪ تجويز ڪيل ڪمٽ پيغام جي فائل ڏسي ڪمٽ رد ڪري سگهي ٿو؟",
+    "options": [
+      "commit-msg",
+      "post-commit",
+      "post-checkout",
+      "post-merge"
+    ],
+    "answer": "commit-msg"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "ڪهڙي سيٽنگ Git هُڪن لاءِ پنهنجي چونڊ جي ڊائريڪٽري مقرر ڪري ٿي؟",
+    "options": [
+      "core.worktree",
+      "core.excludesFile",
+      "core.attributesFile",
+      "core.hooksPath"
+    ],
+    "answer": "core.hooksPath"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "ڪهڙي فائل هڪ ڊولپر کي گڏيل .gitignore قاعدو وجهڻ کان سواءِ اڻٽريڪ فائلون مقامي طور نظرانداز ڪرڻ ڏئي ٿي؟",
+    "options": [
+      ".git\\description",
+      ".git\\packed-refs",
+      ".git\\info\\exclude",
+      ".git\\HEAD"
+    ],
+    "answer": ".git\\info\\exclude"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "ڪهڙو حڪم بائيسيڪٽ سيشن بند ڪري عام طور اصل برانچ تي موٽائي ٿو؟",
+    "options": [
+      "git bisect log",
+      "git bisect reset",
+      "git bisect skip",
+      "git bisect good"
+    ],
+    "answer": "git bisect reset"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "ڪهڙو حڪم پيچ سلسلي جا ٻه نسخا ڀيٽي ٿو؟",
+    "options": [
+      "git range-diff main..old main..new",
+      "git diff old new",
+      "git log old..new",
+      "git merge-base old new"
+    ],
+    "answer": "git range-diff main..old main..new"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "ڪهڙو حڪم ڪمٽ ٺاهيندي پڇاڙيءَ ۾ Signed-off-by داخلا وجهي ٿو؟",
+    "options": [
+      "git commit --gpg-sign",
+      "git commit --amend",
+      "git commit --no-verify",
+      "git commit --signoff"
+    ],
+    "answer": "git commit --signoff"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "git log -S'old_name' ڊفالٽ طور ڇا ڳولي ٿو؟",
+    "options": [
+      "اهي ڪمٽ جن جي پيغام ۾ old_name هجي",
+      "اهي برانچون جن جي نالي ۾ old_name هجي",
+      "اهي ڪمٽ جيڪي old_name اچڻ جو انگ بدلائن",
+      "اهي ڪمٽ جن جي ليکڪ جو نالو old_name هجي"
+    ],
+    "answer": "اهي ڪمٽ جيڪي old_name اچڻ جو انگ بدلائن"
+  }
+]

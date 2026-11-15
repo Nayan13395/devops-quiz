@@ -1,0 +1,302 @@
+[
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "ڪم جي سطح تي ٻي سيٽنگ نه هجي ته چيڪ موڊ ۾ اهڙي ماڊيول سان ڇا ٿئي ٿو جيڪو چيڪ موڊ جي مدد نٿو ڪري؟",
+    "options": [
+      "ماڊيول هميشه پنهنجون عام تبديليون ڪري ٿو",
+      "ماڊيول پاڻمرادو localhost تي هلي ٿو",
+      "ماڊيول کي تيستائين وري هلايو وڃي ٿو جيستائين اهو چيڪ موڊ جي مدد ڪري",
+      "تبديليون ڪرڻ بدران ماڊيول ڇڏي ڏنو وڃي ٿو"
+    ],
+    "answer": "تبديليون ڪرڻ بدران ماڊيول ڇڏي ڏنو وڃي ٿو"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "پلي بڪ --check سان هلايو وڃي تڏهن به ڪهڙي ڪم سيٽنگ حقيقي تبديليون ڪرڻ ڏئي ٿي؟",
+    "options": [
+      "changed_when: false",
+      "ignore_errors: true",
+      "check_mode: false",
+      "diff: false"
+    ],
+    "answer": "check_mode: false"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "Ansible جو ڪهڙو meta عمل اڳ اطلاع مليل هينڊلر فوراً هلائي ٿو؟",
+    "options": [
+      "reset_connection",
+      "flush_handlers",
+      "clear_facts",
+      "end_play"
+    ],
+    "answer": "flush_handlers"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "جيڪڏهن تبديلي آڻيندڙ ٻه ڪم ساڳئي هينڊلر کي ان جي رهيل هلڻ کان اڳ اطلاع ڏين ته هلڻ واري موقعي تي اهو عام طور ڪيترا ڀيرا هلي ٿو؟",
+    "options": [
+      "هڪ ڀيرو",
+      "ٻه ڀيرا",
+      "هر انوينٽري گروهه لاءِ هڪ ڀيرو",
+      "صفر ڀيرا، ڇو ته اطلاع پاڻ ۾ ٽڪرائن ٿا"
+    ],
+    "answer": "هڪ ڀيرو"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "ساڳئي موقعي تي هلندڙ اطلاع مليل هينڊلرن جو ترتيبوار هلڻ ڪهڙي ڳالهه طئي ڪري ٿي؟",
+    "options": [
+      "انهن جي نالن جي الفابيٽ واري ترتيب",
+      "notify فهرست ۾ نالن جي ترتيب",
+      "سنڀال هيٺ هوسٽن جي ڳنڍجڻ جي ترتيب",
+      "handlers حصي ۾ انهن جي تعريف جي ترتيب"
+    ],
+    "answer": "handlers حصي ۾ انهن جي تعريف جي ترتيب"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "ڪهڙي ناڪامي عام طور بلاڪ جا rescue ڪم شروع ڪري ٿي؟",
+    "options": [
+      "پلي بڪ ۾ ڪم جي اڻصحيح تعريف هجي",
+      "YAML دستاويز پارس نه ٿي سگهي",
+      "بلاڪ اندر ڪو ڪم ناڪام نتيجو ڏئي",
+      "ڪم هلڻ کان اڳ هوسٽ سان رابطو ناممڪن ٿي وڃي"
+    ],
+    "answer": "بلاڪ اندر ڪو ڪم ناڪام نتيجو ڏئي"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "عام ڪم تي ignore_errors ڪهڙي غلطي نٿو دٻائي؟",
+    "options": [
+      "failed_when شرط جو سچو نڪرڻ",
+      "اڻڄاڻايل متغير جي غلطي",
+      "حڪم جي ڏنل غير صفر نڪرڻ واري حالت",
+      "صاف طور ناڪام ڄاڻايل ماڊيول نتيجو"
+    ],
+    "answer": "اڻڄاڻايل متغير جي غلطي"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "ڪهڙو ڪليدي لفظ اڻسنڀاليل ڪم ناڪاميءَ تي هاڻوڪو بيچ اهو ڪم پورو ڪرڻ کان پوءِ سڀني هوسٽن تي پلي روڪي ٿو؟",
+    "options": [
+      "any_errors_fatal",
+      "ignore_unreachable",
+      "max_fail_percentage: 100",
+      "force_handlers"
+    ],
+    "answer": "any_errors_fatal"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "پهچ جوڳي هوسٽ تي پوءِ وارو ڪم ناڪام ٿئي ته force_handlers جو ڪهڙو اثر آهي؟",
+    "options": [
+      "هر ڄاڻايل هينڊلر اطلاع کان سواءِ به هلي ٿو",
+      "سڀ ناڪام ڪم پاڻمرادو وري آزمايا وڃن ٿا",
+      "هينڊلر سڀني عام ڪمن کان اڳ هلن ٿا",
+      "اڳ اطلاع مليل هينڊلر اڃا به انهيءَ هوسٽ تي هلي سگهن ٿا"
+    ],
+    "answer": "اڳ اطلاع مليل هينڊلر اڃا به انهيءَ هوسٽ تي هلي سگهن ٿا"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "ڪهڙي ڪم سيٽنگ حساس آرگيومينٽ ۽ نتيجن جي عام لاگنگ روڪي ٿي؟",
+    "options": [
+      "check_mode: true",
+      "changed_when: false",
+      "no_log: true",
+      "diff: true"
+    ],
+    "answer": "no_log: true"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "--diff فعال هجي تڏهن به ڪهڙي ڪم سيٽنگ فائل جي مواد جا فرق لڪائي ٿي؟",
+    "options": [
+      "ignore_errors: true",
+      "diff: false",
+      "no_log: false",
+      "check_mode: false"
+    ],
+    "answer": "diff: false"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "ڪهڙي ڊڪشنري ٻئي انوينٽري هوسٽ سان لاڳاپيل متغيرن تائين رسائي ڏئي ٿي؟",
+    "options": [
+      "hostvars",
+      "ansible_facts",
+      "environment",
+      "ansible_loop"
+    ],
+    "answer": "hostvars"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "ڪهڙي خاص متغير ۾ هاڻوڪي هوسٽ جو انوينٽري نالو آهي؟",
+    "options": [
+      "ansible_host",
+      "ansible_user",
+      "ansible_playbook_python",
+      "inventory_hostname"
+    ],
+    "answer": "inventory_hostname"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "هوسٽ گروهه جا گڏيل متغير رکڻ لاءِ عام طور انوينٽري ڀرسان ڪهڙي ڊائريڪٽري هوندي آهي؟",
+    "options": [
+      "roles",
+      "collections",
+      "group_vars",
+      "host_vars"
+    ],
+    "answer": "group_vars"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "ansible.builtin.file لُڪ اپ ڊفالٽ طور فائل ڪٿي پڙهي ٿو؟",
+    "options": [
+      "become_user ۾ نالو ڏنل هوسٽ تي",
+      "ڪنٽرول نوڊ تي",
+      "سنڀال هيٺ هر هوسٽ تي",
+      "پلي جي پهرئين هوسٽ تي"
+    ],
+    "answer": "ڪنٽرول نوڊ تي"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "ڪهڙو فلٽر YAML اسٽرنگ کي Ansible ڊيٽا ڍانچي ۾ بدلائي ٿو؟",
+    "options": [
+      "from_yaml",
+      "to_yaml",
+      "to_json",
+      "dict2items"
+    ],
+    "answer": "from_yaml"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "ڪهڙو فلٽر ڊڪشنري کي ڪنجي/قدر ڊڪشنرين جي فهرست ۾ بدلائي ٿو؟",
+    "options": [
+      "items2dict",
+      "flatten",
+      "zip",
+      "dict2items"
+    ],
+    "answer": "dict2items"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "ڪهڙو فلٽر فهرست مان ورجايل عنصر هٽائي ٿو؟",
+    "options": [
+      "reverse",
+      "flatten",
+      "unique",
+      "sort"
+    ],
+    "answer": "unique"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "ڪهڙو ماڊيول ايڪسپريشن جانچي ٿو ۽ ڄاڻايل تصديقي شرطون پوريون نه ٿيڻ تي ناڪام ٿئي ٿو؟",
+    "options": [
+      "ansible.builtin.set_fact",
+      "ansible.builtin.assert",
+      "ansible.builtin.debug",
+      "ansible.builtin.pause"
+    ],
+    "answer": "ansible.builtin.assert"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "ڪهڙو ماڊيول ريگيولر ايڪسپريشن سان متن جي فائل ۾ خاص سٽ سنڀالي ٿو؟",
+    "options": [
+      "ansible.builtin.lineinfile",
+      "ansible.builtin.blockinfile",
+      "ansible.builtin.copy",
+      "ansible.builtin.slurp"
+    ],
+    "answer": "ansible.builtin.lineinfile"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "ڪهڙو ماڊيول URL جي درخواست ڪري ٿو ۽ گهربل HTTP اسٽيٽس ڪوڊ جانچي سگهي ٿو؟",
+    "options": [
+      "ansible.builtin.get_url",
+      "ansible.builtin.fetch",
+      "ansible.builtin.wait_for",
+      "ansible.builtin.uri"
+    ],
+    "answer": "ansible.builtin.uri"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "ڪهڙو ماڊيول TCP پورٽ جي گهربل حالت جو انتظار ڪري ٿو؟",
+    "options": [
+      "ansible.builtin.async_status",
+      "ansible.builtin.ping",
+      "ansible.builtin.wait_for",
+      "ansible.builtin.pause"
+    ],
+    "answer": "ansible.builtin.wait_for"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "ڄاڻايل پٿ اڳ موجود هجي ته ڪهڙو پيراميٽر ansible.builtin.command کي هلڻ ڇڏي ڏيڻ لاءِ چوي ٿو؟",
+    "options": [
+      "stdin",
+      "creates",
+      "removes",
+      "chdir"
+    ],
+    "answer": "creates"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "file ماڊيول جي ڪهڙي سيٽنگ علامتي لنڪ ٺاهي ٿي؟",
+    "options": [
+      "state: link",
+      "state: directory",
+      "state: touch",
+      "state: hard"
+    ],
+    "answer": "state: link"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "ڪهڙو ماڊيول پوءِ وارن پليز لاءِ ميموري واري انوينٽري ۾ هوسٽ شامل ڪري سگهي ٿو؟",
+    "options": [
+      "ansible.builtin.group_by",
+      "ansible.builtin.set_fact",
+      "ansible.builtin.meta",
+      "ansible.builtin.add_host"
+    ],
+    "answer": "ansible.builtin.add_host"
+  }
+]

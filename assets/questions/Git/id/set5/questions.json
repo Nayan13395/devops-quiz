@@ -1,0 +1,302 @@
+[
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "Perintah mana yang menambahkan pohon kerja tertaut untuk cabang yang sudah ada bernama release?",
+    "options": [
+      "git worktree prune",
+      "git worktree lock ..\\release",
+      "git worktree add ..\\release release",
+      "git worktree list"
+    ],
+    "answer": "git worktree add ..\\release release"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "Berkas mana yang mencatat jalur dan URL submodul yang dikelola versinya dalam proyek induk?",
+    "options": [
+      ".gitmessage",
+      ".gitmodules",
+      ".gitignore",
+      ".gitattributes"
+    ],
+    "answer": ".gitmodules"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "Perintah mana yang menginisialisasi dan mengekstrak submodul terdaftar, termasuk yang bersarang?",
+    "options": [
+      "git submodule update --init --recursive",
+      "git submodule deinit --all",
+      "git submodule status",
+      "git submodule sync"
+    ],
+    "answer": "git submodule update --init --recursive"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "Apa yang biasanya dicatat proyek induk untuk sebuah submodul dalam commit?",
+    "options": [
+      "Seluruh basis data objek submodul",
+      "Hanya nama cabang bawaan submodul",
+      "Hanya perubahan submodul yang belum di-commit",
+      "Referensi ke commit submodul tertentu"
+    ],
+    "answer": "Referensi ke commit submodul tertentu"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "Perintah mana yang membuat bundel portabel berisi semua referensi dan riwayat yang dapat dijangkau darinya?",
+    "options": [
+      "git format-patch -1 HEAD",
+      "git diff --binary > backup.bundle",
+      "git bundle create backup.bundle --all",
+      "git archive --output=backup.bundle HEAD"
+    ],
+    "answer": "git bundle create backup.bundle --all"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "Perintah mana yang mengekspor berkas terlacak HEAD sebagai arsip ZIP tanpa riwayat Git?",
+    "options": [
+      "git format-patch --stdout HEAD > source.zip",
+      "git archive --format=zip --output=source.zip HEAD",
+      "git bundle create source.zip --all",
+      "git clone --bare . source.zip"
+    ],
+    "answer": "git archive --format=zip --output=source.zip HEAD"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "Perintah mana yang mengubah commit terbaru menjadi berkas patch berformat email?",
+    "options": [
+      "git format-patch -1 HEAD",
+      "git diff HEAD",
+      "git show --stat HEAD",
+      "git log -1 --oneline"
+    ],
+    "answer": "git format-patch -1 HEAD"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "Perintah mana yang menerapkan patch email buatan git format-patch dan membuat commit darinya?",
+    "options": [
+      "git apply changes.patch",
+      "git diff changes.patch",
+      "git add changes.patch",
+      "git am changes.patch"
+    ],
+    "answer": "git am changes.patch"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "Perintah mana yang memeriksa apakah patch biasa dapat diterapkan tanpa mengubah berkas?",
+    "options": [
+      "git am changes.patch",
+      "git add changes.patch",
+      "git apply --check changes.patch",
+      "git apply changes.patch"
+    ],
+    "answer": "git apply --check changes.patch"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "Jenis objek Git mana yang menyimpan isi berkas tanpa nama berkasnya?",
+    "options": [
+      "Tag beranotasi",
+      "Blob",
+      "Tree",
+      "Commit"
+    ],
+    "answer": "Blob"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "Jenis objek Git mana yang mencatat nama berkas dan referensi ke blob atau subpohon?",
+    "options": [
+      "Tree",
+      "Blob",
+      "Commit",
+      "Tag beranotasi"
+    ],
+    "answer": "Tree"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "Perintah mana yang melaporkan jenis objek dari ID objek yang diketahui?",
+    "options": [
+      "git cat-file -s abc1234",
+      "git rev-parse abc1234",
+      "git log -1 abc1234",
+      "git cat-file -t abc1234"
+    ],
+    "answer": "git cat-file -t abc1234"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "Perintah mana yang menampilkan ID objek lengkap untuk HEAD?",
+    "options": [
+      "git status --short",
+      "git branch --show-current",
+      "git rev-parse HEAD",
+      "git symbolic-ref HEAD"
+    ],
+    "answer": "git rev-parse HEAD"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "Rentang revisi mana yang memilih commit yang dapat dijangkau dari feature tetapi tidak dari main?",
+    "options": [
+      "main^",
+      "main..feature",
+      "feature..main",
+      "main...feature"
+    ],
+    "answer": "main..feature"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "Opsi git log mana yang hanya menampilkan commit penggabungan?",
+    "options": [
+      "--merges",
+      "--no-merges",
+      "--first-parent",
+      "--reverse"
+    ],
+    "answer": "--merges"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "Opsi git diff mana yang menampilkan jalur berubah beserta huruf status perubahannya?",
+    "options": [
+      "--name-only",
+      "--stat",
+      "--shortstat",
+      "--name-status"
+    ],
+    "answer": "--name-status"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "Berkas mana yang mendefinisikan atribut berversi, seperti aturan normalisasi teks untuk jalur?",
+    "options": [
+      ".gitmodules",
+      ".gitconfig",
+      ".gitattributes",
+      ".gitignore"
+    ],
+    "answer": ".gitattributes"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "Apa yang diminta aturan .gitattributes '*.sh text eol=lf' untuk berkas teks yang cocok?",
+    "options": [
+      "Penghapusan otomatis baris kosong",
+      "Akhir baris LF dalam pohon kerja",
+      "Akhir baris CRLF dalam pohon kerja",
+      "Perlakuan biner tanpa konversi teks"
+    ],
+    "answer": "Akhir baris LF dalam pohon kerja"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "Hook mana yang dapat menolak commit dengan memeriksa berkas pesan commit yang diusulkan?",
+    "options": [
+      "commit-msg",
+      "post-commit",
+      "post-checkout",
+      "post-merge"
+    ],
+    "answer": "commit-msg"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "Pengaturan konfigurasi mana yang memilih direktori khusus untuk hook Git?",
+    "options": [
+      "core.worktree",
+      "core.excludesFile",
+      "core.attributesFile",
+      "core.hooksPath"
+    ],
+    "answer": "core.hooksPath"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "Berkas mana yang memungkinkan seorang pengembang mengabaikan berkas tidak terlacak secara lokal tanpa menambahkan aturan .gitignore bersama?",
+    "options": [
+      ".git\\description",
+      ".git\\packed-refs",
+      ".git\\info\\exclude",
+      ".git\\HEAD"
+    ],
+    "answer": ".git\\info\\exclude"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "Perintah mana yang mengakhiri sesi bisect dan biasanya kembali ke cabang semula?",
+    "options": [
+      "git bisect log",
+      "git bisect reset",
+      "git bisect skip",
+      "git bisect good"
+    ],
+    "answer": "git bisect reset"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "Perintah mana yang membandingkan dua versi rangkaian patch?",
+    "options": [
+      "git range-diff main..old main..new",
+      "git diff old new",
+      "git log old..new",
+      "git merge-base old new"
+    ],
+    "answer": "git range-diff main..old main..new"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "Perintah mana yang menambahkan baris Signed-off-by saat membuat commit?",
+    "options": [
+      "git commit --gpg-sign",
+      "git commit --amend",
+      "git commit --no-verify",
+      "git commit --signoff"
+    ],
+    "answer": "git commit --signoff"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "Apa yang dicari git log -S'old_name' secara bawaan?",
+    "options": [
+      "Commit yang pesannya berisi old_name",
+      "Cabang yang namanya berisi old_name",
+      "Commit yang mengubah jumlah kemunculan old_name",
+      "Commit yang penulisnya bernama old_name"
+    ],
+    "answer": "Commit yang mengubah jumlah kemunculan old_name"
+  }
+]

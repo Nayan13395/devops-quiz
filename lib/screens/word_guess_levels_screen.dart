@@ -1,3 +1,4 @@
+import '../l10n/game_localizations.dart';
 import 'dart:async';
 import 'dart:math' as math;
 
@@ -5,6 +6,8 @@ import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 import '../services/game_sound_service.dart';
+import '../services/game_rewards.dart';
+import '../widgets/game_hint_purchase.dart';
 import '../services/point_service.dart';
 import '../services/word_guess_level_service.dart';
 
@@ -17,8 +20,7 @@ class WordGuessLevelsScreen extends StatefulWidget {
 
 class _WordGuessLevelsScreenState extends State<WordGuessLevelsScreen> {
   static const int _maxAttempts = 6;
-  static const int _levelReward = 100;
-  static const int _hintPenalty = 20;
+  static const int _levelReward = GameRewards.levelCompletion;
   static const String _progressKey = 'word_guess_completed_levels_v2';
   static const String _alphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
 
@@ -37,17 +39,17 @@ class _WordGuessLevelsScreenState extends State<WordGuessLevelsScreen> {
   bool _finished = false;
   bool _won = false;
   bool _allLevelsComplete = false;
+  bool _purchasingHint = false;
 
   WordGuessLevel get _level => WordGuessLevelService.levels[_completedLevels];
   int get _levelNumber => _completedLevels + 1;
-  int get _earnedPoints =>
-      math.max(0, _levelReward - _hintsUsed * _hintPenalty);
+  int get _earnedPoints => _levelReward;
   int get _enteredCount => _inputLetters.whereType<String>().length;
   int get _requiredInputs => _word.length - _revealedPositions.length;
   String get _chapter => switch (_levelNumber) {
-    <= 34 => 'Chapter 1 · Restore the build pipeline',
-    <= 67 => 'Chapter 2 · Scale the cloud platform',
-    _ => 'Chapter 3 · Protect production',
+    <= 34 => gameL10n(context).gameUiChapter1RestoreTheBuildPipeline,
+    <= 67 => gameL10n(context).gameUiChapter2ScaleTheCloudPlatform,
+    _ => gameL10n(context).gameUiChapter3ProtectProduction,
   };
 
   @override
@@ -151,6 +153,7 @@ class _WordGuessLevelsScreenState extends State<WordGuessLevelsScreen> {
 
   void _enterLetter(int tileIndex) {
     if (_finished ||
+        _purchasingHint ||
         _enteredCount >= _requiredInputs ||
         _usedLetterTiles.contains(tileIndex) ||
         _removedLetterTiles.contains(tileIndex)) {
@@ -170,7 +173,7 @@ class _WordGuessLevelsScreenState extends State<WordGuessLevelsScreen> {
   }
 
   void _deleteLetter() {
-    if (_finished) return;
+    if (_finished || _purchasingHint) return;
     for (var index = _word.length - 1; index >= 0; index--) {
       if (!_revealedPositions.contains(index) && _inputLetters[index] != null) {
         setState(() {
@@ -184,8 +187,17 @@ class _WordGuessLevelsScreenState extends State<WordGuessLevelsScreen> {
     }
   }
 
-  void _useHint() {
-    if (_finished || _revealedPositions.length == _word.length) return;
+  Future<void> _useHint() async {
+    if (_finished ||
+        _purchasingHint ||
+        _revealedPositions.length == _word.length) {
+      return;
+    }
+    setState(() => _purchasingHint = true);
+    final purchased = await purchaseGameHint(context);
+    if (!mounted) return;
+    setState(() => _purchasingHint = false);
+    if (!purchased) return;
     final position = List<int>.generate(
       _word.length,
       (index) => index,
@@ -211,12 +223,14 @@ class _WordGuessLevelsScreenState extends State<WordGuessLevelsScreen> {
   }
 
   void _submit() {
-    if (_finished) return;
+    if (_finished || _purchasingHint) return;
     if (_enteredCount != _requiredInputs) {
       ScaffoldMessenger.of(context).showSnackBar(
         SnackBar(
           content: Text(
-            'Use all $_requiredInputs remaining letters to submit.',
+            gameL10n(context).gameUiUseAllRemainingLettersToSubmit(
+              (_requiredInputs).toString(),
+            ),
           ),
         ),
       );
@@ -279,15 +293,39 @@ class _WordGuessLevelsScreenState extends State<WordGuessLevelsScreen> {
         title: Text(
           didWin
               ? _allLevelsComplete
-                    ? 'All Levels Complete!'
-                    : 'Level $completedNumber Complete!'
-              : 'Try Again',
+                    ? gameL10n(context).gameUiAllLevelsComplete22617e1
+                    : gameL10n(
+                        context,
+                      ).gameUiLevelComplete643224e((completedNumber).toString())
+              : gameL10n(context).gameUiTryAgain,
           textAlign: TextAlign.center,
         ),
         content: Text(
           didWin
-              ? 'The word was $completedWord. You earned $points points${hintsUsed == 0 ? '' : ' after $hintsUsed hint${hintsUsed == 1 ? '' : 's'}'}.'
-              : 'The word was $completedWord. Level $_levelNumber is still waiting for you.',
+              ? hintsUsed == 0
+                    ? gameL10n(context).gameUiTheWordWasYouEarnedPoints(
+                        (completedWord).toString(),
+                        (points).toString(),
+                      )
+                    : hintsUsed == 1
+                    ? gameL10n(
+                        context,
+                      ).gameUiTheWordWasYouEarnedPointsAfterHint(
+                        (completedWord).toString(),
+                        (points).toString(),
+                        (hintsUsed).toString(),
+                      )
+                    : gameL10n(
+                        context,
+                      ).gameUiTheWordWasYouEarnedPointsAfterHints(
+                        (completedWord).toString(),
+                        (points).toString(),
+                        (hintsUsed).toString(),
+                      )
+              : gameL10n(context).gameUiTheWordWasLevelIsStillWaitingForYou(
+                  (completedWord).toString(),
+                  (_levelNumber).toString(),
+                ),
           textAlign: TextAlign.center,
         ),
         actions: [
@@ -302,10 +340,10 @@ class _WordGuessLevelsScreenState extends State<WordGuessLevelsScreen> {
             },
             child: Text(
               _allLevelsComplete
-                  ? 'Finish'
+                  ? gameL10n(context).gameUiFinish
                   : didWin
-                  ? 'Next Level'
-                  : 'Retry Level',
+                  ? gameL10n(context).gameUiNextLevel254fd73
+                  : gameL10n(context).gameUiRetryLevel,
             ),
           ),
         ],
@@ -462,17 +500,14 @@ class _WordGuessLevelsScreenState extends State<WordGuessLevelsScreen> {
     showDialog<void>(
       context: context,
       builder: (dialogContext) => AlertDialog(
-        title: const Text('How to Play'),
-        content: const Text(
-          'Each level has one DevOps word. Words shorter than five letters start '
-          'with no free letters; longer words start with one. Use the letter rack '
-          'to build the answer and press Enter. Hints reveal another letter and '
-          'reduce the reward by 20 points.',
+        title: Text(gameL10n(context).gameUiHowToPlay),
+        content: Text(
+          gameL10n(context).gameUiEachLevelHasOneDevOpsWordWordsShorterThan,
         ),
         actions: [
           FilledButton(
             onPressed: () => Navigator.pop(dialogContext),
-            child: const Text('Got it'),
+            child: Text(gameL10n(context).gameUiGotIt),
           ),
         ],
       ),
@@ -485,14 +520,14 @@ class _WordGuessLevelsScreenState extends State<WordGuessLevelsScreen> {
     final isCompact = MediaQuery.sizeOf(context).height < 600;
     if (_isLoading) {
       return Scaffold(
-        appBar: AppBar(title: const Text('Word Guess')),
+        appBar: AppBar(title: Text(gameL10n(context).gameUiWordGuess)),
         body: Center(child: CircularProgressIndicator()),
       );
     }
 
     if (_allLevelsComplete) {
       return Scaffold(
-        appBar: AppBar(title: const Text('Word Guess')),
+        appBar: AppBar(title: Text(gameL10n(context).gameUiWordGuess)),
         body: Center(
           child: Padding(
             padding: const EdgeInsets.all(24),
@@ -506,7 +541,9 @@ class _WordGuessLevelsScreenState extends State<WordGuessLevelsScreen> {
                 ),
                 const SizedBox(height: 16),
                 Text(
-                  'All ${WordGuessLevelService.levels.length} Levels Complete!',
+                  gameL10n(context).gameUiAllLevelsCompleteb3ea90e(
+                    (WordGuessLevelService.levels.length).toString(),
+                  ),
                   style: const TextStyle(
                     fontSize: 23,
                     fontWeight: FontWeight.bold,
@@ -516,7 +553,7 @@ class _WordGuessLevelsScreenState extends State<WordGuessLevelsScreen> {
                 FilledButton.icon(
                   onPressed: () => Navigator.pop(context),
                   icon: const Icon(Icons.arrow_back_rounded),
-                  label: const Text('Back to Games'),
+                  label: Text(gameL10n(context).gameUiBackToGames),
                 ),
               ],
             ),
@@ -526,18 +563,21 @@ class _WordGuessLevelsScreenState extends State<WordGuessLevelsScreen> {
     }
 
     final difficulty = switch (_level.difficulty) {
-      WordGuessDifficulty.easy => 'Easy',
-      WordGuessDifficulty.medium => 'Medium',
-      WordGuessDifficulty.hard => 'Hard',
+      WordGuessDifficulty.easy => gameL10n(context).gameUiEasy,
+      WordGuessDifficulty.medium => gameL10n(context).gameUiMedium,
+      WordGuessDifficulty.hard => gameL10n(context).gameUiHard,
     };
-    final hintEnabled = !_finished && _revealedPositions.length < _word.length;
+    final hintEnabled =
+        !_finished &&
+        !_purchasingHint &&
+        _revealedPositions.length < _word.length;
 
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Word Guess'),
+        title: Text(gameL10n(context).gameUiWordGuess),
         actions: [
           IconButton(
-            tooltip: 'How to play',
+            tooltip: gameL10n(context).gameUiHowToPlay13a6b22,
             onPressed: _showHelpDialog,
             icon: const Icon(Icons.help_outline_rounded),
           ),
@@ -556,7 +596,10 @@ class _WordGuessLevelsScreenState extends State<WordGuessLevelsScreen> {
                     spacing: 10,
                     children: [
                       Text(
-                        'Level $_levelNumber/${WordGuessLevelService.levels.length}',
+                        gameL10n(context).gameUiLevel(
+                          (_levelNumber).toString(),
+                          (WordGuessLevelService.levels.length).toString(),
+                        ),
                         style: Theme.of(context).textTheme.titleMedium
                             ?.copyWith(fontWeight: FontWeight.w700),
                       ),
@@ -578,13 +621,16 @@ class _WordGuessLevelsScreenState extends State<WordGuessLevelsScreen> {
                     ),
                   ),
                   Text(
-                    _level.hint,
+                    _level.localizedHint(context),
                     textAlign: TextAlign.center,
                     style: Theme.of(context).textTheme.bodyMedium,
                   ),
                   const SizedBox(height: 4),
                   Text(
-                    'Reward $_earnedPoints pts · hints used $_hintsUsed',
+                    gameL10n(context).gameUiRewardPtsHintsUsed(
+                      (_earnedPoints).toString(),
+                      (_hintsUsed).toString(),
+                    ),
                     style: Theme.of(context).textTheme.labelMedium?.copyWith(
                       color: colors.onSurfaceVariant,
                     ),
@@ -628,7 +674,7 @@ class _WordGuessLevelsScreenState extends State<WordGuessLevelsScreen> {
                       tapTargetSize: MaterialTapTargetSize.shrinkWrap,
                     ),
                     icon: const Icon(Icons.lightbulb_outline_rounded),
-                    label: const Text('Hint · −20 pts'),
+                    label: Text(gameL10n(context).gameUiHint20Pts),
                   ),
                   Padding(
                     padding: const EdgeInsets.symmetric(vertical: 4),
@@ -657,7 +703,7 @@ class _WordGuessLevelsScreenState extends State<WordGuessLevelsScreen> {
                               key: const ValueKey('word-guess-enter'),
                               onPressed: _finished ? null : _submit,
                               icon: const Icon(Icons.check_rounded),
-                              label: const Text('Enter'),
+                              label: Text(gameL10n(context).gameUiEnter),
                             ),
                           ),
                         ),
@@ -669,7 +715,7 @@ class _WordGuessLevelsScreenState extends State<WordGuessLevelsScreen> {
                               key: const ValueKey('word-guess-delete'),
                               onPressed: _finished ? null : _deleteLetter,
                               icon: const Icon(Icons.backspace_rounded),
-                              label: const Text('Delete'),
+                              label: Text(gameL10n(context).gameUiDelete),
                             ),
                           ),
                         ),

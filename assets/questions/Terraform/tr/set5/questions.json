@@ -1,0 +1,302 @@
+[
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "Terraform'un mevcut nesneyi koruyabilmesi için kaynak adresi değişikliğini hangi bildirimsel blok kaydeder?",
+    "options": [
+      "removed",
+      "check",
+      "moved",
+      "import"
+    ],
+    "answer": "moved"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "moved bloğunda yeni kaynak adresini hangi argüman belirtir?",
+    "options": [
+      "provider",
+      "to",
+      "from",
+      "id"
+    ],
+    "answer": "to"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "apply işlemi sırasında içe aktarılacak mevcut altyapı nesnesini hangi blok bildirir?",
+    "options": [
+      "import",
+      "moved",
+      "output",
+      "check"
+    ],
+    "answer": "import"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "removed bloğunun hangi ayarı gerçek altyapı nesnesini yok etmeden kaynağı unutur?",
+    "options": [
+      "lifecycle { destroy = true }",
+      "lifecycle { create_before_destroy = true }",
+      "lifecycle { prevent_destroy = false }",
+      "lifecycle { destroy = false }"
+    ],
+    "answer": "lifecycle { destroy = false }"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "Normal bir girdi değişkeni sensitive olarak işaretlendiğinde yerel durum dosyasındaki değerine ne olur?",
+    "options": [
+      "Her zaman durum dışında bırakılır",
+      "Saklanmadan önce değişkenin adıyla değiştirilir",
+      "Normal CLI çıktısında gizlense de düz metin olarak saklanabilir",
+      "sensitive bayrağı tarafından otomatik şifrelenir"
+    ],
+    "answer": "Normal CLI çıktısında gizlense de düz metin olarak saklanabilir"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "output komutunun hangi biçimi hassas çıktı değerlerini makine tarafından okunabilir halde açığa çıkarabilir?",
+    "options": [
+      "terraform providers schema -json",
+      "terraform output -json",
+      "terraform output -help",
+      "terraform output -no-color"
+    ],
+    "answer": "terraform output -json"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "Terraform değerini JSON dizgesine hangi işlev dönüştürür?",
+    "options": [
+      "jsonencode",
+      "jsondecode",
+      "yamldecode",
+      "file"
+    ],
+    "answer": "jsonencode"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "JSON dizgesini Terraform değerine hangi işlev ayrıştırır?",
+    "options": [
+      "jsonencode",
+      "yamlencode",
+      "templatefile",
+      "jsondecode"
+    ],
+    "answer": "jsondecode"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "Verilen değişken eşlemesiyle şablon dosyasını hangi işlev işler?",
+    "options": [
+      "fileset",
+      "filebase64",
+      "templatefile",
+      "file"
+    ],
+    "answer": "templatefile"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "Dinamik hata olmadan değerlendirilen ilk argümanı hangi işlev döndürür?",
+    "options": [
+      "lookup",
+      "try",
+      "can",
+      "coalesce"
+    ],
+    "answer": "try"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "İfadenin dinamik hata olmadan değerlendirilebilirliğini hangi işlev bildirir?",
+    "options": [
+      "can",
+      "try",
+      "contains",
+      "length"
+    ],
+    "answer": "can"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "merge işlevine verilen iki eşleme aynı anahtarı içerirse hangi değer kazanır?",
+    "options": [
+      "Önceki argümandaki değer",
+      "Değerler her zaman listede birleştirilir",
+      "Yinelenen anahtar her zaman hata oluşturur",
+      "Sonraki argümandaki değer"
+    ],
+    "answer": "Sonraki argümandaki değer"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "5.4.x sürümlerine izin verip 5.5.0 sürümüne izin vermeyen sağlayıcı sürüm kısıtı hangisidir?",
+    "options": [
+      ">= 5.4.0",
+      ">= 5.0, < 6.0",
+      "~> 5.4.0",
+      "~> 5.4"
+    ],
+    "answer": "~> 5.4.0"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "Terraform null atanmış kaynak argümanını genellikle nasıl ele alır?",
+    "options": [
+      "Kaynağın tamamını silme isteği olarak",
+      "Varsayılanlarına ve gerekliliklerine tabi, belirtilmemiş bir argüman olarak",
+      "Her sağlayıcıda boş dizge olarak",
+      "Her sağlayıcıda sayısal sıfır olarak"
+    ],
+    "answer": "Varsayılanlarına ve gerekliliklerine tabi, belirtilmemiş bir argüman olarak"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "Yazıldığı modülün dosya sistemi yolunu hangi ifade belirtir?",
+    "options": [
+      "path.module",
+      "path.root",
+      "path.cwd",
+      "terraform.workspace"
+    ],
+    "answer": "path.module"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "CLI yapılandırmasını HCP Terraform'a bağlamak için terraform bloğunun hangi özelliği önerilir?",
+    "options": [
+      "locals",
+      "moved",
+      "check",
+      "cloud"
+    ],
+    "answer": "cloud"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "terraform_remote_state başvurulan durumdan hangi üst düzey değerleri doğrudan sunar?",
+    "options": [
+      "Tüm sağlayıcı kimlik bilgilerini",
+      "Tüm alt modül yerel değerlerini",
+      "Kök modül çıktılarını",
+      "Her kaynak özniteliğini üst düzey çıktı olarak"
+    ],
+    "answer": "Kök modül çıktılarını"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "Başvurulan yönetilen kaynak değiştiğinde değiştirme işlemini hangi yaşam döngüsü kuralı ister?",
+    "options": [
+      "create_before_destroy",
+      "replace_triggered_by",
+      "ignore_changes",
+      "prevent_destroy"
+    ],
+    "answer": "replace_triggered_by"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "Ayrı sağlayıcı kurmadan normal bir girdi değerine kaynak yaşam döngüsünü hangi yerleşik yönetilen kaynak verir?",
+    "options": [
+      "terraform_data",
+      "terraform_remote_state",
+      "local_file",
+      "random_id"
+    ],
+    "answer": "terraform_data"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "Normal plan veya apply sırasında check bloğundaki bir doğrulama başarısız olursa ne olur?",
+    "options": [
+      "Terraform denetlenen nesneyi her zaman yok eder",
+      "Terraform check bloğunu sessizce kaldırır",
+      "Terraform herhangi bir kaynağı yenilemeden her zaman çıkar",
+      "Terraform uyarı verir ve sırf bu hata nedeniyle işlemi engellemez"
+    ],
+    "answer": "Terraform uyarı verir ve sırf bu hata nedeniyle işlemi engellemez"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "Kaynağın yaşam döngüsü ön koşulu false olarak değerlendirilirse ne olur?",
+    "options": [
+      "Terraform kaynağı veri kaynağına dönüştürür",
+      "Terraform ön koşulu yalnızca uyarıyla değiştirir",
+      "Terraform hata bildirir ve ilgili işlemi engeller",
+      "Terraform ön koşulu sonraki çalıştırmaya kadar yok sayar"
+    ],
+    "answer": "Terraform hata bildirir ve ilgili işlemi engeller"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "Terraform'un yerel test dosyalarını hangi komut çalıştırır?",
+    "options": [
+      "terraform console",
+      "terraform test",
+      "terraform validate",
+      "terraform fmt"
+    ],
+    "answer": "terraform test"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "Terraform testindeki run bloğunun varsayılan apply yerine plan yürütmesini hangi ayar sağlar?",
+    "options": [
+      "command = plan",
+      "command = validate",
+      "command = refresh",
+      "command = console"
+    ],
+    "answer": "command = plan"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "Bir dizin altında glob desenine uyan göreli yollar kümesini hangi işlev döndürür?",
+    "options": [
+      "file",
+      "dirname",
+      "basename",
+      "fileset"
+    ],
+    "answer": "fileset"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "Farklı erişim denetimleri gerektiren ortamları ayırmak için yalnızca CLI çalışma alanları neden uygun olmayabilir?",
+    "options": [
+      "Farklı girdi değişkeni değerlerinin kullanılmasını engellerler",
+      "Tüm ortamlarda aynı kaynak adlarını zorunlu kılarlar",
+      "Aynı arka uç yapılandırmasını ve kimlik doğrulama bağlamını paylaşırlar",
+      "Her zaman tek bir durum anlık görüntüsünü paylaşırlar"
+    ],
+    "answer": "Aynı arka uç yapılandırmasını ve kimlik doğrulama bağlamını paylaşırlar"
+  }
+]

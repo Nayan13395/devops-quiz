@@ -11,12 +11,14 @@ class TrueFalseBlitzStatement {
     required this.question,
     required this.answer,
     required this.isTrue,
+    required this.sourceQuestion,
   });
 
   final String category;
   final String question;
   final String answer;
   final bool isTrue;
+  final Question sourceQuestion;
 }
 
 class TrueFalseBlitzService {
@@ -89,6 +91,7 @@ class TrueFalseBlitzService {
           question: trueQuestion.question,
           answer: trueQuestion.answer,
           isTrue: true,
+          sourceQuestion: trueQuestion,
         ),
       );
       deck.add(
@@ -97,6 +100,7 @@ class TrueFalseBlitzService {
           question: falseQuestion.question,
           answer: wrongAnswers[random.nextInt(wrongAnswers.length)],
           isTrue: false,
+          sourceQuestion: falseQuestion,
         ),
       );
     }

@@ -1,0 +1,302 @@
+[
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "哪个声明式块记录资源地址变更，使 Terraform 能保留现有对象？",
+    "options": [
+      "removed",
+      "check",
+      "moved",
+      "import"
+    ],
+    "answer": "moved"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "moved 块中的哪个参数指定新的资源地址？",
+    "options": [
+      "provider",
+      "to",
+      "from",
+      "id"
+    ],
+    "answer": "to"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "哪个块声明将在 apply 操作期间导入的现有基础设施对象？",
+    "options": [
+      "import",
+      "moved",
+      "output",
+      "check"
+    ],
+    "answer": "import"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "removed 块的哪个设置将资源从状态中移除，而不销毁其实际基础设施对象？",
+    "options": [
+      "lifecycle { destroy = true }",
+      "lifecycle { create_before_destroy = true }",
+      "lifecycle { prevent_destroy = false }",
+      "lifecycle { destroy = false }"
+    ],
+    "answer": "lifecycle { destroy = false }"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "普通输入变量标记为 sensitive 后，其值在本地状态文件中会怎样？",
+    "options": [
+      "始终不被写入状态",
+      "存储前被替换为变量名称",
+      "虽然常规 CLI 输出会隐藏它，但仍可能以明文存储",
+      "由 sensitive 标志自动加密"
+    ],
+    "answer": "虽然常规 CLI 输出会隐藏它，但仍可能以明文存储"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "output 命令的哪种格式可能以机器可读形式暴露敏感输出值？",
+    "options": [
+      "terraform providers schema -json",
+      "terraform output -json",
+      "terraform output -help",
+      "terraform output -no-color"
+    ],
+    "answer": "terraform output -json"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "哪个函数将 Terraform 值转换为 JSON 字符串？",
+    "options": [
+      "jsonencode",
+      "jsondecode",
+      "yamldecode",
+      "file"
+    ],
+    "answer": "jsonencode"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "哪个函数将 JSON 字符串解析为 Terraform 值？",
+    "options": [
+      "jsonencode",
+      "yamlencode",
+      "templatefile",
+      "jsondecode"
+    ],
+    "answer": "jsondecode"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "哪个函数使用提供的变量映射渲染模板文件？",
+    "options": [
+      "fileset",
+      "filebase64",
+      "templatefile",
+      "file"
+    ],
+    "answer": "templatefile"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "哪个函数返回第一个求值时不产生动态错误的参数？",
+    "options": [
+      "lookup",
+      "try",
+      "can",
+      "coalesce"
+    ],
+    "answer": "try"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "哪个函数报告表达式能否在没有动态错误的情况下求值？",
+    "options": [
+      "can",
+      "try",
+      "contains",
+      "length"
+    ],
+    "answer": "can"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "传给 merge 的两个映射包含同一键时，哪个值生效？",
+    "options": [
+      "较早参数中的值",
+      "两个值总会被合并成列表",
+      "重复的键总会导致错误",
+      "较晚参数中的值"
+    ],
+    "answer": "较晚参数中的值"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "哪个提供程序版本约束允许 5.4.x，但不允许 5.5.0？",
+    "options": [
+      ">= 5.4.0",
+      ">= 5.0, < 6.0",
+      "~> 5.4.0",
+      "~> 5.4"
+    ],
+    "answer": "~> 5.4.0"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "Terraform 通常如何处理赋值为 null 的资源参数？",
+    "options": [
+      "视为删除整个资源的请求",
+      "视为省略该参数，按其默认值和要求处理",
+      "在所有提供程序中都视为空字符串",
+      "在所有提供程序中都视为数值零"
+    ],
+    "answer": "视为省略该参数，按其默认值和要求处理"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "哪个表达式表示其所在模块的文件系统路径？",
+    "options": [
+      "path.module",
+      "path.root",
+      "path.cwd",
+      "terraform.workspace"
+    ],
+    "answer": "path.module"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "建议使用 terraform 块的哪个功能将 CLI 配置连接到 HCP Terraform？",
+    "options": [
+      "locals",
+      "moved",
+      "check",
+      "cloud"
+    ],
+    "answer": "cloud"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "terraform_remote_state 直接从引用状态中提供哪些顶层值？",
+    "options": [
+      "所有提供程序凭据",
+      "所有子模块的本地值",
+      "根模块输出",
+      "将每个资源属性都作为顶层输出"
+    ],
+    "answer": "根模块输出"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "哪个生命周期规则在被引用的受管资源变化时请求替换？",
+    "options": [
+      "create_before_destroy",
+      "replace_triggered_by",
+      "ignore_changes",
+      "prevent_destroy"
+    ],
+    "answer": "replace_triggered_by"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "哪个内置受管资源无需安装单独的提供程序，就能为普通输入值提供资源生命周期？",
+    "options": [
+      "terraform_data",
+      "terraform_remote_state",
+      "local_file",
+      "random_id"
+    ],
+    "answer": "terraform_data"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "在普通 plan 或 apply 期间，check 块中的断言失败会怎样？",
+    "options": [
+      "Terraform 总会销毁被检查的对象",
+      "Terraform 静默移除 check 块",
+      "Terraform 总会在刷新任何资源前退出",
+      "Terraform 发出警告，但不会仅因这次失败而阻止操作"
+    ],
+    "answer": "Terraform 发出警告，但不会仅因这次失败而阻止操作"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "资源生命周期前置条件求值为 false 时会怎样？",
+    "options": [
+      "Terraform 将资源转换为数据源",
+      "Terraform 将前置条件改为仅警告",
+      "Terraform 报告错误并阻止相关操作",
+      "Terraform 在下次运行前忽略该前置条件"
+    ],
+    "answer": "Terraform 报告错误并阻止相关操作"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "哪个命令运行 Terraform 原生测试文件？",
+    "options": [
+      "terraform console",
+      "terraform test",
+      "terraform validate",
+      "terraform fmt"
+    ],
+    "answer": "terraform test"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "哪个设置使 Terraform 测试的 run 块执行 plan，而不是默认的 apply？",
+    "options": [
+      "command = plan",
+      "command = validate",
+      "command = refresh",
+      "command = console"
+    ],
+    "answer": "command = plan"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "哪个函数返回某目录下匹配 glob 模式的相对路径集合？",
+    "options": [
+      "file",
+      "dirname",
+      "basename",
+      "fileset"
+    ],
+    "answer": "fileset"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "为什么仅靠 CLI 工作空间可能不适合隔离需要不同访问控制的环境？",
+    "options": [
+      "它们不允许使用不同的输入变量值",
+      "它们强制所有环境使用相同的资源名称",
+      "它们共享相同的后端配置和认证上下文",
+      "它们始终共享同一个状态快照"
+    ],
+    "answer": "它们共享相同的后端配置和认证上下文"
+  }
+]

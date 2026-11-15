@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import '../l10n/app_localizations.dart';
 import '../services/national_day_service.dart';
 
 class CelebrationCountryPicker extends StatefulWidget {
@@ -21,6 +22,7 @@ class _CelebrationCountryPickerState extends State<CelebrationCountryPicker> {
 
   @override
   Widget build(BuildContext context) {
+    final l10n = AppLocalizations.of(context);
     final countries = widget.countries
         .where(
           (country) =>
@@ -29,7 +31,7 @@ class _CelebrationCountryPickerState extends State<CelebrationCountryPicker> {
         )
         .toList();
     return AlertDialog(
-      title: const Text('Country / region'),
+      title: Text(l10n?.accountWelcomeCountryRegion ?? 'Country / region'),
       insetPadding: const EdgeInsets.all(16),
       content: SizedBox(
         width: 380,
@@ -38,9 +40,10 @@ class _CelebrationCountryPickerState extends State<CelebrationCountryPicker> {
           children: [
             TextField(
               key: const ValueKey('celebration-country-search'),
-              decoration: const InputDecoration(
-                labelText: 'Search country',
-                prefixIcon: Icon(Icons.search),
+              decoration: InputDecoration(
+                labelText:
+                    l10n?.accountWelcomeSearchCountry ?? 'Search country',
+                prefixIcon: const Icon(Icons.search),
               ),
               onChanged: (value) => setState(() => _query = value),
             ),
@@ -53,7 +56,11 @@ class _CelebrationCountryPickerState extends State<CelebrationCountryPicker> {
                     key: ValueKey(
                       'celebration-country-${country?.code ?? 'none'}',
                     ),
-                    title: Text(country?.name ?? 'Not selected'),
+                    title: Text(
+                      country?.name ??
+                          (l10n?.accountWelcomeCountryNotSelected ??
+                              'Not selected'),
+                    ),
                     selected: country?.code == widget.selectedCode,
                     trailing: country?.code == widget.selectedCode
                         ? const Icon(Icons.check_rounded)
@@ -69,7 +76,7 @@ class _CelebrationCountryPickerState extends State<CelebrationCountryPicker> {
       actions: [
         TextButton(
           onPressed: () => Navigator.pop(context),
-          child: const Text('Cancel'),
+          child: Text(l10n?.accountWelcomeCancel ?? 'Cancel'),
         ),
       ],
     );

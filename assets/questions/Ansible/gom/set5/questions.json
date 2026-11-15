@@ -1,0 +1,302 @@
+[
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "कामाच्या पांवड्यार वेगळी मांडावळ दिल्लिना आसतना, तपासणी पद्धतीन चलोयल्ल्या वेळार ती पद्धत समर्थीत नाशिल्ल्या मॉड्यूलाचें किदें जाता?",
+    "options": [
+      "मॉड्यूल सदांच आपले नेहमीचे बदल करता",
+      "मॉड्यूल आपोआप localhost चेर चलता",
+      "मॉड्यूल तपासणी पद्धतीक आदार दिवपाक लागसर तें परत परत चलयतात",
+      "बदल करचे बदला मॉड्यूल वगळटात"
+    ],
+    "answer": "बदल करचे बदला मॉड्यूल वगळटात"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "प्लेबुक --check वांगडा चलयलें तरी खरे बदल करू दिवपी कामाची मांडावळ खंयची?",
+    "options": [
+      "changed_when: false",
+      "ignore_errors: true",
+      "check_mode: false",
+      "diff: false"
+    ],
+    "answer": "check_mode: false"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "पयलींच कळयल्ले हॅन्डलर रोखडेच चलोवपी Ansible meta कृती खंयची?",
+    "options": [
+      "reset_connection",
+      "flush_handlers",
+      "clear_facts",
+      "end_play"
+    ],
+    "answer": "flush_handlers"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "बदल जाल्लीं दोन कामां एकाच हॅन्डलराक तो चलचे पयलीं कळयतात जाल्यार, ठरिल्ल्या वेळार तो हॅन्डलर साधारण कितले फावटीं चलता?",
+    "options": [
+      "एकदां",
+      "दोनदां",
+      "दरेक इन्व्हेंटरी गटाखातीर एकदां",
+      "एकदां लेगीत ना, कारण कळोवण्यां मदीं संघर्ष जाता"
+    ],
+    "answer": "एकदां"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "एकाच ठरिल्ल्या वेळार चलोवपाखातीर कळयल्ल्या हॅन्डलरांचो क्रम कित्याक लागून थारता?",
+    "options": [
+      "तांच्या नांवांचो वर्णानुक्रम",
+      "notify वळेरींतल्या नांवांचो क्रम",
+      "वेवस्थापीत होस्ट जोडिल्ले तो क्रम",
+      "handlers विभागांत तांची व्याख्या केल्लो क्रम"
+    ],
+    "answer": "handlers विभागांत तांची व्याख्या केल्लो क्रम"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "साधारण खंयचें अपेश ब्लॉकाची rescue कामां सुरू करता?",
+    "options": [
+      "प्लेबुकांत कामाची अवैध व्याख्या आसा",
+      "YAML दस्तावेजाचें रचना-विश्लेषण करपाक जायना",
+      "ब्लॉका भितरलें काम अपेशी निकाल परत दिता",
+      "काम सुरू जावचे पयलीं होस्टाक पावप अशक्य जाता"
+    ],
+    "answer": "ब्लॉका भितरलें काम अपेशी निकाल परत दिता"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "सामान्य कामाचेर दिल्लें ignore_errors खंयची चूक दाबून उरयना?",
+    "options": [
+      "true अशें मोल येवपी failed_when अट",
+      "व्याख्या करूंक नाशिल्ल्या चलाची चूक",
+      "आदेशान कळयल्ली शून्य नाशिल्ली निर्गमन स्थिती",
+      "अपेशी अशें स्पष्टपणान चिन्न केल्लो मॉड्यूलाचो निकाल"
+    ],
+    "answer": "व्याख्या करूंक नाशिल्ल्या चलाची चूक"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "हाताळूंक नाशिल्लें कामाचें अपेश जाल्यार चालू तुकड्यान तें काम सोंपयल्या उपरांत सगळ्या होस्टांचेर play थांबोवपी कीवर्ड खंयचो?",
+    "options": [
+      "any_errors_fatal",
+      "ignore_unreachable",
+      "max_fail_percentage: 100",
+      "force_handlers"
+    ],
+    "answer": "any_errors_fatal"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "पावप शक्य आशिल्ल्या होस्टाचेर फुडलें काम अपेशी जाल्यार force_handlers हाचो परिणाम किदें जाता?",
+    "options": [
+      "कळोवणी नासली तरी दरेक व्याख्या केल्लो हॅन्डलर चलता",
+      "सगळीं अपेशी कामां आपोआप परत चलयतात",
+      "खंयच्याय नियमित कामां पयलीं हॅन्डलर चलतात",
+      "पयलीं कळयल्ले हॅन्डलर त्या होस्टाचेर आजून चलूंक शकतात"
+    ],
+    "answer": "पयलीं कळयल्ले हॅन्डलर त्या होस्टाचेर आजून चलूंक शकतात"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "कामाचे संवेदनशील आर्ग्युमेंट आनी निकाल हांची सामान्य नोंद थांबोवपी कामाची मांडावळ खंयची?",
+    "options": [
+      "check_mode: true",
+      "changed_when: false",
+      "no_log: true",
+      "diff: true"
+    ],
+    "answer": "no_log: true"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "--diff चालू आसलें तरी फायलींतल्या मजकुरांतले फरक लिपोवपी कामाची मांडावळ खंयची?",
+    "options": [
+      "ignore_errors: true",
+      "diff: false",
+      "no_log: false",
+      "check_mode: false"
+    ],
+    "answer": "diff: false"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "हेर इन्व्हेंटरी होस्टा कडेन संबंदीत चल वापरूंक खंयचो शब्दकोश दिता?",
+    "options": [
+      "hostvars",
+      "ansible_facts",
+      "environment",
+      "ansible_loop"
+    ],
+    "answer": "hostvars"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "सद्याच्या होस्टाचें इन्व्हेंटरी नांव खंयच्या खास चलांत आसता?",
+    "options": [
+      "ansible_host",
+      "ansible_user",
+      "ansible_playbook_python",
+      "inventory_hostname"
+    ],
+    "answer": "inventory_hostname"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "होस्ट गटान सांज्या वापरपी चलांखातीर परंपरेन इन्व्हेंटरी लागसारची खंयची डिरेक्टरी वापरतात?",
+    "options": [
+      "roles",
+      "collections",
+      "group_vars",
+      "host_vars"
+    ],
+    "answer": "group_vars"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "ansible.builtin.file लुकअप पूर्वनिर्धारीतपणान फायल खंय वाचता?",
+    "options": [
+      "become_user न नांव दिल्ल्या होस्टाचेर",
+      "नियंत्रण नोडाचेर",
+      "दरेक वेवस्थापीत होस्टाचेर",
+      "play मधल्या पयल्या होस्टाचेर"
+    ],
+    "answer": "नियंत्रण नोडाचेर"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "YAML अक्षरमाळेक Ansible डेटा रचनेंत बदलपी फिल्टर खंयचो?",
+    "options": [
+      "from_yaml",
+      "to_yaml",
+      "to_json",
+      "dict2items"
+    ],
+    "answer": "from_yaml"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "शब्दकोशाक की/मोल शब्दकोशांच्या वळेरीन बदलपी फिल्टर खंयचो?",
+    "options": [
+      "items2dict",
+      "flatten",
+      "zip",
+      "dict2items"
+    ],
+    "answer": "dict2items"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "वळेरींतले परत आयिल्ले घटक काडपी फिल्टर खंयचो?",
+    "options": [
+      "reverse",
+      "flatten",
+      "unique",
+      "sort"
+    ],
+    "answer": "unique"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "अभिव्यक्ती तपासून दिल्लीं विधानां खरीं थारिनात जाल्यार अपेशी जावपी मॉड्यूल खंयचें?",
+    "options": [
+      "ansible.builtin.set_fact",
+      "ansible.builtin.assert",
+      "ansible.builtin.debug",
+      "ansible.builtin.pause"
+    ],
+    "answer": "ansible.builtin.assert"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "नियमित अभिव्यक्ती वापरून मजकूर फायलींतली विशिश्ट ओळ सांबाळपी मॉड्यूल खंयचें?",
+    "options": [
+      "ansible.builtin.lineinfile",
+      "ansible.builtin.blockinfile",
+      "ansible.builtin.copy",
+      "ansible.builtin.slurp"
+    ],
+    "answer": "ansible.builtin.lineinfile"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "URL मागणी करून अपेक्षित HTTP स्थिती कोड तपासूंक शकपी मॉड्यूल खंयचें?",
+    "options": [
+      "ansible.builtin.get_url",
+      "ansible.builtin.fetch",
+      "ansible.builtin.wait_for",
+      "ansible.builtin.uri"
+    ],
+    "answer": "ansible.builtin.uri"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "TCP पोर्ट मागिल्ल्या स्थितीक पावसर वाट पळोवपी मॉड्यूल खंयचें?",
+    "options": [
+      "ansible.builtin.async_status",
+      "ansible.builtin.ping",
+      "ansible.builtin.wait_for",
+      "ansible.builtin.pause"
+    ],
+    "answer": "ansible.builtin.wait_for"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "दिल्ली वाट पयलींच अस्तित्वांत आसल्यार ansible.builtin.command चलोवप वगळूंक लावपी प्राचल खंयचो?",
+    "options": [
+      "stdin",
+      "creates",
+      "removes",
+      "chdir"
+    ],
+    "answer": "creates"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "प्रतीकात्मक जोड तयार करपी file मॉड्यूलाची मांडावळ खंयची?",
+    "options": [
+      "state: link",
+      "state: directory",
+      "state: touch",
+      "state: hard"
+    ],
+    "answer": "state: link"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "फुडल्या play खातीर मेमरींतल्या इन्व्हेंटरींत होस्ट जोडूंक शकपी मॉड्यूल खंयचें?",
+    "options": [
+      "ansible.builtin.group_by",
+      "ansible.builtin.set_fact",
+      "ansible.builtin.meta",
+      "ansible.builtin.add_host"
+    ],
+    "answer": "ansible.builtin.add_host"
+  }
+]

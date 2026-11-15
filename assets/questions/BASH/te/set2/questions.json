@@ -1,0 +1,302 @@
+[
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "date అవుట్‌పుట్‌ను now అనే వేరియబుల్‌లో నిల్వ చేసే సింటాక్స్ ఏది?",
+    "options": [
+      "now=$(date)",
+      "now=date",
+      "now:=$(date)",
+      "date->now"
+    ],
+    "answer": "now=$(date)"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "స్క్రిప్ట్ పేరును ఏ ప్రత్యేక పారామీటర్ సూచిస్తుంది?",
+    "options": [
+      "$0",
+      "$1",
+      "$#",
+      "$@"
+    ],
+    "answer": "$0"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "అత్యంత ఇటీవలి బ్యాక్‌గ్రౌండ్ కమాండ్ యొక్క ప్రాసెస్ ID కి విస్తరించే ప్రత్యేక పారామీటర్ ఏది?",
+    "options": [
+      "$!",
+      "$$",
+      "$?",
+      "$#"
+    ],
+    "answer": "$!"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "positional ఆర్గ్యుమెంట్ల సంఖ్యను ఏ ప్రత్యేక పారామీటర్ సూచిస్తుంది?",
+    "options": [
+      "$#",
+      "$@",
+      "$*",
+      "$$"
+    ],
+    "answer": "$#"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "అన్ని positional ఆర్గ్యుమెంట్లను వేర్వేరు పదాలుగా ఏ ప్రత్యేక పారామీటర్ విస్తరిస్తుంది?",
+    "options": [
+      "$@",
+      "$*",
+      "$#",
+      "$0"
+    ],
+    "answer": "$@"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "మొదటి positional పారామీటర్‌ను తొలగించి, మిగిలినవాటిని ఒక స్థానం కిందికి జరిపే Bash builtin కమాండ్ ఏది?",
+    "options": [
+      "shift",
+      "unshift",
+      "pop",
+      "rotate"
+    ],
+    "answer": "shift"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "ప్రస్తుత షెల్ యొక్క ప్రాసెస్ ID ని ఏ ప్రత్యేక పారామీటర్ సూచిస్తుంది?",
+    "options": [
+      "$$",
+      "$!",
+      "$?",
+      "$0"
+    ],
+    "answer": "$$"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "చివరి కమాండ్ యొక్క exit status ను ఏ ప్రత్యేక పారామీటర్ సూచిస్తుంది?",
+    "options": [
+      "$?",
+      "$!",
+      "$$",
+      "$#"
+    ],
+    "answer": "$?"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "var సెట్ చేయబడకపోయినా లేదా ఖాళీగా ఉన్నా డిఫాల్ట్ విలువను తిరిగి ఇచ్చే ఎక్స్‌పాన్షన్ ఏది?",
+    "options": [
+      "${var:-default}",
+      "${var:=default}",
+      "${var:+default}",
+      "${var:?default}"
+    ],
+    "answer": "${var:-default}"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "var నుండి 3 అక్షరాలను, offset 2 నుండి ప్రారంభించి, వెలికితీసే ఎక్స్‌పాన్షన్ ఏది?",
+    "options": [
+      "${var:2:3}",
+      "${var:3:2}",
+      "${var[2,3]}",
+      "${var#2:3}"
+    ],
+    "answer": "${var:2:3}"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "var విలువ యొక్క పొడవును తిరిగి ఇచ్చే ఎక్స్‌పాన్షన్ ఏది?",
+    "options": [
+      "${#var}",
+      "${len(var)}",
+      "${var:length}",
+      "${var#length}"
+    ],
+    "answer": "${#var}"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "var విలువను అప్పర్‌కేస్‌కు మార్చే ఎక్స్‌పాన్షన్ ఏది?",
+    "options": [
+      "${var^^}",
+      "${var,,}",
+      "${var!!}",
+      "${var##}"
+    ],
+    "answer": "${var^^}"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "var నుండి అతి పొడవైన మ్యాచింగ్ prefix ప్యాటర్న్‌ను తొలగించే ఎక్స్‌పాన్షన్ ఏది?",
+    "options": [
+      "${var##pattern}",
+      "${var#pattern}",
+      "${var%%pattern}",
+      "${var%pattern}"
+    ],
+    "answer": "${var##pattern}"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "var లో pattern యొక్క మొదటి మ్యాచ్‌ను మాత్రమే భర్తీ చేసే ఎక్స్‌పాన్షన్ ఏది?",
+    "options": [
+      "${var/pattern/replacement}",
+      "${var//pattern/replacement}",
+      "${var#pattern}",
+      "${var%pattern}"
+    ],
+    "answer": "${var/pattern/replacement}"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "var సెట్ చేయబడకపోయినా లేదా ఖాళీగా ఉన్నా ఎర్రర్ సందేశాన్ని ప్రింట్ చేసి, non-interactive స్క్రిప్ట్‌ను ఆపివేసే ఎక్స్‌పాన్షన్ ఏది?",
+    "options": [
+      "${var:?message}",
+      "${var:-message}",
+      "${var:+message}",
+      "${var:=message}"
+    ],
+    "answer": "${var:?message}"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "Bash లో అరిథ్‌మెటిక్ ఎక్స్‌పాన్షన్‌ను ఏ సింటాక్స్ నిర్వహిస్తుంది?",
+    "options": [
+      "$((5 + 3))",
+      "$(5 + 3)",
+      "${5 + 3}",
+      "$[5 + 3]"
+    ],
+    "answer": "$((5 + 3))"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "count వేరియబుల్‌ను ఒకటి పెంచే కమాండ్ ఏది?",
+    "options": [
+      "let count++",
+      "count++",
+      "increment count",
+      "add count"
+    ],
+    "answer": "let count++"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "8 ను ప్రింట్ చేసే కమాండ్ ఏది, 5 మరియు 3 ను కలిపిన తర్వాత?",
+    "options": [
+      "expr 5 + 3",
+      "expr 5+3",
+      "expr5 + 3",
+      "expr add 5 3"
+    ],
+    "answer": "expr 5 + 3"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "count ను integer వేరియబుల్‌గా ప్రకటించే కమాండ్ ఏది?",
+    "options": [
+      "declare -i count",
+      "declare int count",
+      "integer count",
+      "set count integer"
+    ],
+    "answer": "declare -i count"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "వేరియబుల్‌ను రీడ్-ఓన్లీగా చేసే కమాండ్ ఏది?",
+    "options": [
+      "readonly var",
+      "lock var",
+      "const var",
+      "final var"
+    ],
+    "answer": "readonly var"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "షెల్ ఎన్విరాన్‌మెంట్ నుండి వేరియబుల్‌ను తొలగించే కమాండ్ ఏది?",
+    "options": [
+      "unset var",
+      "delete var",
+      "remove var",
+      "clear var"
+    ],
+    "answer": "unset var"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "వేరియబుల్‌ను చైల్డ్ ప్రాసెస్‌లకు అందుబాటులో ఉంచే కమాండ్ ఏది?",
+    "options": [
+      "export var",
+      "share var",
+      "env var",
+      "publish var"
+    ],
+    "answer": "export var"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "అవుట్‌పుట్ రీడైరెక్షన్ ఇప్పటికే ఉన్న ఫైల్‌ను ఓవర్‌రైట్ చేయకుండా నిరోధించే ఆప్షన్ ఏది?",
+    "options": [
+      "set -o noclobber",
+      "set -o nooverwrite",
+      "set -o protect",
+      "set -o safe"
+    ],
+    "answer": "set -o noclobber"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "షెల్ ప్రారంభమైనప్పటి నుండి గడిచిన సెకన్ల సంఖ్యను కలిగి ఉండే Bash వేరియబుల్ ఏది?",
+    "options": [
+      "$SECONDS",
+      "$RANDOM",
+      "$LINENO",
+      "$UID"
+    ],
+    "answer": "$SECONDS"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "var సెట్ చేయబడి, ఖాళీగా లేనప్పుడు మాత్రమే దాని స్థానంలో alt ను ప్రతిక్షేపించే Bash ఎక్స్‌పాన్షన్ ఏది?",
+    "options": [
+      "${var:+alt}",
+      "${var:-alt}",
+      "${var:=alt}",
+      "${var:?alt}"
+    ],
+    "answer": "${var:+alt}"
+  }
+]

@@ -13,6 +13,8 @@ import 'package:devops_quiz/screens/spin_wheel_screen.dart';
 import 'package:devops_quiz/screens/word_guess_levels_screen.dart';
 import 'package:devops_quiz/services/daily_login_bonus_service.dart';
 import 'package:devops_quiz/services/in_app_notification_service.dart';
+import 'package:devops_quiz/services/learning_translation_service.dart';
+import 'package:devops_quiz/services/question_service.dart';
 import 'package:devops_quiz/widgets/category_button.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
@@ -73,6 +75,12 @@ Widget responsiveGameApp(Widget home, {double textScale = 1.3}) {
 
 void main() {
   TestWidgetsFlutterBinding.ensureInitialized();
+  setUpAll(() async {
+    for (final language in ['en', 'hi', 'mr']) {
+      await loadLearningCardTranslations(language);
+    }
+  });
+  setUp(() => SharedPreferences.setMockInitialValues({}));
 
   testWidgets('category button shows its icon and handles taps', (
     tester,
@@ -180,21 +188,31 @@ void main() {
     () async {
       for (final entry in categoryAssets.entries) {
         final banks = <String, List<dynamic>>{};
+        final translations = <String, Map<String, LearningCardTranslation>>{};
         for (final language in ['en', 'hi', 'mr']) {
-          banks[language] =
+          translations[language] = await loadLearningCardTranslations(language);
+          banks[language] = <dynamic>[];
+          for (var set = 1; set <= QuestionService.setsPerCategory; set++) {
+            banks[language]!.addAll(
               jsonDecode(
                     await rootBundle.loadString(
-                      'assets/questions/${entry.value}_$language.json',
+                      QuestionService.assetPath(
+                        entry.value.split('/').first,
+                        language,
+                        set,
+                      ),
                     ),
                   )
-                  as List<dynamic>;
+                  as List<dynamic>,
+            );
+          }
         }
         final concepts = learningCards.where(
           (card) => card.topic == entry.key && card.isConcept,
         );
         expect(concepts, isNotEmpty);
         expect(
-          concepts.map((card) => card.description.toLowerCase()).toSet(),
+          concepts.map((card) => card.sourceQuestion).toSet(),
           hasLength(concepts.length),
         );
         for (final card in concepts) {
@@ -207,7 +225,10 @@ void main() {
           for (final language in ['en', 'hi', 'mr']) {
             final source =
                 banks[language]![card.sourceQuestion!] as Map<String, dynamic>;
-            final translated = card.localized(language);
+            final translated = card.localized(
+              language,
+              translation: translations[language]![card.id],
+            );
             expect(
               translated.command,
               source['question'],
@@ -320,21 +341,28 @@ void main() {
     expect(tester.takeException(), isNull);
   });
 
-  testWidgets('left/right swipes, wheel and buttons navigate cards', (
+  testWidgets('left/right/up/down swipes, wheel and buttons navigate cards', (
     tester,
   ) async {
     await tester.pumpWidget(learningApp('en'));
     await tester.pumpAndSettle();
+    final swipeArea = find.byKey(const Key('learning-swipe-area'));
     await tester.tap(find.byTooltip('Next'));
     await tester.pumpAndSettle();
     expect(find.text('2 / 1000'), findsOneWidget);
     await tester.tap(find.byTooltip('Previous'));
     await tester.pumpAndSettle();
     expect(find.text('1 / 1000'), findsOneWidget);
-    await tester.drag(find.byType(PageView), const Offset(-400, 0));
+    await tester.drag(swipeArea, const Offset(-400, 0));
     await tester.pumpAndSettle();
     expect(find.text('2 / 1000'), findsOneWidget);
-    await tester.drag(find.byType(PageView), const Offset(600, 0));
+    await tester.drag(swipeArea, const Offset(600, 0));
+    await tester.pumpAndSettle();
+    expect(find.text('1 / 1000'), findsOneWidget);
+    await tester.drag(swipeArea, const Offset(0, -300));
+    await tester.pumpAndSettle();
+    expect(find.text('2 / 1000'), findsOneWidget);
+    await tester.drag(swipeArea, const Offset(0, 300));
     await tester.pumpAndSettle();
     expect(find.text('1 / 1000'), findsOneWidget);
     await tester.sendEventToBinding(
@@ -345,6 +373,59 @@ void main() {
     );
     await tester.pumpAndSettle();
     expect(find.text('2 / 1000'), findsOneWidget);
+    expect(tester.takeException(), isNull);
+  });
+
+  testWidgets('auto swap moves to the next card every 10 seconds', (
+    tester,
+  ) async {
+    await tester.pumpWidget(learningApp('en'));
+    await tester.pumpAndSettle();
+    await tester.tap(find.byTooltip('Auto swap every 10 seconds'));
+    await tester.pump();
+    await tester.pump(const Duration(seconds: 9));
+    expect(find.text('1 / 1000'), findsOneWidget);
+    await tester.pump(const Duration(seconds: 1));
+    await tester.pumpAndSettle(const Duration(milliseconds: 100));
+    expect(find.text('2 / 1000'), findsOneWidget);
+    await tester.tap(find.byTooltip('Stop auto swap'));
+    await tester.pump(const Duration(seconds: 20));
+    expect(find.text('2 / 1000'), findsOneWidget);
+    expect(tester.takeException(), isNull);
+  });
+
+  testWidgets('shuffle shows cards in random order and can be turned off', (
+    tester,
+  ) async {
+    await tester.pumpWidget(learningApp('en'));
+    await tester.pumpAndSettle();
+    final firstCard = learningCards.first;
+    await tester.tap(find.byTooltip('Shuffle cards'));
+    await tester.pumpAndSettle();
+    expect(find.text('1 / 1000'), findsOneWidget);
+    await tester.tap(find.byTooltip('Turn shuffle off'));
+    await tester.pumpAndSettle();
+    expect(find.byKey(ValueKey(firstCard.id)), findsOneWidget);
+    expect(tester.takeException(), isNull);
+  });
+
+  testWidgets('cards can be saved, filtered and persist', (tester) async {
+    SharedPreferences.setMockInitialValues({});
+    await tester.pumpWidget(learningApp('en'));
+    await tester.pumpAndSettle();
+    await tester.tap(find.byTooltip('Save card'));
+    await tester.pumpAndSettle();
+    expect(find.byTooltip('Remove from saved'), findsOneWidget);
+    await tester.tap(find.byTooltip('Next'));
+    await tester.pumpAndSettle();
+    await tester.tap(find.byTooltip('Show saved cards (1)'));
+    await tester.pumpAndSettle();
+    expect(find.text('1 / 1'), findsOneWidget);
+    await tester.tap(find.byTooltip('Remove from saved'));
+    await tester.pumpAndSettle();
+    expect(find.text('0 / 0'), findsOneWidget);
+    final prefs = await SharedPreferences.getInstance();
+    expect(prefs.getStringList('saved_learning_cards'), isEmpty);
     expect(tester.takeException(), isNull);
   });
 
@@ -478,6 +559,7 @@ void main() {
       find.text('New Skill Games Available! 🎮'),
       200,
       scrollable: find.byType(Scrollable).last,
+      maxScrolls: 100,
     );
     final card = find.ancestor(
       of: find.text('New Skill Games Available! 🎮'),

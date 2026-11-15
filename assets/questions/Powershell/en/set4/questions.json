@@ -1,0 +1,302 @@
+[
+  {
+    "category": "PowerShell",
+    "set": 4,
+    "question": "Which keyword handles terminating errors?",
+    "options": [
+      "catch",
+      "error",
+      "exception",
+      "handle"
+    ],
+    "answer": "catch"
+  },
+  {
+    "category": "PowerShell",
+    "set": 4,
+    "question": "Which keyword runs code after try/catch regardless of errors?",
+    "options": [
+      "finally",
+      "always",
+      "end",
+      "complete"
+    ],
+    "answer": "finally"
+  },
+  {
+    "category": "PowerShell",
+    "set": 4,
+    "question": "Which automatic variable stores recent errors?",
+    "options": [
+      "$Error",
+      "$Errors",
+      "$Exception",
+      "$LastError"
+    ],
+    "answer": "$Error"
+  },
+  {
+    "category": "PowerShell",
+    "set": 4,
+    "question": "Which common parameter changes error handling behavior?",
+    "options": [
+      "-ErrorAction",
+      "-ErrorMode",
+      "-OnException",
+      "-Catch"
+    ],
+    "answer": "-ErrorAction"
+  },
+  {
+    "category": "PowerShell",
+    "set": 4,
+    "question": "Which ErrorAction value suppresses errors and does not add them to $Error?",
+    "options": [
+      "Ignore",
+      "SilentlyContinue",
+      "Continue",
+      "Stop"
+    ],
+    "answer": "Ignore"
+  },
+  {
+    "category": "PowerShell",
+    "set": 4,
+    "question": "Which variable stores the exit code of the last native command?",
+    "options": [
+      "$LASTEXITCODE",
+      "$EXITCODE",
+      "$ErrorCode",
+      "$NativeExit"
+    ],
+    "answer": "$LASTEXITCODE"
+  },
+  {
+    "category": "PowerShell",
+    "set": 4,
+    "question": "Which variable indicates whether the last command succeeded?",
+    "options": [
+      "$?",
+      "$OK",
+      "$Success",
+      "$Result"
+    ],
+    "answer": "$?"
+  },
+  {
+    "category": "PowerShell",
+    "set": 4,
+    "question": "Which cmdlet starts a background job?",
+    "options": [
+      "Start-Job",
+      "Invoke-Job",
+      "New-Job",
+      "Run-Job"
+    ],
+    "answer": "Start-Job"
+  },
+  {
+    "category": "PowerShell",
+    "set": 4,
+    "question": "Which cmdlet lists background jobs?",
+    "options": [
+      "Get-Job",
+      "Show-Job",
+      "List-Job",
+      "View-Job"
+    ],
+    "answer": "Get-Job"
+  },
+  {
+    "category": "PowerShell",
+    "set": 4,
+    "question": "Which cmdlet retrieves job output?",
+    "options": [
+      "Receive-Job",
+      "Get-JobOutput",
+      "Read-Job",
+      "Fetch-Job"
+    ],
+    "answer": "Receive-Job"
+  },
+  {
+    "category": "PowerShell",
+    "set": 4,
+    "question": "Which cmdlet stops a background job?",
+    "options": [
+      "Stop-Job",
+      "Kill-Job",
+      "End-Job",
+      "Cancel-Job"
+    ],
+    "answer": "Stop-Job"
+  },
+  {
+    "category": "PowerShell",
+    "set": 4,
+    "question": "Which cmdlet deletes a background job?",
+    "options": [
+      "Remove-Job",
+      "Delete-Job",
+      "Clear-Job",
+      "Close-Job"
+    ],
+    "answer": "Remove-Job"
+  },
+  {
+    "category": "PowerShell",
+    "set": 4,
+    "question": "Which syntax creates a script block?",
+    "options": [
+      "{ }",
+      "( )",
+      "[ ]",
+      "< >"
+    ],
+    "answer": "{ }"
+  },
+  {
+    "category": "PowerShell",
+    "set": 4,
+    "question": "Which operator invokes a command or script block?",
+    "options": [
+      "&",
+      "|",
+      "$",
+      "@"
+    ],
+    "answer": "&"
+  },
+  {
+    "category": "PowerShell",
+    "set": 4,
+    "question": "Which operator dot-sources a script in the current scope?",
+    "options": [
+      ".",
+      "::",
+      "->",
+      "#"
+    ],
+    "answer": "."
+  },
+  {
+    "category": "PowerShell",
+    "set": 4,
+    "question": "Which operator performs regex matching?",
+    "options": [
+      "-match",
+      "-like",
+      "-eq",
+      "-contains"
+    ],
+    "answer": "-match"
+  },
+  {
+    "category": "PowerShell",
+    "set": 4,
+    "question": "Which operator performs case-sensitive equality comparison?",
+    "options": [
+      "-ceq",
+      "-eq",
+      "-ieq",
+      "-caseeq"
+    ],
+    "answer": "-ceq"
+  },
+  {
+    "category": "PowerShell",
+    "set": 4,
+    "question": "Which operator checks whether a collection contains a value?",
+    "options": [
+      "-contains",
+      "-in",
+      "-has",
+      "-includes"
+    ],
+    "answer": "-contains"
+  },
+  {
+    "category": "PowerShell",
+    "set": 4,
+    "question": "Which operator checks whether a collection does not contain a value?",
+    "options": [
+      "-notcontains",
+      "-notin",
+      "-excludes",
+      "-without"
+    ],
+    "answer": "-notcontains"
+  },
+  {
+    "category": "PowerShell",
+    "set": 4,
+    "question": "Which literal creates an empty hashtable?",
+    "options": [
+      "@{}",
+      "[]",
+      "@()",
+      "{}"
+    ],
+    "answer": "@{}"
+  },
+  {
+    "category": "PowerShell",
+    "set": 4,
+    "question": "Which PowerShell type stores key-value pairs?",
+    "options": [
+      "Hashtable",
+      "Array",
+      "String",
+      "PSCustomObject"
+    ],
+    "answer": "Hashtable"
+  },
+  {
+    "category": "PowerShell",
+    "set": 4,
+    "question": "Which syntax reliably accesses the value for key 'Name' in $hash?",
+    "options": [
+      "$hash['Name']",
+      "$hash{Name}",
+      "$hash->Name",
+      "$hash(Name)"
+    ],
+    "answer": "$hash['Name']"
+  },
+  {
+    "category": "PowerShell",
+    "set": 4,
+    "question": "Which variable stores the current user name?",
+    "options": [
+      "$env:USERNAME",
+      "$env:USER",
+      "$USERNAME",
+      "$currentUser"
+    ],
+    "answer": "$env:USERNAME"
+  },
+  {
+    "category": "PowerShell",
+    "set": 4,
+    "question": "Which PowerShell drive exposes environment variables?",
+    "options": [
+      "Env:",
+      "Environment:",
+      "Variables:",
+      "System:"
+    ],
+    "answer": "Env:"
+  },
+  {
+    "category": "PowerShell",
+    "set": 4,
+    "question": "Which automatic variable stores the path to the current user's profile?",
+    "options": [
+      "$PROFILE",
+      "$PROFILEPATH",
+      "$PSProfile",
+      "$CurrentUserProfile"
+    ],
+    "answer": "$PROFILE"
+  }
+]

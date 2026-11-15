@@ -1,0 +1,302 @@
+[
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "कुन सिन्ट्याक्सले date को आउटपुटलाई now नामक भेरिएबलमा राख्छ?",
+    "options": [
+      "now=$(date)",
+      "now=date",
+      "now:=$(date)",
+      "date->now"
+    ],
+    "answer": "now=$(date)"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "कुन विशेष प्यारामिटरले स्क्रिप्टको नाम जनाउँछ?",
+    "options": [
+      "$0",
+      "$1",
+      "$#",
+      "$@"
+    ],
+    "answer": "$0"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "कुन विशेष प्यारामिटर सबैभन्दा हालै चलाइएको ब्याकग्राउन्ड कमाण्डको process ID मा विस्तार हुन्छ?",
+    "options": [
+      "$!",
+      "$$",
+      "$?",
+      "$#"
+    ],
+    "answer": "$!"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "कुन विशेष प्यारामिटरले positional आर्गुमेन्टहरूको संख्या जनाउँछ?",
+    "options": [
+      "$#",
+      "$@",
+      "$*",
+      "$$"
+    ],
+    "answer": "$#"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "कुन विशेष प्यारामिटरले सबै positional आर्गुमेन्टहरूलाई अलग-अलग शब्दका रूपमा विस्तार गर्छ?",
+    "options": [
+      "$@",
+      "$*",
+      "$#",
+      "$0"
+    ],
+    "answer": "$@"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "कुन Bash builtin ले पहिलो positional प्यारामिटरलाई हटाएर बाँकीलाई एक स्थान तल सार्छ?",
+    "options": [
+      "shift",
+      "unshift",
+      "pop",
+      "rotate"
+    ],
+    "answer": "shift"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "कुन विशेष प्यारामिटरले हालको शेलको प्रक्रिया ID जनाउँछ?",
+    "options": [
+      "$$",
+      "$!",
+      "$?",
+      "$0"
+    ],
+    "answer": "$$"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "कुन विशेष प्यारामिटरले अन्तिम कमाण्डको exit status जनाउँछ?",
+    "options": [
+      "$?",
+      "$!",
+      "$$",
+      "$#"
+    ],
+    "answer": "$?"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "var सेट नभएको वा खाली भएमा कुन विस्तारले पूर्वनिर्धारित मान फर्काउँछ?",
+    "options": [
+      "${var:-default}",
+      "${var:=default}",
+      "${var:+default}",
+      "${var:?default}"
+    ],
+    "answer": "${var:-default}"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "कुन विस्तारले var बाट 3 वटा क्यारेक्टर निकाल्छ, offset 2 बाट सुरु गरेर?",
+    "options": [
+      "${var:2:3}",
+      "${var:3:2}",
+      "${var[2,3]}",
+      "${var#2:3}"
+    ],
+    "answer": "${var:2:3}"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "कुन विस्तारले var को मानको लम्बाइ फर्काउँछ?",
+    "options": [
+      "${#var}",
+      "${len(var)}",
+      "${var:length}",
+      "${var#length}"
+    ],
+    "answer": "${#var}"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "कुन विस्तारले var को मानलाई ठूलो अक्षर (uppercase) मा बदल्छ?",
+    "options": [
+      "${var^^}",
+      "${var,,}",
+      "${var!!}",
+      "${var##}"
+    ],
+    "answer": "${var^^}"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "कुन विस्तारले var बाट सबैभन्दा लामो मिल्ने prefix pattern हटाउँछ?",
+    "options": [
+      "${var##pattern}",
+      "${var#pattern}",
+      "${var%%pattern}",
+      "${var%pattern}"
+    ],
+    "answer": "${var##pattern}"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "कुन विस्तारले var मा pattern को पहिलो मिलान मात्र प्रतिस्थापन गर्छ?",
+    "options": [
+      "${var/pattern/replacement}",
+      "${var//pattern/replacement}",
+      "${var#pattern}",
+      "${var%pattern}"
+    ],
+    "answer": "${var/pattern/replacement}"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "var सेट नभएको वा खाली भएमा कुन विस्तारले त्रुटि सन्देश प्रिन्ट गरी non-interactive स्क्रिप्ट रोक्छ (abort गर्छ)?",
+    "options": [
+      "${var:?message}",
+      "${var:-message}",
+      "${var:+message}",
+      "${var:=message}"
+    ],
+    "answer": "${var:?message}"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "Bash मा अंकगणितीय विस्तार (arithmetic expansion) कुन सिन्ट्याक्सले गर्छ?",
+    "options": [
+      "$((5 + 3))",
+      "$(5 + 3)",
+      "${5 + 3}",
+      "$[5 + 3]"
+    ],
+    "answer": "$((5 + 3))"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "कुन कमाण्डले count भेरिएबललाई एकले बढाउँछ?",
+    "options": [
+      "let count++",
+      "count++",
+      "increment count",
+      "add count"
+    ],
+    "answer": "let count++"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "कुन कमाण्डले 8 प्रिन्ट गर्छ, जब 5 र 3 जोडिन्छन्?",
+    "options": [
+      "expr 5 + 3",
+      "expr 5+3",
+      "expr5 + 3",
+      "expr add 5 3"
+    ],
+    "answer": "expr 5 + 3"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "कुन कमाण्डले count लाई integer भेरिएबलका रूपमा घोषणा गर्छ?",
+    "options": [
+      "declare -i count",
+      "declare int count",
+      "integer count",
+      "set count integer"
+    ],
+    "answer": "declare -i count"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "कुन कमाण्डले भेरिएबललाई केवल-पढ्न मिल्ने (read-only) बनाउँछ?",
+    "options": [
+      "readonly var",
+      "lock var",
+      "const var",
+      "final var"
+    ],
+    "answer": "readonly var"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "कुन कमाण्डले शेल environment बाट भेरिएबल हटाउँछ?",
+    "options": [
+      "unset var",
+      "delete var",
+      "remove var",
+      "clear var"
+    ],
+    "answer": "unset var"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "कुन कमाण्डले भेरिएबललाई चाइल्ड प्रक्रियाहरूका लागि उपलब्ध गराउँछ?",
+    "options": [
+      "export var",
+      "share var",
+      "env var",
+      "publish var"
+    ],
+    "answer": "export var"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "कुन विकल्पले आउटपुट रिडाइरेक्सनलाई अवस्थित फाइल overwrite गर्नबाट रोक्छ?",
+    "options": [
+      "set -o noclobber",
+      "set -o nooverwrite",
+      "set -o protect",
+      "set -o safe"
+    ],
+    "answer": "set -o noclobber"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "कुन Bash भेरिएबलले शेल सुरु भएदेखि बितेका सेकेन्डको संख्या राख्छ?",
+    "options": [
+      "$SECONDS",
+      "$RANDOM",
+      "$LINENO",
+      "$UID"
+    ],
+    "answer": "$SECONDS"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "कुन Bash विस्तारले var सेट भएको र खाली नभएको अवस्थामा मात्र alt प्रतिस्थापन गर्छ?",
+    "options": [
+      "${var:+alt}",
+      "${var:-alt}",
+      "${var:=alt}",
+      "${var:?alt}"
+    ],
+    "answer": "${var:+alt}"
+  }
+]

@@ -1,0 +1,302 @@
+[
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "ਕਿਹੜਾ ਘੋਸ਼ਣਾਤਮਕ ਬਲਾਕ ਰਿਸੋਰਸ ਪਤੇ ਦਾ ਬਦਲਾਅ ਲਿਖਦਾ ਹੈ ਤਾਂ ਜੋ Terraform ਮੌਜੂਦਾ ਆਬਜੈਕਟ ਬਚਾ ਸਕੇ?",
+    "options": [
+      "removed",
+      "check",
+      "moved",
+      "import"
+    ],
+    "answer": "moved"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "moved ਬਲਾਕ ਦਾ ਕਿਹੜਾ ਆਰਗੂਮੈਂਟ ਨਵਾਂ ਰਿਸੋਰਸ ਪਤਾ ਦੱਸਦਾ ਹੈ?",
+    "options": [
+      "provider",
+      "to",
+      "from",
+      "id"
+    ],
+    "answer": "to"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "ਕਿਹੜਾ ਬਲਾਕ apply ਦੌਰਾਨ ਲਿਆਉਣ ਲਈ ਮੌਜੂਦਾ ਬੁਨਿਆਦੀ ਢਾਂਚੇ ਦਾ ਆਬਜੈਕਟ ਘੋਸ਼ਿਤ ਕਰਦਾ ਹੈ?",
+    "options": [
+      "import",
+      "moved",
+      "output",
+      "check"
+    ],
+    "answer": "import"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "removed ਬਲਾਕ ਦੀ ਕਿਹੜੀ ਸੈਟਿੰਗ ਅਸਲ ਆਬਜੈਕਟ ਨਸ਼ਟ ਕੀਤੇ ਬਿਨਾਂ ਰਿਸੋਰਸ ਸਟੇਟ ਤੋਂ ਭੁੱਲਦੀ ਹੈ?",
+    "options": [
+      "lifecycle { destroy = true }",
+      "lifecycle { create_before_destroy = true }",
+      "lifecycle { prevent_destroy = false }",
+      "lifecycle { destroy = false }"
+    ],
+    "answer": "lifecycle { destroy = false }"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "ਆਮ ਇਨਪੁੱਟ ਵੇਰੀਏਬਲ ਨੂੰ sensitive ਕਰਨ 'ਤੇ ਲੋਕਲ ਸਟੇਟ ਫਾਈਲ ਵਿੱਚ ਉਸਦੇ ਮੁੱਲ ਦਾ ਕੀ ਹੁੰਦਾ ਹੈ?",
+    "options": [
+      "ਇਹ ਹਮੇਸ਼ਾ ਸਟੇਟ ਤੋਂ ਬਾਹਰ ਰਹਿੰਦਾ ਹੈ",
+      "ਸੰਭਾਲਣ ਤੋਂ ਪਹਿਲਾਂ ਇਸ ਦੀ ਥਾਂ ਵੇਰੀਏਬਲ ਦਾ ਨਾਮ ਰੱਖਿਆ ਜਾਂਦਾ ਹੈ",
+      "ਆਮ CLI ਆਉਟਪੁੱਟ ਵਿੱਚ ਲੁਕਿਆ ਹੋਣ ਦੇ ਬਾਵਜੂਦ ਇਹ ਸਾਦੀ ਲਿਖਤ ਵਿੱਚ ਸੰਭਾਲਿਆ ਜਾ ਸਕਦਾ ਹੈ",
+      "sensitive ਫਲੈਗ ਇਸਨੂੰ ਆਪਣੇ ਆਪ ਇਨਕ੍ਰਿਪਟ ਕਰਦਾ ਹੈ"
+    ],
+    "answer": "ਆਮ CLI ਆਉਟਪੁੱਟ ਵਿੱਚ ਲੁਕਿਆ ਹੋਣ ਦੇ ਬਾਵਜੂਦ ਇਹ ਸਾਦੀ ਲਿਖਤ ਵਿੱਚ ਸੰਭਾਲਿਆ ਜਾ ਸਕਦਾ ਹੈ"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "output ਕਮਾਂਡ ਦਾ ਕਿਹੜਾ ਫਾਰਮੈਟ ਸੰਵੇਦਨਸ਼ੀਲ ਆਉਟਪੁੱਟ ਮੁੱਲ ਮਸ਼ੀਨ-ਪੜ੍ਹਨਯੋਗ ਰੂਪ ਵਿੱਚ ਖੋਲ੍ਹ ਸਕਦਾ ਹੈ?",
+    "options": [
+      "terraform providers schema -json",
+      "terraform output -json",
+      "terraform output -help",
+      "terraform output -no-color"
+    ],
+    "answer": "terraform output -json"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "ਕਿਹੜਾ ਫੰਕਸ਼ਨ Terraform ਮੁੱਲ ਨੂੰ JSON ਸਟ੍ਰਿੰਗ ਬਣਾਉਂਦਾ ਹੈ?",
+    "options": [
+      "jsonencode",
+      "jsondecode",
+      "yamldecode",
+      "file"
+    ],
+    "answer": "jsonencode"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "ਕਿਹੜਾ ਫੰਕਸ਼ਨ JSON ਸਟ੍ਰਿੰਗ ਪਾਰਸ ਕਰਕੇ Terraform ਮੁੱਲ ਬਣਾਉਂਦਾ ਹੈ?",
+    "options": [
+      "jsonencode",
+      "yamlencode",
+      "templatefile",
+      "jsondecode"
+    ],
+    "answer": "jsondecode"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "ਕਿਹੜਾ ਫੰਕਸ਼ਨ ਦਿੱਤੇ ਵੇਰੀਏਬਲ ਮੈਪ ਨਾਲ ਟੈਂਪਲੇਟ ਫਾਈਲ ਤਿਆਰ ਕਰਦਾ ਹੈ?",
+    "options": [
+      "fileset",
+      "filebase64",
+      "templatefile",
+      "file"
+    ],
+    "answer": "templatefile"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "ਕਿਹੜਾ ਫੰਕਸ਼ਨ ਗਤੀਸ਼ੀਲ ਗਲਤੀ ਬਿਨਾਂ ਮੁਲਾਂਕਣ ਹੋਣ ਵਾਲਾ ਪਹਿਲਾ ਆਰਗੂਮੈਂਟ ਵਾਪਸ ਦਿੰਦਾ ਹੈ?",
+    "options": [
+      "lookup",
+      "try",
+      "can",
+      "coalesce"
+    ],
+    "answer": "try"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "ਕਿਹੜਾ ਫੰਕਸ਼ਨ ਦੱਸਦਾ ਹੈ ਕਿ ਐਕਸਪ੍ਰੈਸ਼ਨ ਦਾ ਮੁਲਾਂਕਣ ਗਤੀਸ਼ੀਲ ਗਲਤੀ ਬਿਨਾਂ ਹੋ ਸਕਦਾ ਹੈ?",
+    "options": [
+      "can",
+      "try",
+      "contains",
+      "length"
+    ],
+    "answer": "can"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "merge ਨੂੰ ਦਿੱਤੇ ਦੋ ਮੈਪਾਂ ਵਿੱਚ ਇੱਕੋ ਕੁੰਜੀ ਹੋਵੇ ਤਾਂ ਕਿਹੜਾ ਮੁੱਲ ਜਿੱਤਦਾ ਹੈ?",
+    "options": [
+      "ਪਹਿਲੇ ਆਰਗੂਮੈਂਟ ਦਾ ਮੁੱਲ",
+      "ਮੁੱਲ ਹਮੇਸ਼ਾ ਜੋੜ ਕੇ ਸੂਚੀ ਬਣਾਏ ਜਾਂਦੇ ਹਨ",
+      "ਦੁਹਰਾਈ ਕੁੰਜੀ ਹਮੇਸ਼ਾ ਗਲਤੀ ਪੈਦਾ ਕਰਦੀ ਹੈ",
+      "ਬਾਅਦਲੇ ਆਰਗੂਮੈਂਟ ਦਾ ਮੁੱਲ"
+    ],
+    "answer": "ਬਾਅਦਲੇ ਆਰਗੂਮੈਂਟ ਦਾ ਮੁੱਲ"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "ਕਿਹੜੀ ਪ੍ਰੋਵਾਈਡਰ ਵਰਜਨ ਹੱਦ 5.4.x ਨੂੰ ਮੰਨਦੀ ਹੈ ਪਰ 5.5.0 ਨੂੰ ਨਹੀਂ?",
+    "options": [
+      ">= 5.4.0",
+      ">= 5.0, < 6.0",
+      "~> 5.4.0",
+      "~> 5.4"
+    ],
+    "answer": "~> 5.4.0"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "Terraform ਆਮ ਤੌਰ 'ਤੇ null ਦਿੱਤੇ ਰਿਸੋਰਸ ਆਰਗੂਮੈਂਟ ਨੂੰ ਕੀ ਮੰਨਦਾ ਹੈ?",
+    "options": [
+      "ਪੂਰਾ ਰਿਸੋਰਸ ਮਿਟਾਉਣ ਦੀ ਬੇਨਤੀ",
+      "ਛੱਡਿਆ ਆਰਗੂਮੈਂਟ ਜਿਸ ਉੱਤੇ ਉਸਦੇ ਮੂਲ ਮੁੱਲ ਅਤੇ ਲੋੜਾਂ ਲਾਗੂ ਹੁੰਦੀਆਂ ਹਨ",
+      "ਹਰੇਕ ਪ੍ਰੋਵਾਈਡਰ ਵਿੱਚ ਖਾਲੀ ਸਟ੍ਰਿੰਗ",
+      "ਹਰੇਕ ਪ੍ਰੋਵਾਈਡਰ ਵਿੱਚ ਅੰਕੀ ਜ਼ੀਰੋ"
+    ],
+    "answer": "ਛੱਡਿਆ ਆਰਗੂਮੈਂਟ ਜਿਸ ਉੱਤੇ ਉਸਦੇ ਮੂਲ ਮੁੱਲ ਅਤੇ ਲੋੜਾਂ ਲਾਗੂ ਹੁੰਦੀਆਂ ਹਨ"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "ਕਿਹੜਾ ਐਕਸਪ੍ਰੈਸ਼ਨ ਉਸ ਮੋਡੀਊਲ ਦਾ ਫਾਈਲਸਿਸਟਮ ਪਾਥ ਦਿੰਦਾ ਹੈ ਜਿਸ ਵਿੱਚ ਇਹ ਲਿਖਿਆ ਹੈ?",
+    "options": [
+      "path.module",
+      "path.root",
+      "path.cwd",
+      "terraform.workspace"
+    ],
+    "answer": "path.module"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "CLI ਸੰਰਚਨਾ ਨੂੰ HCP Terraform ਨਾਲ ਜੋੜਨ ਲਈ terraform ਬਲਾਕ ਦੀ ਕਿਹੜੀ ਸੁਵਿਧਾ ਸਿਫ਼ਾਰਸ਼ ਹੁੰਦੀ ਹੈ?",
+    "options": [
+      "locals",
+      "moved",
+      "check",
+      "cloud"
+    ],
+    "answer": "cloud"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "terraform_remote_state ਹਵਾਲੇ ਵਾਲੀ ਸਟੇਟ ਤੋਂ ਕਿਹੜੇ ਉੱਪਰਲੇ ਪੱਧਰ ਦੇ ਮੁੱਲ ਸਿੱਧੇ ਦਿੰਦਾ ਹੈ?",
+    "options": [
+      "ਪ੍ਰੋਵਾਈਡਰ ਦੇ ਸਾਰੇ ਪ੍ਰਮਾਣਿਕਤਾ ਵੇਰਵੇ",
+      "ਸਾਰੇ ਉਪ-ਮੋਡੀਊਲਾਂ ਦੇ ਲੋਕਲ ਮੁੱਲ",
+      "ਮੁੱਖ ਮੋਡੀਊਲ ਦੇ ਆਉਟਪੁੱਟ",
+      "ਹਰੇਕ ਰਿਸੋਰਸ ਗੁਣ ਉੱਪਰਲੇ ਪੱਧਰ ਦੇ ਆਉਟਪੁੱਟ ਵਜੋਂ"
+    ],
+    "answer": "ਮੁੱਖ ਮੋਡੀਊਲ ਦੇ ਆਉਟਪੁੱਟ"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "ਕਿਹੜਾ ਜੀਵਨ-ਚੱਕਰ ਨਿਯਮ ਹਵਾਲੇ ਵਾਲੇ ਪ੍ਰਬੰਧਿਤ ਰਿਸੋਰਸ ਦੇ ਬਦਲਣ 'ਤੇ ਬਦਲ ਮੰਗਦਾ ਹੈ?",
+    "options": [
+      "create_before_destroy",
+      "replace_triggered_by",
+      "ignore_changes",
+      "prevent_destroy"
+    ],
+    "answer": "replace_triggered_by"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "ਕਿਹੜਾ ਅੰਦਰੂਨੀ ਪ੍ਰਬੰਧਿਤ ਰਿਸੋਰਸ ਵੱਖਰਾ ਪ੍ਰੋਵਾਈਡਰ ਲਗਾਏ ਬਿਨਾਂ ਆਮ ਇਨਪੁੱਟ ਮੁੱਲ ਨੂੰ ਰਿਸੋਰਸ ਜੀਵਨ-ਚੱਕਰ ਦਿੰਦਾ ਹੈ?",
+    "options": [
+      "terraform_data",
+      "terraform_remote_state",
+      "local_file",
+      "random_id"
+    ],
+    "answer": "terraform_data"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "ਆਮ plan ਜਾਂ apply ਵੇਲੇ check ਬਲਾਕ ਦੀ ਪੁਸ਼ਟੀ ਅਸਫਲ ਹੋਵੇ ਤਾਂ ਕੀ ਹੁੰਦਾ ਹੈ?",
+    "options": [
+      "Terraform ਹਮੇਸ਼ਾ ਜਾਂਚਿਆ ਆਬਜੈਕਟ ਨਸ਼ਟ ਕਰਦਾ ਹੈ",
+      "Terraform ਚੁੱਪਚਾਪ check ਬਲਾਕ ਹਟਾਉਂਦਾ ਹੈ",
+      "Terraform ਕੋਈ ਰਿਸੋਰਸ ਤਾਜ਼ਾ ਕਰਨ ਤੋਂ ਪਹਿਲਾਂ ਹਮੇਸ਼ਾ ਬੰਦ ਹੁੰਦਾ ਹੈ",
+      "Terraform ਚੇਤਾਵਨੀ ਦਿੰਦਾ ਹੈ ਪਰ ਸਿਰਫ਼ ਉਸ ਅਸਫਲਤਾ ਕਰਕੇ ਕਾਰਵਾਈ ਨਹੀਂ ਰੋਕਦਾ"
+    ],
+    "answer": "Terraform ਚੇਤਾਵਨੀ ਦਿੰਦਾ ਹੈ ਪਰ ਸਿਰਫ਼ ਉਸ ਅਸਫਲਤਾ ਕਰਕੇ ਕਾਰਵਾਈ ਨਹੀਂ ਰੋਕਦਾ"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "ਰਿਸੋਰਸ ਜੀਵਨ-ਚੱਕਰ ਦੀ ਪੂਰਵ-ਸ਼ਰਤ false ਹੋਵੇ ਤਾਂ ਕੀ ਹੁੰਦਾ ਹੈ?",
+    "options": [
+      "Terraform ਰਿਸੋਰਸ ਨੂੰ ਡਾਟਾ ਸਰੋਤ ਬਣਾਉਂਦਾ ਹੈ",
+      "Terraform ਪੂਰਵ-ਸ਼ਰਤ ਦੀ ਥਾਂ ਸਿਰਫ਼ ਚੇਤਾਵਨੀ ਰੱਖਦਾ ਹੈ",
+      "Terraform ਗਲਤੀ ਦੱਸ ਕੇ ਸਬੰਧਤ ਕਾਰਵਾਈ ਰੋਕਦਾ ਹੈ",
+      "Terraform ਅਗਲੇ ਚਲਾਉਣ ਤੱਕ ਪੂਰਵ-ਸ਼ਰਤ ਅਣਡਿੱਠੀ ਕਰਦਾ ਹੈ"
+    ],
+    "answer": "Terraform ਗਲਤੀ ਦੱਸ ਕੇ ਸਬੰਧਤ ਕਾਰਵਾਈ ਰੋਕਦਾ ਹੈ"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "ਕਿਹੜੀ ਕਮਾਂਡ Terraform ਦੀਆਂ ਆਪਣੀਆਂ ਟੈਸਟ ਫਾਈਲਾਂ ਚਲਾਉਂਦੀ ਹੈ?",
+    "options": [
+      "terraform console",
+      "terraform test",
+      "terraform validate",
+      "terraform fmt"
+    ],
+    "answer": "terraform test"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "ਕਿਹੜੀ ਸੈਟਿੰਗ Terraform ਟੈਸਟ ਦੇ run ਬਲਾਕ ਤੋਂ ਮੂਲ apply ਦੀ ਬਜਾਏ plan ਕਰਾਉਂਦੀ ਹੈ?",
+    "options": [
+      "command = plan",
+      "command = validate",
+      "command = refresh",
+      "command = console"
+    ],
+    "answer": "command = plan"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "ਕਿਹੜਾ ਫੰਕਸ਼ਨ ਡਾਇਰੈਕਟਰੀ ਹੇਠ ਗਲੌਬ ਪੈਟਰਨ ਨਾਲ ਮਿਲਦੇ ਸਾਪੇਖ ਪਾਥਾਂ ਦਾ ਸਮੂਹ ਦਿੰਦਾ ਹੈ?",
+    "options": [
+      "file",
+      "dirname",
+      "basename",
+      "fileset"
+    ],
+    "answer": "fileset"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "ਵੱਖਰੇ ਪਹੁੰਚ ਕੰਟਰੋਲ ਚਾਹੁੰਦੇ ਵਾਤਾਵਰਣ ਵੰਡਣ ਲਈ ਸਿਰਫ਼ CLI ਵਰਕਸਪੇਸ ਅਣਢੁਕਵੇਂ ਕਿਉਂ ਹੋ ਸਕਦੇ ਹਨ?",
+    "options": [
+      "ਇਹ ਵੱਖਰੇ ਇਨਪੁੱਟ ਵੇਰੀਏਬਲ ਮੁੱਲ ਵਰਤਣ ਤੋਂ ਰੋਕਦੇ ਹਨ",
+      "ਇਹ ਹਰ ਵਾਤਾਵਰਣ ਨੂੰ ਇੱਕੋ ਰਿਸੋਰਸ ਨਾਮ ਵਰਤਣ ਲਈ ਮਜਬੂਰ ਕਰਦੇ ਹਨ",
+      "ਇਨ੍ਹਾਂ ਦੀ ਬੈਕਐਂਡ ਸੰਰਚਨਾ ਅਤੇ ਪ੍ਰਮਾਣਿਕਤਾ ਸੰਦਰਭ ਸਾਂਝਾ ਹੁੰਦਾ ਹੈ",
+      "ਇਹ ਹਮੇਸ਼ਾ ਇੱਕੋ ਸਟੇਟ ਸਨੈਪਸ਼ਾਟ ਸਾਂਝਾ ਕਰਦੇ ਹਨ"
+    ],
+    "answer": "ਇਨ੍ਹਾਂ ਦੀ ਬੈਕਐਂਡ ਸੰਰਚਨਾ ਅਤੇ ਪ੍ਰਮਾਣਿਕਤਾ ਸੰਦਰਭ ਸਾਂਝਾ ਹੁੰਦਾ ਹੈ"
+  }
+]

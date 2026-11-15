@@ -1,0 +1,302 @@
+[
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "release என்ற தற்போதைய கிளைக்கு இணைக்கப்பட்ட பணிமரத்தைச் சேர்க்கும் கட்டளை எது?",
+    "options": [
+      "git worktree prune",
+      "git worktree lock ..\\release",
+      "git worktree add ..\\release release",
+      "git worktree list"
+    ],
+    "answer": "git worktree add ..\\release release"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "முதன்மைத் திட்டத்தின் பதிப்பு-கட்டுப்பாட்டிலுள்ள துணைத்தொகுதிப் பாதைகளையும் URLகளையும் எந்தக் கோப்பு பதிவு செய்கிறது?",
+    "options": [
+      ".gitmessage",
+      ".gitmodules",
+      ".gitignore",
+      ".gitattributes"
+    ],
+    "answer": ".gitmodules"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "உட்புறத் துணைத்தொகுதிகள் உட்பட பதிவுசெய்த துணைத்தொகுதிகளைத் தொடங்கி செக்அவுட் செய்யும் கட்டளை எது?",
+    "options": [
+      "git submodule update --init --recursive",
+      "git submodule deinit --all",
+      "git submodule status",
+      "git submodule sync"
+    ],
+    "answer": "git submodule update --init --recursive"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "முதன்மைத் திட்டம் ஒரு கமிட்டில் துணைத்தொகுதிக்காக வழக்கமாக எதைப் பதிவு செய்கிறது?",
+    "options": [
+      "துணைத்தொகுதியின் முழுப் பொருள் தரவுத்தளம்",
+      "துணைத்தொகுதியின் இயல்புநிலைக் கிளையின் பெயர் மட்டும்",
+      "துணைத்தொகுதியின் கமிட் செய்யாத மாற்றங்கள் மட்டும்",
+      "துணைத்தொகுதியின் குறிப்பிட்ட கமிட்டுக்கான குறிப்பு"
+    ],
+    "answer": "துணைத்தொகுதியின் குறிப்பிட்ட கமிட்டுக்கான குறிப்பு"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "அனைத்துக் குறிப்புகளையும் அவற்றிலிருந்து அடையக்கூடிய வரலாற்றையும் கொண்ட எடுத்துச் செல்லக்கூடிய தொகுப்பை உருவாக்கும் கட்டளை எது?",
+    "options": [
+      "git format-patch -1 HEAD",
+      "git diff --binary > backup.bundle",
+      "git bundle create backup.bundle --all",
+      "git archive --output=backup.bundle HEAD"
+    ],
+    "answer": "git bundle create backup.bundle --all"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "HEADஇன் கண்காணிக்கப்படும் கோப்புகளை Git வரலாறின்றி ZIP காப்பகமாக ஏற்றுமதி செய்யும் கட்டளை எது?",
+    "options": [
+      "git format-patch --stdout HEAD > source.zip",
+      "git archive --format=zip --output=source.zip HEAD",
+      "git bundle create source.zip --all",
+      "git clone --bare . source.zip"
+    ],
+    "answer": "git archive --format=zip --output=source.zip HEAD"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "சமீபத்திய கமிட்டை மின்னஞ்சல் பாணிப் பேட்ச் கோப்பாக்கும் கட்டளை எது?",
+    "options": [
+      "git format-patch -1 HEAD",
+      "git diff HEAD",
+      "git show --stat HEAD",
+      "git log -1 --oneline"
+    ],
+    "answer": "git format-patch -1 HEAD"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "git format-patch உருவாக்கிய மின்னஞ்சல் பேட்ச்களைப் பயன்படுத்தி கமிட்கள் உருவாக்கும் கட்டளை எது?",
+    "options": [
+      "git apply changes.patch",
+      "git diff changes.patch",
+      "git add changes.patch",
+      "git am changes.patch"
+    ],
+    "answer": "git am changes.patch"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "கோப்புகளை மாற்றாமல் சாதாரண பேட்ச் பொருந்துமா எனச் சோதிக்கும் கட்டளை எது?",
+    "options": [
+      "git am changes.patch",
+      "git add changes.patch",
+      "git apply --check changes.patch",
+      "git apply changes.patch"
+    ],
+    "answer": "git apply --check changes.patch"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "கோப்புப் பெயரின்றி அதன் உள்ளடக்கத்தைச் சேமிக்கும் Git பொருள் வகை எது?",
+    "options": [
+      "குறிப்புரையுள்ள குறிச்சொல்",
+      "Blob",
+      "Tree",
+      "Commit"
+    ],
+    "answer": "Blob"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "கோப்புப் பெயர்களையும் பிளாப் அல்லது துணைமரக் குறிப்புகளையும் பதிவு செய்யும் Git பொருள் வகை எது?",
+    "options": [
+      "Tree",
+      "Blob",
+      "Commit",
+      "குறிப்புரையுள்ள குறிச்சொல்"
+    ],
+    "answer": "Tree"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "தெரிந்த பொருள் IDஇன் வகையைக் காட்டும் கட்டளை எது?",
+    "options": [
+      "git cat-file -s abc1234",
+      "git rev-parse abc1234",
+      "git log -1 abc1234",
+      "git cat-file -t abc1234"
+    ],
+    "answer": "git cat-file -t abc1234"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "HEADஇன் முழுப் பொருள் IDஐக் காட்டும் கட்டளை எது?",
+    "options": [
+      "git status --short",
+      "git branch --show-current",
+      "git rev-parse HEAD",
+      "git symbolic-ref HEAD"
+    ],
+    "answer": "git rev-parse HEAD"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "featureஇலிருந்து அடையக்கூடிய ஆனால் mainஇலிருந்து அடைய முடியாத கமிட்களைத் தேர்ந்தெடுக்கும் திருத்த வரம்பு எது?",
+    "options": [
+      "main^",
+      "main..feature",
+      "feature..main",
+      "main...feature"
+    ],
+    "answer": "main..feature"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "git logஇன் எந்த விருப்பம் மெர்ஜ் கமிட்களை மட்டும் காட்டும்?",
+    "options": [
+      "--merges",
+      "--no-merges",
+      "--first-parent",
+      "--reverse"
+    ],
+    "answer": "--merges"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "git diffஇன் எந்த விருப்பம் மாறிய பாதைகளையும் மாற்ற நிலையைக் குறிக்கும் எழுத்துகளையும் காட்டும்?",
+    "options": [
+      "--name-only",
+      "--stat",
+      "--shortstat",
+      "--name-status"
+    ],
+    "answer": "--name-status"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "பாதைகளுக்கான உரைச் சீராக்கம் போன்ற பதிப்பு-கட்டுப்பாட்டுப் பண்புகளை வரையறுக்கும் கோப்பு எது?",
+    "options": [
+      ".gitmodules",
+      ".gitconfig",
+      ".gitattributes",
+      ".gitignore"
+    ],
+    "answer": ".gitattributes"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": ".gitattributesஇன் '*.sh text eol=lf' விதி பொருந்தும் உரைக் கோப்புகளுக்கு என்ன கோருகிறது?",
+    "options": [
+      "வெற்று வரிகளைத் தானாக நீக்குதல்",
+      "பணிமரத்தில் LF வரி முடிவுகள்",
+      "பணிமரத்தில் CRLF வரி முடிவுகள்",
+      "உரை மாற்றமின்றி இருமத் தரவாகக் கையாளுதல்"
+    ],
+    "answer": "பணிமரத்தில் LF வரி முடிவுகள்"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "முன்மொழிந்த கமிட் செய்திக் கோப்பைச் சோதித்து கமிட்டை மறுக்கக்கூடிய ஹூக் எது?",
+    "options": [
+      "commit-msg",
+      "post-commit",
+      "post-checkout",
+      "post-merge"
+    ],
+    "answer": "commit-msg"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "Git ஹூக்குகளுக்குத் தனிப்பயன் அடைவைத் தேர்ந்தெடுக்கும் அமைப்பு எது?",
+    "options": [
+      "core.worktree",
+      "core.excludesFile",
+      "core.attributesFile",
+      "core.hooksPath"
+    ],
+    "answer": "core.hooksPath"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "பகிரப்பட்ட .gitignore விதியைச் சேர்க்காமல் ஒரு உருவாக்குநர் உள்ளூரில் கண்காணிக்கப்படாத கோப்புகளைப் புறக்கணிக்க உதவும் கோப்பு எது?",
+    "options": [
+      ".git\\description",
+      ".git\\packed-refs",
+      ".git\\info\\exclude",
+      ".git\\HEAD"
+    ],
+    "answer": ".git\\info\\exclude"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "பைசெக்ட் அமர்வை விட்டு வெளியேறி வழக்கமாக அசல் கிளைக்குத் திரும்பும் கட்டளை எது?",
+    "options": [
+      "git bisect log",
+      "git bisect reset",
+      "git bisect skip",
+      "git bisect good"
+    ],
+    "answer": "git bisect reset"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "பேட்ச் தொடரின் இரு பதிப்புகளை ஒப்பிடும் கட்டளை எது?",
+    "options": [
+      "git range-diff main..old main..new",
+      "git diff old new",
+      "git log old..new",
+      "git merge-base old new"
+    ],
+    "answer": "git range-diff main..old main..new"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "கமிட் உருவாக்கும்போது இறுதியில் Signed-off-by பதிவைச் சேர்க்கும் கட்டளை எது?",
+    "options": [
+      "git commit --gpg-sign",
+      "git commit --amend",
+      "git commit --no-verify",
+      "git commit --signoff"
+    ],
+    "answer": "git commit --signoff"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "git log -S'old_name' இயல்புநிலையில் எதைத் தேடுகிறது?",
+    "options": [
+      "செய்தியில் old_name உள்ள கமிட்கள்",
+      "பெயர்களில் old_name உள்ள கிளைகள்",
+      "old_name வரும் எண்ணிக்கையை மாற்றும் கமிட்கள்",
+      "old_name என்ற பெயருள்ள ஆசிரியரின் கமிட்கள்"
+    ],
+    "answer": "old_name வரும் எண்ணிக்கையை மாற்றும் கமிட்கள்"
+  }
+]

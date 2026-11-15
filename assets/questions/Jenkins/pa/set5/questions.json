@@ -1,0 +1,302 @@
+[
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "Declarative ਦਾ ਕਿਹੜਾ ਵਿਕਲਪ ਇੱਕੋ Pipeline ਦੇ ਇਕੱਠੇ ਚਲਾਉਣ ਦੀ ਬਜਾਏ ਨਵਾਂ ਚਲਾਉਣਾ ਕਤਾਰ ਵਿੱਚ ਰੱਖਦਾ ਹੈ?",
+    "options": [
+      "parallelsAlwaysFailFast()",
+      "disableConcurrentBuilds()",
+      "disableResume()",
+      "skipDefaultCheckout()"
+    ],
+    "answer": "disableConcurrentBuilds()"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "Declarative ਦਾ ਕਿਹੜਾ ਵਿਕਲਪ ਪੁਰਾਣੇ ਬਿਲਡ ਰਿਕਾਰਡ ਅਤੇ ਆਰਟੀਫੈਕਟ ਰੱਖਣ ਦੇ ਨਿਯਮ ਦੱਸਦਾ ਹੈ?",
+    "options": [
+      "buildDiscarder(logRotator(numToKeepStr: '10'))",
+      "timeout(time: 10, unit: 'MINUTES')",
+      "retry(10)",
+      "quietPeriod(10)"
+    ],
+    "answer": "buildDiscarder(logRotator(numToKeepStr: '10'))"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "Jenkins cron ਐਕਸਪ੍ਰੈਸ਼ਨ ਦਾ H ਚਿੰਨ੍ਹ ਕੀ ਦਿੰਦਾ ਹੈ?",
+    "options": [
+      "ਵਰਤੋਂਕਾਰ ਦੇ ਕੰਪਿਊਟਰ ਦਾ ਮੌਜੂਦਾ ਘੰਟਾ",
+      "ਸਿਰਫ਼ ਛੁੱਟੀਆਂ ਉੱਤੇ ਚਲਾਉਣ ਦੀ ਬੇਨਤੀ",
+      "ਸਿਰਫ਼ ਨੋਡ ਵਿਹਲਾ ਹੋਣ 'ਤੇ ਚਲਾਉਣ ਦੀ ਬੇਨਤੀ",
+      "ਕੰਮ ਦੇ ਨਾਮ ਉੱਤੇ ਆਧਾਰਿਤ ਸਥਿਰ ਹੈਸ਼ ਜੋ ਸ਼ੈਡਿਊਲ ਭਾਰ ਵੰਡਦਾ ਹੈ"
+    ],
+    "answer": "ਕੰਮ ਦੇ ਨਾਮ ਉੱਤੇ ਆਧਾਰਿਤ ਸਥਿਰ ਹੈਸ਼ ਜੋ ਸ਼ੈਡਿਊਲ ਭਾਰ ਵੰਡਦਾ ਹੈ"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "Jenkins ਦੀ ਪੰਜ-ਖੇਤਰੀ cron ਸਿੰਟੈਕਸ ਵਿੱਚ ਪੰਜਵਾਂ ਖੇਤਰ ਕੀ ਦੱਸਦਾ ਹੈ?",
+    "options": [
+      "ਦਿਨ ਦਾ ਘੰਟਾ",
+      "ਮਹੀਨੇ ਦਾ ਦਿਨ",
+      "ਹਫ਼ਤੇ ਦਾ ਦਿਨ",
+      "ਘੰਟੇ ਦਾ ਮਿੰਟ"
+    ],
+    "answer": "ਹਫ਼ਤੇ ਦਾ ਦਿਨ"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "ਪਿਛਲਾ ਬਿਲਡ ਅਸਫਲ ਜਾਂ ਅਸਥਿਰ ਹੋਣ ਤੋਂ ਬਾਅਦ ਨਵਾਂ ਸਫਲ ਹੋਵੇ ਤਾਂ post ਦੀ ਕਿਹੜੀ ਸ਼ਰਤ ਚੱਲਦੀ ਹੈ?",
+    "options": [
+      "unsuccessful",
+      "fixed",
+      "changed",
+      "regression"
+    ],
+    "answer": "fixed"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "ਹੋਰ post ਸ਼ਰਤਾਂ ਜਾਂਚਣ ਤੋਂ ਬਾਅਦ post ਦੀ ਕਿਹੜੀ ਸ਼ਰਤ ਚੱਲਦੀ ਹੈ?",
+    "options": [
+      "cleanup",
+      "always",
+      "changed",
+      "success"
+    ],
+    "answer": "cleanup"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "when ਦਾ ਕਿਹੜਾ ਵਿਕਲਪ ਪੜਾਅ ਦਾ ਏਜੰਟ ਦੇਣ ਤੋਂ ਪਹਿਲਾਂ ਸ਼ਰਤ ਜਾਂਚਦਾ ਹੈ?",
+    "options": [
+      "beforeInput false",
+      "beforeOptions false",
+      "branch 'main'",
+      "beforeAgent true"
+    ],
+    "answer": "beforeAgent true"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "when ਦੀ ਕਿਹੜੀ ਸ਼ਰਤ Multibranch Pipeline ਵਿੱਚ ਨਾਮ ਵਾਲੀ ਬ੍ਰਾਂਚ ਚੁਣਦੀ ਹੈ?",
+    "options": [
+      "buildingTag()",
+      "changeRequest()",
+      "branch 'main'",
+      "tag 'main'"
+    ],
+    "answer": "branch 'main'"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "Declarative ਦੀ ਕਿਹੜੀ ਬਣਤਰ ਓਪਰੇਟਿੰਗ ਸਿਸਟਮ ਅਤੇ ਬ੍ਰਾਊਜ਼ਰ ਵਰਗੇ ਧੁਰਿਆਂ ਦੇ ਮੁੱਲਾਂ ਦੇ ਜੋੜ ਚਲਾਉਂਦੀ ਹੈ?",
+    "options": [
+      "environment",
+      "matrix",
+      "parallel",
+      "steps"
+    ],
+    "answer": "matrix"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "ਕਿਹੜਾ ਭਾਗ Declarative ਮੈਟਰਿਕਸ ਤੋਂ ਅਣਚਾਹੇ ਜੋੜ ਹਟਾਉਂਦਾ ਹੈ?",
+    "options": [
+      "excludes",
+      "axes",
+      "stages",
+      "tools"
+    ],
+    "answer": "excludes"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "ਸਮਾਂਤਰ ਸ਼ਾਖਾਵਾਂ ਵਾਲੇ ਪੜਾਅ ਦੀ ਕਿਹੜੀ ਸੈਟਿੰਗ ਇੱਕ ਅਸਫਲ ਹੋਣ 'ਤੇ ਹੋਰ ਸ਼ਾਖਾਵਾਂ ਰੋਕਦੀ ਹੈ?",
+    "options": [
+      "beforeAgent true",
+      "reuseNode true",
+      "alwaysPull true",
+      "failFast true"
+    ],
+    "answer": "failFast true"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "Declarative ਦਾ ਕਿਹੜਾ ਵਿਕਲਪ ਬਿਲਡ ਅਸਥਿਰ ਹੋਣ ਤੋਂ ਬਾਅਦ ਅਗਲੇ ਪੜਾਅ ਛੱਡਦਾ ਹੈ?",
+    "options": [
+      "disableResume()",
+      "preserveStashes()",
+      "skipStagesAfterUnstable()",
+      "skipDefaultCheckout()"
+    ],
+    "answer": "skipStagesAfterUnstable()"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "Pipeline ਦਾ ਕਿਹੜਾ ਕਦਮ ਅਸਫਲਤਾ ਦਰਜ ਕਰਕੇ ਆਪਣੇ ਬਲਾਕ ਤੋਂ ਬਾਅਦ ਚੱਲਣਾ ਜਾਰੀ ਰੱਖਣ ਦਿੰਦਾ ਹੈ?",
+    "options": [
+      "input",
+      "catchError",
+      "error",
+      "timeout"
+    ],
+    "answer": "catchError"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "ਪ੍ਰਕਿਰਿਆ ਮੁੱਕਣ 'ਤੇ sh(script: 'check.sh', returnStatus: true) ਕੀ ਦਿੰਦਾ ਹੈ?",
+    "options": [
+      "ਪ੍ਰਕਿਰਿਆ ਦਾ ਅੰਕੀ ਨਿਕਾਸ ਕੋਡ",
+      "ਪੂਰੀ ਮਿਆਰੀ ਆਉਟਪੁੱਟ ਲਿਖਤ",
+      "ਸ਼ੈੱਲ ਦਾ ਪ੍ਰਕਿਰਿਆ ID",
+      "Jenkins ਪ੍ਰਮਾਣਿਕਤਾ ਵੇਰਵਾ ਆਬਜੈਕਟ"
+    ],
+    "answer": "ਪ੍ਰਕਿਰਿਆ ਦਾ ਅੰਕੀ ਨਿਕਾਸ ਕੋਡ"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "ਸਫਲਤਾ 'ਤੇ sh(script: 'echo ready', returnStdout: true) ਕੀ ਦਿੰਦਾ ਹੈ?",
+    "options": [
+      "ਅੰਕੀ ਬਿਲਡ ਨੰਬਰ",
+      "ਮੈਪ ਵਜੋਂ ਸ਼ੈੱਲ ਦਾ ਵਾਤਾਵਰਣ",
+      "ਏਜੰਟ ਦੀ ਲੇਬਲ ਸੂਚੀ",
+      "ਮਿਲੀ ਮਿਆਰੀ ਆਉਟਪੁੱਟ ਸਟ੍ਰਿੰਗ"
+    ],
+    "answer": "ਮਿਲੀ ਮਿਆਰੀ ਆਉਟਪੁੱਟ ਸਟ੍ਰਿੰਗ"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "Pipeline ਦਾ ਕਿਹੜਾ ਕਦਮ ਮੌਜੂਦਾ ਵਰਕਸਪੇਸ ਡਾਇਰੈਕਟਰੀ ਦੀ ਸਮੱਗਰੀ ਉਪ-ਪੱਧਰਾਂ ਸਮੇਤ ਮਿਟਾਉਂਦਾ ਹੈ?",
+    "options": [
+      "pwd",
+      "readFile",
+      "deleteDir",
+      "fileExists"
+    ],
+    "answer": "deleteDir"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "Pipeline ਦਾ ਕਿਹੜਾ ਕਦਮ ਮੌਜੂਦਾ ਵਰਕਸਪੇਸ ਵਿੱਚ ਪਾਥ ਮੌਜੂਦ ਹੋਣ ਦੀ ਜਾਂਚ ਕਰਦਾ ਹੈ?",
+    "options": [
+      "libraryResource",
+      "fileExists",
+      "readFile",
+      "writeFile"
+    ],
+    "answer": "fileExists"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "Pipeline ਦਾ ਕਿਹੜਾ ਕਦਮ ਹੋਰ Jenkins ਕੰਮ ਚਲਾ ਕੇ ਬਿਲਡ ਪੈਰਾਮੀਟਰ ਦੇ ਸਕਦਾ ਹੈ?",
+    "options": [
+      "build",
+      "stage",
+      "node",
+      "checkout"
+    ],
+    "answer": "build"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "Declarative ਦਾ ਕਿਹੜਾ ਵਿਕਲਪ ਪੜਾਅ ਮੁੜ ਸ਼ੁਰੂ ਕਰਨ ਲਈ ਮੁੱਕੇ ਬਿਲਡਾਂ ਦੇ ਸਟੈਸ਼ ਰੱਖਦਾ ਹੈ?",
+    "options": [
+      "disableResume()",
+      "skipDefaultCheckout()",
+      "quietPeriod(5)",
+      "preserveStashes()"
+    ],
+    "answer": "preserveStashes()"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "Shared Library ਦੀ ਕਿਹੜੀ ਫਾਈਲ vars/deploy.groovy ਦੇ ਗਲੋਬਲ deploy ਵੇਰੀਏਬਲ ਲਈ ਮਦਦ ਲਿਖਤ ਦਿੰਦੀ ਹੈ?",
+    "options": [
+      "resources/deploy.txt",
+      "vars/main.groovy",
+      "vars/deploy.txt",
+      "src/deploy.groovy"
+    ],
+    "answer": "vars/deploy.txt"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "Jenkins Pipeline ਵਿੱਚ @NonCPS ਵਾਲੇ ਮੈਥਡ ਦੀ ਮੁੱਖ ਪਾਬੰਦੀ ਕੀ ਹੈ?",
+    "options": [
+      "ਇਹ Windows ਏਜੰਟ ਉੱਤੇ ਚੱਲਣਾ ਲਾਜ਼ਮੀ ਹੈ",
+      "ਇਸਨੂੰ CPS ਨਾਲ ਬਦਲੇ Pipeline ਕਦਮ ਨਹੀਂ ਬੁਲਾਉਣੇ ਚਾਹੀਦੇ",
+      "ਇਸ ਵਿੱਚ stage ਹਦਾਇਤ ਹੋਣੀ ਲਾਜ਼ਮੀ ਹੈ",
+      "ਇਸਨੂੰ ਹਮੇਸ਼ਾ ਸਟ੍ਰਿੰਗ ਦੇਣੀ ਚਾਹੀਦੀ ਹੈ"
+    ],
+    "answer": "ਇਸਨੂੰ CPS ਨਾਲ ਬਦਲੇ Pipeline ਕਦਮ ਨਹੀਂ ਬੁਲਾਉਣੇ ਚਾਹੀਦੇ"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "Jenkins ਦੀ ਕਿਹੜੀ ਸੁਵਿਧਾ ਅਣਮਨਜ਼ੂਰ ਸੈਂਡਬਾਕਸ Groovy ਕੋਡ ਦੇ ਮੰਗੇ ਦਸਤਖ਼ਤ ਜਾਂਚਦੀ ਹੈ?",
+    "options": [
+      "ਪ੍ਰਕਿਰਿਆ ਅੰਦਰ ਸਕ੍ਰਿਪਟ ਮਨਜ਼ੂਰੀ",
+      "Credentials Store",
+      "Build Queue",
+      "SCM ਪੋਲਿੰਗ ਲੌਗ"
+    ],
+    "answer": "ਪ੍ਰਕਿਰਿਆ ਅੰਦਰ ਸਕ੍ਰਿਪਟ ਮਨਜ਼ੂਰੀ"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "ਬੰਨ੍ਹੇ ਭੇਤ ਵੇਰੀਏਬਲ ਨੂੰ ਸ਼ੈੱਲ ਖੁਦ ਖੋਲ੍ਹੇ, ਅਜਿਹੀ ਸਕ੍ਰਿਪਟ ਲਈ Groovy ਦੀ ਕਿਹੜੀ ਹਵਾਲਾ ਸ਼ੈਲੀ ਸਿਫ਼ਾਰਸ਼ ਹੁੰਦੀ ਹੈ?",
+    "options": [
+      "ਭੇਤ ਪਾਈ ਹੋਈ ਦੋਹਰੇ ਹਵਾਲਿਆਂ ਦੀ ਮੁੱਲ-ਭਰੀ Groovy ਸਟ੍ਰਿੰਗ",
+      "ਭੇਤ ਪਾਈ ਹੋਈ ਤਿੰਨ ਦੋਹਰੇ ਹਵਾਲਿਆਂ ਦੀ ਮੁੱਲ-ਭਰੀ Groovy ਸਟ੍ਰਿੰਗ",
+      "ਸਾਦੀ ਲਿਖਤ ਵਾਲਾ ਭੇਤ ਜੋੜ ਕੇ ਬਣੀ Groovy ਸਟ੍ਰਿੰਗ",
+      "ਇਕਹਿਰੇ ਹਵਾਲਿਆਂ ਵਾਲੀ Groovy ਸਟ੍ਰਿੰਗ"
+    ],
+    "answer": "ਇਕਹਿਰੇ ਹਵਾਲਿਆਂ ਵਾਲੀ Groovy ਸਟ੍ਰਿੰਗ"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "ਸਬੰਧਤ ਵੈੱਬ ਬੇਨਤੀਆਂ ਲਈ Jenkins CSRF crumb ਦਾ ਮਕਸਦ ਕੀ ਹੈ?",
+    "options": [
+      "ਅੱਪਲੋਡ ਤੋਂ ਪਹਿਲਾਂ ਬਿਲਡ ਆਰਟੀਫੈਕਟ ਇਨਕ੍ਰਿਪਟ ਕਰਨਾ",
+      "ਬਿਲਡ ਚਲਾਉਣ ਵਾਲਾ ਏਜੰਟ ਚੁਣਨਾ",
+      "ਇਹ ਜਾਂਚਣ ਵਿੱਚ ਮਦਦ ਕਿ ਹਾਲਤ ਬਦਲਦੀ ਬੇਨਤੀ ਬਣੇ ਹੋਏ ਵਰਤੋਂਕਾਰ ਸੈਸ਼ਨ ਦੀ ਹੈ",
+      "ਸਾਰੇ ਕੰਮਾਂ ਦੀ ਅਧਿਕਾਰ ਜਾਂਚ ਦੀ ਥਾਂ ਲੈਣਾ"
+    ],
+    "answer": "ਇਹ ਜਾਂਚਣ ਵਿੱਚ ਮਦਦ ਕਿ ਹਾਲਤ ਬਦਲਦੀ ਬੇਨਤੀ ਬਣੇ ਹੋਏ ਵਰਤੋਂਕਾਰ ਸੈਸ਼ਨ ਦੀ ਹੈ"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "ਵੱਖਰੇ ਕੰਮਾਂ ਵਿਚਕਾਰ ਸਾਂਝਾ ਟੈਸਟ ਡਿਵਾਈਸ ਇੱਕ ਵਾਰ ਇੱਕੋ ਕੰਮ ਨੂੰ ਦੇਣ ਲਈ Pipeline ਕੀ ਵਰਤੇ?",
+    "options": [
+      "skipDefaultCheckout ਵਿਕਲਪ",
+      "Lockable Resources ਪਲੱਗਇਨ ਦਾ lock ਕਦਮ",
+      "timestamps ਵਿਕਲਪ",
+      "buildDiscarder ਵਿਕਲਪ"
+    ],
+    "answer": "Lockable Resources ਪਲੱਗਇਨ ਦਾ lock ਕਦਮ"
+  }
+]

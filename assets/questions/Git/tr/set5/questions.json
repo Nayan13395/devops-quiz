@@ -1,0 +1,302 @@
+[
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "release adlı mevcut dal için bağlı bir çalışma ağacını hangi komut ekler?",
+    "options": [
+      "git worktree prune",
+      "git worktree lock ..\\release",
+      "git worktree add ..\\release release",
+      "git worktree list"
+    ],
+    "answer": "git worktree add ..\\release release"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "Üst projenin sürümlenen alt modül yollarını ve URL'lerini hangi dosya kaydeder?",
+    "options": [
+      ".gitmessage",
+      ".gitmodules",
+      ".gitignore",
+      ".gitattributes"
+    ],
+    "answer": ".gitmodules"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "İç içe olanlar dahil kayıtlı alt modülleri hangi komut başlatıp çıkarır?",
+    "options": [
+      "git submodule update --init --recursive",
+      "git submodule deinit --all",
+      "git submodule status",
+      "git submodule sync"
+    ],
+    "answer": "git submodule update --init --recursive"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "Üst proje bir commit içinde alt modül için normalde ne kaydeder?",
+    "options": [
+      "Alt modülün tüm nesne veritabanını",
+      "Yalnızca alt modülün varsayılan dal adını",
+      "Yalnızca alt modülün commit edilmemiş değişikliklerini",
+      "Belirli bir alt modül commit'ine başvuruyu"
+    ],
+    "answer": "Belirli bir alt modül commit'ine başvuruyu"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "Tüm başvuruları ve erişilebilir geçmişlerini içeren taşınabilir paketi hangi komut oluşturur?",
+    "options": [
+      "git format-patch -1 HEAD",
+      "git diff --binary > backup.bundle",
+      "git bundle create backup.bundle --all",
+      "git archive --output=backup.bundle HEAD"
+    ],
+    "answer": "git bundle create backup.bundle --all"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "HEAD içindeki izlenen dosyaları Git geçmişi olmadan ZIP arşivine hangi komut aktarır?",
+    "options": [
+      "git format-patch --stdout HEAD > source.zip",
+      "git archive --format=zip --output=source.zip HEAD",
+      "git bundle create source.zip --all",
+      "git clone --bare . source.zip"
+    ],
+    "answer": "git archive --format=zip --output=source.zip HEAD"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "Son commit'i e-posta biçiminde bir yama dosyasına hangi komut dönüştürür?",
+    "options": [
+      "git format-patch -1 HEAD",
+      "git diff HEAD",
+      "git show --stat HEAD",
+      "git log -1 --oneline"
+    ],
+    "answer": "git format-patch -1 HEAD"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "git format-patch ile oluşturulan e-posta yamalarını uygulayıp commit oluşturan komut hangisidir?",
+    "options": [
+      "git apply changes.patch",
+      "git diff changes.patch",
+      "git add changes.patch",
+      "git am changes.patch"
+    ],
+    "answer": "git am changes.patch"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "Normal bir yamanın uygulanabilirliğini dosyaları değiştirmeden hangi komut denetler?",
+    "options": [
+      "git am changes.patch",
+      "git add changes.patch",
+      "git apply --check changes.patch",
+      "git apply changes.patch"
+    ],
+    "answer": "git apply --check changes.patch"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "Dosya adını içermeden dosya içeriğini hangi Git nesne türü saklar?",
+    "options": [
+      "Açıklamalı etiket",
+      "Blob",
+      "Tree",
+      "Commit"
+    ],
+    "answer": "Blob"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "Dosya adlarını ve blob ya da alt ağaç başvurularını hangi Git nesne türü kaydeder?",
+    "options": [
+      "Tree",
+      "Blob",
+      "Commit",
+      "Açıklamalı etiket"
+    ],
+    "answer": "Tree"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "Bilinen bir nesne kimliğinin nesne türünü hangi komut bildirir?",
+    "options": [
+      "git cat-file -s abc1234",
+      "git rev-parse abc1234",
+      "git log -1 abc1234",
+      "git cat-file -t abc1234"
+    ],
+    "answer": "git cat-file -t abc1234"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "HEAD için tam nesne kimliğini hangi komut gösterir?",
+    "options": [
+      "git status --short",
+      "git branch --show-current",
+      "git rev-parse HEAD",
+      "git symbolic-ref HEAD"
+    ],
+    "answer": "git rev-parse HEAD"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "feature üzerinden erişilen, ancak main üzerinden erişilmeyen commit'leri hangi revizyon aralığı seçer?",
+    "options": [
+      "main^",
+      "main..feature",
+      "feature..main",
+      "main...feature"
+    ],
+    "answer": "main..feature"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "Yalnızca birleştirme commit'lerini hangi git log seçeneği gösterir?",
+    "options": [
+      "--merges",
+      "--no-merges",
+      "--first-parent",
+      "--reverse"
+    ],
+    "answer": "--merges"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "Değişen yolları ve değişiklik durum harflerini hangi git diff seçeneği gösterir?",
+    "options": [
+      "--name-only",
+      "--stat",
+      "--shortstat",
+      "--name-status"
+    ],
+    "answer": "--name-status"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "Yollara yönelik metin normalleştirme kuralları gibi sürümlenen öznitelikleri hangi dosya tanımlar?",
+    "options": [
+      ".gitmodules",
+      ".gitconfig",
+      ".gitattributes",
+      ".gitignore"
+    ],
+    "answer": ".gitattributes"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": ".gitattributes içindeki '*.sh text eol=lf' kuralı eşleşen metin dosyaları için ne ister?",
+    "options": [
+      "Boş satırların otomatik silinmesini",
+      "Çalışma ağacında LF satır sonlarını",
+      "Çalışma ağacında CRLF satır sonlarını",
+      "Metin dönüşümü olmadan ikili dosya işlemesini"
+    ],
+    "answer": "Çalışma ağacında LF satır sonlarını"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "Önerilen commit ileti dosyasını inceleyerek hangi kanca commit'i reddedebilir?",
+    "options": [
+      "commit-msg",
+      "post-commit",
+      "post-checkout",
+      "post-merge"
+    ],
+    "answer": "commit-msg"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "Git kancaları için özel dizini hangi yapılandırma ayarı seçer?",
+    "options": [
+      "core.worktree",
+      "core.excludesFile",
+      "core.attributesFile",
+      "core.hooksPath"
+    ],
+    "answer": "core.hooksPath"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "Paylaşılan bir .gitignore kuralı eklemeden bir geliştiricinin izlenmeyen dosyaları yerel olarak yok saymasını hangi dosya sağlar?",
+    "options": [
+      ".git\\description",
+      ".git\\packed-refs",
+      ".git\\info\\exclude",
+      ".git\\HEAD"
+    ],
+    "answer": ".git\\info\\exclude"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "bisect oturumundan çıkıp normalde ilk dala hangi komut döner?",
+    "options": [
+      "git bisect log",
+      "git bisect reset",
+      "git bisect skip",
+      "git bisect good"
+    ],
+    "answer": "git bisect reset"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "Bir yama serisinin iki sürümünü hangi komut karşılaştırır?",
+    "options": [
+      "git range-diff main..old main..new",
+      "git diff old new",
+      "git log old..new",
+      "git merge-base old new"
+    ],
+    "answer": "git range-diff main..old main..new"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "Commit oluştururken Signed-off-by satırını hangi komut ekler?",
+    "options": [
+      "git commit --gpg-sign",
+      "git commit --amend",
+      "git commit --no-verify",
+      "git commit --signoff"
+    ],
+    "answer": "git commit --signoff"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "git log -S'old_name' varsayılan olarak ne arar?",
+    "options": [
+      "İletisinde old_name bulunan commit'leri",
+      "Adında old_name bulunan dalları",
+      "old_name görülme sayısını değiştiren commit'leri",
+      "Yazarı old_name olan commit'leri"
+    ],
+    "answer": "old_name görülme sayısını değiştiren commit'leri"
+  }
+]

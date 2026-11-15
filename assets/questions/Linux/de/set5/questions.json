@@ -1,0 +1,302 @@
+[
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "Was verhindert das Zitieren einer Bash-Expansion als \"$name\"?",
+    "options": [
+      "Jegliche Parameterexpansion innerhalb der Anführungszeichen",
+      "Eine spätere Änderung der Variablen",
+      "Dass der Befehl ein leeres Argument erhält",
+      "Wortaufteilung und Pfadnamenexpansion des expandierten Werts"
+    ],
+    "answer": "Wortaufteilung und Pfadnamenexpansion des expandierten Werts"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "Was bewirken einfache Anführungszeichen in '$HOME' unter Bash?",
+    "options": [
+      "Sie expandieren das vorherige Arbeitsverzeichnis",
+      "Sie entfernen das Dollarzeichen und übergeben HOME",
+      "Sie übergeben den wörtlichen Text $HOME",
+      "Sie expandieren das Benutzerverzeichnis"
+    ],
+    "answer": "Sie übergeben den wörtlichen Text $HOME"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "Was fügt Bash-Befehlssubstitution mit $(command) ein?",
+    "options": [
+      "Den Exitstatus des Befehls als Dezimalzahl",
+      "Die Standardausgabe des Befehls ohne abschließende Zeilenumbrüche",
+      "Die numerische Prozess-ID des Befehls",
+      "Nur die Standardfehlerausgabe des Befehls"
+    ],
+    "answer": "Die Standardausgabe des Befehls ohne abschließende Zeilenumbrüche"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "Welcher eingebaute Bash-Befehl liest und führt Befehle einer Skriptdatei in der aktuellen Shell aus?",
+    "options": [
+      "source",
+      "exec",
+      "eval",
+      "export"
+    ],
+    "answer": "source"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "Was bewirkt 'exec program' in einem Bash-Skript bei erfolgreicher Ausführung?",
+    "options": [
+      "Es startet program als Hintergrundjob, während die Shell weiterläuft",
+      "Es führt program zweimal aus und vergleicht die Ergebnisse",
+      "Es lädt die Ausgabe von program als Shell-Quellcode",
+      "Es ersetzt den Shell-Prozess durch program"
+    ],
+    "answer": "Es ersetzt den Shell-Prozess durch program"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "Welchen Status hat eine Pipeline bei aktiviertem Bash-pipefail, wenn mindestens ein Befehl fehlschlägt?",
+    "options": [
+      "Immer null, wenn der letzte Befehl erfolgreich ist",
+      "Die Summe aller Befehls-Exitstatus",
+      "Den Status des am weitesten rechts stehenden Befehls mit Rückgabewert ungleich null",
+      "Immer den Status des ersten Befehls"
+    ],
+    "answer": "Den Status des am weitesten rechts stehenden Befehls mit Rückgabewert ungleich null"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "Welcher Befehl prüft mit GNU Coreutils die in checksums.txt aufgezeichneten SHA-256-Prüfsummen?",
+    "options": [
+      "cksum checksums.txt",
+      "sha256sum -c checksums.txt",
+      "sha256sum checksums.txt",
+      "md5sum -c checksums.txt"
+    ],
+    "answer": "sha256sum -c checksums.txt"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "Welcher GNU-tar-Befehl erstellt ein gzip-komprimiertes Archiv des Verzeichnisses logs?",
+    "options": [
+      "tar -czf logs.tar.gz logs",
+      "tar -xzf logs.tar.gz",
+      "tar -tzf logs.tar.gz",
+      "gzip -d logs.tar.gz"
+    ],
+    "answer": "tar -czf logs.tar.gz logs"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "Welche tar-Option listet Archivinhalte auf, ohne sie zu entpacken?",
+    "options": [
+      "-x",
+      "-c",
+      "-r",
+      "-t"
+    ],
+    "answer": "-t"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "Was bewirkt das setgid-Bit eines Linux-Verzeichnisses normalerweise für darin neu erstellte Dateien?",
+    "options": [
+      "Sie gehören dem Benutzer root",
+      "Ihr Eigentümer kann sie nicht entfernen",
+      "Sie erben die Gruppenzugehörigkeit des Verzeichnisses",
+      "Sie werden immer für jeden Benutzer ausführbar"
+    ],
+    "answer": "Sie erben die Gruppenzugehörigkeit des Verzeichnisses"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "Was beschränkt das Sticky-Bit eines gemeinsam beschreibbaren Verzeichnisses hauptsächlich?",
+    "options": [
+      "Wer Datenträgerblöcke im Dateisystem zuweisen darf",
+      "Wer Dateien in diesem Verzeichnis löschen oder umbenennen darf",
+      "Wer jede Datei in diesem Verzeichnis lesen darf",
+      "Wer Programme außerhalb dieses Verzeichnisses ausführen darf"
+    ],
+    "answer": "Wer Dateien in diesem Verzeichnis löschen oder umbenennen darf"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "Welcher Befehl zeigt die Zugriffskontrolllisteneinträge einer Datei?",
+    "options": [
+      "getfacl file.txt",
+      "setfacl -b file.txt",
+      "getfattr -d file.txt",
+      "lsattr file.txt"
+    ],
+    "answer": "getfacl file.txt"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "Welche Datei enthält normalerweise lokale Benutzerkontodatensätze statt Passwort-Hashes?",
+    "options": [
+      "/etc/shadow",
+      "/etc/group",
+      "/etc/gshadow",
+      "/etc/passwd"
+    ],
+    "answer": "/etc/passwd"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "Welcher Befehl fügt alice der Zusatzgruppe docker hinzu, ohne ihre bisherigen Zusatzgruppen zu ersetzen?",
+    "options": [
+      "usermod -g docker alice",
+      "usermod -l docker alice",
+      "usermod -aG docker alice",
+      "usermod -G docker alice"
+    ],
+    "answer": "usermod -aG docker alice"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "Welcher Befehl sperrt das Passwort eines Linux-Benutzers für passwortbasierte Authentifizierung?",
+    "options": [
+      "passwd -e alice",
+      "passwd -l alice",
+      "passwd -u alice",
+      "passwd -S alice"
+    ],
+    "answer": "passwd -l alice"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "Welcher Befehl fragt die konfigurierten Namensdienstquellen nach dem passwd-Eintrag von alice ab?",
+    "options": [
+      "getent passwd alice",
+      "groups alice",
+      "id -u alice",
+      "whoami"
+    ],
+    "answer": "getent passwd alice"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "Welche Datei definiert normalerweise beim Systemstart automatisch einzuhängende Dateisysteme?",
+    "options": [
+      "/etc/hosts",
+      "/etc/shells",
+      "/etc/resolv.conf",
+      "/etc/fstab"
+    ],
+    "answer": "/etc/fstab"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "Welcher Befehl zeigt Dateisystem-UUIDs und weitere Blockgeräteattribute?",
+    "options": [
+      "modinfo",
+      "lscpu",
+      "blkid",
+      "lsmod"
+    ],
+    "answer": "blkid"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "Warum sollte ein Dateisystem vor einer reparierenden fsck-Operation normalerweise ausgehängt werden?",
+    "options": [
+      "Eingehängte Dateisysteme enthalten nie freien Speicherplatz",
+      "Gleichzeitige Dateisystemschreibzugriffe können mit Reparaturen kollidieren und Daten beschädigen",
+      "Das Aushängen verschlüsselt automatisch alle Dateisystemmetadaten",
+      "fsck unterstützt nur Dateisysteme ohne Gerätenamen"
+    ],
+    "answer": "Gleichzeitige Dateisystemschreibzugriffe können mit Reparaturen kollidieren und Daten beschädigen"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "Welcher Befehl zeigt aktive Auslagerungsbereiche?",
+    "options": [
+      "swapon --show",
+      "swapoff -a",
+      "free -s 1",
+      "vmstat -d"
+    ],
+    "answer": "swapon --show"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "Welcher Befehl lädt ein Linux-Kernelmodul samt Abhängigkeiten?",
+    "options": [
+      "rmmod",
+      "lsmod",
+      "modinfo",
+      "modprobe"
+    ],
+    "answer": "modprobe"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "Welcher systemd-Befehl verhindert den Start einer Unit durch Verknüpfung mit /dev/null?",
+    "options": [
+      "systemctl stop app.service",
+      "systemctl reset-failed app.service",
+      "systemctl mask app.service",
+      "systemctl disable app.service"
+    ],
+    "answer": "systemctl mask app.service"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "Welche SSH-Option wählt eine private Identitätsdatei zur Authentifizierung?",
+    "options": [
+      "-R",
+      "-i",
+      "-p",
+      "-L"
+    ],
+    "answer": "-i"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "Welcher Befehl kopiert eine lokale Datei sicher über SSH in das Verzeichnis eines entfernten Benutzers?",
+    "options": [
+      "scp report.txt alice@server:/home/alice/",
+      "ssh alice@server cat report.txt",
+      "sftp -b report.txt alice@server",
+      "ssh-keygen -f report.txt"
+    ],
+    "answer": "scp report.txt alice@server:/home/alice/"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "Was fordert 'rsync -n' an?",
+    "options": [
+      "Die Löschung von Zieldateien, die in der Quelle fehlen",
+      "Komprimierung der übertragenen Dateidaten",
+      "Rekursive Erhaltung aller Dateisystemattribute",
+      "Einen Probelauf, der geplante Änderungen meldet, ohne sie vorzunehmen"
+    ],
+    "answer": "Einen Probelauf, der geplante Änderungen meldet, ohne sie vorzunehmen"
+  }
+]

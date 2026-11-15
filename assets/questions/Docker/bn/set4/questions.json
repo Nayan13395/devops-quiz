@@ -1,0 +1,302 @@
+[
+  {
+    "category": "Docker",
+    "set": 4,
+    "question": "কোন কমান্ড Docker Hub থেকে একটি ইমেজ ডাউনলোড করে?",
+    "options": [
+      "docker pull",
+      "docker fetch",
+      "docker copy",
+      "docker get"
+    ],
+    "answer": "docker pull"
+  },
+  {
+    "category": "Docker",
+    "set": 4,
+    "question": "কোন কমান্ড একটি নির্দিষ্ট ইমেজ ট্যাগ পুল করে?",
+    "options": [
+      "docker pull image:tag",
+      "docker pull --tag tag",
+      "docker pull -t tag",
+      "docker get image:tag"
+    ],
+    "answer": "docker pull image:tag"
+  },
+  {
+    "category": "Docker",
+    "set": 4,
+    "question": "ইমেজের স্তর না নামিয়ে ম্যানিফেস্ট পরীক্ষা করে কোন কমান্ড?",
+    "options": [
+      "docker manifest inspect",
+      "docker pull --manifest",
+      "docker image manifest",
+      "docker show manifest"
+    ],
+    "answer": "docker manifest inspect"
+  },
+  {
+    "category": "Docker",
+    "set": 4,
+    "question": "কোন কমান্ড ইমেজ ডাইজেস্টগুলোর তালিকা দেখায়?",
+    "options": [
+      "docker images --digests",
+      "docker digest",
+      "docker image digest",
+      "docker inspect digest"
+    ],
+    "answer": "docker images --digests"
+  },
+  {
+    "category": "Docker",
+    "set": 4,
+    "question": "Docker Engine API 1.42 বা পরে নামযুক্তসহ সব অব্যবহৃত স্থানীয় ভলিউম সরায় কোন কমান্ড?",
+    "options": [
+      "docker volume prune -a",
+      "docker volume clean",
+      "docker prune volumes",
+      "docker rm volume"
+    ],
+    "answer": "docker volume prune -a"
+  },
+  {
+    "category": "Docker",
+    "set": 4,
+    "question": "অব্যবহৃত কাস্টম Docker নেটওয়ার্ক সরায় কোন কমান্ড?",
+    "options": [
+      "docker network prune",
+      "docker prune network",
+      "docker clean network",
+      "docker rm network"
+    ],
+    "answer": "docker network prune"
+  },
+  {
+    "category": "Docker",
+    "set": 4,
+    "question": "নির্বাচিত Buildx বিল্ডারের বিল্ড ক্যাশের ডিস্ক ব্যবহার দেখায় কোন কমান্ড?",
+    "options": [
+      "docker buildx du",
+      "docker build cache",
+      "docker cache usage",
+      "docker builder stats"
+    ],
+    "answer": "docker buildx du"
+  },
+  {
+    "category": "Docker",
+    "set": 4,
+    "question": "কোন কমান্ড অব্যবহৃত বিল্ড ক্যাশ মুছে ফেলে?",
+    "options": [
+      "docker builder prune",
+      "docker build clean",
+      "docker cache prune",
+      "docker prune build"
+    ],
+    "answer": "docker builder prune"
+  },
+  {
+    "category": "Docker",
+    "set": 4,
+    "question": "উপযুক্ত --platform তালিকা ও বিল্ডার দিয়ে একাধিক প্ল্যাটফর্মের ইমেজ বানায় কোন কমান্ড?",
+    "options": [
+      "docker buildx build",
+      "docker build multi",
+      "docker build platform",
+      "docker image buildx"
+    ],
+    "answer": "docker buildx build"
+  },
+  {
+    "category": "Docker",
+    "set": 4,
+    "question": "কোন কমান্ড উপলব্ধ Buildx বিল্ডারগুলোর তালিকা দেখায়?",
+    "options": [
+      "docker buildx ls",
+      "docker buildx show",
+      "docker builder ls",
+      "docker buildx list"
+    ],
+    "answer": "docker buildx ls"
+  },
+  {
+    "category": "Docker",
+    "set": 4,
+    "question": "কোন কমান্ড সব Docker কনটেক্সট দেখায়?",
+    "options": [
+      "docker context ls",
+      "docker contexts",
+      "docker context show",
+      "docker list context"
+    ],
+    "answer": "docker context ls"
+  },
+  {
+    "category": "Docker",
+    "set": 4,
+    "question": "কোন কমান্ড অন্য একটি Docker কনটেক্সটে পরিবর্তন করে?",
+    "options": [
+      "docker context use",
+      "docker context switch",
+      "docker use context",
+      "docker context select"
+    ],
+    "answer": "docker context use"
+  },
+  {
+    "category": "Docker",
+    "set": 4,
+    "question": "কোন কমান্ড একটি Docker কনটেক্সট মুছে ফেলে?",
+    "options": [
+      "docker context rm",
+      "docker context inspect",
+      "docker remove context",
+      "docker context use"
+    ],
+    "answer": "docker context rm"
+  },
+  {
+    "category": "Docker",
+    "set": 4,
+    "question": "কোন Dockerfile ইনস্ট্রাকশন বেস ইমেজ নির্দিষ্ট করে?",
+    "options": [
+      "FROM",
+      "BASE",
+      "IMAGE",
+      "START"
+    ],
+    "answer": "FROM"
+  },
+  {
+    "category": "Docker",
+    "set": 4,
+    "question": "কোন Dockerfile ইনস্ট্রাকশন এনভায়রনমেন্ট ভেরিয়েবল সেট করে?",
+    "options": [
+      "ENV",
+      "SET",
+      "VAR",
+      "EXPORT"
+    ],
+    "answer": "ENV"
+  },
+  {
+    "category": "Docker",
+    "set": 4,
+    "question": "Compose ফাইলের সেবা ব্যাকগ্রাউন্ডে শুরু করে কোন কমান্ড?",
+    "options": [
+      "docker compose up -d",
+      "docker compose create",
+      "docker compose config",
+      "docker compose down"
+    ],
+    "answer": "docker compose up -d"
+  },
+  {
+    "category": "Docker",
+    "set": 4,
+    "question": "অ্যাপের সেবা সংজ্ঞা থাকে Compose-এর কোন শীর্ষ কী-তে?",
+    "options": [
+      "volumes",
+      "networks",
+      "configs",
+      "services"
+    ],
+    "answer": "services"
+  },
+  {
+    "category": "Docker",
+    "set": 4,
+    "question": "সম্পূর্ণ সমাধান করা Compose সেটিং দেখিয়ে যাচাই করে কোন কমান্ড?",
+    "options": [
+      "docker compose images",
+      "docker compose top",
+      "docker compose config",
+      "docker compose ps"
+    ],
+    "answer": "docker compose config"
+  },
+  {
+    "category": "Docker",
+    "set": 4,
+    "question": "--volumes ছাড়া 'docker compose down' সাধারণত কী করে?",
+    "options": [
+      "শুধু Compose কনফিগারেশন ফাইল সরায়",
+      "নামযুক্ত ভলিউম রেখে প্রকল্পের কন্টেইনার ও নেটওয়ার্ক সরায়",
+      "হোস্টের সব ইমেজ ও ভলিউম মুছে দেয়",
+      "কন্টেইনার না সরিয়ে সাময়িক স্থগিত করে"
+    ],
+    "answer": "নামযুক্ত ভলিউম রেখে প্রকল্পের কন্টেইনার ও নেটওয়ার্ক সরায়"
+  },
+  {
+    "category": "Docker",
+    "set": 4,
+    "question": "Compose depends_on-এ service_healthy থাকলে নির্ভরশীল সেবা শুরু হওয়ার আগে কী দরকার?",
+    "options": [
+      "যার ওপর নির্ভর করা হয়েছে তাকে কনফিগার করা স্বাস্থ্য পরীক্ষায় পাস করতে হবে",
+      "যার ওপর নির্ভর করা হয়েছে তাকে সফলভাবে শেষ হতে হবে",
+      "সব ঘোষিত পোর্ট হোস্টে প্রকাশ করতে হবে",
+      "যার ওপর নির্ভর করা হয়েছে তার ইমেজ রেজিস্ট্রিতে দিতে হবে"
+    ],
+    "answer": "যার ওপর নির্ভর করা হয়েছে তাকে কনফিগার করা স্বাস্থ্য পরীক্ষায় পাস করতে হবে"
+  },
+  {
+    "category": "Docker",
+    "set": 4,
+    "question": "linux/amd64 ও linux/arm64-এর মতো লক্ষ্য নির্ধারণ করে কোন Buildx বিকল্প?",
+    "options": [
+      "--target",
+      "--builder",
+      "--progress",
+      "--platform"
+    ],
+    "answer": "--platform"
+  },
+  {
+    "category": "Docker",
+    "set": 4,
+    "question": "নামযুক্ত Dockerfile স্টেজকে বিল্ডের লক্ষ্য হিসেবে বেছে নেয় কোন Buildx বিকল্প?",
+    "options": [
+      "--tag",
+      "--file",
+      "--target",
+      "--platform"
+    ],
+    "answer": "--target"
+  },
+  {
+    "category": "Docker",
+    "set": 4,
+    "question": "বিল্ডের ফল সরাসরি রেজিস্ট্রিতে দেয় কোন Buildx বিকল্প?",
+    "options": [
+      "--pull",
+      "--push",
+      "--load",
+      "--no-cache"
+    ],
+    "answer": "--push"
+  },
+  {
+    "category": "Docker",
+    "set": 4,
+    "question": "ইমেজ তৈরির সময় '--no-cache' Docker-কে কী বলে?",
+    "options": [
+      "ক্যাশ করা বিল্ডের ফল পুনরায় ব্যবহার করবেন না",
+      "সব স্থানীয় ইমেজ সরিয়ে দিন",
+      "কন্টেইনারের রানটাইম ফাইল-সিস্টেম ক্যাশ বন্ধ করুন",
+      "বেস ইমেজ ডাউনলোড বাদ দিন"
+    ],
+    "answer": "ক্যাশ করা বিল্ডের ফল পুনরায় ব্যবহার করবেন না"
+  },
+  {
+    "category": "Docker",
+    "set": 4,
+    "question": "নামযুক্ত Docker ভলিউমের বিস্তারিত দেখায় কোন কমান্ড?",
+    "options": [
+      "docker volume ls",
+      "docker volume create data",
+      "docker volume prune",
+      "docker volume inspect data"
+    ],
+    "answer": "docker volume inspect data"
+  }
+]

@@ -1,0 +1,302 @@
+[
+  {
+    "category": "Terraform",
+    "set": 2,
+    "question": "Quel bloc est utilisé pour définir des variables d'entrée dans Terraform ?",
+    "options": [
+      "variable",
+      "input",
+      "vars",
+      "parameter"
+    ],
+    "answer": "variable"
+  },
+  {
+    "category": "Terraform",
+    "set": 2,
+    "question": "Quel bloc est utilisé pour définir des valeurs locales ?",
+    "options": [
+      "locals",
+      "local",
+      "values",
+      "variables"
+    ],
+    "answer": "locals"
+  },
+  {
+    "category": "Terraform",
+    "set": 2,
+    "question": "Quel bloc est utilisé pour récupérer des informations sur l'infrastructure existante ?",
+    "options": [
+      "data",
+      "resource",
+      "provider",
+      "output"
+    ],
+    "answer": "data"
+  },
+  {
+    "category": "Terraform",
+    "set": 2,
+    "question": "Quel méta-argument accepte un entier pour créer autant d'instances de ressource ?",
+    "options": [
+      "count",
+      "for_each",
+      "repeat",
+      "loop"
+    ],
+    "answer": "count"
+  },
+  {
+    "category": "Terraform",
+    "set": 2,
+    "question": "Quel méta-argument crée des instances de ressource à partir d'un dictionnaire ou d'un ensemble de chaînes ?",
+    "options": [
+      "for_each",
+      "count",
+      "each",
+      "loop"
+    ],
+    "answer": "for_each"
+  },
+  {
+    "category": "Terraform",
+    "set": 2,
+    "question": "Quel opérateur est utilisé pour les expressions conditionnelles ?",
+    "options": [
+      "? :",
+      "if",
+      "switch",
+      "case"
+    ],
+    "answer": "? :"
+  },
+  {
+    "category": "Terraform",
+    "set": 2,
+    "question": "Quelle fonction renvoie la longueur d'une liste ?",
+    "options": [
+      "length()",
+      "count()",
+      "size()",
+      "len()"
+    ],
+    "answer": "length()"
+  },
+  {
+    "category": "Terraform",
+    "set": 2,
+    "question": "Quelle fonction convertit une chaîne en majuscules ?",
+    "options": [
+      "upper()",
+      "toupper()",
+      "capitalize()",
+      "upcase()"
+    ],
+    "answer": "upper()"
+  },
+  {
+    "category": "Terraform",
+    "set": 2,
+    "question": "Quelle fonction réunit les éléments d'une liste en une chaîne ?",
+    "options": [
+      "join()",
+      "concat()",
+      "merge()",
+      "append()"
+    ],
+    "answer": "join()"
+  },
+  {
+    "category": "Terraform",
+    "set": 2,
+    "question": "Quelle fonction combine en une seule liste plusieurs listes fournies comme arguments distincts ?",
+    "options": [
+      "concat()",
+      "join()",
+      "merge()",
+      "flatten()"
+    ],
+    "answer": "concat()"
+  },
+  {
+    "category": "Terraform",
+    "set": 2,
+    "question": "Qu'est-ce qu'une dépendance implicite dans Terraform ?",
+    "options": [
+      "Dépendance détectée automatiquement",
+      "Dépendance manuelle",
+      "Dépendance de fournisseur",
+      "Dépendance d'état"
+    ],
+    "answer": "Dépendance détectée automatiquement"
+  },
+  {
+    "category": "Terraform",
+    "set": 2,
+    "question": "Quel argument crée une dépendance explicite ?",
+    "options": [
+      "depends_on",
+      "dependency",
+      "require",
+      "depends"
+    ],
+    "answer": "depends_on"
+  },
+  {
+    "category": "Terraform",
+    "set": 2,
+    "question": "Quelle commande liste les adresses de ressources dans l'état sans afficher leurs valeurs d'attributs ?",
+    "options": [
+      "terraform state list",
+      "terraform state show",
+      "terraform show",
+      "terraform state resources"
+    ],
+    "answer": "terraform state list"
+  },
+  {
+    "category": "Terraform",
+    "set": 2,
+    "question": "Quelle commande importe l'infrastructure existante dans l'état Terraform ?",
+    "options": [
+      "terraform import",
+      "terraform load",
+      "terraform sync",
+      "terraform attach"
+    ],
+    "answer": "terraform import"
+  },
+  {
+    "category": "Terraform",
+    "set": 2,
+    "question": "Quel type de variable d'entrée accepte uniquement les valeurs true ou false ?",
+    "options": [
+      "bool",
+      "string",
+      "number",
+      "list(string)"
+    ],
+    "answer": "bool"
+  },
+  {
+    "category": "Terraform",
+    "set": 2,
+    "question": "Quel type de variable d'entrée décrit une correspondance entre clés et valeurs de type chaîne ?",
+    "options": [
+      "list(string)",
+      "set(string)",
+      "tuple([string])",
+      "map(string)"
+    ],
+    "answer": "map(string)"
+  },
+  {
+    "category": "Terraform",
+    "set": 2,
+    "question": "Quel argument de variable fournit une valeur lorsque l'appelant n'en définit pas ?",
+    "options": [
+      "nullable",
+      "sensitive",
+      "default",
+      "description"
+    ],
+    "answer": "default"
+  },
+  {
+    "category": "Terraform",
+    "set": 2,
+    "question": "Quel bloc dans une déclaration de variable vérifie que sa valeur respecte une règle personnalisée ?",
+    "options": [
+      "connection",
+      "validation",
+      "lifecycle",
+      "provisioner"
+    ],
+    "answer": "validation"
+  },
+  {
+    "category": "Terraform",
+    "set": 2,
+    "question": "Quelle variable d'environnement fournit la valeur de la variable d'entrée region ?",
+    "options": [
+      "TF_VAR_region",
+      "TF_LOG_region",
+      "TF_CLI_ARGS_region",
+      "TF_DATA_DIR_region"
+    ],
+    "answer": "TF_VAR_region"
+  },
+  {
+    "category": "Terraform",
+    "set": 2,
+    "question": "Quel fichier la CLI charge-t-elle automatiquement comme fichier de définition des variables du module racine ?",
+    "options": [
+      "production.tfvars",
+      "production.vars",
+      "production.hcl",
+      "production.auto.tfvars"
+    ],
+    "answer": "production.auto.tfvars"
+  },
+  {
+    "category": "Terraform",
+    "set": 2,
+    "question": "Dans une ressource utilisant count, quelle expression donne l'indice de l'instance courante, à partir de zéro ?",
+    "options": [
+      "each.value",
+      "self.index",
+      "count.index",
+      "each.key"
+    ],
+    "answer": "count.index"
+  },
+  {
+    "category": "Terraform",
+    "set": 2,
+    "question": "Dans une ressource utilisant for_each avec un dictionnaire, quelle expression lit la valeur de l'élément courant ?",
+    "options": [
+      "self.value",
+      "each.value",
+      "each.key",
+      "count.index"
+    ],
+    "answer": "each.value"
+  },
+  {
+    "category": "Terraform",
+    "set": 2,
+    "question": "Quelle fonction supprime les doublons d'une liste tout en conservant l'ordre des premières occurrences ?",
+    "options": [
+      "distinct",
+      "sort",
+      "reverse",
+      "flatten"
+    ],
+    "answer": "distinct"
+  },
+  {
+    "category": "Terraform",
+    "set": 2,
+    "question": "Quelle fonction élimine les niveaux de listes directement imbriqués dans une liste ?",
+    "options": [
+      "concat",
+      "merge",
+      "join",
+      "flatten"
+    ],
+    "answer": "flatten"
+  },
+  {
+    "category": "Terraform",
+    "set": 2,
+    "question": "Quelle expression crée une nouvelle liste en convertissant chaque nom en majuscules ?",
+    "options": [
+      "[for name in var.names : length(name)]",
+      "[for name in var.names : trimspace(name)]",
+      "[for name in var.names : upper(name)]",
+      "[for name in var.names : lower(name)]"
+    ],
+    "answer": "[for name in var.names : upper(name)]"
+  }
+]

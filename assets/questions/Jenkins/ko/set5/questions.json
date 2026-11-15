@@ -1,0 +1,302 @@
+[
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "같은 파이프라인의 동시 실행 대신 새 실행을 큐에 넣는 선언형 옵션은?",
+    "options": [
+      "parallelsAlwaysFailFast()",
+      "disableConcurrentBuilds()",
+      "disableResume()",
+      "skipDefaultCheckout()"
+    ],
+    "answer": "disableConcurrentBuilds()"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "오래된 빌드 기록과 산출물 보관 규칙을 지정하는 선언형 옵션은?",
+    "options": [
+      "buildDiscarder(logRotator(numToKeepStr: '10'))",
+      "timeout(time: 10, unit: 'MINUTES')",
+      "retry(10)",
+      "quietPeriod(10)"
+    ],
+    "answer": "buildDiscarder(logRotator(numToKeepStr: '10'))"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "Jenkins cron 표현식의 H가 제공하는 것은?",
+    "options": [
+      "사용자 컴퓨터의 현재 시각 중 시 값",
+      "공휴일에만 실행하라는 요청",
+      "노드가 유휴 상태일 때만 실행하라는 요청",
+      "예약 부하를 분산하는 작업 이름 기반의 안정적인 해시"
+    ],
+    "answer": "예약 부하를 분산하는 작업 이름 기반의 안정적인 해시"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "Jenkins의 다섯 필드 cron 문법에서 다섯 번째 필드는?",
+    "options": [
+      "하루 중 시",
+      "월중 날짜",
+      "요일",
+      "시간 내 분"
+    ],
+    "answer": "요일"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "이전 빌드가 실패하거나 불안정했지만 현재 빌드가 성공하면 실행되는 post 조건은?",
+    "options": [
+      "unsuccessful",
+      "fixed",
+      "changed",
+      "regression"
+    ],
+    "answer": "fixed"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "다른 post 조건들이 평가된 뒤 실행되는 post 조건은?",
+    "options": [
+      "cleanup",
+      "always",
+      "changed",
+      "success"
+    ],
+    "answer": "cleanup"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "스테이지 에이전트 할당 전에 조건을 평가하는 when 옵션은?",
+    "options": [
+      "beforeInput false",
+      "beforeOptions false",
+      "branch 'main'",
+      "beforeAgent true"
+    ],
+    "answer": "beforeAgent true"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "멀티브랜치 파이프라인에서 특정 브랜치를 대상으로 하는 when 조건은?",
+    "options": [
+      "buildingTag()",
+      "changeRequest()",
+      "branch 'main'",
+      "tag 'main'"
+    ],
+    "answer": "branch 'main'"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "운영체제와 브라우저 같은 축 값들의 조합을 실행하는 선언형 구조는?",
+    "options": [
+      "environment",
+      "matrix",
+      "parallel",
+      "steps"
+    ],
+    "answer": "matrix"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "선언형 행렬에서 원치 않는 조합을 제외하는 섹션은?",
+    "options": [
+      "excludes",
+      "axes",
+      "stages",
+      "tools"
+    ],
+    "answer": "excludes"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "병렬 분기 중 하나가 실패하면 나머지를 멈추는 스테이지 설정은?",
+    "options": [
+      "beforeAgent true",
+      "reuseNode true",
+      "alwaysPull true",
+      "failFast true"
+    ],
+    "answer": "failFast true"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "빌드가 불안정해지면 후속 스테이지를 건너뛰는 선언형 옵션은?",
+    "options": [
+      "disableResume()",
+      "preserveStashes()",
+      "skipStagesAfterUnstable()",
+      "skipDefaultCheckout()"
+    ],
+    "answer": "skipStagesAfterUnstable()"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "실패를 기록하면서 블록 이후 실행을 계속하게 하는 단계는?",
+    "options": [
+      "input",
+      "catchError",
+      "error",
+      "timeout"
+    ],
+    "answer": "catchError"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "프로세스 종료 후 sh(script: 'check.sh', returnStatus: true)가 반환하는 것은?",
+    "options": [
+      "숫자 형태의 프로세스 종료 코드",
+      "전체 표준 출력 텍스트",
+      "셸의 프로세스 ID",
+      "Jenkins 자격 증명 객체"
+    ],
+    "answer": "숫자 형태의 프로세스 종료 코드"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "sh(script: 'echo ready', returnStdout: true)가 성공 시 반환하는 것은?",
+    "options": [
+      "숫자 빌드 번호",
+      "맵 형태의 셸 환경",
+      "에이전트 레이블 목록",
+      "캡처한 표준 출력 문자열"
+    ],
+    "answer": "캡처한 표준 출력 문자열"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "현재 작업 공간 디렉터리 내용을 재귀적으로 지우는 단계는?",
+    "options": [
+      "pwd",
+      "readFile",
+      "deleteDir",
+      "fileExists"
+    ],
+    "answer": "deleteDir"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "현재 작업 공간에 경로가 존재하는지 확인하는 단계는?",
+    "options": [
+      "libraryResource",
+      "fileExists",
+      "readFile",
+      "writeFile"
+    ],
+    "answer": "fileExists"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "다른 Jenkins 작업을 실행하고 빌드 매개변수를 전달할 수 있는 단계는?",
+    "options": [
+      "build",
+      "stage",
+      "node",
+      "checkout"
+    ],
+    "answer": "build"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "스테이지 재시작을 위해 완료된 빌드의 stash를 보관하는 선언형 옵션은?",
+    "options": [
+      "disableResume()",
+      "skipDefaultCheckout()",
+      "quietPeriod(5)",
+      "preserveStashes()"
+    ],
+    "answer": "preserveStashes()"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "vars/deploy.groovy가 정의한 전역 변수 deploy의 도움말을 제공하는 공유 라이브러리 파일은?",
+    "options": [
+      "resources/deploy.txt",
+      "vars/main.groovy",
+      "vars/deploy.txt",
+      "src/deploy.groovy"
+    ],
+    "answer": "vars/deploy.txt"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "Jenkins 파이프라인에서 @NonCPS 메서드의 핵심 제한은?",
+    "options": [
+      "Windows 에이전트에서 실행해야 한다",
+      "CPS 변환된 파이프라인 단계를 호출하면 안 된다",
+      "stage 지시문을 포함해야 한다",
+      "항상 문자열을 반환해야 한다"
+    ],
+    "answer": "CPS 변환된 파이프라인 단계를 호출하면 안 된다"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "미승인 샌드박스 Groovy 코드가 요청한 서명을 검토하는 Jenkins 기능은?",
+    "options": [
+      "프로세스 내 스크립트 승인",
+      "Credentials Store",
+      "빌드 큐",
+      "SCM 폴링 로그"
+    ],
+    "answer": "프로세스 내 스크립트 승인"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "바인딩한 비밀 변수를 셸이 확장하도록 하는 스크립트에 권장되는 Groovy 따옴표 형식은?",
+    "options": [
+      "비밀을 포함한 큰따옴표 Groovy 보간 문자열",
+      "비밀을 포함한 삼중 큰따옴표 Groovy 보간 문자열",
+      "평문 비밀을 이어 붙인 Groovy 문자열",
+      "작은따옴표 Groovy 문자열"
+    ],
+    "answer": "작은따옴표 Groovy 문자열"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "관련 웹 요청에서 Jenkins CSRF crumb의 목적은?",
+    "options": [
+      "업로드 전 빌드 산출물 암호화",
+      "빌드를 실행할 에이전트 선택",
+      "상태 변경 요청이 기존 사용자 세션에 속하는지 검증하는 데 도움",
+      "모든 작업의 인가 검사를 대체"
+    ],
+    "answer": "상태 변경 요청이 기존 사용자 세션에 속하는지 검증하는 데 도움"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "여러 작업이 공유 테스트 장치를 배타적으로 사용하도록 파이프라인이 사용할 것은?",
+    "options": [
+      "skipDefaultCheckout 옵션",
+      "Lockable Resources 플러그인의 lock 단계",
+      "timestamps 옵션",
+      "buildDiscarder 옵션"
+    ],
+    "answer": "Lockable Resources 플러그인의 lock 단계"
+  }
+]

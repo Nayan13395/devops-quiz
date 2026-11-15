@@ -1,0 +1,302 @@
+[
+  {
+    "category": "Docker",
+    "set": 5,
+    "question": "为什么构建应使用 BuildKit 秘密挂载，而不是将密码存入 ARG 或 ENV 指令？",
+    "options": [
+      "秘密挂载会自动轮换注册中心密码",
+      "秘密挂载会加密生成的每个镜像层",
+      "秘密挂载会阻止构建访问任何网络",
+      "秘密挂载避免将传入的秘密持久保存为镜像的 ARG 或 ENV 值"
+    ],
+    "answer": "秘密挂载避免将传入的秘密持久保存为镜像的 ARG 或 ENV 值"
+  },
+  {
+    "category": "Docker",
+    "set": 5,
+    "question": "RUN 指令中的 BuildKit 缓存挂载有什么用途？",
+    "options": [
+      "用空文件系统替换基础镜像",
+      "保证每条 RUN 指令都不使用缓存",
+      "跨构建复用工具缓存，而不将该挂载纳入最终镜像内容",
+      "将运行日志存储在镜像注册中心"
+    ],
+    "answer": "跨构建复用工具缓存，而不将该挂载纳入最终镜像内容"
+  },
+  {
+    "category": "Docker",
+    "set": 5,
+    "question": "哪种构建输入变化通常会使 COPY 及后续依赖步骤的缓存失效？",
+    "options": [
+      "只修改普通 Dockerfile 注释，不改变指令",
+      "修改被复制源文件的内容",
+      "只修改被复制文件的修改时间戳",
+      "修改被 .dockerignore 排除的文件"
+    ],
+    "answer": "修改被复制源文件的内容"
+  },
+  {
+    "category": "Docker",
+    "set": 5,
+    "question": "Dockerfile 指令 'FROM scratch' 选择什么？",
+    "options": [
+      "不含基础镜像文件系统的空起点",
+      "最小化 Debian 安装",
+      "正在运行的主机的根文件系统",
+      "最近在本地构建的镜像"
+    ],
+    "answer": "不含基础镜像文件系统的空起点"
+  },
+  {
+    "category": "Docker",
+    "set": 5,
+    "question": "哪个 Dockerfile 指令为镜像添加键值元数据？",
+    "options": [
+      "ARG",
+      "EXPOSE",
+      "STOPSIGNAL",
+      "LABEL"
+    ],
+    "answer": "LABEL"
+  },
+  {
+    "category": "Docker",
+    "set": 5,
+    "question": "哪个 Dockerfile 指令更改停止容器时默认发送的信号？",
+    "options": [
+      "SHELL",
+      "ONBUILD",
+      "STOPSIGNAL",
+      "HEALTHCHECK"
+    ],
+    "answer": "STOPSIGNAL"
+  },
+  {
+    "category": "Docker",
+    "set": 5,
+    "question": "为什么主服务器进程通常优先使用 exec 形式的 ENTRYPOINT？",
+    "options": [
+      "它能阻止服务器返回非零状态",
+      "它避免在服务器与容器信号之间插入额外的 shell",
+      "它会自动创建非 root 用户",
+      "它会在镜像中安装进程监管器"
+    ],
+    "answer": "它避免在服务器与容器信号之间插入额外的 shell"
+  },
+  {
+    "category": "Docker",
+    "set": 5,
+    "question": "'docker run --init' 为容器添加什么？",
+    "options": [
+      "一个转发信号并回收子进程的小型 init 进程",
+      "完整的 systemd 安装",
+      "第二个 Docker 守护进程",
+      "为每个进程提供交互式登录 shell"
+    ],
+    "answer": "一个转发信号并回收子进程的小型 init 进程"
+  },
+  {
+    "category": "Docker",
+    "set": 5,
+    "question": "哪个选项使 Linux 容器在移除所有 Linux 能力的情况下运行？",
+    "options": [
+      "--cap-add=ALL",
+      "--privileged",
+      "--security-opt seccomp=unconfined",
+      "--cap-drop=ALL"
+    ],
+    "answer": "--cap-drop=ALL"
+  },
+  {
+    "category": "Docker",
+    "set": 5,
+    "question": "无 root 权限运行的 Docker 主要改变什么？",
+    "options": [
+      "镜像不再需要注册中心",
+      "容器不再使用 Linux 命名空间",
+      "守护进程和容器不使用主机 root 权限运行",
+      "所有容器共享主机根文件系统"
+    ],
+    "answer": "守护进程和容器不使用主机 root 权限运行"
+  },
+  {
+    "category": "Docker",
+    "set": 5,
+    "question": "哪个 Linux 机制主要限制并统计容器的资源使用？",
+    "options": [
+      "Linux 能力机制",
+      "控制组",
+      "命名空间",
+      "Seccomp 过滤器"
+    ],
+    "answer": "控制组"
+  },
+  {
+    "category": "Docker",
+    "set": 5,
+    "question": "哪个 Linux 机制为容器提供进程 ID、网络接口等资源的隔离视图？",
+    "options": [
+      "命名空间",
+      "控制组",
+      "Seccomp 过滤器",
+      "Linux 能力机制"
+    ],
+    "answer": "命名空间"
+  },
+  {
+    "category": "Docker",
+    "set": 5,
+    "question": "哪个 Docker 网络驱动让 Linux 容器使用主机的网络命名空间？",
+    "options": [
+      "bridge",
+      "overlay",
+      "none",
+      "host"
+    ],
+    "answer": "host"
+  },
+  {
+    "category": "Docker",
+    "set": 5,
+    "question": "哪个 Docker 网络驱动使容器仅保留回环接口？",
+    "options": [
+      "host",
+      "overlay",
+      "none",
+      "bridge"
+    ],
+    "answer": "none"
+  },
+  {
+    "category": "Docker",
+    "set": 5,
+    "question": "哪个 Docker 网络驱动用于多个 Docker 主机之间的容器通信？",
+    "options": [
+      "none",
+      "overlay",
+      "bridge",
+      "host"
+    ],
+    "answer": "overlay"
+  },
+  {
+    "category": "Docker",
+    "set": 5,
+    "question": "'--network container:web' 对新容器有什么作用？",
+    "options": [
+      "共享 web 的网络命名空间",
+      "复制 web 的文件系统层",
+      "直接连接主机的所有接口",
+      "创建名为 web 的新网络"
+    ],
+    "answer": "共享 web 的网络命名空间"
+  },
+  {
+    "category": "Docker",
+    "set": 5,
+    "question": "为什么将目录挂载到容器的非空路径上，会让现有镜像文件看似消失？",
+    "options": [
+      "Docker 删除了原始镜像层",
+      "Docker 将文件移到了注册中心",
+      "镜像会自动重新构建并排除这些文件",
+      "只要挂载存在，就会遮蔽该路径下的文件"
+    ],
+    "answer": "只要挂载存在，就会遮蔽该路径下的文件"
+  },
+  {
+    "category": "Docker",
+    "set": 5,
+    "question": "空命名卷首次挂载到容器内已有文件的目录上，且未指定 volume-nocopy 时，Docker 通常做什么？",
+    "options": [
+      "因为目录非空而拒绝启动",
+      "将命名卷转换成绑定挂载",
+      "将目录中已有的文件复制到卷中",
+      "永久删除镜像中的文件"
+    ],
+    "answer": "将目录中已有的文件复制到卷中"
+  },
+  {
+    "category": "Docker",
+    "set": 5,
+    "question": "哪个命令列出容器 web 已发布的端口映射？",
+    "options": [
+      "docker wait web",
+      "docker port web",
+      "docker top web",
+      "docker diff web"
+    ],
+    "answer": "docker port web"
+  },
+  {
+    "category": "Docker",
+    "set": 5,
+    "question": "哪个命令只获取容器 web 日志的最后 20 行？",
+    "options": [
+      "docker logs --tail 20 web",
+      "docker logs --since 20m web",
+      "docker logs --until 20m web",
+      "docker logs --timestamps web"
+    ],
+    "answer": "docker logs --tail 20 web"
+  },
+  {
+    "category": "Docker",
+    "set": 5,
+    "question": "Docker 镜像与容器的主要区别是什么？",
+    "options": [
+      "镜像始终在运行，而容器始终已停止",
+      "镜像属于网络，而容器只属于注册中心",
+      "镜像只存储日志，而容器只存储元数据",
+      "镜像是只读模板，而容器是具有运行状态的实例"
+    ],
+    "answer": "镜像是只读模板，而容器是具有运行状态的实例"
+  },
+  {
+    "category": "Docker",
+    "set": 5,
+    "question": "Docker 上下文主要为 CLI 标识什么？",
+    "options": [
+      "选中的 Dockerfile 构建阶段",
+      "所有镜像的默认目标平台",
+      "Docker 守护进程端点的连接设置",
+      "作为镜像构建上下文发送的文件和目录"
+    ],
+    "answer": "Docker 守护进程端点的连接设置"
+  },
+  {
+    "category": "Docker",
+    "set": 5,
+    "question": "哪个命令使 Docker 客户端退出注册中心登录？",
+    "options": [
+      "docker trust inspect",
+      "docker logout",
+      "docker login",
+      "docker context use"
+    ],
+    "answer": "docker logout"
+  },
+  {
+    "category": "Docker",
+    "set": 5,
+    "question": "哪个选项让 docker login 从标准输入读取密码？",
+    "options": [
+      "--password-stdin",
+      "--username",
+      "--config",
+      "--context"
+    ],
+    "answer": "--password-stdin"
+  },
+  {
+    "category": "Docker",
+    "set": 5,
+    "question": "哪个命令列出名为 api 的 Docker Swarm 服务的任务？",
+    "options": [
+      "docker service inspect api",
+      "docker service logs api",
+      "docker service scale api=3",
+      "docker service ps api"
+    ],
+    "answer": "docker service ps api"
+  }
+]

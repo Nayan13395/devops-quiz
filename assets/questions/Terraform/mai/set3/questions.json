@@ -1,0 +1,302 @@
+[
+  {
+    "category": "Terraform",
+    "set": 3,
+    "question": "कोन Terraform फीचर पुनः प्रयोग योग्य इन्फ्रास्ट्रक्चर कंपोनेंट सभ केँ संभव बनबैत अछि?",
+    "options": [
+      "Modules",
+      "Providers",
+      "Variables",
+      "Outputs"
+    ],
+    "answer": "Modules"
+  },
+  {
+    "category": "Terraform",
+    "set": 3,
+    "question": "मॉड्यूल केँ कॉल करबाक लेल कोन ब्लॉक प्रयोग होइत अछि?",
+    "options": [
+      "module",
+      "import",
+      "resource",
+      "provider"
+    ],
+    "answer": "module"
+  },
+  {
+    "category": "Terraform",
+    "set": 3,
+    "question": "कोन आर्ग्युमेंट मॉड्यूलक सोर्स लोकेशन निर्दिष्ट करैत अछि?",
+    "options": [
+      "source",
+      "path",
+      "location",
+      "module_source"
+    ],
+    "answer": "source"
+  },
+  {
+    "category": "Terraform",
+    "set": 3,
+    "question": "कोन Terraform Registry सार्वजनिक मॉड्यूल सभ केँ होस्ट करैत अछि?",
+    "options": [
+      "Terraform Registry",
+      "Docker Hub",
+      "GitHub Packages",
+      "AWS Marketplace"
+    ],
+    "answer": "Terraform Registry"
+  },
+  {
+    "category": "Terraform",
+    "set": 3,
+    "question": "कोन बैकएंड Terraform स्टेट केँ Amazon S3 मे स्टोर करैत अछि?",
+    "options": [
+      "s3",
+      "aws",
+      "bucket",
+      "remote"
+    ],
+    "answer": "s3"
+  },
+  {
+    "category": "Terraform",
+    "set": 3,
+    "question": "S3 बैकएंडक आब-अप्रचलित (deprecated) टेबल-आधारित स्टेट लॉकिंग लेल कोन AWS सर्विस प्रयोग होइत छल?",
+    "options": [
+      "DynamoDB",
+      "RDS",
+      "EFS",
+      "Lambda"
+    ],
+    "answer": "DynamoDB"
+  },
+  {
+    "category": "Terraform",
+    "set": 3,
+    "question": "कोन लेगेसी बैकएंड टाइप स्टेट केँ HCP Terraform, जे पहिने Terraform Cloud छल, मे स्टोर कऽ सकैत अछि?",
+    "options": [
+      "remote",
+      "cloud",
+      "terraform",
+      "tfc"
+    ],
+    "answer": "remote"
+  },
+  {
+    "category": "Terraform",
+    "set": 3,
+    "question": "स्टेट लॉकिंगक उद्देश्य की अछि?",
+    "options": [
+      "एक संगे भऽ रहल संशोधन सभ केँ रोकब",
+      "स्टेट फाइल केँ एन्क्रिप्ट करब",
+      "स्टेटक बैकअप लेब",
+      "स्टेट केँ कंप्रेस करब"
+    ],
+    "answer": "एक संगे भऽ रहल संशोधन सभ केँ रोकब"
+  },
+  {
+    "category": "Terraform",
+    "set": 3,
+    "question": "कोन कमांड रिमोट स्टेट केँ लोकल मशीन पर पुल करैत अछि?",
+    "options": [
+      "terraform state pull",
+      "terraform pull",
+      "terraform get-state",
+      "terraform state download"
+    ],
+    "answer": "terraform state pull"
+  },
+  {
+    "category": "Terraform",
+    "set": 3,
+    "question": "कोन कमांड स्टेट केँ बैकएंड पर पुश करैत अछि?",
+    "options": [
+      "terraform state push",
+      "terraform push",
+      "terraform upload",
+      "terraform state upload"
+    ],
+    "answer": "terraform state push"
+  },
+  {
+    "category": "Terraform",
+    "set": 3,
+    "question": "कोन बैकएंड टाइप स्टेट केँ लोकल डिस्क पर स्टोर करैत अछि?",
+    "options": [
+      "local",
+      "file",
+      "disk",
+      "host"
+    ],
+    "answer": "local"
+  },
+  {
+    "category": "Terraform",
+    "set": 3,
+    "question": "कोन कमांड कोनो रिसोर्स केँ बिना डिलीट केने स्टेटसँ हटबैत अछि?",
+    "options": [
+      "terraform state rm",
+      "terraform rm",
+      "terraform destroy",
+      "terraform remove"
+    ],
+    "answer": "terraform state rm"
+  },
+  {
+    "category": "Terraform",
+    "set": 3,
+    "question": "कोन कमांड स्टेटक भीतर रिसोर्स सभ केँ एक ठामसँ दोसर ठाम सरकबैत अछि?",
+    "options": [
+      "terraform state mv",
+      "terraform move",
+      "terraform mv",
+      "terraform state move"
+    ],
+    "answer": "terraform state mv"
+  },
+  {
+    "category": "Terraform",
+    "set": 3,
+    "question": "कोन डेटा सोर्स दोसर स्टेट फाइलसँ आउटपुट पढ़ैत अछि?",
+    "options": [
+      "terraform_remote_state",
+      "remote_state",
+      "state_data",
+      "terraform_state"
+    ],
+    "answer": "terraform_remote_state"
+  },
+  {
+    "category": "Terraform",
+    "set": 3,
+    "question": "कोन फाइल प्रोवाइडर वर्जन सभ केँ लॉक करैत अछि?",
+    "options": [
+      ".terraform.lock.hcl",
+      "terraform.lock",
+      "providers.lock",
+      "terraform.providers"
+    ],
+    "answer": ".terraform.lock.hcl"
+  },
+  {
+    "category": "Terraform",
+    "set": 3,
+    "question": "कोन आर्ग्युमेंट रजिस्ट्रीसँ इंस्टॉल कएल गेल मॉड्यूलक वर्जन चुनैत अछि?",
+    "options": [
+      "version",
+      "ref",
+      "revision",
+      "required_version"
+    ],
+    "answer": "version"
+  },
+  {
+    "category": "Terraform",
+    "set": 3,
+    "question": "network नामक चाइल्ड मॉड्यूलक vpc_id आउटपुट केँ कोन एक्सप्रेशन पढ़ैत अछि?",
+    "options": [
+      "var.network.vpc_id",
+      "local.network.vpc_id",
+      "data.network.vpc_id",
+      "module.network.vpc_id"
+    ],
+    "answer": "module.network.vpc_id"
+  },
+  {
+    "category": "Terraform",
+    "set": 3,
+    "question": "कोन provider ब्लॉक आर्ग्युमेंट अतिरिक्त प्रोवाइडर कॉन्फ़िगरेशन केँ नाम दैत अछि?",
+    "options": [
+      "version",
+      "count",
+      "alias",
+      "source"
+    ],
+    "answer": "alias"
+  },
+  {
+    "category": "Terraform",
+    "set": 3,
+    "question": "कोन रिसोर्स मेटा-आर्ग्युमेंट कोनो विशेष aliased प्रोवाइडर कॉन्फ़िगरेशन केँ चुनैत अछि?",
+    "options": [
+      "for_each",
+      "provider",
+      "providers",
+      "depends_on"
+    ],
+    "answer": "provider"
+  },
+  {
+    "category": "Terraform",
+    "set": 3,
+    "question": "कोन मॉड्यूल-कॉल आर्ग्युमेंट चाइल्ड मॉड्यूल केँ विशिष्ट प्रोवाइडर कॉन्फ़िगरेशन सभ पास करैत अछि?",
+    "options": [
+      "providers",
+      "provider",
+      "required_providers",
+      "configuration_aliases"
+    ],
+    "answer": "providers"
+  },
+  {
+    "category": "Terraform",
+    "set": 3,
+    "question": "बैकएंड कॉन्फ़िगरेशन बदलला बाद कोन terraform init विकल्प विद्यमान स्टेट केँ स्थानांतरित करबाक प्रयास करैत अछि?",
+    "options": [
+      "-reconfigure",
+      "-upgrade",
+      "-get=false",
+      "-migrate-state"
+    ],
+    "answer": "-migrate-state"
+  },
+  {
+    "category": "Terraform",
+    "set": 3,
+    "question": "कोन terraform init विकल्प पूर्व बैकएंड कॉन्फ़िगरेशन केँ अनदेखा करैत अछि आ ओकर स्टेट केँ स्थानांतरित करबाक प्रयास नहि करैत अछि?",
+    "options": [
+      "-upgrade",
+      "-lock=false",
+      "-reconfigure",
+      "-migrate-state"
+    ],
+    "answer": "-reconfigure"
+  },
+  {
+    "category": "Terraform",
+    "set": 3,
+    "question": "कोन कमांड staging नामक CLI वर्कस्पेस बनबैत आ चुनैत अछि?",
+    "options": [
+      "terraform workspace list",
+      "terraform workspace new staging",
+      "terraform workspace select staging",
+      "terraform workspace show"
+    ],
+    "answer": "terraform workspace new staging"
+  },
+  {
+    "category": "Terraform",
+    "set": 3,
+    "question": "कोन कमांड वर्तमान CLI वर्कस्पेसक नाम देखबैत अछि?",
+    "options": [
+      "terraform workspace show",
+      "terraform workspace list",
+      "terraform workspace select default",
+      "terraform state list"
+    ],
+    "answer": "terraform workspace show"
+  },
+  {
+    "category": "Terraform",
+    "set": 3,
+    "question": "कोन S3 बैकएंड आर्ग्युमेंट नेटिव S3 लॉकफाइल-आधारित स्टेट लॉकिंग केँ सक्षम करैत अछि?",
+    "options": [
+      "encrypt = true",
+      "workspace_key_prefix = \"env\"",
+      "skip_region_validation = true",
+      "use_lockfile = true"
+    ],
+    "answer": "use_lockfile = true"
+  }
+]

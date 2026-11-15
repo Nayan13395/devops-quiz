@@ -1,0 +1,302 @@
+[
+  {
+    "category": "Hybrid Cloud",
+    "set": 3,
+    "question": "أي مورد في Kubernetes يعرض التطبيق داخليًا ضمن المجموعة (cluster)؟",
+    "options": [
+      "ClusterIP Service",
+      "Ingress",
+      "NodePort",
+      "LoadBalancer"
+    ],
+    "answer": "ClusterIP Service"
+  },
+  {
+    "category": "Hybrid Cloud",
+    "set": 3,
+    "question": "أي مورد في Kubernetes يعرض التطبيق خارجيًا باستخدام موازن الحمل الخاص بمزود السحابة؟",
+    "options": [
+      "LoadBalancer Service",
+      "ReplicaSet",
+      "DaemonSet",
+      "ConfigMap"
+    ],
+    "answer": "LoadBalancer Service"
+  },
+  {
+    "category": "Hybrid Cloud",
+    "set": 3,
+    "question": "أي مكوّن في Kubernetes يدير الوصول الخارجي عبر HTTP و HTTPS إلى الخدمات؟",
+    "options": [
+      "Ingress Controller",
+      "Scheduler",
+      "kube-proxy",
+      "etcd"
+    ],
+    "answer": "Ingress Controller"
+  },
+  {
+    "category": "Hybrid Cloud",
+    "set": 3,
+    "question": "أي مورد في Kubernetes يخزّن بيانات التكوين غير الحساسة؟",
+    "options": [
+      "ConfigMap",
+      "Secret",
+      "PersistentVolume",
+      "Namespace"
+    ],
+    "answer": "ConfigMap"
+  },
+  {
+    "category": "Hybrid Cloud",
+    "set": 3,
+    "question": "أي مورد في Kubernetes يخزّن كلمات المرور ومفاتيح API والشهادات بشكل آمن؟",
+    "options": [
+      "Secret",
+      "ConfigMap",
+      "Pod",
+      "Deployment"
+    ],
+    "answer": "Secret"
+  },
+  {
+    "category": "Hybrid Cloud",
+    "set": 3,
+    "question": "أي كائن في Kubernetes يضمن تشغيل عدد محدد من نسخ pod؟",
+    "options": [
+      "Deployment",
+      "Namespace",
+      "ServiceAccount",
+      "Node"
+    ],
+    "answer": "Deployment"
+  },
+  {
+    "category": "Hybrid Cloud",
+    "set": 3,
+    "question": "أي مورد في Kubernetes يشغّل pod واحدًا على كل عقدة في المجموعة؟",
+    "options": [
+      "DaemonSet",
+      "ReplicaSet",
+      "Job",
+      "CronJob"
+    ],
+    "answer": "DaemonSet"
+  },
+  {
+    "category": "Hybrid Cloud",
+    "set": 3,
+    "question": "أي مورد في Kubernetes يُستخدم لتنفيذ المهام المجدولة؟",
+    "options": [
+      "CronJob",
+      "Job",
+      "StatefulSet",
+      "ReplicaSet"
+    ],
+    "answer": "CronJob"
+  },
+  {
+    "category": "Hybrid Cloud",
+    "set": 3,
+    "question": "أي مبدأ سحابي أصلي (cloud-native) يحسّن قابلية نقل التطبيقات بين مزودي السحابة؟",
+    "options": [
+      "الحاويات (Containerization)",
+      "العتاد المخصص",
+      "واجهات API الخاصة بالمزود",
+      "النشر اليدوي"
+    ],
+    "answer": "الحاويات (Containerization)"
+  },
+  {
+    "category": "Hybrid Cloud",
+    "set": 3,
+    "question": "أي بيئة تشغيل حاويات مفتوحة المصدر تُستخدم عادةً مع Kubernetes؟",
+    "options": [
+      "containerd",
+      "VirtualBox",
+      "Hyper-V",
+      "VMware ESXi"
+    ],
+    "answer": "containerd"
+  },
+  {
+    "category": "Hybrid Cloud",
+    "set": 3,
+    "question": "أي آلية في Kubernetes تحدّ من إجمالي وحدة المعالجة المركزية والذاكرة التي يمكن استهلاكها داخل Namespace؟",
+    "options": [
+      "ResourceQuota",
+      "Ingress",
+      "DaemonSet",
+      "ServiceAccount"
+    ],
+    "answer": "ResourceQuota"
+  },
+  {
+    "category": "Hybrid Cloud",
+    "set": 3,
+    "question": "أي مبدأ في GitOps يعتبر Git المصدر الوحيد للحقيقة؟",
+    "options": [
+      "التكوين التصريحي (Declarative Configuration)",
+      "التكوين اليدوي",
+      "الوصول عبر SSH",
+      "التغييرات المباشرة على الإنتاج"
+    ],
+    "answer": "التكوين التصريحي (Declarative Configuration)"
+  },
+  {
+    "category": "Hybrid Cloud",
+    "set": 3,
+    "question": "أي كائن في Kubernetes يقيّد أي pods يمكنها التواصل مع بعضها على مستوى الشبكة؟",
+    "options": [
+      "NetworkPolicy",
+      "ResourceQuota",
+      "LimitRange",
+      "PodDisruptionBudget"
+    ],
+    "answer": "NetworkPolicy"
+  },
+  {
+    "category": "Hybrid Cloud",
+    "set": 3,
+    "question": "أي مفهوم شبكات يتيح الاتصال بين pods عبر مجموعات Kubernetes مختلفة؟",
+    "options": [
+      "الشبكات متعددة المجموعات (Multi-Cluster Networking)",
+      "إعادة توجيه المنافذ",
+      "نفق SSH",
+      "FTP"
+    ],
+    "answer": "الشبكات متعددة المجموعات (Multi-Cluster Networking)"
+  },
+  {
+    "category": "Hybrid Cloud",
+    "set": 3,
+    "question": "أي حل تخزين يوفّر تخزينًا دائمًا لأعباء عمل Kubernetes؟",
+    "options": [
+      "Persistent Volume",
+      "ConfigMap",
+      "Namespace",
+      "ReplicaSet"
+    ],
+    "answer": "Persistent Volume"
+  },
+  {
+    "category": "Hybrid Cloud",
+    "set": 3,
+    "question": "أي كائن في Kubernetes يطلب مساحة تخزين من Persistent Volume؟",
+    "options": [
+      "PersistentVolumeClaim",
+      "Secret",
+      "Service",
+      "ConfigMap"
+    ],
+    "answer": "PersistentVolumeClaim"
+  },
+  {
+    "category": "Hybrid Cloud",
+    "set": 3,
+    "question": "أي استراتيجية تنشر إصدارًا جديدًا من التطبيق لنسبة صغيرة من المستخدمين أولًا؟",
+    "options": [
+      "Canary Deployment",
+      "Rolling Restart",
+      "Big Bang Deployment",
+      "Cold Migration"
+    ],
+    "answer": "Canary Deployment"
+  },
+  {
+    "category": "Hybrid Cloud",
+    "set": 3,
+    "question": "أي استراتيجية نشر تستخدم بيئتي إنتاج متطابقتين وتحوّل حركة المرور بعد التحقق؟",
+    "options": [
+      "Blue-Green Deployment",
+      "Rolling Update",
+      "Canary Deployment",
+      "Recreate Deployment"
+    ],
+    "answer": "Blue-Green Deployment"
+  },
+  {
+    "category": "Hybrid Cloud",
+    "set": 3,
+    "question": "أي كائن في Kubernetes يضمن بقاء حدّ أدنى من pods متاحًا أثناء الانقطاعات الطوعية مثل إفراغ العقد (node drain)؟",
+    "options": [
+      "PodDisruptionBudget",
+      "HorizontalPodAutoscaler",
+      "NetworkPolicy",
+      "PersistentVolumeClaim"
+    ],
+    "answer": "PodDisruptionBudget"
+  },
+  {
+    "category": "Hybrid Cloud",
+    "set": 3,
+    "question": "أي ممارسة DevOps تتحقق تلقائيًا من تغييرات التطبيق قبل النشر؟",
+    "options": [
+      "الاختبار المستمر (Continuous Testing)",
+      "الاختبار اليدوي",
+      "النشر عبر FTP",
+      "النشر عبر SSH"
+    ],
+    "answer": "الاختبار المستمر (Continuous Testing)"
+  },
+  {
+    "category": "Hybrid Cloud",
+    "set": 3,
+    "question": "أي عملية تدمج تغييرات الشيفرة باستمرار في مستودع مشترك؟",
+    "options": [
+      "التكامل المستمر (Continuous Integration)",
+      "التعافي من الكوارث",
+      "النسخ الاحتياطي",
+      "تجاوز الفشل (Failover)"
+    ],
+    "answer": "التكامل المستمر (Continuous Integration)"
+  },
+  {
+    "category": "Hybrid Cloud",
+    "set": 3,
+    "question": "أي عملية تُصدر البرمجيات التي تم التحقق منها إلى الإنتاج تلقائيًا؟",
+    "options": [
+      "النشر المستمر (Continuous Deployment)",
+      "التحليل الساكن",
+      "مراجعة الشيفرة",
+      "التفرّع (Branching)"
+    ],
+    "answer": "النشر المستمر (Continuous Deployment)"
+  },
+  {
+    "category": "Hybrid Cloud",
+    "set": 3,
+    "question": "أي مقياس مراقبة يقيس المدة التي يستغرقها التطبيق للاستجابة لطلب؟",
+    "options": [
+      "زمن الاستجابة (Latency)",
+      "الإنتاجية (Throughput)",
+      "تردد وحدة المعالجة",
+      "حجم القرص"
+    ],
+    "answer": "زمن الاستجابة (Latency)"
+  },
+  {
+    "category": "Hybrid Cloud",
+    "set": 3,
+    "question": "أي نمط مرونة يعيد توجيه حركة المرور تلقائيًا إلى موارد سليمة بعد حدوث عطل؟",
+    "options": [
+      "Failover",
+      "Forking",
+      "Polling",
+      "Scraping"
+    ],
+    "answer": "Failover"
+  },
+  {
+    "category": "Hybrid Cloud",
+    "set": 3,
+    "question": "أي مبدأ في تصميم السحابة يوزّع أعباء العمل عبر بيئات متعددة لتجنب نقطة الفشل الواحدة؟",
+    "options": [
+      "التوافر العالي (High Availability)",
+      "نسخة واحدة",
+      "مضيف مخصص",
+      "بنية مستقلة"
+    ],
+    "answer": "التوافر العالي (High Availability)"
+  }
+]

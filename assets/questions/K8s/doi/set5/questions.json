@@ -1,0 +1,302 @@
+[
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "Pod ट्रैफिक गी प्रभावत करने आस्तै NetworkPolicy गी केह चाहिदा ऐ?",
+    "options": [
+      "हर चुने गेदे Pod आस्तै इक LoadBalancer Service",
+      "उसी नेमस्पेस च इक PersistentVolumeClaim",
+      "हर पॉलिसी आस्तै लग API server",
+      "इक नेटवर्क इम्प्लीमेंटेशन जेहड़ी NetworkPolicy गी लागू करदी ऐ"
+    ],
+    "answer": "इक नेटवर्क इम्प्लीमेंटेशन जेहड़ी NetworkPolicy गी लागू करदी ऐ"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "इक्को Pod गी चुनने आलियां कई NetworkPolicies अपने ingress ट्रैफिक दी इजाजत गी किस चाल्ली जोड़दियां न?",
+    "options": [
+      "पैह्लें बनी पॉलिसी बाद दियां सारियां पॉलिसियां गी ओवरराइड करदी ऐ",
+      "हर पॉलिसी गी हर पैकेट गी स्वतंत्र तौर पर इजाजत देनी लोड़चदी ऐ",
+      "इजाजत दित्ता गेदा ट्रैफिक उंदी ingress अनुमतियें दा यूनियन होंदा ऐ",
+      "आखरी बनी पॉलिसी पैह्लें दियां सारियां पॉलिसियां गी ओवरराइड करदी ऐ"
+    ],
+    "answer": "इजाजत दित्ता गेदा ट्रैफिक उंदी ingress अनुमतियें दा यूनियन होंदा ऐ"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "कुहड़ा RBAC ऑब्जेक्ट नेमस्पेस दे अंदर अनुमतियां परिभाषत करदा ऐ?",
+    "options": [
+      "ResourceQuota",
+      "Role",
+      "RoleBinding",
+      "ServiceAccount"
+    ],
+    "answer": "Role"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "कुहड़ा RBAC ऑब्जेक्ट इक नेमस्पेस दे अंदर Role जां ClusterRole दियां अनुमतियां दिंदा ऐ?",
+    "options": [
+      "RoleBinding",
+      "ClusterRoleBinding",
+      "ServiceAccount",
+      "LimitRange"
+    ],
+    "answer": "RoleBinding"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "Kubernetes API पहुंच आस्तै Pod च चलदियां प्रक्रियाएं गी आम तौर पर कुहड़ी पछान दित्ती जंदी ऐ?",
+    "options": [
+      "StorageClass",
+      "RuntimeClass",
+      "PriorityClass",
+      "ServiceAccount"
+    ],
+    "answer": "ServiceAccount"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "Secret दे डेटा गी base64 एनकोड करना उस बन्दे थमां इसदी हिफाजत आस्तै काफी क्यों नेईं ऐ जेहड़ा ऑब्जेक्ट पढ़ी सकदा ऐ?",
+    "options": [
+      "Base64 डेटा गी DNS राहें अपने आप प्रकाशत करदा ऐ",
+      "Base64 गी Pod च सटोर कीती गेदी प्राइवेट की चाहिदी ऐ",
+      "Base64 उलटाया जाने जोग एनकोडिंग ऐ, एनक्रिप्शन नेईं",
+      "Base64 Kubernetes गी डेटा सटोर करने थमां रोकदा ऐ"
+    ],
+    "answer": "Base64 उलटाया जाने जोग एनकोडिंग ऐ, एनक्रिप्शन नेईं"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "कुहड़ा फील्ड Kubernetes गी Pod च API क्रेडेंशियल अपने आप माउंट करने थमां रोकी सकदा ऐ?",
+    "options": [
+      "shareProcessNamespace: false",
+      "automountServiceAccountToken: false",
+      "hostNetwork: false",
+      "enableServiceLinks: false"
+    ],
+    "answer": "automountServiceAccountToken: false"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "कुहड़ा ऑब्जेक्ट नेमस्पेस दे अंदर कुल रिसोर्स खपत गी सीमत करदा ऐ?",
+    "options": [
+      "ResourceQuota",
+      "LimitRange",
+      "PriorityClass",
+      "PodDisruptionBudget"
+    ],
+    "answer": "ResourceQuota"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "कुहड़ा ऑब्जेक्ट नेमस्पेस दे अंदर कंटेनरें गी डिफॉल्ट रिसोर्स requests ते limits दे सकदा ऐ?",
+    "options": [
+      "ResourceQuota",
+      "HorizontalPodAutoscaler",
+      "RuntimeClass",
+      "LimitRange"
+    ],
+    "answer": "LimitRange"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "मटाने दा अनुरोध होने दे बाद Kubernetes ऑब्जेक्ट पर finalizer केह करदा ऐ?",
+    "options": [
+      "हर निर्भर ऑब्जेक्ट गी फौरन मटाई दिंदा ऐ",
+      "ऑब्जेक्ट गी अपरिवर्तनीय Secret च बदली दिंदा ऐ",
+      "ऑब्जेक्ट गी मटाने आस्तै लंबित रक्खदा ऐ जदूं तगर जरूरी सफाई finalizer गी नेईं हटांदी",
+      "ऑब्जेक्ट च सारे भविक्खी अपडेट रोकी दिंदा ऐ"
+    ],
+    "answer": "ऑब्जेक्ट गी मटाने आस्तै लंबित रक्खदा ऐ जदूं तगर जरूरी सफाई finalizer गी नेईं हटांदी"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "कुहड़ा मेटाडेटा फील्ड garbage collection आस्तै निर्भर ऑब्जेक्टें गी उंदे मालकें कन्नै जोड़दा ऐ?",
+    "options": [
+      "managedFields",
+      "ownerReferences",
+      "annotations",
+      "labels"
+    ],
+    "answer": "ownerReferences"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "CustomResourceDefinition क्लस्टर च केह जोड़दा ऐ?",
+    "options": [
+      "Kubernetes API दे जरिए परोसेआ जाने आला इक नमां custom resource टाइप",
+      "मौजूदा टाइप आस्तै चलदा reconciliation कंट्रोलर",
+      "हर service account गी इक RBAC अनुमति",
+      "हर built-in रिसोर्स टाइप दा इक इंस्टेंस"
+    ],
+    "answer": "Kubernetes API दे जरिए परोसेआ जाने आला इक नमां custom resource टाइप"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "सिर्फ custom resource definition कोला Kubernetes operator गी केह अलग करदा ऐ?",
+    "options": [
+      "operator सिर्फ schema परिभाषां सटोर करी सकदा ऐ",
+      "operator API server दी लोड़ गी खत्म करी दिंदा ऐ",
+      "operator सिर्फ kubectl दे आउटपुट फॉर्मेट गी बदलदा ऐ",
+      "operator प्रतिनिधित्व कीते गेदे एप्लीकेशन गी संभालने आस्तै reconciliation लॉजिक बी चलांदा ऐ"
+    ],
+    "answer": "operator प्रतिनिधित्व कीते गेदे एप्लीकेशन गी संभालने आस्तै reconciliation लॉजिक बी चलांदा ऐ"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "कुहड़ा तंत्र authentication ते authorization दे बाद, सहेजने थमां पैह्लें, API अनुरोध गी रद्द जां संशोधत करी सकदा ऐ?",
+    "options": [
+      "कंटेनर इमेज पुल करना",
+      "Service endpoint रूटिंग",
+      "Admission control",
+      "Pod शेड्यूलिंग"
+    ],
+    "answer": "Admission control"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "जेकर कोई बी योग्य नोड Pod दी जरूरी node affinity गी पूरा नेईं करदा तां के होंदा ऐ?",
+    "options": [
+      "API server उसी हर नोड पर शेड्यूल करदा ऐ",
+      "Pod तदूं तगर बिना शेड्यूल होए रैंदा ऐ जदूं तगर कोई ठीक नोड उपलब्ध नेईं होंदा जां रुकावटां बदलदियां नेईं",
+      "scheduler इक कोशश दे बाद नियम गी नजरअंदाज करी दिंदा ऐ",
+      "Pod अपने आप DaemonSet बनी जंदा ऐ"
+    ],
+    "answer": "Pod तदूं तगर बिना शेड्यूल होए रैंदा ऐ जदूं तगर कोई ठीक नोड उपलब्ध नेईं होंदा जां रुकावटां बदलदियां नेईं"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "preferredDuringSchedulingIgnoredDuringExecution node affinity केह दस्सदी ऐ?",
+    "options": [
+      "इक जगह दी पसंद जेहड़ी बाकी योग्य पर मेल नेईं खांदे नोड्स गी बाहर नेईं करदी",
+      "इक अनिवार्य जरूरत जेहड़ी मेल नेईं खांदे नोड्स पर रक्खने थमां रोकदी ऐ",
+      "नोड लेबल बदलने पर Pod गी बाहर कड्ढने दा निर्देश",
+      "scheduler गी पूरी चाल्ली बाईपास करने दा अनुरोध"
+    ],
+    "answer": "इक जगह दी पसंद जेहड़ी बाकी योग्य पर मेल नेईं खांदे नोड्स गी बाहर नेईं करदी"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "जेकर नोड दे लेबल चली दे Pod दे node-affinity नियम कन्नै मेल खाना बंद करी दिंदे न तां IgnoredDuringExecution दा केह मतलब ऐ?",
+    "options": [
+      "Pod गी फौरन मटाया जाना लाजमी ऐ",
+      "Pod दे कंटेनर अपने आप रिस्टार्ट होई जंदे न",
+      "नोड दे लेबल अपने आप पैह्लें आले होई जंदे न",
+      "सिर्फ नियम चली दे Pod गी बाहर नेईं कड्ढदा"
+    ],
+    "answer": "सिर्फ नियम चली दे Pod गी बाहर नेईं कड्ढदा"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "जदूं Pod साफ तौर पर spec.nodeName सेट करदा ऐ तां के होंदा ऐ?",
+    "options": [
+      "एह उस नांऽ दा नोड बनांदा ऐ",
+      "एह Pod चलाने आले मौजूदा नोड दा नांऽ बदलदा ऐ",
+      "एह scheduler गी बाईपास करदा ऐ ते उस नांऽ दे नोड गी असाइन होई जंदा ऐ",
+      "एह scheduler गी सारे मेल खांदे नोड लेबलें गी रैंक करने आस्तै आखदा ऐ"
+    ],
+    "answer": "एह scheduler गी बाईपास करदा ऐ ते उस नांऽ दे नोड गी असाइन होई जंदा ऐ"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "topology spread constraints दा मकसद केह ऐ?",
+    "options": [
+      "कंट्रोल-प्लेन कंपोनेंटें दे बश्कार ट्रैफिक गी एनक्रिप्ट करना",
+      "मेल खांदे Pods गी topology domains च किस चाल्ली बंडेआ जा, इसदा नियंत्रण करना",
+      "persistent volumes च कंटेनर फाइलां कॉपी करना",
+      "हर नेमस्पेस गी इक पब्लिक IP अलॉट करना"
+    ],
+    "answer": "मेल खांदे Pods गी topology domains च किस चाल्ली बंडेआ जा, इसदा नियंत्रण करना"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "कुहड़ा taint effect उनें पैह्लें थमां चली दे Pods गी बाहर कड्ढी सकदा ऐ जेहड़े taint गी बरदाश्त नेईं करदे?",
+    "options": [
+      "NoExecute",
+      "NoSchedule",
+      "PreferNoSchedule",
+      "None"
+    ],
+    "answer": "NoExecute"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "कुहड़ी कंटेनर securityContext सेटिंग Linux कंटेनर गी non-root यूज़र दे तौर पर चलने दी मंग करदी ऐ?",
+    "options": [
+      "readOnlyRootFilesystem: true",
+      "privileged: false",
+      "allowPrivilegeEscalation: false",
+      "runAsNonRoot: true"
+    ],
+    "answer": "runAsNonRoot: true"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "कुहड़ी कंटेनर securityContext सेटिंग Linux प्रक्रिया गी अपने पैरेंट थमां बद्ध विशेषाधिकार हासल करने थमां रोकदी ऐ?",
+    "options": [
+      "readOnlyRootFilesystem: true",
+      "privileged: false",
+      "allowPrivilegeEscalation: false",
+      "runAsNonRoot: true"
+    ],
+    "answer": "allowPrivilegeEscalation: false"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "कुहड़ा कंटेनर मौजूदा Pod दे एप्लीकेशन कंटेनरें गी बदले बगैर समस्या-निवारण आस्तै उस च जोड़ेआ जाई सकदा ऐ?",
+    "options": [
+      "Restartable init container",
+      "Ephemeral container",
+      "Ordinary init container",
+      "Regular application container"
+    ],
+    "answer": "Ephemeral container"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "कुहड़ा रिसोर्स स्केल होने जोग समूहें च Service आस्तै नेटवर्क endpoints दा हिसाब रक्खदा ऐ?",
+    "options": [
+      "EndpointSlice",
+      "IngressClass",
+      "NetworkPolicy",
+      "RuntimeClass"
+    ],
+    "answer": "EndpointSlice"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "Ingress रिसोर्स गी असल च HTTP रूटिंग कन्फिगर करने आस्तै केह चाहिदा ऐ?",
+    "options": [
+      "हर नेमस्पेस च ingress नांऽ दा ConfigMap",
+      "हर होस्टनेम आस्तै इक PersistentVolume",
+      "इक Job जेहड़ा सारे चुने गेदे Pods गी रिस्टार्ट करदा ऐ",
+      "इक Ingress controller जेहड़ा उसदे नियमें गी लागू करदा ऐ"
+    ],
+    "answer": "इक Ingress controller जेहड़ा उसदे नियमें गी लागू करदा ऐ"
+  }
+]

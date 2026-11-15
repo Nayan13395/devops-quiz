@@ -1,0 +1,302 @@
+[
+  {
+    "category": "Docker",
+    "set": 3,
+    "question": "哪个命令列出正在运行的容器？",
+    "options": [
+      "docker ps",
+      "docker images",
+      "docker start",
+      "docker build"
+    ],
+    "answer": "docker ps"
+  },
+  {
+    "category": "Docker",
+    "set": 3,
+    "question": "哪个命令在正在运行的容器内执行命令？",
+    "options": [
+      "docker exec",
+      "docker enter",
+      "docker shell",
+      "docker login"
+    ],
+    "answer": "docker exec"
+  },
+  {
+    "category": "Docker",
+    "set": 3,
+    "question": "哪个命令附加到正在运行的容器？",
+    "options": [
+      "docker attach",
+      "docker connect",
+      "docker exec",
+      "docker join"
+    ],
+    "answer": "docker attach"
+  },
+  {
+    "category": "Docker",
+    "set": 3,
+    "question": "哪个命令在容器和主机之间复制文件？",
+    "options": [
+      "docker cp",
+      "docker copy",
+      "docker transfer",
+      "docker sync"
+    ],
+    "answer": "docker cp"
+  },
+  {
+    "category": "Docker",
+    "set": 3,
+    "question": "哪个命令显示实时 Docker 事件？",
+    "options": [
+      "docker events",
+      "docker logs",
+      "docker monitor",
+      "docker watch"
+    ],
+    "answer": "docker events"
+  },
+  {
+    "category": "Docker",
+    "set": 3,
+    "question": "哪个命令将镜像保存为 tar 归档文件？",
+    "options": [
+      "docker save",
+      "docker export",
+      "docker backup",
+      "docker archive"
+    ],
+    "answer": "docker save"
+  },
+  {
+    "category": "Docker",
+    "set": 3,
+    "question": "哪个命令从 tar 归档文件加载镜像？",
+    "options": [
+      "docker load",
+      "docker import",
+      "docker restore",
+      "docker pull"
+    ],
+    "answer": "docker load"
+  },
+  {
+    "category": "Docker",
+    "set": 3,
+    "question": "哪个命令将容器文件系统导出为 tar 归档文件？",
+    "options": [
+      "docker export",
+      "docker save",
+      "docker backup",
+      "docker archive"
+    ],
+    "answer": "docker export"
+  },
+  {
+    "category": "Docker",
+    "set": 3,
+    "question": "哪个命令将 tarball 导入为镜像？",
+    "options": [
+      "docker import",
+      "docker load",
+      "docker pull",
+      "docker build"
+    ],
+    "answer": "docker import"
+  },
+  {
+    "category": "Docker",
+    "set": 3,
+    "question": "哪个命令根据容器的更改创建镜像？",
+    "options": [
+      "docker commit",
+      "docker build",
+      "docker save",
+      "docker tag"
+    ],
+    "answer": "docker commit"
+  },
+  {
+    "category": "Docker",
+    "set": 3,
+    "question": "哪个命令为 Docker 镜像打标签？",
+    "options": [
+      "docker tag",
+      "docker name",
+      "docker commit",
+      "docker label"
+    ],
+    "answer": "docker tag"
+  },
+  {
+    "category": "Docker",
+    "set": 3,
+    "question": "哪个命令将镜像推送到镜像仓库？",
+    "options": [
+      "docker push",
+      "docker upload",
+      "docker publish",
+      "docker send"
+    ],
+    "answer": "docker push"
+  },
+  {
+    "category": "Docker",
+    "set": 3,
+    "question": "哪个命令登录 Docker 镜像仓库？",
+    "options": [
+      "docker login",
+      "docker auth",
+      "docker connect",
+      "docker signin"
+    ],
+    "answer": "docker login"
+  },
+  {
+    "category": "Docker",
+    "set": 3,
+    "question": "哪个命令清理未使用的 Docker 对象？",
+    "options": [
+      "docker system prune",
+      "docker clean",
+      "docker prune",
+      "docker remove"
+    ],
+    "answer": "docker system prune"
+  },
+  {
+    "category": "Docker",
+    "set": 3,
+    "question": "哪个命令显示 Docker 磁盘使用情况？",
+    "options": [
+      "docker system df",
+      "docker disk",
+      "docker usage",
+      "docker info"
+    ],
+    "answer": "docker system df"
+  },
+  {
+    "category": "Docker",
+    "set": 3,
+    "question": "哪个 Dockerfile 指令声明可通过 --build-arg 提供的构建时变量？",
+    "options": [
+      "USER",
+      "ARG",
+      "ENV",
+      "LABEL"
+    ],
+    "answer": "ARG"
+  },
+  {
+    "category": "Docker",
+    "set": 3,
+    "question": "哪个 Dockerfile 指令指定后续 RUN 指令和默认运行进程的用户？",
+    "options": [
+      "USER",
+      "SHELL",
+      "WORKDIR",
+      "STOPSIGNAL"
+    ],
+    "answer": "USER"
+  },
+  {
+    "category": "Docker",
+    "set": 3,
+    "question": "Dockerfile 中 CMD 与 RUN 的区别是什么？",
+    "options": [
+      "CMD 总在 FROM 之前执行",
+      "CMD 从主机复制文件",
+      "CMD 创建新的构建阶段",
+      "CMD 提供容器运行的默认设置，而不是执行构建步骤"
+    ],
+    "answer": "CMD 提供容器运行的默认设置，而不是执行构建步骤"
+  },
+  {
+    "category": "Docker",
+    "set": 3,
+    "question": "镜像使用 exec 形式的 ENTRYPOINT 时，docker run 中镜像名后的普通参数通常如何使用？",
+    "options": [
+      "被解释为 Dockerfile 指令",
+      "存储为镜像标签",
+      "追加到入口命令之后",
+      "替换入口的可执行程序"
+    ],
+    "answer": "追加到入口命令之后"
+  },
+  {
+    "category": "Docker",
+    "set": 3,
+    "question": "多阶段构建中，哪个 Dockerfile 指令开启另一个阶段？",
+    "options": [
+      "ARG",
+      "FROM",
+      "RUN",
+      "COPY"
+    ],
+    "answer": "FROM"
+  },
+  {
+    "category": "Docker",
+    "set": 3,
+    "question": "哪个选项从多阶段 Dockerfile 中名为 build 的阶段复制产物？",
+    "options": [
+      "COPY --from=build",
+      "COPY --chown=build",
+      "COPY --chmod=build",
+      "COPY --exclude=build"
+    ],
+    "answer": "COPY --from=build"
+  },
+  {
+    "category": "Docker",
+    "set": 3,
+    "question": "哪个指令定义 Docker 用于评估容器健康状况的命令？",
+    "options": [
+      "STOPSIGNAL",
+      "ENTRYPOINT",
+      "ONBUILD",
+      "HEALTHCHECK"
+    ],
+    "answer": "HEALTHCHECK"
+  },
+  {
+    "category": "Docker",
+    "set": 3,
+    "question": "哪个镜像引用将拉取固定到内容摘要，而不是可变标签？",
+    "options": [
+      "nginx:stable",
+      "nginx:alpine",
+      "nginx@sha256:<digest>",
+      "nginx:latest"
+    ],
+    "answer": "nginx@sha256:<digest>"
+  },
+  {
+    "category": "Docker",
+    "set": 3,
+    "question": "'latest' 镜像标签实际上意味着什么？",
+    "options": [
+      "它会自动更新正在运行的容器",
+      "它是发布者可以更新的惯例标签",
+      "它保证选择按创建时间计算的最新镜像",
+      "它总是选择稳定版本"
+    ],
+    "answer": "它是发布者可以更新的惯例标签"
+  },
+  {
+    "category": "Docker",
+    "set": 3,
+    "question": "哪个命令显示容器文件系统中新增、修改或删除的文件？",
+    "options": [
+      "docker diff web",
+      "docker history web",
+      "docker inspect web",
+      "docker logs web"
+    ],
+    "answer": "docker diff web"
+  }
+]

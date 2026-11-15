@@ -1,3 +1,4 @@
+import '../l10n/game_localizations.dart';
 import 'dart:async';
 import 'dart:math';
 
@@ -110,18 +111,27 @@ class _ChessScreenState extends State<ChessScreen> with WidgetsBindingObserver {
   String get _status {
     if (_game.in_checkmate) {
       if (!_againstComputer) {
-        return '${_game.turn == chess.Color.WHITE ? 'Black' : 'White'} wins by checkmate';
+        return gameL10n(context).gameUiWinsByCheckmate(
+          (_game.turn == chess.Color.WHITE
+                  ? gameL10n(context).gameUiBlack
+                  : gameL10n(context).gameUiWhite)
+              .toString(),
+        );
       }
       return _game.turn == _userColor
-          ? 'Computer wins by checkmate'
-          : 'You win by checkmate';
+          ? gameL10n(context).gameUiComputerWinsByCheckmate
+          : gameL10n(context).gameUiYouWinByCheckmate;
     }
-    if (_game.in_stalemate) return 'Draw by stalemate';
-    if (_game.in_draw) return 'Draw';
+    if (_game.in_stalemate) return gameL10n(context).gameUiDrawByStalemate;
+    if (_game.in_draw) return gameL10n(context).gameUiDraw;
 
-    final side = _game.turn == chess.Color.WHITE ? 'White' : 'Black';
-    final turn = '$side to move';
-    return _game.in_check ? '$turn · Check' : turn;
+    final side = _game.turn == chess.Color.WHITE
+        ? gameL10n(context).gameUiWhite
+        : gameL10n(context).gameUiBlack;
+    final turn = gameL10n(context).gameUiToMove((side).toString());
+    return _game.in_check
+        ? gameL10n(context).gameUiCheck((turn).toString())
+        : turn;
   }
 
   void _tapSquare(int index) {
@@ -218,7 +228,9 @@ class _ChessScreenState extends State<ChessScreen> with WidgetsBindingObserver {
         await PointService.addPoints(50, source: PointSource.game);
         if (mounted) {
           ScaffoldMessenger.of(context).showSnackBar(
-            const SnackBar(content: Text('Checkmate! You earned 50 points.')),
+            SnackBar(
+              content: Text(gameL10n(context).gameUiCheckmateYouEarned50Points),
+            ),
           );
         }
       } catch (error) {
@@ -239,18 +251,18 @@ class _ChessScreenState extends State<ChessScreen> with WidgetsBindingObserver {
       final restart = await showDialog<bool>(
         context: context,
         builder: (context) => AlertDialog(
-          title: const Text('Start a new game?'),
-          content: const Text(
-            'Changing the player mode replaces the saved match.',
+          title: Text(gameL10n(context).gameUiStartANewGame),
+          content: Text(
+            gameL10n(context).gameUiChangingThePlayerModeReplacesTheSavedMatch,
           ),
           actions: [
             TextButton(
               onPressed: () => Navigator.pop(context, false),
-              child: const Text('Cancel'),
+              child: Text(gameL10n(context).gameUiCancel),
             ),
             FilledButton(
               onPressed: () => Navigator.pop(context, true),
-              child: const Text('New game'),
+              child: Text(gameL10n(context).gameUiNewGame),
             ),
           ],
         ),
@@ -305,10 +317,10 @@ class _ChessScreenState extends State<ChessScreen> with WidgetsBindingObserver {
 
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Chess'),
+        title: Text(gameL10n(context).gameUiChess),
         actions: [
           IconButton(
-            tooltip: 'New game',
+            tooltip: gameL10n(context).gameUiNewGame,
             onPressed: _loading || _busy ? null : _reset,
             icon: const Icon(Icons.refresh_rounded),
           ),
@@ -325,16 +337,16 @@ class _ChessScreenState extends State<ChessScreen> with WidgetsBindingObserver {
                     child: Column(
                       children: [
                         SegmentedButton<bool>(
-                          segments: const [
+                          segments: [
                             ButtonSegment(
                               value: true,
-                              icon: Icon(Icons.computer_rounded),
-                              label: Text('Computer'),
+                              icon: const Icon(Icons.computer_rounded),
+                              label: Text(gameL10n(context).gameUiComputer),
                             ),
                             ButtonSegment(
                               value: false,
-                              icon: Icon(Icons.people_alt_outlined),
-                              label: Text('2 players'),
+                              icon: const Icon(Icons.people_alt_outlined),
+                              label: Text(gameL10n(context).gameUi2Players),
                             ),
                           ],
                           selected: {_againstComputer},
@@ -350,14 +362,29 @@ class _ChessScreenState extends State<ChessScreen> with WidgetsBindingObserver {
                         const SizedBox(height: 4),
                         Text(
                           !_againstComputer
-                              ? '${GamePlayerNames.playerOne()} · White / Player 2 · Black'
+                              ? gameL10n(context).gameUiWhitePlayer2Black(
+                                  gamePlayerName(
+                                    context,
+                                    GamePlayerNames.playerOne(),
+                                  ),
+                                )
                               : _userIsWhite
                               ? playerOneName == null
-                                    ? 'You are White · Computer is Black'
-                                    : '$playerOneName (White) · Computer (Black)'
+                                    ? gameL10n(
+                                        context,
+                                      ).gameUiYouAreWhiteComputerIsBlack
+                                    : gameL10n(
+                                        context,
+                                      ).gameUiWhiteComputerBlack(
+                                        (playerOneName).toString(),
+                                      )
                               : playerOneName == null
-                              ? 'You are Black · Computer is White'
-                              : '$playerOneName (Black) · Computer (White)',
+                              ? gameL10n(
+                                  context,
+                                ).gameUiYouAreBlackComputerIsWhite
+                              : gameL10n(context).gameUiBlackComputerWhite(
+                                  (playerOneName).toString(),
+                                ),
                           key: const ValueKey('chess-player-colors'),
                           style: Theme.of(context).textTheme.bodySmall
                               ?.copyWith(color: colors.onSurfaceVariant),
@@ -392,7 +419,7 @@ class _ChessScreenState extends State<ChessScreen> with WidgetsBindingObserver {
                                 return Semantics(
                                   button: true,
                                   label:
-                                      '$coordinate ${piece == null ? 'empty' : '${piece.color == chess.Color.WHITE ? 'White' : 'Black'} ${chessPieceNames[piece.type.name]}'}',
+                                      '$coordinate ${piece == null ? gameL10n(context).gameUiChessEmpty : '${piece.color == chess.Color.WHITE ? gameL10n(context).gameUiWhite : gameL10n(context).gameUiBlack} ${chessPieceName(context, piece.type.name)}'}',
                                   child: InkWell(
                                     key: ValueKey('chess-square-$coordinate'),
                                     onTap: () => _tapSquare(index),

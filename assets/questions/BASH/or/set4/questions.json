@@ -1,0 +1,302 @@
+[
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "କେଉଁ ସିଣ୍ଟାକ୍ସ ଏକ ସରଳ Bash ଫଙ୍କସନ୍ ପରିଭାଷିତ କରେ?",
+    "options": [
+      "myfunc() { echo hi; }",
+      "def myfunc: echo hi",
+      "function = myfunc",
+      "myfunc -> echo hi"
+    ],
+    "answer": "myfunc() { echo hi; }"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "କେଉଁ କମାଣ୍ଡ myfunc ନାମକ ଫଙ୍କସନ୍‌କୁ କଲ୍ କରେ?",
+    "options": [
+      "myfunc",
+      "call myfunc",
+      "run myfunc",
+      "execute myfunc"
+    ],
+    "answer": "myfunc"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "କେଉଁ କୀୱାର୍ଡ କେବଳ ଫଙ୍କସନ୍ ଭିତରେ ଦୃଶ୍ୟମାନ ହେଉଥିବା ଭାରିଏବଲ୍ ଘୋଷଣା କରେ?",
+    "options": [
+      "local",
+      "private",
+      "internal",
+      "hidden"
+    ],
+    "answer": "local"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "କେଉଁ କମାଣ୍ଡ ଫଙ୍କସନ୍‌ରୁ 0 ର exit status ଫେରାଏ?",
+    "options": [
+      "return 0",
+      "exit function 0",
+      "stop 0",
+      "end 0"
+    ],
+    "answer": "return 0"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "ଫଙ୍କସନ୍ ଭିତରେ, କେଉଁ parameter ଫଙ୍କସନ୍‌କୁ ଦିଆଯାଇଥିବା arguments ର ସଂଖ୍ୟା ଦିଏ?",
+    "options": [
+      "$#",
+      "$@",
+      "$0",
+      "$1"
+    ],
+    "answer": "$#"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "କେଉଁ ସିଣ୍ଟାକ୍ସ ତିନୋଟି ଏଲିମେଣ୍ଟ ଥିବା indexed array ସୃଷ୍ଟି କରେ?",
+    "options": [
+      "arr=(one two three)",
+      "array arr one two three",
+      "arr[one two three]",
+      "set arr one two three"
+    ],
+    "answer": "arr=(one two three)"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "କେଉଁ ସିଣ୍ଟାକ୍ସ arr ର index 2 ରେ ଥିବା ଏଲିମେଣ୍ଟ୍‌କୁ ଆକ୍ସେସ୍ କରେ?",
+    "options": [
+      "${arr[2]}",
+      "${arr:2}",
+      "$arr[2]",
+      "arr{2}"
+    ],
+    "answer": "${arr[2]}"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "କେଉଁ expansion arr ରେ ଥିବା ଏଲିମେଣ୍ଟ ସଂଖ୍ୟା ଦିଏ?",
+    "options": [
+      "${#arr[@]}",
+      "${#arr}",
+      "${arr:length}",
+      "${arr[@]#}"
+    ],
+    "answer": "${#arr[@]}"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "କେଉଁ ସିଣ୍ଟାକ୍ସ arr ରେ newitem append କରେ?",
+    "options": [
+      "arr+=(newitem)",
+      "arr=newitem",
+      "arr.push(newitem)",
+      "add arr newitem"
+    ],
+    "answer": "arr+=(newitem)"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "କେଉଁ expansion arr ର ସମସ୍ତ ଏଲିମେଣ୍ଟ ଫେରାଏ?",
+    "options": [
+      "${arr[@]}",
+      "${arr[0]}",
+      "${arr[all]}",
+      "${arr}"
+    ],
+    "answer": "${arr[@]}"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "କେଉଁ କମାଣ୍ଡ associative array ଘୋଷଣା କରେ?",
+    "options": [
+      "declare -A map",
+      "declare -a map",
+      "array -A map",
+      "assoc map"
+    ],
+    "answer": "declare -A map"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "କେଉଁ redirection standard output ଓ standard error ଉଭୟକୁ output.log କୁ ପଠାଏ?",
+    "options": [
+      "command &> output.log",
+      "command > output.log",
+      "command 2> output.log",
+      "command < output.log"
+    ],
+    "answer": "command &> output.log"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "କେଉଁ redirection ସମସ୍ତ କମାଣ୍ଡ ଆଉଟପୁଟ୍‌କୁ ପରିତ୍ୟାଗ କରେ?",
+    "options": [
+      "command > /dev/null",
+      "command > null",
+      "command > empty",
+      "command > discard"
+    ],
+    "answer": "command > /dev/null"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "କେଉଁ ଅପରେଟର ଗୋଟିଏ କମାଣ୍ଡର ଆଉଟପୁଟ୍‌କୁ ଅନ୍ୟ ଏକର ଇନପୁଟ୍ ଭାବେ ପଠାଏ?",
+    "options": [
+      "|",
+      ">",
+      "<",
+      "&"
+    ],
+    "answer": "|"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "କେଉଁ ଚିହ୍ନ ଏକ କମାଣ୍ଡକୁ background ରେ ଚଲାଏ?",
+    "options": [
+      "&",
+      "&&",
+      "|",
+      ";"
+    ],
+    "answer": "&"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "କେଉଁ builtin background jobs ଶେଷ ହେବା ପର୍ଯ୍ୟନ୍ତ ଅପେକ୍ଷା କରେ?",
+    "options": [
+      "wait",
+      "hold",
+      "pause",
+      "sleep"
+    ],
+    "answer": "wait"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "କେଉଁ କମାଣ୍ଡ script.sh କୁ ବର୍ତ୍ତମାନର ଶେଲ୍ environment ରେ ଚଲାଏ?",
+    "options": [
+      "source script.sh",
+      "bash script.sh",
+      "./script.sh",
+      "sh script.sh"
+    ],
+    "answer": "source script.sh"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "କେଉଁ ଅପରେଟର ଏକ here document ଆରମ୍ଭ କରେ?",
+    "options": [
+      "<<",
+      ">>",
+      "<",
+      ">"
+    ],
+    "answer": "<<"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "କେଉଁ କମାଣ୍ଡ ଏକ ସୁରକ୍ଷିତ ଅସ୍ଥାୟୀ ଫାଇଲ୍ ସୃଷ୍ଟି କରେ?",
+    "options": [
+      "mktemp",
+      "tempfile",
+      "touch tmp",
+      "newfile"
+    ],
+    "answer": "mktemp"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "ସ୍କ୍ରିପ୍ଟ SIGINT ପାଇଲେ କେଉଁ କମାଣ୍ଡ cleanup ଚଲାଏ?",
+    "options": [
+      "trap 'cleanup' SIGINT",
+      "handle SIGINT cleanup",
+      "signal SIGINT cleanup",
+      "catch SIGINT cleanup"
+    ],
+    "answer": "trap 'cleanup' SIGINT"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "ଉପଯୋଗକର୍ତ୍ତା Ctrl+C ଦବାଇଲେ ସାଧାରଣତଃ କେଉଁ signal ପଠାଯାଏ?",
+    "options": [
+      "SIGINT",
+      "SIGTERM",
+      "SIGKILL",
+      "SIGHUP"
+    ],
+    "answer": "SIGINT"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "କେଉଁ ବିକଳ୍ପ କୌଣସି କମାଣ୍ଡ ବିଫଳ ହେଲେ ସ୍କ୍ରିପ୍ଟକୁ ତୁରନ୍ତ ବାହାରିବାକୁ ବାଧ୍ୟ କରେ?",
+    "options": [
+      "set -e",
+      "set -x",
+      "set -u",
+      "set -o pipefail"
+    ],
+    "answer": "set -e"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "unset ଭାରିଏବଲ୍ ବ୍ୟବହାର କଲେ କେଉଁ ବିକଳ୍ପ ତ୍ରୁଟି ଘଟାଏ?",
+    "options": [
+      "set -u",
+      "set -e",
+      "set -x",
+      "set -a"
+    ],
+    "answer": "set -u"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "ଡିବଗିଂ ପାଇଁ କେଉଁ ବିକଳ୍ପ ପ୍ରତ୍ୟେକ କମାଣ୍ଡକୁ ଚଲାଇବା ପୂର୍ବରୁ ପ୍ରିଣ୍ଟ କରେ?",
+    "options": [
+      "set -x",
+      "set -e",
+      "set -u",
+      "set -v"
+    ],
+    "answer": "set -x"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "କେଉଁ କମାଣ୍ଡ ବର୍ତ୍ତମାନ ପରିଭାଷିତ ଶେଲ୍ ଫଙ୍କସନ୍‌ଗୁଡ଼ିକୁ ତାଲିକାଭୁକ୍ତ କରେ?",
+    "options": [
+      "declare -f",
+      "declare -A",
+      "functions",
+      "listfunc"
+    ],
+    "answer": "declare -f"
+  }
+]

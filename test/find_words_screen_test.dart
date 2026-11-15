@@ -9,6 +9,25 @@ import 'package:shared_preferences/shared_preferences.dart';
 void main() {
   TestWidgetsFlutterBinding.ensureInitialized();
 
+  testWidgets('hints cost 20 immediately and cannot overdraw', (tester) async {
+    SharedPreferences.setMockInitialValues({
+      'total_points': 20,
+      'game_sound_enabled': false,
+    });
+    await tester.pumpWidget(const MaterialApp(home: FindWordsScreen()));
+    await tester.pumpAndSettle();
+    await tester.tap(find.byTooltip('Hint · −20 pts'));
+    await tester.pumpAndSettle();
+    expect(await PointService.getTotalPoints(), 0);
+    expect(find.textContaining('Look for '), findsOneWidget);
+    expect(find.text('+100 pts'), findsOneWidget);
+    await tester.tap(find.byTooltip('Hint · −20 pts'));
+    await tester.pumpAndSettle();
+    expect(find.text('You need 20 points to use a hint.'), findsOneWidget);
+    expect(await PointService.getTotalPoints(), 0);
+    await tester.pumpWidget(const SizedBox());
+  });
+
   testWidgets('dragging across a hidden word finds it', (tester) async {
     SharedPreferences.setMockInitialValues({});
     await tester.pumpWidget(const MaterialApp(home: FindWordsScreen()));
@@ -58,9 +77,15 @@ void main() {
   testWidgets('first clear adds its reward to points and leaderboard once', (
     tester,
   ) async {
-    SharedPreferences.setMockInitialValues({});
+    SharedPreferences.setMockInitialValues({
+      'total_points': 20,
+      'game_sound_enabled': false,
+    });
     await tester.pumpWidget(const MaterialApp(home: FindWordsScreen()));
     await tester.pumpAndSettle();
+    await tester.tap(find.byTooltip('Hint · −20 pts'));
+    await tester.pumpAndSettle();
+    expect(await PointService.getTotalPoints(), 0);
 
     final puzzle = FindWordsLevelService.create(1);
     for (final word in puzzle.words) {
@@ -76,7 +101,7 @@ void main() {
     }
 
     expect(find.text('Level 1 complete!'), findsOneWidget);
-    final reward = 50 + puzzle.words.length * 5;
+    const reward = 100;
     expect(await PointService.getTotalPoints(), reward);
     final history = await LeaderboardService().getLeaderboard();
     expect(history, hasLength(1));

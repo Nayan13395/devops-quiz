@@ -1,0 +1,302 @@
+[
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "哪个命令为名为 release 的现有分支添加关联工作树？",
+    "options": [
+      "git worktree prune",
+      "git worktree lock ..\\release",
+      "git worktree add ..\\release release",
+      "git worktree list"
+    ],
+    "answer": "git worktree add ..\\release release"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "哪个文件记录父项目中纳入版本控制的子模块路径和 URL？",
+    "options": [
+      ".gitmessage",
+      ".gitmodules",
+      ".gitignore",
+      ".gitattributes"
+    ],
+    "answer": ".gitmodules"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "哪个命令初始化并检出已注册的子模块，包括嵌套子模块？",
+    "options": [
+      "git submodule update --init --recursive",
+      "git submodule deinit --all",
+      "git submodule status",
+      "git submodule sync"
+    ],
+    "answer": "git submodule update --init --recursive"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "父项目通常在提交中为子模块记录什么？",
+    "options": [
+      "子模块的整个对象数据库",
+      "仅记录子模块默认分支的名称",
+      "仅记录子模块未提交的修改",
+      "指向某个特定子模块提交的引用"
+    ],
+    "answer": "指向某个特定子模块提交的引用"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "哪个命令创建包含所有引用及其可达历史的可移植包？",
+    "options": [
+      "git format-patch -1 HEAD",
+      "git diff --binary > backup.bundle",
+      "git bundle create backup.bundle --all",
+      "git archive --output=backup.bundle HEAD"
+    ],
+    "answer": "git bundle create backup.bundle --all"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "哪个命令将 HEAD 的已跟踪文件导出为不含 Git 历史的 ZIP 压缩包？",
+    "options": [
+      "git format-patch --stdout HEAD > source.zip",
+      "git archive --format=zip --output=source.zip HEAD",
+      "git bundle create source.zip --all",
+      "git clone --bare . source.zip"
+    ],
+    "answer": "git archive --format=zip --output=source.zip HEAD"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "哪个命令将最新提交转换为电子邮件格式的补丁文件？",
+    "options": [
+      "git format-patch -1 HEAD",
+      "git diff HEAD",
+      "git show --stat HEAD",
+      "git log -1 --oneline"
+    ],
+    "answer": "git format-patch -1 HEAD"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "哪个命令应用 git format-patch 生成的邮件补丁并据此创建提交？",
+    "options": [
+      "git apply changes.patch",
+      "git diff changes.patch",
+      "git add changes.patch",
+      "git am changes.patch"
+    ],
+    "answer": "git am changes.patch"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "哪个命令检查普通补丁能否应用，而不修改文件？",
+    "options": [
+      "git am changes.patch",
+      "git add changes.patch",
+      "git apply --check changes.patch",
+      "git apply changes.patch"
+    ],
+    "answer": "git apply --check changes.patch"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "哪种 Git 对象存储文件内容，但不存储文件名？",
+    "options": [
+      "注解标签",
+      "Blob",
+      "Tree",
+      "提交"
+    ],
+    "answer": "Blob"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "哪种 Git 对象记录文件名以及对 blob 或子树的引用？",
+    "options": [
+      "Tree",
+      "Blob",
+      "提交",
+      "注解标签"
+    ],
+    "answer": "Tree"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "哪个命令根据已知对象 ID 报告对象类型？",
+    "options": [
+      "git cat-file -s abc1234",
+      "git rev-parse abc1234",
+      "git log -1 abc1234",
+      "git cat-file -t abc1234"
+    ],
+    "answer": "git cat-file -t abc1234"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "哪个命令输出 HEAD 的完整对象 ID？",
+    "options": [
+      "git status --short",
+      "git branch --show-current",
+      "git rev-parse HEAD",
+      "git symbolic-ref HEAD"
+    ],
+    "answer": "git rev-parse HEAD"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "哪个修订范围选择从 feature 可达、但从 main 不可达的提交？",
+    "options": [
+      "main^",
+      "main..feature",
+      "feature..main",
+      "main...feature"
+    ],
+    "answer": "main..feature"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "git log 的哪个选项仅显示合并提交？",
+    "options": [
+      "--merges",
+      "--no-merges",
+      "--first-parent",
+      "--reverse"
+    ],
+    "answer": "--merges"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "git diff 的哪个选项输出已修改路径及其变更状态字母？",
+    "options": [
+      "--name-only",
+      "--stat",
+      "--shortstat",
+      "--name-status"
+    ],
+    "answer": "--name-status"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "哪个文件定义纳入版本控制的路径属性，例如文本规范化规则？",
+    "options": [
+      ".gitmodules",
+      ".gitconfig",
+      ".gitattributes",
+      ".gitignore"
+    ],
+    "answer": ".gitattributes"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": ".gitattributes 规则 '*.sh text eol=lf' 对匹配的文本文件提出什么要求？",
+    "options": [
+      "自动删除空行",
+      "工作树中使用 LF 行尾",
+      "工作树中使用 CRLF 行尾",
+      "按二进制处理，不进行文本转换"
+    ],
+    "answer": "工作树中使用 LF 行尾"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "哪个钩子可通过检查拟定的提交说明文件来拒绝提交？",
+    "options": [
+      "commit-msg",
+      "post-commit",
+      "post-checkout",
+      "post-merge"
+    ],
+    "answer": "commit-msg"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "哪个配置项选择自定义的 Git 钩子目录？",
+    "options": [
+      "core.worktree",
+      "core.excludesFile",
+      "core.attributesFile",
+      "core.hooksPath"
+    ],
+    "answer": "core.hooksPath"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "哪个文件允许某个开发者在本地忽略未跟踪文件，而不添加共享的 .gitignore 规则？",
+    "options": [
+      ".git\\description",
+      ".git\\packed-refs",
+      ".git\\info\\exclude",
+      ".git\\HEAD"
+    ],
+    "answer": ".git\\info\\exclude"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "哪个命令退出 bisect 会话，并通常返回原来的分支？",
+    "options": [
+      "git bisect log",
+      "git bisect reset",
+      "git bisect skip",
+      "git bisect good"
+    ],
+    "answer": "git bisect reset"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "哪个命令比较一个补丁系列的两个版本？",
+    "options": [
+      "git range-diff main..old main..new",
+      "git diff old new",
+      "git log old..new",
+      "git merge-base old new"
+    ],
+    "answer": "git range-diff main..old main..new"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "哪个命令在创建提交时追加 Signed-off-by 尾注？",
+    "options": [
+      "git commit --gpg-sign",
+      "git commit --amend",
+      "git commit --no-verify",
+      "git commit --signoff"
+    ],
+    "answer": "git commit --signoff"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "git log -S'old_name' 默认搜索什么？",
+    "options": [
+      "提交说明包含 old_name 的提交",
+      "名称包含 old_name 的分支",
+      "改变 old_name 出现次数的提交",
+      "作者名为 old_name 的提交"
+    ],
+    "answer": "改变 old_name 出现次数的提交"
+  }
+]

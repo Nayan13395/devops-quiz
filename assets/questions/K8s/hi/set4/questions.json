@@ -1,0 +1,302 @@
+[
+  {
+    "category": "Kubernetes",
+    "set": 4,
+    "question": "deployment को स्केल करने के लिए किस कमांड का उपयोग किया जाता है?",
+    "options": [
+      "kubectl scale deployment",
+      "kubectl resize deployment",
+      "kubectl expand deployment",
+      "kubectl increase deployment"
+    ],
+    "answer": "kubectl scale deployment"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 4,
+    "question": "deployment को 5 replicas तक स्केल करने के लिए किस कमांड का उपयोग किया जाता है?",
+    "options": [
+      "kubectl scale deployment --replicas=5",
+      "kubectl replicas 5",
+      "kubectl expand deployment",
+      "kubectl set replicas"
+    ],
+    "answer": "kubectl scale deployment --replicas=5"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 4,
+    "question": "deployment को पुनः आरंभ करने के लिए किस कमांड का उपयोग किया जाता है?",
+    "options": [
+      "kubectl rollout restart deployment",
+      "kubectl restart deployment",
+      "kubectl deployment restart",
+      "kubectl reload deployment"
+    ],
+    "answer": "kubectl rollout restart deployment"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 4,
+    "question": "deployment की rollout स्थिति जाँचने के लिए किस कमांड का उपयोग किया जाता है?",
+    "options": [
+      "kubectl rollout status",
+      "kubectl deployment status",
+      "kubectl rollout check",
+      "kubectl get rollout"
+    ],
+    "answer": "kubectl rollout status"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 4,
+    "question": "deployment को रोल बैक करने के लिए किस कमांड का उपयोग किया जाता है?",
+    "options": [
+      "kubectl rollout undo",
+      "kubectl rollback",
+      "kubectl undo deployment",
+      "kubectl deployment rollback"
+    ],
+    "answer": "kubectl rollout undo"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 4,
+    "question": "rollout इतिहास प्रदर्शित करने के लिए किस कमांड का उपयोग किया जाता है?",
+    "options": [
+      "kubectl rollout history",
+      "kubectl history",
+      "kubectl deployment history",
+      "kubectl show rollout"
+    ],
+    "answer": "kubectl rollout history"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 4,
+    "question": "deployment rollout को रोकने के लिए किस कमांड का उपयोग किया जाता है?",
+    "options": [
+      "kubectl rollout pause",
+      "kubectl pause deployment",
+      "kubectl stop rollout",
+      "kubectl hold deployment"
+    ],
+    "answer": "kubectl rollout pause"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 4,
+    "question": "रुके हुए deployment rollout को फिर से शुरू करने के लिए किस कमांड का उपयोग किया जाता है?",
+    "options": [
+      "kubectl rollout resume",
+      "kubectl resume deployment",
+      "kubectl continue rollout",
+      "kubectl restart rollout"
+    ],
+    "answer": "kubectl rollout resume"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 4,
+    "question": "मौजूदा Pod निकालने की कोशिश किए बिना नोड को शेड्यूलिंग के लिए अयोग्य कौन-सा कमांड चिह्नित करता है?",
+    "options": [
+      "kubectl cordon",
+      "kubectl uncordon",
+      "kubectl get node",
+      "kubectl describe node"
+    ],
+    "answer": "kubectl cordon"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 4,
+    "question": "किसी node से कार्यभार को सुरक्षित रूप से हटाने के लिए किस कमांड का उपयोग किया जाता है?",
+    "options": [
+      "kubectl drain",
+      "kubectl cordon",
+      "kubectl delete node",
+      "kubectl migrate"
+    ],
+    "answer": "kubectl drain"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 4,
+    "question": "किसी node को फिर से schedulable बनाने के लिए किस कमांड का उपयोग किया जाता है?",
+    "options": [
+      "kubectl uncordon",
+      "kubectl enable",
+      "kubectl restart",
+      "kubectl activate"
+    ],
+    "answer": "kubectl uncordon"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 4,
+    "question": "node की विस्तृत जानकारी प्रदर्शित करने के लिए किस कमांड का उपयोग किया जाता है?",
+    "options": [
+      "kubectl describe node",
+      "kubectl inspect node",
+      "kubectl info node",
+      "kubectl node show"
+    ],
+    "answer": "kubectl describe node"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 4,
+    "question": "लोकल पोर्ट को pod पर फॉरवर्ड करने के लिए किस कमांड का उपयोग किया जाता है?",
+    "options": [
+      "kubectl port-forward",
+      "kubectl tunnel",
+      "kubectl expose",
+      "kubectl connect"
+    ],
+    "answer": "kubectl port-forward"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 4,
+    "question": "pod में या pod से फ़ाइलें कॉपी करने के लिए किस कमांड का उपयोग किया जाता है?",
+    "options": [
+      "kubectl cp",
+      "kubectl copy",
+      "kubectl transfer",
+      "kubectl sync"
+    ],
+    "answer": "kubectl cp"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 4,
+    "question": "चल रहे pod की YAML परिभाषा प्रदर्शित करने के लिए किस कमांड का उपयोग किया जाता है?",
+    "options": [
+      "kubectl get pod -o yaml",
+      "kubectl show pod yaml",
+      "kubectl export pod",
+      "kubectl pod yaml"
+    ],
+    "answer": "kubectl get pod -o yaml"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 4,
+    "question": "Deployment site के web कंटेनर को nginx:1.27 इमेज पर कौन-सा कमांड अपडेट करता है?",
+    "options": [
+      "kubectl set image deployment/site web=nginx:1.27",
+      "kubectl set env deployment/site web=nginx:1.27",
+      "kubectl annotate deployment/site web=nginx:1.27",
+      "kubectl label deployment/site web=nginx:1.27"
+    ],
+    "answer": "kubectl set image deployment/site web=nginx:1.27"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 4,
+    "question": "बदलाव लागू किए बिना मैनिफ़ेस्ट और सक्रिय कॉन्फ़िगरेशन कौन-सा कमांड मिलाता है?",
+    "options": [
+      "kubectl apply -f app.yaml",
+      "kubectl replace -f app.yaml",
+      "kubectl delete -f app.yaml",
+      "kubectl diff -f app.yaml"
+    ],
+    "answer": "kubectl diff -f app.yaml"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 4,
+    "question": "माँगा संसाधन सहेजे बिना API सर्वर पर परीक्षण रन करने वाला kubectl विकल्प कौन-सा है?",
+    "options": [
+      "--validate=false",
+      "--force",
+      "--dry-run=server",
+      "--dry-run=client"
+    ],
+    "answer": "--dry-run=server"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 4,
+    "question": "Pod api के Ready होने तक अधिकतम 60 सेकंड कौन-सा कमांड रुकता है?",
+    "options": [
+      "kubectl get pod api --request-timeout=60s",
+      "kubectl wait --for=condition=Ready pod/api --timeout=60s",
+      "kubectl wait --for=delete pod/api --timeout=60s",
+      "kubectl logs api --since=60s"
+    ],
+    "answer": "kubectl wait --for=condition=Ready pod/api --timeout=60s"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 4,
+    "question": "रोलिंग अपडेट में अनुपलब्ध प्रतिकृतियों की संख्या कौन-सी Deployment सेटिंग सीमित करती है?",
+    "options": [
+      "maxUnavailable",
+      "maxSurge",
+      "revisionHistoryLimit",
+      "progressDeadlineSeconds"
+    ],
+    "answer": "maxUnavailable"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 4,
+    "question": "रोलिंग अपडेट में वांछित प्रतिकृति संख्या से अधिक अस्थायी Pod कौन-सी Deployment सेटिंग देती है?",
+    "options": [
+      "maxUnavailable",
+      "minReadySeconds",
+      "revisionHistoryLimit",
+      "maxSurge"
+    ],
+    "answer": "maxSurge"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 4,
+    "question": "चुने Pod समूह में एकसाथ स्वैच्छिक व्यवधान कौन-सा संसाधन सीमित करता है?",
+    "options": [
+      "LimitRange",
+      "NetworkPolicy",
+      "PodDisruptionBudget",
+      "ResourceQuota"
+    ],
+    "answer": "PodDisruptionBudget"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 4,
+    "question": "देखे मेट्रिक के अनुसार वर्कलोड प्रतिकृतियों की संख्या कौन-सा नियंत्रक बदलता है?",
+    "options": [
+      "CronJob",
+      "HorizontalPodAutoscaler",
+      "ReplicaSet",
+      "DaemonSet"
+    ],
+    "answer": "HorizontalPodAutoscaler"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 4,
+    "question": "kubectl top को CPU और मेमोरी उपयोग बताने के लिए क्या उपलब्ध चाहिए?",
+    "options": [
+      "संसाधन मेट्रिक API, जो सामान्यतः Metrics Server देता है",
+      "हर नेमस्पेस के लिए Ingress नियंत्रक",
+      "ब्लॉक उपकरण के साथ डिफ़ॉल्ट StorageClass",
+      "हर Pod के लिए LoadBalancer Service"
+    ],
+    "answer": "संसाधन मेट्रिक API, जो सामान्यतः Metrics Server देता है"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 4,
+    "question": "जुड़े क्लस्टर के समर्थित API संसाधन प्रकार कौन-सा कमांड दिखाता है?",
+    "options": [
+      "kubectl api-versions",
+      "kubectl cluster-info",
+      "kubectl config view",
+      "kubectl api-resources"
+    ],
+    "answer": "kubectl api-resources"
+  }
+]

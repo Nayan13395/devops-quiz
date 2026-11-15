@@ -1,0 +1,302 @@
+[
+  {
+    "category": "Jenkins",
+    "set": 3,
+    "question": "Quel est le rôle principal d'un contrôleur Jenkins (Master) ?",
+    "options": [
+      "Gérer et planifier les builds",
+      "Stocker les images Docker",
+      "Exécuter des pods Kubernetes",
+      "Héberger le code source"
+    ],
+    "answer": "Gérer et planifier les builds"
+  },
+  {
+    "category": "Jenkins",
+    "set": 3,
+    "question": "Qu'est-ce qu'un agent Jenkins ?",
+    "options": [
+      "Une machine qui exécute les builds",
+      "Un plugin Jenkins",
+      "Un dépôt de code source",
+      "Un outil de supervision"
+    ],
+    "answer": "Une machine qui exécute les builds"
+  },
+  {
+    "category": "Jenkins",
+    "set": 3,
+    "question": "Quel terme désigne une machine de l'environnement Jenkins pouvant héberger des exécuteurs, y compris une machine agent ?",
+    "options": [
+      "Node",
+      "Executor",
+      "Workspace",
+      "Pipeline"
+    ],
+    "answer": "Node"
+  },
+  {
+    "category": "Jenkins",
+    "set": 3,
+    "question": "À quoi servent les Labels dans Jenkins ?",
+    "options": [
+      "Cibler des agents spécifiques",
+      "Renommer des jobs",
+      "Stocker des identifiants",
+      "Configurer des plugins"
+    ],
+    "answer": "Cibler des agents spécifiques"
+  },
+  {
+    "category": "Jenkins",
+    "set": 3,
+    "question": "Qu'est-ce que le Distributed Build dans Jenkins ?",
+    "options": [
+      "Exécuter des jobs sur plusieurs agents",
+      "Exécuter des conteneurs Docker",
+      "Créer plusieurs pipelines",
+      "Utiliser plusieurs dépôts"
+    ],
+    "answer": "Exécuter des jobs sur plusieurs agents"
+  },
+  {
+    "category": "Jenkins",
+    "set": 3,
+    "question": "Qu'est-ce qu'un Executor dans Jenkins ?",
+    "options": [
+      "Un emplacement qui exécute un build",
+      "Un gestionnaire de plugins",
+      "Un artefact de build",
+      "Un stage de pipeline"
+    ],
+    "answer": "Un emplacement qui exécute un build"
+  },
+  {
+    "category": "Jenkins",
+    "set": 3,
+    "question": "Où les identifiants sont-ils gérés dans Jenkins ?",
+    "options": [
+      "Credentials Store",
+      "Historique des builds",
+      "Workspace",
+      "Pipeline Syntax"
+    ],
+    "answer": "Credentials Store"
+  },
+  {
+    "category": "Jenkins",
+    "set": 3,
+    "question": "Quel type d'identifiant stocke des mots de passe ou des jetons d'API ?",
+    "options": [
+      "Secret Text",
+      "Username",
+      "Certificate",
+      "Workspace"
+    ],
+    "answer": "Secret Text"
+  },
+  {
+    "category": "Jenkins",
+    "set": 3,
+    "question": "Quel type d'identifiants fournit une clé privée pour accéder à Git via SSH ?",
+    "options": [
+      "SSH Private Key",
+      "Secret Text",
+      "Certificate",
+      "Token File"
+    ],
+    "answer": "SSH Private Key"
+  },
+  {
+    "category": "Jenkins",
+    "set": 3,
+    "question": "Quelle section sert à gérer les utilisateurs Jenkins ?",
+    "options": [
+      "Manage Users",
+      "Build Queue",
+      "Plugin Manager",
+      "Workspace"
+    ],
+    "answer": "Manage Users"
+  },
+  {
+    "category": "Jenkins",
+    "set": 3,
+    "question": "Quelle stratégie d'autorisation attribue les permissions à l'aide d'une matrice d'utilisateurs ou de groupes et de permissions ?",
+    "options": [
+      "Matrix Authorization",
+      "Role Plugin",
+      "Anonymous Access",
+      "LDAP"
+    ],
+    "answer": "Matrix Authorization"
+  },
+  {
+    "category": "Jenkins",
+    "set": 3,
+    "question": "Quel service peut être intégré pour une authentification centralisée ?",
+    "options": [
+      "LDAP",
+      "Docker",
+      "Git",
+      "Maven"
+    ],
+    "answer": "LDAP"
+  },
+  {
+    "category": "Jenkins",
+    "set": 3,
+    "question": "Que faut-il sauvegarder pour préserver la configuration de Jenkins ?",
+    "options": [
+      "JENKINS_HOME",
+      "Uniquement le workspace",
+      "Uniquement les journaux de build",
+      "Uniquement les plugins"
+    ],
+    "answer": "JENKINS_HOME"
+  },
+  {
+    "category": "Jenkins",
+    "set": 3,
+    "question": "Quel panneau Jenkins liste les constructions en attente de planification ?",
+    "options": [
+      "Build Queue",
+      "Workspace",
+      "Tableau de bord",
+      "Artefacts"
+    ],
+    "answer": "Build Queue"
+  },
+  {
+    "category": "Jenkins",
+    "set": 3,
+    "question": "Quel menu sert à gérer les agents Jenkins ?",
+    "options": [
+      "Manage Nodes",
+      "Build Queue",
+      "Plugin Manager",
+      "System Log"
+    ],
+    "answer": "Manage Nodes"
+  },
+  {
+    "category": "Jenkins",
+    "set": 3,
+    "question": "Quelle instruction de pipeline lie les identifiants stockés à des variables pendant la durée d'un bloc ?",
+    "options": [
+      "withCredentials",
+      "withEnv",
+      "withContext",
+      "wrap"
+    ],
+    "answer": "withCredentials"
+  },
+  {
+    "category": "Jenkins",
+    "set": 3,
+    "question": "Quelle valeur un Jenkinsfile doit-il normalement utiliser pour désigner un secret stocké ?",
+    "options": [
+      "Son mot de passe en clair",
+      "Ses octets de stockage chiffrés",
+      "Le cookie de connexion de son propriétaire",
+      "Son identifiant d'informations d'authentification"
+    ],
+    "answer": "Son identifiant d'informations d'authentification"
+  },
+  {
+    "category": "Jenkins",
+    "set": 3,
+    "question": "Que garantit le masquage d'informations d'authentification dans la sortie console ?",
+    "options": [
+      "Le chiffrement automatique de tous les artefacts produits",
+      "Leur révocation automatique après chaque construction",
+      "Seulement une dissimulation au mieux dans les journaux, pas une protection contre un code de construction malveillant",
+      "L'impossibilité totale pour la construction d'exfiltrer des secrets"
+    ],
+    "answer": "Seulement une dissimulation au mieux dans les journaux, pas une protection contre un code de construction malveillant"
+  },
+  {
+    "category": "Jenkins",
+    "set": 3,
+    "question": "Quel réglage du nœud intégré empêche les constructions ordinaires d'utiliser les exécuteurs du contrôleur ?",
+    "options": [
+      "Augmenter la durée de conservation de son espace de travail",
+      "Fixer son nombre d'exécuteurs à zéro",
+      "Fixer son nombre d'exécuteurs à dix",
+      "Lui attribuer la même étiquette qu'à tous les agents"
+    ],
+    "answer": "Fixer son nombre d'exécuteurs à zéro"
+  },
+  {
+    "category": "Jenkins",
+    "set": 3,
+    "question": "Que contient env.BUILD_NUMBER dans un pipeline ?",
+    "options": [
+      "Le numéro de construction de la tâche courante",
+      "La version du contrôleur Jenkins",
+      "Le port TCP de l'agent",
+      "Le nombre d'étapes du pipeline"
+    ],
+    "answer": "Le numéro de construction de la tâche courante"
+  },
+  {
+    "category": "Jenkins",
+    "set": 3,
+    "question": "À quoi sert le délai d'attente d'une tâche Jenkins ?",
+    "options": [
+      "À limiter la durée totale d'exécution d'une construction",
+      "À ne conserver que les enregistrements de constructions réussies",
+      "À désactiver toute journalisation console",
+      "À retarder le lancement d'une construction planifiée d'un intervalle configuré"
+    ],
+    "answer": "À retarder le lancement d'une construction planifiée d'un intervalle configuré"
+  },
+  {
+    "category": "Jenkins",
+    "set": 3,
+    "question": "Quelle instruction de pipeline change le répertoire de travail pour les instructions de son bloc ?",
+    "options": [
+      "node",
+      "stage",
+      "dir",
+      "pwd"
+    ],
+    "answer": "dir"
+  },
+  {
+    "category": "Jenkins",
+    "set": 3,
+    "question": "Quelle instruction de pipeline renvoie le chemin du répertoire de travail courant ?",
+    "options": [
+      "fileExists",
+      "pwd",
+      "dir",
+      "readFile"
+    ],
+    "answer": "pwd"
+  },
+  {
+    "category": "Jenkins",
+    "set": 3,
+    "question": "Quelle instruction de pipeline définit temporairement des variables d'environnement pour son bloc ?",
+    "options": [
+      "withEnv",
+      "withCredentials",
+      "readFile",
+      "checkout"
+    ],
+    "answer": "withEnv"
+  },
+  {
+    "category": "Jenkins",
+    "set": 3,
+    "question": "Que prévient normalement la mise hors ligne temporaire d'un agent ?",
+    "options": [
+      "L'accès à tous les journaux de constructions terminées",
+      "Toutes les constructions sur tous les autres agents",
+      "La lecture de la liste des plugins du contrôleur",
+      "L'attribution de nouvelles constructions à cet agent"
+    ],
+    "answer": "L'attribution de nouvelles constructions à cet agent"
+  }
+]

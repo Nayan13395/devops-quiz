@@ -1,0 +1,302 @@
+[
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "기존 release 브랜치를 위한 연결된 작업 트리를 추가하는 명령은?",
+    "options": [
+      "git worktree prune",
+      "git worktree lock ..\\release",
+      "git worktree add ..\\release release",
+      "git worktree list"
+    ],
+    "answer": "git worktree add ..\\release release"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "상위 프로젝트의 버전 관리된 서브모듈 경로와 URL을 기록하는 파일은?",
+    "options": [
+      ".gitmessage",
+      ".gitmodules",
+      ".gitignore",
+      ".gitattributes"
+    ],
+    "answer": ".gitmodules"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "중첩된 것까지 등록된 서브모듈을 초기화하고 체크아웃하는 명령은?",
+    "options": [
+      "git submodule update --init --recursive",
+      "git submodule deinit --all",
+      "git submodule status",
+      "git submodule sync"
+    ],
+    "answer": "git submodule update --init --recursive"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "상위 프로젝트가 커밋에 서브모듈에 대해 보통 기록하는 것은?",
+    "options": [
+      "서브모듈의 전체 객체 데이터베이스",
+      "서브모듈의 기본 브랜치 이름만",
+      "서브모듈의 미커밋 변경만",
+      "특정 서브모듈 커밋에 대한 참조"
+    ],
+    "answer": "특정 서브모듈 커밋에 대한 참조"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "모든 참조와 그로부터 도달 가능한 이력을 담는 이동 가능한 번들을 만드는 명령은?",
+    "options": [
+      "git format-patch -1 HEAD",
+      "git diff --binary > backup.bundle",
+      "git bundle create backup.bundle --all",
+      "git archive --output=backup.bundle HEAD"
+    ],
+    "answer": "git bundle create backup.bundle --all"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "HEAD의 추적 파일을 Git 이력 없이 ZIP으로 내보내는 명령은?",
+    "options": [
+      "git format-patch --stdout HEAD > source.zip",
+      "git archive --format=zip --output=source.zip HEAD",
+      "git bundle create source.zip --all",
+      "git clone --bare . source.zip"
+    ],
+    "answer": "git archive --format=zip --output=source.zip HEAD"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "최근 커밋을 이메일 형식의 패치 파일로 바꾸는 명령은?",
+    "options": [
+      "git format-patch -1 HEAD",
+      "git diff HEAD",
+      "git show --stat HEAD",
+      "git log -1 --oneline"
+    ],
+    "answer": "git format-patch -1 HEAD"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "git format-patch가 만든 이메일 패치를 적용하고 커밋을 만드는 명령은?",
+    "options": [
+      "git apply changes.patch",
+      "git diff changes.patch",
+      "git add changes.patch",
+      "git am changes.patch"
+    ],
+    "answer": "git am changes.patch"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "파일 변경 없이 일반 패치의 적용 가능성을 확인하는 명령은?",
+    "options": [
+      "git am changes.patch",
+      "git add changes.patch",
+      "git apply --check changes.patch",
+      "git apply changes.patch"
+    ],
+    "answer": "git apply --check changes.patch"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "파일 이름 없이 파일 내용만 저장하는 Git 객체 유형은?",
+    "options": [
+      "주석 태그",
+      "Blob",
+      "Tree",
+      "커밋"
+    ],
+    "answer": "Blob"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "파일 이름과 blob 또는 하위 트리 참조를 기록하는 Git 객체 유형은?",
+    "options": [
+      "Tree",
+      "Blob",
+      "커밋",
+      "주석 태그"
+    ],
+    "answer": "Tree"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "알려진 객체 ID의 유형을 보여 주는 명령은?",
+    "options": [
+      "git cat-file -s abc1234",
+      "git rev-parse abc1234",
+      "git log -1 abc1234",
+      "git cat-file -t abc1234"
+    ],
+    "answer": "git cat-file -t abc1234"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "HEAD의 전체 객체 ID를 출력하는 명령은?",
+    "options": [
+      "git status --short",
+      "git branch --show-current",
+      "git rev-parse HEAD",
+      "git symbolic-ref HEAD"
+    ],
+    "answer": "git rev-parse HEAD"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "feature에서는 도달 가능하지만 main에서는 도달 불가능한 커밋을 선택하는 범위는?",
+    "options": [
+      "main^",
+      "main..feature",
+      "feature..main",
+      "main...feature"
+    ],
+    "answer": "main..feature"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "병합 커밋만 보여 주는 git log 옵션은?",
+    "options": [
+      "--merges",
+      "--no-merges",
+      "--first-parent",
+      "--reverse"
+    ],
+    "answer": "--merges"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "변경 경로와 변경 상태 문자를 출력하는 git diff 옵션은?",
+    "options": [
+      "--name-only",
+      "--stat",
+      "--shortstat",
+      "--name-status"
+    ],
+    "answer": "--name-status"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "경로별 텍스트 정규화 규칙 같은 버전 관리 속성을 정의하는 파일은?",
+    "options": [
+      ".gitmodules",
+      ".gitconfig",
+      ".gitattributes",
+      ".gitignore"
+    ],
+    "answer": ".gitattributes"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": ".gitattributes의 '*.sh text eol=lf' 규칙은 일치하는 텍스트 파일에 무엇을 요구하는가?",
+    "options": [
+      "빈 줄 자동 삭제",
+      "작업 트리에서 LF 줄 끝 사용",
+      "작업 트리에서 CRLF 줄 끝 사용",
+      "텍스트 변환 없이 바이너리로 처리"
+    ],
+    "answer": "작업 트리에서 LF 줄 끝 사용"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "제안된 커밋 메시지 파일을 검사해 커밋을 거부할 수 있는 훅은?",
+    "options": [
+      "commit-msg",
+      "post-commit",
+      "post-checkout",
+      "post-merge"
+    ],
+    "answer": "commit-msg"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "Git 훅용 사용자 정의 디렉터리를 고르는 설정은?",
+    "options": [
+      "core.worktree",
+      "core.excludesFile",
+      "core.attributesFile",
+      "core.hooksPath"
+    ],
+    "answer": "core.hooksPath"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "공유 .gitignore 규칙을 추가하지 않고 개발자 한 명이 미추적 파일을 로컬에서 무시하게 하는 파일은?",
+    "options": [
+      ".git\\description",
+      ".git\\packed-refs",
+      ".git\\info\\exclude",
+      ".git\\HEAD"
+    ],
+    "answer": ".git\\info\\exclude"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "bisect 세션을 끝내고 보통 원래 브랜치로 돌아가는 명령은?",
+    "options": [
+      "git bisect log",
+      "git bisect reset",
+      "git bisect skip",
+      "git bisect good"
+    ],
+    "answer": "git bisect reset"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "패치 시리즈의 두 버전을 비교하는 명령은?",
+    "options": [
+      "git range-diff main..old main..new",
+      "git diff old new",
+      "git log old..new",
+      "git merge-base old new"
+    ],
+    "answer": "git range-diff main..old main..new"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "커밋 생성 시 Signed-off-by 줄을 덧붙이는 명령은?",
+    "options": [
+      "git commit --gpg-sign",
+      "git commit --amend",
+      "git commit --no-verify",
+      "git commit --signoff"
+    ],
+    "answer": "git commit --signoff"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "git log -S'old_name'은 기본적으로 무엇을 찾는가?",
+    "options": [
+      "메시지에 old_name이 있는 커밋",
+      "이름에 old_name이 있는 브랜치",
+      "old_name의 출현 횟수를 바꾸는 커밋",
+      "작성자 이름이 old_name인 커밋"
+    ],
+    "answer": "old_name의 출현 횟수를 바꾸는 커밋"
+  }
+]

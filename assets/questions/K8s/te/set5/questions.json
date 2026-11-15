@@ -1,0 +1,302 @@
+[
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "Pod ట్రాఫిక్‌పై ప్రభావం చూపడానికి NetworkPolicyకు ఏమి అవసరం?",
+    "options": [
+      "ఎంచుకున్న ప్రతి Podకు LoadBalancer Service",
+      "అదే నేమ్‌స్పేస్‌లో PersistentVolumeClaim",
+      "ప్రతి పాలసీకి వేరే API సర్వర్",
+      "NetworkPolicyను అమలు చేసే నెట్‌వర్క్ వ్యవస్థ"
+    ],
+    "answer": "NetworkPolicyను అమలు చేసే నెట్‌వర్క్ వ్యవస్థ"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "ఒకే Podను ఎంచుకున్న అనేక NetworkPolicies అనుమతించిన ఇన్‌గ్రెస్ ట్రాఫిక్‌ను ఎలా కలుపుతాయి?",
+    "options": [
+      "మొదట సృష్టించిన పాలసీ తరువాతి అన్నిటినీ అధిగమిస్తుంది",
+      "ప్రతి పాలసీ ప్రతి ప్యాకెట్‌ను విడిగా అనుమతించాలి",
+      "అనుమతించిన ట్రాఫిక్ వాటి ఇన్‌గ్రెస్ అనుమతుల కలయిక",
+      "చివర సృష్టించిన పాలసీ ముందున్న అన్నిటినీ అధిగమిస్తుంది"
+    ],
+    "answer": "అనుమతించిన ట్రాఫిక్ వాటి ఇన్‌గ్రెస్ అనుమతుల కలయిక"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "నేమ్‌స్పేస్‌లో అనుమతులను నిర్వచించే RBAC ఆబ్జెక్ట్ ఏది?",
+    "options": [
+      "ResourceQuota",
+      "Role",
+      "RoleBinding",
+      "ServiceAccount"
+    ],
+    "answer": "Role"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "ఒక నేమ్‌స్పేస్‌లో Role లేదా ClusterRole అనుమతులను ఇచ్చే RBAC ఆబ్జెక్ట్ ఏది?",
+    "options": [
+      "RoleBinding",
+      "ClusterRoleBinding",
+      "ServiceAccount",
+      "LimitRange"
+    ],
+    "answer": "RoleBinding"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "Kubernetes API యాక్సెస్ కోసం Podలో నడుస్తున్న ప్రాసెస్‌లకు సాధారణంగా ఏ గుర్తింపు ఇస్తారు?",
+    "options": [
+      "StorageClass",
+      "RuntimeClass",
+      "PriorityClass",
+      "ServiceAccount"
+    ],
+    "answer": "ServiceAccount"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "Secret డేటాను base64 ఎన్‌కోడ్ చేయడం ఆబ్జెక్ట్‌ను చదవగల వ్యక్తి నుంచి రక్షించడానికి ఎందుకు సరిపోదు?",
+    "options": [
+      "Base64 డేటాను DNS ద్వారా స్వయంచాలకంగా ప్రచురిస్తుంది",
+      "Base64కు Podలో నిల్వ చేసిన ప్రైవేట్ కీ అవసరం",
+      "Base64 తిరిగి మార్చగల ఎన్‌కోడింగ్, గుప్తీకరణ కాదు",
+      "Base64 డేటా నిల్వ చేయకుండా Kubernetesను ఆపుతుంది"
+    ],
+    "answer": "Base64 తిరిగి మార్చగల ఎన్‌కోడింగ్, గుప్తీకరణ కాదు"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "Kubernetes Podలో API ప్రామాణీకరణ వివరాలను స్వయంచాలకంగా మౌంట్ చేయకుండా ఆపగల ఫీల్డ్ ఏది?",
+    "options": [
+      "shareProcessNamespace: false",
+      "automountServiceAccountToken: false",
+      "hostNetwork: false",
+      "enableServiceLinks: false"
+    ],
+    "answer": "automountServiceAccountToken: false"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "నేమ్‌స్పేస్‌లో మొత్తం రిసోర్స్ వినియోగాన్ని పరిమితం చేసే ఆబ్జెక్ట్ ఏది?",
+    "options": [
+      "ResourceQuota",
+      "LimitRange",
+      "PriorityClass",
+      "PodDisruptionBudget"
+    ],
+    "answer": "ResourceQuota"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "నేమ్‌స్పేస్‌లోని కంటైనర్‌లకు డిఫాల్ట్ రిసోర్స్ అభ్యర్థనలు, పరిమితులు ఇవ్వగల ఆబ్జెక్ట్ ఏది?",
+    "options": [
+      "ResourceQuota",
+      "HorizontalPodAutoscaler",
+      "RuntimeClass",
+      "LimitRange"
+    ],
+    "answer": "LimitRange"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "తొలగింపు కోరిన తరువాత Kubernetes ఆబ్జెక్ట్‌పై finalizer ఏమి చేస్తుంది?",
+    "options": [
+      "ఆధారపడిన ప్రతి ఆబ్జెక్ట్‌ను వెంటనే తొలగిస్తుంది",
+      "ఆబ్జెక్ట్‌ను మార్చలేని Secretగా మారుస్తుంది",
+      "అవసరమైన శుభ్రపరిచే పని finalizerను తొలగించే వరకు ఆబ్జెక్ట్ తొలగింపును పెండింగ్‌లో ఉంచుతుంది",
+      "ఆబ్జెక్ట్ భవిష్యత్ నవీకరణలన్నిటినీ అడ్డుకుంటుంది"
+    ],
+    "answer": "అవసరమైన శుభ్రపరిచే పని finalizerను తొలగించే వరకు ఆబ్జెక్ట్ తొలగింపును పెండింగ్‌లో ఉంచుతుంది"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "గార్బేజ్ కలెక్షన్ కోసం ఆధారపడిన ఆబ్జెక్ట్‌లను వాటి యజమానులతో కలిపే మెటాడేటా ఫీల్డ్ ఏది?",
+    "options": [
+      "managedFields",
+      "ownerReferences",
+      "annotations",
+      "labels"
+    ],
+    "answer": "ownerReferences"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "CustomResourceDefinition క్లస్టర్‌కు ఏమి జోడిస్తుంది?",
+    "options": [
+      "Kubernetes API అందించే కొత్త కస్టమ్ రిసోర్స్ రకం",
+      "ప్రస్తుత రకానికి స్థితులను సమన్వయం చేసే నడుస్తున్న కంట్రోలర్",
+      "ప్రతి సర్వీస్ ఖాతాకు RBAC అనుమతి",
+      "ప్రతి అంతర్నిర్మిత రిసోర్స్ రకానికి ఒక ఇన్‌స్టెన్స్"
+    ],
+    "answer": "Kubernetes API అందించే కొత్త కస్టమ్ రిసోర్స్ రకం"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "Kubernetes ఆపరేటర్‌ను కేవలం కస్టమ్ రిసోర్స్ నిర్వచనం నుంచి ఏది వేరు చేస్తుంది?",
+    "options": [
+      "ఆపరేటర్ స్కీమా నిర్వచనాలను మాత్రమే నిల్వ చేయగలదు",
+      "ఆపరేటర్ API సర్వర్ అవసరాన్ని తొలగిస్తుంది",
+      "ఆపరేటర్ kubectl అవుట్‌పుట్ ఫార్మాట్‌ను మాత్రమే మారుస్తుంది",
+      "ఆపరేటర్ సూచించిన అప్లికేషన్‌ను నిర్వహించడానికి స్థితుల సమన్వయ తర్కాన్ని కూడా నడుపుతుంది"
+    ],
+    "answer": "ఆపరేటర్ సూచించిన అప్లికేషన్‌ను నిర్వహించడానికి స్థితుల సమన్వయ తర్కాన్ని కూడా నడుపుతుంది"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "గుర్తింపు, అనుమతి తనిఖీ తరువాత నిల్వ చేయడానికి ముందు API అభ్యర్థనను తిరస్కరించగల లేదా మార్చగల వ్యవస్థ ఏది?",
+    "options": [
+      "కంటైనర్ ఇమేజ్‌ను తెచ్చుకోవడం",
+      "Service ఎండ్‌పాయింట్ రూటింగ్",
+      "అడ్మిషన్ నియంత్రణ",
+      "Pod షెడ్యూలింగ్"
+    ],
+    "answer": "అడ్మిషన్ నియంత్రణ"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "అర్హమైన నోడ్ ఏదీ Pod తప్పనిసరి నోడ్ అఫినిటీని నెరవేర్చకపోతే ఏమవుతుంది?",
+    "options": [
+      "API సర్వర్ దాన్ని ప్రతి నోడ్‌లో షెడ్యూల్ చేస్తుంది",
+      "తగిన నోడ్ దొరికే వరకు లేదా పరిమితులు మారేవరకు Pod షెడ్యూల్ కాకుండా ఉంటుంది",
+      "షెడ్యూలర్ ఒక ప్రయత్నం తరువాత నియమాన్ని విస్మరిస్తుంది",
+      "Pod స్వయంచాలకంగా DaemonSet అవుతుంది"
+    ],
+    "answer": "తగిన నోడ్ దొరికే వరకు లేదా పరిమితులు మారేవరకు Pod షెడ్యూల్ కాకుండా ఉంటుంది"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "preferredDuringSchedulingIgnoredDuringExecution నోడ్ అఫినిటీ ఏమి సూచిస్తుంది?",
+    "options": [
+      "సరిపోలకపోయినా ఇతరంగా అర్హమైన నోడ్‌లను మినహాయించని స్థాన ప్రాధాన్యత",
+      "సరిపోలని నోడ్‌లలో ఉంచడాన్ని ఆపే తప్పనిసరి అవసరం",
+      "నోడ్ లేబుల్ మారితే Podను తొలగించాలనే సూచన",
+      "షెడ్యూలర్‌ను పూర్తిగా దాటవేయాలనే అభ్యర్థన"
+    ],
+    "answer": "సరిపోలకపోయినా ఇతరంగా అర్హమైన నోడ్‌లను మినహాయించని స్థాన ప్రాధాన్యత"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "నోడ్ లేబుల్‌లు నడుస్తున్న Pod నోడ్-అఫినిటీ నియమానికి సరిపోకుండా మారితే IgnoredDuringExecution అర్థం ఏమిటి?",
+    "options": [
+      "Podను వెంటనే తొలగించాలి",
+      "Pod కంటైనర్‌లు స్వయంచాలకంగా మళ్లీ ప్రారంభమవుతాయి",
+      "నోడ్ లేబుల్‌లు స్వయంచాలకంగా పాతవిగా మారతాయి",
+      "ఆ నియమం ఒక్కటే నడుస్తున్న Podను తొలగించదు"
+    ],
+    "answer": "ఆ నియమం ఒక్కటే నడుస్తున్న Podను తొలగించదు"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "Pod స్పష్టంగా spec.nodeName సెట్ చేస్తే ఏమవుతుంది?",
+    "options": [
+      "అది ఆ పేరుతో నోడ్ సృష్టిస్తుంది",
+      "అది ప్రస్తుతం Podను నడిపే నోడ్ పేరు మారుస్తుంది",
+      "అది షెడ్యూలర్‌ను దాటవేసి ఆ పేరున్న నోడ్‌కు కేటాయించబడుతుంది",
+      "అది సరిపోలే అన్ని నోడ్ లేబుల్‌లకు ర్యాంకు ఇవ్వాలని షెడ్యూలర్‌ను అడుగుతుంది"
+    ],
+    "answer": "అది షెడ్యూలర్‌ను దాటవేసి ఆ పేరున్న నోడ్‌కు కేటాయించబడుతుంది"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "టోపాలజీ వ్యాప్తి పరిమితుల ఉద్దేశం ఏమిటి?",
+    "options": [
+      "కంట్రోల్-ప్లేన్ భాగాల మధ్య ట్రాఫిక్‌ను గుప్తీకరించడం",
+      "సరిపోలే Podలను టోపాలజీ ప్రాంతాల మధ్య ఎలా పంచాలో నియంత్రించడం",
+      "శాశ్వత వాల్యూమ్‌ల మధ్య కంటైనర్ ఫైళ్లను కాపీ చేయడం",
+      "ప్రతి నేమ్‌స్పేస్‌కు ఒక పబ్లిక్ IP కేటాయించడం"
+    ],
+    "answer": "సరిపోలే Podలను టోపాలజీ ప్రాంతాల మధ్య ఎలా పంచాలో నియంత్రించడం"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "taintను సహించని ఇప్పటికే నడుస్తున్న Podలను తొలగించగల taint ప్రభావం ఏది?",
+    "options": [
+      "NoExecute",
+      "NoSchedule",
+      "PreferNoSchedule",
+      "None"
+    ],
+    "answer": "NoExecute"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "Linux కంటైనర్ root కాని వినియోగదారుగా నడవాలని కోరే securityContext సెట్టింగ్ ఏది?",
+    "options": [
+      "readOnlyRootFilesystem: true",
+      "privileged: false",
+      "allowPrivilegeEscalation: false",
+      "runAsNonRoot: true"
+    ],
+    "answer": "runAsNonRoot: true"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "Linux ప్రాసెస్ పేరెంట్ కంటే ఎక్కువ అధికారాలు పొందకుండా ఆపే కంటైనర్ securityContext సెట్టింగ్ ఏది?",
+    "options": [
+      "readOnlyRootFilesystem: true",
+      "privileged: false",
+      "allowPrivilegeEscalation: false",
+      "runAsNonRoot: true"
+    ],
+    "answer": "allowPrivilegeEscalation: false"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "సమస్య పరిష్కారం కోసం ప్రస్తుత Pod అప్లికేషన్ కంటైనర్‌లను మార్చకుండా ఏ రకం కంటైనర్‌ను జోడించవచ్చు?",
+    "options": [
+      "పునఃప్రారంభించగల init కంటైనర్",
+      "తాత్కాలిక కంటైనర్",
+      "సాధారణ init కంటైనర్",
+      "సాధారణ అప్లికేషన్ కంటైనర్"
+    ],
+    "answer": "తాత్కాలిక కంటైనర్"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "విస్తరించగల సమూహాల్లో Service నెట్‌వర్క్ ఎండ్‌పాయింట్‌లను నమోదు చేసే రిసోర్స్ ఏది?",
+    "options": [
+      "EndpointSlice",
+      "IngressClass",
+      "NetworkPolicy",
+      "RuntimeClass"
+    ],
+    "answer": "EndpointSlice"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "Ingress రిసోర్స్ నిజంగా HTTP రూటింగ్ కాన్ఫిగర్ చేయడానికి ఏమి అవసరం?",
+    "options": [
+      "ప్రతి నేమ్‌స్పేస్‌లో ingress అనే ConfigMap",
+      "ప్రతి హోస్ట్ పేరుకు PersistentVolume",
+      "ఎంచుకున్న అన్ని Podలను తిరిగి ప్రారంభించే Job",
+      "దాని నియమాలను అమలు చేసే Ingress కంట్రోలర్"
+    ],
+    "answer": "దాని నియమాలను అమలు చేసే Ingress కంట్రోలర్"
+  }
+]

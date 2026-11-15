@@ -1,0 +1,302 @@
+[
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "タスク側で上書きしない場合、チェックモード非対応のモジュールはチェックモード実行中にどう扱われるか？",
+    "options": [
+      "常に通常の変更を行う",
+      "自動的に localhost で実行される",
+      "チェックモードに対応するまで再試行される",
+      "変更せずにスキップされる"
+    ],
+    "answer": "変更せずにスキップされる"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "--check でプレイブックを呼び出しても実際の変更を許可するタスク設定はどれか？",
+    "options": [
+      "changed_when: false",
+      "ignore_errors: true",
+      "check_mode: false",
+      "diff: false"
+    ],
+    "answer": "check_mode: false"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "通知済みのハンドラーを直ちに実行する Ansible meta アクションはどれか？",
+    "options": [
+      "reset_connection",
+      "flush_handlers",
+      "clear_facts",
+      "end_play"
+    ],
+    "answer": "flush_handlers"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "変更を行った二つのタスクが、実行前の同じハンドラーへ通知した場合、その実行時点で通常何回動くか？",
+    "options": [
+      "一回",
+      "二回",
+      "インベントリグループごとに一回",
+      "通知が競合するため零回"
+    ],
+    "answer": "一回"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "同じ実行時点に通知済みのハンドラーの実行順を決めるものは何か？",
+    "options": [
+      "名前のアルファベット順",
+      "notify リストの名前の順序",
+      "管理対象ホストが接続した順序",
+      "handlers セクションでの定義順"
+    ],
+    "answer": "handlers セクションでの定義順"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "ブロックの rescue タスクを通常起動する失敗はどれか？",
+    "options": [
+      "プレイブックに無効なタスク定義がある",
+      "YAML 文書を解析できない",
+      "ブロック内のタスクが失敗を返す",
+      "タスク実行前にホストが到達不能になる"
+    ],
+    "answer": "ブロック内のタスクが失敗を返す"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "通常のタスクで ignore_errors が抑制しないエラーはどれか？",
+    "options": [
+      "failed_when 条件が true になる",
+      "未定義変数のエラー",
+      "コマンドが報告する非ゼロの終了状態",
+      "明示的に failed とされたモジュール結果"
+    ],
+    "answer": "未定義変数のエラー"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "未処理のタスク失敗時、現在のバッチがそのタスクを終えた後に全ホストの play を停止するキーワードはどれか？",
+    "options": [
+      "any_errors_fatal",
+      "ignore_unreachable",
+      "max_fail_percentage: 100",
+      "force_handlers"
+    ],
+    "answer": "any_errors_fatal"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "到達可能なホストで後続タスクが失敗した場合、force_handlers はどのように働くか？",
+    "options": [
+      "定義済みの全ハンドラーが通知なしでも動く",
+      "失敗した全タスクが自動的に再試行される",
+      "通常のタスクより先にハンドラーが動く",
+      "通知済みのハンドラーはそのホストで実行できる"
+    ],
+    "answer": "通知済みのハンドラーはそのホストで実行できる"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "機密性の高いタスク引数と結果の通常ログ出力を抑える設定はどれか？",
+    "options": [
+      "check_mode: true",
+      "changed_when: false",
+      "no_log: true",
+      "diff: true"
+    ],
+    "answer": "no_log: true"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "--diff が有効でもファイル内容の差分を抑えるタスク設定はどれか？",
+    "options": [
+      "ignore_errors: true",
+      "diff: false",
+      "no_log: false",
+      "check_mode: false"
+    ],
+    "answer": "diff: false"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "別のインベントリホストの変数を参照できる辞書はどれか？",
+    "options": [
+      "hostvars",
+      "ansible_facts",
+      "environment",
+      "ansible_loop"
+    ],
+    "answer": "hostvars"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "現在のホストのインベントリ名を保持する特殊変数はどれか？",
+    "options": [
+      "ansible_host",
+      "ansible_user",
+      "ansible_playbook_python",
+      "inventory_hostname"
+    ],
+    "answer": "inventory_hostname"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "ホストグループで共有する変数に通常使う、インベントリの隣のディレクトリはどれか？",
+    "options": [
+      "roles",
+      "collections",
+      "group_vars",
+      "host_vars"
+    ],
+    "answer": "group_vars"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "ansible.builtin.file ルックアップはデフォルトでどこからファイルを読むか？",
+    "options": [
+      "become_user で指定したホスト",
+      "制御ノード",
+      "すべての管理対象ホスト",
+      "play 内の最初のホスト"
+    ],
+    "answer": "制御ノード"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "YAML 文字列を Ansible データ構造に変換するフィルターはどれか？",
+    "options": [
+      "from_yaml",
+      "to_yaml",
+      "to_json",
+      "dict2items"
+    ],
+    "answer": "from_yaml"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "辞書をキー/値の辞書のリストに変換するフィルターはどれか？",
+    "options": [
+      "items2dict",
+      "flatten",
+      "zip",
+      "dict2items"
+    ],
+    "answer": "dict2items"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "リストの重複要素を削除するフィルターはどれか？",
+    "options": [
+      "reverse",
+      "flatten",
+      "unique",
+      "sort"
+    ],
+    "answer": "unique"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "式を検査し、指定したアサーションが満たされないと失敗するモジュールはどれか？",
+    "options": [
+      "ansible.builtin.set_fact",
+      "ansible.builtin.assert",
+      "ansible.builtin.debug",
+      "ansible.builtin.pause"
+    ],
+    "answer": "ansible.builtin.assert"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "正規表現を使ってテキストファイルの特定の行を管理するモジュールはどれか？",
+    "options": [
+      "ansible.builtin.lineinfile",
+      "ansible.builtin.blockinfile",
+      "ansible.builtin.copy",
+      "ansible.builtin.slurp"
+    ],
+    "answer": "ansible.builtin.lineinfile"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "URL にリクエストし、期待する HTTP ステータスコードを確認できるモジュールはどれか？",
+    "options": [
+      "ansible.builtin.get_url",
+      "ansible.builtin.fetch",
+      "ansible.builtin.wait_for",
+      "ansible.builtin.uri"
+    ],
+    "answer": "ansible.builtin.uri"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "TCP ポートが指定状態になるまで待つモジュールはどれか？",
+    "options": [
+      "ansible.builtin.async_status",
+      "ansible.builtin.ping",
+      "ansible.builtin.wait_for",
+      "ansible.builtin.pause"
+    ],
+    "answer": "ansible.builtin.wait_for"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "指定パスが既存なら ansible.builtin.command の実行をスキップするパラメーターはどれか？",
+    "options": [
+      "stdin",
+      "creates",
+      "removes",
+      "chdir"
+    ],
+    "answer": "creates"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "シンボリックリンクを作る file モジュール設定はどれか？",
+    "options": [
+      "state: link",
+      "state: directory",
+      "state: touch",
+      "state: hard"
+    ],
+    "answer": "state: link"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "後続の play 向けにメモリ内インベントリへホストを追加できるモジュールはどれか？",
+    "options": [
+      "ansible.builtin.group_by",
+      "ansible.builtin.set_fact",
+      "ansible.builtin.meta",
+      "ansible.builtin.add_host"
+    ],
+    "answer": "ansible.builtin.add_host"
+  }
+]

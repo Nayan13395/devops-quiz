@@ -1,0 +1,302 @@
+[
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "release ନାମର ବର୍ତ୍ତମାନ ବ୍ରାଞ୍ଚ୍ ପାଇଁ ଯୋଡ଼ାଯାଇଥିବା ୱାର୍କିଂ ଟ୍ରି ତିଆରି କରୁଥିବା କମାଣ୍ଡ କେଉଁଟି?",
+    "options": [
+      "git worktree prune",
+      "git worktree lock ..\\release",
+      "git worktree add ..\\release release",
+      "git worktree list"
+    ],
+    "answer": "git worktree add ..\\release release"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "ମୁଖ୍ୟ ପ୍ରକଳ୍ପର ସଂସ୍କରଣ-ନିୟନ୍ତ୍ରିତ ସବ୍‌ମଡ୍ୟୁଲ୍ ପାଥ୍ ଓ URL ରଖୁଥିବା ଫାଇଲ୍ କେଉଁଟି?",
+    "options": [
+      ".gitmessage",
+      ".gitmodules",
+      ".gitignore",
+      ".gitattributes"
+    ],
+    "answer": ".gitmodules"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "ଭିତରର ସବ୍‌ମଡ୍ୟୁଲ୍ ସହ ସବୁ ପଞ୍ଜୀକୃତ ସବ୍‌ମଡ୍ୟୁଲ୍ ଆରମ୍ଭ କରି ଚେକ୍‌ଆଉଟ୍ କରୁଥିବା କମାଣ୍ଡ କେଉଁଟି?",
+    "options": [
+      "git submodule update --init --recursive",
+      "git submodule deinit --all",
+      "git submodule status",
+      "git submodule sync"
+    ],
+    "answer": "git submodule update --init --recursive"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "ମୁଖ୍ୟ ପ୍ରକଳ୍ପ କମିଟ୍‌ରେ ସବ୍‌ମଡ୍ୟୁଲ୍ ପାଇଁ ସାଧାରଣତଃ କ’ଣ ଲେଖେ?",
+    "options": [
+      "ସବ୍‌ମଡ୍ୟୁଲ୍‌ର ସମ୍ପୂର୍ଣ୍ଣ ଅବଜେକ୍ଟ ଡାଟାବେସ୍",
+      "କେବଳ ସବ୍‌ମଡ୍ୟୁଲ୍‌ର ଡିଫଲ୍ଟ ବ୍ରାଞ୍ଚ୍ ନାମ",
+      "କେବଳ ସବ୍‌ମଡ୍ୟୁଲ୍‌ର କମିଟ୍ ହୋଇନଥିବା ପରିବର୍ତ୍ତନ",
+      "ସବ୍‌ମଡ୍ୟୁଲ୍‌ର ନିର୍ଦ୍ଦିଷ୍ଟ କମିଟ୍‌ର ସନ୍ଦର୍ଭ"
+    ],
+    "answer": "ସବ୍‌ମଡ୍ୟୁଲ୍‌ର ନିର୍ଦ୍ଦିଷ୍ଟ କମିଟ୍‌ର ସନ୍ଦର୍ଭ"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "ସବୁ ସନ୍ଦର୍ଭ ଓ ସେଥିରୁ ପହଞ୍ଚଯୋଗ୍ୟ ଇତିହାସ ଥିବା ବହନଯୋଗ୍ୟ ବଣ୍ଡଲ୍ ତିଆରି କରୁଥିବା କମାଣ୍ଡ କେଉଁଟି?",
+    "options": [
+      "git format-patch -1 HEAD",
+      "git diff --binary > backup.bundle",
+      "git bundle create backup.bundle --all",
+      "git archive --output=backup.bundle HEAD"
+    ],
+    "answer": "git bundle create backup.bundle --all"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "HEADର ଟ୍ରାକ୍ ହେଉଥିବା ଫାଇଲ୍‌କୁ Git ଇତିହାସ ବିନା ZIP ଆର୍କାଇଭ୍‌ରେ ରପ୍ତାନି କରୁଥିବା କମାଣ୍ଡ କେଉଁଟି?",
+    "options": [
+      "git format-patch --stdout HEAD > source.zip",
+      "git archive --format=zip --output=source.zip HEAD",
+      "git bundle create source.zip --all",
+      "git clone --bare . source.zip"
+    ],
+    "answer": "git archive --format=zip --output=source.zip HEAD"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "ଶେଷ କମିଟ୍‌କୁ ଇମେଲ୍ ଶୈଳୀର ପ୍ୟାଚ୍ ଫାଇଲ୍‌ରେ ବଦଳାଉଥିବା କମାଣ୍ଡ କେଉଁଟି?",
+    "options": [
+      "git format-patch -1 HEAD",
+      "git diff HEAD",
+      "git show --stat HEAD",
+      "git log -1 --oneline"
+    ],
+    "answer": "git format-patch -1 HEAD"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "git format-patchର ଇମେଲ୍ ପ୍ୟାଚ୍ ଲାଗୁ କରି କମିଟ୍ କରୁଥିବା କମାଣ୍ଡ କେଉଁଟି?",
+    "options": [
+      "git apply changes.patch",
+      "git diff changes.patch",
+      "git add changes.patch",
+      "git am changes.patch"
+    ],
+    "answer": "git am changes.patch"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "ଫାଇଲ୍ ନବଦଳାଇ ସାଧାରଣ ପ୍ୟାଚ୍ ଲାଗୁ ହୋଇପାରିବ କି ନାହିଁ ଯାଞ୍ଚ କରୁଥିବା କମାଣ୍ଡ କେଉଁଟି?",
+    "options": [
+      "git am changes.patch",
+      "git add changes.patch",
+      "git apply --check changes.patch",
+      "git apply changes.patch"
+    ],
+    "answer": "git apply --check changes.patch"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "ଫାଇଲ୍ ନାମ ବିନା ବିଷୟବସ୍ତୁ ରଖୁଥିବା Git ଅବଜେକ୍ଟ ପ୍ରକାର କେଉଁଟି?",
+    "options": [
+      "ଟିପ୍ପଣୀଯୁକ୍ତ ଟ୍ୟାଗ୍",
+      "Blob",
+      "Tree",
+      "କମିଟ"
+    ],
+    "answer": "Blob"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "ଫାଇଲ୍ ନାମ ଓ ବ୍ଲବ୍ କିମ୍ବା ସବ୍‌ଟ୍ରି ସନ୍ଦର୍ଭ ରଖୁଥିବା Git ଅବଜେକ୍ଟ ପ୍ରକାର କେଉଁଟି?",
+    "options": [
+      "Tree",
+      "Blob",
+      "କମିଟ",
+      "ଟିପ୍ପଣୀଯୁକ୍ତ ଟ୍ୟାଗ୍"
+    ],
+    "answer": "Tree"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "ଜଣାଶୁଣା ଅବଜେକ୍ଟ IDର ପ୍ରକାର କହୁଥିବା କମାଣ୍ଡ କେଉଁଟି?",
+    "options": [
+      "git cat-file -s abc1234",
+      "git rev-parse abc1234",
+      "git log -1 abc1234",
+      "git cat-file -t abc1234"
+    ],
+    "answer": "git cat-file -t abc1234"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "HEADର ପୂର୍ଣ୍ଣ ଅବଜେକ୍ଟ ID ଦେଖାଉଥିବା କମାଣ୍ଡ କେଉଁଟି?",
+    "options": [
+      "git status --short",
+      "git branch --show-current",
+      "git rev-parse HEAD",
+      "git symbolic-ref HEAD"
+    ],
+    "answer": "git rev-parse HEAD"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "featureରୁ ପହଞ୍ଚଯୋଗ୍ୟ କିନ୍ତୁ mainରୁ ନୁହେଁ ଏପରି କମିଟ୍ ବାଛୁଥିବା ରିଭିଜନ୍ ପରିସର କେଉଁଟି?",
+    "options": [
+      "main^",
+      "main..feature",
+      "feature..main",
+      "main...feature"
+    ],
+    "answer": "main..feature"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "କେବଳ ମର୍ଜ୍ କମିଟ୍ ଦେଖାଉଥିବା git log ବିକଳ୍ପ କେଉଁଟି?",
+    "options": [
+      "--merges",
+      "--no-merges",
+      "--first-parent",
+      "--reverse"
+    ],
+    "answer": "--merges"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "ବଦଳିଥିବା ପାଥ୍ ଓ ପରିବର୍ତ୍ତନ-ସ୍ଥିତିର ଅକ୍ଷର ଦେଖାଉଥିବା git diff ବିକଳ୍ପ କେଉଁଟି?",
+    "options": [
+      "--name-only",
+      "--stat",
+      "--shortstat",
+      "--name-status"
+    ],
+    "answer": "--name-status"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "ପାଥ୍ ପାଇଁ ପାଠ୍ୟ ସାଧାରଣୀକରଣ ପରି ସଂସ୍କରଣ-ନିୟନ୍ତ୍ରିତ ଗୁଣ ଦେଉଥିବା ଫାଇଲ୍ କେଉଁଟି?",
+    "options": [
+      ".gitmodules",
+      ".gitconfig",
+      ".gitattributes",
+      ".gitignore"
+    ],
+    "answer": ".gitattributes"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": ".gitattributesର '*.sh text eol=lf' ନିୟମ ମେଳ ଖାଉଥିବା ପାଠ୍ୟ ଫାଇଲ୍ ପାଇଁ କ’ଣ ଚାହେଁ?",
+    "options": [
+      "ଖାଲି ଧାଡ଼ି ସ୍ୱୟଂଚାଳିତ ଭାବେ ମିଟାଇବା",
+      "ୱାର୍କିଂ ଟ୍ରିରେ LF ଧାଡ଼ି ଶେଷ",
+      "ୱାର୍କିଂ ଟ୍ରିରେ CRLF ଧାଡ଼ି ଶେଷ",
+      "ପାଠ୍ୟ ପରିବର୍ତ୍ତନ ବିନା ବାଇନାରି ଭାବେ ବ୍ୟବହାର"
+    ],
+    "answer": "ୱାର୍କିଂ ଟ୍ରିରେ LF ଧାଡ଼ି ଶେଷ"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "ପ୍ରସ୍ତାବିତ କମିଟ୍ ବାର୍ତ୍ତା ଫାଇଲ୍ ଯାଞ୍ଚ କରି କମିଟ୍ ଅଗ୍ରାହ୍ୟ କରିପାରୁଥିବା ହୁକ୍ କେଉଁଟି?",
+    "options": [
+      "commit-msg",
+      "post-commit",
+      "post-checkout",
+      "post-merge"
+    ],
+    "answer": "commit-msg"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "Git ହୁକ୍ ପାଇଁ ନିଜ ପସନ୍ଦର ଡିରେକ୍ଟୋରି ବାଛୁଥିବା ସେଟିଂ କେଉଁଟି?",
+    "options": [
+      "core.worktree",
+      "core.excludesFile",
+      "core.attributesFile",
+      "core.hooksPath"
+    ],
+    "answer": "core.hooksPath"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "ସାଧାରଣ .gitignore ନିୟମ ନଯୋଡ଼ି ଜଣେ ଡେଭେଲପର୍‌କୁ ସ୍ଥାନୀୟ ଭାବେ ଅଣଟ୍ରାକ୍ ଫାଇଲ୍ ଅଣଦେଖା କରିବାକୁ ଦେଉଥିବା ଫାଇଲ୍ କେଉଁଟି?",
+    "options": [
+      ".git\\description",
+      ".git\\packed-refs",
+      ".git\\info\\exclude",
+      ".git\\HEAD"
+    ],
+    "answer": ".git\\info\\exclude"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "ବାଇସେକ୍ଟ ସେସନ୍‌ରୁ ବାହାରି ସାଧାରଣତଃ ମୂଳ ବ୍ରାଞ୍ଚ୍‌କୁ ଫେରାଉଥିବା କମାଣ୍ଡ କେଉଁଟି?",
+    "options": [
+      "git bisect log",
+      "git bisect reset",
+      "git bisect skip",
+      "git bisect good"
+    ],
+    "answer": "git bisect reset"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "ପ୍ୟାଚ୍ ଶୃଙ୍ଖଳାର ଦୁଇ ସଂସ୍କରଣ ତୁଳନା କରୁଥିବା କମାଣ୍ଡ କେଉଁଟି?",
+    "options": [
+      "git range-diff main..old main..new",
+      "git diff old new",
+      "git log old..new",
+      "git merge-base old new"
+    ],
+    "answer": "git range-diff main..old main..new"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "କମିଟ୍ କରିବାବେଳେ ଶେଷରେ Signed-off-by ଯୋଡ଼ୁଥିବା କମାଣ୍ଡ କେଉଁଟି?",
+    "options": [
+      "git commit --gpg-sign",
+      "git commit --amend",
+      "git commit --no-verify",
+      "git commit --signoff"
+    ],
+    "answer": "git commit --signoff"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "git log -S'old_name' ଡିଫଲ୍ଟ ଭାବେ କ’ଣ ଖୋଜେ?",
+    "options": [
+      "ବାର୍ତ୍ତାରେ old_name ଥିବା କମିଟ୍",
+      "ନାମରେ old_name ଥିବା ବ୍ରାଞ୍ଚ୍",
+      "old_name ଆସିବା ସଂଖ୍ୟା ବଦଳାଉଥିବା କମିଟ୍",
+      "ଲେଖକଙ୍କ ନାମ old_name ଥିବା କମିଟ୍"
+    ],
+    "answer": "old_name ଆସିବା ସଂଖ୍ୟା ବଦଳାଉଥିବା କମିଟ୍"
+  }
+]

@@ -1,0 +1,302 @@
+[
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "कोन component nodes पर pods क schedule करैत अछि?",
+    "options": [
+      "kube-scheduler",
+      "kubelet",
+      "etcd",
+      "kube-proxy"
+    ],
+    "answer": "kube-scheduler"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "कोन component प्रत्येक node पर चलैत अछि?",
+    "options": [
+      "kubelet",
+      "etcd",
+      "kube-apiserver",
+      "controller-manager"
+    ],
+    "answer": "kubelet"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "कोन component control plane क front-end क रूप मे काज करैत अछि?",
+    "options": [
+      "kube-apiserver",
+      "kubelet",
+      "etcd",
+      "kube-proxy"
+    ],
+    "answer": "kube-apiserver"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "कोन component cluster क स्थिति केँ संग्रहीत करैत अछि?",
+    "options": [
+      "etcd",
+      "kubelet",
+      "CoreDNS",
+      "Ingress"
+    ],
+    "answer": "etcd"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "कोन component nodes पर networking नियम केँ प्रबंधित करैत अछि?",
+    "options": [
+      "kube-proxy",
+      "kubelet",
+      "etcd",
+      "Scheduler"
+    ],
+    "answer": "kube-proxy"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "Kubernetes मे सामान्यतः कोन DNS service क प्रयोग कएल जाइत अछि?",
+    "options": [
+      "CoreDNS",
+      "Bind",
+      "Route53",
+      "Consul"
+    ],
+    "answer": "CoreDNS"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "Kubernetes मे कोन object सभ सँ छोट deploy कएल जा सकयवला इकाई अछि?",
+    "options": [
+      "Pod",
+      "Cluster",
+      "Node",
+      "Service"
+    ],
+    "answer": "Pod"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "कोन object stateless applications केँ प्रबंधित करैत अछि?",
+    "options": [
+      "Deployment",
+      "ConfigMap",
+      "Secret",
+      "Namespace"
+    ],
+    "answer": "Deployment"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "कोन workload stateful applications लेल स्थिर Pod पहचान आ क्रमबद्ध deployment उपलब्ध कराबैत अछि?",
+    "options": [
+      "StatefulSet",
+      "Deployment",
+      "ReplicaSet",
+      "DaemonSet"
+    ],
+    "answer": "StatefulSet"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "कोन object सुनिश्चित करैत अछि जे pod replicas क निर्दिष्ट संख्या चलि रहल अछि?",
+    "options": [
+      "ReplicaSet",
+      "Service",
+      "ConfigMap",
+      "Namespace"
+    ],
+    "answer": "ReplicaSet"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "कोन object pods केँ network traffic लेल उपलब्ध कराबैत अछि?",
+    "options": [
+      "Service",
+      "Node",
+      "ReplicaSet",
+      "Volume"
+    ],
+    "answer": "Service"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "कोन object services धरि बाहरी पहुँच केँ प्रबंधित करैत अछि?",
+    "options": [
+      "Ingress",
+      "Pod",
+      "ReplicaSet",
+      "Secret"
+    ],
+    "answer": "Ingress"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "कोन object configuration data केँ संग्रहीत करैत अछि?",
+    "options": [
+      "ConfigMap",
+      "Deployment",
+      "Ingress",
+      "Node"
+    ],
+    "answer": "ConfigMap"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "कोन object passwords जेहन संवेदनशील जानकारी केँ संग्रहीत करैत अछि?",
+    "options": [
+      "Secret",
+      "ConfigMap",
+      "Service",
+      "Namespace"
+    ],
+    "answer": "Secret"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "कोन object pods केँ स्थायी storage उपलब्ध कराबैत अछि?",
+    "options": [
+      "PersistentVolume",
+      "ReplicaSet",
+      "Namespace",
+      "Service"
+    ],
+    "answer": "PersistentVolume"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "कोन probe निर्धारित करैत अछि जे container Service traffic प्राप्त करबाक लेल तैयार अछि वा नहि?",
+    "options": [
+      "TCP keepalive probe",
+      "Readiness probe",
+      "Liveness probe",
+      "Startup probe"
+    ],
+    "answer": "Readiness probe"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "liveness probe क कॉन्फ़िगर कएल गेल threshold सँ बेसी बेर बारम्बार विफल भेला पर की भ' सकैत अछि?",
+    "options": [
+      "kubelet ओहि container केँ ओकर restart policy अनुसार restart करैत अछि",
+      "scheduler प्रत्येक Pod केँ नव node पर ल' जाइत अछि",
+      "API server Deployment केँ मेटा दैत अछि",
+      "Service एकटा ExternalName Service बनि जाइत अछि"
+    ],
+    "answer": "kubelet ओहि container केँ ओकर restart policy अनुसार restart करैत अछि"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "जखन application एखन शुरू भ' रहल अछि तखन startup probe की करैत अछि?",
+    "options": [
+      "सभ container resource limits केँ अक्षम करैत अछि",
+      "image केँ pull होमय सँ रोकैत अछि",
+      "एकटा समर्पित control-plane node आरक्षित करैत अछि",
+      "startup probe क सफल होमय धरि liveness आ readiness probing मे विलंब करैत अछि"
+    ],
+    "answer": "startup probe क सफल होमय धरि liveness आ readiness probing मे विलंब करैत अछि"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "Pod मे सामान्य init containers क बारे मे कोन बात सत्य अछि?",
+    "options": [
+      "हुनका Service port उजागर करय पड़ैत छनि",
+      "ओ सभ सदिखन अलग nodes पर चलैत अछि",
+      "ओ सभ application containers शुरू होमय सँ पहिने क्रम सँ पूरा होबय धरि चलैत अछि",
+      "ओ सभ application containers क बाहर निकलला क बादे चलैत अछि"
+    ],
+    "answer": "ओ सभ application containers शुरू होमय सँ पहिने क्रम सँ पूरा होबय धरि चलैत अछि"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "एके Pod मे रहल containers सामान्यतः कोन resources साझा करैत अछि?",
+    "options": [
+      "प्रत्येक container लेल अलग Service IP",
+      "एकटा network namespace आ Pod IP address",
+      "एकटा लिखय योग्य root filesystem",
+      "प्रत्येक container लेल एकटा अलग node"
+    ],
+    "answer": "एकटा network namespace आ Pod IP address"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "container क placement पर विचार करैत काल scheduler द्वारा प्रयोग कएल जाइत resource मात्रा कोन field घोषित करैत अछि?",
+    "options": [
+      "resources.requests",
+      "resources.limits",
+      "securityContext",
+      "imagePullPolicy"
+    ],
+    "answer": "resources.requests"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "250m क container CPU request की प्रतिनिधित्व करैत अछि?",
+    "options": [
+      "अढ़ाई CPU",
+      "पचीस CPU",
+      "दू सय पचास CPU",
+      "एक CPU क चारिम भाग"
+    ],
+    "answer": "एक CPU क चारिम भाग"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "कोनो container द्वारा अपन लागू कएल गेल memory limit सँ बेसी प्रयोग केला पर सामान्य परिणाम की होइत अछि?",
+    "options": [
+      "ओकर image बेसी memory क संग फेर सँ बनाओल जाइत अछि",
+      "ओकर Service port स्वतः बदलि जाइत अछि",
+      "out-of-memory तंत्र द्वारा ओकरा समाप्त कएल जा सकैत अछि",
+      "ओकर memory request स्वतः दोगुना भ' जाइत अछि"
+    ],
+    "answer": "out-of-memory तंत्र द्वारा ओकरा समाप्त कएल जा सकैत अछि"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "कोन Pod field लक्षित nodes सँ सभ निर्दिष्ट node labels सँ मेल खाय क माँग करैत अछि?",
+    "options": [
+      "dnsPolicy",
+      "nodeSelector",
+      "serviceAccountName",
+      "hostAliases"
+    ],
+    "answer": "nodeSelector"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "कोनो node क taint लेल toleration जोड़ला सँ की गारंटी भेटैत अछि जे Pod ओहि node पर schedule होयत?",
+    "options": [
+      "नहि, आन scheduling constraints आ उपलब्ध resources तैयो लागू रहैत अछि",
+      "हँ, ई सभ resource constraint केँ ओवरराइड करैत अछि",
+      "हँ, ई सभ node affinity नियम केँ बायपास करैत अछि",
+      "नहि, tolerations सदिखन taint वला node पर placement केँ वर्जित करैत अछि"
+    ],
+    "answer": "नहि, आन scheduling constraints आ उपलब्ध resources तैयो लागू रहैत अछि"
+  }
+]

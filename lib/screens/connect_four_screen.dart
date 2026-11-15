@@ -1,3 +1,4 @@
+import '../l10n/game_localizations.dart';
 import 'dart:async';
 
 import 'package:flutter/material.dart';
@@ -147,7 +148,9 @@ class _ConnectFourScreenState extends State<ConnectFourScreen> {
       await PointService.addPoints(20, source: PointSource.game);
       if (mounted) {
         ScaffoldMessenger.of(context).showSnackBar(
-          const SnackBar(content: Text('Connect Four win: 20 points!')),
+          SnackBar(
+            content: Text(gameL10n(context).gameUiConnectFourWin20Points),
+          ),
         );
       }
     } catch (error) {
@@ -174,25 +177,35 @@ class _ConnectFourScreenState extends State<ConnectFourScreen> {
     final status = _winner != null
         ? _mode == _ConnectFourMode.vsBot
               ? _winner == 1
-                    ? 'You win!'
-                    : 'Bot wins!'
-              : '${_winner == 1 ? 'Red' : 'Yellow'} wins!'
+                    ? gameL10n(context).gameUiYouWin
+                    : gameL10n(context).gameUiBotWins
+              : gameL10n(context).gameUiWins(
+                  (_winner == 1
+                          ? gameL10n(context).gameUiRed
+                          : gameL10n(context).gameUiYellow)
+                      .toString(),
+                )
         : _draw
-        ? 'Board full — draw'
+        ? gameL10n(context).gameUiBoardFullDraw
         : _mode == _ConnectFourMode.vsBot
         ? _turn == 1
-              ? 'Your turn'
+              ? gameL10n(context).gameUiYourTurn
               : _botThinking
-              ? 'Bot is thinking'
-              : 'Bot turn'
-        : '${_turn == 1 ? 'Red' : 'Yellow'} to move';
+              ? gameL10n(context).gameUiBotIsThinking
+              : gameL10n(context).gameUiBotTurn
+        : gameL10n(context).gameUiToMove(
+            (_turn == 1
+                    ? gameL10n(context).gameUiRed
+                    : gameL10n(context).gameUiYellow)
+                .toString(),
+          );
 
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Connect Four'),
+        title: Text(gameL10n(context).gameUiConnectFour),
         actions: [
           IconButton(
-            tooltip: 'New game',
+            tooltip: gameL10n(context).gameUiNewGame,
             onPressed: _reset,
             icon: const Icon(Icons.refresh_rounded),
           ),
@@ -207,16 +220,16 @@ class _ConnectFourScreenState extends State<ConnectFourScreen> {
               child: Column(
                 children: [
                   SegmentedButton<_ConnectFourMode>(
-                    segments: const [
+                    segments: [
                       ButtonSegment(
                         value: _ConnectFourMode.vsBot,
-                        label: Text('Vs Bot'),
-                        icon: Icon(Icons.smart_toy_outlined),
+                        label: Text(gameL10n(context).gameUiVsBot),
+                        icon: const Icon(Icons.smart_toy_outlined),
                       ),
                       ButtonSegment(
                         value: _ConnectFourMode.twoPlayer,
-                        label: Text('2 Player'),
-                        icon: Icon(Icons.people_outline),
+                        label: Text(gameL10n(context).gameUi2Player),
+                        icon: const Icon(Icons.people_outline),
                       ),
                     ],
                     selected: {_mode},
@@ -233,8 +246,12 @@ class _ConnectFourScreenState extends State<ConnectFourScreen> {
                   const SizedBox(height: 6),
                   Text(
                     _mode == _ConnectFourMode.vsBot
-                        ? 'Play against the bot · tap a column to drop a disc'
-                        : 'Two players · tap a column to drop a disc',
+                        ? gameL10n(
+                            context,
+                          ).gameUiPlayAgainstTheBotTapAColumnToDrop
+                        : gameL10n(
+                            context,
+                          ).gameUiTwoPlayersTapAColumnToDropADisc,
                     style: Theme.of(context).textTheme.bodyMedium?.copyWith(
                       color: colors.onSurfaceVariant,
                     ),
@@ -269,7 +286,9 @@ class _ConnectFourScreenState extends State<ConnectFourScreen> {
 
                             return Semantics(
                               button: true,
-                              label: 'Column ${index % _columns + 1}',
+                              label: gameL10n(
+                                context,
+                              ).gameUiColumn((index % _columns + 1).toString()),
                               child: InkWell(
                                 key: ValueKey('connect-four-cell-$index'),
                                 customBorder: const CircleBorder(),
@@ -307,14 +326,14 @@ class _ConnectFourScreenState extends State<ConnectFourScreen> {
                       _Legend(
                         color: Colors.red.shade600,
                         label: _mode == _ConnectFourMode.vsBot
-                            ? 'You · Red'
-                            : 'Red · Player 1',
+                            ? gameL10n(context).gameUiYouRed
+                            : gameL10n(context).gameUiRedPlayer1,
                       ),
                       _Legend(
                         color: Colors.amber.shade400,
                         label: _mode == _ConnectFourMode.vsBot
-                            ? 'Bot · Yellow'
-                            : 'Yellow · Player 2',
+                            ? gameL10n(context).gameUiBotYellow
+                            : gameL10n(context).gameUiYellowPlayer2,
                       ),
                     ],
                   ),
@@ -322,7 +341,7 @@ class _ConnectFourScreenState extends State<ConnectFourScreen> {
                   FilledButton.icon(
                     onPressed: _reset,
                     icon: const Icon(Icons.replay_rounded),
-                    label: const Text('New game'),
+                    label: Text(gameL10n(context).gameUiNewGame),
                   ),
                 ],
               ),
@@ -347,7 +366,7 @@ class _Legend extends StatelessWidget {
       children: [
         CircleAvatar(radius: 7, backgroundColor: color),
         const SizedBox(width: 6),
-        Text(label),
+        Flexible(child: Text(label)),
       ],
     );
   }

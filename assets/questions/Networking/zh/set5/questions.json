@@ -1,0 +1,302 @@
+[
+  {
+    "category": "Networking",
+    "set": 5,
+    "question": "DNSSEC 旨在为 DNS 数据提供什么？",
+    "options": [
+      "加密所有 DNS 查询和响应",
+      "允许客户端查询公共区域前先验证其身份",
+      "即使受到拒绝服务流量影响也保证可用",
+      "数据来源认证和完整性"
+    ],
+    "answer": "数据来源认证和完整性"
+  },
+  {
+    "category": "Networking",
+    "set": 5,
+    "question": "DNS over TLS 使用哪个目标端口？",
+    "options": [
+      "443",
+      "5353",
+      "853",
+      "53"
+    ],
+    "answer": "853"
+  },
+  {
+    "category": "Networking",
+    "set": 5,
+    "question": "当 UDP DNS 响应被截断且需要完整答案时，递归解析器通常如何处理？",
+    "options": [
+      "将截断视为域名不存在的证据",
+      "使用 TCP 重试查询",
+      "将部分答案当作完整答案接受",
+      "按原始数据包偏移量请求每个缺失的 UDP 片段"
+    ],
+    "answer": "使用 TCP 重试查询"
+  },
+  {
+    "category": "Networking",
+    "set": 5,
+    "question": "哪种传输协议承载 QUIC 数据包？",
+    "options": [
+      "UDP",
+      "TCP",
+      "SCTP",
+      "ICMP"
+    ],
+    "answer": "UDP"
+  },
+  {
+    "category": "Networking",
+    "set": 5,
+    "question": "哪个 HTTP 版本运行在 QUIC 之上？",
+    "options": [
+      "HTTP/2",
+      "HTTP/1.1",
+      "HTTP/1.0",
+      "HTTP/3"
+    ],
+    "answer": "HTTP/3"
+  },
+  {
+    "category": "Networking",
+    "set": 5,
+    "question": "对同一连接中的 HTTP/2 流而言，TCP 队头阻塞意味着什么？",
+    "options": [
+      "TCP 丢包只会延迟 HTTP 首部",
+      "TCP 丢包只影响包含缺失字节的流",
+      "丢失的 TCP 数据可能延迟其他原本独立的流的交付",
+      "必须完整结束一个流后才能创建另一个流"
+    ],
+    "answer": "丢失的 TCP 数据可能延迟其他原本独立的流的交付"
+  },
+  {
+    "category": "Networking",
+    "set": 5,
+    "question": "TCP SYN 洪泛主要试图耗尽服务器的什么资源？",
+    "options": [
+      "处理已成功认证的应用请求的工作队列",
+      "用于跟踪未完成连接握手的资源",
+      "存放已建立会话的完整 HTTP 响应的缓冲区",
+      "TLS 会话票据文件占用的存储空间"
+    ],
+    "answer": "用于跟踪未完成连接握手的资源"
+  },
+  {
+    "category": "Networking",
+    "set": 5,
+    "question": "单播与组播传输有什么区别？",
+    "options": [
+      "单播面向一个接收方，组播面向已加入组的接收方",
+      "单播总是使用 UDP，组播总是使用 TCP",
+      "单播要求 IPv6，组播要求 IPv4",
+      "单播加密帧，组播压缩帧"
+    ],
+    "answer": "单播面向一个接收方，组播面向已加入组的接收方"
+  },
+  {
+    "category": "Networking",
+    "set": 5,
+    "question": "哪个 IPv4 地址范围保留给组播地址？",
+    "options": [
+      "240.0.0.0/4",
+      "169.254.0.0/16",
+      "127.0.0.0/8",
+      "224.0.0.0/4"
+    ],
+    "answer": "224.0.0.0/4"
+  },
+  {
+    "category": "Networking",
+    "set": 5,
+    "question": "哪种协议在主机与相邻路由器之间传递 IPv4 组播组成员关系？",
+    "options": [
+      "OSPF",
+      "DHCP",
+      "IGMP",
+      "ARP"
+    ],
+    "answer": "IGMP"
+  },
+  {
+    "category": "Networking",
+    "set": 5,
+    "question": "多个站点公布同一地址时，任播路由将数据包交给谁？",
+    "options": [
+      "与路由无关、随机选择的 DNS 服务器",
+      "由路由系统选择的一个实例",
+      "同时交给所有实例",
+      "仅交给 MAC 地址最大的实例"
+    ],
+    "answer": "由路由系统选择的一个实例"
+  },
+  {
+    "category": "Networking",
+    "set": 5,
+    "question": "IEEE 802.1Q 标签在以太网帧中有什么作用？",
+    "options": [
+      "标识帧所属的 VLAN",
+      "替换目标 MAC 地址",
+      "标识 IP 子网前缀长度",
+      "记录帧经过的路由器数量"
+    ],
+    "answer": "标识帧所属的 VLAN"
+  },
+  {
+    "category": "Networking",
+    "set": 5,
+    "question": "生成树协议主要防止桥接以太网中的什么问题？",
+    "options": [
+      "自治系统之间的 IP 路由环路",
+      "独立 DHCP 服务器重复分配 IP 地址",
+      "主机上的 TCP 端口分配重叠",
+      "第 2 层转发环路"
+    ],
+    "answer": "第 2 层转发环路"
+  },
+  {
+    "category": "Networking",
+    "set": 5,
+    "question": "全双工以太网链路如何传输流量？",
+    "options": [
+      "两个端点检测到碰撞后必须轮流发送",
+      "其中一个端点永久只能接收",
+      "两个端点可以同时发送",
+      "链路重置前只有一个端点可以发送"
+    ],
+    "answer": "两个端点可以同时发送"
+  },
+  {
+    "category": "Networking",
+    "set": 5,
+    "question": "链路聚合有什么目的？",
+    "options": [
+      "将每个单播帧复制到所有可用上行链路",
+      "将多条物理链路合并为一条逻辑链路",
+      "取消独立广播域以合并多个 VLAN",
+      "将所有已连接交换机端口转换成一个共享半双工介质"
+    ],
+    "answer": "将多条物理链路合并为一条逻辑链路"
+  },
+  {
+    "category": "Networking",
+    "set": 5,
+    "question": "IP 首部中的 DSCP 帮助网络设备对什么进行分类？",
+    "options": [
+      "需要差异化服务质量处理的流量",
+      "按标识号进行分片重组的数据包",
+      "按剩余跳数进行环路预防的数据包",
+      "按端口号识别端点的连接"
+    ],
+    "answer": "需要差异化服务质量处理的流量"
+  },
+  {
+    "category": "Networking",
+    "set": 5,
+    "question": "网络数据包流中的抖动衡量什么？",
+    "options": [
+      "平均数据包传输速率",
+      "丢失数据包的比例",
+      "数据包负载的最大长度",
+      "数据包延迟的变化"
+    ],
+    "answer": "数据包延迟的变化"
+  },
+  {
+    "category": "Networking",
+    "set": 5,
+    "question": "为什么反复重传可能降低应用的有效吞吐量？",
+    "options": [
+      "它们迫使每个路由器将出站链路容量翻倍",
+      "它们保证接收方可以增大通告窗口",
+      "它们消耗容量，却没有交付额外的唯一应用数据",
+      "它们通过删除传输层首部减少协议开销"
+    ],
+    "answer": "它们消耗容量，却没有交付额外的唯一应用数据"
+  },
+  {
+    "category": "Networking",
+    "set": 5,
+    "question": "路径 MTU 发现旨在确定什么？",
+    "options": [
+      "路由器丢弃流量前可以排队的数据包数量",
+      "沿途无需分片即可使用的最大数据包大小",
+      "接收方能缓存的最大未确认字节数",
+      "避免拥塞所需的最小往返时间"
+    ],
+    "answer": "沿途无需分片即可使用的最大数据包大小"
+  },
+  {
+    "category": "Networking",
+    "set": 5,
+    "question": "哪个套接字端点元组将一条 TCP 连接与其他 TCP 连接区分开？",
+    "options": [
+      "源 IP、源端口、目标 IP、目标端口",
+      "源 IP、目标 IP、序列号、确认号",
+      "源端口、目标端口、窗口大小、校验和",
+      "源 IP、源端口、目标 IP、IP 跳数限制"
+    ],
+    "answer": "源 IP、源端口、目标 IP、目标端口"
+  },
+  {
+    "category": "Networking",
+    "set": 5,
+    "question": "临时端口通常用于什么？",
+    "options": [
+      "永久分配的知名服务器端口",
+      "专用于干道流量的物理交换机端口",
+      "所有路由协议共享的保留目标端口",
+      "客户端临时的传输层端点"
+    ],
+    "answer": "客户端临时的传输层端点"
+  },
+  {
+    "category": "Networking",
+    "set": 5,
+    "question": "HTTP Cache-Control 指令 no-store 告诉缓存什么？",
+    "options": [
+      "仅在私有缓存中存储响应",
+      "将响应存储到声明的新鲜度有效期结束",
+      "不要存储该指令所涵盖的请求或响应",
+      "存储响应，但再次使用前重新验证"
+    ],
+    "answer": "不要存储该指令所涵盖的请求或响应"
+  },
+  {
+    "category": "Networking",
+    "set": 5,
+    "question": "条件 GET 之后的 HTTP 304 响应表示什么？",
+    "options": [
+      "源服务器无法解析自身的主机名",
+      "根据验证结果，可以重用缓存的表示",
+      "所请求的资源已永久移动",
+      "客户端必须切换到另一种传输协议"
+    ],
+    "answer": "根据验证结果，可以重用缓存的表示"
+  },
+  {
+    "category": "Networking",
+    "set": 5,
+    "question": "反向代理转发 HTTP 请求时，哪个代理首部通常记录原始客户端 IP？",
+    "options": [
+      "X-Forwarded-For",
+      "Content-Type",
+      "Accept-Encoding",
+      "Cache-Control"
+    ],
+    "answer": "X-Forwarded-For"
+  },
+  {
+    "category": "Networking",
+    "set": 5,
+    "question": "为什么应用只应信任来自已配置可信代理的转发客户端 IP 首部？",
+    "options": [
+      "TLS 会自动认证每个首部中的原始客户端 IP 值",
+      "TCP 校验和证明首部标识了原始客户端",
+      "每个转发代理默认都会对该首部进行密码学签名",
+      "如果没有强制实施信任边界，客户端可以伪造这些首部"
+    ],
+    "answer": "如果没有强制实施信任边界，客户端可以伪造这些首部"
+  }
+]

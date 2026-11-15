@@ -1,0 +1,302 @@
+[
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "Quale componente pianifica i pod sui nodi?",
+    "options": [
+      "kube-scheduler",
+      "kubelet",
+      "etcd",
+      "kube-proxy"
+    ],
+    "answer": "kube-scheduler"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "Quale componente viene eseguito su ogni nodo?",
+    "options": [
+      "kubelet",
+      "etcd",
+      "kube-apiserver",
+      "controller-manager"
+    ],
+    "answer": "kubelet"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "Quale componente funge da front-end del control plane?",
+    "options": [
+      "kube-apiserver",
+      "kubelet",
+      "etcd",
+      "kube-proxy"
+    ],
+    "answer": "kube-apiserver"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "Quale componente memorizza lo stato del cluster?",
+    "options": [
+      "etcd",
+      "kubelet",
+      "CoreDNS",
+      "Ingress"
+    ],
+    "answer": "etcd"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "Quale componente gestisce le regole di rete sui nodi?",
+    "options": [
+      "kube-proxy",
+      "kubelet",
+      "etcd",
+      "Scheduler"
+    ],
+    "answer": "kube-proxy"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "Quale servizio DNS è comunemente usato in Kubernetes?",
+    "options": [
+      "CoreDNS",
+      "Bind",
+      "Route53",
+      "Consul"
+    ],
+    "answer": "CoreDNS"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "Quale oggetto è la più piccola unità distribuibile in Kubernetes?",
+    "options": [
+      "Pod",
+      "Cluster",
+      "Node",
+      "Service"
+    ],
+    "answer": "Pod"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "Quale oggetto gestisce le applicazioni stateless?",
+    "options": [
+      "Deployment",
+      "ConfigMap",
+      "Secret",
+      "Namespace"
+    ],
+    "answer": "Deployment"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "Quale carico di lavoro fornisce identità stabili ai Pod e una distribuzione ordinata per applicazioni con stato?",
+    "options": [
+      "StatefulSet",
+      "Deployment",
+      "ReplicaSet",
+      "DaemonSet"
+    ],
+    "answer": "StatefulSet"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "Quale oggetto garantisce che sia in esecuzione un numero specificato di repliche di pod?",
+    "options": [
+      "ReplicaSet",
+      "Service",
+      "ConfigMap",
+      "Namespace"
+    ],
+    "answer": "ReplicaSet"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "Quale oggetto espone i pod al traffico di rete?",
+    "options": [
+      "Service",
+      "Node",
+      "ReplicaSet",
+      "Volume"
+    ],
+    "answer": "Service"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "Quale oggetto gestisce l'accesso esterno ai service?",
+    "options": [
+      "Ingress",
+      "Pod",
+      "ReplicaSet",
+      "Secret"
+    ],
+    "answer": "Ingress"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "Quale oggetto memorizza i dati di configurazione?",
+    "options": [
+      "ConfigMap",
+      "Deployment",
+      "Ingress",
+      "Node"
+    ],
+    "answer": "ConfigMap"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "Quale oggetto memorizza informazioni sensibili come le password?",
+    "options": [
+      "Secret",
+      "ConfigMap",
+      "Service",
+      "Namespace"
+    ],
+    "answer": "Secret"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "Quale oggetto fornisce storage persistente ai pod?",
+    "options": [
+      "PersistentVolume",
+      "ReplicaSet",
+      "Namespace",
+      "Service"
+    ],
+    "answer": "PersistentVolume"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "Quale sonda determina se un container è pronto a ricevere traffico da un Service?",
+    "options": [
+      "Sonda di mantenimento della connessione TCP",
+      "Readiness probe",
+      "Liveness probe",
+      "Sonda di avvio"
+    ],
+    "answer": "Readiness probe"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "Che cosa può accadere dopo ripetuti fallimenti di una sonda di vitalità oltre la soglia configurata?",
+    "options": [
+      "Il kubelet riavvia quel container secondo il relativo criterio di riavvio",
+      "Lo scheduler sposta ogni Pod su un nuovo nodo",
+      "Il server API elimina il Deployment",
+      "Il Service diventa un Service ExternalName"
+    ],
+    "answer": "Il kubelet riavvia quel container secondo il relativo criterio di riavvio"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "Che cosa fa una sonda di avvio mentre l'applicazione è ancora in fase di avvio?",
+    "options": [
+      "Disabilita tutti i limiti di risorse del container",
+      "Impedisce il download dell'immagine",
+      "Riserva un nodo dedicato del piano di controllo",
+      "Ritarda le sonde di vitalità e prontezza finché la sonda di avvio non riesce"
+    ],
+    "answer": "Ritarda le sonde di vitalità e prontezza finché la sonda di avvio non riesce"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "Quale affermazione è vera per i normali container di inizializzazione in un Pod?",
+    "options": [
+      "Devono esporre una porta di Service",
+      "Vengono sempre eseguiti su nodi separati",
+      "Vengono eseguiti fino al completamento in ordine prima dell'avvio dei container applicativi",
+      "Vengono tutti eseguiti solo dopo la fine dei container applicativi"
+    ],
+    "answer": "Vengono eseguiti fino al completamento in ordine prima dell'avvio dei container applicativi"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "Quali risorse condividono normalmente i container dello stesso Pod?",
+    "options": [
+      "Un IP di Service separato per ogni container",
+      "Uno spazio dei nomi di rete e un indirizzo IP di Pod",
+      "Un filesystem radice scrivibile",
+      "Un nodo distinto per ogni container"
+    ],
+    "answer": "Uno spazio dei nomi di rete e un indirizzo IP di Pod"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "Quale campo dichiara la quantità di risorse usata dallo scheduler per valutare il posizionamento di un container?",
+    "options": [
+      "resources.requests",
+      "resources.limits",
+      "securityContext",
+      "imagePullPolicy"
+    ],
+    "answer": "resources.requests"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "Che cosa rappresenta una richiesta CPU di 250m per un container?",
+    "options": [
+      "Due CPU e mezza",
+      "Venticinque CPU",
+      "Duecentocinquanta CPU",
+      "Un quarto di CPU"
+    ],
+    "answer": "Un quarto di CPU"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "Qual è una conseguenza tipica del superamento del limite di memoria imposto a un container?",
+    "options": [
+      "La sua immagine viene ricreata con più memoria",
+      "La sua porta di Service viene modificata automaticamente",
+      "Può essere terminato dal meccanismo di esaurimento della memoria",
+      "La sua richiesta di memoria viene raddoppiata automaticamente"
+    ],
+    "answer": "Può essere terminato dal meccanismo di esaurimento della memoria"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "Quale campo del Pod richiede che i nodi di destinazione corrispondano a tutte le etichette di nodo specificate?",
+    "options": [
+      "dnsPolicy",
+      "nodeSelector",
+      "serviceAccountName",
+      "hostAliases"
+    ],
+    "answer": "nodeSelector"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "Aggiungere una tolleranza per il taint di un nodo garantisce che un Pod venga pianificato su quel nodo?",
+    "options": [
+      "No, si applicano ancora gli altri vincoli di pianificazione e le risorse disponibili",
+      "Sì, ignora ogni vincolo di risorse",
+      "Sì, aggira tutte le regole di affinità dei nodi",
+      "No, le tolleranze vietano sempre il posizionamento sul nodo con quel taint"
+    ],
+    "answer": "No, si applicano ancora gli altri vincoli di pianificazione e le risorse disponibili"
+  }
+]

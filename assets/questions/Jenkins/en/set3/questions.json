@@ -1,0 +1,302 @@
+[
+  {
+    "category": "Jenkins",
+    "set": 3,
+    "question": "What is the primary role of a Jenkins Controller (Master)?",
+    "options": [
+      "Manage and schedule builds",
+      "Store Docker images",
+      "Run Kubernetes pods",
+      "Host source code"
+    ],
+    "answer": "Manage and schedule builds"
+  },
+  {
+    "category": "Jenkins",
+    "set": 3,
+    "question": "What is a Jenkins Agent?",
+    "options": [
+      "A machine that executes builds",
+      "A Jenkins plugin",
+      "A source code repository",
+      "A monitoring tool"
+    ],
+    "answer": "A machine that executes builds"
+  },
+  {
+    "category": "Jenkins",
+    "set": 3,
+    "question": "Which term describes a machine in the Jenkins environment that can host executors, including an agent machine?",
+    "options": [
+      "Node",
+      "Executor",
+      "Workspace",
+      "Pipeline"
+    ],
+    "answer": "Node"
+  },
+  {
+    "category": "Jenkins",
+    "set": 3,
+    "question": "What are Labels used for in Jenkins?",
+    "options": [
+      "Target specific agents",
+      "Rename jobs",
+      "Store credentials",
+      "Configure plugins"
+    ],
+    "answer": "Target specific agents"
+  },
+  {
+    "category": "Jenkins",
+    "set": 3,
+    "question": "What is Distributed Build in Jenkins?",
+    "options": [
+      "Running jobs on multiple agents",
+      "Running Docker containers",
+      "Creating multiple pipelines",
+      "Using multiple repositories"
+    ],
+    "answer": "Running jobs on multiple agents"
+  },
+  {
+    "category": "Jenkins",
+    "set": 3,
+    "question": "What is an Executor in Jenkins?",
+    "options": [
+      "A slot that runs a build",
+      "A plugin manager",
+      "A build artifact",
+      "A pipeline stage"
+    ],
+    "answer": "A slot that runs a build"
+  },
+  {
+    "category": "Jenkins",
+    "set": 3,
+    "question": "Where are credentials managed in Jenkins?",
+    "options": [
+      "Credentials Store",
+      "Build History",
+      "Workspace",
+      "Pipeline Syntax"
+    ],
+    "answer": "Credentials Store"
+  },
+  {
+    "category": "Jenkins",
+    "set": 3,
+    "question": "Which credential type stores passwords or API tokens?",
+    "options": [
+      "Secret Text",
+      "Username",
+      "Certificate",
+      "Workspace"
+    ],
+    "answer": "Secret Text"
+  },
+  {
+    "category": "Jenkins",
+    "set": 3,
+    "question": "Which credential type supplies a private key for Git access over SSH?",
+    "options": [
+      "SSH Private Key",
+      "Secret Text",
+      "Certificate",
+      "Token File"
+    ],
+    "answer": "SSH Private Key"
+  },
+  {
+    "category": "Jenkins",
+    "set": 3,
+    "question": "Which section is used to manage Jenkins users?",
+    "options": [
+      "Manage Users",
+      "Build Queue",
+      "Plugin Manager",
+      "Workspace"
+    ],
+    "answer": "Manage Users"
+  },
+  {
+    "category": "Jenkins",
+    "set": 3,
+    "question": "Which authorization strategy assigns permissions using a matrix of users or groups and permissions?",
+    "options": [
+      "Matrix Authorization",
+      "Role Plugin",
+      "Anonymous Access",
+      "LDAP"
+    ],
+    "answer": "Matrix Authorization"
+  },
+  {
+    "category": "Jenkins",
+    "set": 3,
+    "question": "Which service can be integrated for centralized authentication?",
+    "options": [
+      "LDAP",
+      "Docker",
+      "Git",
+      "Maven"
+    ],
+    "answer": "LDAP"
+  },
+  {
+    "category": "Jenkins",
+    "set": 3,
+    "question": "What should be backed up to preserve Jenkins configuration?",
+    "options": [
+      "JENKINS_HOME",
+      "Workspace only",
+      "Build logs only",
+      "Plugins only"
+    ],
+    "answer": "JENKINS_HOME"
+  },
+  {
+    "category": "Jenkins",
+    "set": 3,
+    "question": "Which Jenkins panel lists builds waiting to be scheduled for execution?",
+    "options": [
+      "Build Queue",
+      "Workspace",
+      "Dashboard",
+      "Artifacts"
+    ],
+    "answer": "Build Queue"
+  },
+  {
+    "category": "Jenkins",
+    "set": 3,
+    "question": "Which menu is used to manage Jenkins agents?",
+    "options": [
+      "Manage Nodes",
+      "Build Queue",
+      "Plugin Manager",
+      "System Log"
+    ],
+    "answer": "Manage Nodes"
+  },
+  {
+    "category": "Jenkins",
+    "set": 3,
+    "question": "Which Pipeline step binds stored credentials to variables for the duration of a block?",
+    "options": [
+      "withCredentials",
+      "withEnv",
+      "withContext",
+      "wrap"
+    ],
+    "answer": "withCredentials"
+  },
+  {
+    "category": "Jenkins",
+    "set": 3,
+    "question": "Which value should a Jenkinsfile normally use to refer to a stored secret?",
+    "options": [
+      "Its plaintext password",
+      "Its encrypted storage bytes",
+      "Its owner's login cookie",
+      "Its credentials ID"
+    ],
+    "answer": "Its credentials ID"
+  },
+  {
+    "category": "Jenkins",
+    "set": 3,
+    "question": "What does masking a credential in console output guarantee?",
+    "options": [
+      "Automatic encryption of every produced artifact",
+      "Automatic revocation after every build",
+      "Only best-effort concealment in logs, not protection from malicious build code",
+      "Complete prevention of secret exfiltration by the build"
+    ],
+    "answer": "Only best-effort concealment in logs, not protection from malicious build code"
+  },
+  {
+    "category": "Jenkins",
+    "set": 3,
+    "question": "Which built-in node setting prevents ordinary builds from using controller executors?",
+    "options": [
+      "Increase its workspace retention period",
+      "Set its number of executors to zero",
+      "Set its number of executors to ten",
+      "Give it the same label as every agent"
+    ],
+    "answer": "Set its number of executors to zero"
+  },
+  {
+    "category": "Jenkins",
+    "set": 3,
+    "question": "What does env.BUILD_NUMBER contain in a Pipeline?",
+    "options": [
+      "The current job's build number",
+      "The Jenkins controller's version",
+      "The agent's TCP port",
+      "The number of Pipeline stages"
+    ],
+    "answer": "The current job's build number"
+  },
+  {
+    "category": "Jenkins",
+    "set": 3,
+    "question": "What is the purpose of the quiet period for a Jenkins job?",
+    "options": [
+      "Limit the total build execution time",
+      "Retain only successful build records",
+      "Disable all console logging",
+      "Delay the start of a scheduled build for a configured interval"
+    ],
+    "answer": "Delay the start of a scheduled build for a configured interval"
+  },
+  {
+    "category": "Jenkins",
+    "set": 3,
+    "question": "Which Pipeline step changes the working directory for the steps in its body?",
+    "options": [
+      "node",
+      "stage",
+      "dir",
+      "pwd"
+    ],
+    "answer": "dir"
+  },
+  {
+    "category": "Jenkins",
+    "set": 3,
+    "question": "Which Pipeline step returns the current working-directory path?",
+    "options": [
+      "fileExists",
+      "pwd",
+      "dir",
+      "readFile"
+    ],
+    "answer": "pwd"
+  },
+  {
+    "category": "Jenkins",
+    "set": 3,
+    "question": "Which Pipeline step temporarily sets environment variables for its body?",
+    "options": [
+      "withEnv",
+      "withCredentials",
+      "readFile",
+      "checkout"
+    ],
+    "answer": "withEnv"
+  },
+  {
+    "category": "Jenkins",
+    "set": 3,
+    "question": "What does taking an agent temporarily offline normally prevent?",
+    "options": [
+      "Access to all completed build logs",
+      "All builds on every other agent",
+      "Reading the controller's plugin list",
+      "Assignment of new builds to that agent"
+    ],
+    "answer": "Assignment of new builds to that agent"
+  }
+]

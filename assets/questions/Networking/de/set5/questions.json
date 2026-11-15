@@ -1,0 +1,302 @@
+[
+  {
+    "category": "Networking",
+    "set": 5,
+    "question": "Was soll DNSSEC für DNS-Daten bereitstellen?",
+    "options": [
+      "Verschlüsselung aller DNS-Anfragen und Antworten",
+      "Authentifizierung von Clients vor Abfragen einer öffentlichen Zone",
+      "Garantierte Verfügbarkeit trotz Denial-of-Service-Verkehr",
+      "Authentifizierung des Datenursprungs und Integrität"
+    ],
+    "answer": "Authentifizierung des Datenursprungs und Integrität"
+  },
+  {
+    "category": "Networking",
+    "set": 5,
+    "question": "Welcher Zielport ist DNS über TLS zugewiesen?",
+    "options": [
+      "443",
+      "5353",
+      "853",
+      "53"
+    ],
+    "answer": "853"
+  },
+  {
+    "category": "Networking",
+    "set": 5,
+    "question": "Was tut ein rekursiver Resolver normalerweise bei einer gekürzten UDP-DNS-Antwort, wenn eine vollständige Antwort benötigt wird?",
+    "options": [
+      "Er wertet die Kürzung als Beweis, dass die Domain nicht existiert",
+      "Er wiederholt die Anfrage über TCP",
+      "Er akzeptiert die Teilantwort als vollständig",
+      "Er fordert jedes fehlende UDP-Fragment anhand seines ursprünglichen Paket-Offsets an"
+    ],
+    "answer": "Er wiederholt die Anfrage über TCP"
+  },
+  {
+    "category": "Networking",
+    "set": 5,
+    "question": "Welches Transportprotokoll überträgt QUIC-Pakete?",
+    "options": [
+      "UDP",
+      "TCP",
+      "SCTP",
+      "ICMP"
+    ],
+    "answer": "UDP"
+  },
+  {
+    "category": "Networking",
+    "set": 5,
+    "question": "Welche HTTP-Version verwendet QUIC?",
+    "options": [
+      "HTTP/2",
+      "HTTP/1.1",
+      "HTTP/1.0",
+      "HTTP/3"
+    ],
+    "answer": "HTTP/3"
+  },
+  {
+    "category": "Networking",
+    "set": 5,
+    "question": "Was bedeutet TCP-Head-of-Line-Blocking für HTTP/2-Streams auf einer Verbindung?",
+    "options": [
+      "Nur HTTP-Header können durch TCP-Verluste verzögert werden",
+      "TCP-Verluste betreffen nur den Stream mit den fehlenden Bytes",
+      "Verlorene TCP-Daten können die Zustellung ansonsten unabhängiger Streams verzögern",
+      "Jeder Stream muss vollständig enden, bevor ein anderer erstellt werden kann"
+    ],
+    "answer": "Verlorene TCP-Daten können die Zustellung ansonsten unabhängiger Streams verzögern"
+  },
+  {
+    "category": "Networking",
+    "set": 5,
+    "question": "Was versucht eine TCP-SYN-Flut auf einem Server hauptsächlich zu erschöpfen?",
+    "options": [
+      "Arbeitswarteschlangen für erfolgreich authentifizierte Anwendungsanfragen",
+      "Ressourcen zur Verfolgung unvollständiger Verbindungs-Handshakes",
+      "Puffer mit vollständigen HTTP-Antworten für bestehende Sitzungen",
+      "Speicherplatz für TLS-Sitzungsticketdateien"
+    ],
+    "answer": "Ressourcen zur Verfolgung unvollständiger Verbindungs-Handshakes"
+  },
+  {
+    "category": "Networking",
+    "set": 5,
+    "question": "Was unterscheidet Unicast- von Multicast-Zustellung?",
+    "options": [
+      "Unicast richtet sich an einen Empfänger, Multicast an eine Gruppe beigetretener Empfänger",
+      "Unicast verwendet immer UDP, Multicast immer TCP",
+      "Unicast benötigt IPv6, Multicast IPv4",
+      "Unicast verschlüsselt Frames, Multicast komprimiert sie"
+    ],
+    "answer": "Unicast richtet sich an einen Empfänger, Multicast an eine Gruppe beigetretener Empfänger"
+  },
+  {
+    "category": "Networking",
+    "set": 5,
+    "question": "Welcher IPv4-Bereich ist für Multicast-Adressen reserviert?",
+    "options": [
+      "240.0.0.0/4",
+      "169.254.0.0/16",
+      "127.0.0.0/8",
+      "224.0.0.0/4"
+    ],
+    "answer": "224.0.0.0/4"
+  },
+  {
+    "category": "Networking",
+    "set": 5,
+    "question": "Welches Protokoll übermittelt IPv4-Multicast-Gruppenmitgliedschaften zwischen Hosts und benachbarten Routern?",
+    "options": [
+      "OSPF",
+      "DHCP",
+      "IGMP",
+      "ARP"
+    ],
+    "answer": "IGMP"
+  },
+  {
+    "category": "Networking",
+    "set": 5,
+    "question": "Wohin stellt Anycast-Routing ein Paket zu, wenn mehrere Standorte dieselbe Adresse ankündigen?",
+    "options": [
+      "An einen zufällig gewählten DNS-Server unabhängig von der Route",
+      "An eine vom Routingsystem gewählte Instanz",
+      "An alle Instanzen gleichzeitig",
+      "Nur an die Instanz mit der größten MAC-Adresse"
+    ],
+    "answer": "An eine vom Routingsystem gewählte Instanz"
+  },
+  {
+    "category": "Networking",
+    "set": 5,
+    "question": "Welche Aufgabe hat ein IEEE-802.1Q-Tag in einem Ethernet-Frame?",
+    "options": [
+      "Das VLAN des Frames kennzeichnen",
+      "Die Ziel-MAC-Adresse ersetzen",
+      "Die Präfixlänge des IP-Subnetzes kennzeichnen",
+      "Die Anzahl der vom Frame durchquerten Router aufzeichnen"
+    ],
+    "answer": "Das VLAN des Frames kennzeichnen"
+  },
+  {
+    "category": "Networking",
+    "set": 5,
+    "question": "Was verhindert das Spanning Tree Protocol hauptsächlich in einem gebrückten Ethernet-Netz?",
+    "options": [
+      "IP-Routingschleifen zwischen autonomen Systemen",
+      "Doppelte IP-Adresszuweisungen durch unabhängige DHCP-Server",
+      "Überlappende TCP-Portzuweisungen auf einem Host",
+      "Weiterleitungsschleifen auf Layer 2"
+    ],
+    "answer": "Weiterleitungsschleifen auf Layer 2"
+  },
+  {
+    "category": "Networking",
+    "set": 5,
+    "question": "Wie überträgt eine Vollduplex-Ethernet-Verbindung Daten?",
+    "options": [
+      "Beide Endpunkte müssen sich nach erkannten Kollisionen abwechseln",
+      "Ein Endpunkt kann dauerhaft nur empfangen",
+      "Beide Endpunkte können gleichzeitig senden",
+      "Bis zum Zurücksetzen der Verbindung kann nur ein Endpunkt senden"
+    ],
+    "answer": "Beide Endpunkte können gleichzeitig senden"
+  },
+  {
+    "category": "Networking",
+    "set": 5,
+    "question": "Wozu dient Link-Aggregation?",
+    "options": [
+      "Jeden Unicast-Frame auf jeden verfügbaren Uplink kopieren",
+      "Mehrere physische Verbindungen zu einer logischen Verbindung bündeln",
+      "Mehrere VLANs durch Aufheben ihrer getrennten Broadcast-Domänen vereinen",
+      "Alle angeschlossenen Switch-Ports in ein gemeinsames Halbduplex-Medium umwandeln"
+    ],
+    "answer": "Mehrere physische Verbindungen zu einer logischen Verbindung bündeln"
+  },
+  {
+    "category": "Networking",
+    "set": 5,
+    "question": "Was hilft DSCP im IP-Header Netzwerkgeräten zu klassifizieren?",
+    "options": [
+      "Verkehr für eine differenzierte Dienstgütebehandlung",
+      "Pakete für die Fragmentzusammensetzung anhand der Identifikationsnummer",
+      "Pakete zur Schleifenvermeidung anhand der verbleibenden Hop-Anzahl",
+      "Verbindungen zur Endpunktidentifizierung anhand der Portnummer"
+    ],
+    "answer": "Verkehr für eine differenzierte Dienstgütebehandlung"
+  },
+  {
+    "category": "Networking",
+    "set": 5,
+    "question": "Was misst Jitter bei einem Netzwerkpaketstrom?",
+    "options": [
+      "Die durchschnittliche Paketübertragungsrate",
+      "Den Anteil verlorener Pakete",
+      "Die maximale Paketnutzlastlänge",
+      "Die Schwankung der Paketverzögerung"
+    ],
+    "answer": "Die Schwankung der Paketverzögerung"
+  },
+  {
+    "category": "Networking",
+    "set": 5,
+    "question": "Warum können wiederholte Neuübertragungen den nutzbaren Anwendungsdurchsatz verringern?",
+    "options": [
+      "Sie zwingen jeden Router, die Kapazität der ausgehenden Verbindung zu verdoppeln",
+      "Sie garantieren, dass der Empfänger sein angekündigtes Fenster vergrößern kann",
+      "Sie verbrauchen Kapazität, ohne zusätzliche neue Anwendungsdaten zu liefern",
+      "Sie verringern den Protokollaufwand durch Entfernen der Transportheader"
+    ],
+    "answer": "Sie verbrauchen Kapazität, ohne zusätzliche neue Anwendungsdaten zu liefern"
+  },
+  {
+    "category": "Networking",
+    "set": 5,
+    "question": "Was soll Path MTU Discovery ermitteln?",
+    "options": [
+      "Die Paketanzahl, die ein Router vor dem Verwerfen von Verkehr einreihen kann",
+      "Die größte auf einem Pfad ohne Fragmentierung nutzbare Paketgröße",
+      "Die maximale Anzahl unbestätigter Bytes, die ein Empfänger puffern kann",
+      "Die zur Überlastungsvermeidung erforderliche minimale Umlaufzeit"
+    ],
+    "answer": "Die größte auf einem Pfad ohne Fragmentierung nutzbare Paketgröße"
+  },
+  {
+    "category": "Networking",
+    "set": 5,
+    "question": "Welches Socket-Endpunkttupel unterscheidet eine TCP-Verbindung von anderen TCP-Verbindungen?",
+    "options": [
+      "Quell-IP, Quellport, Ziel-IP, Zielport",
+      "Quell-IP, Ziel-IP, Sequenznummer, Bestätigungsnummer",
+      "Quellport, Zielport, Fenstergröße, Prüfsumme",
+      "Quell-IP, Quellport, Ziel-IP, IP-Hop-Limit"
+    ],
+    "answer": "Quell-IP, Quellport, Ziel-IP, Zielport"
+  },
+  {
+    "category": "Networking",
+    "set": 5,
+    "question": "Wozu dient gewöhnlich ein kurzlebiger Port?",
+    "options": [
+      "Als dauerhaft zugewiesener bekannter Serverport",
+      "Als physischer Switch-Port ausschließlich für Trunk-Verkehr",
+      "Als reservierter gemeinsamer Zielport aller Routingprotokolle",
+      "Als vorübergehender clientseitiger Transportendpunkt"
+    ],
+    "answer": "Als vorübergehender clientseitiger Transportendpunkt"
+  },
+  {
+    "category": "Networking",
+    "set": 5,
+    "question": "Was weist die HTTP-Cache-Control-Direktive no-store einen Cache an?",
+    "options": [
+      "Die Antwort nur in einem privaten Cache speichern",
+      "Die Antwort bis zum Ablauf ihrer angegebenen Frischelebensdauer speichern",
+      "Die von der Direktive erfasste Anfrage oder Antwort nicht speichern",
+      "Die Antwort speichern, aber vor Wiederverwendung erneut validieren"
+    ],
+    "answer": "Die von der Direktive erfasste Anfrage oder Antwort nicht speichern"
+  },
+  {
+    "category": "Networking",
+    "set": 5,
+    "question": "Was bedeutet eine HTTP-304-Antwort nach einem bedingten GET?",
+    "options": [
+      "Der Ursprungsserver konnte seinen eigenen Hostnamen nicht auflösen",
+      "Die zwischengespeicherte Darstellung darf gemäß dem Validierungsergebnis wiederverwendet werden",
+      "Die angeforderte Ressource wurde dauerhaft verschoben",
+      "Der Client muss zu einem anderen Transportprotokoll wechseln"
+    ],
+    "answer": "Die zwischengespeicherte Darstellung darf gemäß dem Validierungsergebnis wiederverwendet werden"
+  },
+  {
+    "category": "Networking",
+    "set": 5,
+    "question": "Welcher Proxy-Header enthält gewöhnlich die ursprüngliche Client-IP, wenn ein Reverse-Proxy eine HTTP-Anfrage weiterleitet?",
+    "options": [
+      "X-Forwarded-For",
+      "Content-Type",
+      "Accept-Encoding",
+      "Cache-Control"
+    ],
+    "answer": "X-Forwarded-For"
+  },
+  {
+    "category": "Networking",
+    "set": 5,
+    "question": "Warum sollte eine Anwendung weitergeleiteten Client-IP-Headern nur von konfigurierten vertrauenswürdigen Proxys vertrauen?",
+    "options": [
+      "TLS authentifiziert automatisch die ursprüngliche Client-IP in jedem Header",
+      "TCP-Prüfsummen beweisen, dass der Header den ursprünglichen Client benennt",
+      "Jeder weiterleitende Proxy signiert diesen Header standardmäßig kryptografisch",
+      "Clients können diese Header fälschen, wenn die Vertrauensgrenze nicht durchgesetzt wird"
+    ],
+    "answer": "Clients können diese Header fälschen, wenn die Vertrauensgrenze nicht durchgesetzt wird"
+  }
+]

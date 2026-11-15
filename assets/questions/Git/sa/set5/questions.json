@@ -1,0 +1,302 @@
+[
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "release इति विद्यमानशाखायाः कृते सम्बद्धं कार्यवृक्षं कः आदेशः योजयति?",
+    "options": [
+      "git worktree prune",
+      "git worktree lock ..\\release",
+      "git worktree add ..\\release release",
+      "git worktree list"
+    ],
+    "answer": "git worktree add ..\\release release"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "मुख्यप्रकल्पस्य संस्करणनियन्त्रितान् उपमॉड्यूल्-पथान् URL च का सञ्चिका लिखति?",
+    "options": [
+      ".gitmessage",
+      ".gitmodules",
+      ".gitignore",
+      ".gitattributes"
+    ],
+    "answer": ".gitmodules"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "अन्तर्गतैः सह पञ्जीकृतानाम् उपमॉड्यूल्-घटकानाम् आरम्भं चेकआउट् च कः आदेशः करोति?",
+    "options": [
+      "git submodule update --init --recursive",
+      "git submodule deinit --all",
+      "git submodule status",
+      "git submodule sync"
+    ],
+    "answer": "git submodule update --init --recursive"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "मुख्यप्रकल्पः कमिट्-अभिलेखे उपमॉड्यूल् कृते सामान्यतः किं लिखति?",
+    "options": [
+      "उपमॉड्यूल् इत्यस्य सम्पूर्णं वस्तुदत्तांशकोशम्",
+      "उपमॉड्यूल् इत्यस्य पूर्वनिर्धारितशाखानाम एव",
+      "उपमॉड्यूल् इत्यस्य अकमिट्-कृतपरिवर्तनानि एव",
+      "उपमॉड्यूल् इत्यस्य विशिष्टकमिट्-सन्दर्भम्"
+    ],
+    "answer": "उपमॉड्यूल् इत्यस्य विशिष्टकमिट्-सन्दर्भम्"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "सर्वसन्दर्भान् तत्प्राप्यम् इतिहासं च धारयन्तं वहनीयबण्डलं कः आदेशः सृजति?",
+    "options": [
+      "git format-patch -1 HEAD",
+      "git diff --binary > backup.bundle",
+      "git bundle create backup.bundle --all",
+      "git archive --output=backup.bundle HEAD"
+    ],
+    "answer": "git bundle create backup.bundle --all"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "HEAD इत्यस्य अनुवीक्षितसञ्चिकाः Git इतिहासं विना ZIP सङ्ग्रहे कः आदेशः निर्यातयति?",
+    "options": [
+      "git format-patch --stdout HEAD > source.zip",
+      "git archive --format=zip --output=source.zip HEAD",
+      "git bundle create source.zip --all",
+      "git clone --bare . source.zip"
+    ],
+    "answer": "git archive --format=zip --output=source.zip HEAD"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "नवीनतमकमिट् इत्येतद् ईमेल्-शैल्याः पैच्-सञ्चिकां कः आदेशः परिवर्तयति?",
+    "options": [
+      "git format-patch -1 HEAD",
+      "git diff HEAD",
+      "git show --stat HEAD",
+      "git log -1 --oneline"
+    ],
+    "answer": "git format-patch -1 HEAD"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "git format-patch निर्मितान् ईमेल्-पैच् प्रयोज्य तेभ्यः कमिट्-अभिलेखान् कः आदेशः सृजति?",
+    "options": [
+      "git apply changes.patch",
+      "git diff changes.patch",
+      "git add changes.patch",
+      "git am changes.patch"
+    ],
+    "answer": "git am changes.patch"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "सञ्चिकाः अपरिवर्त्य सामान्यपैच्-प्रयोगः सम्भवति न वा इति कः आदेशः परीक्षते?",
+    "options": [
+      "git am changes.patch",
+      "git add changes.patch",
+      "git apply --check changes.patch",
+      "git apply changes.patch"
+    ],
+    "answer": "git apply --check changes.patch"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "सञ्चिकानाम विना सञ्चिकाविषयं रक्षन् Git वस्तुप्रकारः कः?",
+    "options": [
+      "टिप्पणीसहितं टैग्",
+      "Blob",
+      "Tree",
+      "कमिट्"
+    ],
+    "answer": "Blob"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "सञ्चिकानामानि ब्लॉब् अथवा उपवृक्षसन्दर्भान् च लिखन् Git वस्तुप्रकारः कः?",
+    "options": [
+      "Tree",
+      "Blob",
+      "कमिट्",
+      "टिप्पणीसहितं टैग्"
+    ],
+    "answer": "Tree"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "ज्ञातस्य वस्तु-ID इत्यस्य प्रकारं कः आदेशः निवेदयति?",
+    "options": [
+      "git cat-file -s abc1234",
+      "git rev-parse abc1234",
+      "git log -1 abc1234",
+      "git cat-file -t abc1234"
+    ],
+    "answer": "git cat-file -t abc1234"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "HEAD इत्यस्य पूर्णं वस्तु-ID कः आदेशः दर्शयति?",
+    "options": [
+      "git status --short",
+      "git branch --show-current",
+      "git rev-parse HEAD",
+      "git symbolic-ref HEAD"
+    ],
+    "answer": "git rev-parse HEAD"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "feature इत्यस्मात् प्राप्यान् किन्तु main इत्यस्मात् अप्राप्यान् कमिट्-अभिलेखान् कः परिष्करणपरिसरः चिनोति?",
+    "options": [
+      "main^",
+      "main..feature",
+      "feature..main",
+      "main...feature"
+    ],
+    "answer": "main..feature"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "केवलं मर्ज्-कमिट्-अभिलेखान् दर्शयन् git log विकल्पः कः?",
+    "options": [
+      "--merges",
+      "--no-merges",
+      "--first-parent",
+      "--reverse"
+    ],
+    "answer": "--merges"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "परिवर्तितपथान् परिवर्तनस्थित्याक्षराणि च दर्शयन् git diff विकल्पः कः?",
+    "options": [
+      "--name-only",
+      "--stat",
+      "--shortstat",
+      "--name-status"
+    ],
+    "answer": "--name-status"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "पथानां पाठसामान्यीकरणनियमादीन् संस्करणनियन्त्रितगुणान् का सञ्चिका परिभाषयति?",
+    "options": [
+      ".gitmodules",
+      ".gitconfig",
+      ".gitattributes",
+      ".gitignore"
+    ],
+    "answer": ".gitattributes"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": ".gitattributes इत्यस्य '*.sh text eol=lf' नियमः अनुरूपपाठसञ्चिकानां कृते किं प्रार्थयते?",
+    "options": [
+      "रिक्तपङ्क्तीनां स्वचालितलोपम्",
+      "कार्यवृक्षे LF पङ्क्त्यन्तानि",
+      "कार्यवृक्षे CRLF पङ्क्त्यन्तानि",
+      "पाठपरिवर्तनं विना द्विआधारदत्तांशत्वेन व्यवहारम्"
+    ],
+    "answer": "कार्यवृक्षे LF पङ्क्त्यन्तानि"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "प्रस्तावितकमिट्-सन्देशसञ्चिकां परीक्ष्य कमिट् निराकर्तुं कः हुक् समर्थः?",
+    "options": [
+      "commit-msg",
+      "post-commit",
+      "post-checkout",
+      "post-merge"
+    ],
+    "answer": "commit-msg"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "Git हुक्-समूहाय स्वनिर्देशिकां कः विन्यासः चिनोति?",
+    "options": [
+      "core.worktree",
+      "core.excludesFile",
+      "core.attributesFile",
+      "core.hooksPath"
+    ],
+    "answer": "core.hooksPath"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "सामान्यं .gitignore नियमम् अयोजयित्वा एकं विकासकं स्थानीयरीत्या अननुवीक्षितसञ्चिकाः उपेक्षितुम् अनुमन्यमाना सञ्चिका का?",
+    "options": [
+      ".git\\description",
+      ".git\\packed-refs",
+      ".git\\info\\exclude",
+      ".git\\HEAD"
+    ],
+    "answer": ".git\\info\\exclude"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "बाइसेक्ट्-सत्रं समाप्य सामान्यतः मूलशाखां प्रत्यागमयन् आदेशः कः?",
+    "options": [
+      "git bisect log",
+      "git bisect reset",
+      "git bisect skip",
+      "git bisect good"
+    ],
+    "answer": "git bisect reset"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "पैच्-शृङ्खलायाः द्वे संस्करणे कः आदेशः तुलयति?",
+    "options": [
+      "git range-diff main..old main..new",
+      "git diff old new",
+      "git log old..new",
+      "git merge-base old new"
+    ],
+    "answer": "git range-diff main..old main..new"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "कमिट्-निर्माणकाले अन्ते Signed-off-by प्रविष्टिं कः आदेशः योजयति?",
+    "options": [
+      "git commit --gpg-sign",
+      "git commit --amend",
+      "git commit --no-verify",
+      "git commit --signoff"
+    ],
+    "answer": "git commit --signoff"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "git log -S'old_name' पूर्वनिर्धारितरूपेण किम् अन्विष्यति?",
+    "options": [
+      "येषां सन्देशे old_name विद्यते ते कमिट्-अभिलेखाः",
+      "यासां नामसु old_name विद्यते ताः शाखाः",
+      "old_name इत्यस्य उपस्थितिसङ्ख्यां परिवर्तयन्तः कमिट्-अभिलेखाः",
+      "येषां लेखकस्य नाम old_name अस्ति ते कमिट्-अभिलेखाः"
+    ],
+    "answer": "old_name इत्यस्य उपस्थितिसङ्ख्यां परिवर्तयन्तः कमिट्-अभिलेखाः"
+  }
+]

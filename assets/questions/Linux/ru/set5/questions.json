@@ -1,0 +1,302 @@
+[
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "Что предотвращает заключение подстановки Bash в кавычки как \"$name\"?",
+    "options": [
+      "Любое раскрытие параметров внутри кавычек",
+      "Последующее изменение переменной",
+      "Получение командой пустого аргумента",
+      "Разбиение результата на слова и подстановку имён путей"
+    ],
+    "answer": "Разбиение результата на слова и подстановку имён путей"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "Что делает запись '$HOME' в одинарных кавычках Bash?",
+    "options": [
+      "Подставляет предыдущий рабочий каталог",
+      "Удаляет знак доллара и передаёт HOME",
+      "Передаёт буквальный текст $HOME",
+      "Подставляет домашний каталог пользователя"
+    ],
+    "answer": "Передаёт буквальный текст $HOME"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "Что вставляет подстановка команды Bash $(command)?",
+    "options": [
+      "Код выхода команды как десятичное число",
+      "Стандартный вывод команды без завершающих переводов строки",
+      "Числовой ID процесса команды",
+      "Только стандартный поток ошибок команды"
+    ],
+    "answer": "Стандартный вывод команды без завершающих переводов строки"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "Какая встроенная команда Bash читает и выполняет команды файла сценария в текущей оболочке?",
+    "options": [
+      "source",
+      "exec",
+      "eval",
+      "export"
+    ],
+    "answer": "source"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "Что делает 'exec program' в сценарии Bash при успешном выполнении?",
+    "options": [
+      "Запускает program в фоне, а оболочка продолжает работу",
+      "Запускает program дважды и сравнивает результаты",
+      "Загружает вывод program как исходный код оболочки",
+      "Заменяет процесс оболочки на program"
+    ],
+    "answer": "Заменяет процесс оболочки на program"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "Каков статус конвейера при включённом Bash pipefail, если хотя бы одна команда завершилась ошибкой?",
+    "options": [
+      "Всегда ноль, если последняя команда успешна",
+      "Сумма статусов выхода всех команд",
+      "Статус самой правой команды с ненулевым результатом",
+      "Всегда статус первой команды"
+    ],
+    "answer": "Статус самой правой команды с ненулевым результатом"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "Какая команда GNU Coreutils проверяет суммы SHA-256 из checksums.txt?",
+    "options": [
+      "cksum checksums.txt",
+      "sha256sum -c checksums.txt",
+      "sha256sum checksums.txt",
+      "md5sum -c checksums.txt"
+    ],
+    "answer": "sha256sum -c checksums.txt"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "Какая команда GNU tar создаёт сжатый gzip архив каталога logs?",
+    "options": [
+      "tar -czf logs.tar.gz logs",
+      "tar -xzf logs.tar.gz",
+      "tar -tzf logs.tar.gz",
+      "gzip -d logs.tar.gz"
+    ],
+    "answer": "tar -czf logs.tar.gz logs"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "Какая опция tar показывает содержимое архива без извлечения?",
+    "options": [
+      "-x",
+      "-c",
+      "-r",
+      "-t"
+    ],
+    "answer": "-t"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "Как обычно влияет setgid каталога Linux на новые файлы внутри него?",
+    "options": [
+      "Их владельцем становится root",
+      "Владелец не может их удалить",
+      "Они наследуют группу каталога",
+      "Они всегда становятся исполняемыми для всех"
+    ],
+    "answer": "Они наследуют группу каталога"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "Что прежде всего ограничивает sticky bit общего записываемого каталога?",
+    "options": [
+      "Кто может выделять блоки диска в файловой системе",
+      "Кто может удалять и переименовывать файлы в каталоге",
+      "Кто может читать каждый файл каталога",
+      "Кто может запускать программы вне каталога"
+    ],
+    "answer": "Кто может удалять и переименовывать файлы в каталоге"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "Какая команда показывает записи списка контроля доступа файла?",
+    "options": [
+      "getfacl file.txt",
+      "setfacl -b file.txt",
+      "getfattr -d file.txt",
+      "lsattr file.txt"
+    ],
+    "answer": "getfacl file.txt"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "Какой файл обычно содержит локальные учётные записи, а не хеши паролей?",
+    "options": [
+      "/etc/shadow",
+      "/etc/group",
+      "/etc/gshadow",
+      "/etc/passwd"
+    ],
+    "answer": "/etc/passwd"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "Какая команда добавляет alice в дополнительную группу docker, не заменяя существующие дополнительные группы?",
+    "options": [
+      "usermod -g docker alice",
+      "usermod -l docker alice",
+      "usermod -aG docker alice",
+      "usermod -G docker alice"
+    ],
+    "answer": "usermod -aG docker alice"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "Какая команда блокирует пароль пользователя Linux для парольной аутентификации?",
+    "options": [
+      "passwd -e alice",
+      "passwd -l alice",
+      "passwd -u alice",
+      "passwd -S alice"
+    ],
+    "answer": "passwd -l alice"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "Какая команда запрашивает запись passwd пользователя alice в настроенных источниках службы имён?",
+    "options": [
+      "getent passwd alice",
+      "groups alice",
+      "id -u alice",
+      "whoami"
+    ],
+    "answer": "getent passwd alice"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "Какой файл обычно задаёт файловые системы, автоматически монтируемые при загрузке?",
+    "options": [
+      "/etc/hosts",
+      "/etc/shells",
+      "/etc/resolv.conf",
+      "/etc/fstab"
+    ],
+    "answer": "/etc/fstab"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "Какая команда показывает UUID файловых систем и другие атрибуты блочных устройств?",
+    "options": [
+      "modinfo",
+      "lscpu",
+      "blkid",
+      "lsmod"
+    ],
+    "answer": "blkid"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "Почему файловую систему обычно следует размонтировать перед исправляющим запуском fsck?",
+    "options": [
+      "В смонтированных файловых системах никогда нет свободного места",
+      "Одновременная запись может конфликтовать с ремонтом и повредить данные",
+      "Размонтирование автоматически шифрует все метаданные файловой системы",
+      "fsck поддерживает только файловые системы без имён устройств"
+    ],
+    "answer": "Одновременная запись может конфликтовать с ремонтом и повредить данные"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "Какая команда показывает активные области подкачки?",
+    "options": [
+      "swapon --show",
+      "swapoff -a",
+      "free -s 1",
+      "vmstat -d"
+    ],
+    "answer": "swapon --show"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "Какая команда загружает модуль ядра Linux вместе с зависимостями?",
+    "options": [
+      "rmmod",
+      "lsmod",
+      "modinfo",
+      "modprobe"
+    ],
+    "answer": "modprobe"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "Какая команда systemd запрещает запуск юнита, связывая его с /dev/null?",
+    "options": [
+      "systemctl stop app.service",
+      "systemctl reset-failed app.service",
+      "systemctl mask app.service",
+      "systemctl disable app.service"
+    ],
+    "answer": "systemctl mask app.service"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "Какая опция SSH выбирает файл закрытого ключа для аутентификации?",
+    "options": [
+      "-R",
+      "-i",
+      "-p",
+      "-L"
+    ],
+    "answer": "-i"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "Какая команда безопасно копирует локальный файл в каталог удалённого пользователя по SSH?",
+    "options": [
+      "scp report.txt alice@server:/home/alice/",
+      "ssh alice@server cat report.txt",
+      "sftp -b report.txt alice@server",
+      "ssh-keygen -f report.txt"
+    ],
+    "answer": "scp report.txt alice@server:/home/alice/"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "Что запрашивает 'rsync -n'?",
+    "options": [
+      "Удаление целевых файлов, отсутствующих в источнике",
+      "Сжатие передаваемых данных файлов",
+      "Рекурсивное сохранение всех атрибутов файловой системы",
+      "Пробный запуск с отчётом о предполагаемых изменениях без их внесения"
+    ],
+    "answer": "Пробный запуск с отчётом о предполагаемых изменениях без их внесения"
+  }
+]

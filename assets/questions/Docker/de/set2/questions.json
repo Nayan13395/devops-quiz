@@ -1,0 +1,302 @@
+[
+  {
+    "category": "Docker",
+    "set": 2,
+    "question": "Welcher Befehl gibt die Docker-Version aus?",
+    "options": [
+      "docker --version",
+      "docker run",
+      "docker ps",
+      "docker pull"
+    ],
+    "answer": "docker --version"
+  },
+  {
+    "category": "Docker",
+    "set": 2,
+    "question": "Welcher Befehl zeigt die Docker-Version im JSON-Format an?",
+    "options": [
+      "docker version --format json",
+      "docker version -j",
+      "docker version --json",
+      "docker info --json"
+    ],
+    "answer": "docker version --format json"
+  },
+  {
+    "category": "Docker",
+    "set": 2,
+    "question": "Welcher Befehl listet nur Container-IDs auf?",
+    "options": [
+      "docker ps -q",
+      "docker ps --ids",
+      "docker ps -i",
+      "docker ps --size"
+    ],
+    "answer": "docker ps -q"
+  },
+  {
+    "category": "Docker",
+    "set": 2,
+    "question": "Welcher Befehl listet alle Container einschließlich gestoppter auf?",
+    "options": [
+      "docker ps -a",
+      "docker ps --size",
+      "docker containers",
+      "docker list"
+    ],
+    "answer": "docker ps -a"
+  },
+  {
+    "category": "Docker",
+    "set": 2,
+    "question": "Welcher Befehl erstellt einen Container, ohne ihn zu starten?",
+    "options": [
+      "docker create",
+      "docker run",
+      "docker build",
+      "docker start"
+    ],
+    "answer": "docker create"
+  },
+  {
+    "category": "Docker",
+    "set": 2,
+    "question": "Welcher Befehl startet einen vorhandenen, gestoppten Container?",
+    "options": [
+      "docker start",
+      "docker run",
+      "docker create",
+      "docker exec"
+    ],
+    "answer": "docker start"
+  },
+  {
+    "category": "Docker",
+    "set": 2,
+    "question": "Welcher Befehl stoppt einen laufenden Container ordnungsgemäß?",
+    "options": [
+      "docker stop",
+      "docker kill",
+      "docker pause",
+      "docker halt"
+    ],
+    "answer": "docker stop"
+  },
+  {
+    "category": "Docker",
+    "set": 2,
+    "question": "Welcher Befehl beendet einen Container zwangsweise?",
+    "options": [
+      "docker kill",
+      "docker stop",
+      "docker terminate",
+      "docker end"
+    ],
+    "answer": "docker kill"
+  },
+  {
+    "category": "Docker",
+    "set": 2,
+    "question": "Welcher Befehl startet einen Container neu?",
+    "options": [
+      "docker restart",
+      "docker reset",
+      "docker reload",
+      "docker rerun"
+    ],
+    "answer": "docker restart"
+  },
+  {
+    "category": "Docker",
+    "set": 2,
+    "question": "Welcher Befehl pausiert einen laufenden Container?",
+    "options": [
+      "docker pause",
+      "docker stop",
+      "docker hold",
+      "docker freeze"
+    ],
+    "answer": "docker pause"
+  },
+  {
+    "category": "Docker",
+    "set": 2,
+    "question": "Welcher Befehl setzt einen pausierten Container fort?",
+    "options": [
+      "docker unpause",
+      "docker resume",
+      "docker start",
+      "docker restart"
+    ],
+    "answer": "docker unpause"
+  },
+  {
+    "category": "Docker",
+    "set": 2,
+    "question": "Welcher Befehl entfernt einen Container?",
+    "options": [
+      "docker rm",
+      "docker stop",
+      "docker delete",
+      "docker clear"
+    ],
+    "answer": "docker rm"
+  },
+  {
+    "category": "Docker",
+    "set": 2,
+    "question": "Welcher Befehl entfernt ein Docker-Image?",
+    "options": [
+      "docker rmi",
+      "docker rm",
+      "docker erase",
+      "docker clean"
+    ],
+    "answer": "docker rmi"
+  },
+  {
+    "category": "Docker",
+    "set": 2,
+    "question": "Welcher Befehl zeigt den Verlauf eines Images an?",
+    "options": [
+      "docker history",
+      "docker layers",
+      "docker image show",
+      "docker inspect"
+    ],
+    "answer": "docker history"
+  },
+  {
+    "category": "Docker",
+    "set": 2,
+    "question": "Welche Option von docker run setzt die Umgebungsvariable APP_ENV auf prod?",
+    "options": [
+      "--name APP_ENV=prod",
+      "--hostname APP_ENV=prod",
+      "-e APP_ENV=prod",
+      "--label APP_ENV=prod"
+    ],
+    "answer": "-e APP_ENV=prod"
+  },
+  {
+    "category": "Docker",
+    "set": 2,
+    "question": "Welche Option macht das Root-Dateisystem eines Containers schreibgeschützt?",
+    "options": [
+      "--init",
+      "--read-only",
+      "--privileged",
+      "--tty"
+    ],
+    "answer": "--read-only"
+  },
+  {
+    "category": "Docker",
+    "set": 2,
+    "question": "Welche Neustartrichtlinie startet einen Container nach einem Exitcode ungleich null, aber nicht nach erfolgreichem Ende neu?",
+    "options": [
+      "on-failure",
+      "always",
+      "unless-stopped",
+      "no"
+    ],
+    "answer": "on-failure"
+  },
+  {
+    "category": "Docker",
+    "set": 2,
+    "question": "Welcher Befehl begrenzt einen neuen Container auf 512 MiB Arbeitsspeicher?",
+    "options": [
+      "docker run --memory-reservation 512m alpine",
+      "docker run --memory-swap 512m alpine",
+      "docker run --shm-size 512m alpine",
+      "docker run --memory 512m alpine"
+    ],
+    "answer": "docker run --memory 512m alpine"
+  },
+  {
+    "category": "Docker",
+    "set": 2,
+    "question": "Welche Option setzt das CPU-Kontingent eines Containers auf eine halbe CPU?",
+    "options": [
+      "--cpuset-cpus 0",
+      "--cpu-period 50000",
+      "--cpus 0.5",
+      "--cpu-shares 512"
+    ],
+    "answer": "--cpus 0.5"
+  },
+  {
+    "category": "Docker",
+    "set": 2,
+    "question": "Welcher Mount-Typ stellt ein bestimmtes Hostverzeichnis direkt im Container bereit?",
+    "options": [
+      "tmpfs-Mount",
+      "Bind-Mount",
+      "Benanntes Volume",
+      "Anonymes Volume"
+    ],
+    "answer": "Bind-Mount"
+  },
+  {
+    "category": "Docker",
+    "set": 2,
+    "question": "Welcher Mount-Typ speichert unter Linux Dateien im Host-Arbeitsspeicher statt dauerhaft als gewöhnliche Datenträgerdateien?",
+    "options": [
+      "tmpfs-Mount",
+      "Bind-Mount",
+      "Benanntes Volume",
+      "Anonymes Volume"
+    ],
+    "answer": "tmpfs-Mount"
+  },
+  {
+    "category": "Docker",
+    "set": 2,
+    "question": "Welcher Befehl verbindet den vorhandenen Container web mit dem Netzwerk backend?",
+    "options": [
+      "docker network disconnect backend web",
+      "docker network inspect backend web",
+      "docker network rm backend web",
+      "docker network connect backend web"
+    ],
+    "answer": "docker network connect backend web"
+  },
+  {
+    "category": "Docker",
+    "set": 2,
+    "question": "Welche Netzwerktreiberfunktion unterscheidet eine benutzerdefinierte Bridge von Dockers Standard-Bridge?",
+    "options": [
+      "Automatisches hostübergreifendes Routing ohne Konfiguration",
+      "Automatische Veröffentlichung jedes offengelegten Ports",
+      "Automatische DNS-Namensauflösung zwischen Containern",
+      "Automatische Verschlüsselung des gesamten Containerverkehrs"
+    ],
+    "answer": "Automatische DNS-Namensauflösung zwischen Containern"
+  },
+  {
+    "category": "Docker",
+    "set": 2,
+    "question": "Welcher Befehl benennt einen Container von oldweb in newweb um?",
+    "options": [
+      "docker network connect oldweb newweb",
+      "docker rename oldweb newweb",
+      "docker tag oldweb newweb",
+      "docker cp oldweb newweb"
+    ],
+    "answer": "docker rename oldweb newweb"
+  },
+  {
+    "category": "Docker",
+    "set": 2,
+    "question": "Welcher Befehl wartet auf das Ende des Containers web und gibt seinen Exitcode aus?",
+    "options": [
+      "docker wait web",
+      "docker logs web",
+      "docker top web",
+      "docker attach web"
+    ],
+    "answer": "docker wait web"
+  }
+]

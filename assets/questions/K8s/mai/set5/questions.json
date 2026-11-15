@@ -1,0 +1,302 @@
+[
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "NetworkPolicy केँ Pod traffic पर प्रभाव डालबाक लेल की चाही?",
+    "options": [
+      "प्रत्येक चुनल गेल Pod लेल एकटा LoadBalancer Service",
+      "ओहे namespace मे एकटा PersistentVolumeClaim",
+      "प्रत्येक policy लेल एकटा अलग API server",
+      "एकटा network implementation जे NetworkPolicy केँ लागू करैत हो"
+    ],
+    "answer": "एकटा network implementation जे NetworkPolicy केँ लागू करैत हो"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "एके Pod केँ चुनयवला कएकटा NetworkPolicies अपन अनुमत ingress traffic केँ कोना मिलबैत अछि?",
+    "options": [
+      "पहिने बनाओल गेल policy सभ बाद क policies केँ ओवरराइड करैत अछि",
+      "प्रत्येक policy केँ स्वतंत्र रूप सँ प्रत्येक packet क अनुमति देबय पड़ैत छैक",
+      "अनुमत traffic हुनकर ingress अनुमतिक union होइत अछि",
+      "अंत मे बनाओल गेल policy सभ पहिनुका policies केँ ओवरराइड करैत अछि"
+    ],
+    "answer": "अनुमत traffic हुनकर ingress अनुमतिक union होइत अछि"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "कोन RBAC object namespace क भीतर अनुमति परिभाषित करैत अछि?",
+    "options": [
+      "ResourceQuota",
+      "Role",
+      "RoleBinding",
+      "ServiceAccount"
+    ],
+    "answer": "Role"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "कोन RBAC object कोनो Role वा ClusterRole क अनुमति केँ एकटा namespace क भीतर प्रदान करैत अछि?",
+    "options": [
+      "RoleBinding",
+      "ClusterRoleBinding",
+      "ServiceAccount",
+      "LimitRange"
+    ],
+    "answer": "RoleBinding"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "Kubernetes API पहुँच लेल Pod मे चलयवला processes केँ सामान्यतः कोन पहचान देल जाइत अछि?",
+    "options": [
+      "StorageClass",
+      "RuntimeClass",
+      "PriorityClass",
+      "ServiceAccount"
+    ],
+    "answer": "ServiceAccount"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "Secret क data केँ base64 encode करब ओहि व्यक्ति सँ ओकर रक्षा लेल किएक पर्याप्त नहि अछि जे object पढ़ि सकैत हो?",
+    "options": [
+      "Base64 स्वतः data केँ DNS द्वारा प्रकाशित करैत अछि",
+      "Base64 केँ Pod मे संग्रहीत private key चाही",
+      "Base64 उलटबा योग्य encoding अछि, encryption नहि",
+      "Base64 Kubernetes केँ data संग्रहीत करय सँ रोकैत अछि"
+    ],
+    "answer": "Base64 उलटबा योग्य encoding अछि, encryption नहि"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "कोन field Kubernetes केँ Pod मे API credentials केँ स्वतः mount करय सँ रोकि सकैत अछि?",
+    "options": [
+      "shareProcessNamespace: false",
+      "automountServiceAccountToken: false",
+      "hostNetwork: false",
+      "enableServiceLinks: false"
+    ],
+    "answer": "automountServiceAccountToken: false"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "कोन object namespace क भीतर कुल resource उपभोग केँ सीमित करैत अछि?",
+    "options": [
+      "ResourceQuota",
+      "LimitRange",
+      "PriorityClass",
+      "PodDisruptionBudget"
+    ],
+    "answer": "ResourceQuota"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "कोन object namespace क भीतर containers केँ डिफ़ॉल्ट resource requests आ limits निर्धारित कर' सकैत अछि?",
+    "options": [
+      "ResourceQuota",
+      "HorizontalPodAutoscaler",
+      "RuntimeClass",
+      "LimitRange"
+    ],
+    "answer": "LimitRange"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "मेटाबय क अनुरोध भेलाक बाद Kubernetes object पर finalizer की करैत अछि?",
+    "options": [
+      "तुरंत प्रत्येक आश्रित object केँ मेटा दैत अछि",
+      "object केँ immutable Secret मे बदलि दैत अछि",
+      "object केँ मेटाबय क प्रतीक्षा मे राखैत अछि जा धरि आवश्यक cleanup finalizer केँ नहि हटा दैत",
+      "object मे सभ भविष्य क अपडेट केँ रोकि दैत अछि"
+    ],
+    "answer": "object केँ मेटाबय क प्रतीक्षा मे राखैत अछि जा धरि आवश्यक cleanup finalizer केँ नहि हटा दैत"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "garbage collection लेल कोन metadata field आश्रित objects केँ ओकर मालिक सँ जोड़ैत अछि?",
+    "options": [
+      "managedFields",
+      "ownerReferences",
+      "annotations",
+      "labels"
+    ],
+    "answer": "ownerReferences"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "CustomResourceDefinition कोनो cluster मे की जोड़ैत अछि?",
+    "options": [
+      "Kubernetes API द्वारा उपलब्ध कराओल गेल एकटा नव custom resource type",
+      "विद्यमान type लेल चलि रहल reconciliation controller",
+      "प्रत्येक service account केँ RBAC अनुमति क प्रदान",
+      "प्रत्येक built-in resource type क एकटा instance"
+    ],
+    "answer": "Kubernetes API द्वारा उपलब्ध कराओल गेल एकटा नव custom resource type"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "केवल custom resource definition सँ Kubernetes operator केँ कोन बात अलग करैत अछि?",
+    "options": [
+      "operator केवल schema परिभाषा संग्रहीत कर' सकैत अछि",
+      "operator API server क आवश्यकता केँ समाप्त कऽ दैत अछि",
+      "operator केवल kubectl क output format बदलैत अछि",
+      "operator प्रतिनिधित्व कएल गेल application केँ प्रबंधित करबाक लेल reconciliation logic सेहो चलबैत अछि"
+    ],
+    "answer": "operator प्रतिनिधित्व कएल गेल application केँ प्रबंधित करबाक लेल reconciliation logic सेहो चलबैत अछि"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "authentication आ authorization क बाद, persistence सँ पहिने कोन तंत्र API अनुरोध केँ अस्वीकार वा संशोधित कर' सकैत अछि?",
+    "options": [
+      "Container image pulling",
+      "Service endpoint routing",
+      "Admission control",
+      "Pod scheduling"
+    ],
+    "answer": "Admission control"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "जँ कोनो योग्य node Pod क आवश्यक node affinity केँ पूरा नहि करैत अछि तँ की होइत अछि?",
+    "options": [
+      "API server ओकरा प्रत्येक node पर schedule करैत अछि",
+      "Pod तावत धरि unscheduled रहैत अछि जा धरि कोनो उपयुक्त node उपलब्ध नहि होइत अछि वा constraints नहि बदलैत अछि",
+      "scheduler एक प्रयास क बाद नियम केँ अनदेखा कऽ दैत अछि",
+      "Pod स्वतः DaemonSet बनि जाइत अछि"
+    ],
+    "answer": "Pod तावत धरि unscheduled रहैत अछि जा धरि कोनो उपयुक्त node उपलब्ध नहि होइत अछि वा constraints नहि बदलैत अछि"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "preferredDuringSchedulingIgnoredDuringExecution node affinity की व्यक्त करैत अछि?",
+    "options": [
+      "एकटा placement प्राथमिकता जे अन्यथा योग्य मेल नहि खायवला nodes केँ बाहर नहि करैत अछि",
+      "एकटा अनिवार्य आवश्यकता जे मेल नहि खायवला nodes पर placement केँ रोकैत अछि",
+      "node label बदलि गेला पर Pod केँ evict करबाक निर्देश",
+      "scheduler केँ पूर्ण रूप सँ बायपास करबाक अनुरोध"
+    ],
+    "answer": "एकटा placement प्राथमिकता जे अन्यथा योग्य मेल नहि खायवला nodes केँ बाहर नहि करैत अछि"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "जँ कोनो node क labels चलि रहल Pod क node-affinity नियम सँ मेल खायब बंद कऽ दैत अछि तँ IgnoredDuringExecution क की अर्थ अछि?",
+    "options": [
+      "Pod केँ तुरंत मेटाबय पड़त",
+      "Pod क containers स्वतः restart भ' जाइत अछि",
+      "node क labels स्वतः पूर्ववत भ' जाइत अछि",
+      "केवल ई नियम चलि रहल Pod केँ evict नहि करैत अछि"
+    ],
+    "answer": "केवल ई नियम चलि रहल Pod केँ evict नहि करैत अछि"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "जखन कोनो Pod स्पष्ट रूप सँ spec.nodeName सेट करैत अछि तखन की होइत अछि?",
+    "options": [
+      "ई ओहि नाम क node बनबैत अछि",
+      "ई Pod चला रहल वर्तमान node क नाम बदलि दैत अछि",
+      "ई scheduler केँ बायपास करैत अछि आ ओहि नामित node केँ आवंटित भ' जाइत अछि",
+      "ई scheduler सँ सभ मेल खायवला node labels केँ क्रमबद्ध करबाक अनुरोध करैत अछि"
+    ],
+    "answer": "ई scheduler केँ बायपास करैत अछि आ ओहि नामित node केँ आवंटित भ' जाइत अछि"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "topology spread constraints क उद्देश्य की अछि?",
+    "options": [
+      "control-plane components क बीच traffic केँ encrypt करब",
+      "मेल खायवला Pods केँ topology domains मे कोना वितरित कएल जाय से नियंत्रित करब",
+      "persistent volumes क पार container files केँ कॉपी करब",
+      "प्रत्येक namespace केँ एकटा public IP आवंटित करब"
+    ],
+    "answer": "मेल खायवला Pods केँ topology domains मे कोना वितरित कएल जाय से नियंत्रित करब"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "कोन taint effect पहिनहि सँ चलि रहल ओहि Pods केँ evict कर' सकैत अछि जे taint केँ बर्दाश्त नहि करैत अछि?",
+    "options": [
+      "NoExecute",
+      "NoSchedule",
+      "PreferNoSchedule",
+      "None"
+    ],
+    "answer": "NoExecute"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "कोन container securityContext setting Linux container केँ non-root user क रूप मे चलबाक लेल आवश्यक बनबैत अछि?",
+    "options": [
+      "readOnlyRootFilesystem: true",
+      "privileged: false",
+      "allowPrivilegeEscalation: false",
+      "runAsNonRoot: true"
+    ],
+    "answer": "runAsNonRoot: true"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "कोन container securityContext setting Linux process केँ अपन parent सँ बेसी privileges प्राप्त करय सँ रोकैत अछि?",
+    "options": [
+      "readOnlyRootFilesystem: true",
+      "privileged: false",
+      "allowPrivilegeEscalation: false",
+      "runAsNonRoot: true"
+    ],
+    "answer": "allowPrivilegeEscalation: false"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "कोन प्रकार क container केँ विद्यमान Pod मे troubleshooting लेल, ओकर application containers केँ संशोधित कएने बिना, जोड़ल जा सकैत अछि?",
+    "options": [
+      "Restartable init container",
+      "Ephemeral container",
+      "Ordinary init container",
+      "Regular application container"
+    ],
+    "answer": "Ephemeral container"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "कोन resource scalable समूह मे Service लेल network endpoints केँ ट्रैक करैत अछि?",
+    "options": [
+      "EndpointSlice",
+      "IngressClass",
+      "NetworkPolicy",
+      "RuntimeClass"
+    ],
+    "answer": "EndpointSlice"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "Ingress resource केँ वास्तव मे HTTP routing configure करबाक लेल की चाही?",
+    "options": [
+      "प्रत्येक namespace मे ingress नामक एकटा ConfigMap",
+      "प्रत्येक hostname लेल एकटा PersistentVolume",
+      "एकटा Job जे सभ चुनल गेल Pods केँ restart करैत हो",
+      "एकटा Ingress controller जे ओकर नियम केँ लागू करैत हो"
+    ],
+    "answer": "एकटा Ingress controller जे ओकर नियम केँ लागू करैत हो"
+  }
+]

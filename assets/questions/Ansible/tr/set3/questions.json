@@ -1,0 +1,302 @@
+[
+  {
+    "category": "Ansible",
+    "set": 3,
+    "question": "Ansible Rolü nedir?",
+    "options": [
+      "Yeniden kullanılabilir görev ve dosya koleksiyonu",
+      "Kullanıcı hesabı",
+      "Envanter grubu",
+      "Playbook değişkeni"
+    ],
+    "answer": "Yeniden kullanılabilir görev ve dosya koleksiyonu"
+  },
+  {
+    "category": "Ansible",
+    "set": 3,
+    "question": "Hangi komut yeni bir rol yapısı oluşturur?",
+    "options": [
+      "ansible-galaxy init",
+      "ansible role create",
+      "ansible init role",
+      "ansible-playbook init"
+    ],
+    "answer": "ansible-galaxy init"
+  },
+  {
+    "category": "Ansible",
+    "set": 3,
+    "question": "Rol görevlerini hangi dizin içerir?",
+    "options": [
+      "tasks",
+      "handlers",
+      "files",
+      "vars"
+    ],
+    "answer": "tasks"
+  },
+  {
+    "category": "Ansible",
+    "set": 3,
+    "question": "Bir rolde ana görev dosyası hangisidir?",
+    "options": [
+      "tasks/main.yml",
+      "tasks/tasks.yml",
+      "main/tasks.yml",
+      "role.yml"
+    ],
+    "answer": "tasks/main.yml"
+  },
+  {
+    "category": "Ansible",
+    "set": 3,
+    "question": "Rol handler'larını hangi dizin içerir?",
+    "options": [
+      "handlers",
+      "tasks",
+      "events",
+      "notify"
+    ],
+    "answer": "handlers"
+  },
+  {
+    "category": "Ansible",
+    "set": 3,
+    "question": "Bir rolde Jinja2 şablonlarını hangi dizin saklar?",
+    "options": [
+      "templates",
+      "files",
+      "jinja",
+      "render"
+    ],
+    "answer": "templates"
+  },
+  {
+    "category": "Ansible",
+    "set": 3,
+    "question": "Bir rolde statik dosyaları hangi dizin saklar?",
+    "options": [
+      "files",
+      "templates",
+      "static",
+      "resources"
+    ],
+    "answer": "files"
+  },
+  {
+    "category": "Ansible",
+    "set": 3,
+    "question": "Rol değişkenlerini hangi dizin içerir?",
+    "options": [
+      "vars",
+      "variables",
+      "config",
+      "settings"
+    ],
+    "answer": "vars"
+  },
+  {
+    "category": "Ansible",
+    "set": 3,
+    "question": "Varsayılan değişkenleri hangi dizin içerir?",
+    "options": [
+      "defaults",
+      "vars",
+      "config",
+      "settings"
+    ],
+    "answer": "defaults"
+  },
+  {
+    "category": "Ansible",
+    "set": 3,
+    "question": "Play düzeyindeki hangi anahtar sözcük, tek bir görevden rol çağırmak yerine statik bir rol listesi bildirir?",
+    "options": [
+      "roles",
+      "include_role",
+      "role",
+      "import_role"
+    ],
+    "answer": "roles"
+  },
+  {
+    "category": "Ansible",
+    "set": 3,
+    "question": "Ansible Galaxy nedir?",
+    "options": [
+      "Ansible rolleri ve koleksiyonları için depo",
+      "İzleme aracı",
+      "CI/CD platformu",
+      "Envanter yöneticisi"
+    ],
+    "answer": "Ansible rolleri ve koleksiyonları için depo"
+  },
+  {
+    "category": "Ansible",
+    "set": 3,
+    "question": "Hangi komut Galaxy'den bir rol yükler?",
+    "options": [
+      "ansible-galaxy install",
+      "ansible install role",
+      "ansible role add",
+      "ansible-galaxy add"
+    ],
+    "answer": "ansible-galaxy install"
+  },
+  {
+    "category": "Ansible",
+    "set": 3,
+    "question": "Ansible Vault ne için kullanılır?",
+    "options": [
+      "Hassas verileri şifrelemek",
+      "Envanterleri yönetmek",
+      "Playbook çalıştırmak",
+      "Rol yüklemek"
+    ],
+    "answer": "Hassas verileri şifrelemek"
+  },
+  {
+    "category": "Ansible",
+    "set": 3,
+    "question": "Hangi komut mevcut bir dosyayı şifreler?",
+    "options": [
+      "ansible-vault encrypt",
+      "ansible-vault secure",
+      "ansible-vault create",
+      "ansible-vault lock"
+    ],
+    "answer": "ansible-vault encrypt"
+  },
+  {
+    "category": "Ansible",
+    "set": 3,
+    "question": "Ansible Koleksiyonları nedir?",
+    "options": [
+      "Rol, modül ve eklenti içeren paketler",
+      "Envanter grupları",
+      "Şifrelenmiş dosyalar",
+      "YAML değişkenleri"
+    ],
+    "answer": "Rol, modül ve eklenti içeren paketler"
+  },
+  {
+    "category": "Ansible",
+    "set": 3,
+    "question": "Diğer rollere bağımlılıkları genellikle hangi rol dosyası bildirir?",
+    "options": [
+      "vars/main.yml",
+      "meta/main.yml",
+      "defaults/main.yml",
+      "handlers/main.yml"
+    ],
+    "answer": "meta/main.yml"
+  },
+  {
+    "category": "Ansible",
+    "set": 3,
+    "question": "community.general adlı koleksiyonu hangi komut kurar?",
+    "options": [
+      "ansible-galaxy collection install community.general",
+      "ansible-galaxy role install community.general",
+      "ansible-galaxy collection build community.general",
+      "ansible-galaxy collection verify community.general"
+    ],
+    "answer": "ansible-galaxy collection install community.general"
+  },
+  {
+    "category": "Ansible",
+    "set": 3,
+    "question": "Tam nitelikli koleksiyon adı ansible.builtin.copy neyi tanımlar?",
+    "options": [
+      "builtin adlı ana makine grubundaki copy rolünü",
+      "Ardından bağlantı türü gelen bir envanter ana makine adını",
+      "Ardından şifrelenmiş dosya adı gelen bir Vault tanımlayıcısını",
+      "ansible ad alanındaki builtin koleksiyonunun copy modülünü"
+    ],
+    "answer": "ansible ad alanındaki builtin koleksiyonunun copy modülünü"
+  },
+  {
+    "category": "Ansible",
+    "set": 3,
+    "question": "Hangi komut, şifrelenmiş bir Vault dosyasını diskte kalıcı olarak çözmeden görüntüler?",
+    "options": [
+      "ansible-vault edit secrets.yml",
+      "ansible-vault rekey secrets.yml",
+      "ansible-vault view secrets.yml",
+      "ansible-vault decrypt secrets.yml"
+    ],
+    "answer": "ansible-vault view secrets.yml"
+  },
+  {
+    "category": "Ansible",
+    "set": 3,
+    "question": "Mevcut bir Vault şifreli dosyayı koruyan parolayı hangi komut değiştirir?",
+    "options": [
+      "ansible-vault create secrets.yml",
+      "ansible-vault rekey secrets.yml",
+      "ansible-vault view secrets.yml",
+      "ansible-vault encrypt secrets.yml"
+    ],
+    "answer": "ansible-vault rekey secrets.yml"
+  },
+  {
+    "category": "Ansible",
+    "set": 3,
+    "question": "Playbook çalıştırılırken Vault parolasını hangi seçenek sorar?",
+    "options": [
+      "--ask-vault-pass",
+      "--ask-pass",
+      "--ask-become-pass",
+      "--private-key"
+    ],
+    "answer": "--ask-vault-pass"
+  },
+  {
+    "category": "Ansible",
+    "set": 3,
+    "question": "Bir rolü çalışma zamanında dinamik olarak hangi görev eylemi yükler?",
+    "options": [
+      "ansible.builtin.import_role",
+      "ansible.builtin.import_tasks",
+      "ansible.builtin.include_vars",
+      "ansible.builtin.include_role"
+    ],
+    "answer": "ansible.builtin.include_role"
+  },
+  {
+    "category": "Ansible",
+    "set": 3,
+    "question": "Görevler içeren bir dosyayı hangi görev eylemi statik olarak içe aktarır?",
+    "options": [
+      "ansible.builtin.include_vars",
+      "ansible.builtin.import_role",
+      "ansible.builtin.import_tasks",
+      "ansible.builtin.include_tasks"
+    ],
+    "answer": "ansible.builtin.import_tasks"
+  },
+  {
+    "category": "Ansible",
+    "set": 3,
+    "question": "Aynı ad hem rol varsayılanlarında hem rol değişkenlerinde bulunursa hangi değişken kaynağı önceliklidir?",
+    "options": [
+      "İki tanım her zaman sözdizimi hatası oluşturur",
+      "Rol değişkenleri",
+      "Rol varsayılanları",
+      "İki değer her zaman birleştirilir"
+    ],
+    "answer": "Rol değişkenleri"
+  },
+  {
+    "category": "Ansible",
+    "set": 3,
+    "question": "Verilen bir dizgeden şifrelenmiş değişkeni hangi komut oluşturur?",
+    "options": [
+      "ansible-vault encrypt_string",
+      "ansible-vault encrypt",
+      "ansible-vault rekey",
+      "ansible-vault view"
+    ],
+    "answer": "ansible-vault encrypt_string"
+  }
+]

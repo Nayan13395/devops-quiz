@@ -1,14 +1,16 @@
-import 'dart:typed_data';
 import 'dart:ui' as ui;
 
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
+import 'package:flutter/services.dart';
 import 'package:file_saver/file_saver.dart';
 import 'package:pdf/pdf.dart';
 import 'package:pdf/widgets.dart' as pw;
+import 'package:share_plus/share_plus.dart';
 
 import '../services/certificate_service.dart';
 import '../services/question_service.dart';
+import '../services/referral_service.dart';
 import '../services/user_profile_service.dart';
 import '../services/whats_new_service.dart';
 import '../widgets/certificate_view.dart';
@@ -270,37 +272,54 @@ class CertificateDetailScreen extends StatefulWidget {
       _CertificateDetailScreenState();
 }
 
+enum _CertificateAction { download, share }
+
 class _CertificateDetailScreenState extends State<CertificateDetailScreen> {
   final GlobalKey _captureKey = GlobalKey();
 
-  late String _name = widget.holderName;
-  bool _busy = false;
+  late final String _name = widget.holderName;
+  _CertificateAction? _action;
+  bool get _busy => _action != null;
 
-  Future<void> _editName() async {
-    final String? name = await askHolderName(context, initial: _name);
+  String get _filename =>
+      '${widget.info.category.replaceAll(RegExp(r'[^A-Za-z0-9]+'), '_')}'
+      '_Course_Completion_Certificate';
 
-    if (name != null && mounted) {
-      setState(() => _name = name);
+  String get _shareMessage =>
+      'I completed all ${CertificateService.setsRequired} '
+      '${widget.info.category} quiz sets on DevOps Quiz with a '
+      '${widget.info.averagePercent}% average and earned my '
+      'Course Completion Certificate!\n\n'
+      'Building my skills, one challenge at a time. '
+      'Keep learning and keep growing!\n\n'
+      'Start your own learning journey: ${ReferralService.playStoreUrl}\n\n'
+      '#DevOps #ContinuousLearning #LearningJourney';
+
+  Future<Uint8List> _capturePng() async {
+    await WidgetsBinding.instance.endOfFrame;
+    final boundary = _captureKey.currentContext?.findRenderObject();
+    if (boundary is! RenderRepaintBoundary) {
+      throw StateError('Certificate preview is not available');
+    }
+    final ui.Image image = await boundary.toImage(pixelRatio: 3);
+    try {
+      final ByteData? data = await image.toByteData(
+        format: ui.ImageByteFormat.png,
+      );
+      if (data == null) throw StateError('Unable to render certificate');
+      return data.buffer.asUint8List(data.offsetInBytes, data.lengthInBytes);
+    } finally {
+      image.dispose();
     }
   }
 
   Future<void> _download() async {
-    setState(() => _busy = true);
-
+    if (_busy) return;
+    setState(() => _action = _CertificateAction.download);
     try {
-      final boundary =
-          _captureKey.currentContext!.findRenderObject()
-              as RenderRepaintBoundary;
-
-      final ui.Image image = await boundary.toImage(pixelRatio: 3);
-      final ByteData? data = await image.toByteData(
-        format: ui.ImageByteFormat.png,
-      );
-
-      if (data == null) throw StateError('Unable to render certificate');
-
+      final bytes = await _capturePng();
       final pdf = pw.Document();
-      final picture = pw.MemoryImage(data.buffer.asUint8List());
+      final picture = pw.MemoryImage(bytes);
 
       pdf.addPage(
         pw.Page(
@@ -310,23 +329,18 @@ class _CertificateDetailScreenState extends State<CertificateDetailScreen> {
         ),
       );
 
-      final String safe = widget.info.category.replaceAll(
-        RegExp(r'[^A-Za-z0-9]+'),
-        '_',
-      );
-
-      final filename = '${safe}_Course_Completion_Certificate';
-        final pdfBytes = await pdf.save();
+      final pdfBytes = await pdf.save();
+      if (!mounted) return;
       final savedPath = await FileSaver.instance.saveAs(
-        name: filename,
-          bytes: pdfBytes,
+        name: _filename,
+        bytes: pdfBytes,
         fileExtension: 'pdf',
         mimeType: MimeType.pdf,
       );
       if (savedPath == null || !mounted) return;
 
       ScaffoldMessenger.of(context).showSnackBar(
-        SnackBar(content: Text('Certificate saved as $filename.pdf')),
+        SnackBar(content: Text('Certificate saved as $_filename.pdf')),
       );
     } catch (e) {
       if (!mounted) return;
@@ -335,7 +349,54 @@ class _CertificateDetailScreenState extends State<CertificateDetailScreen> {
         context,
       ).showSnackBar(SnackBar(content: Text('Unable to create PDF: $e')));
     } finally {
-      if (mounted) setState(() => _busy = false);
+      if (mounted) setState(() => _action = null);
+    }
+  }
+
+  Future<void> _share(BuildContext buttonContext) async {
+    if (_busy) return;
+    setState(() => _action = _CertificateAction.share);
+    try {
+      final bytes = await _capturePng();
+      if (!mounted || !buttonContext.mounted) return;
+      final box = buttonContext.findRenderObject();
+      if (box is! RenderBox || !box.hasSize) {
+        throw StateError('Share button is not available');
+      }
+      final result = await SharePlus.instance.share(
+        ShareParams(
+          title: '${widget.info.category} - DevOps Quiz certificate',
+          subject: 'My ${widget.info.category} learning milestone',
+          text: _shareMessage,
+          files: [XFile.fromData(bytes, mimeType: 'image/png')],
+          fileNameOverrides: ['$_filename.png'],
+          sharePositionOrigin: box.localToGlobal(Offset.zero) & box.size,
+          downloadFallbackEnabled: false,
+        ),
+      );
+      if (!mounted) return;
+      if (result.status == ShareResultStatus.unavailable) {
+        ScaffoldMessenger.of(context).showSnackBar(
+          const SnackBar(
+            content: Text(
+              'Sharing could not be confirmed. You can use Download PDF to save the certificate.',
+            ),
+          ),
+        );
+      }
+    } catch (error, stack) {
+      debugPrint('Certificate sharing failed: $error\n$stack');
+      if (mounted) {
+        ScaffoldMessenger.of(context).showSnackBar(
+          const SnackBar(
+            content: Text(
+              'Unable to share the certificate. Please try again or use Download PDF.',
+            ),
+          ),
+        );
+      }
+    } finally {
+      if (mounted) setState(() => _action = null);
     }
   }
 
@@ -373,7 +434,7 @@ class _CertificateDetailScreenState extends State<CertificateDetailScreen> {
                     children: [
                       FilledButton.icon(
                         onPressed: _busy ? null : _download,
-                        icon: _busy
+                        icon: _action == _CertificateAction.download
                             ? const SizedBox(
                                 width: 18,
                                 height: 18,
@@ -384,10 +445,21 @@ class _CertificateDetailScreenState extends State<CertificateDetailScreen> {
                             : const Icon(Icons.download_rounded),
                         label: const Text('Download PDF'),
                       ),
-                      OutlinedButton.icon(
-                        onPressed: _busy ? null : _editName,
-                        icon: const Icon(Icons.edit_outlined),
-                        label: const Text('Edit name'),
+                      Builder(
+                        builder: (buttonContext) => FilledButton.tonalIcon(
+                          key: const ValueKey('certificate-share'),
+                          onPressed: _busy ? null : () => _share(buttonContext),
+                          icon: _action == _CertificateAction.share
+                              ? const SizedBox(
+                                  width: 18,
+                                  height: 18,
+                                  child: CircularProgressIndicator(
+                                    strokeWidth: 2,
+                                  ),
+                                )
+                              : const Icon(Icons.share_rounded),
+                          label: const Text('Share certificate'),
+                        ),
                       ),
                     ],
                   ),

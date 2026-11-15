@@ -1,0 +1,302 @@
+[
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "ᱪᱮᱫ ᱥᱟᱹᱠᱷᱟᱛ ᱫᱚ ᱢᱤᱫ ᱥᱟᱫᱷᱟᱨᱚᱬ Bash ᱯᱷᱟᱝᱥᱚᱱ ᱠᱚ ᱛᱮᱭᱟᱨ ᱮᱫᱟ?",
+    "options": [
+      "myfunc() { echo hi; }",
+      "def myfunc: echo hi",
+      "function = myfunc",
+      "myfunc -> echo hi"
+    ],
+    "answer": "myfunc() { echo hi; }"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "ᱪᱮᱫ ᱠᱚᱢᱟᱸᱰ ᱫᱚ myfunc ᱧᱩᱛᱩᱢ ᱨᱮᱭᱟᱜ ᱯᱷᱟᱝᱥᱚᱱ ᱠᱚ ᱛᱟᱞᱟᱣ ᱮᱫᱟ?",
+    "options": [
+      "myfunc",
+      "call myfunc",
+      "run myfunc",
+      "execute myfunc"
+    ],
+    "answer": "myfunc"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "ᱪᱮᱫ ᱠᱤᱣᱟᱨᱰ ᱫᱚ ᱠᱷᱟᱞᱤ ᱯᱷᱟᱝᱥᱚᱱ ᱵᱷᱤᱛᱨᱤ ᱧᱮᱞᱚᱜ ᱜᱟᱱ ᱵᱷᱮᱨᱤᱭᱮᱵᱩᱞ ᱠᱚ ᱥᱟᱵ ᱮᱫᱟ?",
+    "options": [
+      "local",
+      "private",
+      "internal",
+      "hidden"
+    ],
+    "answer": "local"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "ᱪᱮᱫ ᱠᱚᱢᱟᱸᱰ ᱫᱚ ᱯᱷᱟᱝᱥᱚᱱ ᱠᱷᱚᱱ ᱐ ᱮᱜᱷᱟᱭ ᱥᱴᱮᱴᱚᱥ ᱨᱟᱹᱯᱩᱫ ᱮᱫᱟ?",
+    "options": [
+      "return 0",
+      "exit function 0",
+      "stop 0",
+      "end 0"
+    ],
+    "answer": "return 0"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "ᱯᱷᱟᱝᱥᱚᱱ ᱵᱷᱤᱛᱨᱤ ᱪᱮᱫ ᱯᱮᱨᱮᱢᱤᱴᱚᱨ ᱫᱚ ᱯᱷᱟᱝᱥᱚᱱ ᱥᱮᱞᱮᱫ ᱮᱢ ᱟᱠᱟᱱ ᱟᱨᱜᱩᱢᱮᱱᱴ ᱨᱮᱭᱟᱜ ᱞᱮᱠᱷᱟ ᱮᱢᱟ?",
+    "options": [
+      "$#",
+      "$@",
+      "$0",
+      "$1"
+    ],
+    "answer": "$#"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "ᱪᱮᱫ ᱥᱟᱹᱠᱷᱟᱛ ᱫᱚ ᱯᱮ ᱮᱞᱮᱢᱮᱱᱴ ᱥᱮᱞᱮᱫ ᱤᱱᱰᱮᱠᱥ ᱮᱨᱮ ᱛᱮᱭᱟᱨ ᱮᱫᱟ?",
+    "options": [
+      "arr=(one two three)",
+      "array arr one two three",
+      "arr[one two three]",
+      "set arr one two three"
+    ],
+    "answer": "arr=(one two three)"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "ᱪᱮᱫ ᱥᱟᱹᱠᱷᱟᱛ ᱫᱚ arr ᱨᱮᱭᱟᱜ ᱤᱱᱰᱮᱠᱥ ᱒ ᱨᱮᱭᱟᱜ ᱮᱞᱮᱢᱮᱱᱴ ᱥᱮᱸᱫᱽᱨᱟ ᱮᱫᱟ?",
+    "options": [
+      "${arr[2]}",
+      "${arr:2}",
+      "$arr[2]",
+      "arr{2}"
+    ],
+    "answer": "${arr[2]}"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "ᱪᱮᱫ ᱮᱠᱥᱯᱟᱱᱥᱚᱱ ᱫᱚ arr ᱨᱮᱭᱟᱜ ᱮᱞᱮᱢᱮᱱᱴ ᱨᱮᱭᱟᱜ ᱞᱮᱠᱷᱟ ᱮᱢᱟ?",
+    "options": [
+      "${#arr[@]}",
+      "${#arr}",
+      "${arr:length}",
+      "${arr[@]#}"
+    ],
+    "answer": "${#arr[@]}"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "ᱪᱮᱫ ᱥᱟᱹᱠᱷᱟᱛ ᱫᱚ arr ᱨᱮ newitem ᱠᱚ ᱡᱚᱲᱟᱣ ᱮᱫᱟ?",
+    "options": [
+      "arr+=(newitem)",
+      "arr=newitem",
+      "arr.push(newitem)",
+      "add arr newitem"
+    ],
+    "answer": "arr+=(newitem)"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "ᱪᱮᱫ ᱮᱠᱥᱯᱟᱱᱥᱚᱱ ᱫᱚ arr ᱨᱮᱭᱟᱜ ᱡᱷᱚᱛᱚ ᱮᱞᱮᱢᱮᱱᱴ ᱠᱚ ᱨᱟᱹᱯᱩᱫ ᱮᱢᱟ?",
+    "options": [
+      "${arr[@]}",
+      "${arr[0]}",
+      "${arr[all]}",
+      "${arr}"
+    ],
+    "answer": "${arr[@]}"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "ᱪᱮᱫ ᱠᱚᱢᱟᱸᱰ ᱫᱚ ᱮᱥᱳᱥᱤᱭᱮᱴᱤᱣ ᱮᱨᱮ ᱠᱚ ᱥᱟᱵ ᱮᱫᱟ?",
+    "options": [
+      "declare -A map",
+      "declare -a map",
+      "array -A map",
+      "assoc map"
+    ],
+    "answer": "declare -A map"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "ᱪᱮᱫ ᱨᱤᱰᱟᱭᱨᱮᱠᱥᱚᱱ ᱫᱚ ᱥᱴᱮᱱᱰᱟᱨᱰ ᱟᱣᱴᱯᱩᱴ ᱟᱨ ᱥᱴᱮᱱᱰᱟᱨᱰ ᱮᱨᱚᱨ ᱡᱷᱚᱛᱚ ᱠᱚ output.log ᱨᱮ ᱵᱷᱮᱡᱟ ᱮᱫᱟ?",
+    "options": [
+      "command &> output.log",
+      "command > output.log",
+      "command 2> output.log",
+      "command < output.log"
+    ],
+    "answer": "command &> output.log"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "ᱪᱮᱫ ᱨᱤᱰᱟᱭᱨᱮᱠᱥᱚᱱ ᱫᱚ ᱠᱚᱢᱟᱸᱰ ᱨᱮᱭᱟᱜ ᱡᱷᱚᱛᱚ ᱟᱣᱴᱯᱩᱴ ᱠᱚ ᱪᱟᱥᱟᱜ ᱮᱫᱟ?",
+    "options": [
+      "command > /dev/null",
+      "command > null",
+      "command > empty",
+      "command > discard"
+    ],
+    "answer": "command > /dev/null"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "ᱪᱮᱫ ᱚᱯᱨᱮᱴᱚᱨ ᱫᱚ ᱢᱤᱫ ᱠᱚᱢᱟᱸᱰ ᱨᱮᱭᱟᱜ ᱟᱣᱴᱯᱩᱴ ᱠᱚ ᱮᱴᱟᱜ ᱠᱚᱢᱟᱸᱰ ᱨᱮᱭᱟᱜ ᱤᱱᱯᱩᱴ ᱞᱮᱠᱟ ᱵᱷᱮᱡᱟ ᱮᱫᱟ?",
+    "options": [
+      "|",
+      ">",
+      "<",
+      "&"
+    ],
+    "answer": "|"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "ᱪᱮᱫ ᱪᱤᱱᱦᱟᱹ ᱫᱚ ᱠᱚᱢᱟᱸᱰ ᱠᱚ ᱵᱮᱠᱜᱨᱟᱣᱟᱸᱰ ᱨᱮ ᱪᱟᱞᱟᱣ ᱮᱫᱟ?",
+    "options": [
+      "&",
+      "&&",
+      "|",
+      ";"
+    ],
+    "answer": "&"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "ᱪᱮᱫ ᱵᱷᱤᱛᱨᱤ ᱠᱚᱢᱟᱸᱰ ᱫᱚ ᱵᱮᱠᱜᱨᱟᱣᱟᱸᱰ ᱡᱚᱵ ᱪᱟᱵᱟ ᱞᱟᱹᱜᱤᱫ ᱪᱤᱱᱟᱹ ᱚᱠᱛᱚ ᱛᱟᱦᱮᱱᱟ?",
+    "options": [
+      "wait",
+      "hold",
+      "pause",
+      "sleep"
+    ],
+    "answer": "wait"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "ᱪᱮᱫ ᱠᱚᱢᱟᱸᱰ ᱫᱚ script.sh ᱠᱚ ᱱᱤᱛᱚᱜᱟᱜ ᱥᱮᱞ ᱮᱱᱵᱷᱟᱭᱨᱚᱱᱢᱮᱱᱴ ᱨᱮ ᱪᱟᱞᱟᱣ ᱮᱫᱟ?",
+    "options": [
+      "source script.sh",
+      "bash script.sh",
+      "./script.sh",
+      "sh script.sh"
+    ],
+    "answer": "source script.sh"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "ᱪᱮᱫ ᱚᱯᱨᱮᱴᱚᱨ ᱫᱚ here document ᱠᱚ ᱥᱩᱨᱩ ᱮᱫᱟ?",
+    "options": [
+      "<<",
+      ">>",
+      "<",
+      ">"
+    ],
+    "answer": "<<"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "ᱪᱮᱫ ᱠᱚᱢᱟᱸᱰ ᱫᱚ ᱥᱩᱨᱠᱷᱤᱭᱟ ᱜᱟᱱ ᱛᱟᱹᱛᱷᱟᱞ ᱯᱷᱟᱭᱤᱞ ᱛᱮᱭᱟᱨ ᱮᱫᱟ?",
+    "options": [
+      "mktemp",
+      "tempfile",
+      "touch tmp",
+      "newfile"
+    ],
+    "answer": "mktemp"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "ᱥᱠᱨᱤᱯᱴ ᱫᱚ SIGINT ᱧᱟᱢ ᱚᱠᱛᱮ ᱥᱟᱯᱷᱟ ᱠᱟᱹᱢᱤ ᱪᱮᱫ ᱠᱚᱢᱟᱸᱰ ᱪᱟᱞᱟᱣ ᱮᱫᱟ?",
+    "options": [
+      "trap 'cleanup' SIGINT",
+      "handle SIGINT cleanup",
+      "signal SIGINT cleanup",
+      "catch SIGINT cleanup"
+    ],
+    "answer": "trap 'cleanup' SIGINT"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "ᱵᱮᱵᱷᱟᱨᱤ Ctrl+C ᱞᱮᱱ ᱚᱠᱛᱮ ᱥᱟᱫᱷᱟᱨᱚᱬ ᱛᱮ ᱪᱮᱫ ᱥᱤᱜᱱᱟᱞ ᱵᱷᱮᱡᱟ ᱜᱟᱱ ᱠᱟᱱᱟ?",
+    "options": [
+      "SIGINT",
+      "SIGTERM",
+      "SIGKILL",
+      "SIGHUP"
+    ],
+    "answer": "SIGINT"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "ᱪᱮᱫ ᱚᱯᱥᱚᱱ ᱫᱚ ᱠᱚᱢᱟᱸᱰ ᱵᱤᱯᱷᱚᱞ ᱞᱮᱱ ᱚᱠᱛᱮ ᱥᱠᱨᱤᱯᱴ ᱠᱚ ᱱᱤᱛᱚᱜ ᱛᱮᱭ ᱪᱟᱵᱟ ᱮᱫᱟ?",
+    "options": [
+      "set -e",
+      "set -x",
+      "set -u",
+      "set -o pipefail"
+    ],
+    "answer": "set -e"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "ᱪᱮᱫ ᱚᱯᱥᱚᱱ ᱫᱚ unset ᱵᱷᱮᱨᱤᱭᱮᱵᱩᱞ ᱠᱚ ᱵᱮᱵᱷᱟᱨ ᱚᱠᱛᱮ ᱵᱷᱩᱞ ᱮᱢᱟ?",
+    "options": [
+      "set -u",
+      "set -e",
+      "set -x",
+      "set -a"
+    ],
+    "answer": "set -u"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "ᱪᱮᱫ ᱚᱯᱥᱚᱱ ᱫᱚ ᱰᱤᱵᱟᱜ ᱞᱟᱹᱜᱤᱫ ᱪᱟᱞᱟᱣ ᱢᱟᱨᱟᱝ ᱥᱟᱱᱟᱢ ᱠᱚᱢᱟᱸᱰ ᱠᱚ ᱪᱷᱟᱯᱟ ᱮᱫᱟ?",
+    "options": [
+      "set -x",
+      "set -e",
+      "set -u",
+      "set -v"
+    ],
+    "answer": "set -x"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "ᱪᱮᱫ ᱠᱚᱢᱟᱸᱰ ᱫᱚ ᱱᱤᱛᱚᱜᱟᱜ ᱵᱟᱰᱟᱭ ᱟᱠᱟᱱ ᱥᱮᱞ ᱯᱷᱟᱝᱥᱚᱱ ᱞᱤᱥᱴ ᱠᱚ ᱧᱮᱞᱟᱣᱟ?",
+    "options": [
+      "declare -f",
+      "declare -A",
+      "functions",
+      "listfunc"
+    ],
+    "answer": "declare -f"
+  }
+]

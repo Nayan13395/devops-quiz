@@ -1,0 +1,302 @@
+[
+  {
+    "category": "Docker",
+    "set": 1,
+    "question": "Docker 이미지를 빌드하는 명령어는 무엇입니까?",
+    "options": [
+      "docker build",
+      "docker run",
+      "docker ps",
+      "docker pull"
+    ],
+    "answer": "docker build"
+  },
+  {
+    "category": "Docker",
+    "set": 1,
+    "question": "컨테이너를 분리(detached) 모드로 실행하는 명령어는 무엇입니까?",
+    "options": [
+      "docker run -d",
+      "docker run -b",
+      "docker run --bg",
+      "docker run --background"
+    ],
+    "answer": "docker run -d"
+  },
+  {
+    "category": "Docker",
+    "set": 1,
+    "question": "새 컨테이너의 표준 입력을 열어 두고 의사 TTY를 할당하는 명령은?",
+    "options": [
+      "docker run -it",
+      "docker run -i",
+      "docker run -t",
+      "docker run --interactive"
+    ],
+    "answer": "docker run -it"
+  },
+  {
+    "category": "Docker",
+    "set": 1,
+    "question": "중간 이미지를 포함하여 모든 이미지를 나열하는 명령어는 무엇입니까?",
+    "options": [
+      "docker images -a",
+      "docker images --digests",
+      "docker images -l",
+      "docker images -q"
+    ],
+    "answer": "docker images -a"
+  },
+  {
+    "category": "Docker",
+    "set": 1,
+    "question": "중지된 모든 컨테이너를 제거하는 명령어는 무엇입니까?",
+    "options": [
+      "docker container prune",
+      "docker rm -a",
+      "docker rm --all",
+      "docker clean"
+    ],
+    "answer": "docker container prune"
+  },
+  {
+    "category": "Docker",
+    "set": 1,
+    "question": "사용하지 않는 모든 이미지를 제거하는 명령어는 무엇입니까?",
+    "options": [
+      "docker image prune -a",
+      "docker rmi -a",
+      "docker images --clean",
+      "docker image clean"
+    ],
+    "answer": "docker image prune -a"
+  },
+  {
+    "category": "Docker",
+    "set": 1,
+    "question": "컨테이너 리소스 사용량을 표시하는 명령어는 무엇입니까?",
+    "options": [
+      "docker stats",
+      "docker top",
+      "docker monitor",
+      "docker usage"
+    ],
+    "answer": "docker stats"
+  },
+  {
+    "category": "Docker",
+    "set": 1,
+    "question": "컨테이너 내부에서 실행 중인 프로세스를 표시하는 명령어는 무엇입니까?",
+    "options": [
+      "docker top",
+      "docker ps",
+      "docker stats",
+      "docker inspect"
+    ],
+    "answer": "docker top"
+  },
+  {
+    "category": "Docker",
+    "set": 1,
+    "question": "컨테이너 로그를 표시하는 명령어는 무엇입니까?",
+    "options": [
+      "docker logs",
+      "docker events",
+      "docker output",
+      "docker inspect"
+    ],
+    "answer": "docker logs"
+  },
+  {
+    "category": "Docker",
+    "set": 1,
+    "question": "컨테이너나 이미지를 상세 조회하는 명령어는 무엇입니까?",
+    "options": [
+      "docker inspect",
+      "docker details",
+      "docker info",
+      "docker config"
+    ],
+    "answer": "docker inspect"
+  },
+  {
+    "category": "Docker",
+    "set": 1,
+    "question": "Docker 네트워크를 생성하는 명령어는 무엇입니까?",
+    "options": [
+      "docker network create",
+      "docker create network",
+      "docker net add",
+      "docker network build"
+    ],
+    "answer": "docker network create"
+  },
+  {
+    "category": "Docker",
+    "set": 1,
+    "question": "Docker 네트워크를 나열하는 명령어는 무엇입니까?",
+    "options": [
+      "docker network ls",
+      "docker networks",
+      "docker net list",
+      "docker show networks"
+    ],
+    "answer": "docker network ls"
+  },
+  {
+    "category": "Docker",
+    "set": 1,
+    "question": "Docker 볼륨을 생성하는 명령어는 무엇입니까?",
+    "options": [
+      "docker volume create",
+      "docker storage create",
+      "docker volume add",
+      "docker create volume"
+    ],
+    "answer": "docker volume create"
+  },
+  {
+    "category": "Docker",
+    "set": 1,
+    "question": "Docker 볼륨을 나열하는 명령어는 무엇입니까?",
+    "options": [
+      "docker volume ls",
+      "docker volumes",
+      "docker volume show",
+      "docker storage ls"
+    ],
+    "answer": "docker volume ls"
+  },
+  {
+    "category": "Docker",
+    "set": 1,
+    "question": "Docker 시스템 정보를 표시하는 명령어는 무엇입니까?",
+    "options": [
+      "docker info",
+      "docker version",
+      "docker status",
+      "docker config"
+    ],
+    "answer": "docker info"
+  },
+  {
+    "category": "Docker",
+    "set": 1,
+    "question": "이미지 빌드 중 명령을 실행하는 Dockerfile 지시문은?",
+    "options": [
+      "CMD",
+      "ENTRYPOINT",
+      "EXPOSE",
+      "RUN"
+    ],
+    "answer": "RUN"
+  },
+  {
+    "category": "Docker",
+    "set": 1,
+    "question": "후속 지시문의 작업 디렉터리를 정하는 Dockerfile 지시문은?",
+    "options": [
+      "SHELL",
+      "LABEL",
+      "WORKDIR",
+      "USER"
+    ],
+    "answer": "WORKDIR"
+  },
+  {
+    "category": "Docker",
+    "set": 1,
+    "question": "ADD의 자동 압축 해제 없이 로컬 빌드 컨텍스트 파일을 복사하는 Dockerfile 지시문은?",
+    "options": [
+      "VOLUME",
+      "COPY",
+      "ADD",
+      "RUN"
+    ],
+    "answer": "COPY"
+  },
+  {
+    "category": "Docker",
+    "set": 1,
+    "question": "Dockerfile에서 EXPOSE만 사용하면 무엇을 하는가?",
+    "options": [
+      "사용하려는 컨테이너 포트를 문서화한다",
+      "그 포트를 호스트에 공개한다",
+      "호스트 방화벽에서 그 포트를 연다",
+      "그 포트에서 서버를 시작한다"
+    ],
+    "answer": "사용하려는 컨테이너 포트를 문서화한다"
+  },
+  {
+    "category": "Docker",
+    "set": 1,
+    "question": "Docker 빌드 컨텍스트에서 특정 경로를 보통 제외하는 파일은?",
+    "options": [
+      ".gitignore",
+      "Dockerfile",
+      "compose.yaml",
+      ".dockerignore"
+    ],
+    "answer": ".dockerignore"
+  },
+  {
+    "category": "Docker",
+    "set": 1,
+    "question": "'docker build .' 끝의 점은 무엇을 가리키는가?",
+    "options": [
+      "컨테이너의 작업 디렉터리",
+      "Docker 데몬의 위치",
+      "빌드 컨텍스트로 사용하는 현재 디렉터리",
+      "생성할 이미지의 레지스트리"
+    ],
+    "answer": "빌드 컨텍스트로 사용하는 현재 디렉터리"
+  },
+  {
+    "category": "Docker",
+    "set": 1,
+    "question": "nginx를 시작할 때 새 컨테이너에 'web' 이름을 주는 명령은?",
+    "options": [
+      "docker run --network web nginx",
+      "docker run --name web nginx",
+      "docker run --hostname web nginx",
+      "docker run --label web nginx"
+    ],
+    "answer": "docker run --name web nginx"
+  },
+  {
+    "category": "Docker",
+    "set": 1,
+    "question": "호스트 TCP 포트 8080을 컨테이너 TCP 포트 80에 연결하는 명령은?",
+    "options": [
+      "docker run -p 8080:80 nginx",
+      "docker run -p 80:8080 nginx",
+      "docker run --expose 8080 nginx",
+      "docker run --expose 80 nginx"
+    ],
+    "answer": "docker run -p 8080:80 nginx"
+  },
+  {
+    "category": "Docker",
+    "set": 1,
+    "question": "컨테이너 종료 시 자동으로 삭제하는 docker run 옵션은?",
+    "options": [
+      "--init",
+      "--read-only",
+      "--privileged",
+      "--rm"
+    ],
+    "answer": "--rm"
+  },
+  {
+    "category": "Docker",
+    "set": 1,
+    "question": "컨테이너를 삭제하면 쓰기 가능한 계층의 파일은 보통 어떻게 되는가?",
+    "options": [
+      "이름 있는 볼륨이 된다",
+      "레지스트리에 업로드된다",
+      "컨테이너와 함께 삭제된다",
+      "원본 이미지에 합쳐진다"
+    ],
+    "answer": "컨테이너와 함께 삭제된다"
+  }
+]

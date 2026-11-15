@@ -1,0 +1,335 @@
+{
+  "task": "Whole-app translation audit: all 32 selectable languages",
+  "status": "completed_with_findings",
+  "phase": "Published evidence for all 32 languages; translation remediation remains separate",
+  "updated_at": "2026-11-13T11:33:03.856559+00:00",
+  "scope": "UI, quiz questions, learning and saved cards, games, menus, notifications, errors and language switching. Audit only: no translations changed.",
+  "tasks": [
+    {
+      "name": "Verify all 32 selectable languages and generated UI bundles",
+      "status": "done"
+    },
+    {
+      "name": "Validate every category/language/set question file",
+      "status": "done"
+    },
+    {
+      "name": "Check effective learning-card translation coverage",
+      "status": "done"
+    },
+    {
+      "name": "Audit English-only screens and runtime language propagation",
+      "status": "done"
+    },
+    {
+      "name": "Run per-language localization and widget checks",
+      "status": "done"
+    },
+    {
+      "name": "Publish findings, evidence and remaining manual review",
+      "status": "done"
+    }
+  ],
+  "languages": {
+    "en": {
+      "name": "English",
+      "ui_status": "120 messages; 10 structural errors; 0 English-prose candidates",
+      "runtime_status": "completed; 0 untranslated surfaces observed",
+      "verdict": "English baseline; duplicate UI keys need cleanup",
+      "question_status": "21/21 banks pass integrity checks; 2625 records",
+      "learning_status": "1000/1000 available; 0 missing"
+    },
+    "hi": {
+      "name": "Hindi",
+      "ui_status": "120 messages; 4 structural errors; 0 English-prose candidates",
+      "runtime_status": "completed; 3 untranslated surfaces observed",
+      "verdict": "PARTIAL - whole app is not fully translated",
+      "question_status": "21/21 banks pass integrity checks; 2625 records; 5 confirmed English-prose samples",
+      "learning_status": "1000/1000 available; 0 missing"
+    },
+    "mr": {
+      "name": "Marathi",
+      "ui_status": "120 messages; 4 structural errors; 0 English-prose candidates",
+      "runtime_status": "completed; 3 untranslated surfaces observed",
+      "verdict": "PARTIAL - whole app is not fully translated",
+      "question_status": "21/21 banks pass integrity checks; 2625 records; 5 confirmed English-prose samples",
+      "learning_status": "1000/1000 available; 0 missing"
+    },
+    "es": {
+      "name": "Spanish",
+      "ui_status": "120 messages; 0 structural errors; 0 English-prose candidates",
+      "runtime_status": "completed; 4 untranslated surfaces observed",
+      "verdict": "PARTIAL - whole app is not fully translated",
+      "question_status": "21/21 banks pass integrity checks; 2625 records",
+      "learning_status": "393/1000 available; 607 missing"
+    },
+    "fr": {
+      "name": "French",
+      "ui_status": "120 messages; 0 structural errors; 0 English-prose candidates",
+      "runtime_status": "completed; 4 untranslated surfaces observed",
+      "verdict": "PARTIAL - whole app is not fully translated",
+      "question_status": "21/21 banks pass integrity checks; 2625 records",
+      "learning_status": "393/1000 available; 607 missing"
+    },
+    "de": {
+      "name": "German",
+      "ui_status": "120 messages; 0 structural errors; 0 English-prose candidates",
+      "runtime_status": "completed; 4 untranslated surfaces observed",
+      "verdict": "PARTIAL - whole app is not fully translated",
+      "question_status": "21/21 banks pass integrity checks; 2625 records",
+      "learning_status": "393/1000 available; 607 missing"
+    },
+    "it": {
+      "name": "Italian",
+      "ui_status": "120 messages; 0 structural errors; 0 English-prose candidates",
+      "runtime_status": "completed; 4 untranslated surfaces observed",
+      "verdict": "PARTIAL - whole app is not fully translated",
+      "question_status": "21/21 banks pass integrity checks; 2625 records",
+      "learning_status": "393/1000 available; 607 missing"
+    },
+    "pt": {
+      "name": "Portuguese",
+      "ui_status": "120 messages; 0 structural errors; 0 English-prose candidates",
+      "runtime_status": "completed; 4 untranslated surfaces observed",
+      "verdict": "PARTIAL - whole app is not fully translated",
+      "question_status": "21/21 banks pass integrity checks; 2625 records",
+      "learning_status": "393/1000 available; 607 missing"
+    },
+    "ar": {
+      "name": "Arabic",
+      "ui_status": "120 messages; 0 structural errors; 0 English-prose candidates",
+      "runtime_status": "completed; 4 untranslated surfaces observed",
+      "verdict": "PARTIAL - whole app is not fully translated",
+      "question_status": "21/21 banks pass integrity checks; 2625 records",
+      "learning_status": "393/1000 available; 607 missing"
+    },
+    "id": {
+      "name": "Indonesian",
+      "ui_status": "120 messages; 0 structural errors; 0 English-prose candidates",
+      "runtime_status": "completed; 4 untranslated surfaces observed",
+      "verdict": "PARTIAL - whole app is not fully translated",
+      "question_status": "21/21 banks pass integrity checks; 2625 records",
+      "learning_status": "393/1000 available; 607 missing"
+    },
+    "tr": {
+      "name": "Turkish",
+      "ui_status": "120 messages; 0 structural errors; 0 English-prose candidates",
+      "runtime_status": "completed; 4 untranslated surfaces observed",
+      "verdict": "PARTIAL - whole app is not fully translated",
+      "question_status": "21/21 banks pass integrity checks; 2625 records",
+      "learning_status": "393/1000 available; 607 missing"
+    },
+    "ru": {
+      "name": "Russian",
+      "ui_status": "120 messages; 0 structural errors; 0 English-prose candidates",
+      "runtime_status": "completed; 4 untranslated surfaces observed",
+      "verdict": "PARTIAL - whole app is not fully translated",
+      "question_status": "21/21 banks pass integrity checks; 2625 records",
+      "learning_status": "393/1000 available; 607 missing"
+    },
+    "ja": {
+      "name": "Japanese",
+      "ui_status": "120 messages; 0 structural errors; 0 English-prose candidates",
+      "runtime_status": "completed; 4 untranslated surfaces observed",
+      "verdict": "PARTIAL - whole app is not fully translated",
+      "question_status": "21/21 banks pass integrity checks; 2625 records",
+      "learning_status": "393/1000 available; 607 missing"
+    },
+    "zh": {
+      "name": "Chinese",
+      "ui_status": "120 messages; 0 structural errors; 0 English-prose candidates",
+      "runtime_status": "completed; 4 untranslated surfaces observed",
+      "verdict": "PARTIAL - whole app is not fully translated",
+      "question_status": "21/21 banks pass integrity checks; 2625 records",
+      "learning_status": "393/1000 available; 607 missing"
+    },
+    "bn": {
+      "name": "Bengali",
+      "ui_status": "120 messages; 0 structural errors; 0 English-prose candidates",
+      "runtime_status": "completed; 4 untranslated surfaces observed",
+      "verdict": "PARTIAL - whole app is not fully translated",
+      "question_status": "21/21 banks pass integrity checks; 2625 records",
+      "learning_status": "393/1000 available; 607 missing"
+    },
+    "as": {
+      "name": "Assamese",
+      "ui_status": "120 messages; 0 structural errors; 0 English-prose candidates",
+      "runtime_status": "completed; 4 untranslated surfaces observed",
+      "verdict": "PARTIAL - whole app is not fully translated",
+      "question_status": "21/21 banks pass integrity checks; 2625 records",
+      "learning_status": "393/1000 available; 607 missing"
+    },
+    "doi": {
+      "name": "Dogri",
+      "ui_status": "120 messages; 0 structural errors; 0 English-prose candidates",
+      "runtime_status": "completed; 5 untranslated surfaces observed",
+      "verdict": "PARTIAL - whole app is not fully translated",
+      "question_status": "8/21 banks pass integrity checks; 2625 records; 2 confirmed English-prose samples",
+      "learning_status": "393/1000 available; 607 missing"
+    },
+    "gu": {
+      "name": "Gujarati",
+      "ui_status": "120 messages; 0 structural errors; 0 English-prose candidates",
+      "runtime_status": "completed; 4 untranslated surfaces observed",
+      "verdict": "PARTIAL - whole app is not fully translated",
+      "question_status": "21/21 banks pass integrity checks; 2625 records; 2 confirmed English-prose samples",
+      "learning_status": "393/1000 available; 607 missing"
+    },
+    "kn": {
+      "name": "Kannada",
+      "ui_status": "120 messages; 0 structural errors; 0 English-prose candidates",
+      "runtime_status": "completed; 4 untranslated surfaces observed",
+      "verdict": "PARTIAL - whole app is not fully translated",
+      "question_status": "21/21 banks pass integrity checks; 2625 records",
+      "learning_status": "393/1000 available; 607 missing"
+    },
+    "gom": {
+      "name": "Konkani",
+      "ui_status": "120 messages; 0 structural errors; 0 English-prose candidates",
+      "runtime_status": "completed; 5 untranslated surfaces observed",
+      "verdict": "PARTIAL - whole app is not fully translated",
+      "question_status": "21/21 banks pass integrity checks; 2625 records",
+      "learning_status": "393/1000 available; 607 missing"
+    },
+    "mai": {
+      "name": "Maithili",
+      "ui_status": "120 messages; 0 structural errors; 0 English-prose candidates",
+      "runtime_status": "completed; 5 untranslated surfaces observed",
+      "verdict": "PARTIAL - whole app is not fully translated",
+      "question_status": "8/21 banks pass integrity checks; 2625 records",
+      "learning_status": "393/1000 available; 607 missing"
+    },
+    "ml": {
+      "name": "Malayalam",
+      "ui_status": "120 messages; 0 structural errors; 0 English-prose candidates",
+      "runtime_status": "completed; 4 untranslated surfaces observed",
+      "verdict": "PARTIAL - whole app is not fully translated",
+      "question_status": "21/21 banks pass integrity checks; 2625 records",
+      "learning_status": "393/1000 available; 607 missing"
+    },
+    "mni": {
+      "name": "Manipuri",
+      "ui_status": "120 messages; 0 structural errors; 0 English-prose candidates",
+      "runtime_status": "completed; 5 untranslated surfaces observed",
+      "verdict": "PARTIAL - whole app is not fully translated",
+      "question_status": "8/21 banks pass integrity checks; 2625 records; 2 confirmed English-prose samples",
+      "learning_status": "393/1000 available; 607 missing"
+    },
+    "ne": {
+      "name": "Nepali",
+      "ui_status": "120 messages; 0 structural errors; 0 English-prose candidates",
+      "runtime_status": "completed; 4 untranslated surfaces observed",
+      "verdict": "PARTIAL - whole app is not fully translated",
+      "question_status": "21/21 banks pass integrity checks; 2625 records",
+      "learning_status": "393/1000 available; 607 missing"
+    },
+    "or": {
+      "name": "Odia",
+      "ui_status": "120 messages; 0 structural errors; 0 English-prose candidates",
+      "runtime_status": "completed; 4 untranslated surfaces observed",
+      "verdict": "PARTIAL - whole app is not fully translated",
+      "question_status": "21/21 banks pass integrity checks; 2625 records",
+      "learning_status": "393/1000 available; 607 missing"
+    },
+    "pa": {
+      "name": "Punjabi",
+      "ui_status": "120 messages; 0 structural errors; 0 English-prose candidates",
+      "runtime_status": "completed; 4 untranslated surfaces observed",
+      "verdict": "PARTIAL - whole app is not fully translated",
+      "question_status": "21/21 banks pass integrity checks; 2625 records",
+      "learning_status": "393/1000 available; 607 missing"
+    },
+    "sa": {
+      "name": "Sanskrit",
+      "ui_status": "120 messages; 0 structural errors; 0 English-prose candidates",
+      "runtime_status": "completed; 5 untranslated surfaces observed",
+      "verdict": "PARTIAL - whole app is not fully translated",
+      "question_status": "21/21 banks pass integrity checks; 2625 records; 2 confirmed English-prose samples",
+      "learning_status": "393/1000 available; 607 missing"
+    },
+    "sat": {
+      "name": "Santali",
+      "ui_status": "120 messages; 0 structural errors; 0 English-prose candidates",
+      "runtime_status": "completed; 5 untranslated surfaces observed",
+      "verdict": "PARTIAL - whole app is not fully translated",
+      "question_status": "8/21 banks pass integrity checks; 2625 records; 2 confirmed English-prose samples",
+      "learning_status": "393/1000 available; 607 missing"
+    },
+    "sd": {
+      "name": "Sindhi",
+      "ui_status": "120 messages; 0 structural errors; 0 English-prose candidates",
+      "runtime_status": "completed; 5 untranslated surfaces observed",
+      "verdict": "PARTIAL - whole app is not fully translated",
+      "question_status": "21/21 banks pass integrity checks; 2625 records",
+      "learning_status": "393/1000 available; 607 missing"
+    },
+    "ta": {
+      "name": "Tamil",
+      "ui_status": "120 messages; 0 structural errors; 0 English-prose candidates",
+      "runtime_status": "completed; 4 untranslated surfaces observed",
+      "verdict": "PARTIAL - whole app is not fully translated",
+      "question_status": "21/21 banks pass integrity checks; 2625 records; 2 confirmed English-prose samples",
+      "learning_status": "393/1000 available; 607 missing"
+    },
+    "te": {
+      "name": "Telugu",
+      "ui_status": "120 messages; 0 structural errors; 0 English-prose candidates",
+      "runtime_status": "completed; 4 untranslated surfaces observed",
+      "verdict": "PARTIAL - whole app is not fully translated",
+      "question_status": "21/21 banks pass integrity checks; 2625 records",
+      "learning_status": "393/1000 available; 607 missing"
+    },
+    "ur": {
+      "name": "Urdu",
+      "ui_status": "120 messages; 0 structural errors; 0 English-prose candidates",
+      "runtime_status": "completed; 4 untranslated surfaces observed",
+      "verdict": "PARTIAL - whole app is not fully translated",
+      "question_status": "21/21 banks pass integrity checks; 2625 records",
+      "learning_status": "393/1000 available; 607 missing"
+    }
+  },
+  "findings": [
+    "Question-bank integrity/source-alignment checks fail in these languages; per-record errors are listed below.",
+    "Independent learning-command cards are missing translations despite question-derived overlays; per-language missing IDs are listed below.",
+    "Games hub and multiple game screens use hardcoded English names, instructions, controls and completion popups.",
+    "Scheduled notification text, in-app notifications and their screen controls are constructed in English without a locale parameter.",
+    "Learning-screen search, filter and navigation copy has only English/Hindi/Marathi variants; other locales receive English.",
+    "The welcome headline and Settings title are localized, but account actions, guest labels, confirmations and errors remain English.",
+    "Shared level picker and daily reward dialogs still contain English labels and messages.",
+    "Unlock popup headings are localized, but achievement names/descriptions and theme names remain English.",
+    "Word Guess hints and Command Match descriptions are English-only; preserved technical command names do not justify untranslated prose.",
+    "Certificate wording and PDF report labels are English-only. Exported non-Latin font rendering is not certified by this audit.",
+    "Localized drawer entries open some English-titled screens, including Cloud Computing, Scripting and Challenge Mode.",
+    "Flutter built-in controls fall back to English or Urdu for locales not provided by Flutter, even though the app language is selectable.",
+    "Reviewed samples contain unchanged English answer prose inside non-English questions, including Hindi/Marathi banks that pass structural alignment checks.",
+    "Some UI bundles contain duplicate JSON keys; last-value-wins loading hides earlier text, including conflicting English values.",
+    "Automated harness: 95 passed, 0 failed. These counts do not measure translation completeness."
+  ],
+  "events": [
+    "Audit started. Existing translation completion claims will be rechecked against current files.",
+    "Structural checks and native-language semantic review are separate. A test pass will not be represented as proof of translation accuracy.",
+    "English is included in the 32 selectable UI languages. Extra Korean question assets will be reported separately.",
+    "2026-11-13T11:27:18.202046+00:00: Checking all selectable language bundles",
+    "2026-11-13T11:27:18.276762+00:00: UI bundle structure checked; this does not cover hardcoded screens",
+    "2026-11-13T11:27:18.279623+00:00: Auditing every category/language/set question file",
+    "2026-11-13T11:27:31.298631+00:00: Question counts, answer positions, scripts and source fingerprints checked",
+    "2026-11-13T11:27:31.301687+00:00: Checking effective learning-card coverage, including live question overlays",
+    "2026-11-13T11:27:33.030081+00:00: Learning-card availability checked for every language",
+    "2026-11-13T11:27:33.033348+00:00: Inventorying English-only UI and runtime localization paths",
+    "2026-11-13T11:27:33.274591+00:00: Confirmed English-only game, notification, account and learning-control surfaces",
+    "2026-11-13T11:27:33.363445+00:00: Running per-language runtime probes and existing localization regressions",
+    "2026-11-13T11:28:26.060049+00:00: Runtime execution finished; passing harness tests are not full translation passes",
+    "2026-11-13T11:28:26.167226+00:00: Published evidence for all 32 languages; translation remediation remains separate",
+    "2026-11-13T11:31:59.158411+00:00: Checking all selectable language bundles",
+    "2026-11-13T11:31:59.253830+00:00: UI bundle structure checked; this does not cover hardcoded screens",
+    "2026-11-13T11:31:59.256439+00:00: Auditing every category/language/set question file",
+    "2026-11-13T11:32:10.718720+00:00: Question counts, answer positions, scripts and source fingerprints checked",
+    "2026-11-13T11:32:10.721012+00:00: Checking effective learning-card coverage, including live question overlays",
+    "2026-11-13T11:32:11.755628+00:00: Learning-card availability checked for every language",
+    "2026-11-13T11:32:11.758705+00:00: Inventorying English-only UI and runtime localization paths",
+    "2026-11-13T11:32:11.905529+00:00: Confirmed English-only game, notification, account and learning-control surfaces",
+    "2026-11-13T11:32:11.951307+00:00: Running per-language runtime probes and existing localization regressions",
+    "2026-11-13T11:33:03.750145+00:00: Runtime execution finished; passing harness tests are not full translation passes",
+    "2026-11-13T11:33:03.856559+00:00: Published evidence for all 32 languages; translation remediation remains separate"
+  ]
+}

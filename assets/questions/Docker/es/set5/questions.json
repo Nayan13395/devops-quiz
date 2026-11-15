@@ -1,0 +1,302 @@
+[
+  {
+    "category": "Docker",
+    "set": 5,
+    "question": "¿Por qué debería una construcción utilizar un montaje de secreto de BuildKit en lugar de almacenar una contraseña en una instrucción ARG o ENV?",
+    "options": [
+      "Los montajes de secretos renuevan automáticamente las contraseñas de los registros",
+      "Los montajes de secretos cifran todas las capas de imagen resultantes",
+      "Los montajes de secretos impiden cualquier acceso a la red durante la construcción",
+      "Los montajes de secretos evitan conservar el secreto proporcionado como valor ARG o ENV de la imagen"
+    ],
+    "answer": "Los montajes de secretos evitan conservar el secreto proporcionado como valor ARG o ENV de la imagen"
+  },
+  {
+    "category": "Docker",
+    "set": 5,
+    "question": "¿Para qué sirve un montaje de caché de BuildKit en una instrucción RUN?",
+    "options": [
+      "Para sustituir la imagen base por un sistema de archivos vacío",
+      "Para garantizar que todas las instrucciones RUN se ejecuten sin caché",
+      "Para reutilizar la caché de una herramienta entre construcciones sin convertir ese montaje en contenido de la imagen final",
+      "Para almacenar registros de ejecución en el registro de imágenes"
+    ],
+    "answer": "Para reutilizar la caché de una herramienta entre construcciones sin convertir ese montaje en contenido de la imagen final"
+  },
+  {
+    "category": "Docker",
+    "set": 5,
+    "question": "¿Qué cambio en las entradas de construcción invalida normalmente la caché de una instrucción COPY y de los pasos dependientes posteriores?",
+    "options": [
+      "Editar un comentario ordinario de Dockerfile sin modificar instrucciones",
+      "Cambiar el contenido de un archivo de origen copiado",
+      "Cambiar únicamente la marca temporal de modificación de un archivo copiado",
+      "Cambiar un archivo excluido por .dockerignore"
+    ],
+    "answer": "Cambiar el contenido de un archivo de origen copiado"
+  },
+  {
+    "category": "Docker",
+    "set": 5,
+    "question": "¿Qué selecciona la instrucción de Dockerfile 'FROM scratch'?",
+    "options": [
+      "Un punto de partida vacío sin el sistema de archivos de una imagen base",
+      "Una instalación mínima de Debian",
+      "El sistema de archivos raíz de un host en ejecución",
+      "La imagen construida localmente más reciente"
+    ],
+    "answer": "Un punto de partida vacío sin el sistema de archivos de una imagen base"
+  },
+  {
+    "category": "Docker",
+    "set": 5,
+    "question": "¿Qué instrucción de Dockerfile añade metadatos clave-valor a una imagen?",
+    "options": [
+      "ARG",
+      "EXPOSE",
+      "STOPSIGNAL",
+      "LABEL"
+    ],
+    "answer": "LABEL"
+  },
+  {
+    "category": "Docker",
+    "set": 5,
+    "question": "¿Qué instrucción de Dockerfile cambia la señal predeterminada enviada al detener un contenedor?",
+    "options": [
+      "SHELL",
+      "ONBUILD",
+      "STOPSIGNAL",
+      "HEALTHCHECK"
+    ],
+    "answer": "STOPSIGNAL"
+  },
+  {
+    "category": "Docker",
+    "set": 5,
+    "question": "¿Por qué suele preferirse ENTRYPOINT en formato exec para el proceso principal de un servidor?",
+    "options": [
+      "Impide que el servidor devuelva un estado distinto de cero",
+      "Evita un shell adicional entre el servidor y las señales del contenedor",
+      "Crea automáticamente un usuario que no es root",
+      "Instala un supervisor de procesos en la imagen"
+    ],
+    "answer": "Evita un shell adicional entre el servidor y las señales del contenedor"
+  },
+  {
+    "category": "Docker",
+    "set": 5,
+    "question": "¿Qué añade 'docker run --init' a un contenedor?",
+    "options": [
+      "Un pequeño proceso init que reenvía señales y recoge los procesos hijos terminados",
+      "Una instalación completa de systemd",
+      "Un segundo demonio de Docker",
+      "Un shell de inicio de sesión interactivo para cada proceso"
+    ],
+    "answer": "Un pequeño proceso init que reenvía señales y recoge los procesos hijos terminados"
+  },
+  {
+    "category": "Docker",
+    "set": 5,
+    "question": "¿Qué opción ejecuta un contenedor Linux sin ninguna capacidad de Linux?",
+    "options": [
+      "--cap-add=ALL",
+      "--privileged",
+      "--security-opt seccomp=unconfined",
+      "--cap-drop=ALL"
+    ],
+    "answer": "--cap-drop=ALL"
+  },
+  {
+    "category": "Docker",
+    "set": 5,
+    "question": "¿Qué cambia principalmente Docker sin privilegios root?",
+    "options": [
+      "Las imágenes ya no necesitan un registro",
+      "Los contenedores ya no utilizan espacios de nombres de Linux",
+      "El demonio y los contenedores se ejecutan sin privilegios root del host",
+      "Todos los contenedores comparten el sistema de archivos raíz del host"
+    ],
+    "answer": "El demonio y los contenedores se ejecutan sin privilegios root del host"
+  },
+  {
+    "category": "Docker",
+    "set": 5,
+    "question": "¿Qué mecanismo de Linux limita y contabiliza principalmente el uso de recursos de los contenedores?",
+    "options": [
+      "Las capacidades de Linux",
+      "Los grupos de control",
+      "Los espacios de nombres",
+      "Los filtros Seccomp"
+    ],
+    "answer": "Los grupos de control"
+  },
+  {
+    "category": "Docker",
+    "set": 5,
+    "question": "¿Qué mecanismo de Linux proporciona a los contenedores vistas aisladas de recursos como identificadores de proceso e interfaces de red?",
+    "options": [
+      "Los espacios de nombres",
+      "Los grupos de control",
+      "Los filtros Seccomp",
+      "Las capacidades de Linux"
+    ],
+    "answer": "Los espacios de nombres"
+  },
+  {
+    "category": "Docker",
+    "set": 5,
+    "question": "¿Qué controlador de red de Docker proporciona a un contenedor Linux el espacio de nombres de red del host?",
+    "options": [
+      "bridge",
+      "overlay",
+      "none",
+      "host"
+    ],
+    "answer": "host"
+  },
+  {
+    "category": "Docker",
+    "set": 5,
+    "question": "¿Qué controlador de red de Docker deja al contenedor únicamente su interfaz de bucle local?",
+    "options": [
+      "host",
+      "overlay",
+      "none",
+      "bridge"
+    ],
+    "answer": "none"
+  },
+  {
+    "category": "Docker",
+    "set": 5,
+    "question": "¿Qué controlador de red de Docker está pensado para comunicar contenedores de varios hosts Docker?",
+    "options": [
+      "none",
+      "overlay",
+      "bridge",
+      "host"
+    ],
+    "answer": "overlay"
+  },
+  {
+    "category": "Docker",
+    "set": 5,
+    "question": "¿Qué hace '--network container:web' para un nuevo contenedor?",
+    "options": [
+      "Comparte el espacio de nombres de red de web",
+      "Copia las capas del sistema de archivos de web",
+      "Conecta directamente todas las interfaces del host",
+      "Crea una nueva red llamada web"
+    ],
+    "answer": "Comparte el espacio de nombres de red de web"
+  },
+  {
+    "category": "Docker",
+    "set": 5,
+    "question": "¿Por qué montar un directorio sobre una ruta no vacía de un contenedor puede hacer que los archivos existentes de la imagen parezcan desaparecer?",
+    "options": [
+      "Docker elimina las capas originales de la imagen",
+      "Docker mueve los archivos al registro",
+      "La imagen se reconstruye automáticamente sin esos archivos",
+      "El montaje oculta los archivos de esa ruta mientras permanece montado"
+    ],
+    "answer": "El montaje oculta los archivos de esa ruta mientras permanece montado"
+  },
+  {
+    "category": "Docker",
+    "set": 5,
+    "question": "¿Qué hace normalmente Docker al montar por primera vez un volumen con nombre vacío sobre un directorio del contenedor que contiene archivos, sin volume-nocopy?",
+    "options": [
+      "Se niega a iniciar porque el directorio no está vacío",
+      "Convierte el volumen con nombre en un montaje enlazado",
+      "Copia los archivos existentes del directorio al volumen",
+      "Elimina permanentemente los archivos de la imagen"
+    ],
+    "answer": "Copia los archivos existentes del directorio al volumen"
+  },
+  {
+    "category": "Docker",
+    "set": 5,
+    "question": "¿Qué comando enumera las asignaciones de puertos publicados del contenedor web?",
+    "options": [
+      "docker wait web",
+      "docker port web",
+      "docker top web",
+      "docker diff web"
+    ],
+    "answer": "docker port web"
+  },
+  {
+    "category": "Docker",
+    "set": 5,
+    "question": "¿Qué comando recupera solo las últimas 20 líneas de los registros del contenedor web?",
+    "options": [
+      "docker logs --tail 20 web",
+      "docker logs --since 20m web",
+      "docker logs --until 20m web",
+      "docker logs --timestamps web"
+    ],
+    "answer": "docker logs --tail 20 web"
+  },
+  {
+    "category": "Docker",
+    "set": 5,
+    "question": "¿Cuál es la diferencia principal entre una imagen de Docker y un contenedor?",
+    "options": [
+      "Una imagen siempre está en ejecución, mientras que un contenedor siempre está detenido",
+      "Una imagen pertenece a una red, mientras que un contenedor solo pertenece a un registro",
+      "Una imagen solo almacena registros, mientras que un contenedor solo almacena metadatos",
+      "Una imagen es una plantilla de solo lectura, mientras que un contenedor es una instancia con estado de ejecución"
+    ],
+    "answer": "Una imagen es una plantilla de solo lectura, mientras que un contenedor es una instancia con estado de ejecución"
+  },
+  {
+    "category": "Docker",
+    "set": 5,
+    "question": "¿Qué identifica principalmente un contexto de Docker para la CLI?",
+    "options": [
+      "La etapa de construcción de Dockerfile seleccionada",
+      "La plataforma de destino predeterminada de todas las imágenes",
+      "Los ajustes de conexión para un punto de acceso al demonio de Docker",
+      "Los archivos y directorios enviados como contexto de construcción de una imagen"
+    ],
+    "answer": "Los ajustes de conexión para un punto de acceso al demonio de Docker"
+  },
+  {
+    "category": "Docker",
+    "set": 5,
+    "question": "¿Qué comando cierra la sesión del cliente de Docker en un registro?",
+    "options": [
+      "docker trust inspect",
+      "docker logout",
+      "docker login",
+      "docker context use"
+    ],
+    "answer": "docker logout"
+  },
+  {
+    "category": "Docker",
+    "set": 5,
+    "question": "¿Qué opción permite que docker login lea una contraseña de la entrada estándar?",
+    "options": [
+      "--password-stdin",
+      "--username",
+      "--config",
+      "--context"
+    ],
+    "answer": "--password-stdin"
+  },
+  {
+    "category": "Docker",
+    "set": 5,
+    "question": "¿Qué comando enumera las tareas de un servicio de Docker Swarm llamado api?",
+    "options": [
+      "docker service inspect api",
+      "docker service logs api",
+      "docker service scale api=3",
+      "docker service ps api"
+    ],
+    "answer": "docker service ps api"
+  }
+]

@@ -1,0 +1,302 @@
+[
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "Qual componente agenda os pods nos nós?",
+    "options": [
+      "kube-scheduler",
+      "kubelet",
+      "etcd",
+      "kube-proxy"
+    ],
+    "answer": "kube-scheduler"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "Qual componente é executado em todos os nós?",
+    "options": [
+      "kubelet",
+      "etcd",
+      "kube-apiserver",
+      "controller-manager"
+    ],
+    "answer": "kubelet"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "Qual componente atua como o front-end do control plane?",
+    "options": [
+      "kube-apiserver",
+      "kubelet",
+      "etcd",
+      "kube-proxy"
+    ],
+    "answer": "kube-apiserver"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "Qual componente armazena o estado do cluster?",
+    "options": [
+      "etcd",
+      "kubelet",
+      "CoreDNS",
+      "Ingress"
+    ],
+    "answer": "etcd"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "Qual componente gerencia as regras de rede nos nós?",
+    "options": [
+      "kube-proxy",
+      "kubelet",
+      "etcd",
+      "Scheduler"
+    ],
+    "answer": "kube-proxy"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "Qual serviço de DNS é comumente usado no Kubernetes?",
+    "options": [
+      "CoreDNS",
+      "Bind",
+      "Route53",
+      "Consul"
+    ],
+    "answer": "CoreDNS"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "Qual objeto é a menor unidade implantável no Kubernetes?",
+    "options": [
+      "Pod",
+      "Cluster",
+      "Node",
+      "Service"
+    ],
+    "answer": "Pod"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "Qual objeto gerencia aplicações stateless?",
+    "options": [
+      "Deployment",
+      "ConfigMap",
+      "Secret",
+      "Namespace"
+    ],
+    "answer": "Deployment"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "Qual carga de trabalho fornece identidades estáveis de Pods e implantação ordenada para aplicações com estado?",
+    "options": [
+      "StatefulSet",
+      "Deployment",
+      "ReplicaSet",
+      "DaemonSet"
+    ],
+    "answer": "StatefulSet"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "Qual objeto garante que um número especificado de réplicas de pods esteja em execução?",
+    "options": [
+      "ReplicaSet",
+      "Service",
+      "ConfigMap",
+      "Namespace"
+    ],
+    "answer": "ReplicaSet"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "Qual objeto expõe pods ao tráfego de rede?",
+    "options": [
+      "Service",
+      "Node",
+      "ReplicaSet",
+      "Volume"
+    ],
+    "answer": "Service"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "Qual objeto gerencia o acesso externo aos services?",
+    "options": [
+      "Ingress",
+      "Pod",
+      "ReplicaSet",
+      "Secret"
+    ],
+    "answer": "Ingress"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "Qual objeto armazena dados de configuração?",
+    "options": [
+      "ConfigMap",
+      "Deployment",
+      "Ingress",
+      "Node"
+    ],
+    "answer": "ConfigMap"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "Qual objeto armazena informações sensíveis, como senhas?",
+    "options": [
+      "Secret",
+      "ConfigMap",
+      "Service",
+      "Namespace"
+    ],
+    "answer": "Secret"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "Qual objeto fornece armazenamento persistente aos pods?",
+    "options": [
+      "PersistentVolume",
+      "ReplicaSet",
+      "Namespace",
+      "Service"
+    ],
+    "answer": "PersistentVolume"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "Qual sonda determina se um contêiner está pronto para receber tráfego do Service?",
+    "options": [
+      "Sonda de manutenção de conexão TCP",
+      "Readiness probe",
+      "Liveness probe",
+      "Sonda de inicialização"
+    ],
+    "answer": "Readiness probe"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "O que pode acontecer depois que uma sonda de atividade falha repetidamente além do limite configurado?",
+    "options": [
+      "O kubelet reinicia esse contêiner de acordo com sua política de reinício",
+      "O agendador move todos os Pods para um novo nó",
+      "O servidor de API exclui o Deployment",
+      "O Service se torna um Service ExternalName"
+    ],
+    "answer": "O kubelet reinicia esse contêiner de acordo com sua política de reinício"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "O que uma sonda de inicialização faz enquanto a aplicação ainda está iniciando?",
+    "options": [
+      "Desativa todos os limites de recursos do contêiner",
+      "Impede o download da imagem",
+      "Reserva um nó dedicado do plano de controle",
+      "Atrasa as sondas de atividade e prontidão até que a sonda de inicialização tenha sucesso"
+    ],
+    "answer": "Atrasa as sondas de atividade e prontidão até que a sonda de inicialização tenha sucesso"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "O que é verdadeiro sobre os contêineres de inicialização comuns de um Pod?",
+    "options": [
+      "Eles devem expor uma porta de Service",
+      "Eles sempre são executados em nós separados",
+      "Eles são executados até a conclusão, em ordem, antes de os contêineres da aplicação iniciarem",
+      "Todos eles são executados somente depois que os contêineres da aplicação terminam"
+    ],
+    "answer": "Eles são executados até a conclusão, em ordem, antes de os contêineres da aplicação iniciarem"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "Quais recursos os contêineres do mesmo Pod normalmente compartilham?",
+    "options": [
+      "Um IP de Service separado para cada contêiner",
+      "Um espaço de nomes de rede e um endereço IP de Pod",
+      "Um sistema de arquivos raiz gravável",
+      "Um nó distinto para cada contêiner"
+    ],
+    "answer": "Um espaço de nomes de rede e um endereço IP de Pod"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "Qual campo declara a quantidade de recursos usada pelo agendador ao avaliar o posicionamento de um contêiner?",
+    "options": [
+      "resources.requests",
+      "resources.limits",
+      "securityContext",
+      "imagePullPolicy"
+    ],
+    "answer": "resources.requests"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "O que uma solicitação de CPU de 250m representa para um contêiner?",
+    "options": [
+      "Duas CPUs e meia",
+      "Vinte e cinco CPUs",
+      "Duzentas e cinquenta CPUs",
+      "Um quarto de uma CPU"
+    ],
+    "answer": "Um quarto de uma CPU"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "Qual é uma consequência típica de um contêiner exceder seu limite de memória imposto?",
+    "options": [
+      "Sua imagem é reconstruída com mais memória",
+      "Sua porta de Service é alterada automaticamente",
+      "Ele pode ser encerrado pelo mecanismo de falta de memória",
+      "Sua solicitação de memória é duplicada automaticamente"
+    ],
+    "answer": "Ele pode ser encerrado pelo mecanismo de falta de memória"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "Qual campo do Pod exige que os nós de destino correspondam a todas as etiquetas de nó especificadas?",
+    "options": [
+      "dnsPolicy",
+      "nodeSelector",
+      "serviceAccountName",
+      "hostAliases"
+    ],
+    "answer": "nodeSelector"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "Adicionar uma tolerância ao taint de um nó garante que um Pod seja agendado nesse nó?",
+    "options": [
+      "Não, outras restrições de agendamento e os recursos disponíveis continuam valendo",
+      "Sim, isso ignora todas as restrições de recursos",
+      "Sim, isso contorna todas as regras de afinidade de nó",
+      "Não, tolerâncias sempre proíbem o posicionamento no nó com esse taint"
+    ],
+    "answer": "Não, outras restrições de agendamento e os recursos disponíveis continuam valendo"
+  }
+]

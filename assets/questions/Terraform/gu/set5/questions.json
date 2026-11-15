@@ -1,0 +1,302 @@
+[
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "કયો ઘોષણાત્મક બ્લૉક રિસોર્સ સરનામાનો ફેરફાર નોંધે છે જેથી Terraform હાલનો ઑબ્જેક્ટ જાળવી શકે?",
+    "options": [
+      "removed",
+      "check",
+      "moved",
+      "import"
+    ],
+    "answer": "moved"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "moved બ્લૉકમાં કયો આર્ગ્યુમેન્ટ નવું રિસોર્સ સરનામું આપે છે?",
+    "options": [
+      "provider",
+      "to",
+      "from",
+      "id"
+    ],
+    "answer": "to"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "કયો બ્લૉક apply દરમિયાન આયાત કરવા માટે હાલનો ઇન્ફ્રાસ્ટ્રક્ચર ઑબ્જેક્ટ જાહેર કરે છે?",
+    "options": [
+      "import",
+      "moved",
+      "output",
+      "check"
+    ],
+    "answer": "import"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "removed બ્લૉકની કઈ ગોઠવણી વાસ્તવિક ઇન્ફ્રાસ્ટ્રક્ચર ઑબ્જેક્ટ નષ્ટ કર્યા વિના રિસોર્સને સ્ટેટમાંથી ભૂલી જાય છે?",
+    "options": [
+      "lifecycle { destroy = true }",
+      "lifecycle { create_before_destroy = true }",
+      "lifecycle { prevent_destroy = false }",
+      "lifecycle { destroy = false }"
+    ],
+    "answer": "lifecycle { destroy = false }"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "સામાન્ય ઇનપુટ ચલ sensitive તરીકે ચિહ્નિત હોય ત્યારે સ્થાનિક સ્ટેટ ફાઇલમાં તેના મૂલ્યનું શું થાય છે?",
+    "options": [
+      "તે હંમેશાં સ્ટેટમાંથી બાકાત રહે છે",
+      "સાચવતાં પહેલાં તેના બદલે ચલનું નામ મૂકાય છે",
+      "સામાન્ય CLI આઉટપુટમાં છુપાવાતું હોવા છતાં તે સાદા લખાણમાં સાચવાઈ શકે છે",
+      "sensitive ફ્લૅગ તેને આપમેળે એન્ક્રિપ્ટ કરે છે"
+    ],
+    "answer": "સામાન્ય CLI આઉટપુટમાં છુપાવાતું હોવા છતાં તે સાદા લખાણમાં સાચવાઈ શકે છે"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "output આદેશનું કયું ફોર્મેટ સંવેદનશીલ આઉટપુટ મૂલ્યો મશીન વાંચી શકે એવા સ્વરૂપમાં જાહેર કરી શકે છે?",
+    "options": [
+      "terraform providers schema -json",
+      "terraform output -json",
+      "terraform output -help",
+      "terraform output -no-color"
+    ],
+    "answer": "terraform output -json"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "કયું ફંક્શન Terraform મૂલ્યને JSON સ્ટ્રિંગમાં ફેરવે છે?",
+    "options": [
+      "jsonencode",
+      "jsondecode",
+      "yamldecode",
+      "file"
+    ],
+    "answer": "jsonencode"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "કયું ફંક્શન JSON સ્ટ્રિંગ પાર્સ કરીને Terraform મૂલ્ય બનાવે છે?",
+    "options": [
+      "jsonencode",
+      "yamlencode",
+      "templatefile",
+      "jsondecode"
+    ],
+    "answer": "jsondecode"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "કયું ફંક્શન ચલનો આપેલો મૅપ વાપરી ટેમ્પ્લેટ ફાઇલનું લખાણ તૈયાર કરે છે?",
+    "options": [
+      "fileset",
+      "filebase64",
+      "templatefile",
+      "file"
+    ],
+    "answer": "templatefile"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "કયું ફંક્શન ગતિશીલ ભૂલ વિના મૂલ્યાંકન થતો પ્રથમ આર્ગ્યુમેન્ટ પાછો આપે છે?",
+    "options": [
+      "lookup",
+      "try",
+      "can",
+      "coalesce"
+    ],
+    "answer": "try"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "કયું ફંક્શન એક્સપ્રેશનનું ગતિશીલ ભૂલ વિના મૂલ્યાંકન થઈ શકે છે કે નહીં તે જણાવે છે?",
+    "options": [
+      "can",
+      "try",
+      "contains",
+      "length"
+    ],
+    "answer": "can"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "mergeને આપેલા બે મૅપમાં એક જ કી હોય તો કયું મૂલ્ય પ્રાધાન્ય પામે છે?",
+    "options": [
+      "પહેલાં આપેલા આર્ગ્યુમેન્ટનું મૂલ્ય",
+      "મૂલ્યો હંમેશાં ભેળવીને યાદી બનાવાય છે",
+      "પુનરાવર્તિત કી હંમેશાં ભૂલ સર્જે છે",
+      "પછી આપેલા આર્ગ્યુમેન્ટનું મૂલ્ય"
+    ],
+    "answer": "પછી આપેલા આર્ગ્યુમેન્ટનું મૂલ્ય"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "પ્રોવાઇડર આવૃત્તિની કઈ મર્યાદા 5.4.x પ્રકાશનોને મંજૂરી આપે છે પણ 5.5.0ને નહીં?",
+    "options": [
+      ">= 5.4.0",
+      ">= 5.0, < 6.0",
+      "~> 5.4.0",
+      "~> 5.4"
+    ],
+    "answer": "~> 5.4.0"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "null મૂલ્ય આપેલા રિસોર્સ આર્ગ્યુમેન્ટને Terraform સામાન્ય રીતે શું ગણે છે?",
+    "options": [
+      "આખો રિસોર્સ કાઢવાની વિનંતી",
+      "છોડી દેવાયેલો આર્ગ્યુમેન્ટ, જેને તેનાં મૂળભૂત મૂલ્યો અને આવશ્યકતાઓ લાગુ પડે",
+      "દરેક પ્રોવાઇડરમાં ખાલી સ્ટ્રિંગ",
+      "દરેક પ્રોવાઇડરમાં આંકડાકીય શૂન્ય"
+    ],
+    "answer": "છોડી દેવાયેલો આર્ગ્યુમેન્ટ, જેને તેનાં મૂળભૂત મૂલ્યો અને આવશ્યકતાઓ લાગુ પડે"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "કયું એક્સપ્રેશન જે મોડ્યુલમાં લખાયેલું હોય તેનો ફાઇલસિસ્ટમ પાથ આપે છે?",
+    "options": [
+      "path.module",
+      "path.root",
+      "path.cwd",
+      "terraform.workspace"
+    ],
+    "answer": "path.module"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "CLI ગોઠવણીને HCP Terraform સાથે જોડવા terraform બ્લૉકની કઈ સુવિધા સૂચવાય છે?",
+    "options": [
+      "locals",
+      "moved",
+      "check",
+      "cloud"
+    ],
+    "answer": "cloud"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "terraform_remote_state સંદર્ભિત સ્ટેટમાંથી કયાં ઉચ્ચ સ્તરનાં મૂલ્યો સીધાં ઉપલબ્ધ કરાવે છે?",
+    "options": [
+      "પ્રોવાઇડરનાં બધાં ઓળખપત્રો",
+      "બધા બાળ મોડ્યુલનાં સ્થાનિક મૂલ્યો",
+      "મૂળ મોડ્યુલનાં આઉટપુટ",
+      "દરેક રિસોર્સ ગુણધર્મ ઉચ્ચ સ્તરના આઉટપુટ તરીકે"
+    ],
+    "answer": "મૂળ મોડ્યુલનાં આઉટપુટ"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "જીવનચક્રનો કયો નિયમ સંદર્ભિત સંચાલિત રિસોર્સ બદલાય ત્યારે બદલાની વિનંતી કરે છે?",
+    "options": [
+      "create_before_destroy",
+      "replace_triggered_by",
+      "ignore_changes",
+      "prevent_destroy"
+    ],
+    "answer": "replace_triggered_by"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "કયો બિલ્ટ-ઇન સંચાલિત રિસોર્સ અલગ પ્રોવાઇડર સ્થાપિત કર્યા વિના સામાન્ય ઇનપુટ મૂલ્યને રિસોર્સ જીવનચક્ર આપે છે?",
+    "options": [
+      "terraform_data",
+      "terraform_remote_state",
+      "local_file",
+      "random_id"
+    ],
+    "answer": "terraform_data"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "સામાન્ય plan અથવા apply દરમિયાન check બ્લૉકની ખાતરીની શરત નિષ્ફળ જાય તો શું થાય છે?",
+    "options": [
+      "Terraform હંમેશાં તપાસેલો ઑબ્જેક્ટ નષ્ટ કરે છે",
+      "Terraform કોઈ સૂચના વિના check બ્લૉક કાઢે છે",
+      "Terraform કોઈ રિસોર્સ તાજો કરતાં પહેલાં હંમેશાં બંધ થાય છે",
+      "Terraform ચેતવણી આપે છે, પરંતુ ફક્ત તે નિષ્ફળતાને કારણે ક્રિયા રોકતું નથી"
+    ],
+    "answer": "Terraform ચેતવણી આપે છે, પરંતુ ફક્ત તે નિષ્ફળતાને કારણે ક્રિયા રોકતું નથી"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "રિસોર્સ જીવનચક્રની પૂર્વશરત false ઠરે ત્યારે શું થાય છે?",
+    "options": [
+      "Terraform રિસોર્સને ડેટા સ્રોતમાં ફેરવે છે",
+      "Terraform પૂર્વશરતને બદલે ફક્ત ચેતવણી મૂકે છે",
+      "Terraform ભૂલ જણાવે છે અને સંબંધિત ક્રિયા અટકાવે છે",
+      "Terraform આગળના અમલ સુધી પૂર્વશરત અવગણે છે"
+    ],
+    "answer": "Terraform ભૂલ જણાવે છે અને સંબંધિત ક્રિયા અટકાવે છે"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "કયો આદેશ Terraformની મૂળ ટેસ્ટ ફાઇલો ચલાવે છે?",
+    "options": [
+      "terraform console",
+      "terraform test",
+      "terraform validate",
+      "terraform fmt"
+    ],
+    "answer": "terraform test"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "કઈ ગોઠવણી Terraform ટેસ્ટના run બ્લૉકને મૂળભૂત applyને બદલે plan કરાવે છે?",
+    "options": [
+      "command = plan",
+      "command = validate",
+      "command = refresh",
+      "command = console"
+    ],
+    "answer": "command = plan"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "કયું ફંક્શન ડિરેક્ટરી હેઠળ ગ્લોબ પેટર્ન સાથે મેળ ખાતા સાપેક્ષ પાથનો સંગ્રહ પાછો આપે છે?",
+    "options": [
+      "file",
+      "dirname",
+      "basename",
+      "fileset"
+    ],
+    "answer": "fileset"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "અલગ ઍક્સેસ નિયંત્રણ માંગતાં પર્યાવરણને જુદાં પાડવા માત્ર CLI વર્કસ્પેસ શા માટે અયોગ્ય હોઈ શકે?",
+    "options": [
+      "તે અલગ ઇનપુટ ચલ મૂલ્યો વાપરતાં અટકાવે છે",
+      "તે દરેક પર્યાવરણને એક જ રિસોર્સ નામ વાપરવા મજબૂર કરે છે",
+      "તેમની બૅકએન્ડ ગોઠવણી અને પ્રમાણીકરણ સંદર્ભ એક જ હોય છે",
+      "તેમનું હંમેશાં એક જ સ્ટેટ સ્નૅપશૉટ હોય છે"
+    ],
+    "answer": "તેમની બૅકએન્ડ ગોઠવણી અને પ્રમાણીકરણ સંદર્ભ એક જ હોય છે"
+  }
+]

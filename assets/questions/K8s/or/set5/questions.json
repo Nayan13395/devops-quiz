@@ -1,0 +1,302 @@
+[
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "Pod ଟ୍ରାଫିକ୍‌ରେ ପ୍ରଭାବ ପକାଇବାକୁ NetworkPolicy ପାଇଁ କ’ଣ ଦରକାର?",
+    "options": [
+      "ପ୍ରତ୍ୟେକ ଚୟନିତ Pod ପାଇଁ LoadBalancer Service",
+      "ଏକା ନେମ୍‌ସ୍ପେସ୍‌ରେ PersistentVolumeClaim",
+      "ପ୍ରତ୍ୟେକ ନୀତି ପାଇଁ ଅଲଗା API ସର୍ଭର୍",
+      "NetworkPolicy ଲାଗୁ କରୁଥିବା ନେଟ୍‌ୱର୍କ ବ୍ୟବସ୍ଥା"
+    ],
+    "answer": "NetworkPolicy ଲାଗୁ କରୁଥିବା ନେଟ୍‌ୱର୍କ ବ୍ୟବସ୍ଥା"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "ଏକା Pod ବାଛୁଥିବା ଏକାଧିକ NetworkPolicies ସେମାନଙ୍କ ଅନୁମତିପ୍ରାପ୍ତ ଆସୁଥିବା ଟ୍ରାଫିକ୍‌କୁ କିପରି ମିଶାନ୍ତି?",
+    "options": [
+      "ପ୍ରଥମ ନୀତି ପରବର୍ତ୍ତୀ ସବୁ ନୀତି ଉପରେ ପ୍ରାଧାନ୍ୟ ପାଏ",
+      "ପ୍ରତ୍ୟେକ ନୀତି ପ୍ରତ୍ୟେକ ପ୍ୟାକେଟ୍‌କୁ ଅଲଗା ଅନୁମତି ଦେବା ଦରକାର",
+      "ଅନୁମତିପ୍ରାପ୍ତ ଟ୍ରାଫିକ୍ ସେମାନଙ୍କ ଆସୁଥିବା ଟ୍ରାଫିକ୍ ଅନୁମତିର ମିଳିତ ସମୂହ",
+      "ଶେଷ ନୀତି ପୂର୍ବର ସବୁ ନୀତି ଉପରେ ପ୍ରାଧାନ୍ୟ ପାଏ"
+    ],
+    "answer": "ଅନୁମତିପ୍ରାପ୍ତ ଟ୍ରାଫିକ୍ ସେମାନଙ୍କ ଆସୁଥିବା ଟ୍ରାଫିକ୍ ଅନୁମତିର ମିଳିତ ସମୂହ"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "ନେମ୍‌ସ୍ପେସ୍ ଭିତରେ ଅନୁମତି ନିର୍ଦ୍ଧାରଣ କରୁଥିବା RBAC ଅବଜେକ୍ଟ କେଉଁଟି?",
+    "options": [
+      "ResourceQuota",
+      "Role",
+      "RoleBinding",
+      "ServiceAccount"
+    ],
+    "answer": "Role"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "ଏକ ନେମ୍‌ସ୍ପେସ୍‌ରେ Role କିମ୍ବା ClusterRoleର ଅନୁମତି ଦେଉଥିବା RBAC ଅବଜେକ୍ଟ କେଉଁଟି?",
+    "options": [
+      "RoleBinding",
+      "ClusterRoleBinding",
+      "ServiceAccount",
+      "LimitRange"
+    ],
+    "answer": "RoleBinding"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "Kubernetes API ପ୍ରବେଶ ପାଇଁ Podରେ ଚାଲୁଥିବା ପ୍ରକ୍ରିୟାକୁ ସାଧାରଣତଃ କେଉଁ ପରିଚୟ ଦିଆଯାଏ?",
+    "options": [
+      "StorageClass",
+      "RuntimeClass",
+      "PriorityClass",
+      "ServiceAccount"
+    ],
+    "answer": "ServiceAccount"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "Secretର ଡାଟାକୁ base64 ଏନ୍‌କୋଡ୍ କରିବା ଅବଜେକ୍ଟ ପଢ଼ିପାରୁଥିବା ବ୍ୟକ୍ତିଠାରୁ ସୁରକ୍ଷା ପାଇଁ କାହିଁକି ଯଥେଷ୍ଟ ନୁହେଁ?",
+    "options": [
+      "Base64 ଡାଟାକୁ ସ୍ୱୟଂଚାଳିତ DNS ମାଧ୍ୟମରେ ପ୍ରକାଶ କରେ",
+      "Base64କୁ Podରେ ସଞ୍ଚିତ ବ୍ୟକ୍ତିଗତ କୀ ଦରକାର",
+      "Base64 ଓଲଟାଇହେବା ଏନ୍‌କୋଡିଂ, ଗୁପ୍ତୀକରଣ ନୁହେଁ",
+      "Base64 Kubernetesକୁ ଡାଟା ରଖିବାରୁ ରୋକେ"
+    ],
+    "answer": "Base64 ଓଲଟାଇହେବା ଏନ୍‌କୋଡିଂ, ଗୁପ୍ତୀକରଣ ନୁହେଁ"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "Kubernetesକୁ Podରେ API ପ୍ରମାଣୀକରଣ ବିବରଣୀ ସ୍ୱୟଂଚାଳିତ ମାଉଣ୍ଟ କରିବାରୁ କେଉଁ କ୍ଷେତ୍ର ରୋକିପାରେ?",
+    "options": [
+      "shareProcessNamespace: false",
+      "automountServiceAccountToken: false",
+      "hostNetwork: false",
+      "enableServiceLinks: false"
+    ],
+    "answer": "automountServiceAccountToken: false"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "ନେମ୍‌ସ୍ପେସ୍‌ରେ ସମୁଦାୟ ସମ୍ବଳ ବ୍ୟବହାର ସୀମିତ କରୁଥିବା ଅବଜେକ୍ଟ କେଉଁଟି?",
+    "options": [
+      "ResourceQuota",
+      "LimitRange",
+      "PriorityClass",
+      "PodDisruptionBudget"
+    ],
+    "answer": "ResourceQuota"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "ନେମ୍‌ସ୍ପେସ୍‌ର କଣ୍ଟେନର୍‌କୁ ଡିଫଲ୍ଟ ସମ୍ବଳ ଅନୁରୋଧ ଓ ସୀମା ଦେଇପାରୁଥିବା ଅବଜେକ୍ଟ କେଉଁଟି?",
+    "options": [
+      "ResourceQuota",
+      "HorizontalPodAutoscaler",
+      "RuntimeClass",
+      "LimitRange"
+    ],
+    "answer": "LimitRange"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "ମିଟାଇବାକୁ ଅନୁରୋଧ ପରେ Kubernetes ଅବଜେକ୍ଟର finalizer କ’ଣ କରେ?",
+    "options": [
+      "ପ୍ରତ୍ୟେକ ନିର୍ଭର ଅବଜେକ୍ଟ ତୁରନ୍ତ ମିଟାଏ",
+      "ଅବଜେକ୍ଟକୁ ଅପରିବର୍ତ୍ତନୀୟ Secret କରେ",
+      "ଆବଶ୍ୟକ ସଫା କାର୍ଯ୍ୟ finalizer ହଟାଇବା ପର୍ଯ୍ୟନ୍ତ ଅବଜେକ୍ଟ ମିଟାଇବା ବାକି ରଖେ",
+      "ଅବଜେକ୍ଟର ସବୁ ଭବିଷ୍ୟତ ଅପଡେଟ୍ ରୋକେ"
+    ],
+    "answer": "ଆବଶ୍ୟକ ସଫା କାର୍ଯ୍ୟ finalizer ହଟାଇବା ପର୍ଯ୍ୟନ୍ତ ଅବଜେକ୍ଟ ମିଟାଇବା ବାକି ରଖେ"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "ଅନାବଶ୍ୟକ ଅବଜେକ୍ଟ ସଫା ପାଇଁ ନିର୍ଭର ଅବଜେକ୍ଟକୁ ମାଲିକ ସହ ଯୋଡ଼ୁଥିବା ମେଟାଡାଟା କ୍ଷେତ୍ର କେଉଁଟି?",
+    "options": [
+      "managedFields",
+      "ownerReferences",
+      "annotations",
+      "labels"
+    ],
+    "answer": "ownerReferences"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "CustomResourceDefinition କ୍ଲଷ୍ଟର୍‌ରେ କ’ଣ ଯୋଡ଼େ?",
+    "options": [
+      "Kubernetes API ଦେଉଥିବା ନୂଆ କଷ୍ଟମ୍ ରିସୋର୍ସ ପ୍ରକାର",
+      "ବର୍ତ୍ତମାନ ପ୍ରକାର ପାଇଁ ସ୍ଥିତି ମେଳାଉଥିବା ଚାଲୁ କଣ୍ଟ୍ରୋଲର୍",
+      "ପ୍ରତ୍ୟେକ ସେବା ଖାତାକୁ RBAC ଅନୁମତି",
+      "ପ୍ରତ୍ୟେକ ଅନ୍ତର୍ନିର୍ମିତ ରିସୋର୍ସ ପ୍ରକାରର ଇନ୍‌ଷ୍ଟାନ୍ସ"
+    ],
+    "answer": "Kubernetes API ଦେଉଥିବା ନୂଆ କଷ୍ଟମ୍ ରିସୋର୍ସ ପ୍ରକାର"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "Kubernetes ଅପରେଟର୍‌କୁ କେବଳ କଷ୍ଟମ୍ ରିସୋର୍ସ ପରିଭାଷାଠାରୁ କ’ଣ ଅଲଗା କରେ?",
+    "options": [
+      "ଅପରେଟର୍ କେବଳ ସ୍କିମା ପରିଭାଷା ରଖିପାରେ",
+      "ଅପରେଟର୍ API ସର୍ଭର୍‌ର ଆବଶ୍ୟକତା ହଟାଏ",
+      "ଅପରେଟର୍ କେବଳ kubectl ଆଉଟ୍‌ପୁଟ୍ ଫର୍ମାଟ୍ ବଦଳାଏ",
+      "ଅପରେଟର୍ ଦର୍ଶାଯାଇଥିବା ଆପ୍ଲିକେସନ୍ ପରିଚାଳନା ପାଇଁ ସ୍ଥିତି ମେଳାଇବା ତର୍କ ମଧ୍ୟ ଚଲାଏ"
+    ],
+    "answer": "ଅପରେଟର୍ ଦର୍ଶାଯାଇଥିବା ଆପ୍ଲିକେସନ୍ ପରିଚାଳନା ପାଇଁ ସ୍ଥିତି ମେଳାଇବା ତର୍କ ମଧ୍ୟ ଚଲାଏ"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "ପରିଚୟ ଓ ଅନୁମତି ଯାଞ୍ଚ ପରେ କିନ୍ତୁ ସଞ୍ଚୟ ପୂର୍ବରୁ API ଅନୁରୋଧ ପ୍ରତ୍ୟାଖ୍ୟାନ କିମ୍ବା ପରିବର୍ତ୍ତନ କରିପାରୁଥିବା ବ୍ୟବସ୍ଥା କେଉଁଟି?",
+    "options": [
+      "କଣ୍ଟେନର୍ ଇମେଜ୍ ଆଣିବା",
+      "Service ଏଣ୍ଡପଏଣ୍ଟ ରାଉଟିଂ",
+      "ଆଡମିସନ୍ ନିୟନ୍ତ୍ରଣ",
+      "Pod ନିୟୋଜନ"
+    ],
+    "answer": "ଆଡମିସନ୍ ନିୟନ୍ତ୍ରଣ"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "କୌଣସି ଯୋଗ୍ୟ ନୋଡ୍ Podର ଆବଶ୍ୟକ ନୋଡ୍ ଆଫିନିଟି ପୂରଣ ନକଲେ କ’ଣ ହୁଏ?",
+    "options": [
+      "API ସର୍ଭର୍ ତାହାକୁ ସବୁ ନୋଡ୍‌ରେ ରଖେ",
+      "ଉପଯୁକ୍ତ ନୋଡ୍ ମିଳିବା କିମ୍ବା ସୀମା ବଦଳିବା ପର୍ଯ୍ୟନ୍ତ Pod ନିୟୋଜିତ ହୁଏ ନାହିଁ",
+      "ଶେଡ୍ୟୁଲର୍ ଗୋଟିଏ ଚେଷ୍ଟା ପରେ ନିୟମ ଅଣଦେଖା କରେ",
+      "Pod ସ୍ୱୟଂଚାଳିତ DaemonSet ହୁଏ"
+    ],
+    "answer": "ଉପଯୁକ୍ତ ନୋଡ୍ ମିଳିବା କିମ୍ବା ସୀମା ବଦଳିବା ପର୍ଯ୍ୟନ୍ତ Pod ନିୟୋଜିତ ହୁଏ ନାହିଁ"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "preferredDuringSchedulingIgnoredDuringExecution ନୋଡ୍ ଆଫିନିଟି କ’ଣ ଦର୍ଶାଏ?",
+    "options": [
+      "ନମିଶିଲେ ମଧ୍ୟ ଅନ୍ୟଥା ଯୋଗ୍ୟ ନୋଡ୍‌କୁ ବାହାର ନକରୁଥିବା ସ୍ଥାନ ପସନ୍ଦ",
+      "ନମିଶୁଥିବା ନୋଡ୍‌ରେ ରଖିବା ରୋକୁଥିବା ବାଧ୍ୟତାମୂଳକ ଆବଶ୍ୟକତା",
+      "ନୋଡ୍ ଲେବଲ୍ ବଦଳିଲେ Pod ବାହାର କରିବା ନିର୍ଦ୍ଦେଶ",
+      "ଶେଡ୍ୟୁଲର୍‌କୁ ସମ୍ପୂର୍ଣ୍ଣ ଏଡ଼ାଇବା ଅନୁରୋଧ"
+    ],
+    "answer": "ନମିଶିଲେ ମଧ୍ୟ ଅନ୍ୟଥା ଯୋଗ୍ୟ ନୋଡ୍‌କୁ ବାହାର ନକରୁଥିବା ସ୍ଥାନ ପସନ୍ଦ"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "ନୋଡ୍‌ର ଲେବଲ୍ ଚାଲୁଥିବା Podର ନୋଡ୍-ଆଫିନିଟି ନିୟମ ସହ ମିଶିବା ବନ୍ଦ କଲେ IgnoredDuringExecutionର ଅର୍ଥ କ’ଣ?",
+    "options": [
+      "Pod ତୁରନ୍ତ ମିଟାଇବା ଦରକାର",
+      "Podର କଣ୍ଟେନର୍ ସ୍ୱୟଂଚାଳିତ ପୁଣି ଚାଲେ",
+      "ନୋଡ୍ ଲେବଲ୍ ସ୍ୱୟଂଚାଳିତ ପୂର୍ବ ଅବସ୍ଥାକୁ ଫେରେ",
+      "କେବଳ ସେହି ନିୟମ ଚାଲୁଥିବା Pod ବାହାର କରେ ନାହିଁ"
+    ],
+    "answer": "କେବଳ ସେହି ନିୟମ ଚାଲୁଥିବା Pod ବାହାର କରେ ନାହିଁ"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "Pod ସ୍ପଷ୍ଟ ଭାବେ spec.nodeName ଦେଲେ କ’ଣ ହୁଏ?",
+    "options": [
+      "ତାହା ସେହି ନାମର ନୋଡ୍ କରେ",
+      "ତାହା ବର୍ତ୍ତମାନ Pod ଚଲାଉଥିବା ନୋଡ୍‌ର ନାମ ବଦଳାଏ",
+      "ତାହା ଶେଡ୍ୟୁଲର୍‌କୁ ଏଡ଼ାଇ ସେହି ନାମର ନୋଡ୍‌କୁ ଦିଆଯାଏ",
+      "ତାହା ସବୁ ମେଳଖାଉଥିବା ନୋଡ୍ ଲେବଲ୍‌କୁ କ୍ରମ ଦେବାକୁ ଶେଡ୍ୟୁଲର୍‌କୁ କହେ"
+    ],
+    "answer": "ତାହା ଶେଡ୍ୟୁଲର୍‌କୁ ଏଡ଼ାଇ ସେହି ନାମର ନୋଡ୍‌କୁ ଦିଆଯାଏ"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "ଟୋପୋଲୋଜି ବିସ୍ତାର ସୀମାର ଉଦ୍ଦେଶ୍ୟ କ’ଣ?",
+    "options": [
+      "କଣ୍ଟ୍ରୋଲ୍-ପ୍ଲେନ୍ ଅଂଶଗୁଡ଼ିକ ମଧ୍ୟରେ ଟ୍ରାଫିକ୍ ଗୁପ୍ତୀକରଣ",
+      "ମେଳଖାଉଥିବା Pod ଟୋପୋଲୋଜି କ୍ଷେତ୍ରଗୁଡ଼ିକରେ କିପରି ବଣ୍ଟାଯାଏ ନିୟନ୍ତ୍ରଣ କରିବା",
+      "ସ୍ଥାୟୀ ଭଲ୍ୟୁମ୍‌ଗୁଡ଼ିକ ମଧ୍ୟରେ କଣ୍ଟେନର୍ ଫାଇଲ୍ କପି କରିବା",
+      "ପ୍ରତ୍ୟେକ ନେମ୍‌ସ୍ପେସ୍‌କୁ ଗୋଟିଏ ସାର୍ବଜନୀନ IP ଦେବା"
+    ],
+    "answer": "ମେଳଖାଉଥିବା Pod ଟୋପୋଲୋଜି କ୍ଷେତ୍ରଗୁଡ଼ିକରେ କିପରି ବଣ୍ଟାଯାଏ ନିୟନ୍ତ୍ରଣ କରିବା"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "taint ସହନ ନକରୁଥିବା ପୂର୍ବରୁ ଚାଲୁଥିବା Podକୁ କେଉଁ taint ପ୍ରଭାବ ବାହାର କରିପାରେ?",
+    "options": [
+      "NoExecute",
+      "NoSchedule",
+      "PreferNoSchedule",
+      "None"
+    ],
+    "answer": "NoExecute"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "Linux କଣ୍ଟେନର୍ root ନୁହେଁ ଏପରି ବ୍ୟବହାରକାରୀ ଭାବେ ଚାଲିବା ଦରକାର କରୁଥିବା securityContext ସେଟିଂ କେଉଁଟି?",
+    "options": [
+      "readOnlyRootFilesystem: true",
+      "privileged: false",
+      "allowPrivilegeEscalation: false",
+      "runAsNonRoot: true"
+    ],
+    "answer": "runAsNonRoot: true"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "Linux ପ୍ରକ୍ରିୟାକୁ ପ୍ୟାରେଣ୍ଟଠାରୁ ଅଧିକ ଅଧିକାର ନେବାରୁ ରୋକୁଥିବା କଣ୍ଟେନର୍ securityContext ସେଟିଂ କେଉଁଟି?",
+    "options": [
+      "readOnlyRootFilesystem: true",
+      "privileged: false",
+      "allowPrivilegeEscalation: false",
+      "runAsNonRoot: true"
+    ],
+    "answer": "allowPrivilegeEscalation: false"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "ସମସ୍ୟା ଖୋଜିବା ପାଇଁ ବର୍ତ୍ତମାନ Podର ଆପ୍ଲିକେସନ୍ କଣ୍ଟେନର୍ ନବଦଳାଇ କେଉଁ କଣ୍ଟେନର୍ ପ୍ରକାର ଯୋଡ଼ିହେବ?",
+    "options": [
+      "ପୁଣି ଆରମ୍ଭ ହୋଇପାରୁଥିବା init କଣ୍ଟେନର୍",
+      "ଅସ୍ଥାୟୀ କଣ୍ଟେନର୍",
+      "ସାଧାରଣ init କଣ୍ଟେନର୍",
+      "ସାଧାରଣ ଆପ୍ଲିକେସନ୍ କଣ୍ଟେନର୍"
+    ],
+    "answer": "ଅସ୍ଥାୟୀ କଣ୍ଟେନର୍"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "ବଢ଼ାଯାଇପାରୁଥିବା ଗୋଷ୍ଠୀରେ Serviceର ନେଟ୍‌ୱର୍କ ଏଣ୍ଡପଏଣ୍ଟ ରଖୁଥିବା ରିସୋର୍ସ କେଉଁଟି?",
+    "options": [
+      "EndpointSlice",
+      "IngressClass",
+      "NetworkPolicy",
+      "RuntimeClass"
+    ],
+    "answer": "EndpointSlice"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "Ingress ରିସୋର୍ସ ପ୍ରକୃତରେ HTTP ରାଉଟିଂ ସଂରଚନା କରିବାକୁ କ’ଣ ଦରକାର?",
+    "options": [
+      "ପ୍ରତ୍ୟେକ ନେମ୍‌ସ୍ପେସ୍‌ରେ ingress ନାମର ConfigMap",
+      "ପ୍ରତ୍ୟେକ ହୋଷ୍ଟନାମ ପାଇଁ PersistentVolume",
+      "ସବୁ ଚୟନିତ Pod ପୁଣି ଚଲାଉଥିବା Job",
+      "ତାହାର ନିୟମ ଲାଗୁ କରୁଥିବା Ingress କଣ୍ଟ୍ରୋଲର୍"
+    ],
+    "answer": "ତାହାର ନିୟମ ଲାଗୁ କରୁଥିବା Ingress କଣ୍ଟ୍ରୋଲର୍"
+  }
+]

@@ -1,0 +1,302 @@
+[
+  {
+    "category": "Jenkins",
+    "set": 3,
+    "question": "Jenkins 控制器(Master)的主要职责是什么?",
+    "options": [
+      "管理和调度构建",
+      "存储 Docker 镜像",
+      "运行 Kubernetes Pod",
+      "托管源代码"
+    ],
+    "answer": "管理和调度构建"
+  },
+  {
+    "category": "Jenkins",
+    "set": 3,
+    "question": "什么是 Jenkins 代理(Agent)?",
+    "options": [
+      "执行构建的机器",
+      "Jenkins 插件",
+      "源代码仓库",
+      "监控工具"
+    ],
+    "answer": "执行构建的机器"
+  },
+  {
+    "category": "Jenkins",
+    "set": 3,
+    "question": "Jenkins 环境中能够承载执行器的机器，包括代理机器，称为什么？",
+    "options": [
+      "Node",
+      "Executor",
+      "Workspace",
+      "Pipeline"
+    ],
+    "answer": "Node"
+  },
+  {
+    "category": "Jenkins",
+    "set": 3,
+    "question": "Jenkins 中的标签(Labels)用于什么?",
+    "options": [
+      "指定特定代理",
+      "重命名作业",
+      "存储凭据",
+      "配置插件"
+    ],
+    "answer": "指定特定代理"
+  },
+  {
+    "category": "Jenkins",
+    "set": 3,
+    "question": "Jenkins 中的分布式构建是什么?",
+    "options": [
+      "在多个代理上运行作业",
+      "运行 Docker 容器",
+      "创建多个流水线",
+      "使用多个仓库"
+    ],
+    "answer": "在多个代理上运行作业"
+  },
+  {
+    "category": "Jenkins",
+    "set": 3,
+    "question": "Jenkins 中的执行器(Executor)是什么?",
+    "options": [
+      "运行构建的槽位",
+      "插件管理器",
+      "构建产物",
+      "流水线阶段"
+    ],
+    "answer": "运行构建的槽位"
+  },
+  {
+    "category": "Jenkins",
+    "set": 3,
+    "question": "Jenkins 中的凭据在哪里管理?",
+    "options": [
+      "Credentials Store",
+      "Build History",
+      "Workspace",
+      "Pipeline Syntax"
+    ],
+    "answer": "Credentials Store"
+  },
+  {
+    "category": "Jenkins",
+    "set": 3,
+    "question": "哪种凭据类型用于存储密码或 API 令牌?",
+    "options": [
+      "Secret Text",
+      "Username",
+      "Certificate",
+      "Workspace"
+    ],
+    "answer": "Secret Text"
+  },
+  {
+    "category": "Jenkins",
+    "set": 3,
+    "question": "哪种凭据类型提供通过 SSH 访问 Git 所需的私钥？",
+    "options": [
+      "SSH Private Key",
+      "Secret Text",
+      "Certificate",
+      "Token File"
+    ],
+    "answer": "SSH Private Key"
+  },
+  {
+    "category": "Jenkins",
+    "set": 3,
+    "question": "哪个部分用于管理 Jenkins 用户?",
+    "options": [
+      "Manage Users",
+      "Build Queue",
+      "Plugin Manager",
+      "Workspace"
+    ],
+    "answer": "Manage Users"
+  },
+  {
+    "category": "Jenkins",
+    "set": 3,
+    "question": "哪种授权策略通过用户或组与权限构成的矩阵分配权限？",
+    "options": [
+      "Matrix Authorization",
+      "Role Plugin",
+      "Anonymous Access",
+      "LDAP"
+    ],
+    "answer": "Matrix Authorization"
+  },
+  {
+    "category": "Jenkins",
+    "set": 3,
+    "question": "哪种服务可集成用于集中式身份验证?",
+    "options": [
+      "LDAP",
+      "Docker",
+      "Git",
+      "Maven"
+    ],
+    "answer": "LDAP"
+  },
+  {
+    "category": "Jenkins",
+    "set": 3,
+    "question": "应备份什么来保留 Jenkins 配置?",
+    "options": [
+      "JENKINS_HOME",
+      "仅工作区",
+      "仅构建日志",
+      "仅插件"
+    ],
+    "answer": "JENKINS_HOME"
+  },
+  {
+    "category": "Jenkins",
+    "set": 3,
+    "question": "Jenkins 的哪个面板列出等待调度执行的构建？",
+    "options": [
+      "Build Queue",
+      "Workspace",
+      "Dashboard",
+      "Artifacts"
+    ],
+    "answer": "Build Queue"
+  },
+  {
+    "category": "Jenkins",
+    "set": 3,
+    "question": "哪个菜单用于管理 Jenkins 代理?",
+    "options": [
+      "Manage Nodes",
+      "Build Queue",
+      "Plugin Manager",
+      "System Log"
+    ],
+    "answer": "Manage Nodes"
+  },
+  {
+    "category": "Jenkins",
+    "set": 3,
+    "question": "哪个流水线步骤在代码块执行期间将已存储凭据绑定到变量？",
+    "options": [
+      "withCredentials",
+      "withEnv",
+      "withContext",
+      "wrap"
+    ],
+    "answer": "withCredentials"
+  },
+  {
+    "category": "Jenkins",
+    "set": 3,
+    "question": "Jenkinsfile 通常应使用哪个值来引用已存储的秘密？",
+    "options": [
+      "明文密码",
+      "加密存储的字节",
+      "所有者的登录 cookie",
+      "凭据 ID"
+    ],
+    "answer": "凭据 ID"
+  },
+  {
+    "category": "Jenkins",
+    "set": 3,
+    "question": "在控制台输出中掩码隐藏凭据能保证什么？",
+    "options": [
+      "自动加密所有生成的构建产物",
+      "每次构建后自动撤销凭据",
+      "仅尽力在日志中隐藏，不能防御恶意构建代码",
+      "完全阻止构建窃取秘密"
+    ],
+    "answer": "仅尽力在日志中隐藏，不能防御恶意构建代码"
+  },
+  {
+    "category": "Jenkins",
+    "set": 3,
+    "question": "内置节点的哪个设置阻止普通构建使用控制器执行器？",
+    "options": [
+      "延长其工作空间保留时间",
+      "将其执行器数量设为零",
+      "将其执行器数量设为十",
+      "为它设置与所有代理相同的标签"
+    ],
+    "answer": "将其执行器数量设为零"
+  },
+  {
+    "category": "Jenkins",
+    "set": 3,
+    "question": "流水线中的 env.BUILD_NUMBER 包含什么？",
+    "options": [
+      "当前任务的构建编号",
+      "Jenkins 控制器的版本",
+      "代理的 TCP 端口",
+      "流水线阶段数量"
+    ],
+    "answer": "当前任务的构建编号"
+  },
+  {
+    "category": "Jenkins",
+    "set": 3,
+    "question": "Jenkins 任务的静默等待期有什么用途？",
+    "options": [
+      "限制构建的总执行时间",
+      "仅保留成功的构建记录",
+      "禁用所有控制台日志",
+      "将已安排的构建延迟指定时间后再启动"
+    ],
+    "answer": "将已安排的构建延迟指定时间后再启动"
+  },
+  {
+    "category": "Jenkins",
+    "set": 3,
+    "question": "哪个流水线步骤为其代码块中的步骤切换工作目录？",
+    "options": [
+      "node",
+      "stage",
+      "dir",
+      "pwd"
+    ],
+    "answer": "dir"
+  },
+  {
+    "category": "Jenkins",
+    "set": 3,
+    "question": "哪个流水线步骤返回当前工作目录的路径？",
+    "options": [
+      "fileExists",
+      "pwd",
+      "dir",
+      "readFile"
+    ],
+    "answer": "pwd"
+  },
+  {
+    "category": "Jenkins",
+    "set": 3,
+    "question": "哪个流水线步骤为其代码块临时设置环境变量？",
+    "options": [
+      "withEnv",
+      "withCredentials",
+      "readFile",
+      "checkout"
+    ],
+    "answer": "withEnv"
+  },
+  {
+    "category": "Jenkins",
+    "set": 3,
+    "question": "将代理暂时设为离线通常会阻止什么？",
+    "options": [
+      "访问所有已完成构建的日志",
+      "所有其他代理上的全部构建",
+      "读取控制器的插件列表",
+      "向该代理分配新构建"
+    ],
+    "answer": "向该代理分配新构建"
+  }
+]

@@ -1,0 +1,302 @@
+[
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "कार्य स्तरावर वेगळे सेटिंग नसेल तर तपासणी मोडला आधार नसलेले मॉड्यूल त्या मोडमध्ये कसे हाताळले जाते?",
+    "options": [
+      "ते नेहमी आपले नियमित बदल करते",
+      "ते आपोआप localhost वर चालते",
+      "तपासणी मोड समर्थित होईपर्यंत पुन्हा प्रयत्न होतात",
+      "बदल न करता ते वगळले जाते"
+    ],
+    "answer": "बदल न करता ते वगळले जाते"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "--check ने प्लेबुक चालवले तरी प्रत्यक्ष बदलांना कोणते कार्य सेटिंग परवानगी देते?",
+    "options": [
+      "changed_when: false",
+      "ignore_errors: true",
+      "check_mode: false",
+      "diff: false"
+    ],
+    "answer": "check_mode: false"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "आधी सूचना मिळालेल्या हँडलरना लगेच चालवणारी Ansible meta कृती कोणती?",
+    "options": [
+      "reset_connection",
+      "flush_handlers",
+      "clear_facts",
+      "end_play"
+    ],
+    "answer": "flush_handlers"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "बदल केलेल्या दोन कार्यांनी चालण्यापूर्वी एकाच हँडलरला सूचना दिल्यास तो त्या वेळी सहसा कितीदा चालतो?",
+    "options": [
+      "एकदा",
+      "दोनदा",
+      "प्रत्येक इन्व्हेंटरी गटासाठी एकदा",
+      "सूचनांचा विरोध असल्याने एकदाही नाही"
+    ],
+    "answer": "एकदा"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "एकाच निष्पादन बिंदूसाठी सूचित हँडलरचा क्रम कशावर ठरतो?",
+    "options": [
+      "नावांचा वर्णक्रम",
+      "notify यादीतील नावांचा क्रम",
+      "व्यवस्थापित होस्ट जोडले जाण्याचा क्रम",
+      "handlers विभागातील व्याख्यांचा क्रम"
+    ],
+    "answer": "handlers विभागातील व्याख्यांचा क्रम"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "कोणते अपयश सहसा ब्लॉकमधील rescue कार्ये सुरू करते?",
+    "options": [
+      "प्लेबुकमध्ये अवैध कार्य व्याख्या असणे",
+      "YAML दस्तऐवज पार्स न होणे",
+      "ब्लॉकमधील कार्याने अपयशी परिणाम परत करणे",
+      "कार्य चालण्यापूर्वी होस्ट पोहोचण्याबाहेर जाणे"
+    ],
+    "answer": "ब्लॉकमधील कार्याने अपयशी परिणाम परत करणे"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "सामान्य कार्यात ignore_errors कोणती त्रुटी दडवत नाही?",
+    "options": [
+      "failed_when अट true ठरणे",
+      "अपरिभाषित चलाची त्रुटी",
+      "आदेशाने दिलेली शून्येतर निर्गमन स्थिती",
+      "मॉड्यूलचा परिणाम स्पष्टपणे failed असणे"
+    ],
+    "answer": "अपरिभाषित चलाची त्रुटी"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "न हाताळलेले कार्य अपयश आल्यावर सध्याच्या तुकडीचे ते कार्य पूर्ण झाल्यानंतर सर्व होस्टवरील play कोणता कीवर्ड थांबवतो?",
+    "options": [
+      "any_errors_fatal",
+      "ignore_unreachable",
+      "max_fail_percentage: 100",
+      "force_handlers"
+    ],
+    "answer": "any_errors_fatal"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "पोहोचण्याजोग्या होस्टवर नंतरचे कार्य अयशस्वी झाल्यास force_handlers काय करते?",
+    "options": [
+      "सर्व परिभाषित हँडलर सूचनेशिवायही चालतात",
+      "सर्व अपयशी कार्ये आपोआप पुन्हा चालतात",
+      "सर्व सामान्य कार्यांपूर्वी हँडलर चालतात",
+      "आधी सूचित केलेले हँडलर त्या होस्टवर तरीही चालू शकतात"
+    ],
+    "answer": "आधी सूचित केलेले हँडलर त्या होस्टवर तरीही चालू शकतात"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "संवेदनशील कार्य युक्तिवाद आणि परिणामांचे सामान्य लॉगिंग थांबवणारे सेटिंग कोणते?",
+    "options": [
+      "check_mode: true",
+      "changed_when: false",
+      "no_log: true",
+      "diff: true"
+    ],
+    "answer": "no_log: true"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "--diff सुरू असूनही फाइलमधील फरक लपवणारे कार्य सेटिंग कोणते?",
+    "options": [
+      "ignore_errors: true",
+      "diff: false",
+      "no_log: false",
+      "check_mode: false"
+    ],
+    "answer": "diff: false"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "दुसऱ्या इन्व्हेंटरी होस्टची चले कोणत्या शब्दकोशातून मिळतात?",
+    "options": [
+      "hostvars",
+      "ansible_facts",
+      "environment",
+      "ansible_loop"
+    ],
+    "answer": "hostvars"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "सध्याच्या होस्टचे इन्व्हेंटरी नाव कोणत्या विशेष चलात असते?",
+    "options": [
+      "ansible_host",
+      "ansible_user",
+      "ansible_playbook_python",
+      "inventory_hostname"
+    ],
+    "answer": "inventory_hostname"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "होस्ट गटाची सामायिक चले ठेवण्यासाठी इन्व्हेंटरीजवळ सहसा कोणती डिरेक्टरी असते?",
+    "options": [
+      "roles",
+      "collections",
+      "group_vars",
+      "host_vars"
+    ],
+    "answer": "group_vars"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "ansible.builtin.file शोध डीफॉल्टने फाइल कुठे वाचतो?",
+    "options": [
+      "become_user ने सांगितलेल्या होस्टवर",
+      "नियंत्रण नोडवर",
+      "प्रत्येक व्यवस्थापित होस्टवर",
+      "play मधील पहिल्या होस्टवर"
+    ],
+    "answer": "नियंत्रण नोडवर"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "YAML स्ट्रिंगचे Ansible डेटा संरचनेत रूपांतर करणारा फिल्टर कोणता?",
+    "options": [
+      "from_yaml",
+      "to_yaml",
+      "to_json",
+      "dict2items"
+    ],
+    "answer": "from_yaml"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "शब्दकोशाचे कळ/मूल्य शब्दकोशांच्या यादीत रूपांतर करणारा फिल्टर कोणता?",
+    "options": [
+      "items2dict",
+      "flatten",
+      "zip",
+      "dict2items"
+    ],
+    "answer": "dict2items"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "यादीतील पुनरावृत्त घटक काढणारा फिल्टर कोणता?",
+    "options": [
+      "reverse",
+      "flatten",
+      "unique",
+      "sort"
+    ],
+    "answer": "unique"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "अभिव्यक्ती तपासून दिलेली प्रतिपादने खरी नसल्यास कोणते मॉड्यूल अपयशी होते?",
+    "options": [
+      "ansible.builtin.set_fact",
+      "ansible.builtin.assert",
+      "ansible.builtin.debug",
+      "ansible.builtin.pause"
+    ],
+    "answer": "ansible.builtin.assert"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "नियमित अभिव्यक्ती वापरून मजकूर फाइलची ठरावीक ओळ कोणते मॉड्यूल हाताळते?",
+    "options": [
+      "ansible.builtin.lineinfile",
+      "ansible.builtin.blockinfile",
+      "ansible.builtin.copy",
+      "ansible.builtin.slurp"
+    ],
+    "answer": "ansible.builtin.lineinfile"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "URL मागवून अपेक्षित HTTP स्थिती कोड कोणते मॉड्यूल तपासू शकते?",
+    "options": [
+      "ansible.builtin.get_url",
+      "ansible.builtin.fetch",
+      "ansible.builtin.wait_for",
+      "ansible.builtin.uri"
+    ],
+    "answer": "ansible.builtin.uri"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "TCP पोर्ट अपेक्षित स्थितीत येईपर्यंत कोणते मॉड्यूल थांबते?",
+    "options": [
+      "ansible.builtin.async_status",
+      "ansible.builtin.ping",
+      "ansible.builtin.wait_for",
+      "ansible.builtin.pause"
+    ],
+    "answer": "ansible.builtin.wait_for"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "दिलेला पथ आधीपासून असल्यास ansible.builtin.command वगळणारा मापदंड कोणता?",
+    "options": [
+      "stdin",
+      "creates",
+      "removes",
+      "chdir"
+    ],
+    "answer": "creates"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "प्रतीकात्मक दुवा बनवणारे file मॉड्यूल सेटिंग कोणते?",
+    "options": [
+      "state: link",
+      "state: directory",
+      "state: touch",
+      "state: hard"
+    ],
+    "answer": "state: link"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "पुढील play साठी मेमरीतील इन्व्हेंटरीत होस्ट कोणते मॉड्यूल जोडू शकते?",
+    "options": [
+      "ansible.builtin.group_by",
+      "ansible.builtin.set_fact",
+      "ansible.builtin.meta",
+      "ansible.builtin.add_host"
+    ],
+    "answer": "ansible.builtin.add_host"
+  }
+]

@@ -1,0 +1,302 @@
+[
+  {
+    "category": "Ansible",
+    "set": 1,
+    "question": "Ansible 主要用于什么?",
+    "options": [
+      "配置管理",
+      "容器化",
+      "数据库管理",
+      "监控"
+    ],
+    "answer": "配置管理"
+  },
+  {
+    "category": "Ansible",
+    "set": 1,
+    "question": "Ansible 是用哪种语言编写的?",
+    "options": [
+      "Python",
+      "Java",
+      "Go",
+      "Ruby"
+    ],
+    "answer": "Python"
+  },
+  {
+    "category": "Ansible",
+    "set": 1,
+    "question": "Ansible 中哪个文件包含受管主机?",
+    "options": [
+      "Inventory 文件",
+      "Playbook",
+      "Role",
+      "Module"
+    ],
+    "answer": "Inventory 文件"
+  },
+  {
+    "category": "Ansible",
+    "set": 1,
+    "question": "默认的 inventory 文件位置是什么?",
+    "options": [
+      "/etc/ansible/hosts",
+      "/etc/hosts",
+      "/ansible/hosts",
+      "/usr/ansible/hosts"
+    ],
+    "answer": "/etc/ansible/hosts"
+  },
+  {
+    "category": "Ansible",
+    "set": 1,
+    "question": "哪个命令用于检查 Ansible 版本?",
+    "options": [
+      "ansible --version",
+      "ansible version",
+      "ansible -v",
+      "ansible check"
+    ],
+    "answer": "ansible --version"
+  },
+  {
+    "category": "Ansible",
+    "set": 1,
+    "question": "Ansible 的默认连接插件通常使用哪种协议连接 Linux 主机？",
+    "options": [
+      "SSH",
+      "FTP",
+      "Telnet",
+      "HTTP"
+    ],
+    "answer": "SSH"
+  },
+  {
+    "category": "Ansible",
+    "set": 1,
+    "question": "什么是 Ansible Playbook?",
+    "options": [
+      "包含自动化任务的 YAML 文件",
+      "Inventory 文件",
+      "Python 脚本",
+      "配置文件"
+    ],
+    "answer": "包含自动化任务的 YAML 文件"
+  },
+  {
+    "category": "Ansible",
+    "set": 1,
+    "question": "哪个命令用于运行 Ansible playbook?",
+    "options": [
+      "ansible-playbook",
+      "ansible-run",
+      "ansible-execute",
+      "ansible-start"
+    ],
+    "answer": "ansible-playbook"
+  },
+  {
+    "category": "Ansible",
+    "set": 1,
+    "question": "playbook 中哪个关键字用于定义目标主机?",
+    "options": [
+      "hosts",
+      "servers",
+      "nodes",
+      "targets"
+    ],
+    "answer": "hosts"
+  },
+  {
+    "category": "Ansible",
+    "set": 1,
+    "question": "playbook 中哪个关键字用于定义任务?",
+    "options": [
+      "tasks",
+      "actions",
+      "jobs",
+      "steps"
+    ],
+    "answer": "tasks"
+  },
+  {
+    "category": "Ansible",
+    "set": 1,
+    "question": "哪个模块用于将文件复制到远程主机?",
+    "options": [
+      "copy",
+      "fetch",
+      "file",
+      "transfer"
+    ],
+    "answer": "copy"
+  },
+  {
+    "category": "Ansible",
+    "set": 1,
+    "question": "哪个模块用于管理服务?",
+    "options": [
+      "service",
+      "systemctl",
+      "daemon",
+      "process"
+    ],
+    "answer": "service"
+  },
+  {
+    "category": "Ansible",
+    "set": 1,
+    "question": "哪个命令检查所有目标 POSIX 主机的 Ansible 连通性以及 Python 是否可用？",
+    "options": [
+      "ansible all -m ping",
+      "ansible ping",
+      "ansible test",
+      "ansible connect"
+    ],
+    "answer": "ansible all -m ping"
+  },
+  {
+    "category": "Ansible",
+    "set": 1,
+    "question": "编写 Ansible playbook 通常使用哪种便于阅读的格式？",
+    "options": [
+      "YAML",
+      "JSON",
+      "XML",
+      "INI"
+    ],
+    "answer": "YAML"
+  },
+  {
+    "category": "Ansible",
+    "set": 1,
+    "question": "哪个文件用于配置 Ansible 设置?",
+    "options": [
+      "ansible.cfg",
+      "ansible.conf",
+      "config.yml",
+      "ansible.ini"
+    ],
+    "answer": "ansible.cfg"
+  },
+  {
+    "category": "Ansible",
+    "set": 1,
+    "question": "哪个 Ansible 模块收集受管主机的事实信息？",
+    "options": [
+      "ansible.builtin.stat",
+      "ansible.builtin.debug",
+      "ansible.builtin.assert",
+      "ansible.builtin.setup"
+    ],
+    "answer": "ansible.builtin.setup"
+  },
+  {
+    "category": "Ansible",
+    "set": 1,
+    "question": "哪个任务设置在 Ansible 中启用权限提升？",
+    "options": [
+      "run_once: true",
+      "delegate_facts: true",
+      "become: true",
+      "check_mode: true"
+    ],
+    "answer": "become: true"
+  },
+  {
+    "category": "Ansible",
+    "set": 1,
+    "question": "哪个清单变量指定主机的登录用户？",
+    "options": [
+      "ansible_connection",
+      "ansible_user",
+      "ansible_host",
+      "ansible_port"
+    ],
+    "answer": "ansible_user"
+  },
+  {
+    "category": "Ansible",
+    "set": 1,
+    "question": "运行 ansible-playbook 时，哪个选项选择清单文件？",
+    "options": [
+      "-i inventory.ini",
+      "-e inventory.ini",
+      "--limit inventory.ini",
+      "--tags inventory.ini"
+    ],
+    "answer": "-i inventory.ini"
+  },
+  {
+    "category": "Ansible",
+    "set": 1,
+    "question": "哪个模块确保受管主机上存在某个目录？",
+    "options": [
+      "ansible.builtin.fetch",
+      "ansible.builtin.slurp",
+      "ansible.builtin.template",
+      "ansible.builtin.file"
+    ],
+    "answer": "ansible.builtin.file"
+  },
+  {
+    "category": "Ansible",
+    "set": 1,
+    "question": "哪个模块获取远程文件并将其保存到控制节点？",
+    "options": [
+      "ansible.builtin.get_url",
+      "ansible.builtin.unarchive",
+      "ansible.builtin.fetch",
+      "ansible.builtin.copy"
+    ],
+    "answer": "ansible.builtin.fetch"
+  },
+  {
+    "category": "Ansible",
+    "set": 1,
+    "question": "哪个模块为目标主机的包管理器提供通用接口？",
+    "options": [
+      "ansible.builtin.package_facts",
+      "ansible.builtin.package",
+      "ansible.builtin.service",
+      "ansible.builtin.command"
+    ],
+    "answer": "ansible.builtin.package"
+  },
+  {
+    "category": "Ansible",
+    "set": 1,
+    "question": "哪项描述符合 Ansible 通常采用的 Linux 主机无代理管理方式？",
+    "options": [
+      "无需在每台受管主机上安装常驻 Ansible 代理",
+      "每台受管主机都必须运行 Ansible 调度服务",
+      "每台受管主机都必须运行 Galaxy 服务器",
+      "每台受管主机都必须连接到 Ansible 消息代理"
+    ],
+    "answer": "无需在每台受管主机上安装常驻 Ansible 代理"
+  },
+  {
+    "category": "Ansible",
+    "set": 1,
+    "question": "需要使用 shell 运算符时，哪个模块通过远程 shell 执行命令？",
+    "options": [
+      "ansible.builtin.command",
+      "ansible.builtin.script",
+      "ansible.builtin.debug",
+      "ansible.builtin.shell"
+    ],
+    "answer": "ansible.builtin.shell"
+  },
+  {
+    "category": "Ansible",
+    "set": 1,
+    "question": "哪个清单变量允许名为 web1 的主机连接到不同的 IP 地址？",
+    "options": [
+      "ansible_user",
+      "ansible_port",
+      "ansible_host",
+      "inventory_hostname"
+    ],
+    "answer": "ansible_host"
+  }
+]

@@ -1,0 +1,302 @@
+[
+  {
+    "category": "Jenkins",
+    "set": 2,
+    "question": "Jenkins Pipeline परिभाषित गर्ने फाइल कुन हो?",
+    "options": [
+      "Jenkinsfile",
+      "pipeline.yml",
+      "build.xml",
+      "job.conf"
+    ],
+    "answer": "Jenkinsfile"
+  },
+  {
+    "category": "Jenkins",
+    "set": 2,
+    "question": "कुन प्रकारको पाइपलाइनले संरचित सिन्ट्याक्स प्रयोग गर्छ?",
+    "options": [
+      "Declarative Pipeline",
+      "Scripted Pipeline",
+      "Freestyle Job",
+      "Maven Job"
+    ],
+    "answer": "Declarative Pipeline"
+  },
+  {
+    "category": "Jenkins",
+    "set": 2,
+    "question": "कुन कीवर्डले Declarative Pipeline सुरु गर्छ?",
+    "options": [
+      "pipeline",
+      "stage",
+      "agent",
+      "steps"
+    ],
+    "answer": "pipeline"
+  },
+  {
+    "category": "Jenkins",
+    "set": 2,
+    "question": "Pipeline वा चरण कहाँ चल्छ भन्ने तोक्ने Declarative Pipeline खण्ड कुन हो?",
+    "options": [
+      "agent",
+      "node",
+      "executor",
+      "workspace"
+    ],
+    "answer": "agent"
+  },
+  {
+    "category": "Jenkins",
+    "set": 2,
+    "question": "कुन ब्लकमा धेरै stages हुन्छन्?",
+    "options": [
+      "stages",
+      "steps",
+      "agent",
+      "tools"
+    ],
+    "answer": "stages"
+  },
+  {
+    "category": "Jenkins",
+    "set": 2,
+    "question": "पाइपलाइनको एउटा चरणलाई कुन ब्लकले जनाउँछ?",
+    "options": [
+      "stage",
+      "step",
+      "agent",
+      "job"
+    ],
+    "answer": "stage"
+  },
+  {
+    "category": "Jenkins",
+    "set": 2,
+    "question": "stage मा चलाइने कमान्डहरू कुन ब्लकमा हुन्छन्?",
+    "options": [
+      "steps",
+      "agent",
+      "pipeline",
+      "tools"
+    ],
+    "answer": "steps"
+  },
+  {
+    "category": "Jenkins",
+    "set": 2,
+    "question": "कुन स्टेटमेन्टले पाइपलाइनलाई कुनै पनि उपलब्ध agent मा चलाउँछ?",
+    "options": [
+      "agent any",
+      "node any",
+      "executor any",
+      "run any"
+    ],
+    "answer": "agent any"
+  },
+  {
+    "category": "Jenkins",
+    "set": 2,
+    "question": "कुन ब्लकले वातावरण भेरिएबलहरू परिभाषित गर्छ?",
+    "options": [
+      "environment",
+      "variables",
+      "env",
+      "settings"
+    ],
+    "answer": "environment"
+  },
+  {
+    "category": "Jenkins",
+    "set": 2,
+    "question": "पाइपलाइन कार्यान्वयनपछिका कार्यहरू कुन ब्लकले निर्दिष्ट गर्छ?",
+    "options": [
+      "post",
+      "after",
+      "cleanup",
+      "finally"
+    ],
+    "answer": "post"
+  },
+  {
+    "category": "Jenkins",
+    "set": 2,
+    "question": "stage चल्नुपर्छ कि पर्दैन भनी कुन सर्त ब्लकले नियन्त्रण गर्छ?",
+    "options": [
+      "when",
+      "if",
+      "condition",
+      "runif"
+    ],
+    "answer": "when"
+  },
+  {
+    "category": "Jenkins",
+    "set": 2,
+    "question": "कुन सुविधाले धेरै stages लाई एकैसाथ चल्न दिन्छ?",
+    "options": [
+      "parallel",
+      "multi",
+      "concurrent",
+      "fork"
+    ],
+    "answer": "parallel"
+  },
+  {
+    "category": "Jenkins",
+    "set": 2,
+    "question": "कुन step ले Linux agents मा shell कमान्डहरू चलाउँछ?",
+    "options": [
+      "sh",
+      "shell",
+      "bash",
+      "linux"
+    ],
+    "answer": "sh"
+  },
+  {
+    "category": "Jenkins",
+    "set": 2,
+    "question": "विशेष गरी Windows ब्याच स्क्रिप्ट चलाउने Pipeline चरण कुन हो?",
+    "options": [
+      "bat",
+      "cmd",
+      "powershell",
+      "win"
+    ],
+    "answer": "bat"
+  },
+  {
+    "category": "Jenkins",
+    "set": 2,
+    "question": "स्ट्रिङ प्यारामिटरजस्ता प्रयोगकर्ताले दिने बिल्ड इनपुट घोषणा गर्ने Declarative निर्देशन कुन हो?",
+    "options": [
+      "parameters",
+      "environment",
+      "tools",
+      "triggers"
+    ],
+    "answer": "parameters"
+  },
+  {
+    "category": "Jenkins",
+    "set": 2,
+    "question": "Jenkinsfile मा TARGET नामको बिल्ड प्यारामिटर पढ्ने अभिव्यक्ति कुन हो?",
+    "options": [
+      "currentBuild.TARGET",
+      "scm.TARGET",
+      "agent.TARGET",
+      "params.TARGET"
+    ],
+    "answer": "params.TARGET"
+  },
+  {
+    "category": "Jenkins",
+    "set": 2,
+    "question": "मानवीय स्वीकृतिका लागि कार्यान्वयन रोक्ने Pipeline चरण कुन हो?",
+    "options": [
+      "waitUntil",
+      "retry",
+      "input",
+      "sleep"
+    ],
+    "answer": "input"
+  },
+  {
+    "category": "Jenkins",
+    "set": 2,
+    "question": "JUnit ढाँचाका XML परीक्षण नतिजा प्रकाशित गर्ने Pipeline चरण कुन हो?",
+    "options": [
+      "writeFile",
+      "junit",
+      "archiveArtifacts",
+      "stash"
+    ],
+    "answer": "junit"
+  },
+  {
+    "category": "Jenkins",
+    "set": 2,
+    "question": "मिल्ने वर्कस्पेस फाइललाई बिल्ड आर्टिफ्याक्टका रूपमा राख्ने Pipeline चरण कुन हो?",
+    "options": [
+      "archiveArtifacts",
+      "stash",
+      "checkout",
+      "readFile"
+    ],
+    "answer": "archiveArtifacts"
+  },
+  {
+    "category": "Jenkins",
+    "set": 2,
+    "question": "Pipeline को समाप्ति स्थिति जेसुकै भए पनि चल्ने post सर्त कुन हो?",
+    "options": [
+      "success",
+      "failure",
+      "unstable",
+      "always"
+    ],
+    "answer": "always"
+  },
+  {
+    "category": "Jenkins",
+    "set": 2,
+    "question": "नाम भएको Maven स्थापनाजस्ता उपकरण कन्फिगर गर्ने Declarative निर्देशन कुन हो?",
+    "options": [
+      "parameters",
+      "triggers",
+      "tools",
+      "environment"
+    ],
+    "answer": "tools"
+  },
+  {
+    "category": "Jenkins",
+    "set": 2,
+    "question": "आफूभित्रको कोड चलाउने समय सीमित गर्ने Pipeline चरण कुन हो?",
+    "options": [
+      "waitUntil",
+      "timeout",
+      "retry",
+      "sleep"
+    ],
+    "answer": "timeout"
+  },
+  {
+    "category": "Jenkins",
+    "set": 2,
+    "question": "भित्रको कोडले त्रुटि दिँदा तोकिएको प्रयास सङ्ख्यासम्म पुनः चलाउने Pipeline चरण कुन हो?",
+    "options": [
+      "retry",
+      "timeout",
+      "sleep",
+      "input"
+    ],
+    "answer": "retry"
+  },
+  {
+    "category": "Jenkins",
+    "set": 2,
+    "question": "Declarative को steps खण्डभित्र Scripted Pipeline कोड राख्न दिने ब्लक कुन हो?",
+    "options": [
+      "options",
+      "parameters",
+      "triggers",
+      "script"
+    ],
+    "answer": "script"
+  },
+  {
+    "category": "Jenkins",
+    "set": 2,
+    "question": "Declarative Pipeline मा शीर्ष-स्तरको agent none ले के गर्छ?",
+    "options": [
+      "सबै शेल चरण कन्ट्रोलरमा स्वतः चलाउँछ",
+      "सबै उपलब्ध एजेन्ट एकैचोटि छुट्याउँछ",
+      "सम्पूर्ण Pipeline का लागि विश्वव्यापी एजेन्ट छुट्याउँदैन",
+      "चरण-स्तरका सबै एजेन्ट चल्न रोक्छ"
+    ],
+    "answer": "सम्पूर्ण Pipeline का लागि विश्वव्यापी एजेन्ट छुट्याउँदैन"
+  }
+]

@@ -1,0 +1,302 @@
+[
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "Without a task-level override, what happens to a module that does not support check mode during a check-mode run?",
+    "options": [
+      "The module always makes its normal changes",
+      "The module automatically runs on localhost",
+      "The module is retried until it supports check mode",
+      "The module is skipped instead of making changes"
+    ],
+    "answer": "The module is skipped instead of making changes"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "Which task setting allows real changes even when the playbook is invoked with --check?",
+    "options": [
+      "changed_when: false",
+      "ignore_errors: true",
+      "check_mode: false",
+      "diff: false"
+    ],
+    "answer": "check_mode: false"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "Which Ansible meta action immediately runs handlers that have already been notified?",
+    "options": [
+      "reset_connection",
+      "flush_handlers",
+      "clear_facts",
+      "end_play"
+    ],
+    "answer": "flush_handlers"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "If two changed tasks notify the same handler before it is flushed, how many times does that handler normally run at the flush point?",
+    "options": [
+      "Once",
+      "Twice",
+      "Once per inventory group",
+      "Zero times because notifications conflict"
+    ],
+    "answer": "Once"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "What determines the execution order of handlers notified at the same flush point?",
+    "options": [
+      "The alphabetical order of their names",
+      "The order of names in the notify list",
+      "The order in which managed hosts connected",
+      "Their definition order in the handlers section"
+    ],
+    "answer": "Their definition order in the handlers section"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "Which failure normally triggers a block's rescue tasks?",
+    "options": [
+      "The playbook contains an invalid task definition",
+      "The YAML document cannot be parsed",
+      "A task inside the block returns a failed result",
+      "A host becomes unreachable before its task can run"
+    ],
+    "answer": "A task inside the block returns a failed result"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "Which error is not suppressed by ignore_errors on an ordinary task?",
+    "options": [
+      "A failed_when condition evaluating to true",
+      "An undefined-variable error",
+      "A command's reported nonzero exit status",
+      "A module result explicitly marked failed"
+    ],
+    "answer": "An undefined-variable error"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "Which keyword makes an unhandled task failure stop the play across all hosts after the current batch finishes that task?",
+    "options": [
+      "any_errors_fatal",
+      "ignore_unreachable",
+      "max_fail_percentage: 100",
+      "force_handlers"
+    ],
+    "answer": "any_errors_fatal"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "What is the effect of force_handlers when a reachable host has a later task failure?",
+    "options": [
+      "Every defined handler runs even without notification",
+      "All failed tasks are automatically retried",
+      "Handlers run before any regular tasks",
+      "Previously notified handlers can still run on that host"
+    ],
+    "answer": "Previously notified handlers can still run on that host"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "Which task setting suppresses normal logging of sensitive task arguments and results?",
+    "options": [
+      "check_mode: true",
+      "changed_when: false",
+      "no_log: true",
+      "diff: true"
+    ],
+    "answer": "no_log: true"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "Which task setting suppresses file-content differences even when --diff is enabled?",
+    "options": [
+      "ignore_errors: true",
+      "diff: false",
+      "no_log: false",
+      "check_mode: false"
+    ],
+    "answer": "diff: false"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "Which dictionary provides access to variables associated with another inventory host?",
+    "options": [
+      "hostvars",
+      "ansible_facts",
+      "environment",
+      "ansible_loop"
+    ],
+    "answer": "hostvars"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "Which magic variable contains the inventory name of the current host?",
+    "options": [
+      "ansible_host",
+      "ansible_user",
+      "ansible_playbook_python",
+      "inventory_hostname"
+    ],
+    "answer": "inventory_hostname"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "Which inventory-adjacent directory is conventionally used for variables shared by a host group?",
+    "options": [
+      "roles",
+      "collections",
+      "group_vars",
+      "host_vars"
+    ],
+    "answer": "group_vars"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "Where does the ansible.builtin.file lookup read a file by default?",
+    "options": [
+      "On the host named by become_user",
+      "On the control node",
+      "On every managed host",
+      "On the first host in the play"
+    ],
+    "answer": "On the control node"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "Which filter converts a YAML string into an Ansible data structure?",
+    "options": [
+      "from_yaml",
+      "to_yaml",
+      "to_json",
+      "dict2items"
+    ],
+    "answer": "from_yaml"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "Which filter converts a dictionary into a list of key/value dictionaries?",
+    "options": [
+      "items2dict",
+      "flatten",
+      "zip",
+      "dict2items"
+    ],
+    "answer": "dict2items"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "Which filter removes duplicate elements from a list?",
+    "options": [
+      "reverse",
+      "flatten",
+      "unique",
+      "sort"
+    ],
+    "answer": "unique"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "Which module checks expressions and fails when the specified assertions are not satisfied?",
+    "options": [
+      "ansible.builtin.set_fact",
+      "ansible.builtin.assert",
+      "ansible.builtin.debug",
+      "ansible.builtin.pause"
+    ],
+    "answer": "ansible.builtin.assert"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "Which module manages a particular line in a text file using a regular expression?",
+    "options": [
+      "ansible.builtin.lineinfile",
+      "ansible.builtin.blockinfile",
+      "ansible.builtin.copy",
+      "ansible.builtin.slurp"
+    ],
+    "answer": "ansible.builtin.lineinfile"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "Which module requests a URL and can check the expected HTTP status code?",
+    "options": [
+      "ansible.builtin.get_url",
+      "ansible.builtin.fetch",
+      "ansible.builtin.wait_for",
+      "ansible.builtin.uri"
+    ],
+    "answer": "ansible.builtin.uri"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "Which module waits until a TCP port reaches the requested state?",
+    "options": [
+      "ansible.builtin.async_status",
+      "ansible.builtin.ping",
+      "ansible.builtin.wait_for",
+      "ansible.builtin.pause"
+    ],
+    "answer": "ansible.builtin.wait_for"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "Which parameter makes ansible.builtin.command skip execution when a specified path already exists?",
+    "options": [
+      "stdin",
+      "creates",
+      "removes",
+      "chdir"
+    ],
+    "answer": "creates"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "Which file module setting creates a symbolic link?",
+    "options": [
+      "state: link",
+      "state: directory",
+      "state: touch",
+      "state: hard"
+    ],
+    "answer": "state: link"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "Which module can add a host to the in-memory inventory for later plays?",
+    "options": [
+      "ansible.builtin.group_by",
+      "ansible.builtin.set_fact",
+      "ansible.builtin.meta",
+      "ansible.builtin.add_host"
+    ],
+    "answer": "ansible.builtin.add_host"
+  }
+]

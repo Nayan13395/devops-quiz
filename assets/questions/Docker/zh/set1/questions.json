@@ -1,0 +1,302 @@
+[
+  {
+    "category": "Docker",
+    "set": 1,
+    "question": "哪个命令用于构建 Docker 镜像？",
+    "options": [
+      "docker build",
+      "docker run",
+      "docker ps",
+      "docker pull"
+    ],
+    "answer": "docker build"
+  },
+  {
+    "category": "Docker",
+    "set": 1,
+    "question": "哪个命令以分离模式运行容器？",
+    "options": [
+      "docker run -d",
+      "docker run -b",
+      "docker run --bg",
+      "docker run --background"
+    ],
+    "answer": "docker run -d"
+  },
+  {
+    "category": "Docker",
+    "set": 1,
+    "question": "哪个命令为新容器保持标准输入打开并分配伪终端（TTY）？",
+    "options": [
+      "docker run -it",
+      "docker run -i",
+      "docker run -t",
+      "docker run --interactive"
+    ],
+    "answer": "docker run -it"
+  },
+  {
+    "category": "Docker",
+    "set": 1,
+    "question": "哪个命令列出所有镜像（包括中间镜像）？",
+    "options": [
+      "docker images -a",
+      "docker images --digests",
+      "docker images -l",
+      "docker images -q"
+    ],
+    "answer": "docker images -a"
+  },
+  {
+    "category": "Docker",
+    "set": 1,
+    "question": "哪个命令删除所有已停止的容器？",
+    "options": [
+      "docker container prune",
+      "docker rm -a",
+      "docker rm --all",
+      "docker clean"
+    ],
+    "answer": "docker container prune"
+  },
+  {
+    "category": "Docker",
+    "set": 1,
+    "question": "哪个命令删除所有未使用的镜像？",
+    "options": [
+      "docker image prune -a",
+      "docker rmi -a",
+      "docker images --clean",
+      "docker image clean"
+    ],
+    "answer": "docker image prune -a"
+  },
+  {
+    "category": "Docker",
+    "set": 1,
+    "question": "哪个命令显示容器资源使用情况？",
+    "options": [
+      "docker stats",
+      "docker top",
+      "docker monitor",
+      "docker usage"
+    ],
+    "answer": "docker stats"
+  },
+  {
+    "category": "Docker",
+    "set": 1,
+    "question": "哪个命令显示容器内运行的进程？",
+    "options": [
+      "docker top",
+      "docker ps",
+      "docker stats",
+      "docker inspect"
+    ],
+    "answer": "docker top"
+  },
+  {
+    "category": "Docker",
+    "set": 1,
+    "question": "哪个命令显示容器日志？",
+    "options": [
+      "docker logs",
+      "docker events",
+      "docker output",
+      "docker inspect"
+    ],
+    "answer": "docker logs"
+  },
+  {
+    "category": "Docker",
+    "set": 1,
+    "question": "哪个命令用于检查容器或镜像？",
+    "options": [
+      "docker inspect",
+      "docker details",
+      "docker info",
+      "docker config"
+    ],
+    "answer": "docker inspect"
+  },
+  {
+    "category": "Docker",
+    "set": 1,
+    "question": "哪个命令创建 Docker 网络？",
+    "options": [
+      "docker network create",
+      "docker create network",
+      "docker net add",
+      "docker network build"
+    ],
+    "answer": "docker network create"
+  },
+  {
+    "category": "Docker",
+    "set": 1,
+    "question": "哪个命令列出 Docker 网络？",
+    "options": [
+      "docker network ls",
+      "docker networks",
+      "docker net list",
+      "docker show networks"
+    ],
+    "answer": "docker network ls"
+  },
+  {
+    "category": "Docker",
+    "set": 1,
+    "question": "哪个命令创建 Docker 卷？",
+    "options": [
+      "docker volume create",
+      "docker storage create",
+      "docker volume add",
+      "docker create volume"
+    ],
+    "answer": "docker volume create"
+  },
+  {
+    "category": "Docker",
+    "set": 1,
+    "question": "哪个命令列出 Docker 卷？",
+    "options": [
+      "docker volume ls",
+      "docker volumes",
+      "docker volume show",
+      "docker storage ls"
+    ],
+    "answer": "docker volume ls"
+  },
+  {
+    "category": "Docker",
+    "set": 1,
+    "question": "哪个命令显示 Docker 系统信息？",
+    "options": [
+      "docker info",
+      "docker version",
+      "docker status",
+      "docker config"
+    ],
+    "answer": "docker info"
+  },
+  {
+    "category": "Docker",
+    "set": 1,
+    "question": "哪个 Dockerfile 指令在构建镜像时执行命令？",
+    "options": [
+      "CMD",
+      "ENTRYPOINT",
+      "EXPOSE",
+      "RUN"
+    ],
+    "answer": "RUN"
+  },
+  {
+    "category": "Docker",
+    "set": 1,
+    "question": "哪个 Dockerfile 指令为后续指令设置工作目录？",
+    "options": [
+      "SHELL",
+      "LABEL",
+      "WORKDIR",
+      "USER"
+    ],
+    "answer": "WORKDIR"
+  },
+  {
+    "category": "Docker",
+    "set": 1,
+    "question": "哪个 Dockerfile 指令复制本地构建上下文文件，但不执行 ADD 的自动归档解压？",
+    "options": [
+      "VOLUME",
+      "COPY",
+      "ADD",
+      "RUN"
+    ],
+    "answer": "COPY"
+  },
+  {
+    "category": "Docker",
+    "set": 1,
+    "question": "在 Dockerfile 中单独使用 EXPOSE 有什么作用？",
+    "options": [
+      "记录计划使用的容器端口",
+      "在主机上发布这些端口",
+      "在主机防火墙中打开这些端口",
+      "在这些端口上启动服务器"
+    ],
+    "answer": "记录计划使用的容器端口"
+  },
+  {
+    "category": "Docker",
+    "set": 1,
+    "question": "哪个文件通常从 Docker 构建上下文中排除指定路径？",
+    "options": [
+      ".gitignore",
+      "Dockerfile",
+      "compose.yaml",
+      ".dockerignore"
+    ],
+    "answer": ".dockerignore"
+  },
+  {
+    "category": "Docker",
+    "set": 1,
+    "question": "'docker build .' 最后的点表示什么？",
+    "options": [
+      "容器的工作目录",
+      "Docker 守护进程的位置",
+      "将当前目录用作构建上下文",
+      "生成镜像所用的注册中心"
+    ],
+    "answer": "将当前目录用作构建上下文"
+  },
+  {
+    "category": "Docker",
+    "set": 1,
+    "question": "哪个命令启动 nginx 时将新容器命名为 'web'？",
+    "options": [
+      "docker run --network web nginx",
+      "docker run --name web nginx",
+      "docker run --hostname web nginx",
+      "docker run --label web nginx"
+    ],
+    "answer": "docker run --name web nginx"
+  },
+  {
+    "category": "Docker",
+    "set": 1,
+    "question": "哪个命令将主机 TCP 端口 8080 映射到容器 TCP 端口 80？",
+    "options": [
+      "docker run -p 8080:80 nginx",
+      "docker run -p 80:8080 nginx",
+      "docker run --expose 8080 nginx",
+      "docker run --expose 80 nginx"
+    ],
+    "answer": "docker run -p 8080:80 nginx"
+  },
+  {
+    "category": "Docker",
+    "set": 1,
+    "question": "docker run 的哪个选项在容器退出时自动删除容器？",
+    "options": [
+      "--init",
+      "--read-only",
+      "--privileged",
+      "--rm"
+    ],
+    "answer": "--rm"
+  },
+  {
+    "category": "Docker",
+    "set": 1,
+    "question": "容器被删除时，其可写层中的文件通常会怎样？",
+    "options": [
+      "变成命名卷",
+      "被上传到其注册中心",
+      "随容器一同删除",
+      "合并到源镜像中"
+    ],
+    "answer": "随容器一同删除"
+  }
+]

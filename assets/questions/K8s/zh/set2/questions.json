@@ -1,0 +1,302 @@
+[
+  {
+    "category": "Kubernetes",
+    "set": 2,
+    "question": "哪个命令用于列出命名空间?",
+    "options": [
+      "kubectl get namespaces",
+      "kubectl namespaces",
+      "kubectl show namespaces",
+      "kubectl list namespaces"
+    ],
+    "answer": "kubectl get namespaces"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 2,
+    "question": "哪个命令用于创建命名空间?",
+    "options": [
+      "kubectl create namespace",
+      "kubectl add namespace",
+      "kubectl namespace create",
+      "kubectl new namespace"
+    ],
+    "answer": "kubectl create namespace"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 2,
+    "question": "哪个命令用于删除命名空间?",
+    "options": [
+      "kubectl delete namespace",
+      "kubectl remove namespace",
+      "kubectl destroy namespace",
+      "kubectl erase namespace"
+    ],
+    "answer": "kubectl delete namespace"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 2,
+    "question": "哪个命令用于列出 ReplicaSet?",
+    "options": [
+      "kubectl get replicasets",
+      "kubectl replicasets",
+      "kubectl list rs",
+      "kubectl show rs"
+    ],
+    "answer": "kubectl get replicasets"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 2,
+    "question": "哪个命令用于列出 ConfigMap?",
+    "options": [
+      "kubectl get configmaps",
+      "kubectl configmaps",
+      "kubectl show configmaps",
+      "kubectl list configmaps"
+    ],
+    "answer": "kubectl get configmaps"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 2,
+    "question": "哪个命令用于列出 Secret?",
+    "options": [
+      "kubectl get secrets",
+      "kubectl secrets",
+      "kubectl list secrets",
+      "kubectl show secrets"
+    ],
+    "answer": "kubectl get secrets"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 2,
+    "question": "哪个命令用于列出 Ingress 资源?",
+    "options": [
+      "kubectl get ingress",
+      "kubectl ingress",
+      "kubectl list ingress",
+      "kubectl show ingress"
+    ],
+    "answer": "kubectl get ingress"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 2,
+    "question": "哪个命令用于列出持久卷(Persistent Volume)?",
+    "options": [
+      "kubectl get pv",
+      "kubectl pv",
+      "kubectl volumes",
+      "kubectl show pv"
+    ],
+    "answer": "kubectl get pv"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 2,
+    "question": "哪个命令用于列出持久卷声明(Persistent Volume Claim)?",
+    "options": [
+      "kubectl get pvc",
+      "kubectl pvc",
+      "kubectl volumes claim",
+      "kubectl show pvc"
+    ],
+    "answer": "kubectl get pvc"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 2,
+    "question": "哪个命令使用 kubectl get 列出当前命名空间中的 Event 资源？",
+    "options": [
+      "kubectl get events",
+      "kubectl get services",
+      "kubectl get pods",
+      "kubectl get nodes"
+    ],
+    "answer": "kubectl get events"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 2,
+    "question": "哪个命令列出当前命名空间中属于 kubectl 的 'all' 类别的常见资源类型？",
+    "options": [
+      "kubectl get all",
+      "kubectl all",
+      "kubectl resources",
+      "kubectl show all"
+    ],
+    "answer": "kubectl get all"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 2,
+    "question": "哪个命令用于显示 Pod 的资源使用情况?",
+    "options": [
+      "kubectl top pods",
+      "kubectl usage pods",
+      "kubectl stats pods",
+      "kubectl monitor pods"
+    ],
+    "answer": "kubectl top pods"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 2,
+    "question": "哪个命令用于显示节点的资源使用情况?",
+    "options": [
+      "kubectl top nodes",
+      "kubectl usage nodes",
+      "kubectl stats nodes",
+      "kubectl monitor nodes"
+    ],
+    "answer": "kubectl top nodes"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 2,
+    "question": "哪个命令用于列出 DaemonSet?",
+    "options": [
+      "kubectl get daemonsets",
+      "kubectl daemonsets",
+      "kubectl list daemonsets",
+      "kubectl show daemonsets"
+    ],
+    "answer": "kubectl get daemonsets"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 2,
+    "question": "哪种工作负载让任务运行到完成，而不是维持持续运行的服务？",
+    "options": [
+      "DaemonSet",
+      "StatefulSet",
+      "Job",
+      "Deployment"
+    ],
+    "answer": "Job"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 2,
+    "question": "哪种工作负载按周期性计划创建 Job？",
+    "options": [
+      "Deployment",
+      "CronJob",
+      "ReplicaSet",
+      "DaemonSet"
+    ],
+    "answer": "CronJob"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 2,
+    "question": "哪种工作负载通常在每个符合条件的节点上放置一个 Pod？",
+    "options": [
+      "DaemonSet",
+      "Job",
+      "Deployment",
+      "CronJob"
+    ],
+    "answer": "DaemonSet"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 2,
+    "question": "省略 spec.type 时，默认的 Service 类型是什么？",
+    "options": [
+      "NodePort",
+      "LoadBalancer",
+      "ExternalName",
+      "ClusterIP"
+    ],
+    "answer": "ClusterIP"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 2,
+    "question": "哪种 Service 类型根据集群网络配置，在节点 IP 地址上暴露端口？",
+    "options": [
+      "ExternalName",
+      "无头 Service",
+      "NodePort",
+      "ClusterIP"
+    ],
+    "answer": "NodePort"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 2,
+    "question": "安装了支持的实现时，哪种 Service 类型请求外部负载均衡器？",
+    "options": [
+      "无头 Service",
+      "LoadBalancer",
+      "ClusterIP",
+      "ExternalName"
+    ],
+    "answer": "LoadBalancer"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 2,
+    "question": "将 clusterIP 设为 None 会创建什么？",
+    "options": [
+      "没有分配虚拟集群 IP 的无头 Service",
+      "选择所有 Pod 的 Service",
+      "自动阻止外部流量的 Service",
+      "随机分配 NodePort 的 Service"
+    ],
+    "answer": "没有分配虚拟集群 IP 的无头 Service"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 2,
+    "question": "哪个资源代表工作负载申请存储？",
+    "options": [
+      "StorageClass",
+      "ConfigMap",
+      "ResourceQuota",
+      "PersistentVolumeClaim"
+    ],
+    "answer": "PersistentVolumeClaim"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 2,
+    "question": "哪个对象定义动态供应存储的类别？",
+    "options": [
+      "LimitRange",
+      "EndpointSlice",
+      "StorageClass",
+      "PersistentVolumeClaim"
+    ],
+    "answer": "StorageClass"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 2,
+    "question": "Pod 从节点移除时，它的 emptyDir 卷通常会怎样？",
+    "options": [
+      "内容被复制到每个节点",
+      "内容被删除",
+      "内容变成 PersistentVolume",
+      "内容存储在 Pod 镜像中"
+    ],
+    "answer": "内容被删除"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 2,
+    "question": "Service 的哪个字段指定所选 Pod 上的目标端口？",
+    "options": [
+      "targetPort",
+      "port",
+      "nodePort",
+      "clusterIP"
+    ],
+    "answer": "targetPort"
+  }
+]

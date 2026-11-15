@@ -1,0 +1,4002 @@
+{
+  "linux-001": {
+    "command": "cat",
+    "description": "Menggabungkan dan mencetak isi berkas."
+  },
+  "linux-002": {
+    "command": "grep",
+    "description": "Mencari pola tertentu di dalam berkas."
+  },
+  "linux-003": {
+    "command": "chmod",
+    "description": "Mengubah izin akses berkas atau direktori."
+  },
+  "linux-004": {
+    "command": "chown",
+    "description": "Mengubah kepemilikan berkas atau direktori."
+  },
+  "linux-005": {
+    "command": "ls",
+    "description": "Menampilkan daftar isi direktori."
+  },
+  "linux-006": {
+    "command": "cd",
+    "description": "Mengubah direktori kerja saat ini."
+  },
+  "linux-007": {
+    "command": "pwd",
+    "description": "Mencetak jalur direktori kerja saat ini."
+  },
+  "linux-008": {
+    "command": "mkdir",
+    "description": "Membuat direktori baru."
+  },
+  "linux-009": {
+    "command": "rm",
+    "description": "Menghapus berkas atau direktori."
+  },
+  "linux-010": {
+    "command": "cp",
+    "description": "Menyalin berkas atau direktori."
+  },
+  "linux-011": {
+    "command": "mv",
+    "description": "Memindahkan atau mengganti nama berkas dan direktori."
+  },
+  "linux-012": {
+    "command": "ps",
+    "description": "Menampilkan proses yang sedang berjalan."
+  },
+  "linux-013": {
+    "command": "top",
+    "description": "Menampilkan proses dan sumber daya sistem secara waktu nyata."
+  },
+  "linux-014": {
+    "command": "df",
+    "description": "Menampilkan penggunaan ruang disk."
+  },
+  "linux-015": {
+    "command": "free",
+    "description": "Menampilkan penggunaan memori sistem."
+  },
+  "linux-016": {
+    "command": "systemctl status",
+    "description": "Menampilkan keadaan terkini dan entri log terbaru dari layanan systemd."
+  },
+  "linux-017": {
+    "command": "journalctl",
+    "description": "Membaca log jurnal systemd dengan filter untuk masing-masing layanan."
+  },
+  "linux-018": {
+    "command": "find",
+    "description": "Menelusuri pohon direktori untuk mencari berkas yang memenuhi kondisi seperti nama atau jenis."
+  },
+  "linux-019": {
+    "command": "tail",
+    "description": "Menampilkan baris terakhir suatu berkas dan dapat mengikuti baris baru saat ditambahkan."
+  },
+  "linux-020": {
+    "command": "Perintah mana yang menampilkan 5 baris terakhir dari sebuah file?",
+    "description": "tail -n 5"
+  },
+  "linux-021": {
+    "command": "Perintah mana yang menampilkan ukuran sebuah direktori?",
+    "description": "du -sh"
+  },
+  "linux-022": {
+    "command": "Perintah mana yang hanya menghitung jumlah baris dalam sebuah file?",
+    "description": "wc -l"
+  },
+  "linux-023": {
+    "command": "Perintah mana yang menampilkan uptime sistem?",
+    "description": "uptime"
+  },
+  "git-001": {
+    "command": "git clone",
+    "description": "Membuat salinan lokal dari repositori jarak jauh."
+  },
+  "git-002": {
+    "command": "git init",
+    "description": "Menginisialisasi repositori Git baru."
+  },
+  "git-003": {
+    "command": "git add",
+    "description": "Menyiapkan perubahan untuk commit berikutnya."
+  },
+  "git-004": {
+    "command": "git commit",
+    "description": "Mencatat perubahan yang telah disiapkan ke repositori."
+  },
+  "git-005": {
+    "command": "git push",
+    "description": "Mengunggah commit lokal ke repositori jarak jauh."
+  },
+  "git-006": {
+    "command": "git pull",
+    "description": "Mengambil dan menggabungkan perubahan dari repositori jarak jauh."
+  },
+  "git-007": {
+    "command": "git branch",
+    "description": "Menampilkan, membuat, atau menghapus cabang."
+  },
+  "git-008": {
+    "command": "git checkout",
+    "description": "Beralih cabang atau memulihkan berkas pohon kerja."
+  },
+  "git-009": {
+    "command": "git merge",
+    "description": "Menggabungkan dua atau lebih riwayat pengembangan."
+  },
+  "git-010": {
+    "command": "git status",
+    "description": "Menampilkan status pohon kerja."
+  },
+  "git-011": {
+    "command": "git diff",
+    "description": "Menampilkan perubahan antara pohon kerja dan area penyiapan; --staged menampilkan perubahan yang disiapkan untuk commit berikutnya."
+  },
+  "git-012": {
+    "command": "git stash",
+    "description": "Menyimpan sementara perubahan berkas terlacak dan mengembalikan pohon kerja yang bersih; gunakan -u untuk menyertakan berkas yang belum terlacak."
+  },
+  "git-013": {
+    "command": "Apa itu Git?",
+    "description": "Sistem Kontrol Versi"
+  },
+  "git-014": {
+    "command": "Perintah mana yang menampilkan riwayat commit?",
+    "description": "git log"
+  },
+  "git-015": {
+    "command": "Perintah mana yang menampilkan riwayat commit satu baris?",
+    "description": "git log --oneline"
+  },
+  "git-016": {
+    "command": "Perintah mana yang menetapkan nama penulis commit Git secara global menjadi Alex?",
+    "description": "git config --global user.name \"Alex\""
+  },
+  "git-017": {
+    "command": "Perintah mana yang menetapkan email penulis commit Git secara global menjadi alex@example.com?",
+    "description": "git config --global user.email \"alex@example.com\""
+  },
+  "git-018": {
+    "command": "File mana yang digunakan untuk mengabaikan file di Git?",
+    "description": ".gitignore"
+  },
+  "git-019": {
+    "command": "Saat dijalankan dari akar repositori, perintah mana yang memasukkan semua penambahan, perubahan, dan penghapusan yang tidak diabaikan ke indeks tanpa membuat commit?",
+    "description": "git add ."
+  },
+  "git-020": {
+    "command": "Opsi perintah mana yang menerima pesan commit langsung dari baris perintah?",
+    "description": "git commit -m"
+  },
+  "git-021": {
+    "command": "Perintah mana yang menghapus file yang dilacak?",
+    "description": "git rm"
+  },
+  "git-022": {
+    "command": "Perintah mana yang menetapkan user.name hanya untuk repositori saat ini?",
+    "description": "git config --local user.name \"Alex\""
+  },
+  "git-023": {
+    "command": "Perintah mana yang memasukkan bagian perubahan terpilih ke indeks secara interaktif?",
+    "description": "git add -p"
+  },
+  "docker-001": {
+    "command": "docker build",
+    "description": "Membangun citra dari Dockerfile."
+  },
+  "docker-002": {
+    "command": "docker run",
+    "description": "Menjalankan perintah dalam kontainer baru."
+  },
+  "docker-003": {
+    "command": "docker ps",
+    "description": "Menampilkan daftar kontainer yang berjalan."
+  },
+  "docker-004": {
+    "command": "docker images",
+    "description": "Menampilkan daftar citra Docker lokal."
+  },
+  "docker-005": {
+    "command": "docker stop",
+    "description": "Menghentikan satu atau lebih kontainer yang berjalan."
+  },
+  "docker-006": {
+    "command": "docker rm",
+    "description": "Menghapus satu atau lebih kontainer."
+  },
+  "docker-007": {
+    "command": "docker rmi",
+    "description": "Menghapus satu atau lebih citra."
+  },
+  "docker-008": {
+    "command": "docker exec",
+    "description": "Menjalankan perintah dalam kontainer yang sedang berjalan."
+  },
+  "docker-009": {
+    "command": "docker logs",
+    "description": "Mengambil log suatu kontainer."
+  },
+  "docker-010": {
+    "command": "docker-compose up",
+    "description": "Membuat dan memulai kontainer berdasarkan docker-compose.yml."
+  },
+  "docker-011": {
+    "command": "docker inspect",
+    "description": "Menampilkan informasi JSON terperinci tentang objek Docker seperti kontainer dan citra."
+  },
+  "docker-012": {
+    "command": "docker stats",
+    "description": "Menampilkan penggunaan sumber daya kontainer secara langsung, termasuk CPU dan memori; --no-stream menampilkan satu cuplikan saja."
+  },
+  "docker-013": {
+    "command": "Perintah mana yang menjalankan container dalam mode detached?",
+    "description": "docker run -d"
+  },
+  "docker-014": {
+    "command": "Perintah mana yang menjaga masukan standar tetap terbuka dan mengalokasikan pseudo-TTY untuk kontainer baru?",
+    "description": "docker run -it"
+  },
+  "docker-015": {
+    "command": "Perintah mana yang menampilkan daftar semua image termasuk image perantara?",
+    "description": "docker images -a"
+  },
+  "docker-016": {
+    "command": "Perintah mana yang menghapus semua container yang berhenti?",
+    "description": "docker container prune"
+  },
+  "docker-017": {
+    "command": "Perintah mana yang menghapus semua image yang tidak terpakai?",
+    "description": "docker image prune -a"
+  },
+  "docker-018": {
+    "command": "Perintah mana yang menampilkan proses yang berjalan di dalam container?",
+    "description": "docker top"
+  },
+  "docker-019": {
+    "command": "Perintah mana yang membuat jaringan Docker?",
+    "description": "docker network create"
+  },
+  "docker-020": {
+    "command": "Perintah mana yang menampilkan daftar jaringan Docker?",
+    "description": "docker network ls"
+  },
+  "docker-021": {
+    "command": "Perintah mana yang membuat volume Docker?",
+    "description": "docker volume create"
+  },
+  "docker-022": {
+    "command": "Perintah mana yang menampilkan daftar volume Docker?",
+    "description": "docker volume ls"
+  },
+  "docker-023": {
+    "command": "Perintah mana yang menampilkan informasi sistem Docker?",
+    "description": "docker info"
+  },
+  "k8s-001": {
+    "command": "kubectl get pods",
+    "description": "Menampilkan daftar pod dalam namespace saat ini."
+  },
+  "k8s-002": {
+    "command": "kubectl apply",
+    "description": "Menerapkan konfigurasi ke sumber daya berdasarkan nama berkas."
+  },
+  "k8s-003": {
+    "command": "kubectl delete",
+    "description": "Menghapus sumber daya berdasarkan nama berkas atau nama sumber daya."
+  },
+  "k8s-004": {
+    "command": "kubectl describe",
+    "description": "Menampilkan informasi terperinci tentang sumber daya tertentu."
+  },
+  "k8s-005": {
+    "command": "kubectl logs",
+    "description": "Mencetak log kontainer dalam sebuah pod."
+  },
+  "k8s-006": {
+    "command": "kubectl exec",
+    "description": "Menjalankan perintah dalam kontainer."
+  },
+  "k8s-007": {
+    "command": "kubectl get nodes",
+    "description": "Menampilkan semua simpul dalam klaster."
+  },
+  "k8s-008": {
+    "command": "kubectl get services",
+    "description": "Menampilkan semua layanan dalam namespace saat ini."
+  },
+  "k8s-009": {
+    "command": "kubectl scale",
+    "description": "Menetapkan ukuran baru untuk Deployment atau ReplicaSet."
+  },
+  "k8s-010": {
+    "command": "kubectl port-forward",
+    "description": "Meneruskan port lokal ke sebuah pod."
+  },
+  "k8s-011": {
+    "command": "kubectl rollout status",
+    "description": "Memantau kemajuan peluncuran sumber daya hingga selesai atau batas waktu tercapai."
+  },
+  "k8s-012": {
+    "command": "Perintah mana yang menampilkan daftar pod di semua namespace?",
+    "description": "kubectl get pods -A"
+  },
+  "k8s-013": {
+    "command": "Perintah mana yang menjelaskan sebuah pod?",
+    "description": "kubectl describe pod"
+  },
+  "k8s-014": {
+    "command": "Perintah mana yang menampilkan log pod secara terus-menerus?",
+    "description": "kubectl logs -f"
+  },
+  "k8s-015": {
+    "command": "Perintah mana yang menghapus sebuah pod?",
+    "description": "kubectl delete pod"
+  },
+  "k8s-016": {
+    "command": "Perintah mana yang membuat sebuah deployment?",
+    "description": "kubectl create deployment"
+  },
+  "k8s-017": {
+    "command": "Perintah mana yang menampilkan daftar deployment?",
+    "description": "kubectl get deployments"
+  },
+  "k8s-018": {
+    "command": "Perintah mana yang menampilkan informasi cluster?",
+    "description": "kubectl cluster-info"
+  },
+  "k8s-019": {
+    "command": "Perintah mana yang menerapkan konfigurasi dari file YAML?",
+    "description": "kubectl apply -f"
+  },
+  "k8s-020": {
+    "command": "Perintah mana yang membuat resource dari file YAML?",
+    "description": "kubectl create -f"
+  },
+  "k8s-021": {
+    "command": "Perintah mana yang menghapus resource yang didefinisikan dalam file YAML?",
+    "description": "kubectl delete -f"
+  },
+  "k8s-022": {
+    "command": "Opsi kubectl mana yang memilih ruang nama payments untuk permintaan?",
+    "description": "-n payments"
+  },
+  "k8s-023": {
+    "command": "Perintah mana yang menampilkan nama konteks kubeconfig saat ini?",
+    "description": "kubectl config current-context"
+  },
+  "networking-001": {
+    "command": "curl",
+    "description": "Mentransfer data dari atau ke server."
+  },
+  "networking-002": {
+    "command": "ping",
+    "description": "Menguji keterjangkauan host pada jaringan IP."
+  },
+  "networking-003": {
+    "command": "ssh",
+    "description": "Menghubungkan ke mesin jarak jauh secara aman."
+  },
+  "networking-004": {
+    "command": "netstat",
+    "description": "Menampilkan koneksi jaringan dan tabel perutean."
+  },
+  "networking-005": {
+    "command": "nslookup",
+    "description": "Mengirim kueri ke server nama domain Internet."
+  },
+  "networking-006": {
+    "command": "dig",
+    "description": "Melakukan pencarian DNS dan menampilkan jawabannya."
+  },
+  "networking-007": {
+    "command": "traceroute",
+    "description": "Mencetak rute yang dilalui paket menuju host jaringan."
+  },
+  "networking-008": {
+    "command": "iptables",
+    "description": "Mengonfigurasi aturan penyaringan paket IP di Linux."
+  },
+  "networking-009": {
+    "command": "telnet",
+    "description": "Berkomunikasi secara interaktif dengan host lain."
+  },
+  "networking-010": {
+    "command": "nc (netcat)",
+    "description": "Membaca dan menulis data melalui koneksi jaringan."
+  },
+  "networking-011": {
+    "command": "Apa kepanjangan dari IP?",
+    "description": "Internet Protocol"
+  },
+  "networking-012": {
+    "command": "Protokol manakah yang digunakan untuk mentransfer halaman web?",
+    "description": "HTTP"
+  },
+  "networking-013": {
+    "command": "Port apa yang digunakan HTTPS secara bawaan?",
+    "description": "443"
+  },
+  "networking-014": {
+    "command": "Port apa yang digunakan HTTP secara bawaan?",
+    "description": "80"
+  },
+  "networking-015": {
+    "command": "Port apa yang digunakan SSH secara bawaan?",
+    "description": "22"
+  },
+  "networking-016": {
+    "command": "Apa fungsi DNS?",
+    "description": "Menerjemahkan nama domain menjadi alamat IP"
+  },
+  "networking-017": {
+    "command": "Lapisan model OSI manakah yang menangani routing?",
+    "description": "Network Layer"
+  },
+  "networking-018": {
+    "command": "Protokol manakah yang digunakan untuk mengirim email?",
+    "description": "SMTP"
+  },
+  "networking-019": {
+    "command": "Manakah alamat loopback IPv4 di antara pilihan berikut?",
+    "description": "127.0.0.1"
+  },
+  "networking-020": {
+    "command": "Protokol manakah yang berorientasi koneksi?",
+    "description": "TCP"
+  },
+  "networking-021": {
+    "command": "Protokol manakah yang tanpa koneksi (connectionless)?",
+    "description": "UDP"
+  },
+  "networking-022": {
+    "command": "Perintah manakah yang menampilkan informasi routing?",
+    "description": "ip route"
+  },
+  "networking-023": {
+    "command": "Perintah manakah yang menampilkan antarmuka jaringan di Linux?",
+    "description": "ip addr"
+  },
+  "networking-024": {
+    "command": "Berapa jumlah bit dalam alamat IPv4?",
+    "description": "32"
+  },
+  "jenkins-001": {
+    "command": "Jenkinsfile",
+    "description": "Berkas teks yang berisi definisi Pipeline Jenkins."
+  },
+  "jenkins-002": {
+    "command": "Pipeline",
+    "description": "Kumpulan plugin yang mendukung alur pengiriman berkelanjutan."
+  },
+  "jenkins-003": {
+    "command": "Agent",
+    "description": "Menentukan tempat Pipeline atau tahap akan dijalankan."
+  },
+  "jenkins-004": {
+    "command": "Stage",
+    "description": "Mendefinisikan bagian tugas yang berbeda secara konseptual."
+  },
+  "jenkins-005": {
+    "command": "Node",
+    "description": "Mesin yang mampu menjalankan Pipeline."
+  },
+  "jenkins-006": {
+    "command": "Build Trigger",
+    "description": "Mekanisme yang memulai proses build Jenkins."
+  },
+  "jenkins-007": {
+    "command": "Artifact",
+    "description": "Berkas yang dihasilkan oleh proses build."
+  },
+  "jenkins-008": {
+    "command": "Post actions",
+    "description": "Tindakan yang dilakukan setelah tahap atau pipeline selesai."
+  },
+  "jenkins-009": {
+    "command": "Credentials",
+    "description": "Rahasia yang disimpan secara aman untuk digunakan dalam tugas Jenkins."
+  },
+  "jenkins-010": {
+    "command": "Apa itu Jenkins?",
+    "description": "Alat CI/CD"
+  },
+  "jenkins-011": {
+    "command": "Jenkins ditulis dalam bahasa apa?",
+    "description": "Java"
+  },
+  "jenkins-012": {
+    "command": "Port berapa yang digunakan Jenkins secara default?",
+    "description": "8080"
+  },
+  "jenkins-013": {
+    "command": "Apa itu Jenkins Job?",
+    "description": "Tugas otomatis"
+  },
+  "jenkins-014": {
+    "command": "Plugin mana yang mengintegrasikan Jenkins dengan Git?",
+    "description": "Git Plugin"
+  },
+  "jenkins-015": {
+    "command": "Untuk apa Jenkins terutama digunakan?",
+    "description": "Otomatisasi"
+  },
+  "jenkins-016": {
+    "command": "Apa kepanjangan CI?",
+    "description": "Continuous Integration"
+  },
+  "jenkins-017": {
+    "command": "Apa kepanjangan CD dalam DevOps?",
+    "description": "Continuous Delivery"
+  },
+  "jenkins-018": {
+    "command": "Menu mana yang digunakan untuk memasang plugin Jenkins?",
+    "description": "Manage Jenkins"
+  },
+  "jenkins-019": {
+    "command": "Apa nama variabel direktori home Jenkins?",
+    "description": "JENKINS_HOME"
+  },
+  "jenkins-020": {
+    "command": "Tombol mana yang menjalankan job Jenkins secara manual?",
+    "description": "Build Now"
+  },
+  "jenkins-021": {
+    "command": "Sistem manajemen kode sumber mana yang paling umum diintegrasikan dengan Jenkins?",
+    "description": "Git"
+  },
+  "jenkins-022": {
+    "command": "Apa yang diperlukan untuk menjalankan pengontrol Jenkins sendiri, terlepas dari alat yang dibutuhkan pekerjaan build?",
+    "description": "Lingkungan eksekusi Java yang didukung, disediakan oleh JRE atau JDK"
+  },
+  "jenkins-023": {
+    "command": "Jenis job Jenkins mana yang paling umum digunakan untuk tugas sederhana?",
+    "description": "Freestyle Project"
+  },
+  "jenkins-024": {
+    "command": "Untuk apa ruang kerja Jenkins digunakan?",
+    "description": "Berkas yang diekstrak atau dibuat selama pekerjaan berjalan"
+  },
+  "terraform-001": {
+    "command": "terraform init",
+    "description": "Menginisialisasi direktori kerja dengan berkas Terraform."
+  },
+  "terraform-002": {
+    "command": "terraform plan",
+    "description": "Membuat rencana eksekusi yang menunjukkan tindakan yang akan dilakukan Terraform."
+  },
+  "terraform-003": {
+    "command": "terraform apply",
+    "description": "Menerapkan perubahan untuk mencapai keadaan yang diinginkan."
+  },
+  "terraform-004": {
+    "command": "terraform destroy",
+    "description": "Menghancurkan infrastruktur yang dikelola Terraform."
+  },
+  "terraform-005": {
+    "command": "terraform fmt",
+    "description": "Menulis ulang berkas Terraform ke format baku."
+  },
+  "terraform-006": {
+    "command": "terraform validate",
+    "description": "Memvalidasi berkas konfigurasi dalam direktori."
+  },
+  "terraform-007": {
+    "command": "terraform state",
+    "description": "Pengelolaan keadaan tingkat lanjut, termasuk menampilkan dan memindahkan sumber daya."
+  },
+  "terraform-008": {
+    "command": "Provider",
+    "description": "Plugin yang memungkinkan Terraform berinteraksi dengan penyedia cloud."
+  },
+  "terraform-009": {
+    "command": "Resource",
+    "description": "Mendefinisikan objek infrastruktur yang dibuat dan dikelola Terraform."
+  },
+  "terraform-010": {
+    "command": "Variable",
+    "description": "Menerima nilai masukan agar modul Terraform dapat digunakan kembali dengan pengaturan berbeda."
+  },
+  "terraform-011": {
+    "command": "terraform output",
+    "description": "Membaca nilai keluaran modul akar dari keadaan Terraform."
+  },
+  "terraform-012": {
+    "command": "Apa itu Terraform?",
+    "description": "Alat Infrastructure as Code"
+  },
+  "terraform-013": {
+    "command": "Siapa yang mengembangkan Terraform?",
+    "description": "HashiCorp"
+  },
+  "terraform-014": {
+    "command": "Bahasa apa yang mendasari sintaks konfigurasi native Terraform, berbeda dari alternatif JSON-nya?",
+    "description": "HCL"
+  },
+  "terraform-015": {
+    "command": "Ekstensi file apa yang umum digunakan untuk file Terraform?",
+    "description": ".tf"
+  },
+  "terraform-016": {
+    "command": "File mana yang menyimpan state Terraform secara lokal?",
+    "description": "terraform.tfstate"
+  },
+  "terraform-017": {
+    "command": "Perintah mana yang menampilkan versi Terraform?",
+    "description": "terraform version"
+  },
+  "terraform-018": {
+    "command": "Terraform mengikuti pendekatan yang mana?",
+    "description": "Deklaratif"
+  },
+  "terraform-019": {
+    "command": "Perintah mana yang menampilkan nilai keluaran modul akar dari state?",
+    "description": "terraform output"
+  },
+  "terraform-020": {
+    "command": "Ekspresi mana yang membaca variabel masukan bernama region?",
+    "description": "var.region"
+  },
+  "terraform-021": {
+    "command": "Ekspresi mana yang membaca nilai lokal bernama prefix?",
+    "description": "local.prefix"
+  },
+  "terraform-022": {
+    "command": "Argumen blok terraform mana yang membatasi versi CLI Terraform?",
+    "description": "required_version"
+  },
+  "terraform-023": {
+    "command": "Blok mana di dalam terraform yang mendeklarasikan alamat sumber penyedia dan batasan versinya?",
+    "description": "required_providers"
+  },
+  "terraform-024": {
+    "command": "Apa yang terutama disediakan oleh penyedia Terraform?",
+    "description": "Jenis sumber daya dan sumber data untuk berinteraksi dengan API atau layanan"
+  },
+  "ansible-001": {
+    "command": "ansible",
+    "description": "Menjalankan tugas ad hoc pada host dalam inventaris Ansible."
+  },
+  "ansible-002": {
+    "command": "ansible-playbook",
+    "description": "Menjalankan tugas otomatisasi yang didefinisikan dalam playbook Ansible."
+  },
+  "ansible-003": {
+    "command": "Inventory",
+    "description": "Menampilkan daftar host dan grup host yang dikelola Ansible."
+  },
+  "ansible-004": {
+    "command": "Playbook",
+    "description": "Mendefinisikan tugas otomatisasi dan host sasaran dalam YAML."
+  },
+  "ansible-005": {
+    "command": "Module",
+    "description": "Melakukan operasi Ansible tertentu, seperti memasang paket atau menyalin berkas."
+  },
+  "ansible-006": {
+    "command": "Task",
+    "description": "Memanggil modul Ansible dengan argumen untuk melakukan satu langkah otomatisasi."
+  },
+  "ansible-007": {
+    "command": "Role",
+    "description": "Mengatur tugas, handler, variabel, dan berkas Ansible dalam struktur direktori yang dapat digunakan kembali."
+  },
+  "ansible-008": {
+    "command": "Vault",
+    "description": "Menyimpan data sensitif seperti kata sandi dalam berkas terenkripsi."
+  },
+  "ansible-009": {
+    "command": "Handler",
+    "description": "Tugas yang hanya berjalan ketika mendapat pemberitahuan dari tugas lain."
+  },
+  "ansible-010": {
+    "command": "Facts",
+    "description": "Variabel yang berisi informasi tentang sistem jarak jauh."
+  },
+  "ansible-011": {
+    "command": "Untuk apa Ansible terutama digunakan?",
+    "description": "Manajemen Konfigurasi"
+  },
+  "ansible-012": {
+    "command": "Ansible ditulis dalam bahasa apa?",
+    "description": "Python"
+  },
+  "ansible-013": {
+    "command": "File mana yang berisi host yang dikelola di Ansible?",
+    "description": "File Inventaris"
+  },
+  "ansible-014": {
+    "command": "Di mana lokasi file inventaris default?",
+    "description": "/etc/ansible/hosts"
+  },
+  "ansible-015": {
+    "command": "Perintah mana yang memeriksa versi Ansible?",
+    "description": "ansible --version"
+  },
+  "ansible-016": {
+    "command": "Protokol apa yang biasanya digunakan plugin koneksi bawaan Ansible untuk host Linux?",
+    "description": "SSH"
+  },
+  "ansible-017": {
+    "command": "Apa itu Ansible Playbook?",
+    "description": "File YAML yang berisi tugas otomatisasi"
+  },
+  "ansible-018": {
+    "command": "Kata kunci mana yang mendefinisikan host target dalam playbook?",
+    "description": "hosts"
+  },
+  "ansible-019": {
+    "command": "Kata kunci mana yang mendefinisikan tugas dalam playbook?",
+    "description": "tasks"
+  },
+  "ansible-020": {
+    "command": "Modul mana yang menyalin file ke host jarak jauh?",
+    "description": "copy"
+  },
+  "ansible-021": {
+    "command": "Modul mana yang mengelola layanan?",
+    "description": "service"
+  },
+  "ansible-022": {
+    "command": "Perintah mana yang memeriksa konektivitas Ansible dan ketersediaan Python yang dapat digunakan pada semua host POSIX tujuan?",
+    "description": "ansible all -m ping"
+  },
+  "ansible-023": {
+    "command": "Format yang mudah dibaca apa yang lazim digunakan untuk menulis playbook Ansible?",
+    "description": "YAML"
+  },
+  "ansible-024": {
+    "command": "File mana yang mengonfigurasi pengaturan Ansible?",
+    "description": "ansible.cfg"
+  },
+  "bash-001": {
+    "command": "#!/bin/bash",
+    "description": "Baris shebang yang memberi tahu sistem untuk menggunakan shell Bash."
+  },
+  "bash-002": {
+    "command": "echo",
+    "description": "Menampilkan baris teks atau nilai variabel."
+  },
+  "bash-003": {
+    "command": "if [ condition ]",
+    "description": "Pernyataan bersyarat dasar dalam penulisan skrip Bash."
+  },
+  "bash-004": {
+    "command": "Perintah mana yang menjalankan script.sh jika sudah memiliki izin eksekusi?",
+    "description": "./script.sh"
+  },
+  "bash-005": {
+    "command": "Perintah mana yang secara eksplisit menjalankan script.sh menggunakan Bash?",
+    "description": "bash script.sh"
+  },
+  "bash-006": {
+    "command": "Simbol mana yang memulai komentar satu baris dalam skrip Bash?",
+    "description": "#"
+  },
+  "bash-007": {
+    "command": "Perintah mana yang membuat script.sh dapat dieksekusi?",
+    "description": "chmod +x script.sh"
+  },
+  "bash-008": {
+    "command": "Perintah bawaan mana yang membaca masukan dari pengguna?",
+    "description": "read"
+  },
+  "bash-009": {
+    "command": "Simbol mana yang digunakan untuk memperluas nilai variabel?",
+    "description": "$"
+  },
+  "bash-010": {
+    "command": "Penugasan variabel mana yang valid di Bash?",
+    "description": "name=John"
+  },
+  "bash-011": {
+    "command": "Perintah mana yang mencetak status keluar dari perintah sebelumnya?",
+    "description": "echo $?"
+  },
+  "bash-012": {
+    "command": "Apa yang biasanya ditunjukkan oleh status keluar 0?",
+    "description": "Berhasil"
+  },
+  "bash-013": {
+    "command": "Simbol mana yang memisahkan beberapa perintah dalam satu baris?",
+    "description": ";"
+  },
+  "bash-014": {
+    "command": "Ekstensi file mana yang umum digunakan untuk skrip shell?",
+    "description": ".sh"
+  },
+  "bash-015": {
+    "command": "Perintah mana yang menampilkan variabel lingkungan?",
+    "description": "env"
+  },
+  "bash-016": {
+    "command": "Perintah mana yang menampilkan shell default pengguna saat ini?",
+    "description": "echo $SHELL"
+  },
+  "bash-017": {
+    "command": "Karakter mana yang meng-escape karakter berikutnya di Bash?",
+    "description": "Garis miring terbalik"
+  },
+  "bash-018": {
+    "command": "Gaya kutipan mana yang mencegah ekspansi variabel dan substitusi perintah?",
+    "description": "Kutip tunggal"
+  },
+  "bash-019": {
+    "command": "Gaya kutipan mana yang memungkinkan ekspansi variabel sambil mempertahankan spasi?",
+    "description": "Kutip ganda"
+  },
+  "bash-020": {
+    "command": "Operator mana yang mengalihkan standard output dan menimpa file?",
+    "description": ">"
+  },
+  "bash-021": {
+    "command": "Perintah mana yang mencetak direktori kerja saat ini?",
+    "description": "pwd"
+  },
+  "bash-022": {
+    "command": "Aliran standar mana yang digunakan untuk pesan kesalahan?",
+    "description": "stderr"
+  },
+  "bash-023": {
+    "command": "File descriptor mana yang mewakili standard input?",
+    "description": "0"
+  },
+  "bash-024": {
+    "command": "Perintah mana yang membersihkan layar terminal?",
+    "description": "clear"
+  },
+  "python-001": {
+    "command": "print()",
+    "description": "Mengeluarkan data ke konsol."
+  },
+  "python-002": {
+    "command": "import",
+    "description": "Mengimpor modul atau fungsi tertentu ke dalam skrip."
+  },
+  "python-003": {
+    "command": "def",
+    "description": "Mendefinisikan blok kode yang dapat digunakan kembali, yaitu fungsi."
+  },
+  "python-004": {
+    "command": "pip install",
+    "description": "Memasang paket Python dari PyPI."
+  },
+  "python-005": {
+    "command": "virtualenv",
+    "description": "Membuat lingkungan Python yang terisolasi."
+  },
+  "python-006": {
+    "command": "Simbol apa yang memulai komentar di Python?",
+    "description": "#"
+  },
+  "python-007": {
+    "command": "Fungsi bawaan apa yang membaca input pengguna?",
+    "description": "input()"
+  },
+  "python-008": {
+    "command": "Ekstensi file apa yang digunakan untuk file sumber Python?",
+    "description": ".py"
+  },
+  "python-009": {
+    "command": "Operator apa yang memeriksa kesamaan?",
+    "description": "=="
+  },
+  "python-010": {
+    "command": "Operator apa yang memberikan nilai?",
+    "description": "="
+  },
+  "python-011": {
+    "command": "Pernyataan mana yang membuat variabel bernama x dengan nilai 5?",
+    "description": "x = 5"
+  },
+  "python-012": {
+    "command": "Fungsi bawaan apa yang mengembalikan tipe data suatu objek?",
+    "description": "type()"
+  },
+  "python-013": {
+    "command": "Fungsi bawaan apa yang mengubah nilai menjadi bilangan bulat?",
+    "description": "int()"
+  },
+  "python-014": {
+    "command": "Fungsi bawaan apa yang mengubah nilai menjadi string?",
+    "description": "str()"
+  },
+  "python-015": {
+    "command": "Fungsi bawaan apa yang mengembalikan panjang suatu urutan?",
+    "description": "len()"
+  },
+  "python-016": {
+    "command": "Fungsi bawaan apa yang menghasilkan urutan angka?",
+    "description": "range()"
+  },
+  "python-017": {
+    "command": "Kata kunci apa yang memulai perulangan yang mengiterasi suatu urutan?",
+    "description": "for"
+  },
+  "python-018": {
+    "command": "Kata kunci apa yang mengulang kode selama suatu kondisi bernilai benar?",
+    "description": "while"
+  },
+  "python-019": {
+    "command": "Klausa apa yang dilampirkan pada perulangan for atau while Python yang hanya berjalan jika perulangan selesai tanpa menemui break?",
+    "description": "else"
+  },
+  "python-020": {
+    "command": "Di Python, kata kunci apa yang melewati iterasi perulangan saat ini?",
+    "description": "continue"
+  },
+  "python-021": {
+    "command": "Kata kunci Python apa yang memungkinkan fungsi bersarang mengikat ulang variabel dari fungsi pembungkusnya?",
+    "description": "nonlocal"
+  },
+  "python-022": {
+    "command": "Kata kunci apa yang memulai penanganan pengecualian?",
+    "description": "try"
+  },
+  "python-023": {
+    "command": "Fungsi bawaan Python apa yang mengembalikan identitas unik suatu objek?",
+    "description": "id()"
+  },
+  "python-024": {
+    "command": "Sintaks mana yang membuat dictionary?",
+    "description": "{'name': 'John'}"
+  },
+  "perl-001": {
+    "command": "Perintah mana yang menjalankan skrip Perl dari command line?",
+    "description": "perl script.pl"
+  },
+  "perl-002": {
+    "command": "Baris shebang mana yang umum digunakan untuk skrip Perl?",
+    "description": "#!/usr/bin/perl"
+  },
+  "perl-003": {
+    "command": "Simbol mana yang memulai komentar satu baris di Perl?",
+    "description": "#"
+  },
+  "perl-004": {
+    "command": "Fungsi bawaan mana yang mencetak output?",
+    "description": "print"
+  },
+  "perl-005": {
+    "command": "Karakter mana yang biasanya mengakhiri sebuah pernyataan Perl?",
+    "description": ";"
+  },
+  "perl-006": {
+    "command": "Sigil mana yang menandakan variabel skalar?",
+    "description": "$"
+  },
+  "perl-007": {
+    "command": "Fungsi Perl mana yang mengembalikan posisi sebuah substring di dalam string?",
+    "description": "index"
+  },
+  "perl-008": {
+    "command": "Fungsi Perl mana yang mengembalikan nilai absolut dari sebuah angka?",
+    "description": "abs"
+  },
+  "perl-009": {
+    "command": "Fungsi mana yang mengembalikan panjang sebuah string?",
+    "description": "length"
+  },
+  "perl-010": {
+    "command": "Fungsi mana yang menghapus karakter baris baru di akhir string?",
+    "description": "chomp"
+  },
+  "perl-011": {
+    "command": "Fungsi mana yang memecah string menjadi sebuah list?",
+    "description": "split"
+  },
+  "perl-012": {
+    "command": "Fungsi mana yang menggabungkan elemen list menjadi sebuah string?",
+    "description": "join"
+  },
+  "perl-013": {
+    "command": "Operator mana yang menggabungkan string (konkatenasi)?",
+    "description": "."
+  },
+  "perl-014": {
+    "command": "Operator mana yang mengulang sebuah string?",
+    "description": "x"
+  },
+  "perl-015": {
+    "command": "Fungsi mana yang membuka sebuah file?",
+    "description": "open"
+  },
+  "perl-016": {
+    "command": "Di Perl, mode file mana yang membuka file untuk dibaca?",
+    "description": "<"
+  },
+  "perl-017": {
+    "command": "Fungsi Perl mana yang menghapus file dari sistem file?",
+    "description": "unlink"
+  },
+  "perl-018": {
+    "command": "Operator pengujian file Perl mana yang memeriksa apakah sebuah path ada?",
+    "description": "-e"
+  },
+  "perl-019": {
+    "command": "Filehandle bawaan mana yang mewakili standard input?",
+    "description": "STDIN"
+  },
+  "perl-020": {
+    "command": "Filehandle bawaan mana yang mewakili standard output?",
+    "description": "STDOUT"
+  },
+  "perl-021": {
+    "command": "Filehandle bawaan mana yang mewakili standard error?",
+    "description": "STDERR"
+  },
+  "perl-022": {
+    "command": "Fungsi mana yang menutup filehandle yang terbuka?",
+    "description": "close"
+  },
+  "perl-023": {
+    "command": "Variabel khusus mana yang merupakan variabel input default?",
+    "description": "$_"
+  },
+  "perl-024": {
+    "command": "Variabel khusus mana yang berisi pencocokan pola terakhir yang berhasil?",
+    "description": "$&"
+  },
+  "powershell-001": {
+    "command": "Cmdlet mana yang menampilkan lokasi saat ini?",
+    "description": "Get-Location"
+  },
+  "powershell-002": {
+    "command": "Cmdlet mana yang menampilkan daftar file dan direktori?",
+    "description": "Get-ChildItem"
+  },
+  "powershell-003": {
+    "command": "Cmdlet mana yang mengubah direktori saat ini?",
+    "description": "Set-Location"
+  },
+  "powershell-004": {
+    "command": "Cmdlet mana yang menampilkan isi sebuah file?",
+    "description": "Get-Content"
+  },
+  "powershell-005": {
+    "command": "Cmdlet mana yang membuat file atau direktori baru?",
+    "description": "New-Item"
+  },
+  "powershell-006": {
+    "command": "Cmdlet mana yang menyalin file dan direktori?",
+    "description": "Copy-Item"
+  },
+  "powershell-007": {
+    "command": "Cmdlet mana yang memindahkan file dan direktori?",
+    "description": "Move-Item"
+  },
+  "powershell-008": {
+    "command": "Cmdlet mana yang menghapus file dan direktori?",
+    "description": "Remove-Item"
+  },
+  "powershell-009": {
+    "command": "Cmdlet mana yang mengganti nama sebuah file?",
+    "description": "Rename-Item"
+  },
+  "powershell-010": {
+    "command": "Simbol mana yang memulai komentar satu baris di PowerShell?",
+    "description": "#"
+  },
+  "powershell-011": {
+    "command": "Cmdlet PowerShell mana yang menambahkan teks di akhir sebuah file?",
+    "description": "Add-Content"
+  },
+  "powershell-012": {
+    "command": "Simbol mana yang digunakan sebelum nama variabel?",
+    "description": "$"
+  },
+  "powershell-013": {
+    "command": "Cmdlet mana yang menampilkan riwayat perintah?",
+    "description": "Get-History"
+  },
+  "powershell-014": {
+    "command": "Cmdlet mana yang membersihkan layar konsol?",
+    "description": "Clear-Host"
+  },
+  "powershell-015": {
+    "command": "Cmdlet mana yang menampilkan informasi bantuan?",
+    "description": "Get-Help"
+  },
+  "powershell-016": {
+    "command": "Cmdlet mana yang memperbarui file bantuan lokal?",
+    "description": "Update-Help"
+  },
+  "powershell-017": {
+    "command": "Cmdlet mana yang menampilkan daftar perintah yang tersedia?",
+    "description": "Get-Command"
+  },
+  "powershell-018": {
+    "command": "Cmdlet mana yang menampilkan properti dan metode dari sebuah objek?",
+    "description": "Get-Member"
+  },
+  "powershell-019": {
+    "command": "Variabel otomatis mana yang berisi informasi versi PowerShell secara terperinci?",
+    "description": "$PSVersionTable"
+  },
+  "powershell-020": {
+    "command": "Cmdlet mana yang menampilkan daftar alias?",
+    "description": "Get-Alias"
+  },
+  "powershell-021": {
+    "command": "Cmdlet mana yang menampilkan execution policy saat ini?",
+    "description": "Get-ExecutionPolicy"
+  },
+  "powershell-022": {
+    "command": "Cmdlet mana yang mengubah execution policy?",
+    "description": "Set-ExecutionPolicy"
+  },
+  "powershell-023": {
+    "command": "Execution policy mana yang secara default memblokir eksekusi skrip?",
+    "description": "Restricted"
+  },
+  "powershell-024": {
+    "command": "Execution policy mana yang mengizinkan skrip buatan lokal untuk dijalankan?",
+    "description": "RemoteSigned"
+  },
+  "javascript-001": {
+    "command": "Apa itu JavaScript?",
+    "description": "Bahasa pemrograman"
+  },
+  "javascript-002": {
+    "command": "Kata kunci mana yang mendeklarasikan variabel dengan cakupan blok?",
+    "description": "let"
+  },
+  "javascript-003": {
+    "command": "Kata kunci mana yang mendeklarasikan konstanta?",
+    "description": "const"
+  },
+  "javascript-004": {
+    "command": "Simbol mana yang memulai komentar satu baris?",
+    "description": "//"
+  },
+  "javascript-005": {
+    "command": "Operator JavaScript mana yang memeriksa apakah sebuah objek merupakan instans dari konstruktor tertentu?",
+    "description": "instanceof"
+  },
+  "javascript-006": {
+    "command": "Nilai mana yang secara sengaja merepresentasikan ketiadaan nilai?",
+    "description": "null"
+  },
+  "javascript-007": {
+    "command": "Nilai apa yang dikembalikan ketika variabel dideklarasikan tetapi belum diberi nilai?",
+    "description": "undefined"
+  },
+  "javascript-008": {
+    "command": "Manakah berikut ini yang bukan tipe data primitif?",
+    "description": "object"
+  },
+  "javascript-009": {
+    "command": "Fungsi mana yang mengubah string menjadi bilangan bulat?",
+    "description": "parseInt()"
+  },
+  "javascript-010": {
+    "command": "Fungsi mana yang mengubah string menjadi bilangan desimal (floating-point)?",
+    "description": "parseFloat()"
+  },
+  "javascript-011": {
+    "command": "Operator mana yang memeriksa kesamaan nilai sekaligus tipe?",
+    "description": "==="
+  },
+  "javascript-012": {
+    "command": "Operator mana yang memeriksa kesamaan nilai dengan konversi tipe (type coercion)?",
+    "description": "=="
+  },
+  "javascript-013": {
+    "command": "Operator mana yang mengembalikan sisa hasil bagi?",
+    "description": "%"
+  },
+  "javascript-014": {
+    "command": "Fungsi mana yang menampilkan kotak pesan di browser?",
+    "description": "alert()"
+  },
+  "javascript-015": {
+    "command": "Metode mana yang mencatat keluaran ke konsol browser?",
+    "description": "console.log()"
+  },
+  "javascript-016": {
+    "command": "Tag HTML mana yang digunakan untuk menyertakan kode JavaScript?",
+    "description": "<script>"
+  },
+  "javascript-017": {
+    "command": "Kata kunci mana yang mendefinisikan fungsi?",
+    "description": "function"
+  },
+  "javascript-018": {
+    "command": "Pernyataan mana yang langsung keluar dari perulangan?",
+    "description": "break"
+  },
+  "javascript-019": {
+    "command": "Pernyataan mana yang melewati iterasi perulangan saat ini?",
+    "description": "continue"
+  },
+  "javascript-020": {
+    "command": "Perulangan mana yang menjalankan kodenya setidaknya satu kali?",
+    "description": "do...while"
+  },
+  "javascript-021": {
+    "command": "Perulangan mana yang umum digunakan untuk mengiterasi elemen array?",
+    "description": "for"
+  },
+  "javascript-022": {
+    "command": "Pernyataan mana yang menjalankan kode berdasarkan suatu kondisi?",
+    "description": "if"
+  },
+  "javascript-023": {
+    "command": "Kata kunci mana yang memulai penanganan kesalahan?",
+    "description": "try"
+  },
+  "javascript-024": {
+    "command": "Pernyataan mana yang melempar kesalahan secara manual?",
+    "description": "throw"
+  },
+  "ruby-001": {
+    "command": "Ruby termasuk jenis bahasa apa?",
+    "description": "Bahasa pemrograman berorientasi objek"
+  },
+  "ruby-002": {
+    "command": "Siapa yang menciptakan Ruby?",
+    "description": "Yukihiro Matsumoto"
+  },
+  "ruby-003": {
+    "command": "Ekstensi file apa yang digunakan untuk skrip Ruby?",
+    "description": ".rb"
+  },
+  "ruby-004": {
+    "command": "Perintah mana yang menjalankan skrip Ruby?",
+    "description": "ruby filename.rb"
+  },
+  "ruby-005": {
+    "command": "Simbol apa yang memulai komentar satu baris di Ruby?",
+    "description": "#"
+  },
+  "ruby-006": {
+    "command": "Kata kunci apa yang memulai komentar multibaris di Ruby?",
+    "description": "=begin"
+  },
+  "ruby-007": {
+    "command": "Kata kunci apa yang mendefinisikan metode di Ruby?",
+    "description": "def"
+  },
+  "ruby-008": {
+    "command": "Kata kunci apa yang mengakhiri definisi metode?",
+    "description": "end"
+  },
+  "ruby-009": {
+    "command": "Metode mana yang mencetak output dengan baris baru?",
+    "description": "puts"
+  },
+  "ruby-010": {
+    "command": "Metode mana yang mencetak output tanpa menambahkan baris baru?",
+    "description": "print"
+  },
+  "ruby-011": {
+    "command": "Metode mana yang membaca satu baris dari input standar?",
+    "description": "gets"
+  },
+  "ruby-012": {
+    "command": "Di Ruby, metode mana yang mengubah objek menjadi string?",
+    "description": "to_s"
+  },
+  "ruby-013": {
+    "command": "Di Ruby, metode mana yang mengubah string menjadi integer?",
+    "description": "to_i"
+  },
+  "ruby-014": {
+    "command": "Metode mana yang mengubah string menjadi float?",
+    "description": "to_f"
+  },
+  "ruby-015": {
+    "command": "Metode mana yang mengembalikan kelas dari sebuah objek?",
+    "description": "class"
+  },
+  "ruby-016": {
+    "command": "Metode mana yang memeriksa apakah suatu objek merupakan jenis dari sebuah kelas?",
+    "description": "is_a?"
+  },
+  "ruby-017": {
+    "command": "Metode mana yang memeriksa apakah suatu objek merespons sebuah metode?",
+    "description": "respond_to?"
+  },
+  "ruby-018": {
+    "command": "Metode mana yang mengembalikan pengenal unik untuk sebuah objek?",
+    "description": "object_id"
+  },
+  "ruby-019": {
+    "command": "Operator mana yang memeriksa kesamaan nilai di Ruby?",
+    "description": "=="
+  },
+  "ruby-020": {
+    "command": "Operator mana yang umum digunakan oleh pernyataan case untuk perbandingan?",
+    "description": "==="
+  },
+  "ruby-021": {
+    "command": "Operator mana yang digunakan untuk perbandingan dan pengurutan?",
+    "description": "<=>"
+  },
+  "ruby-022": {
+    "command": "Bagaimana konstanta dideklarasikan di Ruby?",
+    "description": "Dengan memulai nama dengan huruf kapital"
+  },
+  "ruby-023": {
+    "command": "Awalan mana yang menunjukkan variabel instance?",
+    "description": "@"
+  },
+  "ruby-024": {
+    "command": "Operator mana yang memangkatkan sebuah bilangan di Ruby?",
+    "description": "**"
+  },
+  "aws-001": {
+    "command": "aws cli",
+    "description": "Alat terpadu untuk mengelola layanan AWS melalui CLI."
+  },
+  "aws-002": {
+    "command": "IAM",
+    "description": "Mengontrol akses ke sumber daya AWS secara aman."
+  },
+  "aws-003": {
+    "command": "S3",
+    "description": "Penyimpanan objek yang dirancang untuk menyimpan dan mengambil data apa pun."
+  },
+  "aws-004": {
+    "command": "EC2",
+    "description": "Menyediakan kapasitas komputasi yang dapat diskalakan di cloud."
+  },
+  "aws-005": {
+    "command": "VPC",
+    "description": "Menyediakan bagian cloud yang terisolasi secara logis."
+  },
+  "aws-006": {
+    "command": "Layanan AWS mana yang terutama digunakan untuk meluncurkan server virtual?",
+    "description": "Amazon EC2"
+  },
+  "aws-007": {
+    "command": "Layanan penyimpanan AWS mana yang dirancang untuk penyimpanan objek?",
+    "description": "Amazon S3"
+  },
+  "aws-008": {
+    "command": "Layanan AWS mana yang mengelola identitas dan izin pengguna?",
+    "description": "AWS IAM"
+  },
+  "aws-009": {
+    "command": "Layanan AWS mana yang menyediakan komputasi serverless?",
+    "description": "AWS Lambda"
+  },
+  "aws-010": {
+    "command": "Layanan AWS mana yang merupakan basis data relasional terkelola?",
+    "description": "Amazon RDS"
+  },
+  "aws-011": {
+    "command": "Basis data AWS mana yang terkelola penuh dan berjenis NoSQL?",
+    "description": "Amazon DynamoDB"
+  },
+  "aws-012": {
+    "command": "Layanan AWS mana yang membantu memantau aplikasi dan sumber daya AWS?",
+    "description": "Amazon CloudWatch"
+  },
+  "aws-013": {
+    "command": "Layanan AWS mana yang mencatat aktivitas API untuk keperluan audit?",
+    "description": "CloudTrail"
+  },
+  "aws-014": {
+    "command": "Layanan jaringan AWS mana yang menyediakan jaringan virtual yang terisolasi?",
+    "description": "Amazon VPC"
+  },
+  "aws-015": {
+    "command": "Layanan AWS mana yang menyediakan pengelolaan DNS?",
+    "description": "Route 53"
+  },
+  "aws-016": {
+    "command": "Layanan AWS mana yang mendistribusikan lalu lintas ke beberapa instans EC2?",
+    "description": "Elastic Load Balancer"
+  },
+  "aws-017": {
+    "command": "Layanan AWS mana yang secara otomatis menyesuaikan jumlah instans EC2 berdasarkan permintaan?",
+    "description": "Auto Scaling"
+  },
+  "aws-018": {
+    "command": "Layanan AWS mana yang digunakan untuk men-deploy infrastruktur sebagai kode?",
+    "description": "AWS CloudFormation"
+  },
+  "aws-019": {
+    "command": "Layanan AWS mana yang merupakan jaringan pengiriman konten (CDN)?",
+    "description": "Amazon CloudFront"
+  },
+  "aws-020": {
+    "command": "Layanan AWS mana yang menyediakan Kubernetes terkelola?",
+    "description": "Amazon EKS"
+  },
+  "aws-021": {
+    "command": "Layanan AWS mana yang menyediakan orkestrasi kontainer Docker terkelola?",
+    "description": "Amazon ECS"
+  },
+  "aws-022": {
+    "command": "Layanan AWS mana yang menyimpan rahasia seperti kata sandi dan kunci API secara aman?",
+    "description": "AWS Secrets Manager"
+  },
+  "aws-023": {
+    "command": "Layanan AWS mana yang mengelola kunci enkripsi?",
+    "description": "AWS KMS"
+  },
+  "aws-024": {
+    "command": "Layanan AWS mana yang melindungi aplikasi dari serangan DDoS?",
+    "description": "AWS Shield"
+  },
+  "azure-001": {
+    "command": "Layanan Microsoft Azure manakah yang digunakan untuk membuat mesin virtual?",
+    "description": "Azure Virtual Machines"
+  },
+  "azure-002": {
+    "command": "Layanan Azure manakah yang menyediakan penyimpanan objek untuk data tidak terstruktur?",
+    "description": "Azure Blob Storage"
+  },
+  "azure-003": {
+    "command": "Layanan Azure manakah yang digunakan untuk manajemen identitas dan akses?",
+    "description": "Microsoft Entra ID"
+  },
+  "azure-004": {
+    "command": "Layanan Azure manakah yang menyediakan komputasi serverless?",
+    "description": "Azure Functions"
+  },
+  "azure-005": {
+    "command": "Layanan Azure manakah yang menyediakan database relasional terkelola untuk SQL Server?",
+    "description": "Azure SQL Database"
+  },
+  "azure-006": {
+    "command": "Layanan database Azure manakah yang terdistribusi secara global dan berbasis NoSQL?",
+    "description": "Azure Cosmos DB"
+  },
+  "azure-007": {
+    "command": "Layanan Azure manakah yang digunakan untuk memantau aplikasi dan infrastruktur?",
+    "description": "Azure Monitor"
+  },
+  "azure-008": {
+    "command": "Layanan Azure manakah yang mengumpulkan telemetri dari aplikasi web?",
+    "description": "Application Insights"
+  },
+  "azure-009": {
+    "command": "Layanan jaringan Azure manakah yang membuat jaringan privat yang terisolasi?",
+    "description": "Azure Virtual Network"
+  },
+  "azure-010": {
+    "command": "Layanan Azure manakah yang menyediakan hosting DNS?",
+    "description": "Azure DNS"
+  },
+  "azure-011": {
+    "command": "Layanan Azure manakah yang mendistribusikan lalu lintas masuk ke beberapa mesin virtual?",
+    "description": "Azure Load Balancer"
+  },
+  "azure-012": {
+    "command": "Layanan Azure manakah yang menyediakan load balancing global Layer 7?",
+    "description": "Azure Front Door"
+  },
+  "azure-013": {
+    "command": "Layanan Azure manakah yang menyediakan Kubernetes terkelola?",
+    "description": "Azure Kubernetes Service (AKS)"
+  },
+  "azure-014": {
+    "command": "Layanan Azure manakah yang menjalankan kontainer tanpa perlu mengelola server?",
+    "description": "Azure Container Instances"
+  },
+  "azure-015": {
+    "command": "Layanan Azure manakah yang meng-host aplikasi web tanpa perlu mengelola infrastruktur?",
+    "description": "Azure App Service"
+  },
+  "azure-016": {
+    "command": "Layanan Azure manakah yang menyimpan secret, kunci, dan sertifikat dengan aman?",
+    "description": "Azure Key Vault"
+  },
+  "azure-017": {
+    "command": "Layanan Azure manakah yang menyediakan konektivitas privat khusus ke Microsoft Azure?",
+    "description": "Azure ExpressRoute"
+  },
+  "azure-018": {
+    "command": "Layanan Azure manakah yang menyediakan akses jarak jauh yang aman ke mesin virtual melalui portal Azure?",
+    "description": "Azure Bastion"
+  },
+  "azure-019": {
+    "command": "Layanan Azure manakah yang digunakan untuk mencadangkan mesin virtual Azure dan beban kerja lainnya?",
+    "description": "Azure Backup"
+  },
+  "azure-020": {
+    "command": "Layanan Azure manakah yang digunakan untuk pemulihan bencana mesin virtual?",
+    "description": "Azure Site Recovery"
+  },
+  "azure-021": {
+    "command": "Layanan Azure manakah yang digunakan untuk membuat dan menegakkan kebijakan tata kelola?",
+    "description": "Azure Policy"
+  },
+  "azure-022": {
+    "command": "Layanan Azure manakah yang memperluas manajemen Azure ke lingkungan on-premises dan multi-cloud?",
+    "description": "Azure Arc"
+  },
+  "azure-023": {
+    "command": "Komponen Azure DevOps manakah yang digunakan untuk continuous integration dan continuous deployment (CI/CD)?",
+    "description": "Azure Pipelines"
+  },
+  "azure-024": {
+    "command": "Layanan Azure DevOps manakah yang menyediakan repositori Git?",
+    "description": "Azure Repos"
+  },
+  "gcp-001": {
+    "command": "Layanan Google Cloud mana yang digunakan untuk membuat dan mengelola mesin virtual?",
+    "description": "Compute Engine"
+  },
+  "gcp-002": {
+    "command": "Layanan Google Cloud mana yang menyediakan penyimpanan objek?",
+    "description": "Cloud Storage"
+  },
+  "gcp-003": {
+    "command": "Layanan Google Cloud mana yang menyediakan fungsi serverless?",
+    "description": "Cloud Functions"
+  },
+  "gcp-004": {
+    "command": "Layanan Google Cloud mana yang digunakan untuk menjalankan klaster Kubernetes?",
+    "description": "Google Kubernetes Engine (GKE)"
+  },
+  "gcp-005": {
+    "command": "Layanan Google Cloud mana yang menyediakan basis data relasional terkelola penuh?",
+    "description": "Cloud SQL"
+  },
+  "gcp-006": {
+    "command": "Basis data Google Cloud mana yang merupakan basis data relasional terdistribusi secara global?",
+    "description": "Cloud Spanner"
+  },
+  "gcp-007": {
+    "command": "Basis data dokumen NoSQL Google Cloud mana yang bersifat serverless?",
+    "description": "Firestore"
+  },
+  "gcp-008": {
+    "command": "Layanan Google Cloud mana yang digunakan untuk analitik data skala petabyte?",
+    "description": "BigQuery"
+  },
+  "gcp-009": {
+    "command": "Layanan Google Cloud mana yang menyediakan pemantauan dan observabilitas?",
+    "description": "Cloud Monitoring"
+  },
+  "gcp-010": {
+    "command": "Layanan Google Cloud mana yang mengumpulkan log aplikasi?",
+    "description": "Cloud Logging"
+  },
+  "gcp-011": {
+    "command": "Layanan Google Cloud mana yang mengelola pengguna, peran, dan izin?",
+    "description": "Cloud Identity and IAM"
+  },
+  "gcp-012": {
+    "command": "Layanan Google Cloud mana yang membuat jaringan privat yang terisolasi?",
+    "description": "Virtual Private Cloud (VPC)"
+  },
+  "gcp-013": {
+    "command": "Layanan Google Cloud mana yang menyediakan hosting DNS?",
+    "description": "Cloud DNS"
+  },
+  "gcp-014": {
+    "command": "Layanan Google Cloud mana yang mendistribusikan lalu lintas ke beberapa mesin virtual?",
+    "description": "Cloud Load Balancing"
+  },
+  "gcp-015": {
+    "command": "Layanan Google Cloud mana yang mempercepat pengiriman konten di seluruh dunia?",
+    "description": "Cloud CDN"
+  },
+  "gcp-016": {
+    "command": "Layanan Google Cloud mana yang melindungi aplikasi web dari serangan DDoS dan eksploitasi web umum?",
+    "description": "Cloud Armor"
+  },
+  "gcp-017": {
+    "command": "Layanan Google Cloud mana yang menyediakan eksekusi kontainer terkelola tanpa perlu mengelola infrastruktur?",
+    "description": "Cloud Run"
+  },
+  "gcp-018": {
+    "command": "Layanan Google Cloud mana yang merupakan platform terkelola penuh untuk membangun aplikasi web?",
+    "description": "App Engine"
+  },
+  "gcp-019": {
+    "command": "Layanan Google Cloud mana yang menyimpan rahasia, kata sandi, dan kunci API secara aman?",
+    "description": "Secret Manager"
+  },
+  "gcp-020": {
+    "command": "Layanan Google Cloud mana yang mengelola kunci enkripsi?",
+    "description": "Cloud KMS"
+  },
+  "gcp-021": {
+    "command": "Layanan Google Cloud mana yang menyediakan konektivitas privat khusus ke Google Cloud?",
+    "description": "Cloud Interconnect"
+  },
+  "gcp-022": {
+    "command": "Layanan Google Cloud mana yang menyediakan konektivitas terenkripsi yang aman antara jaringan on-premises dan GCP?",
+    "description": "Cloud VPN"
+  },
+  "gcp-023": {
+    "command": "Layanan Google Cloud mana yang menyediakan akses internet keluar bagi instans privat tanpa alamat IP eksternal?",
+    "description": "Cloud NAT"
+  },
+  "gcp-024": {
+    "command": "Layanan Google Cloud mana yang menukar rute secara dinamis antara VPC dan jaringan on-premises?",
+    "description": "Cloud Router"
+  },
+  "oracle-001": {
+    "command": "Layanan Oracle Cloud Infrastructure mana yang digunakan untuk membuat mesin virtual?",
+    "description": "Compute"
+  },
+  "oracle-002": {
+    "command": "Layanan OCI mana yang menyediakan penyimpanan objek yang dapat diskalakan?",
+    "description": "Object Storage"
+  },
+  "oracle-003": {
+    "command": "Layanan penyimpanan OCI mana yang menyediakan penyimpanan blok persisten?",
+    "description": "Block Volumes"
+  },
+  "oracle-004": {
+    "command": "Layanan OCI mana yang menyediakan penyimpanan file NFS bersama?",
+    "description": "File Storage"
+  },
+  "oracle-005": {
+    "command": "Apa nama layanan jaringan virtual OCI?",
+    "description": "Virtual Cloud Network (VCN)"
+  },
+  "oracle-006": {
+    "command": "Layanan OCI mana yang mengelola pengguna, grup, dan kebijakan?",
+    "description": "Identity and Access Management (IAM)"
+  },
+  "oracle-007": {
+    "command": "Fitur OCI mana yang mengorganisasi sumber daya cloud secara logis?",
+    "description": "Compartments"
+  },
+  "oracle-008": {
+    "command": "Fitur OCI mana yang menentukan izin bagi pengguna dan grup?",
+    "description": "Policies"
+  },
+  "oracle-009": {
+    "command": "Layanan OCI mana yang mendistribusikan lalu lintas masuk?",
+    "description": "Load Balancer"
+  },
+  "oracle-010": {
+    "command": "Layanan OCI mana yang menyediakan konektivitas privat khusus?",
+    "description": "FastConnect"
+  },
+  "oracle-011": {
+    "command": "Layanan OCI mana yang menyediakan konektivitas IPSec?",
+    "description": "Site-to-Site VPN"
+  },
+  "oracle-012": {
+    "command": "Komponen OCI mana yang menghubungkan VCN ke jaringan on-premises?",
+    "description": "Dynamic Routing Gateway (DRG)"
+  },
+  "oracle-013": {
+    "command": "Database OCI mana yang mengelola dirinya sendiri?",
+    "description": "Autonomous Database"
+  },
+  "oracle-014": {
+    "command": "Layanan OCI mana yang mengelola klaster Kubernetes?",
+    "description": "Container Engine for Kubernetes (OKE)"
+  },
+  "oracle-015": {
+    "command": "Layanan OCI mana yang menyediakan eksekusi serverless?",
+    "description": "Functions"
+  },
+  "oracle-016": {
+    "command": "Layanan OCI mana yang memublikasikan dan mengamankan API?",
+    "description": "API Gateway"
+  },
+  "oracle-017": {
+    "command": "Layanan OCI mana yang mendukung pipeline CI/CD?",
+    "description": "DevOps"
+  },
+  "oracle-018": {
+    "command": "Layanan OCI mana yang mengelola deployment Terraform?",
+    "description": "Resource Manager"
+  },
+  "oracle-019": {
+    "command": "Layanan OCI mana yang mengumpulkan metrik?",
+    "description": "Monitoring"
+  },
+  "oracle-020": {
+    "command": "Layanan OCI mana yang menyimpan log?",
+    "description": "Logging"
+  },
+  "oracle-021": {
+    "command": "Layanan OCI mana yang mengirim peringatan?",
+    "description": "Notifications"
+  },
+  "oracle-022": {
+    "command": "Layanan OCI mana yang bereaksi terhadap peristiwa sumber daya?",
+    "description": "Events"
+  },
+  "oracle-023": {
+    "command": "Layanan OCI mana yang menyimpan rahasia dan kunci enkripsi?",
+    "description": "Vault"
+  },
+  "oracle-024": {
+    "command": "Layanan OCI mana yang memantau postur keamanan?",
+    "description": "Cloud Guard"
+  },
+  "ibm-001": {
+    "command": "Layanan IBM Cloud mana yang digunakan untuk membuat server virtual?",
+    "description": "Virtual Servers for VPC"
+  },
+  "ibm-002": {
+    "command": "Layanan IBM Cloud mana yang menyediakan penyimpanan objek?",
+    "description": "Cloud Object Storage"
+  },
+  "ibm-003": {
+    "command": "Apa layanan jaringan virtual terisolasi dari IBM Cloud?",
+    "description": "Virtual Private Cloud (VPC)"
+  },
+  "ibm-004": {
+    "command": "Layanan IBM Cloud mana yang mengelola pengguna dan akses?",
+    "description": "IBM Cloud IAM"
+  },
+  "ibm-005": {
+    "command": "Layanan IBM Cloud mana yang menyediakan Kubernetes terkelola?",
+    "description": "IBM Cloud Kubernetes Service"
+  },
+  "ibm-006": {
+    "command": "Layanan IBM Cloud mana yang menyediakan Red Hat OpenShift terkelola?",
+    "description": "Red Hat OpenShift on IBM Cloud"
+  },
+  "ibm-007": {
+    "command": "Perintah mana yang digunakan untuk masuk ke IBM Cloud dari command line?",
+    "description": "ibmcloud login"
+  },
+  "ibm-008": {
+    "command": "Layanan IBM Cloud mana yang menjalankan container tanpa perlu mengelola infrastruktur?",
+    "description": "IBM Cloud Code Engine"
+  },
+  "ibm-009": {
+    "command": "Layanan IBM Cloud mana yang mendistribusikan lalu lintas masuk?",
+    "description": "Load Balancer"
+  },
+  "ibm-010": {
+    "command": "Layanan IBM Cloud mana yang menyediakan konektivitas site-to-site yang aman?",
+    "description": "VPN for VPC"
+  },
+  "ibm-011": {
+    "command": "Layanan IBM Cloud mana yang menyediakan konektivitas privat khusus ke jaringan on-premises?",
+    "description": "Direct Link"
+  },
+  "ibm-012": {
+    "command": "Penawaran IBM Cloud mana yang menyediakan database terkelola?",
+    "description": "IBM Cloud Databases"
+  },
+  "ibm-013": {
+    "command": "Database IBM Cloud mana yang berbasis Db2?",
+    "description": "Db2 on Cloud"
+  },
+  "ibm-014": {
+    "command": "Layanan IBM Cloud mana yang menyediakan pemantauan infrastruktur?",
+    "description": "IBM Cloud Monitoring"
+  },
+  "ibm-015": {
+    "command": "Layanan IBM Cloud mana yang memusatkan log?",
+    "description": "IBM Log Analysis"
+  },
+  "ibm-016": {
+    "command": "Layanan IBM Cloud mana yang menyimpan secret dengan aman?",
+    "description": "Secrets Manager"
+  },
+  "ibm-017": {
+    "command": "Layanan IBM Cloud mana yang mengelola kunci enkripsi?",
+    "description": "Key Protect"
+  },
+  "ibm-018": {
+    "command": "Layanan IBM Cloud mana yang menawarkan manajemen kunci berbasis HSM?",
+    "description": "Hyper Protect Crypto Services"
+  },
+  "ibm-019": {
+    "command": "Layanan IBM Cloud mana yang menyimpan image container?",
+    "description": "Container Registry"
+  },
+  "ibm-020": {
+    "command": "Layanan IBM Cloud mana yang mengelola deployment Terraform?",
+    "description": "Schematics"
+  },
+  "ibm-021": {
+    "command": "Layanan IBM Cloud mana yang mengirim notifikasi?",
+    "description": "Event Notifications"
+  },
+  "ibm-022": {
+    "command": "Layanan IBM Cloud mana yang menyediakan CDN dan perlindungan DDoS?",
+    "description": "Cloud Internet Services"
+  },
+  "ibm-023": {
+    "command": "Platform AI IBM mana yang menyediakan layanan AI?",
+    "description": "watsonx"
+  },
+  "ibm-024": {
+    "command": "Penawaran IBM mana yang menyediakan perangkat lunak enterprise di atas Kubernetes?",
+    "description": "Cloud Pak"
+  },
+  "multicloud-001": {
+    "command": "Strategi cloud manakah yang menggunakan layanan dari dua penyedia cloud publik atau lebih?",
+    "description": "Multi-Cloud"
+  },
+  "multicloud-002": {
+    "command": "Strategi cloud manakah yang menggabungkan cloud publik dan privat?",
+    "description": "Hybrid Cloud"
+  },
+  "multicloud-003": {
+    "command": "Alat manakah yang umum digunakan untuk Infrastructure as Code multi-cloud?",
+    "description": "Terraform"
+  },
+  "multicloud-004": {
+    "command": "Proyek CNCF manakah yang banyak digunakan untuk mengorkestrasi container lintas cloud?",
+    "description": "Kubernetes"
+  },
+  "multicloud-005": {
+    "command": "Protokol manakah yang umum digunakan untuk mengekspos API cloud?",
+    "description": "REST"
+  },
+  "multicloud-006": {
+    "command": "Praktik manakah yang membantu menghindari vendor lock-in?",
+    "description": "Menggunakan standar terbuka"
+  },
+  "multicloud-007": {
+    "command": "Alat manakah yang banyak digunakan untuk kontainerisasi lintas penyedia cloud?",
+    "description": "Docker"
+  },
+  "multicloud-008": {
+    "command": "Protokol manakah yang memungkinkan federated identity lintas cloud?",
+    "description": "SAML"
+  },
+  "multicloud-009": {
+    "command": "Standar autentikasi manakah yang umum digunakan untuk API cloud?",
+    "description": "OAuth 2.0"
+  },
+  "multicloud-010": {
+    "command": "Model layanan cloud manakah yang menyediakan mesin virtual?",
+    "description": "IaaS"
+  },
+  "multicloud-011": {
+    "command": "Model layanan cloud manakah yang menyediakan platform aplikasi terkelola?",
+    "description": "PaaS"
+  },
+  "multicloud-012": {
+    "command": "Model layanan cloud manakah yang menyajikan perangkat lunak melalui internet?",
+    "description": "SaaS"
+  },
+  "multicloud-013": {
+    "command": "Pendekatan pemantauan manakah yang mengumpulkan metrik dari beberapa penyedia cloud?",
+    "description": "Pemantauan Terpusat"
+  },
+  "multicloud-014": {
+    "command": "Pendekatan pencatatan log manakah yang mengumpulkan log dari semua penyedia cloud?",
+    "description": "Pencatatan Log Terpusat"
+  },
+  "multicloud-015": {
+    "command": "Teknik jaringan manakah yang menghubungkan beberapa lingkungan cloud secara aman?",
+    "description": "VPN"
+  },
+  "multicloud-016": {
+    "command": "Layanan jaringan manakah yang menyediakan konektivitas khusus antar cloud?",
+    "description": "Direct Connect/ExpressRoute/Interconnect"
+  },
+  "multicloud-017": {
+    "command": "Teknologi manakah yang umum digunakan untuk service discovery di Kubernetes?",
+    "description": "DNS"
+  },
+  "multicloud-018": {
+    "command": "Alat manakah yang banyak digunakan untuk CI/CD lintas beberapa cloud?",
+    "description": "Jenkins"
+  },
+  "multicloud-019": {
+    "command": "Platform pemantauan open-source manakah yang mendukung lingkungan multi-cloud?",
+    "description": "Prometheus"
+  },
+  "multicloud-020": {
+    "command": "Platform visualisasi manakah yang umum bekerja dengan Prometheus?",
+    "description": "Grafana"
+  },
+  "multicloud-021": {
+    "command": "Prinsip keamanan manakah yang hanya memberikan izin yang diperlukan?",
+    "description": "Hak Akses Minimal"
+  },
+  "multicloud-022": {
+    "command": "Praktik manakah yang mengenkripsi data saat disimpan maupun saat dikirim?",
+    "description": "Enkripsi"
+  },
+  "multicloud-023": {
+    "command": "Arsitektur cloud manakah yang meningkatkan ketersediaan lintas penyedia?",
+    "description": "Redundansi"
+  },
+  "multicloud-024": {
+    "command": "Pendekatan deployment manakah yang mendistribusikan beban kerja ke beberapa cloud?",
+    "description": "Active-Active"
+  },
+  "hybridcloud-001": {
+    "command": "Apa itu Hybrid Cloud?",
+    "description": "Kombinasi lingkungan cloud publik dan privat"
+  },
+  "hybridcloud-002": {
+    "command": "Model deployment mana yang menggabungkan infrastruktur on-premises dengan cloud publik?",
+    "description": "Hybrid Cloud"
+  },
+  "hybridcloud-003": {
+    "command": "Teknologi apa yang umum digunakan untuk menghubungkan data center on-premises ke cloud publik secara aman?",
+    "description": "VPN"
+  },
+  "hybridcloud-004": {
+    "command": "Layanan AWS mana yang memperluas infrastruktur AWS ke lingkungan on-premises?",
+    "description": "AWS Outposts"
+  },
+  "hybridcloud-005": {
+    "command": "Layanan Microsoft Azure mana yang memungkinkan pengelolaan sumber daya hybrid dan multi-cloud?",
+    "description": "Azure Arc"
+  },
+  "hybridcloud-006": {
+    "command": "Platform Google Cloud mana yang membantu mengelola cluster Kubernetes di lingkungan hybrid?",
+    "description": "Anthos"
+  },
+  "hybridcloud-007": {
+    "command": "Layanan IBM Cloud mana yang memperluas layanan cloud ke lingkungan apa pun?",
+    "description": "IBM Cloud Satellite"
+  },
+  "hybridcloud-008": {
+    "command": "Penawaran Oracle Cloud mana yang menyediakan layanan cloud di dalam data center pelanggan?",
+    "description": "OCI Dedicated Region"
+  },
+  "hybridcloud-009": {
+    "command": "Platform orkestrasi container mana yang paling umum digunakan di lingkungan Hybrid Cloud?",
+    "description": "Kubernetes"
+  },
+  "hybridcloud-010": {
+    "command": "Platform open-source mana yang banyak digunakan untuk menjalankan Kubernetes enterprise di Hybrid Cloud?",
+    "description": "OpenShift"
+  },
+  "hybridcloud-011": {
+    "command": "Tool Infrastructure as Code mana yang umum digunakan di lingkungan Hybrid Cloud?",
+    "description": "Terraform"
+  },
+  "hybridcloud-012": {
+    "command": "Tool manajemen konfigurasi mana yang umum digunakan dalam deployment Hybrid Cloud?",
+    "description": "Ansible"
+  },
+  "hybridcloud-013": {
+    "command": "Tool CI/CD mana yang sering digunakan untuk deployment Hybrid Cloud?",
+    "description": "Jenkins"
+  },
+  "hybridcloud-014": {
+    "command": "Apa keuntungan utama Hybrid Cloud?",
+    "description": "Fleksibilitas menjalankan beban kerja di tempat yang paling sesuai"
+  },
+  "hybridcloud-015": {
+    "command": "Layanan jaringan mana yang menyediakan konektivitas khusus antara on-premises dan AWS?",
+    "description": "AWS Direct Connect"
+  },
+  "hybridcloud-016": {
+    "command": "Layanan jaringan Azure mana yang menyediakan konektivitas privat ke Azure?",
+    "description": "Azure ExpressRoute"
+  },
+  "hybridcloud-017": {
+    "command": "Layanan jaringan Google Cloud mana yang menyediakan konektivitas khusus ke Google Cloud?",
+    "description": "Cloud Interconnect"
+  },
+  "hybridcloud-018": {
+    "command": "Layanan jaringan Oracle Cloud mana yang menyediakan konektivitas privat khusus?",
+    "description": "OCI FastConnect"
+  },
+  "hybridcloud-019": {
+    "command": "Layanan IBM Cloud mana yang menyediakan konektivitas jaringan privat khusus?",
+    "description": "IBM Cloud Direct Link"
+  },
+  "hybridcloud-020": {
+    "command": "Metode autentikasi mana yang umum digunakan untuk Single Sign-On di Hybrid Cloud?",
+    "description": "SAML"
+  },
+  "hybridcloud-021": {
+    "command": "Protokol mana yang umum digunakan untuk autentikasi API pada aplikasi Hybrid Cloud?",
+    "description": "OAuth 2.0"
+  },
+  "hybridcloud-022": {
+    "command": "Arsitektur mana yang meningkatkan ketersediaan aplikasi di lingkungan on-premises dan cloud?",
+    "description": "Active-Active"
+  },
+  "hybridcloud-023": {
+    "command": "Platform monitoring mana yang umum digunakan di lingkungan Kubernetes Hybrid Cloud?",
+    "description": "Prometheus"
+  },
+  "hybridcloud-024": {
+    "command": "Tool visualisasi mana yang umum dipasangkan dengan Prometheus?",
+    "description": "Grafana"
+  },
+  "extra-001": {
+    "command": "ansible-vault encrypt",
+    "description": "Mengenkripsi berkas yang ada menggunakan kata sandi vault yang dikonfigurasi."
+  },
+  "extra-002": {
+    "command": "ansible-vault decrypt",
+    "description": "Mendekripsi berkas terlindungi vault untuk pemeriksaan lokal yang terkendali."
+  },
+  "extra-003": {
+    "command": "ansible-vault encrypt_string",
+    "description": "Mengenkripsi satu nilai agar dapat disimpan langsung dalam berkas variabel."
+  },
+  "extra-004": {
+    "command": "ansible-vault rekey",
+    "description": "Mengubah kata sandi yang melindungi berkas vault terenkripsi."
+  },
+  "extra-005": {
+    "command": "ansible-inventory --graph",
+    "description": "Menampilkan grup inventaris dan hubungan host di dalamnya."
+  },
+  "extra-006": {
+    "command": "ansible-inventory --list",
+    "description": "Menyajikan inventaris yang telah diuraikan sebagai JSON, termasuk variabel grup."
+  },
+  "extra-007": {
+    "command": "ansible-config dump --only-changed",
+    "description": "Menampilkan nilai konfigurasi yang berbeda dari nilai bawaan Ansible."
+  },
+  "extra-008": {
+    "command": "ansible-doc ansible.builtin.copy",
+    "description": "Menampilkan dokumentasi modul dan parameter yang didukung."
+  },
+  "extra-009": {
+    "command": "ansible-galaxy collection install",
+    "description": "Memasang modul dan plugin yang dapat digunakan kembali dari sebuah koleksi."
+  },
+  "extra-010": {
+    "command": "ansible-galaxy collection list",
+    "description": "Menampilkan koleksi yang terpasang pada jalur Ansible aktif."
+  },
+  "extra-011": {
+    "command": "ansible-playbook --check",
+    "description": "Menjalankan playbook dalam mode pemeriksaan untuk meninjau banyak perubahan yang belum diterapkan."
+  },
+  "extra-012": {
+    "command": "ansible-playbook --diff",
+    "description": "Menampilkan perubahan berkas yang didukung beserta hasil playbook."
+  },
+  "extra-013": {
+    "command": "ansible-playbook --limit",
+    "description": "Membatasi eksekusi playbook pada pola host atau grup."
+  },
+  "extra-014": {
+    "command": "ansible-playbook --tags",
+    "description": "Hanya menjalankan tugas yang dipilih berdasarkan tag yang ditetapkan."
+  },
+  "extra-015": {
+    "command": "ansible-playbook --skip-tags",
+    "description": "Mengecualikan tugas bertag dari eksekusi playbook."
+  },
+  "extra-016": {
+    "command": "ansible-playbook --list-tasks",
+    "description": "Menampilkan tugas yang cocok dengan playbook dan opsi pemilihan saat ini."
+  },
+  "extra-017": {
+    "command": "ansible-playbook --list-hosts",
+    "description": "Menampilkan host yang akan menjadi sasaran playbook tanpa menjalankan tugas."
+  },
+  "extra-018": {
+    "command": "ansible.builtin.assert",
+    "description": "Menggagalkan play ketika kondisi wajib bernilai salah."
+  },
+  "extra-019": {
+    "command": "delegate_to",
+    "description": "Menjalankan satu tugas pada host selain host inventaris saat ini."
+  },
+  "extra-020": {
+    "command": "serial",
+    "description": "Menjalankan play pada host secara berkelompok untuk membatasi dampak penerapan."
+  },
+  "extra-021": {
+    "command": "any_errors_fatal",
+    "description": "Menghentikan play di seluruh host setelah kesalahan tugas yang fatal."
+  },
+  "extra-022": {
+    "command": "block / rescue / always",
+    "description": "Mengelompokkan tugas serta mendefinisikan perilaku pemulihan dan pembersihan saat terjadi kegagalan."
+  },
+  "extra-023": {
+    "command": "changed_when",
+    "description": "Mengganti ketentuan apakah suatu tugas melaporkan adanya perubahan."
+  },
+  "extra-024": {
+    "command": "ansible.builtin.meta: flush_handlers",
+    "description": "Segera menjalankan handler yang diberi tahu tanpa menunggu play berakhir."
+  },
+  "extra-025": {
+    "command": "aws sts get-caller-identity",
+    "description": "Memastikan akun AWS, pengguna, atau peran yang diasumsikan yang sedang aktif."
+  },
+  "extra-026": {
+    "command": "aws sts assume-role",
+    "description": "Meminta kredensial sementara untuk peran IAM tepercaya."
+  },
+  "extra-027": {
+    "command": "S3 bucket versioning",
+    "description": "Menyimpan versi objek sebelumnya agar penimpaan yang tidak disengaja dapat dipulihkan."
+  },
+  "extra-028": {
+    "command": "S3 lifecycle rule",
+    "description": "Memindahkan kelas penyimpanan atau mengakhiri masa berlaku objek secara otomatis berdasarkan usia atau filter."
+  },
+  "extra-029": {
+    "command": "S3 presigned URL",
+    "description": "Memberikan akses berbatas waktu ke objek tanpa membagikan kredensial berjangka panjang."
+  },
+  "extra-030": {
+    "command": "S3 server-side encryption",
+    "description": "Mengenkripsi objek tersimpan dengan kunci yang dikelola S3 atau pelanggan."
+  },
+  "extra-031": {
+    "command": "EC2 IMDSv2",
+    "description": "Menggunakan token sesi untuk mengurangi paparan kredensial metadata instans."
+  },
+  "extra-032": {
+    "command": "Security group vs network ACL",
+    "description": "Grup keamanan merupakan aturan instans yang melacak keadaan; ACL jaringan merupakan aturan subnet yang tidak melacak keadaan."
+  },
+  "extra-033": {
+    "command": "Application Load Balancer target health",
+    "description": "Melaporkan apakah target terdaftar lulus pemeriksaan kesehatan yang dikonfigurasi."
+  },
+  "extra-034": {
+    "command": "Auto Scaling instance refresh",
+    "description": "Mengganti instans grup secara bertahap setelah perubahan templat peluncuran."
+  },
+  "extra-035": {
+    "command": "EBS volume snapshot",
+    "description": "Membuat cadangan volume penyimpanan blok pada suatu titik waktu."
+  },
+  "extra-036": {
+    "command": "CloudWatch metric alarm",
+    "description": "Mengubah keadaan ketika metrik melewati ambang yang dikonfigurasi."
+  },
+  "extra-037": {
+    "command": "CloudTrail event lookup",
+    "description": "Menelusuri peristiwa pengelolaan yang tercatat untuk suatu prinsipal, sumber daya, atau tindakan."
+  },
+  "extra-038": {
+    "command": "SQS visibility timeout",
+    "description": "Menyembunyikan sementara pesan yang diterima ketika konsumen memprosesnya."
+  },
+  "extra-039": {
+    "command": "SQS dead-letter queue",
+    "description": "Menampung pesan yang melampaui batas percobaan ulang pengiriman pada antrean sumber."
+  },
+  "extra-040": {
+    "command": "SNS message filter policy",
+    "description": "Mengirim pesan topik hanya ketika atributnya cocok dengan filter langganan."
+  },
+  "extra-041": {
+    "command": "Lambda reserved concurrency",
+    "description": "Membatasi eksekusi serentak dan mencadangkan kapasitas untuk satu fungsi."
+  },
+  "extra-042": {
+    "command": "API Gateway stage variables",
+    "description": "Menyediakan nilai khusus tahap kepada integrasi tanpa mengubah rute."
+  },
+  "extra-043": {
+    "command": "RDS Multi-AZ deployment",
+    "description": "Memelihara basis data siaga demi ketersediaan; ini bukan replika untuk meningkatkan kapasitas baca."
+  },
+  "extra-044": {
+    "command": "RDS read replica",
+    "description": "Melayani lalu lintas baca dari instans basis data yang direplikasi secara asinkron."
+  },
+  "extra-045": {
+    "command": "DynamoDB partition key",
+    "description": "Mendistribusikan item ke berbagai partisi dan seharusnya meratakan beban permintaan."
+  },
+  "extra-046": {
+    "command": "DynamoDB conditional write",
+    "description": "Menerapkan penulisan hanya ketika kondisi item bernilai benar."
+  },
+  "extra-047": {
+    "command": "KMS key rotation",
+    "description": "Merotasi materi kunci sambil mempertahankan pengenal kunci agar tetap sama bagi pemanggil."
+  },
+  "extra-048": {
+    "command": "IAM permission boundary",
+    "description": "Menetapkan izin maksimum yang dapat diberikan kebijakan identitas kepada prinsipal."
+  },
+  "extra-049": {
+    "command": "az account show",
+    "description": "Menampilkan konteks langganan dan tenant aktif untuk Azure CLI."
+  },
+  "extra-050": {
+    "command": "az account set",
+    "description": "Memilih langganan yang digunakan perintah CLI berikutnya."
+  },
+  "extra-051": {
+    "command": "Resource lock",
+    "description": "Mencegah penghapusan atau perubahan cakupan sumber daya yang dilindungi."
+  },
+  "extra-052": {
+    "command": "Managed identity",
+    "description": "Memungkinkan beban kerja Azure memperoleh token Entra tanpa rahasia klien tersimpan."
+  },
+  "extra-053": {
+    "command": "Azure RBAC role assignment",
+    "description": "Memberikan peran bawaan atau khusus pada cakupan yang dipilih."
+  },
+  "extra-054": {
+    "command": "Key Vault secret version",
+    "description": "Menjaga revisi rahasia agar tetap dapat diakses melalui pengenalnya dan mendukung rotasi terkendali."
+  },
+  "extra-055": {
+    "command": "Key Vault soft delete",
+    "description": "Mempertahankan objek vault yang dihapus agar dapat dipulihkan selama periode retensi."
+  },
+  "extra-056": {
+    "command": "Private endpoint",
+    "description": "Memetakan layanan PaaS ke IP privat dalam jaringan virtual."
+  },
+  "extra-057": {
+    "command": "Private DNS zone link",
+    "description": "Memungkinkan resolusi catatan DNS endpoint privat dalam jaringan virtual yang ditautkan."
+  },
+  "extra-058": {
+    "command": "NSG flow logs",
+    "description": "Mencatat keputusan aliran jaringan untuk grup keamanan jaringan yang didukung."
+  },
+  "extra-059": {
+    "command": "Application Gateway probe",
+    "description": "Memeriksa kesehatan backend menggunakan jalur, host, dan interval yang dikonfigurasi."
+  },
+  "extra-060": {
+    "command": "Front Door origin health",
+    "description": "Memantau apakah server asal memenuhi pemeriksaan kesehatan yang dikonfigurasi."
+  },
+  "extra-061": {
+    "command": "Blob lifecycle management",
+    "description": "Memindahkan atau mengakhiri masa berlaku blob berdasarkan usia, prefiks, atau tingkat akses."
+  },
+  "extra-062": {
+    "command": "Blob soft delete",
+    "description": "Mempertahankan blob yang dihapus agar dapat dipulihkan selama rentang waktu yang dikonfigurasi."
+  },
+  "extra-063": {
+    "command": "Azure SQL point-in-time restore",
+    "description": "Membuat salinan basis data dari titik waktu sebelumnya dalam rentang retensi."
+  },
+  "extra-064": {
+    "command": "Cosmos DB request units",
+    "description": "Mewakili kapasitas throughput yang dinormalisasi untuk operasi basis data."
+  },
+  "extra-065": {
+    "command": "Azure Monitor alert rule",
+    "description": "Mengevaluasi metrik atau log dan memicu grup tindakan ketika kondisinya cocok."
+  },
+  "extra-066": {
+    "command": "Log Analytics workspace query",
+    "description": "Menggunakan Kusto Query Language untuk menganalisis telemetri yang dikumpulkan."
+  },
+  "extra-067": {
+    "command": "App Service deployment slot",
+    "description": "Menyediakan target penerapan terpisah yang dapat ditukar dengan produksi."
+  },
+  "extra-068": {
+    "command": "Container Apps revision",
+    "description": "Mewakili versi aplikasi yang tidak dapat diubah dan dapat menerima lalu lintas."
+  },
+  "extra-069": {
+    "command": "AKS node pool taint",
+    "description": "Membatasi penjadwalan agar hanya pod dengan toleransi yang sesuai ditempatkan pada kumpulan khusus."
+  },
+  "extra-070": {
+    "command": "Bicep what-if",
+    "description": "Meninjau perubahan sumber daya Azure sebelum penerapan dijalankan."
+  },
+  "extra-071": {
+    "command": "Azure Policy compliance",
+    "description": "Menampilkan sumber daya yang mematuhi atau bertentangan dengan definisi kebijakan yang ditetapkan."
+  },
+  "extra-072": {
+    "command": "Service Bus dead-letter queue",
+    "description": "Menyimpan pesan yang tidak dapat dikirim atau diproses dengan berhasil."
+  },
+  "extra-073": {
+    "command": "set -o pipefail",
+    "description": "Mengembalikan kegagalan pipeline ketika salah satu perintah di dalamnya gagal."
+  },
+  "extra-074": {
+    "command": "trap cleanup EXIT",
+    "description": "Menjalankan logika pembersihan saat shell keluar, termasuk setelah kesalahan."
+  },
+  "extra-075": {
+    "command": "mktemp -d",
+    "description": "Membuat direktori sementara unik untuk mengisolasi berkas perantara."
+  },
+  "extra-076": {
+    "command": "read -r",
+    "description": "Membaca masukan tanpa menafsirkan garis miring terbalik sebagai urutan escape."
+  },
+  "extra-077": {
+    "command": "mapfile -t",
+    "description": "Memuat masukan yang dipisahkan baris baru ke dalam larik Bash berindeks."
+  },
+  "extra-078": {
+    "command": "[[ -v variable ]]",
+    "description": "Menguji apakah variabel shell telah ditetapkan, meskipun nilainya kosong."
+  },
+  "extra-079": {
+    "command": "printf %q",
+    "description": "Mengutip nilai agar dapat direpresentasikan dengan aman sebagai masukan shell."
+  },
+  "extra-080": {
+    "command": "parameter defaulting",
+    "description": "Menggunakan nilai pengganti ketika variabel belum ditetapkan atau kosong."
+  },
+  "extra-081": {
+    "command": "parameter substring",
+    "description": "Mengekstrak bagian string menggunakan ekspansi parameter Bash."
+  },
+  "extra-082": {
+    "command": "parameter substitution",
+    "description": "Mengganti teks yang cocok tanpa memulai proses eksternal."
+  },
+  "extra-083": {
+    "command": "process substitution",
+    "description": "Meneruskan keluaran perintah ke program sebagai masukan yang menyerupai berkas."
+  },
+  "extra-084": {
+    "command": "here-string",
+    "description": "Memberikan satu string kepada perintah melalui masukan standar."
+  },
+  "extra-085": {
+    "command": "getopts",
+    "description": "Mengurai opsi pendek baris perintah dalam perulangan shell yang portabel."
+  },
+  "extra-086": {
+    "command": "wait -n",
+    "description": "Menunggu salah satu tugas latar belakang selesai sebelum memulai pekerjaan tambahan."
+  },
+  "extra-087": {
+    "command": "jobs -pr",
+    "description": "Menampilkan ID proses untuk tugas latar belakang yang masih berjalan dan dimulai oleh shell ini."
+  },
+  "extra-088": {
+    "command": "exec command",
+    "description": "Mengganti proses shell saat ini dengan suatu perintah."
+  },
+  "extra-089": {
+    "command": "command -v",
+    "description": "Menemukan berkas eksekusi yang akan dijalankan shell untuk nama perintah tertentu."
+  },
+  "extra-090": {
+    "command": "umask",
+    "description": "Menetapkan bit izin yang secara bawaan dihapus dari berkas dan direktori yang baru dibuat."
+  },
+  "extra-091": {
+    "command": "noclobber",
+    "description": "Secara bawaan mencegah pengalihan keluaran menimpa berkas yang sudah ada."
+  },
+  "extra-092": {
+    "command": "flock",
+    "description": "Menyediakan penguncian kooperatif agar eksekusi skrip serentak tidak saling tumpang tindih."
+  },
+  "extra-093": {
+    "command": "timeout",
+    "description": "Menghentikan perintah yang berjalan melebihi durasi yang diizinkan."
+  },
+  "extra-094": {
+    "command": "xargs -0",
+    "description": "Meneruskan nama berkas berpemisah NUL secara aman ke perintah lain."
+  },
+  "extra-095": {
+    "command": "find -print0",
+    "description": "Mengeluarkan nama berkas yang dipisahkan karakter NUL untuk menangani spasi dan baris baru."
+  },
+  "extra-096": {
+    "command": "set -u",
+    "description": "Menganggap ekspansi variabel yang belum ditetapkan sebagai kesalahan."
+  },
+  "extra-097": {
+    "command": "docker buildx imagetools inspect",
+    "description": "Memeriksa manifes citra multiplatform dan platform yang dipublikasikannya."
+  },
+  "extra-098": {
+    "command": "docker buildx build --platform",
+    "description": "Membangun citra untuk satu atau lebih arsitektur CPU."
+  },
+  "extra-099": {
+    "command": "docker image inspect",
+    "description": "Menampilkan metadata citra seperti lapisan, arsitektur, dan titik masuk."
+  },
+  "extra-100": {
+    "command": "docker image history",
+    "description": "Menampilkan lapisan citra dan perintah yang membuatnya."
+  },
+  "extra-101": {
+    "command": "docker system df",
+    "description": "Melaporkan penggunaan disk oleh citra, kontainer, volume, dan cache build."
+  },
+  "extra-102": {
+    "command": "docker builder prune",
+    "description": "Menghapus cache build yang tidak digunakan untuk mengosongkan penyimpanan lokal."
+  },
+  "extra-103": {
+    "command": "docker volume inspect",
+    "description": "Menampilkan titik pemasangan, driver, dan label volume Docker."
+  },
+  "extra-104": {
+    "command": "docker network inspect",
+    "description": "Menampilkan kontainer yang terhubung, pengaturan IPAM, dan detail driver jaringan."
+  },
+  "extra-105": {
+    "command": "docker stats --no-stream",
+    "description": "Mengambil satu cuplikan penggunaan sumber daya kontainer yang berjalan."
+  },
+  "extra-106": {
+    "command": "docker events --since",
+    "description": "Mengalirkan peristiwa siklus hidup kontainer sejak waktu yang dipilih."
+  },
+  "extra-107": {
+    "command": "docker exec --workdir",
+    "description": "Menjalankan perintah dalam kontainer mulai dari direktori yang dipilih."
+  },
+  "extra-108": {
+    "command": "docker cp",
+    "description": "Menyalin berkas antara jalur lokal dan sistem berkas kontainer."
+  },
+  "extra-109": {
+    "command": "docker wait",
+    "description": "Menunggu kontainer berhenti dan mencetak kode keluarnya."
+  },
+  "extra-110": {
+    "command": "docker inspect health status",
+    "description": "Membaca status pemeriksaan kesehatan yang dikonfigurasi dan hasil pemeriksaan terbaru."
+  },
+  "extra-111": {
+    "command": "HEALTHCHECK start-period",
+    "description": "Memberi waktu aplikasi untuk melakukan inisialisasi sebelum kegagalan mulai dihitung."
+  },
+  "extra-112": {
+    "command": "read-only root filesystem",
+    "description": "Mencegah penulisan ke sistem berkas akar kontainer saat berjalan."
+  },
+  "extra-113": {
+    "command": "docker run --init",
+    "description": "Menambahkan proses inisialisasi kecil untuk meneruskan sinyal dan membersihkan proses anak yang telah berakhir."
+  },
+  "extra-114": {
+    "command": "docker run --cap-drop",
+    "description": "Menghapus kapabilitas Linux yang tidak diperlukan proses."
+  },
+  "extra-115": {
+    "command": "docker run --security-opt",
+    "description": "Menerapkan pengaturan keamanan saat berjalan seperti profil seccomp."
+  },
+  "extra-116": {
+    "command": "docker run --pids-limit",
+    "description": "Membatasi jumlah proses yang dapat dibuat kontainer."
+  },
+  "extra-117": {
+    "command": "docker compose config",
+    "description": "Menyajikan dan memvalidasi konfigurasi Compose yang telah digabungkan."
+  },
+  "extra-118": {
+    "command": "docker compose profiles",
+    "description": "Mengaktifkan layanan opsional hanya ketika profil bernamanya dipilih."
+  },
+  "extra-119": {
+    "command": "docker compose up --wait",
+    "description": "Menunggu layanan menjadi sehat atau berjalan sebelum mengembalikan kendali."
+  },
+  "extra-120": {
+    "command": "container stop timeout",
+    "description": "Mengirim sinyal penghentian tertib dan menunggu sebelum menghentikan kontainer secara paksa."
+  },
+  "extra-121": {
+    "command": "gcloud config get-value project",
+    "description": "Menampilkan proyek yang digunakan oleh perintah yang tidak menyebutkan proyek secara eksplisit."
+  },
+  "extra-122": {
+    "command": "gcloud auth list",
+    "description": "Menampilkan akun yang telah diautentikasi dan mengidentifikasi prinsipal aktif."
+  },
+  "extra-123": {
+    "command": "gcloud projects get-iam-policy",
+    "description": "Membaca pengikatan IAM tingkat proyek untuk peninjauan akses."
+  },
+  "extra-124": {
+    "command": "IAM service account impersonation",
+    "description": "Memungkinkan prinsipal berwenang memperoleh kredensial berjangka pendek untuk akun layanan."
+  },
+  "extra-125": {
+    "command": "Cloud Storage object versioning",
+    "description": "Mempertahankan generasi objek yang lebih lama setelah objek diganti atau dihapus."
+  },
+  "extra-126": {
+    "command": "Cloud Storage retention policy",
+    "description": "Mencegah penghapusan atau penggantian objek hingga periode retensi berakhir."
+  },
+  "extra-127": {
+    "command": "Cloud Run revision traffic",
+    "description": "Membagi permintaan di antara revisi layanan untuk peluncuran bertahap."
+  },
+  "extra-128": {
+    "command": "Cloud Run min instances",
+    "description": "Mempertahankan sejumlah instans siap pakai sesuai konfigurasi untuk mengurangi mulai dingin."
+  },
+  "extra-129": {
+    "command": "GKE Workload Identity",
+    "description": "Menyediakan kredensial Google berjangka pendek bagi beban kerja Kubernetes tanpa berkas kunci."
+  },
+  "extra-130": {
+    "command": "GKE node taint",
+    "description": "Mencadangkan simpul untuk pod yang mendeklarasikan toleransi yang cocok."
+  },
+  "extra-131": {
+    "command": "Pub/Sub dead-letter topic",
+    "description": "Mengarahkan pesan yang berulang kali gagal dikirim ke topik terpisah untuk diperiksa."
+  },
+  "extra-132": {
+    "command": "Pub/Sub acknowledgment deadline",
+    "description": "Menetapkan waktu yang tersedia bagi pelanggan untuk mengonfirmasi pesan yang ditarik."
+  },
+  "extra-133": {
+    "command": "BigQuery partition pruning",
+    "description": "Mengurangi data yang dipindai dengan menyaring berdasarkan kolom partisi."
+  },
+  "extra-134": {
+    "command": "BigQuery dry run",
+    "description": "Memperkirakan jumlah bita yang diproses kueri tanpa menjalankannya."
+  },
+  "extra-135": {
+    "command": "Cloud SQL automated backups",
+    "description": "Membuat cadangan basis data terjadwal dengan retensi yang dapat dikonfigurasi."
+  },
+  "extra-136": {
+    "command": "Cloud SQL point-in-time recovery",
+    "description": "Memulihkan basis data ke waktu yang dipilih menggunakan cadangan dan log transaksi."
+  },
+  "extra-137": {
+    "command": "Cloud Logging exclusion",
+    "description": "Mengecualikan entri log yang cocok dari penyimpanan saat log diterima."
+  },
+  "extra-138": {
+    "command": "Cloud Monitoring uptime check",
+    "description": "Memeriksa endpoint yang dapat dijangkau dan mencatat ketersediaan serta latensinya."
+  },
+  "extra-139": {
+    "command": "VPC flow logs",
+    "description": "Mencatat sampel aliran jaringan untuk subnetwork yang didukung."
+  },
+  "extra-140": {
+    "command": "Cloud NAT",
+    "description": "Menyediakan akses internet keluar bagi instans privat tanpa alamat IP eksternal."
+  },
+  "extra-141": {
+    "command": "Artifact Registry cleanup policy",
+    "description": "Menghapus versi paket usang berdasarkan usia, tag, atau aturan penyimpanan."
+  },
+  "extra-142": {
+    "command": "Secret Manager version disable",
+    "description": "Mencegah akses ke versi rahasia tanpa menghapus riwayatnya."
+  },
+  "extra-143": {
+    "command": "KMS key version rotation",
+    "description": "Membuat materi kunci kriptografi baru sambil mempertahankan versi sebelumnya untuk dekripsi."
+  },
+  "extra-144": {
+    "command": "Organization Policy constraint",
+    "description": "Menerapkan batasan pengamanan yang dikelola terpusat pada proyek dan folder."
+  },
+  "extra-145": {
+    "command": "git switch -c",
+    "description": "Membuat cabang baru dan beralih ke cabang tersebut dalam satu operasi."
+  },
+  "extra-146": {
+    "command": "git restore --staged",
+    "description": "Menghapus jalur dari indeks sambil mempertahankan perubahannya dalam pohon kerja."
+  },
+  "extra-147": {
+    "command": "git restore --source",
+    "description": "Mengganti jalur pohon kerja dengan isi dari commit yang dipilih."
+  },
+  "extra-148": {
+    "command": "git diff --check",
+    "description": "Menemukan masalah seperti spasi di akhir baris dan penanda konflik."
+  },
+  "extra-149": {
+    "command": "git diff --stat",
+    "description": "Merangkum berkas yang berubah dan jumlah baris tanpa mencetak patch lengkap."
+  },
+  "extra-150": {
+    "command": "git log --graph",
+    "description": "Menggambar grafik ASCII yang menunjukkan cabang, penggabungan, dan commit."
+  },
+  "extra-151": {
+    "command": "git show --stat",
+    "description": "Menampilkan ringkasan commit dan berkas yang diubah oleh commit tersebut."
+  },
+  "extra-152": {
+    "command": "git blame -L",
+    "description": "Menampilkan commit dan penulis yang terkait dengan setiap baris sumber yang dipilih."
+  },
+  "extra-153": {
+    "command": "git bisect",
+    "description": "Menggunakan pencarian biner untuk menemukan commit yang memperkenalkan regresi."
+  },
+  "extra-154": {
+    "command": "git cherry-pick -x",
+    "description": "Menerapkan commit dan mencatat hash aslinya dalam pesan commit baru."
+  },
+  "extra-155": {
+    "command": "git revert",
+    "description": "Membuat commit baru yang membalikkan perubahan dari commit sebelumnya."
+  },
+  "extra-156": {
+    "command": "git reflog",
+    "description": "Menampilkan perpindahan referensi lokal terbaru, termasuk commit yang tidak lagi berada pada cabang."
+  },
+  "extra-157": {
+    "command": "git clean -nd",
+    "description": "Meninjau berkas tak terlacak yang akan dihapus oleh operasi pembersihan."
+  },
+  "extra-158": {
+    "command": "git stash push --include-untracked",
+    "description": "Menyimpan sementara pekerjaan terlacak dan tak terlacak tanpa membuat commit."
+  },
+  "extra-159": {
+    "command": "git stash branch",
+    "description": "Membuat cabang dan menerapkan kembali simpanan sementara yang dipilih ke cabang itu."
+  },
+  "extra-160": {
+    "command": "git worktree add",
+    "description": "Mengekstrak cabang lain ke direktori kerja terpisah."
+  },
+  "extra-161": {
+    "command": "git submodule update --init",
+    "description": "Menginisialisasi dan mengekstrak revisi submodul yang dicatat oleh repositori induk."
+  },
+  "extra-162": {
+    "command": "git config --show-origin",
+    "description": "Menampilkan berkas konfigurasi yang menyediakan suatu pengaturan Git."
+  },
+  "extra-163": {
+    "command": "git commit --fixup",
+    "description": "Membuat commit yang dimaksudkan untuk digabungkan secara otomatis ke commit sasaran."
+  },
+  "extra-164": {
+    "command": "git rebase --autosquash",
+    "description": "Memindahkan commit fixup dan squash ke sebelah sasarannya selama rebase."
+  },
+  "extra-165": {
+    "command": "git format-patch",
+    "description": "Mengekspor commit sebagai berkas patch yang kompatibel dengan format kotak surat."
+  },
+  "extra-166": {
+    "command": "git am",
+    "description": "Menerapkan berkas patch dan membuat commit dari metadatanya."
+  },
+  "extra-167": {
+    "command": "git verify-commit",
+    "description": "Memeriksa tanda tangan commit terhadap kunci tepercaya yang dikonfigurasi."
+  },
+  "extra-168": {
+    "command": "git fsck --full",
+    "description": "Memeriksa keterhubungan objek repositori dan melaporkan objek yang tidak dapat dijangkau."
+  },
+  "extra-169": {
+    "command": "identity federation",
+    "description": "Memungkinkan beban kerja bertukar klaim identitas tepercaya antarlingkungan tanpa rahasia statis."
+  },
+  "extra-170": {
+    "command": "private connectivity failover",
+    "description": "Menjaga VPN atau sirkuit sekunder tetap tersedia ketika konektivitas privat utama gagal."
+  },
+  "extra-171": {
+    "command": "split-horizon DNS",
+    "description": "Mengembalikan jawaban DNS berbeda kepada klien internal dan eksternal untuk satu nama."
+  },
+  "extra-172": {
+    "command": "centralized certificate lifecycle",
+    "description": "Menerbitkan, merotasi, dan mencabut sertifikat secara konsisten antarlingkungan."
+  },
+  "extra-173": {
+    "command": "cross-environment secrets rotation",
+    "description": "Merotasi kredensial di kedua lokasi sambil memastikan klien bertransisi dengan aman."
+  },
+  "extra-174": {
+    "command": "data residency boundary",
+    "description": "Menjaga data yang diatur regulasi dan cadangan tetap berada dalam lokasi geografis yang disetujui."
+  },
+  "extra-175": {
+    "command": "WAN latency budget",
+    "description": "Mendefinisikan keterlambatan jaringan yang dapat diterima untuk dependensi aplikasi sinkron."
+  },
+  "extra-176": {
+    "command": "egress control plane",
+    "description": "Memusatkan rute keluar, pemeriksaan, dan kebijakan di berbagai lokasi dan cloud."
+  },
+  "extra-177": {
+    "command": "configuration drift detection",
+    "description": "Membandingkan pengaturan yang diterapkan dengan keadaan yang diinginkan yang dideklarasikan di setiap lingkungan."
+  },
+  "extra-178": {
+    "command": "hybrid observability correlation",
+    "description": "Menggunakan pengenal layanan dan jejak yang konsisten untuk menghubungkan telemetri antarplatform."
+  },
+  "extra-179": {
+    "command": "site-to-cloud route advertisement",
+    "description": "Mengumumkan prefiks privat yang disetujui antara router lokal dan gateway cloud."
+  },
+  "extra-180": {
+    "command": "active-passive workload failover",
+    "description": "Memindahkan lalu lintas ke lingkungan sekunder yang siap setelah kegagalan lingkungan utama terverifikasi."
+  },
+  "extra-181": {
+    "command": "active-active data consistency",
+    "description": "Mendefinisikan penanganan konflik ketika kedua lokasi menerima penulisan secara bersamaan."
+  },
+  "extra-182": {
+    "command": "hybrid backup immutability",
+    "description": "Melindungi salinan cadangan dari perubahan oleh kredensial produksi yang telah disusupi."
+  },
+  "extra-183": {
+    "command": "local dependency cache",
+    "description": "Menjaga artefak yang diperlukan tetap tersedia selama gangguan konektivitas cloud."
+  },
+  "extra-184": {
+    "command": "edge workload update ring",
+    "description": "Menggulirkan pembaruan perangkat lunak ke lokasi jarak jauh dalam gelombang terkendali."
+  },
+  "extra-185": {
+    "command": "policy translation",
+    "description": "Memetakan persyaratan akses dan jaringan yang setara ke kontrol bawaan setiap platform."
+  },
+  "extra-186": {
+    "command": "hybrid service ownership",
+    "description": "Menetapkan penanggung jawab operasional untuk setiap dependensi lintas batas platform."
+  },
+  "extra-187": {
+    "command": "cross-cloud identity mapping",
+    "description": "Memetakan identitas eksternal ke peran dengan hak akses minimum di cloud lain."
+  },
+  "extra-188": {
+    "command": "clock synchronization",
+    "description": "Menjaga host selaras dengan sumber waktu tepercaya untuk log, sertifikat, dan autentikasi."
+  },
+  "extra-189": {
+    "command": "hybrid deployment contract",
+    "description": "Mendefinisikan versi dan antarmuka yang kompatibel untuk komponen yang dirilis secara terpisah."
+  },
+  "extra-190": {
+    "command": "regional traffic steering",
+    "description": "Mengarahkan pengguna ke lingkungan sehat terdekat berdasarkan pengukuran kesehatan dan latensi."
+  },
+  "extra-191": {
+    "command": "offline operation mode",
+    "description": "Menentukan fungsi yang tetap tersedia ketika layanan jarak jauh tidak dapat dijangkau."
+  },
+  "extra-192": {
+    "command": "hybrid disaster recovery test",
+    "description": "Membuktikan bahwa prosedur pemulihan bekerja untuk dependensi pusat data maupun cloud."
+  },
+  "extra-193": {
+    "command": "ibmcloud target",
+    "description": "Memilih akun, wilayah, dan grup sumber daya untuk operasi CLI selanjutnya."
+  },
+  "extra-194": {
+    "command": "ibmcloud resource groups",
+    "description": "Menampilkan grup sumber daya yang mengatur layanan dan cakupan akses."
+  },
+  "extra-195": {
+    "command": "ibmcloud iam user-policies",
+    "description": "Menampilkan kebijakan yang ditetapkan langsung ke identitas pengguna."
+  },
+  "extra-196": {
+    "command": "IBM Cloud API key rotation",
+    "description": "Mengganti kredensial dan memperbarui beban kerja yang bergantung padanya sebelum pencabutan kredensial lama."
+  },
+  "extra-197": {
+    "command": "VPC security group",
+    "description": "Mengontrol lalu lintas masuk dan keluar dengan pelacakan keadaan untuk antarmuka VPC."
+  },
+  "extra-198": {
+    "command": "VPC network ACL",
+    "description": "Menerapkan aturan izin dan penolakan tingkat subnet tanpa pelacakan keadaan."
+  },
+  "extra-199": {
+    "command": "VPC floating IP",
+    "description": "Mengaitkan alamat publik dengan antarmuka jaringan VPC yang didukung."
+  },
+  "extra-200": {
+    "command": "VPC VPN gateway",
+    "description": "Menghubungkan VPC ke jaringan jarak jauh melalui terowongan IPsec."
+  },
+  "extra-201": {
+    "command": "Cloud Object Storage HMAC key",
+    "description": "Menyediakan kredensial kompatibel S3 untuk klien penyimpanan objek yang didukung."
+  },
+  "extra-202": {
+    "command": "Cloud Object Storage retention",
+    "description": "Melindungi objek dari penghapusan atau penimpaan selama periode yang ditentukan."
+  },
+  "extra-203": {
+    "command": "Kubernetes worker pool",
+    "description": "Mengelompokkan simpul pekerja klaster yang memiliki konfigurasi mesin dan zona yang sama."
+  },
+  "extra-204": {
+    "command": "Kubernetes cluster autoscaler",
+    "description": "Menyesuaikan jumlah pekerja berdasarkan pod yang tidak dapat dijadwalkan."
+  },
+  "extra-205": {
+    "command": "Code Engine job",
+    "description": "Menjalankan beban kerja terbatas hingga selesai, alih-alih melayani endpoint secara terus-menerus."
+  },
+  "extra-206": {
+    "command": "Code Engine project",
+    "description": "Menyediakan cakupan terisolasi untuk aplikasi, tugas, build, dan konfigurasi."
+  },
+  "extra-207": {
+    "command": "Secrets Manager secret group",
+    "description": "Mengatur rahasia dan kebijakan akses dalam instans pengelola rahasia."
+  },
+  "extra-208": {
+    "command": "Secrets Manager rotation policy",
+    "description": "Menjadwalkan rotasi untuk jenis rahasia yang didukung dan layanan yang terhubung."
+  },
+  "extra-209": {
+    "command": "Activity Tracker event",
+    "description": "Mencatat aktivitas akun untuk audit, penyelidikan, dan peringatan."
+  },
+  "extra-210": {
+    "command": "Log Analysis parsing rule",
+    "description": "Mengekstrak bidang terstruktur dari pesan log aplikasi saat penerimaan."
+  },
+  "extra-211": {
+    "command": "Key Protect root key",
+    "description": "Melindungi kunci enkripsi data yang digunakan layanan terintegrasi."
+  },
+  "extra-212": {
+    "command": "Key Protect key rotation",
+    "description": "Merotasi materi kunci kriptografi sambil mempertahankan referensi terkelola."
+  },
+  "extra-213": {
+    "command": "Cloud Internet Services origin pool",
+    "description": "Mengelompokkan server asal backend untuk distribusi lalu lintas berdasarkan kesehatan."
+  },
+  "extra-214": {
+    "command": "Cloud Internet Services WAF rule",
+    "description": "Memblokir atau memberikan tantangan verifikasi pada permintaan yang cocok dengan pola serangan web."
+  },
+  "extra-215": {
+    "command": "Schematics workspace",
+    "description": "Menjalankan otomatisasi Terraform menggunakan lingkungan eksekusi yang dikelola IBM Cloud."
+  },
+  "extra-216": {
+    "command": "Schematics action",
+    "description": "Menjalankan tindakan operasional pada sumber daya yang dikelola ruang kerja."
+  },
+  "extra-217": {
+    "command": "Object.hasOwn",
+    "description": "Memeriksa apakah objek memiliki properti secara langsung tanpa menelusuri prototipe."
+  },
+  "extra-218": {
+    "command": "structuredClone",
+    "description": "Membuat salinan mendalam dari nilai terstruktur yang didukung."
+  },
+  "extra-219": {
+    "command": "Array.toSorted",
+    "description": "Mengembalikan salinan terurut tanpa mengubah larik asli."
+  },
+  "extra-220": {
+    "command": "Array.flatMap",
+    "description": "Memetakan setiap item dan meratakan satu tingkat larik hasilnya."
+  },
+  "extra-221": {
+    "command": "Array.some",
+    "description": "Menguji apakah setidaknya satu elemen larik memenuhi predikat."
+  },
+  "extra-222": {
+    "command": "Array.every",
+    "description": "Menguji apakah semua elemen larik memenuhi predikat."
+  },
+  "extra-223": {
+    "command": "Map.groupBy",
+    "description": "Mengelompokkan nilai iterable berdasarkan kunci yang dikembalikan fungsi panggil balik."
+  },
+  "extra-224": {
+    "command": "Promise.allSettled",
+    "description": "Menunggu semua promise dan mempertahankan hasil yang terpenuhi maupun ditolak."
+  },
+  "extra-225": {
+    "command": "AbortController",
+    "description": "Mengirim sinyal pembatalan ke fetch dan pekerjaan asinkron lain yang mendukung pembatalan."
+  },
+  "extra-226": {
+    "command": "fetch response.ok",
+    "description": "Memeriksa apakah status respons HTTP berada dalam rentang keberhasilan."
+  },
+  "extra-227": {
+    "command": "URLSearchParams",
+    "description": "Membuat dan mengurai string kueri URL dengan pengodean yang benar."
+  },
+  "extra-228": {
+    "command": "import.meta.env",
+    "description": "Membaca nilai lingkungan yang disediakan alat build dalam sistem modul yang didukung."
+  },
+  "extra-229": {
+    "command": "dynamic import",
+    "description": "Memuat modul sesuai permintaan dan mengembalikan promise untuk ekspornya."
+  },
+  "extra-230": {
+    "command": "top-level await",
+    "description": "Memungkinkan modul yang didukung menunggu inisialisasi asinkron secara langsung."
+  },
+  "extra-231": {
+    "command": "WeakMap",
+    "description": "Menyimpan metadata berkunci objek tanpa mempertahankan objek kunci semata-mata karena berada dalam peta."
+  },
+  "extra-232": {
+    "command": "WeakSet",
+    "description": "Melacak keanggotaan objek tanpa menghalangi pengumpulan sampah memori untuk entrinya."
+  },
+  "extra-233": {
+    "command": "Object.freeze",
+    "description": "Mencegah perubahan properti milik objek itu sendiri saat berjalan."
+  },
+  "extra-234": {
+    "command": "nullish coalescing",
+    "description": "Menggunakan nilai pengganti hanya untuk null atau undefined, sehingga nilai sah yang dianggap salah tetap dipertahankan."
+  },
+  "extra-235": {
+    "command": "optional chaining",
+    "description": "Membaca nilai bersarang dengan aman ketika referensi sebelumnya mungkin null atau undefined."
+  },
+  "extra-236": {
+    "command": "Error cause",
+    "description": "Menyertakan pengecualian asal ketika membungkus kesalahan dengan konteks."
+  },
+  "extra-237": {
+    "command": "TextEncoder",
+    "description": "Mengodekan string JavaScript menjadi bita UTF-8."
+  },
+  "extra-238": {
+    "command": "crypto.randomUUID",
+    "description": "Membuat UUID menggunakan sumber acak kriptografi platform."
+  },
+  "extra-239": {
+    "command": "ReadableStream",
+    "description": "Memproses data aliran secara bertahap alih-alih menampung seluruh respons dalam buffer."
+  },
+  "extra-240": {
+    "command": "Object.fromEntries",
+    "description": "Membuat objek dari iterable berisi pasangan kunci dan nilai."
+  },
+  "extra-241": {
+    "command": "pipeline options timeout",
+    "description": "Menghentikan pipeline atau tahap setelah durasi yang dikonfigurasi."
+  },
+  "extra-242": {
+    "command": "pipeline options disableConcurrentBuilds",
+    "description": "Mencegah eksekusi tugas pipeline yang sama saling tumpang tindih."
+  },
+  "extra-243": {
+    "command": "when branch",
+    "description": "Menjalankan tahap deklaratif hanya ketika cabang saat ini cocok."
+  },
+  "extra-244": {
+    "command": "when changeset",
+    "description": "Menjalankan tahap hanya ketika berkas yang berubah cocok dengan pola."
+  },
+  "extra-245": {
+    "command": "input step",
+    "description": "Menjeda pipeline untuk menunggu keputusan manusia yang berwenang."
+  },
+  "extra-246": {
+    "command": "stash and unstash",
+    "description": "Mentransfer berkas terpilih antartahap pada agen yang berbeda."
+  },
+  "extra-247": {
+    "command": "archiveArtifacts",
+    "description": "Mempertahankan keluaran build bersama catatan build Jenkins."
+  },
+  "extra-248": {
+    "command": "junit publisher",
+    "description": "Mempublikasikan hasil pengujian XML dan menandai build tidak stabil jika terjadi kegagalan."
+  },
+  "extra-249": {
+    "command": "credentials binding",
+    "description": "Menyediakan kredensial tersimpan sebagai variabel lingkungan dalam blok bercakupan terbatas."
+  },
+  "extra-250": {
+    "command": "withEnv",
+    "description": "Menambahkan atau mengganti nilai lingkungan untuk blok pipeline terbatas."
+  },
+  "extra-251": {
+    "command": "agent label",
+    "description": "Menjadwalkan pipeline atau tahap pada agen Jenkins yang cocok."
+  },
+  "extra-252": {
+    "command": "matrix axis",
+    "description": "Menjalankan tahap pada kombinasi nilai lingkungan yang dideklarasikan."
+  },
+  "extra-253": {
+    "command": "parallel stages",
+    "description": "Menjalankan tahap deklaratif independen secara serentak."
+  },
+  "extra-254": {
+    "command": "post always",
+    "description": "Menjalankan langkah pembersihan atau pelaporan apa pun hasil pipeline."
+  },
+  "extra-255": {
+    "command": "post unsuccessful",
+    "description": "Menjalankan logika pemulihan atau pemberitahuan untuk hasil gagal atau tidak stabil."
+  },
+  "extra-256": {
+    "command": "retry step",
+    "description": "Mengulangi blok ketika operasi gagal akibat gangguan sementara."
+  },
+  "extra-257": {
+    "command": "warnError",
+    "description": "Menandai tahap tidak stabil sambil tetap mengizinkan pipeline berlanjut."
+  },
+  "extra-258": {
+    "command": "lockable resource",
+    "description": "Mengatur akses pipeline ke sumber daya bersama agar berlangsung satu per satu."
+  },
+  "extra-259": {
+    "command": "milestone step",
+    "description": "Mencegah build lama melanjutkan melewati build yang lebih baru."
+  },
+  "extra-260": {
+    "command": "build job step",
+    "description": "Memicu tugas Jenkins lain dengan parameter dan pilihan untuk menunggu."
+  },
+  "extra-261": {
+    "command": "copyArtifacts",
+    "description": "Menyalin artefak terpilih dari build lain ke ruang kerja saat ini."
+  },
+  "extra-262": {
+    "command": "pipeline shared library",
+    "description": "Mengemas langkah pipeline yang dapat digunakan kembali dan variabel global untuk beberapa tugas."
+  },
+  "extra-263": {
+    "command": "Replay build",
+    "description": "Menjalankan ulang pipeline dengan perubahan skrip sementara untuk penelusuran kesalahan terkendali."
+  },
+  "extra-264": {
+    "command": "build discard policy",
+    "description": "Membatasi riwayat build dan artefak yang disimpan untuk mengendalikan pertumbuhan penyimpanan."
+  },
+  "extra-265": {
+    "command": "kubectl rollout history",
+    "description": "Menampilkan revisi yang dibuat oleh peluncuran Deployment."
+  },
+  "extra-266": {
+    "command": "kubectl rollout undo",
+    "description": "Mengembalikan beban kerja ke revisi sebelumnya ketika pemulihan tersebut aman."
+  },
+  "extra-267": {
+    "command": "kubectl rollout pause",
+    "description": "Menjeda peluncuran Deployment selama perubahan ditinjau."
+  },
+  "extra-268": {
+    "command": "kubectl rollout resume",
+    "description": "Melanjutkan peluncuran yang sebelumnya dijeda."
+  },
+  "extra-269": {
+    "command": "kubectl auth can-i",
+    "description": "Memeriksa apakah identitas saat ini boleh melakukan tindakan API tertentu."
+  },
+  "extra-270": {
+    "command": "kubectl api-resources",
+    "description": "Menampilkan jenis sumber daya dan cakupannya yang disediakan server API."
+  },
+  "extra-271": {
+    "command": "kubectl explain",
+    "description": "Membaca dokumentasi skema untuk bidang sumber daya."
+  },
+  "extra-272": {
+    "command": "kubectl wait",
+    "description": "Menunggu hingga kondisi sumber daya bernilai benar atau batas waktu berakhir."
+  },
+  "extra-273": {
+    "command": "kubectl plugin list",
+    "description": "Menampilkan plugin kubectl yang dapat dieksekusi dan ditemukan pada PATH saat ini."
+  },
+  "extra-274": {
+    "command": "kubectl diff",
+    "description": "Menampilkan perubahan yang akan dibuat manifes pada klaster aktif sebelum diterapkan."
+  },
+  "extra-275": {
+    "command": "kubectl apply --server-side",
+    "description": "Menggunakan kepemilikan bidang sisi server dan deteksi konflik untuk pembaruan."
+  },
+  "extra-276": {
+    "command": "PodDisruptionBudget",
+    "description": "Membatasi gangguan sukarela agar cukup banyak replika tetap tersedia."
+  },
+  "extra-277": {
+    "command": "startup probe",
+    "description": "Memberi waktu bagi kontainer yang lambat memulai sebelum pemeriksaan keaktifan dimulai."
+  },
+  "extra-278": {
+    "command": "readiness probe",
+    "description": "Mengeluarkan pod dari endpoint layanan selama pod tidak dapat menerima lalu lintas."
+  },
+  "extra-279": {
+    "command": "liveness probe",
+    "description": "Memulai ulang kontainer ketika prosesnya tidak lagi sehat."
+  },
+  "extra-280": {
+    "command": "topology spread constraints",
+    "description": "Mendistribusikan pod di berbagai zona atau simpul untuk mengurangi kegagalan yang saling berkaitan."
+  },
+  "extra-281": {
+    "command": "Pod priority class",
+    "description": "Memengaruhi urutan penjadwalan dan kemungkinan penggusuran pod lain ketika sumber daya terbatas."
+  },
+  "extra-282": {
+    "command": "resource quota",
+    "description": "Membatasi konsumsi sumber daya total dalam namespace."
+  },
+  "extra-283": {
+    "command": "LimitRange",
+    "description": "Menetapkan nilai bawaan dan maksimum untuk permintaan atau batas sumber daya objek namespace."
+  },
+  "extra-284": {
+    "command": "EndpointSlice",
+    "description": "Menyimpan data endpoint backend yang dapat diskalakan untuk digunakan oleh Services Kubernetes."
+  },
+  "extra-285": {
+    "command": "IngressClass",
+    "description": "Memilih pengontrol yang harus mengimplementasikan sumber daya Ingress."
+  },
+  "extra-286": {
+    "command": "NetworkPolicy egress",
+    "description": "Membatasi tujuan yang boleh dihubungi oleh pod terpilih."
+  },
+  "extra-287": {
+    "command": "init container",
+    "description": "Menjalankan pekerjaan persiapan hingga selesai sebelum kontainer aplikasi dimulai."
+  },
+  "extra-288": {
+    "command": "ephemeral container",
+    "description": "Menambahkan kontainer penelusuran kesalahan sementara ke pod yang sudah ada."
+  },
+  "extra-289": {
+    "command": "lsof -i",
+    "description": "Menampilkan proses yang menggunakan soket jaringan yang cocok dengan port atau protokol."
+  },
+  "extra-290": {
+    "command": "ss -lntp",
+    "description": "Menampilkan soket TCP yang mendengarkan, alamat numerik, dan proses pemiliknya."
+  },
+  "extra-291": {
+    "command": "ip route get",
+    "description": "Menampilkan rute dan alamat sumber yang akan digunakan kernel untuk suatu tujuan."
+  },
+  "extra-292": {
+    "command": "ip neigh",
+    "description": "Menampilkan cache tetangga lokal yang digunakan untuk resolusi alamat."
+  },
+  "extra-293": {
+    "command": "ethtool",
+    "description": "Memeriksa atau mengonfigurasi properti antarmuka jaringan yang didukung."
+  },
+  "extra-294": {
+    "command": "iostat -xz",
+    "description": "Melaporkan metrik penggunaan dan latensi perangkat dari paket sysstat."
+  },
+  "extra-295": {
+    "command": "vmstat",
+    "description": "Merangkum memori, proses, paging, I/O blok, dan aktivitas CPU."
+  },
+  "extra-296": {
+    "command": "pidstat",
+    "description": "Melaporkan statistik CPU, memori, atau I/O per proses."
+  },
+  "extra-297": {
+    "command": "strace -p",
+    "description": "Melacak panggilan sistem yang dilakukan proses yang sudah berjalan untuk diagnosis."
+  },
+  "extra-298": {
+    "command": "ltrace",
+    "description": "Melacak panggilan proses ke fungsi pustaka bersama."
+  },
+  "extra-299": {
+    "command": "perf top",
+    "description": "Menampilkan secara langsung fungsi yang teramati menggunakan CPU dalam sampel sistem."
+  },
+  "extra-300": {
+    "command": "systemd-analyze blame",
+    "description": "Menampilkan unit awal yang diurutkan berdasarkan waktu yang dibutuhkan selama boot."
+  },
+  "extra-301": {
+    "command": "systemctl cat",
+    "description": "Menampilkan berkas unit beserta konfigurasi pengganti drop-in-nya."
+  },
+  "extra-302": {
+    "command": "journalctl -u -S",
+    "description": "Memfilter jurnal unit systemd berdasarkan layanan dan waktu mulai."
+  },
+  "extra-303": {
+    "command": "loginctl list-sessions",
+    "description": "Mencantumkan sesi masuk aktif yang dikelola systemd-logind."
+  },
+  "extra-304": {
+    "command": "getfacl",
+    "description": "Membaca daftar kontrol akses POSIX di luar bit dasar pemilik, grup, dan mode."
+  },
+  "extra-305": {
+    "command": "setfacl -m",
+    "description": "Menambahkan atau mengubah entri daftar kontrol akses pada objek sistem berkas."
+  },
+  "extra-306": {
+    "command": "find -mmin",
+    "description": "Menemukan berkas yang diubah dalam rentang menit tertentu."
+  },
+  "extra-307": {
+    "command": "stat -c",
+    "description": "Mencetak metadata berkas terpilih seperti mode, pemilik, ukuran, dan cap waktu."
+  },
+  "extra-308": {
+    "command": "du -xhd1",
+    "description": "Merangkum penggunaan direktori tanpa melintasi batas sistem berkas."
+  },
+  "extra-309": {
+    "command": "tar --exclude",
+    "description": "Membuat arsip dengan mengecualikan berkas atau direktori yang cocok."
+  },
+  "extra-310": {
+    "command": "flock -n",
+    "description": "Memperoleh kunci advisory tanpa menunggu sebelum menjalankan tugas kritis."
+  },
+  "extra-311": {
+    "command": "renice",
+    "description": "Mengubah prioritas penjadwalan proses yang sedang berjalan."
+  },
+  "extra-312": {
+    "command": "ulimit -n",
+    "description": "Membaca atau mengubah batas deskriptor berkas proses shell."
+  },
+  "extra-313": {
+    "command": "portable container image",
+    "description": "Menggunakan format image kompatibel OCI yang dapat dipindahkan antaregistri yang didukung."
+  },
+  "extra-314": {
+    "command": "workload identity federation",
+    "description": "Menukar pernyataan identitas eksternal tepercaya dengan kredensial cloud berumur pendek."
+  },
+  "extra-315": {
+    "command": "cloud resource tagging standard",
+    "description": "Menggunakan label pemilik, lingkungan, pusat biaya, dan kelas data secara konsisten."
+  },
+  "extra-316": {
+    "command": "provider lockfile",
+    "description": "Mengunci checksum paket penyedia agar tim memasang biner penyedia yang telah ditinjau."
+  },
+  "extra-317": {
+    "command": "cross-cloud DNS delegation",
+    "description": "Mendelegasikan subdomain agar setiap platform dapat mengelola rekaman layanannya sendiri."
+  },
+  "extra-318": {
+    "command": "global traffic failover",
+    "description": "Mengarahkan permintaan ke penyedia yang sehat ketika endpoint utama tidak tersedia."
+  },
+  "extra-319": {
+    "command": "cloud egress cost review",
+    "description": "Mengidentifikasi biaya akibat data yang keluar dari penyedia, region, atau zona."
+  },
+  "extra-320": {
+    "command": "portable health endpoint",
+    "description": "Menyediakan sinyal kesiapan dan keaktifan yang setara di berbagai platform hosting."
+  },
+  "extra-321": {
+    "command": "cross-provider log correlation",
+    "description": "Meneruskan ID penelusuran agar permintaan dapat diikuti melintasi batas penyedia."
+  },
+  "extra-322": {
+    "command": "cloud-neutral backup format",
+    "description": "Menyimpan data yang dapat dipulihkan dalam format yang tidak terikat pada satu layanan terkelola."
+  },
+  "extra-323": {
+    "command": "service-level objective portability",
+    "description": "Menetapkan sasaran ketersediaan dan latensi yang tidak bergantung pada metrik khusus vendor."
+  },
+  "extra-324": {
+    "command": "cloud policy as code",
+    "description": "Memvalidasi aturan pengamanan bersama dalam CI sebelum sumber daya penyedia dibuat."
+  },
+  "extra-325": {
+    "command": "secret provider abstraction",
+    "description": "Memungkinkan aplikasi menggunakan nilai rahasia melalui antarmuka yang stabil."
+  },
+  "extra-326": {
+    "command": "artifact promotion by digest",
+    "description": "Mempromosikan pengenal artefak yang tidak berubah alih-alih membangun ulang untuk setiap lingkungan."
+  },
+  "extra-327": {
+    "command": "cross-cloud certificate renewal",
+    "description": "Mengoordinasikan penerbitan dan penerapan sertifikat di berbagai sistem ingress independen."
+  },
+  "extra-328": {
+    "command": "multi-provider quota planning",
+    "description": "Melacak kuota layanan dan batas kapasitas sebelum meningkatkan skala lintas penyedia."
+  },
+  "extra-329": {
+    "command": "cloud incident runbook",
+    "description": "Mendokumentasikan langkah pemulihan khusus penyedia untuk mendukung sasaran layanan bersama."
+  },
+  "extra-330": {
+    "command": "data transfer minimization",
+    "description": "Menempatkan komputasi dekat dengan datanya untuk mengurangi latensi dan biaya lintas cloud."
+  },
+  "extra-331": {
+    "command": "immutable deployment artifact",
+    "description": "Menggunakan artefak build bertanda tangan dan berversi sebagai unit rilis."
+  },
+  "extra-332": {
+    "command": "provider outage dependency map",
+    "description": "Memetakan layanan ke region penyedia dan dependensi bidang kendali bersama."
+  },
+  "extra-333": {
+    "command": "cloud configuration drift",
+    "description": "Membandingkan pengaturan aktual dengan konfigurasi yang diinginkan dalam kontrol versi."
+  },
+  "extra-334": {
+    "command": "portable deployment manifest",
+    "description": "Memisahkan pengaturan beban kerja dari pengikatan infrastruktur khusus penyedia."
+  },
+  "extra-335": {
+    "command": "cross-cloud restore exercise",
+    "description": "Menguji pemulihan pada penyedia lain alih-alih menganggap cadangan pasti dapat digunakan."
+  },
+  "extra-336": {
+    "command": "shared responsibility matrix",
+    "description": "Memperjelas kontrol keamanan yang menjadi tanggung jawab penyedia dan tim beban kerja."
+  },
+  "extra-337": {
+    "command": "TCP three-way handshake",
+    "description": "Membangun koneksi TCP menggunakan segmen SYN, SYN-ACK, dan ACK."
+  },
+  "extra-338": {
+    "command": "TCP retransmission",
+    "description": "Mengirim ulang data yang belum diakui setelah kehilangan data atau penundaan berlebihan."
+  },
+  "extra-339": {
+    "command": "MTU path discovery",
+    "description": "Menemukan ukuran paket terbesar yang dapat dikirim tanpa fragmentasi."
+  },
+  "extra-340": {
+    "command": "DNS CNAME record",
+    "description": "Menjadikan satu nama DNS sebagai alias nama lain, bukan langsung ke alamat."
+  },
+  "extra-341": {
+    "command": "DNS negative caching",
+    "description": "Menyimpan dalam cache bahwa suatu nama atau rekaman tidak ada selama periode tertentu."
+  },
+  "extra-342": {
+    "command": "DNS split horizon",
+    "description": "Mengembalikan rekaman berbeda sesuai tampilan resolver klien."
+  },
+  "extra-343": {
+    "command": "BGP local preference",
+    "description": "Memilih rute keluar yang diutamakan dalam suatu sistem otonom."
+  },
+  "extra-344": {
+    "command": "BGP AS path prepending",
+    "description": "Membuat jalur yang diumumkan tampak lebih panjang untuk memengaruhi pemilihan rute jarak jauh."
+  },
+  "extra-345": {
+    "command": "BGP graceful restart",
+    "description": "Mempertahankan penerusan selama proses perutean dimulai ulang jika peer mendukungnya."
+  },
+  "extra-346": {
+    "command": "VLAN trunk",
+    "description": "Membawa beberapa VLAN bertag melalui satu tautan Ethernet fisik."
+  },
+  "extra-347": {
+    "command": "802.1Q native VLAN",
+    "description": "Membawa lalu lintas tanpa tag pada trunk dan harus cocok di kedua ujung."
+  },
+  "extra-348": {
+    "command": "LACP port channel",
+    "description": "Menggabungkan tautan fisik menjadi tautan logis yang dinegosiasikan untuk redundansi dan kapasitas."
+  },
+  "extra-349": {
+    "command": "ARP cache",
+    "description": "Memetakan alamat IPv4 ke alamat lapisan tautan pada jaringan lokal."
+  },
+  "extra-350": {
+    "command": "IPv6 neighbor discovery",
+    "description": "Menggunakan pesan ICMPv6 untuk resolusi alamat dan penemuan router."
+  },
+  "extra-351": {
+    "command": "NAT port exhaustion",
+    "description": "Terjadi ketika perangkat NAT kehabisan port sumber untuk aliran serentak."
+  },
+  "extra-352": {
+    "command": "TLS SNI",
+    "description": "Memungkinkan klien menyatakan nama host yang diminta selama handshake TLS."
+  },
+  "extra-353": {
+    "command": "TLS ALPN",
+    "description": "Menegosiasikan protokol aplikasi seperti HTTP/2 saat menyiapkan TLS."
+  },
+  "extra-354": {
+    "command": "HTTP CONNECT proxy",
+    "description": "Membuat terowongan melalui proksi HTTP, biasanya untuk lalu lintas TLS."
+  },
+  "extra-355": {
+    "command": "reverse proxy buffering",
+    "description": "Mengendalikan apakah perantara menyangga isi permintaan atau respons."
+  },
+  "extra-356": {
+    "command": "Anycast routing",
+    "description": "Mengumumkan satu alamat dari beberapa lokasi agar perutean memilih lokasi terdekat."
+  },
+  "extra-357": {
+    "command": "ECMP",
+    "description": "Mendistribusikan aliran melalui beberapa rute berbiaya sama."
+  },
+  "extra-358": {
+    "command": "network flow logs",
+    "description": "Merekam sampel rincian sumber, tujuan, port, serta izin atau penolakan lalu lintas."
+  },
+  "extra-359": {
+    "command": "ICMP destination unreachable",
+    "description": "Melaporkan bahwa host, jaringan, protokol, port, atau rute tidak dapat dijangkau."
+  },
+  "extra-360": {
+    "command": "packet capture ring buffer",
+    "description": "Merotasi berkas tangkapan agar diagnostik jangka panjang menggunakan ruang disk terbatas."
+  },
+  "extra-361": {
+    "command": "oci iam region-subscription list",
+    "description": "Mencantumkan region yang diaktifkan untuk tenancy saat ini."
+  },
+  "extra-362": {
+    "command": "OCI compartment hierarchy",
+    "description": "Mengatur sumber daya dan menerapkan cakupan kebijakan IAM dalam tenancy."
+  },
+  "extra-363": {
+    "command": "OCI dynamic group",
+    "description": "Memilih prinsipal sumber daya menggunakan aturan kompartemen atau sumber daya yang cocok."
+  },
+  "extra-364": {
+    "command": "OCI resource principal",
+    "description": "Memungkinkan beban kerja OCI memanggil layanan yang diizinkan tanpa menyimpan kunci API pengguna."
+  },
+  "extra-365": {
+    "command": "OCI Vault secret version",
+    "description": "Menyimpan isi rahasia berversi untuk aplikasi dan integrasi."
+  },
+  "extra-366": {
+    "command": "OCI Vault key rotation",
+    "description": "Membuat versi kunci baru sambil mempertahankan versi lama untuk operasi dekripsi."
+  },
+  "extra-367": {
+    "command": "Object Storage retention rule",
+    "description": "Melindungi objek dari penghapusan atau penimpaan selama durasi yang dikonfigurasi."
+  },
+  "extra-368": {
+    "command": "Object Storage pre-authenticated request",
+    "description": "Memberikan akses terbatas cakupan dan waktu ke objek atau bucket terpilih."
+  },
+  "extra-369": {
+    "command": "VCN route rule",
+    "description": "Mengarahkan lalu lintas tujuan yang cocok ke gateway atau hop berikutnya yang privat."
+  },
+  "extra-370": {
+    "command": "Network Security Group",
+    "description": "Menerapkan aturan jaringan virtual pada VNICs terpilih, bukan seluruh subnet."
+  },
+  "extra-371": {
+    "command": "OCI service gateway",
+    "description": "Menyediakan akses privat dari VCN ke layanan Oracle yang didukung."
+  },
+  "extra-372": {
+    "command": "OCI NAT gateway",
+    "description": "Memungkinkan sumber daya subnet privat memulai koneksi publik tanpa membuka akses masuk."
+  },
+  "extra-373": {
+    "command": "Load Balancer backend set",
+    "description": "Mengelompokkan server backend dengan kebijakan dan konfigurasi pemeriksaan kesehatan."
+  },
+  "extra-374": {
+    "command": "Compute instance pool",
+    "description": "Mengelola sekelompok instans komputasi serupa di berbagai domain kegagalan."
+  },
+  "extra-375": {
+    "command": "Block Volume backup policy",
+    "description": "Menjadwalkan pencadangan volume menggunakan kebijakan yang dapat digunakan kembali."
+  },
+  "extra-376": {
+    "command": "File Storage export set",
+    "description": "Menentukan akses jaringan dan opsi ekspor untuk sistem berkas."
+  },
+  "extra-377": {
+    "command": "OKE node pool",
+    "description": "Menentukan konfigurasi mesin worker, image, subnet, dan pengaturan penskalaan kluster."
+  },
+  "extra-378": {
+    "command": "OKE workload identity",
+    "description": "Mengizinkan akun layanan Kubernetes mengakses sumber daya OCI sebagai prinsipal."
+  },
+  "extra-379": {
+    "command": "Autonomous Database wallet",
+    "description": "Berisi materi koneksi klien untuk akses basis data yang dilindungi TLS."
+  },
+  "extra-380": {
+    "command": "Database Data Guard",
+    "description": "Memelihara basis data siaga untuk pemulihan bencana dan pergantian peran."
+  },
+  "extra-381": {
+    "command": "Logging service search",
+    "description": "Mengueri log OCI terpusat untuk menyelidiki peristiwa sumber daya dan aplikasi."
+  },
+  "extra-382": {
+    "command": "Monitoring alarm",
+    "description": "Mengevaluasi kueri metrik dan mengirim notifikasi ketika ambang batas dilampaui."
+  },
+  "extra-383": {
+    "command": "Resource Manager stack drift",
+    "description": "Membandingkan sumber daya yang diterapkan dengan konfigurasi Terraform suatu stack."
+  },
+  "extra-384": {
+    "command": "Cloud Guard responder recipe",
+    "description": "Menentukan tindakan otomatis atau manual ketika aturan detektor menemukan risiko."
+  },
+  "extra-385": {
+    "command": "strict and warnings",
+    "description": "Mengaktifkan pemeriksaan saat kompilasi dan diagnostik runtime yang berguna."
+  },
+  "extra-386": {
+    "command": "defined-or operator",
+    "description": "Menggunakan nilai pengganti hanya ketika nilai tidak terdefinisi, bukan ketika nol atau kosong."
+  },
+  "extra-387": {
+    "command": "three-argument open",
+    "description": "Membuka berkas dengan mode eksplisit dan menghindari penafsiran dua argumen yang ambigu."
+  },
+  "extra-388": {
+    "command": "autodie",
+    "description": "Secara otomatis mengubah kegagalan panggilan sistem yang umum menjadi pengecualian."
+  },
+  "extra-389": {
+    "command": "File::Temp",
+    "description": "Membuat berkas dan direktori sementara dengan nama unik yang aman."
+  },
+  "extra-390": {
+    "command": "Getopt::Long",
+    "description": "Mengurai opsi baris perintah bentuk panjang ke dalam variabel."
+  },
+  "extra-391": {
+    "command": "JSON::PP decode_json",
+    "description": "Mengurai dokumen JSON menjadi referensi Perl menggunakan modul inti JSON::PP."
+  },
+  "extra-392": {
+    "command": "JSON::PP encode_json",
+    "description": "Menserialisasikan struktur data Perl menjadi byte JSON yang ringkas."
+  },
+  "extra-393": {
+    "command": "File::Basename",
+    "description": "Mengekstrak komponen direktori, nama berkas, dan akhiran dari jalur."
+  },
+  "extra-394": {
+    "command": "File::Path make_path",
+    "description": "Membuat direktori bertingkat dan melaporkan kesalahan sistem berkas."
+  },
+  "extra-395": {
+    "command": "File::Find",
+    "description": "Menelusuri pohon direktori dan memanggil callback untuk setiap entri."
+  },
+  "extra-396": {
+    "command": "IPC::Open3",
+    "description": "Menjalankan proses anak dengan handle terpisah untuk stdin, stdout, dan stderr."
+  },
+  "extra-397": {
+    "command": "system list form",
+    "description": "Menjalankan program tanpa memanggil shell untuk menafsirkan argumen."
+  },
+  "extra-398": {
+    "command": "Time::HiRes alarm",
+    "description": "Menyetel alarm dengan ketelitian di bawah satu detik untuk operasi berbatas waktu."
+  },
+  "extra-399": {
+    "command": "POSIX strftime",
+    "description": "Memformat cap waktu dengan pola tertentu yang tidak bergantung pada lokal."
+  },
+  "extra-400": {
+    "command": "Digest::SHA",
+    "description": "Menghitung hash kriptografis untuk berkas atau aliran data."
+  },
+  "extra-401": {
+    "command": "List::Util max",
+    "description": "Menemukan nilai terbesar dari daftar nilai numerik."
+  },
+  "extra-402": {
+    "command": "List::Util any",
+    "description": "Menguji apakah ada item daftar yang memenuhi predikat."
+  },
+  "extra-403": {
+    "command": "Try::Tiny",
+    "description": "Menangani pengecualian dengan blok try, catch, dan finally yang ringkas."
+  },
+  "extra-404": {
+    "command": "Test::More subtests",
+    "description": "Mengelompokkan asersi terkait dan melaporkan hasil pengujian bertingkat yang jelas."
+  },
+  "extra-405": {
+    "command": "Test::Warnings",
+    "description": "Memastikan bahwa kode mengeluarkan peringatan yang diharapkan selama pengujian."
+  },
+  "extra-406": {
+    "command": "DBI placeholders",
+    "description": "Mengikat nilai secara terpisah dari teks SQL untuk menghindari injeksi dan kesalahan pengutipan."
+  },
+  "extra-407": {
+    "command": "DBI transaction",
+    "description": "Mengelompokkan penulisan basis data agar dikomit bersama atau dibatalkan saat gagal."
+  },
+  "extra-408": {
+    "command": "Encode decode",
+    "description": "Mengubah string byte menjadi string karakter menggunakan pengodean eksplisit."
+  },
+  "extra-409": {
+    "command": "Get-Command -All",
+    "description": "Mencantumkan semua perintah dengan nama yang cocok, termasuk perintah yang tertutupi."
+  },
+  "extra-410": {
+    "command": "Get-Member",
+    "description": "Memeriksa properti dan metode yang tersedia pada objek pipeline."
+  },
+  "extra-411": {
+    "command": "Select-Object -ExpandProperty",
+    "description": "Mengeluarkan nilai properti secara langsung tanpa membungkus objek sumber."
+  },
+  "extra-412": {
+    "command": "Where-Object property shorthand",
+    "description": "Memfilter objek dengan sintaks perbandingan ringkas pada versi PowerShell yang mendukungnya."
+  },
+  "extra-413": {
+    "command": "ForEach-Object -Parallel",
+    "description": "Memproses item pipeline secara serentak pada versi PowerShell yang mendukungnya."
+  },
+  "extra-414": {
+    "command": "Start-Job",
+    "description": "Menjalankan pekerjaan dalam job latar belakang terpisah di sesi saat ini."
+  },
+  "extra-415": {
+    "command": "Receive-Job -Keep",
+    "description": "Membaca keluaran job tanpa menghapusnya dari riwayat job."
+  },
+  "extra-416": {
+    "command": "Try / Catch / Finally",
+    "description": "Menangani kesalahan yang menghentikan eksekusi dan memastikan kode pembersihan dapat berjalan."
+  },
+  "extra-417": {
+    "command": "ErrorAction Stop",
+    "description": "Menaikkan banyak kesalahan yang tidak menghentikan eksekusi agar dapat ditangani blok catch."
+  },
+  "extra-418": {
+    "command": "Set-StrictMode",
+    "description": "Mendeteksi variabel yang belum diinisialisasi dan kesalahan skrip umum lainnya."
+  },
+  "extra-419": {
+    "command": "ConvertFrom-Json -AsHashtable",
+    "description": "Mengurai JSON menjadi hashtable yang dapat diubah pada versi PowerShell yang mendukungnya."
+  },
+  "extra-420": {
+    "command": "ConvertTo-Json -Depth",
+    "description": "Menserialisasikan objek bertingkat hingga kedalaman yang dipilih."
+  },
+  "extra-421": {
+    "command": "Invoke-RestMethod -StatusCodeVariable",
+    "description": "Mencatat kode status HTTP saat mengurai respons REST."
+  },
+  "extra-422": {
+    "command": "Test-NetConnection",
+    "description": "Memeriksa resolusi DNS dan konektivitas TCP ke endpoint jarak jauh."
+  },
+  "extra-423": {
+    "command": "Get-FileHash",
+    "description": "Menghitung hash berkas untuk pemeriksaan integritas dan perbandingan artefak."
+  },
+  "extra-424": {
+    "command": "Compare-Object",
+    "description": "Menampilkan perbedaan antara dua koleksi atau properti objek."
+  },
+  "extra-425": {
+    "command": "Import-Csv",
+    "description": "Memuat baris berpemisah sebagai objek dengan header sebagai nama properti."
+  },
+  "extra-426": {
+    "command": "Export-Clixml",
+    "description": "Menserialisasikan objek PowerShell sambil mempertahankan informasi tipe."
+  },
+  "extra-427": {
+    "command": "PSSession",
+    "description": "Mempertahankan koneksi PowerShell jarak jauh yang dapat digunakan kembali untuk beberapa perintah."
+  },
+  "extra-428": {
+    "command": "Register-ArgumentCompleter",
+    "description": "Menambahkan pelengkapan tab khusus untuk perintah atau parameter."
+  },
+  "extra-429": {
+    "command": "SupportsShouldProcess",
+    "description": "Mengaktifkan perilaku standar -WhatIf dan -Confirm dalam fungsi lanjutan."
+  },
+  "extra-430": {
+    "command": "SecureString",
+    "description": "Merepresentasikan teks sensitif dalam memori menggunakan tipe string terlindungi."
+  },
+  "extra-431": {
+    "command": "Resolve-Path",
+    "description": "Memperluas jalur menjadi lokasi absolut yang menyertakan penyedianya."
+  },
+  "extra-432": {
+    "command": "pathlib.Path.rglob",
+    "description": "Menemukan jalur yang cocok dengan pola glob secara rekursif."
+  },
+  "extra-433": {
+    "command": "pathlib.Path.replace",
+    "description": "Mengganti jalur tujuan secara atomik jika sistem berkas mendukungnya."
+  },
+  "extra-434": {
+    "command": "subprocess.run check",
+    "description": "Memunculkan CalledProcessError ketika proses yang dipanggil berakhir dengan kegagalan."
+  },
+  "extra-435": {
+    "command": "subprocess timeout",
+    "description": "Berhenti menunggu dan memunculkan TimeoutExpired ketika proses melampaui batas waktunya."
+  },
+  "extra-436": {
+    "command": "contextlib.ExitStack",
+    "description": "Mengelola sejumlah dinamis pengelola konteks dalam satu cakupan pembersihan."
+  },
+  "extra-437": {
+    "command": "dataclasses.field default_factory",
+    "description": "Membuat nilai bawaan mutable yang baru untuk setiap instans dataclass."
+  },
+  "extra-438": {
+    "command": "typing.Protocol",
+    "description": "Mendeskripsikan antarmuka struktural tanpa mewajibkan pewarisan eksplisit."
+  },
+  "extra-439": {
+    "command": "functools.cache",
+    "description": "Menyimpan hasil fungsi dalam cache ketika argumennya dapat di-hash."
+  },
+  "extra-440": {
+    "command": "functools.partial",
+    "description": "Membuat objek callable dengan sebagian argumen yang telah dikonfigurasi."
+  },
+  "extra-441": {
+    "command": "itertools.batched",
+    "description": "Mengelompokkan iterable menjadi tuple berukuran tetap pada versi Python yang mendukungnya."
+  },
+  "extra-442": {
+    "command": "collections.Counter",
+    "description": "Menghitung nilai yang dapat di-hash dan menyediakan operasi frekuensi yang praktis."
+  },
+  "extra-443": {
+    "command": "collections.defaultdict",
+    "description": "Membuat nilai pemetaan yang belum ada menggunakan fungsi factory."
+  },
+  "extra-444": {
+    "command": "contextlib.suppress",
+    "description": "Mengabaikan tipe pengecualian tertentu dalam blok konteks yang terbatas."
+  },
+  "extra-445": {
+    "command": "logging LoggerAdapter",
+    "description": "Menambahkan bidang kontekstual pada rekaman log untuk logger yang dibungkus."
+  },
+  "extra-446": {
+    "command": "logging QueueHandler",
+    "description": "Memindahkan penanganan log ke thread atau proses pendengar melalui antrean."
+  },
+  "extra-447": {
+    "command": "asyncio.TaskGroup",
+    "description": "Menjalankan tugas terkait dengan pembatalan terstruktur dan penanganan pengecualian."
+  },
+  "extra-448": {
+    "command": "asyncio.Semaphore",
+    "description": "Membatasi jumlah coroutine yang boleh memasuki bagian yang intensif sumber daya."
+  },
+  "extra-449": {
+    "command": "yield from",
+    "description": "Mendelegasikan iterasi dan kendali generator kepada subgenerator."
+  },
+  "extra-450": {
+    "command": "memoryview",
+    "description": "Menyediakan tampilan data buffer tanpa menyalin byte yang mendasarinya."
+  },
+  "extra-451": {
+    "command": "zip strict",
+    "description": "Memunculkan ValueError ketika iterable yang digabungkan dengan zip memiliki panjang berbeda."
+  },
+  "extra-452": {
+    "command": "enum StrEnum",
+    "description": "Mendefinisikan anggota enum bernilai string pada versi Python yang mendukungnya."
+  },
+  "extra-453": {
+    "command": "tomllib",
+    "description": "Mengurai TOML menggunakan pustaka standar pada versi Python yang mendukungnya."
+  },
+  "extra-454": {
+    "command": "unittest.mock autospec",
+    "description": "Membatasi mock pada signature objek asli dan atribut yang tersedia."
+  },
+  "extra-455": {
+    "command": "Enumerable#filter_map",
+    "description": "Memetakan nilai dan membuang hasil nil dalam satu lintasan."
+  },
+  "extra-456": {
+    "command": "Enumerable#tally",
+    "description": "Menghitung kemunculan setiap nilai dalam enumerable."
+  },
+  "extra-457": {
+    "command": "Enumerable#each_slice",
+    "description": "Menghasilkan kelompok berukuran tetap secara berurutan dari enumerable."
+  },
+  "extra-458": {
+    "command": "Hash#fetch",
+    "description": "Membaca kunci dengan nilai bawaan eksplisit atau memunculkan pengecualian jika nilai bawaan tidak diberikan."
+  },
+  "extra-459": {
+    "command": "Hash#transform_values",
+    "description": "Mengembalikan hash dengan setiap nilai ditransformasikan sambil mempertahankan kunci."
+  },
+  "extra-460": {
+    "command": "Hash#compact",
+    "description": "Mengembalikan salinan dengan entri bernilai nil dihapus."
+  },
+  "extra-461": {
+    "command": "String#delete_prefix",
+    "description": "Menghapus satu awalan yang cocok tanpa mengubah string asli."
+  },
+  "extra-462": {
+    "command": "String#match?",
+    "description": "Memeriksa kecocokan string dengan ekspresi reguler tanpa menghasilkan MatchData."
+  },
+  "extra-463": {
+    "command": "Regexp named captures",
+    "description": "Menangkap bidang bermakna berdasarkan nama, bukan posisi numerik."
+  },
+  "extra-464": {
+    "command": "safe navigation operator",
+    "description": "Memanggil metode hanya jika objek penerima bukan nil."
+  },
+  "extra-465": {
+    "command": "Data.define",
+    "description": "Membuat objek nilai immutable dengan anggota bernama pada versi Ruby yang mendukungnya."
+  },
+  "extra-466": {
+    "command": "Struct keyword_init",
+    "description": "Membuat rekaman ringan yang diinisialisasi dengan argumen kata kunci bernama."
+  },
+  "extra-467": {
+    "command": "Enumerable#lazy",
+    "description": "Membangun rangkaian lazy yang memproses nilai hanya saat diminta."
+  },
+  "extra-468": {
+    "command": "Fiber scheduler",
+    "description": "Memungkinkan operasi I/O yang didukung menyerahkan kendali secara kooperatif di bawah penjadwal."
+  },
+  "extra-469": {
+    "command": "Timeout.timeout",
+    "description": "Memunculkan pengecualian ketika blok melampaui durasi yang dikonfigurasi."
+  },
+  "extra-470": {
+    "command": "Open3.capture3",
+    "description": "Menjalankan subproses dan menangkap stdout, stderr, serta statusnya secara terpisah."
+  },
+  "extra-471": {
+    "command": "Tempfile.create",
+    "description": "Membuat berkas sementara dengan pembersihan otomatis setelah blok selesai."
+  },
+  "extra-472": {
+    "command": "JSON.parse symbolize_names",
+    "description": "Mengurai kunci objek JSON sebagai simbol jika sesuai untuk aplikasi."
+  },
+  "extra-473": {
+    "command": "Logger tagged context",
+    "description": "Menambahkan pengenal permintaan atau job ke baris log untuk korelasi."
+  },
+  "extra-474": {
+    "command": "ActiveSupport retry_on",
+    "description": "Mencoba ulang pengecualian job tertentu dengan strategi jeda bertahap yang dikonfigurasi."
+  },
+  "extra-475": {
+    "command": "RSpec shared examples",
+    "description": "Menggunakan kembali kontrak perilaku pada beberapa implementasi."
+  },
+  "extra-476": {
+    "command": "Rake file task",
+    "description": "Mendefinisikan tugas yang berjalan hanya jika berkas tidak ada atau lebih lama daripada prasyaratnya."
+  },
+  "extra-477": {
+    "command": "Bundler deployment mode",
+    "description": "Memasang dependensi terkunci dalam tata letak penerapan yang dapat diprediksi."
+  },
+  "extra-478": {
+    "command": "terraform providers lock",
+    "description": "Menulis checksum penyedia untuk platform terpilih ke berkas pengunci dependensi."
+  },
+  "extra-479": {
+    "command": "terraform fmt -check",
+    "description": "Gagal ketika berkas Terraform berbeda dari format baku."
+  },
+  "extra-480": {
+    "command": "terraform providers schema",
+    "description": "Mencetak skema penyedia untuk memeriksa atribut sumber daya dan sumber data."
+  },
+  "extra-481": {
+    "command": "terraform graph",
+    "description": "Mengeluarkan graf dependensi yang dapat dirender dengan Graphviz."
+  },
+  "extra-482": {
+    "command": "terraform state list",
+    "description": "Mencantumkan alamat sumber daya yang saat ini dilacak dalam berkas state."
+  },
+  "extra-483": {
+    "command": "terraform state show",
+    "description": "Menampilkan atribut tersimpan untuk satu alamat sumber daya."
+  },
+  "extra-484": {
+    "command": "terraform state mv",
+    "description": "Memindahkan alamat state setelah refaktor konfigurasi yang aman."
+  },
+  "extra-485": {
+    "command": "terraform state rm",
+    "description": "Berhenti melacak sumber daya tanpa menghancurkan infrastruktur sebenarnya."
+  },
+  "extra-486": {
+    "command": "terraform import",
+    "description": "Mengaitkan objek jarak jauh yang sudah ada dengan alamat sumber daya Terraform."
+  },
+  "extra-487": {
+    "command": "terraform force-unlock",
+    "description": "Menghapus kunci state kedaluwarsa hanya setelah memastikan tidak ada operasi aktif."
+  },
+  "extra-488": {
+    "command": "terraform console",
+    "description": "Mengevaluasi ekspresi Terraform terhadap konfigurasi saat ini."
+  },
+  "extra-489": {
+    "command": "terraform output -raw",
+    "description": "Mencetak satu nilai output tanpa pengutipan JSON."
+  },
+  "extra-490": {
+    "command": "terraform plan -target",
+    "description": "Merencanakan sebagian kecil dependensi; tidak boleh menggantikan rencana tinjauan menyeluruh."
+  },
+  "extra-491": {
+    "command": "terraform apply -replace",
+    "description": "Merencanakan penggantian sumber daya terpilih alih-alih memakai alur taint yang sudah usang."
+  },
+  "extra-492": {
+    "command": "terraform moved block",
+    "description": "Mendeklarasikan perubahan alamat sumber daya agar migrasi state terjadi saat perencanaan."
+  },
+  "extra-493": {
+    "command": "terraform check block",
+    "description": "Mengevaluasi asersi yang tidak memblokir tentang infrastruktur yang dihasilkan."
+  },
+  "extra-494": {
+    "command": "terraform test",
+    "description": "Menjalankan pengujian konfigurasi native dengan perilaku penyedia tiruan atau nyata."
+  },
+  "extra-495": {
+    "command": "terraform_data resource",
+    "description": "Menyediakan sumber daya yang memahami siklus hidup untuk pemicu dan migrasi provisioner."
+  },
+  "extra-496": {
+    "command": "terraform_data triggers_replace",
+    "description": "Mengganti instans terraform_data ketika nilai yang dipilih berubah."
+  },
+  "extra-497": {
+    "command": "provider alias",
+    "description": "Mengonfigurasi beberapa instans satu penyedia untuk akun atau region terpisah."
+  },
+  "extra-498": {
+    "command": "configuration_aliases",
+    "description": "Mendeklarasikan alias penyedia yang diharapkan modul anak dari pemanggilnya."
+  },
+  "extra-499": {
+    "command": "sensitive output",
+    "description": "Menandai output sebagai sensitif untuk mengurangi penayangan tidak sengaja pada keluaran CLI."
+  },
+  "extra-500": {
+    "command": "precondition and postcondition",
+    "description": "Memvalidasi asumsi sebelum operasi atau jaminan setelah evaluasi sumber daya."
+  }
+}

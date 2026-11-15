@@ -1,0 +1,302 @@
+[
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "कुस Declarative option कन्नै इक्कै Pipeline दे concurrent runs दी इजाजत देने दी जगह नमां run कतार च लग्गदा ऐ?",
+    "options": [
+      "parallelsAlwaysFailFast()",
+      "disableConcurrentBuilds()",
+      "disableResume()",
+      "skipDefaultCheckout()"
+    ],
+    "answer": "disableConcurrentBuilds()"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "कुस Declarative option कन्नै पुराने बिल्ड रिकॉर्डें ते आर्टिफैक्टें आस्तै रिटेंशन नियम दस्से जंदे न?",
+    "options": [
+      "buildDiscarder(logRotator(numToKeepStr: '10'))",
+      "timeout(time: 10, unit: 'MINUTES')",
+      "retry(10)",
+      "quietPeriod(10)"
+    ],
+    "answer": "buildDiscarder(logRotator(numToKeepStr: '10'))"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "Jenkins cron एक्सप्रेशन च H चिन्ह के मुहैया करांदा ऐ?",
+    "options": [
+      "यूज़र दे कंप्यूटर दा मौजूदा घैंटा",
+      "सिर्फ छुट्टियें दे दिन चलने दी बेनती",
+      "सिर्फ जिसले कोई नोड खाली होऐ तां चलने दी बेनती",
+      "job-नांऽ उप्पर आधारत इक स्थिर हैश, जेह्ड़ा शेड्यूल कीते गेदे लोड गी फैलाने आस्तै इस्तेमाल होंदा ऐ"
+    ],
+    "answer": "job-नांऽ उप्पर आधारत इक स्थिर हैश, जेह्ड़ा शेड्यूल कीते गेदे लोड गी फैलाने आस्तै इस्तेमाल होंदा ऐ"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "Jenkins दे पंज-फील्ड cron सिंटैक्स च पंजमां फील्ड के दस्सदा ऐ?",
+    "options": [
+      "दिन दा घैंटा",
+      "महीने दा दिन",
+      "हफ्ते दा दिन",
+      "घैंटे दा मिनट"
+    ],
+    "answer": "हफ्ते दा दिन"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "कुस post कंडीशन उस बेल्लै चलदी ऐ जिसले पिछला बिल्ड फेल जां unstable होने परैत बिल्ड कामयाब होंदा ऐ?",
+    "options": [
+      "unsuccessful",
+      "fixed",
+      "changed",
+      "regression"
+    ],
+    "answer": "fixed"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "कुस post कंडीशन दूईयां post कंडीशनें दा मूल्यांकन होने परैत चलदी ऐ?",
+    "options": [
+      "cleanup",
+      "always",
+      "changed",
+      "success"
+    ],
+    "answer": "cleanup"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "कुस when option कन्नै stage दी कंडीशन उस stage दा agent अलॉट होने थमां पैहले जांची जंदी ऐ?",
+    "options": [
+      "beforeInput false",
+      "beforeOptions false",
+      "branch 'main'",
+      "beforeAgent true"
+    ],
+    "answer": "beforeAgent true"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "कुस when कंडीशन कन्नै Multibranch Pipeline च नांऽ आली ब्रांच गी टारगेट कीता जंदा ऐ?",
+    "options": [
+      "buildingTag()",
+      "changeRequest()",
+      "branch 'main'",
+      "tag 'main'"
+    ],
+    "answer": "branch 'main'"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "कुस Declarative कंस्ट्रक्ट कन्नै axis वैल्यूएं दे मेल, जियां ऑपरेटिंग सिस्टम ते ब्राउज़र, चलाए जंदे न?",
+    "options": [
+      "environment",
+      "matrix",
+      "parallel",
+      "steps"
+    ],
+    "answer": "matrix"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "कुस सेक्शन कन्नै Declarative matrix थमां गैर-लोड़चदे मेल हटाए जंदे न?",
+    "options": [
+      "excludes",
+      "axes",
+      "stages",
+      "tools"
+    ],
+    "answer": "excludes"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "parallel ब्रांचें आले stage उप्पर कुस सेटिंग कन्नै इक ब्रांच फेल होने उप्पर बाकी ब्रांचां रुकी जंदियां न?",
+    "options": [
+      "beforeAgent true",
+      "reuseNode true",
+      "alwaysPull true",
+      "failFast true"
+    ],
+    "answer": "failFast true"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "कुस Declarative option कन्नै बिल्ड unstable होने परैत बाद दे stages छोड़ी दित्ते जंदे न?",
+    "options": [
+      "disableResume()",
+      "preserveStashes()",
+      "skipStagesAfterUnstable()",
+      "skipDefaultCheckout()"
+    ],
+    "answer": "skipStagesAfterUnstable()"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "कुस Pipeline step कन्नै नाकामी दर्ज होंदी ऐ पर उसदी बॉडी परैत execution जारी रेहने दित्ती जंदी ऐ?",
+    "options": [
+      "input",
+      "catchError",
+      "error",
+      "timeout"
+    ],
+    "answer": "catchError"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "प्रोसेस खत्म होने परैत sh(script: 'check.sh', returnStatus: true) के मोड़दा ऐ?",
+    "options": [
+      "संख्यात्मक प्रोसेस exit code",
+      "पूरा स्टैंडर्ड-आउटपुट टेक्स्ट",
+      "शेल दी प्रोसेस ID",
+      "इक Jenkins credentials ऑब्जेक्ट"
+    ],
+    "answer": "संख्यात्मक प्रोसेस exit code"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "कामयाब होने उप्पर sh(script: 'echo ready', returnStdout: true) के मोड़दा ऐ?",
+    "options": [
+      "संख्यात्मक बिल्ड नंबर",
+      "शेल दा एनवायरनमेंट, मैप दे रूप च",
+      "agent दी लेबल लिस्ट",
+      "पकड़ी गेदी स्टैंडर्ड-आउटपुट स्ट्रिंग"
+    ],
+    "answer": "पकड़ी गेदी स्टैंडर्ड-आउटपुट स्ट्रिंग"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "कुस Pipeline step कन्नै मौजूदा workspace डायरेक्टरी दी सामग्री रिकर्सिव तौर उप्पर मिटाई जंदी ऐ?",
+    "options": [
+      "pwd",
+      "readFile",
+      "deleteDir",
+      "fileExists"
+    ],
+    "answer": "deleteDir"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "कुस Pipeline step कन्नै जांचेआ जंदा ऐ जे मौजूदा workspace च कोई पाथ मौजूद ऐ जां नेईं?",
+    "options": [
+      "libraryResource",
+      "fileExists",
+      "readFile",
+      "writeFile"
+    ],
+    "answer": "fileExists"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "कुस Pipeline step कन्नै कोई होर Jenkins job ट्रिगर कीता जाई सकदा ऐ ते बिल्ड पैरामीटर दित्ते जाई सकदे न?",
+    "options": [
+      "build",
+      "stage",
+      "node",
+      "checkout"
+    ],
+    "answer": "build"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "कुस Declarative option कन्नै stages गी दुबारा शुरू करने आस्तै पूरे होई चुके बिल्डें दे stashes सांभे जंदे न?",
+    "options": [
+      "disableResume()",
+      "skipDefaultCheckout()",
+      "quietPeriod(5)",
+      "preserveStashes()"
+    ],
+    "answer": "preserveStashes()"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "Shared Library दी कुस फाइल च vars/deploy.groovy थमां परिभाशत ग्लोबल वेरिएबल deploy आस्तै मदद दा टेक्स्ट होंदा ऐ?",
+    "options": [
+      "resources/deploy.txt",
+      "vars/main.groovy",
+      "vars/deploy.txt",
+      "src/deploy.groovy"
+    ],
+    "answer": "vars/deploy.txt"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "Jenkins Pipeline च @NonCPS annotation आली मेथड उप्पर इक मुक्ख पाबंदी के ऐ?",
+    "options": [
+      "उसी Windows agent उप्पर चलना गै चाहिदा",
+      "ओह् CPS-transformed Pipeline steps गी नेईं सद्दे",
+      "उस च stage डायरेक्टिव होना गै चाहिदा",
+      "ओह् हमेशा स्ट्रिंग गै मोड़ै"
+    ],
+    "answer": "ओह् CPS-transformed Pipeline steps गी नेईं सद्दे"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "कुस Jenkins सुविधा कन्नै गैर-मंजूर sandboxed Groovy कोड वल्लों मंगे गेदे सिग्नेचरें दी समीखा कीती जंदी ऐ?",
+    "options": [
+      "In-process Script Approval",
+      "Credentials Store",
+      "Build Queue",
+      "SCM Polling Log"
+    ],
+    "answer": "In-process Script Approval"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "जिस शेल स्क्रिप्ट च शेल बन्नै गेदे सीक्रेट वेरिएबल गी खुद expand करदा ऐ, उसआस्तै कुस Groovy quoting स्टाइल दी सिफारस कीती जंदी ऐ?",
+    "options": [
+      "सीक्रेट आली double-quoted interpolated Groovy स्ट्रिंग",
+      "सीक्रेट आली triple-double-quoted interpolated Groovy स्ट्रिंग",
+      "प्लेनटेक्स्ट सीक्रेट गी जोड़ियै बनी दी Groovy स्ट्रिंग",
+      "इक single-quoted Groovy स्ट्रिंग"
+    ],
+    "answer": "इक single-quoted Groovy स्ट्रिंग"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "संबंधत वेब रिक्वेस्टें आस्तै Jenkins CSRF crumb दा के मकसद ऐ?",
+    "options": [
+      "अपलोड करने थमां पैहले बिल्ड आर्टिफैक्ट गी एन्क्रिप्ट करना",
+      "बिल्ड चलाने आला agent चुनना",
+      "इस गल्ल दी पुश्टि करने च मदद करना जे स्थिति बदलने आली रिक्वेस्ट इक स्थापत यूज़र सेशन दी ऐ",
+      "सारे jobs आस्तै authorization जांचें गी बदलना"
+    ],
+    "answer": "इस गल्ल दी पुश्टि करने च मदद करना जे स्थिति बदलने आली रिक्वेस्ट इक स्थापत यूज़र सेशन दी ऐ"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "अलग-अलग jobs च साझे टेस्ट डिवाइस तकर खास पहुंच दा तालमेल बनाने आस्तै Pipeline गी कुस दा इस्तेमाल करना चाहिदा?",
+    "options": [
+      "skipDefaultCheckout option",
+      "Lockable Resources plugin दा lock step",
+      "timestamps option",
+      "buildDiscarder option"
+    ],
+    "answer": "Lockable Resources plugin दा lock step"
+  }
+]

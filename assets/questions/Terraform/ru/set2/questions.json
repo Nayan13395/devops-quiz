@@ -1,0 +1,302 @@
+[
+  {
+    "category": "Terraform",
+    "set": 2,
+    "question": "Какой блок используется для определения входных переменных в Terraform?",
+    "options": [
+      "variable",
+      "input",
+      "vars",
+      "parameter"
+    ],
+    "answer": "variable"
+  },
+  {
+    "category": "Terraform",
+    "set": 2,
+    "question": "Какой блок используется для определения локальных значений?",
+    "options": [
+      "locals",
+      "local",
+      "values",
+      "variables"
+    ],
+    "answer": "locals"
+  },
+  {
+    "category": "Terraform",
+    "set": 2,
+    "question": "Какой блок используется для получения информации о существующей инфраструктуре?",
+    "options": [
+      "data",
+      "resource",
+      "provider",
+      "output"
+    ],
+    "answer": "data"
+  },
+  {
+    "category": "Terraform",
+    "set": 2,
+    "question": "Какой метааргумент принимает целое число для создания такого количества экземпляров ресурса?",
+    "options": [
+      "count",
+      "for_each",
+      "repeat",
+      "loop"
+    ],
+    "answer": "count"
+  },
+  {
+    "category": "Terraform",
+    "set": 2,
+    "question": "Какой метааргумент создаёт экземпляры ресурса из словаря или множества строк?",
+    "options": [
+      "for_each",
+      "count",
+      "each",
+      "loop"
+    ],
+    "answer": "for_each"
+  },
+  {
+    "category": "Terraform",
+    "set": 2,
+    "question": "Какой оператор используется для условных выражений?",
+    "options": [
+      "? :",
+      "if",
+      "switch",
+      "case"
+    ],
+    "answer": "? :"
+  },
+  {
+    "category": "Terraform",
+    "set": 2,
+    "question": "Какая функция возвращает длину списка?",
+    "options": [
+      "length()",
+      "count()",
+      "size()",
+      "len()"
+    ],
+    "answer": "length()"
+  },
+  {
+    "category": "Terraform",
+    "set": 2,
+    "question": "Какая функция переводит строку в верхний регистр?",
+    "options": [
+      "upper()",
+      "toupper()",
+      "capitalize()",
+      "upcase()"
+    ],
+    "answer": "upper()"
+  },
+  {
+    "category": "Terraform",
+    "set": 2,
+    "question": "Какая функция соединяет элементы списка в строку?",
+    "options": [
+      "join()",
+      "concat()",
+      "merge()",
+      "append()"
+    ],
+    "answer": "join()"
+  },
+  {
+    "category": "Terraform",
+    "set": 2,
+    "question": "Какая функция объединяет несколько списков, переданных отдельными аргументами, в один?",
+    "options": [
+      "concat()",
+      "join()",
+      "merge()",
+      "flatten()"
+    ],
+    "answer": "concat()"
+  },
+  {
+    "category": "Terraform",
+    "set": 2,
+    "question": "Что такое неявная зависимость в Terraform?",
+    "options": [
+      "Автоматически обнаруживаемая зависимость",
+      "Ручная зависимость",
+      "Зависимость провайдера",
+      "Зависимость состояния"
+    ],
+    "answer": "Автоматически обнаруживаемая зависимость"
+  },
+  {
+    "category": "Terraform",
+    "set": 2,
+    "question": "Какой аргумент создаёт явную зависимость?",
+    "options": [
+      "depends_on",
+      "dependency",
+      "require",
+      "depends"
+    ],
+    "answer": "depends_on"
+  },
+  {
+    "category": "Terraform",
+    "set": 2,
+    "question": "Какая команда перечисляет адреса ресурсов в состоянии без значений атрибутов?",
+    "options": [
+      "terraform state list",
+      "terraform state show",
+      "terraform show",
+      "terraform state resources"
+    ],
+    "answer": "terraform state list"
+  },
+  {
+    "category": "Terraform",
+    "set": 2,
+    "question": "Какая команда импортирует существующую инфраструктуру в состояние Terraform?",
+    "options": [
+      "terraform import",
+      "terraform load",
+      "terraform sync",
+      "terraform attach"
+    ],
+    "answer": "terraform import"
+  },
+  {
+    "category": "Terraform",
+    "set": 2,
+    "question": "Какой тип входной переменной принимает только true или false?",
+    "options": [
+      "bool",
+      "string",
+      "number",
+      "list(string)"
+    ],
+    "answer": "bool"
+  },
+  {
+    "category": "Terraform",
+    "set": 2,
+    "question": "Какой тип входной переменной задаёт соответствие строковых ключей строковым значениям?",
+    "options": [
+      "list(string)",
+      "set(string)",
+      "tuple([string])",
+      "map(string)"
+    ],
+    "answer": "map(string)"
+  },
+  {
+    "category": "Terraform",
+    "set": 2,
+    "question": "Какой аргумент переменной задаёт значение, если вызывающий код его не указал?",
+    "options": [
+      "nullable",
+      "sensitive",
+      "default",
+      "description"
+    ],
+    "answer": "default"
+  },
+  {
+    "category": "Terraform",
+    "set": 2,
+    "question": "Какой блок в объявлении переменной проверяет её значение по пользовательскому правилу?",
+    "options": [
+      "connection",
+      "validation",
+      "lifecycle",
+      "provisioner"
+    ],
+    "answer": "validation"
+  },
+  {
+    "category": "Terraform",
+    "set": 2,
+    "question": "Какая переменная окружения задаёт входную переменную region?",
+    "options": [
+      "TF_VAR_region",
+      "TF_LOG_region",
+      "TF_CLI_ARGS_region",
+      "TF_DATA_DIR_region"
+    ],
+    "answer": "TF_VAR_region"
+  },
+  {
+    "category": "Terraform",
+    "set": 2,
+    "question": "Какой файл CLI автоматически загружает как определения переменных корневого модуля?",
+    "options": [
+      "production.tfvars",
+      "production.vars",
+      "production.hcl",
+      "production.auto.tfvars"
+    ],
+    "answer": "production.auto.tfvars"
+  },
+  {
+    "category": "Terraform",
+    "set": 2,
+    "question": "Какое выражение даёт индекс текущего экземпляра с нуля в ресурсе с count?",
+    "options": [
+      "each.value",
+      "self.index",
+      "count.index",
+      "each.key"
+    ],
+    "answer": "count.index"
+  },
+  {
+    "category": "Terraform",
+    "set": 2,
+    "question": "Какое выражение читает значение текущего элемента в ресурсе с for_each и словарём?",
+    "options": [
+      "self.value",
+      "each.value",
+      "each.key",
+      "count.index"
+    ],
+    "answer": "each.value"
+  },
+  {
+    "category": "Terraform",
+    "set": 2,
+    "question": "Какая функция удаляет повторы из списка, сохраняя порядок первых вхождений?",
+    "options": [
+      "distinct",
+      "sort",
+      "reverse",
+      "flatten"
+    ],
+    "answer": "distinct"
+  },
+  {
+    "category": "Terraform",
+    "set": 2,
+    "question": "Какая функция убирает непосредственно вложенные уровни списков?",
+    "options": [
+      "concat",
+      "merge",
+      "join",
+      "flatten"
+    ],
+    "answer": "flatten"
+  },
+  {
+    "category": "Terraform",
+    "set": 2,
+    "question": "Какое выражение создаёт список, переводя каждое имя в верхний регистр?",
+    "options": [
+      "[for name in var.names : length(name)]",
+      "[for name in var.names : trimspace(name)]",
+      "[for name in var.names : upper(name)]",
+      "[for name in var.names : lower(name)]"
+    ],
+    "answer": "[for name in var.names : upper(name)]"
+  }
+]

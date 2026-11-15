@@ -1,0 +1,302 @@
+[
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "Pod सञ्चारं प्रभावितुं NetworkPolicy कृते किम् आवश्यकम्?",
+    "options": [
+      "प्रत्येकस्य चयनितस्य Pod कृते LoadBalancer Service",
+      "तस्मिन्नेव नामक्षेत्रे PersistentVolumeClaim",
+      "प्रत्येकनीतेः कृते पृथक् API सेवकः",
+      "NetworkPolicy प्रवर्तयन्ती जालकार्यप्रणाली"
+    ],
+    "answer": "NetworkPolicy प्रवर्तयन्ती जालकार्यप्रणाली"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "एकमेव Pod चिन्वत्यः बह्व्यः NetworkPolicies स्वानुमतम् आगमनसञ्चारं कथं संयोजयन्ति?",
+    "options": [
+      "प्रथमसृष्टा नीतिः सर्वाः उत्तरवर्तिनीः अतिक्रामति",
+      "प्रत्येकनीत्या प्रत्येकं दत्तांशपुटं स्वतन्त्रतया अनुमन्तव्यम्",
+      "अनुमतः सञ्चारः तासाम् आगमनानुमतीनां संयुक्तसमूहः अस्ति",
+      "अन्तिमसृष्टा नीतिः सर्वाः पूर्ववर्तिनीः अतिक्रामति"
+    ],
+    "answer": "अनुमतः सञ्चारः तासाम् आगमनानुमतीनां संयुक्तसमूहः अस्ति"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "नामक्षेत्रस्य अन्तः अनुमतीः परिभाषयत् RBAC वस्तु किम्?",
+    "options": [
+      "ResourceQuota",
+      "Role",
+      "RoleBinding",
+      "ServiceAccount"
+    ],
+    "answer": "Role"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "एकस्मिन् नामक्षेत्रे Role अथवा ClusterRole अनुमतीः प्रयच्छत् RBAC वस्तु किम्?",
+    "options": [
+      "RoleBinding",
+      "ClusterRoleBinding",
+      "ServiceAccount",
+      "LimitRange"
+    ],
+    "answer": "RoleBinding"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "Kubernetes API प्रवेशाय Pod मध्ये प्रवर्तमानप्रक्रियाभ्यः सामान्यतः कः परिचयः दीयते?",
+    "options": [
+      "StorageClass",
+      "RuntimeClass",
+      "PriorityClass",
+      "ServiceAccount"
+    ],
+    "answer": "ServiceAccount"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "Secret दत्तांशस्य base64 सङ्केतनं वस्तुपठनसमर्थात् जनात् रक्षणाय कुतः अपर्याप्तम्?",
+    "options": [
+      "Base64 स्वतः DNS द्वारा दत्तांशं प्रकाशयति",
+      "Base64 कृते Pod मध्ये रक्षिता गोपनीयकुञ्चिका आवश्यकी",
+      "Base64 प्रत्यावर्तनीयं सङ्केतनम् अस्ति, गुप्तीकरणं न",
+      "Base64 Kubernetes इत्यस्य दत्तांशरक्षणं निवारयति"
+    ],
+    "answer": "Base64 प्रत्यावर्तनीयं सङ्केतनम् अस्ति, गुप्तीकरणं न"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "Kubernetes द्वारा Pod मध्ये API प्रमाणीकरणविवरणानां स्वचालितमाउण्ट्-करणं निवारयितुं समर्थं क्षेत्रं किम्?",
+    "options": [
+      "shareProcessNamespace: false",
+      "automountServiceAccountToken: false",
+      "hostNetwork: false",
+      "enableServiceLinks: false"
+    ],
+    "answer": "automountServiceAccountToken: false"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "नामक्षेत्रस्य समष्टिसंसाधनप्रयोगं सीमयत् वस्तु किम्?",
+    "options": [
+      "ResourceQuota",
+      "LimitRange",
+      "PriorityClass",
+      "PodDisruptionBudget"
+    ],
+    "answer": "ResourceQuota"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "नामक्षेत्रस्य कण्टेनर्-घटकेभ्यः पूर्वनिर्धारितसंसाधनानुरोधान् मर्यादाश्च दातुं समर्थं वस्तु किम्?",
+    "options": [
+      "ResourceQuota",
+      "HorizontalPodAutoscaler",
+      "RuntimeClass",
+      "LimitRange"
+    ],
+    "answer": "LimitRange"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "लोपानुरोधानन्तरं Kubernetes वस्तुनः finalizer किं करोति?",
+    "options": [
+      "प्रत्येकम् आश्रितवस्तु तत्कालं लोपयति",
+      "वस्तु अपरिवर्तनीयस्य Secret इत्यस्य रूपेण परिवर्तयति",
+      "आवश्यकशोधनक्रिया finalizer अपनयति यावत् वस्तुलोपं लम्बितं रक्षति",
+      "वस्तुनः सर्वाणि भाविनवीकरणानि निवारयति"
+    ],
+    "answer": "आवश्यकशोधनक्रिया finalizer अपनयति यावत् वस्तुलोपं लम्बितं रक्षति"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "अनावश्यकवस्तुशोधनाय आश्रितवस्तूनि स्वामिभिः संयोजयत् मेटादत्तांशक्षेत्रं किम्?",
+    "options": [
+      "managedFields",
+      "ownerReferences",
+      "annotations",
+      "labels"
+    ],
+    "answer": "ownerReferences"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "CustomResourceDefinition समूहे किं योजयति?",
+    "options": [
+      "Kubernetes API प्रदत्तं नूतनं स्वनिर्मितसंसाधनप्रकारम्",
+      "विद्यमानप्रकाराय प्रवर्तमानम् अवस्थासमन्वयनियन्त्रकम्",
+      "प्रत्येकसेवालेखायै RBAC अनुमतिम्",
+      "प्रत्येकस्य अन्तर्निर्मितसंसाधनप्रकारस्य प्रतिरूपम्"
+    ],
+    "answer": "Kubernetes API प्रदत्तं नूतनं स्वनिर्मितसंसाधनप्रकारम्"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "केवलस्वनिर्मितसंसाधनपरिभाषायाः अपेक्षया Kubernetes ऑपरेटर् इत्यस्य विशेषः कः?",
+    "options": [
+      "ऑपरेटर् केवलं स्कीमा-परिभाषाः रक्षितुं शक्नोति",
+      "ऑपरेटर् API सेवकस्य आवश्यकताम् अपनयति",
+      "ऑपरेटर् केवलं kubectl निर्गमप्रारूपं परिवर्तयति",
+      "ऑपरेटर् निरूपितानुप्रयोगस्य प्रबन्धनाय अवस्थासमन्वयतर्कमपि निष्पादयति"
+    ],
+    "answer": "ऑपरेटर् निरूपितानुप्रयोगस्य प्रबन्धनाय अवस्थासमन्वयतर्कमपि निष्पादयति"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "परिचयपरीक्षणाधिकारनिर्णययोः अनन्तरं किन्तु रक्षणात् पूर्वम् API अनुरोधं निराकर्तुं परिवर्तयितुं वा समर्था व्यवस्था का?",
+    "options": [
+      "कण्टेनर्-प्रतिबिम्बानयनम्",
+      "Service अन्तबिन्दुमार्गनिर्देशनम्",
+      "स्वीकारनियन्त्रणम्",
+      "Pod नियोजनम्"
+    ],
+    "answer": "स्वीकारनियन्त्रणम्"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "कश्चिदपि योग्यनोड् Pod इत्यस्य अनिवार्यं नोड्-अफिनिटी-नियमं न पूरयति चेत् किं भवति?",
+    "options": [
+      "API सेवकः तत् प्रत्येकनोड् मध्ये नियोजयति",
+      "योग्यनोड्-उपलब्धेः अथवा निबन्धनपरिवर्तनस्य पूर्वं Pod अनियोजितं तिष्ठति",
+      "नियोजकः एकप्रयत्नानन्तरं नियमम् उपेक्षते",
+      "Pod स्वतः DaemonSet भवति"
+    ],
+    "answer": "योग्यनोड्-उपलब्धेः अथवा निबन्धनपरिवर्तनस्य पूर्वं Pod अनियोजितं तिष्ठति"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "preferredDuringSchedulingIgnoredDuringExecution नोड्-अफिनिटी किं सूचयति?",
+    "options": [
+      "अन्यथा योग्यान् अमेलितान् नोड्-घटकान् अबहिष्कुर्वती स्थानप्राथमिकता",
+      "अमेलितनोड्-घटकेषु नियोजनं निवारयन्ती अनिवार्या आवश्यकता",
+      "नोड्-लेबल् परिवर्तते चेत् Pod निष्कासनस्य सूचना",
+      "नियोजकं पूर्णतया परित्यक्तुम् अनुरोधः"
+    ],
+    "answer": "अन्यथा योग्यान् अमेलितान् नोड्-घटकान् अबहिष्कुर्वती स्थानप्राथमिकता"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "नोड्-लेबल्-चिह्नानि प्रवर्तमानस्य Pod इत्यस्य नोड्-अफिनिटी-नियमेन न मेलन्ति चेत् IgnoredDuringExecution इत्यस्य अर्थः कः?",
+    "options": [
+      "Pod तत्कालं लोपनीयम्",
+      "Pod इत्यस्य कण्टेनर्-घटकाः स्वतः पुनरारभ्यन्ते",
+      "नोड्-लेबल्-चिह्नानि स्वतः पूर्वावस्थां प्रत्यागच्छन्ति",
+      "सः नियमः एव प्रवर्तमानं Pod न निष्कासयति"
+    ],
+    "answer": "सः नियमः एव प्रवर्तमानं Pod न निष्कासयति"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "Pod स्पष्टतया spec.nodeName स्थापयति चेत् किं भवति?",
+    "options": [
+      "तत् तन्नामकं नोड् सृजति",
+      "तत् वर्तमानस्य Pod चालकम् नोड् नामान्तरितं करोति",
+      "तत् नियोजकं परित्यज्य तन्नामकनोड् कृते निर्दिश्यते",
+      "तत् सर्वेषां मेलितनोड्-लेबल्-चिह्नानां श्रेणीकरणाय नियोजकं पृच्छति"
+    ],
+    "answer": "तत् नियोजकं परित्यज्य तन्नामकनोड् कृते निर्दिश्यते"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "टोपोलजी-प्रसारनिबन्धनानां प्रयोजनं किम्?",
+    "options": [
+      "नियन्त्रणस्तरघटकानां मध्यसञ्चारस्य गुप्तीकरणम्",
+      "मेलितानां Pod-घटकानां टोपोलजी-क्षेत्रेषु वितरणनियन्त्रणम्",
+      "स्थायिवॉल्यूम्-खण्डानां मध्ये कण्टेनर्-सञ्चिकाप्रतिलेखनम्",
+      "प्रत्येकनामक्षेत्राय एकस्य सार्वजनिकस्य IP इत्यस्य वितरणम्"
+    ],
+    "answer": "मेलितानां Pod-घटकानां टोपोलजी-क्षेत्रेषु वितरणनियन्त्रणम्"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "taint इत्येतद् असहमानान् पूर्वप्रवर्तमानान् Pod-घटकान् निष्कासयितुं समर्थः taint प्रभावः कः?",
+    "options": [
+      "NoExecute",
+      "NoSchedule",
+      "PreferNoSchedule",
+      "None"
+    ],
+    "answer": "NoExecute"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "Linux कण्टेनर् root-भिन्नोपयोक्तृत्वेन प्रवर्तेत इति नियच्छन् securityContext विन्यासः कः?",
+    "options": [
+      "readOnlyRootFilesystem: true",
+      "privileged: false",
+      "allowPrivilegeEscalation: false",
+      "runAsNonRoot: true"
+    ],
+    "answer": "runAsNonRoot: true"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "Linux प्रक्रियायाः जनकादधिकाधिकारप्राप्तिं निवारयन् कण्टेनर्-securityContext विन्यासः कः?",
+    "options": [
+      "readOnlyRootFilesystem: true",
+      "privileged: false",
+      "allowPrivilegeEscalation: false",
+      "runAsNonRoot: true"
+    ],
+    "answer": "allowPrivilegeEscalation: false"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "समस्यापरीक्षणाय विद्यमानस्य Pod इत्यस्य अनुप्रयोगकण्टेनर्-घटकान् अपरिवर्त्य कः कण्टेनर्-प्रकारः योजयितुं शक्यः?",
+    "options": [
+      "पुनरारम्भयोग्यम् init कण्टेनर्",
+      "तात्कालिकं कण्टेनर्",
+      "सामान्यम् init कण्टेनर्",
+      "सामान्यम् अनुप्रयोगकण्टेनर्"
+    ],
+    "answer": "तात्कालिकं कण्टेनर्"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "Service जालान्तबिन्दून् विस्तारयोग्यगणेषु लिखत् संसाधनं किम्?",
+    "options": [
+      "EndpointSlice",
+      "IngressClass",
+      "NetworkPolicy",
+      "RuntimeClass"
+    ],
+    "answer": "EndpointSlice"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "Ingress संसाधनं वास्तवतः HTTP मार्गनिर्देशनं विन्यस्यति इति कृते किम् आवश्यकम्?",
+    "options": [
+      "प्रत्येकनामक्षेत्रे ingress नामकम् ConfigMap",
+      "प्रत्येकातिथेयनाम्नः कृते PersistentVolume",
+      "सर्वान् चयनितान् Pod-घटकान् पुनरारभमाणं Job",
+      "तस्य नियमान् कार्यान्वयन् Ingress नियन्त्रकः"
+    ],
+    "answer": "तस्य नियमान् कार्यान्वयन् Ingress नियन्त्रकः"
+  }
+]

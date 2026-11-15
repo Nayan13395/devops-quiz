@@ -1,0 +1,302 @@
+[
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "Bash genişletmesini \"$name\" biçiminde tırnaklamak neyi önler?",
+    "options": [
+      "Tırnak içindeki tüm parametre genişletmelerini",
+      "Değişkenin daha sonra değiştirilmesini",
+      "Komutun boş argüman almasını",
+      "Genişletilen değerin sözcüklere bölünmesini ve yol adı genişletmesini"
+    ],
+    "answer": "Genişletilen değerin sözcüklere bölünmesini ve yol adı genişletmesini"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "Bash içinde '$HOME' ifadesini tek tırnakla yazmak ne yapar?",
+    "options": [
+      "Önceki çalışma dizinini genişletir",
+      "Dolar işaretini kaldırıp HOME aktarır",
+      "Değiştirmeden $HOME metnini aktarır",
+      "Kullanıcının ev dizinini genişletir"
+    ],
+    "answer": "Değiştirmeden $HOME metnini aktarır"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "$(command) ile Bash komut yerleştirmesi ne ekler?",
+    "options": [
+      "Komutun çıkış durumunu ondalık sayı olarak",
+      "Sondaki satır sonları kaldırılmış standart komut çıktısını",
+      "Komutun sayısal süreç kimliğini",
+      "Yalnızca komutun standart hatasını"
+    ],
+    "answer": "Sondaki satır sonları kaldırılmış standart komut çıktısını"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "Betiğin komutlarını geçerli kabukta okuyan ve yürüten Bash yerleşik komutu hangisidir?",
+    "options": [
+      "source",
+      "exec",
+      "eval",
+      "export"
+    ],
+    "answer": "source"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "Yürütme başarılı olduğunda Bash betiğindeki 'exec program' ne yapar?",
+    "options": [
+      "Kabuk sürerken program komutunu arka plan işi olarak başlatır",
+      "program komutunu iki kez çalıştırıp sonuçları karşılaştırır",
+      "program çıktısını kabuk kaynak kodu olarak yükler",
+      "Kabuk sürecini program ile değiştirir"
+    ],
+    "answer": "Kabuk sürecini program ile değiştirir"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "Bash pipefail açıkken bir veya daha fazla komut başarısız olursa işlem hattının durumu nedir?",
+    "options": [
+      "Son komut başarılıysa her zaman sıfır",
+      "Tüm komutların çıkış durumlarının toplamı",
+      "Sıfır olmayan değer döndüren en sağdaki komutun durumu",
+      "Her zaman ilk komutun durumu"
+    ],
+    "answer": "Sıfır olmayan değer döndüren en sağdaki komutun durumu"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "GNU Coreutils kullanarak checksums.txt içindeki SHA-256 sağlama toplamlarını hangi komut doğrular?",
+    "options": [
+      "cksum checksums.txt",
+      "sha256sum -c checksums.txt",
+      "sha256sum checksums.txt",
+      "md5sum -c checksums.txt"
+    ],
+    "answer": "sha256sum -c checksums.txt"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "logs dizininin gzip sıkıştırmalı arşivini hangi GNU tar komutu oluşturur?",
+    "options": [
+      "tar -czf logs.tar.gz logs",
+      "tar -xzf logs.tar.gz",
+      "tar -tzf logs.tar.gz",
+      "gzip -d logs.tar.gz"
+    ],
+    "answer": "tar -czf logs.tar.gz logs"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "Arşiv içeriğini çıkarmadan hangi tar seçeneği listeler?",
+    "options": [
+      "-x",
+      "-c",
+      "-r",
+      "-t"
+    ],
+    "answer": "-t"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "Linux dizinindeki setgid biti, içinde yeni oluşturulan dosyalar için normalde neye yol açar?",
+    "options": [
+      "root kullanıcısına ait olurlar",
+      "Sahipleri tarafından kaldırılamazlar",
+      "Dizinin grup sahipliğini devralırlar",
+      "Her zaman tüm kullanıcılar tarafından çalıştırılabilir olurlar"
+    ],
+    "answer": "Dizinin grup sahipliğini devralırlar"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "Paylaşılan yazılabilir dizindeki sticky bit esas olarak neyi sınırlar?",
+    "options": [
+      "Dosya sisteminde kimin disk bloğu ayırabileceğini",
+      "Dizindeki dosyaları kimin silebileceğini veya yeniden adlandırabileceğini",
+      "Dizindeki her dosyayı kimin okuyabileceğini",
+      "Dizin dışındaki programları kimin çalıştırabileceğini"
+    ],
+    "answer": "Dizindeki dosyaları kimin silebileceğini veya yeniden adlandırabileceğini"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "Dosyanın erişim denetim listesi girdilerini hangi komut gösterir?",
+    "options": [
+      "getfacl file.txt",
+      "setfacl -b file.txt",
+      "getfattr -d file.txt",
+      "lsattr file.txt"
+    ],
+    "answer": "getfacl file.txt"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "Parola özetleri yerine yerel kullanıcı hesap kayıtlarını normalde hangi dosya içerir?",
+    "options": [
+      "/etc/shadow",
+      "/etc/group",
+      "/etc/gshadow",
+      "/etc/passwd"
+    ],
+    "answer": "/etc/passwd"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "Mevcut ek gruplarını değiştirmeden alice kullanıcısını docker ek grubuna hangi komut ekler?",
+    "options": [
+      "usermod -g docker alice",
+      "usermod -l docker alice",
+      "usermod -aG docker alice",
+      "usermod -G docker alice"
+    ],
+    "answer": "usermod -aG docker alice"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "Parola tabanlı kimlik doğrulama için Linux kullanıcısının parolasını hangi komut kilitler?",
+    "options": [
+      "passwd -e alice",
+      "passwd -l alice",
+      "passwd -u alice",
+      "passwd -S alice"
+    ],
+    "answer": "passwd -l alice"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "alice kullanıcısının passwd girdisi için yapılandırılmış ad hizmeti kaynaklarını hangi komut sorgular?",
+    "options": [
+      "getent passwd alice",
+      "groups alice",
+      "id -u alice",
+      "whoami"
+    ],
+    "answer": "getent passwd alice"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "Açılışta otomatik bağlanacak dosya sistemlerini normalde hangi dosya tanımlar?",
+    "options": [
+      "/etc/hosts",
+      "/etc/shells",
+      "/etc/resolv.conf",
+      "/etc/fstab"
+    ],
+    "answer": "/etc/fstab"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "Dosya sistemi UUID değerlerini ve diğer blok aygıtı özniteliklerini hangi komut gösterir?",
+    "options": [
+      "modinfo",
+      "lscpu",
+      "blkid",
+      "lsmod"
+    ],
+    "answer": "blkid"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "Onarıcı fsck işlemi öncesinde dosya sistemi neden normalde ayrılmalıdır?",
+    "options": [
+      "Bağlı dosya sistemlerinde asla boş alan bulunmaz",
+      "Eşzamanlı yazmalar onarımlarla çakışıp verilere zarar verebilir",
+      "Ayırma işlemi tüm dosya sistemi metaverisini otomatik şifreler",
+      "fsck yalnızca aygıt adı olmayan dosya sistemlerini destekler"
+    ],
+    "answer": "Eşzamanlı yazmalar onarımlarla çakışıp verilere zarar verebilir"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "Etkin takas alanlarını hangi komut gösterir?",
+    "options": [
+      "swapon --show",
+      "swapoff -a",
+      "free -s 1",
+      "vmstat -d"
+    ],
+    "answer": "swapon --show"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "Linux çekirdek modülünü bağımlılıklarıyla birlikte hangi komut yükler?",
+    "options": [
+      "rmmod",
+      "lsmod",
+      "modinfo",
+      "modprobe"
+    ],
+    "answer": "modprobe"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "Birimi /dev/null yoluna bağlayarak başlatılmasını hangi systemd komutu engeller?",
+    "options": [
+      "systemctl stop app.service",
+      "systemctl reset-failed app.service",
+      "systemctl mask app.service",
+      "systemctl disable app.service"
+    ],
+    "answer": "systemctl mask app.service"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "Kimlik doğrulama için özel kimlik dosyasını hangi SSH seçeneği seçer?",
+    "options": [
+      "-R",
+      "-i",
+      "-p",
+      "-L"
+    ],
+    "answer": "-i"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "Yerel dosyayı SSH üzerinden uzak kullanıcının dizinine güvenle hangi komut kopyalar?",
+    "options": [
+      "scp report.txt alice@server:/home/alice/",
+      "ssh alice@server cat report.txt",
+      "sftp -b report.txt alice@server",
+      "ssh-keygen -f report.txt"
+    ],
+    "answer": "scp report.txt alice@server:/home/alice/"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "'rsync -n' ne ister?",
+    "options": [
+      "Kaynakta bulunmayan hedef dosyaların silinmesini",
+      "Aktarılan dosya verisinin sıkıştırılmasını",
+      "Tüm dosya sistemi özniteliklerinin özyinelemeli korunmasını",
+      "Değişiklik yapmadan planlanan değişiklikleri raporlayan deneme çalıştırmasını"
+    ],
+    "answer": "Değişiklik yapmadan planlanan değişiklikleri raporlayan deneme çalıştırmasını"
+  }
+]

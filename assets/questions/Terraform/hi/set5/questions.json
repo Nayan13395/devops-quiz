@@ -1,0 +1,302 @@
+[
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "Terraform द्वारा मौजूदा ऑब्जेक्ट बचाने के लिए संसाधन पता बदलाव कौन-सा घोषणात्मक ब्लॉक दर्ज करता है?",
+    "options": [
+      "removed",
+      "check",
+      "moved",
+      "import"
+    ],
+    "answer": "moved"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "moved ब्लॉक में नया संसाधन पता कौन-सा तर्क बताता है?",
+    "options": [
+      "provider",
+      "to",
+      "from",
+      "id"
+    ],
+    "answer": "to"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "apply के दौरान आयात होने वाला मौजूदा अवसंरचना ऑब्जेक्ट कौन-सा ब्लॉक घोषित करता है?",
+    "options": [
+      "import",
+      "moved",
+      "output",
+      "check"
+    ],
+    "answer": "import"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "वास्तविक अवसंरचना नष्ट किए बिना संसाधन भूलने वाली removed ब्लॉक सेटिंग कौन-सी है?",
+    "options": [
+      "lifecycle { destroy = true }",
+      "lifecycle { create_before_destroy = true }",
+      "lifecycle { prevent_destroy = false }",
+      "lifecycle { destroy = false }"
+    ],
+    "answer": "lifecycle { destroy = false }"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "सामान्य इनपुट चर को sensitive चिह्नित करने पर स्थानीय स्थिति फ़ाइल में उसका मान कैसा रहता है?",
+    "options": [
+      "हमेशा स्थिति से बाहर रहता है",
+      "भंडारण से पहले चर के नाम से बदल दिया जाता है",
+      "सामान्य CLI आउटपुट में छिपने पर भी सादे पाठ में सहेजा जा सकता है",
+      "sensitive फ़्लैग उसे स्वतः एन्क्रिप्ट करता है"
+    ],
+    "answer": "सामान्य CLI आउटपुट में छिपने पर भी सादे पाठ में सहेजा जा सकता है"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "output कमांड का कौन-सा प्रारूप संवेदनशील आउटपुट मान मशीन-पठनीय रूप में दिखा सकता है?",
+    "options": [
+      "terraform providers schema -json",
+      "terraform output -json",
+      "terraform output -help",
+      "terraform output -no-color"
+    ],
+    "answer": "terraform output -json"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "Terraform मान को JSON स्ट्रिंग में कौन-सा फ़ंक्शन बदलता है?",
+    "options": [
+      "jsonencode",
+      "jsondecode",
+      "yamldecode",
+      "file"
+    ],
+    "answer": "jsonencode"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "JSON स्ट्रिंग से Terraform मान कौन-सा फ़ंक्शन पार्स करता है?",
+    "options": [
+      "jsonencode",
+      "yamlencode",
+      "templatefile",
+      "jsondecode"
+    ],
+    "answer": "jsondecode"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "दिए चर-मैप से टेम्पलेट फ़ाइल कौन-सा फ़ंक्शन तैयार करता है?",
+    "options": [
+      "fileset",
+      "filebase64",
+      "templatefile",
+      "file"
+    ],
+    "answer": "templatefile"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "गतिशील त्रुटि के बिना मूल्यांकित होने वाला पहला तर्क कौन-सा फ़ंक्शन लौटाता है?",
+    "options": [
+      "lookup",
+      "try",
+      "can",
+      "coalesce"
+    ],
+    "answer": "try"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "अभिव्यक्ति गतिशील त्रुटि के बिना मूल्यांकित हो सकती है या नहीं, कौन-सा फ़ंक्शन बताता है?",
+    "options": [
+      "can",
+      "try",
+      "contains",
+      "length"
+    ],
+    "answer": "can"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "merge के दो मैप में एक कुंजी हो तो कौन-सा मान जीतेगा?",
+    "options": [
+      "पहले तर्क का मान",
+      "मान हमेशा सूची में जोड़ दिए जाते हैं",
+      "दोहरी कुंजी हमेशा त्रुटि देती है",
+      "बाद के तर्क का मान"
+    ],
+    "answer": "बाद के तर्क का मान"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "5.4.x स्वीकार करने लेकिन 5.5.0 नहीं स्वीकार करने वाली प्रदाता संस्करण सीमा कौन-सी है?",
+    "options": [
+      ">= 5.4.0",
+      ">= 5.0, < 6.0",
+      "~> 5.4.0",
+      "~> 5.4"
+    ],
+    "answer": "~> 5.4.0"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "Terraform संसाधन तर्क में null को सामान्यतः कैसे समझता है?",
+    "options": [
+      "पूरा संसाधन हटाने का अनुरोध",
+      "तर्क अनुपस्थित है; उसके डिफ़ॉल्ट और आवश्यकताएँ लागू होंगी",
+      "हर प्रदाता में खाली स्ट्रिंग",
+      "हर प्रदाता में संख्यात्मक शून्य"
+    ],
+    "answer": "तर्क अनुपस्थित है; उसके डिफ़ॉल्ट और आवश्यकताएँ लागू होंगी"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "जिस मॉड्यूल में लिखी गई है, उसका फ़ाइल-सिस्टम पथ कौन-सी अभिव्यक्ति देती है?",
+    "options": [
+      "path.module",
+      "path.root",
+      "path.cwd",
+      "terraform.workspace"
+    ],
+    "answer": "path.module"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "CLI कॉन्फ़िगरेशन को HCP Terraform से जोड़ने के लिए terraform ब्लॉक की कौन-सी सुविधा सुझाई जाती है?",
+    "options": [
+      "locals",
+      "moved",
+      "check",
+      "cloud"
+    ],
+    "answer": "cloud"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "terraform_remote_state संदर्भित स्थिति से कौन-से शीर्ष-स्तरीय मान सीधे देता है?",
+    "options": [
+      "सभी प्रदाता क्रेडेंशियल",
+      "सभी उप-मॉड्यूल के स्थानीय मान",
+      "मूल मॉड्यूल के आउटपुट",
+      "हर संसाधन गुण को शीर्ष-स्तरीय आउटपुट के रूप में"
+    ],
+    "answer": "मूल मॉड्यूल के आउटपुट"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "संदर्भित प्रबंधित संसाधन बदलने पर प्रतिस्थापन कौन-सा जीवनचक्र नियम माँगता है?",
+    "options": [
+      "create_before_destroy",
+      "replace_triggered_by",
+      "ignore_changes",
+      "prevent_destroy"
+    ],
+    "answer": "replace_triggered_by"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "अलग प्रदाता लगाए बिना सामान्य इनपुट मान को संसाधन जीवनचक्र कौन-सा अंतर्निहित प्रबंधित संसाधन देता है?",
+    "options": [
+      "terraform_data",
+      "terraform_remote_state",
+      "local_file",
+      "random_id"
+    ],
+    "answer": "terraform_data"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "सामान्य plan या apply में check ब्लॉक का अभिकथन विफल हो तो क्या होता है?",
+    "options": [
+      "Terraform हमेशा जाँचा ऑब्जेक्ट नष्ट करता है",
+      "Terraform चुपचाप check ब्लॉक हटा देता है",
+      "Terraform हमेशा किसी संसाधन को ताज़ा करने से पहले बंद हो जाता है",
+      "Terraform चेतावनी देता है, लेकिन केवल इस विफलता से कार्रवाई नहीं रोकता"
+    ],
+    "answer": "Terraform चेतावनी देता है, लेकिन केवल इस विफलता से कार्रवाई नहीं रोकता"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "संसाधन जीवनचक्र की पूर्वशर्त false हो तो क्या होता है?",
+    "options": [
+      "Terraform संसाधन को डेटा स्रोत बनाता है",
+      "Terraform पूर्वशर्त को केवल चेतावनी बनाता है",
+      "Terraform त्रुटि बताकर संबंधित कार्रवाई रोकता है",
+      "Terraform अगले रन तक पूर्वशर्त अनदेखी करता है"
+    ],
+    "answer": "Terraform त्रुटि बताकर संबंधित कार्रवाई रोकता है"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "Terraform की मूल परीक्षण फ़ाइलें कौन-सा कमांड चलाता है?",
+    "options": [
+      "terraform console",
+      "terraform test",
+      "terraform validate",
+      "terraform fmt"
+    ],
+    "answer": "terraform test"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "Terraform परीक्षण का run ब्लॉक डिफ़ॉल्ट apply के बजाय plan करे, इसकी सेटिंग कौन-सी है?",
+    "options": [
+      "command = plan",
+      "command = validate",
+      "command = refresh",
+      "command = console"
+    ],
+    "answer": "command = plan"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "निर्देशिका के अंदर glob से मेल खाते सापेक्ष पथ कौन-सा फ़ंक्शन लौटाता है?",
+    "options": [
+      "file",
+      "dirname",
+      "basename",
+      "fileset"
+    ],
+    "answer": "fileset"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "अलग पहुँच नियंत्रण वाले पर्यावरण अलग करने में केवल CLI कार्यक्षेत्र क्यों अनुपयुक्त हो सकते हैं?",
+    "options": [
+      "वे अलग इनपुट चर मानों का उपयोग रोकते हैं",
+      "वे हर पर्यावरण में समान संसाधन नाम अनिवार्य करते हैं",
+      "वे एक ही बैकएंड कॉन्फ़िगरेशन और प्रमाणीकरण संदर्भ साझा करते हैं",
+      "वे हमेशा एक ही स्थिति स्नैपशॉट साझा करते हैं"
+    ],
+    "answer": "वे एक ही बैकएंड कॉन्फ़िगरेशन और प्रमाणीकरण संदर्भ साझा करते हैं"
+  }
+]

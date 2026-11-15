@@ -2,7 +2,20 @@
 
 The app registers the 17 Indian Scheduled Languages not already present in the app: Assamese (`as`), Dogri (`doi`), Gujarati (`gu`), Kannada (`kn`), Konkani (`gom`), Maithili (`mai`), Malayalam (`ml`), Meitei/Manipuri (`mni`), Nepali (`ne`), Odia (`or`), Punjabi (`pa`), Sanskrit (`sa`), Santali (`sat`), Sindhi (`sd`), Tamil (`ta`), Telugu (`te`), and Urdu (`ur`). Hindi, Marathi and Bengali were already included.
 
-Question-bank translations use a Python standard-library client for the public Google Translate endpoint. They do not use or download Ollama or a local model. Internet access is required. The separate UI-ARB script still has its existing local-model dependency and is not part of the question-bank queue.
+The older question-bank queue below uses a Python standard-library client for the public Google Translate endpoint. The newer `tools\translate_docker_languages.py` question runner and the learning-card runner use GitHub Copilot CLI instead. Neither downloads a local model. The separate UI-ARB script still has its existing local-model dependency.
+
+## Learning cards
+
+Resume the seven requested card languages using the same Python/Copilot CLI approach as the newer question translator:
+
+```powershell
+python translator\learning\translate_cards.py doi gom mai mni sa sat sd --dry-run
+python translator\learning\translate_cards.py doi gom mai mni sa sat sd --workers 2
+```
+
+The runner retains validated descriptions, translates missing descriptions in batches, and repairs concept source records with invalid answer alignment, untranslated questions or missing native script. It validates each batch before applying it and rebuilds the card catalogs. The active tracker must contain tasks for the requested language codes, as in `tools\active_work_state.json`.
+
+Source-fingerprinted batch responses are cached in `translator\cache\learning`; CLI logs are in `translator\logs\learning`. Failed batches leave published translations intact and are reported as blocked. Rerun the same command to resume. `--batch-size` and `--timeout` control batch size and the per-CLI-call timeout. Commands, flags, numbers and protected technical names are checked mechanically. Completion reports content availability, not independent native-speaker review.
 
 ## App interface
 
@@ -22,6 +35,24 @@ flutter gen-l10n
 The settings picker shows a language only when Flutter has generated its localization bundle. This avoids offering a UI language whose text is still English.
 
 ## Questions and options
+
+For the separately tracked remaining English answer prose, use the scoped
+Python/Copilot runner:
+
+```powershell
+python tool\translate_answer_prose.py --dry-run
+python tool\translate_answer_prose.py --workers 4
+python tool\translate_answer_prose.py --verify
+```
+
+Its reviewed policy preserves product names, code and literal UI labels. It changes
+only selected options and the matching answer, retaining the existing answer
+position even in banks awaiting separate alignment repair. Snapshots, validated
+batches and verification evidence are retained in `translator\cache\answer_prose`.
+Rerun to resume; conflicting edits stop application. Verification compares all
+question files and integrity errors with the original snapshot, without clearing
+pending alignment flags. Rebuild dependent cards with
+`python translator\learning\build_catalogs.py` after the queue finishes.
 
 Translate one question category or every category for a language:
 

@@ -1,0 +1,302 @@
+[
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "Welches Schlüsselwort wird zum Definieren von Variablen in einem Playbook verwendet?",
+    "options": [
+      "vars",
+      "variables",
+      "var",
+      "define"
+    ],
+    "answer": "vars"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "Welche Syntax wird zum Referenzieren einer Variable verwendet?",
+    "options": [
+      "{{ variable_name }}",
+      "$(variable_name)",
+      "${variable_name}",
+      "[variable_name]"
+    ],
+    "answer": "{{ variable_name }}"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "Welches Modul wird verwendet, um Meldungen während der Ausführung anzuzeigen?",
+    "options": [
+      "debug",
+      "print",
+      "echo",
+      "message"
+    ],
+    "answer": "debug"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "Welches Schlüsselwort wird für die bedingte Ausführung verwendet?",
+    "options": [
+      "when",
+      "if",
+      "condition",
+      "check"
+    ],
+    "answer": "when"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "Welches Schlüsselwort wird zum Wiederholen einer Aufgabe verwendet?",
+    "options": [
+      "loop",
+      "repeat",
+      "iterate",
+      "for"
+    ],
+    "answer": "loop"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "Welche Variable enthält standardmäßig das aktuelle Schleifenelement?",
+    "options": [
+      "item",
+      "loopitem",
+      "current",
+      "value"
+    ],
+    "answer": "item"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "Welches Modul erstellt Dateien aus Jinja2-Vorlagen?",
+    "options": [
+      "template",
+      "copy",
+      "render",
+      "jinja"
+    ],
+    "answer": "template"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "Welche Template-Engine verwendet Ansible?",
+    "options": [
+      "Jinja2",
+      "Mustache",
+      "Velocity",
+      "Smarty"
+    ],
+    "answer": "Jinja2"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "Welches Schlüsselwort speichert die Ausgabe einer Aufgabe in einer Variable?",
+    "options": [
+      "register",
+      "save",
+      "output",
+      "store"
+    ],
+    "answer": "register"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "Welches Schlüsselwort setzt die Ausführung nach einem fehlgeschlagenen Task fort, unterdrückt aber keine Syntax- oder Verbindungsfehler?",
+    "options": [
+      "ignore_errors",
+      "skip_errors",
+      "continue",
+      "ignore_failures"
+    ],
+    "answer": "ignore_errors"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "Welches Schlüsselwort wird verwendet, um Aufgaben nur bei Benachrichtigung auszuführen?",
+    "options": [
+      "handlers",
+      "notify",
+      "trigger",
+      "events"
+    ],
+    "answer": "handlers"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "Welches Schlüsselwort löst einen Handler aus?",
+    "options": [
+      "notify",
+      "handler",
+      "alert",
+      "call"
+    ],
+    "answer": "notify"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "Welches Schlüsselwort importiert ein anderes Playbook?",
+    "options": [
+      "import_playbook",
+      "include_playbook",
+      "load_playbook",
+      "playbook"
+    ],
+    "answer": "import_playbook"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "Welches Schlüsselwort versieht Aufgaben mit Tags für die selektive Ausführung?",
+    "options": [
+      "tags",
+      "labels",
+      "groups",
+      "filter"
+    ],
+    "answer": "tags"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "Welche Option führt nur Aufgaben mit bestimmten Tags aus?",
+    "options": [
+      "--tags",
+      "--skip-tags",
+      "--limit",
+      "--list-tags"
+    ],
+    "answer": "--tags"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "Welches Task-Schlüsselwort definiert eine benutzerdefinierte Bedingung zum Melden einer Änderung?",
+    "options": [
+      "changed_when",
+      "failed_when",
+      "until",
+      "when"
+    ],
+    "answer": "changed_when"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "Welches Task-Schlüsselwort definiert eine benutzerdefinierte Bedingung zum Melden eines Fehlers?",
+    "options": [
+      "changed_when",
+      "retries",
+      "delay",
+      "failed_when"
+    ],
+    "answer": "failed_when"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "Welches Task-Schlüsselwort legt die Bedingung fest, die bei Wiederholungsversuchen wahr werden muss?",
+    "options": [
+      "loop",
+      "notify",
+      "until",
+      "when"
+    ],
+    "answer": "until"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "Welches Modul definiert benannte Variablen für den aktuellen Host direkt aus Task-Werten, statt sie aus einer Datei zu laden?",
+    "options": [
+      "ansible.builtin.add_host",
+      "ansible.builtin.set_fact",
+      "ansible.builtin.setup",
+      "ansible.builtin.include_vars"
+    ],
+    "answer": "ansible.builtin.set_fact"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "Welcher Ausdruck greift auf die Standardausgabe eines unter result registrierten Tasks zu?",
+    "options": [
+      "result.stdout",
+      "result.stderr",
+      "result.rc",
+      "result.changed"
+    ],
+    "answer": "result.stdout"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "Welcher Jinja2-Test prüft, ob eine Variable definiert wurde?",
+    "options": [
+      "is none",
+      "is string",
+      "is sequence",
+      "is defined"
+    ],
+    "answer": "is defined"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "Welches Ansible-Schlüsselwort gruppiert Tasks, damit sie Direktiven und Fehlerbehandlung gemeinsam nutzen können?",
+    "options": [
+      "roles",
+      "handlers",
+      "block",
+      "loop"
+    ],
+    "answer": "block"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "Wann sendet ein Task normalerweise seine notify-Benachrichtigungen?",
+    "options": [
+      "Nur beim Start des Playbooks",
+      "Wenn er erfolgreich abgeschlossen wird und changed meldet",
+      "Immer, wenn er aufgrund einer Bedingung übersprungen wird",
+      "Immer, wenn sein Modul unchanged meldet"
+    ],
+    "answer": "Wenn er erfolgreich abgeschlossen wird und changed meldet"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "Welche Einstellung benennt die Variable des aktuellen Schleifenelements in server um?",
+    "options": [
+      "loop_control: {loop_var: server}",
+      "loop_control: {label: server}",
+      "loop_control: {index_var: server}",
+      "loop_control: {pause: 1}"
+    ],
+    "answer": "loop_control: {loop_var: server}"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "Welche Befehlszeilenoption übergibt zusätzliche Variablen mit hoher Variablenpriorität?",
+    "options": [
+      "--tags",
+      "--limit",
+      "--start-at-task",
+      "--extra-vars"
+    ],
+    "answer": "--extra-vars"
+  }
+]

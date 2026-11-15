@@ -1,0 +1,302 @@
+[
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "Bash विस्तार \"$name\" असा अवतरणात ठेवल्याने काय थांबते?",
+    "options": [
+      "अवतरणातील सर्व मापदंड विस्तार",
+      "नंतर चल बदलणे",
+      "आदेशाला रिकामा युक्तिवाद मिळणे",
+      "विस्तारित मूल्याचे शब्दविभाजन आणि पथनाव विस्तार"
+    ],
+    "answer": "विस्तारित मूल्याचे शब्दविभाजन आणि पथनाव विस्तार"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "Bash मध्ये '$HOME' एकेरी अवतरणात ठेवल्यास काय होते?",
+    "options": [
+      "आधीची कार्यरत डिरेक्टरी विस्तारते",
+      "डॉलर चिन्ह काढून HOME पाठवले जाते",
+      "अक्षरशः $HOME मजकूर पाठवला जातो",
+      "वापरकर्त्याची होम डिरेक्टरी विस्तारते"
+    ],
+    "answer": "अक्षरशः $HOME मजकूर पाठवला जातो"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "Bash मध्ये $(command) ने आदेश प्रतिस्थापन केल्यावर काय घातले जाते?",
+    "options": [
+      "आदेशाची निर्गमन स्थिती दशमान संख्येत",
+      "शेवटची नवीन ओळ चिन्हे काढून आदेशाचे मानक आउटपुट",
+      "आदेशाचा संख्यात्मक प्रक्रिया ID",
+      "फक्त आदेशाची मानक त्रुटी"
+    ],
+    "answer": "शेवटची नवीन ओळ चिन्हे काढून आदेशाचे मानक आउटपुट"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "स्क्रिप्ट फाइलमधील आदेश सध्याच्या शेलमध्ये वाचून चालवणारे Bash अंगभूत साधन कोणते?",
+    "options": [
+      "source",
+      "exec",
+      "eval",
+      "export"
+    ],
+    "answer": "source"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "Bash स्क्रिप्टमधील 'exec program' यशस्वी झाल्यास काय करते?",
+    "options": [
+      "शेल सुरू ठेवून program पार्श्वभूमीत चालवते",
+      "program दोनदा चालवून परिणामांची तुलना करते",
+      "program चे आउटपुट शेल स्रोत कोड म्हणून लोड करते",
+      "शेल प्रक्रियेच्या जागी program चालवते"
+    ],
+    "answer": "शेल प्रक्रियेच्या जागी program चालवते"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "Bash pipefail सुरू असताना एक किंवा अधिक आदेश अपयशी ठरल्यास पाइपलाइनची स्थिती कोणती?",
+    "options": [
+      "शेवटचा आदेश यशस्वी असल्यास नेहमी शून्य",
+      "सर्व आदेशांच्या निर्गमन स्थितींची बेरीज",
+      "सर्वात उजवीकडील शून्येतर परिणाम देणाऱ्या आदेशाची स्थिती",
+      "नेहमी पहिल्या आदेशाची स्थिती"
+    ],
+    "answer": "सर्वात उजवीकडील शून्येतर परिणाम देणाऱ्या आदेशाची स्थिती"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "GNU Coreutils ने checksums.txt मधील SHA-256 चेकसम पडताळणारा आदेश कोणता?",
+    "options": [
+      "cksum checksums.txt",
+      "sha256sum -c checksums.txt",
+      "sha256sum checksums.txt",
+      "md5sum -c checksums.txt"
+    ],
+    "answer": "sha256sum -c checksums.txt"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "logs डिरेक्टरीचा gzip-संकुचित संग्रह बनवणारा GNU tar आदेश कोणता?",
+    "options": [
+      "tar -czf logs.tar.gz logs",
+      "tar -xzf logs.tar.gz",
+      "tar -tzf logs.tar.gz",
+      "gzip -d logs.tar.gz"
+    ],
+    "answer": "tar -czf logs.tar.gz logs"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "न काढता संग्रहातील सामग्री दाखवणारा tar पर्याय कोणता?",
+    "options": [
+      "-x",
+      "-c",
+      "-r",
+      "-t"
+    ],
+    "answer": "-t"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "Linux डिरेक्टरीचा setgid बिट तिच्यातील नवीन फाइलवर सहसा काय परिणाम करतो?",
+    "options": [
+      "त्या root वापरकर्त्याच्या मालकीच्या होतात",
+      "त्यांचा मालकही त्यांना काढू शकत नाही",
+      "त्यांना डिरेक्टरीचा मालक गट मिळतो",
+      "त्या नेहमी प्रत्येक वापरकर्त्याला चालवता येतात"
+    ],
+    "answer": "त्यांना डिरेक्टरीचा मालक गट मिळतो"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "सामायिक लिहिता येणाऱ्या डिरेक्टरीचा स्टिकी बिट मुख्यतः काय मर्यादित करतो?",
+    "options": [
+      "फाइल प्रणालीत कोण डिस्क ब्लॉक देऊ शकतो",
+      "डिरेक्टरीतील फाइल कोण काढू किंवा पुनर्नामित करू शकतो",
+      "डिरेक्टरीतील प्रत्येक फाइल कोण वाचू शकतो",
+      "डिरेक्टरीबाहेरचे प्रोग्राम कोण चालवू शकतो"
+    ],
+    "answer": "डिरेक्टरीतील फाइल कोण काढू किंवा पुनर्नामित करू शकतो"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "फाइलच्या प्रवेश नियंत्रण यादीतील नोंदी दाखवणारा आदेश कोणता?",
+    "options": [
+      "getfacl file.txt",
+      "setfacl -b file.txt",
+      "getfattr -d file.txt",
+      "lsattr file.txt"
+    ],
+    "answer": "getfacl file.txt"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "पासवर्ड हॅशऐवजी स्थानिक वापरकर्ता खात्यांच्या नोंदी ठेवणारी नेहमीची फाइल कोणती?",
+    "options": [
+      "/etc/shadow",
+      "/etc/group",
+      "/etc/gshadow",
+      "/etc/passwd"
+    ],
+    "answer": "/etc/passwd"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "आधीचे पूरक गट न बदलता alice ला docker पूरक गटात जोडणारा आदेश कोणता?",
+    "options": [
+      "usermod -g docker alice",
+      "usermod -l docker alice",
+      "usermod -aG docker alice",
+      "usermod -G docker alice"
+    ],
+    "answer": "usermod -aG docker alice"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "पासवर्डवर आधारित प्रमाणीकरणासाठी Linux वापरकर्त्याचा पासवर्ड लॉक करणारा आदेश कोणता?",
+    "options": [
+      "passwd -e alice",
+      "passwd -l alice",
+      "passwd -u alice",
+      "passwd -S alice"
+    ],
+    "answer": "passwd -l alice"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "alice ची passwd नोंद मिळवण्यासाठी ठरवलेल्या नाव-सेवा स्रोतांना विचारणारा आदेश कोणता?",
+    "options": [
+      "getent passwd alice",
+      "groups alice",
+      "id -u alice",
+      "whoami"
+    ],
+    "answer": "getent passwd alice"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "बूटवेळी आपोआप माउंट होणाऱ्या फाइल प्रणाली सहसा कोणती फाइल ठरवते?",
+    "options": [
+      "/etc/hosts",
+      "/etc/shells",
+      "/etc/resolv.conf",
+      "/etc/fstab"
+    ],
+    "answer": "/etc/fstab"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "फाइल प्रणालीचे UUID व ब्लॉक उपकरणांचे इतर गुणधर्म दाखवणारा आदेश कोणता?",
+    "options": [
+      "modinfo",
+      "lscpu",
+      "blkid",
+      "lsmod"
+    ],
+    "answer": "blkid"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "दुरुस्ती करणारे fsck चालवण्याआधी फाइल प्रणाली सहसा अनमाउंट का करावी?",
+    "options": [
+      "माउंट केलेल्या प्रणालींत मोकळी जागा कधीच नसते",
+      "एकाच वेळी लेखन झाल्यास दुरुस्तीशी संघर्ष होऊन डेटा खराब होऊ शकतो",
+      "अनमाउंट केल्याने सर्व मेटाडेटा आपोआप कूटबद्ध होतो",
+      "fsck फक्त उपकरण नावे नसलेल्या फाइल प्रणालींना समर्थन देते"
+    ],
+    "answer": "एकाच वेळी लेखन झाल्यास दुरुस्तीशी संघर्ष होऊन डेटा खराब होऊ शकतो"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "सक्रिय स्वॅप क्षेत्रे दाखवणारा आदेश कोणता?",
+    "options": [
+      "swapon --show",
+      "swapoff -a",
+      "free -s 1",
+      "vmstat -d"
+    ],
+    "answer": "swapon --show"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "अवलंबित्वांसह Linux कर्नल मॉड्यूल लोड करणारा आदेश कोणता?",
+    "options": [
+      "rmmod",
+      "lsmod",
+      "modinfo",
+      "modprobe"
+    ],
+    "answer": "modprobe"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "युनिटला /dev/null शी जोडून तिची सुरुवात रोखणारा systemd आदेश कोणता?",
+    "options": [
+      "systemctl stop app.service",
+      "systemctl reset-failed app.service",
+      "systemctl mask app.service",
+      "systemctl disable app.service"
+    ],
+    "answer": "systemctl mask app.service"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "प्रमाणीकरणासाठी खाजगी कळीची फाइल निवडणारा SSH पर्याय कोणता?",
+    "options": [
+      "-R",
+      "-i",
+      "-p",
+      "-L"
+    ],
+    "answer": "-i"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "SSH ने स्थानिक फाइल दूरस्थ वापरकर्त्याच्या डिरेक्टरीत सुरक्षितपणे कॉपी करणारा आदेश कोणता?",
+    "options": [
+      "scp report.txt alice@server:/home/alice/",
+      "ssh alice@server cat report.txt",
+      "sftp -b report.txt alice@server",
+      "ssh-keygen -f report.txt"
+    ],
+    "answer": "scp report.txt alice@server:/home/alice/"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "'rsync -n' कशाची मागणी करते?",
+    "options": [
+      "स्रोतात नसलेल्या गंतव्य फाइल काढणे",
+      "हस्तांतरित फाइल डेटाचे संकुचन",
+      "प्रत्येक फाइल-सिस्टीम गुणधर्म पुनरावर्तीपणे जपणे",
+      "प्रत्यक्ष बदल न करता अपेक्षित बदल सांगणारे चाचणी निष्पादन"
+    ],
+    "answer": "प्रत्यक्ष बदल न करता अपेक्षित बदल सांगणारे चाचणी निष्पादन"
+  }
+]

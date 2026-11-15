@@ -1,0 +1,302 @@
+[
+  {
+    "category": "PowerShell",
+    "set": 4,
+    "question": "कुन किवर्डले terminating errors ह्यान्डल गर्छ?",
+    "options": [
+      "catch",
+      "error",
+      "exception",
+      "handle"
+    ],
+    "answer": "catch"
+  },
+  {
+    "category": "PowerShell",
+    "set": 4,
+    "question": "त्रुटि भए पनि नभए पनि try/catch पछि कोड चलाउने किवर्ड कुन हो?",
+    "options": [
+      "finally",
+      "always",
+      "end",
+      "complete"
+    ],
+    "answer": "finally"
+  },
+  {
+    "category": "PowerShell",
+    "set": 4,
+    "question": "कुन automatic variable ले हालैका त्रुटिहरू भण्डारण गर्छ?",
+    "options": [
+      "$Error",
+      "$Errors",
+      "$Exception",
+      "$LastError"
+    ],
+    "answer": "$Error"
+  },
+  {
+    "category": "PowerShell",
+    "set": 4,
+    "question": "कुन सामान्य प्यारामिटरले त्रुटि ह्यान्डलिङको व्यवहार परिवर्तन गर्छ?",
+    "options": [
+      "-ErrorAction",
+      "-ErrorMode",
+      "-OnException",
+      "-Catch"
+    ],
+    "answer": "-ErrorAction"
+  },
+  {
+    "category": "PowerShell",
+    "set": 4,
+    "question": "कुन ErrorAction मानले त्रुटिहरू दबाउँछ र तिनलाई $Error मा थप्दैन?",
+    "options": [
+      "Ignore",
+      "SilentlyContinue",
+      "Continue",
+      "Stop"
+    ],
+    "answer": "Ignore"
+  },
+  {
+    "category": "PowerShell",
+    "set": 4,
+    "question": "कुन भेरिएबलले अन्तिम native कमान्डको exit code भण्डारण गर्छ?",
+    "options": [
+      "$LASTEXITCODE",
+      "$EXITCODE",
+      "$ErrorCode",
+      "$NativeExit"
+    ],
+    "answer": "$LASTEXITCODE"
+  },
+  {
+    "category": "PowerShell",
+    "set": 4,
+    "question": "कुन भेरिएबलले अन्तिम कमान्ड सफल भयो कि भएन भनेर जनाउँछ?",
+    "options": [
+      "$?",
+      "$OK",
+      "$Success",
+      "$Result"
+    ],
+    "answer": "$?"
+  },
+  {
+    "category": "PowerShell",
+    "set": 4,
+    "question": "कुन cmdlet ले ब्याकग्राउन्ड job सुरु गर्छ?",
+    "options": [
+      "Start-Job",
+      "Invoke-Job",
+      "New-Job",
+      "Run-Job"
+    ],
+    "answer": "Start-Job"
+  },
+  {
+    "category": "PowerShell",
+    "set": 4,
+    "question": "कुन cmdlet ले ब्याकग्राउन्ड jobs को सूची देखाउँछ?",
+    "options": [
+      "Get-Job",
+      "Show-Job",
+      "List-Job",
+      "View-Job"
+    ],
+    "answer": "Get-Job"
+  },
+  {
+    "category": "PowerShell",
+    "set": 4,
+    "question": "कुन cmdlet ले job को आउटपुट प्राप्त गर्छ?",
+    "options": [
+      "Receive-Job",
+      "Get-JobOutput",
+      "Read-Job",
+      "Fetch-Job"
+    ],
+    "answer": "Receive-Job"
+  },
+  {
+    "category": "PowerShell",
+    "set": 4,
+    "question": "कुन cmdlet ले ब्याकग्राउन्ड job रोक्छ?",
+    "options": [
+      "Stop-Job",
+      "Kill-Job",
+      "End-Job",
+      "Cancel-Job"
+    ],
+    "answer": "Stop-Job"
+  },
+  {
+    "category": "PowerShell",
+    "set": 4,
+    "question": "कुन cmdlet ले ब्याकग्राउन्ड job मेट्छ?",
+    "options": [
+      "Remove-Job",
+      "Delete-Job",
+      "Clear-Job",
+      "Close-Job"
+    ],
+    "answer": "Remove-Job"
+  },
+  {
+    "category": "PowerShell",
+    "set": 4,
+    "question": "कुन सिन्ट्याक्सले स्क्रिप्ट ब्लक बनाउँछ?",
+    "options": [
+      "{ }",
+      "( )",
+      "[ ]",
+      "< >"
+    ],
+    "answer": "{ }"
+  },
+  {
+    "category": "PowerShell",
+    "set": 4,
+    "question": "कुन अपरेटरले कमान्ड वा स्क्रिप्ट ब्लक इन्भोक गर्छ?",
+    "options": [
+      "&",
+      "|",
+      "$",
+      "@"
+    ],
+    "answer": "&"
+  },
+  {
+    "category": "PowerShell",
+    "set": 4,
+    "question": "कुन अपरेटरले हालको स्कोपमा स्क्रिप्टलाई dot-source गर्छ?",
+    "options": [
+      ".",
+      "::",
+      "->",
+      "#"
+    ],
+    "answer": "."
+  },
+  {
+    "category": "PowerShell",
+    "set": 4,
+    "question": "कुन अपरेटरले regex मिलान गर्छ?",
+    "options": [
+      "-match",
+      "-like",
+      "-eq",
+      "-contains"
+    ],
+    "answer": "-match"
+  },
+  {
+    "category": "PowerShell",
+    "set": 4,
+    "question": "कुन अपरेटरले केस-सेन्सिटिभ समानता तुलना गर्छ?",
+    "options": [
+      "-ceq",
+      "-eq",
+      "-ieq",
+      "-caseeq"
+    ],
+    "answer": "-ceq"
+  },
+  {
+    "category": "PowerShell",
+    "set": 4,
+    "question": "कुन अपरेटरले कलेक्सनमा कुनै मान छ कि छैन जाँच गर्छ?",
+    "options": [
+      "-contains",
+      "-in",
+      "-has",
+      "-includes"
+    ],
+    "answer": "-contains"
+  },
+  {
+    "category": "PowerShell",
+    "set": 4,
+    "question": "कुन अपरेटरले कलेक्सनमा कुनै मान छैन भनेर जाँच गर्छ?",
+    "options": [
+      "-notcontains",
+      "-notin",
+      "-excludes",
+      "-without"
+    ],
+    "answer": "-notcontains"
+  },
+  {
+    "category": "PowerShell",
+    "set": 4,
+    "question": "कुन लिटरलले खाली hashtable बनाउँछ?",
+    "options": [
+      "@{}",
+      "[]",
+      "@()",
+      "{}"
+    ],
+    "answer": "@{}"
+  },
+  {
+    "category": "PowerShell",
+    "set": 4,
+    "question": "कुन PowerShell टाइपले key-value जोडीहरू भण्डारण गर्छ?",
+    "options": [
+      "Hashtable",
+      "Array",
+      "String",
+      "PSCustomObject"
+    ],
+    "answer": "Hashtable"
+  },
+  {
+    "category": "PowerShell",
+    "set": 4,
+    "question": "$hash मा 'Name' कीको मान भरपर्दो रूपमा पहुँच गर्ने सिन्ट्याक्स कुन हो?",
+    "options": [
+      "$hash['Name']",
+      "$hash{Name}",
+      "$hash->Name",
+      "$hash(Name)"
+    ],
+    "answer": "$hash['Name']"
+  },
+  {
+    "category": "PowerShell",
+    "set": 4,
+    "question": "कुन भेरिएबलले हालको प्रयोगकर्ता नाम भण्डारण गर्छ?",
+    "options": [
+      "$env:USERNAME",
+      "$env:USER",
+      "$USERNAME",
+      "$currentUser"
+    ],
+    "answer": "$env:USERNAME"
+  },
+  {
+    "category": "PowerShell",
+    "set": 4,
+    "question": "कुन PowerShell ड्राइभले environment variables देखाउँछ?",
+    "options": [
+      "Env:",
+      "Environment:",
+      "Variables:",
+      "System:"
+    ],
+    "answer": "Env:"
+  },
+  {
+    "category": "PowerShell",
+    "set": 4,
+    "question": "कुन automatic variable ले हालको प्रयोगकर्ताको प्रोफाइलको पथ भण्डारण गर्छ?",
+    "options": [
+      "$PROFILE",
+      "$PROFILEPATH",
+      "$PSProfile",
+      "$CurrentUserProfile"
+    ],
+    "answer": "$PROFILE"
+  }
+]

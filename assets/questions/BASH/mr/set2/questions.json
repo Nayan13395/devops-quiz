@@ -1,0 +1,302 @@
+[
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "date चा output now नावाच्या variable मध्ये साठवणारा syntax कोणता?",
+    "options": [
+      "now=$(date)",
+      "now=date",
+      "now:=$(date)",
+      "date->now"
+    ],
+    "answer": "now=$(date)"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "script चे नाव दर्शवणारा special parameter कोणता?",
+    "options": [
+      "$0",
+      "$1",
+      "$#",
+      "$@"
+    ],
+    "answer": "$0"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "पहिला positional argument दर्शवणारा special parameter कोणता?",
+    "options": [
+      "$1",
+      "$0",
+      "$*",
+      "$?"
+    ],
+    "answer": "$1"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "positional arguments ची संख्या दर्शवणारा special parameter कोणता?",
+    "options": [
+      "$#",
+      "$@",
+      "$*",
+      "$$"
+    ],
+    "answer": "$#"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "सर्व positional arguments वेगवेगळ्या words म्हणून expand करणारा special parameter कोणता?",
+    "options": [
+      "$@",
+      "$*",
+      "$#",
+      "$0"
+    ],
+    "answer": "$@"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "सर्व positional arguments एकच word म्हणून expand करणारा special parameter कोणता?",
+    "options": [
+      "$*",
+      "$@",
+      "$#",
+      "$$"
+    ],
+    "answer": "$*"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "सध्याच्या shell चा process ID दर्शवणारा special parameter कोणता?",
+    "options": [
+      "$$",
+      "$!",
+      "$?",
+      "$0"
+    ],
+    "answer": "$$"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "शेवटच्या command ची exit status दर्शवणारा special parameter कोणता?",
+    "options": [
+      "$?",
+      "$!",
+      "$$",
+      "$#"
+    ],
+    "answer": "$?"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "var unset किंवा empty असल्यास default value परत करणारा expansion कोणता?",
+    "options": [
+      "${var:-default}",
+      "${var:=default}",
+      "${var:+default}",
+      "${var:?default}"
+    ],
+    "answer": "${var:-default}"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "कोणते expansion var मधून offset 2 पासून सुरू होणारी 3 अक्षरे काढते?",
+    "options": [
+      "${var:2:3}",
+      "${var:3:2}",
+      "${var[2,3]}",
+      "${var#2:3}"
+    ],
+    "answer": "${var:2:3}"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "var च्या value ची लांबी परत करणारा expansion कोणता?",
+    "options": [
+      "${#var}",
+      "${len(var)}",
+      "${var:length}",
+      "${var#length}"
+    ],
+    "answer": "${#var}"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "var चे value uppercase मध्ये रूपांतरित करणारा expansion कोणता?",
+    "options": [
+      "${var^^}",
+      "${var,,}",
+      "${var!!}",
+      "${var##}"
+    ],
+    "answer": "${var^^}"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "var चे value lowercase मध्ये रूपांतरित करणारा expansion कोणता?",
+    "options": [
+      "${var,,}",
+      "${var^^}",
+      "${var%%}",
+      "${var//}"
+    ],
+    "answer": "${var,,}"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "var मध्ये pattern ची फक्त पहिली जुळणी बदलणारा expansion कोणता?",
+    "options": [
+      "${var/pattern/replacement}",
+      "${var//pattern/replacement}",
+      "${var#pattern}",
+      "${var%pattern}"
+    ],
+    "answer": "${var/pattern/replacement}"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "var मध्ये pattern च्या सर्व जुळण्या बदलणारा expansion कोणता?",
+    "options": [
+      "${var//pattern/replacement}",
+      "${var/pattern/replacement}",
+      "${var##pattern}",
+      "${var%%pattern}"
+    ],
+    "answer": "${var//pattern/replacement}"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "Bash मध्ये arithmetic expansion करणारा syntax कोणता?",
+    "options": [
+      "$((5 + 3))",
+      "$(5 + 3)",
+      "${5 + 3}",
+      "$[5 + 3]"
+    ],
+    "answer": "$((5 + 3))"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "count variable ला एकाने वाढवणारा command कोणता?",
+    "options": [
+      "let count++",
+      "count++",
+      "increment count",
+      "add count"
+    ],
+    "answer": "let count++"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "5 आणि 3 यांची बेरीज करून 8 छापणारा command कोणता?",
+    "options": [
+      "expr 5 + 3",
+      "expr 5+3",
+      "expr5 + 3",
+      "expr add 5 3"
+    ],
+    "answer": "expr 5 + 3"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "count ला integer variable म्हणून declare करणारा command कोणता?",
+    "options": [
+      "declare -i count",
+      "declare int count",
+      "integer count",
+      "set count integer"
+    ],
+    "answer": "declare -i count"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "variable read-only बनवणारा command कोणता?",
+    "options": [
+      "readonly var",
+      "lock var",
+      "const var",
+      "final var"
+    ],
+    "answer": "readonly var"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "shell environment मधून variable काढून टाकणारा command कोणता?",
+    "options": [
+      "unset var",
+      "delete var",
+      "remove var",
+      "clear var"
+    ],
+    "answer": "unset var"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "child processes साठी variable उपलब्ध करून देणारा command कोणता?",
+    "options": [
+      "export var",
+      "share var",
+      "env var",
+      "publish var"
+    ],
+    "answer": "export var"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "output redirection मुळे अस्तित्वातील file overwrite होऊ नये म्हणून कोणता option वापरला जातो?",
+    "options": [
+      "set -o noclobber",
+      "set -o nooverwrite",
+      "set -o protect",
+      "set -o safe"
+    ],
+    "answer": "set -o noclobber"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "मागील background command चा process ID दर्शवणारा special parameter कोणता?",
+    "options": [
+      "$!",
+      "$?",
+      "$@",
+      "$#"
+    ],
+    "answer": "$!"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "var मधून सर्वात लहान जुळणारा suffix काढून टाकणारा expansion कोणता?",
+    "options": [
+      "${var%pattern}",
+      "${var#pattern}",
+      "${var##pattern}",
+      "${var%%pattern}"
+    ],
+    "answer": "${var%pattern}"
+  }
+]

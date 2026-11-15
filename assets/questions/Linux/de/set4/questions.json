@@ -1,0 +1,302 @@
+[
+  {
+    "category": "Linux",
+    "set": 4,
+    "question": "Welcher Befehl wird zum Verschieben oder Umbenennen von Dateien verwendet?",
+    "options": [
+      "mv",
+      "cp",
+      "ln",
+      "shift"
+    ],
+    "answer": "mv"
+  },
+  {
+    "category": "Linux",
+    "set": 4,
+    "question": "Welcher Befehl ändert den Dateieigentümer?",
+    "options": [
+      "chown",
+      "chmod",
+      "owner",
+      "setowner"
+    ],
+    "answer": "chown"
+  },
+  {
+    "category": "Linux",
+    "set": 4,
+    "question": "Welcher Befehl zeigt Dateiberechtigungen im Oktalformat an?",
+    "options": [
+      "stat -c %a",
+      "ls -perm",
+      "perm",
+      "showperm"
+    ],
+    "answer": "stat -c %a"
+  },
+  {
+    "category": "Linux",
+    "set": 4,
+    "question": "Welcher Befehl zeigt den Dateityp an?",
+    "options": [
+      "file",
+      "type",
+      "kind",
+      "format"
+    ],
+    "answer": "file"
+  },
+  {
+    "category": "Linux",
+    "set": 4,
+    "question": "Welcher Befehl zeigt detaillierte Dateistatistiken an?",
+    "options": [
+      "stat",
+      "fileinfo",
+      "details",
+      "ls -stat"
+    ],
+    "answer": "stat"
+  },
+  {
+    "category": "Linux",
+    "set": 4,
+    "question": "Welcher Befehl durchsucht Verzeichnisbäume direkt nach Dateinamen statt über eine vorab erstellte Datenbank?",
+    "options": [
+      "find",
+      "search",
+      "locate",
+      "where"
+    ],
+    "answer": "find"
+  },
+  {
+    "category": "Linux",
+    "set": 4,
+    "question": "Welcher Befehl durchsucht PATH und gibt normalerweise den Pfad der ersten passenden ausführbaren Datei aus?",
+    "options": [
+      "which",
+      "whereis",
+      "locate",
+      "find"
+    ],
+    "answer": "which"
+  },
+  {
+    "category": "Linux",
+    "set": 4,
+    "question": "Welcher Befehl sucht Dateien mithilfe einer Datenbank?",
+    "options": [
+      "locate",
+      "find",
+      "search",
+      "query"
+    ],
+    "answer": "locate"
+  },
+  {
+    "category": "Linux",
+    "set": 4,
+    "question": "Welcher Befehl aktualisiert die locate-Datenbank?",
+    "options": [
+      "updatedb",
+      "updatedatabase",
+      "refreshdb",
+      "syncdb"
+    ],
+    "answer": "updatedb"
+  },
+  {
+    "category": "Linux",
+    "set": 4,
+    "question": "Welcher Befehl zeigt die Crontab-Einträge des aktuellen Benutzers?",
+    "options": [
+      "crontab -l",
+      "cron -list",
+      "cronshow",
+      "jobs"
+    ],
+    "answer": "crontab -l"
+  },
+  {
+    "category": "Linux",
+    "set": 4,
+    "question": "Welcher Befehl bearbeitet Cron-Jobs?",
+    "options": [
+      "crontab -e",
+      "cronedit",
+      "crontab",
+      "schedule"
+    ],
+    "answer": "crontab -e"
+  },
+  {
+    "category": "Linux",
+    "set": 4,
+    "question": "Welcher Befehl plant eine einmalige Aufgabe?",
+    "options": [
+      "at",
+      "cron",
+      "task",
+      "schedule"
+    ],
+    "answer": "at"
+  },
+  {
+    "category": "Linux",
+    "set": 4,
+    "question": "Welcher Befehl zeigt aktive Jobs in der Shell an?",
+    "options": [
+      "jobs",
+      "ps",
+      "bg",
+      "fg"
+    ],
+    "answer": "jobs"
+  },
+  {
+    "category": "Linux",
+    "set": 4,
+    "question": "Welcher eingebaute Shell-Befehl setzt einen angehaltenen Job im Hintergrund fort?",
+    "options": [
+      "bg",
+      "fg",
+      "jobs",
+      "nohup"
+    ],
+    "answer": "bg"
+  },
+  {
+    "category": "Linux",
+    "set": 4,
+    "question": "Welcher Befehl holt einen Hintergrundprozess in den Vordergrund?",
+    "options": [
+      "fg",
+      "bg",
+      "jobs",
+      "top"
+    ],
+    "answer": "fg"
+  },
+  {
+    "category": "Linux",
+    "set": 4,
+    "question": "Welcher systemd-Befehl lädt Unit-Dateidefinitionen nach dem Bearbeiten einer Dienstdatei neu?",
+    "options": [
+      "systemctl daemon-reload",
+      "systemctl reload app.service",
+      "systemctl restart app.service",
+      "systemctl reset-failed app.service"
+    ],
+    "answer": "systemctl daemon-reload"
+  },
+  {
+    "category": "Linux",
+    "set": 4,
+    "question": "Was bewirkt 'systemctl disable app.service' ohne --now?",
+    "options": [
+      "Es stoppt den Dienst und löscht seine Unit-Datei",
+      "Es startet den Dienst mit Werkseinstellungen neu",
+      "Es verhindert alle manuellen Starts durch Maskieren der Unit",
+      "Es entfernt Aktivierungsverknüpfungen, ohne den laufenden Dienst zwingend zu stoppen"
+    ],
+    "answer": "Es entfernt Aktivierungsverknüpfungen, ohne den laufenden Dienst zwingend zu stoppen"
+  },
+  {
+    "category": "Linux",
+    "set": 4,
+    "question": "Welcher Befehl zeigt Journaleinträge für app.service?",
+    "options": [
+      "systemctl show app.service",
+      "systemctl list-dependencies app.service",
+      "journalctl -u app.service",
+      "systemctl cat app.service"
+    ],
+    "answer": "journalctl -u app.service"
+  },
+  {
+    "category": "Linux",
+    "set": 4,
+    "question": "Welche journalctl-Option beschränkt die Ausgabe auf den aktuellen Systemstart?",
+    "options": [
+      "-k",
+      "-b",
+      "-f",
+      "-r"
+    ],
+    "answer": "-b"
+  },
+  {
+    "category": "Linux",
+    "set": 4,
+    "question": "Welches Feld steht zuerst in einer üblichen fünfteiligen Benutzer-Crontab?",
+    "options": [
+      "Minute",
+      "Stunde",
+      "Tag des Monats",
+      "Wochentag"
+    ],
+    "answer": "Minute"
+  },
+  {
+    "category": "Linux",
+    "set": 4,
+    "question": "Wann läuft '0 2 * * *' in einer üblichen Benutzer-Crontab?",
+    "options": [
+      "Zur Minute 2 jeder Stunde",
+      "Alle zwei Minuten",
+      "Um Mitternacht am zweiten Tag jedes Monats",
+      "Täglich um 02:00 in der für cron geltenden Zeitzone"
+    ],
+    "answer": "Täglich um 02:00 in der für cron geltenden Zeitzone"
+  },
+  {
+    "category": "Linux",
+    "set": 4,
+    "question": "Was bewirkt der eingebaute Bash-Befehl export bei einer Shell-Variablen?",
+    "options": [
+      "Er kopiert sie in die Umgebung der Elternshell",
+      "Er macht ihren Wert zu einer schreibgeschützten Variablen",
+      "Er stellt sie in der Umgebung später gestarteter Kindprozesse bereit",
+      "Er schreibt sie dauerhaft in das Profil jedes Benutzers"
+    ],
+    "answer": "Er stellt sie in der Umgebung später gestarteter Kindprozesse bereit"
+  },
+  {
+    "category": "Linux",
+    "set": 4,
+    "question": "Welche Bash-Umleitung hängt die Standardausgabe an app.log an?",
+    "options": [
+      "2> app.log",
+      ">> app.log",
+      "> app.log",
+      "< app.log"
+    ],
+    "answer": ">> app.log"
+  },
+  {
+    "category": "Linux",
+    "set": 4,
+    "question": "Welche Bash-Umleitung sendet die Standardfehlerausgabe an dasselbe Ziel wie die Standardausgabe?",
+    "options": [
+      "2>&1",
+      "1>&2",
+      "2>errors.log",
+      "<input.txt"
+    ],
+    "answer": "2>&1"
+  },
+  {
+    "category": "Linux",
+    "set": 4,
+    "question": "Wozu expandiert $? in Bash unmittelbar nach dem Ende eines Befehls?",
+    "options": [
+      "Zur Prozess-ID der aktuellen Shell",
+      "Zur Anzahl der Positionsparameter",
+      "Zur Prozess-ID des neuesten Hintergrundjobs",
+      "Zum Exitstatus der zuletzt ausgeführten Vordergrund-Pipeline"
+    ],
+    "answer": "Zum Exitstatus der zuletzt ausgeführten Vordergrund-Pipeline"
+  }
+]

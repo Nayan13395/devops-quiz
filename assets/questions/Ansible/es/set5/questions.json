@@ -1,0 +1,302 @@
+[
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "Sin una configuración que lo anule a nivel de tarea, ¿qué sucede con un módulo que no admite el modo de comprobación durante una ejecución en ese modo?",
+    "options": [
+      "El módulo siempre realiza sus cambios normales",
+      "El módulo se ejecuta automáticamente en localhost",
+      "El módulo se reintenta hasta que admita el modo de comprobación",
+      "El módulo se omite en lugar de realizar cambios"
+    ],
+    "answer": "El módulo se omite en lugar de realizar cambios"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "¿Qué configuración de tarea permite cambios reales aunque el playbook se invoque con --check?",
+    "options": [
+      "changed_when: false",
+      "ignore_errors: true",
+      "check_mode: false",
+      "diff: false"
+    ],
+    "answer": "check_mode: false"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "¿Qué acción meta de Ansible ejecuta inmediatamente los manejadores ya notificados?",
+    "options": [
+      "reset_connection",
+      "flush_handlers",
+      "clear_facts",
+      "end_play"
+    ],
+    "answer": "flush_handlers"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "Si dos tareas modificadas notifican al mismo manejador antes de su ejecución, ¿cuántas veces se ejecuta normalmente en ese punto?",
+    "options": [
+      "Una vez",
+      "Dos veces",
+      "Una vez por grupo del inventario",
+      "Ninguna vez, porque las notificaciones entran en conflicto"
+    ],
+    "answer": "Una vez"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "¿Qué determina el orden de ejecución de los manejadores notificados en un mismo punto de ejecución?",
+    "options": [
+      "El orden alfabético de sus nombres",
+      "El orden de los nombres en la lista notify",
+      "El orden en el que se conectaron los hosts administrados",
+      "Su orden de definición en la sección handlers"
+    ],
+    "answer": "Su orden de definición en la sección handlers"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "¿Qué fallo activa normalmente las tareas rescue de un bloque?",
+    "options": [
+      "El playbook contiene una definición de tarea no válida",
+      "No se puede analizar el documento YAML",
+      "Una tarea dentro del bloque devuelve un resultado fallido",
+      "Un host deja de estar accesible antes de que pueda ejecutarse su tarea"
+    ],
+    "answer": "Una tarea dentro del bloque devuelve un resultado fallido"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "¿Qué error no oculta ignore_errors en una tarea ordinaria?",
+    "options": [
+      "Una condición failed_when que se evalúa como true",
+      "Un error de variable no definida",
+      "Un estado de salida distinto de cero informado por un comando",
+      "Un resultado de módulo marcado explícitamente como failed"
+    ],
+    "answer": "Un error de variable no definida"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "¿Qué palabra clave detiene el play en todos los hosts ante un fallo de tarea no gestionado, después de que el lote actual termine esa tarea?",
+    "options": [
+      "any_errors_fatal",
+      "ignore_unreachable",
+      "max_fail_percentage: 100",
+      "force_handlers"
+    ],
+    "answer": "any_errors_fatal"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "¿Qué efecto tiene force_handlers si una tarea posterior falla en un host accesible?",
+    "options": [
+      "Todos los manejadores definidos se ejecutan incluso sin notificación",
+      "Todas las tareas fallidas se reintentan automáticamente",
+      "Los manejadores se ejecutan antes de todas las tareas normales",
+      "Los manejadores previamente notificados todavía pueden ejecutarse en ese host"
+    ],
+    "answer": "Los manejadores previamente notificados todavía pueden ejecutarse en ese host"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "¿Qué configuración de tarea suprime el registro normal de argumentos y resultados sensibles?",
+    "options": [
+      "check_mode: true",
+      "changed_when: false",
+      "no_log: true",
+      "diff: true"
+    ],
+    "answer": "no_log: true"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "¿Qué configuración de tarea suprime las diferencias de contenido de archivos incluso con --diff activado?",
+    "options": [
+      "ignore_errors: true",
+      "diff: false",
+      "no_log: false",
+      "check_mode: false"
+    ],
+    "answer": "diff: false"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "¿Qué diccionario permite acceder a las variables asociadas con otro host del inventario?",
+    "options": [
+      "hostvars",
+      "ansible_facts",
+      "environment",
+      "ansible_loop"
+    ],
+    "answer": "hostvars"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "¿Qué variable mágica contiene el nombre del host actual en el inventario?",
+    "options": [
+      "ansible_host",
+      "ansible_user",
+      "ansible_playbook_python",
+      "inventory_hostname"
+    ],
+    "answer": "inventory_hostname"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "¿Qué directorio situado junto al inventario se utiliza habitualmente para variables compartidas por un grupo de hosts?",
+    "options": [
+      "roles",
+      "collections",
+      "group_vars",
+      "host_vars"
+    ],
+    "answer": "group_vars"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "¿Dónde lee un archivo la búsqueda ansible.builtin.file de forma predeterminada?",
+    "options": [
+      "En el host indicado por become_user",
+      "En el nodo de control",
+      "En cada host administrado",
+      "En el primer host del play"
+    ],
+    "answer": "En el nodo de control"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "¿Qué filtro convierte una cadena YAML en una estructura de datos de Ansible?",
+    "options": [
+      "from_yaml",
+      "to_yaml",
+      "to_json",
+      "dict2items"
+    ],
+    "answer": "from_yaml"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "¿Qué filtro convierte un diccionario en una lista de diccionarios clave/valor?",
+    "options": [
+      "items2dict",
+      "flatten",
+      "zip",
+      "dict2items"
+    ],
+    "answer": "dict2items"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "¿Qué filtro elimina los elementos duplicados de una lista?",
+    "options": [
+      "reverse",
+      "flatten",
+      "unique",
+      "sort"
+    ],
+    "answer": "unique"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "¿Qué módulo comprueba expresiones y falla si no se cumplen las aserciones especificadas?",
+    "options": [
+      "ansible.builtin.set_fact",
+      "ansible.builtin.assert",
+      "ansible.builtin.debug",
+      "ansible.builtin.pause"
+    ],
+    "answer": "ansible.builtin.assert"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "¿Qué módulo gestiona una línea concreta de un archivo de texto mediante una expresión regular?",
+    "options": [
+      "ansible.builtin.lineinfile",
+      "ansible.builtin.blockinfile",
+      "ansible.builtin.copy",
+      "ansible.builtin.slurp"
+    ],
+    "answer": "ansible.builtin.lineinfile"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "¿Qué módulo consulta una URL y puede comprobar el código de estado HTTP esperado?",
+    "options": [
+      "ansible.builtin.get_url",
+      "ansible.builtin.fetch",
+      "ansible.builtin.wait_for",
+      "ansible.builtin.uri"
+    ],
+    "answer": "ansible.builtin.uri"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "¿Qué módulo espera hasta que un puerto TCP alcanza el estado solicitado?",
+    "options": [
+      "ansible.builtin.async_status",
+      "ansible.builtin.ping",
+      "ansible.builtin.wait_for",
+      "ansible.builtin.pause"
+    ],
+    "answer": "ansible.builtin.wait_for"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "¿Qué parámetro hace que ansible.builtin.command omita la ejecución cuando ya existe una ruta especificada?",
+    "options": [
+      "stdin",
+      "creates",
+      "removes",
+      "chdir"
+    ],
+    "answer": "creates"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "¿Qué configuración del módulo file crea un enlace simbólico?",
+    "options": [
+      "state: link",
+      "state: directory",
+      "state: touch",
+      "state: hard"
+    ],
+    "answer": "state: link"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "¿Qué módulo puede añadir un host al inventario en memoria para plays posteriores?",
+    "options": [
+      "ansible.builtin.group_by",
+      "ansible.builtin.set_fact",
+      "ansible.builtin.meta",
+      "ansible.builtin.add_host"
+    ],
+    "answer": "ansible.builtin.add_host"
+  }
+]

@@ -1,0 +1,302 @@
+[
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "कोन कमांड release नामक मौजूदा ब्रांचक लेल लिंक्ड वर्किंग ट्री जोड़ैत अछि?",
+    "options": [
+      "git worktree prune",
+      "git worktree lock ..\\release",
+      "git worktree add ..\\release release",
+      "git worktree list"
+    ],
+    "answer": "git worktree add ..\\release release"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "कोन फाइल सुपरप्रोजेक्टक वर्जन कएल गेल सबमॉड्यूल पाथ आ URL दर्ज करैत अछि?",
+    "options": [
+      ".gitmessage",
+      ".gitmodules",
+      ".gitignore",
+      ".gitattributes"
+    ],
+    "answer": ".gitmodules"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "कोन कमांड नेस्टेड सहित पंजीकृत सबमॉड्यूलसभकेँ आरंभ करैत अछि आ चेकआउट करैत अछि?",
+    "options": [
+      "git submodule update --init --recursive",
+      "git submodule deinit --all",
+      "git submodule status",
+      "git submodule sync"
+    ],
+    "answer": "git submodule update --init --recursive"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "सुपरप्रोजेक्ट सामान्यतया कमिट मे सबमॉड्यूलक लेल की दर्ज करैत अछि?",
+    "options": [
+      "सबमॉड्यूलक पूरा ऑब्जेक्ट डेटाबेस",
+      "मात्र सबमॉड्यूलक डिफ़ॉल्ट ब्रांचक नाम",
+      "मात्र सबमॉड्यूलक बिना कमिट कएल बदलाव",
+      "सबमॉड्यूलक कोनो विशेष कमिटक रेफरेंस"
+    ],
+    "answer": "सबमॉड्यूलक कोनो विशेष कमिटक रेफरेंस"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "कोन कमांड सभ रेफरेंस आ ओकर पहुँच योग्य इतिहास बला पोर्टेबल बंडल बनबैत अछि?",
+    "options": [
+      "git format-patch -1 HEAD",
+      "git diff --binary > backup.bundle",
+      "git bundle create backup.bundle --all",
+      "git archive --output=backup.bundle HEAD"
+    ],
+    "answer": "git bundle create backup.bundle --all"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "कोन कमांड HEAD क ट्रैक कएल गेल फाइलसभकेँ Git इतिहास बिना ZIP आर्काइव क रूप मे निर्यात करैत अछि?",
+    "options": [
+      "git format-patch --stdout HEAD > source.zip",
+      "git archive --format=zip --output=source.zip HEAD",
+      "git bundle create source.zip --all",
+      "git clone --bare . source.zip"
+    ],
+    "answer": "git archive --format=zip --output=source.zip HEAD"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "कोन कमांड सभसँ हालक कमिटकेँ ईमेल-शैलीक पैच फाइल मे बदलैत अछि?",
+    "options": [
+      "git format-patch -1 HEAD",
+      "git diff HEAD",
+      "git show --stat HEAD",
+      "git log -1 --oneline"
+    ],
+    "answer": "git format-patch -1 HEAD"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "कोन कमांड git format-patch द्वारा बनाओल गेल ईमेल पैचसभ लागू करैत अछि आ ओकरा सँ कमिट बनबैत अछि?",
+    "options": [
+      "git apply changes.patch",
+      "git diff changes.patch",
+      "git add changes.patch",
+      "git am changes.patch"
+    ],
+    "answer": "git am changes.patch"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "कोन कमांड जाँचैत अछि जे साधारण पैच फाइलसभ बदलने बिना लागू भऽ सकैत अछि वा नहि?",
+    "options": [
+      "git am changes.patch",
+      "git add changes.patch",
+      "git apply --check changes.patch",
+      "git apply changes.patch"
+    ],
+    "answer": "git apply --check changes.patch"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "कोन Git ऑब्जेक्ट प्रकार फाइलनाम बिना फाइलक सामग्री संग्रहीत करैत अछि?",
+    "options": [
+      "एनोटेटेड टैग",
+      "Blob",
+      "Tree",
+      "Commit"
+    ],
+    "answer": "Blob"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "कोन Git ऑब्जेक्ट प्रकार फाइलनाम आ blobs वा सबट्रीसभक रेफरेंस दर्ज करैत अछि?",
+    "options": [
+      "Tree",
+      "Blob",
+      "Commit",
+      "एनोटेटेड टैग"
+    ],
+    "answer": "Tree"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "कोन कमांड ज्ञात ऑब्जेक्ट IDक ऑब्जेक्ट प्रकार बतबैत अछि?",
+    "options": [
+      "git cat-file -s abc1234",
+      "git rev-parse abc1234",
+      "git log -1 abc1234",
+      "git cat-file -t abc1234"
+    ],
+    "answer": "git cat-file -t abc1234"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "कोन कमांड HEAD क पूर्ण ऑब्जेक्ट ID प्रिंट करैत अछि?",
+    "options": [
+      "git status --short",
+      "git branch --show-current",
+      "git rev-parse HEAD",
+      "git symbolic-ref HEAD"
+    ],
+    "answer": "git rev-parse HEAD"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "कोन रिवीजन रेंज ओहि कमिटसभकेँ चुनैत अछि जे feature सँ पहुँच योग्य अछि मुदा main सँ नहि?",
+    "options": [
+      "main^",
+      "main..feature",
+      "feature..main",
+      "main...feature"
+    ],
+    "answer": "main..feature"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "कोन git log विकल्प मात्र मर्ज कमिट देखबैत अछि?",
+    "options": [
+      "--merges",
+      "--no-merges",
+      "--first-parent",
+      "--reverse"
+    ],
+    "answer": "--merges"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "कोन git diff विकल्प बदलल गेल पाथसभ आ ओकर परिवर्तन-स्थिति अक्षर प्रिंट करैत अछि?",
+    "options": [
+      "--name-only",
+      "--stat",
+      "--shortstat",
+      "--name-status"
+    ],
+    "answer": "--name-status"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "कोन फाइल पाथसभक लेल टेक्स्ट सामान्यीकरण नियम जेहन वर्जन कएल गेल एट्रिब्यूट परिभाषित करैत अछि?",
+    "options": [
+      ".gitmodules",
+      ".gitconfig",
+      ".gitattributes",
+      ".gitignore"
+    ],
+    "answer": ".gitattributes"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": ".gitattributes नियम '*.sh text eol=lf' मेल खाए वला टेक्स्ट फाइलसभक लेल की अनुरोध करैत अछि?",
+    "options": [
+      "खाली पंक्तिसभक स्वतः मेटाएब",
+      "वर्किंग ट्री मे LF लाइन एंडिंग",
+      "वर्किंग ट्री मे CRLF लाइन एंडिंग",
+      "टेक्स्ट रूपांतरण बिना बाइनरी मानब"
+    ],
+    "answer": "वर्किंग ट्री मे LF लाइन एंडिंग"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "कोन हुक प्रस्तावित कमिट-संदेश फाइलक निरीक्षण कऽ कमिटकेँ अस्वीकार कऽ सकैत अछि?",
+    "options": [
+      "commit-msg",
+      "post-commit",
+      "post-checkout",
+      "post-merge"
+    ],
+    "answer": "commit-msg"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "कोन कॉन्फ़िगरेशन सेटिंग Git हुकसभक लेल कस्टम डायरेक्टरी चुनैत अछि?",
+    "options": [
+      "core.worktree",
+      "core.excludesFile",
+      "core.attributesFile",
+      "core.hooksPath"
+    ],
+    "answer": "core.hooksPath"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "कोन फाइल एक डेवलपरकेँ साझा .gitignore नियम जोड़ने बिना ट्रैक नहि कएल गेल फाइलसभकेँ लोकल रूप सँ अनदेखा करए दैत अछि?",
+    "options": [
+      ".git\\description",
+      ".git\\packed-refs",
+      ".git\\info\\exclude",
+      ".git\\HEAD"
+    ],
+    "answer": ".git\\info\\exclude"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "कोन कमांड बाइसेक्ट सत्रसँ बाहर निकलैत अछि आ सामान्यतया मूल ब्रांच पर घुरैत अछि?",
+    "options": [
+      "git bisect log",
+      "git bisect reset",
+      "git bisect skip",
+      "git bisect good"
+    ],
+    "answer": "git bisect reset"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "कोन कमांड पैच श्रृंखलाक दू संस्करणक तुलना करैत अछि?",
+    "options": [
+      "git range-diff main..old main..new",
+      "git diff old new",
+      "git log old..new",
+      "git merge-base old new"
+    ],
+    "answer": "git range-diff main..old main..new"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "कमिट बनबैत काल कोन कमांड Signed-off-by ट्रेलर जोड़ैत अछि?",
+    "options": [
+      "git commit --gpg-sign",
+      "git commit --amend",
+      "git commit --no-verify",
+      "git commit --signoff"
+    ],
+    "answer": "git commit --signoff"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "git log -S'old_name' डिफ़ॉल्ट रूप सँ की खोजैत अछि?",
+    "options": [
+      "ओ कमिट जकर संदेश मे old_name अछि",
+      "ओ ब्रांच जकर नाम मे old_name अछि",
+      "ओ कमिट जे old_name क घटनाक संख्या बदलैत अछि",
+      "ओ कमिट जकर लेखकक नाम old_name अछि"
+    ],
+    "answer": "ओ कमिट जे old_name क घटनाक संख्या बदलैत अछि"
+  }
+]

@@ -1,0 +1,302 @@
+[
+  {
+    "category": "Perl",
+    "set": 4,
+    "question": "Hangi sözdizimi @items için bir referans oluşturur?",
+    "options": [
+      "\\@items",
+      "$items",
+      "@items",
+      "%items"
+    ],
+    "answer": "\\@items"
+  },
+  {
+    "category": "Perl",
+    "set": 4,
+    "question": "Hangi sözdizimi anonim bir dizi referansı oluşturur?",
+    "options": [
+      "[1, 2, 3]",
+      "{1, 2, 3}",
+      "(1, 2, 3)",
+      "<1, 2, 3>"
+    ],
+    "answer": "[1, 2, 3]"
+  },
+  {
+    "category": "Perl",
+    "set": 4,
+    "question": "Hangi sözdizimi anonim bir hash referansı oluşturur?",
+    "options": [
+      "{a => 1}",
+      "[a => 1]",
+      "(a => 1)",
+      "<a => 1>"
+    ],
+    "answer": "{a => 1}"
+  },
+  {
+    "category": "Perl",
+    "set": 4,
+    "question": "Bir nesne üzerinde metot çağırmak için hangi operatör kullanılır?",
+    "options": [
+      "->",
+      "=>",
+      "::",
+      "."
+    ],
+    "answer": "->"
+  },
+  {
+    "category": "Perl",
+    "set": 4,
+    "question": "Bir referansı bir sınıfla ilişkilendiren fonksiyon hangisidir?",
+    "options": [
+      "bless",
+      "create",
+      "new",
+      "object"
+    ],
+    "answer": "bless"
+  },
+  {
+    "category": "Perl",
+    "set": 4,
+    "question": "Bir Perl yapıcısının (constructor) geleneksel adı nedir?",
+    "options": [
+      "new",
+      "init",
+      "create",
+      "constructor"
+    ],
+    "answer": "new"
+  },
+  {
+    "category": "Perl",
+    "set": 4,
+    "question": "Hangi belirteç geçerli paket adını içerir?",
+    "options": [
+      "__PACKAGE__",
+      "__FILE__",
+      "__LINE__",
+      "__SUB__"
+    ],
+    "answer": "__PACKAGE__"
+  },
+  {
+    "category": "Perl",
+    "set": 4,
+    "question": "Hangi anahtar sözcük bir paket tanımlar?",
+    "options": [
+      "package",
+      "module",
+      "namespace",
+      "class"
+    ],
+    "answer": "package"
+  },
+  {
+    "category": "Perl",
+    "set": 4,
+    "question": "Hangi sözdizimi $ref adlı bir dizi referansının referansını çözer?",
+    "options": [
+      "@$ref",
+      "$$ref",
+      "%$ref",
+      "$ref[]"
+    ],
+    "answer": "@$ref"
+  },
+  {
+    "category": "Perl",
+    "set": 4,
+    "question": "Hangi sözdizimi $ref dizi referansının ilk öğesine erişir?",
+    "options": [
+      "$ref->[0]",
+      "$ref->{0}",
+      "$ref[0]",
+      "$ref(0)"
+    ],
+    "answer": "$ref->[0]"
+  },
+  {
+    "category": "Perl",
+    "set": 4,
+    "question": "Hangi sözdizimi $ref hash referansındaki bir anahtara erişir?",
+    "options": [
+      "$ref->{key}",
+      "$ref->[key]",
+      "$ref{key}",
+      "$ref:key"
+    ],
+    "answer": "$ref->{key}"
+  },
+  {
+    "category": "Perl",
+    "set": 4,
+    "question": "Bir referansın türünü döndüren fonksiyon hangisidir?",
+    "options": [
+      "ref",
+      "type",
+      "typeof",
+      "reftype"
+    ],
+    "answer": "ref"
+  },
+  {
+    "category": "Perl",
+    "set": 4,
+    "question": "Hangi deyim say özelliğini etkinleştirir?",
+    "options": [
+      "use feature 'say';",
+      "use say;",
+      "feature say;",
+      "enable say;"
+    ],
+    "answer": "use feature 'say';"
+  },
+  {
+    "category": "Perl",
+    "set": 4,
+    "question": "Özellik etkinleştirildiğinde sonuna satır sonu ekleyerek yazdıran yerleşik fonksiyon hangisidir?",
+    "options": [
+      "say",
+      "print",
+      "write",
+      "echo"
+    ],
+    "answer": "say"
+  },
+  {
+    "category": "Perl",
+    "set": 4,
+    "question": "Hangi sözdizimi $fh dosya tanıtıcısından bir satır okur?",
+    "options": [
+      "<$fh>",
+      "fetch $fh",
+      "read $fh",
+      "get $fh"
+    ],
+    "answer": "<$fh>"
+  },
+  {
+    "category": "Perl",
+    "set": 4,
+    "question": "Bir dizgeyi Perl kodu olarak değerlendiren fonksiyon hangisidir?",
+    "options": [
+      "eval",
+      "exec",
+      "system",
+      "do"
+    ],
+    "answer": "eval"
+  },
+  {
+    "category": "Perl",
+    "set": 4,
+    "question": "eval sonrasında hangi değişken hatayı tutar?",
+    "options": [
+      "$@",
+      "$!",
+      "$?",
+      "$_"
+    ],
+    "answer": "$@"
+  },
+  {
+    "category": "Perl",
+    "set": 4,
+    "question": "Hangi değişken en son çalıştırılan harici komutun bekleme durumunu (wait status) tutar?",
+    "options": [
+      "$?",
+      "$!",
+      "$@",
+      "$_"
+    ],
+    "answer": "$?"
+  },
+  {
+    "category": "Perl",
+    "set": 4,
+    "question": "Hangi sözdizimi harici bir komutun çıktısını yakalar?",
+    "options": [
+      "qx{command}",
+      "system command",
+      "exec command",
+      "open command"
+    ],
+    "answer": "qx{command}"
+  },
+  {
+    "category": "Perl",
+    "set": 4,
+    "question": "Harici bir komutu çalıştırıp bitmesini bekleyen fonksiyon hangisidir?",
+    "options": [
+      "system",
+      "exec",
+      "qx",
+      "spawn"
+    ],
+    "answer": "system"
+  },
+  {
+    "category": "Perl",
+    "set": 4,
+    "question": "Geçerli çalışma dizinini değiştiren fonksiyon hangisidir?",
+    "options": [
+      "chdir",
+      "cd",
+      "mkdir",
+      "rmdir"
+    ],
+    "answer": "chdir"
+  },
+  {
+    "category": "Perl",
+    "set": 4,
+    "question": "Geçerli epoch zamanını döndüren fonksiyon hangisidir?",
+    "options": [
+      "time",
+      "now",
+      "epoch",
+      "clock"
+    ],
+    "answer": "time"
+  },
+  {
+    "category": "Perl",
+    "set": 4,
+    "question": "Epoch zamanını yerel zaman bileşenlerine dönüştüren fonksiyon hangisidir?",
+    "options": [
+      "localtime",
+      "gmtime",
+      "strftime",
+      "date"
+    ],
+    "answer": "localtime"
+  },
+  {
+    "category": "Perl",
+    "set": 4,
+    "question": "Yürütmeyi belirli sayıda saniye boyunca duraklatan fonksiyon hangisidir?",
+    "options": [
+      "sleep",
+      "wait",
+      "pause",
+      "delay"
+    ],
+    "answer": "sleep"
+  },
+  {
+    "category": "Perl",
+    "set": 4,
+    "question": "Hangi hash ortam değişkenlerini içerir?",
+    "options": [
+      "%ENV",
+      "@ENV",
+      "$ENV",
+      "ENV"
+    ],
+    "answer": "%ENV"
+  }
+]

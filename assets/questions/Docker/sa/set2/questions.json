@@ -1,0 +1,302 @@
+[
+  {
+    "category": "Docker",
+    "set": 2,
+    "question": "कः आदेशः Docker संस्करणं ददाति?",
+    "options": [
+      "docker --version",
+      "docker run",
+      "docker ps",
+      "docker pull"
+    ],
+    "answer": "docker --version"
+  },
+  {
+    "category": "Docker",
+    "set": 2,
+    "question": "कः आदेशः Docker संस्करणं JSON प्रारूपे दर्शयति?",
+    "options": [
+      "docker version --format json",
+      "docker version -j",
+      "docker version --json",
+      "docker info --json"
+    ],
+    "answer": "docker version --format json"
+  },
+  {
+    "category": "Docker",
+    "set": 2,
+    "question": "कः आदेशः केवलं कन्टेनर-IDs सूचीकरोति?",
+    "options": [
+      "docker ps -q",
+      "docker ps --ids",
+      "docker ps -i",
+      "docker ps --size"
+    ],
+    "answer": "docker ps -q"
+  },
+  {
+    "category": "Docker",
+    "set": 2,
+    "question": "कः आदेशः स्थगितान् सहितान् सर्वान् कन्टेनरान् सूचीकरोति?",
+    "options": [
+      "docker ps -a",
+      "docker ps --size",
+      "docker containers",
+      "docker list"
+    ],
+    "answer": "docker ps -a"
+  },
+  {
+    "category": "Docker",
+    "set": 2,
+    "question": "कः आदेशः कन्टेनरं प्रारम्भं विना निर्माति?",
+    "options": [
+      "docker create",
+      "docker run",
+      "docker build",
+      "docker start"
+    ],
+    "answer": "docker create"
+  },
+  {
+    "category": "Docker",
+    "set": 2,
+    "question": "कः आदेशः विद्यमानं स्थगितं कन्टेनरं प्रारभते?",
+    "options": [
+      "docker start",
+      "docker run",
+      "docker create",
+      "docker exec"
+    ],
+    "answer": "docker start"
+  },
+  {
+    "category": "Docker",
+    "set": 2,
+    "question": "कः आदेशः चलन्तं कन्टेनरं सौम्यतया स्थगयति?",
+    "options": [
+      "docker stop",
+      "docker kill",
+      "docker pause",
+      "docker halt"
+    ],
+    "answer": "docker stop"
+  },
+  {
+    "category": "Docker",
+    "set": 2,
+    "question": "कः आदेशः कन्टेनरं बलात् समापयति?",
+    "options": [
+      "docker kill",
+      "docker stop",
+      "docker terminate",
+      "docker end"
+    ],
+    "answer": "docker kill"
+  },
+  {
+    "category": "Docker",
+    "set": 2,
+    "question": "कः आदेशः कन्टेनरं पुनः प्रारभते?",
+    "options": [
+      "docker restart",
+      "docker reset",
+      "docker reload",
+      "docker rerun"
+    ],
+    "answer": "docker restart"
+  },
+  {
+    "category": "Docker",
+    "set": 2,
+    "question": "कः आदेशः चलन्तं कन्टेनरं विरमयति?",
+    "options": [
+      "docker pause",
+      "docker stop",
+      "docker hold",
+      "docker freeze"
+    ],
+    "answer": "docker pause"
+  },
+  {
+    "category": "Docker",
+    "set": 2,
+    "question": "कः आदेशः विरमितं कन्टेनरं पुनः चालयति?",
+    "options": [
+      "docker unpause",
+      "docker resume",
+      "docker start",
+      "docker restart"
+    ],
+    "answer": "docker unpause"
+  },
+  {
+    "category": "Docker",
+    "set": 2,
+    "question": "कः आदेशः कन्टेनरम् अपनयति?",
+    "options": [
+      "docker rm",
+      "docker stop",
+      "docker delete",
+      "docker clear"
+    ],
+    "answer": "docker rm"
+  },
+  {
+    "category": "Docker",
+    "set": 2,
+    "question": "कः आदेशः Docker इमेजम् अपनयति?",
+    "options": [
+      "docker rmi",
+      "docker rm",
+      "docker erase",
+      "docker clean"
+    ],
+    "answer": "docker rmi"
+  },
+  {
+    "category": "Docker",
+    "set": 2,
+    "question": "कः आदेशः इमेजस्य इतिहासं दर्शयति?",
+    "options": [
+      "docker history",
+      "docker layers",
+      "docker image show",
+      "docker inspect"
+    ],
+    "answer": "docker history"
+  },
+  {
+    "category": "Docker",
+    "set": 2,
+    "question": "APP_ENV पर्यावरणचरस्य मूल्यं prod इति स्थापयन् docker run विकल्पः कः?",
+    "options": [
+      "--name APP_ENV=prod",
+      "--hostname APP_ENV=prod",
+      "-e APP_ENV=prod",
+      "--label APP_ENV=prod"
+    ],
+    "answer": "-e APP_ENV=prod"
+  },
+  {
+    "category": "Docker",
+    "set": 2,
+    "question": "कण्टेनर् इत्यस्य मूलसञ्चिकातन्त्रं केवलपठनीयं कुर्वन् विकल्पः कः?",
+    "options": [
+      "--init",
+      "--read-only",
+      "--privileged",
+      "--tty"
+    ],
+    "answer": "--read-only"
+  },
+  {
+    "category": "Docker",
+    "set": 2,
+    "question": "अशून्यनिर्गमनानन्तरं कण्टेनर् पुनरारभते किन्तु सफलनिर्गमनानन्तरं न आरभते इति पुनरारम्भनीतिः का?",
+    "options": [
+      "on-failure",
+      "always",
+      "unless-stopped",
+      "no"
+    ],
+    "answer": "on-failure"
+  },
+  {
+    "category": "Docker",
+    "set": 2,
+    "question": "नूतनकण्टेनर् इत्यस्य स्मृतिं 512 MiB मध्ये कः आदेशः सीमयति?",
+    "options": [
+      "docker run --memory-reservation 512m alpine",
+      "docker run --memory-swap 512m alpine",
+      "docker run --shm-size 512m alpine",
+      "docker run --memory 512m alpine"
+    ],
+    "answer": "docker run --memory 512m alpine"
+  },
+  {
+    "category": "Docker",
+    "set": 2,
+    "question": "कण्टेनर् इत्यस्य CPU भागम् अर्धस्य CPU इत्यस्य समं कुर्वन् विकल्पः कः?",
+    "options": [
+      "--cpuset-cpus 0",
+      "--cpu-period 50000",
+      "--cpus 0.5",
+      "--cpu-shares 512"
+    ],
+    "answer": "--cpus 0.5"
+  },
+  {
+    "category": "Docker",
+    "set": 2,
+    "question": "आतिथेयस्य विशिष्टनिर्देशिकां कण्टेनर्-अन्तः साक्षात् उपलब्धां कुर्वन् माउण्ट्-प्रकारः कः?",
+    "options": [
+      "tmpfs mount",
+      "Bind mount",
+      "नामित-वॉल्यूम्",
+      "अनाम वॉल्यूम्"
+    ],
+    "answer": "Bind mount"
+  },
+  {
+    "category": "Docker",
+    "set": 2,
+    "question": "Linux मध्ये सञ्चिकाः सामान्यडिस्क्-सञ्चिकात्वेन न रक्षित्वा आतिथेयस्मृतौ धारयन् माउण्ट्-प्रकारः कः?",
+    "options": [
+      "tmpfs mount",
+      "Bind mount",
+      "नामित-वॉल्यूम्",
+      "अनाम वॉल्यूम्"
+    ],
+    "answer": "tmpfs mount"
+  },
+  {
+    "category": "Docker",
+    "set": 2,
+    "question": "web नामकं विद्यमानकण्टेनर् backend जाले कः आदेशः संयोजयति?",
+    "options": [
+      "docker network disconnect backend web",
+      "docker network inspect backend web",
+      "docker network rm backend web",
+      "docker network connect backend web"
+    ],
+    "answer": "docker network connect backend web"
+  },
+  {
+    "category": "Docker",
+    "set": 2,
+    "question": "उपयोक्तृनिर्मितं सेतुं Docker इत्यस्य पूर्वनिर्धारितसेतोः पृथक् कुर्वत् जालचालकवैशिष्ट्यं किम्?",
+    "options": [
+      "विन्यासं विना बह्वातिथेयेषु स्वचालितमार्गनिर्देशनम्",
+      "प्रत्येकस्य प्रकटितपोर्ट् इत्यस्य स्वचालितप्रकाशनम्",
+      "कण्टेनर्-घटकानां मध्ये नाम्ना स्वचालितं DNS समाधानम्",
+      "सर्वकण्टेनर्-सञ्चारस्य स्वचालितगुप्तीकरणम्"
+    ],
+    "answer": "कण्टेनर्-घटकानां मध्ये नाम्ना स्वचालितं DNS समाधानम्"
+  },
+  {
+    "category": "Docker",
+    "set": 2,
+    "question": "कण्टेनर्-नाम oldweb इत्यस्मात् newweb इति कः आदेशः परिवर्तयति?",
+    "options": [
+      "docker network connect oldweb newweb",
+      "docker rename oldweb newweb",
+      "docker tag oldweb newweb",
+      "docker cp oldweb newweb"
+    ],
+    "answer": "docker rename oldweb newweb"
+  },
+  {
+    "category": "Docker",
+    "set": 2,
+    "question": "web कण्टेनर्-समाप्तिं प्रतीक्ष्य तस्य निर्गमनकूटं कः आदेशः दर्शयति?",
+    "options": [
+      "docker wait web",
+      "docker logs web",
+      "docker top web",
+      "docker attach web"
+    ],
+    "answer": "docker wait web"
+  }
+]

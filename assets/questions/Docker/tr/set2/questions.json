@@ -1,0 +1,302 @@
+[
+  {
+    "category": "Docker",
+    "set": 2,
+    "question": "Hangi komut Docker sürümünü verir?",
+    "options": [
+      "docker --version",
+      "docker run",
+      "docker ps",
+      "docker pull"
+    ],
+    "answer": "docker --version"
+  },
+  {
+    "category": "Docker",
+    "set": 2,
+    "question": "Hangi komut Docker sürümünü JSON biçiminde gösterir?",
+    "options": [
+      "docker version --format json",
+      "docker version -j",
+      "docker version --json",
+      "docker info --json"
+    ],
+    "answer": "docker version --format json"
+  },
+  {
+    "category": "Docker",
+    "set": 2,
+    "question": "Hangi komut yalnızca konteyner kimliklerini (ID) listeler?",
+    "options": [
+      "docker ps -q",
+      "docker ps --ids",
+      "docker ps -i",
+      "docker ps --size"
+    ],
+    "answer": "docker ps -q"
+  },
+  {
+    "category": "Docker",
+    "set": 2,
+    "question": "Hangi komut durdurulmuş olanlar dahil tüm konteynerleri listeler?",
+    "options": [
+      "docker ps -a",
+      "docker ps --size",
+      "docker containers",
+      "docker list"
+    ],
+    "answer": "docker ps -a"
+  },
+  {
+    "category": "Docker",
+    "set": 2,
+    "question": "Hangi komut bir konteyneri başlatmadan oluşturur?",
+    "options": [
+      "docker create",
+      "docker run",
+      "docker build",
+      "docker start"
+    ],
+    "answer": "docker create"
+  },
+  {
+    "category": "Docker",
+    "set": 2,
+    "question": "Hangi komut mevcut, durdurulmuş bir konteyneri başlatır?",
+    "options": [
+      "docker start",
+      "docker run",
+      "docker create",
+      "docker exec"
+    ],
+    "answer": "docker start"
+  },
+  {
+    "category": "Docker",
+    "set": 2,
+    "question": "Hangi komut çalışan bir konteyneri düzgün şekilde durdurur?",
+    "options": [
+      "docker stop",
+      "docker kill",
+      "docker pause",
+      "docker halt"
+    ],
+    "answer": "docker stop"
+  },
+  {
+    "category": "Docker",
+    "set": 2,
+    "question": "Hangi komut bir konteyneri zorla sonlandırır?",
+    "options": [
+      "docker kill",
+      "docker stop",
+      "docker terminate",
+      "docker end"
+    ],
+    "answer": "docker kill"
+  },
+  {
+    "category": "Docker",
+    "set": 2,
+    "question": "Hangi komut bir konteyneri yeniden başlatır?",
+    "options": [
+      "docker restart",
+      "docker reset",
+      "docker reload",
+      "docker rerun"
+    ],
+    "answer": "docker restart"
+  },
+  {
+    "category": "Docker",
+    "set": 2,
+    "question": "Hangi komut çalışan bir konteyneri duraklatır?",
+    "options": [
+      "docker pause",
+      "docker stop",
+      "docker hold",
+      "docker freeze"
+    ],
+    "answer": "docker pause"
+  },
+  {
+    "category": "Docker",
+    "set": 2,
+    "question": "Hangi komut duraklatılmış bir konteyneri devam ettirir?",
+    "options": [
+      "docker unpause",
+      "docker resume",
+      "docker start",
+      "docker restart"
+    ],
+    "answer": "docker unpause"
+  },
+  {
+    "category": "Docker",
+    "set": 2,
+    "question": "Hangi komut bir konteyneri siler?",
+    "options": [
+      "docker rm",
+      "docker stop",
+      "docker delete",
+      "docker clear"
+    ],
+    "answer": "docker rm"
+  },
+  {
+    "category": "Docker",
+    "set": 2,
+    "question": "Hangi komut bir Docker imajını siler?",
+    "options": [
+      "docker rmi",
+      "docker rm",
+      "docker erase",
+      "docker clean"
+    ],
+    "answer": "docker rmi"
+  },
+  {
+    "category": "Docker",
+    "set": 2,
+    "question": "Hangi komut bir imajın geçmişini gösterir?",
+    "options": [
+      "docker history",
+      "docker layers",
+      "docker image show",
+      "docker inspect"
+    ],
+    "answer": "docker history"
+  },
+  {
+    "category": "Docker",
+    "set": 2,
+    "question": "APP_ENV ortam değişkenini prod olarak hangi docker run seçeneği ayarlar?",
+    "options": [
+      "--name APP_ENV=prod",
+      "--hostname APP_ENV=prod",
+      "-e APP_ENV=prod",
+      "--label APP_ENV=prod"
+    ],
+    "answer": "-e APP_ENV=prod"
+  },
+  {
+    "category": "Docker",
+    "set": 2,
+    "question": "Kapsayıcının kök dosya sistemini salt okunur yapan seçenek hangisidir?",
+    "options": [
+      "--init",
+      "--read-only",
+      "--privileged",
+      "--tty"
+    ],
+    "answer": "--read-only"
+  },
+  {
+    "category": "Docker",
+    "set": 2,
+    "question": "Sıfır olmayan çıkıştan sonra kapsayıcıyı yeniden başlatıp başarılı çıkıştan sonra başlatmayan ilke hangisidir?",
+    "options": [
+      "on-failure",
+      "always",
+      "unless-stopped",
+      "no"
+    ],
+    "answer": "on-failure"
+  },
+  {
+    "category": "Docker",
+    "set": 2,
+    "question": "Yeni kapsayıcıyı 512 MiB bellekle hangi komut sınırlar?",
+    "options": [
+      "docker run --memory-reservation 512m alpine",
+      "docker run --memory-swap 512m alpine",
+      "docker run --shm-size 512m alpine",
+      "docker run --memory 512m alpine"
+    ],
+    "answer": "docker run --memory 512m alpine"
+  },
+  {
+    "category": "Docker",
+    "set": 2,
+    "question": "Kapsayıcının CPU kotasını yarım CPU eşdeğerine hangi seçenek ayarlar?",
+    "options": [
+      "--cpuset-cpus 0",
+      "--cpu-period 50000",
+      "--cpus 0.5",
+      "--cpu-shares 512"
+    ],
+    "answer": "--cpus 0.5"
+  },
+  {
+    "category": "Docker",
+    "set": 2,
+    "question": "Belirli bir ana makine dizinini kapsayıcı içinde doğrudan sunan bağlama türü hangisidir?",
+    "options": [
+      "tmpfs mount",
+      "Bind mount",
+      "Adlandırılmış birim (named volume)",
+      "Adsız birim"
+    ],
+    "answer": "Bind mount"
+  },
+  {
+    "category": "Docker",
+    "set": 2,
+    "question": "Linux'ta dosyaları kalıcı disk dosyaları yerine ana makine belleğinde hangi bağlama türü saklar?",
+    "options": [
+      "tmpfs mount",
+      "Bind mount",
+      "Adlandırılmış birim (named volume)",
+      "Adsız birim"
+    ],
+    "answer": "tmpfs mount"
+  },
+  {
+    "category": "Docker",
+    "set": 2,
+    "question": "web adlı mevcut kapsayıcıyı backend adlı ağa hangi komut bağlar?",
+    "options": [
+      "docker network disconnect backend web",
+      "docker network inspect backend web",
+      "docker network rm backend web",
+      "docker network connect backend web"
+    ],
+    "answer": "docker network connect backend web"
+  },
+  {
+    "category": "Docker",
+    "set": 2,
+    "question": "Kullanıcı tanımlı köprüyü Docker'ın varsayılan köprüsünden hangi ağ sürücüsü özelliği ayırır?",
+    "options": [
+      "Yapılandırmasız otomatik çok ana makineli yönlendirme",
+      "Kullanıma sunulan her bağlantı noktasının otomatik yayımlanması",
+      "Kapsayıcılar arasında ada göre otomatik DNS çözümlemesi",
+      "Tüm kapsayıcı trafiğinin otomatik şifrelenmesi"
+    ],
+    "answer": "Kapsayıcılar arasında ada göre otomatik DNS çözümlemesi"
+  },
+  {
+    "category": "Docker",
+    "set": 2,
+    "question": "Kapsayıcının adını oldweb yerine newweb yapan komut hangisidir?",
+    "options": [
+      "docker network connect oldweb newweb",
+      "docker rename oldweb newweb",
+      "docker tag oldweb newweb",
+      "docker cp oldweb newweb"
+    ],
+    "answer": "docker rename oldweb newweb"
+  },
+  {
+    "category": "Docker",
+    "set": 2,
+    "question": "web kapsayıcısının durmasını bekleyip çıkış kodunu hangi komut gösterir?",
+    "options": [
+      "docker wait web",
+      "docker logs web",
+      "docker top web",
+      "docker attach web"
+    ],
+    "answer": "docker wait web"
+  }
+]

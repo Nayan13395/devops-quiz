@@ -1,0 +1,302 @@
+[
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "कोन Declarative विकल्प एके Pipeline के समवर्ती रन के अनुमति देबाक बदला नव रन केँ कतार मे राखैत अछि?",
+    "options": [
+      "parallelsAlwaysFailFast()",
+      "disableConcurrentBuilds()",
+      "disableResume()",
+      "skipDefaultCheckout()"
+    ],
+    "answer": "disableConcurrentBuilds()"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "कोन Declarative विकल्प पुरान बिल्ड रिकॉर्ड आ आर्टिफैक्ट सभक लेल रिटेंशन नियम निर्दिष्ट करैत अछि?",
+    "options": [
+      "buildDiscarder(logRotator(numToKeepStr: '10'))",
+      "timeout(time: 10, unit: 'MINUTES')",
+      "retry(10)",
+      "quietPeriod(10)"
+    ],
+    "answer": "buildDiscarder(logRotator(numToKeepStr: '10'))"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "Jenkins cron एक्सप्रेशन मे H प्रतीक की उपलब्ध करबैत अछि?",
+    "options": [
+      "यूज़र के कंप्यूटर पर वर्तमान घंटा",
+      "मात्र छुट्टी के दिन चलबाक अनुरोध",
+      "मात्र node निष्क्रिय रहला पर चलबाक अनुरोध",
+      "शेड्यूल कएल गेल लोड केँ पसारबा लेल प्रयुक्त स्थिर job-नाम-आधारित हैश"
+    ],
+    "answer": "शेड्यूल कएल गेल लोड केँ पसारबा लेल प्रयुक्त स्थिर job-नाम-आधारित हैश"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "Jenkins के पाँच-फील्ड cron सिंटैक्स मे पाँचम फील्ड की दर्शाबैत अछि?",
+    "options": [
+      "दिन के घंटा",
+      "महीना के दिन",
+      "सप्ताह के दिन",
+      "घंटा के मिनट"
+    ],
+    "answer": "सप्ताह के दिन"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "कोन post शर्त तखन चलैत अछि जखन पूर्ववर्ती बिल्ड असफल वा unstable रहलाक बाद बिल्ड सफल होइत अछि?",
+    "options": [
+      "unsuccessful",
+      "fixed",
+      "changed",
+      "regression"
+    ],
+    "answer": "fixed"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "कोन post शर्त दोसर post शर्त सभक मूल्यांकन भेलाक बाद चलैत अछि?",
+    "options": [
+      "cleanup",
+      "always",
+      "changed",
+      "success"
+    ],
+    "answer": "cleanup"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "कोन when विकल्प कोनो stage के एजेंट आवंटित करबा सँ पहिने ओहि stage के शर्त के मूल्यांकन करैत अछि?",
+    "options": [
+      "beforeInput false",
+      "beforeOptions false",
+      "branch 'main'",
+      "beforeAgent true"
+    ],
+    "answer": "beforeAgent true"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "कोन when शर्त Multibranch Pipeline मे कोनो नामित ब्रांच केँ लक्षित करैत अछि?",
+    "options": [
+      "buildingTag()",
+      "changeRequest()",
+      "branch 'main'",
+      "tag 'main'"
+    ],
+    "answer": "branch 'main'"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "कोन Declarative निर्माण axis मान सभक संयोजन, जेना ऑपरेटिंग सिस्टम आ ब्राउज़र, केँ चलबैत अछि?",
+    "options": [
+      "environment",
+      "matrix",
+      "parallel",
+      "steps"
+    ],
+    "answer": "matrix"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "कोन सेक्शन Declarative matrix सँ अवांछित संयोजन सभ केँ हटबैत अछि?",
+    "options": [
+      "excludes",
+      "axes",
+      "stages",
+      "tools"
+    ],
+    "answer": "excludes"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "समानांतर ब्रांच सभ वला stage पर कोन सेटिंग एकटा ब्रांच असफल भेला पर दोसर ब्रांच सभ केँ रोकैत अछि?",
+    "options": [
+      "beforeAgent true",
+      "reuseNode true",
+      "alwaysPull true",
+      "failFast true"
+    ],
+    "answer": "failFast true"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "कोन Declarative विकल्प बिल्ड के unstable भेलाक बाद बाद के stages केँ छोड़ि दैत अछि?",
+    "options": [
+      "disableResume()",
+      "preserveStashes()",
+      "skipStagesAfterUnstable()",
+      "skipDefaultCheckout()"
+    ],
+    "answer": "skipStagesAfterUnstable()"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "कोन Pipeline स्टेप विफलता केँ दर्ज करैत अछि जबकि अपन बॉडी के बाद निष्पादन केँ जारी रहबाक अनुमति दैत अछि?",
+    "options": [
+      "input",
+      "catchError",
+      "error",
+      "timeout"
+    ],
+    "answer": "catchError"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "प्रोसेस के समाप्त भेलाक बाद sh(script: 'check.sh', returnStatus: true) की लौटबैत अछि?",
+    "options": [
+      "संख्यात्मक प्रोसेस एक्ज़िट कोड",
+      "पूर्ण स्टैंडर्ड-आउटपुट टेक्स्ट",
+      "शेल के प्रोसेस ID",
+      "एक Jenkins क्रेडेंशियल ऑब्जेक्ट"
+    ],
+    "answer": "संख्यात्मक प्रोसेस एक्ज़िट कोड"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "सफल भेला पर sh(script: 'echo ready', returnStdout: true) की लौटबैत अछि?",
+    "options": [
+      "संख्यात्मक बिल्ड नंबर",
+      "मैप के रूप मे शेल के एनवायरनमेंट",
+      "एजेंट के लेबल सूची",
+      "कैप्चर कएल गेल स्टैंडर्ड-आउटपुट स्ट्रिंग"
+    ],
+    "answer": "कैप्चर कएल गेल स्टैंडर्ड-आउटपुट स्ट्रिंग"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "कोन Pipeline स्टेप वर्तमान workspace डायरेक्टरी के सामग्री केँ पुनरावर्ती रूप सँ मेटा दैत अछि?",
+    "options": [
+      "pwd",
+      "readFile",
+      "deleteDir",
+      "fileExists"
+    ],
+    "answer": "deleteDir"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "कोन Pipeline स्टेप जाँचैत अछि जे वर्तमान workspace मे कोनो पथ मौजूद अछि वा नहि?",
+    "options": [
+      "libraryResource",
+      "fileExists",
+      "readFile",
+      "writeFile"
+    ],
+    "answer": "fileExists"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "कोन Pipeline स्टेप दोसर Jenkins job केँ ट्रिगर करैत अछि आ बिल्ड पैरामीटर पास कऽ सकैत अछि?",
+    "options": [
+      "build",
+      "stage",
+      "node",
+      "checkout"
+    ],
+    "answer": "build"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "कोन Declarative विकल्प stages केँ फेर सँ शुरू करबा लेल पूर्ण भेल बिल्ड सभक stashes केँ राखैत अछि?",
+    "options": [
+      "disableResume()",
+      "skipDefaultCheckout()",
+      "quietPeriod(5)",
+      "preserveStashes()"
+    ],
+    "answer": "preserveStashes()"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "Shared Library मे कोन फाइल vars/deploy.groovy द्वारा परिभाषित ग्लोबल वेरिएबल deploy लेल सहायता टेक्स्ट उपलब्ध करबैत अछि?",
+    "options": [
+      "resources/deploy.txt",
+      "vars/main.groovy",
+      "vars/deploy.txt",
+      "src/deploy.groovy"
+    ],
+    "answer": "vars/deploy.txt"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "Jenkins Pipeline मे @NonCPS सँ एनोटेट कएल गेल मेथड पर मुख्य प्रतिबंध की अछि?",
+    "options": [
+      "ई Windows एजेंट पर चलबाक चाही",
+      "ई CPS-रूपांतरित Pipeline स्टेप सभ केँ नहि बजाबय",
+      "ऐ मे stage डायरेक्टिव होयबाक चाही",
+      "ई सदिखन स्ट्रिंग लौटबय"
+    ],
+    "answer": "ई CPS-रूपांतरित Pipeline स्टेप सभ केँ नहि बजाबय"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "कोन Jenkins सुविधा अस्वीकृत सैंडबॉक्स्ड Groovy कोड द्वारा अनुरोधित सिग्नेचर सभक समीक्षा करैत अछि?",
+    "options": [
+      "In-process Script Approval",
+      "Credentials Store",
+      "Build Queue",
+      "SCM Polling Log"
+    ],
+    "answer": "In-process Script Approval"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "बाँन्हल गुप्त वेरिएबल केँ शेल द्वारा विस्तारित करबाक देबयवला शेल स्क्रिप्ट लेल कोन Groovy कोटिंग शैली अनुशंसित अछि?",
+    "options": [
+      "गुप्त जानकारी वला डबल-कोटेड इंटरपोलेटेड Groovy स्ट्रिंग",
+      "गुप्त जानकारी वला ट्रिपल-डबल-कोटेड इंटरपोलेटेड Groovy स्ट्रिंग",
+      "प्लेनटेक्स्ट गुप्त जानकारी केँ जोड़ि कऽ बनाओल गेल Groovy स्ट्रिंग",
+      "सिंगल-कोटेड Groovy स्ट्रिंग"
+    ],
+    "answer": "सिंगल-कोटेड Groovy स्ट्रिंग"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "संबंधित वेब अनुरोध सभक लेल Jenkins CSRF crumb के उद्देश्य की अछि?",
+    "options": [
+      "अपलोड सँ पहिने बिल्ड आर्टिफैक्ट केँ एन्क्रिप्ट करब",
+      "बिल्ड चलाबयवला एजेंट चुनब",
+      "ई सत्यापित करबा मे मदद करब जे स्थिति बदलयवला अनुरोध स्थापित यूज़र सेशन के अछि",
+      "सभ jobs लेल authorization जाँच के स्थान लेब"
+    ],
+    "answer": "ई सत्यापित करबा मे मदद करब जे स्थिति बदलयवला अनुरोध स्थापित यूज़र सेशन के अछि"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "भिन्न-भिन्न jobs मे साझा टेस्ट डिवाइस पर विशेष पहुँच केँ समन्वित करबा लेल Pipeline केँ की प्रयोग करबाक चाही?",
+    "options": [
+      "skipDefaultCheckout विकल्प",
+      "Lockable Resources प्लगइन के lock स्टेप",
+      "timestamps विकल्प",
+      "buildDiscarder विकल्प"
+    ],
+    "answer": "Lockable Resources प्लगइन के lock स्टेप"
+  }
+]

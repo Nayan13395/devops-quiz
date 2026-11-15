@@ -1,49 +1,15 @@
+import '../l10n/game_localizations.dart';
 import 'dart:async';
 import 'dart:math';
 
 import 'package:flutter/material.dart';
 
+import '../l10n/app_localizations.dart';
+import '../services/port_question_service.dart';
+import '../widgets/save_question_button.dart';
 import '../services/game_sound_service.dart';
 import '../services/point_service.dart';
 import '../widgets/daily_game_gate.dart';
-
-class _Service {
-  final String name;
-  final int port;
-
-  const _Service(this.name, this.port);
-}
-
-const List<_Service> _services = [
-  _Service('SSH', 22),
-  _Service('HTTP', 80),
-  _Service('HTTPS', 443),
-  _Service('FTP (control)', 21),
-  _Service('Telnet', 23),
-  _Service('SMTP', 25),
-  _Service('DNS', 53),
-  _Service('POP3', 110),
-  _Service('IMAP', 143),
-  _Service('LDAP', 389),
-  _Service('SMB', 445),
-  _Service('MySQL', 3306),
-  _Service('PostgreSQL', 5432),
-  _Service('Redis', 6379),
-  _Service('MongoDB', 27017),
-  _Service('RDP', 3389),
-  _Service('Jenkins (default)', 8080),
-  _Service('Elasticsearch (HTTP)', 9200),
-  _Service('Prometheus', 9090),
-  _Service('Grafana', 3000),
-  _Service('etcd (client)', 2379),
-  _Service('Kubernetes API server', 6443),
-  _Service('Docker daemon (TLS)', 2376),
-  _Service('RabbitMQ (AMQP)', 5672),
-  _Service('Kafka broker', 9092),
-  _Service('Zookeeper', 2181),
-  _Service('NTP', 123),
-  _Service('SNMP', 161),
-];
 
 class PortMasterScreen extends StatelessWidget {
   const PortMasterScreen({super.key});
@@ -53,7 +19,7 @@ class PortMasterScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('Port Master 🔌')),
+      appBar: AppBar(title: Text(gameL10n(context).gameUiPortMaster9c730cf)),
       body: const DailyGameGate(gameKey: gameKey, child: _PortGame()),
     );
   }
@@ -73,7 +39,9 @@ class _PortGameState extends State<_PortGame> {
 
   final Random _random = Random();
 
-  late final List<_Service> _deck = List<_Service>.of(_services)..shuffle();
+  late final List<PortService> _deck = List<PortService>.of(
+    PortQuestionService.services,
+  )..shuffle();
 
   int _index = 0;
   int _livesLeft = _lives;
@@ -91,12 +59,12 @@ class _PortGameState extends State<_PortGame> {
   }
 
   List<int> _buildOptions() {
-    final _Service current = _deck[_index];
+    final current = _deck[_index];
 
     final Set<int> options = {current.port};
 
     final List<int> others =
-        _services
+        PortQuestionService.services
             .map((s) => s.port)
             .where((port) => port != current.port)
             .toList()
@@ -159,17 +127,26 @@ class _PortGameState extends State<_PortGame> {
     await showGameResultDialog(
       context,
       icon: _livesLeft > 0 ? '🏆' : '🔌',
-      title: _livesLeft > 0 ? 'Port Master!' : 'Out of Lives',
-      message:
-          'Correct answers: $_correct\nYou earned $_points points!\n\n'
-          'Come back tomorrow for another round!',
+      title: _livesLeft > 0
+          ? gameL10n(context).gameUiPortMastera796b69
+          : gameL10n(context).gameUiOutOfLives,
+      message: gameL10n(context)
+          .gameUiCorrectAnswersYouEarnedPointsComeBackTomorrowFor(
+            (_correct).toString(),
+            (_points).toString(),
+          ),
     );
   }
 
   @override
   Widget build(BuildContext context) {
     final ColorScheme colors = Theme.of(context).colorScheme;
-    final _Service current = _deck[_index];
+    final current = _deck[_index];
+    final question = PortQuestionService.question(
+      current,
+      _options,
+      AppLocalizations.of(context)!,
+    );
 
     return SafeArea(
       child: LayoutBuilder(
@@ -199,7 +176,8 @@ class _PortGameState extends State<_PortGame> {
                       ),
                       const SizedBox(height: 24),
                       Text(
-                        'Default port of',
+                        question.question,
+                        textAlign: TextAlign.center,
                         style: TextStyle(color: colors.onSurfaceVariant),
                       ),
                       const SizedBox(height: 6),
@@ -211,6 +189,7 @@ class _PortGameState extends State<_PortGame> {
                           fontWeight: FontWeight.bold,
                         ),
                       ),
+                      SaveQuestionButton(question: question),
                       const SizedBox(height: 24),
                       for (final port in _options) _option(port, current),
                     ],
@@ -224,7 +203,7 @@ class _PortGameState extends State<_PortGame> {
     );
   }
 
-  Widget _option(int port, _Service current) {
+  Widget _option(int port, PortService current) {
     final ColorScheme colors = Theme.of(context).colorScheme;
 
     Color background = colors.surfaceContainerHighest;

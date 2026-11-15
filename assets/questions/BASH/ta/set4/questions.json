@@ -1,0 +1,302 @@
+[
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "எளிய Bash செயல்பாட்டை (function) வரையறுக்கும் தொடரியல் எது?",
+    "options": [
+      "myfunc() { echo hi; }",
+      "def myfunc: echo hi",
+      "function = myfunc",
+      "myfunc -> echo hi"
+    ],
+    "answer": "myfunc() { echo hi; }"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "myfunc என்ற செயல்பாட்டை அழைக்கும் கட்டளை எது?",
+    "options": [
+      "myfunc",
+      "call myfunc",
+      "run myfunc",
+      "execute myfunc"
+    ],
+    "answer": "myfunc"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "ஒரு செயல்பாட்டுக்குள் மட்டுமே தெரியும் மாறியை அறிவிக்கும் முக்கிய சொல் எது?",
+    "options": [
+      "local",
+      "private",
+      "internal",
+      "hidden"
+    ],
+    "answer": "local"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "ஒரு செயல்பாட்டிலிருந்து வெளியேறு நிலை 0-ஐத் தரும் கட்டளை எது?",
+    "options": [
+      "return 0",
+      "exit function 0",
+      "stop 0",
+      "end 0"
+    ],
+    "answer": "return 0"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "ஒரு செயல்பாட்டுக்குள், செயல்பாட்டுக்கு அனுப்பப்பட்ட ஆர்க்யுமெண்ட்டுகளின் எண்ணிக்கையைத் தரும் அளவுரு எது?",
+    "options": [
+      "$#",
+      "$@",
+      "$0",
+      "$1"
+    ],
+    "answer": "$#"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "மூன்று உறுப்புகளுடன் குறியீட்டு அணியை (indexed array) உருவாக்கும் தொடரியல் எது?",
+    "options": [
+      "arr=(one two three)",
+      "array arr one two three",
+      "arr[one two three]",
+      "set arr one two three"
+    ],
+    "answer": "arr=(one two three)"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "arr-இன் குறியீடு 2-இல் உள்ள உறுப்பை அணுகும் தொடரியல் எது?",
+    "options": [
+      "${arr[2]}",
+      "${arr:2}",
+      "$arr[2]",
+      "arr{2}"
+    ],
+    "answer": "${arr[2]}"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "arr-இல் உள்ள உறுப்புகளின் எண்ணிக்கையைத் தரும் விரிவாக்கம் எது?",
+    "options": [
+      "${#arr[@]}",
+      "${#arr}",
+      "${arr:length}",
+      "${arr[@]#}"
+    ],
+    "answer": "${#arr[@]}"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "arr-இல் newitem-ஐச் சேர்க்கும் தொடரியல் எது?",
+    "options": [
+      "arr+=(newitem)",
+      "arr=newitem",
+      "arr.push(newitem)",
+      "add arr newitem"
+    ],
+    "answer": "arr+=(newitem)"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "arr-இன் அனைத்து உறுப்புகளையும் தரும் விரிவாக்கம் எது?",
+    "options": [
+      "${arr[@]}",
+      "${arr[0]}",
+      "${arr[all]}",
+      "${arr}"
+    ],
+    "answer": "${arr[@]}"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "இணைப்பு அணியை (associative array) அறிவிக்கும் கட்டளை எது?",
+    "options": [
+      "declare -A map",
+      "declare -a map",
+      "array -A map",
+      "assoc map"
+    ],
+    "answer": "declare -A map"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "நிலையான வெளியீடு மற்றும் நிலையான பிழை இரண்டையும் output.log-க்கு அனுப்பும் திசைதிருப்பல் எது?",
+    "options": [
+      "command &> output.log",
+      "command > output.log",
+      "command 2> output.log",
+      "command < output.log"
+    ],
+    "answer": "command &> output.log"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "கட்டளையின் அனைத்து வெளியீட்டையும் நிராகரிக்கும் திசைதிருப்பல் எது?",
+    "options": [
+      "command > /dev/null",
+      "command > null",
+      "command > empty",
+      "command > discard"
+    ],
+    "answer": "command > /dev/null"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "ஒரு கட்டளையின் வெளியீட்டை மற்றொரு கட்டளைக்கு உள்ளீடாக அனுப்பும் ஆபரேட்டர் எது?",
+    "options": [
+      "|",
+      ">",
+      "<",
+      "&"
+    ],
+    "answer": "|"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "ஒரு கட்டளையைப் பின்னணியில் இயக்கும் குறியீடு எது?",
+    "options": [
+      "&",
+      "&&",
+      "|",
+      ";"
+    ],
+    "answer": "&"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "பின்னணிப் பணிகள் முடியும் வரை காத்திருக்கும் உள்ளமைந்த கட்டளை எது?",
+    "options": [
+      "wait",
+      "hold",
+      "pause",
+      "sleep"
+    ],
+    "answer": "wait"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "script.sh-ஐ தற்போதைய ஷெல் சூழலிலேயே இயக்கும் கட்டளை எது?",
+    "options": [
+      "source script.sh",
+      "bash script.sh",
+      "./script.sh",
+      "sh script.sh"
+    ],
+    "answer": "source script.sh"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "here document-ஐத் தொடங்கும் ஆபரேட்டர் எது?",
+    "options": [
+      "<<",
+      ">>",
+      "<",
+      ">"
+    ],
+    "answer": "<<"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "பாதுகாப்பான தற்காலிக கோப்பை உருவாக்கும் கட்டளை எது?",
+    "options": [
+      "mktemp",
+      "tempfile",
+      "touch tmp",
+      "newfile"
+    ],
+    "answer": "mktemp"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "ஸ்கிரிப்ட் SIGINT பெறும்போது cleanup-ஐ இயக்கும் கட்டளை எது?",
+    "options": [
+      "trap 'cleanup' SIGINT",
+      "handle SIGINT cleanup",
+      "signal SIGINT cleanup",
+      "catch SIGINT cleanup"
+    ],
+    "answer": "trap 'cleanup' SIGINT"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "பயனர் Ctrl+C அழுத்தும்போது பொதுவாக அனுப்பப்படும் சிக்னல் எது?",
+    "options": [
+      "SIGINT",
+      "SIGTERM",
+      "SIGKILL",
+      "SIGHUP"
+    ],
+    "answer": "SIGINT"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "ஒரு கட்டளை தோல்வியடையும்போது ஸ்கிரிப்ட் உடனடியாக வெளியேறச் செய்யும் விருப்பம் எது?",
+    "options": [
+      "set -e",
+      "set -x",
+      "set -u",
+      "set -o pipefail"
+    ],
+    "answer": "set -e"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "அமைக்கப்படாத மாறி குறிப்பிடப்படும்போது பிழையை ஏற்படுத்தும் விருப்பம் எது?",
+    "options": [
+      "set -u",
+      "set -e",
+      "set -x",
+      "set -a"
+    ],
+    "answer": "set -u"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "பிழைதிருத்தத்திற்காக ஒவ்வொரு கட்டளையையும் இயக்குவதற்கு முன் அச்சிடும் விருப்பம் எது?",
+    "options": [
+      "set -x",
+      "set -e",
+      "set -u",
+      "set -v"
+    ],
+    "answer": "set -x"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "தற்போது வரையறுக்கப்பட்டுள்ள ஷெல் செயல்பாடுகளைப் பட்டியலிடும் கட்டளை எது?",
+    "options": [
+      "declare -f",
+      "declare -A",
+      "functions",
+      "listfunc"
+    ],
+    "answer": "declare -f"
+  }
+]

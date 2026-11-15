@@ -1,0 +1,302 @@
+[
+  {
+    "category": "Docker",
+    "set": 3,
+    "question": "Qual comando lista os contêineres em execução?",
+    "options": [
+      "docker ps",
+      "docker images",
+      "docker start",
+      "docker build"
+    ],
+    "answer": "docker ps"
+  },
+  {
+    "category": "Docker",
+    "set": 3,
+    "question": "Qual comando executa um comando dentro de um contêiner em execução?",
+    "options": [
+      "docker exec",
+      "docker enter",
+      "docker shell",
+      "docker login"
+    ],
+    "answer": "docker exec"
+  },
+  {
+    "category": "Docker",
+    "set": 3,
+    "question": "Qual comando se conecta (attach) a um contêiner em execução?",
+    "options": [
+      "docker attach",
+      "docker connect",
+      "docker exec",
+      "docker join"
+    ],
+    "answer": "docker attach"
+  },
+  {
+    "category": "Docker",
+    "set": 3,
+    "question": "Qual comando copia arquivos entre um contêiner e o host?",
+    "options": [
+      "docker cp",
+      "docker copy",
+      "docker transfer",
+      "docker sync"
+    ],
+    "answer": "docker cp"
+  },
+  {
+    "category": "Docker",
+    "set": 3,
+    "question": "Qual comando exibe os eventos do Docker em tempo real?",
+    "options": [
+      "docker events",
+      "docker logs",
+      "docker monitor",
+      "docker watch"
+    ],
+    "answer": "docker events"
+  },
+  {
+    "category": "Docker",
+    "set": 3,
+    "question": "Qual comando salva uma imagem em um arquivo tar?",
+    "options": [
+      "docker save",
+      "docker export",
+      "docker backup",
+      "docker archive"
+    ],
+    "answer": "docker save"
+  },
+  {
+    "category": "Docker",
+    "set": 3,
+    "question": "Qual comando carrega uma imagem a partir de um arquivo tar?",
+    "options": [
+      "docker load",
+      "docker import",
+      "docker restore",
+      "docker pull"
+    ],
+    "answer": "docker load"
+  },
+  {
+    "category": "Docker",
+    "set": 3,
+    "question": "Qual comando exporta o sistema de arquivos de um contêiner como um arquivo tar?",
+    "options": [
+      "docker export",
+      "docker save",
+      "docker backup",
+      "docker archive"
+    ],
+    "answer": "docker export"
+  },
+  {
+    "category": "Docker",
+    "set": 3,
+    "question": "Qual comando importa um tarball como uma imagem?",
+    "options": [
+      "docker import",
+      "docker load",
+      "docker pull",
+      "docker build"
+    ],
+    "answer": "docker import"
+  },
+  {
+    "category": "Docker",
+    "set": 3,
+    "question": "Qual comando cria uma imagem a partir das alterações de um contêiner?",
+    "options": [
+      "docker commit",
+      "docker build",
+      "docker save",
+      "docker tag"
+    ],
+    "answer": "docker commit"
+  },
+  {
+    "category": "Docker",
+    "set": 3,
+    "question": "Qual comando adiciona uma tag a uma imagem Docker?",
+    "options": [
+      "docker tag",
+      "docker name",
+      "docker commit",
+      "docker label"
+    ],
+    "answer": "docker tag"
+  },
+  {
+    "category": "Docker",
+    "set": 3,
+    "question": "Qual comando envia uma imagem para um registry?",
+    "options": [
+      "docker push",
+      "docker upload",
+      "docker publish",
+      "docker send"
+    ],
+    "answer": "docker push"
+  },
+  {
+    "category": "Docker",
+    "set": 3,
+    "question": "Qual comando faz login em um registry Docker?",
+    "options": [
+      "docker login",
+      "docker auth",
+      "docker connect",
+      "docker signin"
+    ],
+    "answer": "docker login"
+  },
+  {
+    "category": "Docker",
+    "set": 3,
+    "question": "Qual comando remove objetos Docker não utilizados?",
+    "options": [
+      "docker system prune",
+      "docker clean",
+      "docker prune",
+      "docker remove"
+    ],
+    "answer": "docker system prune"
+  },
+  {
+    "category": "Docker",
+    "set": 3,
+    "question": "Qual comando exibe o uso de disco do Docker?",
+    "options": [
+      "docker system df",
+      "docker disk",
+      "docker usage",
+      "docker info"
+    ],
+    "answer": "docker system df"
+  },
+  {
+    "category": "Docker",
+    "set": 3,
+    "question": "Qual instrução de Dockerfile declara uma variável de construção que pode ser fornecida com --build-arg?",
+    "options": [
+      "USER",
+      "ARG",
+      "ENV",
+      "LABEL"
+    ],
+    "answer": "ARG"
+  },
+  {
+    "category": "Docker",
+    "set": 3,
+    "question": "Qual instrução de Dockerfile especifica o usuário das instruções RUN seguintes e do processo de execução padrão?",
+    "options": [
+      "USER",
+      "SHELL",
+      "WORKDIR",
+      "STOPSIGNAL"
+    ],
+    "answer": "USER"
+  },
+  {
+    "category": "Docker",
+    "set": 3,
+    "question": "O que distingue CMD de RUN em um Dockerfile?",
+    "options": [
+      "CMD sempre é executado antes de FROM",
+      "CMD copia arquivos do host",
+      "CMD cria um novo estágio de construção",
+      "CMD fornece padrões para a execução do contêiner em vez de executar uma etapa de construção"
+    ],
+    "answer": "CMD fornece padrões para a execução do contêiner em vez de executar uma etapa de construção"
+  },
+  {
+    "category": "Docker",
+    "set": 3,
+    "question": "Quando uma imagem tem ENTRYPOINT no formato exec, como os argumentos comuns após o nome da imagem em docker run normalmente são usados?",
+    "options": [
+      "Eles são interpretados como instruções de Dockerfile",
+      "Eles são armazenados como etiquetas da imagem",
+      "Eles são acrescentados ao comando do ponto de entrada",
+      "Eles substituem o executável do ponto de entrada"
+    ],
+    "answer": "Eles são acrescentados ao comando do ponto de entrada"
+  },
+  {
+    "category": "Docker",
+    "set": 3,
+    "question": "Qual instrução de Dockerfile inicia outro estágio em uma construção de múltiplos estágios?",
+    "options": [
+      "ARG",
+      "FROM",
+      "RUN",
+      "COPY"
+    ],
+    "answer": "FROM"
+  },
+  {
+    "category": "Docker",
+    "set": 3,
+    "question": "Qual opção copia artefatos de um estágio chamado build em um Dockerfile de múltiplos estágios?",
+    "options": [
+      "COPY --from=build",
+      "COPY --chown=build",
+      "COPY --chmod=build",
+      "COPY --exclude=build"
+    ],
+    "answer": "COPY --from=build"
+  },
+  {
+    "category": "Docker",
+    "set": 3,
+    "question": "Qual instrução define um comando que o Docker executa para avaliar a saúde de um contêiner?",
+    "options": [
+      "STOPSIGNAL",
+      "ENTRYPOINT",
+      "ONBUILD",
+      "HEALTHCHECK"
+    ],
+    "answer": "HEALTHCHECK"
+  },
+  {
+    "category": "Docker",
+    "set": 3,
+    "question": "Qual referência de imagem fixa o download a um resumo de conteúdo em vez de uma tag mutável?",
+    "options": [
+      "nginx:stable",
+      "nginx:alpine",
+      "nginx@sha256:<digest>",
+      "nginx:latest"
+    ],
+    "answer": "nginx@sha256:<digest>"
+  },
+  {
+    "category": "Docker",
+    "set": 3,
+    "question": "O que uma tag de imagem 'latest' realmente significa?",
+    "options": [
+      "Ela atualiza automaticamente os contêineres em execução",
+      "Ela é uma tag convencional que o publicador pode atualizar",
+      "Ela garante a imagem mais recente pela data de criação",
+      "Ela sempre seleciona uma versão estável"
+    ],
+    "answer": "Ela é uma tag convencional que o publicador pode atualizar"
+  },
+  {
+    "category": "Docker",
+    "set": 3,
+    "question": "Qual comando mostra arquivos adicionados, alterados ou excluídos no sistema de arquivos de um contêiner?",
+    "options": [
+      "docker diff web",
+      "docker history web",
+      "docker inspect web",
+      "docker logs web"
+    ],
+    "answer": "docker diff web"
+  }
+]

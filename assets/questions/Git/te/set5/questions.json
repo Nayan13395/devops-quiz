@@ -1,0 +1,302 @@
+[
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "release అనే ప్రస్తుత బ్రాంచ్ కోసం అనుసంధానించిన వర్కింగ్ ట్రీని చేర్చే కమాండ్ ఏది?",
+    "options": [
+      "git worktree prune",
+      "git worktree lock ..\\release",
+      "git worktree add ..\\release release",
+      "git worktree list"
+    ],
+    "answer": "git worktree add ..\\release release"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "ప్రధాన ప్రాజెక్ట్ వెర్షన్-నియంత్రిత సబ్‌మాడ్యూల్ పాత్‌లు, URLలను ఏ ఫైల్ నమోదు చేస్తుంది?",
+    "options": [
+      ".gitmessage",
+      ".gitmodules",
+      ".gitignore",
+      ".gitattributes"
+    ],
+    "answer": ".gitmodules"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "లోపలి సబ్‌మాడ్యూల్‌లతో సహా నమోదైన సబ్‌మాడ్యూల్‌లను ప్రారంభించి చెక్అవుట్ చేసే కమాండ్ ఏది?",
+    "options": [
+      "git submodule update --init --recursive",
+      "git submodule deinit --all",
+      "git submodule status",
+      "git submodule sync"
+    ],
+    "answer": "git submodule update --init --recursive"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "ప్రధాన ప్రాజెక్ట్ సాధారణంగా కమిట్‌లో సబ్‌మాడ్యూల్ కోసం ఏమి నమోదు చేస్తుంది?",
+    "options": [
+      "సబ్‌మాడ్యూల్ మొత్తం ఆబ్జెక్ట్ డేటాబేస్",
+      "సబ్‌మాడ్యూల్ డిఫాల్ట్ బ్రాంచ్ పేరు మాత్రమే",
+      "సబ్‌మాడ్యూల్ కమిట్ చేయని మార్పులు మాత్రమే",
+      "సబ్‌మాడ్యూల్‌లోని నిర్దిష్ట కమిట్‌కు రిఫరెన్స్"
+    ],
+    "answer": "సబ్‌మాడ్యూల్‌లోని నిర్దిష్ట కమిట్‌కు రిఫరెన్స్"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "అన్ని రిఫరెన్స్‌లు, వాటి నుంచి చేరుకోగల చరిత్రతో తరలించగల బండిల్‌ను సృష్టించే కమాండ్ ఏది?",
+    "options": [
+      "git format-patch -1 HEAD",
+      "git diff --binary > backup.bundle",
+      "git bundle create backup.bundle --all",
+      "git archive --output=backup.bundle HEAD"
+    ],
+    "answer": "git bundle create backup.bundle --all"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "HEADలో ట్రాక్ చేస్తున్న ఫైళ్లను Git చరిత్ర లేకుండా ZIP ఆర్కైవ్‌గా ఎగుమతి చేసే కమాండ్ ఏది?",
+    "options": [
+      "git format-patch --stdout HEAD > source.zip",
+      "git archive --format=zip --output=source.zip HEAD",
+      "git bundle create source.zip --all",
+      "git clone --bare . source.zip"
+    ],
+    "answer": "git archive --format=zip --output=source.zip HEAD"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "చివరి కమిట్‌ను ఇమెయిల్-శైలి ప్యాచ్ ఫైల్‌గా మార్చే కమాండ్ ఏది?",
+    "options": [
+      "git format-patch -1 HEAD",
+      "git diff HEAD",
+      "git show --stat HEAD",
+      "git log -1 --oneline"
+    ],
+    "answer": "git format-patch -1 HEAD"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "git format-patch సృష్టించిన ఇమెయిల్ ప్యాచ్‌లను వర్తింపజేసి కమిట్‌లు చేసే కమాండ్ ఏది?",
+    "options": [
+      "git apply changes.patch",
+      "git diff changes.patch",
+      "git add changes.patch",
+      "git am changes.patch"
+    ],
+    "answer": "git am changes.patch"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "ఫైళ్లను మార్చకుండా సాధారణ ప్యాచ్ వర్తిస్తుందో లేదో తనిఖీ చేసే కమాండ్ ఏది?",
+    "options": [
+      "git am changes.patch",
+      "git add changes.patch",
+      "git apply --check changes.patch",
+      "git apply changes.patch"
+    ],
+    "answer": "git apply --check changes.patch"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "ఫైల్ పేరు లేకుండా విషయాన్ని నిల్వచేసే Git ఆబ్జెక్ట్ రకం ఏది?",
+    "options": [
+      "వ్యాఖ్యానంతో కూడిన ట్యాగ్",
+      "Blob",
+      "Tree",
+      "కమిట్"
+    ],
+    "answer": "Blob"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "ఫైల్ పేర్లు, బ్లాబ్‌లు లేదా సబ్‌ట్రీలకు రిఫరెన్స్‌లను నమోదు చేసే Git ఆబ్జెక్ట్ రకం ఏది?",
+    "options": [
+      "Tree",
+      "Blob",
+      "కమిట్",
+      "వ్యాఖ్యానంతో కూడిన ట్యాగ్"
+    ],
+    "answer": "Tree"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "తెలిసిన ఆబ్జెక్ట్ ID రకాన్ని చెప్పే కమాండ్ ఏది?",
+    "options": [
+      "git cat-file -s abc1234",
+      "git rev-parse abc1234",
+      "git log -1 abc1234",
+      "git cat-file -t abc1234"
+    ],
+    "answer": "git cat-file -t abc1234"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "HEAD పూర్తి ఆబ్జెక్ట్ IDను చూపే కమాండ్ ఏది?",
+    "options": [
+      "git status --short",
+      "git branch --show-current",
+      "git rev-parse HEAD",
+      "git symbolic-ref HEAD"
+    ],
+    "answer": "git rev-parse HEAD"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "feature నుంచి చేరుకోగలిగినా main నుంచి చేరుకోలేని కమిట్‌లను ఎంచుకునే రివిజన్ పరిధి ఏది?",
+    "options": [
+      "main^",
+      "main..feature",
+      "feature..main",
+      "main...feature"
+    ],
+    "answer": "main..feature"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "మెర్జ్ కమిట్‌లను మాత్రమే చూపే git log ఆప్షన్ ఏది?",
+    "options": [
+      "--merges",
+      "--no-merges",
+      "--first-parent",
+      "--reverse"
+    ],
+    "answer": "--merges"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "మారిన పాత్‌లు, వాటి మార్పు-స్థితి అక్షరాలను చూపే git diff ఆప్షన్ ఏది?",
+    "options": [
+      "--name-only",
+      "--stat",
+      "--shortstat",
+      "--name-status"
+    ],
+    "answer": "--name-status"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "పాత్‌లకు టెక్స్ట్ సాధారణీకరణ వంటి వెర్షన్-నియంత్రిత లక్షణాలను నిర్వచించే ఫైల్ ఏది?",
+    "options": [
+      ".gitmodules",
+      ".gitconfig",
+      ".gitattributes",
+      ".gitignore"
+    ],
+    "answer": ".gitattributes"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": ".gitattributes నియమం '*.sh text eol=lf' సరిపోలే టెక్స్ట్ ఫైళ్ల కోసం ఏమి కోరుతుంది?",
+    "options": [
+      "ఖాళీ పంక్తుల స్వయంచాలక తొలగింపు",
+      "వర్కింగ్ ట్రీలో LF పంక్తి ముగింపులు",
+      "వర్కింగ్ ట్రీలో CRLF పంక్తి ముగింపులు",
+      "టెక్స్ట్ మార్పు లేకుండా బైనరీగా పరిగణించడం"
+    ],
+    "answer": "వర్కింగ్ ట్రీలో LF పంక్తి ముగింపులు"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "ప్రతిపాదిత కమిట్ సందేశ ఫైల్‌ను తనిఖీ చేసి కమిట్‌ను తిరస్కరించగల హుక్ ఏది?",
+    "options": [
+      "commit-msg",
+      "post-commit",
+      "post-checkout",
+      "post-merge"
+    ],
+    "answer": "commit-msg"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "Git హుక్‌లకు అనుకూల డైరెక్టరీని ఎంచుకునే సెట్టింగ్ ఏది?",
+    "options": [
+      "core.worktree",
+      "core.excludesFile",
+      "core.attributesFile",
+      "core.hooksPath"
+    ],
+    "answer": "core.hooksPath"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "ఉమ్మడి .gitignore నియమం చేర్చకుండా ఒక డెవలపర్ స్థానికంగా ట్రాక్ చేయని ఫైళ్లను విస్మరించడానికి ఏ ఫైల్ ఉపయోగపడుతుంది?",
+    "options": [
+      ".git\\description",
+      ".git\\packed-refs",
+      ".git\\info\\exclude",
+      ".git\\HEAD"
+    ],
+    "answer": ".git\\info\\exclude"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "బైసెక్ట్ సెషన్ నుంచి బయటకు వచ్చి సాధారణంగా అసలు బ్రాంచ్‌కు తీసుకెళ్లే కమాండ్ ఏది?",
+    "options": [
+      "git bisect log",
+      "git bisect reset",
+      "git bisect skip",
+      "git bisect good"
+    ],
+    "answer": "git bisect reset"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "ప్యాచ్ శ్రేణి రెండు వెర్షన్‌లను పోల్చే కమాండ్ ఏది?",
+    "options": [
+      "git range-diff main..old main..new",
+      "git diff old new",
+      "git log old..new",
+      "git merge-base old new"
+    ],
+    "answer": "git range-diff main..old main..new"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "కమిట్ సృష్టించేటప్పుడు చివర Signed-off-by నమోదు జోడించే కమాండ్ ఏది?",
+    "options": [
+      "git commit --gpg-sign",
+      "git commit --amend",
+      "git commit --no-verify",
+      "git commit --signoff"
+    ],
+    "answer": "git commit --signoff"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "git log -S'old_name' డిఫాల్ట్‌గా ఏమి వెతుకుతుంది?",
+    "options": [
+      "సందేశంలో old_name ఉన్న కమిట్‌లు",
+      "పేరులో old_name ఉన్న బ్రాంచ్‌లు",
+      "old_name వచ్చే సంఖ్యను మార్చే కమిట్‌లు",
+      "రచయిత పేరు old_name అయిన కమిట్‌లు"
+    ],
+    "answer": "old_name వచ్చే సంఖ్యను మార్చే కమిట్‌లు"
+  }
+]

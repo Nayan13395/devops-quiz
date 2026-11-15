@@ -1,0 +1,302 @@
+[
+  {
+    "category": "Kubernetes",
+    "set": 4,
+    "question": "எந்த கட்டளை ஒரு deployment-ஐ scale செய்கிறது?",
+    "options": [
+      "kubectl scale deployment",
+      "kubectl resize deployment",
+      "kubectl expand deployment",
+      "kubectl increase deployment"
+    ],
+    "answer": "kubectl scale deployment"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 4,
+    "question": "எந்த கட்டளை ஒரு deployment-ஐ 5 replicas ஆக scale செய்கிறது?",
+    "options": [
+      "kubectl scale deployment --replicas=5",
+      "kubectl replicas 5",
+      "kubectl expand deployment",
+      "kubectl set replicas"
+    ],
+    "answer": "kubectl scale deployment --replicas=5"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 4,
+    "question": "எந்த கட்டளை ஒரு deployment-ஐ மறுதொடக்கம் செய்கிறது?",
+    "options": [
+      "kubectl rollout restart deployment",
+      "kubectl restart deployment",
+      "kubectl deployment restart",
+      "kubectl reload deployment"
+    ],
+    "answer": "kubectl rollout restart deployment"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 4,
+    "question": "ஒரு deployment-இன் rollout நிலையை எந்த கட்டளை சரிபார்க்கிறது?",
+    "options": [
+      "kubectl rollout status",
+      "kubectl deployment status",
+      "kubectl rollout check",
+      "kubectl get rollout"
+    ],
+    "answer": "kubectl rollout status"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 4,
+    "question": "எந்த கட்டளை ஒரு deployment-ஐ முந்தைய நிலைக்கு rollback செய்கிறது?",
+    "options": [
+      "kubectl rollout undo",
+      "kubectl rollback",
+      "kubectl undo deployment",
+      "kubectl deployment rollback"
+    ],
+    "answer": "kubectl rollout undo"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 4,
+    "question": "எந்த கட்டளை rollout வரலாற்றைக் காட்டுகிறது?",
+    "options": [
+      "kubectl rollout history",
+      "kubectl history",
+      "kubectl deployment history",
+      "kubectl show rollout"
+    ],
+    "answer": "kubectl rollout history"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 4,
+    "question": "எந்த கட்டளை ஒரு deployment rollout-ஐ இடைநிறுத்துகிறது?",
+    "options": [
+      "kubectl rollout pause",
+      "kubectl pause deployment",
+      "kubectl stop rollout",
+      "kubectl hold deployment"
+    ],
+    "answer": "kubectl rollout pause"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 4,
+    "question": "இடைநிறுத்தப்பட்ட deployment rollout-ஐ எந்த கட்டளை மீண்டும் தொடங்குகிறது?",
+    "options": [
+      "kubectl rollout resume",
+      "kubectl resume deployment",
+      "kubectl continue rollout",
+      "kubectl restart rollout"
+    ],
+    "answer": "kubectl rollout resume"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 4,
+    "question": "தற்போதைய Podகளை வெளியேற்ற முயலாமல் முனைக்கு புதிய Pod ஒதுக்குவதைத் தடுக்கும் கட்டளை எது?",
+    "options": [
+      "kubectl cordon",
+      "kubectl uncordon",
+      "kubectl get node",
+      "kubectl describe node"
+    ],
+    "answer": "kubectl cordon"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 4,
+    "question": "ஒரு node-இலிருந்து workloads-ஐ பாதுகாப்பாக வெளியேற்றும் கட்டளை எது?",
+    "options": [
+      "kubectl drain",
+      "kubectl cordon",
+      "kubectl delete node",
+      "kubectl migrate"
+    ],
+    "answer": "kubectl drain"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 4,
+    "question": "ஒரு node-ஐ மீண்டும் திட்டமிடக்கூடியதாக (schedulable) மாற்றும் கட்டளை எது?",
+    "options": [
+      "kubectl uncordon",
+      "kubectl enable",
+      "kubectl restart",
+      "kubectl activate"
+    ],
+    "answer": "kubectl uncordon"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 4,
+    "question": "எந்த கட்டளை node பற்றிய விரிவான தகவலைக் காட்டுகிறது?",
+    "options": [
+      "kubectl describe node",
+      "kubectl inspect node",
+      "kubectl info node",
+      "kubectl node show"
+    ],
+    "answer": "kubectl describe node"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 4,
+    "question": "உள்ளூர் port-ஐ ஒரு pod-க்கு அனுப்பும் (forward) கட்டளை எது?",
+    "options": [
+      "kubectl port-forward",
+      "kubectl tunnel",
+      "kubectl expose",
+      "kubectl connect"
+    ],
+    "answer": "kubectl port-forward"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 4,
+    "question": "ஒரு pod-க்கு அல்லது pod-இலிருந்து கோப்புகளை நகலெடுக்கும் கட்டளை எது?",
+    "options": [
+      "kubectl cp",
+      "kubectl copy",
+      "kubectl transfer",
+      "kubectl sync"
+    ],
+    "answer": "kubectl cp"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 4,
+    "question": "இயங்கும் pod-இன் YAML வரையறையைக் காட்டும் கட்டளை எது?",
+    "options": [
+      "kubectl get pod -o yaml",
+      "kubectl show pod yaml",
+      "kubectl export pod",
+      "kubectl pod yaml"
+    ],
+    "answer": "kubectl get pod -o yaml"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 4,
+    "question": "site Deploymentஇன் web கன்டெய்னரை nginx:1.27 படிமத்திற்கு மாற்றும் கட்டளை எது?",
+    "options": [
+      "kubectl set image deployment/site web=nginx:1.27",
+      "kubectl set env deployment/site web=nginx:1.27",
+      "kubectl annotate deployment/site web=nginx:1.27",
+      "kubectl label deployment/site web=nginx:1.27"
+    ],
+    "answer": "kubectl set image deployment/site web=nginx:1.27"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 4,
+    "question": "மாற்றத்தைப் பயன்படுத்தாமல் மானிஃபெஸ்டை நேரடி உள்ளமைவுடன் ஒப்பிடும் கட்டளை எது?",
+    "options": [
+      "kubectl apply -f app.yaml",
+      "kubectl replace -f app.yaml",
+      "kubectl delete -f app.yaml",
+      "kubectl diff -f app.yaml"
+    ],
+    "answer": "kubectl diff -f app.yaml"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 4,
+    "question": "கோரிய வளத்தைச் சேமிக்காமல் API சேவையகத்தில் சோதனை இயக்கம் செய்யும் kubectl விருப்பம் எது?",
+    "options": [
+      "--validate=false",
+      "--force",
+      "--dry-run=server",
+      "--dry-run=client"
+    ],
+    "answer": "--dry-run=server"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 4,
+    "question": "api Pod Ready ஆக அதிகபட்சம் 60 விநாடிகள் காத்திருக்கும் கட்டளை எது?",
+    "options": [
+      "kubectl get pod api --request-timeout=60s",
+      "kubectl wait --for=condition=Ready pod/api --timeout=60s",
+      "kubectl wait --for=delete pod/api --timeout=60s",
+      "kubectl logs api --since=60s"
+    ],
+    "answer": "kubectl wait --for=condition=Ready pod/api --timeout=60s"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 4,
+    "question": "படிப்படியான புதுப்பிப்பின்போது கிடைக்காமல் இருக்கக்கூடிய பிரதிகளின் எண்ணிக்கையைக் கட்டுப்படுத்தும் Deployment அமைப்பு எது?",
+    "options": [
+      "maxUnavailable",
+      "maxSurge",
+      "revisionHistoryLimit",
+      "progressDeadlineSeconds"
+    ],
+    "answer": "maxUnavailable"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 4,
+    "question": "படிப்படியான புதுப்பிப்பின்போது விரும்பிய பிரதியெண்ணிக்கைக்கு மேல் தற்காலிக கூடுதல் Podகளை அனுமதிக்கும் Deployment அமைப்பு எது?",
+    "options": [
+      "maxUnavailable",
+      "minReadySeconds",
+      "revisionHistoryLimit",
+      "maxSurge"
+    ],
+    "answer": "maxSurge"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 4,
+    "question": "தேர்ந்தெடுத்த Podகளில் ஒரே நேரத்தில் நடக்கும் விருப்பத் தடங்கல்களைக் கட்டுப்படுத்தும் வளம் எது?",
+    "options": [
+      "LimitRange",
+      "NetworkPolicy",
+      "PodDisruptionBudget",
+      "ResourceQuota"
+    ],
+    "answer": "PodDisruptionBudget"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 4,
+    "question": "கண்காணித்த அளவீடுகளின் அடிப்படையில் பணிச்சுமைப் பிரதியெண்ணிக்கையை மாற்றும் கட்டுப்படுத்தி எது?",
+    "options": [
+      "CronJob",
+      "HorizontalPodAutoscaler",
+      "ReplicaSet",
+      "DaemonSet"
+    ],
+    "answer": "HorizontalPodAutoscaler"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 4,
+    "question": "kubectl top CPU மற்றும் நினைவகப் பயன்பாட்டைக் காட்ட எது கிடைக்க வேண்டும்?",
+    "options": [
+      "பொதுவாக Metrics Server வழங்கும் வள அளவீடுகள் API",
+      "ஒவ்வொரு பெயர்வெளிக்கும் Ingress கட்டுப்படுத்தி",
+      "பிளாக் சாதனமுள்ள இயல்புநிலை StorageClass",
+      "ஒவ்வொரு Podக்கும் LoadBalancer Service"
+    ],
+    "answer": "பொதுவாக Metrics Server வழங்கும் வள அளவீடுகள் API"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 4,
+    "question": "இணைந்த கிளஸ்டர் ஆதரிக்கும் API வள வகைகளைக் காட்டும் கட்டளை எது?",
+    "options": [
+      "kubectl api-versions",
+      "kubectl cluster-info",
+      "kubectl config view",
+      "kubectl api-resources"
+    ],
+    "answer": "kubectl api-resources"
+  }
+]

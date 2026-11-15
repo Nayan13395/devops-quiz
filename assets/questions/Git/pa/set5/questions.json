@@ -1,0 +1,302 @@
+[
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "release ਨਾਮ ਦੀ ਮੌਜੂਦਾ ਬ੍ਰਾਂਚ ਲਈ ਜੁੜੀ ਵਰਕਿੰਗ ਟ੍ਰੀ ਜੋੜਨ ਵਾਲੀ ਕਮਾਂਡ ਕਿਹੜੀ ਹੈ?",
+    "options": [
+      "git worktree prune",
+      "git worktree lock ..\\release",
+      "git worktree add ..\\release release",
+      "git worktree list"
+    ],
+    "answer": "git worktree add ..\\release release"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "ਮੁੱਖ ਪ੍ਰੋਜੈਕਟ ਦੇ ਵਰਜਨ-ਨਿਯੰਤਰਿਤ ਸਬਮੋਡੀਊਲ ਪਾਥ ਅਤੇ URL ਕਿਹੜੀ ਫਾਈਲ ਵਿੱਚ ਹੁੰਦੇ ਹਨ?",
+    "options": [
+      ".gitmessage",
+      ".gitmodules",
+      ".gitignore",
+      ".gitattributes"
+    ],
+    "answer": ".gitmodules"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "ਦਰਜ ਸਬਮੋਡੀਊਲਾਂ ਨੂੰ ਅੰਦਰਲੇ ਸਬਮੋਡੀਊਲਾਂ ਸਮੇਤ ਮੁੱਢਲਾ ਰੂਪ ਦੇ ਕੇ ਚੈੱਕਆਉਟ ਕਰਨ ਵਾਲੀ ਕਮਾਂਡ ਕਿਹੜੀ ਹੈ?",
+    "options": [
+      "git submodule update --init --recursive",
+      "git submodule deinit --all",
+      "git submodule status",
+      "git submodule sync"
+    ],
+    "answer": "git submodule update --init --recursive"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "ਮੁੱਖ ਪ੍ਰੋਜੈਕਟ ਕਮਿਟ ਵਿੱਚ ਸਬਮੋਡੀਊਲ ਲਈ ਆਮ ਤੌਰ 'ਤੇ ਕੀ ਦਰਜ ਕਰਦਾ ਹੈ?",
+    "options": [
+      "ਸਬਮੋਡੀਊਲ ਦਾ ਪੂਰਾ ਆਬਜੈਕਟ ਡਾਟਾਬੇਸ",
+      "ਸਿਰਫ਼ ਸਬਮੋਡੀਊਲ ਦੀ ਮੂਲ ਬ੍ਰਾਂਚ ਦਾ ਨਾਮ",
+      "ਸਿਰਫ਼ ਸਬਮੋਡੀਊਲ ਦੇ ਅਣਕਮਿਟ ਬਦਲਾਅ",
+      "ਸਬਮੋਡੀਊਲ ਦੇ ਖਾਸ ਕਮਿਟ ਦਾ ਹਵਾਲਾ"
+    ],
+    "answer": "ਸਬਮੋਡੀਊਲ ਦੇ ਖਾਸ ਕਮਿਟ ਦਾ ਹਵਾਲਾ"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "ਸਾਰੇ ਹਵਾਲੇ ਅਤੇ ਉਨ੍ਹਾਂ ਤੋਂ ਪਹੁੰਚਯੋਗ ਇਤਿਹਾਸ ਵਾਲਾ ਲਿਜਾਣਯੋਗ ਬੰਡਲ ਕਿਹੜੀ ਕਮਾਂਡ ਬਣਾਉਂਦੀ ਹੈ?",
+    "options": [
+      "git format-patch -1 HEAD",
+      "git diff --binary > backup.bundle",
+      "git bundle create backup.bundle --all",
+      "git archive --output=backup.bundle HEAD"
+    ],
+    "answer": "git bundle create backup.bundle --all"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "HEAD ਦੀਆਂ ਟ੍ਰੈਕ ਕੀਤੀਆਂ ਫਾਈਲਾਂ ਨੂੰ Git ਇਤਿਹਾਸ ਬਿਨਾਂ ZIP ਆਰਕਾਈਵ ਵਿੱਚ ਕੱਢਣ ਵਾਲੀ ਕਮਾਂਡ ਕਿਹੜੀ ਹੈ?",
+    "options": [
+      "git format-patch --stdout HEAD > source.zip",
+      "git archive --format=zip --output=source.zip HEAD",
+      "git bundle create source.zip --all",
+      "git clone --bare . source.zip"
+    ],
+    "answer": "git archive --format=zip --output=source.zip HEAD"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "ਪਿਛਲੇ ਕਮਿਟ ਨੂੰ ਈਮੇਲ-ਸ਼ੈਲੀ ਪੈਚ ਫਾਈਲ ਬਣਾਉਣ ਵਾਲੀ ਕਮਾਂਡ ਕਿਹੜੀ ਹੈ?",
+    "options": [
+      "git format-patch -1 HEAD",
+      "git diff HEAD",
+      "git show --stat HEAD",
+      "git log -1 --oneline"
+    ],
+    "answer": "git format-patch -1 HEAD"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "git format-patch ਦੇ ਈਮੇਲ ਪੈਚ ਲਾਗੂ ਕਰਕੇ ਕਮਿਟ ਬਣਾਉਣ ਵਾਲੀ ਕਮਾਂਡ ਕਿਹੜੀ ਹੈ?",
+    "options": [
+      "git apply changes.patch",
+      "git diff changes.patch",
+      "git add changes.patch",
+      "git am changes.patch"
+    ],
+    "answer": "git am changes.patch"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "ਫਾਈਲਾਂ ਬਦਲੇ ਬਿਨਾਂ ਸਾਦਾ ਪੈਚ ਲਾਗੂ ਹੋ ਸਕਦਾ ਹੈ ਜਾਂ ਨਹੀਂ, ਕਿਹੜੀ ਕਮਾਂਡ ਜਾਂਚਦੀ ਹੈ?",
+    "options": [
+      "git am changes.patch",
+      "git add changes.patch",
+      "git apply --check changes.patch",
+      "git apply changes.patch"
+    ],
+    "answer": "git apply --check changes.patch"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "Git ਆਬਜੈਕਟ ਦੀ ਕਿਹੜੀ ਕਿਸਮ ਫਾਈਲ ਨਾਮ ਬਿਨਾਂ ਸਮੱਗਰੀ ਰੱਖਦੀ ਹੈ?",
+    "options": [
+      "ਟਿੱਪਣੀ ਵਾਲਾ ਟੈਗ",
+      "Blob",
+      "Tree",
+      "ਕਮਿਟ"
+    ],
+    "answer": "Blob"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "Git ਆਬਜੈਕਟ ਦੀ ਕਿਹੜੀ ਕਿਸਮ ਫਾਈਲ ਨਾਮ ਅਤੇ ਬਲੌਬ ਜਾਂ ਸਬਟ੍ਰੀ ਦੇ ਹਵਾਲੇ ਰੱਖਦੀ ਹੈ?",
+    "options": [
+      "Tree",
+      "Blob",
+      "ਕਮਿਟ",
+      "ਟਿੱਪਣੀ ਵਾਲਾ ਟੈਗ"
+    ],
+    "answer": "Tree"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "ਜਾਣੇ ਆਬਜੈਕਟ ID ਦੀ ਕਿਸਮ ਦੱਸਣ ਵਾਲੀ ਕਮਾਂਡ ਕਿਹੜੀ ਹੈ?",
+    "options": [
+      "git cat-file -s abc1234",
+      "git rev-parse abc1234",
+      "git log -1 abc1234",
+      "git cat-file -t abc1234"
+    ],
+    "answer": "git cat-file -t abc1234"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "HEAD ਦਾ ਪੂਰਾ ਆਬਜੈਕਟ ID ਦਿਖਾਉਣ ਵਾਲੀ ਕਮਾਂਡ ਕਿਹੜੀ ਹੈ?",
+    "options": [
+      "git status --short",
+      "git branch --show-current",
+      "git rev-parse HEAD",
+      "git symbolic-ref HEAD"
+    ],
+    "answer": "git rev-parse HEAD"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "feature ਤੋਂ ਪਹੁੰਚਯੋਗ ਪਰ main ਤੋਂ ਨਾ ਪਹੁੰਚਯੋਗ ਕਮਿਟ ਕਿਹੜੀ ਰਿਵਿਜ਼ਨ ਰੇਂਜ ਚੁਣਦੀ ਹੈ?",
+    "options": [
+      "main^",
+      "main..feature",
+      "feature..main",
+      "main...feature"
+    ],
+    "answer": "main..feature"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "git log ਦਾ ਕਿਹੜਾ ਵਿਕਲਪ ਸਿਰਫ਼ ਮਰਜ ਕਮਿਟ ਦਿਖਾਉਂਦਾ ਹੈ?",
+    "options": [
+      "--merges",
+      "--no-merges",
+      "--first-parent",
+      "--reverse"
+    ],
+    "answer": "--merges"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "git diff ਦਾ ਕਿਹੜਾ ਵਿਕਲਪ ਬਦਲੇ ਪਾਥ ਅਤੇ ਬਦਲਾਅ-ਸਥਿਤੀ ਦੇ ਅੱਖਰ ਦਿਖਾਉਂਦਾ ਹੈ?",
+    "options": [
+      "--name-only",
+      "--stat",
+      "--shortstat",
+      "--name-status"
+    ],
+    "answer": "--name-status"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "ਪਾਥਾਂ ਲਈ ਲਿਖਤ ਸਧਾਰਨ ਕਰਨ ਵਰਗੇ ਵਰਜਨ-ਨਿਯੰਤਰਿਤ ਗੁਣ ਕਿਹੜੀ ਫਾਈਲ ਤੈਅ ਕਰਦੀ ਹੈ?",
+    "options": [
+      ".gitmodules",
+      ".gitconfig",
+      ".gitattributes",
+      ".gitignore"
+    ],
+    "answer": ".gitattributes"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": ".gitattributes ਦਾ '*.sh text eol=lf' ਨਿਯਮ ਮੇਲ ਖਾਂਦੀਆਂ ਟੈਕਸਟ ਫਾਈਲਾਂ ਲਈ ਕੀ ਮੰਗਦਾ ਹੈ?",
+    "options": [
+      "ਖਾਲੀ ਲਾਈਨਾਂ ਆਪਣੇ ਆਪ ਮਿਟਾਉਣਾ",
+      "ਵਰਕਿੰਗ ਟ੍ਰੀ ਵਿੱਚ LF ਲਾਈਨ ਅੰਤ",
+      "ਵਰਕਿੰਗ ਟ੍ਰੀ ਵਿੱਚ CRLF ਲਾਈਨ ਅੰਤ",
+      "ਲਿਖਤ ਬਦਲੇ ਬਿਨਾਂ ਬਾਈਨਰੀ ਵਜੋਂ ਵਰਤਾਅ"
+    ],
+    "answer": "ਵਰਕਿੰਗ ਟ੍ਰੀ ਵਿੱਚ LF ਲਾਈਨ ਅੰਤ"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "ਸੁਝਾਈ ਕਮਿਟ-ਸੁਨੇਹਾ ਫਾਈਲ ਜਾਂਚ ਕੇ ਕਮਿਟ ਰੱਦ ਕਰ ਸਕਣ ਵਾਲਾ ਹੁੱਕ ਕਿਹੜਾ ਹੈ?",
+    "options": [
+      "commit-msg",
+      "post-commit",
+      "post-checkout",
+      "post-merge"
+    ],
+    "answer": "commit-msg"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "Git ਹੁੱਕਾਂ ਲਈ ਆਪਣੀ ਡਾਇਰੈਕਟਰੀ ਚੁਣਨ ਵਾਲੀ ਸੈਟਿੰਗ ਕਿਹੜੀ ਹੈ?",
+    "options": [
+      "core.worktree",
+      "core.excludesFile",
+      "core.attributesFile",
+      "core.hooksPath"
+    ],
+    "answer": "core.hooksPath"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "ਸਾਂਝਾ .gitignore ਨਿਯਮ ਜੋੜੇ ਬਿਨਾਂ ਇੱਕ ਡਿਵੈਲਪਰ ਨੂੰ ਅਣਟ੍ਰੈਕ ਫਾਈਲਾਂ ਲੋਕਲ ਤੌਰ 'ਤੇ ਅਣਡਿੱਠੀਆਂ ਕਰਨ ਦੇਣ ਵਾਲੀ ਫਾਈਲ ਕਿਹੜੀ ਹੈ?",
+    "options": [
+      ".git\\description",
+      ".git\\packed-refs",
+      ".git\\info\\exclude",
+      ".git\\HEAD"
+    ],
+    "answer": ".git\\info\\exclude"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "ਬਾਈਸੈਕਟ ਸੈਸ਼ਨ ਖਤਮ ਕਰਕੇ ਆਮ ਤੌਰ 'ਤੇ ਅਸਲ ਬ੍ਰਾਂਚ ਉੱਤੇ ਮੁੜਨ ਵਾਲੀ ਕਮਾਂਡ ਕਿਹੜੀ ਹੈ?",
+    "options": [
+      "git bisect log",
+      "git bisect reset",
+      "git bisect skip",
+      "git bisect good"
+    ],
+    "answer": "git bisect reset"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "ਪੈਚ ਲੜੀ ਦੇ ਦੋ ਵਰਜਨਾਂ ਦੀ ਤੁਲਨਾ ਕਰਨ ਵਾਲੀ ਕਮਾਂਡ ਕਿਹੜੀ ਹੈ?",
+    "options": [
+      "git range-diff main..old main..new",
+      "git diff old new",
+      "git log old..new",
+      "git merge-base old new"
+    ],
+    "answer": "git range-diff main..old main..new"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "ਕਮਿਟ ਬਣਾਉਂਦਿਆਂ ਅੰਤ ਵਿੱਚ Signed-off-by ਜੋੜਨ ਵਾਲੀ ਕਮਾਂਡ ਕਿਹੜੀ ਹੈ?",
+    "options": [
+      "git commit --gpg-sign",
+      "git commit --amend",
+      "git commit --no-verify",
+      "git commit --signoff"
+    ],
+    "answer": "git commit --signoff"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "git log -S'old_name' ਮੂਲ ਰੂਪ ਵਿੱਚ ਕੀ ਲੱਭਦਾ ਹੈ?",
+    "options": [
+      "ਸੁਨੇਹੇ ਵਿੱਚ old_name ਵਾਲੇ ਕਮਿਟ",
+      "ਨਾਮ ਵਿੱਚ old_name ਵਾਲੀਆਂ ਬ੍ਰਾਂਚਾਂ",
+      "old_name ਦੇ ਆਉਣ ਦੀ ਗਿਣਤੀ ਬਦਲਣ ਵਾਲੇ ਕਮਿਟ",
+      "old_name ਨਾਮ ਦੇ ਲੇਖਕ ਵਾਲੇ ਕਮਿਟ"
+    ],
+    "answer": "old_name ਦੇ ਆਉਣ ਦੀ ਗਿਣਤੀ ਬਦਲਣ ਵਾਲੇ ਕਮਿਟ"
+  }
+]

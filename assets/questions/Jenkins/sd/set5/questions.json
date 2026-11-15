@@ -1,0 +1,302 @@
+[
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "Declarative جو ڪهڙو اختيار ساڳئي Pipeline جا گڏيل هلڻ ڏيڻ بدران نئون هلڻ قطار ۾ رکي ٿو؟",
+    "options": [
+      "parallelsAlwaysFailFast()",
+      "disableConcurrentBuilds()",
+      "disableResume()",
+      "skipDefaultCheckout()"
+    ],
+    "answer": "disableConcurrentBuilds()"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "Declarative جو ڪهڙو اختيار پراڻا بلڊ رڪارڊ ۽ آرٽيفيڪٽ رکڻ جا قاعدا ٻڌائي ٿو؟",
+    "options": [
+      "buildDiscarder(logRotator(numToKeepStr: '10'))",
+      "timeout(time: 10, unit: 'MINUTES')",
+      "retry(10)",
+      "quietPeriod(10)"
+    ],
+    "answer": "buildDiscarder(logRotator(numToKeepStr: '10'))"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "Jenkins cron ايڪسپريشن ۾ H نشان ڇا ڏئي ٿو؟",
+    "options": [
+      "استعمال ڪندڙ جي ڪمپيوٽر جو هاڻوڪو ڪلاڪ",
+      "رڳو موڪلن ۾ هلڻ جي درخواست",
+      "رڳو نوڊ فارغ هجي تڏهن هلڻ جي درخواست",
+      "ڪم جي نالي تي ٻڌل مستقل هيش جيڪو شيڊيول ٿيل بار ورهائي ٿو"
+    ],
+    "answer": "ڪم جي نالي تي ٻڌل مستقل هيش جيڪو شيڊيول ٿيل بار ورهائي ٿو"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "Jenkins جي پنجن خانن واري cron نحو ۾ پنجون خانو ڇا ڄاڻائي ٿو؟",
+    "options": [
+      "ڏينهن جو ڪلاڪ",
+      "مهيني جو ڏينهن",
+      "هفتي جو ڏينهن",
+      "ڪلاڪ جو منٽ"
+    ],
+    "answer": "هفتي جو ڏينهن"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "اڳيون بلڊ ناڪام يا غيرمستحڪم هجي ۽ نئون ڪامياب ٿئي ته post جي ڪهڙي شرط هلي ٿي؟",
+    "options": [
+      "unsuccessful",
+      "fixed",
+      "changed",
+      "regression"
+    ],
+    "answer": "fixed"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "ٻين post شرطن جي جاچ کان پوءِ ڪهڙي post شرط هلي ٿي؟",
+    "options": [
+      "cleanup",
+      "always",
+      "changed",
+      "success"
+    ],
+    "answer": "cleanup"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "when جو ڪهڙو اختيار مرحلي جو ايجنٽ ڏيڻ کان اڳ ان جي شرط جانچي ٿو؟",
+    "options": [
+      "beforeInput false",
+      "beforeOptions false",
+      "branch 'main'",
+      "beforeAgent true"
+    ],
+    "answer": "beforeAgent true"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "when جي ڪهڙي شرط Multibranch Pipeline ۾ نالي واري برانچ چونڊي ٿي؟",
+    "options": [
+      "buildingTag()",
+      "changeRequest()",
+      "branch 'main'",
+      "tag 'main'"
+    ],
+    "answer": "branch 'main'"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "Declarative جي ڪهڙي بناوت آپريٽنگ سسٽم ۽ برائوزر جهڙن محورَن جي قدرن جا جوڙ هلائي ٿي؟",
+    "options": [
+      "environment",
+      "matrix",
+      "parallel",
+      "steps"
+    ],
+    "answer": "matrix"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "ڪهڙو حصو Declarative ميٽرڪس مان اڻگهريل جوڙ هٽائي ٿو؟",
+    "options": [
+      "excludes",
+      "axes",
+      "stages",
+      "tools"
+    ],
+    "answer": "excludes"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "گڏ هلندڙ شاخن واري مرحلي جي ڪهڙي سيٽنگ هڪ ناڪام ٿيڻ تي ٻيون روڪي ٿي؟",
+    "options": [
+      "beforeAgent true",
+      "reuseNode true",
+      "alwaysPull true",
+      "failFast true"
+    ],
+    "answer": "failFast true"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "Declarative جو ڪهڙو اختيار بلڊ غيرمستحڪم ٿيندي پوءِ وارا مرحلا ڇڏي ٿو؟",
+    "options": [
+      "disableResume()",
+      "preserveStashes()",
+      "skipStagesAfterUnstable()",
+      "skipDefaultCheckout()"
+    ],
+    "answer": "skipStagesAfterUnstable()"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "Pipeline جو ڪهڙو قدم ناڪامي لکي پنهنجي بلاڪ کان پوءِ هلڻ جاري رهڻ ڏئي ٿو؟",
+    "options": [
+      "input",
+      "catchError",
+      "error",
+      "timeout"
+    ],
+    "answer": "catchError"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "عمل ختم ٿيڻ تي sh(script: 'check.sh', returnStatus: true) ڇا ڏئي ٿو؟",
+    "options": [
+      "عمل جو عددي نڪرڻ وارو ڪوڊ",
+      "مڪمل معياري آئوٽ پُٽ متن",
+      "شيل جو عمل ID",
+      "Jenkins توثيقي تفصيلن جو آبجيڪٽ"
+    ],
+    "answer": "عمل جو عددي نڪرڻ وارو ڪوڊ"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "ڪاميابيءَ تي sh(script: 'echo ready', returnStdout: true) ڇا ڏئي ٿو؟",
+    "options": [
+      "عددي بلڊ نمبر",
+      "شيل جو ماحول ميپ طور",
+      "ايجنٽ جي ليبل فهرست",
+      "ورتل معياري آئوٽ پُٽ اسٽرنگ"
+    ],
+    "answer": "ورتل معياري آئوٽ پُٽ اسٽرنگ"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "Pipeline جو ڪهڙو قدم هاڻوڪي ورڪ اسپيس ڊائريڪٽري جو مواد ذيلي سطحن سميت مٽائي ٿو؟",
+    "options": [
+      "pwd",
+      "readFile",
+      "deleteDir",
+      "fileExists"
+    ],
+    "answer": "deleteDir"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "Pipeline جو ڪهڙو قدم جانچي ٿو ته هاڻوڪي ورڪ اسپيس ۾ پٿ موجود آهي؟",
+    "options": [
+      "libraryResource",
+      "fileExists",
+      "readFile",
+      "writeFile"
+    ],
+    "answer": "fileExists"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "Pipeline جو ڪهڙو قدم ٻيو Jenkins ڪم شروع ڪري بلڊ پيراميٽر ڏئي سگهي ٿو؟",
+    "options": [
+      "build",
+      "stage",
+      "node",
+      "checkout"
+    ],
+    "answer": "build"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "Declarative جو ڪهڙو اختيار مرحلا وري شروع ڪرڻ لاءِ مڪمل بلڊن جا اسٽيش رکي ٿو؟",
+    "options": [
+      "disableResume()",
+      "skipDefaultCheckout()",
+      "quietPeriod(5)",
+      "preserveStashes()"
+    ],
+    "answer": "preserveStashes()"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "Shared Library جي ڪهڙي فائل vars/deploy.groovy واري عالمي deploy متغير لاءِ مدد جو متن ڏئي ٿي؟",
+    "options": [
+      "resources/deploy.txt",
+      "vars/main.groovy",
+      "vars/deploy.txt",
+      "src/deploy.groovy"
+    ],
+    "answer": "vars/deploy.txt"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "Jenkins Pipeline ۾ @NonCPS واري ميٿڊ جي اهم پابندي ڇا آهي؟",
+    "options": [
+      "ان کي Windows ايجنٽ تي هلڻ گهرجي",
+      "ان کي CPS سان بدليل Pipeline قدم نه سڏڻ گهرجن",
+      "ان ۾ stage هدايت هجڻ گهرجي",
+      "ان کي هميشه اسٽرنگ ڏيڻ گهرجي"
+    ],
+    "answer": "ان کي CPS سان بدليل Pipeline قدم نه سڏڻ گهرجن"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "Jenkins جي ڪهڙي سهولت اڻمنظور سينڊ باڪس Groovy ڪوڊ جي گهريل دستخطن جو جائزو وٺي ٿي؟",
+    "options": [
+      "عمل اندر اسڪرپٽ منظوري",
+      "Credentials Store",
+      "Build Queue",
+      "SCM پولنگ لاگ"
+    ],
+    "answer": "عمل اندر اسڪرپٽ منظوري"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "شيل پاڻ ٻڌل راز متغير کولي، اهڙي اسڪرپٽ لاءِ Groovy جي ڪهڙي اقتباس صورت تجويز ڪجي ٿي؟",
+    "options": [
+      "راز شامل ڪيل ٻٽي اقتباس واري قدر ڀريل Groovy اسٽرنگ",
+      "راز شامل ڪيل ٽن ٻٽن اقتباسن واري قدر ڀريل Groovy اسٽرنگ",
+      "سادي متن جو راز ڳنڍي ٺهيل Groovy اسٽرنگ",
+      "اڪيلي اقتباس واري Groovy اسٽرنگ"
+    ],
+    "answer": "اڪيلي اقتباس واري Groovy اسٽرنگ"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "لاڳاپيل ويب درخواستن لاءِ Jenkins CSRF crumb جو مقصد ڇا آهي؟",
+    "options": [
+      "اپ لوڊ کان اڳ بلڊ آرٽيفيڪٽ رمز ڪرڻ",
+      "بلڊ هلائيندڙ ايجنٽ چونڊڻ",
+      "تصديق ۾ مدد ته حالت بدلائيندڙ درخواست قائم ٿيل استعمال ڪندڙ سيشن جي آهي",
+      "سڀني ڪمن جي اجازت جاچ جي جاءِ وٺڻ"
+    ],
+    "answer": "تصديق ۾ مدد ته حالت بدلائيندڙ درخواست قائم ٿيل استعمال ڪندڙ سيشن جي آهي"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "مختلف ڪمن وچ ۾ گڏيل ٽيسٽ ڊوائيس هڪ وقت هڪ ڪم کي ڏيڻ لاءِ Pipeline ڇا استعمال ڪري؟",
+    "options": [
+      "skipDefaultCheckout اختيار",
+      "Lockable Resources پلگ اِن جو lock قدم",
+      "timestamps اختيار",
+      "buildDiscarder اختيار"
+    ],
+    "answer": "Lockable Resources پلگ اِن جو lock قدم"
+  }
+]

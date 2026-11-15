@@ -1,0 +1,4002 @@
+{
+  "linux-001": {
+    "command": "cat",
+    "description": "ファイルの内容を連結して出力します。"
+  },
+  "linux-002": {
+    "command": "grep",
+    "description": "ファイル内で特定のパターンを検索します。"
+  },
+  "linux-003": {
+    "command": "chmod",
+    "description": "ファイルやディレクトリのアクセス権を変更します。"
+  },
+  "linux-004": {
+    "command": "chown",
+    "description": "ファイルやディレクトリの所有者を変更します。"
+  },
+  "linux-005": {
+    "command": "ls",
+    "description": "ディレクトリの内容を一覧表示します。"
+  },
+  "linux-006": {
+    "command": "cd",
+    "description": "現在の作業ディレクトリを変更します。"
+  },
+  "linux-007": {
+    "command": "pwd",
+    "description": "現在の作業ディレクトリのパスを出力します。"
+  },
+  "linux-008": {
+    "command": "mkdir",
+    "description": "新しいディレクトリを作成します。"
+  },
+  "linux-009": {
+    "command": "rm",
+    "description": "ファイルやディレクトリを削除します。"
+  },
+  "linux-010": {
+    "command": "cp",
+    "description": "ファイルやディレクトリをコピーします。"
+  },
+  "linux-011": {
+    "command": "mv",
+    "description": "ファイルやディレクトリを移動、または名前変更します。"
+  },
+  "linux-012": {
+    "command": "ps",
+    "description": "現在実行中のプロセスを表示します。"
+  },
+  "linux-013": {
+    "command": "top",
+    "description": "システムのプロセスとリソースをリアルタイムで表示します。"
+  },
+  "linux-014": {
+    "command": "df",
+    "description": "ディスク容量の使用状況を表示します。"
+  },
+  "linux-015": {
+    "command": "free",
+    "description": "システムのメモリ使用状況を表示します。"
+  },
+  "linux-016": {
+    "command": "systemctl status",
+    "description": "systemdサービスの現在の状態と最近のログエントリを表示します。"
+  },
+  "linux-017": {
+    "command": "journalctl",
+    "description": "個々のサービスで絞り込みながらsystemdのジャーナルログを読み取ります。"
+  },
+  "linux-018": {
+    "command": "find",
+    "description": "ディレクトリツリーから、名前や種類などの条件に合うファイルを検索します。"
+  },
+  "linux-019": {
+    "command": "tail",
+    "description": "ファイルの末尾の行を表示し、追加される新しい行を追跡することもできます。"
+  },
+  "linux-020": {
+    "command": "ファイルの最後の5行を表示するコマンドはどれですか?",
+    "description": "tail -n 5"
+  },
+  "linux-021": {
+    "command": "ディレクトリのサイズを表示するコマンドはどれですか?",
+    "description": "du -sh"
+  },
+  "linux-022": {
+    "command": "ファイルの行数のみをカウントするコマンドはどれですか?",
+    "description": "wc -l"
+  },
+  "linux-023": {
+    "command": "システムの稼働時間を表示するコマンドはどれですか?",
+    "description": "uptime"
+  },
+  "git-001": {
+    "command": "git clone",
+    "description": "リモートリポジトリのローカルコピーを作成します。"
+  },
+  "git-002": {
+    "command": "git init",
+    "description": "新しいGitリポジトリを初期化します。"
+  },
+  "git-003": {
+    "command": "git add",
+    "description": "次のコミットに向けて変更をステージングします。"
+  },
+  "git-004": {
+    "command": "git commit",
+    "description": "ステージングされた変更をリポジトリに記録します。"
+  },
+  "git-005": {
+    "command": "git push",
+    "description": "ローカルのコミットをリモートリポジトリにアップロードします。"
+  },
+  "git-006": {
+    "command": "git pull",
+    "description": "リモートリポジトリから変更を取得してマージします。"
+  },
+  "git-007": {
+    "command": "git branch",
+    "description": "ブランチを一覧表示、作成、または削除します。"
+  },
+  "git-008": {
+    "command": "git checkout",
+    "description": "ブランチを切り替えるか、作業ツリーのファイルを復元します。"
+  },
+  "git-009": {
+    "command": "git merge",
+    "description": "2つ以上の開発履歴を統合します。"
+  },
+  "git-010": {
+    "command": "git status",
+    "description": "作業ツリーの状態を表示します。"
+  },
+  "git-011": {
+    "command": "git diff",
+    "description": "作業ツリーとステージング領域の間の変更を表示します。--stagedは次のコミット用にステージングされた変更を表示します。"
+  },
+  "git-012": {
+    "command": "git stash",
+    "description": "追跡対象ファイルの変更を一時保存し、作業ツリーをクリーンな状態に戻します。未追跡ファイルを含めるには-uを使います。"
+  },
+  "git-013": {
+    "command": "Gitとは何ですか?",
+    "description": "バージョン管理システム"
+  },
+  "git-014": {
+    "command": "コミット履歴を表示するコマンドはどれですか?",
+    "description": "git log"
+  },
+  "git-015": {
+    "command": "コミット履歴を一行ずつ表示するコマンドはどれですか?",
+    "description": "git log --oneline"
+  },
+  "git-016": {
+    "command": "Git のコミット作成者名をグローバルに Alex に設定するコマンドはどれか？",
+    "description": "git config --global user.name \"Alex\""
+  },
+  "git-017": {
+    "command": "Git のコミット作成者メールをグローバルに alex@example.com に設定するコマンドはどれか？",
+    "description": "git config --global user.email \"alex@example.com\""
+  },
+  "git-018": {
+    "command": "Gitでファイルを無視するために使用されるファイルはどれですか?",
+    "description": ".gitignore"
+  },
+  "git-019": {
+    "command": "リポジトリのルートで、無視されていない追加・変更・削除をすべてステージし、コミットはしないコマンドはどれか？",
+    "description": "git add ."
+  },
+  "git-020": {
+    "command": "コマンドラインでコミットメッセージを直接渡すオプションはどれか？",
+    "description": "git commit -m"
+  },
+  "git-021": {
+    "command": "追跡されているファイルを削除するコマンドはどれですか?",
+    "description": "git rm"
+  },
+  "git-022": {
+    "command": "現在のリポジトリだけに user.name を設定するコマンドはどれか？",
+    "description": "git config --local user.name \"Alex\""
+  },
+  "git-023": {
+    "command": "選んだ変更部分を対話的にステージするコマンドはどれか？",
+    "description": "git add -p"
+  },
+  "docker-001": {
+    "command": "docker build",
+    "description": "Dockerfileからイメージをビルドします。"
+  },
+  "docker-002": {
+    "command": "docker run",
+    "description": "新しいコンテナでコマンドを実行します。"
+  },
+  "docker-003": {
+    "command": "docker ps",
+    "description": "実行中のコンテナを一覧表示します。"
+  },
+  "docker-004": {
+    "command": "docker images",
+    "description": "ローカルのDockerイメージを一覧表示します。"
+  },
+  "docker-005": {
+    "command": "docker stop",
+    "description": "実行中のコンテナを1つ以上停止します。"
+  },
+  "docker-006": {
+    "command": "docker rm",
+    "description": "コンテナを1つ以上削除します。"
+  },
+  "docker-007": {
+    "command": "docker rmi",
+    "description": "イメージを1つ以上削除します。"
+  },
+  "docker-008": {
+    "command": "docker exec",
+    "description": "実行中のコンテナでコマンドを実行します。"
+  },
+  "docker-009": {
+    "command": "docker logs",
+    "description": "コンテナのログを取得します。"
+  },
+  "docker-010": {
+    "command": "docker-compose up",
+    "description": "docker-compose.ymlからコンテナを作成して起動します。"
+  },
+  "docker-011": {
+    "command": "docker inspect",
+    "description": "コンテナやイメージなどのDockerオブジェクトに関する詳細なJSON情報を表示します。"
+  },
+  "docker-012": {
+    "command": "docker stats",
+    "description": "CPUとメモリを含むコンテナのリソース使用状況をリアルタイムで表示します。--no-streamは単一のスナップショットを表示します。"
+  },
+  "docker-013": {
+    "command": "コンテナをデタッチモードで実行するコマンドはどれですか?",
+    "description": "docker run -d"
+  },
+  "docker-014": {
+    "command": "標準入力を開いたまま、新しいコンテナに疑似 TTY を割り当てるコマンドはどれか？",
+    "description": "docker run -it"
+  },
+  "docker-015": {
+    "command": "中間イメージを含むすべてのイメージを一覧表示するコマンドはどれですか?",
+    "description": "docker images -a"
+  },
+  "docker-016": {
+    "command": "停止中のすべてのコンテナを削除するコマンドはどれですか?",
+    "description": "docker container prune"
+  },
+  "docker-017": {
+    "command": "未使用のすべてのイメージを削除するコマンドはどれですか?",
+    "description": "docker image prune -a"
+  },
+  "docker-018": {
+    "command": "コンテナ内で実行中のプロセスを表示するコマンドはどれですか?",
+    "description": "docker top"
+  },
+  "docker-019": {
+    "command": "Dockerネットワークを作成するコマンドはどれですか?",
+    "description": "docker network create"
+  },
+  "docker-020": {
+    "command": "Dockerネットワークを一覧表示するコマンドはどれですか?",
+    "description": "docker network ls"
+  },
+  "docker-021": {
+    "command": "Dockerボリュームを作成するコマンドはどれですか?",
+    "description": "docker volume create"
+  },
+  "docker-022": {
+    "command": "Dockerボリュームを一覧表示するコマンドはどれですか?",
+    "description": "docker volume ls"
+  },
+  "docker-023": {
+    "command": "Dockerのシステム情報を表示するコマンドはどれですか?",
+    "description": "docker info"
+  },
+  "k8s-001": {
+    "command": "kubectl get pods",
+    "description": "現在の名前空間にあるPodを一覧表示します。"
+  },
+  "k8s-002": {
+    "command": "kubectl apply",
+    "description": "ファイル名を指定してリソースに構成を適用します。"
+  },
+  "k8s-003": {
+    "command": "kubectl delete",
+    "description": "ファイル名または名前でリソースを削除します。"
+  },
+  "k8s-004": {
+    "command": "kubectl describe",
+    "description": "特定のリソースに関する詳細情報を表示します。"
+  },
+  "k8s-005": {
+    "command": "kubectl logs",
+    "description": "Pod内のコンテナのログを出力します。"
+  },
+  "k8s-006": {
+    "command": "kubectl exec",
+    "description": "コンテナ内でコマンドを実行します。"
+  },
+  "k8s-007": {
+    "command": "kubectl get nodes",
+    "description": "クラスター内のすべてのノードを一覧表示します。"
+  },
+  "k8s-008": {
+    "command": "kubectl get services",
+    "description": "現在の名前空間にあるすべてのサービスを一覧表示します。"
+  },
+  "k8s-009": {
+    "command": "kubectl scale",
+    "description": "DeploymentまたはReplicaSetの新しいサイズを設定します。"
+  },
+  "k8s-010": {
+    "command": "kubectl port-forward",
+    "description": "ローカルポートをPodに転送します。"
+  },
+  "k8s-011": {
+    "command": "kubectl rollout status",
+    "description": "リソースのロールアウトが完了するかタイムアウトするまで進行状況を監視します。"
+  },
+  "k8s-012": {
+    "command": "すべての名前空間の Pod を一覧表示するコマンドはどれですか?",
+    "description": "kubectl get pods -A"
+  },
+  "k8s-013": {
+    "command": "Pod の詳細を表示するコマンドはどれですか?",
+    "description": "kubectl describe pod"
+  },
+  "k8s-014": {
+    "command": "Pod のログを継続的に表示するコマンドはどれですか?",
+    "description": "kubectl logs -f"
+  },
+  "k8s-015": {
+    "command": "Pod を削除するコマンドはどれですか?",
+    "description": "kubectl delete pod"
+  },
+  "k8s-016": {
+    "command": "Deployment を作成するコマンドはどれですか?",
+    "description": "kubectl create deployment"
+  },
+  "k8s-017": {
+    "command": "Deployment を一覧表示するコマンドはどれですか?",
+    "description": "kubectl get deployments"
+  },
+  "k8s-018": {
+    "command": "クラスター情報を表示するコマンドはどれですか?",
+    "description": "kubectl cluster-info"
+  },
+  "k8s-019": {
+    "command": "YAML ファイルから設定を適用するコマンドはどれですか?",
+    "description": "kubectl apply -f"
+  },
+  "k8s-020": {
+    "command": "YAML ファイルからリソースを作成するコマンドはどれですか?",
+    "description": "kubectl create -f"
+  },
+  "k8s-021": {
+    "command": "YAML ファイルで定義されたリソースを削除するコマンドはどれですか?",
+    "description": "kubectl delete -f"
+  },
+  "k8s-022": {
+    "command": "要求先の名前空間 payments を選ぶ kubectl オプションはどれか？",
+    "description": "-n payments"
+  },
+  "k8s-023": {
+    "command": "現在の kubeconfig コンテキスト名を表示するコマンドはどれか？",
+    "description": "kubectl config current-context"
+  },
+  "networking-001": {
+    "command": "curl",
+    "description": "サーバーから、またはサーバーへデータを転送します。"
+  },
+  "networking-002": {
+    "command": "ping",
+    "description": "IPネットワーク上のホストへの到達性をテストします。"
+  },
+  "networking-003": {
+    "command": "ssh",
+    "description": "リモートマシンに安全に接続します。"
+  },
+  "networking-004": {
+    "command": "netstat",
+    "description": "ネットワーク接続とルーティングテーブルを表示します。"
+  },
+  "networking-005": {
+    "command": "nslookup",
+    "description": "インターネットのドメインネームサーバーに問い合わせます。"
+  },
+  "networking-006": {
+    "command": "dig",
+    "description": "DNS検索を実行して応答を表示します。"
+  },
+  "networking-007": {
+    "command": "traceroute",
+    "description": "ネットワークホストまでパケットが通る経路を出力します。"
+  },
+  "networking-008": {
+    "command": "iptables",
+    "description": "LinuxでIPパケットのフィルタールールを設定します。"
+  },
+  "networking-009": {
+    "command": "telnet",
+    "description": "別のホストと対話的に通信します。"
+  },
+  "networking-010": {
+    "command": "nc (netcat)",
+    "description": "ネットワーク接続を通じてデータを読み書きします。"
+  },
+  "networking-011": {
+    "command": "IPは何の略ですか？",
+    "description": "Internet Protocol"
+  },
+  "networking-012": {
+    "command": "Webページの転送に使われるプロトコルはどれですか？",
+    "description": "HTTP"
+  },
+  "networking-013": {
+    "command": "HTTPS のデフォルトポートはどれか？",
+    "description": "443"
+  },
+  "networking-014": {
+    "command": "HTTP のデフォルトポートはどれか？",
+    "description": "80"
+  },
+  "networking-015": {
+    "command": "SSH のデフォルトポートはどれか？",
+    "description": "22"
+  },
+  "networking-016": {
+    "command": "DNSの役割は何ですか？",
+    "description": "ドメイン名をIPアドレスに解決する"
+  },
+  "networking-017": {
+    "command": "OSI参照モデルのどの層がルーティングを担当しますか？",
+    "description": "ネットワーク層"
+  },
+  "networking-018": {
+    "command": "メールの送信に使われるプロトコルはどれですか？",
+    "description": "SMTP"
+  },
+  "networking-019": {
+    "command": "IPv4 のループバックアドレスはどれか？",
+    "description": "127.0.0.1"
+  },
+  "networking-020": {
+    "command": "コネクション型のプロトコルはどれですか？",
+    "description": "TCP"
+  },
+  "networking-021": {
+    "command": "コネクションレス型のプロトコルはどれですか？",
+    "description": "UDP"
+  },
+  "networking-022": {
+    "command": "ルーティング情報を表示するコマンドはどれですか？",
+    "description": "ip route"
+  },
+  "networking-023": {
+    "command": "Linuxでネットワークインターフェースを表示するコマンドはどれですか？",
+    "description": "ip addr"
+  },
+  "networking-024": {
+    "command": "IPv4 アドレスは何ビットか？",
+    "description": "32"
+  },
+  "jenkins-001": {
+    "command": "Jenkinsfile",
+    "description": "Jenkins Pipelineの定義を含むテキストファイルです。"
+  },
+  "jenkins-002": {
+    "command": "Pipeline",
+    "description": "継続的デリバリーのパイプラインを支援するプラグイン群です。"
+  },
+  "jenkins-003": {
+    "command": "Agent",
+    "description": "Pipelineまたはステージを実行する場所を指定します。"
+  },
+  "jenkins-004": {
+    "command": "Stage",
+    "description": "概念的に独立したタスクの部分集合を定義します。"
+  },
+  "jenkins-005": {
+    "command": "Node",
+    "description": "Pipelineを実行できるマシンです。"
+  },
+  "jenkins-006": {
+    "command": "Build Trigger",
+    "description": "Jenkinsのビルドを開始する仕組みです。"
+  },
+  "jenkins-007": {
+    "command": "Artifact",
+    "description": "ビルドプロセスによって生成されるファイルです。"
+  },
+  "jenkins-008": {
+    "command": "Post actions",
+    "description": "ステージまたはパイプラインの完了後に実行されるアクションです。"
+  },
+  "jenkins-009": {
+    "command": "Credentials",
+    "description": "Jenkinsのジョブで使われる、安全に保存されたシークレットです。"
+  },
+  "jenkins-010": {
+    "command": "Jenkinsとは何ですか?",
+    "description": "CI/CDツール"
+  },
+  "jenkins-011": {
+    "command": "Jenkinsは何の言語で書かれていますか?",
+    "description": "Java"
+  },
+  "jenkins-012": {
+    "command": "Jenkinsがデフォルトで使用するポートはどれですか?",
+    "description": "8080"
+  },
+  "jenkins-013": {
+    "command": "Jenkinsのジョブとは何ですか?",
+    "description": "自動化されたタスク"
+  },
+  "jenkins-014": {
+    "command": "JenkinsとGitを連携させるプラグインはどれですか?",
+    "description": "Git Plugin"
+  },
+  "jenkins-015": {
+    "command": "Jenkinsは主に何のために使われますか?",
+    "description": "自動化"
+  },
+  "jenkins-016": {
+    "command": "CIは何の略ですか?",
+    "description": "継続的インテグレーション"
+  },
+  "jenkins-017": {
+    "command": "DevOpsにおけるCDは何の略ですか?",
+    "description": "継続的デリバリー"
+  },
+  "jenkins-018": {
+    "command": "Jenkinsプラグインをインストールするメニューはどれですか?",
+    "description": "Manage Jenkins"
+  },
+  "jenkins-019": {
+    "command": "Jenkinsのホームディレクトリを示す変数はどれですか?",
+    "description": "JENKINS_HOME"
+  },
+  "jenkins-020": {
+    "command": "Jenkinsのジョブを手動で開始するボタンはどれですか?",
+    "description": "Build Now"
+  },
+  "jenkins-021": {
+    "command": "Jenkinsと最も一般的に連携されるソースコード管理システムはどれですか?",
+    "description": "Git"
+  },
+  "jenkins-022": {
+    "command": "ビルド用ツールとは別に、Jenkins コントローラー自体の実行に必要なものはどれか？",
+    "description": "JRE または JDK が提供する対応 Java 実行環境"
+  },
+  "jenkins-023": {
+    "command": "単純なタスクで最も一般的に使われるJenkinsのジョブタイプはどれですか?",
+    "description": "フリースタイル・プロジェクト"
+  },
+  "jenkins-024": {
+    "command": "Jenkins ワークスペースの用途はどれか？",
+    "description": "ジョブ中に取得または生成するファイル"
+  },
+  "terraform-001": {
+    "command": "terraform init",
+    "description": "Terraformファイルを含む作業ディレクトリを初期化します。"
+  },
+  "terraform-002": {
+    "command": "terraform plan",
+    "description": "Terraformが実行するアクションを示す実行計画を作成します。"
+  },
+  "terraform-003": {
+    "command": "terraform apply",
+    "description": "望ましい状態に到達するために変更を適用します。"
+  },
+  "terraform-004": {
+    "command": "terraform destroy",
+    "description": "Terraformが管理するインフラストラクチャを破棄します。"
+  },
+  "terraform-005": {
+    "command": "terraform fmt",
+    "description": "Terraformファイルを標準形式に書き換えます。"
+  },
+  "terraform-006": {
+    "command": "terraform validate",
+    "description": "ディレクトリ内の構成ファイルを検証します。"
+  },
+  "terraform-007": {
+    "command": "terraform state",
+    "description": "リソースの一覧表示や移動など、高度な状態管理を行います。"
+  },
+  "terraform-008": {
+    "command": "Provider",
+    "description": "Terraformがクラウドプロバイダーと連携できるようにするプラグインです。"
+  },
+  "terraform-009": {
+    "command": "Resource",
+    "description": "Terraformが作成して管理するインフラストラクチャオブジェクトを定義します。"
+  },
+  "terraform-010": {
+    "command": "Variable",
+    "description": "入力値を受け取り、Terraformモジュールを異なる設定で再利用できるようにします。"
+  },
+  "terraform-011": {
+    "command": "terraform output",
+    "description": "Terraformの状態からルートモジュールの出力値を読み取ります。"
+  },
+  "terraform-012": {
+    "command": "Terraformとは何ですか?",
+    "description": "Infrastructure as Codeツール"
+  },
+  "terraform-013": {
+    "command": "Terraformを開発したのはどこですか?",
+    "description": "HashiCorp"
+  },
+  "terraform-014": {
+    "command": "JSON 形式とは別の、Terraform のネイティブ設定構文の基礎言語はどれか？",
+    "description": "HCL"
+  },
+  "terraform-015": {
+    "command": "Terraformファイルで一般的に使用されるファイル拡張子はどれですか?",
+    "description": ".tf"
+  },
+  "terraform-016": {
+    "command": "Terraformのステートをローカルに保存するファイルはどれですか?",
+    "description": "terraform.tfstate"
+  },
+  "terraform-017": {
+    "command": "Terraformのバージョンを表示するコマンドはどれですか?",
+    "description": "terraform version"
+  },
+  "terraform-018": {
+    "command": "Terraformはどのアプローチに従いますか?",
+    "description": "宣言型"
+  },
+  "terraform-019": {
+    "command": "状態からルートモジュールの出力値を表示するコマンドはどれか？",
+    "description": "terraform output"
+  },
+  "terraform-020": {
+    "command": "入力変数 region を読む式はどれか？",
+    "description": "var.region"
+  },
+  "terraform-021": {
+    "command": "ローカル値 prefix を読む式はどれか？",
+    "description": "local.prefix"
+  },
+  "terraform-022": {
+    "command": "Terraform CLI のバージョンを制約する terraform ブロックの引数はどれか？",
+    "description": "required_version"
+  },
+  "terraform-023": {
+    "command": "プロバイダーの取得元とバージョン制約を宣言する terraform 内のブロックはどれか？",
+    "description": "required_providers"
+  },
+  "terraform-024": {
+    "command": "Terraform プロバイダーが主に提供するものはどれか？",
+    "description": "API やサービスとやり取りするリソース型とデータソース"
+  },
+  "ansible-001": {
+    "command": "ansible",
+    "description": "Ansibleインベントリのホストでアドホックなタスクを実行します。"
+  },
+  "ansible-002": {
+    "command": "ansible-playbook",
+    "description": "Ansibleプレイブックで定義された自動化タスクを実行します。"
+  },
+  "ansible-003": {
+    "command": "Inventory",
+    "description": "Ansibleが管理するホストとホストグループを一覧表示します。"
+  },
+  "ansible-004": {
+    "command": "Playbook",
+    "description": "自動化タスクと対象ホストをYAMLで定義します。"
+  },
+  "ansible-005": {
+    "command": "Module",
+    "description": "パッケージのインストールやファイルのコピーなど、特定のAnsible操作を実行します。"
+  },
+  "ansible-006": {
+    "command": "Task",
+    "description": "引数を指定してAnsibleモジュールを呼び出し、自動化の1ステップを実行します。"
+  },
+  "ansible-007": {
+    "command": "Role",
+    "description": "Ansibleのタスク、ハンドラー、変数、ファイルを再利用可能なディレクトリ構造に整理します。"
+  },
+  "ansible-008": {
+    "command": "Vault",
+    "description": "パスワードなどの機密データを暗号化されたファイルに保管します。"
+  },
+  "ansible-009": {
+    "command": "Handler",
+    "description": "別のタスクから通知された場合にのみ実行されるタスクです。"
+  },
+  "ansible-010": {
+    "command": "Facts",
+    "description": "リモートシステムに関する情報を含む変数です。"
+  },
+  "ansible-011": {
+    "command": "Ansibleは主に何に使用されますか?",
+    "description": "構成管理"
+  },
+  "ansible-012": {
+    "command": "Ansibleはどの言語で書かれていますか?",
+    "description": "Python"
+  },
+  "ansible-013": {
+    "command": "Ansibleで管理対象ホストを含むファイルはどれですか?",
+    "description": "インベントリファイル"
+  },
+  "ansible-014": {
+    "command": "デフォルトのインベントリファイルの場所はどこですか?",
+    "description": "/etc/ansible/hosts"
+  },
+  "ansible-015": {
+    "command": "Ansibleのバージョンを確認するコマンドはどれですか?",
+    "description": "ansible --version"
+  },
+  "ansible-016": {
+    "command": "Ansible の標準接続プラグインが Linux ホストに通常使うプロトコルはどれか？",
+    "description": "SSH"
+  },
+  "ansible-017": {
+    "command": "Ansibleプレイブックとは何ですか?",
+    "description": "自動化タスクを含むYAMLファイル"
+  },
+  "ansible-018": {
+    "command": "プレイブックで対象ホストを定義するキーワードはどれですか?",
+    "description": "hosts"
+  },
+  "ansible-019": {
+    "command": "プレイブックでタスクを定義するキーワードはどれですか?",
+    "description": "tasks"
+  },
+  "ansible-020": {
+    "command": "リモートホストにファイルをコピーするモジュールはどれですか?",
+    "description": "copy"
+  },
+  "ansible-021": {
+    "command": "サービスを管理するモジュールはどれですか?",
+    "description": "service"
+  },
+  "ansible-022": {
+    "command": "すべての対象 POSIX ホストで Ansible の接続と利用可能な Python を確認するコマンドはどれか？",
+    "description": "ansible all -m ping"
+  },
+  "ansible-023": {
+    "command": "Ansible プレイブックの記述に通常使う、読みやすい形式はどれか？",
+    "description": "YAML"
+  },
+  "ansible-024": {
+    "command": "Ansibleの設定を行うファイルはどれですか?",
+    "description": "ansible.cfg"
+  },
+  "bash-001": {
+    "command": "#!/bin/bash",
+    "description": "Bashシェルを使うようシステムに指示するシバン行です。"
+  },
+  "bash-002": {
+    "command": "echo",
+    "description": "テキストの1行または変数の値を表示します。"
+  },
+  "bash-003": {
+    "command": "if [ condition ]",
+    "description": "Bashスクリプトの基本的な条件文です。"
+  },
+  "bash-004": {
+    "command": "script.shにすでに実行権限がある場合、これを実行するコマンドはどれですか？",
+    "description": "./script.sh"
+  },
+  "bash-005": {
+    "command": "Bashを使ってscript.shを明示的に実行するコマンドはどれですか？",
+    "description": "bash script.sh"
+  },
+  "bash-006": {
+    "command": "Bashスクリプトで一行コメントを開始する記号はどれですか？",
+    "description": "#"
+  },
+  "bash-007": {
+    "command": "script.shを実行可能にするコマンドはどれですか？",
+    "description": "chmod +x script.sh"
+  },
+  "bash-008": {
+    "command": "ユーザーからの入力を読み取る組み込みコマンドはどれですか？",
+    "description": "read"
+  },
+  "bash-009": {
+    "command": "変数の値を展開するために使われる記号はどれですか？",
+    "description": "$"
+  },
+  "bash-010": {
+    "command": "Bashで有効な変数代入はどれですか？",
+    "description": "name=John"
+  },
+  "bash-011": {
+    "command": "直前のコマンドの終了ステータスを出力するコマンドはどれですか？",
+    "description": "echo $?"
+  },
+  "bash-012": {
+    "command": "終了ステータス0は通常何を示しますか？",
+    "description": "成功"
+  },
+  "bash-013": {
+    "command": "一行に複数のコマンドを区切る記号はどれですか？",
+    "description": ";"
+  },
+  "bash-014": {
+    "command": "シェルスクリプトによく使われるファイル拡張子はどれですか？",
+    "description": ".sh"
+  },
+  "bash-015": {
+    "command": "環境変数を表示するコマンドはどれですか？",
+    "description": "env"
+  },
+  "bash-016": {
+    "command": "現在のユーザーのデフォルトシェルを表示するコマンドはどれですか？",
+    "description": "echo $SHELL"
+  },
+  "bash-017": {
+    "command": "Bashで次の文字をエスケープする文字はどれですか？",
+    "description": "バックスラッシュ"
+  },
+  "bash-018": {
+    "command": "変数展開とコマンド置換を防ぐクォートの種類はどれですか？",
+    "description": "シングルクォート"
+  },
+  "bash-019": {
+    "command": "空白を保持しつつ変数展開を許可するクォートの種類はどれですか？",
+    "description": "ダブルクォート"
+  },
+  "bash-020": {
+    "command": "標準出力をリダイレクトしてファイルを上書きする演算子はどれですか？",
+    "description": ">"
+  },
+  "bash-021": {
+    "command": "現在の作業ディレクトリを出力するコマンドはどれですか？",
+    "description": "pwd"
+  },
+  "bash-022": {
+    "command": "エラーメッセージに使われる標準ストリームはどれですか？",
+    "description": "stderr"
+  },
+  "bash-023": {
+    "command": "標準入力を表すファイルディスクリプタはどれですか？",
+    "description": "0"
+  },
+  "bash-024": {
+    "command": "ターミナル画面をクリアするコマンドはどれですか？",
+    "description": "clear"
+  },
+  "python-001": {
+    "command": "print()",
+    "description": "コンソールにデータを出力します。"
+  },
+  "python-002": {
+    "command": "import",
+    "description": "モジュールまたは特定の関数をスクリプトにインポートします。"
+  },
+  "python-003": {
+    "command": "def",
+    "description": "再利用可能なコードブロックである関数を定義します。"
+  },
+  "python-004": {
+    "command": "pip install",
+    "description": "PyPIからPythonパッケージをインストールします。"
+  },
+  "python-005": {
+    "command": "virtualenv",
+    "description": "分離されたPython環境を作成します。"
+  },
+  "python-006": {
+    "command": "Pythonでコメントを開始する記号はどれですか?",
+    "description": "#"
+  },
+  "python-007": {
+    "command": "ユーザー入力を読み取る組み込み関数はどれですか?",
+    "description": "input()"
+  },
+  "python-008": {
+    "command": "Pythonのソースファイルに使われる拡張子はどれですか?",
+    "description": ".py"
+  },
+  "python-009": {
+    "command": "等価性を比較する演算子はどれですか?",
+    "description": "=="
+  },
+  "python-010": {
+    "command": "値を代入する演算子はどれですか?",
+    "description": "="
+  },
+  "python-011": {
+    "command": "値5を持つxという名前の変数を作成する文はどれですか?",
+    "description": "x = 5"
+  },
+  "python-012": {
+    "command": "オブジェクトのデータ型を返す組み込み関数はどれですか?",
+    "description": "type()"
+  },
+  "python-013": {
+    "command": "値を整数に変換する組み込み関数はどれですか?",
+    "description": "int()"
+  },
+  "python-014": {
+    "command": "値を文字列に変換する組み込み関数はどれですか?",
+    "description": "str()"
+  },
+  "python-015": {
+    "command": "シーケンスの長さを返す組み込み関数はどれですか?",
+    "description": "len()"
+  },
+  "python-016": {
+    "command": "数値のシーケンスを生成する組み込み関数はどれですか?",
+    "description": "range()"
+  },
+  "python-017": {
+    "command": "シーケンスを反復処理するループを開始するキーワードはどれですか?",
+    "description": "for"
+  },
+  "python-018": {
+    "command": "条件が真の間、コードを繰り返すキーワードはどれですか?",
+    "description": "while"
+  },
+  "python-019": {
+    "command": "Pythonのforループまたはwhileループに付けるどの節が、ループがbreakに到達せずに終了した場合にのみ実行されますか?",
+    "description": "else"
+  },
+  "python-020": {
+    "command": "Pythonで、ループの現在の反復をスキップするキーワードはどれですか?",
+    "description": "continue"
+  },
+  "python-021": {
+    "command": "ネストされた関数が、外側の関数の変数を再束縛できるようにするPythonのキーワードはどれですか?",
+    "description": "nonlocal"
+  },
+  "python-022": {
+    "command": "例外処理を開始するキーワードはどれですか?",
+    "description": "try"
+  },
+  "python-023": {
+    "command": "オブジェクトの一意な識別値を返すPython組み込み関数はどれですか?",
+    "description": "id()"
+  },
+  "python-024": {
+    "command": "辞書を作成する構文はどれですか?",
+    "description": "{'name': 'John'}"
+  },
+  "perl-001": {
+    "command": "コマンドラインから Perl スクリプトを実行するコマンドはどれですか?",
+    "description": "perl script.pl"
+  },
+  "perl-002": {
+    "command": "Perl スクリプトで一般的に使われるシバン行はどれですか?",
+    "description": "#!/usr/bin/perl"
+  },
+  "perl-003": {
+    "command": "Perl で単一行コメントを開始する記号はどれですか?",
+    "description": "#"
+  },
+  "perl-004": {
+    "command": "出力を表示する組み込み関数はどれですか?",
+    "description": "print"
+  },
+  "perl-005": {
+    "command": "Perl の文を通常終了させる文字はどれですか?",
+    "description": ";"
+  },
+  "perl-006": {
+    "command": "スカラー変数を表すシジルはどれですか?",
+    "description": "$"
+  },
+  "perl-007": {
+    "command": "文字列内の部分文字列の位置を返す Perl 関数はどれですか?",
+    "description": "index"
+  },
+  "perl-008": {
+    "command": "数値の絶対値を返す Perl 関数はどれですか?",
+    "description": "abs"
+  },
+  "perl-009": {
+    "command": "文字列の長さを返す関数はどれですか?",
+    "description": "length"
+  },
+  "perl-010": {
+    "command": "文字列の末尾の改行を削除する関数はどれですか?",
+    "description": "chomp"
+  },
+  "perl-011": {
+    "command": "文字列をリストに分割する関数はどれですか?",
+    "description": "split"
+  },
+  "perl-012": {
+    "command": "リストの要素を結合して文字列にする関数はどれですか?",
+    "description": "join"
+  },
+  "perl-013": {
+    "command": "文字列を連結する演算子はどれですか?",
+    "description": "."
+  },
+  "perl-014": {
+    "command": "文字列を繰り返す演算子はどれですか?",
+    "description": "x"
+  },
+  "perl-015": {
+    "command": "ファイルを開く関数はどれですか?",
+    "description": "open"
+  },
+  "perl-016": {
+    "command": "Perl で、ファイルを読み取り用に開くファイルモードはどれですか?",
+    "description": "<"
+  },
+  "perl-017": {
+    "command": "ファイルシステムからファイルを削除する Perl 関数はどれですか?",
+    "description": "unlink"
+  },
+  "perl-018": {
+    "command": "パスが存在するかどうかを調べる Perl のファイルテスト演算子はどれですか?",
+    "description": "-e"
+  },
+  "perl-019": {
+    "command": "標準入力を表す組み込みファイルハンドルはどれですか?",
+    "description": "STDIN"
+  },
+  "perl-020": {
+    "command": "標準出力を表す組み込みファイルハンドルはどれですか?",
+    "description": "STDOUT"
+  },
+  "perl-021": {
+    "command": "標準エラーを表す組み込みファイルハンドルはどれですか?",
+    "description": "STDERR"
+  },
+  "perl-022": {
+    "command": "開いているファイルハンドルを閉じる関数はどれですか?",
+    "description": "close"
+  },
+  "perl-023": {
+    "command": "デフォルトの入力変数である特殊変数はどれですか?",
+    "description": "$_"
+  },
+  "perl-024": {
+    "command": "直前に成功したパターンマッチの内容を保持する特殊変数はどれですか?",
+    "description": "$&"
+  },
+  "powershell-001": {
+    "command": "現在の場所を表示するcmdletはどれですか?",
+    "description": "Get-Location"
+  },
+  "powershell-002": {
+    "command": "ファイルとディレクトリを一覧表示するcmdletはどれですか?",
+    "description": "Get-ChildItem"
+  },
+  "powershell-003": {
+    "command": "現在のディレクトリを変更するcmdletはどれですか?",
+    "description": "Set-Location"
+  },
+  "powershell-004": {
+    "command": "ファイルの内容を表示するcmdletはどれですか?",
+    "description": "Get-Content"
+  },
+  "powershell-005": {
+    "command": "新しいファイルまたはディレクトリを作成するcmdletはどれですか?",
+    "description": "New-Item"
+  },
+  "powershell-006": {
+    "command": "ファイルとディレクトリをコピーするcmdletはどれですか?",
+    "description": "Copy-Item"
+  },
+  "powershell-007": {
+    "command": "ファイルとディレクトリを移動するcmdletはどれですか?",
+    "description": "Move-Item"
+  },
+  "powershell-008": {
+    "command": "ファイルとディレクトリを削除するcmdletはどれですか?",
+    "description": "Remove-Item"
+  },
+  "powershell-009": {
+    "command": "ファイル名を変更するcmdletはどれですか?",
+    "description": "Rename-Item"
+  },
+  "powershell-010": {
+    "command": "PowerShellで単一行コメントを開始する記号はどれですか?",
+    "description": "#"
+  },
+  "powershell-011": {
+    "command": "ファイルの末尾にテキストを追加するPowerShellのcmdletはどれですか?",
+    "description": "Add-Content"
+  },
+  "powershell-012": {
+    "command": "変数名の前に付ける記号はどれですか?",
+    "description": "$"
+  },
+  "powershell-013": {
+    "command": "コマンド履歴を表示するcmdletはどれですか?",
+    "description": "Get-History"
+  },
+  "powershell-014": {
+    "command": "コンソール画面をクリアするcmdletはどれですか?",
+    "description": "Clear-Host"
+  },
+  "powershell-015": {
+    "command": "ヘルプ情報を表示するcmdletはどれですか?",
+    "description": "Get-Help"
+  },
+  "powershell-016": {
+    "command": "ローカルのヘルプファイルを更新するcmdletはどれですか?",
+    "description": "Update-Help"
+  },
+  "powershell-017": {
+    "command": "利用可能なコマンドを一覧表示するcmdletはどれですか?",
+    "description": "Get-Command"
+  },
+  "powershell-018": {
+    "command": "オブジェクトのプロパティとメソッドを表示するcmdletはどれですか?",
+    "description": "Get-Member"
+  },
+  "powershell-019": {
+    "command": "PowerShellの詳細なバージョン情報を含む自動変数はどれですか?",
+    "description": "$PSVersionTable"
+  },
+  "powershell-020": {
+    "command": "エイリアスを一覧表示するcmdletはどれですか?",
+    "description": "Get-Alias"
+  },
+  "powershell-021": {
+    "command": "現在の実行ポリシーを表示するcmdletはどれですか?",
+    "description": "Get-ExecutionPolicy"
+  },
+  "powershell-022": {
+    "command": "実行ポリシーを変更するcmdletはどれですか?",
+    "description": "Set-ExecutionPolicy"
+  },
+  "powershell-023": {
+    "command": "デフォルトでスクリプトの実行をブロックする実行ポリシーはどれですか?",
+    "description": "Restricted"
+  },
+  "powershell-024": {
+    "command": "ローカルで作成されたスクリプトの実行を許可する実行ポリシーはどれですか?",
+    "description": "RemoteSigned"
+  },
+  "javascript-001": {
+    "command": "JavaScriptとは何ですか?",
+    "description": "プログラミング言語"
+  },
+  "javascript-002": {
+    "command": "ブロックスコープの変数を宣言するキーワードはどれですか?",
+    "description": "let"
+  },
+  "javascript-003": {
+    "command": "定数を宣言するキーワードはどれですか?",
+    "description": "const"
+  },
+  "javascript-004": {
+    "command": "単一行コメントを開始する記号はどれですか?",
+    "description": "//"
+  },
+  "javascript-005": {
+    "command": "オブジェクトが指定したコンストラクタのインスタンスかどうかを確認するJavaScriptの演算子はどれですか?",
+    "description": "instanceof"
+  },
+  "javascript-006": {
+    "command": "意図的に値がないことを表す値はどれですか?",
+    "description": "null"
+  },
+  "javascript-007": {
+    "command": "変数が宣言されたものの値が代入されていない場合に返される値はどれですか?",
+    "description": "undefined"
+  },
+  "javascript-008": {
+    "command": "次のうち、プリミティブデータ型ではないものはどれですか?",
+    "description": "object"
+  },
+  "javascript-009": {
+    "command": "文字列を整数に変換する関数はどれですか?",
+    "description": "parseInt()"
+  },
+  "javascript-010": {
+    "command": "文字列を浮動小数点数に変換する関数はどれですか?",
+    "description": "parseFloat()"
+  },
+  "javascript-011": {
+    "command": "値と型の両方が等しいかを確認する演算子はどれですか?",
+    "description": "==="
+  },
+  "javascript-012": {
+    "command": "型変換を伴って値の等価性を確認する演算子はどれですか?",
+    "description": "=="
+  },
+  "javascript-013": {
+    "command": "除算の余りを返す演算子はどれですか?",
+    "description": "%"
+  },
+  "javascript-014": {
+    "command": "ブラウザでメッセージボックスを表示する関数はどれですか?",
+    "description": "alert()"
+  },
+  "javascript-015": {
+    "command": "ブラウザのコンソールに出力を記録するメソッドはどれですか?",
+    "description": "console.log()"
+  },
+  "javascript-016": {
+    "command": "JavaScriptコードを組み込むために使用するHTMLタグはどれですか?",
+    "description": "<script>"
+  },
+  "javascript-017": {
+    "command": "関数を定義するキーワードはどれですか?",
+    "description": "function"
+  },
+  "javascript-018": {
+    "command": "ループを直ちに終了する文はどれですか?",
+    "description": "break"
+  },
+  "javascript-019": {
+    "command": "現在のループの反復をスキップする文はどれですか?",
+    "description": "continue"
+  },
+  "javascript-020": {
+    "command": "コードを少なくとも一度は実行するループはどれですか?",
+    "description": "do...while"
+  },
+  "javascript-021": {
+    "command": "配列の要素を反復処理するために一般的に使われるループはどれですか?",
+    "description": "for"
+  },
+  "javascript-022": {
+    "command": "条件に基づいてコードを実行する文はどれですか?",
+    "description": "if"
+  },
+  "javascript-023": {
+    "command": "エラー処理を開始するキーワードはどれですか?",
+    "description": "try"
+  },
+  "javascript-024": {
+    "command": "手動でエラーをスローする文はどれですか?",
+    "description": "throw"
+  },
+  "ruby-001": {
+    "command": "Rubyはどのような種類の言語ですか？",
+    "description": "オブジェクト指向プログラミング言語"
+  },
+  "ruby-002": {
+    "command": "Rubyを作ったのは誰ですか？",
+    "description": "Yukihiro Matsumoto"
+  },
+  "ruby-003": {
+    "command": "Rubyスクリプトにはどのファイル拡張子が使われますか？",
+    "description": ".rb"
+  },
+  "ruby-004": {
+    "command": "Rubyスクリプトを実行するコマンドはどれですか？",
+    "description": "ruby filename.rb"
+  },
+  "ruby-005": {
+    "command": "Rubyで単一行コメントを開始する記号はどれですか？",
+    "description": "#"
+  },
+  "ruby-006": {
+    "command": "Rubyで複数行コメントを開始するキーワードはどれですか？",
+    "description": "=begin"
+  },
+  "ruby-007": {
+    "command": "Rubyでメソッドを定義するキーワードはどれですか？",
+    "description": "def"
+  },
+  "ruby-008": {
+    "command": "メソッド定義を終了するキーワードはどれですか？",
+    "description": "end"
+  },
+  "ruby-009": {
+    "command": "改行付きで出力するメソッドはどれですか？",
+    "description": "puts"
+  },
+  "ruby-010": {
+    "command": "改行を追加せずに出力するメソッドはどれですか？",
+    "description": "print"
+  },
+  "ruby-011": {
+    "command": "標準入力から一行読み込むメソッドはどれですか？",
+    "description": "gets"
+  },
+  "ruby-012": {
+    "command": "Rubyでオブジェクトを文字列に変換するメソッドはどれですか？",
+    "description": "to_s"
+  },
+  "ruby-013": {
+    "command": "Rubyで文字列を整数に変換するメソッドはどれですか？",
+    "description": "to_i"
+  },
+  "ruby-014": {
+    "command": "文字列を浮動小数点数に変換するメソッドはどれですか？",
+    "description": "to_f"
+  },
+  "ruby-015": {
+    "command": "オブジェクトのクラスを返すメソッドはどれですか？",
+    "description": "class"
+  },
+  "ruby-016": {
+    "command": "オブジェクトがあるクラスの一種かどうかを調べるメソッドはどれですか？",
+    "description": "is_a?"
+  },
+  "ruby-017": {
+    "command": "オブジェクトがあるメソッドに応答するかどうかを調べるメソッドはどれですか？",
+    "description": "respond_to?"
+  },
+  "ruby-018": {
+    "command": "オブジェクトの一意な識別子を返すメソッドはどれですか？",
+    "description": "object_id"
+  },
+  "ruby-019": {
+    "command": "Rubyで値の等価性を調べる演算子はどれですか？",
+    "description": "=="
+  },
+  "ruby-020": {
+    "command": "case文が比較に一般的に使う演算子はどれですか？",
+    "description": "==="
+  },
+  "ruby-021": {
+    "command": "比較と順序付けに使われる演算子はどれですか？",
+    "description": "<=>"
+  },
+  "ruby-022": {
+    "command": "Rubyで定数はどのように宣言しますか？",
+    "description": "名前を大文字で始める"
+  },
+  "ruby-023": {
+    "command": "インスタンス変数を示す接頭辞はどれですか？",
+    "description": "@"
+  },
+  "ruby-024": {
+    "command": "Rubyで数値のべき乗を求める演算子はどれですか？",
+    "description": "**"
+  },
+  "aws-001": {
+    "command": "aws cli",
+    "description": "CLIからAWSサービスを管理するための統合ツールです。"
+  },
+  "aws-002": {
+    "command": "IAM",
+    "description": "AWSリソースへのアクセスを安全に制御します。"
+  },
+  "aws-003": {
+    "command": "S3",
+    "description": "あらゆるデータを保存、取得するためのオブジェクトストレージです。"
+  },
+  "aws-004": {
+    "command": "EC2",
+    "description": "クラウドでスケーラブルなコンピューティング容量を提供します。"
+  },
+  "aws-005": {
+    "command": "VPC",
+    "description": "クラウド内に論理的に分離された領域を用意します。"
+  },
+  "aws-006": {
+    "command": "仮想サーバーの起動に主に使用される AWS サービスはどれですか?",
+    "description": "Amazon EC2"
+  },
+  "aws-007": {
+    "command": "オブジェクトストレージ向けに設計された AWS ストレージサービスはどれですか?",
+    "description": "Amazon S3"
+  },
+  "aws-008": {
+    "command": "ユーザーのアイデンティティと権限を管理する AWS サービスはどれですか?",
+    "description": "AWS IAM"
+  },
+  "aws-009": {
+    "command": "サーバーレスコンピューティングを提供する AWS サービスはどれですか?",
+    "description": "AWS Lambda"
+  },
+  "aws-010": {
+    "command": "マネージド型リレーショナルデータベースである AWS サービスはどれですか?",
+    "description": "Amazon RDS"
+  },
+  "aws-011": {
+    "command": "フルマネージド型の NoSQL である AWS データベースはどれですか?",
+    "description": "Amazon DynamoDB"
+  },
+  "aws-012": {
+    "command": "アプリケーションと AWS リソースの監視に役立つ AWS サービスはどれですか?",
+    "description": "Amazon CloudWatch"
+  },
+  "aws-013": {
+    "command": "監査目的で API アクティビティを記録する AWS サービスはどれですか?",
+    "description": "CloudTrail"
+  },
+  "aws-014": {
+    "command": "分離された仮想ネットワークを提供する AWS ネットワーキングサービスはどれですか?",
+    "description": "Amazon VPC"
+  },
+  "aws-015": {
+    "command": "DNS 管理を提供する AWS サービスはどれですか?",
+    "description": "Route 53"
+  },
+  "aws-016": {
+    "command": "複数の EC2 インスタンスにトラフィックを分散する AWS サービスはどれですか?",
+    "description": "Elastic Load Balancer"
+  },
+  "aws-017": {
+    "command": "需要に応じて EC2 インスタンス数を自動的に調整する AWS サービスはどれですか?",
+    "description": "Auto Scaling"
+  },
+  "aws-018": {
+    "command": "Infrastructure as Code としてインフラストラクチャをデプロイするために使用される AWS サービスはどれですか?",
+    "description": "AWS CloudFormation"
+  },
+  "aws-019": {
+    "command": "コンテンツ配信ネットワーク (CDN) である AWS サービスはどれですか?",
+    "description": "Amazon CloudFront"
+  },
+  "aws-020": {
+    "command": "マネージド型 Kubernetes を提供する AWS サービスはどれですか?",
+    "description": "Amazon EKS"
+  },
+  "aws-021": {
+    "command": "マネージド型の Docker コンテナオーケストレーションを提供する AWS サービスはどれですか?",
+    "description": "Amazon ECS"
+  },
+  "aws-022": {
+    "command": "パスワードや API キーなどのシークレットを安全に保存する AWS サービスはどれですか?",
+    "description": "AWS Secrets Manager"
+  },
+  "aws-023": {
+    "command": "暗号化キーを管理する AWS サービスはどれですか?",
+    "description": "AWS KMS"
+  },
+  "aws-024": {
+    "command": "DDoS 攻撃からアプリケーションを保護する AWS サービスはどれですか?",
+    "description": "AWS Shield"
+  },
+  "azure-001": {
+    "command": "仮想マシンの作成に使用される Microsoft Azure サービスはどれですか?",
+    "description": "Azure Virtual Machines"
+  },
+  "azure-002": {
+    "command": "非構造化データ向けのオブジェクトストレージを提供する Azure サービスはどれですか?",
+    "description": "Azure Blob Storage"
+  },
+  "azure-003": {
+    "command": "ID とアクセス管理に使用される Azure サービスはどれですか?",
+    "description": "Microsoft Entra ID"
+  },
+  "azure-004": {
+    "command": "サーバーレスコンピューティングを提供する Azure サービスはどれですか?",
+    "description": "Azure Functions"
+  },
+  "azure-005": {
+    "command": "SQL Server 向けのマネージドリレーショナルデータベースを提供する Azure サービスはどれですか?",
+    "description": "Azure SQL Database"
+  },
+  "azure-006": {
+    "command": "グローバルに分散された NoSQL の Azure データベースサービスはどれですか?",
+    "description": "Azure Cosmos DB"
+  },
+  "azure-007": {
+    "command": "アプリケーションとインフラストラクチャの監視に使用される Azure サービスはどれですか?",
+    "description": "Azure Monitor"
+  },
+  "azure-008": {
+    "command": "Web アプリケーションからテレメトリを収集する Azure サービスはどれですか?",
+    "description": "Application Insights"
+  },
+  "azure-009": {
+    "command": "分離されたプライベートネットワークを作成する Azure ネットワークサービスはどれですか?",
+    "description": "Azure Virtual Network"
+  },
+  "azure-010": {
+    "command": "DNS ホスティングを提供する Azure サービスはどれですか?",
+    "description": "Azure DNS"
+  },
+  "azure-011": {
+    "command": "受信トラフィックを複数の仮想マシンに分散する Azure サービスはどれですか?",
+    "description": "Azure Load Balancer"
+  },
+  "azure-012": {
+    "command": "レイヤー 7 のグローバル負荷分散を提供する Azure サービスはどれですか?",
+    "description": "Azure Front Door"
+  },
+  "azure-013": {
+    "command": "マネージド Kubernetes を提供する Azure サービスはどれですか?",
+    "description": "Azure Kubernetes Service (AKS)"
+  },
+  "azure-014": {
+    "command": "サーバーを管理せずにコンテナーを実行する Azure サービスはどれですか?",
+    "description": "Azure Container Instances"
+  },
+  "azure-015": {
+    "command": "インフラストラクチャを管理せずに Web アプリケーションをホストする Azure サービスはどれですか?",
+    "description": "Azure App Service"
+  },
+  "azure-016": {
+    "command": "シークレット、キー、証明書を安全に保存する Azure サービスはどれですか?",
+    "description": "Azure Key Vault"
+  },
+  "azure-017": {
+    "command": "Microsoft Azure への専用プライベート接続を提供する Azure サービスはどれですか?",
+    "description": "Azure ExpressRoute"
+  },
+  "azure-018": {
+    "command": "Azure portal を通じて仮想マシンへの安全なリモートアクセスを提供する Azure サービスはどれですか?",
+    "description": "Azure Bastion"
+  },
+  "azure-019": {
+    "command": "Azure 仮想マシンやその他のワークロードのバックアップに使用される Azure サービスはどれですか?",
+    "description": "Azure Backup"
+  },
+  "azure-020": {
+    "command": "仮想マシンのディザスターリカバリーに使用される Azure サービスはどれですか?",
+    "description": "Azure Site Recovery"
+  },
+  "azure-021": {
+    "command": "ガバナンスポリシーの作成と適用に使用される Azure サービスはどれですか?",
+    "description": "Azure Policy"
+  },
+  "azure-022": {
+    "command": "Azure の管理をオンプレミスやマルチクラウド環境に拡張する Azure サービスはどれですか?",
+    "description": "Azure Arc"
+  },
+  "azure-023": {
+    "command": "継続的インテグレーションと継続的デプロイ (CI/CD) に使用される Azure DevOps のコンポーネントはどれですか?",
+    "description": "Azure Pipelines"
+  },
+  "azure-024": {
+    "command": "Git リポジトリを提供する Azure DevOps サービスはどれですか?",
+    "description": "Azure Repos"
+  },
+  "gcp-001": {
+    "command": "仮想マシンの作成と管理に使用されるGoogle Cloudサービスはどれですか?",
+    "description": "Compute Engine"
+  },
+  "gcp-002": {
+    "command": "オブジェクトストレージを提供するGoogle Cloudサービスはどれですか?",
+    "description": "Cloud Storage"
+  },
+  "gcp-003": {
+    "command": "サーバーレス関数を提供するGoogle Cloudサービスはどれですか?",
+    "description": "Cloud Functions"
+  },
+  "gcp-004": {
+    "command": "Kubernetesクラスタの実行に使用されるGoogle Cloudサービスはどれですか?",
+    "description": "Google Kubernetes Engine (GKE)"
+  },
+  "gcp-005": {
+    "command": "フルマネージドのリレーショナルデータベースを提供するGoogle Cloudサービスはどれですか?",
+    "description": "Cloud SQL"
+  },
+  "gcp-006": {
+    "command": "グローバルに分散されたリレーショナルデータベースであるGoogle Cloudのデータベースはどれですか?",
+    "description": "Cloud Spanner"
+  },
+  "gcp-007": {
+    "command": "サーバーレスのNoSQLドキュメントデータベースであるGoogle Cloudのサービスはどれですか?",
+    "description": "Firestore"
+  },
+  "gcp-008": {
+    "command": "ペタバイト規模のデータ分析に使用されるGoogle Cloudサービスはどれですか?",
+    "description": "BigQuery"
+  },
+  "gcp-009": {
+    "command": "モニタリングとオブザーバビリティを提供するGoogle Cloudサービスはどれですか?",
+    "description": "Cloud Monitoring"
+  },
+  "gcp-010": {
+    "command": "アプリケーションログを収集するGoogle Cloudサービスはどれですか?",
+    "description": "Cloud Logging"
+  },
+  "gcp-011": {
+    "command": "ユーザー、ロール、権限を管理するGoogle Cloudサービスはどれですか?",
+    "description": "Cloud IdentityとIAM"
+  },
+  "gcp-012": {
+    "command": "分離されたプライベートネットワークを作成するGoogle Cloudサービスはどれですか?",
+    "description": "Virtual Private Cloud (VPC)"
+  },
+  "gcp-013": {
+    "command": "DNSホスティングを提供するGoogle Cloudサービスはどれですか?",
+    "description": "Cloud DNS"
+  },
+  "gcp-014": {
+    "command": "複数の仮想マシンにトラフィックを分散するGoogle Cloudサービスはどれですか?",
+    "description": "Cloud Load Balancing"
+  },
+  "gcp-015": {
+    "command": "世界中でコンテンツ配信を高速化するGoogle Cloudサービスはどれですか?",
+    "description": "Cloud CDN"
+  },
+  "gcp-016": {
+    "command": "DDoS攻撃や一般的なWebの脆弱性攻撃からWebアプリケーションを保護するGoogle Cloudサービスはどれですか?",
+    "description": "Cloud Armor"
+  },
+  "gcp-017": {
+    "command": "インフラストラクチャを管理せずにマネージドなコンテナ実行を提供するGoogle Cloudサービスはどれですか?",
+    "description": "Cloud Run"
+  },
+  "gcp-018": {
+    "command": "Webアプリケーションを構築するためのフルマネージドプラットフォームであるGoogle Cloudサービスはどれですか?",
+    "description": "App Engine"
+  },
+  "gcp-019": {
+    "command": "シークレット、パスワード、APIキーを安全に保存するGoogle Cloudサービスはどれですか?",
+    "description": "Secret Manager"
+  },
+  "gcp-020": {
+    "command": "暗号鍵を管理するGoogle Cloudサービスはどれですか?",
+    "description": "Cloud KMS"
+  },
+  "gcp-021": {
+    "command": "Google Cloudへの専用プライベート接続を提供するGoogle Cloudサービスはどれですか?",
+    "description": "Cloud Interconnect"
+  },
+  "gcp-022": {
+    "command": "オンプレミスネットワークとGCP間の安全な暗号化接続を提供するGoogle Cloudサービスはどれですか?",
+    "description": "Cloud VPN"
+  },
+  "gcp-023": {
+    "command": "外部IPアドレスを持たないプライベートインスタンスにアウトバウンドのインターネットアクセスを提供するGoogle Cloudサービスはどれですか?",
+    "description": "Cloud NAT"
+  },
+  "gcp-024": {
+    "command": "VPCとオンプレミスネットワーク間でルートを動的に交換するGoogle Cloudサービスはどれですか?",
+    "description": "Cloud Router"
+  },
+  "oracle-001": {
+    "command": "仮想マシンの作成に使用されるOracle Cloud Infrastructureのサービスはどれですか？",
+    "description": "Compute"
+  },
+  "oracle-002": {
+    "command": "スケーラブルなオブジェクトストレージを提供するOCIサービスはどれですか？",
+    "description": "Object Storage"
+  },
+  "oracle-003": {
+    "command": "永続的なブロックストレージを提供するOCIストレージサービスはどれですか？",
+    "description": "Block Volumes"
+  },
+  "oracle-004": {
+    "command": "共有NFSファイルストレージを提供するOCIサービスはどれですか？",
+    "description": "File Storage"
+  },
+  "oracle-005": {
+    "command": "OCIの仮想ネットワークサービスの名称は何ですか？",
+    "description": "Virtual Cloud Network (VCN)"
+  },
+  "oracle-006": {
+    "command": "ユーザー、グループ、ポリシーを管理するOCIサービスはどれですか？",
+    "description": "Identity and Access Management (IAM)"
+  },
+  "oracle-007": {
+    "command": "クラウドリソースを論理的に整理するOCIの機能はどれですか？",
+    "description": "Compartments"
+  },
+  "oracle-008": {
+    "command": "ユーザーとグループの権限を定義するOCIの機能はどれですか？",
+    "description": "Policies"
+  },
+  "oracle-009": {
+    "command": "受信トラフィックを分散するOCIサービスはどれですか？",
+    "description": "Load Balancer"
+  },
+  "oracle-010": {
+    "command": "専用のプライベート接続を提供するOCIサービスはどれですか？",
+    "description": "FastConnect"
+  },
+  "oracle-011": {
+    "command": "IPSec接続を提供するOCIサービスはどれですか？",
+    "description": "Site-to-Site VPN"
+  },
+  "oracle-012": {
+    "command": "VCNをオンプレミスネットワークに接続するOCIコンポーネントはどれですか？",
+    "description": "Dynamic Routing Gateway (DRG)"
+  },
+  "oracle-013": {
+    "command": "自己管理機能を備えたOCIデータベースはどれですか？",
+    "description": "Autonomous Database"
+  },
+  "oracle-014": {
+    "command": "Kubernetesクラスターを管理するOCIサービスはどれですか？",
+    "description": "Container Engine for Kubernetes (OKE)"
+  },
+  "oracle-015": {
+    "command": "サーバーレス実行を提供するOCIサービスはどれですか？",
+    "description": "Functions"
+  },
+  "oracle-016": {
+    "command": "APIの公開と保護を行うOCIサービスはどれですか？",
+    "description": "API Gateway"
+  },
+  "oracle-017": {
+    "command": "CI/CDパイプラインをサポートするOCIサービスはどれですか？",
+    "description": "DevOps"
+  },
+  "oracle-018": {
+    "command": "Terraformのデプロイを管理するOCIサービスはどれですか？",
+    "description": "Resource Manager"
+  },
+  "oracle-019": {
+    "command": "メトリクスを収集するOCIサービスはどれですか？",
+    "description": "Monitoring"
+  },
+  "oracle-020": {
+    "command": "ログを保存するOCIサービスはどれですか？",
+    "description": "Logging"
+  },
+  "oracle-021": {
+    "command": "アラートを送信するOCIサービスはどれですか？",
+    "description": "Notifications"
+  },
+  "oracle-022": {
+    "command": "リソースイベントに反応するOCIサービスはどれですか？",
+    "description": "Events"
+  },
+  "oracle-023": {
+    "command": "シークレットと暗号化キーを保存するOCIサービスはどれですか？",
+    "description": "Vault"
+  },
+  "oracle-024": {
+    "command": "セキュリティ態勢を監視するOCIサービスはどれですか？",
+    "description": "Cloud Guard"
+  },
+  "ibm-001": {
+    "command": "仮想サーバーの作成に使用される IBM Cloud サービスはどれですか？",
+    "description": "Virtual Servers for VPC"
+  },
+  "ibm-002": {
+    "command": "オブジェクトストレージを提供する IBM Cloud サービスはどれですか？",
+    "description": "Cloud Object Storage"
+  },
+  "ibm-003": {
+    "command": "IBM Cloud の分離された仮想ネットワーキングサービスは何ですか？",
+    "description": "Virtual Private Cloud (VPC)"
+  },
+  "ibm-004": {
+    "command": "ユーザーとアクセスを管理する IBM Cloud サービスはどれですか？",
+    "description": "IBM Cloud IAM"
+  },
+  "ibm-005": {
+    "command": "マネージド Kubernetes を提供する IBM Cloud サービスはどれですか？",
+    "description": "IBM Cloud Kubernetes Service"
+  },
+  "ibm-006": {
+    "command": "マネージド Red Hat OpenShift を提供する IBM Cloud サービスはどれですか？",
+    "description": "Red Hat OpenShift on IBM Cloud"
+  },
+  "ibm-007": {
+    "command": "コマンドラインから IBM Cloud にログインするコマンドはどれですか？",
+    "description": "ibmcloud login"
+  },
+  "ibm-008": {
+    "command": "インフラストラクチャを管理せずにコンテナーを実行できる IBM Cloud サービスはどれですか？",
+    "description": "IBM Cloud Code Engine"
+  },
+  "ibm-009": {
+    "command": "受信トラフィックを分散する IBM Cloud サービスはどれですか？",
+    "description": "Load Balancer"
+  },
+  "ibm-010": {
+    "command": "安全なサイト間接続を提供する IBM Cloud サービスはどれですか？",
+    "description": "VPN for VPC"
+  },
+  "ibm-011": {
+    "command": "オンプレミスネットワークへの専用プライベート接続を提供する IBM Cloud サービスはどれですか？",
+    "description": "Direct Link"
+  },
+  "ibm-012": {
+    "command": "マネージドデータベースを提供する IBM Cloud のサービスはどれですか？",
+    "description": "IBM Cloud Databases"
+  },
+  "ibm-013": {
+    "command": "Db2 をベースにした IBM Cloud のデータベースはどれですか？",
+    "description": "Db2 on Cloud"
+  },
+  "ibm-014": {
+    "command": "インフラストラクチャの監視を提供する IBM Cloud サービスはどれですか？",
+    "description": "IBM Cloud Monitoring"
+  },
+  "ibm-015": {
+    "command": "ログを一元管理する IBM Cloud サービスはどれですか？",
+    "description": "IBM Log Analysis"
+  },
+  "ibm-016": {
+    "command": "シークレットを安全に保管する IBM Cloud サービスはどれですか？",
+    "description": "Secrets Manager"
+  },
+  "ibm-017": {
+    "command": "暗号鍵を管理する IBM Cloud サービスはどれですか？",
+    "description": "Key Protect"
+  },
+  "ibm-018": {
+    "command": "HSM に基づく鍵管理を提供する IBM Cloud サービスはどれですか？",
+    "description": "Hyper Protect Crypto Services"
+  },
+  "ibm-019": {
+    "command": "コンテナーイメージを保管する IBM Cloud サービスはどれですか？",
+    "description": "Container Registry"
+  },
+  "ibm-020": {
+    "command": "Terraform のデプロイメントを管理する IBM Cloud サービスはどれですか？",
+    "description": "Schematics"
+  },
+  "ibm-021": {
+    "command": "通知を送信する IBM Cloud サービスはどれですか？",
+    "description": "Event Notifications"
+  },
+  "ibm-022": {
+    "command": "CDN と DDoS 保護を提供する IBM Cloud サービスはどれですか？",
+    "description": "Cloud Internet Services"
+  },
+  "ibm-023": {
+    "command": "AI サービスを提供する IBM の AI プラットフォームはどれですか？",
+    "description": "watsonx"
+  },
+  "ibm-024": {
+    "command": "Kubernetes 上でエンタープライズソフトウェアを提供する IBM の製品はどれですか？",
+    "description": "Cloud Pak"
+  },
+  "multicloud-001": {
+    "command": "二つ以上のパブリッククラウドプロバイダーのサービスを利用するクラウド戦略はどれですか?",
+    "description": "マルチクラウド"
+  },
+  "multicloud-002": {
+    "command": "パブリッククラウドとプライベートクラウドを組み合わせるクラウド戦略はどれですか?",
+    "description": "ハイブリッドクラウド"
+  },
+  "multicloud-003": {
+    "command": "マルチクラウドのInfrastructure as Codeで一般的に使われるツールはどれですか?",
+    "description": "Terraform"
+  },
+  "multicloud-004": {
+    "command": "クラウドをまたいでコンテナをオーケストレーションするために広く使われているCNCFプロジェクトはどれですか?",
+    "description": "Kubernetes"
+  },
+  "multicloud-005": {
+    "command": "クラウドAPIを公開するために一般的に使われるプロトコルはどれですか?",
+    "description": "REST"
+  },
+  "multicloud-006": {
+    "command": "ベンダーロックインを回避するのに役立つ手法はどれですか?",
+    "description": "オープン標準の使用"
+  },
+  "multicloud-007": {
+    "command": "クラウドプロバイダーをまたいだコンテナ化に広く使われているツールはどれですか?",
+    "description": "Docker"
+  },
+  "multicloud-008": {
+    "command": "クラウド間でフェデレーテッドアイデンティティを実現するプロトコルはどれですか?",
+    "description": "SAML"
+  },
+  "multicloud-009": {
+    "command": "クラウドAPIで一般的に使われる認証標準はどれですか?",
+    "description": "OAuth 2.0"
+  },
+  "multicloud-010": {
+    "command": "仮想マシンを提供するクラウドサービスモデルはどれですか?",
+    "description": "IaaS"
+  },
+  "multicloud-011": {
+    "command": "マネージドなアプリケーションプラットフォームを提供するクラウドサービスモデルはどれですか?",
+    "description": "PaaS"
+  },
+  "multicloud-012": {
+    "command": "インターネット経由でソフトウェアを提供するクラウドサービスモデルはどれですか?",
+    "description": "SaaS"
+  },
+  "multicloud-013": {
+    "command": "複数のクラウドプロバイダーからメトリクスを収集する監視アプローチはどれですか?",
+    "description": "集中監視"
+  },
+  "multicloud-014": {
+    "command": "すべてのクラウドプロバイダーのログを集約するログ管理アプローチはどれですか?",
+    "description": "集中ログ管理"
+  },
+  "multicloud-015": {
+    "command": "複数のクラウド環境を安全に接続するネットワーク技術はどれですか?",
+    "description": "VPN"
+  },
+  "multicloud-016": {
+    "command": "クラウド間の専用接続を提供するネットワークサービスはどれですか?",
+    "description": "Direct Connect/ExpressRoute/Interconnect"
+  },
+  "multicloud-017": {
+    "command": "Kubernetesのサービスディスカバリで一般的に使われる技術はどれですか?",
+    "description": "DNS"
+  },
+  "multicloud-018": {
+    "command": "複数のクラウドにまたがるCI/CDで広く使われているツールはどれですか?",
+    "description": "Jenkins"
+  },
+  "multicloud-019": {
+    "command": "マルチクラウド環境をサポートするオープンソースの監視プラットフォームはどれですか?",
+    "description": "Prometheus"
+  },
+  "multicloud-020": {
+    "command": "Prometheusと一緒によく使われる可視化プラットフォームはどれですか?",
+    "description": "Grafana"
+  },
+  "multicloud-021": {
+    "command": "必要な権限のみを付与するセキュリティ原則はどれですか?",
+    "description": "最小権限"
+  },
+  "multicloud-022": {
+    "command": "保存時と転送時の両方でデータを暗号化する手法はどれですか?",
+    "description": "暗号化"
+  },
+  "multicloud-023": {
+    "command": "プロバイダーをまたいで可用性を向上させるクラウドアーキテクチャはどれですか?",
+    "description": "冗長化"
+  },
+  "multicloud-024": {
+    "command": "ワークロードを複数のクラウドに分散させるデプロイ方式はどれですか?",
+    "description": "アクティブ・アクティブ"
+  },
+  "hybridcloud-001": {
+    "command": "ハイブリッドクラウドとは何ですか？",
+    "description": "パブリッククラウドとプライベートクラウド環境の組み合わせ"
+  },
+  "hybridcloud-002": {
+    "command": "オンプレミスのインフラストラクチャとパブリッククラウドを組み合わせるデプロイメントモデルはどれですか？",
+    "description": "ハイブリッドクラウド"
+  },
+  "hybridcloud-003": {
+    "command": "オンプレミスのデータセンターをパブリッククラウドに安全に接続するために一般的に使用される技術はどれですか？",
+    "description": "VPN"
+  },
+  "hybridcloud-004": {
+    "command": "AWSインフラストラクチャをオンプレミス環境に拡張するAWSサービスはどれですか？",
+    "description": "AWS Outposts"
+  },
+  "hybridcloud-005": {
+    "command": "ハイブリッドおよびマルチクラウドのリソース管理を可能にするMicrosoft Azureサービスはどれですか？",
+    "description": "Azure Arc"
+  },
+  "hybridcloud-006": {
+    "command": "ハイブリッド環境全体のKubernetesクラスターの管理を支援するGoogle Cloudのプラットフォームはどれですか？",
+    "description": "Anthos"
+  },
+  "hybridcloud-007": {
+    "command": "クラウドサービスをあらゆる環境に拡張するIBM Cloudのサービスはどれですか？",
+    "description": "IBM Cloud Satellite"
+  },
+  "hybridcloud-008": {
+    "command": "顧客のデータセンター内でクラウドサービスを提供するOracle Cloudの製品はどれですか？",
+    "description": "OCI Dedicated Region"
+  },
+  "hybridcloud-009": {
+    "command": "ハイブリッドクラウド環境で最も一般的に使用されるコンテナオーケストレーションプラットフォームはどれですか？",
+    "description": "Kubernetes"
+  },
+  "hybridcloud-010": {
+    "command": "ハイブリッドクラウドでエンタープライズ向けKubernetesを実行するために広く使用されているオープンソースプラットフォームはどれですか？",
+    "description": "OpenShift"
+  },
+  "hybridcloud-011": {
+    "command": "ハイブリッドクラウド環境全体で一般的に使用されるInfrastructure as Codeツールはどれですか？",
+    "description": "Terraform"
+  },
+  "hybridcloud-012": {
+    "command": "ハイブリッドクラウドのデプロイメントで一般的に使用される構成管理ツールはどれですか？",
+    "description": "Ansible"
+  },
+  "hybridcloud-013": {
+    "command": "ハイブリッドクラウドのデプロイメントで頻繁に使用されるCI/CDツールはどれですか？",
+    "description": "Jenkins"
+  },
+  "hybridcloud-014": {
+    "command": "ハイブリッドクラウドの主な利点は何ですか？",
+    "description": "ワークロードを最適な場所で実行できる柔軟性"
+  },
+  "hybridcloud-015": {
+    "command": "オンプレミスとAWS間の専用接続を提供するネットワークサービスはどれですか？",
+    "description": "AWS Direct Connect"
+  },
+  "hybridcloud-016": {
+    "command": "Azureへのプライベート接続を提供するAzureのネットワークサービスはどれですか？",
+    "description": "Azure ExpressRoute"
+  },
+  "hybridcloud-017": {
+    "command": "Google Cloudへの専用接続を提供するGoogle Cloudのネットワークサービスはどれですか？",
+    "description": "Cloud Interconnect"
+  },
+  "hybridcloud-018": {
+    "command": "専用のプライベート接続を提供するOracle Cloudのネットワークサービスはどれですか？",
+    "description": "OCI FastConnect"
+  },
+  "hybridcloud-019": {
+    "command": "専用のプライベートネットワーク接続を提供するIBM Cloudのサービスはどれですか？",
+    "description": "IBM Cloud Direct Link"
+  },
+  "hybridcloud-020": {
+    "command": "ハイブリッドクラウドのシングルサインオンで一般的に使用される認証方式はどれですか？",
+    "description": "SAML"
+  },
+  "hybridcloud-021": {
+    "command": "ハイブリッドクラウドアプリケーションのAPI認証で一般的に使用されるプロトコルはどれですか？",
+    "description": "OAuth 2.0"
+  },
+  "hybridcloud-022": {
+    "command": "オンプレミスとクラウド環境全体でアプリケーションの可用性を向上させるアーキテクチャはどれですか？",
+    "description": "Active-Active"
+  },
+  "hybridcloud-023": {
+    "command": "ハイブリッドクラウドのKubernetes環境全体で一般的に使用されるモニタリングプラットフォームはどれですか？",
+    "description": "Prometheus"
+  },
+  "hybridcloud-024": {
+    "command": "Prometheusと組み合わせて一般的に使用される可視化ツールはどれですか？",
+    "description": "Grafana"
+  },
+  "extra-001": {
+    "command": "ansible-vault encrypt",
+    "description": "設定済みのVaultパスワードを使って既存のファイルを暗号化します。"
+  },
+  "extra-002": {
+    "command": "ansible-vault decrypt",
+    "description": "Vaultで暗号化されたファイルを復号し、管理された形でローカル確認できるようにします。"
+  },
+  "extra-003": {
+    "command": "ansible-vault encrypt_string",
+    "description": "単一の値を暗号化し、変数ファイル内に直接保存できるようにします。"
+  },
+  "extra-004": {
+    "command": "ansible-vault rekey",
+    "description": "暗号化されたVaultファイルを保護するパスワードを変更します。"
+  },
+  "extra-005": {
+    "command": "ansible-inventory --graph",
+    "description": "インベントリのグループとホストの関係を表示します。"
+  },
+  "extra-006": {
+    "command": "ansible-inventory --list",
+    "description": "解決済みのインベントリを、グループ変数も含めてJSONとして出力します。"
+  },
+  "extra-007": {
+    "command": "ansible-config dump --only-changed",
+    "description": "Ansibleのデフォルトと異なる構成値を表示します。"
+  },
+  "extra-008": {
+    "command": "ansible-doc ansible.builtin.copy",
+    "description": "モジュールのドキュメントと対応するパラメーターを表示します。"
+  },
+  "extra-009": {
+    "command": "ansible-galaxy collection install",
+    "description": "コレクションから再利用可能なモジュールとプラグインをインストールします。"
+  },
+  "extra-010": {
+    "command": "ansible-galaxy collection list",
+    "description": "有効なAnsibleパスにインストールされたコレクションを一覧表示します。"
+  },
+  "extra-011": {
+    "command": "ansible-playbook --check",
+    "description": "プレイブックをチェックモードで実行し、適用予定の多くの変更を事前確認します。"
+  },
+  "extra-012": {
+    "command": "ansible-playbook --diff",
+    "description": "対応するファイル変更をプレイブックの結果と併せて表示します。"
+  },
+  "extra-013": {
+    "command": "ansible-playbook --limit",
+    "description": "プレイブックの実行対象をホストまたはグループのパターンで限定します。"
+  },
+  "extra-014": {
+    "command": "ansible-playbook --tags",
+    "description": "割り当てられたタグで選ばれたタスクのみを実行します。"
+  },
+  "extra-015": {
+    "command": "ansible-playbook --skip-tags",
+    "description": "タグ付きタスクをプレイブックの実行から除外します。"
+  },
+  "extra-016": {
+    "command": "ansible-playbook --list-tasks",
+    "description": "プレイブックと現在の選択オプションに合致するタスクを一覧表示します。"
+  },
+  "extra-017": {
+    "command": "ansible-playbook --list-hosts",
+    "description": "タスクを実行せずに、プレイブックが対象とするホストを一覧表示します。"
+  },
+  "extra-018": {
+    "command": "ansible.builtin.assert",
+    "description": "必要な条件が偽の場合にプレイを失敗させます。"
+  },
+  "extra-019": {
+    "command": "delegate_to",
+    "description": "現在のインベントリホストとは別のホストで単一のタスクを実行します。"
+  },
+  "extra-020": {
+    "command": "serial",
+    "description": "ホストをバッチに分けてプレイを実行し、デプロイの影響を抑えます。"
+  },
+  "extra-021": {
+    "command": "any_errors_fatal",
+    "description": "致命的なタスクエラーが発生した後、全ホストでプレイを停止します。"
+  },
+  "extra-022": {
+    "command": "block / rescue / always",
+    "description": "タスクをグループ化し、失敗時の復旧と後処理の動作を定義します。"
+  },
+  "extra-023": {
+    "command": "changed_when",
+    "description": "タスクが変更ありという結果を報告するかどうかを上書きします。"
+  },
+  "extra-024": {
+    "command": "ansible.builtin.meta: flush_handlers",
+    "description": "プレイの終了を待たずに、通知されたハンドラーを直ちに実行します。"
+  },
+  "extra-025": {
+    "command": "aws sts get-caller-identity",
+    "description": "現在有効なAWSアカウント、ユーザー、または引き受けたロールを確認します。"
+  },
+  "extra-026": {
+    "command": "aws sts assume-role",
+    "description": "信頼されたIAMロールの一時認証情報を要求します。"
+  },
+  "extra-027": {
+    "command": "S3 bucket versioning",
+    "description": "オブジェクトの以前のバージョンを保持し、誤った上書きから復旧できるようにします。"
+  },
+  "extra-028": {
+    "command": "S3 lifecycle rule",
+    "description": "経過時間やフィルターに応じて、オブジェクトの移行や有効期限切れ処理を自動で行います。"
+  },
+  "extra-029": {
+    "command": "S3 presigned URL",
+    "description": "長期認証情報を共有せずに、オブジェクトへの期限付きアクセスを付与します。"
+  },
+  "extra-030": {
+    "command": "S3 server-side encryption",
+    "description": "S3管理または顧客管理のキーを使って保存済みオブジェクトを暗号化します。"
+  },
+  "extra-031": {
+    "command": "EC2 IMDSv2",
+    "description": "セッショントークンを使い、インスタンスメタデータの認証情報が漏れるリスクを減らします。"
+  },
+  "extra-032": {
+    "command": "Security group vs network ACL",
+    "description": "セキュリティグループはステートフルなインスタンスルールで、ネットワークACLはステートレスなサブネットルールです。"
+  },
+  "extra-033": {
+    "command": "Application Load Balancer target health",
+    "description": "登録済みターゲットが設定されたヘルスチェックに合格するかを報告します。"
+  },
+  "extra-034": {
+    "command": "Auto Scaling instance refresh",
+    "description": "起動テンプレートの変更後、グループのインスタンスを段階的に置き換えます。"
+  },
+  "extra-035": {
+    "command": "EBS volume snapshot",
+    "description": "ブロックストレージボリュームの特定時点のバックアップを作成します。"
+  },
+  "extra-036": {
+    "command": "CloudWatch metric alarm",
+    "description": "メトリックが設定済みのしきい値を超えると状態を変更します。"
+  },
+  "extra-037": {
+    "command": "CloudTrail event lookup",
+    "description": "記録された管理イベントから、プリンシパル、リソース、またはアクションを検索します。"
+  },
+  "extra-038": {
+    "command": "SQS visibility timeout",
+    "description": "コンシューマーが処理する間、受信したメッセージを一時的に隠します。"
+  },
+  "extra-039": {
+    "command": "SQS dead-letter queue",
+    "description": "送信元キューの再配信上限を超えたメッセージを取り込みます。"
+  },
+  "extra-040": {
+    "command": "SNS message filter policy",
+    "description": "属性がサブスクリプションフィルターと一致する場合のみ、トピックのメッセージを配信します。"
+  },
+  "extra-041": {
+    "command": "Lambda reserved concurrency",
+    "description": "同時実行数に上限を設け、特定の関数用の容量を確保します。"
+  },
+  "extra-042": {
+    "command": "API Gateway stage variables",
+    "description": "ルートを変更せずに、ステージ固有の値を統合先に提供します。"
+  },
+  "extra-043": {
+    "command": "RDS Multi-AZ deployment",
+    "description": "可用性のためにスタンバイデータベースを維持します。読み取りを拡張するレプリカではありません。"
+  },
+  "extra-044": {
+    "command": "RDS read replica",
+    "description": "非同期で複製されたデータベースインスタンスから読み取りトラフィックを処理します。"
+  },
+  "extra-045": {
+    "command": "DynamoDB partition key",
+    "description": "項目をパーティションに分散し、リクエスト負荷を均等に分散させる必要があります。"
+  },
+  "extra-046": {
+    "command": "DynamoDB conditional write",
+    "description": "項目の条件が真の場合のみ書き込みを適用します。"
+  },
+  "extra-047": {
+    "command": "KMS key rotation",
+    "description": "呼び出し側のキー識別子を変えずに、キー素材をローテーションします。"
+  },
+  "extra-048": {
+    "command": "IAM permission boundary",
+    "description": "アイデンティティポリシーがプリンシパルに付与できる権限の上限を設定します。"
+  },
+  "extra-049": {
+    "command": "az account show",
+    "description": "Azure CLIの有効なサブスクリプションとテナントのコンテキストを表示します。"
+  },
+  "extra-050": {
+    "command": "az account set",
+    "description": "後続のCLIコマンドが使うサブスクリプションを選択します。"
+  },
+  "extra-051": {
+    "command": "Resource lock",
+    "description": "保護されたリソーススコープの削除や変更を防ぎます。"
+  },
+  "extra-052": {
+    "command": "Managed identity",
+    "description": "Azureワークロードがクライアントシークレットを保存せずにEntraトークンを取得できるようにします。"
+  },
+  "extra-053": {
+    "command": "Azure RBAC role assignment",
+    "description": "選択したスコープで組み込みロールまたはカスタムロールを付与します。"
+  },
+  "extra-054": {
+    "command": "Key Vault secret version",
+    "description": "シークレットの各リビジョンを指定可能な状態で保持し、制御されたローテーションを支援します。"
+  },
+  "extra-055": {
+    "command": "Key Vault soft delete",
+    "description": "削除されたVaultオブジェクトを保持し、保持期間中に復旧できるようにします。"
+  },
+  "extra-056": {
+    "command": "Private endpoint",
+    "description": "PaaSサービスを仮想ネットワーク内のプライベートIPに対応付けます。"
+  },
+  "extra-057": {
+    "command": "Private DNS zone link",
+    "description": "リンクされた仮想ネットワーク内で、プライベートエンドポイントのDNSレコードを解決できるようにします。"
+  },
+  "extra-058": {
+    "command": "NSG flow logs",
+    "description": "対応するネットワークセキュリティグループのネットワークフロー判定を記録します。"
+  },
+  "extra-059": {
+    "command": "Application Gateway probe",
+    "description": "設定済みのパス、ホスト、間隔でバックエンドの正常性を確認します。"
+  },
+  "extra-060": {
+    "command": "Front Door origin health",
+    "description": "オリジンが設定された正常性プローブの条件を満たすか追跡します。"
+  },
+  "extra-061": {
+    "command": "Blob lifecycle management",
+    "description": "経過時間、プレフィックス、アクセス層に基づいてBLOBを移動または期限切れにします。"
+  },
+  "extra-062": {
+    "command": "Blob soft delete",
+    "description": "削除されたBLOBを保持し、設定された期間内に復元できるようにします。"
+  },
+  "extra-063": {
+    "command": "Azure SQL point-in-time restore",
+    "description": "保持期間内の過去の時点からデータベースのコピーを作成します。"
+  },
+  "extra-064": {
+    "command": "Cosmos DB request units",
+    "description": "データベース操作の正規化されたスループット容量を表します。"
+  },
+  "extra-065": {
+    "command": "Azure Monitor alert rule",
+    "description": "メトリックやログを評価し、条件が一致するとアクショングループを起動します。"
+  },
+  "extra-066": {
+    "command": "Log Analytics workspace query",
+    "description": "Kusto Query Languageを使い、収集したテレメトリを分析します。"
+  },
+  "extra-067": {
+    "command": "App Service deployment slot",
+    "description": "本番とスワップできる独立したデプロイ先を提供します。"
+  },
+  "extra-068": {
+    "command": "Container Apps revision",
+    "description": "トラフィックを受け取れる、不変のアプリケーションバージョンを表します。"
+  },
+  "extra-069": {
+    "command": "AKS node pool taint",
+    "description": "適切な許容設定を持つPodだけが専用プールに配置されるよう、スケジューリングを制限します。"
+  },
+  "extra-070": {
+    "command": "Bicep what-if",
+    "description": "デプロイを適用する前にAzureリソースの変更を事前表示します。"
+  },
+  "extra-071": {
+    "command": "Azure Policy compliance",
+    "description": "割り当てられたポリシー定義に準拠する、または違反するリソースを表示します。"
+  },
+  "extra-072": {
+    "command": "Service Bus dead-letter queue",
+    "description": "正常に配信または処理できないメッセージを保存します。"
+  },
+  "extra-073": {
+    "command": "set -o pipefail",
+    "description": "パイプライン内のいずれかのコマンドが失敗すると、パイプラインの失敗を返します。"
+  },
+  "extra-074": {
+    "command": "trap cleanup EXIT",
+    "description": "エラー後を含め、シェルの終了時に後処理を実行します。"
+  },
+  "extra-075": {
+    "command": "mktemp -d",
+    "description": "中間ファイルを分離するため、一意の一時ディレクトリを作成します。"
+  },
+  "extra-076": {
+    "command": "read -r",
+    "description": "バックスラッシュをエスケープシーケンスとして解釈せずに入力を読み取ります。"
+  },
+  "extra-077": {
+    "command": "mapfile -t",
+    "description": "改行区切りの入力を、インデックス付きBash配列に読み込みます。"
+  },
+  "extra-078": {
+    "command": "[[ -v variable ]]",
+    "description": "値が空でも、シェル変数が設定済みかを調べます。"
+  },
+  "extra-079": {
+    "command": "printf %q",
+    "description": "シェル入力として安全に表現できるよう、値を引用符で保護します。"
+  },
+  "extra-080": {
+    "command": "parameter defaulting",
+    "description": "変数が未設定または空の場合、代替値を使います。"
+  },
+  "extra-081": {
+    "command": "parameter substring",
+    "description": "Bashのパラメーター展開で文字列の一部を抽出します。"
+  },
+  "extra-082": {
+    "command": "parameter substitution",
+    "description": "外部プロセスを起動せずに、一致したテキストを置換します。"
+  },
+  "extra-083": {
+    "command": "process substitution",
+    "description": "コマンドの出力をファイルのような入力としてプログラムに渡します。"
+  },
+  "extra-084": {
+    "command": "here-string",
+    "description": "標準入力を通じて単一の文字列をコマンドに渡します。"
+  },
+  "extra-085": {
+    "command": "getopts",
+    "description": "移植性のあるシェルループで短いコマンドラインオプションを解析します。"
+  },
+  "extra-086": {
+    "command": "wait -n",
+    "description": "追加の処理を起動する前に、いずれかのバックグラウンドジョブの完了を待ちます。"
+  },
+  "extra-087": {
+    "command": "jobs -pr",
+    "description": "このシェルが起動した実行中のバックグラウンドジョブのプロセスIDを一覧表示します。"
+  },
+  "extra-088": {
+    "command": "exec command",
+    "description": "現在のシェルプロセスをコマンドで置き換えます。"
+  },
+  "extra-089": {
+    "command": "command -v",
+    "description": "コマンド名に対してシェルが実行する実行可能ファイルを探します。"
+  },
+  "extra-090": {
+    "command": "umask",
+    "description": "新規作成されるファイルやディレクトリから、デフォルトで除外する権限ビットを設定します。"
+  },
+  "extra-091": {
+    "command": "noclobber",
+    "description": "デフォルトで、出力リダイレクトによる既存ファイルの上書きを防ぎます。"
+  },
+  "extra-092": {
+    "command": "flock",
+    "description": "アドバイザリロックを提供し、同時に起動したスクリプトの実行が重ならないようにします。"
+  },
+  "extra-093": {
+    "command": "timeout",
+    "description": "許可された時間を超えて動作するコマンドを停止します。"
+  },
+  "extra-094": {
+    "command": "xargs -0",
+    "description": "NUL区切りのファイル名を別のコマンドに安全に渡します。"
+  },
+  "extra-095": {
+    "command": "find -print0",
+    "description": "空白や改行を扱えるよう、ファイル名をNUL文字で区切って出力します。"
+  },
+  "extra-096": {
+    "command": "set -u",
+    "description": "未設定の変数の展開をエラーとして扱います。"
+  },
+  "extra-097": {
+    "command": "docker buildx imagetools inspect",
+    "description": "マルチプラットフォームイメージのマニフェストと公開済みプラットフォームを調べます。"
+  },
+  "extra-098": {
+    "command": "docker buildx build --platform",
+    "description": "1つ以上のCPUアーキテクチャ向けにイメージをビルドします。"
+  },
+  "extra-099": {
+    "command": "docker image inspect",
+    "description": "レイヤー、アーキテクチャ、エントリーポイントなどのイメージメタデータを表示します。"
+  },
+  "extra-100": {
+    "command": "docker image history",
+    "description": "イメージのレイヤーと、それらを作成したコマンドを一覧表示します。"
+  },
+  "extra-101": {
+    "command": "docker system df",
+    "description": "イメージ、コンテナ、ボリューム、ビルドキャッシュのディスク使用量を報告します。"
+  },
+  "extra-102": {
+    "command": "docker builder prune",
+    "description": "未使用のビルドキャッシュを削除し、ローカルストレージの空き容量を回復します。"
+  },
+  "extra-103": {
+    "command": "docker volume inspect",
+    "description": "Dockerボリュームのマウントポイント、ドライバー、ラベルを表示します。"
+  },
+  "extra-104": {
+    "command": "docker network inspect",
+    "description": "接続されたコンテナ、IPAM設定、ネットワークドライバーの詳細を表示します。"
+  },
+  "extra-105": {
+    "command": "docker stats --no-stream",
+    "description": "実行中のコンテナのリソース使用状況を一度だけ取得します。"
+  },
+  "extra-106": {
+    "command": "docker events --since",
+    "description": "指定時刻以降のコンテナライフサイクルイベントをストリーム表示します。"
+  },
+  "extra-107": {
+    "command": "docker exec --workdir",
+    "description": "選択したディレクトリを起点として、コンテナ内でコマンドを実行します。"
+  },
+  "extra-108": {
+    "command": "docker cp",
+    "description": "ローカルパスとコンテナのファイルシステムの間でファイルをコピーします。"
+  },
+  "extra-109": {
+    "command": "docker wait",
+    "description": "コンテナの停止を待ち、終了コードを出力します。"
+  },
+  "extra-110": {
+    "command": "docker inspect health status",
+    "description": "設定されたヘルスチェックの状態と最近のプローブ結果を読み取ります。"
+  },
+  "extra-111": {
+    "command": "HEALTHCHECK start-period",
+    "description": "失敗を数え始める前に、アプリケーションの初期化時間を確保します。"
+  },
+  "extra-112": {
+    "command": "read-only root filesystem",
+    "description": "実行時にコンテナのルートファイルシステムへの書き込みを防ぎます。"
+  },
+  "extra-113": {
+    "command": "docker run --init",
+    "description": "小さなinitプロセスを追加し、シグナルの転送と終了した子プロセスの回収を行います。"
+  },
+  "extra-114": {
+    "command": "docker run --cap-drop",
+    "description": "プロセスが必要としないLinuxケーパビリティを削除します。"
+  },
+  "extra-115": {
+    "command": "docker run --security-opt",
+    "description": "seccompプロファイルなどの実行時セキュリティ設定を適用します。"
+  },
+  "extra-116": {
+    "command": "docker run --pids-limit",
+    "description": "コンテナが作成できるプロセス数に上限を設けます。"
+  },
+  "extra-117": {
+    "command": "docker compose config",
+    "description": "マージされたCompose構成を出力して検証します。"
+  },
+  "extra-118": {
+    "command": "docker compose profiles",
+    "description": "名前付きプロファイルが選択された場合のみ、対応するオプションサービスを有効にします。"
+  },
+  "extra-119": {
+    "command": "docker compose up --wait",
+    "description": "サービスが正常または実行中の状態になるまで待ってから戻ります。"
+  },
+  "extra-120": {
+    "command": "container stop timeout",
+    "description": "正常終了用の停止シグナルを送り、待機してからコンテナを強制終了します。"
+  },
+  "extra-121": {
+    "command": "gcloud config get-value project",
+    "description": "プロジェクトを明示しないコマンドが使用するプロジェクトを表示します。"
+  },
+  "extra-122": {
+    "command": "gcloud auth list",
+    "description": "認証済みアカウントを一覧表示し、有効なプリンシパルを特定します。"
+  },
+  "extra-123": {
+    "command": "gcloud projects get-iam-policy",
+    "description": "アクセス確認のためにプロジェクトレベルのIAMバインディングを読み取ります。"
+  },
+  "extra-124": {
+    "command": "IAM service account impersonation",
+    "description": "権限のあるプリンシパルがサービスアカウントの短期認証情報を取得できるようにします。"
+  },
+  "extra-125": {
+    "command": "Cloud Storage object versioning",
+    "description": "オブジェクトを置換または削除した後も、以前の世代を保持します。"
+  },
+  "extra-126": {
+    "command": "Cloud Storage retention policy",
+    "description": "保持期間が終了するまで、オブジェクトの削除や置換を防ぎます。"
+  },
+  "extra-127": {
+    "command": "Cloud Run revision traffic",
+    "description": "段階的なロールアウトのため、リクエストをサービスのリビジョン間で分配します。"
+  },
+  "extra-128": {
+    "command": "Cloud Run min instances",
+    "description": "設定された数のインスタンスを待機状態に保ち、コールドスタートを減らします。"
+  },
+  "extra-129": {
+    "command": "GKE Workload Identity",
+    "description": "キーファイルなしで、KubernetesワークロードにGoogleの短期認証情報を提供します。"
+  },
+  "extra-130": {
+    "command": "GKE node taint",
+    "description": "一致する許容設定を宣言したPod用にノードを予約します。"
+  },
+  "extra-131": {
+    "command": "Pub/Sub dead-letter topic",
+    "description": "繰り返し配信に失敗したメッセージを、確認用の別トピックに送ります。"
+  },
+  "extra-132": {
+    "command": "Pub/Sub acknowledgment deadline",
+    "description": "取得したメッセージをサブスクライバーが確認応答するまでの時間を設定します。"
+  },
+  "extra-133": {
+    "command": "BigQuery partition pruning",
+    "description": "パーティション列でフィルターし、スキャンするデータを減らします。"
+  },
+  "extra-134": {
+    "command": "BigQuery dry run",
+    "description": "クエリを実行せずに処理対象のバイト数を見積もります。"
+  },
+  "extra-135": {
+    "command": "Cloud SQL automated backups",
+    "description": "保持期間を設定できる、定期的なデータベースバックアップを作成します。"
+  },
+  "extra-136": {
+    "command": "Cloud SQL point-in-time recovery",
+    "description": "バックアップとトランザクションログを使い、データベースを選択した時点に復元します。"
+  },
+  "extra-137": {
+    "command": "Cloud Logging exclusion",
+    "description": "ログ取り込み時に、一致するエントリを保存対象から除外します。"
+  },
+  "extra-138": {
+    "command": "Cloud Monitoring uptime check",
+    "description": "到達可能なエンドポイントをプローブし、可用性と遅延を記録します。"
+  },
+  "extra-139": {
+    "command": "VPC flow logs",
+    "description": "対応するサブネットのネットワークフローをサンプリングして記録します。"
+  },
+  "extra-140": {
+    "command": "Cloud NAT",
+    "description": "外部IPアドレスなしで、プライベートインスタンスにインターネットへの送信アクセスを提供します。"
+  },
+  "extra-141": {
+    "command": "Artifact Registry cleanup policy",
+    "description": "経過時間、タグ、保持ルールに基づき、古いパッケージバージョンを削除します。"
+  },
+  "extra-142": {
+    "command": "Secret Manager version disable",
+    "description": "履歴を削除せずに、特定のシークレットバージョンへのアクセスを停止します。"
+  },
+  "extra-143": {
+    "command": "KMS key version rotation",
+    "description": "復号用に以前のバージョンを残したまま、新しい暗号キー素材を作成します。"
+  },
+  "extra-144": {
+    "command": "Organization Policy constraint",
+    "description": "中央管理の保護ルールをプロジェクトやフォルダーに適用します。"
+  },
+  "extra-145": {
+    "command": "git switch -c",
+    "description": "新しいブランチの作成とチェックアウトを一度に行います。"
+  },
+  "extra-146": {
+    "command": "git restore --staged",
+    "description": "作業ツリーの変更を残したまま、パスをインデックスから削除します。"
+  },
+  "extra-147": {
+    "command": "git restore --source",
+    "description": "作業ツリーのパスを、選択したコミットの内容で置き換えます。"
+  },
+  "extra-148": {
+    "command": "git diff --check",
+    "description": "行末の空白や競合マーカーなどの空白関連エラーを検出します。"
+  },
+  "extra-149": {
+    "command": "git diff --stat",
+    "description": "パッチ全体を出力せずに、変更されたファイルと行数を要約します。"
+  },
+  "extra-150": {
+    "command": "git log --graph",
+    "description": "ブランチ、マージ、コミットのグラフをASCIIで描画します。"
+  },
+  "extra-151": {
+    "command": "git show --stat",
+    "description": "コミットの概要と、そのコミットで変更されたファイルを表示します。"
+  },
+  "extra-152": {
+    "command": "git blame -L",
+    "description": "選択したソースの各行に関連するコミットと作者を表示します。"
+  },
+  "extra-153": {
+    "command": "git bisect",
+    "description": "二分探索でリグレッションを引き起こしたコミットを特定します。"
+  },
+  "extra-154": {
+    "command": "git cherry-pick -x",
+    "description": "コミットを適用し、元のハッシュを新しいコミットメッセージに記録します。"
+  },
+  "extra-155": {
+    "command": "git revert",
+    "description": "以前のコミットによる変更を打ち消す新しいコミットを作成します。"
+  },
+  "extra-156": {
+    "command": "git reflog",
+    "description": "ブランチから外れたコミットも含め、最近のローカル参照の移動を一覧表示します。"
+  },
+  "extra-157": {
+    "command": "git clean -nd",
+    "description": "クリーン操作で削除される未追跡ファイルを事前表示します。"
+  },
+  "extra-158": {
+    "command": "git stash push --include-untracked",
+    "description": "追跡対象と未追跡の作業内容を、コミットせずに一時保存します。"
+  },
+  "extra-159": {
+    "command": "git stash branch",
+    "description": "ブランチを作成し、選択したスタッシュをその上に再適用します。"
+  },
+  "extra-160": {
+    "command": "git worktree add",
+    "description": "別の作業ディレクトリに別ブランチをチェックアウトします。"
+  },
+  "extra-161": {
+    "command": "git submodule update --init",
+    "description": "親リポジトリに記録されたサブモジュールのリビジョンを初期化してチェックアウトします。"
+  },
+  "extra-162": {
+    "command": "git config --show-origin",
+    "description": "Gitの設定を提供した構成ファイルを表示します。"
+  },
+  "extra-163": {
+    "command": "git commit --fixup",
+    "description": "対象コミットに自動でまとめるためのコミットを作成します。"
+  },
+  "extra-164": {
+    "command": "git rebase --autosquash",
+    "description": "リベース時にfixupとsquashのコミットを対象コミットの隣に移動します。"
+  },
+  "extra-165": {
+    "command": "git format-patch",
+    "description": "コミットをメールボックス互換のパッチファイルとしてエクスポートします。"
+  },
+  "extra-166": {
+    "command": "git am",
+    "description": "パッチファイルを適用し、そのメタデータからコミットを作成します。"
+  },
+  "extra-167": {
+    "command": "git verify-commit",
+    "description": "設定された信頼済みキーでコミット署名を検証します。"
+  },
+  "extra-168": {
+    "command": "git fsck --full",
+    "description": "リポジトリのオブジェクトの接続性を調べ、到達不能なオブジェクトを報告します。"
+  },
+  "extra-169": {
+    "command": "identity federation",
+    "description": "固定シークレットを使わずに、ワークロードが環境間で信頼されたIDクレームを交換できるようにします。"
+  },
+  "extra-170": {
+    "command": "private connectivity failover",
+    "description": "主系のプライベート接続が失敗した場合に備え、予備のVPNまたは回線を利用可能に保ちます。"
+  },
+  "extra-171": {
+    "command": "split-horizon DNS",
+    "description": "同じ名前に対して内部クライアントと外部クライアントへ異なるDNS応答を返します。"
+  },
+  "extra-172": {
+    "command": "centralized certificate lifecycle",
+    "description": "環境をまたいで証明書を一貫して発行、ローテーション、失効します。"
+  },
+  "extra-173": {
+    "command": "cross-environment secrets rotation",
+    "description": "クライアントが安全に移行する間、両方の場所で認証情報をローテーションします。"
+  },
+  "extra-174": {
+    "command": "data residency boundary",
+    "description": "規制対象のデータとバックアップを、承認された地理的な場所に保持します。"
+  },
+  "extra-175": {
+    "command": "WAN latency budget",
+    "description": "同期的なアプリケーション依存関係に対して、許容するネットワーク遅延を定義します。"
+  },
+  "extra-176": {
+    "command": "egress control plane",
+    "description": "サイトとクラウドをまたぐ送信経路、検査、ポリシーを一元化します。"
+  },
+  "extra-177": {
+    "command": "configuration drift detection",
+    "description": "各環境で、デプロイ済み設定と宣言された望ましい状態を比較します。"
+  },
+  "extra-178": {
+    "command": "hybrid observability correlation",
+    "description": "一貫したサービスIDとトレースIDを使い、プラットフォーム間のテレメトリを関連付けます。"
+  },
+  "extra-179": {
+    "command": "site-to-cloud route advertisement",
+    "description": "オンプレミスのルーターとクラウドゲートウェイの間で、承認済みのプライベートプレフィックスを広報します。"
+  },
+  "extra-180": {
+    "command": "active-passive workload failover",
+    "description": "主系の障害を確認後、準備済みの副系環境へトラフィックを移します。"
+  },
+  "extra-181": {
+    "command": "active-active data consistency",
+    "description": "両サイトが同時に書き込みを受け付ける場合の競合処理を定義します。"
+  },
+  "extra-182": {
+    "command": "hybrid backup immutability",
+    "description": "侵害された本番認証情報による変更からバックアップコピーを保護します。"
+  },
+  "extra-183": {
+    "command": "local dependency cache",
+    "description": "クラウド接続が途絶しても、必要な成果物を利用可能に保ちます。"
+  },
+  "extra-184": {
+    "command": "edge workload update ring",
+    "description": "リモートサイトに対し、制御された段階ごとにソフトウェア更新を展開します。"
+  },
+  "extra-185": {
+    "command": "policy translation",
+    "description": "同等のアクセス要件とネットワーク要件を、各プラットフォーム標準の制御に対応付けます。"
+  },
+  "extra-186": {
+    "command": "hybrid service ownership",
+    "description": "プラットフォーム境界をまたぐ各依存関係に運用責任者を割り当てます。"
+  },
+  "extra-187": {
+    "command": "cross-cloud identity mapping",
+    "description": "外部IDを別のクラウドの最小権限ロールに対応付けます。"
+  },
+  "extra-188": {
+    "command": "clock synchronization",
+    "description": "ログ、証明書、認証のため、ホストを信頼できる時刻源に同期させます。"
+  },
+  "extra-189": {
+    "command": "hybrid deployment contract",
+    "description": "独立してリリースされるコンポーネントの互換バージョンとインターフェースを定義します。"
+  },
+  "extra-190": {
+    "command": "regional traffic steering",
+    "description": "測定した正常性と遅延を使い、ユーザーを近くの正常な環境へ誘導します。"
+  },
+  "extra-191": {
+    "command": "offline operation mode",
+    "description": "リモートサービスに到達できない場合も利用可能な機能を指定します。"
+  },
+  "extra-192": {
+    "command": "hybrid disaster recovery test",
+    "description": "データセンターとクラウド双方の依存関係を含め、復旧手順が機能することを実証します。"
+  },
+  "extra-193": {
+    "command": "ibmcloud target",
+    "description": "後続のCLI操作用にアカウント、リージョン、リソースグループを選択します。"
+  },
+  "extra-194": {
+    "command": "ibmcloud resource groups",
+    "description": "サービスとアクセススコープを整理するリソースグループを一覧表示します。"
+  },
+  "extra-195": {
+    "command": "ibmcloud iam user-policies",
+    "description": "ユーザーIDに直接割り当てられたポリシーを表示します。"
+  },
+  "extra-196": {
+    "command": "IBM Cloud API key rotation",
+    "description": "認証情報を置き換え、古い情報を失効させる前に依存ワークロードを更新します。"
+  },
+  "extra-197": {
+    "command": "VPC security group",
+    "description": "VPCインターフェースの受信と送信トラフィックをステートフルに制御します。"
+  },
+  "extra-198": {
+    "command": "VPC network ACL",
+    "description": "サブネット単位のステートレスな許可・拒否ルールを適用します。"
+  },
+  "extra-199": {
+    "command": "VPC floating IP",
+    "description": "サポート対象のVPCネットワークインターフェースにパブリックアドレスを関連付けます。"
+  },
+  "extra-200": {
+    "command": "VPC VPN gateway",
+    "description": "IPsecトンネルを通じてVPCをリモートネットワークに接続します。"
+  },
+  "extra-201": {
+    "command": "Cloud Object Storage HMAC key",
+    "description": "対応するオブジェクトストレージクライアントにS3互換の認証情報を提供します。"
+  },
+  "extra-202": {
+    "command": "Cloud Object Storage retention",
+    "description": "指定期間中、オブジェクトを削除や上書きから保護します。"
+  },
+  "extra-203": {
+    "command": "Kubernetes worker pool",
+    "description": "マシンとゾーンの構成を共有するクラスターのワーカーノードをグループ化します。"
+  },
+  "extra-204": {
+    "command": "Kubernetes cluster autoscaler",
+    "description": "スケジュールできないPodに基づいてワーカー数を調整します。"
+  },
+  "extra-205": {
+    "command": "Code Engine job",
+    "description": "継続的なエンドポイントを提供する代わりに、有限のワークロードを完了まで実行します。"
+  },
+  "extra-206": {
+    "command": "Code Engine project",
+    "description": "アプリ、ジョブ、ビルド、構成のための分離されたスコープを提供します。"
+  },
+  "extra-207": {
+    "command": "Secrets Manager secret group",
+    "description": "シークレットマネージャーのインスタンス内でシークレットとアクセスポリシーを整理します。"
+  },
+  "extra-208": {
+    "command": "Secrets Manager rotation policy",
+    "description": "対応するシークレットの種類と接続サービスのローテーションをスケジュールします。"
+  },
+  "extra-209": {
+    "command": "Activity Tracker event",
+    "description": "監査、調査、アラートのためにアカウントのアクティビティを記録します。"
+  },
+  "extra-210": {
+    "command": "Log Analysis parsing rule",
+    "description": "取り込み時に、アプリケーションのログメッセージから構造化フィールドを抽出します。"
+  },
+  "extra-211": {
+    "command": "Key Protect root key",
+    "description": "統合サービスが使うデータ暗号化キーを保護します。"
+  },
+  "extra-212": {
+    "command": "Key Protect key rotation",
+    "description": "管理された参照を維持しながら、暗号キー素材をローテーションします。"
+  },
+  "extra-213": {
+    "command": "Cloud Internet Services origin pool",
+    "description": "正常性に基づいてトラフィックを分散するため、バックエンドのオリジンをグループ化します。"
+  },
+  "extra-214": {
+    "command": "Cloud Internet Services WAF rule",
+    "description": "Web攻撃パターンに一致するリクエストをブロックするか、確認チャレンジを要求します。"
+  },
+  "extra-215": {
+    "command": "Schematics workspace",
+    "description": "IBM Cloud管理の実行環境でTerraformの自動化を実行します。"
+  },
+  "extra-216": {
+    "command": "Schematics action",
+    "description": "ワークスペースが管理するリソースに対して運用アクションを実行します。"
+  },
+  "extra-217": {
+    "command": "Object.hasOwn",
+    "description": "プロトタイプを検索せずに、オブジェクトが直接プロパティを持つか確認します。"
+  },
+  "extra-218": {
+    "command": "structuredClone",
+    "description": "対応する構造化値のディープクローンを作成します。"
+  },
+  "extra-219": {
+    "command": "Array.toSorted",
+    "description": "元の配列を変更せずに、ソート済みのコピーを返します。"
+  },
+  "extra-220": {
+    "command": "Array.flatMap",
+    "description": "各項目を変換し、結果の配列を1段階平坦化します。"
+  },
+  "extra-221": {
+    "command": "Array.some",
+    "description": "配列の少なくとも1つの要素が述語を満たすか調べます。"
+  },
+  "extra-222": {
+    "command": "Array.every",
+    "description": "配列のすべての要素が述語を満たすか調べます。"
+  },
+  "extra-223": {
+    "command": "Map.groupBy",
+    "description": "コールバックが返すキーで反復可能な値をグループ化します。"
+  },
+  "extra-224": {
+    "command": "Promise.allSettled",
+    "description": "すべてのPromiseを待ち、成功と拒否の両方の結果を保持します。"
+  },
+  "extra-225": {
+    "command": "AbortController",
+    "description": "fetchや、中止を認識するその他の非同期処理にキャンセルを通知します。"
+  },
+  "extra-226": {
+    "command": "fetch response.ok",
+    "description": "HTTPレスポンスのステータスが成功範囲内か確認します。"
+  },
+  "extra-227": {
+    "command": "URLSearchParams",
+    "description": "正しいエンコーディングでURLクエリ文字列を作成、解析します。"
+  },
+  "extra-228": {
+    "command": "import.meta.env",
+    "description": "対応するモジュールシステムで、ビルドツールが提供する環境値を読み取ります。"
+  },
+  "extra-229": {
+    "command": "dynamic import",
+    "description": "必要に応じてモジュールを読み込み、そのエクスポートを表すPromiseを返します。"
+  },
+  "extra-230": {
+    "command": "top-level await",
+    "description": "対応するモジュールが非同期初期化を直接awaitできるようにします。"
+  },
+  "extra-231": {
+    "command": "WeakMap",
+    "description": "マップだけが理由でキーを生存させることなく、オブジェクトをキーとするメタデータを保存します。"
+  },
+  "extra-232": {
+    "command": "WeakSet",
+    "description": "要素のガベージコレクションを妨げずに、オブジェクトの所属を追跡します。"
+  },
+  "extra-233": {
+    "command": "Object.freeze",
+    "description": "実行時にオブジェクト自身のプロパティを変更できないようにします。"
+  },
+  "extra-234": {
+    "command": "nullish coalescing",
+    "description": "nullまたはundefinedの場合にのみ代替値を使い、有効な偽値を保持します。"
+  },
+  "extra-235": {
+    "command": "optional chaining",
+    "description": "途中の参照がnullまたはundefinedの可能性がある場合でも、入れ子の値を安全に読み取ります。"
+  },
+  "extra-236": {
+    "command": "Error cause",
+    "description": "エラーにコンテキストを付けてラップする際、原因の例外を添付します。"
+  },
+  "extra-237": {
+    "command": "TextEncoder",
+    "description": "JavaScript文字列をUTF-8のバイト列にエンコードします。"
+  },
+  "extra-238": {
+    "command": "crypto.randomUUID",
+    "description": "プラットフォームの暗号学的乱数源を使ってUUIDを作成します。"
+  },
+  "extra-239": {
+    "command": "ReadableStream",
+    "description": "レスポンス全体をバッファリングせずに、ストリームデータを段階的に処理します。"
+  },
+  "extra-240": {
+    "command": "Object.fromEntries",
+    "description": "キーと値のペアの反復可能オブジェクトから、オブジェクトを構築します。"
+  },
+  "extra-241": {
+    "command": "pipeline options timeout",
+    "description": "設定された時間が経過すると、パイプラインまたはステージを停止します。"
+  },
+  "extra-242": {
+    "command": "pipeline options disableConcurrentBuilds",
+    "description": "同じパイプラインジョブの実行が重なるのを防ぎます。"
+  },
+  "extra-243": {
+    "command": "when branch",
+    "description": "現在のブランチが一致する場合のみ、宣言的ステージを実行します。"
+  },
+  "extra-244": {
+    "command": "when changeset",
+    "description": "変更されたファイルがパターンに一致する場合のみ、ステージを実行します。"
+  },
+  "extra-245": {
+    "command": "input step",
+    "description": "権限のある人の判断を待つため、パイプラインを一時停止します。"
+  },
+  "extra-246": {
+    "command": "stash and unstash",
+    "description": "異なるエージェント上のステージ間で、選択したファイルを転送します。"
+  },
+  "extra-247": {
+    "command": "archiveArtifacts",
+    "description": "ビルドの出力をJenkinsのビルド記録とともに保持します。"
+  },
+  "extra-248": {
+    "command": "junit publisher",
+    "description": "テスト結果のXMLを公開し、失敗がある場合はビルドを不安定としてマークします。"
+  },
+  "extra-249": {
+    "command": "credentials binding",
+    "description": "保存済みの認証情報を、限定されたブロック内で環境変数として公開します。"
+  },
+  "extra-250": {
+    "command": "withEnv",
+    "description": "パイプラインの限定されたブロックに対して、環境値を追加または上書きします。"
+  },
+  "extra-251": {
+    "command": "agent label",
+    "description": "一致するJenkinsエージェント上でパイプラインまたはステージをスケジュールします。"
+  },
+  "extra-252": {
+    "command": "matrix axis",
+    "description": "宣言された環境値の組み合わせごとにステージを実行します。"
+  },
+  "extra-253": {
+    "command": "parallel stages",
+    "description": "独立した宣言的ステージを並行して実行します。"
+  },
+  "extra-254": {
+    "command": "post always",
+    "description": "パイプラインの結果にかかわらず、後処理または報告のステップを実行します。"
+  },
+  "extra-255": {
+    "command": "post unsuccessful",
+    "description": "失敗または不安定な結果に対して、復旧や通知の処理を実行します。"
+  },
+  "extra-256": {
+    "command": "retry step",
+    "description": "一時的な操作失敗が発生した場合にブロックを再実行します。"
+  },
+  "extra-257": {
+    "command": "warnError",
+    "description": "パイプラインの続行を許可しながら、ステージを不安定としてマークします。"
+  },
+  "extra-258": {
+    "command": "lockable resource",
+    "description": "共有リソースへのパイプラインのアクセスを直列化します。"
+  },
+  "extra-259": {
+    "command": "milestone step",
+    "description": "古いビルドが新しいビルドを追い越して進むのを防ぎます。"
+  },
+  "extra-260": {
+    "command": "build job step",
+    "description": "パラメーターを渡して別のJenkinsジョブを起動し、必要に応じて完了を待ちます。"
+  },
+  "extra-261": {
+    "command": "copyArtifacts",
+    "description": "別のビルドから選択した成果物を現在のワークスペースにコピーします。"
+  },
+  "extra-262": {
+    "command": "pipeline shared library",
+    "description": "複数のジョブで使えるパイプラインのステップとグローバル変数をパッケージ化します。"
+  },
+  "extra-263": {
+    "command": "Replay build",
+    "description": "管理されたデバッグのため、スクリプトを一時的に編集してパイプラインを再実行します。"
+  },
+  "extra-264": {
+    "command": "build discard policy",
+    "description": "保持するビルド履歴と成果物を制限し、ストレージの増加を抑えます。"
+  },
+  "extra-265": {
+    "command": "kubectl rollout history",
+    "description": "Deploymentのロールアウトで作成されたリビジョンを表示します。"
+  },
+  "extra-266": {
+    "command": "kubectl rollout undo",
+    "description": "ロールバックが安全な場合、ワークロードを以前のリビジョンに戻します。"
+  },
+  "extra-267": {
+    "command": "kubectl rollout pause",
+    "description": "変更のレビュー中、Deploymentのロールアウトを一時停止します。"
+  },
+  "extra-268": {
+    "command": "kubectl rollout resume",
+    "description": "以前に一時停止したロールアウトを再開します。"
+  },
+  "extra-269": {
+    "command": "kubectl auth can-i",
+    "description": "現在のIDが特定のAPI操作を実行できるか確認します。"
+  },
+  "extra-270": {
+    "command": "kubectl api-resources",
+    "description": "APIサーバーが提供するリソースの種類とスコープを一覧表示します。"
+  },
+  "extra-271": {
+    "command": "kubectl explain",
+    "description": "リソースのフィールドに関するスキーマのドキュメントを読み取ります。"
+  },
+  "extra-272": {
+    "command": "kubectl wait",
+    "description": "リソースの条件が真になるかタイムアウトするまで待機します。"
+  },
+  "extra-273": {
+    "command": "kubectl plugin list",
+    "description": "現在のPATHで見つかった実行可能なkubectlプラグインを一覧表示します。"
+  },
+  "extra-274": {
+    "command": "kubectl diff",
+    "description": "適用前に、マニフェストが稼働中のクラスターをどう変更するか表示します。"
+  },
+  "extra-275": {
+    "command": "kubectl apply --server-side",
+    "description": "更新にサーバー側のフィールド所有権と競合検出を使用します。"
+  },
+  "extra-276": {
+    "command": "PodDisruptionBudget",
+    "description": "十分なレプリカが利用可能な状態を保つため、自発的な中断を制限します。"
+  },
+  "extra-277": {
+    "command": "startup probe",
+    "description": "起動の遅いコンテナに対し、生存確認が始まる前の猶予時間を与えます。"
+  },
+  "extra-278": {
+    "command": "readiness probe",
+    "description": "トラフィックを受け付けられない間、Podをサービスのエンドポイントから除外します。"
+  },
+  "extra-279": {
+    "command": "liveness probe",
+    "description": "プロセスが正常でなくなった場合にコンテナを再起動します。"
+  },
+  "extra-280": {
+    "command": "topology spread constraints",
+    "description": "関連する障害を減らすため、Podをゾーンやノードに分散します。"
+  },
+  "extra-281": {
+    "command": "Pod priority class",
+    "description": "リソースが逼迫した場合のスケジュール順序とプリエンプションの可能性に影響します。"
+  },
+  "extra-282": {
+    "command": "resource quota",
+    "description": "名前空間内のリソース消費の合計に上限を設けます。"
+  },
+  "extra-283": {
+    "command": "LimitRange",
+    "description": "名前空間内のオブジェクトに対する、リソース要求または制限のデフォルト値と最大値を設定します。"
+  },
+  "extra-284": {
+    "command": "EndpointSlice",
+    "description": "Kubernetes Servicesが使用する、拡張可能なバックエンドエンドポイントのデータを保存します。"
+  },
+  "extra-285": {
+    "command": "IngressClass",
+    "description": "Ingressリソースを実装するコントローラーを選択します。"
+  },
+  "extra-286": {
+    "command": "NetworkPolicy egress",
+    "description": "選択したPodが接続できる宛先を制限します。"
+  },
+  "extra-287": {
+    "command": "init container",
+    "description": "アプリケーションコンテナを起動する前に、セットアップ処理を完了させます。"
+  },
+  "extra-288": {
+    "command": "ephemeral container",
+    "description": "既存のPodに一時的なデバッグ用コンテナを追加します。"
+  },
+  "extra-289": {
+    "command": "lsof -i",
+    "description": "指定したポートやプロトコルに一致するネットワークソケットを使うプロセスを一覧表示します。"
+  },
+  "extra-290": {
+    "command": "ss -lntp",
+    "description": "待ち受け中のTCPソケット、数値アドレス、所有プロセスを表示します。"
+  },
+  "extra-291": {
+    "command": "ip route get",
+    "description": "カーネルが指定した宛先に使う経路と送信元アドレスを表示します。"
+  },
+  "extra-292": {
+    "command": "ip neigh",
+    "description": "アドレス解決に使うローカルの近隣キャッシュを表示します。"
+  },
+  "extra-293": {
+    "command": "ethtool",
+    "description": "対応するネットワークインターフェースのプロパティを確認または設定します。"
+  },
+  "extra-294": {
+    "command": "iostat -xz",
+    "description": "sysstatパッケージから、デバイス使用率と遅延のメトリックを報告します。"
+  },
+  "extra-295": {
+    "command": "vmstat",
+    "description": "メモリ、プロセス、ページング、ブロックI/O、CPUの動作を要約します。"
+  },
+  "extra-296": {
+    "command": "pidstat",
+    "description": "プロセスごとのCPU、メモリ、またはI/Oの統計を報告します。"
+  },
+  "extra-297": {
+    "command": "strace -p",
+    "description": "診断のため、既存プロセスのシステムコールを追跡します。"
+  },
+  "extra-298": {
+    "command": "ltrace",
+    "description": "プロセスが共有ライブラリの関数を呼び出す様子を追跡します。"
+  },
+  "extra-299": {
+    "command": "perf top",
+    "description": "システムでCPUサンプルを消費している関数をリアルタイムで表示します。"
+  },
+  "extra-300": {
+    "command": "systemd-analyze blame",
+    "description": "起動時にかかった時間順に、起動ユニットを一覧表示します。"
+  },
+  "extra-301": {
+    "command": "systemctl cat",
+    "description": "ユニットファイルと、そのドロップインの上書き設定をまとめて表示します。"
+  },
+  "extra-302": {
+    "command": "journalctl -u -S",
+    "description": "systemdユニットのジャーナルを、サービスと開始時刻で絞り込みます。"
+  },
+  "extra-303": {
+    "command": "loginctl list-sessions",
+    "description": "systemd-logindが管理する有効なログインセッションを一覧表示します。"
+  },
+  "extra-304": {
+    "command": "getfacl",
+    "description": "基本の所有者・グループ・モードのビットを超えるPOSIXアクセス制御リストを読み取ります。"
+  },
+  "extra-305": {
+    "command": "setfacl -m",
+    "description": "ファイルシステムのオブジェクトにアクセス制御リストのエントリを追加または変更します。"
+  },
+  "extra-306": {
+    "command": "find -mmin",
+    "description": "指定した分数以内に変更されたファイルを探します。"
+  },
+  "extra-307": {
+    "command": "stat -c",
+    "description": "モード、所有者、サイズ、タイムスタンプなど、選択したファイルメタデータを出力します。"
+  },
+  "extra-308": {
+    "command": "du -xhd1",
+    "description": "ファイルシステムの境界を越えずに、ディレクトリの使用量を要約します。"
+  },
+  "extra-309": {
+    "command": "tar --exclude",
+    "description": "一致するファイルやディレクトリを除外してアーカイブを作成します。"
+  },
+  "extra-310": {
+    "command": "flock -n",
+    "description": "重要なタスクを実行する前に、非ブロッキングのアドバイザリロックを取得します。"
+  },
+  "extra-311": {
+    "command": "renice",
+    "description": "実行中のプロセスのスケジューリング優先度を変更します。"
+  },
+  "extra-312": {
+    "command": "ulimit -n",
+    "description": "シェルプロセスのファイルディスクリプター上限を読み取り、または変更します。"
+  },
+  "extra-313": {
+    "command": "portable container image",
+    "description": "対応するレジストリ間で移動できるOCI互換のイメージ形式を使用します。"
+  },
+  "extra-314": {
+    "command": "workload identity federation",
+    "description": "信頼された外部IDアサーションを、短期のクラウド認証情報と交換します。"
+  },
+  "extra-315": {
+    "command": "cloud resource tagging standard",
+    "description": "所有者、環境、コストセンター、データ分類に一貫したラベルを使用します。"
+  },
+  "extra-316": {
+    "command": "provider lockfile",
+    "description": "プロバイダーパッケージのチェックサムを固定し、レビュー済みのバイナリをチームがインストールするようにします。"
+  },
+  "extra-317": {
+    "command": "cross-cloud DNS delegation",
+    "description": "各プラットフォームが自分のサービスレコードを管理できるよう、サブドメインを委任します。"
+  },
+  "extra-318": {
+    "command": "global traffic failover",
+    "description": "プライマリエンドポイントが使えなくなると、正常なプロバイダーへリクエストを送ります。"
+  },
+  "extra-319": {
+    "command": "cloud egress cost review",
+    "description": "プロバイダー、リージョン、ゾーンからデータが出ることで発生する料金を特定します。"
+  },
+  "extra-320": {
+    "command": "portable health endpoint",
+    "description": "ホスティングプラットフォームをまたいで、同等の準備完了と生存のシグナルを公開します。"
+  },
+  "extra-321": {
+    "command": "cross-provider log correlation",
+    "description": "プロバイダーの境界を越えてリクエストを追跡できるよう、トレースIDを伝播します。"
+  },
+  "extra-322": {
+    "command": "cloud-neutral backup format",
+    "description": "単一のマネージドサービスに縛られない形式で、復旧可能なデータを保存します。"
+  },
+  "extra-323": {
+    "command": "service-level objective portability",
+    "description": "ベンダー固有のメトリックと独立して、可用性と遅延の目標を定義します。"
+  },
+  "extra-324": {
+    "command": "cloud policy as code",
+    "description": "プロバイダーのリソースを作成する前に、CIで共通の保護ルールを検証します。"
+  },
+  "extra-325": {
+    "command": "secret provider abstraction",
+    "description": "アプリケーションが安定したインターフェース経由でシークレット値を利用できるようにします。"
+  },
+  "extra-326": {
+    "command": "artifact promotion by digest",
+    "description": "環境ごとに再ビルドする代わりに、不変の成果物識別子を次の環境へ昇格させます。"
+  },
+  "extra-327": {
+    "command": "cross-cloud certificate renewal",
+    "description": "独立した入口システム間で、証明書の発行とデプロイを調整します。"
+  },
+  "extra-328": {
+    "command": "multi-provider quota planning",
+    "description": "プロバイダーをまたいで拡張する前に、サービスのクォータと容量制限を追跡します。"
+  },
+  "extra-329": {
+    "command": "cloud incident runbook",
+    "description": "共通のサービス目標を満たすための、プロバイダー固有の復旧手順を文書化します。"
+  },
+  "extra-330": {
+    "command": "data transfer minimization",
+    "description": "データの近くに計算処理を置き、遅延とクラウド間の料金を減らします。"
+  },
+  "extra-331": {
+    "command": "immutable deployment artifact",
+    "description": "署名とバージョンが付いたビルド成果物をリリース単位として使用します。"
+  },
+  "extra-332": {
+    "command": "provider outage dependency map",
+    "description": "サービスをプロバイダーのリージョンと共有コントロールプレーンの依存関係に対応付けます。"
+  },
+  "extra-333": {
+    "command": "cloud configuration drift",
+    "description": "実際の設定を、バージョン管理された望ましい構成と比較します。"
+  },
+  "extra-334": {
+    "command": "portable deployment manifest",
+    "description": "ワークロードの設定を、プロバイダー固有のインフラストラクチャの関連付けから分離します。"
+  },
+  "extra-335": {
+    "command": "cross-cloud restore exercise",
+    "description": "バックアップが使えると仮定せず、別のプロバイダーで復旧をテストします。"
+  },
+  "extra-336": {
+    "command": "shared responsibility matrix",
+    "description": "プロバイダーとワークロードチームそれぞれが担うセキュリティ制御を明確にします。"
+  },
+  "extra-337": {
+    "command": "TCP three-way handshake",
+    "description": "SYN、SYN-ACK、ACKセグメントを使ってTCP接続を確立します。"
+  },
+  "extra-338": {
+    "command": "TCP retransmission",
+    "description": "損失や過度の遅延後、確認応答されていないデータを再送します。"
+  },
+  "extra-339": {
+    "command": "MTU path discovery",
+    "description": "断片化せずに送れる最大のパケットサイズを見つけます。"
+  },
+  "extra-340": {
+    "command": "DNS CNAME record",
+    "description": "DNS名をアドレスへ直接ではなく、別の名前へのエイリアスとして設定します。"
+  },
+  "extra-341": {
+    "command": "DNS negative caching",
+    "description": "名前やレコードが存在しないことを、指定期間キャッシュします。"
+  },
+  "extra-342": {
+    "command": "DNS split horizon",
+    "description": "クライアントのリゾルバービューに応じて異なるレコードを返します。"
+  },
+  "extra-343": {
+    "command": "BGP local preference",
+    "description": "自律システム内で優先する送信経路を選択します。"
+  },
+  "extra-344": {
+    "command": "BGP AS path prepending",
+    "description": "広報するパスを長く見せ、リモート側の経路選択に影響を与えます。"
+  },
+  "extra-345": {
+    "command": "BGP graceful restart",
+    "description": "ピアが対応している場合、ルーティングプロセスの再起動中も転送を維持します。"
+  },
+  "extra-346": {
+    "command": "VLAN trunk",
+    "description": "1本の物理Ethernetリンクで、複数のタグ付きVLANを運びます。"
+  },
+  "extra-347": {
+    "command": "802.1Q native VLAN",
+    "description": "トランクでタグなしトラフィックを運び、両端で一致させる必要があります。"
+  },
+  "extra-348": {
+    "command": "LACP port channel",
+    "description": "冗長性と容量のため、物理リンクをネゴシエーションされた論理リンクにまとめます。"
+  },
+  "extra-349": {
+    "command": "ARP cache",
+    "description": "ローカルネットワーク上でIPv4アドレスをリンク層アドレスに対応付けます。"
+  },
+  "extra-350": {
+    "command": "IPv6 neighbor discovery",
+    "description": "アドレス解決とルーター検出にICMPv6メッセージを使用します。"
+  },
+  "extra-351": {
+    "command": "NAT port exhaustion",
+    "description": "NATデバイスで、同時フローに使える送信元ポートが不足すると発生します。"
+  },
+  "extra-352": {
+    "command": "TLS SNI",
+    "description": "TLSハンドシェイク中に、クライアントが要求するホスト名を示せるようにします。"
+  },
+  "extra-353": {
+    "command": "TLS ALPN",
+    "description": "TLSの確立時に、HTTP/2などのアプリケーションプロトコルをネゴシエーションします。"
+  },
+  "extra-354": {
+    "command": "HTTP CONNECT proxy",
+    "description": "HTTPプロキシ経由でトンネルを作成し、通常はTLSトラフィックに使用します。"
+  },
+  "extra-355": {
+    "command": "reverse proxy buffering",
+    "description": "中継装置がリクエストやレスポンスの本文をバッファリングするか制御します。"
+  },
+  "extra-356": {
+    "command": "Anycast routing",
+    "description": "複数の場所から同じアドレスを広報し、ルーティングで近くのサイトを選ばせます。"
+  },
+  "extra-357": {
+    "command": "ECMP",
+    "description": "複数の等コスト経路にフローを分散します。"
+  },
+  "extra-358": {
+    "command": "network flow logs",
+    "description": "トラフィックの送信元、宛先、ポート、許可・拒否の詳細をサンプリングして記録します。"
+  },
+  "extra-359": {
+    "command": "ICMP destination unreachable",
+    "description": "ホスト、ネットワーク、プロトコル、ポート、経路に到達できないことを報告します。"
+  },
+  "extra-360": {
+    "command": "packet capture ring buffer",
+    "description": "キャプチャファイルをローテーションし、長時間の診断で使うディスク容量を制限します。"
+  },
+  "extra-361": {
+    "command": "oci iam region-subscription list",
+    "description": "現在のテナンシーで有効なリージョンを一覧表示します。"
+  },
+  "extra-362": {
+    "command": "OCI compartment hierarchy",
+    "description": "テナンシー内のリソースを整理し、IAMポリシーのスコープを適用します。"
+  },
+  "extra-363": {
+    "command": "OCI dynamic group",
+    "description": "一致するコンパートメントまたはリソースのルールで、リソースプリンシパルを選択します。"
+  },
+  "extra-364": {
+    "command": "OCI resource principal",
+    "description": "ユーザーのAPIキーを保存せずに、OCIワークロードが許可されたサービスを呼び出せるようにします。"
+  },
+  "extra-365": {
+    "command": "OCI Vault secret version",
+    "description": "アプリケーションや統合用に、バージョン付きのシークレット内容を保存します。"
+  },
+  "extra-366": {
+    "command": "OCI Vault key rotation",
+    "description": "復号用の古いバージョンを保持しながら、新しいキーバージョンを作成します。"
+  },
+  "extra-367": {
+    "command": "Object Storage retention rule",
+    "description": "設定された期間中、オブジェクトを削除や上書きから保護します。"
+  },
+  "extra-368": {
+    "command": "Object Storage pre-authenticated request",
+    "description": "選択したオブジェクトやバケットに、範囲と期間を限定したアクセスを付与します。"
+  },
+  "extra-369": {
+    "command": "VCN route rule",
+    "description": "宛先が一致するトラフィックを、ゲートウェイまたはプライベートのネクストホップに送ります。"
+  },
+  "extra-370": {
+    "command": "Network Security Group",
+    "description": "サブネット全体ではなく、選択したVNICに仮想ネットワークのルールを適用します。"
+  },
+  "extra-371": {
+    "command": "OCI service gateway",
+    "description": "VCNから対応するOracleサービスへのプライベートアクセスを提供します。"
+  },
+  "extra-372": {
+    "command": "OCI NAT gateway",
+    "description": "プライベートサブネットのリソースが、外からの受信にさらされずにパブリック接続を開始できるようにします。"
+  },
+  "extra-373": {
+    "command": "Load Balancer backend set",
+    "description": "ポリシーとヘルスチェック構成を指定して、バックエンドサーバーをグループ化します。"
+  },
+  "extra-374": {
+    "command": "Compute instance pool",
+    "description": "障害ドメインをまたいで、類似したコンピュートインスタンスのグループを管理します。"
+  },
+  "extra-375": {
+    "command": "Block Volume backup policy",
+    "description": "再利用可能なポリシーで、ボリュームのバックアップをスケジュールします。"
+  },
+  "extra-376": {
+    "command": "File Storage export set",
+    "description": "ファイルシステムのネットワークアクセスとエクスポートオプションを定義します。"
+  },
+  "extra-377": {
+    "command": "OKE node pool",
+    "description": "クラスターのワーカーシェイプ、イメージ、サブネット、スケーリング設定を定義します。"
+  },
+  "extra-378": {
+    "command": "OKE workload identity",
+    "description": "Kubernetesサービスアカウントに、プリンシパルとしてOCIリソースへアクセスする権限を与えます。"
+  },
+  "extra-379": {
+    "command": "Autonomous Database wallet",
+    "description": "TLSで保護されたデータベースアクセス用のクライアント接続情報を含みます。"
+  },
+  "extra-380": {
+    "command": "Database Data Guard",
+    "description": "災害復旧とロール切り替えのために、スタンバイデータベースを維持します。"
+  },
+  "extra-381": {
+    "command": "Logging service search",
+    "description": "集約されたOCIログを検索し、リソースとアプリケーションのイベントを調査します。"
+  },
+  "extra-382": {
+    "command": "Monitoring alarm",
+    "description": "メトリッククエリを評価し、しきい値に違反した場合に通知を送ります。"
+  },
+  "extra-383": {
+    "command": "Resource Manager stack drift",
+    "description": "デプロイ済みのリソースをスタックのTerraform構成と比較します。"
+  },
+  "extra-384": {
+    "command": "Cloud Guard responder recipe",
+    "description": "検出ルールがリスクを見つけた場合の、自動または手動のアクションを定義します。"
+  },
+  "extra-385": {
+    "command": "strict and warnings",
+    "description": "コンパイル時のチェックと、役立つ実行時診断を有効にします。"
+  },
+  "extra-386": {
+    "command": "defined-or operator",
+    "description": "値がゼロや空ではなく、未定義の場合にのみ代替値を使用します。"
+  },
+  "extra-387": {
+    "command": "three-argument open",
+    "description": "明示的なモードでファイルを開き、2引数形式の曖昧な解析を避けます。"
+  },
+  "extra-388": {
+    "command": "autodie",
+    "description": "よくあるシステムコールの失敗を自動的に例外に変換します。"
+  },
+  "extra-389": {
+    "command": "File::Temp",
+    "description": "安全で一意な名前の一時ファイルとディレクトリを作成します。"
+  },
+  "extra-390": {
+    "command": "Getopt::Long",
+    "description": "長い形式のコマンドラインオプションを解析して変数に格納します。"
+  },
+  "extra-391": {
+    "command": "JSON::PP decode_json",
+    "description": "標準のJSON::PPモジュールを使い、JSON文書をPerlの参照に解析します。"
+  },
+  "extra-392": {
+    "command": "JSON::PP encode_json",
+    "description": "Perlのデータ構造をコンパクトなJSONバイト列にシリアライズします。"
+  },
+  "extra-393": {
+    "command": "File::Basename",
+    "description": "パスからディレクトリ、ファイル名、接尾辞の各要素を抽出します。"
+  },
+  "extra-394": {
+    "command": "File::Path make_path",
+    "description": "入れ子のディレクトリを作成し、ファイルシステムのエラーを報告します。"
+  },
+  "extra-395": {
+    "command": "File::Find",
+    "description": "ディレクトリツリーを巡回し、各エントリでコールバックを呼び出します。"
+  },
+  "extra-396": {
+    "command": "IPC::Open3",
+    "description": "stdin、stdout、stderrに別々のハンドルを使って子プロセスを実行します。"
+  },
+  "extra-397": {
+    "command": "system list form",
+    "description": "引数を解釈するためのシェルを呼び出さずに、プログラムを実行します。"
+  },
+  "extra-398": {
+    "command": "Time::HiRes alarm",
+    "description": "時間制限のある操作用に、秒未満の精度でアラームを設定します。"
+  },
+  "extra-399": {
+    "command": "POSIX strftime",
+    "description": "ロケールに依存しない指定パターンでタイムスタンプを書式設定します。"
+  },
+  "extra-400": {
+    "command": "Digest::SHA",
+    "description": "ファイルやデータストリームの暗号学的ハッシュを計算します。"
+  },
+  "extra-401": {
+    "command": "List::Util max",
+    "description": "数値リストから最大値を見つけます。"
+  },
+  "extra-402": {
+    "command": "List::Util any",
+    "description": "リストのいずれかの項目が述語を満たすか調べます。"
+  },
+  "extra-403": {
+    "command": "Try::Tiny",
+    "description": "簡潔なtry、catch、finallyブロックで例外を処理します。"
+  },
+  "extra-404": {
+    "command": "Test::More subtests",
+    "description": "関連するアサーションをまとめ、明確な入れ子のテスト結果を報告します。"
+  },
+  "extra-405": {
+    "command": "Test::Warnings",
+    "description": "テスト中にコードが期待した警告を発することを検証します。"
+  },
+  "extra-406": {
+    "command": "DBI placeholders",
+    "description": "SQLテキストとは別に値をバインドし、インジェクションや引用符のバグを防ぎます。"
+  },
+  "extra-407": {
+    "command": "DBI transaction",
+    "description": "データベースへの書き込みをまとめ、一括コミットするか失敗時にロールバックします。"
+  },
+  "extra-408": {
+    "command": "Encode decode",
+    "description": "明示的なエンコーディングで、バイト列を文字列に変換します。"
+  },
+  "extra-409": {
+    "command": "Get-Command -All",
+    "description": "隠されているコマンドも含め、一致する名前のすべてのコマンドを一覧表示します。"
+  },
+  "extra-410": {
+    "command": "Get-Member",
+    "description": "パイプラインのオブジェクトで使用可能なプロパティとメソッドを調べます。"
+  },
+  "extra-411": {
+    "command": "Select-Object -ExpandProperty",
+    "description": "元のオブジェクトをラップせずに、プロパティの値を直接出力します。"
+  },
+  "extra-412": {
+    "command": "Where-Object property shorthand",
+    "description": "対応するPowerShellバージョンで、簡潔な比較構文を使ってオブジェクトを絞り込みます。"
+  },
+  "extra-413": {
+    "command": "ForEach-Object -Parallel",
+    "description": "対応するPowerShellバージョンで、パイプラインの項目を並行処理します。"
+  },
+  "extra-414": {
+    "command": "Start-Job",
+    "description": "現在のセッション内で、別のバックグラウンドジョブとして処理を実行します。"
+  },
+  "extra-415": {
+    "command": "Receive-Job -Keep",
+    "description": "ジョブ履歴から削除せずに、ジョブの出力を読み取ります。"
+  },
+  "extra-416": {
+    "command": "Try / Catch / Finally",
+    "description": "終了エラーを処理し、後処理コードを実行できることを保証します。"
+  },
+  "extra-417": {
+    "command": "ErrorAction Stop",
+    "description": "多くの非終了エラーを終了エラーに昇格させ、catchブロックで処理できるようにします。"
+  },
+  "extra-418": {
+    "command": "Set-StrictMode",
+    "description": "未初期化の変数や、その他のよくあるスクリプトの誤りを検出します。"
+  },
+  "extra-419": {
+    "command": "ConvertFrom-Json -AsHashtable",
+    "description": "対応するPowerShellバージョンで、JSONを変更可能なハッシュテーブルに解析します。"
+  },
+  "extra-420": {
+    "command": "ConvertTo-Json -Depth",
+    "description": "選択した深さまで、入れ子のオブジェクトをシリアライズします。"
+  },
+  "extra-421": {
+    "command": "Invoke-RestMethod -StatusCodeVariable",
+    "description": "RESTレスポンスを解析しながらHTTPステータスコードを取得します。"
+  },
+  "extra-422": {
+    "command": "Test-NetConnection",
+    "description": "リモートエンドポイントへのDNS解決とTCP接続性を確認します。"
+  },
+  "extra-423": {
+    "command": "Get-FileHash",
+    "description": "整合性確認と成果物比較のためにファイルハッシュを計算します。"
+  },
+  "extra-424": {
+    "command": "Compare-Object",
+    "description": "2つのコレクションまたはオブジェクトのプロパティ間の違いを表示します。"
+  },
+  "extra-425": {
+    "command": "Import-Csv",
+    "description": "区切り文字付きの行をオブジェクトとして読み込み、ヘッダーをプロパティ名にします。"
+  },
+  "extra-426": {
+    "command": "Export-Clixml",
+    "description": "型情報を保持しながらPowerShellオブジェクトをシリアライズします。"
+  },
+  "extra-427": {
+    "command": "PSSession",
+    "description": "複数のコマンドで再利用できるリモートPowerShell接続を維持します。"
+  },
+  "extra-428": {
+    "command": "Register-ArgumentCompleter",
+    "description": "コマンドやパラメーターにカスタムのタブ補完を追加します。"
+  },
+  "extra-429": {
+    "command": "SupportsShouldProcess",
+    "description": "高度な関数で標準の-WhatIfと-Confirmの動作を有効にします。"
+  },
+  "extra-430": {
+    "command": "SecureString",
+    "description": "保護された文字列型を使い、機密テキストをメモリ内で表現します。"
+  },
+  "extra-431": {
+    "command": "Resolve-Path",
+    "description": "パスをプロバイダーで修飾された絶対位置に展開します。"
+  },
+  "extra-432": {
+    "command": "pathlib.Path.rglob",
+    "description": "globパターンに一致するパスを再帰的に検索します。"
+  },
+  "extra-433": {
+    "command": "pathlib.Path.replace",
+    "description": "ファイルシステムが対応している場合、宛先パスをアトミックに置き換えます。"
+  },
+  "extra-434": {
+    "command": "subprocess.run check",
+    "description": "呼び出したプロセスが正常終了しなかった場合、CalledProcessErrorを送出します。"
+  },
+  "extra-435": {
+    "command": "subprocess timeout",
+    "description": "プロセスが制限を超えると待機をやめ、TimeoutExpiredを送出します。"
+  },
+  "extra-436": {
+    "command": "contextlib.ExitStack",
+    "description": "動的な数のコンテキストマネージャーを、単一の後処理スコープで管理します。"
+  },
+  "extra-437": {
+    "command": "dataclasses.field default_factory",
+    "description": "dataclassの各インスタンスに、新しい変更可能なデフォルト値を作成します。"
+  },
+  "extra-438": {
+    "command": "typing.Protocol",
+    "description": "明示的な継承を要求せずに、構造的なインターフェースを記述します。"
+  },
+  "extra-439": {
+    "command": "functools.cache",
+    "description": "引数がハッシュ可能な場合に、関数の結果をメモ化します。"
+  },
+  "extra-440": {
+    "command": "functools.partial",
+    "description": "一部の引数を事前設定した呼び出し可能オブジェクトを作成します。"
+  },
+  "extra-441": {
+    "command": "itertools.batched",
+    "description": "対応するPythonバージョンで、反復可能オブジェクトを固定サイズのタプルに分割します。"
+  },
+  "extra-442": {
+    "command": "collections.Counter",
+    "description": "ハッシュ可能な値を数え、頻度に関する便利な操作を提供します。"
+  },
+  "extra-443": {
+    "command": "collections.defaultdict",
+    "description": "ファクトリー関数で、マッピングの欠落値を作成します。"
+  },
+  "extra-444": {
+    "command": "contextlib.suppress",
+    "description": "限定されたコンテキストブロック内で、選択した種類の例外を無視します。"
+  },
+  "extra-445": {
+    "command": "logging LoggerAdapter",
+    "description": "ラップしたロガーのログレコードに、コンテキストのフィールドを追加します。"
+  },
+  "extra-446": {
+    "command": "logging QueueHandler",
+    "description": "キューを通じて、ログ処理をリスナースレッドまたはプロセスに移します。"
+  },
+  "extra-447": {
+    "command": "asyncio.TaskGroup",
+    "description": "構造化されたキャンセルと例外処理を使い、関連タスクを実行します。"
+  },
+  "extra-448": {
+    "command": "asyncio.Semaphore",
+    "description": "リソースを多く使う区間に入れるコルーチン数を制限します。"
+  },
+  "extra-449": {
+    "command": "yield from",
+    "description": "反復とジェネレーターの制御をサブジェネレーターに委譲します。"
+  },
+  "extra-450": {
+    "command": "memoryview",
+    "description": "元のバイト列をコピーせずに、バッファーデータのビューを提供します。"
+  },
+  "extra-451": {
+    "command": "zip strict",
+    "description": "zipでまとめる反復可能オブジェクトの長さが異なる場合、ValueErrorを送出します。"
+  },
+  "extra-452": {
+    "command": "enum StrEnum",
+    "description": "対応するPythonバージョンで、文字列値の列挙型メンバーを定義します。"
+  },
+  "extra-453": {
+    "command": "tomllib",
+    "description": "対応するPythonバージョンで、標準ライブラリを使ってTOMLを解析します。"
+  },
+  "extra-454": {
+    "command": "unittest.mock autospec",
+    "description": "モックを実際のオブジェクトのシグネチャと利用可能な属性に制限します。"
+  },
+  "extra-455": {
+    "command": "Enumerable#filter_map",
+    "description": "1回の走査で値を変換し、nilの結果を除去します。"
+  },
+  "extra-456": {
+    "command": "Enumerable#tally",
+    "description": "列挙可能なコレクション内で、各値の出現回数を数えます。"
+  },
+  "extra-457": {
+    "command": "Enumerable#each_slice",
+    "description": "列挙可能なコレクションから、固定サイズのグループを順番に生成します。"
+  },
+  "extra-458": {
+    "command": "Hash#fetch",
+    "description": "明示的なデフォルト値を使ってキーを読み取り、デフォルトが指定されていなければ例外を送出します。"
+  },
+  "extra-459": {
+    "command": "Hash#transform_values",
+    "description": "キーを保持したまま各値を変換したハッシュを返します。"
+  },
+  "extra-460": {
+    "command": "Hash#compact",
+    "description": "値がnilのエントリを除いたコピーを返します。"
+  },
+  "extra-461": {
+    "command": "String#delete_prefix",
+    "description": "元の文字列を変更せず、一致するプレフィックスを1つ除去します。"
+  },
+  "extra-462": {
+    "command": "String#match?",
+    "description": "MatchDataの結果を生成せずに、文字列が正規表現に一致するか確認します。"
+  },
+  "extra-463": {
+    "command": "Regexp named captures",
+    "description": "意味のあるフィールドを数値の位置ではなく名前で取得します。"
+  },
+  "extra-464": {
+    "command": "safe navigation operator",
+    "description": "レシーバーがnilでない場合のみメソッドを呼び出します。"
+  },
+  "extra-465": {
+    "command": "Data.define",
+    "description": "対応するRubyバージョンで、名前付きメンバーを持つ不変の値オブジェクトを作成します。"
+  },
+  "extra-466": {
+    "command": "Struct keyword_init",
+    "description": "名前付きキーワード引数で初期化する軽量なレコードを作成します。"
+  },
+  "extra-467": {
+    "command": "Enumerable#lazy",
+    "description": "要求された時だけ値を処理する、遅延評価のチェーンを構築します。"
+  },
+  "extra-468": {
+    "command": "Fiber scheduler",
+    "description": "対応するI/O操作がスケジューラーの下で協調的に実行権を譲れるようにします。"
+  },
+  "extra-469": {
+    "command": "Timeout.timeout",
+    "description": "ブロックが設定時間を超えると例外を送出します。"
+  },
+  "extra-470": {
+    "command": "Open3.capture3",
+    "description": "サブプロセスを実行し、stdout、stderr、終了状態を別々に取得します。"
+  },
+  "extra-471": {
+    "command": "Tempfile.create",
+    "description": "ブロック終了後に自動で後処理する一時ファイルを作成します。"
+  },
+  "extra-472": {
+    "command": "JSON.parse symbolize_names",
+    "description": "アプリケーションに適する場合、JSONオブジェクトのキーをシンボルとして解析します。"
+  },
+  "extra-473": {
+    "command": "Logger tagged context",
+    "description": "関連付けのため、ログ行にリクエストIDまたはジョブIDを追加します。"
+  },
+  "extra-474": {
+    "command": "ActiveSupport retry_on",
+    "description": "選択したジョブ例外を、設定したバックオフ戦略で再試行します。"
+  },
+  "extra-475": {
+    "command": "RSpec shared examples",
+    "description": "複数の実装間で振る舞いの契約を再利用します。"
+  },
+  "extra-476": {
+    "command": "Rake file task",
+    "description": "ファイルが存在しないか前提ファイルより古い場合のみ実行するタスクを定義します。"
+  },
+  "extra-477": {
+    "command": "Bundler deployment mode",
+    "description": "ロック済みの依存関係を、予測可能なデプロイ配置にインストールします。"
+  },
+  "extra-478": {
+    "command": "terraform providers lock",
+    "description": "選択したプラットフォームのプロバイダーチェックサムを、依存関係のロックファイルに書き込みます。"
+  },
+  "extra-479": {
+    "command": "terraform fmt -check",
+    "description": "Terraformファイルが標準の書式と異なる場合に失敗します。"
+  },
+  "extra-480": {
+    "command": "terraform providers schema",
+    "description": "リソースとデータソースの属性を調べるため、プロバイダーのスキーマを出力します。"
+  },
+  "extra-481": {
+    "command": "terraform graph",
+    "description": "Graphvizで描画できる依存関係グラフを出力します。"
+  },
+  "extra-482": {
+    "command": "terraform state list",
+    "description": "状態ファイルで現在追跡しているリソースアドレスを一覧表示します。"
+  },
+  "extra-483": {
+    "command": "terraform state show",
+    "description": "単一のリソースアドレスに保存された属性を表示します。"
+  },
+  "extra-484": {
+    "command": "terraform state mv",
+    "description": "安全な構成リファクタリング後に、状態のアドレスを移動します。"
+  },
+  "extra-485": {
+    "command": "terraform state rm",
+    "description": "実際のインフラストラクチャを破棄せず、リソースの追跡を停止します。"
+  },
+  "extra-486": {
+    "command": "terraform import",
+    "description": "既存のリモートオブジェクトをTerraformのリソースアドレスに関連付けます。"
+  },
+  "extra-487": {
+    "command": "terraform force-unlock",
+    "description": "実行中の操作がないことを確認してから、古い状態ロックを解除します。"
+  },
+  "extra-488": {
+    "command": "terraform console",
+    "description": "現在の構成に対してTerraform式を評価します。"
+  },
+  "extra-489": {
+    "command": "terraform output -raw",
+    "description": "JSONの引用符なしで単一の出力値を表示します。"
+  },
+  "extra-490": {
+    "command": "terraform plan -target",
+    "description": "依存関係の限られた範囲を計画します。全体を確認する計画の代わりにはすべきではありません。"
+  },
+  "extra-491": {
+    "command": "terraform apply -replace",
+    "description": "非推奨のtaintワークフローではなく、選択したリソースの置換を計画します。"
+  },
+  "extra-492": {
+    "command": "terraform moved block",
+    "description": "リソースアドレスの変更を宣言し、計画中に状態の移行が行われるようにします。"
+  },
+  "extra-493": {
+    "command": "terraform check block",
+    "description": "結果のインフラストラクチャについて、処理を阻止しないアサーションを評価します。"
+  },
+  "extra-494": {
+    "command": "terraform test",
+    "description": "モックまたは実際のプロバイダー動作を使い、組み込みの構成テストを実行します。"
+  },
+  "extra-495": {
+    "command": "terraform_data resource",
+    "description": "トリガーとプロビジョナーの移行用に、ライフサイクルを認識するリソースを提供します。"
+  },
+  "extra-496": {
+    "command": "terraform_data triggers_replace",
+    "description": "選択した値が変わるとterraform_dataインスタンスを置き換えます。"
+  },
+  "extra-497": {
+    "command": "provider alias",
+    "description": "別々のアカウントやリージョン用に、同じプロバイダーの複数インスタンスを設定します。"
+  },
+  "extra-498": {
+    "command": "configuration_aliases",
+    "description": "子モジュールが呼び出し側から受け取ることを期待する、プロバイダーのエイリアスを宣言します。"
+  },
+  "extra-499": {
+    "command": "sensitive output",
+    "description": "出力を機密としてマークし、CLI出力に誤って表示されるリスクを減らします。"
+  },
+  "extra-500": {
+    "command": "precondition and postcondition",
+    "description": "操作前の前提条件、またはリソース評価後の保証を検証します。"
+  }
+}

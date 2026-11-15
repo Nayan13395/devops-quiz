@@ -1,0 +1,302 @@
+[
+  {
+    "category": "Docker",
+    "set": 4,
+    "question": "哪个命令从 Docker Hub 下载镜像？",
+    "options": [
+      "docker pull",
+      "docker fetch",
+      "docker copy",
+      "docker get"
+    ],
+    "answer": "docker pull"
+  },
+  {
+    "category": "Docker",
+    "set": 4,
+    "question": "哪个命令拉取指定的镜像标签？",
+    "options": [
+      "docker pull image:tag",
+      "docker pull --tag tag",
+      "docker pull -t tag",
+      "docker get image:tag"
+    ],
+    "answer": "docker pull image:tag"
+  },
+  {
+    "category": "Docker",
+    "set": 4,
+    "question": "哪个命令检查镜像清单，而不下载镜像层？",
+    "options": [
+      "docker manifest inspect",
+      "docker pull --manifest",
+      "docker image manifest",
+      "docker show manifest"
+    ],
+    "answer": "docker manifest inspect"
+  },
+  {
+    "category": "Docker",
+    "set": 4,
+    "question": "哪个命令列出镜像摘要？",
+    "options": [
+      "docker images --digests",
+      "docker digest",
+      "docker image digest",
+      "docker inspect digest"
+    ],
+    "answer": "docker images --digests"
+  },
+  {
+    "category": "Docker",
+    "set": 4,
+    "question": "使用 Docker Engine API 1.42 或更高版本时，哪个命令删除所有未使用的本地卷，包括命名卷？",
+    "options": [
+      "docker volume prune -a",
+      "docker volume clean",
+      "docker prune volumes",
+      "docker rm volume"
+    ],
+    "answer": "docker volume prune -a"
+  },
+  {
+    "category": "Docker",
+    "set": 4,
+    "question": "哪个命令删除未使用的自定义 Docker 网络？",
+    "options": [
+      "docker network prune",
+      "docker prune network",
+      "docker clean network",
+      "docker rm network"
+    ],
+    "answer": "docker network prune"
+  },
+  {
+    "category": "Docker",
+    "set": 4,
+    "question": "哪个命令显示所选 Buildx 构建器的构建缓存磁盘用量？",
+    "options": [
+      "docker buildx du",
+      "docker build cache",
+      "docker cache usage",
+      "docker builder stats"
+    ],
+    "answer": "docker buildx du"
+  },
+  {
+    "category": "Docker",
+    "set": 4,
+    "question": "哪个命令删除未使用的构建缓存？",
+    "options": [
+      "docker builder prune",
+      "docker build clean",
+      "docker cache prune",
+      "docker prune build"
+    ],
+    "answer": "docker builder prune"
+  },
+  {
+    "category": "Docker",
+    "set": 4,
+    "question": "提供合适的 --platform 列表和构建器后，哪个命令支持多平台镜像构建？",
+    "options": [
+      "docker buildx build",
+      "docker build multi",
+      "docker build platform",
+      "docker image buildx"
+    ],
+    "answer": "docker buildx build"
+  },
+  {
+    "category": "Docker",
+    "set": 4,
+    "question": "哪个命令列出可用的 Buildx 构建器？",
+    "options": [
+      "docker buildx ls",
+      "docker buildx show",
+      "docker builder ls",
+      "docker buildx list"
+    ],
+    "answer": "docker buildx ls"
+  },
+  {
+    "category": "Docker",
+    "set": 4,
+    "question": "哪个命令显示所有 Docker 上下文？",
+    "options": [
+      "docker context ls",
+      "docker contexts",
+      "docker context show",
+      "docker list context"
+    ],
+    "answer": "docker context ls"
+  },
+  {
+    "category": "Docker",
+    "set": 4,
+    "question": "哪个命令切换到另一个 Docker 上下文？",
+    "options": [
+      "docker context use",
+      "docker context switch",
+      "docker use context",
+      "docker context select"
+    ],
+    "answer": "docker context use"
+  },
+  {
+    "category": "Docker",
+    "set": 4,
+    "question": "哪个命令删除 Docker 上下文？",
+    "options": [
+      "docker context rm",
+      "docker context inspect",
+      "docker remove context",
+      "docker context use"
+    ],
+    "answer": "docker context rm"
+  },
+  {
+    "category": "Docker",
+    "set": 4,
+    "question": "哪个 Dockerfile 指令指定基础镜像？",
+    "options": [
+      "FROM",
+      "BASE",
+      "IMAGE",
+      "START"
+    ],
+    "answer": "FROM"
+  },
+  {
+    "category": "Docker",
+    "set": 4,
+    "question": "哪个 Dockerfile 指令设置环境变量？",
+    "options": [
+      "ENV",
+      "SET",
+      "VAR",
+      "EXPORT"
+    ],
+    "answer": "ENV"
+  },
+  {
+    "category": "Docker",
+    "set": 4,
+    "question": "哪个命令在后台启动 Compose 文件定义的服务？",
+    "options": [
+      "docker compose up -d",
+      "docker compose create",
+      "docker compose config",
+      "docker compose down"
+    ],
+    "answer": "docker compose up -d"
+  },
+  {
+    "category": "Docker",
+    "set": 4,
+    "question": "哪个顶层 Compose 键包含应用服务定义？",
+    "options": [
+      "volumes",
+      "networks",
+      "configs",
+      "services"
+    ],
+    "answer": "services"
+  },
+  {
+    "category": "Docker",
+    "set": 4,
+    "question": "哪个命令展示并验证解析后的 Compose 配置？",
+    "options": [
+      "docker compose images",
+      "docker compose top",
+      "docker compose config",
+      "docker compose ps"
+    ],
+    "answer": "docker compose config"
+  },
+  {
+    "category": "Docker",
+    "set": 4,
+    "question": "'docker compose down' 不带 --volumes 时通常执行什么操作？",
+    "options": [
+      "仅删除 Compose 配置文件",
+      "删除项目容器和网络，但保留命名卷",
+      "删除主机上的所有镜像和卷",
+      "暂停容器，而不删除它们"
+    ],
+    "answer": "删除项目容器和网络，但保留命名卷"
+  },
+  {
+    "category": "Docker",
+    "set": 4,
+    "question": "Compose 的 depends_on 使用 service_healthy 时，依赖方服务启动前必须满足什么条件？",
+    "options": [
+      "被依赖的服务必须通过已配置的健康检查",
+      "被依赖的服务必须成功退出",
+      "所有暴露的端口都必须发布到主机",
+      "被依赖服务的镜像必须推送到注册中心"
+    ],
+    "answer": "被依赖的服务必须通过已配置的健康检查"
+  },
+  {
+    "category": "Docker",
+    "set": 4,
+    "question": "哪个 Buildx 选项指定 linux/amd64 和 linux/arm64 等目标平台？",
+    "options": [
+      "--target",
+      "--builder",
+      "--progress",
+      "--platform"
+    ],
+    "answer": "--platform"
+  },
+  {
+    "category": "Docker",
+    "set": 4,
+    "question": "哪个 Buildx 选项选择指定名称的 Dockerfile 阶段作为构建目标？",
+    "options": [
+      "--tag",
+      "--file",
+      "--target",
+      "--platform"
+    ],
+    "answer": "--target"
+  },
+  {
+    "category": "Docker",
+    "set": 4,
+    "question": "哪个 Buildx 构建选项将结果直接推送到注册中心？",
+    "options": [
+      "--pull",
+      "--push",
+      "--load",
+      "--no-cache"
+    ],
+    "answer": "--push"
+  },
+  {
+    "category": "Docker",
+    "set": 4,
+    "question": "构建镜像时，'--no-cache' 要求 Docker 做什么？",
+    "options": [
+      "不复用缓存的构建结果",
+      "删除所有本地镜像",
+      "禁用容器运行时的文件系统缓存",
+      "跳过基础镜像下载"
+    ],
+    "answer": "不复用缓存的构建结果"
+  },
+  {
+    "category": "Docker",
+    "set": 4,
+    "question": "哪个命令显示指定名称的 Docker 卷的详情？",
+    "options": [
+      "docker volume ls",
+      "docker volume create data",
+      "docker volume prune",
+      "docker volume inspect data"
+    ],
+    "answer": "docker volume inspect data"
+  }
+]

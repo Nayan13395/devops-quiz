@@ -1,0 +1,85 @@
+{
+  "created_at": "2026-11-14T15:30:57+05:30",
+  "completed": [
+    "game-ui-localization"
+  ],
+  "blocked": [
+    "full-app-regression",
+    "refresh-docs-reports"
+  ],
+  "order": [
+    "game-ui-localization",
+    "full-app-regression",
+    "refresh-docs-reports"
+  ],
+  "status": "finished_with_blockers",
+  "active_task": null,
+  "runner_pid": null,
+  "updated_at": "2026-11-15T02:51:32+05:30",
+  "parallel_tasks": 0,
+  "planned_parallel_tasks": 3,
+  "requested_autopilot": true,
+  "requested_allow_all": true,
+  "verified_models": [
+    "gpt-5.6-sol",
+    "claude-sonnet-5.5",
+    "gemini-4-argon"
+  ],
+  "mode": "parallel",
+  "sessions": {
+    "game-ui-localization": {
+      "task_id": "game-ui-localization",
+      "session_id": "493cb536-d841-4855-a0a0-39c35c6e57ee",
+      "model": "gpt-5.6-sol",
+      "directory": "C:\\devops_quiz\\translator\\cache\\parallel_tasks\\9838b63f291f4063a0fd73805e800d25\\game-ui-localization",
+      "workspace": "C:\\devops_quiz\\translator\\cache\\parallel_tasks\\9838b63f291f4063a0fd73805e800d25\\game-ui-localization\\workspace",
+      "baseline": "C:\\devops_quiz\\translator\\cache\\parallel_tasks\\9838b63f291f4063a0fd73805e800d25\\game-ui-localization\\baseline-refresh-53737b9d68964514b9407aff20a85ab3",
+      "status": "done",
+      "worker_pid": null,
+      "started_at": "2026-11-15T02:30:18+05:30",
+      "summary": "Completed Games hub and game-screen localization across all 31 non-English locales. Reconciled the refreshed catalog by replacing obsolete picture-label resolution with one localized, parameterized 3D Scene {number} message restricted to the current 3D Scene 1-100 Spot the Difference catalog; preserved the 300-image Jigsaw catalog, compact game cards, app font settings, technical tokens, storage identities, existing ARB messages, and prior work. Flutter localization generation, 53 multilingual/gameplay tests, Python translation-tool tests, ARB integrity checks, and targeted analysis pass. The obsolete UI-GAMES audit finding remains removed after verification. Full-workspace analysis reports 32 unrelated pre-existing warnings outside the scoped localization changes.",
+      "retry_after": 0,
+      "network_retries": 0,
+      "previous_summary": "Session launch failed: [WinError 5] Access is denied: 'C:\\\\devops_quiz\\\\translator\\\\cache\\\\parallel_tasks\\\\9838b63f291f4063a0fd73805e800d25\\\\game-ui-localization\\\\baseline-refresh-c2ab0cbb57054ce2b67c863deee1e1b3.building-996dca7c5cf747be821f54a4a52799a2' -> 'C:\\\\devops_quiz\\\\translator\\\\cache\\\\parallel_tasks\\\\9838b63f291f4063a0fd73805e800d25\\\\game-ui-localization\\\\baseline-refresh-c2ab0cbb57054ce2b67c863deee1e1b3'",
+      "log_offset": 52655,
+      "needs_refresh": false,
+      "refreshed_at": "2026-11-15T02:30:18+05:30",
+      "refresh_conflicts": 1
+    },
+    "full-app-regression": {
+      "task_id": "full-app-regression",
+      "session_id": "a772daba-11df-4b74-ac01-19ee4c31c83a",
+      "model": "gemini-4-argon",
+      "directory": "C:\\devops_quiz\\translator\\cache\\parallel_tasks\\9838b63f291f4063a0fd73805e800d25\\full-app-regression",
+      "workspace": "C:\\devops_quiz\\translator\\cache\\parallel_tasks\\9838b63f291f4063a0fd73805e800d25\\full-app-regression\\workspace",
+      "baseline": "C:\\devops_quiz\\translator\\cache\\parallel_tasks\\9838b63f291f4063a0fd73805e800d25\\full-app-regression\\baseline",
+      "status": "blocked",
+      "worker_pid": null,
+      "started_at": "2026-11-14T21:33:44+05:30",
+      "summary": "Session launch failed: [WinError 33] The process cannot access the file because another process has locked a portion of the file",
+      "retry_after": 0,
+      "network_retries": 0,
+      "previous_summary": "Waiting to resume; final regression and documentation wait for dependencies.",
+      "log_offset": 934,
+      "needs_refresh": true
+    },
+    "refresh-docs-reports": {
+      "task_id": "refresh-docs-reports",
+      "session_id": "5da5b1b1-9f98-4dbf-939d-aadad285bf49",
+      "model": "gpt-5.6-sol",
+      "directory": "C:\\devops_quiz\\translator\\cache\\parallel_tasks\\9838b63f291f4063a0fd73805e800d25\\refresh-docs-reports",
+      "workspace": "C:\\devops_quiz\\translator\\cache\\parallel_tasks\\9838b63f291f4063a0fd73805e800d25\\refresh-docs-reports\\workspace",
+      "baseline": "C:\\devops_quiz\\translator\\cache\\parallel_tasks\\9838b63f291f4063a0fd73805e800d25\\refresh-docs-reports\\baseline",
+      "status": "blocked",
+      "worker_pid": null,
+      "summary": "Session launch failed: [WinError 33] The process cannot access the file because another process has locked a portion of the file",
+      "retry_after": 0,
+      "network_retries": 0,
+      "previous_summary": "Waiting to resume; final regression and documentation wait for dependencies.",
+      "log_offset": 0,
+      "started_at": "2026-11-14T21:52:47+05:30",
+      "needs_refresh": true
+    }
+  },
+  "run_directory": "C:\\devops_quiz\\translator\\cache\\parallel_tasks\\9838b63f291f4063a0fd73805e800d25"
+}

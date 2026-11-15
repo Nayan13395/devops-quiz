@@ -1,0 +1,302 @@
+[
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "Какой декларативный блок фиксирует смену адреса ресурса, чтобы Terraform сохранил существующий объект?",
+    "options": [
+      "removed",
+      "check",
+      "moved",
+      "import"
+    ],
+    "answer": "moved"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "Какой аргумент блока moved задаёт новый адрес ресурса?",
+    "options": [
+      "provider",
+      "to",
+      "from",
+      "id"
+    ],
+    "answer": "to"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "Какой блок объявляет существующий объект инфраструктуры для импорта при apply?",
+    "options": [
+      "import",
+      "moved",
+      "output",
+      "check"
+    ],
+    "answer": "import"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "Какая настройка блока removed забывает ресурс, не уничтожая реальный объект инфраструктуры?",
+    "options": [
+      "lifecycle { destroy = true }",
+      "lifecycle { create_before_destroy = true }",
+      "lifecycle { prevent_destroy = false }",
+      "lifecycle { destroy = false }"
+    ],
+    "answer": "lifecycle { destroy = false }"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "Что происходит со значением обычной входной переменной с пометкой sensitive в локальном файле состояния?",
+    "options": [
+      "Оно всегда исключается из состояния",
+      "Оно заменяется именем переменной перед сохранением",
+      "Оно может храниться открыто, хотя обычный вывод CLI его скрывает",
+      "Оно автоматически шифруется флагом sensitive"
+    ],
+    "answer": "Оно может храниться открыто, хотя обычный вывод CLI его скрывает"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "Какой формат команды output может раскрывать чувствительные выходные значения в машиночитаемом виде?",
+    "options": [
+      "terraform providers schema -json",
+      "terraform output -json",
+      "terraform output -help",
+      "terraform output -no-color"
+    ],
+    "answer": "terraform output -json"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "Какая функция преобразует значение Terraform в строку JSON?",
+    "options": [
+      "jsonencode",
+      "jsondecode",
+      "yamldecode",
+      "file"
+    ],
+    "answer": "jsonencode"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "Какая функция разбирает строку JSON в значение Terraform?",
+    "options": [
+      "jsonencode",
+      "yamlencode",
+      "templatefile",
+      "jsondecode"
+    ],
+    "answer": "jsondecode"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "Какая функция обрабатывает файл шаблона с переданным словарём переменных?",
+    "options": [
+      "fileset",
+      "filebase64",
+      "templatefile",
+      "file"
+    ],
+    "answer": "templatefile"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "Какая функция возвращает первый аргумент, вычисляемый без динамической ошибки?",
+    "options": [
+      "lookup",
+      "try",
+      "can",
+      "coalesce"
+    ],
+    "answer": "try"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "Какая функция сообщает, можно ли вычислить выражение без динамической ошибки?",
+    "options": [
+      "can",
+      "try",
+      "contains",
+      "length"
+    ],
+    "answer": "can"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "Если два словаря, переданные merge, содержат одинаковый ключ, какое значение побеждает?",
+    "options": [
+      "Значение из более раннего аргумента",
+      "Значения всегда объединяются в список",
+      "Повтор ключа всегда вызывает ошибку",
+      "Значение из более позднего аргумента"
+    ],
+    "answer": "Значение из более позднего аргумента"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "Какое ограничение версии провайдера допускает 5.4.x, но не 5.5.0?",
+    "options": [
+      ">= 5.4.0",
+      ">= 5.0, < 6.0",
+      "~> 5.4.0",
+      "~> 5.4"
+    ],
+    "answer": "~> 5.4.0"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "Как Terraform обычно трактует аргумент ресурса со значением null?",
+    "options": [
+      "Как запрос удаления всего ресурса",
+      "Как пропущенный аргумент с применением его значений по умолчанию и требований",
+      "Как пустую строку у любого провайдера",
+      "Как числовой ноль у любого провайдера"
+    ],
+    "answer": "Как пропущенный аргумент с применением его значений по умолчанию и требований"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "Какое выражение обозначает путь в файловой системе модуля, в котором оно записано?",
+    "options": [
+      "path.module",
+      "path.root",
+      "path.cwd",
+      "terraform.workspace"
+    ],
+    "answer": "path.module"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "Какая возможность блока terraform рекомендуется для подключения конфигурации CLI к HCP Terraform?",
+    "options": [
+      "locals",
+      "moved",
+      "check",
+      "cloud"
+    ],
+    "answer": "cloud"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "Какие значения верхнего уровня terraform_remote_state напрямую раскрывает из указанного состояния?",
+    "options": [
+      "Все учётные данные провайдеров",
+      "Все локальные значения дочерних модулей",
+      "Выходы корневого модуля",
+      "Каждый атрибут ресурса как выход верхнего уровня"
+    ],
+    "answer": "Выходы корневого модуля"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "Какое правило жизненного цикла требует замены при изменении указанного управляемого ресурса?",
+    "options": [
+      "create_before_destroy",
+      "replace_triggered_by",
+      "ignore_changes",
+      "prevent_destroy"
+    ],
+    "answer": "replace_triggered_by"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "Какой встроенный управляемый ресурс даёт обычному входному значению жизненный цикл ресурса без отдельного провайдера?",
+    "options": [
+      "terraform_data",
+      "terraform_remote_state",
+      "local_file",
+      "random_id"
+    ],
+    "answer": "terraform_data"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "Что происходит, если утверждение блока check не выполняется при обычном plan или apply?",
+    "options": [
+      "Terraform всегда уничтожает проверяемый объект",
+      "Terraform молча удаляет блок check",
+      "Terraform всегда завершается до обновления любых ресурсов",
+      "Terraform выдаёт предупреждение, не блокируя операцию только из-за этой ошибки"
+    ],
+    "answer": "Terraform выдаёт предупреждение, не блокируя операцию только из-за этой ошибки"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "Что происходит, когда предусловие жизненного цикла ресурса равно false?",
+    "options": [
+      "Terraform превращает ресурс в источник данных",
+      "Terraform заменяет предусловие только предупреждением",
+      "Terraform сообщает об ошибке и запрещает соответствующую операцию",
+      "Terraform игнорирует предусловие до следующего запуска"
+    ],
+    "answer": "Terraform сообщает об ошибке и запрещает соответствующую операцию"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "Какая команда запускает собственные тестовые файлы Terraform?",
+    "options": [
+      "terraform console",
+      "terraform test",
+      "terraform validate",
+      "terraform fmt"
+    ],
+    "answer": "terraform test"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "Какая настройка блока run теста Terraform выполняет plan вместо apply по умолчанию?",
+    "options": [
+      "command = plan",
+      "command = validate",
+      "command = refresh",
+      "command = console"
+    ],
+    "answer": "command = plan"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "Какая функция возвращает относительные пути, соответствующие glob-шаблону под каталогом?",
+    "options": [
+      "file",
+      "dirname",
+      "basename",
+      "fileset"
+    ],
+    "answer": "fileset"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "Почему одних рабочих пространств CLI может не хватить для разделения сред с разным контролем доступа?",
+    "options": [
+      "Они запрещают разные значения входных переменных",
+      "Они требуют одинаковых имён ресурсов во всех средах",
+      "Они используют общую конфигурацию бэкенда и контекст аутентификации",
+      "Они всегда используют один снимок состояния"
+    ],
+    "answer": "Они используют общую конфигурацию бэкенда и контекст аутентификации"
+  }
+]

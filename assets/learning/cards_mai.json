@@ -1,0 +1,4002 @@
+{
+  "linux-001": {
+    "command": "cat",
+    "description": "फाइलसभक सामग्री जोड़ि कऽ छापैत अछि।"
+  },
+  "linux-002": {
+    "command": "grep",
+    "description": "फाइलसभक भीतर कोनो खास पैटर्न खोजैत अछि।"
+  },
+  "linux-003": {
+    "command": "chmod",
+    "description": "फाइल वा डायरेक्टरीक पहुँच अनुमति बदलैत अछि।"
+  },
+  "linux-004": {
+    "command": "chown",
+    "description": "फाइल वा डायरेक्टरीक स्वामित्व बदलैत अछि।"
+  },
+  "linux-005": {
+    "command": "ls",
+    "description": "डायरेक्टरीक सामग्रीक सूची देखबैत अछि।"
+  },
+  "linux-006": {
+    "command": "cd",
+    "description": "वर्तमान कार्य डायरेक्टरी बदलैत अछि।"
+  },
+  "linux-007": {
+    "command": "pwd",
+    "description": "वर्तमान कार्य डायरेक्टरीक पथ छापैत अछि।"
+  },
+  "linux-008": {
+    "command": "mkdir",
+    "description": "नव डायरेक्टरी बनबैत अछि।"
+  },
+  "linux-009": {
+    "command": "rm",
+    "description": "फाइल वा डायरेक्टरी हटबैत अछि।"
+  },
+  "linux-010": {
+    "command": "cp",
+    "description": "फाइल वा डायरेक्टरीक प्रतिलिपि बनबैत अछि।"
+  },
+  "linux-011": {
+    "command": "mv",
+    "description": "फाइल आ डायरेक्टरी स्थानांतरित करैत अछि वा ओकर नाम बदलैत अछि।"
+  },
+  "linux-012": {
+    "command": "ps",
+    "description": "एखन चलि रहल प्रक्रियासभ देखबैत अछि।"
+  },
+  "linux-013": {
+    "command": "top",
+    "description": "सिस्टमक प्रक्रिया आ संसाधन वास्तविक समयमे देखबैत अछि।"
+  },
+  "linux-014": {
+    "command": "df",
+    "description": "डिस्क स्थानक उपयोग देखबैत अछि।"
+  },
+  "linux-015": {
+    "command": "free",
+    "description": "सिस्टम मेमोरीक उपयोग देखबैत अछि।"
+  },
+  "linux-016": {
+    "command": "systemctl status",
+    "description": "systemd सेवाक वर्तमान अवस्था आ हालक लॉग प्रविष्टिसभ देखबैत अछि।"
+  },
+  "linux-017": {
+    "command": "journalctl",
+    "description": "अलग-अलग सेवाक फिल्टरक संग systemd जर्नल लॉग पढ़ैत अछि।"
+  },
+  "linux-018": {
+    "command": "find",
+    "description": "नाम वा प्रकार सन शर्तसँ मेल खाइत फाइल डायरेक्टरी वृक्षमे खोजैत अछि।"
+  },
+  "linux-019": {
+    "command": "tail",
+    "description": "फाइलक अंतिम पाँतिसभ देखबैत अछि आ नव पाँति जुड़िते ओकर अनुसरण कऽ सकैत अछि।"
+  },
+  "linux-020": {
+    "command": "कोन कमांड फाइलक अंतिम 5 पंक्ति देखबैत अछि?",
+    "description": "tail -n 5"
+  },
+  "linux-021": {
+    "command": "कोन कमांड डायरेक्टरीक आकार देखबैत अछि?",
+    "description": "du -sh"
+  },
+  "linux-022": {
+    "command": "कोन कमांड फाइल मे केवल पंक्तिक संख्या गिनैत अछि?",
+    "description": "wc -l"
+  },
+  "linux-023": {
+    "command": "कोन कमांड सिस्टमक अपटाइम देखबैत अछि?",
+    "description": "uptime"
+  },
+  "git-001": {
+    "command": "git clone",
+    "description": "दूरस्थ रिपॉजिटरीक स्थानीय प्रतिलिपि बनबैत अछि।"
+  },
+  "git-002": {
+    "command": "git init",
+    "description": "नव Git रिपॉजिटरी आरंभ करैत अछि।"
+  },
+  "git-003": {
+    "command": "git add",
+    "description": "अगिला कमिट लेल परिवर्तन स्टेज करैत अछि।"
+  },
+  "git-004": {
+    "command": "git commit",
+    "description": "स्टेज कएल परिवर्तन रिपॉजिटरीमे दर्ज करैत अछि।"
+  },
+  "git-005": {
+    "command": "git push",
+    "description": "स्थानीय कमिट दूरस्थ रिपॉजिटरीमे अपलोड करैत अछि।"
+  },
+  "git-006": {
+    "command": "git pull",
+    "description": "दूरस्थ रिपॉजिटरीसँ परिवर्तन आनैत आ मिलबैत अछि।"
+  },
+  "git-007": {
+    "command": "git branch",
+    "description": "ब्रांचक सूची देखबैत, बनबैत वा हटबैत अछि।"
+  },
+  "git-008": {
+    "command": "git checkout",
+    "description": "ब्रांच बदलैत अछि वा कार्य वृक्षक फाइल पुनःस्थापित करैत अछि।"
+  },
+  "git-009": {
+    "command": "git merge",
+    "description": "दू वा अधिक विकास इतिहास एक संग जोड़ैत अछि।"
+  },
+  "git-010": {
+    "command": "git status",
+    "description": "कार्य वृक्षक स्थिति देखबैत अछि।"
+  },
+  "git-011": {
+    "command": "git diff",
+    "description": "कार्य वृक्ष आ स्टेजिंग क्षेत्रक बीचक परिवर्तन देखबैत अछि; --staged अगिला कमिट लेल स्टेज कएल परिवर्तन देखबैत अछि।"
+  },
+  "git-012": {
+    "command": "git stash",
+    "description": "ट्रैक कएल फाइलक परिवर्तन अस्थायी रूपसँ सहेजि स्वच्छ कार्य वृक्ष बहाल करैत अछि; अनट्रैक फाइल समेटबाक लेल -u प्रयोग करू।"
+  },
+  "git-013": {
+    "command": "Git की छै?",
+    "description": "संस्करण नियंत्रण प्रणाली"
+  },
+  "git-014": {
+    "command": "कोन कमांड कमिट इतिहास देखबैत अछि?",
+    "description": "git log"
+  },
+  "git-015": {
+    "command": "कोन कमांड एक-पंक्तिक कमिट इतिहास देखबैत अछि?",
+    "description": "git log --oneline"
+  },
+  "git-016": {
+    "command": "कोन कमांड ग्लोबल Git कमिट-लेखकक नाम Alex सेट करैत अछि?",
+    "description": "git config --global user.name \"Alex\""
+  },
+  "git-017": {
+    "command": "कोन कमांड ग्लोबल Git कमिट-लेखकक ईमेल alex@example.com सेट करैत अछि?",
+    "description": "git config --global user.email \"alex@example.com\""
+  },
+  "git-018": {
+    "command": "Git मे फाइलसभकेँ अनदेखा करबाक लेल कोन फाइल प्रयोग होइत अछि?",
+    "description": ".gitignore"
+  },
+  "git-019": {
+    "command": "रिपॉजिटरी रूट मे चलाबए पर, कोन कमांड सभ अनदेखा नहि कएल गेल जोड़ल, बदलल आ मेटाओल गेल चीजकेँ कमिट कएने बिना स्टेज करैत अछि?",
+    "description": "git add ."
+  },
+  "git-020": {
+    "command": "कोन कमांड विकल्प कमांड लाइन पर सीधे कमिट संदेश स्वीकार करैत अछि?",
+    "description": "git commit -m"
+  },
+  "git-021": {
+    "command": "कोन कमांड ट्रैक कएल गेल फाइलकेँ हटबैत अछि?",
+    "description": "git rm"
+  },
+  "git-022": {
+    "command": "कोन कमांड user.name केँ मात्र वर्तमान रिपॉजिटरीक लेल सेट करैत अछि?",
+    "description": "git config --local user.name \"Alex\""
+  },
+  "git-023": {
+    "command": "कोन कमांड चुनल हंकसभकेँ इंटरैक्टिव रूप सँ स्टेज करैत अछि?",
+    "description": "git add -p"
+  },
+  "docker-001": {
+    "command": "docker build",
+    "description": "Dockerfile सँ इमेज बनबैत अछि।"
+  },
+  "docker-002": {
+    "command": "docker run",
+    "description": "नव कंटेनरमे कमांड चलबैत अछि।"
+  },
+  "docker-003": {
+    "command": "docker ps",
+    "description": "चलि रहल कंटेनरक सूची देखबैत अछि।"
+  },
+  "docker-004": {
+    "command": "docker images",
+    "description": "स्थानीय Docker इमेजक सूची देखबैत अछि।"
+  },
+  "docker-005": {
+    "command": "docker stop",
+    "description": "एक वा अधिक चलैत कंटेनर रोकैत अछि।"
+  },
+  "docker-006": {
+    "command": "docker rm",
+    "description": "एक वा अधिक कंटेनर हटबैत अछि।"
+  },
+  "docker-007": {
+    "command": "docker rmi",
+    "description": "एक वा अधिक इमेज हटबैत अछि।"
+  },
+  "docker-008": {
+    "command": "docker exec",
+    "description": "चलैत कंटेनरमे कमांड चलबैत अछि।"
+  },
+  "docker-009": {
+    "command": "docker logs",
+    "description": "कंटेनरक लॉग आनैत अछि।"
+  },
+  "docker-010": {
+    "command": "docker-compose up",
+    "description": "docker-compose.yml सँ कंटेनर बनबैत आ शुरू करैत अछि।"
+  },
+  "docker-011": {
+    "command": "docker inspect",
+    "description": "कंटेनर आ इमेज सन Docker वस्तुक विस्तृत JSON जानकारी देखबैत अछि।"
+  },
+  "docker-012": {
+    "command": "docker stats",
+    "description": "CPU आ मेमोरी सहित कंटेनर संसाधनक उपयोग सजीव देखबैत अछि; --no-stream एकटा स्नैपशॉट देखबैत अछि।"
+  },
+  "docker-013": {
+    "command": "कोन कमांड कंटेनरकेँ डिटैच्ड मोडमे चलबैत अछि?",
+    "description": "docker run -d"
+  },
+  "docker-014": {
+    "command": "कोन कमांड नव कंटेनरक लेल स्टैंडर्ड इनपुट खुजल रखैत अछि आ pseudo-TTY आवंटित करैत अछि?",
+    "description": "docker run -it"
+  },
+  "docker-015": {
+    "command": "कोन कमांड मध्यवर्ती इमेज सहित सभ इमेजक सूची देखबैत अछि?",
+    "description": "docker images -a"
+  },
+  "docker-016": {
+    "command": "कोन कमांड सभ रोकल गेल कंटेनरकेँ हटबैत अछि?",
+    "description": "docker container prune"
+  },
+  "docker-017": {
+    "command": "कोन कमांड सभ अप्रयुक्त इमेजकेँ हटबैत अछि?",
+    "description": "docker image prune -a"
+  },
+  "docker-018": {
+    "command": "कोन कमांड कंटेनरक भीतर चलि रहल प्रोसेस सभ देखबैत अछि?",
+    "description": "docker top"
+  },
+  "docker-019": {
+    "command": "कोन कमांड Docker नेटवर्क बनबैत अछि?",
+    "description": "docker network create"
+  },
+  "docker-020": {
+    "command": "कोन कमांड Docker नेटवर्कक सूची देखबैत अछि?",
+    "description": "docker network ls"
+  },
+  "docker-021": {
+    "command": "कोन कमांड Docker वॉल्यूम बनबैत अछि?",
+    "description": "docker volume create"
+  },
+  "docker-022": {
+    "command": "कोन कमांड Docker वॉल्यूमक सूची देखबैत अछि?",
+    "description": "docker volume ls"
+  },
+  "docker-023": {
+    "command": "कोन कमांड Docker सिस्टमक जानकारी देखबैत अछि?",
+    "description": "docker info"
+  },
+  "k8s-001": {
+    "command": "kubectl get pods",
+    "description": "वर्तमान नेमस्पेसक पॉडसभक सूची देखबैत अछि।"
+  },
+  "k8s-002": {
+    "command": "kubectl apply",
+    "description": "फाइल नामक आधार पर संसाधन पर विन्यास लागू करैत अछि।"
+  },
+  "k8s-003": {
+    "command": "kubectl delete",
+    "description": "फाइल नाम वा नामक आधार पर संसाधन हटबैत अछि।"
+  },
+  "k8s-004": {
+    "command": "kubectl describe",
+    "description": "कोनो खास संसाधनक विस्तृत जानकारी देखबैत अछि।"
+  },
+  "k8s-005": {
+    "command": "kubectl logs",
+    "description": "पॉडमे स्थित कंटेनरक लॉग छापैत अछि।"
+  },
+  "k8s-006": {
+    "command": "kubectl exec",
+    "description": "कंटेनरमे कमांड निष्पादित करैत अछि।"
+  },
+  "k8s-007": {
+    "command": "kubectl get nodes",
+    "description": "क्लस्टरक सभ नोडक सूची देखबैत अछि।"
+  },
+  "k8s-008": {
+    "command": "kubectl get services",
+    "description": "वर्तमान नेमस्पेसक सभ सेवाक सूची देखबैत अछि।"
+  },
+  "k8s-009": {
+    "command": "kubectl scale",
+    "description": "Deployment वा ReplicaSet लेल नव आकार निर्धारित करैत अछि।"
+  },
+  "k8s-010": {
+    "command": "kubectl port-forward",
+    "description": "स्थानीय पोर्ट पॉड दिस अग्रेषित करैत अछि।"
+  },
+  "k8s-011": {
+    "command": "kubectl rollout status",
+    "description": "संसाधनक रोलआउट पूरा होएबा वा समयसीमा धरि ओकर प्रगति देखैत रहैत अछि।"
+  },
+  "k8s-012": {
+    "command": "कोन कमांड सभ namespaces मे pods केँ सूचीबद्ध करैत अछि?",
+    "description": "kubectl get pods -A"
+  },
+  "k8s-013": {
+    "command": "कोन कमांड pod केँ वर्णित करैत अछि?",
+    "description": "kubectl describe pod"
+  },
+  "k8s-014": {
+    "command": "कोन कमांड pod logs केँ लगातार देखबैत अछि?",
+    "description": "kubectl logs -f"
+  },
+  "k8s-015": {
+    "command": "कोन कमांड pod केँ मेटबैत अछि?",
+    "description": "kubectl delete pod"
+  },
+  "k8s-016": {
+    "command": "कोन कमांड deployment बनबैत अछि?",
+    "description": "kubectl create deployment"
+  },
+  "k8s-017": {
+    "command": "कोन कमांड deployments केँ सूचीबद्ध करैत अछि?",
+    "description": "kubectl get deployments"
+  },
+  "k8s-018": {
+    "command": "कोन कमांड cluster सँ जुड़ल जानकारी देखबैत अछि?",
+    "description": "kubectl cluster-info"
+  },
+  "k8s-019": {
+    "command": "कोन कमांड YAML फाइल सँ configuration लागू करैत अछि?",
+    "description": "kubectl apply -f"
+  },
+  "k8s-020": {
+    "command": "कोन कमांड YAML फाइल सँ resources बनबैत अछि?",
+    "description": "kubectl create -f"
+  },
+  "k8s-021": {
+    "command": "कोन कमांड YAML फाइल मे परिभाषित resources केँ मेटबैत अछि?",
+    "description": "kubectl delete -f"
+  },
+  "k8s-022": {
+    "command": "कोन kubectl विकल्प कोनो अनुरोध लेल payments नामक namespace चुनैत अछि?",
+    "description": "-n payments"
+  },
+  "k8s-023": {
+    "command": "कोन कमांड वर्तमान kubeconfig context क नाम छपैत अछि?",
+    "description": "kubectl config current-context"
+  },
+  "networking-001": {
+    "command": "curl",
+    "description": "सर्वरसँ वा सर्वर दिस डेटा स्थानांतरित करैत अछि।"
+  },
+  "networking-002": {
+    "command": "ping",
+    "description": "IP नेटवर्क पर होस्ट धरि पहुँचक जाँच करैत अछि।"
+  },
+  "networking-003": {
+    "command": "ssh",
+    "description": "दूरस्थ मशीनसँ सुरक्षित रूपसँ जुड़ैत अछि।"
+  },
+  "networking-004": {
+    "command": "netstat",
+    "description": "नेटवर्क कनेक्शन आ रूटिंग तालिकासभ देखबैत अछि।"
+  },
+  "networking-005": {
+    "command": "nslookup",
+    "description": "इंटरनेट डोमेन नाम सर्वरसँ पूछताछ करैत अछि।"
+  },
+  "networking-006": {
+    "command": "dig",
+    "description": "DNS खोज करैत आ उत्तर देखबैत अछि।"
+  },
+  "networking-007": {
+    "command": "traceroute",
+    "description": "नेटवर्क होस्ट धरि पैकेट जे मार्ग लैत अछि से छापैत अछि।"
+  },
+  "networking-008": {
+    "command": "iptables",
+    "description": "Linux मे IP पैकेट फिल्टर नियम विन्यस्त करैत अछि।"
+  },
+  "networking-009": {
+    "command": "telnet",
+    "description": "दोसर होस्टसँ संवादात्मक संचार करैत अछि।"
+  },
+  "networking-010": {
+    "command": "nc (netcat)",
+    "description": "नेटवर्क कनेक्शन पर डेटा पढ़ैत आ लिखैत अछि।"
+  },
+  "networking-011": {
+    "command": "IP केर पूर्ण रूप की अछि?",
+    "description": "इंटरनेट प्रोटोकॉल"
+  },
+  "networking-012": {
+    "command": "वेब पेज स्थानांतरित करबाक लेल कोन प्रोटोकॉलक उपयोग कएल जाइत अछि?",
+    "description": "HTTP"
+  },
+  "networking-013": {
+    "command": "HTTPS द्वारा डिफॉल्ट रूपेँ कोन पोर्टक उपयोग कएल जाइत अछि?",
+    "description": "443"
+  },
+  "networking-014": {
+    "command": "HTTP द्वारा डिफॉल्ट रूपेँ कोन पोर्टक उपयोग कएल जाइत अछि?",
+    "description": "80"
+  },
+  "networking-015": {
+    "command": "SSH द्वारा डिफॉल्ट रूपेँ कोन पोर्टक उपयोग कएल जाइत अछि?",
+    "description": "22"
+  },
+  "networking-016": {
+    "command": "DNS की करैत अछि?",
+    "description": "डोमेन नामकेँ IP पता मे बदलैत अछि"
+  },
+  "networking-017": {
+    "command": "OSI मॉडलक कोन लेयर रूटिंग सम्हारैत अछि?",
+    "description": "नेटवर्क लेयर"
+  },
+  "networking-018": {
+    "command": "ईमेल पठबाक लेल कोन प्रोटोकॉलक उपयोग कएल जाइत अछि?",
+    "description": "SMTP"
+  },
+  "networking-019": {
+    "command": "एहिमे सँ कोन IPv4 लूपबैक पता अछि?",
+    "description": "127.0.0.1"
+  },
+  "networking-020": {
+    "command": "कोन प्रोटोकॉल कनेक्शन-ओरिएंटेड अछि?",
+    "description": "TCP"
+  },
+  "networking-021": {
+    "command": "कोन प्रोटोकॉल कनेक्शनलेस अछि?",
+    "description": "UDP"
+  },
+  "networking-022": {
+    "command": "कोन कमांड रूटिंग जानकारी देखबैत अछि?",
+    "description": "ip route"
+  },
+  "networking-023": {
+    "command": "Linux मे कोन कमांड नेटवर्क इंटरफेस देखबैत अछि?",
+    "description": "ip addr"
+  },
+  "networking-024": {
+    "command": "IPv4 पता मे कतेक बिट होइत अछि?",
+    "description": "32"
+  },
+  "jenkins-001": {
+    "command": "Jenkinsfile",
+    "description": "Jenkins Pipeline क परिभाषा राखनिहार टेक्स्ट फाइल।"
+  },
+  "jenkins-002": {
+    "command": "Pipeline",
+    "description": "निरंतर डिलीवरी पाइपलाइनक समर्थन करनिहार प्लगिनक समूह।"
+  },
+  "jenkins-003": {
+    "command": "Agent",
+    "description": "Pipeline वा चरण कतऽ चलत से निर्धारित करैत अछि।"
+  },
+  "jenkins-004": {
+    "command": "Stage",
+    "description": "कार्यसभक अवधारणात्मक रूपसँ अलग उपसमूह परिभाषित करैत अछि।"
+  },
+  "jenkins-005": {
+    "command": "Node",
+    "description": "Pipeline चलाबयमे सक्षम मशीन।"
+  },
+  "jenkins-006": {
+    "command": "Build Trigger",
+    "description": "Jenkins बिल्ड शुरू करनिहार तंत्र।"
+  },
+  "jenkins-007": {
+    "command": "Artifact",
+    "description": "बिल्ड प्रक्रियासँ बनल फाइल।"
+  },
+  "jenkins-008": {
+    "command": "Post actions",
+    "description": "चरण वा पाइपलाइन पूरा भेलाक बाद कएल जाएबला क्रियासभ।"
+  },
+  "jenkins-009": {
+    "command": "Credentials",
+    "description": "Jenkins जॉबमे प्रयुक्त सुरक्षित रूपसँ सहेजल गुप्त जानकारी।"
+  },
+  "jenkins-010": {
+    "command": "Jenkins की छै?",
+    "description": "CI/CD टूल"
+  },
+  "jenkins-011": {
+    "command": "Jenkins कोन भाषा मे लिखल गेल अछि?",
+    "description": "Java"
+  },
+  "jenkins-012": {
+    "command": "Jenkins डिफ़ॉल्ट रूप सँ कोन पोर्ट के उपयोग करैत अछि?",
+    "description": "8080"
+  },
+  "jenkins-013": {
+    "command": "Jenkins Job की होइत अछि?",
+    "description": "स्वचालित कार्य"
+  },
+  "jenkins-014": {
+    "command": "कोन प्लगइन Jenkins केँ Git सँ जोड़ैत अछि?",
+    "description": "Git Plugin"
+  },
+  "jenkins-015": {
+    "command": "Jenkins मुख्य रूप सँ कथी लेल प्रयोग कएल जाइत अछि?",
+    "description": "स्वचालन"
+  },
+  "jenkins-016": {
+    "command": "CI के पूर्ण रूप की अछि?",
+    "description": "Continuous Integration"
+  },
+  "jenkins-017": {
+    "command": "DevOps मे CD के पूर्ण रूप की अछि?",
+    "description": "Continuous Delivery"
+  },
+  "jenkins-018": {
+    "command": "कोन मेनू सँ Jenkins प्लगइन इंस्टॉल कएल जाइत अछि?",
+    "description": "Manage Jenkins"
+  },
+  "jenkins-019": {
+    "command": "Jenkins Home डायरेक्टरी के वेरिएबल की अछि?",
+    "description": "JENKINS_HOME"
+  },
+  "jenkins-020": {
+    "command": "कोन बटन Jenkins job केँ मैन्युअल रूप सँ शुरू करैत अछि?",
+    "description": "Build Now"
+  },
+  "jenkins-021": {
+    "command": "कोन सोर्स कोड मैनेजमेंट सिस्टम Jenkins सँ सबसँ बेसी जोड़ल जाइत अछि?",
+    "description": "Git"
+  },
+  "jenkins-022": {
+    "command": "बिल्ड जॉब सभ केँ चाही वला टूल सभ सँ अलग, Jenkins controller केँ स्वयं चलेबाक लेल की आवश्यक अछि?",
+    "description": "JRE वा JDK द्वारा उपलब्ध कराओल गेल समर्थित Java रनटाइम"
+  },
+  "jenkins-023": {
+    "command": "साधारण कार्य सभ लेल सबसँ बेसी कोन Jenkins job प्रकार प्रयोग कएल जाइत अछि?",
+    "description": "Freestyle Project"
+  },
+  "jenkins-024": {
+    "command": "Jenkins workspace कथी लेल प्रयोग कएल जाइत अछि?",
+    "description": "job चलैत काल चेकआउट वा जनरेट कएल गेल फाइल सभ"
+  },
+  "terraform-001": {
+    "command": "terraform init",
+    "description": "Terraform फाइलसभक संग कार्य डायरेक्टरी आरंभ करैत अछि।"
+  },
+  "terraform-002": {
+    "command": "terraform plan",
+    "description": "Terraform द्वारा कएल जाएबला क्रिया देखबैत निष्पादन योजना बनबैत अछि।"
+  },
+  "terraform-003": {
+    "command": "terraform apply",
+    "description": "वांछित अवस्था धरि पहुँचबाक लेल परिवर्तन लागू करैत अछि।"
+  },
+  "terraform-004": {
+    "command": "terraform destroy",
+    "description": "Terraform द्वारा प्रबंधित आधारभूत संरचना नष्ट करैत अछि।"
+  },
+  "terraform-005": {
+    "command": "terraform fmt",
+    "description": "Terraform फाइलसभकेँ मानक प्रारूपमे फेर लिखैत अछि।"
+  },
+  "terraform-006": {
+    "command": "terraform validate",
+    "description": "डायरेक्टरीक विन्यास फाइलसभक वैधता जाँचैत अछि।"
+  },
+  "terraform-007": {
+    "command": "terraform state",
+    "description": "उन्नत अवस्था प्रबंधन (संसाधनक सूची बनायब, स्थानांतरित करब)।"
+  },
+  "terraform-008": {
+    "command": "Provider",
+    "description": "Terraform केँ क्लाउड प्रदातासँ संवाद कराबयबला प्लगिन।"
+  },
+  "terraform-009": {
+    "command": "Resource",
+    "description": "Terraform द्वारा बनाओल आ प्रबंधित आधारभूत संरचनाक वस्तु परिभाषित करैत अछि।"
+  },
+  "terraform-010": {
+    "command": "Variable",
+    "description": "इनपुट मान स्वीकारैत अछि जाहिसँ Terraform मॉड्यूल अलग-अलग सेटिंगक संग फेर प्रयोग कएल जा सकय।"
+  },
+  "terraform-011": {
+    "command": "terraform output",
+    "description": "Terraform अवस्थासँ मूल मॉड्यूलक आउटपुट मान पढ़ैत अछि।"
+  },
+  "terraform-012": {
+    "command": "Terraform की अछि?",
+    "description": "Infrastructure as Code टूल"
+  },
+  "terraform-013": {
+    "command": "Terraform केँ के विकसित केलक?",
+    "description": "HashiCorp"
+  },
+  "terraform-014": {
+    "command": "Terraform केर नेटिव कॉन्फ़िगरेशन सिंटैक्स, जे ओकर JSON विकल्पसँ अलग अछि, कोन भाषा पर आधारित अछि?",
+    "description": "HCL"
+  },
+  "terraform-015": {
+    "command": "Terraform फाइल सभक लेल सामान्यतया कोन फाइल एक्सटेंशन प्रयोग कएल जाइत अछि?",
+    "description": ".tf"
+  },
+  "terraform-016": {
+    "command": "कोन फाइल Terraform स्टेट केँ लोकल रूपेँ स्टोर करैत अछि?",
+    "description": "terraform.tfstate"
+  },
+  "terraform-017": {
+    "command": "कोन कमांड Terraform वर्जन देखबैत अछि?",
+    "description": "terraform version"
+  },
+  "terraform-018": {
+    "command": "Terraform कोन दृष्टिकोणक अनुसरण करैत अछि?",
+    "description": "घोषणात्मक (Declarative)"
+  },
+  "terraform-019": {
+    "command": "कोन कमांड स्टेटसँ रूट-मॉड्यूलक आउटपुट मान सभ प्रिंट करैत अछि?",
+    "description": "terraform output"
+  },
+  "terraform-020": {
+    "command": "region नामक इनपुट वेरिएबल केँ कोन एक्सप्रेशन पढ़ैत अछि?",
+    "description": "var.region"
+  },
+  "terraform-021": {
+    "command": "prefix नामक लोकल वैल्यू केँ कोन एक्सप्रेशन पढ़ैत अछि?",
+    "description": "local.prefix"
+  },
+  "terraform-022": {
+    "command": "terraform ब्लॉकक कोन आर्ग्युमेंट Terraform CLI वर्जन केँ सीमित करैत अछि?",
+    "description": "required_version"
+  },
+  "terraform-023": {
+    "command": "terraform ब्लॉकक कोन आर्ग्युमेंट प्रोवाइडरक सोर्स एड्रेस आ वर्जन कंस्ट्रेंट घोषित करैत अछि?",
+    "description": "required_providers"
+  },
+  "terraform-024": {
+    "command": "Terraform प्रोवाइडर मुख्य रूपेँ की उपलब्ध करबैत अछि?",
+    "description": "कोनो API वा सर्विससँ अंतर्क्रिया लेल रिसोर्स टाइप आ डेटा सोर्स"
+  },
+  "ansible-001": {
+    "command": "ansible",
+    "description": "Ansible इन्वेंटरीक होस्टसभ पर तदर्थ कार्य चलबैत अछि।"
+  },
+  "ansible-002": {
+    "command": "ansible-playbook",
+    "description": "Ansible प्लेबुकमे परिभाषित स्वचालन कार्य चलबैत अछि।"
+  },
+  "ansible-003": {
+    "command": "Inventory",
+    "description": "Ansible द्वारा प्रबंधित होस्ट आ होस्ट समूहक सूची देखबैत अछि।"
+  },
+  "ansible-004": {
+    "command": "Playbook",
+    "description": "YAML मे स्वचालन कार्य आ लक्ष्य होस्ट परिभाषित करैत अछि।"
+  },
+  "ansible-005": {
+    "command": "Module",
+    "description": "पैकेज स्थापित करब वा फाइलक प्रतिलिपि बनायब सन खास Ansible क्रिया करैत अछि।"
+  },
+  "ansible-006": {
+    "command": "Task",
+    "description": "स्वचालनक एक चरण पूरा करबाक लेल आर्ग्युमेंटक संग Ansible मॉड्यूल बजबैत अछि।"
+  },
+  "ansible-007": {
+    "command": "Role",
+    "description": "Ansible कार्य, हैंडलर, चर आ फाइलसभकेँ पुनःप्रयोग योग्य डायरेक्टरी संरचनामे व्यवस्थित करैत अछि।"
+  },
+  "ansible-008": {
+    "command": "Vault",
+    "description": "पासवर्ड सन संवेदनशील डेटा एन्क्रिप्टेड फाइलमे राखैत अछि।"
+  },
+  "ansible-009": {
+    "command": "Handler",
+    "description": "एहन कार्य जे दोसर कार्यसँ सूचना भेटलापर मात्र चलैत अछि।"
+  },
+  "ansible-010": {
+    "command": "Facts",
+    "description": "दूरस्थ सिस्टमक जानकारी राखनिहार चरसभ।"
+  },
+  "ansible-011": {
+    "command": "Ansible मुख्य रूप सँ कथी लेल प्रयोग कएल जाइत अछि?",
+    "description": "कॉन्फ़िगरेशन प्रबंधन"
+  },
+  "ansible-012": {
+    "command": "Ansible कोन भाषा मे लिखल गेल अछि?",
+    "description": "Python"
+  },
+  "ansible-013": {
+    "command": "Ansible मे प्रबंधित होस्ट सभ कोन फाइल मे रहैत अछि?",
+    "description": "इन्वेंटरी फाइल"
+  },
+  "ansible-014": {
+    "command": "डिफ़ॉल्ट इन्वेंटरी फाइलक स्थान की अछि?",
+    "description": "/etc/ansible/hosts"
+  },
+  "ansible-015": {
+    "command": "कोन कमांड Ansible केर वर्जन जाँचैत अछि?",
+    "description": "ansible --version"
+  },
+  "ansible-016": {
+    "command": "Linux होस्ट सभक लेल Ansible केर डिफ़ॉल्ट कनेक्शन प्लगइन सामान्यतया कोन प्रोटोकॉल प्रयोग करैत अछि?",
+    "description": "SSH"
+  },
+  "ansible-017": {
+    "command": "Ansible प्लेबुक की होइत अछि?",
+    "description": "स्वचालन टास्क सभ बला YAML फाइल"
+  },
+  "ansible-018": {
+    "command": "प्लेबुक मे लक्ष्य होस्ट सभ कोन कीवर्ड सँ निर्धारित कएल जाइत अछि?",
+    "description": "hosts"
+  },
+  "ansible-019": {
+    "command": "प्लेबुक मे टास्क सभ कोन कीवर्ड सँ निर्धारित कएल जाइत अछि?",
+    "description": "tasks"
+  },
+  "ansible-020": {
+    "command": "कोन मॉड्यूल फाइल सभ केँ रिमोट होस्ट पर कॉपी करैत अछि?",
+    "description": "copy"
+  },
+  "ansible-021": {
+    "command": "कोन मॉड्यूल सर्विस सभक प्रबंधन करैत अछि?",
+    "description": "service"
+  },
+  "ansible-022": {
+    "command": "कोन कमांड सभ लक्षित POSIX होस्ट पर Ansible कनेक्टिविटी आ प्रयोग योग्य Python केँ जाँचैत अछि?",
+    "description": "ansible all -m ping"
+  },
+  "ansible-023": {
+    "command": "Ansible प्लेबुक लिखबाक लेल परंपरागत रूप सँ कोन मानव-अनुकूल फॉर्मेट प्रयोग कएल जाइत अछि?",
+    "description": "YAML"
+  },
+  "ansible-024": {
+    "command": "कोन फाइल Ansible केर सेटिंग सभ कॉन्फ़िगर करैत अछि?",
+    "description": "ansible.cfg"
+  },
+  "bash-001": {
+    "command": "#!/bin/bash",
+    "description": "सिस्टमकेँ Bash शेल प्रयोग करबाक निर्देश देनिहार शेबैंग पाँति।"
+  },
+  "bash-002": {
+    "command": "echo",
+    "description": "टेक्स्टक पाँति वा चरक मान देखबैत अछि।"
+  },
+  "bash-003": {
+    "command": "if [ condition ]",
+    "description": "Bash स्क्रिप्टिंगक मूल सशर्त कथन।"
+  },
+  "bash-004": {
+    "command": "जँ script.sh मे पहिनहिये execute अनुमति अछि तँ कोन कमांड एकरा चलबैत अछि?",
+    "description": "./script.sh"
+  },
+  "bash-005": {
+    "command": "कोन कमांड script.sh केँ स्पष्ट रूपेँ Bash सँ चलबैत अछि?",
+    "description": "bash script.sh"
+  },
+  "bash-006": {
+    "command": "Bash स्क्रिप्ट मे एक-पंक्तिक टिप्पणी कोन चिह्नसँ शुरू होइत अछि?",
+    "description": "#"
+  },
+  "bash-007": {
+    "command": "कोन कमांड script.sh केँ executable बनबैत अछि?",
+    "description": "chmod +x script.sh"
+  },
+  "bash-008": {
+    "command": "कोन builtin कमांड उपयोगकर्तासँ इनपुट पढ़ैत अछि?",
+    "description": "read"
+  },
+  "bash-009": {
+    "command": "वेरिएबलक मान विस्तारित करबाक लेल कोन चिह्नक उपयोग होइत अछि?",
+    "description": "$"
+  },
+  "bash-010": {
+    "command": "Bash मे कोन वेरिएबल असाइनमेंट वैध अछि?",
+    "description": "name=John"
+  },
+  "bash-011": {
+    "command": "कोन कमांड पूर्ववर्ती कमांडक exit status प्रिंट करैत अछि?",
+    "description": "echo $?"
+  },
+  "bash-012": {
+    "command": "0 केर exit status सामान्यतः की संकेत करैत अछि?",
+    "description": "सफलता"
+  },
+  "bash-013": {
+    "command": "कोन चिह्न एक लाइन पर कएक टा कमांड केँ अलग करैत अछि?",
+    "description": ";"
+  },
+  "bash-014": {
+    "command": "शेल स्क्रिप्टक लेल सामान्यतः कोन फाइल एक्सटेंशनक उपयोग होइत अछि?",
+    "description": ".sh"
+  },
+  "bash-015": {
+    "command": "कोन कमांड environment variables देखबैत अछि?",
+    "description": "env"
+  },
+  "bash-016": {
+    "command": "कोन कमांड वर्तमान उपयोगकर्ताक डिफ़ॉल्ट शेल देखबैत अछि?",
+    "description": "echo $SHELL"
+  },
+  "bash-017": {
+    "command": "Bash मे अगिला वर्ण केँ कोन वर्ण escape करैत अछि?",
+    "description": "बैकस्लैश"
+  },
+  "bash-018": {
+    "command": "कोन उद्धरण शैली वेरिएबल विस्तार आ कमांड सब्स्टीट्यूशन केँ रोकैत अछि?",
+    "description": "एकल उद्धरण चिह्न"
+  },
+  "bash-019": {
+    "command": "कोन उद्धरण शैली स्पेस सुरक्षित रखैत वेरिएबल विस्तारक अनुमति दैत अछि?",
+    "description": "दोहरा उद्धरण चिह्न"
+  },
+  "bash-020": {
+    "command": "कोन ऑपरेटर standard output केँ redirect करैत फाइल केँ overwrite करैत अछि?",
+    "description": ">"
+  },
+  "bash-021": {
+    "command": "कोन कमांड वर्तमान वर्किंग डायरेक्टरी प्रिंट करैत अछि?",
+    "description": "pwd"
+  },
+  "bash-022": {
+    "command": "त्रुटि संदेशक लेल कोन standard stream क उपयोग होइत अछि?",
+    "description": "stderr"
+  },
+  "bash-023": {
+    "command": "कोन file descriptor standard input केँ दर्शाबैत अछि?",
+    "description": "0"
+  },
+  "bash-024": {
+    "command": "कोन कमांड टर्मिनल स्क्रीन साफ करैत अछि?",
+    "description": "clear"
+  },
+  "python-001": {
+    "command": "print()",
+    "description": "कंसोल पर डेटा देैत अछि।"
+  },
+  "python-002": {
+    "command": "import",
+    "description": "स्क्रिप्टमे मॉड्यूल वा खास फंक्शन आयात करैत अछि।"
+  },
+  "python-003": {
+    "command": "def",
+    "description": "पुनःप्रयोग योग्य कोड खंड (फंक्शन) परिभाषित करैत अछि।"
+  },
+  "python-004": {
+    "command": "pip install",
+    "description": "PyPI सँ Python पैकेज स्थापित करैत अछि।"
+  },
+  "python-005": {
+    "command": "virtualenv",
+    "description": "पृथक Python परिवेश बनबैत अछि।"
+  },
+  "python-006": {
+    "command": "Python मे कमेंट कोन चिह्नसँ शुरू होइत अछि?",
+    "description": "#"
+  },
+  "python-007": {
+    "command": "कोन बिल्ट-इन फंक्शन प्रयोगकर्ताक इनपुट पढ़ैत अछि?",
+    "description": "input()"
+  },
+  "python-008": {
+    "command": "Python सोर्स फाइलक लेल कोन फाइल एक्सटेंशन प्रयोग कएल जाइत अछि?",
+    "description": ".py"
+  },
+  "python-009": {
+    "command": "कोन ऑपरेटर समानताक जाँच करैत अछि?",
+    "description": "=="
+  },
+  "python-010": {
+    "command": "कोन ऑपरेटर मान असाइन करैत अछि?",
+    "description": "="
+  },
+  "python-011": {
+    "command": "कोन स्टेटमेंट मान 5 बला x नामक वेरिएबल बनबैत अछि?",
+    "description": "x = 5"
+  },
+  "python-012": {
+    "command": "कोन बिल्ट-इन फंक्शन कोनो ऑब्जेक्टक डेटा टाइप लौटबैत अछि?",
+    "description": "type()"
+  },
+  "python-013": {
+    "command": "कोन बिल्ट-इन फंक्शन कोनो मान केँ इंटीजर मे बदलैत अछि?",
+    "description": "int()"
+  },
+  "python-014": {
+    "command": "कोन बिल्ट-इन फंक्शन कोनो मान केँ स्ट्रिंग मे बदलैत अछि?",
+    "description": "str()"
+  },
+  "python-015": {
+    "command": "कोन बिल्ट-इन फंक्शन कोनो सीक्वेंसक लंबाई लौटबैत अछि?",
+    "description": "len()"
+  },
+  "python-016": {
+    "command": "कोन बिल्ट-इन फंक्शन संख्याक सीक्वेंस बनबैत अछि?",
+    "description": "range()"
+  },
+  "python-017": {
+    "command": "कोन कीवर्ड कोनो सीक्वेंस पर इटरेट करएबला लूप शुरू करैत अछि?",
+    "description": "for"
+  },
+  "python-018": {
+    "command": "कोन कीवर्ड कोनो शर्त सत्य रहबा धरि कोड दोहराबैत अछि?",
+    "description": "while"
+  },
+  "python-019": {
+    "command": "Python मे for वा while लूपसँ जुड़ल कोन क्लॉज तखने चलैत अछि जखन लूप break सँ बिना टकराएल पूरा होइत अछि?",
+    "description": "else"
+  },
+  "python-020": {
+    "command": "Python मे कोन कीवर्ड लूपक वर्तमान इटरेशन केँ छोड़ि दैत अछि?",
+    "description": "continue"
+  },
+  "python-021": {
+    "command": "Python मे कोन कीवर्ड नेस्टेड फंक्शन केँ अपन एनक्लोजिंग फंक्शनक वेरिएबल केँ पुनः बाइंड करबाक अनुमति दैत अछि?",
+    "description": "nonlocal"
+  },
+  "python-022": {
+    "command": "कोन कीवर्ड एक्सेप्शन हैंडलिंग शुरू करैत अछि?",
+    "description": "try"
+  },
+  "python-023": {
+    "command": "कोन बिल्ट-इन Python फंक्शन कोनो ऑब्जेक्टक अद्वितीय आइडेंटिटी लौटबैत अछि?",
+    "description": "id()"
+  },
+  "python-024": {
+    "command": "कोन सिंटैक्स डिक्शनरी बनबैत अछि?",
+    "description": "{'name': 'John'}"
+  },
+  "perl-001": {
+    "command": "कमांड लाइन सँ Perl स्क्रिप्ट चलाबय लेल कोन कमांड प्रयोग होइत अछि?",
+    "description": "perl script.pl"
+  },
+  "perl-002": {
+    "command": "Perl स्क्रिप्ट सभ लेल सामान्यतः कोन शेबैंग लाइन प्रयोग होइत अछि?",
+    "description": "#!/usr/bin/perl"
+  },
+  "perl-003": {
+    "command": "Perl मे एक-पंक्तिक कमेंट कोन चिह्न सँ शुरू होइत अछि?",
+    "description": "#"
+  },
+  "perl-004": {
+    "command": "कोन बिल्ट-इन फंक्शन आउटपुट प्रिंट करैत अछि?",
+    "description": "print"
+  },
+  "perl-005": {
+    "command": "Perl स्टेटमेंट केँ सामान्यतः कोन वर्ण समाप्त करैत अछि?",
+    "description": ";"
+  },
+  "perl-006": {
+    "command": "कोन सिगिल स्केलर वेरिएबल केँ दर्शबैत अछि?",
+    "description": "$"
+  },
+  "perl-007": {
+    "command": "कोन Perl फंक्शन स्ट्रिंग भीतर सबस्ट्रिंगक स्थिति वापस करैत अछि?",
+    "description": "index"
+  },
+  "perl-008": {
+    "command": "कोन Perl फंक्शन कोनो संख्याक परम मान (absolute value) वापस करैत अछि?",
+    "description": "abs"
+  },
+  "perl-009": {
+    "command": "कोन फंक्शन स्ट्रिंगक लंबाई वापस करैत अछि?",
+    "description": "length"
+  },
+  "perl-010": {
+    "command": "कोन फंक्शन स्ट्रिंगक अंतिम न्यूलाइन हटबैत अछि?",
+    "description": "chomp"
+  },
+  "perl-011": {
+    "command": "कोन फंक्शन स्ट्रिंग केँ लिस्ट मे बाँटैत अछि?",
+    "description": "split"
+  },
+  "perl-012": {
+    "command": "कोन फंक्शन लिस्टक तत्वसभ केँ जोड़ि कय स्ट्रिंग बनबैत अछि?",
+    "description": "join"
+  },
+  "perl-013": {
+    "command": "कोन ऑपरेटर स्ट्रिंग सभ केँ जोड़ैत अछि?",
+    "description": "."
+  },
+  "perl-014": {
+    "command": "कोन ऑपरेटर स्ट्रिंग केँ दोहराबैत अछि?",
+    "description": "x"
+  },
+  "perl-015": {
+    "command": "कोन फंक्शन फाइल खोलैत अछि?",
+    "description": "open"
+  },
+  "perl-016": {
+    "command": "Perl मे कोन फाइल मोड फाइल केँ पढ़य लेल खोलैत अछि?",
+    "description": "<"
+  },
+  "perl-017": {
+    "command": "कोन Perl फंक्शन फाइलसिस्टम सँ फाइल केँ मेटाबैत अछि?",
+    "description": "unlink"
+  },
+  "perl-018": {
+    "command": "कोन Perl फाइल टेस्ट ऑपरेटर जाँचैत अछि जे कोनो पाथ मौजूद अछि वा नहि?",
+    "description": "-e"
+  },
+  "perl-019": {
+    "command": "कोन बिल्ट-इन फाइलहैंडल स्टैंडर्ड इनपुट केँ दर्शबैत अछि?",
+    "description": "STDIN"
+  },
+  "perl-020": {
+    "command": "कोन बिल्ट-इन फाइलहैंडल स्टैंडर्ड आउटपुट केँ दर्शबैत अछि?",
+    "description": "STDOUT"
+  },
+  "perl-021": {
+    "command": "कोन बिल्ट-इन फाइलहैंडल स्टैंडर्ड एरर केँ दर्शबैत अछि?",
+    "description": "STDERR"
+  },
+  "perl-022": {
+    "command": "कोन फंक्शन खुजल फाइलहैंडल केँ बंद करैत अछि?",
+    "description": "close"
+  },
+  "perl-023": {
+    "command": "कोन विशेष वेरिएबल डिफॉल्ट इनपुट वेरिएबल अछि?",
+    "description": "$_"
+  },
+  "perl-024": {
+    "command": "कोन विशेष वेरिएबल अंतिम सफल पैटर्न मैच केँ रखैत अछि?",
+    "description": "$&"
+  },
+  "powershell-001": {
+    "command": "कोन cmdlet वर्तमान लोकेशन देखबैत अछि?",
+    "description": "Get-Location"
+  },
+  "powershell-002": {
+    "command": "कोन cmdlet फाइल आ डायरेक्टरी सभक सूची देखबैत अछि?",
+    "description": "Get-ChildItem"
+  },
+  "powershell-003": {
+    "command": "कोन cmdlet वर्तमान डायरेक्टरी बदलैत अछि?",
+    "description": "Set-Location"
+  },
+  "powershell-004": {
+    "command": "कोन cmdlet फाइलक सामग्री देखबैत अछि?",
+    "description": "Get-Content"
+  },
+  "powershell-005": {
+    "command": "कोन cmdlet नव फाइल वा डायरेक्टरी बनबैत अछि?",
+    "description": "New-Item"
+  },
+  "powershell-006": {
+    "command": "कोन cmdlet फाइल आ डायरेक्टरी सभकेँ कॉपी करैत अछि?",
+    "description": "Copy-Item"
+  },
+  "powershell-007": {
+    "command": "कोन cmdlet फाइल आ डायरेक्टरी सभकेँ मूव करैत अछि?",
+    "description": "Move-Item"
+  },
+  "powershell-008": {
+    "command": "कोन cmdlet फाइल आ डायरेक्टरी सभकेँ हटबैत अछि?",
+    "description": "Remove-Item"
+  },
+  "powershell-009": {
+    "command": "कोन cmdlet फाइलक नाम बदलैत अछि?",
+    "description": "Rename-Item"
+  },
+  "powershell-010": {
+    "command": "PowerShell मे एक-पंक्तिक कमेंट कोन चिन्हसँ शुरू होइत अछि?",
+    "description": "#"
+  },
+  "powershell-011": {
+    "command": "कोन PowerShell cmdlet फाइलक अंत मे टेक्स्ट जोड़ैत अछि?",
+    "description": "Add-Content"
+  },
+  "powershell-012": {
+    "command": "वेरिएबलक नामसँ पहिने कोन चिन्हक प्रयोग होइत अछि?",
+    "description": "$"
+  },
+  "powershell-013": {
+    "command": "कोन cmdlet कमांड हिस्ट्री देखबैत अछि?",
+    "description": "Get-History"
+  },
+  "powershell-014": {
+    "command": "कोन cmdlet कंसोल स्क्रीन साफ करैत अछि?",
+    "description": "Clear-Host"
+  },
+  "powershell-015": {
+    "command": "कोन cmdlet सहायता जानकारी देखबैत अछि?",
+    "description": "Get-Help"
+  },
+  "powershell-016": {
+    "command": "कोन cmdlet लोकल हेल्प फाइल सभकेँ अपडेट करैत अछि?",
+    "description": "Update-Help"
+  },
+  "powershell-017": {
+    "command": "कोन cmdlet उपलब्ध कमांड सभक सूची देखबैत अछि?",
+    "description": "Get-Command"
+  },
+  "powershell-018": {
+    "command": "कोन cmdlet कोनो ऑब्जेक्टक प्रॉपर्टी आ मेथड सभ देखबैत अछि?",
+    "description": "Get-Member"
+  },
+  "powershell-019": {
+    "command": "कोन ऑटोमैटिक वेरिएबल मे PowerShell वर्जनक विस्तृत जानकारी रहैत अछि?",
+    "description": "$PSVersionTable"
+  },
+  "powershell-020": {
+    "command": "कोन cmdlet alias सभक सूची देखबैत अछि?",
+    "description": "Get-Alias"
+  },
+  "powershell-021": {
+    "command": "कोन cmdlet वर्तमान execution policy देखबैत अछि?",
+    "description": "Get-ExecutionPolicy"
+  },
+  "powershell-022": {
+    "command": "कोन cmdlet execution policy बदलैत अछि?",
+    "description": "Set-ExecutionPolicy"
+  },
+  "powershell-023": {
+    "command": "कोन execution policy डिफॉल्ट रूपेँ स्क्रिप्ट चलेबाकेँ ब्लॉक करैत अछि?",
+    "description": "Restricted"
+  },
+  "powershell-024": {
+    "command": "कोन execution policy लोकल रूपेँ बनाओल स्क्रिप्ट सभकेँ चलबाक अनुमति दैत अछि?",
+    "description": "RemoteSigned"
+  },
+  "javascript-001": {
+    "command": "JavaScript की अछि?",
+    "description": "प्रोग्रामिंग भाषा"
+  },
+  "javascript-002": {
+    "command": "कोन कीवर्ड ब्लॉक-स्कोप्ड वेरिएबल घोषित करैत अछि?",
+    "description": "let"
+  },
+  "javascript-003": {
+    "command": "कोन कीवर्ड कॉन्सटेन्ट घोषित करैत अछि?",
+    "description": "const"
+  },
+  "javascript-004": {
+    "command": "कोन चिह्न एकल-पंक्तिक कमेंट शुरू करैत अछि?",
+    "description": "//"
+  },
+  "javascript-005": {
+    "command": "कोन JavaScript ऑपरेटर जाँचैत अछि जे कोनो ऑब्जेक्ट देल गेल कंस्ट्रक्टरक इंस्टेंस अछि वा नहि?",
+    "description": "instanceof"
+  },
+  "javascript-006": {
+    "command": "कोन मान जानि-बूझि कए कोनो मानक अभाव केँ दर्शबैत अछि?",
+    "description": "null"
+  },
+  "javascript-007": {
+    "command": "जखन कोनो वेरिएबल घोषित कएल जाइत अछि मुदा मान नहि देल जाइत अछि तखन कोन मान घुरैत अछि?",
+    "description": "undefined"
+  },
+  "javascript-008": {
+    "command": "निम्नलिखित मे सँ कोन प्रिमिटिव डेटा टाइप नहि अछि?",
+    "description": "object"
+  },
+  "javascript-009": {
+    "command": "कोन फंक्शन स्ट्रिंग केँ इंटीजर मे बदलैत अछि?",
+    "description": "parseInt()"
+  },
+  "javascript-010": {
+    "command": "कोन फंक्शन स्ट्रिंग केँ फ्लोटिंग-पॉइंट नंबर मे बदलैत अछि?",
+    "description": "parseFloat()"
+  },
+  "javascript-011": {
+    "command": "कोन ऑपरेटर मान आ टाइप दुनूक समानता जाँचैत अछि?",
+    "description": "==="
+  },
+  "javascript-012": {
+    "command": "कोन ऑपरेटर टाइप कोअर्शन सहित मानक समानता जाँचैत अछि?",
+    "description": "=="
+  },
+  "javascript-013": {
+    "command": "कोन ऑपरेटर भागक शेषफल घुरबैत अछि?",
+    "description": "%"
+  },
+  "javascript-014": {
+    "command": "कोन फंक्शन ब्राउज़र मे मैसेज बॉक्स देखबैत अछि?",
+    "description": "alert()"
+  },
+  "javascript-015": {
+    "command": "कोन मेथड ब्राउज़र कंसोल मे आउटपुट लॉग करैत अछि?",
+    "description": "console.log()"
+  },
+  "javascript-016": {
+    "command": "JavaScript कोड शामिल करबा लेल कोन HTML टैग प्रयोग कएल जाइत अछि?",
+    "description": "<script>"
+  },
+  "javascript-017": {
+    "command": "कोन कीवर्ड फंक्शन परिभाषित करैत अछि?",
+    "description": "function"
+  },
+  "javascript-018": {
+    "command": "कोन स्टेटमेंट लूप सँ तुरंत बाहर निकलैत अछि?",
+    "description": "break"
+  },
+  "javascript-019": {
+    "command": "कोन स्टेटमेंट वर्तमान लूप इटरेशन केँ छोड़ि दैत अछि?",
+    "description": "continue"
+  },
+  "javascript-020": {
+    "command": "कोन लूप अपन कोड कम सँ कम एक बेर चलबैत अछि?",
+    "description": "do...while"
+  },
+  "javascript-021": {
+    "command": "एरे एलिमेंट पर इटरेट करबा लेल सामान्यतः कोन लूप प्रयोग कएल जाइत अछि?",
+    "description": "for"
+  },
+  "javascript-022": {
+    "command": "कोन स्टेटमेंट कोनो शर्तक आधार पर कोड चलबैत अछि?",
+    "description": "if"
+  },
+  "javascript-023": {
+    "command": "कोन कीवर्ड एरर हैंडलिंग शुरू करैत अछि?",
+    "description": "try"
+  },
+  "javascript-024": {
+    "command": "कोन स्टेटमेंट हाथ सँ एरर उत्पन्न करैत अछि?",
+    "description": "throw"
+  },
+  "ruby-001": {
+    "command": "Ruby कोन तरहक भाषा अछि?",
+    "description": "ऑब्जेक्ट-ओरिएंटेड प्रोग्रामिंग भाषा"
+  },
+  "ruby-002": {
+    "command": "Ruby के बनौलक?",
+    "description": "Yukihiro Matsumoto"
+  },
+  "ruby-003": {
+    "command": "Ruby स्क्रिप्टक लेल कोन फाइल एक्सटेंशन प्रयोग कएल जाइत अछि?",
+    "description": ".rb"
+  },
+  "ruby-004": {
+    "command": "कोन कमांड Ruby स्क्रिप्ट चलबैत अछि?",
+    "description": "ruby filename.rb"
+  },
+  "ruby-005": {
+    "command": "Ruby मे एकल-पंक्ति कमेंट कोन चिह्नसँ शुरू होइत अछि?",
+    "description": "#"
+  },
+  "ruby-006": {
+    "command": "Ruby मे बहु-पंक्ति कमेंट कोन कीवर्डसँ शुरू होइत अछि?",
+    "description": "=begin"
+  },
+  "ruby-007": {
+    "command": "Ruby मे कोन कीवर्ड मेथड परिभाषित करैत अछि?",
+    "description": "def"
+  },
+  "ruby-008": {
+    "command": "कोन कीवर्ड मेथड परिभाषाक अंत करैत अछि?",
+    "description": "end"
+  },
+  "ruby-009": {
+    "command": "कोन मेथड नव पंक्तिक संग आउटपुट प्रिंट करैत अछि?",
+    "description": "puts"
+  },
+  "ruby-010": {
+    "command": "कोन मेथड नव पंक्ति जोड़ने बिना आउटपुट प्रिंट करैत अछि?",
+    "description": "print"
+  },
+  "ruby-011": {
+    "command": "कोन मेथड स्टैंडर्ड इनपुटसँ एक पंक्ति पढ़ैत अछि?",
+    "description": "gets"
+  },
+  "ruby-012": {
+    "command": "Ruby मे कोन मेथड कोनो ऑब्जेक्टकेँ स्ट्रिंग मे बदलैत अछि?",
+    "description": "to_s"
+  },
+  "ruby-013": {
+    "command": "Ruby मे कोन मेथड स्ट्रिंगकेँ इंटीजर मे बदलैत अछि?",
+    "description": "to_i"
+  },
+  "ruby-014": {
+    "command": "कोन मेथड स्ट्रिंगकेँ फ्लोट मे बदलैत अछि?",
+    "description": "to_f"
+  },
+  "ruby-015": {
+    "command": "कोन मेथड ऑब्जेक्टक क्लास लौटबैत अछि?",
+    "description": "class"
+  },
+  "ruby-016": {
+    "command": "कोन मेथड जाँचैत अछि जे कोनो ऑब्जेक्ट कोनो क्लासक प्रकारक अछि वा नहि?",
+    "description": "is_a?"
+  },
+  "ruby-017": {
+    "command": "कोन मेथड जाँचैत अछि जे कोनो ऑब्जेक्ट कोनो मेथडकेँ रिस्पॉन्ड करैत अछि वा नहि?",
+    "description": "respond_to?"
+  },
+  "ruby-018": {
+    "command": "कोन मेथड ऑब्जेक्टक लेल यूनिक आइडेंटिफायर लौटबैत अछि?",
+    "description": "object_id"
+  },
+  "ruby-019": {
+    "command": "Ruby मे कोन ऑपरेटर मान समानता जाँचैत अछि?",
+    "description": "=="
+  },
+  "ruby-020": {
+    "command": "case स्टेटमेंट तुलनाक लेल सामान्यतः कोन ऑपरेटर प्रयोग करैत अछि?",
+    "description": "==="
+  },
+  "ruby-021": {
+    "command": "तुलना आ क्रमबद्धताक लेल कोन ऑपरेटर प्रयोग होइत अछि?",
+    "description": "<=>"
+  },
+  "ruby-022": {
+    "command": "Ruby मे कॉन्स्टेंट कोना घोषित कएल जाइत अछि?",
+    "description": "नामकेँ अपरकेस अक्षरसँ शुरू कऽ कए"
+  },
+  "ruby-023": {
+    "command": "कोन उपसर्ग इंस्टेंस वेरिएबलकेँ दर्शबैत अछि?",
+    "description": "@"
+  },
+  "ruby-024": {
+    "command": "Ruby मे कोन ऑपरेटर कोनो संख्याकेँ घात (पावर) पर उठबैत अछि?",
+    "description": "**"
+  },
+  "aws-001": {
+    "command": "aws cli",
+    "description": "CLI सँ AWS सेवाक प्रबंधन लेल एकीकृत औजार।"
+  },
+  "aws-002": {
+    "command": "IAM",
+    "description": "AWS संसाधनक पहुँच सुरक्षित रूपसँ नियंत्रित करैत अछि।"
+  },
+  "aws-003": {
+    "command": "S3",
+    "description": "कोनो डेटा सहेजबाक आ फेर प्राप्त करबाक लेल बनल ऑब्जेक्ट भंडारण।"
+  },
+  "aws-004": {
+    "command": "EC2",
+    "description": "क्लाउडमे विस्तार योग्य संगणन क्षमता देैत अछि।"
+  },
+  "aws-005": {
+    "command": "VPC",
+    "description": "क्लाउडक तार्किक रूपसँ पृथक भाग उपलब्ध करबैत अछि।"
+  },
+  "aws-006": {
+    "command": "वर्चुअल सर्वर शुरू करबाक लेल मुख्य रूप सँ कोन AWS सेवा उपयोग कएल जाइत अछि?",
+    "description": "Amazon EC2"
+  },
+  "aws-007": {
+    "command": "ऑब्जेक्ट स्टोरेज लेल कोन AWS स्टोरेज सेवा डिजाइन कएल गेल अछि?",
+    "description": "Amazon S3"
+  },
+  "aws-008": {
+    "command": "उपयोगकर्ताक पहचान आ अनुमति सभक प्रबंधन कोन AWS सेवा करैत अछि?",
+    "description": "AWS IAM"
+  },
+  "aws-009": {
+    "command": "सर्वरलेस कंप्यूटिंग कोन AWS सेवा प्रदान करैत अछि?",
+    "description": "AWS Lambda"
+  },
+  "aws-010": {
+    "command": "मैनेज्ड रिलेशनल डेटाबेस कोन AWS सेवा अछि?",
+    "description": "Amazon RDS"
+  },
+  "aws-011": {
+    "command": "पूर्ण रूप सँ मैनेज्ड आ NoSQL AWS डेटाबेस कोन अछि?",
+    "description": "Amazon DynamoDB"
+  },
+  "aws-012": {
+    "command": "एप्लिकेशन आ AWS संसाधन सभक निगरानी करय मे कोन AWS सेवा सहायता करैत अछि?",
+    "description": "Amazon CloudWatch"
+  },
+  "aws-013": {
+    "command": "ऑडिटिंग लेल API गतिविधि रिकॉर्ड करबाक लेल कोन AWS सेवा उपयोग कएल जाइत अछि?",
+    "description": "CloudTrail"
+  },
+  "aws-014": {
+    "command": "अलग वर्चुअल नेटवर्क प्रदान करय वाली AWS नेटवर्किंग सेवा कोन अछि?",
+    "description": "Amazon VPC"
+  },
+  "aws-015": {
+    "command": "DNS प्रबंधन कोन AWS सेवा प्रदान करैत अछि?",
+    "description": "Route 53"
+  },
+  "aws-016": {
+    "command": "कतेको EC2 इंस्टेंसक बीच ट्रैफिक बाँटबाक लेल कोन AWS सेवा उपयोग कएल जाइत अछि?",
+    "description": "Elastic Load Balancer"
+  },
+  "aws-017": {
+    "command": "माँगक अनुसार EC2 इंस्टेंसक संख्या अपने-आप बदलय वाली AWS सेवा कोन अछि?",
+    "description": "Auto Scaling"
+  },
+  "aws-018": {
+    "command": "Infrastructure as Code तैनात करबाक लेल कोन AWS सेवा उपयोग कएल जाइत अछि?",
+    "description": "AWS CloudFormation"
+  },
+  "aws-019": {
+    "command": "कंटेंट डिलीवरी नेटवर्क (CDN) कोन AWS सेवा अछि?",
+    "description": "Amazon CloudFront"
+  },
+  "aws-020": {
+    "command": "मैनेज्ड Kubernetes कोन AWS सेवा प्रदान करैत अछि?",
+    "description": "Amazon EKS"
+  },
+  "aws-021": {
+    "command": "मैनेज्ड Docker कंटेनर ऑर्केस्ट्रेशन कोन AWS सेवा प्रदान करैत अछि?",
+    "description": "Amazon ECS"
+  },
+  "aws-022": {
+    "command": "पासवर्ड आ API key जेकाँ गुप्त जानकारी कोन AWS सेवा सुरक्षित रूप सँ जमा करैत अछि?",
+    "description": "AWS Secrets Manager"
+  },
+  "aws-023": {
+    "command": "एन्क्रिप्शन key सभक प्रबंधन कोन AWS सेवा करैत अछि?",
+    "description": "AWS KMS"
+  },
+  "aws-024": {
+    "command": "DDoS हमला सँ एप्लिकेशन सभकेँ कोन AWS सेवा बचबैत अछि?",
+    "description": "AWS Shield"
+  },
+  "azure-001": {
+    "command": "वर्चुअल मशीन बनएबाक लेल Microsoft Azure केर कोन सेवा उपयोग कएल जाइत अछि?",
+    "description": "Azure Virtual Machines"
+  },
+  "azure-002": {
+    "command": "असंरचित डेटाक लेल कोन Azure सेवा ऑब्जेक्ट स्टोरेज प्रदान करैत अछि?",
+    "description": "Azure Blob Storage"
+  },
+  "azure-003": {
+    "command": "पहिचान आ पहुँच प्रबंधनक लेल कोन Azure सेवा उपयोग कएल जाइत अछि?",
+    "description": "Microsoft Entra ID"
+  },
+  "azure-004": {
+    "command": "कोन Azure सेवा सर्वरलेस कंप्यूटिंग प्रदान करैत अछि?",
+    "description": "Azure Functions"
+  },
+  "azure-005": {
+    "command": "SQL Server केर लेल कोन Azure सेवा प्रबंधित रिलेशनल डेटाबेस प्रदान करैत अछि?",
+    "description": "Azure SQL Database"
+  },
+  "azure-006": {
+    "command": "कोन Azure डेटाबेस सेवा विश्वभरि वितरित आ NoSQL-आधारित अछि?",
+    "description": "Azure Cosmos DB"
+  },
+  "azure-007": {
+    "command": "एप्लिकेशन आ आधारभूत संरचनाक निगरानी करबाक लेल कोन Azure सेवा उपयोग कएल जाइत अछि?",
+    "description": "Azure Monitor"
+  },
+  "azure-008": {
+    "command": "कोन Azure सेवा वेब एप्लिकेशन सँ टेलीमेट्री एकत्र करैत अछि?",
+    "description": "Application Insights"
+  },
+  "azure-009": {
+    "command": "कोन Azure नेटवर्किंग सेवा एकटा अलग निजी नेटवर्क बनबैत अछि?",
+    "description": "Azure Virtual Network"
+  },
+  "azure-010": {
+    "command": "कोन Azure सेवा DNS होस्टिंग प्रदान करैत अछि?",
+    "description": "Azure DNS"
+  },
+  "azure-011": {
+    "command": "कोन Azure सेवा आबयवला ट्रैफिक केँ अनेक वर्चुअल मशीनक बीच बाँटैत अछि?",
+    "description": "Azure Load Balancer"
+  },
+  "azure-012": {
+    "command": "कोन Azure सेवा लेयर 7 पर वैश्विक लोड बैलेंसिंग प्रदान करैत अछि?",
+    "description": "Azure Front Door"
+  },
+  "azure-013": {
+    "command": "कोन Azure सेवा प्रबंधित Kubernetes प्रदान करैत अछि?",
+    "description": "Azure Kubernetes Service (AKS)"
+  },
+  "azure-014": {
+    "command": "सर्वरक प्रबंधन केने बिना कोन Azure सेवा कंटेनर चलबैत अछि?",
+    "description": "Azure Container Instances"
+  },
+  "azure-015": {
+    "command": "आधारभूत संरचनाक प्रबंधन केने बिना कोन Azure सेवा वेब एप्लिकेशन होस्ट करैत अछि?",
+    "description": "Azure App Service"
+  },
+  "azure-016": {
+    "command": "कोन Azure सेवा गोपनीय जानकारी, कुंजी आ प्रमाणपत्र सुरक्षित रूप सँ संग्रह करैत अछि?",
+    "description": "Azure Key Vault"
+  },
+  "azure-017": {
+    "command": "Microsoft Azure सँ जुड़बाक लेल कोन Azure सेवा समर्पित निजी कनेक्टिविटी प्रदान करैत अछि?",
+    "description": "Azure ExpressRoute"
+  },
+  "azure-018": {
+    "command": "Azure पोर्टलक माध्यम सँ वर्चुअल मशीन धरि सुरक्षित दूरस्थ पहुँच कोन Azure सेवा प्रदान करैत अछि?",
+    "description": "Azure Bastion"
+  },
+  "azure-019": {
+    "command": "Azure वर्चुअल मशीन आ अन्य वर्कलोडक बैकअप लेबाक लेल कोन Azure सेवा उपयोग कएल जाइत अछि?",
+    "description": "Azure Backup"
+  },
+  "azure-020": {
+    "command": "आपदाक बाद वर्चुअल मशीनक पुनर्प्राप्तिक लेल कोन Azure सेवा उपयोग कएल जाइत अछि?",
+    "description": "Azure Site Recovery"
+  },
+  "azure-021": {
+    "command": "शासन नीति बनएबाक आ लागू करबाक लेल कोन Azure सेवा उपयोग कएल जाइत अछि?",
+    "description": "Azure Policy"
+  },
+  "azure-022": {
+    "command": "कोन Azure सेवा ऑन-प्रिमिसेस आ मल्टी-क्लाउड वातावरण धरि Azure प्रबंधनक विस्तार करैत अछि?",
+    "description": "Azure Arc"
+  },
+  "azure-023": {
+    "command": "निरंतर एकीकरण आ निरंतर डिप्लॉयमेंट (CI/CD) केर लेल Azure DevOps केर कोन घटक उपयोग कएल जाइत अछि?",
+    "description": "Azure Pipelines"
+  },
+  "azure-024": {
+    "command": "Azure DevOps केर कोन सेवा Git रिपॉजिटरी प्रदान करैत अछि?",
+    "description": "Azure Repos"
+  },
+  "gcp-001": {
+    "command": "वर्चुअल मशीन बनाबय आ प्रबंधित करबाक लेल कोन Google Cloud सेवाक उपयोग कएल जाइत अछि?",
+    "description": "Compute Engine"
+  },
+  "gcp-002": {
+    "command": "कोन Google Cloud सेवा ऑब्जेक्ट स्टोरेज उपलब्ध कराबैत अछि?",
+    "description": "Cloud Storage"
+  },
+  "gcp-003": {
+    "command": "कोन Google Cloud सेवा सर्वरलेस फंक्शन उपलब्ध कराबैत अछि?",
+    "description": "Cloud Functions"
+  },
+  "gcp-004": {
+    "command": "Kubernetes क्लस्टर चलाबय लेल कोन Google Cloud सेवाक उपयोग कएल जाइत अछि?",
+    "description": "Google Kubernetes Engine (GKE)"
+  },
+  "gcp-005": {
+    "command": "कोन Google Cloud सेवा पूर्णतः प्रबंधित रिलेशनल डेटाबेस उपलब्ध कराबैत अछि?",
+    "description": "Cloud SQL"
+  },
+  "gcp-006": {
+    "command": "कोन Google Cloud डेटाबेस विश्वव्यापी रूपेँ वितरित रिलेशनल डेटाबेस अछि?",
+    "description": "Cloud Spanner"
+  },
+  "gcp-007": {
+    "command": "कोन Google Cloud NoSQL डॉक्युमेंट डेटाबेस सर्वरलेस अछि?",
+    "description": "Firestore"
+  },
+  "gcp-008": {
+    "command": "पेटाबाइट-स्तरक डेटा विश्लेषणक लेल कोन Google Cloud सेवाक उपयोग कएल जाइत अछि?",
+    "description": "BigQuery"
+  },
+  "gcp-009": {
+    "command": "कोन Google Cloud सेवा मॉनिटरिंग आ ऑब्जर्वेबिलिटी उपलब्ध कराबैत अछि?",
+    "description": "Cloud Monitoring"
+  },
+  "gcp-010": {
+    "command": "कोन Google Cloud सेवा एप्लिकेशन लॉग एकत्र करैत अछि?",
+    "description": "Cloud Logging"
+  },
+  "gcp-011": {
+    "command": "कोन Google Cloud सेवा यूजर, रोल आ अनुमति (permissions) केँ प्रबंधित करैत अछि?",
+    "description": "Cloud Identity and IAM"
+  },
+  "gcp-012": {
+    "command": "कोन Google Cloud सेवा पृथक निजी नेटवर्क बनबैत अछि?",
+    "description": "Virtual Private Cloud (VPC)"
+  },
+  "gcp-013": {
+    "command": "कोन Google Cloud सेवा DNS होस्टिंग उपलब्ध कराबैत अछि?",
+    "description": "Cloud DNS"
+  },
+  "gcp-014": {
+    "command": "कोन Google Cloud सेवा एकाधिक वर्चुअल मशीन पर ट्रैफिक वितरित करैत अछि?",
+    "description": "Cloud Load Balancing"
+  },
+  "gcp-015": {
+    "command": "कोन Google Cloud सेवा पूरा विश्वमे कंटेंट डिलीवरी केँ तेज करैत अछि?",
+    "description": "Cloud CDN"
+  },
+  "gcp-016": {
+    "command": "कोन Google Cloud सेवा वेब एप्लिकेशन केँ DDoS आक्रमण आ सामान्य वेब एक्सप्लॉइट सँ बचबैत अछि?",
+    "description": "Cloud Armor"
+  },
+  "gcp-017": {
+    "command": "कोन Google Cloud सेवा इन्फ्रास्ट्रक्चर प्रबंधित कएने बिना प्रबंधित कंटेनर निष्पादन उपलब्ध कराबैत अछि?",
+    "description": "Cloud Run"
+  },
+  "gcp-018": {
+    "command": "वेब एप्लिकेशन बनाबयक लेल कोन Google Cloud सेवा पूर्णतः प्रबंधित प्लेटफॉर्म अछि?",
+    "description": "App Engine"
+  },
+  "gcp-019": {
+    "command": "कोन Google Cloud सेवा सीक्रेट, पासवर्ड आ API की केँ सुरक्षित रूपेँ संग्रहित करैत अछि?",
+    "description": "Secret Manager"
+  },
+  "gcp-020": {
+    "command": "कोन Google Cloud सेवा एन्क्रिप्शन की केँ प्रबंधित करैत अछि?",
+    "description": "Cloud KMS"
+  },
+  "gcp-021": {
+    "command": "कोन Google Cloud सेवा Google Cloud सँ समर्पित निजी कनेक्टिविटी उपलब्ध कराबैत अछि?",
+    "description": "Cloud Interconnect"
+  },
+  "gcp-022": {
+    "command": "कोन Google Cloud सेवा ऑन-प्रिमाइसेस नेटवर्क आ GCP क बीच सुरक्षित एन्क्रिप्टेड कनेक्टिविटी उपलब्ध कराबैत अछि?",
+    "description": "Cloud VPN"
+  },
+  "gcp-023": {
+    "command": "कोन Google Cloud सेवा बिना बाहरी IP पता वला निजी इंस्टेंस केँ आउटबाउंड इंटरनेट एक्सेस उपलब्ध कराबैत अछि?",
+    "description": "Cloud NAT"
+  },
+  "gcp-024": {
+    "command": "कोन Google Cloud सेवा VPC आ ऑन-प्रिमाइसेस नेटवर्क क बीच रूट केँ गतिशील रूपेँ आदान-प्रदान करैत अछि?",
+    "description": "Cloud Router"
+  },
+  "oracle-001": {
+    "command": "वर्चुअल मशीन बनाबय लेल कोन Oracle Cloud Infrastructure सेवा प्रयोग कएल जाइत अछि?",
+    "description": "Compute"
+  },
+  "oracle-002": {
+    "command": "कोन OCI सेवा स्केलेबल ऑब्जेक्ट स्टोरेज प्रदान करैत अछि?",
+    "description": "Object Storage"
+  },
+  "oracle-003": {
+    "command": "कोन OCI स्टोरेज सेवा स्थायी ब्लॉक स्टोरेज प्रदान करैत अछि?",
+    "description": "Block Volumes"
+  },
+  "oracle-004": {
+    "command": "कोन OCI सेवा साझा NFS फाइल स्टोरेज प्रदान करैत अछि?",
+    "description": "File Storage"
+  },
+  "oracle-005": {
+    "command": "OCI वर्चुअल नेटवर्क सेवा केँ की कहल जाइत अछि?",
+    "description": "Virtual Cloud Network (VCN)"
+  },
+  "oracle-006": {
+    "command": "कोन OCI सेवा यूजर, ग्रुप आ पॉलिसी केँ प्रबंधित करैत अछि?",
+    "description": "Identity and Access Management (IAM)"
+  },
+  "oracle-007": {
+    "command": "कोन OCI फीचर क्लाउड रिसोर्स केँ तार्किक रूप सँ व्यवस्थित करैत अछि?",
+    "description": "Compartments"
+  },
+  "oracle-008": {
+    "command": "कोन OCI फीचर यूजर आ ग्रुप लेल अनुमति निर्धारित करैत अछि?",
+    "description": "Policies"
+  },
+  "oracle-009": {
+    "command": "कोन OCI सेवा आबऽ वला ट्रैफिक केँ बाँटैत अछि?",
+    "description": "Load Balancer"
+  },
+  "oracle-010": {
+    "command": "कोन OCI सेवा समर्पित निजी कनेक्टिविटी प्रदान करैत अछि?",
+    "description": "FastConnect"
+  },
+  "oracle-011": {
+    "command": "कोन OCI सेवा IPSec कनेक्टिविटी प्रदान करैत अछि?",
+    "description": "Site-to-Site VPN"
+  },
+  "oracle-012": {
+    "command": "कोन OCI कम्पोनेंट VCN केँ ऑन-प्रिमाइसेस नेटवर्क सँ जोड़ैत अछि?",
+    "description": "Dynamic Routing Gateway (DRG)"
+  },
+  "oracle-013": {
+    "command": "कोन OCI डेटाबेस स्वयं-प्रबंधित अछि?",
+    "description": "Autonomous Database"
+  },
+  "oracle-014": {
+    "command": "कोन OCI सेवा Kubernetes क्लस्टर केँ प्रबंधित करैत अछि?",
+    "description": "Container Engine for Kubernetes (OKE)"
+  },
+  "oracle-015": {
+    "command": "कोन OCI सेवा सर्वरलेस एक्जीक्यूशन प्रदान करैत अछि?",
+    "description": "Functions"
+  },
+  "oracle-016": {
+    "command": "कोन OCI सेवा API केँ प्रकाशित आ सुरक्षित करैत अछि?",
+    "description": "API Gateway"
+  },
+  "oracle-017": {
+    "command": "कोन OCI सेवा CI/CD पाइपलाइन केँ सपोर्ट करैत अछि?",
+    "description": "DevOps"
+  },
+  "oracle-018": {
+    "command": "कोन OCI सेवा Terraform डिप्लॉयमेंट केँ प्रबंधित करैत अछि?",
+    "description": "Resource Manager"
+  },
+  "oracle-019": {
+    "command": "कोन OCI सेवा मेट्रिक्स एकत्र करैत अछि?",
+    "description": "Monitoring"
+  },
+  "oracle-020": {
+    "command": "कोन OCI सेवा लॉग सहेजैत अछि?",
+    "description": "Logging"
+  },
+  "oracle-021": {
+    "command": "कोन OCI सेवा अलर्ट पठबैत अछि?",
+    "description": "Notifications"
+  },
+  "oracle-022": {
+    "command": "कोन OCI सेवा रिसोर्स इवेंट पर प्रतिक्रिया दैत अछि?",
+    "description": "Events"
+  },
+  "oracle-023": {
+    "command": "कोन OCI सेवा सीक्रेट आ एन्क्रिप्शन कुंजी सहेजैत अछि?",
+    "description": "Vault"
+  },
+  "oracle-024": {
+    "command": "कोन OCI सेवा सुरक्षा स्थिति केँ मॉनिटर करैत अछि?",
+    "description": "Cloud Guard"
+  },
+  "ibm-001": {
+    "command": "कोन IBM Cloud सेवाक उपयोग वर्चुअल सर्वर बनेबाक लेल कएल जाइत अछि?",
+    "description": "Virtual Servers for VPC"
+  },
+  "ibm-002": {
+    "command": "कोन IBM Cloud सेवा ऑब्जेक्ट स्टोरेज प्रदान करैत अछि?",
+    "description": "Cloud Object Storage"
+  },
+  "ibm-003": {
+    "command": "IBM Cloud केर पृथक वर्चुअल नेटवर्किंग सेवा कोन अछि?",
+    "description": "Virtual Private Cloud (VPC)"
+  },
+  "ibm-004": {
+    "command": "कोन IBM Cloud सेवा उपयोगकर्ता आ एक्सेस केँ प्रबंधित करैत अछि?",
+    "description": "IBM Cloud IAM"
+  },
+  "ibm-005": {
+    "command": "कोन IBM Cloud सेवा प्रबंधित Kubernetes प्रदान करैत अछि?",
+    "description": "IBM Cloud Kubernetes Service"
+  },
+  "ibm-006": {
+    "command": "कोन IBM Cloud सेवा प्रबंधित Red Hat OpenShift प्रदान करैत अछि?",
+    "description": "Red Hat OpenShift on IBM Cloud"
+  },
+  "ibm-007": {
+    "command": "कमांड लाइन सँ IBM Cloud मे लॉग इन करबाक लेल कोन कमांड प्रयुक्त होइत अछि?",
+    "description": "ibmcloud login"
+  },
+  "ibm-008": {
+    "command": "कोन IBM Cloud सेवा इन्फ्रास्ट्रक्चर प्रबंधित कएने बिना कंटेनर चलबैत अछि?",
+    "description": "IBM Cloud Code Engine"
+  },
+  "ibm-009": {
+    "command": "कोन IBM Cloud सेवा आबऽवला ट्रैफिक केँ वितरित करैत अछि?",
+    "description": "Load Balancer"
+  },
+  "ibm-010": {
+    "command": "कोन IBM Cloud सेवा सुरक्षित साइट-टू-साइट कनेक्टिविटी प्रदान करैत अछि?",
+    "description": "VPN for VPC"
+  },
+  "ibm-011": {
+    "command": "कोन IBM Cloud सेवा ऑन-प्रिमाइसेस नेटवर्क धरि समर्पित निजी कनेक्टिविटी प्रदान करैत अछि?",
+    "description": "Direct Link"
+  },
+  "ibm-012": {
+    "command": "कोन IBM Cloud ऑफरिंग प्रबंधित डेटाबेस प्रदान करैत अछि?",
+    "description": "IBM Cloud Databases"
+  },
+  "ibm-013": {
+    "command": "कोन IBM Cloud डेटाबेस Db2 पर आधारित अछि?",
+    "description": "Db2 on Cloud"
+  },
+  "ibm-014": {
+    "command": "कोन IBM Cloud सेवा इन्फ्रास्ट्रक्चर मॉनिटरिंग प्रदान करैत अछि?",
+    "description": "IBM Cloud Monitoring"
+  },
+  "ibm-015": {
+    "command": "कोन IBM Cloud सेवा लॉग केँ केंद्रीकृत करैत अछि?",
+    "description": "IBM Log Analysis"
+  },
+  "ibm-016": {
+    "command": "कोन IBM Cloud सेवा सीक्रेट्स केँ सुरक्षित रूपेँ स्टोर करैत अछि?",
+    "description": "Secrets Manager"
+  },
+  "ibm-017": {
+    "command": "कोन IBM Cloud सेवा एन्क्रिप्शन कीज़ केँ प्रबंधित करैत अछि?",
+    "description": "Key Protect"
+  },
+  "ibm-018": {
+    "command": "कोन IBM Cloud सेवा HSM-समर्थित की प्रबंधन प्रदान करैत अछि?",
+    "description": "Hyper Protect Crypto Services"
+  },
+  "ibm-019": {
+    "command": "कोन IBM Cloud सेवा कंटेनर इमेज केँ स्टोर करैत अछि?",
+    "description": "Container Registry"
+  },
+  "ibm-020": {
+    "command": "कोन IBM Cloud सेवा Terraform डिप्लॉयमेंट केँ प्रबंधित करैत अछि?",
+    "description": "Schematics"
+  },
+  "ibm-021": {
+    "command": "कोन IBM Cloud सेवा नोटिफिकेशन पठबैत अछि?",
+    "description": "Event Notifications"
+  },
+  "ibm-022": {
+    "command": "कोन IBM Cloud सेवा CDN आ DDoS सुरक्षा प्रदान करैत अछि?",
+    "description": "Cloud Internet Services"
+  },
+  "ibm-023": {
+    "command": "कोन IBM AI प्लेटफॉर्म AI सेवा प्रदान करैत अछि?",
+    "description": "watsonx"
+  },
+  "ibm-024": {
+    "command": "कोन IBM ऑफरिंग Kubernetes पर एंटरप्राइज सॉफ्टवेयर प्रदान करैत अछि?",
+    "description": "Cloud Pak"
+  },
+  "multicloud-001": {
+    "command": "कोन क्लाउड रणनीति दू वा बेसी पब्लिक क्लाउड प्रोवाइडरक सेवाक उपयोग करैत अछि?",
+    "description": "Multi-Cloud"
+  },
+  "multicloud-002": {
+    "command": "कोन क्लाउड रणनीति पब्लिक आ प्राइवेट क्लाउडकेँ जोड़ैत अछि?",
+    "description": "Hybrid Cloud"
+  },
+  "multicloud-003": {
+    "command": "मल्टी-क्लाउड Infrastructure as Code लेल सामान्यतया कोन टूल प्रयोग कएल जाइत अछि?",
+    "description": "Terraform"
+  },
+  "multicloud-004": {
+    "command": "क्लाउड सभमे कंटेनरकेँ ऑर्केस्ट्रेट करबा लेल कोन CNCF प्रोजेक्ट व्यापक रूपेँ प्रयोग कएल जाइत अछि?",
+    "description": "Kubernetes"
+  },
+  "multicloud-005": {
+    "command": "क्लाउड API सभकेँ उपलब्ध करबाक लेल सामान्यतया कोन प्रोटोकॉल प्रयोग कएल जाइत अछि?",
+    "description": "REST"
+  },
+  "multicloud-006": {
+    "command": "कोन अभ्यास वेंडर लॉक-इनसँ बचबामे मदति करैत अछि?",
+    "description": "ओपन स्टैंडर्ड्सक उपयोग"
+  },
+  "multicloud-007": {
+    "command": "क्लाउड प्रोवाइडर सभमे कंटेनराइजेशन लेल कोन टूल व्यापक रूपेँ प्रयोग कएल जाइत अछि?",
+    "description": "Docker"
+  },
+  "multicloud-008": {
+    "command": "कोन प्रोटोकॉल क्लाउड सभमे फेडरेटेड आइडेंटिटी सक्षम करैत अछि?",
+    "description": "SAML"
+  },
+  "multicloud-009": {
+    "command": "क्लाउड API सभ लेल सामान्यतया कोन ऑथेंटिकेशन स्टैंडर्ड प्रयोग कएल जाइत अछि?",
+    "description": "OAuth 2.0"
+  },
+  "multicloud-010": {
+    "command": "कोन क्लाउड सर्विस मॉडल वर्चुअल मशीन उपलब्ध कराबैत अछि?",
+    "description": "IaaS"
+  },
+  "multicloud-011": {
+    "command": "कोन क्लाउड सर्विस मॉडल मैनेज्ड एप्लिकेशन प्लेटफॉर्म उपलब्ध कराबैत अछि?",
+    "description": "PaaS"
+  },
+  "multicloud-012": {
+    "command": "कोन क्लाउड सर्विस मॉडल इंटरनेट माध्यमे सॉफ्टवेयर उपलब्ध कराबैत अछि?",
+    "description": "SaaS"
+  },
+  "multicloud-013": {
+    "command": "कोन मॉनिटरिंग पद्धति एकाधिक क्लाउड प्रोवाइडर सभसँ मेट्रिक्स एकत्र करैत अछि?",
+    "description": "केंद्रीकृत मॉनिटरिंग"
+  },
+  "multicloud-014": {
+    "command": "कोन लॉगिंग पद्धति सभ क्लाउड प्रोवाइडरसँ लॉग सभकेँ एकत्र करैत अछि?",
+    "description": "केंद्रीकृत लॉगिंग"
+  },
+  "multicloud-015": {
+    "command": "कोन नेटवर्किंग तकनीक एकाधिक क्लाउड वातावरणकेँ सुरक्षित रूपेँ जोड़ैत अछि?",
+    "description": "VPN"
+  },
+  "multicloud-016": {
+    "command": "कोन नेटवर्किंग सेवा क्लाउड सभक बीच समर्पित कनेक्टिविटी उपलब्ध कराबैत अछि?",
+    "description": "Direct Connect/ExpressRoute/Interconnect"
+  },
+  "multicloud-017": {
+    "command": "Kubernetes मे सर्विस डिस्कवरी लेल सामान्यतया कोन तकनीक प्रयोग कएल जाइत अछि?",
+    "description": "DNS"
+  },
+  "multicloud-018": {
+    "command": "एकाधिक क्लाउड सभमे CI/CD लेल कोन टूल व्यापक रूपेँ प्रयोग कएल जाइत अछि?",
+    "description": "Jenkins"
+  },
+  "multicloud-019": {
+    "command": "कोन ओपन-सोर्स मॉनिटरिंग प्लेटफॉर्म मल्टी-क्लाउड वातावरणकेँ सपोर्ट करैत अछि?",
+    "description": "Prometheus"
+  },
+  "multicloud-020": {
+    "command": "कोन विज़ुअलाइज़ेशन प्लेटफॉर्म सामान्यतया Prometheus क संग काज करैत अछि?",
+    "description": "Grafana"
+  },
+  "multicloud-021": {
+    "command": "कोन सुरक्षा सिद्धांत मात्र आवश्यक अनुमति प्रदान करैत अछि?",
+    "description": "न्यूनतम विशेषाधिकार"
+  },
+  "multicloud-022": {
+    "command": "कोन अभ्यास डेटाकेँ स्टोरेज आ ट्रांजिट दुनू अवस्थामे एन्क्रिप्ट करैत अछि?",
+    "description": "एन्क्रिप्शन"
+  },
+  "multicloud-023": {
+    "command": "कोन क्लाउड आर्किटेक्चर प्रोवाइडर सभमे उपलब्धता (availability) बढ़बैत अछि?",
+    "description": "रिडंडेंसी"
+  },
+  "multicloud-024": {
+    "command": "कोन डिप्लॉयमेंट दृष्टिकोण वर्कलोडकेँ एकाधिक क्लाउड सभमे वितरित करैत अछि?",
+    "description": "Active-Active"
+  },
+  "hybridcloud-001": {
+    "command": "Hybrid Cloud की अछि?",
+    "description": "पब्लिक आ प्राइवेट क्लाउड परिवेशक संयोजन"
+  },
+  "hybridcloud-002": {
+    "command": "कोन डिप्लॉयमेंट मॉडल ऑन-प्रिमाइसेस इन्फ्रास्ट्रक्चरकेँ पब्लिक क्लाउडक संग जोड़ैत अछि?",
+    "description": "Hybrid Cloud"
+  },
+  "hybridcloud-003": {
+    "command": "ऑन-प्रिमाइसेस डेटा सेंटरकेँ पब्लिक क्लाउडसँ सुरक्षित रूपेँ जोड़' लेल सामान्यतः कोन टेक्नोलॉजी प्रयोग कएल जाइत अछि?",
+    "description": "VPN"
+  },
+  "hybridcloud-004": {
+    "command": "कोन AWS सर्विस AWS इन्फ्रास्ट्रक्चरकेँ ऑन-प्रिमाइसेस परिवेश धरि विस्तारित करैत अछि?",
+    "description": "AWS Outposts"
+  },
+  "hybridcloud-005": {
+    "command": "कोन Microsoft Azure सर्विस हाइब्रिड आ मल्टी-क्लाउड रिसोर्सक प्रबंधन सक्षम करैत अछि?",
+    "description": "Azure Arc"
+  },
+  "hybridcloud-006": {
+    "command": "कोन Google Cloud प्लेटफॉर्म हाइब्रिड परिवेशमे Kubernetes क्लस्टरक प्रबंधनमे मदद करैत अछि?",
+    "description": "Anthos"
+  },
+  "hybridcloud-007": {
+    "command": "कोन IBM Cloud सर्विस क्लाउड सर्विसेजकेँ कोनो परिवेश धरि विस्तारित करैत अछि?",
+    "description": "IBM Cloud Satellite"
+  },
+  "hybridcloud-008": {
+    "command": "कोन Oracle Cloud ऑफरिंग ग्राहकक डेटा सेंटरक भीतर क्लाउड सर्विसेज उपलब्ध कराबैत अछि?",
+    "description": "OCI Dedicated Region"
+  },
+  "hybridcloud-009": {
+    "command": "Hybrid Cloud परिवेशमे सभसँ बेसी कोन कंटेनर ऑर्केस्ट्रेशन प्लेटफॉर्म प्रयोग कएल जाइत अछि?",
+    "description": "Kubernetes"
+  },
+  "hybridcloud-010": {
+    "command": "Hybrid Cloudमे एंटरप्राइज Kubernetes चलाबय लेल कोन ओपन-सोर्स प्लेटफॉर्म व्यापक रूपेँ प्रयोग कएल जाइत अछि?",
+    "description": "OpenShift"
+  },
+  "hybridcloud-011": {
+    "command": "Hybrid Cloud परिवेशमे सामान्यतः कोन Infrastructure as Code टूल प्रयोग कएल जाइत अछि?",
+    "description": "Terraform"
+  },
+  "hybridcloud-012": {
+    "command": "Hybrid Cloud डिप्लॉयमेंटमे सामान्यतः कोन कॉन्फ़िगरेशन मैनेजमेंट टूल प्रयोग कएल जाइत अछि?",
+    "description": "Ansible"
+  },
+  "hybridcloud-013": {
+    "command": "Hybrid Cloud डिप्लॉयमेंट लेल प्रायः कोन CI/CD टूल प्रयोग कएल जाइत अछि?",
+    "description": "Jenkins"
+  },
+  "hybridcloud-014": {
+    "command": "Hybrid Cloudक मुख्य लाभ की अछि?",
+    "description": "वर्कलोडकेँ जतय ओ सभसँ नीक फिट हो ओतय चलाबयक लचीलापन"
+  },
+  "hybridcloud-015": {
+    "command": "कोन नेटवर्किंग सर्विस ऑन-प्रिमाइसेस आ AWSक बीच समर्पित कनेक्टिविटी प्रदान करैत अछि?",
+    "description": "AWS Direct Connect"
+  },
+  "hybridcloud-016": {
+    "command": "कोन Azure नेटवर्किंग सर्विस Azure धरि प्राइवेट कनेक्टिविटी प्रदान करैत अछि?",
+    "description": "Azure ExpressRoute"
+  },
+  "hybridcloud-017": {
+    "command": "कोन Google Cloud नेटवर्किंग सर्विस Google Cloud धरि समर्पित कनेक्टिविटी प्रदान करैत अछि?",
+    "description": "Cloud Interconnect"
+  },
+  "hybridcloud-018": {
+    "command": "कोन Oracle Cloud नेटवर्किंग सर्विस समर्पित प्राइवेट कनेक्टिविटी प्रदान करैत अछि?",
+    "description": "OCI FastConnect"
+  },
+  "hybridcloud-019": {
+    "command": "कोन IBM Cloud सर्विस समर्पित प्राइवेट नेटवर्क कनेक्टिविटी प्रदान करैत अछि?",
+    "description": "IBM Cloud Direct Link"
+  },
+  "hybridcloud-020": {
+    "command": "Hybrid Cloud Single Sign-On लेल सामान्यतः कोन ऑथेंटिकेशन विधि प्रयोग कएल जाइत अछि?",
+    "description": "SAML"
+  },
+  "hybridcloud-021": {
+    "command": "Hybrid Cloud एप्लिकेशनमे API ऑथेंटिकेशन लेल सामान्यतः कोन प्रोटोकॉल प्रयोग कएल जाइत अछि?",
+    "description": "OAuth 2.0"
+  },
+  "hybridcloud-022": {
+    "command": "कोन आर्किटेक्चर ऑन-प्रिमाइसेस आ क्लाउड परिवेशमे एप्लिकेशनक उपलब्धता बढ़ाबैत अछि?",
+    "description": "Active-Active"
+  },
+  "hybridcloud-023": {
+    "command": "Hybrid Cloud Kubernetes परिवेशमे सामान्यतः कोन मॉनिटरिंग प्लेटफॉर्म प्रयोग कएल जाइत अछि?",
+    "description": "Prometheus"
+  },
+  "hybridcloud-024": {
+    "command": "Prometheusक संग सामान्यतः कोन विज़ुअलाइज़ेशन टूल जोड़ल जाइत अछि?",
+    "description": "Grafana"
+  },
+  "extra-001": {
+    "command": "ansible-vault encrypt",
+    "description": "विन्यस्त वॉल्ट पासवर्डसँ विद्यमान फाइल एन्क्रिप्ट करैत अछि।"
+  },
+  "extra-002": {
+    "command": "ansible-vault decrypt",
+    "description": "नियंत्रित स्थानीय निरीक्षण लेल वॉल्टमे सुरक्षित फाइल डिक्रिप्ट करैत अछि।"
+  },
+  "extra-003": {
+    "command": "ansible-vault encrypt_string",
+    "description": "एक मान एन्क्रिप्ट करैत अछि जाहिसँ ओकरा चरक फाइलमे इनलाइन राखल जा सकय।"
+  },
+  "extra-004": {
+    "command": "ansible-vault rekey",
+    "description": "एन्क्रिप्टेड वॉल्ट फाइलक रक्षा करनिहार पासवर्ड बदलैत अछि।"
+  },
+  "extra-005": {
+    "command": "ansible-inventory --graph",
+    "description": "इन्वेंटरी समूह आ ओकर होस्ट संबंध देखबैत अछि।"
+  },
+  "extra-006": {
+    "command": "ansible-inventory --list",
+    "description": "समूह चर सहित समाधान कएल इन्वेंटरी JSON केर रूपमे प्रस्तुत करैत अछि।"
+  },
+  "extra-007": {
+    "command": "ansible-config dump --only-changed",
+    "description": "Ansible क डिफॉल्टसँ भिन्न विन्यास मान देखबैत अछि।"
+  },
+  "extra-008": {
+    "command": "ansible-doc ansible.builtin.copy",
+    "description": "मॉड्यूलक दस्तावेज आ समर्थित पैरामीटर देखबैत अछि।"
+  },
+  "extra-009": {
+    "command": "ansible-galaxy collection install",
+    "description": "संग्रहसँ पुनःप्रयोग योग्य मॉड्यूल आ प्लगिन स्थापित करैत अछि।"
+  },
+  "extra-010": {
+    "command": "ansible-galaxy collection list",
+    "description": "सक्रिय Ansible पथसभमे स्थापित संग्रहक सूची देखबैत अछि।"
+  },
+  "extra-011": {
+    "command": "ansible-playbook --check",
+    "description": "बहुतो लंबित परिवर्तनक पूर्वावलोकन लेल प्लेबुक चेक मोडमे चलबैत अछि।"
+  },
+  "extra-012": {
+    "command": "ansible-playbook --diff",
+    "description": "प्लेबुक परिणामक संग समर्थित फाइल परिवर्तन देखबैत अछि।"
+  },
+  "extra-013": {
+    "command": "ansible-playbook --limit",
+    "description": "प्लेबुक निष्पादनकेँ होस्ट वा समूह पैटर्न धरि सीमित करैत अछि।"
+  },
+  "extra-014": {
+    "command": "ansible-playbook --tags",
+    "description": "मात्र सौंपल टैग द्वारा चुनल कार्य चलबैत अछि।"
+  },
+  "extra-015": {
+    "command": "ansible-playbook --skip-tags",
+    "description": "टैग लागल कार्यकेँ प्लेबुक निष्पादनसँ बाहर राखैत अछि।"
+  },
+  "extra-016": {
+    "command": "ansible-playbook --list-tasks",
+    "description": "प्लेबुक आ वर्तमान चयन विकल्पसँ मेल खाइत कार्यक सूची देखबैत अछि।"
+  },
+  "extra-017": {
+    "command": "ansible-playbook --list-hosts",
+    "description": "कार्य चलौने बिना प्लेबुकक लक्ष्य होस्टक सूची देखबैत अछि।"
+  },
+  "extra-018": {
+    "command": "ansible.builtin.assert",
+    "description": "आवश्यक शर्त असत्य भेलापर प्ले असफल करैत अछि।"
+  },
+  "extra-019": {
+    "command": "delegate_to",
+    "description": "वर्तमान इन्वेंटरी होस्टक बदला दोसर होस्ट पर एक कार्य चलबैत अछि।"
+  },
+  "extra-020": {
+    "command": "serial",
+    "description": "तैनातीक प्रभाव सीमित करबाक लेल होस्ट पर जत्थामे प्ले चलबैत अछि।"
+  },
+  "extra-021": {
+    "command": "any_errors_fatal",
+    "description": "घातक कार्य त्रुटिक बाद सभ होस्ट पर प्ले रोकैत अछि।"
+  },
+  "extra-022": {
+    "command": "block / rescue / always",
+    "description": "कार्यसभक समूह बनबैत अछि आ विफलता लेल पुनर्प्राप्ति आ सफाइक व्यवहार परिभाषित करैत अछि।"
+  },
+  "extra-023": {
+    "command": "changed_when",
+    "description": "कार्य परिवर्तित परिणाम रिपोर्ट करत कि नहि, तकर निर्धारण ओवरराइड करैत अछि।"
+  },
+  "extra-024": {
+    "command": "ansible.builtin.meta: flush_handlers",
+    "description": "प्लेक अंत धरि प्रतीक्षा करबाक बदला सूचित हैंडलर तुरंत चलबैत अछि।"
+  },
+  "extra-025": {
+    "command": "aws sts get-caller-identity",
+    "description": "सक्रिय AWS खाता, उपयोगकर्ता वा ग्रहण कएल भूमिकाक पुष्टि करैत अछि।"
+  },
+  "extra-026": {
+    "command": "aws sts assume-role",
+    "description": "विश्वसनीय IAM भूमिका लेल अस्थायी क्रेडेंशियल माँगैत अछि।"
+  },
+  "extra-027": {
+    "command": "S3 bucket versioning",
+    "description": "ऑब्जेक्टक पुरान संस्करण राखैत अछि जाहिसँ अनजाने ओवरराइटक बाद पुनर्प्राप्ति भऽ सकय।"
+  },
+  "extra-028": {
+    "command": "S3 lifecycle rule",
+    "description": "आयु वा फिल्टरक अनुसार ऑब्जेक्ट स्वतः स्थानांतरित करैत अछि वा ओकर अवधि समाप्त करैत अछि।"
+  },
+  "extra-029": {
+    "command": "S3 presigned URL",
+    "description": "दीर्घकालिक क्रेडेंशियल साझा केने बिना ऑब्जेक्टक समय-सीमित पहुँच देैत अछि।"
+  },
+  "extra-030": {
+    "command": "S3 server-side encryption",
+    "description": "S3-प्रबंधित वा ग्राहक-प्रबंधित कुंजीसँ संग्रहीत ऑब्जेक्ट एन्क्रिप्ट करैत अछि।"
+  },
+  "extra-031": {
+    "command": "EC2 IMDSv2",
+    "description": "इंस्टेंस मेटाडेटा क्रेडेंशियलक उजागर होएबाक जोखिम घटाबय लेल सत्र टोकन प्रयोग करैत अछि।"
+  },
+  "extra-032": {
+    "command": "Security group vs network ACL",
+    "description": "सुरक्षा समूह अवस्थायुक्त इंस्टेंस नियम होइत अछि; नेटवर्क ACL अवस्थारहित सबनेट नियम होइत अछि।"
+  },
+  "extra-033": {
+    "command": "Application Load Balancer target health",
+    "description": "पंजीकृत लक्ष्य विन्यस्त स्वास्थ्य जाँचमे सफल अछि कि नहि से बतबैत अछि।"
+  },
+  "extra-034": {
+    "command": "Auto Scaling instance refresh",
+    "description": "लॉन्च-टेम्पलेट परिवर्तनक बाद समूहक इंस्टेंस धीरे-धीरे बदलैत अछि।"
+  },
+  "extra-035": {
+    "command": "EBS volume snapshot",
+    "description": "ब्लॉक भंडारण वॉल्यूमक कोनो खास समयक बैकअप बनबैत अछि।"
+  },
+  "extra-036": {
+    "command": "CloudWatch metric alarm",
+    "description": "मेट्रिक विन्यस्त सीमा पार केलापर अवस्था बदलैत अछि।"
+  },
+  "extra-037": {
+    "command": "CloudTrail event lookup",
+    "description": "दर्ज प्रबंधन घटनामे प्रिंसिपल, संसाधन वा क्रिया खोजैत अछि।"
+  },
+  "extra-038": {
+    "command": "SQS visibility timeout",
+    "description": "उपभोक्ताक प्रसंस्करण कालमे प्राप्त संदेश अस्थायी रूपसँ नुकबैत अछि।"
+  },
+  "extra-039": {
+    "command": "SQS dead-letter queue",
+    "description": "स्रोत कतारक रीड्राइव सीमा पार केनिहार संदेश पकड़ैत अछि।"
+  },
+  "extra-040": {
+    "command": "SNS message filter policy",
+    "description": "विशेषता सदस्यता फिल्टरसँ मेल खाए तखने विषयक संदेश पहुँचबैत अछि।"
+  },
+  "extra-041": {
+    "command": "Lambda reserved concurrency",
+    "description": "समवर्ती निष्पादन सीमित करैत अछि आ एक फंक्शन लेल क्षमता आरक्षित करैत अछि।"
+  },
+  "extra-042": {
+    "command": "API Gateway stage variables",
+    "description": "मार्ग बदलने बिना एकीकरणकेँ चरण-विशिष्ट मान देैत अछि।"
+  },
+  "extra-043": {
+    "command": "RDS Multi-AZ deployment",
+    "description": "उपलब्धता लेल स्टैंडबाय डेटाबेस राखैत अछि; ई पठन क्षमता बढ़ाबयबला प्रतिकृति नहि अछि।"
+  },
+  "extra-044": {
+    "command": "RDS read replica",
+    "description": "अतुल्यकालिक रूपसँ प्रतिकृत डेटाबेस इंस्टेंससँ पठन ट्रैफिक सँभालैत अछि।"
+  },
+  "extra-045": {
+    "command": "DynamoDB partition key",
+    "description": "वस्तुसभकेँ विभाजनसभमे बाँटैत अछि आ अनुरोधक भार समान रूपसँ बाँटबाक चाही।"
+  },
+  "extra-046": {
+    "command": "DynamoDB conditional write",
+    "description": "वस्तुक शर्त सत्य भेलापर मात्र लेखन लागू करैत अछि।"
+  },
+  "extra-047": {
+    "command": "KMS key rotation",
+    "description": "कॉलर लेल कुंजी पहचानकर्ता स्थिर राखैत कुंजी सामग्री बदलैत अछि।"
+  },
+  "extra-048": {
+    "command": "IAM permission boundary",
+    "description": "पहचान नीति प्रिंसिपलकेँ अधिकतम कतेक अनुमति दऽ सकैत अछि से तय करैत अछि।"
+  },
+  "extra-049": {
+    "command": "az account show",
+    "description": "Azure CLI लेल सक्रिय सदस्यता आ टेनेंट संदर्भ देखबैत अछि।"
+  },
+  "extra-050": {
+    "command": "az account set",
+    "description": "बादक CLI कमांड द्वारा प्रयुक्त सदस्यता चुनैत अछि।"
+  },
+  "extra-051": {
+    "command": "Resource lock",
+    "description": "संरक्षित संसाधन दायराक हटाओल जायब वा बदलाओल जायब रोकैत अछि।"
+  },
+  "extra-052": {
+    "command": "Managed identity",
+    "description": "Azure कार्यभारकेँ संग्रहीत क्लाइंट सीक्रेट बिना Entra टोकन प्राप्त करय देैत अछि।"
+  },
+  "extra-053": {
+    "command": "Azure RBAC role assignment",
+    "description": "चुनल दायरामे अंतर्निर्मित वा अनुकूलित भूमिका प्रदान करैत अछि।"
+  },
+  "extra-054": {
+    "command": "Key Vault secret version",
+    "description": "गुप्त जानकारीक संशोधनसभ पता योग्य राखैत अछि आ नियंत्रित बदलावक समर्थन करैत अछि।"
+  },
+  "extra-055": {
+    "command": "Key Vault soft delete",
+    "description": "अवधारण कालमे पुनर्प्राप्ति लेल हटाओल वॉल्ट वस्तु राखैत अछि।"
+  },
+  "extra-056": {
+    "command": "Private endpoint",
+    "description": "वर्चुअल नेटवर्कमे PaaS सेवाकेँ निजी IP सँ जोड़ैत अछि।"
+  },
+  "extra-057": {
+    "command": "Private DNS zone link",
+    "description": "जुड़ल वर्चुअल नेटवर्कक भीतर निजी एंडपॉइंटक DNS रिकॉर्ड समाधान योग्य बनबैत अछि।"
+  },
+  "extra-058": {
+    "command": "NSG flow logs",
+    "description": "समर्थित नेटवर्क सुरक्षा समूह लेल नेटवर्क प्रवाहक निर्णय दर्ज करैत अछि।"
+  },
+  "extra-059": {
+    "command": "Application Gateway probe",
+    "description": "विन्यस्त पथ, होस्ट आ अंतरालसँ बैकएंडक स्वास्थ्य जाँचैत अछि।"
+  },
+  "extra-060": {
+    "command": "Front Door origin health",
+    "description": "मूल सर्वर विन्यस्त स्वास्थ्य जाँच पूरा करैत अछि कि नहि से देखैत अछि।"
+  },
+  "extra-061": {
+    "command": "Blob lifecycle management",
+    "description": "आयु, उपसर्ग वा पहुँच स्तरक आधार पर ब्लॉब हटबैत अछि, स्थानांतरित करैत अछि वा ओकर अवधि समाप्त करैत अछि।"
+  },
+  "extra-062": {
+    "command": "Blob soft delete",
+    "description": "विन्यस्त अवधिमे बहाली लेल हटाओल ब्लॉब राखैत अछि।"
+  },
+  "extra-063": {
+    "command": "Azure SQL point-in-time restore",
+    "description": "अवधारण अवधिक भीतर पहिलुक समयसँ डेटाबेसक प्रतिलिपि बनबैत अछि।"
+  },
+  "extra-064": {
+    "command": "Cosmos DB request units",
+    "description": "डेटाबेस क्रिया लेल सामान्यीकृत थ्रूपुट क्षमताक प्रतिनिधित्व करैत अछि।"
+  },
+  "extra-065": {
+    "command": "Azure Monitor alert rule",
+    "description": "मेट्रिक वा लॉगक मूल्यांकन करैत अछि आ शर्त मेल खाएलापर क्रिया समूह सक्रिय करैत अछि।"
+  },
+  "extra-066": {
+    "command": "Log Analytics workspace query",
+    "description": "संग्रहीत टेलीमेट्रीक विश्लेषण लेल Kusto Query Language प्रयोग करैत अछि।"
+  },
+  "extra-067": {
+    "command": "App Service deployment slot",
+    "description": "अलग तैनाती लक्ष्य देैत अछि जकरा उत्पादनसँ अदला-बदली कएल जा सकैत अछि।"
+  },
+  "extra-068": {
+    "command": "Container Apps revision",
+    "description": "ट्रैफिक प्राप्त कऽ सकनिहार अपरिवर्तनीय अनुप्रयोग संस्करणक प्रतिनिधित्व करैत अछि।"
+  },
+  "extra-069": {
+    "command": "AKS node pool taint",
+    "description": "शेड्यूलिंग सीमित करैत अछि जाहिसँ खास पूलमे मात्र सहनशील पॉड पहुँचय।"
+  },
+  "extra-070": {
+    "command": "Bicep what-if",
+    "description": "तैनाती लागू होएबासँ पहिने Azure संसाधन परिवर्तनक पूर्वावलोकन देखबैत अछि।"
+  },
+  "extra-071": {
+    "command": "Azure Policy compliance",
+    "description": "सौंपल नीति परिभाषाक पालन करैत वा विरोधमे रहल संसाधन देखबैत अछि।"
+  },
+  "extra-072": {
+    "command": "Service Bus dead-letter queue",
+    "description": "सफलतासँ पहुँचाओल वा प्रसंस्कृत नहि भऽ सकनिहार संदेश सहेजैत अछि।"
+  },
+  "extra-073": {
+    "command": "set -o pipefail",
+    "description": "पाइपलाइनक कोनो कमांड असफल भेलापर पाइपलाइन विफलता लौटबैत अछि।"
+  },
+  "extra-074": {
+    "command": "trap cleanup EXIT",
+    "description": "शेलसँ निकलबाक समय, त्रुटिक बादो, सफाइक तर्क चलबैत अछि।"
+  },
+  "extra-075": {
+    "command": "mktemp -d",
+    "description": "पृथक मध्यवर्ती फाइल लेल अद्वितीय अस्थायी डायरेक्टरी बनबैत अछि।"
+  },
+  "extra-076": {
+    "command": "read -r",
+    "description": "बैकस्लैशकेँ एस्केप अनुक्रम मानने बिना इनपुट पढ़ैत अछि।"
+  },
+  "extra-077": {
+    "command": "mapfile -t",
+    "description": "नव-पाँतिसँ अलग कएल इनपुट अनुक्रमित Bash ऐरेमे भरैत अछि।"
+  },
+  "extra-078": {
+    "command": "[[ -v variable ]]",
+    "description": "शेल चर निर्धारित अछि कि नहि से जाँचैत अछि, चाहे ओकर मान खाली हो।"
+  },
+  "extra-079": {
+    "command": "printf %q",
+    "description": "मानकेँ उद्धृत करैत अछि जाहिसँ ओकरा सुरक्षित शेल इनपुटक रूपमे दर्शाओल जा सकय।"
+  },
+  "extra-080": {
+    "command": "parameter defaulting",
+    "description": "चर अनिर्धारित वा खाली भेलापर वैकल्पिक मान प्रयोग करैत अछि।"
+  },
+  "extra-081": {
+    "command": "parameter substring",
+    "description": "Bash पैरामीटर विस्तारसँ स्ट्रिंगक एक भाग निकालैत अछि।"
+  },
+  "extra-082": {
+    "command": "parameter substitution",
+    "description": "बाहरी प्रक्रिया शुरू केने बिना मेल खाइत टेक्स्ट बदलैत अछि।"
+  },
+  "extra-083": {
+    "command": "process substitution",
+    "description": "कमांडक आउटपुट प्रोग्रामकेँ फाइल-सदृश इनपुटक रूपमे देैत अछि।"
+  },
+  "extra-084": {
+    "command": "here-string",
+    "description": "मानक इनपुटक माध्यमसँ कमांडकेँ एक स्ट्रिंग देैत अछि।"
+  },
+  "extra-085": {
+    "command": "getopts",
+    "description": "पोर्टेबल शेल लूपमे छोट कमांड-लाइन विकल्प पार्स करैत अछि।"
+  },
+  "extra-086": {
+    "command": "wait -n",
+    "description": "आओर काज शुरू करबासँ पहिने कोनो एक पृष्ठभूमि जॉब पूरा होएबाक प्रतीक्षा करैत अछि।"
+  },
+  "extra-087": {
+    "command": "jobs -pr",
+    "description": "एहि शेल द्वारा शुरू कएल चलैत पृष्ठभूमि जॉबक प्रक्रिया ID सूचीबद्ध करैत अछि।"
+  },
+  "extra-088": {
+    "command": "exec command",
+    "description": "वर्तमान शेल प्रक्रियाक स्थान पर कमांड चलबैत अछि।"
+  },
+  "extra-089": {
+    "command": "command -v",
+    "description": "कमांड नाम लेल शेल जे निष्पादन योग्य फाइल चलाओत से खोजैत अछि।"
+  },
+  "extra-090": {
+    "command": "umask",
+    "description": "नव फाइल आ डायरेक्टरीसँ हटाओल जाएबला डिफॉल्ट अनुमति बिट तय करैत अछि।"
+  },
+  "extra-091": {
+    "command": "noclobber",
+    "description": "डिफॉल्ट रूपसँ आउटपुट पुनर्निर्देशनकेँ विद्यमान फाइल ओवरराइट करबासँ रोकैत अछि।"
+  },
+  "extra-092": {
+    "command": "flock",
+    "description": "सलाहकारी लॉक देैत अछि जाहिसँ एक संग चलैत स्क्रिप्ट निष्पादन एक-दोसरासँ नहि टकराय।"
+  },
+  "extra-093": {
+    "command": "timeout",
+    "description": "अनुमत अवधिसँ बेसी चलनिहार कमांड रोकैत अछि।"
+  },
+  "extra-094": {
+    "command": "xargs -0",
+    "description": "NUL सँ अलग फाइल नाम सुरक्षित रूपसँ दोसर कमांडकेँ देैत अछि।"
+  },
+  "extra-095": {
+    "command": "find -print0",
+    "description": "स्पेस आ नव-पाँति सँभालबाक लेल NUL वर्णसँ अलग फाइल नाम निकालैत अछि।"
+  },
+  "extra-096": {
+    "command": "set -u",
+    "description": "अनिर्धारित चरक विस्तारकेँ त्रुटि मानैत अछि।"
+  },
+  "extra-097": {
+    "command": "docker buildx imagetools inspect",
+    "description": "बहु-प्लेटफॉर्म इमेज मैनिफेस्ट आ ओकर प्रकाशित प्लेटफॉर्मक निरीक्षण करैत अछि।"
+  },
+  "extra-098": {
+    "command": "docker buildx build --platform",
+    "description": "एक वा अधिक CPU आर्किटेक्चर लेल इमेज बनबैत अछि।"
+  },
+  "extra-099": {
+    "command": "docker image inspect",
+    "description": "परत, आर्किटेक्चर आ प्रवेशबिंदु सन इमेज मेटाडेटा देखबैत अछि।"
+  },
+  "extra-100": {
+    "command": "docker image history",
+    "description": "इमेजक परत आ ओकरा बनौनिहार कमांडक सूची देखबैत अछि।"
+  },
+  "extra-101": {
+    "command": "docker system df",
+    "description": "इमेज, कंटेनर, वॉल्यूम आ बिल्ड कैश द्वारा डिस्क उपयोग बतबैत अछि।"
+  },
+  "extra-102": {
+    "command": "docker builder prune",
+    "description": "स्थानीय भंडारण खाली करबाक लेल अप्रयुक्त बिल्ड कैश हटबैत अछि।"
+  },
+  "extra-103": {
+    "command": "docker volume inspect",
+    "description": "Docker वॉल्यूमक माउंटपॉइंट, ड्राइवर आ लेबल देखबैत अछि।"
+  },
+  "extra-104": {
+    "command": "docker network inspect",
+    "description": "जुड़ल कंटेनर, IPAM सेटिंग आ नेटवर्क ड्राइवरक विवरण देखबैत अछि।"
+  },
+  "extra-105": {
+    "command": "docker stats --no-stream",
+    "description": "चलैत कंटेनरक संसाधन उपयोगक एकबेरक दृश्य लैत अछि।"
+  },
+  "extra-106": {
+    "command": "docker events --since",
+    "description": "चुनल समयसँ कंटेनर जीवनचक्रक घटना लगातार देखबैत अछि।"
+  },
+  "extra-107": {
+    "command": "docker exec --workdir",
+    "description": "चुनल डायरेक्टरीसँ शुरू कऽ कंटेनरमे कमांड चलबैत अछि।"
+  },
+  "extra-108": {
+    "command": "docker cp",
+    "description": "स्थानीय पथ आ कंटेनर फाइलसिस्टमक बीच फाइलक प्रतिलिपि बनबैत अछि।"
+  },
+  "extra-109": {
+    "command": "docker wait",
+    "description": "कंटेनर रुकबाक प्रतीक्षा करैत अछि आ ओकर निकास कोड छापैत अछि।"
+  },
+  "extra-110": {
+    "command": "docker inspect health status",
+    "description": "विन्यस्त स्वास्थ्य-जाँचक अवस्था आ हालक जाँच परिणाम पढ़ैत अछि।"
+  },
+  "extra-111": {
+    "command": "HEALTHCHECK start-period",
+    "description": "विफलताक गिनती शुरू होएबासँ पहिने अनुप्रयोगकेँ आरंभ होएबाक समय देैत अछि।"
+  },
+  "extra-112": {
+    "command": "read-only root filesystem",
+    "description": "रनटाइममे कंटेनरक मूल फाइलसिस्टम पर लेखन रोकैत अछि।"
+  },
+  "extra-113": {
+    "command": "docker run --init",
+    "description": "संकेत अग्रेषित करबाक आ बाल प्रक्रिया समेटबाक लेल छोट इनिट प्रक्रिया जोड़ैत अछि।"
+  },
+  "extra-114": {
+    "command": "docker run --cap-drop",
+    "description": "प्रक्रियाकेँ अनावश्यक Linux क्षमता हटबैत अछि।"
+  },
+  "extra-115": {
+    "command": "docker run --security-opt",
+    "description": "seccomp प्रोफाइल सन रनटाइम सुरक्षा सेटिंग लागू करैत अछि।"
+  },
+  "extra-116": {
+    "command": "docker run --pids-limit",
+    "description": "कंटेनर द्वारा बनाओल जा सकनिहार प्रक्रियाक संख्या सीमित करैत अछि।"
+  },
+  "extra-117": {
+    "command": "docker compose config",
+    "description": "मिलाओल Compose विन्यास प्रस्तुत करैत आ ओकर वैधता जाँचैत अछि।"
+  },
+  "extra-118": {
+    "command": "docker compose profiles",
+    "description": "नामित प्रोफाइल चुनल गेलापर मात्र वैकल्पिक सेवा सक्षम करैत अछि।"
+  },
+  "extra-119": {
+    "command": "docker compose up --wait",
+    "description": "लौटबासँ पहिने सेवा स्वस्थ वा चालू होएबाक प्रतीक्षा करैत अछि।"
+  },
+  "extra-120": {
+    "command": "container stop timeout",
+    "description": "सुव्यवस्थित रोकक संकेत पठबैत अछि आ कंटेनरकेँ बलपूर्वक समाप्त करबासँ पहिने प्रतीक्षा करैत अछि।"
+  },
+  "extra-121": {
+    "command": "gcloud config get-value project",
+    "description": "जे कमांड स्पष्ट रूपसँ परियोजना नहि बतबैत अछि, ताहिमे प्रयुक्त परियोजना देखबैत अछि।"
+  },
+  "extra-122": {
+    "command": "gcloud auth list",
+    "description": "प्रमाणित खाताक सूची देखबैत अछि आ सक्रिय प्रिंसिपल चिन्हैत अछि।"
+  },
+  "extra-123": {
+    "command": "gcloud projects get-iam-policy",
+    "description": "पहुँचक समीक्षाक लेल परियोजना-स्तरीय IAM बाइंडिंग पढ़ैत अछि।"
+  },
+  "extra-124": {
+    "command": "IAM service account impersonation",
+    "description": "अधिकृत प्रिंसिपलकेँ सेवा खाता लेल अल्पकालिक क्रेडेंशियल प्राप्त करय देैत अछि।"
+  },
+  "extra-125": {
+    "command": "Cloud Storage object versioning",
+    "description": "ऑब्जेक्ट बदलल वा हटाओल गेलाक बाद ओकर पुरान पीढ़ी राखैत अछि।"
+  },
+  "extra-126": {
+    "command": "Cloud Storage retention policy",
+    "description": "अवधारण अवधि समाप्त होएबा धरि ऑब्जेक्ट हटायब वा बदलायब रोकैत अछि।"
+  },
+  "extra-127": {
+    "command": "Cloud Run revision traffic",
+    "description": "क्रमिक रोलआउट लेल सेवा संशोधनसभक बीच अनुरोध बाँटैत अछि।"
+  },
+  "extra-128": {
+    "command": "Cloud Run min instances",
+    "description": "शीत आरंभ घटाबय लेल विन्यस्त संख्यामे इंस्टेंस तैयार राखैत अछि।"
+  },
+  "extra-129": {
+    "command": "GKE Workload Identity",
+    "description": "Kubernetes कार्यभारकेँ कुंजी फाइल बिना अल्पकालिक Google क्रेडेंशियल देैत अछि।"
+  },
+  "extra-130": {
+    "command": "GKE node taint",
+    "description": "मेल खाइत सहनशीलता घोषित करनिहार पॉड लेल नोड आरक्षित करैत अछि।"
+  },
+  "extra-131": {
+    "command": "Pub/Sub dead-letter topic",
+    "description": "बेर-बेर नहि पहुँचि सकनिहार संदेश निरीक्षण लेल अलग विषय दिस पठबैत अछि।"
+  },
+  "extra-132": {
+    "command": "Pub/Sub acknowledgment deadline",
+    "description": "खींचल संदेशक पावती देबाक लेल ग्राहककेँ कतेक समय भेटत से तय करैत अछि।"
+  },
+  "extra-133": {
+    "command": "BigQuery partition pruning",
+    "description": "विभाजन स्तंभ पर फिल्टर लगा कऽ स्कैन कएल डेटा घटबैत अछि।"
+  },
+  "extra-134": {
+    "command": "BigQuery dry run",
+    "description": "क्वेरी चलौने बिना प्रसंस्कृत होएबला बाइटक अनुमान लगबैत अछि।"
+  },
+  "extra-135": {
+    "command": "Cloud SQL automated backups",
+    "description": "विन्यास योग्य अवधारणक संग निर्धारित डेटाबेस बैकअप बनबैत अछि।"
+  },
+  "extra-136": {
+    "command": "Cloud SQL point-in-time recovery",
+    "description": "बैकअप आ लेनदेन लॉगसँ डेटाबेसकेँ चुनल समयक अवस्थामे बहाल करैत अछि।"
+  },
+  "extra-137": {
+    "command": "Cloud Logging exclusion",
+    "description": "अंतर्ग्रहणक समय मेल खाइत लॉग प्रविष्टिकेँ भंडारणसँ बाहर करैत अछि।"
+  },
+  "extra-138": {
+    "command": "Cloud Monitoring uptime check",
+    "description": "पहुँच योग्य एंडपॉइंटक जाँच करैत अछि आ उपलब्धता आ विलंब दर्ज करैत अछि।"
+  },
+  "extra-139": {
+    "command": "VPC flow logs",
+    "description": "समर्थित सबनेटवर्क लेल नमूना कएल नेटवर्क प्रवाह दर्ज करैत अछि।"
+  },
+  "extra-140": {
+    "command": "Cloud NAT",
+    "description": "बाहरी IP पता बिना निजी इंस्टेंसकेँ बाहर दिस इंटरनेट पहुँच देैत अछि।"
+  },
+  "extra-141": {
+    "command": "Artifact Registry cleanup policy",
+    "description": "आयु, टैग वा राखबाक नियमक आधार पर पुरान पैकेज संस्करण हटबैत अछि।"
+  },
+  "extra-142": {
+    "command": "Secret Manager version disable",
+    "description": "गुप्त जानकारीक इतिहास हटौने बिना ओकर संस्करणक पहुँच रोकैत अछि।"
+  },
+  "extra-143": {
+    "command": "KMS key version rotation",
+    "description": "डिक्रिप्शन लेल पुरान संस्करण राखैत नव क्रिप्टोग्राफिक कुंजी सामग्री बनबैत अछि।"
+  },
+  "extra-144": {
+    "command": "Organization Policy constraint",
+    "description": "परियोजना आ फोल्डर पर केंद्रीय रूपसँ प्रबंधित सुरक्षा सीमा लागू करैत अछि।"
+  },
+  "extra-145": {
+    "command": "git switch -c",
+    "description": "एक क्रियामे नव ब्रांच बनबैत अछि आ चेकआउट करैत अछि।"
+  },
+  "extra-146": {
+    "command": "git restore --staged",
+    "description": "कार्य वृक्षक परिवर्तन राखैत इंडेक्ससँ पथ हटबैत अछि।"
+  },
+  "extra-147": {
+    "command": "git restore --source",
+    "description": "कार्य वृक्षक पथकेँ चुनल कमिटक सामग्रीसँ बदलैत अछि।"
+  },
+  "extra-148": {
+    "command": "git diff --check",
+    "description": "अंतिम स्पेस आ टकराव चिह्न सन श्वेतस्थान त्रुटि खोजैत अछि।"
+  },
+  "extra-149": {
+    "command": "git diff --stat",
+    "description": "पूरा पैच छापने बिना बदलल फाइल आ पाँतिक संख्याक सार देखबैत अछि।"
+  },
+  "extra-150": {
+    "command": "git log --graph",
+    "description": "ब्रांच, मर्ज आ कमिटक ASCII ग्राफ बनबैत अछि।"
+  },
+  "extra-151": {
+    "command": "git show --stat",
+    "description": "कमिटक सार आ ओहि कमिटसँ बदलल फाइल देखबैत अछि।"
+  },
+  "extra-152": {
+    "command": "git blame -L",
+    "description": "चुनल प्रत्येक स्रोत पाँतिसँ जुड़ल कमिट आ लेखक देखबैत अछि।"
+  },
+  "extra-153": {
+    "command": "git bisect",
+    "description": "द्विआधारी खोजसँ प्रतिगमन आननिहार कमिट खोजैत अछि।"
+  },
+  "extra-154": {
+    "command": "git cherry-pick -x",
+    "description": "कमिट लागू करैत अछि आ ओकर मूल हैश नव कमिट संदेशमे दर्ज करैत अछि।"
+  },
+  "extra-155": {
+    "command": "git revert",
+    "description": "पुरान कमिटक परिवर्तन उलटाबयबला नव कमिट बनबैत अछि।"
+  },
+  "extra-156": {
+    "command": "git reflog",
+    "description": "ब्रांच पर आब नहि रहल कमिट सहित हालक स्थानीय रेफ बदलावक सूची देखबैत अछि।"
+  },
+  "extra-157": {
+    "command": "git clean -nd",
+    "description": "सफाइ क्रियासँ हटयबला अनट्रैक फाइलक पूर्वावलोकन देखबैत अछि।"
+  },
+  "extra-158": {
+    "command": "git stash push --include-untracked",
+    "description": "ट्रैक आ अनट्रैक काजकेँ कमिट केने बिना अस्थायी रूपसँ सहेजैत अछि।"
+  },
+  "extra-159": {
+    "command": "git stash branch",
+    "description": "ब्रांच बनबैत अछि आ चुनल स्टैश ओहि पर फेर लागू करैत अछि।"
+  },
+  "extra-160": {
+    "command": "git worktree add",
+    "description": "दोसर ब्रांचकेँ अलग कार्य डायरेक्टरीमे चेकआउट करैत अछि।"
+  },
+  "extra-161": {
+    "command": "git submodule update --init",
+    "description": "मूल रिपॉजिटरीमे दर्ज सबमॉड्यूल संशोधन आरंभ आ चेकआउट करैत अछि।"
+  },
+  "extra-162": {
+    "command": "git config --show-origin",
+    "description": "Git सेटिंग कोन विन्यास फाइलसँ आएल से देखबैत अछि।"
+  },
+  "extra-163": {
+    "command": "git commit --fixup",
+    "description": "लक्ष्य कमिटमे स्वतः स्क्वैश करबाक उद्देश्यसँ कमिट बनबैत अछि।"
+  },
+  "extra-164": {
+    "command": "git rebase --autosquash",
+    "description": "रीबेसक समय फिक्सअप आ स्क्वैश कमिटकेँ ओकर लक्ष्यक लग लऽ जाइत अछि।"
+  },
+  "extra-165": {
+    "command": "git format-patch",
+    "description": "कमिटकेँ मेलबॉक्स-अनुकूल पैच फाइलक रूपमे निर्यात करैत अछि।"
+  },
+  "extra-166": {
+    "command": "git am",
+    "description": "पैच फाइल लागू करैत अछि आ ओकर मेटाडेटासँ कमिट बनबैत अछि।"
+  },
+  "extra-167": {
+    "command": "git verify-commit",
+    "description": "विन्यस्त विश्वसनीय कुंजीक विरुद्ध कमिट हस्ताक्षर जाँचैत अछि।"
+  },
+  "extra-168": {
+    "command": "git fsck --full",
+    "description": "रिपॉजिटरी वस्तुक जुड़ाव जाँचैत अछि आ पहुँचसँ बाहर वस्तुक सूचना देैत अछि।"
+  },
+  "extra-169": {
+    "command": "identity federation",
+    "description": "स्थिर गुप्त जानकारी बिना कार्यभारकेँ परिवेशसभक बीच विश्वसनीय पहचान दावा आदान-प्रदान करय देैत अछि।"
+  },
+  "extra-170": {
+    "command": "private connectivity failover",
+    "description": "मुख्य निजी कनेक्टिविटी असफल भेलापर द्वितीयक VPN वा सर्किट उपलब्ध राखैत अछि।"
+  },
+  "extra-171": {
+    "command": "split-horizon DNS",
+    "description": "एक नाम लेल आंतरिक आ बाहरी क्लाइंटकेँ अलग DNS उत्तर लौटबैत अछि।"
+  },
+  "extra-172": {
+    "command": "centralized certificate lifecycle",
+    "description": "सभ परिवेशमे एकरूप ढंगसँ प्रमाणपत्र जारी, नवीकृत आ निरस्त करैत अछि।"
+  },
+  "extra-173": {
+    "command": "cross-environment secrets rotation",
+    "description": "क्लाइंटक सुरक्षित संक्रमणक संग दुनू स्थानक क्रेडेंशियल बदलैत अछि।"
+  },
+  "extra-174": {
+    "command": "data residency boundary",
+    "description": "विनियमित डेटा आ बैकअप अनुमोदित भौगोलिक स्थानक भीतर राखैत अछि।"
+  },
+  "extra-175": {
+    "command": "WAN latency budget",
+    "description": "तुल्यकालिक अनुप्रयोग निर्भरताक लेल स्वीकार्य नेटवर्क विलंब परिभाषित करैत अछि।"
+  },
+  "extra-176": {
+    "command": "egress control plane",
+    "description": "साइट आ क्लाउडसभक बाहर जाएबला मार्ग, निरीक्षण आ नीतिकेँ केंद्रीकृत करैत अछि।"
+  },
+  "extra-177": {
+    "command": "configuration drift detection",
+    "description": "प्रत्येक परिवेशमे तैनात सेटिंगक तुलना घोषित वांछित अवस्थासँ करैत अछि।"
+  },
+  "extra-178": {
+    "command": "hybrid observability correlation",
+    "description": "प्लेटफॉर्मसभक टेलीमेट्री जोड़बाक लेल एकरूप सेवा आ ट्रेस पहचानकर्ता प्रयोग करैत अछि।"
+  },
+  "extra-179": {
+    "command": "site-to-cloud route advertisement",
+    "description": "स्थानीय परिसरक राउटर आ क्लाउड गेटवेक बीच अनुमोदित निजी उपसर्ग प्रकाशित करैत अछि।"
+  },
+  "extra-180": {
+    "command": "active-passive workload failover",
+    "description": "मुख्य परिवेशक विफलताक पुष्टि भेलाक बाद ट्रैफिक तैयार द्वितीयक परिवेशमे लऽ जाइत अछि।"
+  },
+  "extra-181": {
+    "command": "active-active data consistency",
+    "description": "दुनू साइट एक संग लेखन स्वीकार केलापर टकराव सँभालबाक तरीका परिभाषित करैत अछि।"
+  },
+  "extra-182": {
+    "command": "hybrid backup immutability",
+    "description": "समझौता भेल उत्पादन क्रेडेंशियलसँ बैकअप प्रतिक बदलबासँ रक्षा करैत अछि।"
+  },
+  "extra-183": {
+    "command": "local dependency cache",
+    "description": "क्लाउड कनेक्टिविटी बाधित भेलापर आवश्यक आर्टिफैक्ट उपलब्ध राखैत अछि।"
+  },
+  "extra-184": {
+    "command": "edge workload update ring",
+    "description": "दूरस्थ साइटसभमे नियंत्रित चरणमे सॉफ्टवेयर अद्यतन पहुँचबैत अछि।"
+  },
+  "extra-185": {
+    "command": "policy translation",
+    "description": "समान पहुँच आ नेटवर्क आवश्यकताकेँ प्रत्येक प्लेटफॉर्मक मूल नियंत्रणसँ मिलबैत अछि।"
+  },
+  "extra-186": {
+    "command": "hybrid service ownership",
+    "description": "प्लेटफॉर्म सीमा पार करनिहार प्रत्येक निर्भरता लेल संचालनक उत्तरदायी तय करैत अछि।"
+  },
+  "extra-187": {
+    "command": "cross-cloud identity mapping",
+    "description": "बाहरी पहचानकेँ दोसर क्लाउडमे न्यूनतम-अधिकार भूमिकासँ जोड़ैत अछि।"
+  },
+  "extra-188": {
+    "command": "clock synchronization",
+    "description": "लॉग, प्रमाणपत्र आ प्रमाणीकरण लेल होस्टकेँ विश्वसनीय समय स्रोतसँ मिलायल राखैत अछि।"
+  },
+  "extra-189": {
+    "command": "hybrid deployment contract",
+    "description": "स्वतंत्र रूपसँ जारी घटक लेल संगत संस्करण आ इंटरफेस परिभाषित करैत अछि।"
+  },
+  "extra-190": {
+    "command": "regional traffic steering",
+    "description": "मापल स्वास्थ्य आ विलंबक आधार पर उपयोगकर्ताकेँ स्वस्थ नजदीकी परिवेश दिस पठबैत अछि।"
+  },
+  "extra-191": {
+    "command": "offline operation mode",
+    "description": "दूरस्थ सेवा धरि पहुँच नहि भेलापर कोन कार्य उपलब्ध रहत से निर्धारित करैत अछि।"
+  },
+  "extra-192": {
+    "command": "hybrid disaster recovery test",
+    "description": "डेटासेंटर आ क्लाउड दुनूक निर्भरतामे पुनर्प्राप्ति प्रक्रिया काज करैत अछि से प्रमाणित करैत अछि।"
+  },
+  "extra-193": {
+    "command": "ibmcloud target",
+    "description": "बादक CLI क्रिया लेल खाता, क्षेत्र आ संसाधन समूह चुनैत अछि।"
+  },
+  "extra-194": {
+    "command": "ibmcloud resource groups",
+    "description": "सेवा आ पहुँच दायरा व्यवस्थित करनिहार संसाधन समूहक सूची देखबैत अछि।"
+  },
+  "extra-195": {
+    "command": "ibmcloud iam user-policies",
+    "description": "उपयोगकर्ता पहचानकेँ सीधे सौंपल नीति देखबैत अछि।"
+  },
+  "extra-196": {
+    "command": "IBM Cloud API key rotation",
+    "description": "क्रेडेंशियल बदलैत अछि आ निरस्तीकरणसँ पहिने निर्भर कार्यभार अद्यतन करैत अछि।"
+  },
+  "extra-197": {
+    "command": "VPC security group",
+    "description": "VPC इंटरफेस लेल अवस्थायुक्त आवक आ जावक ट्रैफिक नियंत्रित करैत अछि।"
+  },
+  "extra-198": {
+    "command": "VPC network ACL",
+    "description": "अवस्थारहित सबनेट-स्तरीय अनुमति आ निषेध नियम लागू करैत अछि।"
+  },
+  "extra-199": {
+    "command": "VPC floating IP",
+    "description": "सार्वजनिक पताकेँ समर्थित VPC नेटवर्क इंटरफेससँ जोड़ैत अछि।"
+  },
+  "extra-200": {
+    "command": "VPC VPN gateway",
+    "description": "IPsec सुरंगसँ VPC केँ दूरस्थ नेटवर्कसँ जोड़ैत अछि।"
+  },
+  "extra-201": {
+    "command": "Cloud Object Storage HMAC key",
+    "description": "समर्थित ऑब्जेक्ट भंडारण क्लाइंट लेल S3-अनुकूल क्रेडेंशियल देैत अछि।"
+  },
+  "extra-202": {
+    "command": "Cloud Object Storage retention",
+    "description": "निर्धारित अवधिक लेल ऑब्जेक्टकेँ हटाओल जायब वा ओवरराइट होएबासँ बचबैत अछि।"
+  },
+  "extra-203": {
+    "command": "Kubernetes worker pool",
+    "description": "साझा मशीन आ जोन विन्यासबला क्लस्टर वर्कर नोडक समूह बनबैत अछि।"
+  },
+  "extra-204": {
+    "command": "Kubernetes cluster autoscaler",
+    "description": "शेड्यूल नहि भऽ सकनिहार पॉडक आधार पर वर्कर संख्या समायोजित करैत अछि।"
+  },
+  "extra-205": {
+    "command": "Code Engine job",
+    "description": "लगातार एंडपॉइंट सेवा देबाक बदला सीमित कार्यभारकेँ पूरा होएबा धरि चलबैत अछि।"
+  },
+  "extra-206": {
+    "command": "Code Engine project",
+    "description": "ऐप, जॉब, बिल्ड आ विन्यास लेल पृथक दायरा देैत अछि।"
+  },
+  "extra-207": {
+    "command": "Secrets Manager secret group",
+    "description": "सीक्रेट मैनेजर इंस्टेंसक भीतर गुप्त जानकारी आ पहुँच नीति व्यवस्थित करैत अछि।"
+  },
+  "extra-208": {
+    "command": "Secrets Manager rotation policy",
+    "description": "समर्थित गुप्त जानकारीक प्रकार आ जुड़ल सेवाक बदलावक समय निर्धारित करैत अछि।"
+  },
+  "extra-209": {
+    "command": "Activity Tracker event",
+    "description": "ऑडिट, जाँच आ चेतावनी लेल खाताक गतिविधि दर्ज करैत अछि।"
+  },
+  "extra-210": {
+    "command": "Log Analysis parsing rule",
+    "description": "अंतर्ग्रहणक समय अनुप्रयोग लॉग संदेशसँ संरचित फील्ड निकालैत अछि।"
+  },
+  "extra-211": {
+    "command": "Key Protect root key",
+    "description": "एकीकृत सेवामे प्रयुक्त डेटा-एन्क्रिप्शन कुंजीक रक्षा करैत अछि।"
+  },
+  "extra-212": {
+    "command": "Key Protect key rotation",
+    "description": "प्रबंधित संदर्भ कायम राखैत क्रिप्टोग्राफिक कुंजी सामग्री बदलैत अछि।"
+  },
+  "extra-213": {
+    "command": "Cloud Internet Services origin pool",
+    "description": "स्वास्थ्य-आधारित ट्रैफिक वितरण लेल बैकएंड मूल सर्वरक समूह बनबैत अछि।"
+  },
+  "extra-214": {
+    "command": "Cloud Internet Services WAF rule",
+    "description": "वेब आक्रमण पैटर्नसँ मेल खाइत अनुरोध रोकैत अछि वा ओकरासँ चुनौतीक उत्तर माँगैत अछि।"
+  },
+  "extra-215": {
+    "command": "Schematics workspace",
+    "description": "IBM Cloud द्वारा प्रबंधित निष्पादन परिवेशमे Terraform स्वचालन चलबैत अछि।"
+  },
+  "extra-216": {
+    "command": "Schematics action",
+    "description": "कार्यस्थान द्वारा प्रबंधित संसाधन पर संचालन क्रिया चलबैत अछि।"
+  },
+  "extra-217": {
+    "command": "Object.hasOwn",
+    "description": "प्रोटोटाइप खोजने बिना वस्तुमे कोनो गुण सीधे मौजूद अछि कि नहि से जाँचैत अछि।"
+  },
+  "extra-218": {
+    "command": "structuredClone",
+    "description": "समर्थित संरचित मानक गहन प्रतिलिपि बनबैत अछि।"
+  },
+  "extra-219": {
+    "command": "Array.toSorted",
+    "description": "मूल ऐरे बदलने बिना क्रमबद्ध प्रतिलिपि लौटबैत अछि।"
+  },
+  "extra-220": {
+    "command": "Array.flatMap",
+    "description": "प्रत्येक मदकेँ मैप करैत अछि आ परिणामी ऐरेक एक स्तर समतल करैत अछि।"
+  },
+  "extra-221": {
+    "command": "Array.some",
+    "description": "ऐरेक कमसँ कम एक तत्व शर्त पूरा करैत अछि कि नहि से जाँचैत अछि।"
+  },
+  "extra-222": {
+    "command": "Array.every",
+    "description": "ऐरेक सभ तत्व शर्त पूरा करैत अछि कि नहि से जाँचैत अछि।"
+  },
+  "extra-223": {
+    "command": "Map.groupBy",
+    "description": "कॉलबैकसँ लौटल कुंजीक आधार पर इटरेबल मानक समूह बनबैत अछि।"
+  },
+  "extra-224": {
+    "command": "Promise.allSettled",
+    "description": "प्रत्येक प्रॉमिसक प्रतीक्षा करैत अछि आ पूर्ण आ अस्वीकृत परिणाम सहेजैत अछि।"
+  },
+  "extra-225": {
+    "command": "AbortController",
+    "description": "fetch आ निरस्तीकरण बुझनिहार दोसर अतुल्यकालिक काजकेँ रद्द करबाक संकेत देैत अछि।"
+  },
+  "extra-226": {
+    "command": "fetch response.ok",
+    "description": "HTTP प्रतिक्रियाक स्थिति सफल श्रेणीमे अछि कि नहि से जाँचैत अछि।"
+  },
+  "extra-227": {
+    "command": "URLSearchParams",
+    "description": "सही एन्कोडिंगक संग URL क्वेरी स्ट्रिंग बनबैत आ पार्स करैत अछि।"
+  },
+  "extra-228": {
+    "command": "import.meta.env",
+    "description": "समर्थित मॉड्यूल प्रणालीमे बिल्ड औजार द्वारा देल परिवेश मान पढ़ैत अछि।"
+  },
+  "extra-229": {
+    "command": "dynamic import",
+    "description": "माँग पर मॉड्यूल लोड करैत अछि आ ओकर निर्यात लेल प्रॉमिस लौटबैत अछि।"
+  },
+  "extra-230": {
+    "command": "top-level await",
+    "description": "समर्थित मॉड्यूलकेँ सीधे अतुल्यकालिक आरंभीकरणक प्रतीक्षा करय देैत अछि।"
+  },
+  "extra-231": {
+    "command": "WeakMap",
+    "description": "केवल मैपक कारण कुंजी जीवित रखने बिना वस्तु-कुंजीबला मेटाडेटा सहेजैत अछि।"
+  },
+  "extra-232": {
+    "command": "WeakSet",
+    "description": "प्रविष्टिक गार्बेज संग्रह रोकने बिना वस्तु सदस्यता पर नजरि राखैत अछि।"
+  },
+  "extra-233": {
+    "command": "Object.freeze",
+    "description": "रनटाइममे वस्तुक अपन गुण बदलायब रोकैत अछि।"
+  },
+  "extra-234": {
+    "command": "nullish coalescing",
+    "description": "वैध असत्य-सदृश मान राखैत मात्र null वा undefined लेल वैकल्पिक मान प्रयोग करैत अछि।"
+  },
+  "extra-235": {
+    "command": "optional chaining",
+    "description": "पहिलुक संदर्भ null-सदृश भऽ सकय तखन नेस्टेड मान सुरक्षित रूपसँ पढ़ैत अछि।"
+  },
+  "extra-236": {
+    "command": "Error cause",
+    "description": "त्रुटिकेँ संदर्भक संग लपेटैत समय मूल अपवाद जोड़ैत अछि।"
+  },
+  "extra-237": {
+    "command": "TextEncoder",
+    "description": "JavaScript स्ट्रिंगकेँ UTF-8 बाइटमे एन्कोड करैत अछि।"
+  },
+  "extra-238": {
+    "command": "crypto.randomUUID",
+    "description": "प्लेटफॉर्मक क्रिप्टोग्राफिक यादृच्छिक स्रोतसँ UUID बनबैत अछि।"
+  },
+  "extra-239": {
+    "command": "ReadableStream",
+    "description": "सम्पूर्ण प्रतिक्रिया बफर करबाक बदला प्रवाहित डेटा क्रमशः प्रसंस्कृत करैत अछि।"
+  },
+  "extra-240": {
+    "command": "Object.fromEntries",
+    "description": "कुंजी आ मानक जोड़ीक इटरेबलसँ वस्तु बनबैत अछि।"
+  },
+  "extra-241": {
+    "command": "pipeline options timeout",
+    "description": "विन्यस्त अवधिक बाद पाइपलाइन वा चरण रोकैत अछि।"
+  },
+  "extra-242": {
+    "command": "pipeline options disableConcurrentBuilds",
+    "description": "एक्के पाइपलाइन जॉबक निष्पादन एक-दोसर पर चढ़ब रोकैत अछि।"
+  },
+  "extra-243": {
+    "command": "when branch",
+    "description": "वर्तमान ब्रांच मेल खाए तखने घोषणात्मक चरण चलबैत अछि।"
+  },
+  "extra-244": {
+    "command": "when changeset",
+    "description": "बदलल फाइल पैटर्नसँ मेल खाए तखने चरण चलबैत अछि।"
+  },
+  "extra-245": {
+    "command": "input step",
+    "description": "अधिकृत मानवीय निर्णय लेल पाइपलाइन विराम करैत अछि।"
+  },
+  "extra-246": {
+    "command": "stash and unstash",
+    "description": "अलग एजेंटक चरणसभक बीच चुनल फाइल स्थानांतरित करैत अछि।"
+  },
+  "extra-247": {
+    "command": "archiveArtifacts",
+    "description": "Jenkins बिल्ड रिकॉर्डक संग बिल्ड आउटपुट राखैत अछि।"
+  },
+  "extra-248": {
+    "command": "junit publisher",
+    "description": "परीक्षण परिणामक XML प्रकाशित करैत अछि आ विफलता भेलापर बिल्डकेँ अस्थिर चिह्नित करैत अछि।"
+  },
+  "extra-249": {
+    "command": "credentials binding",
+    "description": "सीमित दायराक ब्लॉकमे संग्रहीत क्रेडेंशियल परिवेश चरक रूपमे उपलब्ध करबैत अछि।"
+  },
+  "extra-250": {
+    "command": "withEnv",
+    "description": "सीमित पाइपलाइन ब्लॉक लेल परिवेश मान जोड़ैत वा ओवरराइड करैत अछि।"
+  },
+  "extra-251": {
+    "command": "agent label",
+    "description": "मेल खाइत Jenkins एजेंट पर पाइपलाइन वा चरण निर्धारित करैत अछि।"
+  },
+  "extra-252": {
+    "command": "matrix axis",
+    "description": "घोषित परिवेश मानक संयोजनसभ पर चरण चलबैत अछि।"
+  },
+  "extra-253": {
+    "command": "parallel stages",
+    "description": "स्वतंत्र घोषणात्मक चरण एक संग चलबैत अछि।"
+  },
+  "extra-254": {
+    "command": "post always",
+    "description": "पाइपलाइन परिणाम जे हो, सफाइ वा रिपोर्टिंग चरण चलबैत अछि।"
+  },
+  "extra-255": {
+    "command": "post unsuccessful",
+    "description": "असफल वा अस्थिर परिणाम लेल पुनर्प्राप्ति वा सूचनाक तर्क चलबैत अछि।"
+  },
+  "extra-256": {
+    "command": "retry step",
+    "description": "क्षणिक क्रिया असफल भेलापर ब्लॉक दोहरबैत अछि।"
+  },
+  "extra-257": {
+    "command": "warnError",
+    "description": "पाइपलाइन जारी रखैत चरणकेँ अस्थिर चिह्नित करैत अछि।"
+  },
+  "extra-258": {
+    "command": "lockable resource",
+    "description": "साझा संसाधन धरि पाइपलाइन पहुँचकेँ क्रमिक बनबैत अछि।"
+  },
+  "extra-259": {
+    "command": "milestone step",
+    "description": "पुरान बिल्डकेँ नव बिल्डसँ आगाँ बढ़बासँ रोकैत अछि।"
+  },
+  "extra-260": {
+    "command": "build job step",
+    "description": "पैरामीटर आ वैकल्पिक प्रतीक्षाक संग दोसर Jenkins जॉब शुरू करैत अछि।"
+  },
+  "extra-261": {
+    "command": "copyArtifacts",
+    "description": "दोसर बिल्डसँ चुनल आर्टिफैक्ट वर्तमान कार्यस्थानमे कॉपी करैत अछि।"
+  },
+  "extra-262": {
+    "command": "pipeline shared library",
+    "description": "अनेक जॉब लेल पुनःप्रयोग योग्य पाइपलाइन चरण आ वैश्विक चर पैकेज करैत अछि।"
+  },
+  "extra-263": {
+    "command": "Replay build",
+    "description": "नियंत्रित डिबगिंग लेल अस्थायी स्क्रिप्ट संपादनक संग पाइपलाइन फेर चलबैत अछि।"
+  },
+  "extra-264": {
+    "command": "build discard policy",
+    "description": "भंडारण वृद्धि नियंत्रित करबाक लेल राखल बिल्ड इतिहास आ आर्टिफैक्ट सीमित करैत अछि।"
+  },
+  "extra-265": {
+    "command": "kubectl rollout history",
+    "description": "Deployment रोलआउटसँ बनल संशोधन देखबैत अछि।"
+  },
+  "extra-266": {
+    "command": "kubectl rollout undo",
+    "description": "रोलबैक सुरक्षित भेलापर कार्यभारकेँ पुरान संशोधनमे लौटबैत अछि।"
+  },
+  "extra-267": {
+    "command": "kubectl rollout pause",
+    "description": "परिवर्तनक समीक्षा कालमे Deployment रोलआउट रोकि राखैत अछि।"
+  },
+  "extra-268": {
+    "command": "kubectl rollout resume",
+    "description": "पहिनेसँ विराम कएल रोलआउट फेर जारी करैत अछि।"
+  },
+  "extra-269": {
+    "command": "kubectl auth can-i",
+    "description": "वर्तमान पहचान कोनो खास API क्रिया कऽ सकैत अछि कि नहि से जाँचैत अछि।"
+  },
+  "extra-270": {
+    "command": "kubectl api-resources",
+    "description": "API सर्वर द्वारा देल संसाधन प्रकार आ ओकर दायराक सूची देखबैत अछि।"
+  },
+  "extra-271": {
+    "command": "kubectl explain",
+    "description": "संसाधन फील्डक स्कीमा दस्तावेज पढ़ैत अछि।"
+  },
+  "extra-272": {
+    "command": "kubectl wait",
+    "description": "संसाधनक शर्त सत्य होएबा वा समयसीमा समाप्त होएबा धरि प्रतीक्षा करैत अछि।"
+  },
+  "extra-273": {
+    "command": "kubectl plugin list",
+    "description": "वर्तमान PATH मे भेटल निष्पादन योग्य kubectl प्लगिनक सूची देखबैत अछि।"
+  },
+  "extra-274": {
+    "command": "kubectl diff",
+    "description": "मैनिफेस्ट लागू करबासँ पहिने ओ चालू क्लस्टरकेँ कोना बदलत से देखबैत अछि।"
+  },
+  "extra-275": {
+    "command": "kubectl apply --server-side",
+    "description": "अद्यतन लेल सर्वर-पक्षक फील्ड स्वामित्व आ टकराव पहचान प्रयोग करैत अछि।"
+  },
+  "extra-276": {
+    "command": "PodDisruptionBudget",
+    "description": "स्वैच्छिक बाधा सीमित करैत अछि जाहिसँ पर्याप्त प्रतिकृति उपलब्ध रहय।"
+  },
+  "extra-277": {
+    "command": "startup probe",
+    "description": "जीवंतता जाँच शुरू होएबासँ पहिने धीमे शुरू होनिहार कंटेनरकेँ समय देैत अछि।"
+  },
+  "extra-278": {
+    "command": "readiness probe",
+    "description": "पॉड ट्रैफिक स्वीकार नहि कऽ सकय तखन ओकरा सेवा एंडपॉइंटसँ हटबैत अछि।"
+  },
+  "extra-279": {
+    "command": "liveness probe",
+    "description": "प्रक्रिया स्वस्थ नहि रहलापर कंटेनर फेर शुरू करैत अछि।"
+  },
+  "extra-280": {
+    "command": "topology spread constraints",
+    "description": "संबद्ध विफलता घटाबय लेल पॉडकेँ जोन वा नोडसभमे बाँटैत अछि।"
+  },
+  "extra-281": {
+    "command": "Pod priority class",
+    "description": "संसाधन दबावमे शेड्यूलिंग क्रम आ संभावित पूर्वाधिकारक कारण हटाएबकेँ प्रभावित करैत अछि।"
+  },
+  "extra-282": {
+    "command": "resource quota",
+    "description": "नेमस्पेसमे कुल संसाधन खपत सीमित करैत अछि।"
+  },
+  "extra-283": {
+    "command": "LimitRange",
+    "description": "नेमस्पेस वस्तु लेल डिफॉल्ट आ अधिकतम संसाधन अनुरोध वा सीमा तय करैत अछि।"
+  },
+  "extra-284": {
+    "command": "EndpointSlice",
+    "description": "Kubernetes Services द्वारा प्रयुक्त विस्तार योग्य बैकएंड एंडपॉइंट डेटा सहेजैत अछि।"
+  },
+  "extra-285": {
+    "command": "IngressClass",
+    "description": "Ingress संसाधन लागू करनिहार नियंत्रक चुनैत अछि।"
+  },
+  "extra-286": {
+    "command": "NetworkPolicy egress",
+    "description": "चुनल पॉड कोन गंतव्यसँ जुड़ि सकैत अछि से सीमित करैत अछि।"
+  },
+  "extra-287": {
+    "command": "init container",
+    "description": "अनुप्रयोग कंटेनर शुरू होएबासँ पहिने सेटअप काज पूरा करैत अछि।"
+  },
+  "extra-288": {
+    "command": "ephemeral container",
+    "description": "विद्यमान पॉडमे अस्थायी डिबगिंग कंटेनर जोड़ैत अछि।"
+  },
+  "extra-289": {
+    "command": "lsof -i",
+    "description": "पोर्ट वा प्रोटोकॉलसँ मेल खाइत नेटवर्क सॉकेट प्रयोग करनिहार प्रक्रियाक सूची देखबैत अछि।"
+  },
+  "extra-290": {
+    "command": "ss -lntp",
+    "description": "सुनैत TCP सॉकेट, संख्यात्मक पता आ स्वामी प्रक्रिया देखबैत अछि।"
+  },
+  "extra-291": {
+    "command": "ip route get",
+    "description": "गंतव्य लेल कर्नेल जे मार्ग आ स्रोत पता प्रयोग करत से देखबैत अछि।"
+  },
+  "extra-292": {
+    "command": "ip neigh",
+    "description": "पता समाधानमे प्रयुक्त स्थानीय पड़ोसी कैश देखबैत अछि।"
+  },
+  "extra-293": {
+    "command": "ethtool",
+    "description": "समर्थित नेटवर्क इंटरफेस गुणक निरीक्षण वा विन्यास करैत अछि।"
+  },
+  "extra-294": {
+    "command": "iostat -xz",
+    "description": "sysstat पैकेजसँ डिवाइस उपयोग आ विलंब मेट्रिक बतबैत अछि।"
+  },
+  "extra-295": {
+    "command": "vmstat",
+    "description": "मेमोरी, प्रक्रिया, पेजिंग, ब्लॉक I/O आ CPU गतिविधिक सार देैत अछि।"
+  },
+  "extra-296": {
+    "command": "pidstat",
+    "description": "प्रत्येक प्रक्रियाक CPU, मेमोरी वा I/O आँकड़ा बतबैत अछि।"
+  },
+  "extra-297": {
+    "command": "strace -p",
+    "description": "निदान लेल विद्यमान प्रक्रियाक सिस्टम कॉल ट्रेस करैत अछि।"
+  },
+  "extra-298": {
+    "command": "ltrace",
+    "description": "प्रक्रिया द्वारा साझा लाइब्रेरी फंक्शनकेँ कएल कॉल ट्रेस करैत अछि।"
+  },
+  "extra-299": {
+    "command": "perf top",
+    "description": "सिस्टम पर CPU नमूना खपत करनिहार सजीव फंक्शन देखबैत अछि।"
+  },
+  "extra-300": {
+    "command": "systemd-analyze blame",
+    "description": "बूटक समय लागल अवधिक क्रममे स्टार्टअप यूनिटक सूची देखबैत अछि।"
+  },
+  "extra-301": {
+    "command": "systemctl cat",
+    "description": "यूनिट फाइलक संग ओकर ड्रॉप-इन ओवरराइड देखबैत अछि।"
+  },
+  "extra-302": {
+    "command": "journalctl -u -S",
+    "description": "सेवा आ आरंभ समयक आधार पर systemd यूनिट जर्नल फिल्टर करैत अछि।"
+  },
+  "extra-303": {
+    "command": "loginctl list-sessions",
+    "description": "systemd-logind द्वारा प्रबंधित सक्रिय लॉगिन सत्रक सूची देखबैत अछि।"
+  },
+  "extra-304": {
+    "command": "getfacl",
+    "description": "मूल स्वामी/समूह/मोड बिटसँ आगाँ POSIX पहुँच नियंत्रण सूची पढ़ैत अछि।"
+  },
+  "extra-305": {
+    "command": "setfacl -m",
+    "description": "फाइलसिस्टम वस्तु पर पहुँच नियंत्रण सूचीक प्रविष्टि जोड़ैत वा बदलैत अछि।"
+  },
+  "extra-306": {
+    "command": "find -mmin",
+    "description": "निर्धारित मिनटसभक भीतर संशोधित फाइल खोजैत अछि।"
+  },
+  "extra-307": {
+    "command": "stat -c",
+    "description": "मोड, स्वामी, आकार आ समयचिह्न सन चुनल फाइल मेटाडेटा छापैत अछि।"
+  },
+  "extra-308": {
+    "command": "du -xhd1",
+    "description": "फाइलसिस्टम सीमा पार केने बिना डायरेक्टरी उपयोगक सार देैत अछि।"
+  },
+  "extra-309": {
+    "command": "tar --exclude",
+    "description": "मेल खाइत फाइल वा डायरेक्टरी छोड़ि अभिलेख बनबैत अछि।"
+  },
+  "extra-310": {
+    "command": "flock -n",
+    "description": "महत्त्वपूर्ण कार्य चलाबय सँ पहिने गैर-अवरोधक सलाहकारी लॉक लैत अछि।"
+  },
+  "extra-311": {
+    "command": "renice",
+    "description": "चलैत प्रक्रियाक शेड्यूलिंग प्राथमिकता बदलैत अछि।"
+  },
+  "extra-312": {
+    "command": "ulimit -n",
+    "description": "शेल प्रक्रियाक फाइल-डिस्क्रिप्टर सीमा पढ़ैत वा बदलैत अछि।"
+  },
+  "extra-313": {
+    "command": "portable container image",
+    "description": "OCI-अनुकूल इमेज प्रारूप प्रयोग करैत अछि जे समर्थित रजिस्ट्रीक बीच स्थानांतरित भऽ सकैत अछि।"
+  },
+  "extra-314": {
+    "command": "workload identity federation",
+    "description": "विश्वसनीय बाहरी पहचान दावाक बदलामे अल्पकालिक क्लाउड क्रेडेंशियल लैत अछि।"
+  },
+  "extra-315": {
+    "command": "cloud resource tagging standard",
+    "description": "एकरूप स्वामी, परिवेश, लागत-केंद्र आ डेटा-वर्ग लेबल प्रयोग करैत अछि।"
+  },
+  "extra-316": {
+    "command": "provider lockfile",
+    "description": "प्रदाता पैकेज चेकसम निश्चित करैत अछि जाहिसँ दल समीक्षित प्रदाता बाइनरी स्थापित करय।"
+  },
+  "extra-317": {
+    "command": "cross-cloud DNS delegation",
+    "description": "उपडोमेनक अधिकार सौंपैत अछि जाहिसँ प्रत्येक प्लेटफॉर्म अपन सेवा रिकॉर्ड सँभालि सकय।"
+  },
+  "extra-318": {
+    "command": "global traffic failover",
+    "description": "मुख्य एंडपॉइंट अनुपलब्ध भेलापर अनुरोध स्वस्थ प्रदाता दिस पठबैत अछि।"
+  },
+  "extra-319": {
+    "command": "cloud egress cost review",
+    "description": "प्रदाता, क्षेत्र वा जोनसँ डेटा बाहर जाएबाक शुल्क चिन्हैत अछि।"
+  },
+  "extra-320": {
+    "command": "portable health endpoint",
+    "description": "होस्टिंग प्लेटफॉर्मसभमे समान तत्परता आ जीवंतता संकेत उपलब्ध करबैत अछि।"
+  },
+  "extra-321": {
+    "command": "cross-provider log correlation",
+    "description": "ट्रेस ID आगाँ बढ़बैत अछि जाहिसँ प्रदाता सीमा पार अनुरोधक अनुसरण कएल जा सकय।"
+  },
+  "extra-322": {
+    "command": "cloud-neutral backup format",
+    "description": "पुनर्प्राप्ति योग्य डेटा एहन प्रारूपमे सहेजैत अछि जे एक प्रबंधित सेवासँ बान्हल नहि हो।"
+  },
+  "extra-323": {
+    "command": "service-level objective portability",
+    "description": "विक्रेता-विशिष्ट मेट्रिकसँ स्वतंत्र उपलब्धता आ विलंब लक्ष्य परिभाषित करैत अछि।"
+  },
+  "extra-324": {
+    "command": "cloud policy as code",
+    "description": "प्रदाता संसाधन बनबासँ पहिने CI मे साझा सुरक्षा सीमाक वैधता जाँचैत अछि।"
+  },
+  "extra-325": {
+    "command": "secret provider abstraction",
+    "description": "अनुप्रयोगकेँ स्थिर इंटरफेससँ गुप्त मान प्रयोग करय देैत अछि।"
+  },
+  "extra-326": {
+    "command": "artifact promotion by digest",
+    "description": "हर परिवेश लेल फेर बिल्ड करबाक बदला अपरिवर्तनीय आर्टिफैक्ट पहचानकर्ता आगाँ बढ़बैत अछि।"
+  },
+  "extra-327": {
+    "command": "cross-cloud certificate renewal",
+    "description": "स्वतंत्र प्रवेश प्रणालीसभक बीच प्रमाणपत्र जारी करब आ तैनातीक समन्वय करैत अछि।"
+  },
+  "extra-328": {
+    "command": "multi-provider quota planning",
+    "description": "प्रदातासभमे विस्तार करबासँ पहिने सेवा कोटा आ क्षमता सीमा पर नजरि राखैत अछि।"
+  },
+  "extra-329": {
+    "command": "cloud incident runbook",
+    "description": "साझा सेवा उद्देश्यक अंतर्गत प्रदाता-विशिष्ट पुनर्प्राप्ति चरण दस्तावेजित करैत अछि।"
+  },
+  "extra-330": {
+    "command": "data transfer minimization",
+    "description": "विलंब आ क्लाउड-पार शुल्क घटाबय लेल संगणनकेँ ओकर डेटाक लग राखैत अछि।"
+  },
+  "extra-331": {
+    "command": "immutable deployment artifact",
+    "description": "हस्ताक्षरित, संस्करणयुक्त बिल्ड आर्टिफैक्टकेँ रिलीजक इकाई बनबैत अछि।"
+  },
+  "extra-332": {
+    "command": "provider outage dependency map",
+    "description": "सेवाकेँ प्रदाता क्षेत्र आ साझा नियंत्रण-पटल निर्भरतासँ जोड़ैत अछि।"
+  },
+  "extra-333": {
+    "command": "cloud configuration drift",
+    "description": "वास्तविक सेटिंगक तुलना संस्करण-नियंत्रित वांछित विन्याससँ करैत अछि।"
+  },
+  "extra-334": {
+    "command": "portable deployment manifest",
+    "description": "कार्यभार सेटिंगकेँ प्रदाता-विशिष्ट आधारभूत संरचना बाइंडिंगसँ अलग करैत अछि।"
+  },
+  "extra-335": {
+    "command": "cross-cloud restore exercise",
+    "description": "बैकअप उपयोग योग्य मानि लेबाक बदला दोसर प्रदातामे पुनर्प्राप्तिक परीक्षण करैत अछि।"
+  },
+  "extra-336": {
+    "command": "shared responsibility matrix",
+    "description": "प्रदाता आ कार्यभार दलक जिम्माक सुरक्षा नियंत्रण स्पष्ट करैत अछि।"
+  },
+  "extra-337": {
+    "command": "TCP three-way handshake",
+    "description": "SYN, SYN-ACK आ ACK खंडक प्रयोगसँ TCP कनेक्शन स्थापित करैत अछि।"
+  },
+  "extra-338": {
+    "command": "TCP retransmission",
+    "description": "हानि वा अत्यधिक विलंबक बाद बिना पावतीक डेटा फेर पठबैत अछि।"
+  },
+  "extra-339": {
+    "command": "MTU path discovery",
+    "description": "खंडित भेल बिना जा सकनिहार पैकेटक अधिकतम आकार खोजैत अछि।"
+  },
+  "extra-340": {
+    "command": "DNS CNAME record",
+    "description": "एक DNS नामकेँ सीधे पताक बदला दोसर नामक उपनाम बनबैत अछि।"
+  },
+  "extra-341": {
+    "command": "DNS negative caching",
+    "description": "कोनो नाम वा रिकॉर्ड नहि अछि से निर्धारित अवधिक लेल कैश करैत अछि।"
+  },
+  "extra-342": {
+    "command": "DNS split horizon",
+    "description": "क्लाइंटक रिजॉल्वर दृष्टिक आधार पर अलग रिकॉर्ड लौटबैत अछि।"
+  },
+  "extra-343": {
+    "command": "BGP local preference",
+    "description": "स्वायत्त प्रणालीक भीतर प्राथमिक जावक मार्ग चुनैत अछि।"
+  },
+  "extra-344": {
+    "command": "BGP AS path prepending",
+    "description": "दूरस्थ मार्ग चयन प्रभावित करबाक लेल विज्ञापित पथकेँ बेसी नमहर देखबैत अछि।"
+  },
+  "extra-345": {
+    "command": "BGP graceful restart",
+    "description": "पीयर समर्थन केलापर रूटिंग प्रक्रिया फेर शुरू होइत समय अग्रेषण जारी राखैत अछि।"
+  },
+  "extra-346": {
+    "command": "VLAN trunk",
+    "description": "एक भौतिक Ethernet लिंक पर अनेक टैगयुक्त VLAN लऽ जाइत अछि।"
+  },
+  "extra-347": {
+    "command": "802.1Q native VLAN",
+    "description": "ट्रंक पर बिना टैगक ट्रैफिक लऽ जाइत अछि आ दुनू छोर पर मेल खाएबाक चाही।"
+  },
+  "extra-348": {
+    "command": "LACP port channel",
+    "description": "अतिरिक्तता आ क्षमता लेल भौतिक लिंककेँ सहमत तार्किक लिंकमे जोड़ैत अछि।"
+  },
+  "extra-349": {
+    "command": "ARP cache",
+    "description": "स्थानीय नेटवर्कमे IPv4 पताकेँ लिंक-स्तर पतासँ मिलबैत अछि।"
+  },
+  "extra-350": {
+    "command": "IPv6 neighbor discovery",
+    "description": "पता समाधान आ राउटर खोज लेल ICMPv6 संदेश प्रयोग करैत अछि।"
+  },
+  "extra-351": {
+    "command": "NAT port exhaustion",
+    "description": "जखन NAT डिवाइस लग समवर्ती प्रवाह लेल खाली स्रोत पोर्ट नहि बचैत अछि तखन होइत अछि।"
+  },
+  "extra-352": {
+    "command": "TLS SNI",
+    "description": "TLS हैंडशेकक समय क्लाइंटकेँ अनुरोधित होस्टनाम बताबय देैत अछि।"
+  },
+  "extra-353": {
+    "command": "TLS ALPN",
+    "description": "TLS सेटअपक समय HTTP/2 सन अनुप्रयोग प्रोटोकॉल पर सहमति बनबैत अछि।"
+  },
+  "extra-354": {
+    "command": "HTTP CONNECT proxy",
+    "description": "HTTP प्रॉक्सीक माध्यमसँ सुरंग बनबैत अछि, प्रायः TLS ट्रैफिक लेल।"
+  },
+  "extra-355": {
+    "command": "reverse proxy buffering",
+    "description": "मध्यस्थ अनुरोध वा प्रतिक्रियाक बॉडी बफर करत कि नहि से नियंत्रित करैत अछि।"
+  },
+  "extra-356": {
+    "command": "Anycast routing",
+    "description": "अनेक स्थानसँ एक पता विज्ञापित करैत अछि जाहिसँ रूटिंग नजदीकी साइट चुनय।"
+  },
+  "extra-357": {
+    "command": "ECMP",
+    "description": "समान लागतबला अनेक मार्गमे प्रवाह बाँटैत अछि।"
+  },
+  "extra-358": {
+    "command": "network flow logs",
+    "description": "ट्रैफिक लेल नमूना कएल स्रोत, गंतव्य, पोर्ट आ अनुमति/निषेध विवरण दर्ज करैत अछि।"
+  },
+  "extra-359": {
+    "command": "ICMP destination unreachable",
+    "description": "होस्ट, नेटवर्क, प्रोटोकॉल, पोर्ट वा मार्ग धरि पहुँच नहि भऽ सकैत अछि से बतबैत अछि।"
+  },
+  "extra-360": {
+    "command": "packet capture ring buffer",
+    "description": "कैप्चर फाइल चक्रित करैत अछि जाहिसँ दीर्घकालिक निदान सीमित डिस्क स्थान उपयोग करय।"
+  },
+  "extra-361": {
+    "command": "oci iam region-subscription list",
+    "description": "वर्तमान टेनेंसी लेल सक्षम क्षेत्रक सूची देखबैत अछि।"
+  },
+  "extra-362": {
+    "command": "OCI compartment hierarchy",
+    "description": "टेनेंसीक भीतर संसाधन व्यवस्थित करैत अछि आ IAM नीतिक दायरा लागू करैत अछि।"
+  },
+  "extra-363": {
+    "command": "OCI dynamic group",
+    "description": "मेल खाइत कंपार्टमेंट वा संसाधन नियमसँ संसाधन प्रिंसिपल चुनैत अछि।"
+  },
+  "extra-364": {
+    "command": "OCI resource principal",
+    "description": "OCI कार्यभारकेँ संग्रहीत उपयोगकर्ता API कुंजी बिना अधिकृत सेवा बजाबय देैत अछि।"
+  },
+  "extra-365": {
+    "command": "OCI Vault secret version",
+    "description": "अनुप्रयोग आ एकीकरण लेल संस्करणयुक्त गुप्त सामग्री सहेजैत अछि।"
+  },
+  "extra-366": {
+    "command": "OCI Vault key rotation",
+    "description": "डिक्रिप्ट क्रिया लेल पुरान संस्करण राखैत नव कुंजी संस्करण बनबैत अछि।"
+  },
+  "extra-367": {
+    "command": "Object Storage retention rule",
+    "description": "विन्यस्त अवधिमे ऑब्जेक्टकेँ हटाओल जायब वा ओवरराइट होएबासँ बचबैत अछि।"
+  },
+  "extra-368": {
+    "command": "Object Storage pre-authenticated request",
+    "description": "चुनल ऑब्जेक्ट वा बकेट लेल दायरा आ समयसँ सीमित पहुँच देैत अछि।"
+  },
+  "extra-369": {
+    "command": "VCN route rule",
+    "description": "मेल खाइत गंतव्य ट्रैफिककेँ गेटवे वा निजी अगिला हॉप दिस पठबैत अछि।"
+  },
+  "extra-370": {
+    "command": "Network Security Group",
+    "description": "पूरा सबनेटक बदला चुनल VNIC पर वर्चुअल नेटवर्क नियम लागू करैत अछि।"
+  },
+  "extra-371": {
+    "command": "OCI service gateway",
+    "description": "VCN सँ समर्थित Oracle सेवा धरि निजी पहुँच देैत अछि।"
+  },
+  "extra-372": {
+    "command": "OCI NAT gateway",
+    "description": "निजी सबनेट संसाधनकेँ आवक पहुँच उजागर केने बिना सार्वजनिक कनेक्शन शुरू करय देैत अछि।"
+  },
+  "extra-373": {
+    "command": "Load Balancer backend set",
+    "description": "नीति आ स्वास्थ्य-जाँच विन्यासक संग बैकएंड सर्वरक समूह बनबैत अछि।"
+  },
+  "extra-374": {
+    "command": "Compute instance pool",
+    "description": "दोष डोमेनसभमे समान संगणन इंस्टेंसक समूह प्रबंधित करैत अछि।"
+  },
+  "extra-375": {
+    "command": "Block Volume backup policy",
+    "description": "पुनःप्रयोग योग्य नीतिसँ वॉल्यूम बैकअपक समय निर्धारित करैत अछि।"
+  },
+  "extra-376": {
+    "command": "File Storage export set",
+    "description": "फाइलसिस्टम लेल नेटवर्क पहुँच आ निर्यात विकल्प परिभाषित करैत अछि।"
+  },
+  "extra-377": {
+    "command": "OKE node pool",
+    "description": "क्लस्टर लेल वर्करक आकार-प्रकार, इमेज, सबनेट आ विस्तार सेटिंग परिभाषित करैत अछि।"
+  },
+  "extra-378": {
+    "command": "OKE workload identity",
+    "description": "Kubernetes सेवा खाताकेँ प्रिंसिपलक रूपमे OCI संसाधनक पहुँचक अधिकार देैत अछि।"
+  },
+  "extra-379": {
+    "command": "Autonomous Database wallet",
+    "description": "TLS-संरक्षित डेटाबेस पहुँच लेल क्लाइंट कनेक्शन सामग्री राखैत अछि।"
+  },
+  "extra-380": {
+    "command": "Database Data Guard",
+    "description": "आपदा पुनर्प्राप्ति आ भूमिका संक्रमण लेल स्टैंडबाय डेटाबेस राखैत अछि।"
+  },
+  "extra-381": {
+    "command": "Logging service search",
+    "description": "संसाधन आ अनुप्रयोग घटनाक जाँच लेल केंद्रीकृत OCI लॉग क्वेरी करैत अछि।"
+  },
+  "extra-382": {
+    "command": "Monitoring alarm",
+    "description": "मेट्रिक क्वेरीक मूल्यांकन करैत अछि आ सीमा टूटलापर सूचना पठबैत अछि।"
+  },
+  "extra-383": {
+    "command": "Resource Manager stack drift",
+    "description": "तैनात संसाधनक तुलना स्टैकक Terraform विन्याससँ करैत अछि।"
+  },
+  "extra-384": {
+    "command": "Cloud Guard responder recipe",
+    "description": "डिटेक्टर नियम जोखिम चिन्हलापर स्वचालित वा मानवीय क्रिया परिभाषित करैत अछि।"
+  },
+  "extra-385": {
+    "command": "strict and warnings",
+    "description": "संकलन-समय जाँच आ उपयोगी रनटाइम निदान सक्षम करैत अछि।"
+  },
+  "extra-386": {
+    "command": "defined-or operator",
+    "description": "मान अनिर्धारित भेलापर मात्र विकल्प प्रयोग करैत अछि, शून्य वा खाली भेलापर नहि।"
+  },
+  "extra-387": {
+    "command": "three-argument open",
+    "description": "स्पष्ट मोडक संग फाइल खोलैत अछि आ अस्पष्ट दू-आर्ग्युमेंट पार्सिंगसँ बचैत अछि।"
+  },
+  "extra-388": {
+    "command": "autodie",
+    "description": "सामान्य सिस्टम-कॉल विफलताकेँ स्वतः अपवादमे बदलैत अछि।"
+  },
+  "extra-389": {
+    "command": "File::Temp",
+    "description": "सुरक्षित अद्वितीय नामसँ अस्थायी फाइल आ डायरेक्टरी बनबैत अछि।"
+  },
+  "extra-390": {
+    "command": "Getopt::Long",
+    "description": "नमहर कमांड-लाइन विकल्प पार्स कऽ चरमे भरैत अछि।"
+  },
+  "extra-391": {
+    "command": "JSON::PP decode_json",
+    "description": "मूल JSON::PP मॉड्यूलसँ JSON दस्तावेज पार्स कऽ Perl संदर्भ बनबैत अछि।"
+  },
+  "extra-392": {
+    "command": "JSON::PP encode_json",
+    "description": "Perl डेटा संरचनाकेँ संक्षिप्त JSON बाइटक रूपमे क्रमबद्ध करैत अछि।"
+  },
+  "extra-393": {
+    "command": "File::Basename",
+    "description": "पथसँ डायरेक्टरी, फाइल नाम आ प्रत्यय घटक निकालैत अछि।"
+  },
+  "extra-394": {
+    "command": "File::Path make_path",
+    "description": "नेस्टेड डायरेक्टरी बनबैत अछि आ फाइलसिस्टम त्रुटि बतबैत अछि।"
+  },
+  "extra-395": {
+    "command": "File::Find",
+    "description": "डायरेक्टरी वृक्षमे घूमैत अछि आ प्रत्येक प्रविष्टि लेल कॉलबैक बजबैत अछि।"
+  },
+  "extra-396": {
+    "command": "IPC::Open3",
+    "description": "stdin, stdout आ stderr लेल अलग हैंडलक संग बाल प्रक्रिया चलबैत अछि।"
+  },
+  "extra-397": {
+    "command": "system list form",
+    "description": "आर्ग्युमेंटक अर्थ निकालबाक लेल शेल बजौने बिना प्रोग्राम चलबैत अछि।"
+  },
+  "extra-398": {
+    "command": "Time::HiRes alarm",
+    "description": "समय-सीमित क्रिया लेल एक सेकंडसँ छोट अवधिक अलार्म लगबैत अछि।"
+  },
+  "extra-399": {
+    "command": "POSIX strftime",
+    "description": "निर्दिष्ट लोकैल-स्वतंत्र पैटर्नसँ समयचिह्नक प्रारूप बनबैत अछि।"
+  },
+  "extra-400": {
+    "command": "Digest::SHA",
+    "description": "फाइल वा डेटा धाराक क्रिप्टोग्राफिक हैश गणना करैत अछि।"
+  },
+  "extra-401": {
+    "command": "List::Util max",
+    "description": "संख्यात्मक मानक सूचीमे सँ सभसँ पैघ मान ताकैत अछि।"
+  },
+  "extra-402": {
+    "command": "List::Util any",
+    "description": "जाँचैत अछि जे सूचीक कोनो आइटम predicate केँ पूरा करैत अछि वा नहि।"
+  },
+  "extra-403": {
+    "command": "Try::Tiny",
+    "description": "संक्षिप्त try, catch, आ finally ब्लॉकक संग exceptions केँ सँभारैत अछि।"
+  },
+  "extra-404": {
+    "command": "Test::More subtests",
+    "description": "सम्बन्धित assertions केँ समूहमे राखैत अछि आ स्पष्ट नेस्टेड परीक्षण परिणाम रिपोर्ट करैत अछि।"
+  },
+  "extra-405": {
+    "command": "Test::Warnings",
+    "description": "पुष्टि करैत अछि जे परीक्षणक दौरान कोड अपेक्षित warnings उत्सर्जित करैत अछि।"
+  },
+  "extra-406": {
+    "command": "DBI placeholders",
+    "description": "injection आ quoting बग सँ बचबाक लेल मानकेँ SQL पाठसँ अलग बाइंड करैत अछि।"
+  },
+  "extra-407": {
+    "command": "DBI transaction",
+    "description": "डेटाबेस राइट्सकेँ समूहमे राखैत अछि जाहिसँ ओ सभ संगे commit होइत अछि वा विफलता पर roll back भ' जाइत अछि।"
+  },
+  "extra-408": {
+    "command": "Encode decode",
+    "description": "स्पष्ट एन्कोडिंगक उपयोग करैत byte strings केँ character strings मे बदलैत अछि।"
+  },
+  "extra-409": {
+    "command": "Get-Command -All",
+    "description": "मेल खाइत नामवला सभ कमांडक सूची दैत अछि, छिपल (shadowed) कमांड सहित।"
+  },
+  "extra-410": {
+    "command": "Get-Member",
+    "description": "pipeline ऑब्जेक्ट पर उपलब्ध प्रॉपर्टी आ मेथड सभक जाँच करैत अछि।"
+  },
+  "extra-411": {
+    "command": "Select-Object -ExpandProperty",
+    "description": "स्रोत ऑब्जेक्ट केँ लपेटबाक बदला प्रॉपर्टीक मान सीधे आउटपुट करैत अछि।"
+  },
+  "extra-412": {
+    "command": "Where-Object property shorthand",
+    "description": "समर्थित PowerShell संस्करणमे संक्षिप्त तुलना सिंटैक्सक उपयोग कए ऑब्जेक्ट सभ केँ फिल्टर करैत अछि।"
+  },
+  "extra-413": {
+    "command": "ForEach-Object -Parallel",
+    "description": "समर्थित PowerShell संस्करणमे pipeline आइटम सभ केँ एक संग (concurrently) प्रोसेस करैत अछि।"
+  },
+  "extra-414": {
+    "command": "Start-Job",
+    "description": "वर्तमान सत्रक भीतर एकटा अलग बैकग्राउंड जॉबमे काज चलबैत अछि।"
+  },
+  "extra-415": {
+    "command": "Receive-Job -Keep",
+    "description": "जॉब इतिहाससँ हटौने बिना जॉबक आउटपुट पढ़ैत अछि।"
+  },
+  "extra-416": {
+    "command": "Try / Catch / Finally",
+    "description": "terminating त्रुटि सभ केँ सँभारैत अछि आ गारंटी दैत अछि जे सफाई कोड चलि सकैत अछि।"
+  },
+  "extra-417": {
+    "command": "ErrorAction Stop",
+    "description": "बहुत रास non-terminating त्रुटि सभ केँ ऊपर उठबैत अछि जाहिसँ catch ब्लॉक ओकरा सँभारि सकय।"
+  },
+  "extra-418": {
+    "command": "Set-StrictMode",
+    "description": "अप्रारम्भ कएल चर आ आन सामान्य स्क्रिप्टिंग गलती सभ केँ पकड़ैत अछि।"
+  },
+  "extra-419": {
+    "command": "ConvertFrom-Json -AsHashtable",
+    "description": "समर्थित PowerShell संस्करणमे JSON केँ बदलऽ योग्य hashtable मे पार्स करैत अछि।"
+  },
+  "extra-420": {
+    "command": "ConvertTo-Json -Depth",
+    "description": "नेस्टेड ऑब्जेक्ट सभ केँ चुनल गहराई धरि serialize करैत अछि।"
+  },
+  "extra-421": {
+    "command": "Invoke-RestMethod -StatusCodeVariable",
+    "description": "REST प्रतिक्रिया पार्स करैत काल HTTP स्टेटस कोड पकड़ैत अछि।"
+  },
+  "extra-422": {
+    "command": "Test-NetConnection",
+    "description": "कोनो रिमोट endpoint धरि DNS रिज़ॉल्यूशन आ TCP कनेक्टिविटीक जाँच करैत अछि।"
+  },
+  "extra-423": {
+    "command": "Get-FileHash",
+    "description": "अखंडता जाँच आ आर्टिफैक्टक तुलनाक लेल फाइलक हैश गणना करैत अछि।"
+  },
+  "extra-424": {
+    "command": "Compare-Object",
+    "description": "दू संग्रह वा ऑब्जेक्ट प्रॉपर्टीक बीचक अंतर देखबैत अछि।"
+  },
+  "extra-425": {
+    "command": "Import-Csv",
+    "description": "सीमांकित पंक्ति सभ केँ ऑब्जेक्टक रूपमे लोड करैत अछि जकर हेडर प्रॉपर्टीक नाम बनि जाइत अछि।"
+  },
+  "extra-426": {
+    "command": "Export-Clixml",
+    "description": "प्रकार सूचना सुरक्षित रखैत PowerShell ऑब्जेक्ट सभ केँ serialize करैत अछि।"
+  },
+  "extra-427": {
+    "command": "PSSession",
+    "description": "कतोक कमांडक लेल पुनः उपयोग योग्य रिमोट PowerShell कनेक्शन बनौने रखैत अछि।"
+  },
+  "extra-428": {
+    "command": "Register-ArgumentCompleter",
+    "description": "कमांड वा पैरामीटरक लेल अनुकूलित tab completion जोड़ैत अछि।"
+  },
+  "extra-429": {
+    "command": "SupportsShouldProcess",
+    "description": "उन्नत फंक्शन सभमे मानक -WhatIf आ -Confirm व्यवहार सक्षम करैत अछि।"
+  },
+  "extra-430": {
+    "command": "SecureString",
+    "description": "संरक्षित स्ट्रिंग प्रकारक उपयोग कए मेमोरीमे संवेदनशील पाठकेँ दर्शबैत अछि।"
+  },
+  "extra-431": {
+    "command": "Resolve-Path",
+    "description": "कोनो पाथ केँ ओकर provider-qualified निरपेक्ष स्थान धरि विस्तारित करैत अछि।"
+  },
+  "extra-432": {
+    "command": "pathlib.Path.rglob",
+    "description": "glob पैटर्नसँ मेल खाइत पाथ सभ केँ पुनरावर्ती रूपसँ ताकैत अछि।"
+  },
+  "extra-433": {
+    "command": "pathlib.Path.replace",
+    "description": "जखन फाइलसिस्टम समर्थन करैत अछि तखन गंतव्य पाथ केँ atomically बदलैत अछि।"
+  },
+  "extra-434": {
+    "command": "subprocess.run check",
+    "description": "जखन आह्वानित प्रोसेस असफलतासँ बाहर निकलैत अछि तखन CalledProcessError उठबैत अछि।"
+  },
+  "extra-435": {
+    "command": "subprocess timeout",
+    "description": "जखन कोनो प्रोसेस अपन सीमा पार करैत अछि तखन प्रतीक्षा बंद कए TimeoutExpired उठबैत अछि।"
+  },
+  "extra-436": {
+    "command": "contextlib.ExitStack",
+    "description": "एके सफाई स्कोपक संग गतिशील संख्याक context managers केँ प्रबंधित करैत अछि।"
+  },
+  "extra-437": {
+    "command": "dataclasses.field default_factory",
+    "description": "प्रत्येक dataclass इंस्टेंसक लेल एकटा नव बदलऽ योग्य डिफ़ॉल्ट मान बनबैत अछि।"
+  },
+  "extra-438": {
+    "command": "typing.Protocol",
+    "description": "स्पष्ट inheritance क आवश्यकताक बिना संरचनात्मक इंटरफ़ेस सभक वर्णन करैत अछि।"
+  },
+  "extra-439": {
+    "command": "functools.cache",
+    "description": "जखन आर्गुमेंट hashable होइत अछि तखन फंक्शनक परिणाम सभ केँ memoize करैत अछि।"
+  },
+  "extra-440": {
+    "command": "functools.partial",
+    "description": "किछु आर्गुमेंट पहिनहिसँ कॉन्फ़िगर कएल एकटा callable बनबैत अछि।"
+  },
+  "extra-441": {
+    "command": "itertools.batched",
+    "description": "समर्थित Python संस्करणमे iterable केँ निश्चित आकारक tuples मे समूहित करैत अछि।"
+  },
+  "extra-442": {
+    "command": "collections.Counter",
+    "description": "hashable मान सभ केँ गनैत अछि आ सुविधाजनक आवृत्ति संचालन उपलब्ध करबैत अछि।"
+  },
+  "extra-443": {
+    "command": "collections.defaultdict",
+    "description": "factory फंक्शनसँ अनुपस्थित मैपिंग मान बनबैत अछि।"
+  },
+  "extra-444": {
+    "command": "contextlib.suppress",
+    "description": "सँकरा context ब्लॉकक भीतर चुनल exception प्रकार सभ केँ अनदेखा करैत अछि।"
+  },
+  "extra-445": {
+    "command": "logging LoggerAdapter",
+    "description": "लपेटल logger क लेल लॉग रिकॉर्ड सभ मे प्रासंगिक फील्ड जोड़ैत अछि।"
+  },
+  "extra-446": {
+    "command": "logging QueueHandler",
+    "description": "क्यू (queue) क माध्यमसँ लॉग हैंडलिंग केँ listener थ्रेड वा प्रोसेसमे हस्तांतरित करैत अछि।"
+  },
+  "extra-447": {
+    "command": "asyncio.TaskGroup",
+    "description": "संरचित रद्दीकरण आ exception हैंडलिंगक संग सम्बन्धित tasks चलबैत अछि।"
+  },
+  "extra-448": {
+    "command": "asyncio.Semaphore",
+    "description": "सीमित करैत अछि जे कतेक coroutines संसाधन-गहन खंडमे प्रवेश कए सकैत अछि।"
+  },
+  "extra-449": {
+    "command": "yield from",
+    "description": "iteration आ generator नियंत्रण केँ subgenerator केँ सौंपैत अछि।"
+  },
+  "extra-450": {
+    "command": "memoryview",
+    "description": "अंतर्निहित bytes केँ कॉपी कएने बिना buffer डेटा पर एकटा दृश्य (view) उपलब्ध करबैत अछि।"
+  },
+  "extra-451": {
+    "command": "zip strict",
+    "description": "जखन zip कएल iterables क लम्बाई भिन्न होइत अछि तखन ValueError उठबैत अछि।"
+  },
+  "extra-452": {
+    "command": "enum StrEnum",
+    "description": "समर्थित Python संस्करणमे स्ट्रिंग-मानवला enum सदस्य सभ केँ परिभाषित करैत अछि।"
+  },
+  "extra-453": {
+    "command": "tomllib",
+    "description": "समर्थित Python संस्करणमे मानक लाइब्रेरीक उपयोग कए TOML पार्स करैत अछि।"
+  },
+  "extra-454": {
+    "command": "unittest.mock autospec",
+    "description": "mocks केँ वास्तविक ऑब्जेक्टक signature आ उपलब्ध attributes धरि सीमित करैत अछि।"
+  },
+  "extra-455": {
+    "command": "Enumerable#filter_map",
+    "description": "एके पासमे मान सभ केँ map करैत अछि आ nil परिणाम सभ केँ हटबैत अछि।"
+  },
+  "extra-456": {
+    "command": "Enumerable#tally",
+    "description": "enumerable मे प्रत्येक मानक घटनाक गणना करैत अछि।"
+  },
+  "extra-457": {
+    "command": "Enumerable#each_slice",
+    "description": "enumerable सँ क्रमिक निश्चित आकारक समूह सभ प्रदान करैत अछि।"
+  },
+  "extra-458": {
+    "command": "Hash#fetch",
+    "description": "स्पष्ट डिफ़ॉल्टक संग कोनो key पढ़ैत अछि, वा डिफ़ॉल्ट नहि देल गेला पर त्रुटि उठबैत अछि।"
+  },
+  "extra-459": {
+    "command": "Hash#transform_values",
+    "description": "key सभ केँ सुरक्षित रखैत प्रत्येक मान केँ रूपांतरित कएल एकटा hash लौटबैत अछि।"
+  },
+  "extra-460": {
+    "command": "Hash#compact",
+    "description": "nil-मानवला प्रविष्टि सभ हटाओल एकटा प्रति लौटबैत अछि।"
+  },
+  "extra-461": {
+    "command": "String#delete_prefix",
+    "description": "मूल स्ट्रिंग केँ बदलने बिना एकटा मेल खाइत उपसर्ग हटबैत अछि।"
+  },
+  "extra-462": {
+    "command": "String#match?",
+    "description": "MatchData परिणामक बिना जाँचैत अछि जे कोनो स्ट्रिंग regular expression सँ मेल खाइत अछि वा नहि।"
+  },
+  "extra-463": {
+    "command": "Regexp named captures",
+    "description": "अर्थपूर्ण फील्ड सभ केँ संख्यात्मक स्थितिक बदला नामसँ पकड़ैत अछि।"
+  },
+  "extra-464": {
+    "command": "safe navigation operator",
+    "description": "मेथड केवल तखने कॉल करैत अछि जखन receiver nil नहि होइत अछि।"
+  },
+  "extra-465": {
+    "command": "Data.define",
+    "description": "समर्थित Ruby संस्करणमे नामित सदस्यक संग अपरिवर्तनीय मान ऑब्जेक्ट बनबैत अछि।"
+  },
+  "extra-466": {
+    "command": "Struct keyword_init",
+    "description": "नामित keyword आर्गुमेंट सँ प्रारम्भ कएल एकटा हल्का रिकॉर्ड बनबैत अछि।"
+  },
+  "extra-467": {
+    "command": "Enumerable#lazy",
+    "description": "एकटा lazy चेन बनबैत अछि जे मान सभ केँ केवल मँगला पर प्रोसेस करैत अछि।"
+  },
+  "extra-468": {
+    "command": "Fiber scheduler",
+    "description": "समर्थित I/O संचालन सभ केँ scheduler क अधीन सहकारी रूपसँ yield करबाक अनुमति दैत अछि।"
+  },
+  "extra-469": {
+    "command": "Timeout.timeout",
+    "description": "जखन कोनो ब्लॉक कॉन्फ़िगर कएल अवधिसँ बेसी लैत अछि तखन exception उठबैत अछि।"
+  },
+  "extra-470": {
+    "command": "Open3.capture3",
+    "description": "एकटा subprocess चलबैत अछि आ stdout, stderr, आ ओकर स्टेटस केँ अलग-अलग पकड़ैत अछि।"
+  },
+  "extra-471": {
+    "command": "Tempfile.create",
+    "description": "ब्लॉकक बाद स्वचालित सफाईक संग एकटा अस्थायी फाइल बनबैत अछि।"
+  },
+  "extra-472": {
+    "command": "JSON.parse symbolize_names",
+    "description": "जखन एप्लिकेशनक लेल उपयुक्त हो तखन JSON ऑब्जेक्टक key सभ केँ symbols क रूपमे पार्स करैत अछि।"
+  },
+  "extra-473": {
+    "command": "Logger tagged context",
+    "description": "सहसंबंधक लेल लॉग पंक्ति सभ मे request वा job पहचानकर्ता जोड़ैत अछि।"
+  },
+  "extra-474": {
+    "command": "ActiveSupport retry_on",
+    "description": "कॉन्फ़िगर कएल backoff रणनीतिक संग चुनल job exceptions केँ पुनः प्रयास करैत अछि।"
+  },
+  "extra-475": {
+    "command": "RSpec shared examples",
+    "description": "कतोक implementation सभ मे एकहि व्यवहारिक अनुबंधक पुनः उपयोग करैत अछि।"
+  },
+  "extra-476": {
+    "command": "Rake file task",
+    "description": "एकटा एहन task परिभाषित करैत अछि जे केवल तखने चलैत अछि जखन फाइल अनुपस्थित हो वा पूर्वापेक्षा सभसँ पुरान हो।"
+  },
+  "extra-477": {
+    "command": "Bundler deployment mode",
+    "description": "पूर्वानुमेय deployment लेआउटमे लॉक कएल dependencies इंस्टॉल करैत अछि।"
+  },
+  "extra-478": {
+    "command": "terraform providers lock",
+    "description": "चुनल प्लेटफ़ॉर्म सभक लेल provider checksums केँ dependency लॉक फाइलमे लिखैत अछि।"
+  },
+  "extra-479": {
+    "command": "terraform fmt -check",
+    "description": "जखन Terraform फाइल सभ मानक फ़ॉर्मेटिंगसँ भिन्न होइत अछि तखन विफल भ' जाइत अछि।"
+  },
+  "extra-480": {
+    "command": "terraform providers schema",
+    "description": "resource आ data-source attributes क निरीक्षणक लेल provider schemas प्रिंट करैत अछि।"
+  },
+  "extra-481": {
+    "command": "terraform graph",
+    "description": "एकटा dependency graph आउटपुट करैत अछि जे Graphviz सँ रेंडर कएल जा सकैत अछि।"
+  },
+  "extra-482": {
+    "command": "terraform state list",
+    "description": "state फाइलमे वर्तमानमे ट्रैक कएल जा रहल resource addresses क सूची दैत अछि।"
+  },
+  "extra-483": {
+    "command": "terraform state show",
+    "description": "एक resource address क लेल संग्रहित attributes देखबैत अछि।"
+  },
+  "extra-484": {
+    "command": "terraform state mv",
+    "description": "सुरक्षित कॉन्फ़िगरेशन refactor क बाद state address केँ स्थानांतरित करैत अछि।"
+  },
+  "extra-485": {
+    "command": "terraform state rm",
+    "description": "वास्तविक इन्फ्रास्ट्रक्चर केँ नष्ट कएने बिना कोनो resource केँ ट्रैक करब बंद कए दैत अछि।"
+  },
+  "extra-486": {
+    "command": "terraform import",
+    "description": "कोनो विद्यमान रिमोट ऑब्जेक्ट केँ Terraform resource address सँ जोड़ैत अछि।"
+  },
+  "extra-487": {
+    "command": "terraform force-unlock",
+    "description": "केवल ई पुष्टि कएलाक बाद पुरान state लॉक हटबैत अछि जे कोनो संचालन सक्रिय नहि अछि।"
+  },
+  "extra-488": {
+    "command": "terraform console",
+    "description": "वर्तमान कॉन्फ़िगरेशनक विरुद्ध Terraform expressions क मूल्यांकन करैत अछि।"
+  },
+  "extra-489": {
+    "command": "terraform output -raw",
+    "description": "JSON quoting क बिना एकल आउटपुट मान प्रिंट करैत अछि।"
+  },
+  "extra-490": {
+    "command": "terraform plan -target",
+    "description": "एकटा सीमित dependency खंडक योजना बनबैत अछि; एकरा पूर्ण समीक्षा योजनाक स्थान पर नहि राखबाक चाही।"
+  },
+  "extra-491": {
+    "command": "terraform apply -replace",
+    "description": "deprecated taint वर्कफ़्लोक उपयोगक बदला चुनल resource क प्रतिस्थापनक योजना बनबैत अछि।"
+  },
+  "extra-492": {
+    "command": "terraform moved block",
+    "description": "resource address परिवर्तनक घोषणा करैत अछि जाहिसँ planning क दौरान state migration होइत अछि।"
+  },
+  "extra-493": {
+    "command": "terraform check block",
+    "description": "परिणामी इन्फ्रास्ट्रक्चरक बारेमे एकटा non-blocking assertion क मूल्यांकन करैत अछि।"
+  },
+  "extra-494": {
+    "command": "terraform test",
+    "description": "mocked वा वास्तविक provider व्यवहारक संग मूल कॉन्फ़िगरेशन परीक्षण चलबैत अछि।"
+  },
+  "extra-495": {
+    "command": "terraform_data resource",
+    "description": "triggers आ provisioner migration क लेल lifecycle-सजग resource उपलब्ध करबैत अछि।"
+  },
+  "extra-496": {
+    "command": "terraform_data triggers_replace",
+    "description": "जखन चुनल मान सभ बदलैत अछि तखन terraform_data इंस्टेंस केँ बदलि दैत अछि।"
+  },
+  "extra-497": {
+    "command": "provider alias",
+    "description": "अलग-अलग खाता वा क्षेत्र सभक लेल एके provider क कतोक इंस्टेंस कॉन्फ़िगर करैत अछि।"
+  },
+  "extra-498": {
+    "command": "configuration_aliases",
+    "description": "ओहि provider aliases केँ घोषित करैत अछि जकर अपेक्षा child module अपन कॉलरसँ करैत अछि।"
+  },
+  "extra-499": {
+    "command": "sensitive output",
+    "description": "CLI आउटपुटमे आकस्मिक प्रदर्शन कम करबाक लेल कोनो output केँ संवेदनशील चिह्नित करैत अछि।"
+  },
+  "extra-500": {
+    "command": "precondition and postcondition",
+    "description": "कोनो संचालनसँ पहिने मान्यता सभक वैधता जाँचैत अछि वा resource मूल्यांकनक बाद गारंटी सुनिश्चित करैत अछि।"
+  }
+}

@@ -1,0 +1,302 @@
+[
+  {
+    "category": "Jenkins",
+    "set": 2,
+    "question": "Jenkins işlem hattını tanımlamak için hangi dosya kullanılır?",
+    "options": [
+      "Jenkinsfile",
+      "pipeline.yml",
+      "build.xml",
+      "job.conf"
+    ],
+    "answer": "Jenkinsfile"
+  },
+  {
+    "category": "Jenkins",
+    "set": 2,
+    "question": "Hangi pipeline türü yapılandırılmış bir sözdizimi kullanır?",
+    "options": [
+      "Declarative Pipeline",
+      "Scripted Pipeline",
+      "Freestyle Job",
+      "Maven Job"
+    ],
+    "answer": "Declarative Pipeline"
+  },
+  {
+    "category": "Jenkins",
+    "set": 2,
+    "question": "Hangi anahtar kelime bir Declarative Pipeline'ı başlatır?",
+    "options": [
+      "pipeline",
+      "stage",
+      "agent",
+      "steps"
+    ],
+    "answer": "pipeline"
+  },
+  {
+    "category": "Jenkins",
+    "set": 2,
+    "question": "Bildirimsel işlem hattının hangi bölümü, hattın veya aşamanın nerede yürütüleceğini belirtir?",
+    "options": [
+      "agent",
+      "node",
+      "executor",
+      "workspace"
+    ],
+    "answer": "agent"
+  },
+  {
+    "category": "Jenkins",
+    "set": 2,
+    "question": "Hangi blok birden fazla stage içerir?",
+    "options": [
+      "stages",
+      "steps",
+      "agent",
+      "tools"
+    ],
+    "answer": "stages"
+  },
+  {
+    "category": "Jenkins",
+    "set": 2,
+    "question": "Hangi blok pipeline'daki bir aşamayı temsil eder?",
+    "options": [
+      "stage",
+      "step",
+      "agent",
+      "job"
+    ],
+    "answer": "stage"
+  },
+  {
+    "category": "Jenkins",
+    "set": 2,
+    "question": "Hangi blok bir stage içinde çalıştırılan komutları içerir?",
+    "options": [
+      "steps",
+      "agent",
+      "pipeline",
+      "tools"
+    ],
+    "answer": "steps"
+  },
+  {
+    "category": "Jenkins",
+    "set": 2,
+    "question": "Hangi ifade pipeline'ı kullanılabilir herhangi bir agent üzerinde çalıştırır?",
+    "options": [
+      "agent any",
+      "node any",
+      "executor any",
+      "run any"
+    ],
+    "answer": "agent any"
+  },
+  {
+    "category": "Jenkins",
+    "set": 2,
+    "question": "Hangi blok ortam değişkenlerini tanımlar?",
+    "options": [
+      "environment",
+      "variables",
+      "env",
+      "settings"
+    ],
+    "answer": "environment"
+  },
+  {
+    "category": "Jenkins",
+    "set": 2,
+    "question": "Hangi blok pipeline çalışmasından sonraki eylemleri belirtir?",
+    "options": [
+      "post",
+      "after",
+      "cleanup",
+      "finally"
+    ],
+    "answer": "post"
+  },
+  {
+    "category": "Jenkins",
+    "set": 2,
+    "question": "Hangi koşul bloğu bir stage'in çalışıp çalışmayacağını kontrol eder?",
+    "options": [
+      "when",
+      "if",
+      "condition",
+      "runif"
+    ],
+    "answer": "when"
+  },
+  {
+    "category": "Jenkins",
+    "set": 2,
+    "question": "Hangi özellik birden fazla stage'in aynı anda çalışmasına izin verir?",
+    "options": [
+      "parallel",
+      "multi",
+      "concurrent",
+      "fork"
+    ],
+    "answer": "parallel"
+  },
+  {
+    "category": "Jenkins",
+    "set": 2,
+    "question": "Hangi adım Linux agent'larında shell komutlarını çalıştırır?",
+    "options": [
+      "sh",
+      "shell",
+      "bash",
+      "linux"
+    ],
+    "answer": "sh"
+  },
+  {
+    "category": "Jenkins",
+    "set": 2,
+    "question": "Windows toplu iş betiğini özellikle hangi işlem hattı adımı çalıştırır?",
+    "options": [
+      "bat",
+      "cmd",
+      "powershell",
+      "win"
+    ],
+    "answer": "bat"
+  },
+  {
+    "category": "Jenkins",
+    "set": 2,
+    "question": "Dizge parametresi gibi kullanıcı tarafından sağlanan derleme girdilerini hangi bildirimsel yönerge tanımlar?",
+    "options": [
+      "parameters",
+      "environment",
+      "tools",
+      "triggers"
+    ],
+    "answer": "parameters"
+  },
+  {
+    "category": "Jenkins",
+    "set": 2,
+    "question": "Jenkinsfile içinde TARGET adlı derleme parametresini hangi ifade okur?",
+    "options": [
+      "currentBuild.TARGET",
+      "scm.TARGET",
+      "agent.TARGET",
+      "params.TARGET"
+    ],
+    "answer": "params.TARGET"
+  },
+  {
+    "category": "Jenkins",
+    "set": 2,
+    "question": "İnsan onayı için yürütmeyi hangi işlem hattı adımı duraklatır?",
+    "options": [
+      "waitUntil",
+      "retry",
+      "input",
+      "sleep"
+    ],
+    "answer": "input"
+  },
+  {
+    "category": "Jenkins",
+    "set": 2,
+    "question": "JUnit biçimindeki XML test sonuçlarını hangi işlem hattı adımı yayımlar?",
+    "options": [
+      "writeFile",
+      "junit",
+      "archiveArtifacts",
+      "stash"
+    ],
+    "answer": "junit"
+  },
+  {
+    "category": "Jenkins",
+    "set": 2,
+    "question": "Eşleşen çalışma alanı dosyalarını derleme artefaktı olarak hangi işlem hattı adımı saklar?",
+    "options": [
+      "archiveArtifacts",
+      "stash",
+      "checkout",
+      "readFile"
+    ],
+    "answer": "archiveArtifacts"
+  },
+  {
+    "category": "Jenkins",
+    "set": 2,
+    "question": "İşlem hattının tamamlanma durumundan bağımsız olarak hangi post koşulu çalışır?",
+    "options": [
+      "success",
+      "failure",
+      "unstable",
+      "always"
+    ],
+    "answer": "always"
+  },
+  {
+    "category": "Jenkins",
+    "set": 2,
+    "question": "Adlandırılmış Maven kurulumu gibi araçları hangi bildirimsel yönerge yapılandırır?",
+    "options": [
+      "parameters",
+      "triggers",
+      "tools",
+      "environment"
+    ],
+    "answer": "tools"
+  },
+  {
+    "category": "Jenkins",
+    "set": 2,
+    "question": "Kendi bloğunun yürütme süresini hangi işlem hattı adımı sınırlar?",
+    "options": [
+      "waitUntil",
+      "timeout",
+      "retry",
+      "sleep"
+    ],
+    "answer": "timeout"
+  },
+  {
+    "category": "Jenkins",
+    "set": 2,
+    "question": "Kendi bloğu hata fırlattığında istenen deneme sayısına kadar bloğu hangi işlem hattı adımı yeniden çalıştırır?",
+    "options": [
+      "retry",
+      "timeout",
+      "sleep",
+      "input"
+    ],
+    "answer": "retry"
+  },
+  {
+    "category": "Jenkins",
+    "set": 2,
+    "question": "Bildirimsel steps bölümü içinde betikli işlem hattı koduna hangi blok izin verir?",
+    "options": [
+      "options",
+      "parameters",
+      "triggers",
+      "script"
+    ],
+    "answer": "script"
+  },
+  {
+    "category": "Jenkins",
+    "set": 2,
+    "question": "Bildirimsel işlem hattının en üst düzeyindeki agent none ne yapar?",
+    "options": [
+      "Tüm kabuk adımlarını otomatik olarak denetleyicide çalıştırır",
+      "Kullanılabilir tüm aracıları aynı anda ayırır",
+      "Tüm işlem hattı için genel aracı ayırmaktan kaçınır",
+      "Aşama düzeyindeki tüm aracıların çalışmasını engeller"
+    ],
+    "answer": "Tüm işlem hattı için genel aracı ayırmaktan kaçınır"
+  }
+]

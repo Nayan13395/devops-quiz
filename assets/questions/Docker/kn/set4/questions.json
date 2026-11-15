@@ -1,0 +1,302 @@
+[
+  {
+    "category": "Docker",
+    "set": 4,
+    "question": "ಯಾವ ಕಮಾಂಡ್ Docker Hub ನಿಂದ ಇಮೇಜ್ ಅನ್ನು ಡೌನ್‌ಲೋಡ್ ಮಾಡುತ್ತದೆ?",
+    "options": [
+      "docker pull",
+      "docker fetch",
+      "docker copy",
+      "docker get"
+    ],
+    "answer": "docker pull"
+  },
+  {
+    "category": "Docker",
+    "set": 4,
+    "question": "ಯಾವ ಕಮಾಂಡ್ ನಿರ್ದಿಷ್ಟ ಇಮೇಜ್ ಟ್ಯಾಗ್ ಅನ್ನು ಪುಲ್ ಮಾಡುತ್ತದೆ?",
+    "options": [
+      "docker pull image:tag",
+      "docker pull --tag tag",
+      "docker pull -t tag",
+      "docker get image:tag"
+    ],
+    "answer": "docker pull image:tag"
+  },
+  {
+    "category": "Docker",
+    "set": 4,
+    "question": "ಇಮೇಜ್ ಪದರಗಳನ್ನು ಡೌನ್‌ಲೋಡ್ ಮಾಡದೆ ಮ್ಯಾನಿಫೆಸ್ಟ್ ಪರಿಶೀಲಿಸುವ ಆಜ್ಞೆ ಯಾವುದು?",
+    "options": [
+      "docker manifest inspect",
+      "docker pull --manifest",
+      "docker image manifest",
+      "docker show manifest"
+    ],
+    "answer": "docker manifest inspect"
+  },
+  {
+    "category": "Docker",
+    "set": 4,
+    "question": "ಯಾವ ಕಮಾಂಡ್ ಇಮೇಜ್ ಡೈಜೆಸ್ಟ್‌ಗಳನ್ನು ಪಟ್ಟಿ ಮಾಡುತ್ತದೆ?",
+    "options": [
+      "docker images --digests",
+      "docker digest",
+      "docker image digest",
+      "docker inspect digest"
+    ],
+    "answer": "docker images --digests"
+  },
+  {
+    "category": "Docker",
+    "set": 4,
+    "question": "Docker Engine API 1.42 ಅಥವಾ ನಂತರದಲ್ಲಿ ಹೆಸರಿರುವವುಗಳೂ ಸೇರಿದಂತೆ ಬಳಸದ ಎಲ್ಲ ಸ್ಥಳೀಯ ವಾಲ್ಯೂಮ್ ತೆಗೆದುಹಾಕುವ ಆಜ್ಞೆ ಯಾವುದು?",
+    "options": [
+      "docker volume prune -a",
+      "docker volume clean",
+      "docker prune volumes",
+      "docker rm volume"
+    ],
+    "answer": "docker volume prune -a"
+  },
+  {
+    "category": "Docker",
+    "set": 4,
+    "question": "ಬಳಸದ ಕಸ್ಟಮ್ Docker ನೆಟ್‌ವರ್ಕ್‌ಗಳನ್ನು ತೆಗೆದುಹಾಕುವ ಆಜ್ಞೆ ಯಾವುದು?",
+    "options": [
+      "docker network prune",
+      "docker prune network",
+      "docker clean network",
+      "docker rm network"
+    ],
+    "answer": "docker network prune"
+  },
+  {
+    "category": "Docker",
+    "set": 4,
+    "question": "ಆಯ್ದ Buildx ಬಿಲ್ಡರ್‌ನ ಬಿಲ್ಡ್-ಕ್ಯಾಶ್ ಡಿಸ್ಕ್ ಬಳಕೆ ತೋರಿಸುವ ಆಜ್ಞೆ ಯಾವುದು?",
+    "options": [
+      "docker buildx du",
+      "docker build cache",
+      "docker cache usage",
+      "docker builder stats"
+    ],
+    "answer": "docker buildx du"
+  },
+  {
+    "category": "Docker",
+    "set": 4,
+    "question": "ಯಾವ ಕಮಾಂಡ್ ಬಳಕೆಯಾಗದ ಬಿಲ್ಡ್ ಕ್ಯಾಶ್ ಅನ್ನು ತೆಗೆದುಹಾಕುತ್ತದೆ?",
+    "options": [
+      "docker builder prune",
+      "docker build clean",
+      "docker cache prune",
+      "docker prune build"
+    ],
+    "answer": "docker builder prune"
+  },
+  {
+    "category": "Docker",
+    "set": 4,
+    "question": "ಸೂಕ್ತ --platform ಪಟ್ಟಿ ಮತ್ತು ಬಿಲ್ಡರ್ ನೀಡಿದಾಗ ಬಹು-ಪ್ಲಾಟ್‌ಫಾರ್ಮ್ ಇಮೇಜ್ ನಿರ್ಮಿಸುವ ಆಜ್ಞೆ ಯಾವುದು?",
+    "options": [
+      "docker buildx build",
+      "docker build multi",
+      "docker build platform",
+      "docker image buildx"
+    ],
+    "answer": "docker buildx build"
+  },
+  {
+    "category": "Docker",
+    "set": 4,
+    "question": "ಯಾವ ಕಮಾಂಡ್ ಲಭ್ಯವಿರುವ Buildx ಬಿಲ್ಡರ್‌ಗಳನ್ನು ಪಟ್ಟಿ ಮಾಡುತ್ತದೆ?",
+    "options": [
+      "docker buildx ls",
+      "docker buildx show",
+      "docker builder ls",
+      "docker buildx list"
+    ],
+    "answer": "docker buildx ls"
+  },
+  {
+    "category": "Docker",
+    "set": 4,
+    "question": "ಯಾವ ಕಮಾಂಡ್ ಎಲ್ಲಾ Docker ಕಾಂಟೆಕ್ಸ್ಟ್‌ಗಳನ್ನು ತೋರಿಸುತ್ತದೆ?",
+    "options": [
+      "docker context ls",
+      "docker contexts",
+      "docker context show",
+      "docker list context"
+    ],
+    "answer": "docker context ls"
+  },
+  {
+    "category": "Docker",
+    "set": 4,
+    "question": "ಯಾವ ಕಮಾಂಡ್ ಬೇರೆ Docker ಕಾಂಟೆಕ್ಸ್ಟ್‌ಗೆ ಬದಲಾಯಿಸುತ್ತದೆ?",
+    "options": [
+      "docker context use",
+      "docker context switch",
+      "docker use context",
+      "docker context select"
+    ],
+    "answer": "docker context use"
+  },
+  {
+    "category": "Docker",
+    "set": 4,
+    "question": "ಯಾವ ಕಮಾಂಡ್ Docker ಕಾಂಟೆಕ್ಸ್ಟ್ ಅನ್ನು ತೆಗೆದುಹಾಕುತ್ತದೆ?",
+    "options": [
+      "docker context rm",
+      "docker context inspect",
+      "docker remove context",
+      "docker context use"
+    ],
+    "answer": "docker context rm"
+  },
+  {
+    "category": "Docker",
+    "set": 4,
+    "question": "ಯಾವ Dockerfile ಇನ್‌ಸ್ಟ್ರಕ್ಷನ್ ಬೇಸ್ ಇಮೇಜ್ ಅನ್ನು ನಿರ್ದಿಷ್ಟಪಡಿಸುತ್ತದೆ?",
+    "options": [
+      "FROM",
+      "BASE",
+      "IMAGE",
+      "START"
+    ],
+    "answer": "FROM"
+  },
+  {
+    "category": "Docker",
+    "set": 4,
+    "question": "ಯಾವ Dockerfile ಇನ್‌ಸ್ಟ್ರಕ್ಷನ್ ಎನ್ವಿರಾನ್‌ಮೆಂಟ್ ವೇರಿಯಬಲ್‌ಗಳನ್ನು ಹೊಂದಿಸುತ್ತದೆ?",
+    "options": [
+      "ENV",
+      "SET",
+      "VAR",
+      "EXPORT"
+    ],
+    "answer": "ENV"
+  },
+  {
+    "category": "Docker",
+    "set": 4,
+    "question": "Compose ಫೈಲ್‌ನ ಸೇವೆಗಳನ್ನು ಹಿನ್ನೆಲೆಯಲ್ಲಿ ಆರಂಭಿಸುವ ಆಜ್ಞೆ ಯಾವುದು?",
+    "options": [
+      "docker compose up -d",
+      "docker compose create",
+      "docker compose config",
+      "docker compose down"
+    ],
+    "answer": "docker compose up -d"
+  },
+  {
+    "category": "Docker",
+    "set": 4,
+    "question": "ಅಪ್ಲಿಕೇಶನ್ ಸೇವಾ ವ್ಯಾಖ್ಯಾನಗಳನ್ನು ಹೊಂದಿರುವ ಮೇಲ್ಮಟ್ಟದ Compose ಕೀ ಯಾವುದು?",
+    "options": [
+      "volumes",
+      "networks",
+      "configs",
+      "services"
+    ],
+    "answer": "services"
+  },
+  {
+    "category": "Docker",
+    "set": 4,
+    "question": "ಪರಿಹರಿಸಿದ Compose ಸಂರಚನೆ ರಚಿಸಿ ಪರಿಶೀಲಿಸುವ ಆಜ್ಞೆ ಯಾವುದು?",
+    "options": [
+      "docker compose images",
+      "docker compose top",
+      "docker compose config",
+      "docker compose ps"
+    ],
+    "answer": "docker compose config"
+  },
+  {
+    "category": "Docker",
+    "set": 4,
+    "question": "--volumes ಇಲ್ಲದೆ 'docker compose down' ಸಾಮಾನ್ಯವಾಗಿ ಏನು ಮಾಡುತ್ತದೆ?",
+    "options": [
+      "Compose ಸಂರಚನಾ ಫೈಲ್ ಮಾತ್ರ ತೆಗೆದುಹಾಕುತ್ತದೆ",
+      "ಹೆಸರಿರುವ ವಾಲ್ಯೂಮ್ ಉಳಿಸಿ ಯೋಜನೆಯ ಕಂಟೇನರ್ ಮತ್ತು ನೆಟ್‌ವರ್ಕ್ ತೆಗೆದುಹಾಕುತ್ತದೆ",
+      "ಹೋಸ್ಟ್‌ನ ಎಲ್ಲ ಇಮೇಜ್ ಮತ್ತು ವಾಲ್ಯೂಮ್ ಅಳಿಸುತ್ತದೆ",
+      "ಕಂಟೇನರ್ ತೆಗೆದುಹಾಕದೆ ವಿರಾಮಗೊಳಿಸುತ್ತದೆ"
+    ],
+    "answer": "ಹೆಸರಿರುವ ವಾಲ್ಯೂಮ್ ಉಳಿಸಿ ಯೋಜನೆಯ ಕಂಟೇನರ್ ಮತ್ತು ನೆಟ್‌ವರ್ಕ್ ತೆಗೆದುಹಾಕುತ್ತದೆ"
+  },
+  {
+    "category": "Docker",
+    "set": 4,
+    "question": "Composeನ depends_on service_healthy ಬಳಸಿದಾಗ ಅವಲಂಬಿತ ಸೇವೆ ಆರಂಭವಾಗುವ ಮೊದಲು ಏನಾಗಬೇಕು?",
+    "options": [
+      "ಆಧಾರ ಸೇವೆಯ ಸಂರಚಿಸಿದ ಆರೋಗ್ಯ ಪರೀಕ್ಷೆ ಯಶಸ್ವಿಯಾಗಬೇಕು",
+      "ಆಧಾರ ಸೇವೆ ಯಶಸ್ವಿಯಾಗಿ ನಿರ್ಗಮಿಸಬೇಕು",
+      "ತೆರೆದ ಪ್ರತಿ ಪೋರ್ಟ್ ಹೋಸ್ಟ್‌ನಲ್ಲಿ ಪ್ರಕಟವಾಗಬೇಕು",
+      "ಆಧಾರ ಸೇವೆಯ ಇಮೇಜ್ ರಿಜಿಸ್ಟ್ರಿಗೆ ಪುಶ್ ಆಗಬೇಕು"
+    ],
+    "answer": "ಆಧಾರ ಸೇವೆಯ ಸಂರಚಿಸಿದ ಆರೋಗ್ಯ ಪರೀಕ್ಷೆ ಯಶಸ್ವಿಯಾಗಬೇಕು"
+  },
+  {
+    "category": "Docker",
+    "set": 4,
+    "question": "linux/amd64 ಮತ್ತು linux/arm64ನಂತಹ ಗುರಿ ಪ್ಲಾಟ್‌ಫಾರ್ಮ್‌ಗಳನ್ನು ಸೂಚಿಸುವ Buildx ಆಯ್ಕೆ ಯಾವುದು?",
+    "options": [
+      "--target",
+      "--builder",
+      "--progress",
+      "--platform"
+    ],
+    "answer": "--platform"
+  },
+  {
+    "category": "Docker",
+    "set": 4,
+    "question": "ಹೆಸರಿರುವ Dockerfile ಹಂತವನ್ನು ಬಿಲ್ಡ್ ಗುರಿಯಾಗಿ ಆರಿಸುವ Buildx ಆಯ್ಕೆ ಯಾವುದು?",
+    "options": [
+      "--tag",
+      "--file",
+      "--target",
+      "--platform"
+    ],
+    "answer": "--target"
+  },
+  {
+    "category": "Docker",
+    "set": 4,
+    "question": "ಬಿಲ್ಡ್ ಫಲಿತಾಂಶವನ್ನು ನೇರವಾಗಿ ರಿಜಿಸ್ಟ್ರಿಗೆ ಪುಶ್ ಮಾಡುವ Buildx ಬಿಲ್ಡ್ ಆಯ್ಕೆ ಯಾವುದು?",
+    "options": [
+      "--pull",
+      "--push",
+      "--load",
+      "--no-cache"
+    ],
+    "answer": "--push"
+  },
+  {
+    "category": "Docker",
+    "set": 4,
+    "question": "ಇಮೇಜ್ ಬಿಲ್ಡ್ ಮಾಡುವಾಗ '--no-cache' Dockerಗೆ ಏನು ಮಾಡಲು ಹೇಳುತ್ತದೆ?",
+    "options": [
+      "ಕ್ಯಾಶ್ ಮಾಡಿದ ಬಿಲ್ಡ್ ಫಲಿತಾಂಶಗಳನ್ನು ಮರುಬಳಸಬಾರದು",
+      "ಪ್ರತಿ ಸ್ಥಳೀಯ ಇಮೇಜ್ ತೆಗೆದುಹಾಕಬೇಕು",
+      "ಕಂಟೇನರ್‌ನ ರನ್‌ಟೈಮ್ ಫೈಲ್‌ಸಿಸ್ಟಮ್ ಕ್ಯಾಶ್ ನಿಷ್ಕ್ರಿಯಗೊಳಿಸಬೇಕು",
+      "ಮೂಲ ಇಮೇಜ್ ಡೌನ್‌ಲೋಡ್ ಬಿಟ್ಟುಬಿಡಬೇಕು"
+    ],
+    "answer": "ಕ್ಯಾಶ್ ಮಾಡಿದ ಬಿಲ್ಡ್ ಫಲಿತಾಂಶಗಳನ್ನು ಮರುಬಳಸಬಾರದು"
+  },
+  {
+    "category": "Docker",
+    "set": 4,
+    "question": "ಹೆಸರಿರುವ Docker ವಾಲ್ಯೂಮ್ ವಿವರ ತೋರಿಸುವ ಆಜ್ಞೆ ಯಾವುದು?",
+    "options": [
+      "docker volume ls",
+      "docker volume create data",
+      "docker volume prune",
+      "docker volume inspect data"
+    ],
+    "answer": "docker volume inspect data"
+  }
+]

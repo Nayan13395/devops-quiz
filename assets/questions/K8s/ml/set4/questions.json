@@ -1,0 +1,302 @@
+[
+  {
+    "category": "Kubernetes",
+    "set": 4,
+    "question": "ഒരു ഡിപ്ലോയ്മെന്റ് സ്കെയിൽ ചെയ്യുന്ന കമാൻഡ് ഏതാണ്?",
+    "options": [
+      "kubectl scale deployment",
+      "kubectl resize deployment",
+      "kubectl expand deployment",
+      "kubectl increase deployment"
+    ],
+    "answer": "kubectl scale deployment"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 4,
+    "question": "ഒരു ഡിപ്ലോയ്മെന്റ് 5 റെപ്ലിക്കകളിലേക്ക് സ്കെയിൽ ചെയ്യുന്ന കമാൻഡ് ഏതാണ്?",
+    "options": [
+      "kubectl scale deployment --replicas=5",
+      "kubectl replicas 5",
+      "kubectl expand deployment",
+      "kubectl set replicas"
+    ],
+    "answer": "kubectl scale deployment --replicas=5"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 4,
+    "question": "ഒരു ഡിപ്ലോയ്മെന്റ് റീസ്റ്റാർട്ട് ചെയ്യുന്ന കമാൻഡ് ഏതാണ്?",
+    "options": [
+      "kubectl rollout restart deployment",
+      "kubectl restart deployment",
+      "kubectl deployment restart",
+      "kubectl reload deployment"
+    ],
+    "answer": "kubectl rollout restart deployment"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 4,
+    "question": "ഒരു ഡിപ്ലോയ്മെന്റിന്റെ റോൾഔട്ട് സ്റ്റാറ്റസ് പരിശോധിക്കുന്ന കമാൻഡ് ഏതാണ്?",
+    "options": [
+      "kubectl rollout status",
+      "kubectl deployment status",
+      "kubectl rollout check",
+      "kubectl get rollout"
+    ],
+    "answer": "kubectl rollout status"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 4,
+    "question": "ഒരു ഡിപ്ലോയ്മെന്റ് റോൾ ബാക്ക് ചെയ്യുന്ന കമാൻഡ് ഏതാണ്?",
+    "options": [
+      "kubectl rollout undo",
+      "kubectl rollback",
+      "kubectl undo deployment",
+      "kubectl deployment rollback"
+    ],
+    "answer": "kubectl rollout undo"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 4,
+    "question": "റോൾഔട്ട് ഹിസ്റ്ററി പ്രദർശിപ്പിക്കുന്ന കമാൻഡ് ഏതാണ്?",
+    "options": [
+      "kubectl rollout history",
+      "kubectl history",
+      "kubectl deployment history",
+      "kubectl show rollout"
+    ],
+    "answer": "kubectl rollout history"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 4,
+    "question": "ഒരു ഡിപ്ലോയ്മെന്റ് റോൾഔട്ട് താൽക്കാലികമായി നിർത്തുന്ന കമാൻഡ് ഏതാണ്?",
+    "options": [
+      "kubectl rollout pause",
+      "kubectl pause deployment",
+      "kubectl stop rollout",
+      "kubectl hold deployment"
+    ],
+    "answer": "kubectl rollout pause"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 4,
+    "question": "താൽക്കാലികമായി നിർത്തിയ ഡിപ്ലോയ്മെന്റ് റോൾഔട്ട് പുനരാരംഭിക്കുന്ന കമാൻഡ് ഏതാണ്?",
+    "options": [
+      "kubectl rollout resume",
+      "kubectl resume deployment",
+      "kubectl continue rollout",
+      "kubectl restart rollout"
+    ],
+    "answer": "kubectl rollout resume"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 4,
+    "question": "നിലവിലെ Podകൾ പുറത്താക്കാൻ ശ്രമിക്കാതെ നോഡിൽ പുതിയവ ഷെഡ്യൂൾ ചെയ്യാനാകാത്തതായി അടയാളപ്പെടുത്തുന്ന കമാൻഡ് ഏതാണ്?",
+    "options": [
+      "kubectl cordon",
+      "kubectl uncordon",
+      "kubectl get node",
+      "kubectl describe node"
+    ],
+    "answer": "kubectl cordon"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 4,
+    "question": "ഒരു നോഡിൽ നിന്ന് വർക്ക്‌ലോഡുകൾ സുരക്ഷിതമായി ഒഴിപ്പിക്കുന്ന കമാൻഡ് ഏതാണ്?",
+    "options": [
+      "kubectl drain",
+      "kubectl cordon",
+      "kubectl delete node",
+      "kubectl migrate"
+    ],
+    "answer": "kubectl drain"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 4,
+    "question": "ഒരു നോഡിനെ വീണ്ടും ഷെഡ്യൂൾ ചെയ്യാവുന്നതാക്കുന്ന കമാൻഡ് ഏതാണ്?",
+    "options": [
+      "kubectl uncordon",
+      "kubectl enable",
+      "kubectl restart",
+      "kubectl activate"
+    ],
+    "answer": "kubectl uncordon"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 4,
+    "question": "നോഡിന്റെ വിശദമായ വിവരങ്ങൾ പ്രദർശിപ്പിക്കുന്ന കമാൻഡ് ഏതാണ്?",
+    "options": [
+      "kubectl describe node",
+      "kubectl inspect node",
+      "kubectl info node",
+      "kubectl node show"
+    ],
+    "answer": "kubectl describe node"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 4,
+    "question": "ഒരു ലോക്കൽ പോർട്ട് ഒരു പോഡിലേക്ക് ഫോർവേഡ് ചെയ്യുന്ന കമാൻഡ് ഏതാണ്?",
+    "options": [
+      "kubectl port-forward",
+      "kubectl tunnel",
+      "kubectl expose",
+      "kubectl connect"
+    ],
+    "answer": "kubectl port-forward"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 4,
+    "question": "ഒരു പോഡിലേക്കോ പോഡിൽ നിന്നോ ഫയലുകൾ പകർത്തുന്ന കമാൻഡ് ഏതാണ്?",
+    "options": [
+      "kubectl cp",
+      "kubectl copy",
+      "kubectl transfer",
+      "kubectl sync"
+    ],
+    "answer": "kubectl cp"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 4,
+    "question": "പ്രവർത്തിക്കുന്ന ഒരു പോഡിന്റെ YAML നിർവചനം പ്രദർശിപ്പിക്കുന്ന കമാൻഡ് ഏതാണ്?",
+    "options": [
+      "kubectl get pod -o yaml",
+      "kubectl show pod yaml",
+      "kubectl export pod",
+      "kubectl pod yaml"
+    ],
+    "answer": "kubectl get pod -o yaml"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 4,
+    "question": "site Deploymentലെ web കണ്ടെയ്നറിന്റെ ഇമേജ് nginx:1.27 ആക്കുന്ന കമാൻഡ് ഏതാണ്?",
+    "options": [
+      "kubectl set image deployment/site web=nginx:1.27",
+      "kubectl set env deployment/site web=nginx:1.27",
+      "kubectl annotate deployment/site web=nginx:1.27",
+      "kubectl label deployment/site web=nginx:1.27"
+    ],
+    "answer": "kubectl set image deployment/site web=nginx:1.27"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 4,
+    "question": "മാറ്റം പ്രയോഗിക്കാതെ മാനിഫെസ്റ്റിനെ നിലവിലെ കോൺഫിഗറേഷനുമായി താരതമ്യം ചെയ്യുന്ന കമാൻഡ് ഏതാണ്?",
+    "options": [
+      "kubectl apply -f app.yaml",
+      "kubectl replace -f app.yaml",
+      "kubectl delete -f app.yaml",
+      "kubectl diff -f app.yaml"
+    ],
+    "answer": "kubectl diff -f app.yaml"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 4,
+    "question": "ആവശ്യപ്പെട്ട റിസോഴ്സ് സ്ഥിരമായി സൂക്ഷിക്കാതെ API സർവറിൽ പരീക്ഷണ നിർവഹണം ചെയ്യുന്ന kubectl ഓപ്ഷൻ ഏതാണ്?",
+    "options": [
+      "--validate=false",
+      "--force",
+      "--dry-run=server",
+      "--dry-run=client"
+    ],
+    "answer": "--dry-run=server"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 4,
+    "question": "api Pod Ready ആകാൻ പരമാവധി 60 സെക്കൻഡ് കാത്തിരിക്കുന്ന കമാൻഡ് ഏതാണ്?",
+    "options": [
+      "kubectl get pod api --request-timeout=60s",
+      "kubectl wait --for=condition=Ready pod/api --timeout=60s",
+      "kubectl wait --for=delete pod/api --timeout=60s",
+      "kubectl logs api --since=60s"
+    ],
+    "answer": "kubectl wait --for=condition=Ready pod/api --timeout=60s"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 4,
+    "question": "ഘട്ടംഘട്ടമായ അപ്‌ഡേറ്റിനിടെ എത്ര പകർപ്പുകൾ ലഭ്യമല്ലാതാകാം എന്നു പരിമിതപ്പെടുത്തുന്ന Deployment ക്രമീകരണം ഏതാണ്?",
+    "options": [
+      "maxUnavailable",
+      "maxSurge",
+      "revisionHistoryLimit",
+      "progressDeadlineSeconds"
+    ],
+    "answer": "maxUnavailable"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 4,
+    "question": "ഘട്ടംഘട്ടമായ അപ്‌ഡേറ്റിനിടെ ആവശ്യമായ പകർപ്പുകളുടെ എണ്ണത്തേക്കാൾ അധികം താൽക്കാലിക Podകൾ അനുവദിക്കുന്ന Deployment ക്രമീകരണം ഏതാണ്?",
+    "options": [
+      "maxUnavailable",
+      "minReadySeconds",
+      "revisionHistoryLimit",
+      "maxSurge"
+    ],
+    "answer": "maxSurge"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 4,
+    "question": "തിരഞ്ഞെടുത്ത Podകളിൽ ഒരേസമയം ഉണ്ടാക്കുന്ന ഐച്ഛിക തടസ്സങ്ങൾ പരിമിതപ്പെടുത്തുന്ന റിസോഴ്സ് ഏതാണ്?",
+    "options": [
+      "LimitRange",
+      "NetworkPolicy",
+      "PodDisruptionBudget",
+      "ResourceQuota"
+    ],
+    "answer": "PodDisruptionBudget"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 4,
+    "question": "നിരീക്ഷിച്ച അളവുകൾ അടിസ്ഥാനമാക്കി വർക്ക്‌ലോഡ് പകർപ്പുകളുടെ എണ്ണം ക്രമീകരിക്കുന്ന കൺട്രോളർ ഏതാണ്?",
+    "options": [
+      "CronJob",
+      "HorizontalPodAutoscaler",
+      "ReplicaSet",
+      "DaemonSet"
+    ],
+    "answer": "HorizontalPodAutoscaler"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 4,
+    "question": "kubectl topന് CPUയും മെമ്മറി ഉപയോഗവും കാണിക്കാൻ എന്ത് ലഭ്യമായിരിക്കണം?",
+    "options": [
+      "സാധാരണയായി Metrics Server നൽകുന്ന റിസോഴ്സ് അളവുകളുടെ API",
+      "ഓരോ നെയിംസ്പേസിനും Ingress കൺട്രോളർ",
+      "ബ്ലോക്ക് ഉപകരണമുള്ള ഡിഫോൾട്ട് StorageClass",
+      "ഓരോ Podനും LoadBalancer Service"
+    ],
+    "answer": "സാധാരണയായി Metrics Server നൽകുന്ന റിസോഴ്സ് അളവുകളുടെ API"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 4,
+    "question": "ബന്ധിപ്പിച്ച ക്ലസ്റ്റർ പിന്തുണയ്ക്കുന്ന API റിസോഴ്സ് തരങ്ങൾ കാണിക്കുന്ന കമാൻഡ് ഏതാണ്?",
+    "options": [
+      "kubectl api-versions",
+      "kubectl cluster-info",
+      "kubectl config view",
+      "kubectl api-resources"
+    ],
+    "answer": "kubectl api-resources"
+  }
+]

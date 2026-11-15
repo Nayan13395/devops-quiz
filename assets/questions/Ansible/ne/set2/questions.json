@@ -1,0 +1,302 @@
+[
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "प्लेबुकमा चर परिभाषित गर्न कुन कुञ्जी शब्द प्रयोग गरिन्छ?",
+    "options": [
+      "vars",
+      "variables",
+      "var",
+      "define"
+    ],
+    "answer": "vars"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "चर सन्दर्भ गर्न कुन वाक्यविन्यास प्रयोग गरिन्छ?",
+    "options": [
+      "{{ variable_name }}",
+      "$(variable_name)",
+      "${variable_name}",
+      "[variable_name]"
+    ],
+    "answer": "{{ variable_name }}"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "कार्यान्वयनको क्रममा सन्देशहरू प्रदर्शन गर्न कुन मोड्युल प्रयोग गरिन्छ?",
+    "options": [
+      "debug",
+      "print",
+      "echo",
+      "message"
+    ],
+    "answer": "debug"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "सशर्त कार्यान्वयनको लागि कुन कुञ्जी शब्द प्रयोग गरिन्छ?",
+    "options": [
+      "when",
+      "if",
+      "condition",
+      "check"
+    ],
+    "answer": "when"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "कार्य दोहोर्याउन कुन कुञ्जी शब्द प्रयोग गरिन्छ?",
+    "options": [
+      "loop",
+      "repeat",
+      "iterate",
+      "for"
+    ],
+    "answer": "loop"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "पूर्वनिर्धारित रूपमा, लुपको हालको तत्व कुन चलमा हुन्छ?",
+    "options": [
+      "item",
+      "loopitem",
+      "current",
+      "value"
+    ],
+    "answer": "item"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "कुन मोड्युलले Jinja2 टेम्प्लेटबाट फाइलहरू सिर्जना गर्छ?",
+    "options": [
+      "template",
+      "copy",
+      "render",
+      "jinja"
+    ],
+    "answer": "template"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "कुन टेम्प्लेटिंग इन्जिन Ansible प्रयोग गर्दछ?",
+    "options": [
+      "Jinja2",
+      "Mustache",
+      "Velocity",
+      "Smarty"
+    ],
+    "answer": "Jinja2"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "कुन किवर्डले कार्य आउटपुटलाई चलमा दर्ता गर्छ?",
+    "options": [
+      "register",
+      "save",
+      "output",
+      "store"
+    ],
+    "answer": "register"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "कार्यले असफल नतिजा फर्काएपछि पनि अगाडि बढ्न दिने तर वाक्यरचना वा जडानका त्रुटिहरू नलुकाउने किवर्ड कुन हो?",
+    "options": [
+      "ignore_errors",
+      "skip_errors",
+      "continue",
+      "ignore_failures"
+    ],
+    "answer": "ignore_errors"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "सूचना प्राप्त हुँदा मात्र कार्यहरू कार्यान्वयन गर्न कुन कुञ्जी शब्द प्रयोग गरिन्छ?",
+    "options": [
+      "handlers",
+      "notify",
+      "trigger",
+      "events"
+    ],
+    "answer": "handlers"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "कुन किवर्डले ह्यान्डलरलाई ट्रिगर गर्छ?",
+    "options": [
+      "notify",
+      "handler",
+      "alert",
+      "call"
+    ],
+    "answer": "notify"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "कुन कीवर्डले अर्को प्लेबुक आयात गर्छ?",
+    "options": [
+      "import_playbook",
+      "include_playbook",
+      "load_playbook",
+      "playbook"
+    ],
+    "answer": "import_playbook"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "कुन किवर्डले चयनात्मक कार्यान्वयनका लागि कार्यहरूलाई ट्याग गर्छ?",
+    "options": [
+      "tags",
+      "labels",
+      "groups",
+      "filter"
+    ],
+    "answer": "tags"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "कुन विकल्पले विशेष ट्यागहरूसँग मात्र कार्यहरू चलाउँछ?",
+    "options": [
+      "--tags",
+      "--skip-tags",
+      "--limit",
+      "--list-tags"
+    ],
+    "answer": "--tags"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "परिवर्तन भएको रिपोर्ट गर्न अनुकूल सर्त परिभाषित गर्ने कार्य किवर्ड कुन हो?",
+    "options": [
+      "changed_when",
+      "failed_when",
+      "until",
+      "when"
+    ],
+    "answer": "changed_when"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "असफलता रिपोर्ट गर्न अनुकूल सर्त परिभाषित गर्ने कार्य किवर्ड कुन हो?",
+    "options": [
+      "changed_when",
+      "retries",
+      "delay",
+      "failed_when"
+    ],
+    "answer": "failed_when"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "पुनः प्रयासहरूको क्रममा सत्य हुनुपर्ने सर्त कुन कार्य किवर्डले तोक्छ?",
+    "options": [
+      "loop",
+      "notify",
+      "until",
+      "when"
+    ],
+    "answer": "until"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "हालको होस्टका लागि नाम भएका चलहरू फाइलबाट लोड गर्नुको सट्टा कार्यले दिएका मानहरूबाट सीधै परिभाषित गर्ने मोड्युल कुन हो?",
+    "options": [
+      "ansible.builtin.add_host",
+      "ansible.builtin.set_fact",
+      "ansible.builtin.setup",
+      "ansible.builtin.include_vars"
+    ],
+    "answer": "ansible.builtin.set_fact"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "result को रूपमा दर्ता गरिएको कार्यको मानक आउटपुट कुन अभिव्यक्तिले प्राप्त गर्छ?",
+    "options": [
+      "result.stdout",
+      "result.stderr",
+      "result.rc",
+      "result.changed"
+    ],
+    "answer": "result.stdout"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "चल परिभाषित गरिएको छ कि छैन भनेर कुन Jinja2 परीक्षणले जाँच्छ?",
+    "options": [
+      "is none",
+      "is string",
+      "is sequence",
+      "is defined"
+    ],
+    "answer": "is defined"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "निर्देशन र त्रुटि व्यवस्थापन साझा गर्न मिल्ने गरी कार्यहरूलाई समूहमा राख्ने Ansible किवर्ड कुन हो?",
+    "options": [
+      "roles",
+      "handlers",
+      "block",
+      "loop"
+    ],
+    "answer": "block"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "कार्यले सामान्यतया आफ्ना notify सूचनाहरू कहिले पठाउँछ?",
+    "options": [
+      "प्लेबुक सुरु हुँदा मात्र",
+      "सफलतापूर्वक पूरा भएर परिवर्तन भएको रिपोर्ट गर्दा",
+      "कुनै सर्तका कारण कार्य छोडिने हरेक पटक",
+      "यसको मोड्युलले परिवर्तन नभएको रिपोर्ट गर्ने हरेक पटक"
+    ],
+    "answer": "सफलतापूर्वक पूरा भएर परिवर्तन भएको रिपोर्ट गर्दा"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "लुपको हालको तत्व जनाउने चलको नाम server बनाउने सेटिङ कुन हो?",
+    "options": [
+      "loop_control: {loop_var: server}",
+      "loop_control: {label: server}",
+      "loop_control: {index_var: server}",
+      "loop_control: {pause: 1}"
+    ],
+    "answer": "loop_control: {loop_var: server}"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "उच्च प्राथमिकता भएका अतिरिक्त चलहरू दिने कमान्ड-लाइन विकल्प कुन हो?",
+    "options": [
+      "--tags",
+      "--limit",
+      "--start-at-task",
+      "--extra-vars"
+    ],
+    "answer": "--extra-vars"
+  }
+]

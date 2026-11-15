@@ -1,0 +1,302 @@
+[
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "¿Qué componente programa los pods en los nodos?",
+    "options": [
+      "kube-scheduler",
+      "kubelet",
+      "etcd",
+      "kube-proxy"
+    ],
+    "answer": "kube-scheduler"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "¿Qué componente se ejecuta en cada nodo?",
+    "options": [
+      "kubelet",
+      "etcd",
+      "kube-apiserver",
+      "controller-manager"
+    ],
+    "answer": "kubelet"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "¿Qué componente actúa como el front-end del plano de control?",
+    "options": [
+      "kube-apiserver",
+      "kubelet",
+      "etcd",
+      "kube-proxy"
+    ],
+    "answer": "kube-apiserver"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "¿Qué componente almacena el estado del clúster?",
+    "options": [
+      "etcd",
+      "kubelet",
+      "CoreDNS",
+      "Ingress"
+    ],
+    "answer": "etcd"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "¿Qué componente gestiona las reglas de red en los nodos?",
+    "options": [
+      "kube-proxy",
+      "kubelet",
+      "etcd",
+      "Scheduler"
+    ],
+    "answer": "kube-proxy"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "¿Qué servicio DNS se usa comúnmente en Kubernetes?",
+    "options": [
+      "CoreDNS",
+      "Bind",
+      "Route53",
+      "Consul"
+    ],
+    "answer": "CoreDNS"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "¿Qué objeto es la unidad desplegable más pequeña en Kubernetes?",
+    "options": [
+      "Pod",
+      "Cluster",
+      "Node",
+      "Service"
+    ],
+    "answer": "Pod"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "¿Qué objeto gestiona aplicaciones sin estado?",
+    "options": [
+      "Deployment",
+      "ConfigMap",
+      "Secret",
+      "Namespace"
+    ],
+    "answer": "Deployment"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "¿Qué carga de trabajo proporciona identidades estables de Pods y un despliegue ordenado para aplicaciones con estado?",
+    "options": [
+      "StatefulSet",
+      "Deployment",
+      "ReplicaSet",
+      "DaemonSet"
+    ],
+    "answer": "StatefulSet"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "¿Qué objeto garantiza que se esté ejecutando un número especificado de réplicas de pods?",
+    "options": [
+      "ReplicaSet",
+      "Service",
+      "ConfigMap",
+      "Namespace"
+    ],
+    "answer": "ReplicaSet"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "¿Qué objeto expone los pods al tráfico de red?",
+    "options": [
+      "Service",
+      "Node",
+      "ReplicaSet",
+      "Volume"
+    ],
+    "answer": "Service"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "¿Qué objeto gestiona el acceso externo a los servicios?",
+    "options": [
+      "Ingress",
+      "Pod",
+      "ReplicaSet",
+      "Secret"
+    ],
+    "answer": "Ingress"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "¿Qué objeto almacena datos de configuración?",
+    "options": [
+      "ConfigMap",
+      "Deployment",
+      "Ingress",
+      "Node"
+    ],
+    "answer": "ConfigMap"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "¿Qué objeto almacena información sensible como contraseñas?",
+    "options": [
+      "Secret",
+      "ConfigMap",
+      "Service",
+      "Namespace"
+    ],
+    "answer": "Secret"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "¿Qué objeto proporciona almacenamiento persistente a los pods?",
+    "options": [
+      "PersistentVolume",
+      "ReplicaSet",
+      "Namespace",
+      "Service"
+    ],
+    "answer": "PersistentVolume"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "¿Qué sonda determina si un contenedor está preparado para recibir tráfico del Service?",
+    "options": [
+      "Sonda de mantenimiento de conexión TCP",
+      "Sonda de readiness",
+      "Sonda de liveness",
+      "Sonda de arranque"
+    ],
+    "answer": "Sonda de readiness"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "¿Qué puede ocurrir cuando una sonda de actividad falla repetidamente más allá de su umbral configurado?",
+    "options": [
+      "El kubelet reinicia ese contenedor según su política de reinicio",
+      "El planificador mueve todos los Pods a un nodo nuevo",
+      "El servidor de API elimina el Deployment",
+      "El Service se convierte en un Service ExternalName"
+    ],
+    "answer": "El kubelet reinicia ese contenedor según su política de reinicio"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "¿Qué hace una sonda de arranque mientras la aplicación todavía se está iniciando?",
+    "options": [
+      "Desactiva todos los límites de recursos del contenedor",
+      "Impide que se descargue la imagen",
+      "Reserva un nodo dedicado del plano de control",
+      "Retrasa las sondas de actividad y preparación hasta que la sonda de arranque tiene éxito"
+    ],
+    "answer": "Retrasa las sondas de actividad y preparación hasta que la sonda de arranque tiene éxito"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "¿Qué es cierto sobre los contenedores de inicialización ordinarios de un Pod?",
+    "options": [
+      "Deben exponer un puerto de Service",
+      "Siempre se ejecutan en nodos separados",
+      "Se ejecutan hasta terminar, por orden, antes de que arranquen los contenedores de aplicación",
+      "Todos se ejecutan únicamente después de que terminen los contenedores de aplicación"
+    ],
+    "answer": "Se ejecutan hasta terminar, por orden, antes de que arranquen los contenedores de aplicación"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "¿Qué recursos comparten normalmente los contenedores de un mismo Pod?",
+    "options": [
+      "Una IP de Service separada para cada contenedor",
+      "Un espacio de nombres de red y una dirección IP de Pod",
+      "Un sistema de archivos raíz escribible",
+      "Un nodo distinto para cada contenedor"
+    ],
+    "answer": "Un espacio de nombres de red y una dirección IP de Pod"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "¿Qué campo declara la cantidad de recursos que utiliza el planificador al considerar la ubicación de un contenedor?",
+    "options": [
+      "resources.requests",
+      "resources.limits",
+      "securityContext",
+      "imagePullPolicy"
+    ],
+    "answer": "resources.requests"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "¿Qué representa una solicitud de CPU de 250m para un contenedor?",
+    "options": [
+      "Dos CPU y media",
+      "Veinticinco CPU",
+      "Doscientas cincuenta CPU",
+      "Un cuarto de CPU"
+    ],
+    "answer": "Un cuarto de CPU"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "¿Cuál es una consecuencia habitual de que un contenedor supere su límite de memoria impuesto?",
+    "options": [
+      "Su imagen se reconstruye con más memoria",
+      "Su puerto de Service cambia automáticamente",
+      "Puede ser terminado por el mecanismo de falta de memoria",
+      "Su solicitud de memoria se duplica automáticamente"
+    ],
+    "answer": "Puede ser terminado por el mecanismo de falta de memoria"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "¿Qué campo de Pod exige que los nodos de destino coincidan con todas las etiquetas de nodo especificadas?",
+    "options": [
+      "dnsPolicy",
+      "nodeSelector",
+      "serviceAccountName",
+      "hostAliases"
+    ],
+    "answer": "nodeSelector"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "¿Añadir una tolerancia al taint de un nodo garantiza que el Pod se programe en ese nodo?",
+    "options": [
+      "No, siguen aplicándose otras restricciones de programación y la disponibilidad de recursos",
+      "Sí, anula todas las restricciones de recursos",
+      "Sí, omite todas las reglas de afinidad de nodo",
+      "No, las tolerancias siempre prohíben la ubicación en el nodo con ese taint"
+    ],
+    "answer": "No, siguen aplicándose otras restricciones de programación y la disponibilidad de recursos"
+  }
+]

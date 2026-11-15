@@ -1,0 +1,302 @@
+[
+  {
+    "category": "Hybrid Cloud",
+    "set": 3,
+    "question": "클러스터 내부에서 애플리케이션을 노출하는 Kubernetes 리소스는 무엇입니까?",
+    "options": [
+      "ClusterIP Service",
+      "Ingress",
+      "NodePort",
+      "LoadBalancer"
+    ],
+    "answer": "ClusterIP Service"
+  },
+  {
+    "category": "Hybrid Cloud",
+    "set": 3,
+    "question": "클라우드 공급자의 로드 밸런서를 사용하여 애플리케이션을 외부에 노출하는 Kubernetes 리소스는 무엇입니까?",
+    "options": [
+      "LoadBalancer Service",
+      "ReplicaSet",
+      "DaemonSet",
+      "ConfigMap"
+    ],
+    "answer": "LoadBalancer Service"
+  },
+  {
+    "category": "Hybrid Cloud",
+    "set": 3,
+    "question": "서비스에 대한 외부 HTTP 및 HTTPS 접근을 관리하는 Kubernetes 구성 요소는 무엇입니까?",
+    "options": [
+      "Ingress Controller",
+      "Scheduler",
+      "kube-proxy",
+      "etcd"
+    ],
+    "answer": "Ingress Controller"
+  },
+  {
+    "category": "Hybrid Cloud",
+    "set": 3,
+    "question": "민감하지 않은 구성 데이터를 저장하는 Kubernetes 리소스는 무엇입니까?",
+    "options": [
+      "ConfigMap",
+      "Secret",
+      "PersistentVolume",
+      "Namespace"
+    ],
+    "answer": "ConfigMap"
+  },
+  {
+    "category": "Hybrid Cloud",
+    "set": 3,
+    "question": "비밀번호, API 키, 인증서를 안전하게 저장하는 Kubernetes 리소스는 무엇입니까?",
+    "options": [
+      "Secret",
+      "ConfigMap",
+      "Pod",
+      "Deployment"
+    ],
+    "answer": "Secret"
+  },
+  {
+    "category": "Hybrid Cloud",
+    "set": 3,
+    "question": "지정된 수의 파드 복제본이 실행되도록 보장하는 Kubernetes 오브젝트는 무엇입니까?",
+    "options": [
+      "Deployment",
+      "Namespace",
+      "ServiceAccount",
+      "Node"
+    ],
+    "answer": "Deployment"
+  },
+  {
+    "category": "Hybrid Cloud",
+    "set": 3,
+    "question": "클러스터의 모든 노드에서 파드를 하나씩 실행하는 Kubernetes 리소스는 무엇입니까?",
+    "options": [
+      "DaemonSet",
+      "ReplicaSet",
+      "Job",
+      "CronJob"
+    ],
+    "answer": "DaemonSet"
+  },
+  {
+    "category": "Hybrid Cloud",
+    "set": 3,
+    "question": "예약된 작업을 실행하는 데 사용되는 Kubernetes 리소스는 무엇입니까?",
+    "options": [
+      "CronJob",
+      "Job",
+      "StatefulSet",
+      "ReplicaSet"
+    ],
+    "answer": "CronJob"
+  },
+  {
+    "category": "Hybrid Cloud",
+    "set": 3,
+    "question": "클라우드 공급자 간 애플리케이션 이식성을 향상시키는 클라우드 네이티브 원칙은 무엇입니까?",
+    "options": [
+      "컨테이너화",
+      "전용 하드웨어",
+      "벤더별 API",
+      "수동 배포"
+    ],
+    "answer": "컨테이너화"
+  },
+  {
+    "category": "Hybrid Cloud",
+    "set": 3,
+    "question": "Kubernetes와 함께 일반적으로 사용되는 오픈 소스 컨테이너 런타임은 무엇입니까?",
+    "options": [
+      "containerd",
+      "VirtualBox",
+      "Hyper-V",
+      "VMware ESXi"
+    ],
+    "answer": "containerd"
+  },
+  {
+    "category": "Hybrid Cloud",
+    "set": 3,
+    "question": "네임스페이스 내에서 소비할 수 있는 CPU와 메모리의 총량을 제한하는 Kubernetes 메커니즘은 무엇입니까?",
+    "options": [
+      "ResourceQuota",
+      "Ingress",
+      "DaemonSet",
+      "ServiceAccount"
+    ],
+    "answer": "ResourceQuota"
+  },
+  {
+    "category": "Hybrid Cloud",
+    "set": 3,
+    "question": "Git을 단일 진실 공급원(single source of truth)으로 취급하는 GitOps 원칙은 무엇입니까?",
+    "options": [
+      "선언적 구성",
+      "수동 구성",
+      "SSH 접근",
+      "운영 환경 직접 변경"
+    ],
+    "answer": "선언적 구성"
+  },
+  {
+    "category": "Hybrid Cloud",
+    "set": 3,
+    "question": "네트워크 수준에서 어떤 파드끼리 서로 통신할 수 있는지 제한하는 Kubernetes 오브젝트는 무엇입니까?",
+    "options": [
+      "NetworkPolicy",
+      "ResourceQuota",
+      "LimitRange",
+      "PodDisruptionBudget"
+    ],
+    "answer": "NetworkPolicy"
+  },
+  {
+    "category": "Hybrid Cloud",
+    "set": 3,
+    "question": "서로 다른 Kubernetes 클러스터의 파드 간 통신을 가능하게 하는 네트워킹 개념은 무엇입니까?",
+    "options": [
+      "멀티 클러스터 네트워킹",
+      "포트 포워딩",
+      "SSH 터널",
+      "FTP"
+    ],
+    "answer": "멀티 클러스터 네트워킹"
+  },
+  {
+    "category": "Hybrid Cloud",
+    "set": 3,
+    "question": "Kubernetes 워크로드에 영구 스토리지를 제공하는 스토리지 솔루션은 무엇입니까?",
+    "options": [
+      "Persistent Volume",
+      "ConfigMap",
+      "Namespace",
+      "ReplicaSet"
+    ],
+    "answer": "Persistent Volume"
+  },
+  {
+    "category": "Hybrid Cloud",
+    "set": 3,
+    "question": "Persistent Volume에 스토리지를 요청하는 Kubernetes 오브젝트는 무엇입니까?",
+    "options": [
+      "PersistentVolumeClaim",
+      "Secret",
+      "Service",
+      "ConfigMap"
+    ],
+    "answer": "PersistentVolumeClaim"
+  },
+  {
+    "category": "Hybrid Cloud",
+    "set": 3,
+    "question": "새 애플리케이션 버전을 먼저 소수의 사용자에게 배포하는 전략은 무엇입니까?",
+    "options": [
+      "카나리 배포",
+      "롤링 재시작",
+      "빅뱅 배포",
+      "콜드 마이그레이션"
+    ],
+    "answer": "카나리 배포"
+  },
+  {
+    "category": "Hybrid Cloud",
+    "set": 3,
+    "question": "동일한 두 개의 운영 환경을 사용하고 검증 후 트래픽을 전환하는 배포 전략은 무엇입니까?",
+    "options": [
+      "블루-그린 배포",
+      "롤링 업데이트",
+      "카나리 배포",
+      "Recreate 배포"
+    ],
+    "answer": "블루-그린 배포"
+  },
+  {
+    "category": "Hybrid Cloud",
+    "set": 3,
+    "question": "노드 드레인과 같은 자발적 중단 중에도 최소 개수의 파드를 계속 사용할 수 있도록 보장하는 Kubernetes 오브젝트는 무엇입니까?",
+    "options": [
+      "PodDisruptionBudget",
+      "HorizontalPodAutoscaler",
+      "NetworkPolicy",
+      "PersistentVolumeClaim"
+    ],
+    "answer": "PodDisruptionBudget"
+  },
+  {
+    "category": "Hybrid Cloud",
+    "set": 3,
+    "question": "배포 전에 애플리케이션 변경 사항을 자동으로 검증하는 DevOps 관행은 무엇입니까?",
+    "options": [
+      "지속적 테스트",
+      "수동 테스트",
+      "FTP 배포",
+      "SSH 배포"
+    ],
+    "answer": "지속적 테스트"
+  },
+  {
+    "category": "Hybrid Cloud",
+    "set": 3,
+    "question": "코드 변경 사항을 공유 저장소에 지속적으로 통합하는 프로세스는 무엇입니까?",
+    "options": [
+      "지속적 통합",
+      "재해 복구",
+      "백업",
+      "페일오버"
+    ],
+    "answer": "지속적 통합"
+  },
+  {
+    "category": "Hybrid Cloud",
+    "set": 3,
+    "question": "검증된 소프트웨어를 운영 환경에 자동으로 릴리스하는 프로세스는 무엇입니까?",
+    "options": [
+      "지속적 배포",
+      "정적 분석",
+      "코드 리뷰",
+      "브랜칭"
+    ],
+    "answer": "지속적 배포"
+  },
+  {
+    "category": "Hybrid Cloud",
+    "set": 3,
+    "question": "애플리케이션이 요청에 응답하는 데 걸리는 시간을 측정하는 모니터링 지표는 무엇입니까?",
+    "options": [
+      "지연 시간",
+      "처리량",
+      "CPU 주파수",
+      "디스크 크기"
+    ],
+    "answer": "지연 시간"
+  },
+  {
+    "category": "Hybrid Cloud",
+    "set": 3,
+    "question": "장애 발생 후 트래픽을 정상 리소스로 자동 전환하는 복원력 패턴은 무엇입니까?",
+    "options": [
+      "페일오버",
+      "포킹",
+      "폴링",
+      "스크래핑"
+    ],
+    "answer": "페일오버"
+  },
+  {
+    "category": "Hybrid Cloud",
+    "set": 3,
+    "question": "단일 장애 지점을 피하기 위해 여러 환경에 워크로드를 분산하는 클라우드 설계 원칙은 무엇입니까?",
+    "options": [
+      "고가용성",
+      "단일 인스턴스",
+      "전용 호스트",
+      "독립형 아키텍처"
+    ],
+    "answer": "고가용성"
+  }
+]

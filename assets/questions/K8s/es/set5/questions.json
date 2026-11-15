@@ -1,0 +1,302 @@
+[
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "¿Qué necesita una NetworkPolicy para afectar al tráfico de los Pods?",
+    "options": [
+      "Un Service LoadBalancer para cada Pod seleccionado",
+      "Un PersistentVolumeClaim en el mismo espacio de nombres",
+      "Un servidor de API separado para cada política",
+      "Una implementación de red que aplique NetworkPolicy"
+    ],
+    "answer": "Una implementación de red que aplique NetworkPolicy"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "¿Cómo combinan sus permisos de tráfico entrante varias NetworkPolicies que seleccionan el mismo Pod?",
+    "options": [
+      "La primera política creada anula todas las posteriores",
+      "Cada política debe permitir cada paquete de forma independiente",
+      "El tráfico permitido es la unión de sus permisos de entrada",
+      "La última política creada anula todas las anteriores"
+    ],
+    "answer": "El tráfico permitido es la unión de sus permisos de entrada"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "¿Qué objeto RBAC define permisos dentro de un espacio de nombres?",
+    "options": [
+      "ResourceQuota",
+      "Role",
+      "RoleBinding",
+      "ServiceAccount"
+    ],
+    "answer": "Role"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "¿Qué objeto RBAC concede los permisos de un Role o ClusterRole dentro de un espacio de nombres?",
+    "options": [
+      "RoleBinding",
+      "ClusterRoleBinding",
+      "ServiceAccount",
+      "LimitRange"
+    ],
+    "answer": "RoleBinding"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "¿Qué identidad se asigna normalmente a los procesos de un Pod para acceder a la API de Kubernetes?",
+    "options": [
+      "StorageClass",
+      "RuntimeClass",
+      "PriorityClass",
+      "ServiceAccount"
+    ],
+    "answer": "ServiceAccount"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "¿Por qué codificar en base64 los datos de un Secret no basta para protegerlos de alguien que puede leer el objeto?",
+    "options": [
+      "Base64 publica automáticamente los datos mediante DNS",
+      "Base64 requiere una clave privada almacenada en el Pod",
+      "Base64 es una codificación reversible, no un cifrado",
+      "Base64 impide que Kubernetes almacene los datos"
+    ],
+    "answer": "Base64 es una codificación reversible, no un cifrado"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "¿Qué campo puede impedir que Kubernetes monte automáticamente credenciales de API en un Pod?",
+    "options": [
+      "shareProcessNamespace: false",
+      "automountServiceAccountToken: false",
+      "hostNetwork: false",
+      "enableServiceLinks: false"
+    ],
+    "answer": "automountServiceAccountToken: false"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "¿Qué objeto limita el consumo total de recursos dentro de un espacio de nombres?",
+    "options": [
+      "ResourceQuota",
+      "LimitRange",
+      "PriorityClass",
+      "PodDisruptionBudget"
+    ],
+    "answer": "ResourceQuota"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "¿Qué objeto puede asignar solicitudes y límites de recursos predeterminados a los contenedores de un espacio de nombres?",
+    "options": [
+      "ResourceQuota",
+      "HorizontalPodAutoscaler",
+      "RuntimeClass",
+      "LimitRange"
+    ],
+    "answer": "LimitRange"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "¿Qué hace un finalizador de un objeto de Kubernetes después de solicitar su eliminación?",
+    "options": [
+      "Elimina inmediatamente todos los objetos dependientes",
+      "Convierte el objeto en un Secret inmutable",
+      "Mantiene el objeto pendiente de eliminación hasta que la limpieza requerida retira el finalizador",
+      "Impide todas las actualizaciones futuras del objeto"
+    ],
+    "answer": "Mantiene el objeto pendiente de eliminación hasta que la limpieza requerida retira el finalizador"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "¿Qué campo de metadatos conecta los objetos dependientes con sus propietarios para la recolección automática?",
+    "options": [
+      "managedFields",
+      "ownerReferences",
+      "annotations",
+      "labels"
+    ],
+    "answer": "ownerReferences"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "¿Qué añade una CustomResourceDefinition a un clúster?",
+    "options": [
+      "Un nuevo tipo de recurso personalizado expuesto por la API de Kubernetes",
+      "Un controlador de reconciliación en ejecución para un tipo existente",
+      "Una concesión de permisos RBAC a todas las cuentas de servicio",
+      "Una instancia de cada tipo de recurso integrado"
+    ],
+    "answer": "Un nuevo tipo de recurso personalizado expuesto por la API de Kubernetes"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "¿Qué distingue a un operador de Kubernetes de una definición de recurso personalizado por sí sola?",
+    "options": [
+      "Un operador solo puede almacenar definiciones de esquema",
+      "Un operador elimina la necesidad de un servidor de API",
+      "Un operador solo cambia el formato de salida de kubectl",
+      "Un operador también ejecuta lógica de reconciliación para gestionar la aplicación representada"
+    ],
+    "answer": "Un operador también ejecuta lógica de reconciliación para gestionar la aplicación representada"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "¿Qué mecanismo puede rechazar o modificar una solicitud de API después de autenticarla y autorizarla, pero antes de guardarla?",
+    "options": [
+      "La descarga de imágenes de contenedores",
+      "El enrutamiento de extremos de Service",
+      "El control de admisión",
+      "La programación de Pods"
+    ],
+    "answer": "El control de admisión"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "¿Qué ocurre si ningún nodo apto cumple la afinidad de nodo obligatoria de un Pod?",
+    "options": [
+      "El servidor de API lo programa en todos los nodos",
+      "El Pod permanece sin programar hasta que haya un nodo adecuado o cambien las restricciones",
+      "El planificador ignora la regla después de un intento",
+      "El Pod se convierte automáticamente en un DaemonSet"
+    ],
+    "answer": "El Pod permanece sin programar hasta que haya un nodo adecuado o cambien las restricciones"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "¿Qué expresa la afinidad de nodo preferredDuringSchedulingIgnoredDuringExecution?",
+    "options": [
+      "Una preferencia de ubicación que no excluye nodos no coincidentes que sean aptos por lo demás",
+      "Un requisito obligatorio que impide la ubicación en nodos no coincidentes",
+      "Una instrucción para desalojar el Pod si cambia una etiqueta del nodo",
+      "Una solicitud para omitir por completo el planificador"
+    ],
+    "answer": "Una preferencia de ubicación que no excluye nodos no coincidentes que sean aptos por lo demás"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "¿Qué significa IgnoredDuringExecution si las etiquetas de un nodo dejan de coincidir con la regla de afinidad de un Pod en ejecución?",
+    "options": [
+      "El Pod debe eliminarse inmediatamente",
+      "Los contenedores del Pod se reinician automáticamente",
+      "Las etiquetas del nodo recuperan automáticamente sus valores anteriores",
+      "La regla por sí sola no desaloja al Pod en ejecución"
+    ],
+    "answer": "La regla por sí sola no desaloja al Pod en ejecución"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "¿Qué ocurre cuando un Pod establece explícitamente spec.nodeName?",
+    "options": [
+      "Crea un nodo con ese nombre",
+      "Cambia el nombre del nodo que ejecuta actualmente el Pod",
+      "Omite el planificador y se asigna al nodo indicado",
+      "Pide al planificador que clasifique todas las etiquetas de nodo coincidentes"
+    ],
+    "answer": "Omite el planificador y se asigna al nodo indicado"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "¿Cuál es el propósito de las restricciones de distribución topológica?",
+    "options": [
+      "Cifrar el tráfico entre los componentes del plano de control",
+      "Controlar cómo se distribuyen los Pods coincidentes entre dominios topológicos",
+      "Copiar archivos de contenedores entre volúmenes persistentes",
+      "Asignar una IP pública a cada espacio de nombres"
+    ],
+    "answer": "Controlar cómo se distribuyen los Pods coincidentes entre dominios topológicos"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "¿Qué efecto de taint puede desalojar Pods que ya están en ejecución y no toleran ese taint?",
+    "options": [
+      "NoExecute",
+      "NoSchedule",
+      "PreferNoSchedule",
+      "None"
+    ],
+    "answer": "NoExecute"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "¿Qué ajuste securityContext de un contenedor exige que un contenedor Linux se ejecute como usuario distinto de root?",
+    "options": [
+      "readOnlyRootFilesystem: true",
+      "privileged: false",
+      "allowPrivilegeEscalation: false",
+      "runAsNonRoot: true"
+    ],
+    "answer": "runAsNonRoot: true"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "¿Qué ajuste securityContext impide que un proceso Linux obtenga más privilegios que su padre?",
+    "options": [
+      "readOnlyRootFilesystem: true",
+      "privileged: false",
+      "allowPrivilegeEscalation: false",
+      "runAsNonRoot: true"
+    ],
+    "answer": "allowPrivilegeEscalation: false"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "¿Qué tipo de contenedor puede añadirse a un Pod existente para diagnosticar problemas sin modificar sus contenedores de aplicación?",
+    "options": [
+      "Contenedor de inicialización reiniciable",
+      "Contenedor efímero",
+      "Contenedor de inicialización ordinario",
+      "Contenedor de aplicación ordinario"
+    ],
+    "answer": "Contenedor efímero"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "¿Qué recurso sigue los extremos de red de un Service en grupos escalables?",
+    "options": [
+      "EndpointSlice",
+      "IngressClass",
+      "NetworkPolicy",
+      "RuntimeClass"
+    ],
+    "answer": "EndpointSlice"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "¿Qué se necesita para que un recurso Ingress configure realmente el enrutamiento HTTP?",
+    "options": [
+      "Una ConfigMap llamada ingress en cada espacio de nombres",
+      "Un PersistentVolume por cada nombre de host",
+      "Un Job que reinicie todos los Pods seleccionados",
+      "Un controlador Ingress que implemente sus reglas"
+    ],
+    "answer": "Un controlador Ingress que implemente sus reglas"
+  }
+]

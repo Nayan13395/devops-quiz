@@ -28,7 +28,7 @@ void main() {
     await tester.tap(find.text('Open highlights'));
     await tester.pumpAndSettle();
 
-    expect(find.text('DevOps Quiz 1.10.3'), findsOneWidget);
+    expect(find.text('DevOps Quiz 1.10.4'), findsOneWidget);
     expect(find.text('Spot the Difference'), findsOneWidget);
     expect(find.text('More ways to play'), findsOneWidget);
     expect(find.text('Daily Auto Themes'), findsOneWidget);

@@ -1,0 +1,302 @@
+[
+  {
+    "category": "PowerShell",
+    "set": 3,
+    "question": "Atribut parameter PowerShell mana yang membatasi argumen pada daftar nilai tetap yang diizinkan?",
+    "options": [
+      "[ValidateSet()]",
+      "[AllowNull()]",
+      "[Alias()]",
+      "[OutputType()]"
+    ],
+    "answer": "[ValidateSet()]"
+  },
+  {
+    "category": "PowerShell",
+    "set": 3,
+    "question": "Blok mana yang dijalankan satu kali di awal sebuah fungsi lanjutan (advanced function)?",
+    "options": [
+      "begin",
+      "start",
+      "init",
+      "open"
+    ],
+    "answer": "begin"
+  },
+  {
+    "category": "PowerShell",
+    "set": 3,
+    "question": "Blok mana yang memproses setiap objek input pipeline?",
+    "options": [
+      "process",
+      "loop",
+      "foreach",
+      "handle"
+    ],
+    "answer": "process"
+  },
+  {
+    "category": "PowerShell",
+    "set": 3,
+    "question": "Blok mana yang dijalankan satu kali di akhir sebuah fungsi lanjutan (advanced function)?",
+    "options": [
+      "end",
+      "finish",
+      "final",
+      "complete"
+    ],
+    "answer": "end"
+  },
+  {
+    "category": "PowerShell",
+    "set": 3,
+    "question": "Variabel otomatis mana yang mewakili objek pipeline saat ini?",
+    "options": [
+      "$_",
+      "$this",
+      "$item",
+      "$current"
+    ],
+    "answer": "$_"
+  },
+  {
+    "category": "PowerShell",
+    "set": 3,
+    "question": "Variabel otomatis mana yang berisi seluruh input pipeline?",
+    "options": [
+      "$input",
+      "$args",
+      "$pipeline",
+      "$objects"
+    ],
+    "answer": "$input"
+  },
+  {
+    "category": "PowerShell",
+    "set": 3,
+    "question": "Variabel otomatis mana yang berisi argumen fungsi yang tidak ditentukan?",
+    "options": [
+      "$args",
+      "$params",
+      "$arguments",
+      "$values"
+    ],
+    "answer": "$args"
+  },
+  {
+    "category": "PowerShell",
+    "set": 3,
+    "question": "Atribut mana yang mengaktifkan fitur fungsi lanjutan (advanced function)?",
+    "options": [
+      "[CmdletBinding()]",
+      "[Function()]",
+      "[Advanced()]",
+      "[Parameter()]"
+    ],
+    "answer": "[CmdletBinding()]"
+  },
+  {
+    "category": "PowerShell",
+    "set": 3,
+    "question": "Atribut parameter mana yang membuat sebuah parameter wajib diisi?",
+    "options": [
+      "Mandatory=$true",
+      "Required=$true",
+      "Must=$true",
+      "Force=$true"
+    ],
+    "answer": "Mandatory=$true"
+  },
+  {
+    "category": "PowerShell",
+    "set": 3,
+    "question": "Konvensi penamaan mana yang direkomendasikan untuk cmdlet PowerShell?",
+    "options": [
+      "Verb-Noun",
+      "Noun-Verb",
+      "Verb_Noun",
+      "VerbNoun"
+    ],
+    "answer": "Verb-Noun"
+  },
+  {
+    "category": "PowerShell",
+    "set": 3,
+    "question": "Ekstensi file mana yang digunakan untuk skrip PowerShell?",
+    "options": [
+      ".ps1",
+      ".psm1",
+      ".psd1",
+      ".bat"
+    ],
+    "answer": ".ps1"
+  },
+  {
+    "category": "PowerShell",
+    "set": 3,
+    "question": "Ekstensi file mana yang digunakan untuk modul PowerShell?",
+    "options": [
+      ".psm1",
+      ".ps1",
+      ".psd1",
+      ".json"
+    ],
+    "answer": ".psm1"
+  },
+  {
+    "category": "PowerShell",
+    "set": 3,
+    "question": "Ekstensi file mana yang digunakan untuk manifes modul?",
+    "options": [
+      ".psd1",
+      ".psm1",
+      ".ps1",
+      ".xml"
+    ],
+    "answer": ".psd1"
+  },
+  {
+    "category": "PowerShell",
+    "set": 3,
+    "question": "Parameter Get-Module mana yang menampilkan modul yang saat ini belum dimuat?",
+    "options": [
+      "-ListAvailable",
+      "-All",
+      "-Loaded",
+      "-Complete"
+    ],
+    "answer": "-ListAvailable"
+  },
+  {
+    "category": "PowerShell",
+    "set": 3,
+    "question": "Cmdlet mana yang memuat modul ke dalam sesi saat ini?",
+    "options": [
+      "Import-Module",
+      "Install-Module",
+      "Add-Module",
+      "Load-Module"
+    ],
+    "answer": "Import-Module"
+  },
+  {
+    "category": "PowerShell",
+    "set": 3,
+    "question": "Cmdlet mana yang menghapus modul dari sesi saat ini?",
+    "options": [
+      "Remove-Module",
+      "Uninstall-Module",
+      "Delete-Module",
+      "Clear-Module"
+    ],
+    "answer": "Remove-Module"
+  },
+  {
+    "category": "PowerShell",
+    "set": 3,
+    "question": "Parameter Get-Command mana yang memfilter perintah berdasarkan modul?",
+    "options": [
+      "-Module",
+      "-FromModule",
+      "-ModuleName",
+      "-Source"
+    ],
+    "answer": "-Module"
+  },
+  {
+    "category": "PowerShell",
+    "set": 3,
+    "question": "Cmdlet mana yang memulai sesi jarak jauh interaktif?",
+    "options": [
+      "Enter-PSSession",
+      "New-PSSession",
+      "Invoke-Command",
+      "Connect-Computer"
+    ],
+    "answer": "Enter-PSSession"
+  },
+  {
+    "category": "PowerShell",
+    "set": 3,
+    "question": "Cmdlet mana yang menjalankan perintah di komputer jarak jauh?",
+    "options": [
+      "Invoke-Command",
+      "Enter-PSSession",
+      "Remote-Command",
+      "Execute-Command"
+    ],
+    "answer": "Invoke-Command"
+  },
+  {
+    "category": "PowerShell",
+    "set": 3,
+    "question": "Cmdlet mana yang membuat sesi jarak jauh yang persisten?",
+    "options": [
+      "New-PSSession",
+      "Enter-PSSession",
+      "Start-Session",
+      "Open-PSSession"
+    ],
+    "answer": "New-PSSession"
+  },
+  {
+    "category": "PowerShell",
+    "set": 3,
+    "question": "Cmdlet mana yang menghapus sesi jarak jauh?",
+    "options": [
+      "Remove-PSSession",
+      "Delete-PSSession",
+      "Close-PSSession",
+      "End-PSSession"
+    ],
+    "answer": "Remove-PSSession"
+  },
+  {
+    "category": "PowerShell",
+    "set": 3,
+    "question": "Protokol mana yang umum digunakan untuk PowerShell remoting?",
+    "options": [
+      "WinRM",
+      "SSH",
+      "HTTP",
+      "FTP"
+    ],
+    "answer": "WinRM"
+  },
+  {
+    "category": "PowerShell",
+    "set": 3,
+    "question": "Cmdlet mana yang mengaktifkan PowerShell remoting?",
+    "options": [
+      "Enable-PSRemoting",
+      "Start-PSRemoting",
+      "Enable-Remoting",
+      "Configure-Remoting"
+    ],
+    "answer": "Enable-PSRemoting"
+  },
+  {
+    "category": "PowerShell",
+    "set": 3,
+    "question": "Cmdlet mana yang menonaktifkan PowerShell remoting?",
+    "options": [
+      "Disable-PSRemoting",
+      "Stop-PSRemoting",
+      "Disable-Remoting",
+      "Remove-Remoting"
+    ],
+    "answer": "Disable-PSRemoting"
+  },
+  {
+    "category": "PowerShell",
+    "set": 3,
+    "question": "Cmdlet mana yang mengambil instance CIM?",
+    "options": [
+      "Get-CimInstance",
+      "Get-WmiObject",
+      "Get-CimObject",
+      "Query-Cim"
+    ],
+    "answer": "Get-CimInstance"
+  }
+]

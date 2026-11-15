@@ -50,7 +50,17 @@ void main() {
     tester.view.physicalSize = const Size(320, 568);
     SharedPreferences.setMockInitialValues({});
 
-    await tester.pumpWidget(const MaterialApp(home: ConnectFourScreen()));
+    await tester.pumpWidget(
+      MaterialApp(
+        builder: (context, child) => MediaQuery(
+          data: MediaQuery.of(
+            context,
+          ).copyWith(textScaler: TextScaler.linear(1.3)),
+          child: child!,
+        ),
+        home: const ConnectFourScreen(),
+      ),
+    );
 
     expect(find.text('Vs Bot'), findsOneWidget);
     expect(find.text('2 Player'), findsOneWidget);

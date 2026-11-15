@@ -1,0 +1,302 @@
+[
+  {
+    "category": "Terraform",
+    "set": 2,
+    "question": "Welcher Block wird in Terraform zum Definieren von Eingabevariablen verwendet?",
+    "options": [
+      "variable",
+      "input",
+      "vars",
+      "parameter"
+    ],
+    "answer": "variable"
+  },
+  {
+    "category": "Terraform",
+    "set": 2,
+    "question": "Welcher Block wird zum Definieren lokaler Werte verwendet?",
+    "options": [
+      "locals",
+      "local",
+      "values",
+      "variables"
+    ],
+    "answer": "locals"
+  },
+  {
+    "category": "Terraform",
+    "set": 2,
+    "question": "Welcher Block wird verwendet, um Informationen über bestehende Infrastruktur abzurufen?",
+    "options": [
+      "data",
+      "resource",
+      "provider",
+      "output"
+    ],
+    "answer": "data"
+  },
+  {
+    "category": "Terraform",
+    "set": 2,
+    "question": "Welches Metaargument nimmt eine ganze Zahl zur Erstellung entsprechend vieler Ressourceninstanzen an?",
+    "options": [
+      "count",
+      "for_each",
+      "repeat",
+      "loop"
+    ],
+    "answer": "count"
+  },
+  {
+    "category": "Terraform",
+    "set": 2,
+    "question": "Welches Metaargument erstellt Ressourceninstanzen aus einer Map oder Zeichenfolgenmenge?",
+    "options": [
+      "for_each",
+      "count",
+      "each",
+      "loop"
+    ],
+    "answer": "for_each"
+  },
+  {
+    "category": "Terraform",
+    "set": 2,
+    "question": "Welcher Operator wird für bedingte Ausdrücke verwendet?",
+    "options": [
+      "? :",
+      "if",
+      "switch",
+      "case"
+    ],
+    "answer": "? :"
+  },
+  {
+    "category": "Terraform",
+    "set": 2,
+    "question": "Welche Funktion gibt die Länge einer Liste zurück?",
+    "options": [
+      "length()",
+      "count()",
+      "size()",
+      "len()"
+    ],
+    "answer": "length()"
+  },
+  {
+    "category": "Terraform",
+    "set": 2,
+    "question": "Welche Funktion wandelt eine Zeichenfolge in Großbuchstaben um?",
+    "options": [
+      "upper()",
+      "toupper()",
+      "capitalize()",
+      "upcase()"
+    ],
+    "answer": "upper()"
+  },
+  {
+    "category": "Terraform",
+    "set": 2,
+    "question": "Welche Funktion verbindet Listenelemente zu einer Zeichenfolge?",
+    "options": [
+      "join()",
+      "concat()",
+      "merge()",
+      "append()"
+    ],
+    "answer": "join()"
+  },
+  {
+    "category": "Terraform",
+    "set": 2,
+    "question": "Welche Funktion vereint mindestens zwei als getrennte Argumente übergebene Listen zu einer Liste?",
+    "options": [
+      "concat()",
+      "join()",
+      "merge()",
+      "flatten()"
+    ],
+    "answer": "concat()"
+  },
+  {
+    "category": "Terraform",
+    "set": 2,
+    "question": "Was ist eine implizite Abhängigkeit in Terraform?",
+    "options": [
+      "Automatisch erkannte Abhängigkeit",
+      "Manuelle Abhängigkeit",
+      "Provider-Abhängigkeit",
+      "State-Abhängigkeit"
+    ],
+    "answer": "Automatisch erkannte Abhängigkeit"
+  },
+  {
+    "category": "Terraform",
+    "set": 2,
+    "question": "Welches Argument erstellt eine explizite Abhängigkeit?",
+    "options": [
+      "depends_on",
+      "dependency",
+      "require",
+      "depends"
+    ],
+    "answer": "depends_on"
+  },
+  {
+    "category": "Terraform",
+    "set": 2,
+    "question": "Welcher Befehl listet Ressourcenadressen im Zustand ohne ihre Attributwerte auf?",
+    "options": [
+      "terraform state list",
+      "terraform state show",
+      "terraform show",
+      "terraform state resources"
+    ],
+    "answer": "terraform state list"
+  },
+  {
+    "category": "Terraform",
+    "set": 2,
+    "question": "Welcher Befehl importiert bestehende Infrastruktur in den Terraform-State?",
+    "options": [
+      "terraform import",
+      "terraform load",
+      "terraform sync",
+      "terraform attach"
+    ],
+    "answer": "terraform import"
+  },
+  {
+    "category": "Terraform",
+    "set": 2,
+    "question": "Welcher Eingabevariablentyp akzeptiert nur die Werte true oder false?",
+    "options": [
+      "bool",
+      "string",
+      "number",
+      "list(string)"
+    ],
+    "answer": "bool"
+  },
+  {
+    "category": "Terraform",
+    "set": 2,
+    "question": "Welcher Eingabevariablentyp beschreibt eine Zuordnung von Zeichenfolgenschlüsseln zu Zeichenfolgenwerten?",
+    "options": [
+      "list(string)",
+      "set(string)",
+      "tuple([string])",
+      "map(string)"
+    ],
+    "answer": "map(string)"
+  },
+  {
+    "category": "Terraform",
+    "set": 2,
+    "question": "Welches Variablenargument liefert einen Wert, wenn der Aufrufer keinen setzt?",
+    "options": [
+      "nullable",
+      "sensitive",
+      "default",
+      "description"
+    ],
+    "answer": "default"
+  },
+  {
+    "category": "Terraform",
+    "set": 2,
+    "question": "Welcher Block in einer Variablendeklaration prüft den Wert anhand einer benutzerdefinierten Regel?",
+    "options": [
+      "connection",
+      "validation",
+      "lifecycle",
+      "provisioner"
+    ],
+    "answer": "validation"
+  },
+  {
+    "category": "Terraform",
+    "set": 2,
+    "question": "Welche Umgebungsvariable liefert den Wert der Eingabevariablen region?",
+    "options": [
+      "TF_VAR_region",
+      "TF_LOG_region",
+      "TF_CLI_ARGS_region",
+      "TF_DATA_DIR_region"
+    ],
+    "answer": "TF_VAR_region"
+  },
+  {
+    "category": "Terraform",
+    "set": 2,
+    "question": "Welche Datei lädt die CLI automatisch als Variablendefinitionsdatei des Stammmoduls?",
+    "options": [
+      "production.tfvars",
+      "production.vars",
+      "production.hcl",
+      "production.auto.tfvars"
+    ],
+    "answer": "production.auto.tfvars"
+  },
+  {
+    "category": "Terraform",
+    "set": 2,
+    "question": "Welcher Ausdruck liefert bei einer Ressource mit count den nullbasierten Index der aktuellen Instanz?",
+    "options": [
+      "each.value",
+      "self.index",
+      "count.index",
+      "each.key"
+    ],
+    "answer": "count.index"
+  },
+  {
+    "category": "Terraform",
+    "set": 2,
+    "question": "Welcher Ausdruck liest bei einer Ressource mit for_each und einer Map den Wert des aktuellen Elements?",
+    "options": [
+      "self.value",
+      "each.value",
+      "each.key",
+      "count.index"
+    ],
+    "answer": "each.value"
+  },
+  {
+    "category": "Terraform",
+    "set": 2,
+    "question": "Welche Funktion entfernt wiederholte Listenelemente unter Beibehaltung der Reihenfolge ihres ersten Auftretens?",
+    "options": [
+      "distinct",
+      "sort",
+      "reverse",
+      "flatten"
+    ],
+    "answer": "distinct"
+  },
+  {
+    "category": "Terraform",
+    "set": 2,
+    "question": "Welche Funktion entfernt direkt verschachtelte Listenebenen aus einer Liste?",
+    "options": [
+      "concat",
+      "merge",
+      "join",
+      "flatten"
+    ],
+    "answer": "flatten"
+  },
+  {
+    "category": "Terraform",
+    "set": 2,
+    "question": "Welcher Ausdruck erstellt eine neue Liste, indem er jeden Namen in Großbuchstaben umwandelt?",
+    "options": [
+      "[for name in var.names : length(name)]",
+      "[for name in var.names : trimspace(name)]",
+      "[for name in var.names : upper(name)]",
+      "[for name in var.names : lower(name)]"
+    ],
+    "answer": "[for name in var.names : upper(name)]"
+  }
+]

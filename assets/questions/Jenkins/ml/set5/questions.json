@@ -1,0 +1,302 @@
+[
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "ഒരേ Pipeline ഒരേസമയം പ്രവർത്തിപ്പിക്കുന്നതിനു പകരം പുതിയ നിർവഹണം ക്യൂവിൽ ഇടുന്ന Declarative ഓപ്ഷൻ ഏതാണ്?",
+    "options": [
+      "parallelsAlwaysFailFast()",
+      "disableConcurrentBuilds()",
+      "disableResume()",
+      "skipDefaultCheckout()"
+    ],
+    "answer": "disableConcurrentBuilds()"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "പഴയ ബിൽഡ് രേഖകളും ആർട്ടിഫാക്ടുകളും സൂക്ഷിക്കുന്ന നിയമങ്ങൾ നൽകുന്ന Declarative ഓപ്ഷൻ ഏതാണ്?",
+    "options": [
+      "buildDiscarder(logRotator(numToKeepStr: '10'))",
+      "timeout(time: 10, unit: 'MINUTES')",
+      "retry(10)",
+      "quietPeriod(10)"
+    ],
+    "answer": "buildDiscarder(logRotator(numToKeepStr: '10'))"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "Jenkins cron എക്സ്പ്രഷനിലെ H ചിഹ്നം എന്താണ് നൽകുന്നത്?",
+    "options": [
+      "ഉപയോക്താവിന്റെ കമ്പ്യൂട്ടറിലെ നിലവിലെ മണിക്കൂർ",
+      "അവധിദിവസങ്ങളിൽ മാത്രം പ്രവർത്തിപ്പിക്കാനുള്ള അഭ്യർത്ഥന",
+      "നോഡ് നിഷ്ക്രിയമായിരിക്കുമ്പോൾ മാത്രം പ്രവർത്തിപ്പിക്കാനുള്ള അഭ്യർത്ഥന",
+      "ഷെഡ്യൂൾ ചെയ്ത ലോഡ് വിതരണം ചെയ്യുന്ന ജോലിയുടെ പേരധിഷ്ഠിത സ്ഥിര ഹാഷ്"
+    ],
+    "answer": "ഷെഡ്യൂൾ ചെയ്ത ലോഡ് വിതരണം ചെയ്യുന്ന ജോലിയുടെ പേരധിഷ്ഠിത സ്ഥിര ഹാഷ്"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "Jenkinsന്റെ അഞ്ച് ഫീൽഡുള്ള cron വാക്യഘടനയിൽ അഞ്ചാമത്തെ ഫീൽഡ് എന്താണ് സൂചിപ്പിക്കുന്നത്?",
+    "options": [
+      "ദിവസത്തിലെ മണിക്കൂർ",
+      "മാസത്തിലെ ദിവസം",
+      "ആഴ്ചയിലെ ദിവസം",
+      "മണിക്കൂറിലെ മിനിറ്റ്"
+    ],
+    "answer": "ആഴ്ചയിലെ ദിവസം"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "മുൻ ബിൽഡ് പരാജയപ്പെട്ടതോ അസ്ഥിരമായതോ ആയ ശേഷം പുതിയ ബിൽഡ് വിജയിച്ചാൽ പ്രവർത്തിക്കുന്ന post നിബന്ധന ഏതാണ്?",
+    "options": [
+      "unsuccessful",
+      "fixed",
+      "changed",
+      "regression"
+    ],
+    "answer": "fixed"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "മറ്റ് post നിബന്ധനകൾ വിലയിരുത്തിയശേഷം പ്രവർത്തിക്കുന്ന post നിബന്ധന ഏതാണ്?",
+    "options": [
+      "cleanup",
+      "always",
+      "changed",
+      "success"
+    ],
+    "answer": "cleanup"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "ഘട്ടത്തിന്റെ ഏജന്റിനെ അനുവദിക്കുന്നതിന് മുമ്പ് അതിന്റെ നിബന്ധന വിലയിരുത്തുന്ന when ഓപ്ഷൻ ഏതാണ്?",
+    "options": [
+      "beforeInput false",
+      "beforeOptions false",
+      "branch 'main'",
+      "beforeAgent true"
+    ],
+    "answer": "beforeAgent true"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "Multibranch Pipelineൽ പേരുള്ള ബ്രാഞ്ചിനെ ലക്ഷ്യമിടുന്ന when നിബന്ധന ഏതാണ്?",
+    "options": [
+      "buildingTag()",
+      "changeRequest()",
+      "branch 'main'",
+      "tag 'main'"
+    ],
+    "answer": "branch 'main'"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "ഓപ്പറേറ്റിങ് സിസ്റ്റം, ബ്രൗസർ തുടങ്ങിയ അക്ഷങ്ങളുടെ മൂല്യക്കൂട്ടുകൾ പ്രവർത്തിപ്പിക്കുന്ന Declarative ഘടന ഏതാണ്?",
+    "options": [
+      "environment",
+      "matrix",
+      "parallel",
+      "steps"
+    ],
+    "answer": "matrix"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "Declarative മാട്രിക്സിൽനിന്ന് ആവശ്യമില്ലാത്ത മൂല്യക്കൂട്ടുകൾ ഒഴിവാക്കുന്ന വിഭാഗം ഏതാണ്?",
+    "options": [
+      "excludes",
+      "axes",
+      "stages",
+      "tools"
+    ],
+    "answer": "excludes"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "സമാന്തര ശാഖകളുള്ള ഘട്ടത്തിൽ ഒന്ന് പരാജയപ്പെട്ടാൽ മറ്റുള്ളവ നിർത്തുന്ന ക്രമീകരണം ഏതാണ്?",
+    "options": [
+      "beforeAgent true",
+      "reuseNode true",
+      "alwaysPull true",
+      "failFast true"
+    ],
+    "answer": "failFast true"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "ബിൽഡ് അസ്ഥിരമായാൽ പിന്നീടുള്ള ഘട്ടങ്ങൾ ഒഴിവാക്കുന്ന Declarative ഓപ്ഷൻ ഏതാണ്?",
+    "options": [
+      "disableResume()",
+      "preserveStashes()",
+      "skipStagesAfterUnstable()",
+      "skipDefaultCheckout()"
+    ],
+    "answer": "skipStagesAfterUnstable()"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "പരാജയം രേഖപ്പെടുത്തി തന്റെ ബ്ലോക്കിനുശേഷമുള്ള നിർവഹണം തുടരാൻ അനുവദിക്കുന്ന Pipeline ഘട്ടം ഏതാണ്?",
+    "options": [
+      "input",
+      "catchError",
+      "error",
+      "timeout"
+    ],
+    "answer": "catchError"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "പ്രക്രിയ അവസാനിച്ചാൽ sh(script: 'check.sh', returnStatus: true) എന്താണ് നൽകുന്നത്?",
+    "options": [
+      "പ്രക്രിയയുടെ സംഖ്യാരൂപത്തിലുള്ള എക്സിറ്റ് കോഡ്",
+      "പൂർണ്ണ സ്റ്റാൻഡേർഡ് ഔട്ട്പുട്ട് ടെക്സ്റ്റ്",
+      "ഷെല്ലിന്റെ പ്രക്രിയ ID",
+      "Jenkins പ്രാമാണീകരണ വിവര ഒബ്ജക്റ്റ്"
+    ],
+    "answer": "പ്രക്രിയയുടെ സംഖ്യാരൂപത്തിലുള്ള എക്സിറ്റ് കോഡ്"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "വിജയിക്കുമ്പോൾ sh(script: 'echo ready', returnStdout: true) എന്താണ് നൽകുന്നത്?",
+    "options": [
+      "സംഖ്യാരൂപത്തിലുള്ള ബിൽഡ് നമ്പർ",
+      "മാപ്പായി ഷെല്ലിന്റെ എൻവയോൺമെന്റ്",
+      "ഏജന്റിന്റെ ലേബൽ പട്ടിക",
+      "പിടിച്ചെടുത്ത സ്റ്റാൻഡേർഡ് ഔട്ട്പുട്ട് സ്ട്രിങ്"
+    ],
+    "answer": "പിടിച്ചെടുത്ത സ്റ്റാൻഡേർഡ് ഔട്ട്പുട്ട് സ്ട്രിങ്"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "നിലവിലെ വർക്സ്പേസ് ഡയറക്ടറിയുടെ ഉള്ളടക്കം ഉപതലങ്ങൾ ഉൾപ്പെടെ നീക്കുന്ന Pipeline ഘട്ടം ഏതാണ്?",
+    "options": [
+      "pwd",
+      "readFile",
+      "deleteDir",
+      "fileExists"
+    ],
+    "answer": "deleteDir"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "നിലവിലെ വർക്സ്പേസിൽ പാതയുണ്ടോ എന്നു പരിശോധിക്കുന്ന Pipeline ഘട്ടം ഏതാണ്?",
+    "options": [
+      "libraryResource",
+      "fileExists",
+      "readFile",
+      "writeFile"
+    ],
+    "answer": "fileExists"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "മറ്റൊരു Jenkins ജോലി തുടങ്ങി ബിൽഡ് പാരാമീറ്ററുകൾ നൽകാവുന്ന Pipeline ഘട്ടം ഏതാണ്?",
+    "options": [
+      "build",
+      "stage",
+      "node",
+      "checkout"
+    ],
+    "answer": "build"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "ഘട്ടങ്ങൾ വീണ്ടും തുടങ്ങാനായി പൂർത്തിയായ ബിൽഡുകളുടെ സ്റ്റാഷുകൾ നിലനിർത്തുന്ന Declarative ഓപ്ഷൻ ഏതാണ്?",
+    "options": [
+      "disableResume()",
+      "skipDefaultCheckout()",
+      "quietPeriod(5)",
+      "preserveStashes()"
+    ],
+    "answer": "preserveStashes()"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "vars/deploy.groovy നിർവചിച്ച ആഗോള deploy വേരിയബിളിനുള്ള സഹായ ടെക്സ്റ്റ് നൽകുന്ന Shared Library ഫയൽ ഏതാണ്?",
+    "options": [
+      "resources/deploy.txt",
+      "vars/main.groovy",
+      "vars/deploy.txt",
+      "src/deploy.groovy"
+    ],
+    "answer": "vars/deploy.txt"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "Jenkins Pipelineൽ @NonCPS അനോട്ടേഷൻ നൽകിയ മെത്തഡിന്റെ പ്രധാന നിയന്ത്രണം എന്താണ്?",
+    "options": [
+      "അത് Windows ഏജന്റിൽ പ്രവർത്തിക്കണം",
+      "അത് CPS-പരിവർത്തനം ചെയ്ത Pipeline ഘട്ടങ്ങളെ വിളിക്കരുത്",
+      "അതിൽ stage നിർദേശം ഉണ്ടായിരിക്കണം",
+      "അത് എപ്പോഴും സ്ട്രിങ് നൽകണം"
+    ],
+    "answer": "അത് CPS-പരിവർത്തനം ചെയ്ത Pipeline ഘട്ടങ്ങളെ വിളിക്കരുത്"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "അംഗീകരിക്കാത്ത സാൻഡ്ബോക്സിലെ Groovy കോഡ് ആവശ്യപ്പെട്ട സിഗ്നേച്ചറുകൾ പരിശോധിക്കുന്ന Jenkins സംവിധാനം ഏതാണ്?",
+    "options": [
+      "പ്രക്രിയയ്ക്കുള്ളിലെ സ്ക്രിപ്റ്റ് അംഗീകാരം",
+      "Credentials Store",
+      "Build Queue",
+      "SCM പോളിങ് ലോഗ്"
+    ],
+    "answer": "പ്രക്രിയയ്ക്കുള്ളിലെ സ്ക്രിപ്റ്റ് അംഗീകാരം"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "ബന്ധിപ്പിച്ച രഹസ്യ വേരിയബിളിനെ ഷെൽ തന്നെ വിപുലീകരിക്കുന്ന സ്ക്രിപ്റ്റിന് ഏത് Groovy ഉദ്ധരണിശൈലിയാണ് നിർദേശിക്കുന്നത്?",
+    "options": [
+      "രഹസ്യം ചേർത്ത ഇരട്ട ഉദ്ധരണിയുള്ള ഇന്റർപൊളേറ്റ് ചെയ്ത Groovy സ്ട്രിങ്",
+      "രഹസ്യം ചേർത്ത മൂന്ന് ഇരട്ട ഉദ്ധരണികളുള്ള ഇന്റർപൊളേറ്റ് ചെയ്ത Groovy സ്ട്രിങ്",
+      "സാധാരണ ടെക്സ്റ്റിലുള്ള രഹസ്യം കൂട്ടിച്ചേർത്ത് ഉണ്ടാക്കിയ Groovy സ്ട്രിങ്",
+      "ഒറ്റ ഉദ്ധരണിയുള്ള Groovy സ്ട്രിങ്"
+    ],
+    "answer": "ഒറ്റ ഉദ്ധരണിയുള്ള Groovy സ്ട്രിങ്"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "ബന്ധപ്പെട്ട വെബ് അഭ്യർത്ഥനകൾക്ക് Jenkins CSRF crumbന്റെ ഉദ്ദേശ്യം എന്താണ്?",
+    "options": [
+      "അപ്‌ലോഡിനു മുമ്പ് ബിൽഡ് ആർട്ടിഫാക്ട് എൻക്രിപ്റ്റ് ചെയ്യുക",
+      "ബിൽഡ് പ്രവർത്തിപ്പിക്കുന്ന ഏജന്റിനെ തിരഞ്ഞെടുക്കുക",
+      "നില മാറ്റുന്ന അഭ്യർത്ഥന നിലവിലുള്ള ഉപയോക്തൃ സെഷനിൽനിന്നാണെന്ന് ഉറപ്പാക്കാൻ സഹായിക്കുക",
+      "എല്ലാ ജോലികളുടെയും അനുമതി പരിശോധനകൾക്ക് പകരമാകുക"
+    ],
+    "answer": "നില മാറ്റുന്ന അഭ്യർത്ഥന നിലവിലുള്ള ഉപയോക്തൃ സെഷനിൽനിന്നാണെന്ന് ഉറപ്പാക്കാൻ സഹായിക്കുക"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "വ്യത്യസ്ത ജോലികൾക്കിടയിൽ പങ്കിട്ട ടെസ്റ്റ് ഉപകരണം ഒരേസമയം ഒരു ജോലിക്ക് മാത്രം നൽകാൻ Pipeline എന്താണ് ഉപയോഗിക്കേണ്ടത്?",
+    "options": [
+      "skipDefaultCheckout ഓപ്ഷൻ",
+      "Lockable Resources പ്ലഗിന്റെ lock ഘട്ടം",
+      "timestamps ഓപ്ഷൻ",
+      "buildDiscarder ഓപ്ഷൻ"
+    ],
+    "answer": "Lockable Resources പ്ലഗിന്റെ lock ഘട്ടം"
+  }
+]

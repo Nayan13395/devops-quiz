@@ -1,0 +1,302 @@
+[
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "Terraform தற்போதைய பொருளைப் பாதுகாக்க வள முகவரி மாற்றத்தைப் பதிவு செய்யும் அறிவிப்புத் தொகுப்பு எது?",
+    "options": [
+      "removed",
+      "check",
+      "moved",
+      "import"
+    ],
+    "answer": "moved"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "moved தொகுப்பில் புதிய வள முகவரியைக் குறிப்பிடும் மதிப்புரு எது?",
+    "options": [
+      "provider",
+      "to",
+      "from",
+      "id"
+    ],
+    "answer": "to"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "apply செய்யும்போது இறக்குமதி செய்ய வேண்டிய தற்போதைய உள்கட்டமைப்புப் பொருளை அறிவிக்கும் தொகுப்பு எது?",
+    "options": [
+      "import",
+      "moved",
+      "output",
+      "check"
+    ],
+    "answer": "import"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "உண்மையான உள்கட்டமைப்புப் பொருளை அழிக்காமல் வளத்தை மறக்கும் removed தொகுப்பு அமைப்பு எது?",
+    "options": [
+      "lifecycle { destroy = true }",
+      "lifecycle { create_before_destroy = true }",
+      "lifecycle { prevent_destroy = false }",
+      "lifecycle { destroy = false }"
+    ],
+    "answer": "lifecycle { destroy = false }"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "சாதாரண உள்ளீட்டு மாறியை sensitive எனக் குறித்தால் உள்ளூர் நிலைக் கோப்பில் அதன் மதிப்பிற்கு என்ன நிகழும்?",
+    "options": [
+      "அது எப்போதும் நிலையிலிருந்து விலக்கப்படும்",
+      "சேமிப்பதற்கு முன் அதன் இடத்தில் மாறியின் பெயர் வைக்கப்படும்",
+      "சாதாரண CLI வெளியீட்டில் மறைக்கப்பட்டாலும் அது சாதாரண உரையாகச் சேமிக்கப்படலாம்",
+      "sensitive கொடி அதைத் தானாக மறையாக்கும்"
+    ],
+    "answer": "சாதாரண CLI வெளியீட்டில் மறைக்கப்பட்டாலும் அது சாதாரண உரையாகச் சேமிக்கப்படலாம்"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "ரகசிய வெளியீட்டு மதிப்புகளை இயந்திரம் படிக்கும் வடிவில் காட்டக்கூடிய output கட்டளை வடிவம் எது?",
+    "options": [
+      "terraform providers schema -json",
+      "terraform output -json",
+      "terraform output -help",
+      "terraform output -no-color"
+    ],
+    "answer": "terraform output -json"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "Terraform மதிப்பை JSON சரமாக மாற்றும் செயல்கூறு எது?",
+    "options": [
+      "jsonencode",
+      "jsondecode",
+      "yamldecode",
+      "file"
+    ],
+    "answer": "jsonencode"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "JSON சரத்தைப் பகுத்து Terraform மதிப்பாக்கும் செயல்கூறு எது?",
+    "options": [
+      "jsonencode",
+      "yamlencode",
+      "templatefile",
+      "jsondecode"
+    ],
+    "answer": "jsondecode"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "கொடுக்கப்பட்ட மாறி மேப்பைக் கொண்டு வார்ப்புருக் கோப்பை உருவாக்கும் செயல்கூறு எது?",
+    "options": [
+      "fileset",
+      "filebase64",
+      "templatefile",
+      "file"
+    ],
+    "answer": "templatefile"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "இயக்கநிலைப் பிழையின்றி மதிப்பிடப்படும் முதல் மதிப்புருவைத் தரும் செயல்கூறு எது?",
+    "options": [
+      "lookup",
+      "try",
+      "can",
+      "coalesce"
+    ],
+    "answer": "try"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "கோவையை இயக்கநிலைப் பிழையின்றி மதிப்பிட முடியுமா எனக் கூறும் செயல்கூறு எது?",
+    "options": [
+      "can",
+      "try",
+      "contains",
+      "length"
+    ],
+    "answer": "can"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "mergeக்கு அளித்த இரு மேப்புகளில் ஒரே விசை இருந்தால் எந்த மதிப்பு முன்னுரிமை பெறும்?",
+    "options": [
+      "முந்தைய மதிப்புருவின் மதிப்பு",
+      "மதிப்புகள் எப்போதும் பட்டியலாக இணைக்கப்படும்",
+      "மீள்வரும் விசை எப்போதும் பிழை ஏற்படுத்தும்",
+      "பிந்தைய மதிப்புருவின் மதிப்பு"
+    ],
+    "answer": "பிந்தைய மதிப்புருவின் மதிப்பு"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "5.4.x பதிப்புகளை அனுமதித்து 5.5.0ஐ அனுமதிக்காத வழங்குநர் பதிப்புக் கட்டுப்பாடு எது?",
+    "options": [
+      ">= 5.4.0",
+      ">= 5.0, < 6.0",
+      "~> 5.4.0",
+      "~> 5.4"
+    ],
+    "answer": "~> 5.4.0"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "null மதிப்பளித்த வள மதிப்புருவை Terraform பொதுவாக எவ்வாறு கருதுகிறது?",
+    "options": [
+      "முழு வளத்தையும் நீக்குவதற்கான கோரிக்கை",
+      "அதன் இயல்புநிலைகளுக்கும் தேவைகளுக்கும் உட்பட்ட விடுபட்ட மதிப்புரு",
+      "ஒவ்வொரு வழங்குநரிலும் வெற்றுச் சரம்",
+      "ஒவ்வொரு வழங்குநரிலும் எண் பூஜ்ஜியம்"
+    ],
+    "answer": "அதன் இயல்புநிலைகளுக்கும் தேவைகளுக்கும் உட்பட்ட விடுபட்ட மதிப்புரு"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "எழுதப்பட்டுள்ள தொகுதியின் கோப்பமைப்புப் பாதையைக் குறிப்பிடும் கோவை எது?",
+    "options": [
+      "path.module",
+      "path.root",
+      "path.cwd",
+      "terraform.workspace"
+    ],
+    "answer": "path.module"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "CLI உள்ளமைவை HCP Terraform உடன் இணைக்கப் பரிந்துரைக்கப்படும் terraform தொகுப்பு வசதி எது?",
+    "options": [
+      "locals",
+      "moved",
+      "check",
+      "cloud"
+    ],
+    "answer": "cloud"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "குறிப்பிட்ட நிலையிலிருந்து terraform_remote_state எந்த மேல்நிலை மதிப்புகளை நேரடியாக வழங்குகிறது?",
+    "options": [
+      "வழங்குநரின் அனைத்து அங்கீகாரத் தகவல்கள்",
+      "அனைத்துத் துணைத்தொகுதிகளின் உள்ளூர் மதிப்புகள்",
+      "முதன்மைத் தொகுதி வெளியீடுகள்",
+      "ஒவ்வொரு வளப் பண்பும் மேல்நிலை வெளியீடாக"
+    ],
+    "answer": "முதன்மைத் தொகுதி வெளியீடுகள்"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "குறிப்பிட்ட நிர்வகிக்கப்படும் வளம் மாறும்போது மாற்றீடு கோரும் வாழ்க்கைச்சுழற்சி விதி எது?",
+    "options": [
+      "create_before_destroy",
+      "replace_triggered_by",
+      "ignore_changes",
+      "prevent_destroy"
+    ],
+    "answer": "replace_triggered_by"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "தனி வழங்குநரை நிறுவாமல் சாதாரண உள்ளீட்டு மதிப்பிற்கு வள வாழ்க்கைச்சுழற்சி வழங்கும் உள்ளமைந்த வளம் எது?",
+    "options": [
+      "terraform_data",
+      "terraform_remote_state",
+      "local_file",
+      "random_id"
+    ],
+    "answer": "terraform_data"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "சாதாரண plan அல்லது applyஇல் check தொகுப்பின் உறுதிப்பாடு தோல்வியடைந்தால் என்ன நடக்கும்?",
+    "options": [
+      "Terraform சோதிக்கப்பட்ட பொருளை எப்போதும் அழிக்கும்",
+      "Terraform அறிவிப்பின்றி check தொகுப்பை நீக்கும்",
+      "எந்த வளத்தையும் புதுப்பிப்பதற்கு முன் Terraform எப்போதும் வெளியேறும்",
+      "Terraform எச்சரிக்கும்; அந்தத் தோல்விக்காக மட்டும் செயலைத் தடுக்காது"
+    ],
+    "answer": "Terraform எச்சரிக்கும்; அந்தத் தோல்விக்காக மட்டும் செயலைத் தடுக்காது"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "வள வாழ்க்கைச்சுழற்சியின் முன்நிபந்தனை false என மதிப்பிடப்பட்டால் என்ன நடக்கும்?",
+    "options": [
+      "Terraform வளத்தைத் தரவு மூலமாக மாற்றும்",
+      "Terraform முன்நிபந்தனைக்குப் பதிலாக எச்சரிக்கை மட்டும் தரும்",
+      "Terraform பிழை தெரிவித்து தொடர்புடைய செயலைத் தடுக்கும்",
+      "Terraform அடுத்த இயக்கம் வரை முன்நிபந்தனையைப் புறக்கணிக்கும்"
+    ],
+    "answer": "Terraform பிழை தெரிவித்து தொடர்புடைய செயலைத் தடுக்கும்"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "Terraformஇன் சொந்தச் சோதனைக் கோப்புகளை இயக்கும் கட்டளை எது?",
+    "options": [
+      "terraform console",
+      "terraform test",
+      "terraform validate",
+      "terraform fmt"
+    ],
+    "answer": "terraform test"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "Terraform சோதனையின் run தொகுப்பை இயல்புநிலை applyக்கு மாற்றாக plan செய்ய வைக்கும் அமைப்பு எது?",
+    "options": [
+      "command = plan",
+      "command = validate",
+      "command = refresh",
+      "command = console"
+    ],
+    "answer": "command = plan"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "ஒரு அடைவுக்குள் குளோப் வடிவத்துடன் பொருந்தும் சார்புப் பாதைகளின் தொகுப்பைத் தரும் செயல்கூறு எது?",
+    "options": [
+      "file",
+      "dirname",
+      "basename",
+      "fileset"
+    ],
+    "answer": "fileset"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "வேறுபட்ட அணுகல் கட்டுப்பாடுகள் தேவைப்படும் சூழல்களைப் பிரிக்க CLI பணியிடங்கள் மட்டும் ஏன் பொருத்தமற்றதாக இருக்கலாம்?",
+    "options": [
+      "அவை வெவ்வேறு உள்ளீட்டு மாறி மதிப்புகளைப் பயன்படுத்த விடாது",
+      "அவை ஒவ்வொரு சூழலும் ஒரே வளப் பெயர்களைப் பயன்படுத்தக் கட்டாயப்படுத்தும்",
+      "அவை ஒரே பின்தள உள்ளமைவையும் அங்கீகாரச் சூழலையும் பகிர்கின்றன",
+      "அவை எப்போதும் ஒரே நிலைப் படிமத்தைப் பகிர்கின்றன"
+    ],
+    "answer": "அவை ஒரே பின்தள உள்ளமைவையும் அங்கீகாரச் சூழலையும் பகிர்கின்றன"
+  }
+]

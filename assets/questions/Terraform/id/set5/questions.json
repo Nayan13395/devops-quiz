@@ -1,0 +1,302 @@
+[
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "Blok deklaratif mana yang mencatat perubahan alamat sumber daya agar Terraform dapat mempertahankan objek yang ada?",
+    "options": [
+      "removed",
+      "check",
+      "moved",
+      "import"
+    ],
+    "answer": "moved"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "Dalam blok moved, argumen mana yang menentukan alamat sumber daya baru?",
+    "options": [
+      "provider",
+      "to",
+      "from",
+      "id"
+    ],
+    "answer": "to"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "Blok mana yang mendeklarasikan objek infrastruktur yang sudah ada untuk diimpor saat operasi apply?",
+    "options": [
+      "import",
+      "moved",
+      "output",
+      "check"
+    ],
+    "answer": "import"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "Pengaturan blok removed mana yang melupakan sumber daya tanpa menghancurkan objek infrastruktur nyatanya?",
+    "options": [
+      "lifecycle { destroy = true }",
+      "lifecycle { create_before_destroy = true }",
+      "lifecycle { prevent_destroy = false }",
+      "lifecycle { destroy = false }"
+    ],
+    "answer": "lifecycle { destroy = false }"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "Ketika variabel masukan biasa ditandai sensitive, apa yang terjadi pada nilainya di berkas state lokal?",
+    "options": [
+      "Nilainya selalu dikeluarkan dari state",
+      "Nilainya diganti dengan nama variabel sebelum disimpan",
+      "Nilainya masih dapat disimpan sebagai teks biasa meskipun keluaran CLI normal menyamarkannya",
+      "Nilainya otomatis dienkripsi oleh flag sensitive"
+    ],
+    "answer": "Nilainya masih dapat disimpan sebagai teks biasa meskipun keluaran CLI normal menyamarkannya"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "Format perintah output mana yang dapat menampilkan nilai keluaran sensitif dalam bentuk yang dapat dibaca mesin?",
+    "options": [
+      "terraform providers schema -json",
+      "terraform output -json",
+      "terraform output -help",
+      "terraform output -no-color"
+    ],
+    "answer": "terraform output -json"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "Fungsi mana yang mengubah nilai Terraform menjadi string JSON?",
+    "options": [
+      "jsonencode",
+      "jsondecode",
+      "yamldecode",
+      "file"
+    ],
+    "answer": "jsonencode"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "Fungsi mana yang mengurai string JSON menjadi nilai Terraform?",
+    "options": [
+      "jsonencode",
+      "yamlencode",
+      "templatefile",
+      "jsondecode"
+    ],
+    "answer": "jsondecode"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "Fungsi mana yang merender berkas templat menggunakan peta variabel yang diberikan?",
+    "options": [
+      "fileset",
+      "filebase64",
+      "templatefile",
+      "file"
+    ],
+    "answer": "templatefile"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "Fungsi mana yang mengembalikan argumen pertama yang dapat dievaluasi tanpa kesalahan dinamis?",
+    "options": [
+      "lookup",
+      "try",
+      "can",
+      "coalesce"
+    ],
+    "answer": "try"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "Fungsi mana yang melaporkan apakah ekspresi dapat dievaluasi tanpa kesalahan dinamis?",
+    "options": [
+      "can",
+      "try",
+      "contains",
+      "length"
+    ],
+    "answer": "can"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "Jika dua peta yang diberikan ke merge berisi kunci yang sama, nilai mana yang berlaku?",
+    "options": [
+      "Nilai dari argumen yang lebih awal",
+      "Nilainya selalu digabungkan menjadi daftar",
+      "Kunci duplikat selalu menyebabkan kesalahan",
+      "Nilai dari argumen yang lebih akhir"
+    ],
+    "answer": "Nilai dari argumen yang lebih akhir"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "Batasan versi penyedia mana yang mengizinkan rilis 5.4.x tetapi tidak 5.5.0?",
+    "options": [
+      ">= 5.4.0",
+      ">= 5.0, < 6.0",
+      "~> 5.4.0",
+      "~> 5.4"
+    ],
+    "answer": "~> 5.4.0"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "Bagaimana Terraform umumnya memperlakukan argumen sumber daya yang diberi nilai null?",
+    "options": [
+      "Sebagai permintaan menghapus seluruh sumber daya",
+      "Sebagai argumen yang tidak diberikan, sesuai nilai bawaan dan persyaratan argumen tersebut",
+      "Sebagai string kosong pada setiap penyedia",
+      "Sebagai angka nol pada setiap penyedia"
+    ],
+    "answer": "Sebagai argumen yang tidak diberikan, sesuai nilai bawaan dan persyaratan argumen tersebut"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "Ekspresi mana yang menunjukkan jalur sistem berkas dari modul tempat ekspresi itu ditulis?",
+    "options": [
+      "path.module",
+      "path.root",
+      "path.cwd",
+      "terraform.workspace"
+    ],
+    "answer": "path.module"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "Fitur blok terraform mana yang disarankan untuk menghubungkan konfigurasi CLI ke HCP Terraform?",
+    "options": [
+      "locals",
+      "moved",
+      "check",
+      "cloud"
+    ],
+    "answer": "cloud"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "Nilai tingkat teratas apa yang langsung disediakan terraform_remote_state dari state yang dirujuk?",
+    "options": [
+      "Semua kredensial penyedia",
+      "Semua nilai lokal modul anak",
+      "Keluaran modul akar",
+      "Setiap atribut sumber daya sebagai keluaran tingkat teratas"
+    ],
+    "answer": "Keluaran modul akar"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "Aturan siklus hidup mana yang meminta penggantian ketika sumber daya terkelola yang dirujuk berubah?",
+    "options": [
+      "create_before_destroy",
+      "replace_triggered_by",
+      "ignore_changes",
+      "prevent_destroy"
+    ],
+    "answer": "replace_triggered_by"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "Sumber daya terkelola bawaan mana yang memberikan siklus hidup sumber daya pada nilai masukan biasa tanpa memasang penyedia terpisah?",
+    "options": [
+      "terraform_data",
+      "terraform_remote_state",
+      "local_file",
+      "random_id"
+    ],
+    "answer": "terraform_data"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "Apa yang terjadi jika asersi dalam blok check gagal saat plan atau apply biasa?",
+    "options": [
+      "Terraform selalu menghancurkan objek yang diperiksa",
+      "Terraform diam-diam menghapus blok check",
+      "Terraform selalu berhenti sebelum memperbarui sumber daya apa pun",
+      "Terraform memberikan peringatan tanpa menghentikan operasi hanya karena kegagalan itu"
+    ],
+    "answer": "Terraform memberikan peringatan tanpa menghentikan operasi hanya karena kegagalan itu"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "Apa yang terjadi ketika prasyarat siklus hidup sumber daya bernilai false?",
+    "options": [
+      "Terraform mengubah sumber daya menjadi sumber data",
+      "Terraform mengganti prasyarat menjadi sekadar peringatan",
+      "Terraform melaporkan kesalahan dan mencegah operasi terkait",
+      "Terraform mengabaikan prasyarat sampai eksekusi berikutnya"
+    ],
+    "answer": "Terraform melaporkan kesalahan dan mencegah operasi terkait"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "Perintah mana yang menjalankan berkas pengujian native Terraform?",
+    "options": [
+      "terraform console",
+      "terraform test",
+      "terraform validate",
+      "terraform fmt"
+    ],
+    "answer": "terraform test"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "Pengaturan mana yang membuat blok run dalam pengujian Terraform melakukan plan, bukan apply bawaan?",
+    "options": [
+      "command = plan",
+      "command = validate",
+      "command = refresh",
+      "command = console"
+    ],
+    "answer": "command = plan"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "Fungsi mana yang mengembalikan kumpulan jalur relatif yang cocok dengan pola glob di bawah sebuah direktori?",
+    "options": [
+      "file",
+      "dirname",
+      "basename",
+      "fileset"
+    ],
+    "answer": "fileset"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "Mengapa ruang kerja CLI saja dapat kurang sesuai untuk memisahkan lingkungan yang membutuhkan kontrol akses berbeda?",
+    "options": [
+      "Ruang kerja mencegah penggunaan nilai variabel masukan yang berbeda",
+      "Ruang kerja memaksa semua lingkungan menggunakan nama sumber daya yang sama",
+      "Ruang kerja berbagi konfigurasi backend dan konteks autentikasi yang sama",
+      "Ruang kerja selalu berbagi satu snapshot state"
+    ],
+    "answer": "Ruang kerja berbagi konfigurasi backend dan konteks autentikasi yang sama"
+  }
+]

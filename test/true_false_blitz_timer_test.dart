@@ -1,10 +1,20 @@
 import 'package:devops_quiz/screens/true_false_blitz_screen.dart';
+import 'package:devops_quiz/app_localization_delegates.dart';
+import 'package:devops_quiz/l10n/app_localizations.dart';
+import 'package:devops_quiz/services/saved_data_service.dart';
+import 'package:devops_quiz/widgets/save_question_button.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 Future<void> _pumpBlitz(WidgetTester tester) async {
-  await tester.pumpWidget(const MaterialApp(home: TrueFalseBlitzScreen()));
+  await tester.pumpWidget(
+    const MaterialApp(
+      localizationsDelegates: appLocalizationDelegates,
+      supportedLocales: AppLocalizations.supportedLocales,
+      home: TrueFalseBlitzScreen(),
+    ),
+  );
   for (
     int attempt = 0;
     attempt < 200 &&
@@ -48,6 +58,15 @@ void main() {
     await tester.tap(find.text('Start'));
     await tester.pump();
     expect(find.textContaining('180 s'), findsOneWidget);
+    final question = tester
+        .widget<SaveQuestionButton>(find.byType(SaveQuestionButton))
+        .question;
+    await tester.pump();
+    await tester.ensureVisible(find.text('Save question'));
+    await tester.tap(find.text('Save question'));
+    await tester.pump();
+    await tester.pump();
+    expect(await SavedDataService.questionIds(), {question.id});
     expect(
       tester
           .widget<LinearProgressIndicator>(find.byType(LinearProgressIndicator))

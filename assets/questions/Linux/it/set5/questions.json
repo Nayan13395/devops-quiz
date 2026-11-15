@@ -1,0 +1,302 @@
+[
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "Che cosa impedisce racchiudere un'espansione Bash tra virgolette come \"$name\"?",
+    "options": [
+      "Qualsiasi espansione di parametri all'interno delle virgolette",
+      "La modifica successiva della variabile",
+      "Che il comando riceva un argomento vuoto",
+      "La suddivisione in parole e l'espansione dei nomi di percorso del valore espanso"
+    ],
+    "answer": "La suddivisione in parole e l'espansione dei nomi di percorso del valore espanso"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "Che cosa fa scrivere '$HOME' tra apici singoli in Bash?",
+    "options": [
+      "Espande la directory di lavoro precedente",
+      "Elimina il simbolo del dollaro e passa HOME",
+      "Passa il testo letterale $HOME",
+      "Espande la directory personale dell'utente"
+    ],
+    "answer": "Passa il testo letterale $HOME"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "Che cosa inserisce la sostituzione di comando Bash tramite $(command)?",
+    "options": [
+      "Lo stato di uscita del comando come numero decimale",
+      "L'output standard del comando senza i ritorni a capo finali",
+      "L'identificatore numerico del processo del comando",
+      "Soltanto l'errore standard del comando"
+    ],
+    "answer": "L'output standard del comando senza i ritorni a capo finali"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "Quale comando integrato Bash legge ed esegue i comandi di un file di script nella shell corrente?",
+    "options": [
+      "source",
+      "exec",
+      "eval",
+      "export"
+    ],
+    "answer": "source"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "Che cosa fa 'exec program' in uno script Bash quando l'esecuzione riesce?",
+    "options": [
+      "Avvia program come job in background mentre la shell continua",
+      "Esegue program due volte e confronta i risultati",
+      "Carica l'output di program come codice sorgente della shell",
+      "Sostituisce il processo della shell con program"
+    ],
+    "answer": "Sostituisce il processo della shell con program"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "Con pipefail abilitato in Bash, qual è lo stato di una pipeline se uno o più comandi falliscono?",
+    "options": [
+      "Sempre zero se l'ultimo comando riesce",
+      "La somma degli stati di uscita di tutti i comandi",
+      "Lo stato del comando più a destra che ha restituito un valore diverso da zero",
+      "Sempre lo stato del primo comando"
+    ],
+    "answer": "Lo stato del comando più a destra che ha restituito un valore diverso da zero"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "Quale comando verifica i checksum SHA-256 registrati in checksums.txt usando GNU Coreutils?",
+    "options": [
+      "cksum checksums.txt",
+      "sha256sum -c checksums.txt",
+      "sha256sum checksums.txt",
+      "md5sum -c checksums.txt"
+    ],
+    "answer": "sha256sum -c checksums.txt"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "Quale comando GNU tar crea un archivio della directory logs compresso con gzip?",
+    "options": [
+      "tar -czf logs.tar.gz logs",
+      "tar -xzf logs.tar.gz",
+      "tar -tzf logs.tar.gz",
+      "gzip -d logs.tar.gz"
+    ],
+    "answer": "tar -czf logs.tar.gz logs"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "Quale opzione tar elenca il contenuto di un archivio senza estrarlo?",
+    "options": [
+      "-x",
+      "-c",
+      "-r",
+      "-t"
+    ],
+    "answer": "-t"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "Che cosa comporta normalmente il bit setgid di una directory Linux per i nuovi file creati al suo interno?",
+    "options": [
+      "Appartengono all'utente root",
+      "Non possono essere rimossi dal proprietario",
+      "Ereditano il gruppo proprietario della directory",
+      "Diventano sempre eseguibili da ogni utente"
+    ],
+    "answer": "Ereditano il gruppo proprietario della directory"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "Che cosa limita principalmente lo sticky bit di una directory condivisa scrivibile?",
+    "options": [
+      "Chi può allocare blocchi su disco nel filesystem",
+      "Chi può eliminare o rinominare file in quella directory",
+      "Chi può leggere ogni file in quella directory",
+      "Chi può eseguire programmi fuori da quella directory"
+    ],
+    "answer": "Chi può eliminare o rinominare file in quella directory"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "Quale comando mostra le voci della lista di controllo degli accessi di un file?",
+    "options": [
+      "getfacl file.txt",
+      "setfacl -b file.txt",
+      "getfattr -d file.txt",
+      "lsattr file.txt"
+    ],
+    "answer": "getfacl file.txt"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "Quale file contiene normalmente i record degli account utente locali anziché gli hash delle password?",
+    "options": [
+      "/etc/shadow",
+      "/etc/group",
+      "/etc/gshadow",
+      "/etc/passwd"
+    ],
+    "answer": "/etc/passwd"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "Quale comando aggiunge alice al gruppo supplementare docker senza sostituire i gruppi supplementari esistenti?",
+    "options": [
+      "usermod -g docker alice",
+      "usermod -l docker alice",
+      "usermod -aG docker alice",
+      "usermod -G docker alice"
+    ],
+    "answer": "usermod -aG docker alice"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "Quale comando blocca la password di un utente Linux per l'autenticazione basata su password?",
+    "options": [
+      "passwd -e alice",
+      "passwd -l alice",
+      "passwd -u alice",
+      "passwd -S alice"
+    ],
+    "answer": "passwd -l alice"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "Quale comando interroga le fonti configurate dei servizi dei nomi per ottenere la voce passwd di alice?",
+    "options": [
+      "getent passwd alice",
+      "groups alice",
+      "id -u alice",
+      "whoami"
+    ],
+    "answer": "getent passwd alice"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "Quale file definisce normalmente i filesystem da montare automaticamente all'avvio?",
+    "options": [
+      "/etc/hosts",
+      "/etc/shells",
+      "/etc/resolv.conf",
+      "/etc/fstab"
+    ],
+    "answer": "/etc/fstab"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "Quale comando mostra gli UUID dei filesystem e altri attributi dei dispositivi a blocchi?",
+    "options": [
+      "modinfo",
+      "lscpu",
+      "blkid",
+      "lsmod"
+    ],
+    "answer": "blkid"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "Perché normalmente si dovrebbe smontare un filesystem prima di eseguire un'operazione di riparazione con fsck?",
+    "options": [
+      "I filesystem montati non contengono mai spazio libero",
+      "Scritture simultanee possono entrare in conflitto con le riparazioni e danneggiare i dati",
+      "Lo smontaggio crittografa automaticamente tutti i metadati del filesystem",
+      "fsck supporta soltanto filesystem senza nomi di dispositivo"
+    ],
+    "answer": "Scritture simultanee possono entrare in conflitto con le riparazioni e danneggiare i dati"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "Quale comando mostra le aree di swap attive?",
+    "options": [
+      "swapon --show",
+      "swapoff -a",
+      "free -s 1",
+      "vmstat -d"
+    ],
+    "answer": "swapon --show"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "Quale comando carica un modulo del kernel Linux insieme alle sue dipendenze?",
+    "options": [
+      "rmmod",
+      "lsmod",
+      "modinfo",
+      "modprobe"
+    ],
+    "answer": "modprobe"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "Quale comando systemd impedisce l'avvio di un'unità collegandola a /dev/null?",
+    "options": [
+      "systemctl stop app.service",
+      "systemctl reset-failed app.service",
+      "systemctl mask app.service",
+      "systemctl disable app.service"
+    ],
+    "answer": "systemctl mask app.service"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "Quale opzione SSH seleziona un file di identità privata per l'autenticazione?",
+    "options": [
+      "-R",
+      "-i",
+      "-p",
+      "-L"
+    ],
+    "answer": "-i"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "Quale comando copia in modo sicuro un file locale nella directory di un utente remoto tramite SSH?",
+    "options": [
+      "scp report.txt alice@server:/home/alice/",
+      "ssh alice@server cat report.txt",
+      "sftp -b report.txt alice@server",
+      "ssh-keygen -f report.txt"
+    ],
+    "answer": "scp report.txt alice@server:/home/alice/"
+  },
+  {
+    "category": "Linux",
+    "set": 5,
+    "question": "Che cosa richiede 'rsync -n'?",
+    "options": [
+      "L'eliminazione dei file di destinazione assenti nella sorgente",
+      "La compressione dei dati dei file trasferiti",
+      "La conservazione ricorsiva di ogni attributo del filesystem",
+      "Una simulazione che segnala le modifiche previste senza applicarle"
+    ],
+    "answer": "Una simulazione che segnala le modifiche previste senza applicarle"
+  }
+]

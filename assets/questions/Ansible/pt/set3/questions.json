@@ -1,0 +1,302 @@
+[
+  {
+    "category": "Ansible",
+    "set": 3,
+    "question": "O que é uma Role do Ansible?",
+    "options": [
+      "Uma coleção reutilizável de tarefas e arquivos",
+      "Uma conta de usuário",
+      "Um grupo de inventário",
+      "Uma variável de playbook"
+    ],
+    "answer": "Uma coleção reutilizável de tarefas e arquivos"
+  },
+  {
+    "category": "Ansible",
+    "set": 3,
+    "question": "Qual comando cria uma nova estrutura de role?",
+    "options": [
+      "ansible-galaxy init",
+      "ansible role create",
+      "ansible init role",
+      "ansible-playbook init"
+    ],
+    "answer": "ansible-galaxy init"
+  },
+  {
+    "category": "Ansible",
+    "set": 3,
+    "question": "Qual diretório contém as tarefas de uma role?",
+    "options": [
+      "tasks",
+      "handlers",
+      "files",
+      "vars"
+    ],
+    "answer": "tasks"
+  },
+  {
+    "category": "Ansible",
+    "set": 3,
+    "question": "Qual arquivo é o arquivo principal de tarefas em uma role?",
+    "options": [
+      "tasks/main.yml",
+      "tasks/tasks.yml",
+      "main/tasks.yml",
+      "role.yml"
+    ],
+    "answer": "tasks/main.yml"
+  },
+  {
+    "category": "Ansible",
+    "set": 3,
+    "question": "Qual diretório contém os handlers de uma role?",
+    "options": [
+      "handlers",
+      "tasks",
+      "events",
+      "notify"
+    ],
+    "answer": "handlers"
+  },
+  {
+    "category": "Ansible",
+    "set": 3,
+    "question": "Qual diretório armazena templates Jinja2 em uma role?",
+    "options": [
+      "templates",
+      "files",
+      "jinja",
+      "render"
+    ],
+    "answer": "templates"
+  },
+  {
+    "category": "Ansible",
+    "set": 3,
+    "question": "Qual diretório armazena arquivos estáticos em uma role?",
+    "options": [
+      "files",
+      "templates",
+      "static",
+      "resources"
+    ],
+    "answer": "files"
+  },
+  {
+    "category": "Ansible",
+    "set": 3,
+    "question": "Qual diretório contém as variáveis de uma role?",
+    "options": [
+      "vars",
+      "variables",
+      "config",
+      "settings"
+    ],
+    "answer": "vars"
+  },
+  {
+    "category": "Ansible",
+    "set": 3,
+    "question": "Qual diretório contém as variáveis padrão?",
+    "options": [
+      "defaults",
+      "vars",
+      "config",
+      "settings"
+    ],
+    "answer": "defaults"
+  },
+  {
+    "category": "Ansible",
+    "set": 3,
+    "question": "Qual palavra-chave no nível do play declara uma lista estática de papéis, em vez de invocar um papel a partir de uma tarefa individual?",
+    "options": [
+      "roles",
+      "include_role",
+      "role",
+      "import_role"
+    ],
+    "answer": "roles"
+  },
+  {
+    "category": "Ansible",
+    "set": 3,
+    "question": "O que é o Ansible Galaxy?",
+    "options": [
+      "Repositório de roles e collections do Ansible",
+      "Ferramenta de monitoramento",
+      "Plataforma de CI/CD",
+      "Gerenciador de inventário"
+    ],
+    "answer": "Repositório de roles e collections do Ansible"
+  },
+  {
+    "category": "Ansible",
+    "set": 3,
+    "question": "Qual comando instala uma role do Galaxy?",
+    "options": [
+      "ansible-galaxy install",
+      "ansible install role",
+      "ansible role add",
+      "ansible-galaxy add"
+    ],
+    "answer": "ansible-galaxy install"
+  },
+  {
+    "category": "Ansible",
+    "set": 3,
+    "question": "Para que o Ansible Vault é usado?",
+    "options": [
+      "Criptografar dados sensíveis",
+      "Gerenciar inventários",
+      "Executar playbooks",
+      "Instalar roles"
+    ],
+    "answer": "Criptografar dados sensíveis"
+  },
+  {
+    "category": "Ansible",
+    "set": 3,
+    "question": "Qual comando criptografa um arquivo existente?",
+    "options": [
+      "ansible-vault encrypt",
+      "ansible-vault secure",
+      "ansible-vault create",
+      "ansible-vault lock"
+    ],
+    "answer": "ansible-vault encrypt"
+  },
+  {
+    "category": "Ansible",
+    "set": 3,
+    "question": "O que são Collections do Ansible?",
+    "options": [
+      "Pacotes contendo roles, módulos e plugins",
+      "Grupos de inventário",
+      "Arquivos criptografados",
+      "Variáveis YAML"
+    ],
+    "answer": "Pacotes contendo roles, módulos e plugins"
+  },
+  {
+    "category": "Ansible",
+    "set": 3,
+    "question": "Qual arquivo de um papel normalmente declara dependências de outros papéis?",
+    "options": [
+      "vars/main.yml",
+      "meta/main.yml",
+      "defaults/main.yml",
+      "handlers/main.yml"
+    ],
+    "answer": "meta/main.yml"
+  },
+  {
+    "category": "Ansible",
+    "set": 3,
+    "question": "Qual comando instala uma coleção chamada community.general?",
+    "options": [
+      "ansible-galaxy collection install community.general",
+      "ansible-galaxy role install community.general",
+      "ansible-galaxy collection build community.general",
+      "ansible-galaxy collection verify community.general"
+    ],
+    "answer": "ansible-galaxy collection install community.general"
+  },
+  {
+    "category": "Ansible",
+    "set": 3,
+    "question": "O que o nome de coleção totalmente qualificado ansible.builtin.copy identifica?",
+    "options": [
+      "Um papel copy dentro de um grupo de hosts chamado builtin",
+      "Um nome de host do inventário seguido de seu tipo de conexão",
+      "Um identificador do Vault seguido de um nome de arquivo criptografado",
+      "O módulo copy na coleção builtin do espaço de nomes ansible"
+    ],
+    "answer": "O módulo copy na coleção builtin do espaço de nomes ansible"
+  },
+  {
+    "category": "Ansible",
+    "set": 3,
+    "question": "Qual comando exibe um arquivo criptografado com Vault sem descriptografá-lo permanentemente no disco?",
+    "options": [
+      "ansible-vault edit secrets.yml",
+      "ansible-vault rekey secrets.yml",
+      "ansible-vault view secrets.yml",
+      "ansible-vault decrypt secrets.yml"
+    ],
+    "answer": "ansible-vault view secrets.yml"
+  },
+  {
+    "category": "Ansible",
+    "set": 3,
+    "question": "Qual comando altera a senha que protege um arquivo existente criptografado com Vault?",
+    "options": [
+      "ansible-vault create secrets.yml",
+      "ansible-vault rekey secrets.yml",
+      "ansible-vault view secrets.yml",
+      "ansible-vault encrypt secrets.yml"
+    ],
+    "answer": "ansible-vault rekey secrets.yml"
+  },
+  {
+    "category": "Ansible",
+    "set": 3,
+    "question": "Qual opção solicita uma senha do Vault ao executar um playbook?",
+    "options": [
+      "--ask-vault-pass",
+      "--ask-pass",
+      "--ask-become-pass",
+      "--private-key"
+    ],
+    "answer": "--ask-vault-pass"
+  },
+  {
+    "category": "Ansible",
+    "set": 3,
+    "question": "Qual ação de tarefa carrega dinamicamente um papel durante a execução?",
+    "options": [
+      "ansible.builtin.import_role",
+      "ansible.builtin.import_tasks",
+      "ansible.builtin.include_vars",
+      "ansible.builtin.include_role"
+    ],
+    "answer": "ansible.builtin.include_role"
+  },
+  {
+    "category": "Ansible",
+    "set": 3,
+    "question": "Qual ação de tarefa importa estaticamente um arquivo que contém tarefas?",
+    "options": [
+      "ansible.builtin.include_vars",
+      "ansible.builtin.import_role",
+      "ansible.builtin.import_tasks",
+      "ansible.builtin.include_tasks"
+    ],
+    "answer": "ansible.builtin.import_tasks"
+  },
+  {
+    "category": "Ansible",
+    "set": 3,
+    "question": "Qual origem de variáveis tem precedência quando o mesmo nome aparece nos valores padrão e nas variáveis de um papel?",
+    "options": [
+      "As duas definições sempre causam um erro de sintaxe",
+      "Variáveis do papel",
+      "Valores padrão do papel",
+      "Os dois valores são sempre concatenados"
+    ],
+    "answer": "Variáveis do papel"
+  },
+  {
+    "category": "Ansible",
+    "set": 3,
+    "question": "Qual comando cria uma variável criptografada a partir de uma string fornecida?",
+    "options": [
+      "ansible-vault encrypt_string",
+      "ansible-vault encrypt",
+      "ansible-vault rekey",
+      "ansible-vault view"
+    ],
+    "answer": "ansible-vault encrypt_string"
+  }
+]

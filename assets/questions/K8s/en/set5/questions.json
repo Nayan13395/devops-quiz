@@ -1,0 +1,302 @@
+[
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "What does a NetworkPolicy require in order to affect Pod traffic?",
+    "options": [
+      "A LoadBalancer Service for every selected Pod",
+      "A PersistentVolumeClaim in the same namespace",
+      "A separate API server for each policy",
+      "A network implementation that enforces NetworkPolicy"
+    ],
+    "answer": "A network implementation that enforces NetworkPolicy"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "How do multiple NetworkPolicies that select the same Pod combine their allowed ingress traffic?",
+    "options": [
+      "The first-created policy overrides all later policies",
+      "Each policy must allow every packet independently",
+      "The allowed traffic is the union of their ingress permissions",
+      "The last-created policy overrides all earlier policies"
+    ],
+    "answer": "The allowed traffic is the union of their ingress permissions"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "Which RBAC object defines permissions within a namespace?",
+    "options": [
+      "ResourceQuota",
+      "Role",
+      "RoleBinding",
+      "ServiceAccount"
+    ],
+    "answer": "Role"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "Which RBAC object grants a Role or ClusterRole's permissions within one namespace?",
+    "options": [
+      "RoleBinding",
+      "ClusterRoleBinding",
+      "ServiceAccount",
+      "LimitRange"
+    ],
+    "answer": "RoleBinding"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "Which identity is normally assigned to processes running in a Pod for Kubernetes API access?",
+    "options": [
+      "StorageClass",
+      "RuntimeClass",
+      "PriorityClass",
+      "ServiceAccount"
+    ],
+    "answer": "ServiceAccount"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "Why is base64 encoding a Secret's data not sufficient to protect it from someone who can read the object?",
+    "options": [
+      "Base64 automatically publishes the data through DNS",
+      "Base64 requires a private key stored in the Pod",
+      "Base64 is reversible encoding, not encryption",
+      "Base64 prevents Kubernetes from storing the data"
+    ],
+    "answer": "Base64 is reversible encoding, not encryption"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "Which field can stop Kubernetes from automatically mounting API credentials into a Pod?",
+    "options": [
+      "shareProcessNamespace: false",
+      "automountServiceAccountToken: false",
+      "hostNetwork: false",
+      "enableServiceLinks: false"
+    ],
+    "answer": "automountServiceAccountToken: false"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "Which object caps aggregate resource consumption within a namespace?",
+    "options": [
+      "ResourceQuota",
+      "LimitRange",
+      "PriorityClass",
+      "PodDisruptionBudget"
+    ],
+    "answer": "ResourceQuota"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "Which object can assign default resource requests and limits to containers within a namespace?",
+    "options": [
+      "ResourceQuota",
+      "HorizontalPodAutoscaler",
+      "RuntimeClass",
+      "LimitRange"
+    ],
+    "answer": "LimitRange"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "What does a finalizer on a Kubernetes object do after deletion is requested?",
+    "options": [
+      "Immediately deletes every dependent object",
+      "Converts the object to an immutable Secret",
+      "Keeps the object pending deletion until the required cleanup removes the finalizer",
+      "Prevents all future updates to the object"
+    ],
+    "answer": "Keeps the object pending deletion until the required cleanup removes the finalizer"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "Which metadata field connects dependent objects to their owners for garbage collection?",
+    "options": [
+      "managedFields",
+      "ownerReferences",
+      "annotations",
+      "labels"
+    ],
+    "answer": "ownerReferences"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "What does a CustomResourceDefinition add to a cluster?",
+    "options": [
+      "A new custom resource type served by the Kubernetes API",
+      "A running reconciliation controller for an existing type",
+      "An RBAC permission grant to every service account",
+      "An instance of every built-in resource type"
+    ],
+    "answer": "A new custom resource type served by the Kubernetes API"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "What distinguishes a Kubernetes operator from a custom resource definition alone?",
+    "options": [
+      "An operator can only store schema definitions",
+      "An operator removes the need for an API server",
+      "An operator only changes kubectl's output format",
+      "An operator also runs reconciliation logic to manage the represented application"
+    ],
+    "answer": "An operator also runs reconciliation logic to manage the represented application"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "Which mechanism can reject or modify an API request after authentication and authorization, before persistence?",
+    "options": [
+      "Container image pulling",
+      "Service endpoint routing",
+      "Admission control",
+      "Pod scheduling"
+    ],
+    "answer": "Admission control"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "What happens if no eligible node satisfies a Pod's required node affinity?",
+    "options": [
+      "The API server schedules it on every node",
+      "The Pod remains unscheduled until a suitable node is available or constraints change",
+      "The scheduler ignores the rule after one attempt",
+      "The Pod automatically becomes a DaemonSet"
+    ],
+    "answer": "The Pod remains unscheduled until a suitable node is available or constraints change"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "What does preferredDuringSchedulingIgnoredDuringExecution node affinity express?",
+    "options": [
+      "A placement preference that does not rule out otherwise eligible nonmatching nodes",
+      "A mandatory requirement that prevents placement on nonmatching nodes",
+      "An instruction to evict the Pod if a node label changes",
+      "A request to bypass the scheduler entirely"
+    ],
+    "answer": "A placement preference that does not rule out otherwise eligible nonmatching nodes"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "What does IgnoredDuringExecution mean if a node's labels stop matching a running Pod's node-affinity rule?",
+    "options": [
+      "The Pod must immediately be deleted",
+      "The Pod's containers automatically restart",
+      "The node's labels automatically revert",
+      "The rule alone does not evict the running Pod"
+    ],
+    "answer": "The rule alone does not evict the running Pod"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "What happens when a Pod explicitly sets spec.nodeName?",
+    "options": [
+      "It creates a node with that name",
+      "It renames the node currently running the Pod",
+      "It bypasses the scheduler and is assigned to that named node",
+      "It asks the scheduler to rank all matching node labels"
+    ],
+    "answer": "It bypasses the scheduler and is assigned to that named node"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "What is the purpose of topology spread constraints?",
+    "options": [
+      "Encrypt traffic between control-plane components",
+      "Control how matching Pods are distributed across topology domains",
+      "Copy container files across persistent volumes",
+      "Allocate one public IP to every namespace"
+    ],
+    "answer": "Control how matching Pods are distributed across topology domains"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "Which taint effect can evict already-running Pods that do not tolerate the taint?",
+    "options": [
+      "NoExecute",
+      "NoSchedule",
+      "PreferNoSchedule",
+      "None"
+    ],
+    "answer": "NoExecute"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "Which container securityContext setting requires a Linux container to run as a non-root user?",
+    "options": [
+      "readOnlyRootFilesystem: true",
+      "privileged: false",
+      "allowPrivilegeEscalation: false",
+      "runAsNonRoot: true"
+    ],
+    "answer": "runAsNonRoot: true"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "Which container securityContext setting prevents a Linux process from gaining more privileges than its parent?",
+    "options": [
+      "readOnlyRootFilesystem: true",
+      "privileged: false",
+      "allowPrivilegeEscalation: false",
+      "runAsNonRoot: true"
+    ],
+    "answer": "allowPrivilegeEscalation: false"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "Which kind of container can be added to an existing Pod for troubleshooting without modifying its application containers?",
+    "options": [
+      "Restartable init container",
+      "Ephemeral container",
+      "Ordinary init container",
+      "Regular application container"
+    ],
+    "answer": "Ephemeral container"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "Which resource tracks network endpoints for a Service in scalable groups?",
+    "options": [
+      "EndpointSlice",
+      "IngressClass",
+      "NetworkPolicy",
+      "RuntimeClass"
+    ],
+    "answer": "EndpointSlice"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "What is needed for an Ingress resource to actually configure HTTP routing?",
+    "options": [
+      "A ConfigMap named ingress in every namespace",
+      "A PersistentVolume for each hostname",
+      "A Job that restarts all selected Pods",
+      "An Ingress controller that implements its rules"
+    ],
+    "answer": "An Ingress controller that implements its rules"
+  }
+]

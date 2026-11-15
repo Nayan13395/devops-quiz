@@ -1,0 +1,302 @@
+[
+  {
+    "category": "Kubernetes",
+    "set": 1,
+    "question": "Pod を一覧表示するコマンドはどれですか?",
+    "options": [
+      "kubectl get pods",
+      "kubectl pods",
+      "kubectl list",
+      "kubectl show"
+    ],
+    "answer": "kubectl get pods"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 1,
+    "question": "すべての名前空間の Pod を一覧表示するコマンドはどれですか?",
+    "options": [
+      "kubectl get pods -A",
+      "kubectl get pods --all",
+      "kubectl pods all",
+      "kubectl list pods"
+    ],
+    "answer": "kubectl get pods -A"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 1,
+    "question": "Pod の詳細を表示するコマンドはどれですか?",
+    "options": [
+      "kubectl describe pod",
+      "kubectl details pod",
+      "kubectl inspect pod",
+      "kubectl info pod"
+    ],
+    "answer": "kubectl describe pod"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 1,
+    "question": "Pod のログを表示するコマンドはどれですか?",
+    "options": [
+      "kubectl logs",
+      "kubectl get logs",
+      "kubectl show logs",
+      "kubectl pod logs"
+    ],
+    "answer": "kubectl logs"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 1,
+    "question": "Pod のログを継続的に表示するコマンドはどれですか?",
+    "options": [
+      "kubectl logs -f",
+      "kubectl logs --previous",
+      "kubectl follow logs",
+      "kubectl stream logs"
+    ],
+    "answer": "kubectl logs -f"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 1,
+    "question": "Pod を削除するコマンドはどれですか?",
+    "options": [
+      "kubectl delete pod",
+      "kubectl remove pod",
+      "kubectl erase pod",
+      "kubectl destroy pod"
+    ],
+    "answer": "kubectl delete pod"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 1,
+    "question": "Deployment を作成するコマンドはどれですか?",
+    "options": [
+      "kubectl create deployment",
+      "kubectl add deployment",
+      "kubectl run deployment",
+      "kubectl deploy create"
+    ],
+    "answer": "kubectl create deployment"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 1,
+    "question": "Deployment を一覧表示するコマンドはどれですか?",
+    "options": [
+      "kubectl get deployments",
+      "kubectl deployments",
+      "kubectl show deployments",
+      "kubectl list deploy"
+    ],
+    "answer": "kubectl get deployments"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 1,
+    "question": "Service を一覧表示するコマンドはどれですか?",
+    "options": [
+      "kubectl get services",
+      "kubectl services",
+      "kubectl list svc",
+      "kubectl show services"
+    ],
+    "answer": "kubectl get services"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 1,
+    "question": "ノードを一覧表示するコマンドはどれですか?",
+    "options": [
+      "kubectl get nodes",
+      "kubectl nodes",
+      "kubectl list nodes",
+      "kubectl show nodes"
+    ],
+    "answer": "kubectl get nodes"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 1,
+    "question": "クラスター情報を表示するコマンドはどれですか?",
+    "options": [
+      "kubectl cluster-info",
+      "kubectl get cluster",
+      "kubectl show cluster",
+      "kubectl info cluster"
+    ],
+    "answer": "kubectl cluster-info"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 1,
+    "question": "YAML ファイルから設定を適用するコマンドはどれですか?",
+    "options": [
+      "kubectl apply -f",
+      "kubectl create yaml",
+      "kubectl update -f",
+      "kubectl deploy -f"
+    ],
+    "answer": "kubectl apply -f"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 1,
+    "question": "YAML ファイルからリソースを作成するコマンドはどれですか?",
+    "options": [
+      "kubectl create -f",
+      "kubectl run -f",
+      "kubectl deploy -f",
+      "kubectl start -f"
+    ],
+    "answer": "kubectl create -f"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 1,
+    "question": "YAML ファイルで定義されたリソースを削除するコマンドはどれですか?",
+    "options": [
+      "kubectl delete -f",
+      "kubectl remove -f",
+      "kubectl destroy -f",
+      "kubectl erase -f"
+    ],
+    "answer": "kubectl delete -f"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 1,
+    "question": "実行中の Pod 内でコマンドを実行するコマンドはどれですか?",
+    "options": [
+      "kubectl exec",
+      "kubectl run inside",
+      "kubectl pod exec",
+      "kubectl connect"
+    ],
+    "answer": "kubectl exec"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 1,
+    "question": "要求先の名前空間 payments を選ぶ kubectl オプションはどれか？",
+    "options": [
+      "-l payments",
+      "-o payments",
+      "--context payments",
+      "-n payments"
+    ],
+    "answer": "-n payments"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 1,
+    "question": "現在の kubeconfig コンテキスト名を表示するコマンドはどれか？",
+    "options": [
+      "kubectl config get-users",
+      "kubectl cluster-info",
+      "kubectl config current-context",
+      "kubectl config get-clusters"
+    ],
+    "answer": "kubectl config current-context"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 1,
+    "question": "kubectl を既存の staging コンテキストに切り替えるコマンドはどれか？",
+    "options": [
+      "kubectl config get-contexts staging",
+      "kubectl config use-context staging",
+      "kubectl config delete-context staging",
+      "kubectl config rename-context staging prod"
+    ],
+    "answer": "kubectl config use-context staging"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 1,
+    "question": "Pod 仕様のフィールドの説明を表示するコマンドはどれか？",
+    "options": [
+      "kubectl explain pod.spec",
+      "kubectl describe pod spec",
+      "kubectl get pod spec",
+      "kubectl logs spec"
+    ],
+    "answer": "kubectl explain pod.spec"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 1,
+    "question": "ラベル app=web の Pod を選ぶコマンドはどれか？",
+    "options": [
+      "kubectl get pods -n app=web",
+      "kubectl get pods -o app=web",
+      "kubectl get pods --context app=web",
+      "kubectl get pods -l app=web"
+    ],
+    "answer": "kubectl get pods -l app=web"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 1,
+    "question": "Pod api に team=payments ラベルを追加するコマンドはどれか？",
+    "options": [
+      "kubectl set env pod api team=payments",
+      "kubectl get pod api -l team=payments",
+      "kubectl label pod api team=payments",
+      "kubectl annotate pod api team=payments"
+    ],
+    "answer": "kubectl label pod api team=payments"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 1,
+    "question": "文書 URL など識別に使わない情報を置くメタデータフィールドはどれか？",
+    "options": [
+      "namespace",
+      "annotations",
+      "labels",
+      "name"
+    ],
+    "answer": "annotations"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 1,
+    "question": "現在の認証主体が dev 名前空間で Deployment を作れるか調べるコマンドはどれか？",
+    "options": [
+      "kubectl auth can-i create deployments -n dev",
+      "kubectl get deployments -n dev",
+      "kubectl describe namespace dev",
+      "kubectl config view"
+    ],
+    "answer": "kubectl auth can-i create deployments -n dev"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 1,
+    "question": "複数コンテナの Pod batch から worker のログを得るコマンドはどれか？",
+    "options": [
+      "kubectl logs batch -n worker",
+      "kubectl logs batch --since=1h",
+      "kubectl logs batch --tail=10",
+      "kubectl logs batch -c worker"
+    ],
+    "answer": "kubectl logs batch -c worker"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 1,
+    "question": "Pod api の唯一のコンテナについて、前回終了したインスタンスのログを得るコマンドはどれか？",
+    "options": [
+      "kubectl logs api --timestamps",
+      "kubectl logs api --tail=1",
+      "kubectl logs api --previous",
+      "kubectl logs api --follow"
+    ],
+    "answer": "kubectl logs api --previous"
+  }
+]

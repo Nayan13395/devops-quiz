@@ -1,0 +1,4002 @@
+{
+  "linux-001": {
+    "command": "cat",
+    "description": "ফাইলের বিষয়বস্তু একত্র করে মুদ্রণ করে।"
+  },
+  "linux-002": {
+    "command": "grep",
+    "description": "ফাইলের মধ্যে নির্দিষ্ট প্যাটার্ন খোঁজে।"
+  },
+  "linux-003": {
+    "command": "chmod",
+    "description": "ফাইল বা ডিরেক্টরিতে প্রবেশের অনুমতি পরিবর্তন করে।"
+  },
+  "linux-004": {
+    "command": "chown",
+    "description": "ফাইল বা ডিরেক্টরির মালিকানা পরিবর্তন করে।"
+  },
+  "linux-005": {
+    "command": "ls",
+    "description": "ডিরেক্টরির বিষয়বস্তুর তালিকা দেখায়।"
+  },
+  "linux-006": {
+    "command": "cd",
+    "description": "বর্তমান কাজের ডিরেক্টরি পরিবর্তন করে।"
+  },
+  "linux-007": {
+    "command": "pwd",
+    "description": "বর্তমান কাজের ডিরেক্টরির পাথ মুদ্রণ করে।"
+  },
+  "linux-008": {
+    "command": "mkdir",
+    "description": "নতুন ডিরেক্টরি তৈরি করে।"
+  },
+  "linux-009": {
+    "command": "rm",
+    "description": "ফাইল বা ডিরেক্টরি মুছে দেয়।"
+  },
+  "linux-010": {
+    "command": "cp",
+    "description": "ফাইল বা ডিরেক্টরি অনুলিপি করে।"
+  },
+  "linux-011": {
+    "command": "mv",
+    "description": "ফাইল ও ডিরেক্টরি সরায় বা নাম পরিবর্তন করে।"
+  },
+  "linux-012": {
+    "command": "ps",
+    "description": "বর্তমানে চলমান প্রসেসগুলি দেখায়।"
+  },
+  "linux-013": {
+    "command": "top",
+    "description": "সিস্টেমের প্রসেস ও সম্পদের তাৎক্ষণিক অবস্থা দেখায়।"
+  },
+  "linux-014": {
+    "command": "df",
+    "description": "ডিস্কের স্থান ব্যবহারের তথ্য দেখায়।"
+  },
+  "linux-015": {
+    "command": "free",
+    "description": "সিস্টেমের মেমরি ব্যবহারের তথ্য দেখায়।"
+  },
+  "linux-016": {
+    "command": "systemctl status",
+    "description": "একটি systemd সার্ভিসের বর্তমান অবস্থা ও সাম্প্রতিক লগ এন্ট্রি দেখায়।"
+  },
+  "linux-017": {
+    "command": "journalctl",
+    "description": "পৃথক সার্ভিস অনুযায়ী ফিল্টার করে systemd জার্নাল লগ পড়ে।"
+  },
+  "linux-018": {
+    "command": "find",
+    "description": "নাম বা ধরনের মতো শর্তের সঙ্গে মেলে এমন ফাইল ডিরেক্টরি ট্রিতে খোঁজে।"
+  },
+  "linux-019": {
+    "command": "tail",
+    "description": "ফাইলের শেষের লাইনগুলি দেখায় এবং নতুন লাইন যোগ হলে সেগুলিও দেখাতে পারে।"
+  },
+  "linux-020": {
+    "command": "কোন কমান্ড একটি ফাইলের শেষ ৫টি লাইন দেখায়?",
+    "description": "tail -n 5"
+  },
+  "linux-021": {
+    "command": "কোন কমান্ড একটি ডিরেক্টরির আকার দেখায়?",
+    "description": "du -sh"
+  },
+  "linux-022": {
+    "command": "কোন কমান্ড একটি ফাইলের শুধু লাইনের সংখ্যা গণনা করে?",
+    "description": "wc -l"
+  },
+  "linux-023": {
+    "command": "কোন কমান্ড সিস্টেমের আপটাইম দেখায়?",
+    "description": "uptime"
+  },
+  "git-001": {
+    "command": "git clone",
+    "description": "দূরবর্তী রিপোজিটরির স্থানীয় অনুলিপি তৈরি করে।"
+  },
+  "git-002": {
+    "command": "git init",
+    "description": "নতুন Git রিপোজিটরি প্রস্তুত করে।"
+  },
+  "git-003": {
+    "command": "git add",
+    "description": "পরবর্তী কমিটের জন্য পরিবর্তনগুলি স্টেজ করে।"
+  },
+  "git-004": {
+    "command": "git commit",
+    "description": "স্টেজ করা পরিবর্তনগুলি রিপোজিটরিতে নথিভুক্ত করে।"
+  },
+  "git-005": {
+    "command": "git push",
+    "description": "স্থানীয় কমিটগুলি দূরবর্তী রিপোজিটরিতে আপলোড করে।"
+  },
+  "git-006": {
+    "command": "git pull",
+    "description": "দূরবর্তী রিপোজিটরি থেকে পরিবর্তন এনে মার্জ করে।"
+  },
+  "git-007": {
+    "command": "git branch",
+    "description": "ব্রাঞ্চের তালিকা দেখায়, ব্রাঞ্চ তৈরি করে বা মুছে দেয়।"
+  },
+  "git-008": {
+    "command": "git checkout",
+    "description": "ব্রাঞ্চ পরিবর্তন করে বা ওয়ার্কিং ট্রির ফাইল পুনরুদ্ধার করে।"
+  },
+  "git-009": {
+    "command": "git merge",
+    "description": "দুই বা ততোধিক উন্নয়ন ইতিহাস একত্র করে।"
+  },
+  "git-010": {
+    "command": "git status",
+    "description": "ওয়ার্কিং ট্রির অবস্থা দেখায়।"
+  },
+  "git-011": {
+    "command": "git diff",
+    "description": "ওয়ার্কিং ট্রি ও স্টেজিং এলাকার মধ্যে পরিবর্তনগুলি দেখায়; --staged পরবর্তী কমিটের জন্য স্টেজ করা পরিবর্তন দেখায়।"
+  },
+  "git-012": {
+    "command": "git stash",
+    "description": "ট্র্যাক করা ফাইলের পরিবর্তন সাময়িকভাবে সংরক্ষণ করে পরিচ্ছন্ন ওয়ার্কিং ট্রি ফিরিয়ে আনে; ট্র্যাক না করা ফাইল অন্তর্ভুক্ত করতে -u ব্যবহার করুন।"
+  },
+  "git-013": {
+    "command": "Git কী?",
+    "description": "ভার্সন কন্ট্রোল সিস্টেম"
+  },
+  "git-014": {
+    "command": "কোন কমান্ড কমিট ইতিহাস প্রদর্শন করে?",
+    "description": "git log"
+  },
+  "git-015": {
+    "command": "কোন কমান্ড এক লাইনে কমিট ইতিহাস প্রদর্শন করে?",
+    "description": "git log --oneline"
+  },
+  "git-016": {
+    "command": "Git কমিট লেখকের নাম সর্বজনীনভাবে Alex করে কোন কমান্ড?",
+    "description": "git config --global user.name \"Alex\""
+  },
+  "git-017": {
+    "command": "Git কমিট লেখকের ইমেল সর্বজনীনভাবে alex@example.com করে কোন কমান্ড?",
+    "description": "git config --global user.email \"alex@example.com\""
+  },
+  "git-018": {
+    "command": "Git-এ ফাইল উপেক্ষা করতে কোন ফাইল ব্যবহৃত হয়?",
+    "description": ".gitignore"
+  },
+  "git-019": {
+    "command": "রিপোজিটরির মূলে চালালে উপেক্ষা করা হয়নি এমন সব যোগ, পরিবর্তন ও মুছে ফেলা স্টেজ করে, কিন্তু কমিট করে না—কোন কমান্ড?",
+    "description": "git add ."
+  },
+  "git-020": {
+    "command": "কমান্ড লাইনেই সরাসরি কমিট বার্তা দেওয়ার বিকল্প কোনটি?",
+    "description": "git commit -m"
+  },
+  "git-021": {
+    "command": "কোন কমান্ড একটি ট্র্যাক করা ফাইল মুছে ফেলে?",
+    "description": "git rm"
+  },
+  "git-022": {
+    "command": "শুধু বর্তমান রিপোজিটরির user.name সেট করে কোন কমান্ড?",
+    "description": "git config --local user.name \"Alex\""
+  },
+  "git-023": {
+    "command": "বেছে নেওয়া পরিবর্তনের অংশ ইন্টারঅ্যাক্টিভভাবে স্টেজ করে কোন কমান্ড?",
+    "description": "git add -p"
+  },
+  "docker-001": {
+    "command": "docker build",
+    "description": "Dockerfile থেকে ইমেজ তৈরি করে।"
+  },
+  "docker-002": {
+    "command": "docker run",
+    "description": "নতুন কনটেইনারে একটি কমান্ড চালায়।"
+  },
+  "docker-003": {
+    "command": "docker ps",
+    "description": "চলমান কনটেইনারের তালিকা দেখায়।"
+  },
+  "docker-004": {
+    "command": "docker images",
+    "description": "স্থানীয় Docker ইমেজের তালিকা দেখায়।"
+  },
+  "docker-005": {
+    "command": "docker stop",
+    "description": "এক বা একাধিক চলমান কনটেইনার বন্ধ করে।"
+  },
+  "docker-006": {
+    "command": "docker rm",
+    "description": "এক বা একাধিক কনটেইনার মুছে দেয়।"
+  },
+  "docker-007": {
+    "command": "docker rmi",
+    "description": "এক বা একাধিক ইমেজ মুছে দেয়।"
+  },
+  "docker-008": {
+    "command": "docker exec",
+    "description": "চলমান কনটেইনারে একটি কমান্ড চালায়।"
+  },
+  "docker-009": {
+    "command": "docker logs",
+    "description": "কনটেইনারের লগ সংগ্রহ করে।"
+  },
+  "docker-010": {
+    "command": "docker-compose up",
+    "description": "docker-compose.yml থেকে কনটেইনার তৈরি করে চালু করে।"
+  },
+  "docker-011": {
+    "command": "docker inspect",
+    "description": "কনটেইনার ও ইমেজের মতো Docker অবজেক্টের বিস্তারিত JSON তথ্য দেখায়।"
+  },
+  "docker-012": {
+    "command": "docker stats",
+    "description": "CPU ও মেমরিসহ কনটেইনারের সম্পদ ব্যবহারের চলতি তথ্য দেখায়; --no-stream একটি মাত্র স্ন্যাপশট দেখায়।"
+  },
+  "docker-013": {
+    "command": "কোন কমান্ড ডিটাচড মোডে একটি কন্টেইনার চালায়?",
+    "description": "docker run -d"
+  },
+  "docker-014": {
+    "command": "নতুন কন্টেইনারের মানক ইনপুট খোলা রেখে ছদ্ম TTY বরাদ্দ করে কোন কমান্ড?",
+    "description": "docker run -it"
+  },
+  "docker-015": {
+    "command": "কোন কমান্ড মধ্যবর্তী ইমেজসহ সব ইমেজের তালিকা দেখায়?",
+    "description": "docker images -a"
+  },
+  "docker-016": {
+    "command": "কোন কমান্ড সব বন্ধ কন্টেইনার মুছে ফেলে?",
+    "description": "docker container prune"
+  },
+  "docker-017": {
+    "command": "কোন কমান্ড সব অব্যবহৃত ইমেজ মুছে ফেলে?",
+    "description": "docker image prune -a"
+  },
+  "docker-018": {
+    "command": "কোন কমান্ড একটি কন্টেইনারের ভেতরে চলমান প্রসেসগুলো দেখায়?",
+    "description": "docker top"
+  },
+  "docker-019": {
+    "command": "কোন কমান্ড একটি Docker নেটওয়ার্ক তৈরি করে?",
+    "description": "docker network create"
+  },
+  "docker-020": {
+    "command": "কোন কমান্ড Docker নেটওয়ার্কগুলোর তালিকা দেখায়?",
+    "description": "docker network ls"
+  },
+  "docker-021": {
+    "command": "কোন কমান্ড একটি Docker ভলিউম তৈরি করে?",
+    "description": "docker volume create"
+  },
+  "docker-022": {
+    "command": "কোন কমান্ড Docker ভলিউমগুলোর তালিকা দেখায়?",
+    "description": "docker volume ls"
+  },
+  "docker-023": {
+    "command": "কোন কমান্ড Docker সিস্টেমের তথ্য দেখায়?",
+    "description": "docker info"
+  },
+  "k8s-001": {
+    "command": "kubectl get pods",
+    "description": "বর্তমান নেমস্পেসের পডগুলির তালিকা দেখায়।"
+  },
+  "k8s-002": {
+    "command": "kubectl apply",
+    "description": "ফাইলের নাম অনুযায়ী রিসোর্সে কনফিগারেশন প্রয়োগ করে।"
+  },
+  "k8s-003": {
+    "command": "kubectl delete",
+    "description": "ফাইলের নাম বা রিসোর্সের নাম অনুযায়ী রিসোর্স মুছে দেয়।"
+  },
+  "k8s-004": {
+    "command": "kubectl describe",
+    "description": "নির্দিষ্ট রিসোর্সের বিস্তারিত তথ্য দেখায়।"
+  },
+  "k8s-005": {
+    "command": "kubectl logs",
+    "description": "পডের একটি কনটেইনারের লগ মুদ্রণ করে।"
+  },
+  "k8s-006": {
+    "command": "kubectl exec",
+    "description": "কনটেইনারে একটি কমান্ড চালায়।"
+  },
+  "k8s-007": {
+    "command": "kubectl get nodes",
+    "description": "ক্লাস্টারের সব নোডের তালিকা দেখায়।"
+  },
+  "k8s-008": {
+    "command": "kubectl get services",
+    "description": "বর্তমান নেমস্পেসের সব সার্ভিসের তালিকা দেখায়।"
+  },
+  "k8s-009": {
+    "command": "kubectl scale",
+    "description": "Deployment বা ReplicaSet-এর জন্য নতুন আকার নির্ধারণ করে।"
+  },
+  "k8s-010": {
+    "command": "kubectl port-forward",
+    "description": "স্থানীয় পোর্টগুলি একটি পডে ফরওয়ার্ড করে।"
+  },
+  "k8s-011": {
+    "command": "kubectl rollout status",
+    "description": "রিসোর্সের রোলআউট সম্পূর্ণ হওয়া বা সময়সীমা শেষ হওয়া পর্যন্ত তার অগ্রগতি পর্যবেক্ষণ করে।"
+  },
+  "k8s-012": {
+    "command": "কোন কমান্ড সব নেমস্পেসের পডগুলির তালিকা দেখায়?",
+    "description": "kubectl get pods -A"
+  },
+  "k8s-013": {
+    "command": "কোন কমান্ড একটি পডের বিবরণ দেখায়?",
+    "description": "kubectl describe pod"
+  },
+  "k8s-014": {
+    "command": "কোন কমান্ড পডের লগ নিরবচ্ছিন্নভাবে দেখায়?",
+    "description": "kubectl logs -f"
+  },
+  "k8s-015": {
+    "command": "কোন কমান্ড একটি পড মুছে ফেলে?",
+    "description": "kubectl delete pod"
+  },
+  "k8s-016": {
+    "command": "কোন কমান্ড একটি ডিপ্লয়মেন্ট তৈরি করে?",
+    "description": "kubectl create deployment"
+  },
+  "k8s-017": {
+    "command": "কোন কমান্ড ডিপ্লয়মেন্টগুলির তালিকা দেখায়?",
+    "description": "kubectl get deployments"
+  },
+  "k8s-018": {
+    "command": "কোন কমান্ড ক্লাস্টারের তথ্য দেখায়?",
+    "description": "kubectl cluster-info"
+  },
+  "k8s-019": {
+    "command": "কোন কমান্ড একটি YAML ফাইল থেকে কনফিগারেশন প্রয়োগ করে?",
+    "description": "kubectl apply -f"
+  },
+  "k8s-020": {
+    "command": "কোন কমান্ড একটি YAML ফাইল থেকে রিসোর্স তৈরি করে?",
+    "description": "kubectl create -f"
+  },
+  "k8s-021": {
+    "command": "কোন কমান্ড একটি YAML ফাইলে সংজ্ঞায়িত রিসোর্স মুছে ফেলে?",
+    "description": "kubectl delete -f"
+  },
+  "k8s-022": {
+    "command": "অনুরোধের জন্য payments নেমস্পেস বেছে নেয় কোন kubectl বিকল্প?",
+    "description": "-n payments"
+  },
+  "k8s-023": {
+    "command": "বর্তমান kubeconfig কনটেক্সটের নাম দেখায় কোন কমান্ড?",
+    "description": "kubectl config current-context"
+  },
+  "networking-001": {
+    "command": "curl",
+    "description": "সার্ভার থেকে বা সার্ভারে ডেটা স্থানান্তর করে।"
+  },
+  "networking-002": {
+    "command": "ping",
+    "description": "IP নেটওয়ার্কে কোনো হোস্টে পৌঁছানো যায় কি না পরীক্ষা করে।"
+  },
+  "networking-003": {
+    "command": "ssh",
+    "description": "দূরবর্তী মেশিনের সঙ্গে নিরাপদে সংযোগ স্থাপন করে।"
+  },
+  "networking-004": {
+    "command": "netstat",
+    "description": "নেটওয়ার্ক সংযোগ ও রাউটিং টেবিল দেখায়।"
+  },
+  "networking-005": {
+    "command": "nslookup",
+    "description": "ইন্টারনেট ডোমেইন নেম সার্ভারে অনুসন্ধান চালায়।"
+  },
+  "networking-006": {
+    "command": "dig",
+    "description": "DNS অনুসন্ধান চালিয়ে উত্তর দেখায়।"
+  },
+  "networking-007": {
+    "command": "traceroute",
+    "description": "নেটওয়ার্ক হোস্টে পৌঁছাতে প্যাকেট যে পথ অনুসরণ করে তা মুদ্রণ করে।"
+  },
+  "networking-008": {
+    "command": "iptables",
+    "description": "Linux-এ IP প্যাকেট ফিল্টারের নিয়ম কনফিগার করে।"
+  },
+  "networking-009": {
+    "command": "telnet",
+    "description": "অন্য হোস্টের সঙ্গে ইন্টার‌্যাকটিভভাবে যোগাযোগ করে।"
+  },
+  "networking-010": {
+    "command": "nc (netcat)",
+    "description": "নেটওয়ার্ক সংযোগের মাধ্যমে ডেটা পড়ে ও লেখে।"
+  },
+  "networking-011": {
+    "command": "IP এর পূর্ণরূপ কী?",
+    "description": "ইন্টারনেট প্রোটোকল"
+  },
+  "networking-012": {
+    "command": "ওয়েব পেজ স্থানান্তরের জন্য কোন প্রোটোকল ব্যবহৃত হয়?",
+    "description": "HTTP"
+  },
+  "networking-013": {
+    "command": "HTTPS-এর ডিফল্ট পোর্ট কোনটি?",
+    "description": "443"
+  },
+  "networking-014": {
+    "command": "HTTP-এর ডিফল্ট পোর্ট কোনটি?",
+    "description": "80"
+  },
+  "networking-015": {
+    "command": "SSH-এর ডিফল্ট পোর্ট কোনটি?",
+    "description": "22"
+  },
+  "networking-016": {
+    "command": "DNS কী কাজ করে?",
+    "description": "ডোমেইন নামকে IP অ্যাড্রেসে রূপান্তর করে"
+  },
+  "networking-017": {
+    "command": "OSI মডেলের কোন লেয়ার রাউটিং পরিচালনা করে?",
+    "description": "নেটওয়ার্ক লেয়ার"
+  },
+  "networking-018": {
+    "command": "ইমেইল পাঠানোর জন্য কোন প্রোটোকল ব্যবহৃত হয়?",
+    "description": "SMTP"
+  },
+  "networking-019": {
+    "command": "কোনটি IPv4 লুপব্যাক ঠিকানা?",
+    "description": "127.0.0.1"
+  },
+  "networking-020": {
+    "command": "কোন প্রোটোকলটি কানেকশন-ওরিয়েন্টেড?",
+    "description": "TCP"
+  },
+  "networking-021": {
+    "command": "কোন প্রোটোকলটি কানেকশনলেস?",
+    "description": "UDP"
+  },
+  "networking-022": {
+    "command": "কোন কমান্ড রাউটিং তথ্য দেখায়?",
+    "description": "ip route"
+  },
+  "networking-023": {
+    "command": "Linux-এ নেটওয়ার্ক ইন্টারফেস দেখাতে কোন কমান্ড ব্যবহৃত হয়?",
+    "description": "ip addr"
+  },
+  "networking-024": {
+    "command": "একটি IPv4 ঠিকানায় কত বিট থাকে?",
+    "description": "32"
+  },
+  "jenkins-001": {
+    "command": "Jenkinsfile",
+    "description": "Jenkins Pipeline-এর সংজ্ঞা থাকা টেক্সট ফাইল।"
+  },
+  "jenkins-002": {
+    "command": "Pipeline",
+    "description": "অবিচ্ছিন্ন ডেলিভারি পাইপলাইন সমর্থনকারী প্লাগইনের সমষ্টি।"
+  },
+  "jenkins-003": {
+    "command": "Agent",
+    "description": "Pipeline বা স্টেজ কোথায় চলবে তা নির্ধারণ করে।"
+  },
+  "jenkins-004": {
+    "command": "Stage",
+    "description": "ধারণাগতভাবে স্বতন্ত্র একটি কাজের গুচ্ছ নির্ধারণ করে।"
+  },
+  "jenkins-005": {
+    "command": "Node",
+    "description": "Pipeline চালাতে সক্ষম মেশিন।"
+  },
+  "jenkins-006": {
+    "command": "Build Trigger",
+    "description": "Jenkins বিল্ড শুরু করার প্রক্রিয়াগুলি।"
+  },
+  "jenkins-007": {
+    "command": "Artifact",
+    "description": "বিল্ড প্রক্রিয়ায় তৈরি হওয়া ফাইল।"
+  },
+  "jenkins-008": {
+    "command": "Post actions",
+    "description": "স্টেজ বা পাইপলাইন শেষ হওয়ার পর সম্পন্ন হওয়া কাজগুলি।"
+  },
+  "jenkins-009": {
+    "command": "Credentials",
+    "description": "Jenkins জবে ব্যবহৃত নিরাপদে সংরক্ষিত গোপন তথ্য।"
+  },
+  "jenkins-010": {
+    "command": "Jenkins কী?",
+    "description": "CI/CD টুল"
+  },
+  "jenkins-011": {
+    "command": "Jenkins কোন ভাষায় লেখা?",
+    "description": "Java"
+  },
+  "jenkins-012": {
+    "command": "Jenkins ডিফল্টভাবে কোন পোর্ট ব্যবহার করে?",
+    "description": "8080"
+  },
+  "jenkins-013": {
+    "command": "Jenkins Job কী?",
+    "description": "স্বয়ংক্রিয় কাজ"
+  },
+  "jenkins-014": {
+    "command": "কোন প্লাগইন Jenkins-কে Git-এর সাথে ইন্টিগ্রেট করে?",
+    "description": "Git Plugin"
+  },
+  "jenkins-015": {
+    "command": "Jenkins প্রধানত কীসের জন্য ব্যবহৃত হয়?",
+    "description": "অটোমেশন"
+  },
+  "jenkins-016": {
+    "command": "CI-এর পূর্ণরূপ কী?",
+    "description": "Continuous Integration"
+  },
+  "jenkins-017": {
+    "command": "DevOps-এ CD-এর পূর্ণরূপ কী?",
+    "description": "Continuous Delivery"
+  },
+  "jenkins-018": {
+    "command": "কোন মেনু থেকে Jenkins প্লাগইন ইনস্টল করা হয়?",
+    "description": "Manage Jenkins"
+  },
+  "jenkins-019": {
+    "command": "Jenkins Home ডিরেক্টরি ভ্যারিয়েবলের নাম কী?",
+    "description": "JENKINS_HOME"
+  },
+  "jenkins-020": {
+    "command": "কোন বাটন Jenkins জব ম্যানুয়ালি শুরু করে?",
+    "description": "Build Now"
+  },
+  "jenkins-021": {
+    "command": "কোন সোর্স কোড ম্যানেজমেন্ট সিস্টেম Jenkins-এর সাথে সবচেয়ে বেশি ইন্টিগ্রেট করা হয়?",
+    "description": "Git"
+  },
+  "jenkins-022": {
+    "command": "বিল্ডের জবগুলোর সরঞ্জাম নির্বিশেষে Jenkins কন্ট্রোলার নিজে চালাতে কী লাগে?",
+    "description": "JRE বা JDK থেকে পাওয়া সমর্থিত Java রানটাইম"
+  },
+  "jenkins-023": {
+    "command": "সহজ কাজের জন্য কোন Jenkins জব টাইপ সবচেয়ে বেশি ব্যবহৃত হয়?",
+    "description": "Freestyle Project"
+  },
+  "jenkins-024": {
+    "command": "Jenkins ওয়ার্কস্পেসের কাজ কী?",
+    "description": "জব চলার সময় চেকআউট বা তৈরি হওয়া ফাইল"
+  },
+  "terraform-001": {
+    "command": "terraform init",
+    "description": "Terraform ফাইলসহ কাজের ডিরেক্টরি প্রস্তুত করে।"
+  },
+  "terraform-002": {
+    "command": "terraform plan",
+    "description": "Terraform কী কী কাজ করবে তা দেখিয়ে কার্যনির্বাহের পরিকল্পনা তৈরি করে।"
+  },
+  "terraform-003": {
+    "command": "terraform apply",
+    "description": "কাঙ্ক্ষিত অবস্থায় পৌঁছাতে পরিবর্তন প্রয়োগ করে।"
+  },
+  "terraform-004": {
+    "command": "terraform destroy",
+    "description": "Terraform দ্বারা পরিচালিত অবকাঠামো ধ্বংস করে।"
+  },
+  "terraform-005": {
+    "command": "terraform fmt",
+    "description": "Terraform ফাইলগুলি মান্য বিন্যাসে পুনর্লিখন করে।"
+  },
+  "terraform-006": {
+    "command": "terraform validate",
+    "description": "ডিরেক্টরির কনফিগারেশন ফাইলগুলি যাচাই করে।"
+  },
+  "terraform-007": {
+    "command": "terraform state",
+    "description": "উন্নত স্টেট ব্যবস্থাপনা করে, যেমন রিসোর্সের তালিকা দেখানো ও সরানো।"
+  },
+  "terraform-008": {
+    "command": "Provider",
+    "description": "Terraform-কে ক্লাউড প্রদানকারীদের সঙ্গে কাজ করতে সক্ষম করে এমন প্লাগইন।"
+  },
+  "terraform-009": {
+    "command": "Resource",
+    "description": "Terraform যে অবকাঠামোগত অবজেক্ট তৈরি ও পরিচালনা করে তা সংজ্ঞায়িত করে।"
+  },
+  "terraform-010": {
+    "command": "Variable",
+    "description": "ইনপুট মান গ্রহণ করে, যাতে ভিন্ন সেটিংস দিয়ে একটি Terraform মডিউল পুনর্ব্যবহার করা যায়।"
+  },
+  "terraform-011": {
+    "command": "terraform output",
+    "description": "Terraform স্টেট থেকে রুট মডিউলের আউটপুট মান পড়ে।"
+  },
+  "terraform-012": {
+    "command": "Terraform কী?",
+    "description": "ইনফ্রাস্ট্রাকচার অ্যাজ কোড টুল"
+  },
+  "terraform-013": {
+    "command": "Terraform কে তৈরি করেছে?",
+    "description": "HashiCorp"
+  },
+  "terraform-014": {
+    "command": "JSON বিকল্প ছাড়া Terraform-এর নিজস্ব কনফিগারেশন ভাষার ভিত্তি কোনটি?",
+    "description": "HCL"
+  },
+  "terraform-015": {
+    "command": "Terraform ফাইলের জন্য সাধারণত কোন ফাইল এক্সটেনশন ব্যবহৃত হয়?",
+    "description": ".tf"
+  },
+  "terraform-016": {
+    "command": "কোন ফাইল Terraform স্টেট লোকালি সংরক্ষণ করে?",
+    "description": "terraform.tfstate"
+  },
+  "terraform-017": {
+    "command": "কোন কমান্ড Terraform ভার্সন প্রদর্শন করে?",
+    "description": "terraform version"
+  },
+  "terraform-018": {
+    "command": "Terraform কোন পদ্ধতি অনুসরণ করে?",
+    "description": "ডিক্লারেটিভ"
+  },
+  "terraform-019": {
+    "command": "স্টেট থেকে মূল মডিউলের আউটপুট মান দেখায় কোন কমান্ড?",
+    "description": "terraform output"
+  },
+  "terraform-020": {
+    "command": "region নামের ইনপুট ভেরিয়েবল পড়ে কোন এক্সপ্রেশন?",
+    "description": "var.region"
+  },
+  "terraform-021": {
+    "command": "prefix নামের স্থানীয় মান পড়ে কোন এক্সপ্রেশন?",
+    "description": "local.prefix"
+  },
+  "terraform-022": {
+    "command": "Terraform CLI-এর সংস্করণ সীমিত করে terraform ব্লকের কোন আর্গুমেন্ট?",
+    "description": "required_version"
+  },
+  "terraform-023": {
+    "command": "প্রোভাইডারের উৎস ঠিকানা ও সংস্করণের শর্ত ঘোষণা করে terraform-এর ভেতরের কোন ব্লক?",
+    "description": "required_providers"
+  },
+  "terraform-024": {
+    "command": "Terraform প্রোভাইডার প্রধানত কী দেয়?",
+    "description": "API বা সেবার সঙ্গে কাজ করতে রিসোর্স ধরন ও ডেটা সোর্স"
+  },
+  "ansible-001": {
+    "command": "ansible",
+    "description": "Ansible ইনভেন্টরির হোস্টগুলিতে তাৎক্ষণিক একটি কাজ চালায়।"
+  },
+  "ansible-002": {
+    "command": "ansible-playbook",
+    "description": "Ansible প্লেবুকে সংজ্ঞায়িত স্বয়ংক্রিয় কাজগুলি চালায়।"
+  },
+  "ansible-003": {
+    "command": "Inventory",
+    "description": "Ansible দ্বারা পরিচালিত হোস্ট ও হোস্ট গ্রুপের তালিকা দেখায়।"
+  },
+  "ansible-004": {
+    "command": "Playbook",
+    "description": "YAML-এ স্বয়ংক্রিয় কাজ ও লক্ষ্য হোস্টগুলি সংজ্ঞায়িত করে।"
+  },
+  "ansible-005": {
+    "command": "Module",
+    "description": "প্যাকেজ ইনস্টল বা ফাইল অনুলিপি করার মতো নির্দিষ্ট Ansible কাজ সম্পন্ন করে।"
+  },
+  "ansible-006": {
+    "command": "Task",
+    "description": "স্বয়ংক্রিয়করণের একটি ধাপ সম্পন্ন করতে আর্গুমেন্টসহ Ansible মডিউল আহ্বান করে।"
+  },
+  "ansible-007": {
+    "command": "Role",
+    "description": "পুনর্ব্যবহারযোগ্য ডিরেক্টরি কাঠামোয় Ansible টাস্ক, হ্যান্ডলার, ভেরিয়েবল ও ফাইল সাজায়।"
+  },
+  "ansible-008": {
+    "command": "Vault",
+    "description": "পাসওয়ার্ডের মতো সংবেদনশীল তথ্য এনক্রিপ্ট করা ফাইলে রাখে।"
+  },
+  "ansible-009": {
+    "command": "Handler",
+    "description": "অন্য কাজ থেকে বিজ্ঞপ্তি পেলেই কেবল চলে এমন কাজ।"
+  },
+  "ansible-010": {
+    "command": "Facts",
+    "description": "দূরবর্তী সিস্টেমের তথ্য ধারণকারী ভেরিয়েবল।"
+  },
+  "ansible-011": {
+    "command": "Ansible প্রাথমিকভাবে কী জন্য ব্যবহৃত হয়?",
+    "description": "Configuration Management"
+  },
+  "ansible-012": {
+    "command": "Ansible কোন ভাষায় লেখা হয়?",
+    "description": "Python"
+  },
+  "ansible-013": {
+    "command": "কোন ফাইলে Ansible-এ পরিচালিত হোস্ট রয়েছে?",
+    "description": "Inventory File"
+  },
+  "ansible-014": {
+    "command": "ডিফল্ট ইনভেন্টরি ফাইলের অবস্থান কোথায়?",
+    "description": "/etc/ansible/hosts"
+  },
+  "ansible-015": {
+    "command": "কোন কমান্ডে Ansible-এর সংস্করণ দেখা যায়?",
+    "description": "ansible --version"
+  },
+  "ansible-016": {
+    "command": "Ansible-এর ডিফল্ট সংযোগ প্লাগইন Linux হোস্টের জন্য সাধারণত কোন প্রোটোকল ব্যবহার করে?",
+    "description": "SSH"
+  },
+  "ansible-017": {
+    "command": "Ansible playbook কী?",
+    "description": "অটোমেশন টাস্ক সম্বলিত YAML ফাইল"
+  },
+  "ansible-018": {
+    "command": "কোন কীওয়ার্ড একটি প্লেবুকে লক্ষ্য হোস্ট সংজ্ঞায়িত করে?",
+    "description": "hosts"
+  },
+  "ansible-019": {
+    "command": "কোন কীওয়ার্ড একটি প্লেবুকের কাজ সংজ্ঞায়িত করে?",
+    "description": "tasks"
+  },
+  "ansible-020": {
+    "command": "কোন মডিউল রিমোট হোস্টে ফাইল কপি করে?",
+    "description": "copy"
+  },
+  "ansible-021": {
+    "command": "কোন মডিউল পরিষেবাগুলি পরিচালনা করে?",
+    "description": "service"
+  },
+  "ansible-022": {
+    "command": "সব লক্ষ্য POSIX হোস্টে Ansible সংযোগ ও ব্যবহারযোগ্য Python পরীক্ষা করে কোন কমান্ড?",
+    "description": "ansible all -m ping"
+  },
+  "ansible-023": {
+    "command": "Ansible প্লেবুক লেখার জন্য সাধারণত কোন সহজপাঠ্য বিন্যাস ব্যবহৃত হয়?",
+    "description": "YAML"
+  },
+  "ansible-024": {
+    "command": "Ansible-এর সেটিংস কোন ফাইলে কনফিগার করা হয়?",
+    "description": "ansible.cfg"
+  },
+  "bash-001": {
+    "command": "#!/bin/bash",
+    "description": "সিস্টেমকে Bash শেল ব্যবহার করতে বলে এমন শিব্যাং লাইন।"
+  },
+  "bash-002": {
+    "command": "echo",
+    "description": "এক লাইন টেক্সট বা ভেরিয়েবলের মান দেখায়।"
+  },
+  "bash-003": {
+    "command": "if [ condition ]",
+    "description": "Bash স্ক্রিপ্টিংয়ের মৌলিক শর্তসাপেক্ষ বিবৃতি।"
+  },
+  "bash-004": {
+    "command": "script.sh-এ আগে থেকেই execute permission থাকলে কোন কমান্ড এটি চালায়?",
+    "description": "./script.sh"
+  },
+  "bash-005": {
+    "command": "কোন কমান্ড স্পষ্টভাবে Bash ব্যবহার করে script.sh চালায়?",
+    "description": "bash script.sh"
+  },
+  "bash-006": {
+    "command": "Bash স্ক্রিপ্টে কোন চিহ্ন একক লাইনের মন্তব্য শুরু করে?",
+    "description": "#"
+  },
+  "bash-007": {
+    "command": "কোন কমান্ড script.sh-কে এক্সিকিউটেবল করে?",
+    "description": "chmod +x script.sh"
+  },
+  "bash-008": {
+    "command": "কোন বিল্টইন কমান্ড ব্যবহারকারীর কাছ থেকে ইনপুট পড়ে?",
+    "description": "read"
+  },
+  "bash-009": {
+    "command": "ভেরিয়েবলের মান প্রসারিত (expand) করতে কোন চিহ্ন ব্যবহৃত হয়?",
+    "description": "$"
+  },
+  "bash-010": {
+    "command": "Bash-এ কোন ভেরিয়েবল অ্যাসাইনমেন্টটি বৈধ?",
+    "description": "name=John"
+  },
+  "bash-011": {
+    "command": "কোন কমান্ড পূর্ববর্তী কমান্ডের exit status প্রিন্ট করে?",
+    "description": "echo $?"
+  },
+  "bash-012": {
+    "command": "exit status 0 সাধারণত কী নির্দেশ করে?",
+    "description": "সফল"
+  },
+  "bash-013": {
+    "command": "কোন চিহ্ন এক লাইনে একাধিক কমান্ড আলাদা করে?",
+    "description": ";"
+  },
+  "bash-014": {
+    "command": "শেল স্ক্রিপ্টের জন্য সাধারণত কোন ফাইল এক্সটেনশন ব্যবহৃত হয়?",
+    "description": ".sh"
+  },
+  "bash-015": {
+    "command": "কোন কমান্ড এনভায়রনমেন্ট ভেরিয়েবল দেখায়?",
+    "description": "env"
+  },
+  "bash-016": {
+    "command": "কোন কমান্ড বর্তমান ব্যবহারকারীর ডিফল্ট শেল দেখায়?",
+    "description": "echo $SHELL"
+  },
+  "bash-017": {
+    "command": "Bash-এ কোন অক্ষর পরবর্তী অক্ষরকে escape করে?",
+    "description": "ব্যাকস্ল্যাশ"
+  },
+  "bash-018": {
+    "command": "কোন কোটিং স্টাইল ভেরিয়েবল এক্সপ্যানশন ও কমান্ড সাবস্টিটিউশন প্রতিরোধ করে?",
+    "description": "একক উদ্ধৃতি চিহ্ন"
+  },
+  "bash-019": {
+    "command": "কোন কোটিং স্টাইল স্পেস সংরক্ষণ করে ভেরিয়েবল এক্সপ্যানশনের অনুমতি দেয়?",
+    "description": "ডাবল উদ্ধৃতি চিহ্ন"
+  },
+  "bash-020": {
+    "command": "কোন অপারেটর স্ট্যান্ডার্ড আউটপুট রিডাইরেক্ট করে ফাইল ওভাররাইট করে?",
+    "description": ">"
+  },
+  "bash-021": {
+    "command": "কোন কমান্ড বর্তমান ওয়ার্কিং ডিরেক্টরি প্রিন্ট করে?",
+    "description": "pwd"
+  },
+  "bash-022": {
+    "command": "ত্রুটি বার্তার জন্য কোন স্ট্যান্ডার্ড স্ট্রিম ব্যবহৃত হয়?",
+    "description": "stderr"
+  },
+  "bash-023": {
+    "command": "কোন ফাইল ডেসক্রিপ্টর স্ট্যান্ডার্ড ইনপুট নির্দেশ করে?",
+    "description": "0"
+  },
+  "bash-024": {
+    "command": "কোন কমান্ড টার্মিনাল স্ক্রিন পরিষ্কার করে?",
+    "description": "clear"
+  },
+  "python-001": {
+    "command": "print()",
+    "description": "কনসোলে ডেটা দেখায়।"
+  },
+  "python-002": {
+    "command": "import",
+    "description": "স্ক্রিপ্টে মডিউল বা নির্দিষ্ট ফাংশন ইমপোর্ট করে।"
+  },
+  "python-003": {
+    "command": "def",
+    "description": "পুনর্ব্যবহারযোগ্য কোডের ব্লক বা ফাংশন সংজ্ঞায়িত করে।"
+  },
+  "python-004": {
+    "command": "pip install",
+    "description": "PyPI থেকে Python প্যাকেজ ইনস্টল করে।"
+  },
+  "python-005": {
+    "command": "virtualenv",
+    "description": "বিচ্ছিন্ন Python পরিবেশ তৈরি করে।"
+  },
+  "python-006": {
+    "command": "Python-এ কোন চিহ্ন দিয়ে মন্তব্য (comment) শুরু হয়?",
+    "description": "#"
+  },
+  "python-007": {
+    "command": "কোন বিল্ট-ইন ফাংশন ব্যবহারকারীর ইনপুট পড়ে?",
+    "description": "input()"
+  },
+  "python-008": {
+    "command": "Python সোর্স ফাইলের জন্য কোন ফাইল এক্সটেনশন ব্যবহার করা হয়?",
+    "description": ".py"
+  },
+  "python-009": {
+    "command": "কোন অপারেটর সমতা যাচাই করে?",
+    "description": "=="
+  },
+  "python-010": {
+    "command": "কোন অপারেটর মান নির্ধারণ (assign) করে?",
+    "description": "="
+  },
+  "python-011": {
+    "command": "কোন স্টেটমেন্ট 5 মানসহ x নামের একটি ভেরিয়েবল তৈরি করে?",
+    "description": "x = 5"
+  },
+  "python-012": {
+    "command": "কোন বিল্ট-ইন ফাংশন একটি অবজেক্টের ডেটা টাইপ ফেরত দেয়?",
+    "description": "type()"
+  },
+  "python-013": {
+    "command": "কোন বিল্ট-ইন ফাংশন একটি মানকে পূর্ণসংখ্যায় রূপান্তর করে?",
+    "description": "int()"
+  },
+  "python-014": {
+    "command": "কোন বিল্ট-ইন ফাংশন একটি মানকে স্ট্রিংয়ে রূপান্তর করে?",
+    "description": "str()"
+  },
+  "python-015": {
+    "command": "কোন বিল্ট-ইন ফাংশন একটি সিকোয়েন্সের দৈর্ঘ্য ফেরত দেয়?",
+    "description": "len()"
+  },
+  "python-016": {
+    "command": "কোন বিল্ট-ইন ফাংশন সংখ্যার একটি সিকোয়েন্স তৈরি করে?",
+    "description": "range()"
+  },
+  "python-017": {
+    "command": "কোন কিওয়ার্ড একটি সিকোয়েন্সের উপর পুনরাবৃত্তি করার লুপ শুরু করে?",
+    "description": "for"
+  },
+  "python-018": {
+    "command": "কোন কিওয়ার্ড শর্ত সত্য থাকা পর্যন্ত কোড পুনরাবৃত্তি করে?",
+    "description": "while"
+  },
+  "python-019": {
+    "command": "Python-এর for বা while লুপের সঙ্গে যুক্ত কোন ক্লজ শুধুমাত্র তখনই চলে যখন লুপ break-এ না পৌঁছে শেষ হয়?",
+    "description": "else"
+  },
+  "python-020": {
+    "command": "Python-এ কোন কিওয়ার্ড লুপের বর্তমান ইটারেশন এড়িয়ে যায়?",
+    "description": "continue"
+  },
+  "python-021": {
+    "command": "Python-এর কোন কিওয়ার্ড একটি নেস্টেড ফাংশনকে তার এনক্লোজিং ফাংশনের ভেরিয়েবল পুনরায় বাইন্ড করতে দেয়?",
+    "description": "nonlocal"
+  },
+  "python-022": {
+    "command": "কোন কিওয়ার্ড এক্সসেপশন হ্যান্ডলিং শুরু করে?",
+    "description": "try"
+  },
+  "python-023": {
+    "command": "Python-এর কোন বিল্ট-ইন ফাংশন একটি অবজেক্টের অনন্য আইডেন্টিটি ফেরত দেয়?",
+    "description": "id()"
+  },
+  "python-024": {
+    "command": "কোন সিনট্যাক্স একটি ডিকশনারি তৈরি করে?",
+    "description": "{'name': 'John'}"
+  },
+  "perl-001": {
+    "command": "কোন কমান্ড কমান্ড লাইন থেকে একটি Perl স্ক্রিপ্ট চালায়?",
+    "description": "perl script.pl"
+  },
+  "perl-002": {
+    "command": "Perl স্ক্রিপ্টের জন্য সাধারণত কোন shebang লাইন ব্যবহার করা হয়?",
+    "description": "#!/usr/bin/perl"
+  },
+  "perl-003": {
+    "command": "Perl-এ কোন চিহ্ন একক লাইনের মন্তব্য শুরু করে?",
+    "description": "#"
+  },
+  "perl-004": {
+    "command": "কোন বিল্ট-ইন ফাংশন আউটপুট প্রিন্ট করে?",
+    "description": "print"
+  },
+  "perl-005": {
+    "command": "কোন অক্ষর সাধারণত একটি Perl স্টেটমেন্ট শেষ করে?",
+    "description": ";"
+  },
+  "perl-006": {
+    "command": "কোন sigil একটি স্কেলার ভেরিয়েবল নির্দেশ করে?",
+    "description": "$"
+  },
+  "perl-007": {
+    "command": "কোন Perl ফাংশন একটি স্ট্রিংয়ের মধ্যে সাবস্ট্রিংয়ের অবস্থান ফেরত দেয়?",
+    "description": "index"
+  },
+  "perl-008": {
+    "command": "কোন Perl ফাংশন একটি সংখ্যার পরম মান ফেরত দেয়?",
+    "description": "abs"
+  },
+  "perl-009": {
+    "command": "কোন ফাংশন একটি স্ট্রিংয়ের দৈর্ঘ্য ফেরত দেয়?",
+    "description": "length"
+  },
+  "perl-010": {
+    "command": "কোন ফাংশন একটি স্ট্রিং থেকে শেষের নিউলাইন সরিয়ে দেয়?",
+    "description": "chomp"
+  },
+  "perl-011": {
+    "command": "কোন ফাংশন একটি স্ট্রিংকে তালিকায় বিভক্ত করে?",
+    "description": "split"
+  },
+  "perl-012": {
+    "command": "কোন ফাংশন তালিকার উপাদানগুলোকে একটি স্ট্রিংয়ে যুক্ত করে?",
+    "description": "join"
+  },
+  "perl-013": {
+    "command": "কোন অপারেটর স্ট্রিং সংযুক্ত (concatenate) করে?",
+    "description": "."
+  },
+  "perl-014": {
+    "command": "কোন অপারেটর একটি স্ট্রিংকে পুনরাবৃত্তি করে?",
+    "description": "x"
+  },
+  "perl-015": {
+    "command": "কোন ফাংশন একটি ফাইল খোলে?",
+    "description": "open"
+  },
+  "perl-016": {
+    "command": "Perl-এ কোন ফাইল মোড একটি ফাইল পড়ার জন্য খোলে?",
+    "description": "<"
+  },
+  "perl-017": {
+    "command": "কোন Perl ফাংশন ফাইলসিস্টেম থেকে একটি ফাইল মুছে ফেলে?",
+    "description": "unlink"
+  },
+  "perl-018": {
+    "command": "কোন Perl ফাইল টেস্ট অপারেটর একটি পাথ বিদ্যমান কিনা তা যাচাই করে?",
+    "description": "-e"
+  },
+  "perl-019": {
+    "command": "কোন বিল্ট-ইন ফাইলহ্যান্ডেল স্ট্যান্ডার্ড ইনপুট নির্দেশ করে?",
+    "description": "STDIN"
+  },
+  "perl-020": {
+    "command": "কোন বিল্ট-ইন ফাইলহ্যান্ডেল স্ট্যান্ডার্ড আউটপুট নির্দেশ করে?",
+    "description": "STDOUT"
+  },
+  "perl-021": {
+    "command": "কোন বিল্ট-ইন ফাইলহ্যান্ডেল স্ট্যান্ডার্ড এরর নির্দেশ করে?",
+    "description": "STDERR"
+  },
+  "perl-022": {
+    "command": "কোন ফাংশন একটি খোলা ফাইলহ্যান্ডেল বন্ধ করে?",
+    "description": "close"
+  },
+  "perl-023": {
+    "command": "কোন বিশেষ ভেরিয়েবল ডিফল্ট ইনপুট ভেরিয়েবল?",
+    "description": "$_"
+  },
+  "perl-024": {
+    "command": "কোন বিশেষ ভেরিয়েবলে সর্বশেষ সফল প্যাটার্ন ম্যাচ থাকে?",
+    "description": "$&"
+  },
+  "powershell-001": {
+    "command": "কোন cmdlet বর্তমান অবস্থান (location) দেখায়?",
+    "description": "Get-Location"
+  },
+  "powershell-002": {
+    "command": "কোন cmdlet ফাইল ও ডিরেক্টরির তালিকা দেখায়?",
+    "description": "Get-ChildItem"
+  },
+  "powershell-003": {
+    "command": "কোন cmdlet বর্তমান ডিরেক্টরি পরিবর্তন করে?",
+    "description": "Set-Location"
+  },
+  "powershell-004": {
+    "command": "কোন cmdlet একটি ফাইলের বিষয়বস্তু দেখায়?",
+    "description": "Get-Content"
+  },
+  "powershell-005": {
+    "command": "কোন cmdlet নতুন ফাইল বা ডিরেক্টরি তৈরি করে?",
+    "description": "New-Item"
+  },
+  "powershell-006": {
+    "command": "কোন cmdlet ফাইল ও ডিরেক্টরি কপি করে?",
+    "description": "Copy-Item"
+  },
+  "powershell-007": {
+    "command": "কোন cmdlet ফাইল ও ডিরেক্টরি সরায় (move করে)?",
+    "description": "Move-Item"
+  },
+  "powershell-008": {
+    "command": "কোন cmdlet ফাইল ও ডিরেক্টরি মুছে ফেলে?",
+    "description": "Remove-Item"
+  },
+  "powershell-009": {
+    "command": "কোন cmdlet একটি ফাইলের নাম পরিবর্তন করে?",
+    "description": "Rename-Item"
+  },
+  "powershell-010": {
+    "command": "PowerShell-এ কোন চিহ্ন একক-লাইন মন্তব্য (comment) শুরু করে?",
+    "description": "#"
+  },
+  "powershell-011": {
+    "command": "কোন PowerShell cmdlet একটি ফাইলের শেষে টেক্সট যুক্ত (append) করে?",
+    "description": "Add-Content"
+  },
+  "powershell-012": {
+    "command": "ভেরিয়েবলের নামের আগে কোন চিহ্ন ব্যবহার করা হয়?",
+    "description": "$"
+  },
+  "powershell-013": {
+    "command": "কোন cmdlet কমান্ডের ইতিহাস (history) দেখায়?",
+    "description": "Get-History"
+  },
+  "powershell-014": {
+    "command": "কোন cmdlet কনসোল স্ক্রিন পরিষ্কার করে?",
+    "description": "Clear-Host"
+  },
+  "powershell-015": {
+    "command": "কোন cmdlet সহায়তা তথ্য (help) দেখায়?",
+    "description": "Get-Help"
+  },
+  "powershell-016": {
+    "command": "কোন cmdlet লোকাল help ফাইল আপডেট করে?",
+    "description": "Update-Help"
+  },
+  "powershell-017": {
+    "command": "কোন cmdlet উপলব্ধ কমান্ডগুলোর তালিকা দেখায়?",
+    "description": "Get-Command"
+  },
+  "powershell-018": {
+    "command": "কোন cmdlet একটি অবজেক্টের প্রপার্টি ও মেথড দেখায়?",
+    "description": "Get-Member"
+  },
+  "powershell-019": {
+    "command": "কোন অটোমেটিক ভেরিয়েবলে PowerShell সংস্করণের বিস্তারিত তথ্য থাকে?",
+    "description": "$PSVersionTable"
+  },
+  "powershell-020": {
+    "command": "কোন cmdlet alias-গুলোর তালিকা দেখায়?",
+    "description": "Get-Alias"
+  },
+  "powershell-021": {
+    "command": "কোন cmdlet বর্তমান execution policy দেখায়?",
+    "description": "Get-ExecutionPolicy"
+  },
+  "powershell-022": {
+    "command": "কোন cmdlet execution policy পরিবর্তন করে?",
+    "description": "Set-ExecutionPolicy"
+  },
+  "powershell-023": {
+    "command": "কোন execution policy ডিফল্টভাবে স্ক্রিপ্ট চালানো বন্ধ রাখে?",
+    "description": "Restricted"
+  },
+  "powershell-024": {
+    "command": "কোন execution policy লোকালি তৈরি স্ক্রিপ্ট চালানোর অনুমতি দেয়?",
+    "description": "RemoteSigned"
+  },
+  "javascript-001": {
+    "command": "JavaScript কী?",
+    "description": "প্রোগ্রামিং ভাষা"
+  },
+  "javascript-002": {
+    "command": "কোন কিওয়ার্ড ব্লক-স্কোপড ভেরিয়েবল ঘোষণা করে?",
+    "description": "let"
+  },
+  "javascript-003": {
+    "command": "কোন কিওয়ার্ড ধ্রুবক (constant) ঘোষণা করে?",
+    "description": "const"
+  },
+  "javascript-004": {
+    "command": "কোন চিহ্ন একটি একক-লাইন কমেন্ট শুরু করে?",
+    "description": "//"
+  },
+  "javascript-005": {
+    "command": "কোন JavaScript অপারেটর পরীক্ষা করে একটি অবজেক্ট নির্দিষ্ট কনস্ট্রাক্টরের ইনস্ট্যান্স কি না?",
+    "description": "instanceof"
+  },
+  "javascript-006": {
+    "command": "কোন মান ইচ্ছাকৃতভাবে কোনো মান না থাকা বোঝায়?",
+    "description": "null"
+  },
+  "javascript-007": {
+    "command": "একটি ভেরিয়েবল ঘোষণা করা হয়েছে কিন্তু মান দেওয়া হয়নি—এমন হলে কোন মান পাওয়া যায়?",
+    "description": "undefined"
+  },
+  "javascript-008": {
+    "command": "নিচের কোনটি প্রিমিটিভ ডেটা টাইপ নয়?",
+    "description": "object"
+  },
+  "javascript-009": {
+    "command": "কোন ফাংশন একটি স্ট্রিংকে পূর্ণসংখ্যায় রূপান্তর করে?",
+    "description": "parseInt()"
+  },
+  "javascript-010": {
+    "command": "কোন ফাংশন একটি স্ট্রিংকে ফ্লোটিং-পয়েন্ট সংখ্যায় রূপান্তর করে?",
+    "description": "parseFloat()"
+  },
+  "javascript-011": {
+    "command": "কোন অপারেটর মান ও টাইপ উভয়ের সমতা পরীক্ষা করে?",
+    "description": "==="
+  },
+  "javascript-012": {
+    "command": "কোন অপারেটর টাইপ কোয়ার্শনসহ মানের সমতা পরীক্ষা করে?",
+    "description": "=="
+  },
+  "javascript-013": {
+    "command": "কোন অপারেটর ভাগের ভাগশেষ প্রদান করে?",
+    "description": "%"
+  },
+  "javascript-014": {
+    "command": "কোন ফাংশন ব্রাউজারে একটি মেসেজ বক্স দেখায়?",
+    "description": "alert()"
+  },
+  "javascript-015": {
+    "command": "কোন মেথড ব্রাউজার কনসোলে আউটপুট লগ করে?",
+    "description": "console.log()"
+  },
+  "javascript-016": {
+    "command": "JavaScript কোড অন্তর্ভুক্ত করতে কোন HTML ট্যাগ ব্যবহার করা হয়?",
+    "description": "<script>"
+  },
+  "javascript-017": {
+    "command": "কোন কিওয়ার্ড একটি ফাংশন সংজ্ঞায়িত করে?",
+    "description": "function"
+  },
+  "javascript-018": {
+    "command": "কোন স্টেটমেন্ট তাৎক্ষণিকভাবে একটি লুপ থেকে বের হয়ে যায়?",
+    "description": "break"
+  },
+  "javascript-019": {
+    "command": "কোন স্টেটমেন্ট লুপের বর্তমান ইটারেশন বাদ দেয়?",
+    "description": "continue"
+  },
+  "javascript-020": {
+    "command": "কোন লুপ অন্তত একবার তার কোড চালায়?",
+    "description": "do...while"
+  },
+  "javascript-021": {
+    "command": "অ্যারের উপাদানগুলোর উপর ইটারেট করতে সাধারণত কোন লুপ ব্যবহৃত হয়?",
+    "description": "for"
+  },
+  "javascript-022": {
+    "command": "কোন স্টেটমেন্ট একটি শর্তের ভিত্তিতে কোড চালায়?",
+    "description": "if"
+  },
+  "javascript-023": {
+    "command": "কোন কিওয়ার্ড এরর হ্যান্ডলিং শুরু করে?",
+    "description": "try"
+  },
+  "javascript-024": {
+    "command": "কোন স্টেটমেন্ট ম্যানুয়ালি একটি এরর নিক্ষেপ করে?",
+    "description": "throw"
+  },
+  "ruby-001": {
+    "command": "Ruby কী ধরনের ভাষা?",
+    "description": "অবজেক্ট-ওরিয়েন্টেড প্রোগ্রামিং ভাষা"
+  },
+  "ruby-002": {
+    "command": "Ruby কে তৈরি করেছেন?",
+    "description": "Yukihiro Matsumoto"
+  },
+  "ruby-003": {
+    "command": "Ruby স্ক্রিপ্টের জন্য কোন ফাইল এক্সটেনশন ব্যবহার করা হয়?",
+    "description": ".rb"
+  },
+  "ruby-004": {
+    "command": "কোন কমান্ড একটি Ruby স্ক্রিপ্ট চালায়?",
+    "description": "ruby filename.rb"
+  },
+  "ruby-005": {
+    "command": "Ruby-তে কোন চিহ্ন একক লাইনের মন্তব্য শুরু করে?",
+    "description": "#"
+  },
+  "ruby-006": {
+    "command": "Ruby-তে কোন কীওয়ার্ড বহু লাইনের মন্তব্য শুরু করে?",
+    "description": "=begin"
+  },
+  "ruby-007": {
+    "command": "Ruby-তে কোন কীওয়ার্ড একটি মেথড সংজ্ঞায়িত করে?",
+    "description": "def"
+  },
+  "ruby-008": {
+    "command": "কোন কীওয়ার্ড মেথড সংজ্ঞার সমাপ্তি ঘটায়?",
+    "description": "end"
+  },
+  "ruby-009": {
+    "command": "কোন মেথড নতুন লাইনসহ আউটপুট প্রিন্ট করে?",
+    "description": "puts"
+  },
+  "ruby-010": {
+    "command": "কোন মেথড নতুন লাইন যোগ না করে আউটপুট প্রিন্ট করে?",
+    "description": "print"
+  },
+  "ruby-011": {
+    "command": "কোন মেথড স্ট্যান্ডার্ড ইনপুট থেকে একটি লাইন পড়ে?",
+    "description": "gets"
+  },
+  "ruby-012": {
+    "command": "Ruby-তে কোন মেথড একটি অবজেক্টকে স্ট্রিং-এ রূপান্তর করে?",
+    "description": "to_s"
+  },
+  "ruby-013": {
+    "command": "Ruby-তে কোন মেথড একটি স্ট্রিংকে ইন্টিজারে রূপান্তর করে?",
+    "description": "to_i"
+  },
+  "ruby-014": {
+    "command": "কোন মেথড একটি স্ট্রিংকে ফ্লোটে রূপান্তর করে?",
+    "description": "to_f"
+  },
+  "ruby-015": {
+    "command": "কোন মেথড একটি অবজেক্টের ক্লাস ফেরত দেয়?",
+    "description": "class"
+  },
+  "ruby-016": {
+    "command": "কোন মেথড পরীক্ষা করে একটি অবজেক্ট কোনো ক্লাসের অন্তর্গত কি না?",
+    "description": "is_a?"
+  },
+  "ruby-017": {
+    "command": "কোন মেথড পরীক্ষা করে একটি অবজেক্ট কোনো মেথডে সাড়া দেয় কি না?",
+    "description": "respond_to?"
+  },
+  "ruby-018": {
+    "command": "কোন মেথড একটি অবজেক্টের জন্য অনন্য শনাক্তকারী ফেরত দেয়?",
+    "description": "object_id"
+  },
+  "ruby-019": {
+    "command": "Ruby-তে কোন অপারেটর মানের সমতা পরীক্ষা করে?",
+    "description": "=="
+  },
+  "ruby-020": {
+    "command": "case স্টেটমেন্টে তুলনার জন্য সাধারণত কোন অপারেটর ব্যবহৃত হয়?",
+    "description": "==="
+  },
+  "ruby-021": {
+    "command": "তুলনা ও ক্রমবিন্যাসের জন্য কোন অপারেটর ব্যবহৃত হয়?",
+    "description": "<=>"
+  },
+  "ruby-022": {
+    "command": "Ruby-তে ধ্রুবক (constant) কীভাবে ঘোষণা করা হয়?",
+    "description": "নামের শুরুতে বড় হাতের অক্ষর দিয়ে"
+  },
+  "ruby-023": {
+    "command": "কোন প্রিফিক্স ইনস্ট্যান্স ভেরিয়েবল নির্দেশ করে?",
+    "description": "@"
+  },
+  "ruby-024": {
+    "command": "Ruby-তে কোন অপারেটর একটি সংখ্যাকে ঘাত (পাওয়ার) হিসেবে উন্নীত করে?",
+    "description": "**"
+  },
+  "aws-001": {
+    "command": "aws cli",
+    "description": "CLI থেকে AWS সার্ভিস পরিচালনার সমন্বিত সরঞ্জাম।"
+  },
+  "aws-002": {
+    "command": "IAM",
+    "description": "AWS রিসোর্সে প্রবেশাধিকার নিরাপদে নিয়ন্ত্রণ করে।"
+  },
+  "aws-003": {
+    "command": "S3",
+    "description": "যেকোনো ডেটা সংরক্ষণ ও পুনরুদ্ধারের জন্য তৈরি অবজেক্ট স্টোরেজ।"
+  },
+  "aws-004": {
+    "command": "EC2",
+    "description": "ক্লাউডে প্রয়োজনমতো বাড়ানো যায় এমন কম্পিউটিং ক্ষমতা দেয়।"
+  },
+  "aws-005": {
+    "command": "VPC",
+    "description": "ক্লাউডের যৌক্তিকভাবে বিচ্ছিন্ন একটি অংশ বরাদ্দ করে।"
+  },
+  "aws-006": {
+    "command": "ভার্চুয়াল সার্ভার চালু করতে প্রধানত কোন AWS পরিষেবা ব্যবহার করা হয়?",
+    "description": "Amazon EC2"
+  },
+  "aws-007": {
+    "command": "অবজেক্ট স্টোরেজের জন্য কোন AWS স্টোরেজ পরিষেবা তৈরি করা হয়েছে?",
+    "description": "Amazon S3"
+  },
+  "aws-008": {
+    "command": "ব্যবহারকারীর পরিচয় ও অনুমতিগুলো কোন AWS পরিষেবা পরিচালনা করে?",
+    "description": "AWS IAM"
+  },
+  "aws-009": {
+    "command": "সার্ভারবিহীন কম্পিউটিং কোন AWS পরিষেবা প্রদান করে?",
+    "description": "AWS Lambda"
+  },
+  "aws-010": {
+    "command": "পরিচালিত রিলেশনাল ডেটাবেস কোন AWS পরিষেবা?",
+    "description": "Amazon RDS"
+  },
+  "aws-011": {
+    "command": "সম্পূর্ণভাবে পরিচালিত NoSQL AWS ডেটাবেস কোনটি?",
+    "description": "Amazon DynamoDB"
+  },
+  "aws-012": {
+    "command": "অ্যাপ্লিকেশন ও AWS রিসোর্স পর্যবেক্ষণে কোন AWS পরিষেবা সাহায্য করে?",
+    "description": "Amazon CloudWatch"
+  },
+  "aws-013": {
+    "command": "অডিটের উদ্দেশ্যে API কার্যকলাপ রেকর্ড করতে কোন AWS পরিষেবা ব্যবহার করা হয়?",
+    "description": "CloudTrail"
+  },
+  "aws-014": {
+    "command": "একটি বিচ্ছিন্ন ভার্চুয়াল নেটওয়ার্ক প্রদানকারী AWS নেটওয়ার্কিং পরিষেবা কোনটি?",
+    "description": "Amazon VPC"
+  },
+  "aws-015": {
+    "command": "DNS ব্যবস্থাপনা কোন AWS পরিষেবা প্রদান করে?",
+    "description": "Route 53"
+  },
+  "aws-016": {
+    "command": "একাধিক EC2 ইনস্ট্যান্সে ট্র্যাফিক বিতরণ করতে কোন AWS পরিষেবা ব্যবহার করা হয়?",
+    "description": "Elastic Load Balancer"
+  },
+  "aws-017": {
+    "command": "চাহিদা অনুযায়ী EC2 ইনস্ট্যান্সের সংখ্যা স্বয়ংক্রিয়ভাবে সমন্বয় করে কোন AWS পরিষেবা?",
+    "description": "Auto Scaling"
+  },
+  "aws-018": {
+    "command": "Infrastructure as Code স্থাপন করতে কোন AWS পরিষেবা ব্যবহার করা হয়?",
+    "description": "AWS CloudFormation"
+  },
+  "aws-019": {
+    "command": "কনটেন্ট ডেলিভারি নেটওয়ার্ক (CDN) কোন AWS পরিষেবা?",
+    "description": "Amazon CloudFront"
+  },
+  "aws-020": {
+    "command": "পরিচালিত Kubernetes কোন AWS পরিষেবা প্রদান করে?",
+    "description": "Amazon EKS"
+  },
+  "aws-021": {
+    "command": "পরিচালিত Docker কনটেইনার অর্কেস্ট্রেশন কোন AWS পরিষেবা প্রদান করে?",
+    "description": "Amazon ECS"
+  },
+  "aws-022": {
+    "command": "পাসওয়ার্ড ও API key-এর মতো গোপন তথ্য কোন AWS পরিষেবা নিরাপদে সংরক্ষণ করে?",
+    "description": "AWS Secrets Manager"
+  },
+  "aws-023": {
+    "command": "এনক্রিপশন key কোন AWS পরিষেবা পরিচালনা করে?",
+    "description": "AWS KMS"
+  },
+  "aws-024": {
+    "command": "DDoS আক্রমণ থেকে অ্যাপ্লিকেশনকে কোন AWS পরিষেবা সুরক্ষা দেয়?",
+    "description": "AWS Shield"
+  },
+  "azure-001": {
+    "command": "ভার্চুয়াল মেশিন তৈরি করতে Microsoft Azure-এর কোন পরিষেবা ব্যবহার করা হয়?",
+    "description": "Azure Virtual Machines"
+  },
+  "azure-002": {
+    "command": "অসংগঠিত ডেটার জন্য কোন Azure পরিষেবা অবজেক্ট স্টোরেজ প্রদান করে?",
+    "description": "Azure Blob Storage"
+  },
+  "azure-003": {
+    "command": "পরিচয় এবং অ্যাক্সেস ব্যবস্থাপনার জন্য কোন Azure পরিষেবা ব্যবহার করা হয়?",
+    "description": "Microsoft Entra ID"
+  },
+  "azure-004": {
+    "command": "কোন Azure পরিষেবা সার্ভারলেস কম্পিউটিং প্রদান করে?",
+    "description": "Azure Functions"
+  },
+  "azure-005": {
+    "command": "SQL Server-এর জন্য কোন Azure পরিষেবা পরিচালিত রিলেশনাল ডেটাবেস প্রদান করে?",
+    "description": "Azure SQL Database"
+  },
+  "azure-006": {
+    "command": "কোন Azure ডেটাবেস পরিষেবা বিশ্বব্যাপী বিতরণ করা এবং NoSQL-ভিত্তিক?",
+    "description": "Azure Cosmos DB"
+  },
+  "azure-007": {
+    "command": "অ্যাপ্লিকেশন এবং অবকাঠামো পর্যবেক্ষণ করতে কোন Azure পরিষেবা ব্যবহার করা হয়?",
+    "description": "Azure Monitor"
+  },
+  "azure-008": {
+    "command": "কোন Azure পরিষেবা ওয়েব অ্যাপ্লিকেশন থেকে টেলিমেট্রি সংগ্রহ করে?",
+    "description": "Application Insights"
+  },
+  "azure-009": {
+    "command": "কোন Azure নেটওয়ার্কিং পরিষেবা একটি বিচ্ছিন্ন ব্যক্তিগত নেটওয়ার্ক তৈরি করে?",
+    "description": "Azure Virtual Network"
+  },
+  "azure-010": {
+    "command": "কোন Azure পরিষেবা DNS হোস্টিং প্রদান করে?",
+    "description": "Azure DNS"
+  },
+  "azure-011": {
+    "command": "কোন Azure পরিষেবা আগত ট্রাফিক একাধিক ভার্চুয়াল মেশিনের মধ্যে বণ্টন করে?",
+    "description": "Azure Load Balancer"
+  },
+  "azure-012": {
+    "command": "কোন Azure পরিষেবা লেয়ার ৭-এ বিশ্বব্যাপী লোড ব্যালেন্সিং প্রদান করে?",
+    "description": "Azure Front Door"
+  },
+  "azure-013": {
+    "command": "কোন Azure পরিষেবা পরিচালিত Kubernetes প্রদান করে?",
+    "description": "Azure Kubernetes Service (AKS)"
+  },
+  "azure-014": {
+    "command": "সার্ভার পরিচালনা না করেই কোন Azure পরিষেবা কন্টেইনার চালায়?",
+    "description": "Azure Container Instances"
+  },
+  "azure-015": {
+    "command": "অবকাঠামো পরিচালনা না করেই কোন Azure পরিষেবা ওয়েব অ্যাপ্লিকেশন হোস্ট করে?",
+    "description": "Azure App Service"
+  },
+  "azure-016": {
+    "command": "কোন Azure পরিষেবা গোপন তথ্য, কী এবং সার্টিফিকেট নিরাপদে সংরক্ষণ করে?",
+    "description": "Azure Key Vault"
+  },
+  "azure-017": {
+    "command": "Microsoft Azure-এর সঙ্গে কোন Azure পরিষেবা নিবেদিত ব্যক্তিগত সংযোগ প্রদান করে?",
+    "description": "Azure ExpressRoute"
+  },
+  "azure-018": {
+    "command": "Azure পোর্টালের মাধ্যমে ভার্চুয়াল মেশিনে কোন Azure পরিষেবা নিরাপদ দূরবর্তী অ্যাক্সেস প্রদান করে?",
+    "description": "Azure Bastion"
+  },
+  "azure-019": {
+    "command": "Azure ভার্চুয়াল মেশিন এবং অন্যান্য ওয়ার্কলোডের ব্যাকআপ নিতে কোন Azure পরিষেবা ব্যবহার করা হয়?",
+    "description": "Azure Backup"
+  },
+  "azure-020": {
+    "command": "বিপর্যয়ের পরে ভার্চুয়াল মেশিন পুনরুদ্ধার করতে কোন Azure পরিষেবা ব্যবহার করা হয়?",
+    "description": "Azure Site Recovery"
+  },
+  "azure-021": {
+    "command": "গভর্ন্যান্স নীতি তৈরি এবং কার্যকর করতে কোন Azure পরিষেবা ব্যবহার করা হয়?",
+    "description": "Azure Policy"
+  },
+  "azure-022": {
+    "command": "কোন Azure পরিষেবা অন-প্রিমিসেস এবং মাল্টি-ক্লাউড পরিবেশে Azure ব্যবস্থাপনা সম্প্রসারিত করে?",
+    "description": "Azure Arc"
+  },
+  "azure-023": {
+    "command": "অবিচ্ছিন্ন ইন্টিগ্রেশন এবং অবিচ্ছিন্ন ডিপ্লয়মেন্টের (CI/CD) জন্য Azure DevOps-এর কোন উপাদান ব্যবহার করা হয়?",
+    "description": "Azure Pipelines"
+  },
+  "azure-024": {
+    "command": "Azure DevOps-এর কোন পরিষেবা Git রিপোজিটরি প্রদান করে?",
+    "description": "Azure Repos"
+  },
+  "gcp-001": {
+    "command": "ভার্চুয়াল মেশিন তৈরি ও পরিচালনা করতে কোন Google Cloud সার্ভিস ব্যবহৃত হয়?",
+    "description": "Compute Engine"
+  },
+  "gcp-002": {
+    "command": "কোন Google Cloud সার্ভিস অবজেক্ট স্টোরেজ প্রদান করে?",
+    "description": "Cloud Storage"
+  },
+  "gcp-003": {
+    "command": "কোন Google Cloud সার্ভিস সার্ভারলেস ফাংশন প্রদান করে?",
+    "description": "Cloud Functions"
+  },
+  "gcp-004": {
+    "command": "Kubernetes ক্লাস্টার চালাতে কোন Google Cloud সার্ভিস ব্যবহৃত হয়?",
+    "description": "Google Kubernetes Engine (GKE)"
+  },
+  "gcp-005": {
+    "command": "কোন Google Cloud সার্ভিস সম্পূর্ণ ম্যানেজড রিলেশনাল ডেটাবেস প্রদান করে?",
+    "description": "Cloud SQL"
+  },
+  "gcp-006": {
+    "command": "কোন Google Cloud ডেটাবেস বিশ্বব্যাপী বিতরিত রিলেশনাল ডেটাবেস?",
+    "description": "Cloud Spanner"
+  },
+  "gcp-007": {
+    "command": "কোন Google Cloud NoSQL ডকুমেন্ট ডেটাবেস সার্ভারলেস?",
+    "description": "Firestore"
+  },
+  "gcp-008": {
+    "command": "পেটাবাইট-স্কেল ডেটা অ্যানালিটিক্সের জন্য কোন Google Cloud সার্ভিস ব্যবহৃত হয়?",
+    "description": "BigQuery"
+  },
+  "gcp-009": {
+    "command": "কোন Google Cloud সার্ভিস মনিটরিং ও অবজার্ভেবিলিটি প্রদান করে?",
+    "description": "Cloud Monitoring"
+  },
+  "gcp-010": {
+    "command": "কোন Google Cloud সার্ভিস অ্যাপ্লিকেশন লগ সংগ্রহ করে?",
+    "description": "Cloud Logging"
+  },
+  "gcp-011": {
+    "command": "কোন Google Cloud সার্ভিস ব্যবহারকারী, রোল ও পারমিশন পরিচালনা করে?",
+    "description": "Cloud Identity and IAM"
+  },
+  "gcp-012": {
+    "command": "কোন Google Cloud সার্ভিস বিচ্ছিন্ন প্রাইভেট নেটওয়ার্ক তৈরি করে?",
+    "description": "Virtual Private Cloud (VPC)"
+  },
+  "gcp-013": {
+    "command": "কোন Google Cloud সার্ভিস DNS হোস্টিং প্রদান করে?",
+    "description": "Cloud DNS"
+  },
+  "gcp-014": {
+    "command": "কোন Google Cloud সার্ভিস একাধিক ভার্চুয়াল মেশিনের মধ্যে ট্রাফিক বিতরণ করে?",
+    "description": "Cloud Load Balancing"
+  },
+  "gcp-015": {
+    "command": "কোন Google Cloud সার্ভিস বিশ্বব্যাপী কনটেন্ট ডেলিভারি দ্রুততর করে?",
+    "description": "Cloud CDN"
+  },
+  "gcp-016": {
+    "command": "কোন Google Cloud সার্ভিস ওয়েব অ্যাপ্লিকেশনকে DDoS আক্রমণ ও সাধারণ ওয়েব এক্সপ্লয়েট থেকে রক্ষা করে?",
+    "description": "Cloud Armor"
+  },
+  "gcp-017": {
+    "command": "কোন Google Cloud সার্ভিস ইনফ্রাস্ট্রাকচার পরিচালনা ছাড়াই ম্যানেজড কনটেইনার এক্সিকিউশন প্রদান করে?",
+    "description": "Cloud Run"
+  },
+  "gcp-018": {
+    "command": "ওয়েব অ্যাপ্লিকেশন তৈরির জন্য কোন Google Cloud সার্ভিস একটি সম্পূর্ণ ম্যানেজড প্ল্যাটফর্ম?",
+    "description": "App Engine"
+  },
+  "gcp-019": {
+    "command": "কোন Google Cloud সার্ভিস সিক্রেট, পাসওয়ার্ড ও API কী নিরাপদে সংরক্ষণ করে?",
+    "description": "Secret Manager"
+  },
+  "gcp-020": {
+    "command": "কোন Google Cloud সার্ভিস এনক্রিপশন কী পরিচালনা করে?",
+    "description": "Cloud KMS"
+  },
+  "gcp-021": {
+    "command": "কোন Google Cloud সার্ভিস Google Cloud-এর সাথে ডেডিকেটেড প্রাইভেট সংযোগ প্রদান করে?",
+    "description": "Cloud Interconnect"
+  },
+  "gcp-022": {
+    "command": "কোন Google Cloud সার্ভিস অন-প্রিমিসেস নেটওয়ার্ক ও GCP-এর মধ্যে নিরাপদ এনক্রিপ্টেড সংযোগ প্রদান করে?",
+    "description": "Cloud VPN"
+  },
+  "gcp-023": {
+    "command": "কোন Google Cloud সার্ভিস এক্সটার্নাল IP অ্যাড্রেস ছাড়া প্রাইভেট ইনস্ট্যান্সের জন্য আউটবাউন্ড ইন্টারনেট অ্যাক্সেস প্রদান করে?",
+    "description": "Cloud NAT"
+  },
+  "gcp-024": {
+    "command": "কোন Google Cloud সার্ভিস VPC ও অন-প্রিমিসেস নেটওয়ার্কের মধ্যে গতিশীলভাবে রুট বিনিময় করে?",
+    "description": "Cloud Router"
+  },
+  "oracle-001": {
+    "command": "ভার্চুয়াল মেশিন তৈরি করতে কোন Oracle Cloud Infrastructure পরিষেবা ব্যবহৃত হয়?",
+    "description": "Compute"
+  },
+  "oracle-002": {
+    "command": "কোন OCI পরিষেবা স্কেলযোগ্য অবজেক্ট স্টোরেজ প্রদান করে?",
+    "description": "Object Storage"
+  },
+  "oracle-003": {
+    "command": "কোন OCI স্টোরেজ পরিষেবা স্থায়ী ব্লক স্টোরেজ প্রদান করে?",
+    "description": "Block Volumes"
+  },
+  "oracle-004": {
+    "command": "কোন OCI পরিষেবা শেয়ার্ড NFS ফাইল স্টোরেজ প্রদান করে?",
+    "description": "File Storage"
+  },
+  "oracle-005": {
+    "command": "OCI-এর ভার্চুয়াল নেটওয়ার্ক পরিষেবাটির নাম কী?",
+    "description": "Virtual Cloud Network (VCN)"
+  },
+  "oracle-006": {
+    "command": "কোন OCI পরিষেবা ব্যবহারকারী, গ্রুপ এবং পলিসি পরিচালনা করে?",
+    "description": "Identity and Access Management (IAM)"
+  },
+  "oracle-007": {
+    "command": "কোন OCI ফিচার ক্লাউড রিসোর্সগুলোকে যৌক্তিকভাবে সংগঠিত করে?",
+    "description": "Compartments"
+  },
+  "oracle-008": {
+    "command": "কোন OCI ফিচার ব্যবহারকারী ও গ্রুপের জন্য অনুমতি নির্ধারণ করে?",
+    "description": "Policies"
+  },
+  "oracle-009": {
+    "command": "কোন OCI পরিষেবা আগত ট্রাফিক বণ্টন করে?",
+    "description": "Load Balancer"
+  },
+  "oracle-010": {
+    "command": "কোন OCI পরিষেবা ডেডিকেটেড প্রাইভেট সংযোগ প্রদান করে?",
+    "description": "FastConnect"
+  },
+  "oracle-011": {
+    "command": "কোন OCI পরিষেবা IPSec সংযোগ প্রদান করে?",
+    "description": "Site-to-Site VPN"
+  },
+  "oracle-012": {
+    "command": "কোন OCI উপাদান VCN-গুলোকে অন-প্রিমিসেস নেটওয়ার্কের সাথে সংযুক্ত করে?",
+    "description": "Dynamic Routing Gateway (DRG)"
+  },
+  "oracle-013": {
+    "command": "কোন OCI ডেটাবেস স্বয়ংক্রিয়ভাবে নিজেকে পরিচালনা করে?",
+    "description": "Autonomous Database"
+  },
+  "oracle-014": {
+    "command": "কোন OCI পরিষেবা Kubernetes ক্লাস্টার পরিচালনা করে?",
+    "description": "Container Engine for Kubernetes (OKE)"
+  },
+  "oracle-015": {
+    "command": "কোন OCI পরিষেবা সার্ভারলেস এক্সিকিউশন প্রদান করে?",
+    "description": "Functions"
+  },
+  "oracle-016": {
+    "command": "কোন OCI পরিষেবা API প্রকাশ ও সুরক্ষিত করে?",
+    "description": "API Gateway"
+  },
+  "oracle-017": {
+    "command": "কোন OCI পরিষেবা CI/CD পাইপলাইন সমর্থন করে?",
+    "description": "DevOps"
+  },
+  "oracle-018": {
+    "command": "কোন OCI পরিষেবা Terraform ডিপ্লয়মেন্ট পরিচালনা করে?",
+    "description": "Resource Manager"
+  },
+  "oracle-019": {
+    "command": "কোন OCI পরিষেবা মেট্রিক সংগ্রহ করে?",
+    "description": "Monitoring"
+  },
+  "oracle-020": {
+    "command": "কোন OCI পরিষেবা লগ সংরক্ষণ করে?",
+    "description": "Logging"
+  },
+  "oracle-021": {
+    "command": "কোন OCI পরিষেবা অ্যালার্ট পাঠায়?",
+    "description": "Notifications"
+  },
+  "oracle-022": {
+    "command": "কোন OCI পরিষেবা রিসোর্স ইভেন্টে সাড়া দেয়?",
+    "description": "Events"
+  },
+  "oracle-023": {
+    "command": "কোন OCI পরিষেবা সিক্রেট ও এনক্রিপশন কী সংরক্ষণ করে?",
+    "description": "Vault"
+  },
+  "oracle-024": {
+    "command": "কোন OCI পরিষেবা নিরাপত্তা অবস্থা পর্যবেক্ষণ করে?",
+    "description": "Cloud Guard"
+  },
+  "ibm-001": {
+    "command": "কোন IBM Cloud পরিষেবা ভার্চুয়াল সার্ভার তৈরি করতে ব্যবহৃত হয়?",
+    "description": "Virtual Servers for VPC"
+  },
+  "ibm-002": {
+    "command": "কোন IBM Cloud পরিষেবা অবজেক্ট স্টোরেজ প্রদান করে?",
+    "description": "Cloud Object Storage"
+  },
+  "ibm-003": {
+    "command": "IBM Cloud-এর আইসোলেটেড ভার্চুয়াল নেটওয়ার্কিং পরিষেবা কোনটি?",
+    "description": "Virtual Private Cloud (VPC)"
+  },
+  "ibm-004": {
+    "command": "কোন IBM Cloud পরিষেবা ব্যবহারকারী ও অ্যাক্সেস পরিচালনা করে?",
+    "description": "IBM Cloud IAM"
+  },
+  "ibm-005": {
+    "command": "কোন IBM Cloud পরিষেবা ম্যানেজড Kubernetes প্রদান করে?",
+    "description": "IBM Cloud Kubernetes Service"
+  },
+  "ibm-006": {
+    "command": "কোন IBM Cloud পরিষেবা ম্যানেজড Red Hat OpenShift প্রদান করে?",
+    "description": "Red Hat OpenShift on IBM Cloud"
+  },
+  "ibm-007": {
+    "command": "কোন কমান্ড কমান্ড লাইন থেকে IBM Cloud-এ লগইন করে?",
+    "description": "ibmcloud login"
+  },
+  "ibm-008": {
+    "command": "কোন IBM Cloud পরিষেবা অবকাঠামো পরিচালনা না করেই কন্টেইনার চালায়?",
+    "description": "IBM Cloud Code Engine"
+  },
+  "ibm-009": {
+    "command": "কোন IBM Cloud পরিষেবা আগত ট্রাফিক বিতরণ করে?",
+    "description": "Load Balancer"
+  },
+  "ibm-010": {
+    "command": "কোন IBM Cloud পরিষেবা নিরাপদ সাইট-টু-সাইট সংযোগ প্রদান করে?",
+    "description": "VPN for VPC"
+  },
+  "ibm-011": {
+    "command": "কোন IBM Cloud পরিষেবা অন-প্রিমিসেস নেটওয়ার্কের সাথে ডেডিকেটেড প্রাইভেট সংযোগ প্রদান করে?",
+    "description": "Direct Link"
+  },
+  "ibm-012": {
+    "command": "কোন IBM Cloud অফারিং ম্যানেজড ডেটাবেস প্রদান করে?",
+    "description": "IBM Cloud Databases"
+  },
+  "ibm-013": {
+    "command": "কোন IBM Cloud ডেটাবেস Db2-এর উপর ভিত্তি করে তৈরি?",
+    "description": "Db2 on Cloud"
+  },
+  "ibm-014": {
+    "command": "কোন IBM Cloud পরিষেবা অবকাঠামো মনিটরিং প্রদান করে?",
+    "description": "IBM Cloud Monitoring"
+  },
+  "ibm-015": {
+    "command": "কোন IBM Cloud পরিষেবা লগ কেন্দ্রীভূত করে?",
+    "description": "IBM Log Analysis"
+  },
+  "ibm-016": {
+    "command": "কোন IBM Cloud পরিষেবা সিক্রেট নিরাপদে সংরক্ষণ করে?",
+    "description": "Secrets Manager"
+  },
+  "ibm-017": {
+    "command": "কোন IBM Cloud পরিষেবা এনক্রিপশন কী পরিচালনা করে?",
+    "description": "Key Protect"
+  },
+  "ibm-018": {
+    "command": "কোন IBM Cloud পরিষেবা HSM-ভিত্তিক কী ম্যানেজমেন্ট প্রদান করে?",
+    "description": "Hyper Protect Crypto Services"
+  },
+  "ibm-019": {
+    "command": "কোন IBM Cloud পরিষেবা কন্টেইনার ইমেজ সংরক্ষণ করে?",
+    "description": "Container Registry"
+  },
+  "ibm-020": {
+    "command": "কোন IBM Cloud পরিষেবা Terraform ডিপ্লয়মেন্ট পরিচালনা করে?",
+    "description": "Schematics"
+  },
+  "ibm-021": {
+    "command": "কোন IBM Cloud পরিষেবা নোটিফিকেশন পাঠায়?",
+    "description": "Event Notifications"
+  },
+  "ibm-022": {
+    "command": "কোন IBM Cloud পরিষেবা CDN ও DDoS সুরক্ষা প্রদান করে?",
+    "description": "Cloud Internet Services"
+  },
+  "ibm-023": {
+    "command": "কোন IBM AI প্ল্যাটফর্ম AI পরিষেবা প্রদান করে?",
+    "description": "watsonx"
+  },
+  "ibm-024": {
+    "command": "কোন IBM অফারিং Kubernetes-এ এন্টারপ্রাইজ সফটওয়্যার প্রদান করে?",
+    "description": "Cloud Pak"
+  },
+  "multicloud-001": {
+    "command": "কোন ক্লাউড কৌশলে দুই বা ততোধিক পাবলিক ক্লাউড প্রদানকারীর পরিষেবা ব্যবহার করা হয়?",
+    "description": "মাল্টি-ক্লাউড"
+  },
+  "multicloud-002": {
+    "command": "কোন ক্লাউড কৌশলে পাবলিক ও প্রাইভেট ক্লাউড একত্রিত করা হয়?",
+    "description": "হাইব্রিড ক্লাউড"
+  },
+  "multicloud-003": {
+    "command": "মাল্টি-ক্লাউড Infrastructure as Code-এর জন্য সাধারণত কোন টুল ব্যবহৃত হয়?",
+    "description": "Terraform"
+  },
+  "multicloud-004": {
+    "command": "ক্লাউডগুলোজুড়ে কন্টেইনার অর্কেস্ট্রেট করতে কোন CNCF প্রজেক্ট ব্যাপকভাবে ব্যবহৃত হয়?",
+    "description": "Kubernetes"
+  },
+  "multicloud-005": {
+    "command": "ক্লাউড API প্রকাশ করতে সাধারণত কোন প্রোটোকল ব্যবহৃত হয়?",
+    "description": "REST"
+  },
+  "multicloud-006": {
+    "command": "কোন অনুশীলন ভেন্ডর লক-ইন এড়াতে সাহায্য করে?",
+    "description": "ওপেন স্ট্যান্ডার্ড ব্যবহার করা"
+  },
+  "multicloud-007": {
+    "command": "ক্লাউড প্রদানকারীদের জুড়ে কন্টেইনারাইজেশনের জন্য কোন টুল ব্যাপকভাবে ব্যবহৃত হয়?",
+    "description": "Docker"
+  },
+  "multicloud-008": {
+    "command": "কোন প্রোটোকল ক্লাউডগুলোজুড়ে ফেডারেটেড আইডেন্টিটি সক্ষম করে?",
+    "description": "SAML"
+  },
+  "multicloud-009": {
+    "command": "ক্লাউড API-এর জন্য সাধারণত কোন অথেনটিকেশন স্ট্যান্ডার্ড ব্যবহৃত হয়?",
+    "description": "OAuth 2.0"
+  },
+  "multicloud-010": {
+    "command": "কোন ক্লাউড সার্ভিস মডেল ভার্চুয়াল মেশিন প্রদান করে?",
+    "description": "IaaS"
+  },
+  "multicloud-011": {
+    "command": "কোন ক্লাউড সার্ভিস মডেল ম্যানেজড অ্যাপ্লিকেশন প্ল্যাটফর্ম প্রদান করে?",
+    "description": "PaaS"
+  },
+  "multicloud-012": {
+    "command": "কোন ক্লাউড সার্ভিস মডেল ইন্টারনেটের মাধ্যমে সফটওয়্যার সরবরাহ করে?",
+    "description": "SaaS"
+  },
+  "multicloud-013": {
+    "command": "কোন মনিটরিং পদ্ধতি একাধিক ক্লাউড প্রদানকারীর কাছ থেকে মেট্রিক সংগ্রহ করে?",
+    "description": "কেন্দ্রীভূত মনিটরিং"
+  },
+  "multicloud-014": {
+    "command": "কোন লগিং পদ্ধতি সব ক্লাউড প্রদানকারীর লগ একত্রিত করে?",
+    "description": "কেন্দ্রীভূত লগিং"
+  },
+  "multicloud-015": {
+    "command": "কোন নেটওয়ার্কিং কৌশল একাধিক ক্লাউড পরিবেশকে নিরাপদে সংযুক্ত করে?",
+    "description": "VPN"
+  },
+  "multicloud-016": {
+    "command": "কোন নেটওয়ার্কিং সার্ভিস ক্লাউডগুলোর মধ্যে ডেডিকেটেড সংযোগ প্রদান করে?",
+    "description": "Direct Connect/ExpressRoute/Interconnect"
+  },
+  "multicloud-017": {
+    "command": "Kubernetes-এ সার্ভিস ডিসকভারির জন্য সাধারণত কোন প্রযুক্তি ব্যবহৃত হয়?",
+    "description": "DNS"
+  },
+  "multicloud-018": {
+    "command": "একাধিক ক্লাউডজুড়ে CI/CD-এর জন্য কোন টুল ব্যাপকভাবে ব্যবহৃত হয়?",
+    "description": "Jenkins"
+  },
+  "multicloud-019": {
+    "command": "কোন ওপেন-সোর্স মনিটরিং প্ল্যাটফর্ম মাল্টি-ক্লাউড পরিবেশ সমর্থন করে?",
+    "description": "Prometheus"
+  },
+  "multicloud-020": {
+    "command": "কোন ভিজ্যুয়ালাইজেশন প্ল্যাটফর্ম সাধারণত Prometheus-এর সাথে কাজ করে?",
+    "description": "Grafana"
+  },
+  "multicloud-021": {
+    "command": "কোন নিরাপত্তা নীতি শুধুমাত্র প্রয়োজনীয় অনুমতি প্রদান করে?",
+    "description": "ন্যূনতম অধিকার"
+  },
+  "multicloud-022": {
+    "command": "কোন অনুশীলন ডেটাকে স্থির অবস্থায় ও ট্রানজিটে উভয় ক্ষেত্রেই এনক্রিপ্ট করে?",
+    "description": "এনক্রিপশন"
+  },
+  "multicloud-023": {
+    "command": "কোন ক্লাউড আর্কিটেকচার প্রদানকারীদের জুড়ে প্রাপ্যতা উন্নত করে?",
+    "description": "রিডান্ডেন্সি"
+  },
+  "multicloud-024": {
+    "command": "কোন ডেপ্লয়মেন্ট পদ্ধতি একাধিক ক্লাউডে ওয়ার্কলোড বিতরণ করে?",
+    "description": "Active-Active"
+  },
+  "hybridcloud-001": {
+    "command": "হাইব্রিড ক্লাউড (Hybrid Cloud) কী?",
+    "description": "পাবলিক ও প্রাইভেট ক্লাউড পরিবেশের সমন্বয়"
+  },
+  "hybridcloud-002": {
+    "command": "কোন ডেপ্লয়মেন্ট মডেল অন-প্রিমিসেস অবকাঠামোকে পাবলিক ক্লাউডের সাথে যুক্ত করে?",
+    "description": "হাইব্রিড ক্লাউড (Hybrid Cloud)"
+  },
+  "hybridcloud-003": {
+    "command": "অন-প্রিমিসেস ডেটা সেন্টারকে পাবলিক ক্লাউডের সাথে নিরাপদে সংযুক্ত করতে সাধারণত কোন প্রযুক্তি ব্যবহৃত হয়?",
+    "description": "VPN"
+  },
+  "hybridcloud-004": {
+    "command": "কোন AWS সার্ভিস AWS অবকাঠামোকে অন-প্রিমিসেস পরিবেশে সম্প্রসারিত করে?",
+    "description": "AWS Outposts"
+  },
+  "hybridcloud-005": {
+    "command": "কোন Microsoft Azure সার্ভিস হাইব্রিড ও মাল্টি-ক্লাউড রিসোর্স ব্যবস্থাপনা সক্ষম করে?",
+    "description": "Azure Arc"
+  },
+  "hybridcloud-006": {
+    "command": "কোন Google Cloud প্ল্যাটফর্ম হাইব্রিড পরিবেশে Kubernetes ক্লাস্টার পরিচালনা করতে সাহায্য করে?",
+    "description": "Anthos"
+  },
+  "hybridcloud-007": {
+    "command": "কোন IBM Cloud সার্ভিস যেকোনো পরিবেশে ক্লাউড সার্ভিস সম্প্রসারিত করে?",
+    "description": "IBM Cloud Satellite"
+  },
+  "hybridcloud-008": {
+    "command": "কোন Oracle Cloud অফারিং গ্রাহকের ডেটা সেন্টারের ভেতরে ক্লাউড সার্ভিস প্রদান করে?",
+    "description": "OCI Dedicated Region"
+  },
+  "hybridcloud-009": {
+    "command": "হাইব্রিড ক্লাউড পরিবেশে সবচেয়ে বেশি ব্যবহৃত কনটেইনার অর্কেস্ট্রেশন প্ল্যাটফর্ম কোনটি?",
+    "description": "Kubernetes"
+  },
+  "hybridcloud-010": {
+    "command": "হাইব্রিড ক্লাউডে এন্টারপ্রাইজ Kubernetes চালাতে কোন ওপেন-সোর্স প্ল্যাটফর্ম ব্যাপকভাবে ব্যবহৃত হয়?",
+    "description": "OpenShift"
+  },
+  "hybridcloud-011": {
+    "command": "হাইব্রিড ক্লাউড পরিবেশে সাধারণত কোন Infrastructure as Code টুল ব্যবহৃত হয়?",
+    "description": "Terraform"
+  },
+  "hybridcloud-012": {
+    "command": "হাইব্রিড ক্লাউড ডেপ্লয়মেন্টে সাধারণত কোন কনফিগারেশন ম্যানেজমেন্ট টুল ব্যবহৃত হয়?",
+    "description": "Ansible"
+  },
+  "hybridcloud-013": {
+    "command": "হাইব্রিড ক্লাউড ডেপ্লয়মেন্টে কোন CI/CD টুল প্রায়ই ব্যবহৃত হয়?",
+    "description": "Jenkins"
+  },
+  "hybridcloud-014": {
+    "command": "হাইব্রিড ক্লাউডের প্রধান সুবিধা কী?",
+    "description": "ওয়ার্কলোড যেখানে সবচেয়ে উপযুক্ত সেখানে চালানোর নমনীয়তা"
+  },
+  "hybridcloud-015": {
+    "command": "কোন নেটওয়ার্কিং সার্ভিস অন-প্রিমিসেস ও AWS-এর মধ্যে ডেডিকেটেড সংযোগ প্রদান করে?",
+    "description": "AWS Direct Connect"
+  },
+  "hybridcloud-016": {
+    "command": "কোন Azure নেটওয়ার্কিং সার্ভিস Azure-এ প্রাইভেট সংযোগ প্রদান করে?",
+    "description": "Azure ExpressRoute"
+  },
+  "hybridcloud-017": {
+    "command": "কোন Google Cloud নেটওয়ার্কিং সার্ভিস Google Cloud-এ ডেডিকেটেড সংযোগ প্রদান করে?",
+    "description": "Cloud Interconnect"
+  },
+  "hybridcloud-018": {
+    "command": "কোন Oracle Cloud নেটওয়ার্কিং সার্ভিস ডেডিকেটেড প্রাইভেট সংযোগ প্রদান করে?",
+    "description": "OCI FastConnect"
+  },
+  "hybridcloud-019": {
+    "command": "কোন IBM Cloud সার্ভিস ডেডিকেটেড প্রাইভেট নেটওয়ার্ক সংযোগ প্রদান করে?",
+    "description": "IBM Cloud Direct Link"
+  },
+  "hybridcloud-020": {
+    "command": "হাইব্রিড ক্লাউডে Single Sign-On-এর জন্য সাধারণত কোন অথেনটিকেশন পদ্ধতি ব্যবহৃত হয়?",
+    "description": "SAML"
+  },
+  "hybridcloud-021": {
+    "command": "হাইব্রিড ক্লাউড অ্যাপ্লিকেশনে API অথেনটিকেশনের জন্য সাধারণত কোন প্রোটোকল ব্যবহৃত হয়?",
+    "description": "OAuth 2.0"
+  },
+  "hybridcloud-022": {
+    "command": "কোন আর্কিটেকচার অন-প্রিমিসেস ও ক্লাউড পরিবেশ জুড়ে অ্যাপ্লিকেশনের প্রাপ্যতা (availability) উন্নত করে?",
+    "description": "Active-Active"
+  },
+  "hybridcloud-023": {
+    "command": "হাইব্রিড ক্লাউড Kubernetes পরিবেশে সাধারণত কোন মনিটরিং প্ল্যাটফর্ম ব্যবহৃত হয়?",
+    "description": "Prometheus"
+  },
+  "hybridcloud-024": {
+    "command": "Prometheus-এর সাথে সাধারণত কোন ভিজ্যুয়ালাইজেশন টুল ব্যবহৃত হয়?",
+    "description": "Grafana"
+  },
+  "extra-001": {
+    "command": "ansible-vault encrypt",
+    "description": "কনফিগার করা ভল্ট পাসওয়ার্ড দিয়ে বিদ্যমান ফাইল এনক্রিপ্ট করে।"
+  },
+  "extra-002": {
+    "command": "ansible-vault decrypt",
+    "description": "নিয়ন্ত্রিত স্থানীয় পরীক্ষার জন্য ভল্টে এনক্রিপ্ট করা ফাইল ডিক্রিপ্ট করে।"
+  },
+  "extra-003": {
+    "command": "ansible-vault encrypt_string",
+    "description": "একটি মান এনক্রিপ্ট করে, যাতে সেটি ভেরিয়েবল ফাইলের মধ্যেই রাখা যায়।"
+  },
+  "extra-004": {
+    "command": "ansible-vault rekey",
+    "description": "এনক্রিপ্ট করা ভল্ট ফাইলের সুরক্ষাকারী পাসওয়ার্ড পরিবর্তন করে।"
+  },
+  "extra-005": {
+    "command": "ansible-inventory --graph",
+    "description": "ইনভেন্টরি গ্রুপ ও তাদের হোস্টের সম্পর্ক দেখায়।"
+  },
+  "extra-006": {
+    "command": "ansible-inventory --list",
+    "description": "গ্রুপ ভেরিয়েবলসহ সম্পূর্ণ নির্ধারিত ইনভেন্টরি JSON হিসেবে দেখায়।"
+  },
+  "extra-007": {
+    "command": "ansible-config dump --only-changed",
+    "description": "Ansible-এর ডিফল্ট মান থেকে আলাদা কনফিগারেশন মানগুলি দেখায়।"
+  },
+  "extra-008": {
+    "command": "ansible-doc ansible.builtin.copy",
+    "description": "মডিউলের ডকুমেন্টেশন ও সমর্থিত প্যারামিটার দেখায়।"
+  },
+  "extra-009": {
+    "command": "ansible-galaxy collection install",
+    "description": "কালেকশন থেকে পুনর্ব্যবহারযোগ্য মডিউল ও প্লাগইন ইনস্টল করে।"
+  },
+  "extra-010": {
+    "command": "ansible-galaxy collection list",
+    "description": "সক্রিয় Ansible পাথগুলিতে ইনস্টল করা কালেকশনের তালিকা দেখায়।"
+  },
+  "extra-011": {
+    "command": "ansible-playbook --check",
+    "description": "বাকি থাকা অনেক পরিবর্তনের পূর্বরূপ দেখতে চেক মোডে প্লেবুক চালায়।"
+  },
+  "extra-012": {
+    "command": "ansible-playbook --diff",
+    "description": "প্লেবুকের ফলাফলের সঙ্গে সমর্থিত ফাইলের পরিবর্তন দেখায়।"
+  },
+  "extra-013": {
+    "command": "ansible-playbook --limit",
+    "description": "প্লেবুক চালানোকে একটি হোস্ট বা গ্রুপ প্যাটার্নের মধ্যে সীমাবদ্ধ রাখে।"
+  },
+  "extra-014": {
+    "command": "ansible-playbook --tags",
+    "description": "নির্ধারিত ট্যাগ দিয়ে নির্বাচিত কাজগুলিই কেবল চালায়।"
+  },
+  "extra-015": {
+    "command": "ansible-playbook --skip-tags",
+    "description": "প্লেবুক চালানোর সময় ট্যাগযুক্ত কাজগুলি বাদ দেয়।"
+  },
+  "extra-016": {
+    "command": "ansible-playbook --list-tasks",
+    "description": "প্লেবুক ও বর্তমান নির্বাচন বিকল্পের সঙ্গে মেলে এমন কাজের তালিকা দেখায়।"
+  },
+  "extra-017": {
+    "command": "ansible-playbook --list-hosts",
+    "description": "কাজ না চালিয়ে প্লেবুক কোন হোস্টগুলিকে লক্ষ্য করবে তার তালিকা দেখায়।"
+  },
+  "extra-018": {
+    "command": "ansible.builtin.assert",
+    "description": "প্রয়োজনীয় শর্ত মিথ্যা হলে প্লে ব্যর্থ করে।"
+  },
+  "extra-019": {
+    "command": "delegate_to",
+    "description": "বর্তমান ইনভেন্টরি হোস্ট ছাড়া অন্য একটি হোস্টে একটি কাজ চালায়।"
+  },
+  "extra-020": {
+    "command": "serial",
+    "description": "ডেপ্লয়মেন্টের প্রভাব সীমিত রাখতে দলে দলে হোস্টে প্লে চালায়।"
+  },
+  "extra-021": {
+    "command": "any_errors_fatal",
+    "description": "কোনো কাজে মারাত্মক ত্রুটি হলে সব হোস্টে প্লে বন্ধ করে।"
+  },
+  "extra-022": {
+    "command": "block / rescue / always",
+    "description": "কাজগুলিকে গোষ্ঠীবদ্ধ করে এবং ব্যর্থতার ক্ষেত্রে পুনরুদ্ধার ও পরিষ্কারের আচরণ নির্ধারণ করে।"
+  },
+  "extra-023": {
+    "command": "changed_when",
+    "description": "কোনো কাজ পরিবর্তন হয়েছে বলে রিপোর্ট করবে কি না তা নতুন করে নির্ধারণ করে।"
+  },
+  "extra-024": {
+    "command": "ansible.builtin.meta: flush_handlers",
+    "description": "প্লে শেষের অপেক্ষা না করে বিজ্ঞপ্তি পাওয়া হ্যান্ডলার সঙ্গে সঙ্গে চালায়।"
+  },
+  "extra-025": {
+    "command": "aws sts get-caller-identity",
+    "description": "সক্রিয় AWS অ্যাকাউন্ট, ব্যবহারকারী বা গৃহীত রোল নিশ্চিত করে।"
+  },
+  "extra-026": {
+    "command": "aws sts assume-role",
+    "description": "বিশ্বস্ত IAM রোলের জন্য অস্থায়ী পরিচয়পত্র চায়।"
+  },
+  "extra-027": {
+    "command": "S3 bucket versioning",
+    "description": "অবজেক্টের আগের সংস্করণ রাখে, যাতে ভুল করে ওভাররাইট হলে পুনরুদ্ধার করা যায়।"
+  },
+  "extra-028": {
+    "command": "S3 lifecycle rule",
+    "description": "বয়স বা ফিল্টার অনুযায়ী অবজেক্ট স্বয়ংক্রিয়ভাবে অন্য স্টোরেজ স্তরে সরায় বা মেয়াদ শেষ করে।"
+  },
+  "extra-029": {
+    "command": "S3 presigned URL",
+    "description": "দীর্ঘস্থায়ী পরিচয়পত্র শেয়ার না করে অবজেক্টে সীমিত সময়ের প্রবেশাধিকার দেয়।"
+  },
+  "extra-030": {
+    "command": "S3 server-side encryption",
+    "description": "S3-পরিচালিত বা গ্রাহক-পরিচালিত কী দিয়ে সংরক্ষিত অবজেক্ট এনক্রিপ্ট করে।"
+  },
+  "extra-031": {
+    "command": "EC2 IMDSv2",
+    "description": "ইনস্ট্যান্স মেটাডেটার পরিচয়পত্র প্রকাশের ঝুঁকি কমাতে সেশন টোকেন ব্যবহার করে।"
+  },
+  "extra-032": {
+    "command": "Security group vs network ACL",
+    "description": "সিকিউরিটি গ্রুপ হল অবস্থা-সচেতন ইনস্ট্যান্স নিয়ম; নেটওয়ার্ক ACL হল অবস্থা-নিরপেক্ষ সাবনেট নিয়ম।"
+  },
+  "extra-033": {
+    "command": "Application Load Balancer target health",
+    "description": "নিবন্ধিত লক্ষ্যগুলি কনফিগার করা স্বাস্থ্য পরীক্ষায় উত্তীর্ণ হয় কি না জানায়।"
+  },
+  "extra-034": {
+    "command": "Auto Scaling instance refresh",
+    "description": "লঞ্চ টেমপ্লেট পরিবর্তনের পরে গ্রুপের ইনস্ট্যান্সগুলি ধীরে ধীরে প্রতিস্থাপন করে।"
+  },
+  "extra-035": {
+    "command": "EBS volume snapshot",
+    "description": "ব্লক স্টোরেজ ভলিউমের নির্দিষ্ট মুহূর্তের ব্যাকআপ তৈরি করে।"
+  },
+  "extra-036": {
+    "command": "CloudWatch metric alarm",
+    "description": "মেট্রিক কনফিগার করা সীমা অতিক্রম করলে অবস্থা পরিবর্তন করে।"
+  },
+  "extra-037": {
+    "command": "CloudTrail event lookup",
+    "description": "নথিভুক্ত ব্যবস্থাপনা ইভেন্টে কোনো প্রিন্সিপাল, রিসোর্স বা কাজ খোঁজে।"
+  },
+  "extra-038": {
+    "command": "SQS visibility timeout",
+    "description": "ভোক্তা প্রাপ্ত বার্তা প্রক্রিয়া করার সময় সেটি সাময়িকভাবে লুকিয়ে রাখে।"
+  },
+  "extra-039": {
+    "command": "SQS dead-letter queue",
+    "description": "উৎস কিউয়ের পুনঃপ্রক্রিয়াকরণ সীমা অতিক্রম করা বার্তাগুলি ধরে রাখে।"
+  },
+  "extra-040": {
+    "command": "SNS message filter policy",
+    "description": "বৈশিষ্ট্যগুলি সাবস্ক্রিপশন ফিল্টারের সঙ্গে মিললেই কেবল টপিকের বার্তা পৌঁছে দেয়।"
+  },
+  "extra-041": {
+    "command": "Lambda reserved concurrency",
+    "description": "সমসাময়িক নির্বাহের সংখ্যা সীমিত করে এবং একটি ফাংশনের জন্য ক্ষমতা সংরক্ষণ করে।"
+  },
+  "extra-042": {
+    "command": "API Gateway stage variables",
+    "description": "রুট পরিবর্তন না করে ইন্টিগ্রেশনগুলিকে স্টেজ-নির্দিষ্ট মান দেয়।"
+  },
+  "extra-043": {
+    "command": "RDS Multi-AZ deployment",
+    "description": "প্রাপ্যতা বজায় রাখতে প্রস্তুত বিকল্প ডেটাবেস রাখে; এটি পড়ার ক্ষমতা বাড়ানোর রেপ্লিকা নয়।"
+  },
+  "extra-044": {
+    "command": "RDS read replica",
+    "description": "অ্যাসিঙ্ক্রোনাসভাবে প্রতিলিপি করা ডেটাবেস ইনস্ট্যান্স থেকে পড়ার অনুরোধ পরিবেশন করে।"
+  },
+  "extra-045": {
+    "command": "DynamoDB partition key",
+    "description": "পার্টিশন জুড়ে আইটেম বণ্টন করে এবং অনুরোধের চাপ সমানভাবে ছড়ানো উচিত।"
+  },
+  "extra-046": {
+    "command": "DynamoDB conditional write",
+    "description": "আইটেমের শর্ত সত্য হলেই কেবল লেখার কাজ প্রয়োগ করে।"
+  },
+  "extra-047": {
+    "command": "KMS key rotation",
+    "description": "আহ্বানকারীদের কাছে কী শনাক্তকারী অপরিবর্তিত রেখে কী উপাদান পর্যায়ক্রমে বদলায়।"
+  },
+  "extra-048": {
+    "command": "IAM permission boundary",
+    "description": "পরিচয়ভিত্তিক নীতি কোনো প্রিন্সিপালকে সর্বোচ্চ কী অনুমতি দিতে পারবে তা নির্ধারণ করে।"
+  },
+  "extra-049": {
+    "command": "az account show",
+    "description": "Azure CLI-এর সক্রিয় সাবস্ক্রিপশন ও টেন্যান্ট প্রসঙ্গ দেখায়।"
+  },
+  "extra-050": {
+    "command": "az account set",
+    "description": "পরবর্তী CLI কমান্ডগুলি যে সাবস্ক্রিপশন ব্যবহার করবে তা নির্বাচন করে।"
+  },
+  "extra-051": {
+    "command": "Resource lock",
+    "description": "সুরক্ষিত রিসোর্স পরিসরে মুছে ফেলা বা পরিবর্তন আটকায়।"
+  },
+  "extra-052": {
+    "command": "Managed identity",
+    "description": "ক্লায়েন্টের গোপন তথ্য সংরক্ষণ না করেই Azure ওয়ার্কলোডকে Entra টোকেন পেতে দেয়।"
+  },
+  "extra-053": {
+    "command": "Azure RBAC role assignment",
+    "description": "নির্বাচিত পরিসরে বিল্ট-ইন বা কাস্টম রোল দেয়।"
+  },
+  "extra-054": {
+    "command": "Key Vault secret version",
+    "description": "গোপন তথ্যের সংশোধিত সংস্করণগুলিকে আলাদাভাবে পাওয়ার ব্যবস্থা রাখে এবং নিয়ন্ত্রিত পরিবর্তন সমর্থন করে।"
+  },
+  "extra-055": {
+    "command": "Key Vault soft delete",
+    "description": "সংরক্ষণকালের মধ্যে পুনরুদ্ধারের জন্য মুছে ফেলা ভল্ট অবজেক্ট রাখে।"
+  },
+  "extra-056": {
+    "command": "Private endpoint",
+    "description": "ভার্চুয়াল নেটওয়ার্কের ব্যক্তিগত IP-এর সঙ্গে একটি PaaS সার্ভিস ম্যাপ করে।"
+  },
+  "extra-057": {
+    "command": "Private DNS zone link",
+    "description": "সংযুক্ত ভার্চুয়াল নেটওয়ার্কে ব্যক্তিগত এন্ডপয়েন্টের DNS রেকর্ড রিজলভ করার ব্যবস্থা করে।"
+  },
+  "extra-058": {
+    "command": "NSG flow logs",
+    "description": "সমর্থিত নেটওয়ার্ক সিকিউরিটি গ্রুপের নেটওয়ার্ক প্রবাহ-সংক্রান্ত সিদ্ধান্ত নথিভুক্ত করে।"
+  },
+  "extra-059": {
+    "command": "Application Gateway probe",
+    "description": "কনফিগার করা পাথ, হোস্ট ও সময়ের ব্যবধান ব্যবহার করে ব্যাকএন্ডের স্বাস্থ্য পরীক্ষা করে।"
+  },
+  "extra-060": {
+    "command": "Front Door origin health",
+    "description": "অরিজিনগুলি কনফিগার করা স্বাস্থ্য পরীক্ষার শর্ত পূরণ করে কি না পর্যবেক্ষণ করে।"
+  },
+  "extra-061": {
+    "command": "Blob lifecycle management",
+    "description": "বয়স, প্রিফিক্স বা অ্যাক্সেস স্তর অনুযায়ী ব্লব সরায় বা মেয়াদ শেষ করে।"
+  },
+  "extra-062": {
+    "command": "Blob soft delete",
+    "description": "নির্ধারিত সময়ের মধ্যে পুনরুদ্ধারের জন্য মুছে ফেলা ব্লব রাখে।"
+  },
+  "extra-063": {
+    "command": "Azure SQL point-in-time restore",
+    "description": "সংরক্ষণকালের মধ্যে আগের কোনো মুহূর্তের ডেটাবেস অনুলিপি তৈরি করে।"
+  },
+  "extra-064": {
+    "command": "Cosmos DB request units",
+    "description": "ডেটাবেসের কাজের জন্য মানসম্মত থ্রুপুট ক্ষমতা প্রকাশ করে।"
+  },
+  "extra-065": {
+    "command": "Azure Monitor alert rule",
+    "description": "মেট্রিক বা লগ মূল্যায়ন করে এবং শর্ত মিললে অ্যাকশন গ্রুপ সক্রিয় করে।"
+  },
+  "extra-066": {
+    "command": "Log Analytics workspace query",
+    "description": "সংগৃহীত টেলিমেট্রি বিশ্লেষণে Kusto Query Language ব্যবহার করে।"
+  },
+  "extra-067": {
+    "command": "App Service deployment slot",
+    "description": "প্রোডাকশনের সঙ্গে অদলবদল করা যায় এমন পৃথক ডেপ্লয়মেন্ট লক্ষ্য দেয়।"
+  },
+  "extra-068": {
+    "command": "Container Apps revision",
+    "description": "ট্রাফিক গ্রহণ করতে পারে এমন অ্যাপ্লিকেশনের অপরিবর্তনীয় সংস্করণ বোঝায়।"
+  },
+  "extra-069": {
+    "command": "AKS node pool taint",
+    "description": "শিডিউলিং সীমিত করে, যাতে কেবল উপযুক্ত টলারেশনযুক্ত পড বিশেষায়িত পুলে যায়।"
+  },
+  "extra-070": {
+    "command": "Bicep what-if",
+    "description": "ডেপ্লয়মেন্ট প্রয়োগের আগে Azure রিসোর্সের পরিবর্তনের পূর্বরূপ দেখায়।"
+  },
+  "extra-071": {
+    "command": "Azure Policy compliance",
+    "description": "নির্ধারিত নীতির সংজ্ঞা মেনে চলে বা তার বিরোধিতা করে এমন রিসোর্স দেখায়।"
+  },
+  "extra-072": {
+    "command": "Service Bus dead-letter queue",
+    "description": "সফলভাবে পৌঁছানো বা প্রক্রিয়া করা যায় না এমন বার্তা সংরক্ষণ করে।"
+  },
+  "extra-073": {
+    "command": "set -o pipefail",
+    "description": "পাইপলাইনের যেকোনো কমান্ড ব্যর্থ হলে পাইপলাইনের ব্যর্থতা ফেরত দেয়।"
+  },
+  "extra-074": {
+    "command": "trap cleanup EXIT",
+    "description": "ত্রুটির পরেও শেল বন্ধ হওয়ার সময় পরিষ্কারের লজিক চালায়।"
+  },
+  "extra-075": {
+    "command": "mktemp -d",
+    "description": "মধ্যবর্তী ফাইল আলাদা রাখতে অনন্য অস্থায়ী ডিরেক্টরি তৈরি করে।"
+  },
+  "extra-076": {
+    "command": "read -r",
+    "description": "ব্যাকস্ল্যাশকে এস্কেপ সিকোয়েন্স হিসেবে ব্যাখ্যা না করে ইনপুট পড়ে।"
+  },
+  "extra-077": {
+    "command": "mapfile -t",
+    "description": "নতুন লাইন দিয়ে পৃথক করা ইনপুট একটি সূচকযুক্ত Bash অ্যারেতে লোড করে।"
+  },
+  "extra-078": {
+    "command": "[[ -v variable ]]",
+    "description": "শেল ভেরিয়েবল নির্ধারিত হয়েছে কি না পরীক্ষা করে, তার মান খালি হলেও।"
+  },
+  "extra-079": {
+    "command": "printf %q",
+    "description": "একটি মান এমনভাবে উদ্ধৃত করে, যাতে সেটিকে নিরাপদে শেল ইনপুট হিসেবে প্রকাশ করা যায়।"
+  },
+  "extra-080": {
+    "command": "parameter defaulting",
+    "description": "ভেরিয়েবল অনির্ধারিত বা খালি হলে বিকল্প মান ব্যবহার করে।"
+  },
+  "extra-081": {
+    "command": "parameter substring",
+    "description": "Bash প্যারামিটার এক্সপ্যানশন ব্যবহার করে স্ট্রিংয়ের অংশ বের করে।"
+  },
+  "extra-082": {
+    "command": "parameter substitution",
+    "description": "বাইরের প্রসেস শুরু না করে মিলে যাওয়া টেক্সট প্রতিস্থাপন করে।"
+  },
+  "extra-083": {
+    "command": "process substitution",
+    "description": "কমান্ডের আউটপুট ফাইলসদৃশ ইনপুট হিসেবে প্রোগ্রামে পাঠায়।"
+  },
+  "extra-084": {
+    "command": "here-string",
+    "description": "স্ট্যান্ডার্ড ইনপুটের মাধ্যমে কমান্ডে একটি স্ট্রিং দেয়।"
+  },
+  "extra-085": {
+    "command": "getopts",
+    "description": "বিভিন্ন পরিবেশে ব্যবহারযোগ্য শেল লুপে সংক্ষিপ্ত কমান্ড-লাইন বিকল্প বিশ্লেষণ করে।"
+  },
+  "extra-086": {
+    "command": "wait -n",
+    "description": "আরও কাজ শুরু করার আগে যেকোনো একটি ব্যাকগ্রাউন্ড জব শেষ হওয়ার অপেক্ষা করে।"
+  },
+  "extra-087": {
+    "command": "jobs -pr",
+    "description": "এই শেল থেকে শুরু করা চলমান ব্যাকগ্রাউন্ড জবের প্রসেস আইডির তালিকা দেখায়।"
+  },
+  "extra-088": {
+    "command": "exec command",
+    "description": "বর্তমান শেল প্রসেসকে একটি কমান্ড দিয়ে প্রতিস্থাপন করে।"
+  },
+  "extra-089": {
+    "command": "command -v",
+    "description": "কমান্ডের নাম দিলে শেল যে নির্বাহযোগ্য ফাইল চালাবে তা খুঁজে বের করে।"
+  },
+  "extra-090": {
+    "command": "umask",
+    "description": "নতুন ফাইল ও ডিরেক্টরির অনুমতি থেকে ডিফল্টভাবে বাদ দেওয়া বিট নির্ধারণ করে।"
+  },
+  "extra-091": {
+    "command": "noclobber",
+    "description": "ডিফল্টভাবে আউটপুট রিডাইরেকশন দিয়ে বিদ্যমান ফাইল ওভাররাইট করা আটকায়।"
+  },
+  "extra-092": {
+    "command": "flock",
+    "description": "স্বেচ্ছায় মান্য লকিং দেয়, যাতে একই স্ক্রিপ্টের সমসাময়িক নির্বাহ পরস্পরের সঙ্গে না মেশে।"
+  },
+  "extra-093": {
+    "command": "timeout",
+    "description": "অনুমোদিত সময়ের চেয়ে বেশি চলা কমান্ড বন্ধ করে।"
+  },
+  "extra-094": {
+    "command": "xargs -0",
+    "description": "NUL দিয়ে পৃথক করা ফাইলের নাম নিরাপদে অন্য কমান্ডে পাঠায়।"
+  },
+  "extra-095": {
+    "command": "find -print0",
+    "description": "স্পেস ও নতুন লাইন সামলাতে NUL অক্ষর দিয়ে পৃথক করা ফাইলের নাম আউটপুট দেয়।"
+  },
+  "extra-096": {
+    "command": "set -u",
+    "description": "অনির্ধারিত ভেরিয়েবলের এক্সপ্যানশনকে ত্রুটি হিসেবে গণ্য করে।"
+  },
+  "extra-097": {
+    "command": "docker buildx imagetools inspect",
+    "description": "একাধিক প্ল্যাটফর্মের ইমেজ ম্যানিফেস্ট ও তার প্রকাশিত প্ল্যাটফর্মগুলি পরীক্ষা করে।"
+  },
+  "extra-098": {
+    "command": "docker buildx build --platform",
+    "description": "এক বা একাধিক CPU স্থাপত্যের জন্য ইমেজ তৈরি করে।"
+  },
+  "extra-099": {
+    "command": "docker image inspect",
+    "description": "স্তর, স্থাপত্য ও এন্ট্রিপয়েন্টের মতো ইমেজ মেটাডেটা দেখায়।"
+  },
+  "extra-100": {
+    "command": "docker image history",
+    "description": "ইমেজের স্তর ও সেগুলি তৈরি করা কমান্ডের তালিকা দেখায়।"
+  },
+  "extra-101": {
+    "command": "docker system df",
+    "description": "ইমেজ, কনটেইনার, ভলিউম ও বিল্ড ক্যাশ অনুযায়ী ডিস্ক ব্যবহারের তথ্য জানায়।"
+  },
+  "extra-102": {
+    "command": "docker builder prune",
+    "description": "স্থানীয় স্টোরেজের স্থান ফেরত পেতে অব্যবহৃত বিল্ড ক্যাশ মুছে দেয়।"
+  },
+  "extra-103": {
+    "command": "docker volume inspect",
+    "description": "Docker ভলিউমের মাউন্টপয়েন্ট, ড্রাইভার ও লেবেল দেখায়।"
+  },
+  "extra-104": {
+    "command": "docker network inspect",
+    "description": "সংযুক্ত কনটেইনার, IPAM সেটিংস ও নেটওয়ার্ক ড্রাইভারের বিস্তারিত দেখায়।"
+  },
+  "extra-105": {
+    "command": "docker stats --no-stream",
+    "description": "চলমান কনটেইনারের সম্পদ ব্যবহারের এক মুহূর্তের চিত্র সংগ্রহ করে।"
+  },
+  "extra-106": {
+    "command": "docker events --since",
+    "description": "নির্বাচিত সময় থেকে কনটেইনারের জীবনচক্রের ইভেন্ট ধারাবাহিকভাবে দেখায়।"
+  },
+  "extra-107": {
+    "command": "docker exec --workdir",
+    "description": "নির্বাচিত ডিরেক্টরি থেকে শুরু করে কনটেইনারে একটি কমান্ড চালায়।"
+  },
+  "extra-108": {
+    "command": "docker cp",
+    "description": "স্থানীয় পাথ ও কনটেইনারের ফাইলসিস্টেমের মধ্যে ফাইল অনুলিপি করে।"
+  },
+  "extra-109": {
+    "command": "docker wait",
+    "description": "কনটেইনার বন্ধ হওয়ার অপেক্ষা করে এবং তার প্রস্থান কোড মুদ্রণ করে।"
+  },
+  "extra-110": {
+    "command": "docker inspect health status",
+    "description": "কনফিগার করা স্বাস্থ্য পরীক্ষার অবস্থা ও সাম্প্রতিক পরীক্ষার ফল পড়ে।"
+  },
+  "extra-111": {
+    "command": "HEALTHCHECK start-period",
+    "description": "ব্যর্থতা গণনা শুরুর আগে অ্যাপ্লিকেশনকে প্রস্তুত হওয়ার সময় দেয়।"
+  },
+  "extra-112": {
+    "command": "read-only root filesystem",
+    "description": "চলার সময় কনটেইনারের রুট ফাইলসিস্টেমে লেখা আটকায়।"
+  },
+  "extra-113": {
+    "command": "docker run --init",
+    "description": "সংকেত ফরওয়ার্ড করা ও শেষ হওয়া চাইল্ড প্রসেস পরিষ্কার করার জন্য ছোট একটি ইনিট প্রসেস যোগ করে।"
+  },
+  "extra-114": {
+    "command": "docker run --cap-drop",
+    "description": "প্রসেসের প্রয়োজন নেই এমন Linux ক্ষমতাগুলি বাদ দেয়।"
+  },
+  "extra-115": {
+    "command": "docker run --security-opt",
+    "description": "seccomp প্রোফাইলের মতো রানটাইম নিরাপত্তা সেটিংস প্রয়োগ করে।"
+  },
+  "extra-116": {
+    "command": "docker run --pids-limit",
+    "description": "কনটেইনার সর্বোচ্চ কতগুলি প্রসেস তৈরি করতে পারবে তা সীমিত করে।"
+  },
+  "extra-117": {
+    "command": "docker compose config",
+    "description": "মার্জ করা Compose কনফিগারেশন দেখায় ও যাচাই করে।"
+  },
+  "extra-118": {
+    "command": "docker compose profiles",
+    "description": "নামযুক্ত প্রোফাইল নির্বাচন করা হলেই কেবল সংশ্লিষ্ট ঐচ্ছিক সার্ভিসগুলি সক্রিয় করে।"
+  },
+  "extra-119": {
+    "command": "docker compose up --wait",
+    "description": "ফিরে আসার আগে সার্ভিসগুলি সুস্থ বা চলমান হওয়ার অপেক্ষা করে।"
+  },
+  "extra-120": {
+    "command": "container stop timeout",
+    "description": "সুশৃঙ্খলভাবে বন্ধ হওয়ার সংকেত পাঠায় এবং কনটেইনার জোর করে বন্ধ করার আগে অপেক্ষা করে।"
+  },
+  "extra-121": {
+    "command": "gcloud config get-value project",
+    "description": "স্পষ্টভাবে প্রজেক্ট উল্লেখ না করা কমান্ডগুলি কোন প্রজেক্ট ব্যবহার করে তা দেখায়।"
+  },
+  "extra-122": {
+    "command": "gcloud auth list",
+    "description": "প্রমাণীকৃত অ্যাকাউন্টের তালিকা দেখায় ও সক্রিয় প্রিন্সিপাল শনাক্ত করে।"
+  },
+  "extra-123": {
+    "command": "gcloud projects get-iam-policy",
+    "description": "প্রবেশাধিকার পর্যালোচনার জন্য প্রজেক্ট-স্তরের IAM বাইন্ডিং পড়ে।"
+  },
+  "extra-124": {
+    "command": "IAM service account impersonation",
+    "description": "অনুমোদিত প্রিন্সিপালকে সার্ভিস অ্যাকাউন্টের স্বল্পমেয়াদি পরিচয়পত্র পেতে দেয়।"
+  },
+  "extra-125": {
+    "command": "Cloud Storage object versioning",
+    "description": "অবজেক্ট প্রতিস্থাপন বা মুছে ফেলার পরে তার পুরোনো সংস্করণগুলি রাখে।"
+  },
+  "extra-126": {
+    "command": "Cloud Storage retention policy",
+    "description": "সংরক্ষণকাল শেষ না হওয়া পর্যন্ত অবজেক্ট মুছে ফেলা বা প্রতিস্থাপন আটকায়।"
+  },
+  "extra-127": {
+    "command": "Cloud Run revision traffic",
+    "description": "ধীরে ধীরে রোলআউটের জন্য সার্ভিসের সংস্করণগুলির মধ্যে অনুরোধ ভাগ করে।"
+  },
+  "extra-128": {
+    "command": "Cloud Run min instances",
+    "description": "কোল্ড স্টার্ট কমাতে নির্ধারিত সংখ্যক ইনস্ট্যান্স প্রস্তুত রাখে।"
+  },
+  "extra-129": {
+    "command": "GKE Workload Identity",
+    "description": "কী ফাইল ছাড়াই Kubernetes ওয়ার্কলোডকে স্বল্পমেয়াদি Google পরিচয়পত্র দেয়।"
+  },
+  "extra-130": {
+    "command": "GKE node taint",
+    "description": "মিলে যাওয়া টলারেশন ঘোষণা করে এমন পডের জন্য নোড সংরক্ষণ করে।"
+  },
+  "extra-131": {
+    "command": "Pub/Sub dead-letter topic",
+    "description": "বারবার পৌঁছানো যাচ্ছে না এমন বার্তা পরীক্ষার জন্য পৃথক টপিকে পাঠায়।"
+  },
+  "extra-132": {
+    "command": "Pub/Sub acknowledgment deadline",
+    "description": "টেনে আনা বার্তার প্রাপ্তিস্বীকার করার জন্য সাবস্ক্রাইবার কত সময় পাবে তা নির্ধারণ করে।"
+  },
+  "extra-133": {
+    "command": "BigQuery partition pruning",
+    "description": "পার্টিশনের কলামে ফিল্টার করে স্ক্যান করা ডেটার পরিমাণ কমায়।"
+  },
+  "extra-134": {
+    "command": "BigQuery dry run",
+    "description": "কোয়েরি না চালিয়ে সেটি কত বাইট প্রক্রিয়া করবে তা অনুমান করে।"
+  },
+  "extra-135": {
+    "command": "Cloud SQL automated backups",
+    "description": "কনফিগারযোগ্য সংরক্ষণকালসহ নির্ধারিত সময়ে ডেটাবেস ব্যাকআপ তৈরি করে।"
+  },
+  "extra-136": {
+    "command": "Cloud SQL point-in-time recovery",
+    "description": "ব্যাকআপ ও লেনদেনের লগ ব্যবহার করে ডেটাবেসকে নির্বাচিত সময়ের অবস্থায় ফিরিয়ে আনে।"
+  },
+  "extra-137": {
+    "command": "Cloud Logging exclusion",
+    "description": "লগ গ্রহণের সময় মিলে যাওয়া এন্ট্রিগুলি স্টোরেজে রাখা থেকে বাদ দেয়।"
+  },
+  "extra-138": {
+    "command": "Cloud Monitoring uptime check",
+    "description": "পৌঁছানো যায় এমন এন্ডপয়েন্ট পরীক্ষা করে তার প্রাপ্যতা ও বিলম্ব নথিভুক্ত করে।"
+  },
+  "extra-139": {
+    "command": "VPC flow logs",
+    "description": "সমর্থিত সাবনেটওয়ার্কের নমুনাভিত্তিক নেটওয়ার্ক প্রবাহ নথিভুক্ত করে।"
+  },
+  "extra-140": {
+    "command": "Cloud NAT",
+    "description": "বাহ্যিক IP ঠিকানা ছাড়াই ব্যক্তিগত ইনস্ট্যান্সকে ইন্টারনেটে বহির্মুখী প্রবেশাধিকার দেয়।"
+  },
+  "extra-141": {
+    "command": "Artifact Registry cleanup policy",
+    "description": "বয়স, ট্যাগ বা রেখে দেওয়ার নিয়ম অনুযায়ী পুরোনো প্যাকেজ সংস্করণ সরিয়ে দেয়।"
+  },
+  "extra-142": {
+    "command": "Secret Manager version disable",
+    "description": "ইতিহাস না মুছে গোপন তথ্যের একটি সংস্করণে প্রবেশ বন্ধ করে।"
+  },
+  "extra-143": {
+    "command": "KMS key version rotation",
+    "description": "ডিক্রিপশনের জন্য আগের সংস্করণ রেখে নতুন ক্রিপ্টোগ্রাফিক কী উপাদান তৈরি করে।"
+  },
+  "extra-144": {
+    "command": "Organization Policy constraint",
+    "description": "প্রজেক্ট ও ফোল্ডারে কেন্দ্রীয়ভাবে পরিচালিত নীতিগত সীমা প্রয়োগ করে।"
+  },
+  "extra-145": {
+    "command": "git switch -c",
+    "description": "একটি কাজেই নতুন ব্রাঞ্চ তৈরি ও চেকআউট করে।"
+  },
+  "extra-146": {
+    "command": "git restore --staged",
+    "description": "ওয়ার্কিং ট্রির পরিবর্তন রেখে ইনডেক্স থেকে পাথ সরায়।"
+  },
+  "extra-147": {
+    "command": "git restore --source",
+    "description": "নির্বাচিত কমিটের বিষয়বস্তু দিয়ে ওয়ার্কিং ট্রির একটি পাথ প্রতিস্থাপন করে।"
+  },
+  "extra-148": {
+    "command": "git diff --check",
+    "description": "লাইনের শেষের স্পেস ও দ্বন্দ্বসূচক মার্কারের মতো হোয়াইটস্পেস-সংক্রান্ত ত্রুটি খোঁজে।"
+  },
+  "extra-149": {
+    "command": "git diff --stat",
+    "description": "সম্পূর্ণ প্যাচ না দেখিয়ে পরিবর্তিত ফাইল ও লাইনের সংখ্যার সারাংশ দেখায়।"
+  },
+  "extra-150": {
+    "command": "git log --graph",
+    "description": "ব্রাঞ্চ, মার্জ ও কমিটের ASCII গ্রাফ আঁকে।"
+  },
+  "extra-151": {
+    "command": "git show --stat",
+    "description": "কমিটের সারাংশ ও ওই কমিটে পরিবর্তিত ফাইলগুলি দেখায়।"
+  },
+  "extra-152": {
+    "command": "git blame -L",
+    "description": "নির্বাচিত প্রতিটি সোর্স লাইনের সঙ্গে যুক্ত কমিট ও লেখক দেখায়।"
+  },
+  "extra-153": {
+    "command": "git bisect",
+    "description": "কোন কমিটে কার্যকারিতার অবনতি শুরু হয়েছে তা বাইনারি সার্চ দিয়ে খুঁজে বের করে।"
+  },
+  "extra-154": {
+    "command": "git cherry-pick -x",
+    "description": "কমিট প্রয়োগ করে এবং নতুন কমিট বার্তায় তার মূল হ্যাশ নথিভুক্ত করে।"
+  },
+  "extra-155": {
+    "command": "git revert",
+    "description": "আগের কমিটের পরিবর্তন উল্টে দেয় এমন নতুন কমিট তৈরি করে।"
+  },
+  "extra-156": {
+    "command": "git reflog",
+    "description": "কোনো ব্রাঞ্চে আর নেই এমন কমিটসহ সাম্প্রতিক স্থানীয় রেফ পরিবর্তনের তালিকা দেখায়।"
+  },
+  "extra-157": {
+    "command": "git clean -nd",
+    "description": "পরিষ্কারের কাজে মুছে যাবে এমন ট্র্যাক না করা ফাইলের পূর্বরূপ দেখায়।"
+  },
+  "extra-158": {
+    "command": "git stash push --include-untracked",
+    "description": "কমিট না করে ট্র্যাক করা ও না করা কাজ সাময়িকভাবে সংরক্ষণ করে।"
+  },
+  "extra-159": {
+    "command": "git stash branch",
+    "description": "ব্রাঞ্চ তৈরি করে তাতে নির্বাচিত স্ট্যাশ পুনরায় প্রয়োগ করে।"
+  },
+  "extra-160": {
+    "command": "git worktree add",
+    "description": "পৃথক কাজের ডিরেক্টরিতে অন্য ব্রাঞ্চ চেকআউট করে।"
+  },
+  "extra-161": {
+    "command": "git submodule update --init",
+    "description": "মূল রিপোজিটরিতে নথিভুক্ত সাবমডিউলের সংস্করণগুলি প্রস্তুত ও চেকআউট করে।"
+  },
+  "extra-162": {
+    "command": "git config --show-origin",
+    "description": "কোন কনফিগারেশন ফাইল থেকে Git সেটিং এসেছে তা দেখায়।"
+  },
+  "extra-163": {
+    "command": "git commit --fixup",
+    "description": "লক্ষ্য কমিটের সঙ্গে স্বয়ংক্রিয়ভাবে একত্র করার উদ্দেশ্যে কমিট তৈরি করে।"
+  },
+  "extra-164": {
+    "command": "git rebase --autosquash",
+    "description": "রিবেসের সময় fixup ও squash কমিটকে তাদের লক্ষ্য কমিটের পাশে সরায়।"
+  },
+  "extra-165": {
+    "command": "git format-patch",
+    "description": "মেলবক্স-উপযোগী প্যাচ ফাইল হিসেবে কমিট রপ্তানি করে।"
+  },
+  "extra-166": {
+    "command": "git am",
+    "description": "প্যাচ ফাইল প্রয়োগ করে এবং তাদের মেটাডেটা থেকে কমিট তৈরি করে।"
+  },
+  "extra-167": {
+    "command": "git verify-commit",
+    "description": "কনফিগার করা বিশ্বস্ত কী দিয়ে কমিটের স্বাক্ষর যাচাই করে।"
+  },
+  "extra-168": {
+    "command": "git fsck --full",
+    "description": "রিপোজিটরির অবজেক্টের সংযোগ পরীক্ষা করে এবং পৌঁছানো যায় না এমন অবজেক্ট জানায়।"
+  },
+  "extra-169": {
+    "command": "identity federation",
+    "description": "স্থায়ী গোপন তথ্য ছাড়াই বিভিন্ন পরিবেশে ওয়ার্কলোডকে বিশ্বস্ত পরিচয়-সংক্রান্ত দাবি বিনিময় করতে দেয়।"
+  },
+  "extra-170": {
+    "command": "private connectivity failover",
+    "description": "প্রধান ব্যক্তিগত সংযোগ ব্যর্থ হলে বিকল্প VPN বা সার্কিট প্রস্তুত রাখে।"
+  },
+  "extra-171": {
+    "command": "split-horizon DNS",
+    "description": "একই নামের জন্য অভ্যন্তরীণ ও বাহ্যিক ক্লায়েন্টকে ভিন্ন DNS উত্তর দেয়।"
+  },
+  "extra-172": {
+    "command": "centralized certificate lifecycle",
+    "description": "বিভিন্ন পরিবেশে একই নিয়মে সার্টিফিকেট জারি, পর্যায়ক্রমে বদল ও প্রত্যাহার করে।"
+  },
+  "extra-173": {
+    "command": "cross-environment secrets rotation",
+    "description": "ক্লায়েন্টগুলি নিরাপদে স্থানান্তরিত হওয়ার সময় উভয় স্থানের পরিচয়পত্র পর্যায়ক্রমে বদলায়।"
+  },
+  "extra-174": {
+    "command": "data residency boundary",
+    "description": "বিধিনিয়ন্ত্রিত ডেটা ও ব্যাকআপ অনুমোদিত ভৌগোলিক স্থানের মধ্যে রাখে।"
+  },
+  "extra-175": {
+    "command": "WAN latency budget",
+    "description": "সিঙ্ক্রোনাস অ্যাপ্লিকেশন নির্ভরতার জন্য গ্রহণযোগ্য নেটওয়ার্ক বিলম্ব নির্ধারণ করে।"
+  },
+  "extra-176": {
+    "command": "egress control plane",
+    "description": "বিভিন্ন সাইট ও ক্লাউডের বহির্মুখী রুট, পরীক্ষা ও নীতি কেন্দ্রীভূত করে।"
+  },
+  "extra-177": {
+    "command": "configuration drift detection",
+    "description": "প্রতিটি পরিবেশে ডেপ্লয় করা সেটিংস ঘোষিত কাঙ্ক্ষিত অবস্থার সঙ্গে তুলনা করে।"
+  },
+  "extra-178": {
+    "command": "hybrid observability correlation",
+    "description": "প্ল্যাটফর্ম জুড়ে টেলিমেট্রি সংযুক্ত করতে সামঞ্জস্যপূর্ণ সার্ভিস ও ট্রেস শনাক্তকারী ব্যবহার করে।"
+  },
+  "extra-179": {
+    "command": "site-to-cloud route advertisement",
+    "description": "অন-প্রেমিসেস রাউটার ও ক্লাউড গেটওয়ের মধ্যে অনুমোদিত ব্যক্তিগত প্রিফিক্স প্রকাশ করে।"
+  },
+  "extra-180": {
+    "command": "active-passive workload failover",
+    "description": "প্রধান পরিবেশের ব্যর্থতা যাচাইয়ের পরে ট্রাফিক প্রস্তুত বিকল্প পরিবেশে সরায়।"
+  },
+  "extra-181": {
+    "command": "active-active data consistency",
+    "description": "উভয় সাইট একই সময়ে লেখা গ্রহণ করলে দ্বন্দ্ব কীভাবে সামলানো হবে তা নির্ধারণ করে।"
+  },
+  "extra-182": {
+    "command": "hybrid backup immutability",
+    "description": "প্রোডাকশনের পরিচয়পত্র ফাঁস হলেও সেগুলি দিয়ে ব্যাকআপ অনুলিপি পরিবর্তন করা আটকায়।"
+  },
+  "extra-183": {
+    "command": "local dependency cache",
+    "description": "ক্লাউড সংযোগ বিচ্ছিন্ন থাকাকালীন প্রয়োজনীয় আর্টিফ্যাক্ট উপলব্ধ রাখে।"
+  },
+  "extra-184": {
+    "command": "edge workload update ring",
+    "description": "নিয়ন্ত্রিত ধাপে দূরবর্তী সাইটগুলিতে সফটওয়্যার আপডেট প্রয়োগ করে।"
+  },
+  "extra-185": {
+    "command": "policy translation",
+    "description": "সমতুল্য প্রবেশাধিকার ও নেটওয়ার্কের চাহিদাকে প্রতিটি প্ল্যাটফর্মের নিজস্ব নিয়ন্ত্রণের সঙ্গে মেলায়।"
+  },
+  "extra-186": {
+    "command": "hybrid service ownership",
+    "description": "প্ল্যাটফর্মের সীমানা অতিক্রমকারী প্রতিটি নির্ভরতার জন্য পরিচালনার দায়িত্বপ্রাপ্ত ব্যক্তি নির্ধারণ করে।"
+  },
+  "extra-187": {
+    "command": "cross-cloud identity mapping",
+    "description": "বাহ্যিক পরিচয়গুলিকে অন্য ক্লাউডের ন্যূনতম অনুমতির রোলের সঙ্গে মেলায়।"
+  },
+  "extra-188": {
+    "command": "clock synchronization",
+    "description": "লগ, সার্টিফিকেট ও প্রমাণীকরণের জন্য হোস্টগুলির সময় বিশ্বস্ত সময়ের উৎসের সঙ্গে মিলিয়ে রাখে।"
+  },
+  "extra-189": {
+    "command": "hybrid deployment contract",
+    "description": "স্বাধীনভাবে প্রকাশিত কম্পোনেন্টের জন্য সামঞ্জস্যপূর্ণ সংস্করণ ও ইন্টারফেস নির্ধারণ করে।"
+  },
+  "extra-190": {
+    "command": "regional traffic steering",
+    "description": "পরিমাপ করা স্বাস্থ্য ও বিলম্ব অনুযায়ী ব্যবহারকারীকে কাছের সুস্থ পরিবেশে পাঠায়।"
+  },
+  "extra-191": {
+    "command": "offline operation mode",
+    "description": "দূরবর্তী সার্ভিসে পৌঁছানো না গেলে কোন কাজগুলি উপলব্ধ থাকবে তা নির্ধারণ করে।"
+  },
+  "extra-192": {
+    "command": "hybrid disaster recovery test",
+    "description": "ডেটাসেন্টার ও ক্লাউড উভয়ের নির্ভরতা জুড়ে পুনরুদ্ধারের পদ্ধতি কার্যকর কি না প্রমাণ করে।"
+  },
+  "extra-193": {
+    "command": "ibmcloud target",
+    "description": "পরবর্তী CLI কাজের জন্য অ্যাকাউন্ট, অঞ্চল ও রিসোর্স গ্রুপ নির্বাচন করে।"
+  },
+  "extra-194": {
+    "command": "ibmcloud resource groups",
+    "description": "সার্ভিস ও প্রবেশাধিকারের পরিসর সংগঠিত করে এমন রিসোর্স গ্রুপের তালিকা দেখায়।"
+  },
+  "extra-195": {
+    "command": "ibmcloud iam user-policies",
+    "description": "ব্যবহারকারীর পরিচয়ে সরাসরি নির্ধারিত নীতি দেখায়।"
+  },
+  "extra-196": {
+    "command": "IBM Cloud API key rotation",
+    "description": "পরিচয়পত্র প্রতিস্থাপন করে এবং পুরোনোটি প্রত্যাহারের আগে নির্ভরশীল ওয়ার্কলোড আপডেট করে।"
+  },
+  "extra-197": {
+    "command": "VPC security group",
+    "description": "VPC ইন্টারফেসের অবস্থা-সচেতন আগত ও বহির্গত ট্রাফিক নিয়ন্ত্রণ করে।"
+  },
+  "extra-198": {
+    "command": "VPC network ACL",
+    "description": "সাবনেট স্তরে অবস্থা-নিরপেক্ষ অনুমোদন ও প্রত্যাখ্যানের নিয়ম প্রয়োগ করে।"
+  },
+  "extra-199": {
+    "command": "VPC floating IP",
+    "description": "সমর্থিত VPC নেটওয়ার্ক ইন্টারফেসের সঙ্গে একটি সর্বজনীন ঠিকানা যুক্ত করে।"
+  },
+  "extra-200": {
+    "command": "VPC VPN gateway",
+    "description": "IPsec টানেলের মাধ্যমে VPC-কে দূরবর্তী নেটওয়ার্কের সঙ্গে যুক্ত করে।"
+  },
+  "extra-201": {
+    "command": "Cloud Object Storage HMAC key",
+    "description": "সমর্থিত অবজেক্ট স্টোরেজ ক্লায়েন্টের জন্য S3-সামঞ্জস্যপূর্ণ পরিচয়পত্র দেয়।"
+  },
+  "extra-202": {
+    "command": "Cloud Object Storage retention",
+    "description": "নির্ধারিত সময়ের জন্য অবজেক্ট মুছে ফেলা বা ওভাররাইট করা আটকায়।"
+  },
+  "extra-203": {
+    "command": "Kubernetes worker pool",
+    "description": "একই মেশিন ও জোন কনফিগারেশনের ক্লাস্টার ওয়ার্কার নোডগুলিকে গোষ্ঠীবদ্ধ করে।"
+  },
+  "extra-204": {
+    "command": "Kubernetes cluster autoscaler",
+    "description": "শিডিউল করা যাচ্ছে না এমন পডের ভিত্তিতে ওয়ার্কারের সংখ্যা সমন্বয় করে।"
+  },
+  "extra-205": {
+    "command": "Code Engine job",
+    "description": "অবিরত এন্ডপয়েন্ট পরিবেশন না করে সসীম ওয়ার্কলোড সম্পূর্ণ হওয়া পর্যন্ত চালায়।"
+  },
+  "extra-206": {
+    "command": "Code Engine project",
+    "description": "অ্যাপ, জব, বিল্ড ও কনফিগারেশনের জন্য বিচ্ছিন্ন পরিসর দেয়।"
+  },
+  "extra-207": {
+    "command": "Secrets Manager secret group",
+    "description": "সিক্রেটস ম্যানেজার ইনস্ট্যান্সে গোপন তথ্য ও প্রবেশাধিকারের নীতি সংগঠিত করে।"
+  },
+  "extra-208": {
+    "command": "Secrets Manager rotation policy",
+    "description": "সমর্থিত গোপন তথ্যের ধরন ও সংযুক্ত সার্ভিসের জন্য পর্যায়ক্রমিক পরিবর্তনের সময় নির্ধারণ করে।"
+  },
+  "extra-209": {
+    "command": "Activity Tracker event",
+    "description": "অডিট, অনুসন্ধান ও সতর্কতার জন্য অ্যাকাউন্টের কার্যকলাপ নথিভুক্ত করে।"
+  },
+  "extra-210": {
+    "command": "Log Analysis parsing rule",
+    "description": "অ্যাপ্লিকেশনের লগ বার্তা গ্রহণের সময় সেগুলি থেকে কাঠামোবদ্ধ ক্ষেত্র বের করে।"
+  },
+  "extra-211": {
+    "command": "Key Protect root key",
+    "description": "সমন্বিত সার্ভিসগুলির ব্যবহৃত ডেটা এনক্রিপশন কী সুরক্ষিত রাখে।"
+  },
+  "extra-212": {
+    "command": "Key Protect key rotation",
+    "description": "পরিচালিত রেফারেন্স বজায় রেখে ক্রিপ্টোগ্রাফিক কী উপাদান পর্যায়ক্রমে বদলায়।"
+  },
+  "extra-213": {
+    "command": "Cloud Internet Services origin pool",
+    "description": "স্বাস্থ্যের ভিত্তিতে ট্রাফিক বণ্টনের জন্য ব্যাকএন্ড অরিজিনগুলি গোষ্ঠীবদ্ধ করে।"
+  },
+  "extra-214": {
+    "command": "Cloud Internet Services WAF rule",
+    "description": "ওয়েব আক্রমণের প্যাটার্নের সঙ্গে মেলে এমন অনুরোধ আটকায় বা যাচাইয়ের চ্যালেঞ্জ দেয়।"
+  },
+  "extra-215": {
+    "command": "Schematics workspace",
+    "description": "IBM Cloud-পরিচালিত নির্বাহ পরিবেশ ব্যবহার করে Terraform স্বয়ংক্রিয়করণ চালায়।"
+  },
+  "extra-216": {
+    "command": "Schematics action",
+    "description": "ওয়ার্কস্পেস-পরিচালিত রিসোর্সে পরিচালনামূলক কাজ চালায়।"
+  },
+  "extra-217": {
+    "command": "Object.hasOwn",
+    "description": "প্রোটোটাইপে না খুঁজে অবজেক্টে সরাসরি কোনো প্রপার্টি আছে কি না পরীক্ষা করে।"
+  },
+  "extra-218": {
+    "command": "structuredClone",
+    "description": "সমর্থিত কাঠামোবদ্ধ মানের গভীর অনুলিপি তৈরি করে।"
+  },
+  "extra-219": {
+    "command": "Array.toSorted",
+    "description": "মূল অ্যারে পরিবর্তন না করে সাজানো অনুলিপি ফেরত দেয়।"
+  },
+  "extra-220": {
+    "command": "Array.flatMap",
+    "description": "প্রতিটি আইটেম ম্যাপ করে এবং ফলের অ্যারের একটি স্তর সমতল করে।"
+  },
+  "extra-221": {
+    "command": "Array.some",
+    "description": "অ্যারের অন্তত একটি উপাদান শর্ত পূরণ করে কি না পরীক্ষা করে।"
+  },
+  "extra-222": {
+    "command": "Array.every",
+    "description": "অ্যারের সব উপাদান শর্ত পূরণ করে কি না পরীক্ষা করে।"
+  },
+  "extra-223": {
+    "command": "Map.groupBy",
+    "description": "কলব্যাক থেকে ফেরত পাওয়া কী অনুযায়ী ইটারেবল মানগুলি গোষ্ঠীবদ্ধ করে।"
+  },
+  "extra-224": {
+    "command": "Promise.allSettled",
+    "description": "প্রতিটি প্রমিসের জন্য অপেক্ষা করে এবং পূরণ ও প্রত্যাখ্যান উভয়ের ফল রাখে।"
+  },
+  "extra-225": {
+    "command": "AbortController",
+    "description": "fetch এবং বাতিলের সংকেত বোঝে এমন অন্যান্য অ্যাসিঙ্ক্রোনাস কাজে বাতিলের সংকেত দেয়।"
+  },
+  "extra-226": {
+    "command": "fetch response.ok",
+    "description": "HTTP প্রতিক্রিয়ার স্ট্যাটাস সফলতার সীমার মধ্যে আছে কি না পরীক্ষা করে।"
+  },
+  "extra-227": {
+    "command": "URLSearchParams",
+    "description": "সঠিক এনকোডিংসহ URL কোয়েরি স্ট্রিং তৈরি ও বিশ্লেষণ করে।"
+  },
+  "extra-228": {
+    "command": "import.meta.env",
+    "description": "সমর্থিত মডিউল সিস্টেমে বিল্ড সরঞ্জামের দেওয়া পরিবেশের মান পড়ে।"
+  },
+  "extra-229": {
+    "command": "dynamic import",
+    "description": "প্রয়োজনমতো মডিউল লোড করে এবং তার এক্সপোর্টের জন্য একটি প্রমিস ফেরত দেয়।"
+  },
+  "extra-230": {
+    "command": "top-level await",
+    "description": "সমর্থিত মডিউলগুলিকে সরাসরি অ্যাসিঙ্ক্রোনাস সূচনার জন্য অপেক্ষা করতে দেয়।"
+  },
+  "extra-231": {
+    "command": "WeakMap",
+    "description": "কেবল ম্যাপের কারণে কী অবজেক্টগুলি মেমরিতে ধরে না রেখে অবজেক্ট-কীযুক্ত মেটাডেটা সংরক্ষণ করে।"
+  },
+  "extra-232": {
+    "command": "WeakSet",
+    "description": "এন্ট্রিগুলির গারবেজ কালেকশন না আটকে অবজেক্টের সদস্যতা পর্যবেক্ষণ করে।"
+  },
+  "extra-233": {
+    "command": "Object.freeze",
+    "description": "চলার সময় অবজেক্টের নিজস্ব প্রপার্টিগুলি পরিবর্তন করা আটকায়।"
+  },
+  "extra-234": {
+    "command": "nullish coalescing",
+    "description": "বৈধ falsy মান অক্ষুণ্ণ রেখে কেবল null বা undefined হলে বিকল্প মান ব্যবহার করে।"
+  },
+  "extra-235": {
+    "command": "optional chaining",
+    "description": "আগের রেফারেন্স null বা undefined হতে পারলে নিরাপদে ভেতরের মান পড়ে।"
+  },
+  "extra-236": {
+    "command": "Error cause",
+    "description": "প্রসঙ্গসহ ত্রুটি মোড়ানোর সময় মূল এক্সেপশনটি যুক্ত করে।"
+  },
+  "extra-237": {
+    "command": "TextEncoder",
+    "description": "JavaScript স্ট্রিংকে UTF-8 বাইটে এনকোড করে।"
+  },
+  "extra-238": {
+    "command": "crypto.randomUUID",
+    "description": "প্ল্যাটফর্মের ক্রিপ্টোগ্রাফিক দৈব উৎস দিয়ে UUID তৈরি করে।"
+  },
+  "extra-239": {
+    "command": "ReadableStream",
+    "description": "সম্পূর্ণ প্রতিক্রিয়া বাফারে না রেখে স্ট্রিমে আসা ডেটা ধাপে ধাপে প্রক্রিয়া করে।"
+  },
+  "extra-240": {
+    "command": "Object.fromEntries",
+    "description": "কী ও মানের জোড়ার ইটারেবল থেকে অবজেক্ট তৈরি করে।"
+  },
+  "extra-241": {
+    "command": "pipeline options timeout",
+    "description": "নির্ধারিত সময়ের পরে পাইপলাইন বা স্টেজ বন্ধ করে।"
+  },
+  "extra-242": {
+    "command": "pipeline options disableConcurrentBuilds",
+    "description": "একই পাইপলাইন জবের একাধিক নির্বাহ একসঙ্গে চলা আটকায়।"
+  },
+  "extra-243": {
+    "command": "when branch",
+    "description": "বর্তমান ব্রাঞ্চ মিললেই কেবল ঘোষণামূলক স্টেজ চালায়।"
+  },
+  "extra-244": {
+    "command": "when changeset",
+    "description": "পরিবর্তিত ফাইল প্যাটার্নের সঙ্গে মিললেই কেবল স্টেজ চালায়।"
+  },
+  "extra-245": {
+    "command": "input step",
+    "description": "অনুমোদিত ব্যক্তির সিদ্ধান্তের জন্য পাইপলাইন থামিয়ে রাখে।"
+  },
+  "extra-246": {
+    "command": "stash and unstash",
+    "description": "ভিন্ন এজেন্টে চলা স্টেজগুলির মধ্যে নির্বাচিত ফাইল স্থানান্তর করে।"
+  },
+  "extra-247": {
+    "command": "archiveArtifacts",
+    "description": "Jenkins বিল্ড রেকর্ডের সঙ্গে বিল্ডের আউটপুট রেখে দেয়।"
+  },
+  "extra-248": {
+    "command": "junit publisher",
+    "description": "পরীক্ষার ফলের XML প্রকাশ করে এবং ব্যর্থতার জন্য বিল্ডকে অস্থিতিশীল চিহ্নিত করে।"
+  },
+  "extra-249": {
+    "command": "credentials binding",
+    "description": "নির্দিষ্ট পরিসরের ব্লকে পরিবেশ ভেরিয়েবল হিসেবে সংরক্ষিত পরিচয়পত্র উপলব্ধ করে।"
+  },
+  "extra-250": {
+    "command": "withEnv",
+    "description": "পাইপলাইনের সীমিত ব্লকে পরিবেশের মান যোগ করে বা বদলে দেয়।"
+  },
+  "extra-251": {
+    "command": "agent label",
+    "description": "মিলে যাওয়া Jenkins এজেন্টে পাইপলাইন বা স্টেজ চালানোর ব্যবস্থা করে।"
+  },
+  "extra-252": {
+    "command": "matrix axis",
+    "description": "ঘোষিত পরিবেশের মানগুলির বিভিন্ন সমন্বয়ে একটি স্টেজ চালায়।"
+  },
+  "extra-253": {
+    "command": "parallel stages",
+    "description": "স্বাধীন ঘোষণামূলক স্টেজগুলি একই সময়ে চালায়।"
+  },
+  "extra-254": {
+    "command": "post always",
+    "description": "পাইপলাইনের ফল যাই হোক, পরিষ্কার বা রিপোর্টের ধাপ চালায়।"
+  },
+  "extra-255": {
+    "command": "post unsuccessful",
+    "description": "ব্যর্থ বা অস্থিতিশীল ফলের ক্ষেত্রে পুনরুদ্ধার বা বিজ্ঞপ্তির লজিক চালায়।"
+  },
+  "extra-256": {
+    "command": "retry step",
+    "description": "সাময়িক কারণে কোনো কাজ ব্যর্থ হলে ব্লকটি আবার চালায়।"
+  },
+  "extra-257": {
+    "command": "warnError",
+    "description": "পাইপলাইন চলতে দিয়েই স্টেজকে অস্থিতিশীল চিহ্নিত করে।"
+  },
+  "extra-258": {
+    "command": "lockable resource",
+    "description": "ভাগ করা রিসোর্সে পাইপলাইনের প্রবেশ একটির পর একটি করে।"
+  },
+  "extra-259": {
+    "command": "milestone step",
+    "description": "পুরোনো বিল্ডকে নতুন বিল্ডের চেয়ে এগিয়ে যাওয়া থেকে আটকায়।"
+  },
+  "extra-260": {
+    "command": "build job step",
+    "description": "প্যারামিটার ও ঐচ্ছিক অপেক্ষাসহ অন্য Jenkins জব চালু করে।"
+  },
+  "extra-261": {
+    "command": "copyArtifacts",
+    "description": "অন্য বিল্ডের নির্বাচিত আর্টিফ্যাক্ট বর্তমান ওয়ার্কস্পেসে অনুলিপি করে।"
+  },
+  "extra-262": {
+    "command": "pipeline shared library",
+    "description": "একাধিক জবের জন্য পুনর্ব্যবহারযোগ্য পাইপলাইন ধাপ ও গ্লোবাল ভেরিয়েবল প্যাকেজ করে।"
+  },
+  "extra-263": {
+    "command": "Replay build",
+    "description": "নিয়ন্ত্রিত ডিবাগিংয়ের জন্য স্ক্রিপ্টে সাময়িক সম্পাদনাসহ পাইপলাইন আবার চালায়।"
+  },
+  "extra-264": {
+    "command": "build discard policy",
+    "description": "স্টোরেজের বৃদ্ধি নিয়ন্ত্রণে রাখা বিল্ড ইতিহাস ও আর্টিফ্যাক্টের পরিমাণ সীমিত করে।"
+  },
+  "extra-265": {
+    "command": "kubectl rollout history",
+    "description": "Deployment রোলআউটে তৈরি সংস্করণগুলি দেখায়।"
+  },
+  "extra-266": {
+    "command": "kubectl rollout undo",
+    "description": "রোলব্যাক নিরাপদ হলে ওয়ার্কলোডকে আগের সংস্করণে ফিরিয়ে নেয়।"
+  },
+  "extra-267": {
+    "command": "kubectl rollout pause",
+    "description": "পরিবর্তন পর্যালোচনার সময় Deployment রোলআউট থামিয়ে রাখে।"
+  },
+  "extra-268": {
+    "command": "kubectl rollout resume",
+    "description": "আগে থামানো রোলআউট আবার চালু করে।"
+  },
+  "extra-269": {
+    "command": "kubectl auth can-i",
+    "description": "বর্তমান পরিচয় নির্দিষ্ট API কাজ করতে অনুমোদিত কি না পরীক্ষা করে।"
+  },
+  "extra-270": {
+    "command": "kubectl api-resources",
+    "description": "API সার্ভার পরিবেশিত রিসোর্সের ধরন ও তাদের পরিসরের তালিকা দেখায়।"
+  },
+  "extra-271": {
+    "command": "kubectl explain",
+    "description": "রিসোর্স ক্ষেত্রের স্কিমা ডকুমেন্টেশন পড়ে।"
+  },
+  "extra-272": {
+    "command": "kubectl wait",
+    "description": "রিসোর্সের শর্ত সত্য হওয়া বা সময়সীমা শেষ হওয়া পর্যন্ত অপেক্ষা করে।"
+  },
+  "extra-273": {
+    "command": "kubectl plugin list",
+    "description": "বর্তমান PATH-এ পাওয়া নির্বাহযোগ্য kubectl প্লাগইনের তালিকা দেখায়।"
+  },
+  "extra-274": {
+    "command": "kubectl diff",
+    "description": "ম্যানিফেস্ট প্রয়োগের আগে তা চলতি ক্লাস্টারে কী পরিবর্তন করবে দেখায়।"
+  },
+  "extra-275": {
+    "command": "kubectl apply --server-side",
+    "description": "আপডেটের জন্য সার্ভার-সাইড ক্ষেত্রের মালিকানা ও দ্বন্দ্ব শনাক্তকরণ ব্যবহার করে।"
+  },
+  "extra-276": {
+    "command": "PodDisruptionBudget",
+    "description": "পর্যাপ্ত রেপ্লিকা উপলব্ধ রাখতে স্বেচ্ছাকৃত বিঘ্ন সীমিত করে।"
+  },
+  "extra-277": {
+    "command": "startup probe",
+    "description": "লাইভনেস পরীক্ষা শুরুর আগে ধীরে চালু হওয়া কনটেইনারকে সময় দেয়।"
+  },
+  "extra-278": {
+    "command": "readiness probe",
+    "description": "পড ট্রাফিক গ্রহণ করতে না পারলে সেটিকে সার্ভিস এন্ডপয়েন্ট থেকে সরায়।"
+  },
+  "extra-279": {
+    "command": "liveness probe",
+    "description": "প্রসেস আর সুস্থ না থাকলে কনটেইনার পুনরায় চালু করে।"
+  },
+  "extra-280": {
+    "command": "topology spread constraints",
+    "description": "পারস্পরিক সম্পর্কযুক্ত ব্যর্থতা কমাতে জোন বা নোড জুড়ে পড বণ্টন করে।"
+  },
+  "extra-281": {
+    "command": "Pod priority class",
+    "description": "সম্পদের চাপ থাকলে শিডিউলিংয়ের ক্রম ও সম্ভাব্য অগ্রাধিকারভিত্তিক উচ্ছেদে প্রভাব ফেলে।"
+  },
+  "extra-282": {
+    "command": "resource quota",
+    "description": "নেমস্পেসে মোট সম্পদ ব্যবহারের সীমা নির্ধারণ করে।"
+  },
+  "extra-283": {
+    "command": "LimitRange",
+    "description": "নেমস্পেস অবজেক্টের সম্পদ অনুরোধ বা সীমার ডিফল্ট ও সর্বোচ্চ মান নির্ধারণ করে।"
+  },
+  "extra-284": {
+    "command": "EndpointSlice",
+    "description": "Kubernetes Services-এর ব্যবহৃত পরিসর বাড়ানোর উপযোগী ব্যাকএন্ড এন্ডপয়েন্ট ডেটা সংরক্ষণ করে।"
+  },
+  "extra-285": {
+    "command": "IngressClass",
+    "description": "কোন কন্ট্রোলার Ingress রিসোর্স বাস্তবায়ন করবে তা নির্বাচন করে।"
+  },
+  "extra-286": {
+    "command": "NetworkPolicy egress",
+    "description": "নির্বাচিত পড কোন গন্তব্যে সংযোগ করতে পারবে তা সীমিত করে।"
+  },
+  "extra-287": {
+    "command": "init container",
+    "description": "অ্যাপ্লিকেশন কনটেইনার শুরুর আগে প্রস্তুতির কাজ সম্পূর্ণ করে।"
+  },
+  "extra-288": {
+    "command": "ephemeral container",
+    "description": "বিদ্যমান পডে অস্থায়ী ডিবাগিং কনটেইনার যোগ করে।"
+  },
+  "extra-289": {
+    "command": "lsof -i",
+    "description": "পোর্ট বা প্রোটোকলের সঙ্গে মেলে এমন নেটওয়ার্ক সকেট ব্যবহারকারী প্রসেসের তালিকা দেখায়।"
+  },
+  "extra-290": {
+    "command": "ss -lntp",
+    "description": "সংযোগের অপেক্ষায় থাকা TCP সকেট, সংখ্যাসূচক ঠিকানা ও মালিক প্রসেস দেখায়।"
+  },
+  "extra-291": {
+    "command": "ip route get",
+    "description": "নির্দিষ্ট গন্তব্যে পৌঁছাতে কার্নেল যে রুট ও উৎস ঠিকানা ব্যবহার করবে তা দেখায়।"
+  },
+  "extra-292": {
+    "command": "ip neigh",
+    "description": "ঠিকানা নির্ণয়ের জন্য ব্যবহৃত স্থানীয় প্রতিবেশী ক্যাশ দেখায়।"
+  },
+  "extra-293": {
+    "command": "ethtool",
+    "description": "সমর্থিত নেটওয়ার্ক ইন্টারফেসের বৈশিষ্ট্য পরীক্ষা বা কনফিগার করে।"
+  },
+  "extra-294": {
+    "command": "iostat -xz",
+    "description": "sysstat প্যাকেজ থেকে ডিভাইসের ব্যবহার ও বিলম্বের মেট্রিক জানায়।"
+  },
+  "extra-295": {
+    "command": "vmstat",
+    "description": "মেমরি, প্রসেস, পেজিং, ব্লক I/O ও CPU কার্যকলাপের সারাংশ দেখায়।"
+  },
+  "extra-296": {
+    "command": "pidstat",
+    "description": "প্রতিটি প্রসেসের CPU, মেমরি বা I/O পরিসংখ্যান জানায়।"
+  },
+  "extra-297": {
+    "command": "strace -p",
+    "description": "সমস্যা নির্ণয়ে বিদ্যমান প্রসেসের সিস্টেম কল অনুসরণ করে।"
+  },
+  "extra-298": {
+    "command": "ltrace",
+    "description": "প্রসেস থেকে শেয়ার্ড লাইব্রেরির ফাংশনে করা কল অনুসরণ করে।"
+  },
+  "extra-299": {
+    "command": "perf top",
+    "description": "সিস্টেমে CPU স্যাম্পল ব্যয় করছে এমন ফাংশন চলতি অবস্থায় দেখায়।"
+  },
+  "extra-300": {
+    "command": "systemd-analyze blame",
+    "description": "বুটের সময় নেওয়া সময় অনুযায়ী স্টার্টআপ ইউনিটগুলি সাজিয়ে দেখায়।"
+  },
+  "extra-301": {
+    "command": "systemctl cat",
+    "description": "ইউনিট ফাইলের সঙ্গে তার ড্রপ-ইন ওভাররাইডগুলি দেখায়।"
+  },
+  "extra-302": {
+    "command": "journalctl -u -S",
+    "description": "পরিষেবা ও শুরুর সময় অনুযায়ী systemd ইউনিটের জার্নাল ছেঁকে দেখায়।"
+  },
+  "extra-303": {
+    "command": "loginctl list-sessions",
+    "description": "systemd-logind পরিচালিত সক্রিয় লগইন সেশনগুলির তালিকা দেখায়।"
+  },
+  "extra-304": {
+    "command": "getfacl",
+    "description": "মালিক, গ্রুপ ও মোডের মৌলিক বিট ছাড়াও POSIX অ্যাক্সেস কন্ট্রোল তালিকা পড়ে।"
+  },
+  "extra-305": {
+    "command": "setfacl -m",
+    "description": "ফাইলসিস্টেমের অবজেক্টে অ্যাক্সেস কন্ট্রোল তালিকার এন্ট্রি যোগ বা পরিবর্তন করে।"
+  },
+  "extra-306": {
+    "command": "find -mmin",
+    "description": "নির্দিষ্ট সংখ্যক মিনিটের মধ্যে পরিবর্তিত ফাইল খুঁজে বের করে।"
+  },
+  "extra-307": {
+    "command": "stat -c",
+    "description": "মোড, মালিক, আকার ও টাইমস্ট্যাম্পের মতো নির্বাচিত ফাইল মেটাডেটা প্রিন্ট করে।"
+  },
+  "extra-308": {
+    "command": "du -xhd1",
+    "description": "ফাইলসিস্টেমের সীমানা অতিক্রম না করে ডিরেক্টরির ব্যবহার সংক্ষেপে দেখায়।"
+  },
+  "extra-309": {
+    "command": "tar --exclude",
+    "description": "মিলে যাওয়া ফাইল বা ডিরেক্টরি বাদ দিয়ে আর্কাইভ তৈরি করে।"
+  },
+  "extra-310": {
+    "command": "flock -n",
+    "description": "গুরুত্বপূর্ণ কাজ চালানোর আগে অপেক্ষা না করে একটি পরামর্শমূলক লক নেওয়ার চেষ্টা করে।"
+  },
+  "extra-311": {
+    "command": "renice",
+    "description": "চলমান প্রসেসের শিডিউলিং অগ্রাধিকার পরিবর্তন করে।"
+  },
+  "extra-312": {
+    "command": "ulimit -n",
+    "description": "শেল প্রসেসের ফাইল ডেসক্রিপ্টরের সীমা পড়ে বা পরিবর্তন করে।"
+  },
+  "extra-313": {
+    "command": "portable container image",
+    "description": "সমর্থিত রেজিস্ট্রিগুলির মধ্যে স্থানান্তরযোগ্য OCI-সঙ্গত ইমেজ ফরম্যাট ব্যবহার করে।"
+  },
+  "extra-314": {
+    "command": "workload identity federation",
+    "description": "বিশ্বস্ত বহিরাগত পরিচয় ঘোষণার বিনিময়ে স্বল্পমেয়াদি ক্লাউড শংসাপত্র নেয়।"
+  },
+  "extra-315": {
+    "command": "cloud resource tagging standard",
+    "description": "মালিক, পরিবেশ, খরচ কেন্দ্র ও ডেটার শ্রেণির জন্য সামঞ্জস্যপূর্ণ লেবেল ব্যবহার করে।"
+  },
+  "extra-316": {
+    "command": "provider lockfile",
+    "description": "প্রোভাইডার প্যাকেজের চেকসাম নির্দিষ্ট করে রাখে, যাতে দল পর্যালোচিত প্রোভাইডার বাইনারি ইনস্টল করে।"
+  },
+  "extra-317": {
+    "command": "cross-cloud DNS delegation",
+    "description": "সাবডোমেনের কর্তৃত্ব অর্পণ করে, যাতে প্রতিটি প্ল্যাটফর্ম নিজের পরিষেবার রেকর্ড পরিচালনা করতে পারে।"
+  },
+  "extra-318": {
+    "command": "global traffic failover",
+    "description": "প্রধান এন্ডপয়েন্ট অনুপলব্ধ হলে সচল প্রোভাইডারের কাছে অনুরোধ পাঠায়।"
+  },
+  "extra-319": {
+    "command": "cloud egress cost review",
+    "description": "প্রোভাইডার, অঞ্চল বা জোন থেকে ডেটা বাইরে যাওয়ার কারণে হওয়া খরচ শনাক্ত করে।"
+  },
+  "extra-320": {
+    "command": "portable health endpoint",
+    "description": "বিভিন্ন হোস্টিং প্ল্যাটফর্মে সমতুল্য প্রস্তুতি ও সচলতার সংকেত প্রকাশ করে।"
+  },
+  "extra-321": {
+    "command": "cross-provider log correlation",
+    "description": "প্রোভাইডারের সীমানা পেরিয়েও অনুরোধ অনুসরণ করার জন্য ট্রেস আইডি ছড়িয়ে দেয়।"
+  },
+  "extra-322": {
+    "command": "cloud-neutral backup format",
+    "description": "পুনরুদ্ধারযোগ্য ডেটা এমন ফরম্যাটে রাখে যা একটি নির্দিষ্ট পরিচালিত পরিষেবার সঙ্গে বাঁধা নয়।"
+  },
+  "extra-323": {
+    "command": "service-level objective portability",
+    "description": "বিক্রেতানির্দিষ্ট মেট্রিকের ওপর নির্ভর না করে প্রাপ্যতা ও বিলম্বের লক্ষ্য নির্ধারণ করে।"
+  },
+  "extra-324": {
+    "command": "cloud policy as code",
+    "description": "প্রোভাইডারের রিসোর্স তৈরির আগে CI-তে সাধারণ সুরক্ষাবিধি যাচাই করে।"
+  },
+  "extra-325": {
+    "command": "secret provider abstraction",
+    "description": "একটি স্থিতিশীল ইন্টারফেসের মাধ্যমে অ্যাপ্লিকেশনকে গোপন মান ব্যবহার করতে দেয়।"
+  },
+  "extra-326": {
+    "command": "artifact promotion by digest",
+    "description": "প্রতিটি পরিবেশের জন্য নতুন করে বিল্ড না করে অপরিবর্তনীয় আর্টিফ্যাক্টের পরিচয় পরবর্তী ধাপে নিয়ে যায়।"
+  },
+  "extra-327": {
+    "command": "cross-cloud certificate renewal",
+    "description": "স্বাধীন ইনগ্রেস ব্যবস্থাগুলির মধ্যে সার্টিফিকেট প্রদান ও স্থাপন সমন্বয় করে।"
+  },
+  "extra-328": {
+    "command": "multi-provider quota planning",
+    "description": "একাধিক প্রোভাইডারে পরিসর বাড়ানোর আগে পরিষেবার কোটা ও ধারণক্ষমতার সীমা অনুসরণ করে।"
+  },
+  "extra-329": {
+    "command": "cloud incident runbook",
+    "description": "সাধারণ পরিষেবা-লক্ষ্য পূরণের জন্য প্রোভাইডারভেদে পুনরুদ্ধারের ধাপ নথিভুক্ত করে।"
+  },
+  "extra-330": {
+    "command": "data transfer minimization",
+    "description": "বিলম্ব ও ক্লাউডগুলির মধ্যে আদানপ্রদানের খরচ কমাতে কম্পিউটিংকে তার ডেটার কাছে রাখে।"
+  },
+  "extra-331": {
+    "command": "immutable deployment artifact",
+    "description": "স্বাক্ষরিত ও সংস্করণযুক্ত বিল্ড আর্টিফ্যাক্টকে রিলিজের একক হিসেবে ব্যবহার করে।"
+  },
+  "extra-332": {
+    "command": "provider outage dependency map",
+    "description": "পরিষেবাকে প্রোভাইডারের অঞ্চল ও ভাগ করা কন্ট্রোল-প্লেন নির্ভরতার সঙ্গে মানচিত্রায়িত করে।"
+  },
+  "extra-333": {
+    "command": "cloud configuration drift",
+    "description": "প্রকৃত সেটিংসের সঙ্গে সংস্করণ নিয়ন্ত্রণে রাখা কাঙ্ক্ষিত কনফিগারেশন তুলনা করে।"
+  },
+  "extra-334": {
+    "command": "portable deployment manifest",
+    "description": "ওয়ার্কলোডের সেটিংসকে প্রোভাইডারনির্দিষ্ট অবকাঠামোর সংযোগ থেকে আলাদা রাখে।"
+  },
+  "extra-335": {
+    "command": "cross-cloud restore exercise",
+    "description": "ব্যাকআপ ব্যবহারযোগ্য ধরে না নিয়ে ভিন্ন প্রোভাইডারে পুনরুদ্ধার পরীক্ষা করে।"
+  },
+  "extra-336": {
+    "command": "shared responsibility matrix",
+    "description": "প্রোভাইডার ও ওয়ার্কলোড দলের নিজ নিজ নিরাপত্তা নিয়ন্ত্রণের দায়িত্ব স্পষ্ট করে।"
+  },
+  "extra-337": {
+    "command": "TCP three-way handshake",
+    "description": "SYN, SYN-ACK ও ACK সেগমেন্ট দিয়ে TCP সংযোগ স্থাপন করে।"
+  },
+  "extra-338": {
+    "command": "TCP retransmission",
+    "description": "ডেটা হারালে বা অতিরিক্ত বিলম্ব হলে স্বীকৃতি না পাওয়া ডেটা আবার পাঠায়।"
+  },
+  "extra-339": {
+    "command": "MTU path discovery",
+    "description": "খণ্ডিত না হয়ে পাঠানো যায় এমন সর্বোচ্চ প্যাকেটের আকার নির্ণয় করে।"
+  },
+  "extra-340": {
+    "command": "DNS CNAME record",
+    "description": "সরাসরি ঠিকানার পরিবর্তে একটি DNS নামকে অন্য নামের উপনাম করে।"
+  },
+  "extra-341": {
+    "command": "DNS negative caching",
+    "description": "কোনো নাম বা রেকর্ড নেই—এই তথ্য নির্দিষ্ট সময়ের জন্য ক্যাশে রাখে।"
+  },
+  "extra-342": {
+    "command": "DNS split horizon",
+    "description": "ক্লায়েন্টের রিজলভারের ভিউ অনুযায়ী ভিন্ন রেকর্ড ফেরত দেয়।"
+  },
+  "extra-343": {
+    "command": "BGP local preference",
+    "description": "একটি স্বায়ত্তশাসিত ব্যবস্থার মধ্যে পছন্দের বহির্গামী রুট নির্বাচন করে।"
+  },
+  "extra-344": {
+    "command": "BGP AS path prepending",
+    "description": "দূরবর্তী রুট নির্বাচনকে প্রভাবিত করতে ঘোষিত পথকে দীর্ঘতর বলে দেখায়।"
+  },
+  "extra-345": {
+    "command": "BGP graceful restart",
+    "description": "পিয়ার সমর্থন করলে রাউটিং প্রসেস পুনরায় চালুর সময়ও ফরওয়ার্ডিং বজায় রাখে।"
+  },
+  "extra-346": {
+    "command": "VLAN trunk",
+    "description": "একটি ভৌত Ethernet লিঙ্কে একাধিক ট্যাগযুক্ত VLAN বহন করে।"
+  },
+  "extra-347": {
+    "command": "802.1Q native VLAN",
+    "description": "ট্রাঙ্কে ট্যাগবিহীন ট্রাফিক বহন করে এবং দুই প্রান্তে একই হতে হয়।"
+  },
+  "extra-348": {
+    "command": "LACP port channel",
+    "description": "বাড়তি নির্ভরযোগ্যতা ও ধারণক্ষমতার জন্য ভৌত লিঙ্কগুলিকে আলোচনার মাধ্যমে নির্ধারিত একটি যৌক্তিক লিঙ্কে যুক্ত করে।"
+  },
+  "extra-349": {
+    "command": "ARP cache",
+    "description": "স্থানীয় নেটওয়ার্কে IPv4 ঠিকানাকে লিঙ্ক-স্তরের ঠিকানার সঙ্গে মেলায়।"
+  },
+  "extra-350": {
+    "command": "IPv6 neighbor discovery",
+    "description": "ঠিকানা নির্ণয় ও রাউটার আবিষ্কারের জন্য ICMPv6 বার্তা ব্যবহার করে।"
+  },
+  "extra-351": {
+    "command": "NAT port exhaustion",
+    "description": "সমসাময়িক ডেটা প্রবাহের জন্য NAT যন্ত্রে খালি উৎস পোর্ট না থাকলে এটি ঘটে।"
+  },
+  "extra-352": {
+    "command": "TLS SNI",
+    "description": "TLS হ্যান্ডশেকের সময় ক্লায়েন্টকে অনুরোধ করা হোস্টনাম জানাতে দেয়।"
+  },
+  "extra-353": {
+    "command": "TLS ALPN",
+    "description": "TLS স্থাপনের সময় HTTP/2-এর মতো অ্যাপ্লিকেশন প্রোটোকল নিয়ে সমঝোতা করে।"
+  },
+  "extra-354": {
+    "command": "HTTP CONNECT proxy",
+    "description": "সাধারণত TLS ট্রাফিকের জন্য HTTP প্রক্সির মধ্য দিয়ে টানেল তৈরি করে।"
+  },
+  "extra-355": {
+    "command": "reverse proxy buffering",
+    "description": "মধ্যবর্তী ব্যবস্থা অনুরোধ বা উত্তরের মূল অংশ বাফারে রাখবে কি না তা নিয়ন্ত্রণ করে।"
+  },
+  "extra-356": {
+    "command": "Anycast routing",
+    "description": "একাধিক স্থান থেকে একই ঠিকানা ঘোষণা করে, যাতে রাউটিং কাছের স্থান বেছে নেয়।"
+  },
+  "extra-357": {
+    "command": "ECMP",
+    "description": "সমান খরচের একাধিক রুটে ডেটা প্রবাহ ভাগ করে দেয়।"
+  },
+  "extra-358": {
+    "command": "network flow logs",
+    "description": "ট্রাফিকের উৎস, গন্তব্য, পোর্ট ও অনুমতি বা প্রত্যাখ্যানের নমুনা তথ্য সংরক্ষণ করে।"
+  },
+  "extra-359": {
+    "command": "ICMP destination unreachable",
+    "description": "হোস্ট, নেটওয়ার্ক, প্রোটোকল, পোর্ট বা রুটে পৌঁছানো যাচ্ছে না বলে জানায়।"
+  },
+  "extra-360": {
+    "command": "packet capture ring buffer",
+    "description": "ক্যাপচার ফাইল পর্যায়ক্রমে বদলায়, যাতে দীর্ঘমেয়াদি সমস্যা নির্ণয় সীমিত ডিস্ক স্থান ব্যবহার করে।"
+  },
+  "extra-361": {
+    "command": "oci iam region-subscription list",
+    "description": "বর্তমান টেন্যান্সির জন্য সক্রিয় অঞ্চলগুলির তালিকা দেখায়।"
+  },
+  "extra-362": {
+    "command": "OCI compartment hierarchy",
+    "description": "টেন্যান্সির মধ্যে রিসোর্স সাজায় এবং IAM নীতির পরিধি প্রয়োগ করে।"
+  },
+  "extra-363": {
+    "command": "OCI dynamic group",
+    "description": "মিলে যাওয়া কম্পার্টমেন্ট বা রিসোর্সের নিয়ম দিয়ে রিসোর্স প্রিন্সিপাল নির্বাচন করে।"
+  },
+  "extra-364": {
+    "command": "OCI resource principal",
+    "description": "ব্যবহারকারীর API কী সংরক্ষণ না করেই OCI ওয়ার্কলোডকে অনুমোদিত পরিষেবা কল করতে দেয়।"
+  },
+  "extra-365": {
+    "command": "OCI Vault secret version",
+    "description": "অ্যাপ্লিকেশন ও সমন্বয়ের জন্য গোপন বিষয়বস্তুর সংস্করণ সংরক্ষণ করে।"
+  },
+  "extra-366": {
+    "command": "OCI Vault key rotation",
+    "description": "ডিক্রিপ্ট করার জন্য পুরোনো সংস্করণ রেখে কী-এর নতুন সংস্করণ তৈরি করে।"
+  },
+  "extra-367": {
+    "command": "Object Storage retention rule",
+    "description": "কনফিগার করা সময়কাল পর্যন্ত অবজেক্ট মুছে ফেলা বা তার ওপর লেখা থেকে রক্ষা করে।"
+  },
+  "extra-368": {
+    "command": "Object Storage pre-authenticated request",
+    "description": "নির্বাচিত অবজেক্ট বা বাকেটে নির্দিষ্ট পরিধি ও সময়ের জন্য প্রবেশাধিকার দেয়।"
+  },
+  "extra-369": {
+    "command": "VCN route rule",
+    "description": "গন্তব্যের সঙ্গে মিলে যাওয়া ট্রাফিক গেটওয়ে বা ব্যক্তিগত পরবর্তী হপে পাঠায়।"
+  },
+  "extra-370": {
+    "command": "Network Security Group",
+    "description": "পুরো সাবনেটের পরিবর্তে নির্বাচিত VNICs-এ ভার্চুয়াল নেটওয়ার্কের নিয়ম প্রয়োগ করে।"
+  },
+  "extra-371": {
+    "command": "OCI service gateway",
+    "description": "VCN থেকে সমর্থিত Oracle পরিষেবায় ব্যক্তিগত প্রবেশাধিকার দেয়।"
+  },
+  "extra-372": {
+    "command": "OCI NAT gateway",
+    "description": "বাইরে থেকে সরাসরি প্রবেশের সুযোগ না দিয়ে ব্যক্তিগত সাবনেটের রিসোর্সকে পাবলিক সংযোগ শুরু করতে দেয়।"
+  },
+  "extra-373": {
+    "command": "Load Balancer backend set",
+    "description": "নীতি ও স্বাস্থ্যপরীক্ষার কনফিগারেশনসহ ব্যাকএন্ড সার্ভারগুলি এক দলে রাখে।"
+  },
+  "extra-374": {
+    "command": "Compute instance pool",
+    "description": "বিভিন্ন ফল্ট ডোমেনে একই ধরনের কম্পিউট ইনস্ট্যান্সের দল পরিচালনা করে।"
+  },
+  "extra-375": {
+    "command": "Block Volume backup policy",
+    "description": "পুনর্ব্যবহারযোগ্য নীতি দিয়ে ভলিউম ব্যাকআপের সময়সূচি নির্ধারণ করে।"
+  },
+  "extra-376": {
+    "command": "File Storage export set",
+    "description": "ফাইলসিস্টেমের নেটওয়ার্ক প্রবেশাধিকার ও এক্সপোর্ট বিকল্প নির্ধারণ করে।"
+  },
+  "extra-377": {
+    "command": "OKE node pool",
+    "description": "ক্লাস্টারের ওয়ার্কার মেশিনের ধরন, ইমেজ, সাবনেট ও পরিসর বাড়ানোর সেটিংস নির্ধারণ করে।"
+  },
+  "extra-378": {
+    "command": "OKE workload identity",
+    "description": "Kubernetes সার্ভিস অ্যাকাউন্টকে প্রিন্সিপাল হিসেবে OCI রিসোর্স ব্যবহারের অনুমতি দেয়।"
+  },
+  "extra-379": {
+    "command": "Autonomous Database wallet",
+    "description": "TLS-সুরক্ষিত ডেটাবেসে প্রবেশের জন্য ক্লায়েন্টের সংযোগ-সংক্রান্ত উপকরণ রাখে।"
+  },
+  "extra-380": {
+    "command": "Database Data Guard",
+    "description": "দুর্যোগ থেকে পুনরুদ্ধার ও ভূমিকা বদলের জন্য একটি স্ট্যান্ডবাই ডেটাবেস বজায় রাখে।"
+  },
+  "extra-381": {
+    "command": "Logging service search",
+    "description": "রিসোর্স ও অ্যাপ্লিকেশনের ঘটনা তদন্ত করতে কেন্দ্রীভূত OCI লগে অনুসন্ধান করে।"
+  },
+  "extra-382": {
+    "command": "Monitoring alarm",
+    "description": "মেট্রিকের কোয়েরি মূল্যায়ন করে এবং সীমা অতিক্রম করলে বিজ্ঞপ্তি পাঠায়।"
+  },
+  "extra-383": {
+    "command": "Resource Manager stack drift",
+    "description": "স্থাপিত রিসোর্সের সঙ্গে স্ট্যাকের Terraform কনফিগারেশন তুলনা করে।"
+  },
+  "extra-384": {
+    "command": "Cloud Guard responder recipe",
+    "description": "ডিটেক্টরের নিয়ম ঝুঁকি শনাক্ত করলে স্বয়ংক্রিয় বা ম্যানুয়াল পদক্ষেপ নির্ধারণ করে।"
+  },
+  "extra-385": {
+    "command": "strict and warnings",
+    "description": "কম্পাইলের সময় পরীক্ষা ও চলার সময় উপযোগী সমস্যা-নির্ণয় সক্রিয় করে।"
+  },
+  "extra-386": {
+    "command": "defined-or operator",
+    "description": "মান অনির্ধারিত হলেই বিকল্প মান ব্যবহার করে; শূন্য বা খালি হলে নয়।"
+  },
+  "extra-387": {
+    "command": "three-argument open",
+    "description": "স্পষ্ট মোড দিয়ে ফাইল খোলে এবং দুটি আর্গুমেন্টের অস্পষ্ট ব্যাখ্যা এড়ায়।"
+  },
+  "extra-388": {
+    "command": "autodie",
+    "description": "সাধারণ সিস্টেম কলের ব্যর্থতাকে স্বয়ংক্রিয়ভাবে এক্সসেপশনে রূপান্তর করে।"
+  },
+  "extra-389": {
+    "command": "File::Temp",
+    "description": "নিরাপদ ও অনন্য নাম দিয়ে অস্থায়ী ফাইল ও ডিরেক্টরি তৈরি করে।"
+  },
+  "extra-390": {
+    "command": "Getopt::Long",
+    "description": "দীর্ঘরূপের কমান্ড-লাইন বিকল্প বিশ্লেষণ করে ভেরিয়েবলে রাখে।"
+  },
+  "extra-391": {
+    "command": "JSON::PP decode_json",
+    "description": "মূল JSON::PP মডিউল দিয়ে JSON নথি বিশ্লেষণ করে Perl রেফারেন্সে রূপান্তর করে।"
+  },
+  "extra-392": {
+    "command": "JSON::PP encode_json",
+    "description": "Perl ডেটা স্ট্রাকচারকে সংক্ষিপ্ত JSON বাইটে সিরিয়ালাইজ করে।"
+  },
+  "extra-393": {
+    "command": "File::Basename",
+    "description": "পাথ থেকে ডিরেক্টরি, ফাইলের নাম ও প্রত্যয় আলাদা করে।"
+  },
+  "extra-394": {
+    "command": "File::Path make_path",
+    "description": "একাধিক স্তরের ডিরেক্টরি তৈরি করে এবং ফাইলসিস্টেমের ত্রুটি জানায়।"
+  },
+  "extra-395": {
+    "command": "File::Find",
+    "description": "ডিরেক্টরি ট্রি ঘুরে প্রতিটি এন্ট্রির জন্য কলব্যাক চালায়।"
+  },
+  "extra-396": {
+    "command": "IPC::Open3",
+    "description": "stdin, stdout ও stderr-এর জন্য আলাদা হ্যান্ডেল দিয়ে চাইল্ড প্রসেস চালায়।"
+  },
+  "extra-397": {
+    "command": "system list form",
+    "description": "আর্গুমেন্ট ব্যাখ্যার জন্য শেল না ডেকে প্রোগ্রাম চালায়।"
+  },
+  "extra-398": {
+    "command": "Time::HiRes alarm",
+    "description": "সময়সীমাবদ্ধ কাজের জন্য এক সেকেন্ডেরও কম ব্যবধানে অ্যালার্ম নির্ধারণ করে।"
+  },
+  "extra-399": {
+    "command": "POSIX strftime",
+    "description": "লোকেল-নিরপেক্ষ নির্দিষ্ট প্যাটার্ন দিয়ে টাইমস্ট্যাম্পের বিন্যাস করে।"
+  },
+  "extra-400": {
+    "command": "Digest::SHA",
+    "description": "ফাইল বা ডেটা স্ট্রিমের ক্রিপ্টোগ্রাফিক হ্যাশ গণনা করে।"
+  },
+  "extra-401": {
+    "command": "List::Util max",
+    "description": "সংখ্যার তালিকা থেকে সর্বোচ্চ মান বের করে।"
+  },
+  "extra-402": {
+    "command": "List::Util any",
+    "description": "তালিকার কোনো উপাদান নির্দিষ্ট শর্ত পূরণ করে কি না পরীক্ষা করে।"
+  },
+  "extra-403": {
+    "command": "Try::Tiny",
+    "description": "সংক্ষিপ্ত try, catch ও finally ব্লক দিয়ে এক্সসেপশন সামলায়।"
+  },
+  "extra-404": {
+    "command": "Test::More subtests",
+    "description": "সম্পর্কিত অ্যাসারশন একত্র করে এবং স্পষ্ট স্তরবিন্যস্ত পরীক্ষার ফল জানায়।"
+  },
+  "extra-405": {
+    "command": "Test::Warnings",
+    "description": "পরীক্ষার সময় কোড প্রত্যাশিত সতর্কবার্তা দেয় কি না নিশ্চিত করে।"
+  },
+  "extra-406": {
+    "command": "DBI placeholders",
+    "description": "ইনজেকশন ও উদ্ধৃতি-চিহ্নের ত্রুটি এড়াতে SQL টেক্সট থেকে আলাদাভাবে মান যুক্ত করে।"
+  },
+  "extra-407": {
+    "command": "DBI transaction",
+    "description": "ডেটাবেসে লেখার কাজ একত্র করে, যাতে সব একসঙ্গে কমিট হয় বা ব্যর্থ হলে রোলব্যাক হয়।"
+  },
+  "extra-408": {
+    "command": "Encode decode",
+    "description": "স্পষ্ট এনকোডিং ব্যবহার করে বাইট স্ট্রিংকে অক্ষরের স্ট্রিংয়ে রূপান্তর করে।"
+  },
+  "extra-409": {
+    "command": "Get-Command -All",
+    "description": "একই নামের আড়ালে থাকা কমান্ডসহ মিলে যাওয়া নামের সব কমান্ড দেখায়।"
+  },
+  "extra-410": {
+    "command": "Get-Member",
+    "description": "পাইপলাইনের অবজেক্টে থাকা প্রপার্টি ও মেথড পরীক্ষা করে।"
+  },
+  "extra-411": {
+    "command": "Select-Object -ExpandProperty",
+    "description": "মূল অবজেক্ট মোড়ানোর পরিবর্তে সরাসরি প্রপার্টির মান আউটপুট দেয়।"
+  },
+  "extra-412": {
+    "command": "Where-Object property shorthand",
+    "description": "সমর্থিত PowerShell সংস্করণে সংক্ষিপ্ত তুলনার সিনট্যাক্স দিয়ে অবজেক্ট ছেঁকে নেয়।"
+  },
+  "extra-413": {
+    "command": "ForEach-Object -Parallel",
+    "description": "সমর্থিত PowerShell সংস্করণে পাইপলাইনের উপাদানগুলি সমসাময়িকভাবে প্রক্রিয়াকরণ করে।"
+  },
+  "extra-414": {
+    "command": "Start-Job",
+    "description": "বর্তমান সেশনে আলাদা ব্যাকগ্রাউন্ড জব হিসেবে কাজ চালায়।"
+  },
+  "extra-415": {
+    "command": "Receive-Job -Keep",
+    "description": "জবের ইতিহাস থেকে না সরিয়ে তার আউটপুট পড়ে।"
+  },
+  "extra-416": {
+    "command": "Try / Catch / Finally",
+    "description": "কাজ থামিয়ে দেওয়া ত্রুটি সামলায় এবং পরিষ্কারের কোড চালানোর সুযোগ নিশ্চিত করে।"
+  },
+  "extra-417": {
+    "command": "ErrorAction Stop",
+    "description": "কাজ না থামানো বহু ত্রুটিকে কাজ থামানো ত্রুটিতে বদলায়, যাতে catch ব্লক সেগুলি সামলাতে পারে।"
+  },
+  "extra-418": {
+    "command": "Set-StrictMode",
+    "description": "আরম্ভিক মান না দেওয়া ভেরিয়েবল ও অন্যান্য সাধারণ স্ক্রিপ্টের ভুল শনাক্ত করে।"
+  },
+  "extra-419": {
+    "command": "ConvertFrom-Json -AsHashtable",
+    "description": "সমর্থিত PowerShell সংস্করণে JSON বিশ্লেষণ করে পরিবর্তনযোগ্য হ্যাশটেবিলে রূপান্তর করে।"
+  },
+  "extra-420": {
+    "command": "ConvertTo-Json -Depth",
+    "description": "নির্বাচিত গভীরতা পর্যন্ত নেস্টেড অবজেক্ট সিরিয়ালাইজ করে।"
+  },
+  "extra-421": {
+    "command": "Invoke-RestMethod -StatusCodeVariable",
+    "description": "REST রেসপন্স বিশ্লেষণের সময় HTTP স্ট্যাটাস কোড ধরে রাখে।"
+  },
+  "extra-422": {
+    "command": "Test-NetConnection",
+    "description": "দূরবর্তী এন্ডপয়েন্টের DNS নির্ণয় ও TCP সংযোগ পরীক্ষা করে।"
+  },
+  "extra-423": {
+    "command": "Get-FileHash",
+    "description": "অখণ্ডতা পরীক্ষা ও আর্টিফ্যাক্ট তুলনার জন্য ফাইলের হ্যাশ গণনা করে।"
+  },
+  "extra-424": {
+    "command": "Compare-Object",
+    "description": "দুটি সংগ্রহ বা অবজেক্টের প্রপার্টির পার্থক্য দেখায়।"
+  },
+  "extra-425": {
+    "command": "Import-Csv",
+    "description": "বিভাজকযুক্ত সারি অবজেক্ট হিসেবে লোড করে, যেখানে হেডারগুলি প্রপার্টির নাম হয়।"
+  },
+  "extra-426": {
+    "command": "Export-Clixml",
+    "description": "টাইপের তথ্য বজায় রেখে PowerShell অবজেক্ট সিরিয়ালাইজ করে।"
+  },
+  "extra-427": {
+    "command": "PSSession",
+    "description": "একাধিক কমান্ডের জন্য পুনর্ব্যবহারযোগ্য দূরবর্তী PowerShell সংযোগ বজায় রাখে।"
+  },
+  "extra-428": {
+    "command": "Register-ArgumentCompleter",
+    "description": "কমান্ড বা প্যারামিটারের জন্য নিজস্ব ট্যাব কমপ্লিশন যোগ করে।"
+  },
+  "extra-429": {
+    "command": "SupportsShouldProcess",
+    "description": "উন্নত ফাংশনে প্রচলিত -WhatIf ও -Confirm আচরণ সক্রিয় করে।"
+  },
+  "extra-430": {
+    "command": "SecureString",
+    "description": "সুরক্ষিত স্ট্রিং টাইপ ব্যবহার করে সংবেদনশীল টেক্সট মেমরিতে রাখে।"
+  },
+  "extra-431": {
+    "command": "Resolve-Path",
+    "description": "পাথকে তার প্রোভাইডারসহ পূর্ণ অবস্থানে সম্প্রসারিত করে।"
+  },
+  "extra-432": {
+    "command": "pathlib.Path.rglob",
+    "description": "পুনরাবৃত্তভাবে ডিরেক্টরির ভেতরে গিয়ে glob প্যাটার্নের সঙ্গে মেলা পাথ খুঁজে পায়।"
+  },
+  "extra-433": {
+    "command": "pathlib.Path.replace",
+    "description": "ফাইলসিস্টেম সমর্থন করলে গন্তব্য পাথ একক অবিভাজ্য ধাপে প্রতিস্থাপন করে।"
+  },
+  "extra-434": {
+    "command": "subprocess.run check",
+    "description": "ডাকা প্রসেস ব্যর্থ হয়ে শেষ হলে CalledProcessError তোলে।"
+  },
+  "extra-435": {
+    "command": "subprocess timeout",
+    "description": "প্রসেস সময়সীমা ছাড়ালে অপেক্ষা বন্ধ করে TimeoutExpired তোলে।"
+  },
+  "extra-436": {
+    "command": "contextlib.ExitStack",
+    "description": "একটি পরিষ্কার-পরিসরের মধ্যে পরিবর্তনশীল সংখ্যক কনটেক্সট ম্যানেজার পরিচালনা করে।"
+  },
+  "extra-437": {
+    "command": "dataclasses.field default_factory",
+    "description": "প্রতিটি dataclass ইনস্ট্যান্সের জন্য নতুন পরিবর্তনযোগ্য ডিফল্ট মান তৈরি করে।"
+  },
+  "extra-438": {
+    "command": "typing.Protocol",
+    "description": "স্পষ্টভাবে উত্তরাধিকার ঘোষণা বাধ্যতামূলক না করেই কাঠামোগত ইন্টারফেস বর্ণনা করে।"
+  },
+  "extra-439": {
+    "command": "functools.cache",
+    "description": "আর্গুমেন্ট হ্যাশযোগ্য হলে ফাংশনের ফল মনে রেখে পুনর্ব্যবহার করে।"
+  },
+  "extra-440": {
+    "command": "functools.partial",
+    "description": "কিছু আর্গুমেন্ট আগে থেকেই নির্ধারিত থাকে এমন কলযোগ্য অবজেক্ট তৈরি করে।"
+  },
+  "extra-441": {
+    "command": "itertools.batched",
+    "description": "সমর্থিত Python সংস্করণে iterable-কে নির্দিষ্ট আকারের টাপলে ভাগ করে।"
+  },
+  "extra-442": {
+    "command": "collections.Counter",
+    "description": "হ্যাশযোগ্য মান গুনে এবং তাদের পুনরাবৃত্তি নিয়ে সুবিধাজনক কাজের সুযোগ দেয়।"
+  },
+  "extra-443": {
+    "command": "collections.defaultdict",
+    "description": "ফ্যাক্টরি ফাংশন দিয়ে ম্যাপিংয়ে অনুপস্থিত মান তৈরি করে।"
+  },
+  "extra-444": {
+    "command": "contextlib.suppress",
+    "description": "সীমিত কনটেক্সট ব্লকের মধ্যে নির্বাচিত ধরনের এক্সসেপশন উপেক্ষা করে।"
+  },
+  "extra-445": {
+    "command": "logging LoggerAdapter",
+    "description": "মোড়ানো লগারের লগ রেকর্ডে প্রাসঙ্গিক ফিল্ড যোগ করে।"
+  },
+  "extra-446": {
+    "command": "logging QueueHandler",
+    "description": "সারির মাধ্যমে লগ সামলানোর কাজ শ্রোতা থ্রেড বা প্রসেসে সরায়।"
+  },
+  "extra-447": {
+    "command": "asyncio.TaskGroup",
+    "description": "কাঠামোবদ্ধ বাতিলকরণ ও এক্সসেপশন ব্যবস্থাপনাসহ সম্পর্কিত কাজ চালায়।"
+  },
+  "extra-448": {
+    "command": "asyncio.Semaphore",
+    "description": "বেশি রিসোর্স লাগে এমন অংশে কতগুলি coroutine প্রবেশ করতে পারে তা সীমিত করে।"
+  },
+  "extra-449": {
+    "command": "yield from",
+    "description": "পুনরাবৃত্তি ও জেনারেটর নিয়ন্ত্রণ সাবজেনারেটরের হাতে দেয়।"
+  },
+  "extra-450": {
+    "command": "memoryview",
+    "description": "মূল বাইটগুলি কপি না করে বাফারের ডেটা দেখার ব্যবস্থা দেয়।"
+  },
+  "extra-451": {
+    "command": "zip strict",
+    "description": "zip করা iterable-গুলির দৈর্ঘ্য ভিন্ন হলে ValueError তোলে।"
+  },
+  "extra-452": {
+    "command": "enum StrEnum",
+    "description": "সমর্থিত Python সংস্করণে স্ট্রিং-মানযুক্ত enum সদস্য নির্ধারণ করে।"
+  },
+  "extra-453": {
+    "command": "tomllib",
+    "description": "সমর্থিত Python সংস্করণে স্ট্যান্ডার্ড লাইব্রেরি দিয়ে TOML বিশ্লেষণ করে।"
+  },
+  "extra-454": {
+    "command": "unittest.mock autospec",
+    "description": "আসল অবজেক্টের সিগনেচার ও উপলব্ধ অ্যাট্রিবিউটের মধ্যে মককে সীমাবদ্ধ রাখে।"
+  },
+  "extra-455": {
+    "command": "Enumerable#filter_map",
+    "description": "একবারেই মান রূপান্তর করে এবং nil ফলগুলি বাদ দেয়।"
+  },
+  "extra-456": {
+    "command": "Enumerable#tally",
+    "description": "enumerable-এ প্রতিটি মান কতবার এসেছে তা গুনে।"
+  },
+  "extra-457": {
+    "command": "Enumerable#each_slice",
+    "description": "enumerable থেকে ধারাবাহিকভাবে নির্দিষ্ট আকারের দল দেয়।"
+  },
+  "extra-458": {
+    "command": "Hash#fetch",
+    "description": "স্পষ্ট ডিফল্ট মানসহ কী পড়ে, অথবা ডিফল্ট দেওয়া না থাকলে এক্সসেপশন তোলে।"
+  },
+  "extra-459": {
+    "command": "Hash#transform_values",
+    "description": "কী অপরিবর্তিত রেখে প্রতিটি মান রূপান্তর করা হ্যাশ ফেরত দেয়।"
+  },
+  "extra-460": {
+    "command": "Hash#compact",
+    "description": "nil মানের এন্ট্রি বাদ দেওয়া কপি ফেরত দেয়।"
+  },
+  "extra-461": {
+    "command": "String#delete_prefix",
+    "description": "মূল স্ট্রিং না বদলে একটি মিলে যাওয়া উপসর্গ সরায়।"
+  },
+  "extra-462": {
+    "command": "String#match?",
+    "description": "MatchData ফল তৈরি না করে স্ট্রিং রেগুলার এক্সপ্রেশনের সঙ্গে মেলে কি না পরীক্ষা করে।"
+  },
+  "extra-463": {
+    "command": "Regexp named captures",
+    "description": "সংখ্যাসূচক অবস্থানের পরিবর্তে নাম দিয়ে অর্থপূর্ণ ফিল্ড ধরে।"
+  },
+  "extra-464": {
+    "command": "safe navigation operator",
+    "description": "গ্রহণকারী অবজেক্ট nil না হলেই মেথড কল করে।"
+  },
+  "extra-465": {
+    "command": "Data.define",
+    "description": "সমর্থিত Ruby সংস্করণে নামযুক্ত সদস্যসহ অপরিবর্তনীয় ভ্যালু অবজেক্ট তৈরি করে।"
+  },
+  "extra-466": {
+    "command": "Struct keyword_init",
+    "description": "নামযুক্ত কীওয়ার্ড আর্গুমেন্ট দিয়ে শুরু করা হালকা রেকর্ড তৈরি করে।"
+  },
+  "extra-467": {
+    "command": "Enumerable#lazy",
+    "description": "চাওয়া হলেই মান প্রক্রিয়াকরণ করে এমন অলস মূল্যায়নের শৃঙ্খল তৈরি করে।"
+  },
+  "extra-468": {
+    "command": "Fiber scheduler",
+    "description": "সমর্থিত I/O অপারেশনকে শিডিউলারের অধীনে সহযোগিতামূলকভাবে নিয়ন্ত্রণ ছেড়ে দিতে দেয়।"
+  },
+  "extra-469": {
+    "command": "Timeout.timeout",
+    "description": "ব্লক কনফিগার করা সময়কাল ছাড়ালে এক্সসেপশন তোলে।"
+  },
+  "extra-470": {
+    "command": "Open3.capture3",
+    "description": "সাবপ্রসেস চালিয়ে stdout, stderr ও তার স্ট্যাটাস আলাদাভাবে সংগ্রহ করে।"
+  },
+  "extra-471": {
+    "command": "Tempfile.create",
+    "description": "ব্লক শেষে স্বয়ংক্রিয়ভাবে পরিষ্কার হয় এমন অস্থায়ী ফাইল তৈরি করে।"
+  },
+  "extra-472": {
+    "command": "JSON.parse symbolize_names",
+    "description": "অ্যাপ্লিকেশনের জন্য উপযুক্ত হলে JSON অবজেক্টের কী প্রতীকে রূপান্তর করে।"
+  },
+  "extra-473": {
+    "command": "Logger tagged context",
+    "description": "সম্পর্ক খুঁজে পেতে লগের লাইনে অনুরোধ বা জবের পরিচয় যোগ করে।"
+  },
+  "extra-474": {
+    "command": "ActiveSupport retry_on",
+    "description": "কনফিগার করা বিরতি বাড়ানোর কৌশল অনুযায়ী নির্বাচিত জব এক্সসেপশনের পর পুনরায় চেষ্টা করে।"
+  },
+  "extra-475": {
+    "command": "RSpec shared examples",
+    "description": "একাধিক বাস্তবায়নে একই আচরণগত চুক্তি পুনর্ব্যবহার করে।"
+  },
+  "extra-476": {
+    "command": "Rake file task",
+    "description": "ফাইল না থাকলে বা প্রয়োজনীয় পূর্বশর্তের চেয়ে পুরোনো হলেই চলে এমন টাস্ক নির্ধারণ করে।"
+  },
+  "extra-477": {
+    "command": "Bundler deployment mode",
+    "description": "পূর্বনির্ধারিত ডিপ্লয়মেন্ট বিন্যাসে লক করা নির্ভরতাগুলি ইনস্টল করে।"
+  },
+  "extra-478": {
+    "command": "terraform providers lock",
+    "description": "নির্বাচিত প্ল্যাটফর্মের প্রোভাইডার চেকসাম নির্ভরতার লক ফাইলে লেখে।"
+  },
+  "extra-479": {
+    "command": "terraform fmt -check",
+    "description": "Terraform ফাইলের বিন্যাস মান্য বিন্যাসের সঙ্গে না মিললে ব্যর্থ হয়।"
+  },
+  "extra-480": {
+    "command": "terraform providers schema",
+    "description": "রিসোর্স ও ডেটা সোর্সের অ্যাট্রিবিউট পরীক্ষা করতে প্রোভাইডার স্কিমা প্রিন্ট করে।"
+  },
+  "extra-481": {
+    "command": "terraform graph",
+    "description": "Graphviz দিয়ে আঁকা যায় এমন নির্ভরতার গ্রাফ আউটপুট দেয়।"
+  },
+  "extra-482": {
+    "command": "terraform state list",
+    "description": "স্টেট ফাইলে বর্তমানে অনুসরণ করা রিসোর্সের ঠিকানাগুলি দেখায়।"
+  },
+  "extra-483": {
+    "command": "terraform state show",
+    "description": "একটি রিসোর্স ঠিকানার সংরক্ষিত অ্যাট্রিবিউট দেখায়।"
+  },
+  "extra-484": {
+    "command": "terraform state mv",
+    "description": "কনফিগারেশন নিরাপদে পুনর্গঠনের পরে স্টেটের ঠিকানা সরায়।"
+  },
+  "extra-485": {
+    "command": "terraform state rm",
+    "description": "প্রকৃত অবকাঠামো ধ্বংস না করেই রিসোর্স অনুসরণ বন্ধ করে।"
+  },
+  "extra-486": {
+    "command": "terraform import",
+    "description": "আগে থেকে থাকা দূরবর্তী অবজেক্টকে Terraform রিসোর্সের ঠিকানার সঙ্গে যুক্ত করে।"
+  },
+  "extra-487": {
+    "command": "terraform force-unlock",
+    "description": "কোনো অপারেশন সক্রিয় নেই নিশ্চিত করার পরেই পুরোনো স্টেট লক সরায়।"
+  },
+  "extra-488": {
+    "command": "terraform console",
+    "description": "বর্তমান কনফিগারেশনের ভিত্তিতে Terraform এক্সপ্রেশন মূল্যায়ন করে।"
+  },
+  "extra-489": {
+    "command": "terraform output -raw",
+    "description": "JSON উদ্ধৃতি-চিহ্ন ছাড়া একটি আউটপুটের মান প্রিন্ট করে।"
+  },
+  "extra-490": {
+    "command": "terraform plan -target",
+    "description": "নির্ভরতার সীমিত অংশের পরিকল্পনা করে; এটি পূর্ণ পর্যালোচনার পরিকল্পনার বিকল্প নয়।"
+  },
+  "extra-491": {
+    "command": "terraform apply -replace",
+    "description": "অপ্রচলিত taint পদ্ধতির বদলে নির্বাচিত রিসোর্স প্রতিস্থাপনের পরিকল্পনা করে।"
+  },
+  "extra-492": {
+    "command": "terraform moved block",
+    "description": "রিসোর্সের ঠিকানা পরিবর্তন ঘোষণা করে, যাতে পরিকল্পনার সময় স্টেট স্থানান্তর হয়।"
+  },
+  "extra-493": {
+    "command": "terraform check block",
+    "description": "ফলস্বরূপ অবকাঠামো সম্পর্কে কাজ থামায় না এমন অ্যাসারশন মূল্যায়ন করে।"
+  },
+  "extra-494": {
+    "command": "terraform test",
+    "description": "মক বা প্রকৃত প্রোভাইডারের আচরণ দিয়ে নিজস্ব কনফিগারেশন পরীক্ষা চালায়।"
+  },
+  "extra-495": {
+    "command": "terraform_data resource",
+    "description": "ট্রিগার ও প্রোভিশনার স্থানান্তরের জন্য জীবনচক্র-সচেতন রিসোর্স দেয়।"
+  },
+  "extra-496": {
+    "command": "terraform_data triggers_replace",
+    "description": "নির্বাচিত মান বদলালে terraform_data ইনস্ট্যান্স প্রতিস্থাপন করে।"
+  },
+  "extra-497": {
+    "command": "provider alias",
+    "description": "আলাদা অ্যাকাউন্ট বা অঞ্চলের জন্য একই প্রোভাইডারের একাধিক ইনস্ট্যান্স কনফিগার করে।"
+  },
+  "extra-498": {
+    "command": "configuration_aliases",
+    "description": "চাইল্ড মডিউল তার কলারের কাছ থেকে যে প্রোভাইডার উপনাম আশা করে তা ঘোষণা করে।"
+  },
+  "extra-499": {
+    "command": "sensitive output",
+    "description": "CLI আউটপুটে অনিচ্ছাকৃত প্রকাশ কমাতে আউটপুটকে সংবেদনশীল হিসেবে চিহ্নিত করে।"
+  },
+  "extra-500": {
+    "command": "precondition and postcondition",
+    "description": "অপারেশনের আগে অনুমান বা রিসোর্স মূল্যায়নের পরে নিশ্চয়তা যাচাই করে।"
+  }
+}

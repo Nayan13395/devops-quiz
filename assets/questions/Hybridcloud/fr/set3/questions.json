@@ -1,0 +1,302 @@
+[
+  {
+    "category": "Hybrid Cloud",
+    "set": 3,
+    "question": "Quelle ressource Kubernetes expose une application en interne au sein d'un cluster ?",
+    "options": [
+      "Service ClusterIP",
+      "Ingress",
+      "NodePort",
+      "LoadBalancer"
+    ],
+    "answer": "Service ClusterIP"
+  },
+  {
+    "category": "Hybrid Cloud",
+    "set": 3,
+    "question": "Quelle ressource Kubernetes expose une application en externe via le load balancer d'un fournisseur cloud ?",
+    "options": [
+      "Service LoadBalancer",
+      "ReplicaSet",
+      "DaemonSet",
+      "ConfigMap"
+    ],
+    "answer": "Service LoadBalancer"
+  },
+  {
+    "category": "Hybrid Cloud",
+    "set": 3,
+    "question": "Quel composant Kubernetes gère l'accès HTTP et HTTPS externe aux services ?",
+    "options": [
+      "Ingress Controller",
+      "Scheduler",
+      "kube-proxy",
+      "etcd"
+    ],
+    "answer": "Ingress Controller"
+  },
+  {
+    "category": "Hybrid Cloud",
+    "set": 3,
+    "question": "Quelle ressource Kubernetes stocke des données de configuration non sensibles ?",
+    "options": [
+      "ConfigMap",
+      "Secret",
+      "PersistentVolume",
+      "Namespace"
+    ],
+    "answer": "ConfigMap"
+  },
+  {
+    "category": "Hybrid Cloud",
+    "set": 3,
+    "question": "Quelle ressource Kubernetes stocke de manière sécurisée les mots de passe, clés d'API et certificats ?",
+    "options": [
+      "Secret",
+      "ConfigMap",
+      "Pod",
+      "Deployment"
+    ],
+    "answer": "Secret"
+  },
+  {
+    "category": "Hybrid Cloud",
+    "set": 3,
+    "question": "Quel objet Kubernetes garantit qu'un nombre spécifié de réplicas de pods est en cours d'exécution ?",
+    "options": [
+      "Deployment",
+      "Namespace",
+      "ServiceAccount",
+      "Node"
+    ],
+    "answer": "Deployment"
+  },
+  {
+    "category": "Hybrid Cloud",
+    "set": 3,
+    "question": "Quelle ressource Kubernetes exécute un pod sur chaque nœud d'un cluster ?",
+    "options": [
+      "DaemonSet",
+      "ReplicaSet",
+      "Job",
+      "CronJob"
+    ],
+    "answer": "DaemonSet"
+  },
+  {
+    "category": "Hybrid Cloud",
+    "set": 3,
+    "question": "Quelle ressource Kubernetes est utilisée pour exécuter des tâches planifiées ?",
+    "options": [
+      "CronJob",
+      "Job",
+      "StatefulSet",
+      "ReplicaSet"
+    ],
+    "answer": "CronJob"
+  },
+  {
+    "category": "Hybrid Cloud",
+    "set": 3,
+    "question": "Quel principe cloud-native améliore la portabilité des applications entre fournisseurs cloud ?",
+    "options": [
+      "Conteneurisation",
+      "Matériel dédié",
+      "API propres à un fournisseur",
+      "Déploiement manuel"
+    ],
+    "answer": "Conteneurisation"
+  },
+  {
+    "category": "Hybrid Cloud",
+    "set": 3,
+    "question": "Quel runtime de conteneurs open source est couramment utilisé avec Kubernetes ?",
+    "options": [
+      "containerd",
+      "VirtualBox",
+      "Hyper-V",
+      "VMware ESXi"
+    ],
+    "answer": "containerd"
+  },
+  {
+    "category": "Hybrid Cloud",
+    "set": 3,
+    "question": "Quel mécanisme Kubernetes limite le total de CPU et de mémoire pouvant être consommé au sein d'un namespace ?",
+    "options": [
+      "ResourceQuota",
+      "Ingress",
+      "DaemonSet",
+      "ServiceAccount"
+    ],
+    "answer": "ResourceQuota"
+  },
+  {
+    "category": "Hybrid Cloud",
+    "set": 3,
+    "question": "Quel principe GitOps considère Git comme source unique de vérité ?",
+    "options": [
+      "Configuration déclarative",
+      "Configuration manuelle",
+      "Accès SSH",
+      "Modifications directes en production"
+    ],
+    "answer": "Configuration déclarative"
+  },
+  {
+    "category": "Hybrid Cloud",
+    "set": 3,
+    "question": "Quel objet Kubernetes restreint, au niveau du réseau, les pods autorisés à communiquer entre eux ?",
+    "options": [
+      "NetworkPolicy",
+      "ResourceQuota",
+      "LimitRange",
+      "PodDisruptionBudget"
+    ],
+    "answer": "NetworkPolicy"
+  },
+  {
+    "category": "Hybrid Cloud",
+    "set": 3,
+    "question": "Quel concept réseau permet la communication entre des pods de différents clusters Kubernetes ?",
+    "options": [
+      "Multi-Cluster Networking",
+      "Redirection de port",
+      "Tunnel SSH",
+      "FTP"
+    ],
+    "answer": "Multi-Cluster Networking"
+  },
+  {
+    "category": "Hybrid Cloud",
+    "set": 3,
+    "question": "Quelle solution de stockage fournit un stockage persistant aux charges de travail Kubernetes ?",
+    "options": [
+      "Persistent Volume",
+      "ConfigMap",
+      "Namespace",
+      "ReplicaSet"
+    ],
+    "answer": "Persistent Volume"
+  },
+  {
+    "category": "Hybrid Cloud",
+    "set": 3,
+    "question": "Quel objet Kubernetes demande du stockage à un Persistent Volume ?",
+    "options": [
+      "PersistentVolumeClaim",
+      "Secret",
+      "Service",
+      "ConfigMap"
+    ],
+    "answer": "PersistentVolumeClaim"
+  },
+  {
+    "category": "Hybrid Cloud",
+    "set": 3,
+    "question": "Quelle stratégie déploie d'abord une nouvelle version de l'application auprès d'un faible pourcentage d'utilisateurs ?",
+    "options": [
+      "Déploiement Canary",
+      "Rolling Restart",
+      "Déploiement Big Bang",
+      "Migration à froid"
+    ],
+    "answer": "Déploiement Canary"
+  },
+  {
+    "category": "Hybrid Cloud",
+    "set": 3,
+    "question": "Quelle stratégie de déploiement utilise deux environnements de production identiques et bascule le trafic après validation ?",
+    "options": [
+      "Déploiement Blue-Green",
+      "Rolling Update",
+      "Déploiement Canary",
+      "Déploiement Recreate"
+    ],
+    "answer": "Déploiement Blue-Green"
+  },
+  {
+    "category": "Hybrid Cloud",
+    "set": 3,
+    "question": "Quel objet Kubernetes garantit un nombre minimal de pods disponibles lors d'interruptions volontaires, comme le drain d'un nœud ?",
+    "options": [
+      "PodDisruptionBudget",
+      "HorizontalPodAutoscaler",
+      "NetworkPolicy",
+      "PersistentVolumeClaim"
+    ],
+    "answer": "PodDisruptionBudget"
+  },
+  {
+    "category": "Hybrid Cloud",
+    "set": 3,
+    "question": "Quelle pratique DevOps valide automatiquement les modifications d'une application avant le déploiement ?",
+    "options": [
+      "Tests continus",
+      "Tests manuels",
+      "Déploiement FTP",
+      "Déploiement SSH"
+    ],
+    "answer": "Tests continus"
+  },
+  {
+    "category": "Hybrid Cloud",
+    "set": 3,
+    "question": "Quel processus intègre en continu les modifications de code dans un dépôt partagé ?",
+    "options": [
+      "Intégration continue",
+      "Reprise après sinistre",
+      "Sauvegarde",
+      "Failover"
+    ],
+    "answer": "Intégration continue"
+  },
+  {
+    "category": "Hybrid Cloud",
+    "set": 3,
+    "question": "Quel processus livre automatiquement en production les logiciels validés ?",
+    "options": [
+      "Déploiement continu",
+      "Analyse statique",
+      "Revue de code",
+      "Gestion des branches"
+    ],
+    "answer": "Déploiement continu"
+  },
+  {
+    "category": "Hybrid Cloud",
+    "set": 3,
+    "question": "Quelle métrique de supervision mesure le temps qu'une application met à répondre à une requête ?",
+    "options": [
+      "Latence",
+      "Débit",
+      "Fréquence du CPU",
+      "Taille du disque"
+    ],
+    "answer": "Latence"
+  },
+  {
+    "category": "Hybrid Cloud",
+    "set": 3,
+    "question": "Quel modèle de résilience redirige automatiquement le trafic vers des ressources saines après une panne ?",
+    "options": [
+      "Failover",
+      "Forking",
+      "Polling",
+      "Scraping"
+    ],
+    "answer": "Failover"
+  },
+  {
+    "category": "Hybrid Cloud",
+    "set": 3,
+    "question": "Quel principe de conception cloud répartit les charges de travail sur plusieurs environnements afin d'éviter un point de défaillance unique ?",
+    "options": [
+      "Haute disponibilité",
+      "Instance unique",
+      "Hôte dédié",
+      "Architecture autonome"
+    ],
+    "answer": "Haute disponibilité"
+  }
+]

@@ -1,3 +1,4 @@
+import '../l10n/game_localizations.dart';
 import 'dart:async';
 import 'dart:math' as math;
 
@@ -7,6 +8,8 @@ import 'package:shared_preferences/shared_preferences.dart';
 
 import '../services/find_words_level_service.dart';
 import '../services/game_sound_service.dart';
+import '../services/game_rewards.dart';
+import '../widgets/game_hint_purchase.dart';
 import '../services/point_service.dart';
 
 class FindWordsScreen extends StatefulWidget {
@@ -40,14 +43,15 @@ class _FindWordsScreenState extends State<FindWordsScreen> {
   int? _selectionStart;
   int? _selectionEnd;
   int? _hintCell;
-  int _hintsUsed = 0;
-  String _status = 'Drag through a word';
+  bool _purchasingHint = false;
+  bool _completing = false;
+  String Function(BuildContext) _status = (context) =>
+      gameL10n(context).gameUiDragThroughAWord;
   Timer? _hintTimer;
 
   int get _level => _puzzle.level;
   int get _remainingWords => _puzzle.words.length - _foundWords.length;
-  int get _reward =>
-      math.max(0, 50 + _puzzle.words.length * 5 - _hintsUsed * 10);
+  int get _reward => GameRewards.levelCompletion;
 
   @override
   void initState() {
@@ -85,12 +89,12 @@ class _FindWordsScreenState extends State<FindWordsScreen> {
     _selectionStart = null;
     _selectionEnd = null;
     _hintCell = null;
-    _hintsUsed = 0;
-    _status = 'Drag through each word';
+    _completing = false;
+    _status = (context) => gameL10n(context).gameUiDragThroughEachWord;
   }
 
   void _startLevel(int level) {
-    if (level < 1 || level > _completedLevels + 1) return;
+    if (_purchasingHint || level < 1 || level > _completedLevels + 1) return;
     setState(() {
       _allLevelsComplete = false;
       _prepareLevel(level);
@@ -130,12 +134,13 @@ class _FindWordsScreenState extends State<FindWordsScreen> {
   }
 
   void _beginSelection(DragStartDetails details, Size boardSize) {
+    if (_purchasingHint || _completing) return;
     final cell = _cellAt(details.localPosition, boardSize);
     if (cell == null) return;
     setState(() {
       _selectionStart = cell;
       _selectionEnd = cell;
-      _status = 'Release to select';
+      _status = (context) => gameL10n(context).gameUiReleaseToSelect;
     });
   }
 
@@ -164,7 +169,7 @@ class _FindWordsScreenState extends State<FindWordsScreen> {
       setState(() {
         _foundWords.add(word);
         _foundPaths[word] = path!;
-        _status = 'Found $word';
+        _status = (context) => gameL10n(context).gameUiFound((word).toString());
         _selectionStart = null;
         _selectionEnd = null;
       });
@@ -175,22 +180,32 @@ class _FindWordsScreenState extends State<FindWordsScreen> {
     setState(() {
       _selectionStart = null;
       _selectionEnd = null;
-      _status = word == null ? 'No word there' : 'Already found $word';
+      _status = (context) => word == null
+          ? gameL10n(context).gameUiNoWordThere
+          : gameL10n(context).gameUiAlreadyFound((word).toString());
     });
   }
 
   Future<void> _showHint() async {
+    if (_isLoading || _allLevelsComplete || _purchasingHint || _completing) {
+      return;
+    }
     final nextWord = _puzzle.words.firstWhere(
       (word) => !_foundWords.contains(word),
       orElse: () => '',
     );
     if (nextWord.isEmpty) return;
+    setState(() => _purchasingHint = true);
+    final purchased = await purchaseGameHint(context);
+    if (!mounted) return;
+    setState(() => _purchasingHint = false);
+    if (!purchased) return;
 
     _hintTimer?.cancel();
     setState(() {
       _hintCell = _puzzle.wordPaths[nextWord]!.first;
-      _hintsUsed++;
-      _status = 'Look for $nextWord';
+      _status = (context) =>
+          gameL10n(context).gameUiLookFor((nextWord).toString());
     });
     _hintTimer = Timer(const Duration(milliseconds: 1400), () {
       if (mounted) setState(() => _hintCell = null);
@@ -198,6 +213,8 @@ class _FindWordsScreenState extends State<FindWordsScreen> {
   }
 
   Future<void> _completeLevel() async {
+    if (_completing) return;
+    setState(() => _completing = true);
     final completedLevel = _level;
     final firstClear = completedLevel > _completedLevels;
     final points = _reward;
@@ -222,14 +239,20 @@ class _FindWordsScreenState extends State<FindWordsScreen> {
         icon: const Icon(Icons.emoji_events_rounded, size: 44),
         title: Text(
           completedLevel == FindWordsLevelService.totalLevels
-              ? 'All levels complete!'
-              : 'Level $completedLevel complete!',
+              ? gameL10n(context).gameUiAllLevelsComplete9597abc
+              : gameL10n(
+                  context,
+                ).gameUiLevelComplete((completedLevel).toString()),
           textAlign: TextAlign.center,
         ),
         content: Text(
           firstClear
-              ? 'You found every word and earned $points points.'
-              : 'You found every word. This level was already cleared.',
+              ? gameL10n(
+                  context,
+                ).gameUiYouFoundEveryWordAndEarnedPoints((points).toString())
+              : gameL10n(
+                  context,
+                ).gameUiYouFoundEveryWordThisLevelWasAlreadyCleared,
           textAlign: TextAlign.center,
         ),
         actions: [
@@ -244,13 +267,14 @@ class _FindWordsScreenState extends State<FindWordsScreen> {
             },
             child: Text(
               completedLevel == FindWordsLevelService.totalLevels
-                  ? 'Finish'
-                  : 'Next level',
+                  ? gameL10n(context).gameUiFinish
+                  : gameL10n(context).gameUiNextLevel,
             ),
           ),
         ],
       ),
     );
+    if (mounted) setState(() => _completing = false);
   }
 
   Color? _foundColorForCell(int cell, ColorScheme colors) {
@@ -348,29 +372,34 @@ class _FindWordsScreenState extends State<FindWordsScreen> {
     final colors = Theme.of(context).colorScheme;
     if (_isLoading) {
       return Scaffold(
-        appBar: AppBar(title: const Text('Find Words')),
+        appBar: AppBar(title: Text(gameL10n(context).gameUiFindWords)),
         body: const Center(child: CircularProgressIndicator()),
       );
     }
 
     if (_allLevelsComplete) {
       return Scaffold(
-        appBar: AppBar(title: const Text('Find Words')),
+        appBar: AppBar(title: Text(gameL10n(context).gameUiFindWords)),
         body: Center(
           child: Column(
             mainAxisSize: MainAxisSize.min,
             children: [
               Icon(Icons.emoji_events_rounded, size: 64, color: colors.primary),
               const SizedBox(height: 16),
-              const Text(
-                'All 500 levels complete!',
-                style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
+              Text(
+                gameL10n(context).gameUiAll500LevelsComplete,
+                style: const TextStyle(
+                  fontSize: 22,
+                  fontWeight: FontWeight.bold,
+                ),
               ),
               const SizedBox(height: 16),
               FilledButton.icon(
-                onPressed: _showLevelPicker,
+                onPressed: _purchasingHint || _completing
+                    ? null
+                    : _showLevelPicker,
                 icon: const Icon(Icons.grid_view_rounded),
-                label: const Text('Review levels'),
+                label: Text(gameL10n(context).gameUiReviewLevels),
               ),
             ],
           ),
@@ -379,23 +408,29 @@ class _FindWordsScreenState extends State<FindWordsScreen> {
     }
 
     final difficulty = _level <= FindWordsLevelService.easyLastLevel
-        ? 'Easy'
+        ? gameL10n(context).gameUiEasy
         : _level <= FindWordsLevelService.mediumLastLevel
-        ? 'Medium'
-        : 'Hard';
+        ? gameL10n(context).gameUiMedium
+        : gameL10n(context).gameUiHard;
 
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Find Words'),
+        title: Text(gameL10n(context).gameUiFindWords),
         actions: [
           IconButton(
-            tooltip: 'Choose level',
+            tooltip: gameL10n(context).gameUiChooseLevel,
             onPressed: _showLevelPicker,
             icon: const Icon(Icons.grid_view_rounded),
           ),
           IconButton(
-            tooltip: 'Hint',
-            onPressed: _showHint,
+            tooltip: gameL10n(context).gameUiHint20Pts,
+            onPressed:
+                _isLoading ||
+                    _allLevelsComplete ||
+                    _purchasingHint ||
+                    _completing
+                ? null
+                : _showHint,
             icon: const Icon(Icons.lightbulb_outline_rounded),
           ),
         ],
@@ -409,7 +444,10 @@ class _FindWordsScreenState extends State<FindWordsScreen> {
                 children: [
                   Expanded(
                     child: Text(
-                      'Level $_level/${FindWordsLevelService.totalLevels}',
+                      gameL10n(context).gameUiLevel(
+                        (_level).toString(),
+                        (FindWordsLevelService.totalLevels).toString(),
+                      ),
                       style: Theme.of(context).textTheme.titleMedium?.copyWith(
                         fontWeight: FontWeight.w800,
                       ),
@@ -459,7 +497,7 @@ class _FindWordsScreenState extends State<FindWordsScreen> {
                 children: [
                   Expanded(
                     child: Text(
-                      _status,
+                      _status(context),
                       maxLines: 1,
                       overflow: TextOverflow.ellipsis,
                       style: Theme.of(context).textTheme.bodySmall?.copyWith(
@@ -469,12 +507,12 @@ class _FindWordsScreenState extends State<FindWordsScreen> {
                   ),
                   const SizedBox(width: 8),
                   Text(
-                    '$_remainingWords left',
+                    gameL10n(context).gameUiLeft((_remainingWords).toString()),
                     style: Theme.of(context).textTheme.labelMedium,
                   ),
                   const SizedBox(width: 10),
                   Text(
-                    '+$_reward pts',
+                    gameL10n(context).gameUiPts((_reward).toString()),
                     style: Theme.of(context).textTheme.labelMedium?.copyWith(
                       color: colors.primary,
                       fontWeight: FontWeight.w700,

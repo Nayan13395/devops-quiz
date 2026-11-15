@@ -1,0 +1,302 @@
+[
+  {
+    "category": "Git",
+    "set": 2,
+    "question": "Qual comando cria um branch local chamado topic sem mudar para ele?",
+    "options": [
+      "git branch topic",
+      "git checkout topic",
+      "git merge topic",
+      "git switch topic"
+    ],
+    "answer": "git branch topic"
+  },
+  {
+    "category": "Git",
+    "set": 2,
+    "question": "Qual comando lista todas as branches locais?",
+    "options": [
+      "git branch",
+      "git status",
+      "git log",
+      "git show"
+    ],
+    "answer": "git branch"
+  },
+  {
+    "category": "Git",
+    "set": 2,
+    "question": "Qual comando muda para outra branch?",
+    "options": [
+      "git checkout",
+      "git merge",
+      "git push",
+      "git clone"
+    ],
+    "answer": "git checkout"
+  },
+  {
+    "category": "Git",
+    "set": 2,
+    "question": "Qual comando cria e muda para uma nova branch?",
+    "options": [
+      "git checkout -b",
+      "git branch -n",
+      "git switch",
+      "git merge"
+    ],
+    "answer": "git checkout -b"
+  },
+  {
+    "category": "Git",
+    "set": 2,
+    "question": "Qual comando faz merge de uma branch na branch atual?",
+    "options": [
+      "git merge",
+      "git join",
+      "git combine",
+      "git attach"
+    ],
+    "answer": "git merge"
+  },
+  {
+    "category": "Git",
+    "set": 2,
+    "question": "Qual comando exclui uma branch local?",
+    "options": [
+      "git branch -d",
+      "git rm branch",
+      "git delete",
+      "git remove branch"
+    ],
+    "answer": "git branch -d"
+  },
+  {
+    "category": "Git",
+    "set": 2,
+    "question": "Qual comando força a exclusão de uma branch?",
+    "options": [
+      "git branch -D",
+      "git branch -f",
+      "git rm -f",
+      "git delete -f"
+    ],
+    "answer": "git branch -D"
+  },
+  {
+    "category": "Git",
+    "set": 2,
+    "question": "Qual comando exibe todas as branches, incluindo as remotas?",
+    "options": [
+      "git branch -a",
+      "git show branches",
+      "git list branches",
+      "git status"
+    ],
+    "answer": "git branch -a"
+  },
+  {
+    "category": "Git",
+    "set": 2,
+    "question": "Qual comando salva temporariamente as alterações não commitadas?",
+    "options": [
+      "git stash",
+      "git save",
+      "git backup",
+      "git hold"
+    ],
+    "answer": "git stash"
+  },
+  {
+    "category": "Git",
+    "set": 2,
+    "question": "Qual comando lista as alterações guardadas em stash?",
+    "options": [
+      "git stash list",
+      "git stash show",
+      "git stash view",
+      "git list stash"
+    ],
+    "answer": "git stash list"
+  },
+  {
+    "category": "Git",
+    "set": 2,
+    "question": "Qual comando restaura o stash mais recente?",
+    "options": [
+      "git stash pop",
+      "git stash restore",
+      "git stash pull",
+      "git stash apply latest"
+    ],
+    "answer": "git stash pop"
+  },
+  {
+    "category": "Git",
+    "set": 2,
+    "question": "Qual comando aplica um stash sem removê-lo?",
+    "options": [
+      "git stash apply",
+      "git stash pop",
+      "git stash use",
+      "git stash merge"
+    ],
+    "answer": "git stash apply"
+  },
+  {
+    "category": "Git",
+    "set": 2,
+    "question": "Qual comando cria uma tag?",
+    "options": [
+      "git tag",
+      "git label",
+      "git mark",
+      "git version"
+    ],
+    "answer": "git tag"
+  },
+  {
+    "category": "Git",
+    "set": 2,
+    "question": "Qual comando muda de branch usando a sintaxe mais nova do Git?",
+    "options": [
+      "git switch",
+      "git branch",
+      "git merge",
+      "git pull"
+    ],
+    "answer": "git switch"
+  },
+  {
+    "category": "Git",
+    "set": 2,
+    "question": "Qual comando renomeia o branch atual para release?",
+    "options": [
+      "git branch -m release",
+      "git branch -d release",
+      "git branch -a release",
+      "git branch --contains release"
+    ],
+    "answer": "git branch -m release"
+  },
+  {
+    "category": "Git",
+    "set": 2,
+    "question": "O que acontece durante uma mesclagem por avanço rápido?",
+    "options": [
+      "Todos os commits dos dois branches são reescritos",
+      "O branch de origem é excluído automaticamente",
+      "Um novo commit raiz substitui os dois históricos",
+      "O ponteiro do branch atual avança sem criar um commit de mesclagem"
+    ],
+    "answer": "O ponteiro do branch atual avança sem criar um commit de mesclagem"
+  },
+  {
+    "category": "Git",
+    "set": 2,
+    "question": "Qual comando cria um commit de mesclagem mesmo quando feature poderia ser integrado por avanço rápido?",
+    "options": [
+      "git merge --squash feature",
+      "git merge --abort",
+      "git merge --no-ff feature",
+      "git merge --ff-only feature"
+    ],
+    "answer": "git merge --no-ff feature"
+  },
+  {
+    "category": "Git",
+    "set": 2,
+    "question": "Qual comando lista todos os branches locais que contêm o commit abc1234 em seu histórico?",
+    "options": [
+      "git show abc1234",
+      "git branch --contains abc1234",
+      "git branch --no-contains abc1234",
+      "git branch --points-at abc1234"
+    ],
+    "answer": "git branch --contains abc1234"
+  },
+  {
+    "category": "Git",
+    "set": 2,
+    "question": "Qual comando inclui arquivos não rastreados, mas não os ignorados, em um novo stash?",
+    "options": [
+      "git stash push -u",
+      "git stash push -a",
+      "git stash push --staged",
+      "git stash list"
+    ],
+    "answer": "git stash push -u"
+  },
+  {
+    "category": "Git",
+    "set": 2,
+    "question": "Qual comando exclui somente a entrada stash@{2}?",
+    "options": [
+      "git stash clear",
+      "git stash pop",
+      "git stash show 'stash@{2}'",
+      "git stash drop 'stash@{2}'"
+    ],
+    "answer": "git stash drop 'stash@{2}'"
+  },
+  {
+    "category": "Git",
+    "set": 2,
+    "question": "Qual comando cria uma tag anotada chamada v1.0 com uma mensagem?",
+    "options": [
+      "git tag -d v1.0",
+      "git tag -l v1.0",
+      "git tag -a v1.0 -m \"Release 1.0\"",
+      "git tag v1.0"
+    ],
+    "answer": "git tag -a v1.0 -m \"Release 1.0\""
+  },
+  {
+    "category": "Git",
+    "set": 2,
+    "question": "Qual comando lista tags existentes cujos nomes começam com v2?",
+    "options": [
+      "git remote -v",
+      "git tag --list 'v2*'",
+      "git branch --list 'v2*'",
+      "git log --grep='v2*'"
+    ],
+    "answer": "git tag --list 'v2*'"
+  },
+  {
+    "category": "Git",
+    "set": 2,
+    "question": "O que indica um HEAD separado?",
+    "options": [
+      "HEAD aponta diretamente para um commit em vez de um branch",
+      "O repositório não tem commits",
+      "A árvore de trabalho não contém arquivos rastreados",
+      "O repositório remoto está indisponível"
+    ],
+    "answer": "HEAD aponta diretamente para um commit em vez de um branch"
+  },
+  {
+    "category": "Git",
+    "set": 2,
+    "question": "Após resolver um conflito de mesclagem em app.py, qual comando marca esse arquivo como resolvido no índice?",
+    "options": [
+      "git diff app.py",
+      "git log -- app.py",
+      "git restore --staged app.py",
+      "git add app.py"
+    ],
+    "answer": "git add app.py"
+  },
+  {
+    "category": "Git",
+    "set": 2,
+    "question": "Qual comando tenta interromper uma mesclagem com conflitos em andamento e restaurar o estado anterior?",
+    "options": [
+      "git merge --no-commit",
+      "git merge --ff-only",
+      "git merge --abort",
+      "git merge --continue"
+    ],
+    "answer": "git merge --abort"
+  }
+]

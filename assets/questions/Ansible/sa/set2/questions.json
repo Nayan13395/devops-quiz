@@ -1,0 +1,302 @@
+[
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "प्लेबुक् मध्ये चराणां परिभाषार्थं कः कीवर्डः उपयुज्यते ?",
+    "options": [
+      "vars",
+      "variables",
+      "var",
+      "define"
+    ],
+    "answer": "vars"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "चरस्य सन्दर्भार्थं कस्य वाक्यविन्यासस्य उपयोगः भवति ?",
+    "options": [
+      "{{ variable_name }}",
+      "$(variable_name)",
+      "${variable_name}",
+      "[variable_name]"
+    ],
+    "answer": "{{ variable_name }}"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "निष्पादनस्य समये सन्देशान् प्रदर्शयितुं कस्य मॉड्यूलस्य उपयोगः भवति ?",
+    "options": [
+      "debug",
+      "print",
+      "echo",
+      "message"
+    ],
+    "answer": "debug"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "सशर्तनिष्पादनार्थं कः कीवर्डः उपयुज्यते ?",
+    "options": [
+      "when",
+      "if",
+      "condition",
+      "check"
+    ],
+    "answer": "when"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "कार्यस्य पुनरावृत्त्यर्थं कः कीवर्डः उपयुज्यते ?",
+    "options": [
+      "loop",
+      "repeat",
+      "iterate",
+      "for"
+    ],
+    "answer": "loop"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "पूर्वनिर्धारितरीत्या आवर्तनस्य वर्तमानः घटकः कस्मिन् चरे भवति?",
+    "options": [
+      "item",
+      "loopitem",
+      "current",
+      "value"
+    ],
+    "answer": "item"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "कः मॉड्यूलः Jinja2 टेम्पलेट्-भ्यः सञ्चिकाः निर्माति ?",
+    "options": [
+      "template",
+      "copy",
+      "render",
+      "jinja"
+    ],
+    "answer": "template"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "Ansible कस्य टेम्पलेटिंग् इञ्जिनस्य उपयोगं करोति ?",
+    "options": [
+      "Jinja2",
+      "Mustache",
+      "Velocity",
+      "Smarty"
+    ],
+    "answer": "Jinja2"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "कः कीवर्डः कार्यनिर्गमं चरमध्ये पञ्जीकरणं करोति?",
+    "options": [
+      "register",
+      "save",
+      "output",
+      "store"
+    ],
+    "answer": "register"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "कार्येण विफलपरिणामे प्रत्यर्पितेऽपि प्रवर्तनम् अनुवर्तयति, किन्तु वाक्यरचनादोषान् सम्पर्कदोषान् वा न निगूहति—तादृशं कीवर्ड् किम्?",
+    "options": [
+      "ignore_errors",
+      "skip_errors",
+      "continue",
+      "ignore_failures"
+    ],
+    "answer": "ignore_errors"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "केवलं सूचिते सति एव कार्याणि निष्पादयितुं कः कीवर्डः उपयुज्यते ?",
+    "options": [
+      "handlers",
+      "notify",
+      "trigger",
+      "events"
+    ],
+    "answer": "handlers"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "कः कीवर्डः हन्डलरं प्रेरयति ?",
+    "options": [
+      "notify",
+      "handler",
+      "alert",
+      "call"
+    ],
+    "answer": "notify"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "कः कीवर्डः अन्यं प्लेबुकं आयातयति ?",
+    "options": [
+      "import_playbook",
+      "include_playbook",
+      "load_playbook",
+      "playbook"
+    ],
+    "answer": "import_playbook"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "कः कीवर्डः चयनात्मकनिष्पादनार्थं कार्याणि टैग् करोति ?",
+    "options": [
+      "tags",
+      "labels",
+      "groups",
+      "filter"
+    ],
+    "answer": "tags"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "कः विकल्पः केवलं विशिष्टटैगयुक्तानि कार्याणि चालयति?",
+    "options": [
+      "--tags",
+      "--skip-tags",
+      "--limit",
+      "--list-tags"
+    ],
+    "answer": "--tags"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "परिवर्तनस्य प्रतिवेदनाय स्वनिर्धारितं निबन्धनं कार्यस्य किं कीवर्ड् परिभाषयति?",
+    "options": [
+      "changed_when",
+      "failed_when",
+      "until",
+      "when"
+    ],
+    "answer": "changed_when"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "विफलतायाः प्रतिवेदनाय स्वनिर्धारितं निबन्धनं कार्यस्य किं कीवर्ड् परिभाषयति?",
+    "options": [
+      "changed_when",
+      "retries",
+      "delay",
+      "failed_when"
+    ],
+    "answer": "failed_when"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "पुनःप्रयत्नेषु यन्निबन्धनं सत्यं भवेत् तत् कार्यस्य किं कीवर्ड् निर्दिशति?",
+    "options": [
+      "loop",
+      "notify",
+      "until",
+      "when"
+    ],
+    "answer": "until"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "वर्तमानस्य आतिथेयसङ्गणकस्य कृते नामयुक्तान् चरान् सञ्चिकातः न आनीय कार्यप्रदत्तमूल्येभ्यः साक्षात् किम् मॉड्यूल् परिभाषयति?",
+    "options": [
+      "ansible.builtin.add_host",
+      "ansible.builtin.set_fact",
+      "ansible.builtin.setup",
+      "ansible.builtin.include_vars"
+    ],
+    "answer": "ansible.builtin.set_fact"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "result इति पञ्जीकृतस्य कार्यस्य मानकनिर्गमं कः व्यञ्जकः प्राप्नोति?",
+    "options": [
+      "result.stdout",
+      "result.stderr",
+      "result.rc",
+      "result.changed"
+    ],
+    "answer": "result.stdout"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "चरः परिभाषितः अस्ति न वा इति कः Jinja2 परीक्षणप्रकारः परीक्षते?",
+    "options": [
+      "is none",
+      "is string",
+      "is sequence",
+      "is defined"
+    ],
+    "answer": "is defined"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "निर्देशान् दोषप्रबन्धनं च सामान्यरूपेण प्रयोक्तुं कार्याणि किम् Ansible कीवर्ड् समूहीकरोति?",
+    "options": [
+      "roles",
+      "handlers",
+      "block",
+      "loop"
+    ],
+    "answer": "block"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "कार्यं स्वकीयाः notify सूचनाः सामान्यतः कदा प्रेषयति?",
+    "options": [
+      "केवलं प्लेबुक्-आरम्भकाले",
+      "यदा तत् सफलतया समाप्यते परिवर्तनं च निवेदयति",
+      "यदा यदा निबन्धनवशात् तत् परित्यज्यते",
+      "यदा यदा तस्य मॉड्यूल् परिवर्तनाभावं निवेदयति"
+    ],
+    "answer": "यदा तत् सफलतया समाप्यते परिवर्तनं च निवेदयति"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "आवर्तनस्य वर्तमानघटकं धारयतः चरस्य नाम server इति कः विन्यासः परिवर्तयति?",
+    "options": [
+      "loop_control: {loop_var: server}",
+      "loop_control: {label: server}",
+      "loop_control: {index_var: server}",
+      "loop_control: {pause: 1}"
+    ],
+    "answer": "loop_control: {loop_var: server}"
+  },
+  {
+    "category": "Ansible",
+    "set": 2,
+    "question": "उच्चप्राधान्ययुक्तान् अतिरिक्तचरान् कः आदेशपङ्क्तिविकल्पः प्रयच्छति?",
+    "options": [
+      "--tags",
+      "--limit",
+      "--start-at-task",
+      "--extra-vars"
+    ],
+    "answer": "--extra-vars"
+  }
+]

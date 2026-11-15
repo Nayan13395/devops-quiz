@@ -11,8 +11,8 @@ import '../services/daily_quiz_service.dart';
 import '../services/game_sound_service.dart';
 import '../services/point_service.dart';
 import '../services/question_service.dart';
-import '../widgets/achievement_dialog.dart';
 import '../widgets/app_drawer.dart';
+import '../widgets/save_question_button.dart';
 import '../widgets/quiz/challenge_banner.dart';
 import '../widgets/quiz/navigation_buttons.dart';
 import '../widgets/quiz/option_button.dart';
@@ -133,11 +133,10 @@ class _QuizScreenState extends State<QuizScreen> {
           questions = questions.take(25).toList();
         }
       } else {
-        questions = allQuestions
-            .where((q) => q.set == widget.setNumber)
-            .toList();
-
-        questions.shuffle();
+        questions = QuestionService.buildSetQuiz(
+          allQuestions,
+          widget.setNumber,
+        );
 
         if (isChallenge) {
           questions = questions.take(widget.challenge!.questionCount).toList();
@@ -312,16 +311,10 @@ class _QuizScreenState extends State<QuizScreen> {
             totalQuestions: questions.length,
           );
 
-    final achievements = await AchievementService.checkAchievements(
+    await AchievementService.checkAchievements(
       score: score,
       totalQuestions: questions.length,
     );
-
-    for (final achievement in achievements) {
-      if (!mounted) return;
-
-      await showAchievementDialog(context, achievement);
-    }
 
     if (!mounted) return;
 
@@ -785,6 +778,12 @@ class _QuizScreenState extends State<QuizScreen> {
                     category: widget.category,
                     isChallenge: isChallenge,
                     challenge: widget.challenge,
+                  ),
+                  Align(
+                    alignment: AlignmentDirectional.centerEnd,
+                    child: SaveQuestionButton(
+                      question: questions[currentQuestion],
+                    ),
                   ),
 
                   const SizedBox(height: 14),

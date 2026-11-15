@@ -1,0 +1,302 @@
+[
+  {
+    "category": "Perl",
+    "set": 4,
+    "question": "哪种语法用于创建指向 @items 的引用？",
+    "options": [
+      "\\@items",
+      "$items",
+      "@items",
+      "%items"
+    ],
+    "answer": "\\@items"
+  },
+  {
+    "category": "Perl",
+    "set": 4,
+    "question": "哪种语法用于创建匿名数组引用？",
+    "options": [
+      "[1, 2, 3]",
+      "{1, 2, 3}",
+      "(1, 2, 3)",
+      "<1, 2, 3>"
+    ],
+    "answer": "[1, 2, 3]"
+  },
+  {
+    "category": "Perl",
+    "set": 4,
+    "question": "哪种语法用于创建匿名哈希引用？",
+    "options": [
+      "{a => 1}",
+      "[a => 1]",
+      "(a => 1)",
+      "<a => 1>"
+    ],
+    "answer": "{a => 1}"
+  },
+  {
+    "category": "Perl",
+    "set": 4,
+    "question": "调用对象方法时使用哪个运算符？",
+    "options": [
+      "->",
+      "=>",
+      "::",
+      "."
+    ],
+    "answer": "->"
+  },
+  {
+    "category": "Perl",
+    "set": 4,
+    "question": "哪个函数用于将引用与类关联？",
+    "options": [
+      "bless",
+      "create",
+      "new",
+      "object"
+    ],
+    "answer": "bless"
+  },
+  {
+    "category": "Perl",
+    "set": 4,
+    "question": "Perl 构造函数的惯用名称是什么？",
+    "options": [
+      "new",
+      "init",
+      "create",
+      "constructor"
+    ],
+    "answer": "new"
+  },
+  {
+    "category": "Perl",
+    "set": 4,
+    "question": "哪个标记包含当前包名？",
+    "options": [
+      "__PACKAGE__",
+      "__FILE__",
+      "__LINE__",
+      "__SUB__"
+    ],
+    "answer": "__PACKAGE__"
+  },
+  {
+    "category": "Perl",
+    "set": 4,
+    "question": "哪个关键字用于声明包？",
+    "options": [
+      "package",
+      "module",
+      "namespace",
+      "class"
+    ],
+    "answer": "package"
+  },
+  {
+    "category": "Perl",
+    "set": 4,
+    "question": "哪种语法用于解引用名为 $ref 的数组引用？",
+    "options": [
+      "@$ref",
+      "$$ref",
+      "%$ref",
+      "$ref[]"
+    ],
+    "answer": "@$ref"
+  },
+  {
+    "category": "Perl",
+    "set": 4,
+    "question": "哪种语法用于访问数组引用 $ref 的第一个元素？",
+    "options": [
+      "$ref->[0]",
+      "$ref->{0}",
+      "$ref[0]",
+      "$ref(0)"
+    ],
+    "answer": "$ref->[0]"
+  },
+  {
+    "category": "Perl",
+    "set": 4,
+    "question": "哪种语法用于访问哈希引用 $ref 中的某个键？",
+    "options": [
+      "$ref->{key}",
+      "$ref->[key]",
+      "$ref{key}",
+      "$ref:key"
+    ],
+    "answer": "$ref->{key}"
+  },
+  {
+    "category": "Perl",
+    "set": 4,
+    "question": "哪个函数返回引用的类型？",
+    "options": [
+      "ref",
+      "type",
+      "typeof",
+      "reftype"
+    ],
+    "answer": "ref"
+  },
+  {
+    "category": "Perl",
+    "set": 4,
+    "question": "哪条语句用于启用 say 特性？",
+    "options": [
+      "use feature 'say';",
+      "use say;",
+      "feature say;",
+      "enable say;"
+    ],
+    "answer": "use feature 'say';"
+  },
+  {
+    "category": "Perl",
+    "set": 4,
+    "question": "启用 feature 后，哪个内置函数在输出时会自动添加换行？",
+    "options": [
+      "say",
+      "print",
+      "write",
+      "echo"
+    ],
+    "answer": "say"
+  },
+  {
+    "category": "Perl",
+    "set": 4,
+    "question": "哪种语法从文件句柄 $fh 读取一行？",
+    "options": [
+      "<$fh>",
+      "fetch $fh",
+      "read $fh",
+      "get $fh"
+    ],
+    "answer": "<$fh>"
+  },
+  {
+    "category": "Perl",
+    "set": 4,
+    "question": "哪个函数将字符串作为 Perl 代码求值执行？",
+    "options": [
+      "eval",
+      "exec",
+      "system",
+      "do"
+    ],
+    "answer": "eval"
+  },
+  {
+    "category": "Perl",
+    "set": 4,
+    "question": "eval 之后，哪个变量保存错误信息？",
+    "options": [
+      "$@",
+      "$!",
+      "$?",
+      "$_"
+    ],
+    "answer": "$@"
+  },
+  {
+    "category": "Perl",
+    "set": 4,
+    "question": "哪个变量保存最近一次运行的外部命令的等待状态？",
+    "options": [
+      "$?",
+      "$!",
+      "$@",
+      "$_"
+    ],
+    "answer": "$?"
+  },
+  {
+    "category": "Perl",
+    "set": 4,
+    "question": "哪种语法用于捕获外部命令的输出？",
+    "options": [
+      "qx{command}",
+      "system command",
+      "exec command",
+      "open command"
+    ],
+    "answer": "qx{command}"
+  },
+  {
+    "category": "Perl",
+    "set": 4,
+    "question": "哪个函数运行外部命令并等待其完成？",
+    "options": [
+      "system",
+      "exec",
+      "qx",
+      "spawn"
+    ],
+    "answer": "system"
+  },
+  {
+    "category": "Perl",
+    "set": 4,
+    "question": "哪个函数用于更改当前工作目录？",
+    "options": [
+      "chdir",
+      "cd",
+      "mkdir",
+      "rmdir"
+    ],
+    "answer": "chdir"
+  },
+  {
+    "category": "Perl",
+    "set": 4,
+    "question": "哪个函数返回当前的纪元（epoch）时间？",
+    "options": [
+      "time",
+      "now",
+      "epoch",
+      "clock"
+    ],
+    "answer": "time"
+  },
+  {
+    "category": "Perl",
+    "set": 4,
+    "question": "哪个函数将纪元时间转换为本地时间的各个组成部分？",
+    "options": [
+      "localtime",
+      "gmtime",
+      "strftime",
+      "date"
+    ],
+    "answer": "localtime"
+  },
+  {
+    "category": "Perl",
+    "set": 4,
+    "question": "哪个函数使程序暂停执行指定的秒数？",
+    "options": [
+      "sleep",
+      "wait",
+      "pause",
+      "delay"
+    ],
+    "answer": "sleep"
+  },
+  {
+    "category": "Perl",
+    "set": 4,
+    "question": "哪个哈希包含环境变量？",
+    "options": [
+      "%ENV",
+      "@ENV",
+      "$ENV",
+      "ENV"
+    ],
+    "answer": "%ENV"
+  }
+]

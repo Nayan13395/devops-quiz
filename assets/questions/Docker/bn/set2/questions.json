@@ -1,0 +1,302 @@
+[
+  {
+    "category": "Docker",
+    "set": 2,
+    "question": "কোন কমান্ড Docker এর ভার্সন দেখায়?",
+    "options": [
+      "docker --version",
+      "docker run",
+      "docker ps",
+      "docker pull"
+    ],
+    "answer": "docker --version"
+  },
+  {
+    "category": "Docker",
+    "set": 2,
+    "question": "কোন কমান্ড JSON ফরম্যাটে Docker ভার্সন দেখায়?",
+    "options": [
+      "docker version --format json",
+      "docker version -j",
+      "docker version --json",
+      "docker info --json"
+    ],
+    "answer": "docker version --format json"
+  },
+  {
+    "category": "Docker",
+    "set": 2,
+    "question": "কোন কমান্ড শুধু কন্টেইনার ID গুলোর তালিকা দেখায়?",
+    "options": [
+      "docker ps -q",
+      "docker ps --ids",
+      "docker ps -i",
+      "docker ps --size"
+    ],
+    "answer": "docker ps -q"
+  },
+  {
+    "category": "Docker",
+    "set": 2,
+    "question": "কোন কমান্ড বন্ধ কন্টেইনারসহ সব কন্টেইনারের তালিকা দেখায়?",
+    "options": [
+      "docker ps -a",
+      "docker ps --size",
+      "docker containers",
+      "docker list"
+    ],
+    "answer": "docker ps -a"
+  },
+  {
+    "category": "Docker",
+    "set": 2,
+    "question": "কোন কমান্ড একটি কন্টেইনার চালু না করেই তৈরি করে?",
+    "options": [
+      "docker create",
+      "docker run",
+      "docker build",
+      "docker start"
+    ],
+    "answer": "docker create"
+  },
+  {
+    "category": "Docker",
+    "set": 2,
+    "question": "কোন কমান্ড একটি বিদ্যমান বন্ধ কন্টেইনার চালু করে?",
+    "options": [
+      "docker start",
+      "docker run",
+      "docker create",
+      "docker exec"
+    ],
+    "answer": "docker start"
+  },
+  {
+    "category": "Docker",
+    "set": 2,
+    "question": "কোন কমান্ড একটি চলমান কন্টেইনারকে সুন্দরভাবে (gracefully) বন্ধ করে?",
+    "options": [
+      "docker stop",
+      "docker kill",
+      "docker pause",
+      "docker halt"
+    ],
+    "answer": "docker stop"
+  },
+  {
+    "category": "Docker",
+    "set": 2,
+    "question": "কোন কমান্ড একটি কন্টেইনারকে জোর করে বন্ধ (kill) করে?",
+    "options": [
+      "docker kill",
+      "docker stop",
+      "docker terminate",
+      "docker end"
+    ],
+    "answer": "docker kill"
+  },
+  {
+    "category": "Docker",
+    "set": 2,
+    "question": "কোন কমান্ড একটি কন্টেইনার রিস্টার্ট করে?",
+    "options": [
+      "docker restart",
+      "docker reset",
+      "docker reload",
+      "docker rerun"
+    ],
+    "answer": "docker restart"
+  },
+  {
+    "category": "Docker",
+    "set": 2,
+    "question": "কোন কমান্ড একটি চলমান কন্টেইনারকে পজ করে?",
+    "options": [
+      "docker pause",
+      "docker stop",
+      "docker hold",
+      "docker freeze"
+    ],
+    "answer": "docker pause"
+  },
+  {
+    "category": "Docker",
+    "set": 2,
+    "question": "কোন কমান্ড একটি পজ করা কন্টেইনার পুনরায় চালু করে?",
+    "options": [
+      "docker unpause",
+      "docker resume",
+      "docker start",
+      "docker restart"
+    ],
+    "answer": "docker unpause"
+  },
+  {
+    "category": "Docker",
+    "set": 2,
+    "question": "কোন কমান্ড একটি কন্টেইনার মুছে ফেলে?",
+    "options": [
+      "docker rm",
+      "docker stop",
+      "docker delete",
+      "docker clear"
+    ],
+    "answer": "docker rm"
+  },
+  {
+    "category": "Docker",
+    "set": 2,
+    "question": "কোন কমান্ড একটি Docker ইমেজ মুছে ফেলে?",
+    "options": [
+      "docker rmi",
+      "docker rm",
+      "docker erase",
+      "docker clean"
+    ],
+    "answer": "docker rmi"
+  },
+  {
+    "category": "Docker",
+    "set": 2,
+    "question": "কোন কমান্ড একটি ইমেজের হিস্ট্রি দেখায়?",
+    "options": [
+      "docker history",
+      "docker layers",
+      "docker image show",
+      "docker inspect"
+    ],
+    "answer": "docker history"
+  },
+  {
+    "category": "Docker",
+    "set": 2,
+    "question": "পরিবেশ ভেরিয়েবল APP_ENV-কে prod করে কোন docker run বিকল্প?",
+    "options": [
+      "--name APP_ENV=prod",
+      "--hostname APP_ENV=prod",
+      "-e APP_ENV=prod",
+      "--label APP_ENV=prod"
+    ],
+    "answer": "-e APP_ENV=prod"
+  },
+  {
+    "category": "Docker",
+    "set": 2,
+    "question": "কন্টেইনারের মূল ফাইল সিস্টেম কেবল-পাঠযোগ্য করে কোন বিকল্প?",
+    "options": [
+      "--init",
+      "--read-only",
+      "--privileged",
+      "--tty"
+    ],
+    "answer": "--read-only"
+  },
+  {
+    "category": "Docker",
+    "set": 2,
+    "question": "অশূন্য প্রস্থানের পরে কন্টেইনার আবার চালায়, কিন্তু সফল প্রস্থানে নয়—কোন নীতি?",
+    "options": [
+      "on-failure",
+      "always",
+      "unless-stopped",
+      "no"
+    ],
+    "answer": "on-failure"
+  },
+  {
+    "category": "Docker",
+    "set": 2,
+    "question": "নতুন কন্টেইনারের মেমরি 512 MiB-তে সীমিত করে কোন কমান্ড?",
+    "options": [
+      "docker run --memory-reservation 512m alpine",
+      "docker run --memory-swap 512m alpine",
+      "docker run --shm-size 512m alpine",
+      "docker run --memory 512m alpine"
+    ],
+    "answer": "docker run --memory 512m alpine"
+  },
+  {
+    "category": "Docker",
+    "set": 2,
+    "question": "কন্টেইনারের CPU কোটা অর্ধেক CPU-র সমান করে কোন বিকল্প?",
+    "options": [
+      "--cpuset-cpus 0",
+      "--cpu-period 50000",
+      "--cpus 0.5",
+      "--cpu-shares 512"
+    ],
+    "answer": "--cpus 0.5"
+  },
+  {
+    "category": "Docker",
+    "set": 2,
+    "question": "হোস্টের নির্দিষ্ট ডিরেক্টরি সরাসরি কন্টেইনারে দেখায় কোন মাউন্ট ধরন?",
+    "options": [
+      "tmpfs mount",
+      "Bind mount",
+      "Named volume",
+      "অনামা ভলিউম"
+    ],
+    "answer": "Bind mount"
+  },
+  {
+    "category": "Docker",
+    "set": 2,
+    "question": "Linux-এ সাধারণ স্থায়ী ডিস্ক ফাইলের বদলে হোস্ট মেমরিতে ফাইল রাখে কোন মাউন্ট ধরন?",
+    "options": [
+      "tmpfs mount",
+      "Bind mount",
+      "Named volume",
+      "অনামা ভলিউম"
+    ],
+    "answer": "tmpfs mount"
+  },
+  {
+    "category": "Docker",
+    "set": 2,
+    "question": "বিদ্যমান web কন্টেইনারকে backend নেটওয়ার্কে যুক্ত করে কোন কমান্ড?",
+    "options": [
+      "docker network disconnect backend web",
+      "docker network inspect backend web",
+      "docker network rm backend web",
+      "docker network connect backend web"
+    ],
+    "answer": "docker network connect backend web"
+  },
+  {
+    "category": "Docker",
+    "set": 2,
+    "question": "ব্যবহারকারীর বানানো ব্রিজকে Docker-এর ডিফল্ট ব্রিজ থেকে কোন সুবিধা আলাদা করে?",
+    "options": [
+      "সেটিং ছাড়াই একাধিক হোস্টের স্বয়ংক্রিয় রাউটিং",
+      "সব ঘোষিত পোর্টের স্বয়ংক্রিয় প্রকাশ",
+      "কন্টেইনারের মধ্যে নাম দিয়ে স্বয়ংক্রিয় DNS সমাধান",
+      "সব কন্টেইনার ট্রাফিকের স্বয়ংক্রিয় এনক্রিপশন"
+    ],
+    "answer": "কন্টেইনারের মধ্যে নাম দিয়ে স্বয়ংক্রিয় DNS সমাধান"
+  },
+  {
+    "category": "Docker",
+    "set": 2,
+    "question": "কন্টেইনারের নাম oldweb থেকে newweb করে কোন কমান্ড?",
+    "options": [
+      "docker network connect oldweb newweb",
+      "docker rename oldweb newweb",
+      "docker tag oldweb newweb",
+      "docker cp oldweb newweb"
+    ],
+    "answer": "docker rename oldweb newweb"
+  },
+  {
+    "category": "Docker",
+    "set": 2,
+    "question": "web কন্টেইনার থামা পর্যন্ত অপেক্ষা করে প্রস্থান কোড দেখায় কোন কমান্ড?",
+    "options": [
+      "docker wait web",
+      "docker logs web",
+      "docker top web",
+      "docker attach web"
+    ],
+    "answer": "docker wait web"
+  }
+]

@@ -1,0 +1,302 @@
+[
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "எந்த component pods-ஐ nodes-இல் திட்டமிட்டு ஒதுக்குகிறது?",
+    "options": [
+      "kube-scheduler",
+      "kubelet",
+      "etcd",
+      "kube-proxy"
+    ],
+    "answer": "kube-scheduler"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "எந்த component ஒவ்வொரு node-இலும் இயங்குகிறது?",
+    "options": [
+      "kubelet",
+      "etcd",
+      "kube-apiserver",
+      "controller-manager"
+    ],
+    "answer": "kubelet"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "எந்த component control plane-இன் முன்பகுதியாக (front-end) செயல்படுகிறது?",
+    "options": [
+      "kube-apiserver",
+      "kubelet",
+      "etcd",
+      "kube-proxy"
+    ],
+    "answer": "kube-apiserver"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "எந்த component cluster நிலையை சேமிக்கிறது?",
+    "options": [
+      "etcd",
+      "kubelet",
+      "CoreDNS",
+      "Ingress"
+    ],
+    "answer": "etcd"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "எந்த component nodes-இல் நெட்வொர்க் விதிகளை நிர்வகிக்கிறது?",
+    "options": [
+      "kube-proxy",
+      "kubelet",
+      "etcd",
+      "Scheduler"
+    ],
+    "answer": "kube-proxy"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "Kubernetes-இல் பொதுவாகப் பயன்படுத்தப்படும் DNS சேவை எது?",
+    "options": [
+      "CoreDNS",
+      "Bind",
+      "Route53",
+      "Consul"
+    ],
+    "answer": "CoreDNS"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "Kubernetes-இல் பயன்படுத்தக்கூடிய மிகச்சிறிய அலகு எந்த object?",
+    "options": [
+      "Pod",
+      "Cluster",
+      "Node",
+      "Service"
+    ],
+    "answer": "Pod"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "எந்த object நிலையற்ற (stateless) பயன்பாடுகளை நிர்வகிக்கிறது?",
+    "options": [
+      "Deployment",
+      "ConfigMap",
+      "Secret",
+      "Namespace"
+    ],
+    "answer": "Deployment"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "நிலை சேமிக்கும் பயன்பாடுகளுக்கு நிலையான Pod அடையாளங்களையும் வரிசையான நிறுவலையும் வழங்கும் பணிச்சுமை எது?",
+    "options": [
+      "StatefulSet",
+      "Deployment",
+      "ReplicaSet",
+      "DaemonSet"
+    ],
+    "answer": "StatefulSet"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "குறிப்பிட்ட எண்ணிக்கையிலான pod replicas இயங்குவதை எந்த object உறுதி செய்கிறது?",
+    "options": [
+      "ReplicaSet",
+      "Service",
+      "ConfigMap",
+      "Namespace"
+    ],
+    "answer": "ReplicaSet"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "pods-ஐ நெட்வொர்க் போக்குவரத்துக்கு வெளிப்படுத்தும் object எது?",
+    "options": [
+      "Service",
+      "Node",
+      "ReplicaSet",
+      "Volume"
+    ],
+    "answer": "Service"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "services-க்கான வெளிப்புற அணுகலை எந்த object நிர்வகிக்கிறது?",
+    "options": [
+      "Ingress",
+      "Pod",
+      "ReplicaSet",
+      "Secret"
+    ],
+    "answer": "Ingress"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "கட்டமைப்பு தரவை எந்த object சேமிக்கிறது?",
+    "options": [
+      "ConfigMap",
+      "Deployment",
+      "Ingress",
+      "Node"
+    ],
+    "answer": "ConfigMap"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "கடவுச்சொற்கள் போன்ற முக்கியமான தகவல்களை எந்த object சேமிக்கிறது?",
+    "options": [
+      "Secret",
+      "ConfigMap",
+      "Service",
+      "Namespace"
+    ],
+    "answer": "Secret"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "pods-க்கு நிலையான சேமிப்பகத்தை வழங்கும் object எது?",
+    "options": [
+      "PersistentVolume",
+      "ReplicaSet",
+      "Namespace",
+      "Service"
+    ],
+    "answer": "PersistentVolume"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "கன்டெய்னர் Service போக்குவரத்தைப் பெறத் தயாரா எனத் தீர்மானிக்கும் சோதனை எது?",
+    "options": [
+      "TCP இணைப்பை உயிர்ப்புடன் வைத்திருக்கும் சோதனை",
+      "Readiness probe",
+      "Liveness probe",
+      "தொடக்கச் சோதனை"
+    ],
+    "answer": "Readiness probe"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "இயங்குநிலைச் சோதனை நிர்ணயித்த வரம்பைவிட அதிகமுறை தோல்வியடைந்தால் என்ன நடக்கலாம்?",
+    "options": [
+      "kubelet அந்தக் கன்டெய்னரை அதன் மறுதொடக்கக் கொள்கைப்படி மீண்டும் தொடங்கும்",
+      "ஒதுக்கி ஒவ்வொரு Podஐயும் புதிய முனைக்கு நகர்த்தும்",
+      "API சேவையகம் Deploymentஐ நீக்கும்",
+      "Service ஒரு ExternalName Service ஆகும்"
+    ],
+    "answer": "kubelet அந்தக் கன்டெய்னரை அதன் மறுதொடக்கக் கொள்கைப்படி மீண்டும் தொடங்கும்"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "பயன்பாடு இன்னும் தொடங்கிக்கொண்டிருக்கும்போது தொடக்கச் சோதனை என்ன செய்கிறது?",
+    "options": [
+      "கன்டெய்னரின் அனைத்து வள வரம்புகளையும் முடக்கும்",
+      "படிமம் பெறப்படுவதைத் தடுக்கும்",
+      "பிரத்யேக கட்டுப்பாட்டுத் தள முனையை ஒதுக்கிவைக்கும்",
+      "தொடக்கச் சோதனை வெற்றிபெறும்வரை இயங்குநிலை மற்றும் தயார்நிலைச் சோதனைகளைத் தள்ளிவைக்கும்"
+    ],
+    "answer": "தொடக்கச் சோதனை வெற்றிபெறும்வரை இயங்குநிலை மற்றும் தயார்நிலைச் சோதனைகளைத் தள்ளிவைக்கும்"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "Podஇல் உள்ள சாதாரண init கன்டெய்னர்களைப் பற்றி எது உண்மை?",
+    "options": [
+      "அவை Service போர்ட்டை வெளிப்படுத்த வேண்டும்",
+      "அவை எப்போதும் தனித்தனி முனைகளில் இயங்கும்",
+      "பயன்பாட்டு கன்டெய்னர்கள் தொடங்கும்முன் அவை வரிசையாக முடிவடையும்",
+      "பயன்பாட்டு கன்டெய்னர்கள் முடிந்த பிறகே அவை அனைத்தும் இயங்கும்"
+    ],
+    "answer": "பயன்பாட்டு கன்டெய்னர்கள் தொடங்கும்முன் அவை வரிசையாக முடிவடையும்"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "ஒரே Podஇன் கன்டெய்னர்கள் வழக்கமாக எவற்றைப் பகிர்கின்றன?",
+    "options": [
+      "ஒவ்வொரு கன்டெய்னருக்கும் தனி Service IP",
+      "பிணையப் பெயர்வெளியும் Pod IP முகவரியும்",
+      "எழுதக்கூடிய வேர்க் கோப்பமைப்பு",
+      "ஒவ்வொரு கன்டெய்னருக்கும் தனி முனை"
+    ],
+    "answer": "பிணையப் பெயர்வெளியும் Pod IP முகவரியும்"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "கன்டெய்னருக்கான இடத்தை ஒதுக்கி தேர்ந்தெடுக்கும்போது பயன்படுத்தும் வள அளவை அறிவிக்கும் புலம் எது?",
+    "options": [
+      "resources.requests",
+      "resources.limits",
+      "securityContext",
+      "imagePullPolicy"
+    ],
+    "answer": "resources.requests"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "கன்டெய்னரின் 250m CPU கோரிக்கை எதைக் குறிக்கிறது?",
+    "options": [
+      "இரண்டரை CPU",
+      "இருபத்தைந்து CPU",
+      "இருநூற்று ஐம்பது CPU",
+      "ஒரு CPUவின் கால்பங்கு"
+    ],
+    "answer": "ஒரு CPUவின் கால்பங்கு"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "கன்டெய்னர் விதிக்கப்பட்ட நினைவக வரம்பை மீறுவதன் வழக்கமான விளைவு என்ன?",
+    "options": [
+      "அதன் படிமம் அதிக நினைவகத்துடன் மீண்டும் உருவாகும்",
+      "அதன் Service போர்ட் தானாக மாறும்",
+      "நினைவகம் தீர்ந்துவிட்டதைக் கையாளும் அமைப்பு அதை முடிக்கலாம்",
+      "அதன் நினைவகக் கோரிக்கை தானாக இரட்டிப்பாகும்"
+    ],
+    "answer": "நினைவகம் தீர்ந்துவிட்டதைக் கையாளும் அமைப்பு அதை முடிக்கலாம்"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "இலக்கு முனையில் குறிப்பிட்ட எல்லா முனை லேபிள்களும் பொருந்த வேண்டும் எனக் கட்டாயப்படுத்தும் Pod புலம் எது?",
+    "options": [
+      "dnsPolicy",
+      "nodeSelector",
+      "serviceAccountName",
+      "hostAliases"
+    ],
+    "answer": "nodeSelector"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 3,
+    "question": "முனையின் taintக்கு toleration சேர்த்தால் Pod அந்த முனையில் ஒதுக்கப்படுவது உறுதியா?",
+    "options": [
+      "இல்லை; பிற ஒதுக்கீட்டுக் கட்டுப்பாடுகளும் கிடைக்கும் வளங்களும் இன்னும் பொருந்தும்",
+      "ஆம்; அது அனைத்து வளக் கட்டுப்பாடுகளையும் மீறும்",
+      "ஆம்; அது அனைத்து முனைச் சார்பு விதிகளையும் புறக்கணிக்கும்",
+      "இல்லை; tolerations எப்போதும் taint உள்ள முனையில் ஒதுக்குவதைத் தடுக்கும்"
+    ],
+    "answer": "இல்லை; பிற ஒதுக்கீட்டுக் கட்டுப்பாடுகளும் கிடைக்கும் வளங்களும் இன்னும் பொருந்தும்"
+  }
+]

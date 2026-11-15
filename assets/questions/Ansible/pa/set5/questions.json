@@ -1,0 +1,302 @@
+[
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "ਟਾਸਕ-ਪੱਧਰ ਦੀ ਵੱਖਰੀ ਸੈਟਿੰਗ ਨਾ ਹੋਵੇ ਤਾਂ ਚੈੱਕ ਮੋਡ ਵਿੱਚ ਉਸ ਮੋਡੀਊਲ ਦਾ ਕੀ ਹੁੰਦਾ ਹੈ ਜੋ ਚੈੱਕ ਮੋਡ ਦਾ ਸਮਰਥਨ ਨਹੀਂ ਕਰਦਾ?",
+    "options": [
+      "ਮੋਡੀਊਲ ਹਮੇਸ਼ਾ ਆਪਣੀਆਂ ਆਮ ਤਬਦੀਲੀਆਂ ਕਰਦਾ ਹੈ",
+      "ਮੋਡੀਊਲ ਆਪਣੇ ਆਪ localhost ਉੱਤੇ ਚੱਲਦਾ ਹੈ",
+      "ਚੈੱਕ ਮੋਡ ਦਾ ਸਮਰਥਨ ਕਰਨ ਤੱਕ ਮੋਡੀਊਲ ਨੂੰ ਮੁੜ ਚਲਾਉਣ ਦੀ ਕੋਸ਼ਿਸ਼ ਹੁੰਦੀ ਹੈ",
+      "ਤਬਦੀਲੀਆਂ ਕਰਨ ਦੀ ਬਜਾਏ ਮੋਡੀਊਲ ਛੱਡ ਦਿੱਤਾ ਜਾਂਦਾ ਹੈ"
+    ],
+    "answer": "ਤਬਦੀਲੀਆਂ ਕਰਨ ਦੀ ਬਜਾਏ ਮੋਡੀਊਲ ਛੱਡ ਦਿੱਤਾ ਜਾਂਦਾ ਹੈ"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "ਪਲੇਬੁੱਕ --check ਨਾਲ ਚਲਾਈ ਹੋਵੇ ਤਾਂ ਵੀ ਅਸਲ ਤਬਦੀਲੀਆਂ ਕਰਨ ਦੇਣ ਵਾਲੀ ਟਾਸਕ ਸੈਟਿੰਗ ਕਿਹੜੀ ਹੈ?",
+    "options": [
+      "changed_when: false",
+      "ignore_errors: true",
+      "check_mode: false",
+      "diff: false"
+    ],
+    "answer": "check_mode: false"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "Ansible ਦੀ ਕਿਹੜੀ meta ਕਾਰਵਾਈ ਪਹਿਲਾਂ ਸੂਚਿਤ ਹੈਂਡਲਰ ਤੁਰੰਤ ਚਲਾਉਂਦੀ ਹੈ?",
+    "options": [
+      "reset_connection",
+      "flush_handlers",
+      "clear_facts",
+      "end_play"
+    ],
+    "answer": "flush_handlers"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "ਜੇ ਤਬਦੀਲੀ ਕਰਨ ਵਾਲੇ ਦੋ ਟਾਸਕ ਇੱਕੋ ਹੈਂਡਲਰ ਨੂੰ ਉਸਦੇ ਬਕਾਇਆ ਚੱਲਣ ਤੋਂ ਪਹਿਲਾਂ ਸੂਚਿਤ ਕਰਨ, ਤਾਂ ਉਸ ਵੇਲੇ ਹੈਂਡਲਰ ਆਮ ਤੌਰ 'ਤੇ ਕਿੰਨੀ ਵਾਰ ਚੱਲਦਾ ਹੈ?",
+    "options": [
+      "ਇੱਕ ਵਾਰ",
+      "ਦੋ ਵਾਰ",
+      "ਹਰੇਕ ਇਨਵੈਂਟਰੀ ਸਮੂਹ ਲਈ ਇੱਕ ਵਾਰ",
+      "ਜ਼ੀਰੋ ਵਾਰ, ਕਿਉਂਕਿ ਸੂਚਨਾਵਾਂ ਟਕਰਾਉਂਦੀਆਂ ਹਨ"
+    ],
+    "answer": "ਇੱਕ ਵਾਰ"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "ਇੱਕੋ ਵੇਲੇ ਚਲਾਏ ਜਾਣ ਵਾਲੇ ਸੂਚਿਤ ਹੈਂਡਲਰਾਂ ਦਾ ਕ੍ਰਮ ਕਿਸ ਨਾਲ ਤੈਅ ਹੁੰਦਾ ਹੈ?",
+    "options": [
+      "ਉਨ੍ਹਾਂ ਦੇ ਨਾਮਾਂ ਦਾ ਅੱਖਰਕ੍ਰਮ",
+      "notify ਸੂਚੀ ਵਿੱਚ ਨਾਮਾਂ ਦਾ ਕ੍ਰਮ",
+      "ਪ੍ਰਬੰਧਿਤ ਹੋਸਟਾਂ ਦੇ ਜੁੜਨ ਦਾ ਕ੍ਰਮ",
+      "handlers ਭਾਗ ਵਿੱਚ ਉਨ੍ਹਾਂ ਦੀ ਪਰਿਭਾਸ਼ਾ ਦਾ ਕ੍ਰਮ"
+    ],
+    "answer": "handlers ਭਾਗ ਵਿੱਚ ਉਨ੍ਹਾਂ ਦੀ ਪਰਿਭਾਸ਼ਾ ਦਾ ਕ੍ਰਮ"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "ਕਿਹੜੀ ਅਸਫਲਤਾ ਆਮ ਤੌਰ 'ਤੇ ਬਲਾਕ ਦੇ rescue ਟਾਸਕ ਸ਼ੁਰੂ ਕਰਦੀ ਹੈ?",
+    "options": [
+      "ਪਲੇਬੁੱਕ ਵਿੱਚ ਟਾਸਕ ਦੀ ਅਵੈਧ ਪਰਿਭਾਸ਼ਾ ਹੋਵੇ",
+      "YAML ਦਸਤਾਵੇਜ਼ ਪਾਰਸ ਨਾ ਹੋ ਸਕੇ",
+      "ਬਲਾਕ ਦਾ ਕੋਈ ਟਾਸਕ ਅਸਫਲ ਨਤੀਜਾ ਦੇਵੇ",
+      "ਟਾਸਕ ਚੱਲਣ ਤੋਂ ਪਹਿਲਾਂ ਹੀ ਹੋਸਟ ਨਾਲ ਸੰਪਰਕ ਅਸੰਭਵ ਹੋ ਜਾਵੇ"
+    ],
+    "answer": "ਬਲਾਕ ਦਾ ਕੋਈ ਟਾਸਕ ਅਸਫਲ ਨਤੀਜਾ ਦੇਵੇ"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "ਆਮ ਟਾਸਕ ਵਿੱਚ ignore_errors ਕਿਹੜੀ ਗਲਤੀ ਨਹੀਂ ਦਬਾਉਂਦਾ?",
+    "options": [
+      "failed_when ਸ਼ਰਤ ਦਾ ਸੱਚ ਹੋਣਾ",
+      "ਅਪਰਿਭਾਸ਼ਿਤ ਵੇਰੀਏਬਲ ਦੀ ਗਲਤੀ",
+      "ਕਮਾਂਡ ਵੱਲੋਂ ਦਿੱਤੀ ਗੈਰ-ਜ਼ੀਰੋ ਨਿਕਾਸ ਸਥਿਤੀ",
+      "ਸਪਸ਼ਟ ਤੌਰ 'ਤੇ ਅਸਫਲ ਚਿੰਨ੍ਹਿਤ ਮੋਡੀਊਲ ਨਤੀਜਾ"
+    ],
+    "answer": "ਅਪਰਿਭਾਸ਼ਿਤ ਵੇਰੀਏਬਲ ਦੀ ਗਲਤੀ"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "ਨਾ ਸੰਭਾਲੀ ਗਈ ਟਾਸਕ ਅਸਫਲਤਾ 'ਤੇ ਮੌਜੂਦਾ ਬੈਚ ਦਾ ਉਹ ਟਾਸਕ ਮੁੱਕਣ ਮਗਰੋਂ ਸਾਰੇ ਹੋਸਟਾਂ ਉੱਤੇ ਪਲੇ ਰੋਕਣ ਵਾਲਾ ਕੀਵਰਡ ਕਿਹੜਾ ਹੈ?",
+    "options": [
+      "any_errors_fatal",
+      "ignore_unreachable",
+      "max_fail_percentage: 100",
+      "force_handlers"
+    ],
+    "answer": "any_errors_fatal"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "ਪਹੁੰਚਯੋਗ ਹੋਸਟ ਉੱਤੇ ਬਾਅਦ ਦਾ ਟਾਸਕ ਅਸਫਲ ਹੋਵੇ ਤਾਂ force_handlers ਦਾ ਕੀ ਅਸਰ ਹੁੰਦਾ ਹੈ?",
+    "options": [
+      "ਹਰੇਕ ਪਰਿਭਾਸ਼ਿਤ ਹੈਂਡਲਰ ਬਿਨਾਂ ਸੂਚਨਾ ਵੀ ਚੱਲਦਾ ਹੈ",
+      "ਸਾਰੇ ਅਸਫਲ ਟਾਸਕ ਆਪਣੇ ਆਪ ਮੁੜ ਅਜ਼ਮਾਏ ਜਾਂਦੇ ਹਨ",
+      "ਹੈਂਡਲਰ ਸਾਰੇ ਆਮ ਟਾਸਕਾਂ ਤੋਂ ਪਹਿਲਾਂ ਚੱਲਦੇ ਹਨ",
+      "ਪਹਿਲਾਂ ਸੂਚਿਤ ਹੈਂਡਲਰ ਹਾਲੇ ਵੀ ਉਸ ਹੋਸਟ ਉੱਤੇ ਚੱਲ ਸਕਦੇ ਹਨ"
+    ],
+    "answer": "ਪਹਿਲਾਂ ਸੂਚਿਤ ਹੈਂਡਲਰ ਹਾਲੇ ਵੀ ਉਸ ਹੋਸਟ ਉੱਤੇ ਚੱਲ ਸਕਦੇ ਹਨ"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "ਸੰਵੇਦਨਸ਼ੀਲ ਟਾਸਕ ਆਰਗੂਮੈਂਟ ਅਤੇ ਨਤੀਜਿਆਂ ਦੀ ਆਮ ਲੌਗਿੰਗ ਕਿਹੜੀ ਸੈਟਿੰਗ ਰੋਕਦੀ ਹੈ?",
+    "options": [
+      "check_mode: true",
+      "changed_when: false",
+      "no_log: true",
+      "diff: true"
+    ],
+    "answer": "no_log: true"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "--diff ਚਾਲੂ ਹੋਣ 'ਤੇ ਵੀ ਫਾਈਲ ਸਮੱਗਰੀ ਦੇ ਫਰਕ ਦਿਖਾਉਣ ਤੋਂ ਕਿਹੜੀ ਟਾਸਕ ਸੈਟਿੰਗ ਰੋਕਦੀ ਹੈ?",
+    "options": [
+      "ignore_errors: true",
+      "diff: false",
+      "no_log: false",
+      "check_mode: false"
+    ],
+    "answer": "diff: false"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "ਕਿਹੜੀ ਡਿਕਸ਼ਨਰੀ ਦੂਜੇ ਇਨਵੈਂਟਰੀ ਹੋਸਟ ਨਾਲ ਜੁੜੇ ਵੇਰੀਏਬਲਾਂ ਤੱਕ ਪਹੁੰਚ ਦਿੰਦੀ ਹੈ?",
+    "options": [
+      "hostvars",
+      "ansible_facts",
+      "environment",
+      "ansible_loop"
+    ],
+    "answer": "hostvars"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "ਕਿਹੜੇ ਵਿਸ਼ੇਸ਼ ਵੇਰੀਏਬਲ ਵਿੱਚ ਮੌਜੂਦਾ ਹੋਸਟ ਦਾ ਇਨਵੈਂਟਰੀ ਨਾਮ ਹੁੰਦਾ ਹੈ?",
+    "options": [
+      "ansible_host",
+      "ansible_user",
+      "ansible_playbook_python",
+      "inventory_hostname"
+    ],
+    "answer": "inventory_hostname"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "ਹੋਸਟ ਸਮੂਹ ਦੇ ਸਾਂਝੇ ਵੇਰੀਏਬਲਾਂ ਲਈ ਆਮ ਤੌਰ 'ਤੇ ਇਨਵੈਂਟਰੀ ਦੇ ਨਾਲ ਕਿਹੜੀ ਡਾਇਰੈਕਟਰੀ ਵਰਤੀ ਜਾਂਦੀ ਹੈ?",
+    "options": [
+      "roles",
+      "collections",
+      "group_vars",
+      "host_vars"
+    ],
+    "answer": "group_vars"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "ansible.builtin.file ਲੁੱਕਅੱਪ ਮੂਲ ਰੂਪ ਵਿੱਚ ਫਾਈਲ ਕਿੱਥੇ ਪੜ੍ਹਦਾ ਹੈ?",
+    "options": [
+      "become_user ਵੱਲੋਂ ਨਾਮ ਦਿੱਤੇ ਹੋਸਟ ਉੱਤੇ",
+      "ਕੰਟਰੋਲ ਨੋਡ ਉੱਤੇ",
+      "ਹਰੇਕ ਪ੍ਰਬੰਧਿਤ ਹੋਸਟ ਉੱਤੇ",
+      "ਪਲੇ ਦੇ ਪਹਿਲੇ ਹੋਸਟ ਉੱਤੇ"
+    ],
+    "answer": "ਕੰਟਰੋਲ ਨੋਡ ਉੱਤੇ"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "YAML ਸਟ੍ਰਿੰਗ ਨੂੰ Ansible ਡਾਟਾ ਢਾਂਚੇ ਵਿੱਚ ਬਦਲਣ ਵਾਲਾ ਫਿਲਟਰ ਕਿਹੜਾ ਹੈ?",
+    "options": [
+      "from_yaml",
+      "to_yaml",
+      "to_json",
+      "dict2items"
+    ],
+    "answer": "from_yaml"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "ਡਿਕਸ਼ਨਰੀ ਨੂੰ ਕੁੰਜੀ/ਮੁੱਲ ਡਿਕਸ਼ਨਰੀਆਂ ਦੀ ਸੂਚੀ ਵਿੱਚ ਕਿਹੜਾ ਫਿਲਟਰ ਬਦਲਦਾ ਹੈ?",
+    "options": [
+      "items2dict",
+      "flatten",
+      "zip",
+      "dict2items"
+    ],
+    "answer": "dict2items"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "ਸੂਚੀ ਤੋਂ ਦੁਹਰਾਈਆਂ ਇਕਾਈਆਂ ਹਟਾਉਣ ਵਾਲਾ ਫਿਲਟਰ ਕਿਹੜਾ ਹੈ?",
+    "options": [
+      "reverse",
+      "flatten",
+      "unique",
+      "sort"
+    ],
+    "answer": "unique"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "ਕਿਹੜਾ ਮੋਡੀਊਲ ਐਕਸਪ੍ਰੈਸ਼ਨ ਜਾਂਚਦਾ ਹੈ ਅਤੇ ਨਿਰਧਾਰਤ ਪੁਸ਼ਟੀ ਦੀਆਂ ਸ਼ਰਤਾਂ ਪੂਰੀਆਂ ਨਾ ਹੋਣ 'ਤੇ ਅਸਫਲ ਹੁੰਦਾ ਹੈ?",
+    "options": [
+      "ansible.builtin.set_fact",
+      "ansible.builtin.assert",
+      "ansible.builtin.debug",
+      "ansible.builtin.pause"
+    ],
+    "answer": "ansible.builtin.assert"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "ਰੈਗੂਲਰ ਐਕਸਪ੍ਰੈਸ਼ਨ ਰਾਹੀਂ ਟੈਕਸਟ ਫਾਈਲ ਦੀ ਖਾਸ ਲਾਈਨ ਸੰਭਾਲਣ ਵਾਲਾ ਮੋਡੀਊਲ ਕਿਹੜਾ ਹੈ?",
+    "options": [
+      "ansible.builtin.lineinfile",
+      "ansible.builtin.blockinfile",
+      "ansible.builtin.copy",
+      "ansible.builtin.slurp"
+    ],
+    "answer": "ansible.builtin.lineinfile"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "URL ਲਈ ਬੇਨਤੀ ਭੇਜ ਕੇ ਉਮੀਦ ਕੀਤਾ HTTP ਸਥਿਤੀ ਕੋਡ ਜਾਂਚ ਸਕਣ ਵਾਲਾ ਮੋਡੀਊਲ ਕਿਹੜਾ ਹੈ?",
+    "options": [
+      "ansible.builtin.get_url",
+      "ansible.builtin.fetch",
+      "ansible.builtin.wait_for",
+      "ansible.builtin.uri"
+    ],
+    "answer": "ansible.builtin.uri"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "TCP ਪੋਰਟ ਦੀ ਮੰਗੀ ਹਾਲਤ ਤੱਕ ਉਡੀਕ ਕਰਨ ਵਾਲਾ ਮੋਡੀਊਲ ਕਿਹੜਾ ਹੈ?",
+    "options": [
+      "ansible.builtin.async_status",
+      "ansible.builtin.ping",
+      "ansible.builtin.wait_for",
+      "ansible.builtin.pause"
+    ],
+    "answer": "ansible.builtin.wait_for"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "ਦਿੱਤਾ ਪਾਥ ਪਹਿਲਾਂ ਮੌਜੂਦ ਹੋਵੇ ਤਾਂ ansible.builtin.command ਨੂੰ ਚੱਲਣ ਤੋਂ ਛੱਡਣ ਲਈ ਕਿਹੜਾ ਪੈਰਾਮੀਟਰ ਕਹਿੰਦਾ ਹੈ?",
+    "options": [
+      "stdin",
+      "creates",
+      "removes",
+      "chdir"
+    ],
+    "answer": "creates"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "file ਮੋਡੀਊਲ ਦੀ ਕਿਹੜੀ ਸੈਟਿੰਗ ਪ੍ਰਤੀਕਾਤਮਕ ਲਿੰਕ ਬਣਾਉਂਦੀ ਹੈ?",
+    "options": [
+      "state: link",
+      "state: directory",
+      "state: touch",
+      "state: hard"
+    ],
+    "answer": "state: link"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "ਬਾਅਦ ਦੇ ਪਲੇਆਂ ਲਈ ਮੈਮੋਰੀ ਵਿੱਚ ਮੌਜੂਦ ਇਨਵੈਂਟਰੀ ਵਿੱਚ ਹੋਸਟ ਕਿਹੜਾ ਮੋਡੀਊਲ ਜੋੜ ਸਕਦਾ ਹੈ?",
+    "options": [
+      "ansible.builtin.group_by",
+      "ansible.builtin.set_fact",
+      "ansible.builtin.meta",
+      "ansible.builtin.add_host"
+    ],
+    "answer": "ansible.builtin.add_host"
+  }
+]

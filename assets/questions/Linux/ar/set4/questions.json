@@ -1,0 +1,302 @@
+[
+  {
+    "category": "Linux",
+    "set": 4,
+    "question": "ما الأمر المستخدم لنقل الملفات أو إعادة تسميتها؟",
+    "options": [
+      "mv",
+      "cp",
+      "ln",
+      "shift"
+    ],
+    "answer": "mv"
+  },
+  {
+    "category": "Linux",
+    "set": 4,
+    "question": "ما الأمر الذي يغير ملكية الملف؟",
+    "options": [
+      "chown",
+      "chmod",
+      "owner",
+      "setowner"
+    ],
+    "answer": "chown"
+  },
+  {
+    "category": "Linux",
+    "set": 4,
+    "question": "ما الأمر الذي يعرض أذونات الملف بالصيغة الثمانية؟",
+    "options": [
+      "stat -c %a",
+      "ls -perm",
+      "perm",
+      "showperm"
+    ],
+    "answer": "stat -c %a"
+  },
+  {
+    "category": "Linux",
+    "set": 4,
+    "question": "ما الأمر الذي يعرض نوع الملف؟",
+    "options": [
+      "file",
+      "type",
+      "kind",
+      "format"
+    ],
+    "answer": "file"
+  },
+  {
+    "category": "Linux",
+    "set": 4,
+    "question": "ما الأمر الذي يعرض إحصائيات مفصلة عن الملف؟",
+    "options": [
+      "stat",
+      "fileinfo",
+      "details",
+      "ls -stat"
+    ],
+    "answer": "stat"
+  },
+  {
+    "category": "Linux",
+    "set": 4,
+    "question": "أي أمر يبحث مباشرة في أشجار المجلدات عن ملفات بالاسم دون قاعدة بيانات مسبقة؟",
+    "options": [
+      "find",
+      "search",
+      "locate",
+      "where"
+    ],
+    "answer": "find"
+  },
+  {
+    "category": "Linux",
+    "set": 4,
+    "question": "أي أمر يبحث في PATH ويطبع عادة مسار أول ملف تنفيذي مطابق؟",
+    "options": [
+      "which",
+      "whereis",
+      "locate",
+      "find"
+    ],
+    "answer": "which"
+  },
+  {
+    "category": "Linux",
+    "set": 4,
+    "question": "ما الأمر الذي يبحث عن الملفات باستخدام قاعدة بيانات؟",
+    "options": [
+      "locate",
+      "find",
+      "search",
+      "query"
+    ],
+    "answer": "locate"
+  },
+  {
+    "category": "Linux",
+    "set": 4,
+    "question": "ما الأمر الذي يحدّث قاعدة بيانات locate؟",
+    "options": [
+      "updatedb",
+      "updatedatabase",
+      "refreshdb",
+      "syncdb"
+    ],
+    "answer": "updatedb"
+  },
+  {
+    "category": "Linux",
+    "set": 4,
+    "question": "أي أمر يعرض إدخالات crontab للمستخدم الحالي؟",
+    "options": [
+      "crontab -l",
+      "cron -list",
+      "cronshow",
+      "jobs"
+    ],
+    "answer": "crontab -l"
+  },
+  {
+    "category": "Linux",
+    "set": 4,
+    "question": "ما الأمر الذي يحرر مهام cron؟",
+    "options": [
+      "crontab -e",
+      "cronedit",
+      "crontab",
+      "schedule"
+    ],
+    "answer": "crontab -e"
+  },
+  {
+    "category": "Linux",
+    "set": 4,
+    "question": "ما الأمر الذي يجدول مهمة لمرة واحدة؟",
+    "options": [
+      "at",
+      "cron",
+      "task",
+      "schedule"
+    ],
+    "answer": "at"
+  },
+  {
+    "category": "Linux",
+    "set": 4,
+    "question": "ما الأمر الذي يعرض المهام النشطة في الشل؟",
+    "options": [
+      "jobs",
+      "ps",
+      "bg",
+      "fg"
+    ],
+    "answer": "jobs"
+  },
+  {
+    "category": "Linux",
+    "set": 4,
+    "question": "أي أمر مدمج في الصدفة يستأنف وظيفة موقوفة في الخلفية؟",
+    "options": [
+      "bg",
+      "fg",
+      "jobs",
+      "nohup"
+    ],
+    "answer": "bg"
+  },
+  {
+    "category": "Linux",
+    "set": 4,
+    "question": "ما الأمر الذي يعيد عملية من الخلفية إلى المقدمة؟",
+    "options": [
+      "fg",
+      "bg",
+      "jobs",
+      "top"
+    ],
+    "answer": "fg"
+  },
+  {
+    "category": "Linux",
+    "set": 4,
+    "question": "أي أمر systemd يعيد تحميل تعريفات الوحدات بعد تعديل ملف خدمة؟",
+    "options": [
+      "systemctl daemon-reload",
+      "systemctl reload app.service",
+      "systemctl restart app.service",
+      "systemctl reset-failed app.service"
+    ],
+    "answer": "systemctl daemon-reload"
+  },
+  {
+    "category": "Linux",
+    "set": 4,
+    "question": "ماذا يفعل 'systemctl disable app.service' دون --now؟",
+    "options": [
+      "يوقف الخدمة ويحذف ملف وحدتها",
+      "يعيد تشغيل الخدمة بإعدادات المصنع",
+      "يمنع كل تشغيل يدوي بحجب الوحدة",
+      "يزيل روابط التمكين دون ضرورة إيقاف الخدمة العاملة"
+    ],
+    "answer": "يزيل روابط التمكين دون ضرورة إيقاف الخدمة العاملة"
+  },
+  {
+    "category": "Linux",
+    "set": 4,
+    "question": "أي أمر يعرض إدخالات السجل الخاصة بـ app.service؟",
+    "options": [
+      "systemctl show app.service",
+      "systemctl list-dependencies app.service",
+      "journalctl -u app.service",
+      "systemctl cat app.service"
+    ],
+    "answer": "journalctl -u app.service"
+  },
+  {
+    "category": "Linux",
+    "set": 4,
+    "question": "أي خيار journalctl يقصر الخرج على الإقلاع الحالي؟",
+    "options": [
+      "-k",
+      "-b",
+      "-f",
+      "-r"
+    ],
+    "answer": "-b"
+  },
+  {
+    "category": "Linux",
+    "set": 4,
+    "question": "ما الحقل الأول في crontab مستخدم قياسية ذات خمسة حقول؟",
+    "options": [
+      "الدقيقة",
+      "الساعة",
+      "يوم الشهر",
+      "يوم الأسبوع"
+    ],
+    "answer": "الدقيقة"
+  },
+  {
+    "category": "Linux",
+    "set": 4,
+    "question": "متى يُنفذ '0 2 * * *' في crontab مستخدم قياسية؟",
+    "options": [
+      "عند الدقيقة 2 من كل ساعة",
+      "كل دقيقتين",
+      "عند منتصف ليل اليوم الثاني من كل شهر",
+      "عند 02:00 يوميا وفق المنطقة الزمنية المطبقة في cron"
+    ],
+    "answer": "عند 02:00 يوميا وفق المنطقة الزمنية المطبقة في cron"
+  },
+  {
+    "category": "Linux",
+    "set": 4,
+    "question": "ماذا يفعل أمر Bash المدمج export بمتغير صدفة؟",
+    "options": [
+      "ينسخه إلى بيئة الصدفة الأم",
+      "يجعل قيمته للقراءة فقط",
+      "يجعله متاحا في بيئة العمليات الفرعية التي تبدأ لاحقا",
+      "يكتبه بشكل دائم في ملف تعريف كل مستخدم"
+    ],
+    "answer": "يجعله متاحا في بيئة العمليات الفرعية التي تبدأ لاحقا"
+  },
+  {
+    "category": "Linux",
+    "set": 4,
+    "question": "أي إعادة توجيه في Bash تلحق الخرج القياسي بآخر app.log؟",
+    "options": [
+      "2> app.log",
+      ">> app.log",
+      "> app.log",
+      "< app.log"
+    ],
+    "answer": ">> app.log"
+  },
+  {
+    "category": "Linux",
+    "set": 4,
+    "question": "أي إعادة توجيه في Bash ترسل الخطأ القياسي إلى وجهة الخرج القياسي نفسها؟",
+    "options": [
+      "2>&1",
+      "1>&2",
+      "2>errors.log",
+      "<input.txt"
+    ],
+    "answer": "2>&1"
+  },
+  {
+    "category": "Linux",
+    "set": 4,
+    "question": "إلى ماذا يتوسع $? في Bash فور انتهاء الأمر؟",
+    "options": [
+      "معرّف عملية الصدفة الحالية",
+      "عدد المعاملات الموضعية",
+      "معرّف عملية أحدث وظيفة خلفية",
+      "حالة خروج آخر سلسلة أوامر منفذة في المقدمة"
+    ],
+    "answer": "حالة خروج آخر سلسلة أوامر منفذة في المقدمة"
+  }
+]

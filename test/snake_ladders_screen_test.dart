@@ -1,11 +1,35 @@
 import 'package:devops_quiz/screens/snake_ladders_screen.dart';
 import 'package:devops_quiz/services/snake_ladders_service.dart';
+import 'package:devops_quiz/services/point_service.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 void main() {
   TestWidgetsFlutterBinding.ensureInitialized();
+
+  testWidgets(
+    'a human level win earns 100 and restoring it does not pay again',
+    (tester) async {
+      SharedPreferences.setMockInitialValues({'game_sound_enabled': false});
+      final game = SnakeLaddersGame.create()..positions[0] = 99;
+      await SnakeLaddersService.save(game);
+      await tester.pumpWidget(
+        MaterialApp(home: SnakeLaddersScreen(diceRoller: () => 1)),
+      );
+      await tester.pumpAndSettle();
+      await tester.ensureVisible(
+        find.byKey(const ValueKey('snake-ladder-roll')),
+      );
+      await tester.tap(find.byKey(const ValueKey('snake-ladder-roll')));
+      await tester.pumpAndSettle();
+      expect(await PointService.getTotalPoints(), 100);
+      await tester.pumpWidget(const SizedBox());
+      await tester.pumpWidget(const MaterialApp(home: SnakeLaddersScreen()));
+      await tester.pumpAndSettle();
+      expect(await PointService.getTotalPoints(), 100);
+    },
+  );
 
   testWidgets('six keeps the turn and saves it without move commentary', (
     tester,

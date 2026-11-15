@@ -212,6 +212,10 @@ def run() -> dict:
 
 
 def main() -> int:
+    if (QUESTIONS_DIR / "catalog.json").exists():
+        print("This legacy validator does not support the category/language/set layout. "
+              "Do not interpret an empty legacy-file scan as successful verification.")
+        return 2
     for s in (sys.stdout, sys.stderr):
         s.reconfigure(encoding="utf-8", errors="replace")
     ap = argparse.ArgumentParser()

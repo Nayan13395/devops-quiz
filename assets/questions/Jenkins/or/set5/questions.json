@@ -1,0 +1,302 @@
+[
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "ଏକା Pipelineକୁ ଏକା ସମୟରେ ଚଲାଇବା ବଦଳରେ ନୂଆ ନିଷ୍ପାଦନକୁ ଧାଡ଼ିରେ ରଖୁଥିବା Declarative ବିକଳ୍ପ କେଉଁଟି?",
+    "options": [
+      "parallelsAlwaysFailFast()",
+      "disableConcurrentBuilds()",
+      "disableResume()",
+      "skipDefaultCheckout()"
+    ],
+    "answer": "disableConcurrentBuilds()"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "ପୁରୁଣା ବିଲ୍ଡ ରେକର୍ଡ ଓ ଆର୍ଟିଫାକ୍ଟ ରଖିବା ନିୟମ ଦେଉଥିବା Declarative ବିକଳ୍ପ କେଉଁଟି?",
+    "options": [
+      "buildDiscarder(logRotator(numToKeepStr: '10'))",
+      "timeout(time: 10, unit: 'MINUTES')",
+      "retry(10)",
+      "quietPeriod(10)"
+    ],
+    "answer": "buildDiscarder(logRotator(numToKeepStr: '10'))"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "Jenkins cron ଅଭିବ୍ୟକ୍ତିର H ଚିହ୍ନ କ’ଣ ଦିଏ?",
+    "options": [
+      "ବ୍ୟବହାରକାରୀଙ୍କ କମ୍ପ୍ୟୁଟର୍‌ର ବର୍ତ୍ତମାନ ଘଣ୍ଟା",
+      "କେବଳ ଛୁଟି ଦିନରେ ଚଲାଇବାର ଅନୁରୋଧ",
+      "କେବଳ ନୋଡ୍ ନିଷ୍କ୍ରିୟ ଥିଲେ ଚଲାଇବାର ଅନୁରୋଧ",
+      "କାମର ନାମ ଆଧାରିତ ସ୍ଥିର ହ୍ୟାଶ୍ ଯାହା ନିର୍ଦ୍ଧାରିତ ଭାର ବାଣ୍ଟେ"
+    ],
+    "answer": "କାମର ନାମ ଆଧାରିତ ସ୍ଥିର ହ୍ୟାଶ୍ ଯାହା ନିର୍ଦ୍ଧାରିତ ଭାର ବାଣ୍ଟେ"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "Jenkinsର ପାଞ୍ଚ-କ୍ଷେତ୍ରର cron ବାକ୍ୟବିନ୍ୟାସରେ ପଞ୍ଚମ କ୍ଷେତ୍ର କ’ଣ ଦର୍ଶାଏ?",
+    "options": [
+      "ଦିନର ଘଣ୍ଟା",
+      "ମାସର ଦିନ",
+      "ସପ୍ତାହର ଦିନ",
+      "ଘଣ୍ଟାର ମିନିଟ୍"
+    ],
+    "answer": "ସପ୍ତାହର ଦିନ"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "ପୂର୍ବ ବିଲ୍ଡ ବିଫଳ କିମ୍ବା ଅସ୍ଥିର ହେବା ପରେ ନୂଆ ବିଲ୍ଡ ସଫଳ ହେଲେ ଚାଲୁଥିବା post ସର୍ତ୍ତ କେଉଁଟି?",
+    "options": [
+      "unsuccessful",
+      "fixed",
+      "changed",
+      "regression"
+    ],
+    "answer": "fixed"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "ଅନ୍ୟ post ସର୍ତ୍ତ ଯାଞ୍ଚ ପରେ ଚାଲୁଥିବା post ସର୍ତ୍ତ କେଉଁଟି?",
+    "options": [
+      "cleanup",
+      "always",
+      "changed",
+      "success"
+    ],
+    "answer": "cleanup"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "ପର୍ଯ୍ୟାୟର ଏଜେଣ୍ଟ ଦେବା ପୂର୍ବରୁ ସର୍ତ୍ତ ଯାଞ୍ଚ କରୁଥିବା when ବିକଳ୍ପ କେଉଁଟି?",
+    "options": [
+      "beforeInput false",
+      "beforeOptions false",
+      "branch 'main'",
+      "beforeAgent true"
+    ],
+    "answer": "beforeAgent true"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "Multibranch Pipelineରେ ନାମଯୁକ୍ତ ବ୍ରାଞ୍ଚ୍‌କୁ ଲକ୍ଷ୍ୟ କରୁଥିବା when ସର୍ତ୍ତ କେଉଁଟି?",
+    "options": [
+      "buildingTag()",
+      "changeRequest()",
+      "branch 'main'",
+      "tag 'main'"
+    ],
+    "answer": "branch 'main'"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "ଅପରେଟିଂ ସିଷ୍ଟମ୍ ଓ ବ୍ରାଉଜର୍ ପରି ଅକ୍ଷଗୁଡ଼ିକର ମୂଲ୍ୟ ସଂଯୋଗ ଚଲାଉଥିବା Declarative ଗଠନ କେଉଁଟି?",
+    "options": [
+      "environment",
+      "matrix",
+      "parallel",
+      "steps"
+    ],
+    "answer": "matrix"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "Declarative ମ୍ୟାଟ୍ରିକ୍ସରୁ ଅନାବଶ୍ୟକ ସଂଯୋଗ ହଟାଉଥିବା ବିଭାଗ କେଉଁଟି?",
+    "options": [
+      "excludes",
+      "axes",
+      "stages",
+      "tools"
+    ],
+    "answer": "excludes"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "ସମାନ୍ତରାଳ ଶାଖା ଥିବା ପର୍ଯ୍ୟାୟରେ ଗୋଟିଏ ବିଫଳ ହେଲେ ଅନ୍ୟଗୁଡ଼ିକୁ ରୋକୁଥିବା ସେଟିଂ କେଉଁଟି?",
+    "options": [
+      "beforeAgent true",
+      "reuseNode true",
+      "alwaysPull true",
+      "failFast true"
+    ],
+    "answer": "failFast true"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "ବିଲ୍ଡ ଅସ୍ଥିର ହେଲାପରେ ପରବର୍ତ୍ତୀ ପର୍ଯ୍ୟାୟ ଛାଡ଼ୁଥିବା Declarative ବିକଳ୍ପ କେଉଁଟି?",
+    "options": [
+      "disableResume()",
+      "preserveStashes()",
+      "skipStagesAfterUnstable()",
+      "skipDefaultCheckout()"
+    ],
+    "answer": "skipStagesAfterUnstable()"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "ବିଫଳତା ଲେଖି ନିଜ ବ୍ଲକ୍ ପରେ ନିଷ୍ପାଦନ ଚାଲୁ ରଖିବାକୁ ଦେଉଥିବା Pipeline ପଦକ୍ଷେପ କେଉଁଟି?",
+    "options": [
+      "input",
+      "catchError",
+      "error",
+      "timeout"
+    ],
+    "answer": "catchError"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "ପ୍ରକ୍ରିୟା ସରିବା ପରେ sh(script: 'check.sh', returnStatus: true) କ’ଣ ଦିଏ?",
+    "options": [
+      "ପ୍ରକ୍ରିୟାର ସଂଖ୍ୟାତ୍ମକ ପ୍ରସ୍ଥାନ କୋଡ୍",
+      "ସମ୍ପୂର୍ଣ୍ଣ ମାନକ ଆଉଟ୍‌ପୁଟ୍ ପାଠ୍ୟ",
+      "ଶେଲ୍‌ର ପ୍ରକ୍ରିୟା ID",
+      "Jenkins ପ୍ରମାଣୀକରଣ ବିବରଣୀ ଅବଜେକ୍ଟ"
+    ],
+    "answer": "ପ୍ରକ୍ରିୟାର ସଂଖ୍ୟାତ୍ମକ ପ୍ରସ୍ଥାନ କୋଡ୍"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "ସଫଳ ହେଲେ sh(script: 'echo ready', returnStdout: true) କ’ଣ ଦିଏ?",
+    "options": [
+      "ସଂଖ୍ୟାତ୍ମକ ବିଲ୍ଡ ସଂଖ୍ୟା",
+      "ମ୍ୟାପ୍ ଭାବେ ଶେଲ୍‌ର ପରିବେଶ",
+      "ଏଜେଣ୍ଟର ଲେବଲ୍ ତାଲିକା",
+      "ଧରାଯାଇଥିବା ମାନକ ଆଉଟ୍‌ପୁଟ୍ ଷ୍ଟ୍ରିଙ୍ଗ୍"
+    ],
+    "answer": "ଧରାଯାଇଥିବା ମାନକ ଆଉଟ୍‌ପୁଟ୍ ଷ୍ଟ୍ରିଙ୍ଗ୍"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "ବର୍ତ୍ତମାନ ୱାର୍କସ୍ପେସ୍ ଡିରେକ୍ଟୋରିର ବିଷୟବସ୍ତୁ ଉପସ୍ତର ସହ ମିଟାଉଥିବା Pipeline ପଦକ୍ଷେପ କେଉଁଟି?",
+    "options": [
+      "pwd",
+      "readFile",
+      "deleteDir",
+      "fileExists"
+    ],
+    "answer": "deleteDir"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "ବର୍ତ୍ତମାନ ୱାର୍କସ୍ପେସ୍‌ରେ ପାଥ୍ ଅଛି କି ନାହିଁ ଯାଞ୍ଚ କରୁଥିବା Pipeline ପଦକ୍ଷେପ କେଉଁଟି?",
+    "options": [
+      "libraryResource",
+      "fileExists",
+      "readFile",
+      "writeFile"
+    ],
+    "answer": "fileExists"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "ଅନ୍ୟ Jenkins କାମ ଆରମ୍ଭ କରି ବିଲ୍ଡ ପାରାମିଟର୍ ଦେଇପାରୁଥିବା Pipeline ପଦକ୍ଷେପ କେଉଁଟି?",
+    "options": [
+      "build",
+      "stage",
+      "node",
+      "checkout"
+    ],
+    "answer": "build"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "ପର୍ଯ୍ୟାୟ ପୁଣି ଆରମ୍ଭ କରିବା ପାଇଁ ସମାପ୍ତ ବିଲ୍ଡର ଷ୍ଟାଶ୍ ରଖୁଥିବା Declarative ବିକଳ୍ପ କେଉଁଟି?",
+    "options": [
+      "disableResume()",
+      "skipDefaultCheckout()",
+      "quietPeriod(5)",
+      "preserveStashes()"
+    ],
+    "answer": "preserveStashes()"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "vars/deploy.groovy ପରିଭାଷିତ ବିଶ୍ୱବ୍ୟାପୀ deploy ଚଳ ପାଇଁ ସହାୟତା ପାଠ୍ୟ ଦେଉଥିବା Shared Library ଫାଇଲ୍ କେଉଁଟି?",
+    "options": [
+      "resources/deploy.txt",
+      "vars/main.groovy",
+      "vars/deploy.txt",
+      "src/deploy.groovy"
+    ],
+    "answer": "vars/deploy.txt"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "Jenkins Pipelineରେ @NonCPS ଆନୋଟେସନ୍ ଥିବା ମେଥଡ୍‌ର ମୁଖ୍ୟ ପ୍ରତିବନ୍ଧକ କ’ଣ?",
+    "options": [
+      "ଏହା Windows ଏଜେଣ୍ଟରେ ଚାଲିବା ଦରକାର",
+      "ଏହା CPS-ପରିବର୍ତ୍ତିତ Pipeline ପଦକ୍ଷେପକୁ ଡାକିବା ଉଚିତ ନୁହେଁ",
+      "ଏଥିରେ stage ନିର୍ଦ୍ଦେଶ ଥିବା ଦରକାର",
+      "ଏହା ସର୍ବଦା ଷ୍ଟ୍ରିଙ୍ଗ୍ ଦେବା ଦରକାର"
+    ],
+    "answer": "ଏହା CPS-ପରିବର୍ତ୍ତିତ Pipeline ପଦକ୍ଷେପକୁ ଡାକିବା ଉଚିତ ନୁହେଁ"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "ଅନୁମୋଦନ ନହୋଇଥିବା ସ୍ୟାଣ୍ଡବକ୍ସ Groovy କୋଡ୍ ମାଗିଥିବା ସିଗ୍ନେଚର୍ ଯାଞ୍ଚ କରୁଥିବା Jenkins ସୁବିଧା କେଉଁଟି?",
+    "options": [
+      "ପ୍ରକ୍ରିୟା ଭିତରେ ସ୍କ୍ରିପ୍ଟ ଅନୁମୋଦନ",
+      "Credentials Store",
+      "Build Queue",
+      "SCM ପୋଲିଂ ଲଗ୍"
+    ],
+    "answer": "ପ୍ରକ୍ରିୟା ଭିତରେ ସ୍କ୍ରିପ୍ଟ ଅନୁମୋଦନ"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "ବନ୍ଧା ଗୁପ୍ତ ଚଳକୁ ଶେଲ୍ ନିଜେ ବିସ୍ତାର କରିବାକୁ ଦେଉଥିବା ସ୍କ୍ରିପ୍ଟ ପାଇଁ Groovyର କେଉଁ ଉଦ୍ଧୃତି ଶୈଳୀ ସୁପାରିସ ହୁଏ?",
+    "options": [
+      "ଗୁପ୍ତ ମୂଲ୍ୟ ବସାଯାଇଥିବା ଡବଲ୍-କୋଟ୍ Groovy ଷ୍ଟ୍ରିଙ୍ଗ୍",
+      "ଗୁପ୍ତ ମୂଲ୍ୟ ବସାଯାଇଥିବା ଟ୍ରିପଲ୍-ଡବଲ୍-କୋଟ୍ Groovy ଷ୍ଟ୍ରିଙ୍ଗ୍",
+      "ସରଳ ପାଠ୍ୟ ଗୁପ୍ତ ତଥ୍ୟ ଯୋଡ଼ି ତିଆରି Groovy ଷ୍ଟ୍ରିଙ୍ଗ୍",
+      "ଏକକ ଉଦ୍ଧୃତିଯୁକ୍ତ Groovy ଷ୍ଟ୍ରିଙ୍ଗ୍"
+    ],
+    "answer": "ଏକକ ଉଦ୍ଧୃତିଯୁକ୍ତ Groovy ଷ୍ଟ୍ରିଙ୍ଗ୍"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "ସମ୍ପର୍କିତ ୱେବ୍ ଅନୁରୋଧ ପାଇଁ Jenkins CSRF crumbର ଉଦ୍ଦେଶ୍ୟ କ’ଣ?",
+    "options": [
+      "ଅପଲୋଡ୍ ପୂର୍ବରୁ ବିଲ୍ଡ ଆର୍ଟିଫାକ୍ଟ ଗୁପ୍ତୀକରଣ କରିବା",
+      "ବିଲ୍ଡ ଚଲାଉଥିବା ଏଜେଣ୍ଟ ବାଛିବା",
+      "ସ୍ଥିତି ବଦଳାଉଥିବା ଅନୁରୋଧ ସ୍ଥାପିତ ବ୍ୟବହାରକାରୀ ସେସନ୍‌ର ବୋଲି ଯାଞ୍ଚ କରିବାରେ ସାହାଯ୍ୟ",
+      "ସବୁ କାମର ଅଧିକାର ଯାଞ୍ଚର ସ୍ଥାନ ନେବା"
+    ],
+    "answer": "ସ୍ଥିତି ବଦଳାଉଥିବା ଅନୁରୋଧ ସ୍ଥାପିତ ବ୍ୟବହାରକାରୀ ସେସନ୍‌ର ବୋଲି ଯାଞ୍ଚ କରିବାରେ ସାହାଯ୍ୟ"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "ଭିନ୍ନ କାମ ମଧ୍ୟରେ ସାଧାରଣ ପରୀକ୍ଷା ଡିଭାଇସ୍ ଏକା ସମୟରେ କେବଳ ଗୋଟିଏ କାମକୁ ଦେବା ପାଇଁ Pipeline କ’ଣ ବ୍ୟବହାର କରିବ?",
+    "options": [
+      "skipDefaultCheckout ବିକଳ୍ପ",
+      "Lockable Resources ପ୍ଲଗଇନ୍‌ର lock ପଦକ୍ଷେପ",
+      "timestamps ବିକଳ୍ପ",
+      "buildDiscarder ବିକଳ୍ପ"
+    ],
+    "answer": "Lockable Resources ପ୍ଲଗଇନ୍‌ର lock ପଦକ୍ଷେପ"
+  }
+]

@@ -1,0 +1,302 @@
+[
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "कार्यस्तरे पृथग्विन्यासाभावे परीक्षणमोड्-निष्पादने तन्मोड्-असमर्थस्य मॉड्यूल् इत्यस्य किं भवति?",
+    "options": [
+      "मॉड्यूल् सर्वदा स्वसामान्यपरिवर्तनानि करोति",
+      "मॉड्यूल् स्वतः localhost मध्ये निष्पाद्यते",
+      "परीक्षणमोड्-समर्थं यावत् न भवति तावत् मॉड्यूल् पुनः पुनः प्रयुज्यते",
+      "परिवर्तनकरणस्य स्थाने मॉड्यूल् परित्यज्यते"
+    ],
+    "answer": "परिवर्तनकरणस्य स्थाने मॉड्यूल् परित्यज्यते"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "--check सहिते प्लेबुक्-निष्पादनेऽपि वास्तविकपरिवर्तनानि अनुमन्यमानः कार्यविन्यासः कः?",
+    "options": [
+      "changed_when: false",
+      "ignore_errors: true",
+      "check_mode: false",
+      "diff: false"
+    ],
+    "answer": "check_mode: false"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "पूर्वसूचितान् कार्यप्रतिसादकान् तत्कालं निष्पादयन्ती Ansible meta क्रिया का?",
+    "options": [
+      "reset_connection",
+      "flush_handlers",
+      "clear_facts",
+      "end_play"
+    ],
+    "answer": "flush_handlers"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "परिवर्तनकारिणी द्वे कार्ये एकमेव कार्यप्रतिसादकं तस्य लम्बितनिष्पादनात् पूर्वं सूचयतः चेत्, तस्मिन् निष्पादनावसरे सः सामान्यतः कतिवारं निष्पाद्यते?",
+    "options": [
+      "सकृत्",
+      "द्विवारम्",
+      "प्रत्येकस्य आतिथेयसूचीगणस्य कृते सकृत्",
+      "सूचनाविरोधात् शून्यवारम्"
+    ],
+    "answer": "सकृत्"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "एकस्मिन् लम्बितनिष्पादनावसरे सूचितकार्यप्रतिसादकानां क्रमं किं निर्धारयति?",
+    "options": [
+      "तेषां नाम्नां वर्णानुक्रमः",
+      "notify सूच्यां नाम्नां क्रमः",
+      "प्रबन्धितातिथेयानां सम्पर्कक्रमः",
+      "handlers विभागे तेषां परिभाषाक्रमः"
+    ],
+    "answer": "handlers विभागे तेषां परिभाषाक्रमः"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "का विफलता सामान्यतः खण्डस्य rescue कार्याणि प्रवर्तयति?",
+    "options": [
+      "प्लेबुक्-अन्तर्गता अमान्या कार्यपरिभाषा",
+      "YAML प्रलेखस्य वाक्यविश्लेषणासम्भवः",
+      "खण्डान्तर्गतकार्यस्य विफलपरिणामप्रत्यर्पणम्",
+      "कार्यनिष्पादनात् पूर्वम् आतिथेयस्य असम्पर्क्यत्वम्"
+    ],
+    "answer": "खण्डान्तर्गतकार्यस्य विफलपरिणामप्रत्यर्पणम्"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "सामान्यकार्ये ignore_errors कं दोषं न निगूहति?",
+    "options": [
+      "failed_when निबन्धनस्य true इति मूल्याङ्कनम्",
+      "अपरिभाषितचरदोषः",
+      "आदेशेन निवेदिता अशून्या निर्गमनस्थितिः",
+      "स्पष्टतया विफलत्वेन अङ्कितः मॉड्यूल्-परिणामः"
+    ],
+    "answer": "अपरिभाषितचरदोषः"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "अनुपचारितकार्यविफलतायां वर्तमानगणे तत्कार्यं समाप्ते सति सर्वेष्वातिथेयेषु प्ले इत्यस्य प्रवर्तनं स्थगयत् कीवर्ड् किम्?",
+    "options": [
+      "any_errors_fatal",
+      "ignore_unreachable",
+      "max_fail_percentage: 100",
+      "force_handlers"
+    ],
+    "answer": "any_errors_fatal"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "सम्पर्क्ये आतिथेये उत्तरवर्तिकार्यविफलतायां force_handlers इत्यस्य प्रभावः कः?",
+    "options": [
+      "प्रत्येकः परिभाषितः कार्यप्रतिसादकः सूचनां विनापि निष्पाद्यते",
+      "सर्वाणि विफलकार्याणि स्वतः पुनः प्रयुज्यन्ते",
+      "कार्यप्रतिसादकाः सर्वेभ्यः सामान्यकार्येभ्यः पूर्वं निष्पाद्यन्ते",
+      "पूर्वसूचिताः कार्यप्रतिसादकाः तस्मिन् आतिथेये अद्यापि निष्पादयितुं शक्यन्ते"
+    ],
+    "answer": "पूर्वसूचिताः कार्यप्रतिसादकाः तस्मिन् आतिथेये अद्यापि निष्पादयितुं शक्यन्ते"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "गोपनीयकार्यप्राचलानां परिणामानां च सामान्यलेखनं निवारयन् कार्यविन्यासः कः?",
+    "options": [
+      "check_mode: true",
+      "changed_when: false",
+      "no_log: true",
+      "diff: true"
+    ],
+    "answer": "no_log: true"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "--diff सक्रियत्वेऽपि सञ्चिकाविषयभेदान् निगूहन् कार्यविन्यासः कः?",
+    "options": [
+      "ignore_errors: true",
+      "diff: false",
+      "no_log: false",
+      "check_mode: false"
+    ],
+    "answer": "diff: false"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "अन्येन आतिथेयसूचीसङ्गणकेन सम्बद्धान् चरान् उपलब्धान् कुर्वाणः शब्दकोशः कः?",
+    "options": [
+      "hostvars",
+      "ansible_facts",
+      "environment",
+      "ansible_loop"
+    ],
+    "answer": "hostvars"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "वर्तमानातिथेयस्य आतिथेयसूचीनाम धारयन् विशेषचरः कः?",
+    "options": [
+      "ansible_host",
+      "ansible_user",
+      "ansible_playbook_python",
+      "inventory_hostname"
+    ],
+    "answer": "inventory_hostname"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "आतिथेयगणेन सहप्रयुक्तानां चराणां कृते आतिथेयसूचीसमीपे सामान्यतः का निर्देशिका प्रयुज्यते?",
+    "options": [
+      "roles",
+      "collections",
+      "group_vars",
+      "host_vars"
+    ],
+    "answer": "group_vars"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "ansible.builtin.file अन्वेषणं पूर्वनिर्धारितरूपेण सञ्चिकां कुत्र पठति?",
+    "options": [
+      "become_user निर्दिष्टे आतिथेये",
+      "नियन्त्रणनोड्-मध्ये",
+      "प्रत्येकस्मिन् प्रबन्धिते आतिथेये",
+      "प्ले इत्यस्य प्रथमे आतिथेये"
+    ],
+    "answer": "नियन्त्रणनोड्-मध्ये"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "YAML वर्णक्रमम् Ansible दत्तांशसंरचनां परिवर्तयन् निस्यन्दकः कः?",
+    "options": [
+      "from_yaml",
+      "to_yaml",
+      "to_json",
+      "dict2items"
+    ],
+    "answer": "from_yaml"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "शब्दकोशं कुञ्चिका/मूल्यशब्दकोशानां सूचीं परिवर्तयन् निस्यन्दकः कः?",
+    "options": [
+      "items2dict",
+      "flatten",
+      "zip",
+      "dict2items"
+    ],
+    "answer": "dict2items"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "सूच्याः पुनरावृत्तघटकान् अपनयन् निस्यन्दकः कः?",
+    "options": [
+      "reverse",
+      "flatten",
+      "unique",
+      "sort"
+    ],
+    "answer": "unique"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "व्यञ्जकान् परीक्ष्य निर्दिष्टसत्यतापरीक्षणेषु असिद्धेषु विफलं भवत् मॉड्यूल् किम्?",
+    "options": [
+      "ansible.builtin.set_fact",
+      "ansible.builtin.assert",
+      "ansible.builtin.debug",
+      "ansible.builtin.pause"
+    ],
+    "answer": "ansible.builtin.assert"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "रेगुलर्-एक्स्प्रेशन् द्वारा पाठसञ्चिकायाः विशिष्टपङ्क्तिं प्रबन्धयत् मॉड्यूल् किम्?",
+    "options": [
+      "ansible.builtin.lineinfile",
+      "ansible.builtin.blockinfile",
+      "ansible.builtin.copy",
+      "ansible.builtin.slurp"
+    ],
+    "answer": "ansible.builtin.lineinfile"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "URL अनुरोधं कृत्वा अपेक्षितं HTTP स्थितिकूटं परीक्षितुं समर्थं मॉड्यूल् किम्?",
+    "options": [
+      "ansible.builtin.get_url",
+      "ansible.builtin.fetch",
+      "ansible.builtin.wait_for",
+      "ansible.builtin.uri"
+    ],
+    "answer": "ansible.builtin.uri"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "TCP पोर्ट् इष्टस्थितिं यावत् न प्राप्नोति तावत् प्रतीक्षमाणं मॉड्यूल् किम्?",
+    "options": [
+      "ansible.builtin.async_status",
+      "ansible.builtin.ping",
+      "ansible.builtin.wait_for",
+      "ansible.builtin.pause"
+    ],
+    "answer": "ansible.builtin.wait_for"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "निर्दिष्टपथस्य पूर्वमेव अस्तित्वे ansible.builtin.command निष्पादनं परित्याजयन् प्राचलः कः?",
+    "options": [
+      "stdin",
+      "creates",
+      "removes",
+      "chdir"
+    ],
+    "answer": "creates"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "file मॉड्यूल् इत्यस्य कः विन्यासः प्रतीकात्मकस्य लिङ्क् इत्यस्य निर्माणं करोति?",
+    "options": [
+      "state: link",
+      "state: directory",
+      "state: touch",
+      "state: hard"
+    ],
+    "answer": "state: link"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "उत्तरवर्तिप्ले-निष्पादनाय स्मृतिस्थायाम् आतिथेयसूच्याम् आतिथेयं योजयितुं समर्थं मॉड्यूल् किम्?",
+    "options": [
+      "ansible.builtin.group_by",
+      "ansible.builtin.set_fact",
+      "ansible.builtin.meta",
+      "ansible.builtin.add_host"
+    ],
+    "answer": "ansible.builtin.add_host"
+  }
+]

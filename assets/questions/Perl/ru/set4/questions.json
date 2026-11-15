@@ -1,0 +1,302 @@
+[
+  {
+    "category": "Perl",
+    "set": 4,
+    "question": "Какой синтаксис создаёт ссылку на @items?",
+    "options": [
+      "\\@items",
+      "$items",
+      "@items",
+      "%items"
+    ],
+    "answer": "\\@items"
+  },
+  {
+    "category": "Perl",
+    "set": 4,
+    "question": "Какой синтаксис создаёт ссылку на анонимный массив?",
+    "options": [
+      "[1, 2, 3]",
+      "{1, 2, 3}",
+      "(1, 2, 3)",
+      "<1, 2, 3>"
+    ],
+    "answer": "[1, 2, 3]"
+  },
+  {
+    "category": "Perl",
+    "set": 4,
+    "question": "Какой синтаксис создаёт ссылку на анонимный хеш?",
+    "options": [
+      "{a => 1}",
+      "[a => 1]",
+      "(a => 1)",
+      "<a => 1>"
+    ],
+    "answer": "{a => 1}"
+  },
+  {
+    "category": "Perl",
+    "set": 4,
+    "question": "Какой оператор используется для вызова метода объекта?",
+    "options": [
+      "->",
+      "=>",
+      "::",
+      "."
+    ],
+    "answer": "->"
+  },
+  {
+    "category": "Perl",
+    "set": 4,
+    "question": "Какая функция связывает ссылку с классом?",
+    "options": [
+      "bless",
+      "create",
+      "new",
+      "object"
+    ],
+    "answer": "bless"
+  },
+  {
+    "category": "Perl",
+    "set": 4,
+    "question": "Как по соглашению называется конструктор в Perl?",
+    "options": [
+      "new",
+      "init",
+      "create",
+      "constructor"
+    ],
+    "answer": "new"
+  },
+  {
+    "category": "Perl",
+    "set": 4,
+    "question": "Какой токен содержит имя текущего пакета?",
+    "options": [
+      "__PACKAGE__",
+      "__FILE__",
+      "__LINE__",
+      "__SUB__"
+    ],
+    "answer": "__PACKAGE__"
+  },
+  {
+    "category": "Perl",
+    "set": 4,
+    "question": "Какое ключевое слово объявляет пакет?",
+    "options": [
+      "package",
+      "module",
+      "namespace",
+      "class"
+    ],
+    "answer": "package"
+  },
+  {
+    "category": "Perl",
+    "set": 4,
+    "question": "Какой синтаксис разыменовывает ссылку на массив с именем $ref?",
+    "options": [
+      "@$ref",
+      "$$ref",
+      "%$ref",
+      "$ref[]"
+    ],
+    "answer": "@$ref"
+  },
+  {
+    "category": "Perl",
+    "set": 4,
+    "question": "Какой синтаксис обращается к первому элементу ссылки на массив $ref?",
+    "options": [
+      "$ref->[0]",
+      "$ref->{0}",
+      "$ref[0]",
+      "$ref(0)"
+    ],
+    "answer": "$ref->[0]"
+  },
+  {
+    "category": "Perl",
+    "set": 4,
+    "question": "Какой синтаксис обращается к ключу в ссылке на хеш $ref?",
+    "options": [
+      "$ref->{key}",
+      "$ref->[key]",
+      "$ref{key}",
+      "$ref:key"
+    ],
+    "answer": "$ref->{key}"
+  },
+  {
+    "category": "Perl",
+    "set": 4,
+    "question": "Какая функция возвращает тип ссылки?",
+    "options": [
+      "ref",
+      "type",
+      "typeof",
+      "reftype"
+    ],
+    "answer": "ref"
+  },
+  {
+    "category": "Perl",
+    "set": 4,
+    "question": "Какая инструкция включает возможность say?",
+    "options": [
+      "use feature 'say';",
+      "use say;",
+      "feature say;",
+      "enable say;"
+    ],
+    "answer": "use feature 'say';"
+  },
+  {
+    "category": "Perl",
+    "set": 4,
+    "question": "Какая встроенная функция выводит текст с переводом строки, если включена соответствующая возможность (feature)?",
+    "options": [
+      "say",
+      "print",
+      "write",
+      "echo"
+    ],
+    "answer": "say"
+  },
+  {
+    "category": "Perl",
+    "set": 4,
+    "question": "Какой синтаксис читает строку из файлового дескриптора $fh?",
+    "options": [
+      "<$fh>",
+      "fetch $fh",
+      "read $fh",
+      "get $fh"
+    ],
+    "answer": "<$fh>"
+  },
+  {
+    "category": "Perl",
+    "set": 4,
+    "question": "Какая функция выполняет строку как код Perl?",
+    "options": [
+      "eval",
+      "exec",
+      "system",
+      "do"
+    ],
+    "answer": "eval"
+  },
+  {
+    "category": "Perl",
+    "set": 4,
+    "question": "Какая переменная хранит ошибку после eval?",
+    "options": [
+      "$@",
+      "$!",
+      "$?",
+      "$_"
+    ],
+    "answer": "$@"
+  },
+  {
+    "category": "Perl",
+    "set": 4,
+    "question": "Какая переменная хранит статус ожидания (wait status) последней выполненной внешней команды?",
+    "options": [
+      "$?",
+      "$!",
+      "$@",
+      "$_"
+    ],
+    "answer": "$?"
+  },
+  {
+    "category": "Perl",
+    "set": 4,
+    "question": "Какой синтаксис захватывает вывод внешней команды?",
+    "options": [
+      "qx{command}",
+      "system command",
+      "exec command",
+      "open command"
+    ],
+    "answer": "qx{command}"
+  },
+  {
+    "category": "Perl",
+    "set": 4,
+    "question": "Какая функция запускает внешнюю команду и ожидает её завершения?",
+    "options": [
+      "system",
+      "exec",
+      "qx",
+      "spawn"
+    ],
+    "answer": "system"
+  },
+  {
+    "category": "Perl",
+    "set": 4,
+    "question": "Какая функция меняет текущий рабочий каталог?",
+    "options": [
+      "chdir",
+      "cd",
+      "mkdir",
+      "rmdir"
+    ],
+    "answer": "chdir"
+  },
+  {
+    "category": "Perl",
+    "set": 4,
+    "question": "Какая функция возвращает текущее epoch-время?",
+    "options": [
+      "time",
+      "now",
+      "epoch",
+      "clock"
+    ],
+    "answer": "time"
+  },
+  {
+    "category": "Perl",
+    "set": 4,
+    "question": "Какая функция преобразует epoch-время в компоненты местного времени?",
+    "options": [
+      "localtime",
+      "gmtime",
+      "strftime",
+      "date"
+    ],
+    "answer": "localtime"
+  },
+  {
+    "category": "Perl",
+    "set": 4,
+    "question": "Какая функция приостанавливает выполнение на заданное число секунд?",
+    "options": [
+      "sleep",
+      "wait",
+      "pause",
+      "delay"
+    ],
+    "answer": "sleep"
+  },
+  {
+    "category": "Perl",
+    "set": 4,
+    "question": "Какой хеш содержит переменные окружения?",
+    "options": [
+      "%ENV",
+      "@ENV",
+      "$ENV",
+      "ENV"
+    ],
+    "answer": "%ENV"
+  }
+]

@@ -1,0 +1,302 @@
+[
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "Apa yang dibutuhkan NetworkPolicy agar memengaruhi lalu lintas Pod?",
+    "options": [
+      "Service LoadBalancer untuk setiap Pod terpilih",
+      "PersistentVolumeClaim dalam ruang nama yang sama",
+      "Server API terpisah untuk setiap kebijakan",
+      "Implementasi jaringan yang menegakkan NetworkPolicy"
+    ],
+    "answer": "Implementasi jaringan yang menegakkan NetworkPolicy"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "Bagaimana beberapa NetworkPolicy yang memilih Pod yang sama menggabungkan izin lalu lintas masuk?",
+    "options": [
+      "Kebijakan yang pertama dibuat mengesampingkan semua kebijakan berikutnya",
+      "Setiap kebijakan harus mengizinkan setiap paket secara independen",
+      "Lalu lintas yang diizinkan merupakan gabungan seluruh izin masuknya",
+      "Kebijakan yang terakhir dibuat mengesampingkan semua kebijakan sebelumnya"
+    ],
+    "answer": "Lalu lintas yang diizinkan merupakan gabungan seluruh izin masuknya"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "Objek RBAC mana yang mendefinisikan izin dalam ruang nama?",
+    "options": [
+      "ResourceQuota",
+      "Role",
+      "RoleBinding",
+      "ServiceAccount"
+    ],
+    "answer": "Role"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "Objek RBAC mana yang memberikan izin Role atau ClusterRole dalam satu ruang nama?",
+    "options": [
+      "RoleBinding",
+      "ClusterRoleBinding",
+      "ServiceAccount",
+      "LimitRange"
+    ],
+    "answer": "RoleBinding"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "Identitas apa yang biasanya diberikan kepada proses dalam Pod untuk mengakses API Kubernetes?",
+    "options": [
+      "StorageClass",
+      "RuntimeClass",
+      "PriorityClass",
+      "ServiceAccount"
+    ],
+    "answer": "ServiceAccount"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "Mengapa pengodean base64 pada data Secret tidak cukup melindunginya dari orang yang dapat membaca objek?",
+    "options": [
+      "Base64 otomatis menerbitkan data melalui DNS",
+      "Base64 membutuhkan kunci privat yang disimpan dalam Pod",
+      "Base64 adalah pengodean yang dapat dibalik, bukan enkripsi",
+      "Base64 mencegah Kubernetes menyimpan data"
+    ],
+    "answer": "Base64 adalah pengodean yang dapat dibalik, bukan enkripsi"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "Kolom mana yang dapat mencegah Kubernetes otomatis memasang kredensial API ke dalam Pod?",
+    "options": [
+      "shareProcessNamespace: false",
+      "automountServiceAccountToken: false",
+      "hostNetwork: false",
+      "enableServiceLinks: false"
+    ],
+    "answer": "automountServiceAccountToken: false"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "Objek mana yang membatasi total konsumsi sumber daya dalam ruang nama?",
+    "options": [
+      "ResourceQuota",
+      "LimitRange",
+      "PriorityClass",
+      "PodDisruptionBudget"
+    ],
+    "answer": "ResourceQuota"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "Objek mana yang dapat menetapkan permintaan dan batas sumber daya bawaan untuk kontainer dalam ruang nama?",
+    "options": [
+      "ResourceQuota",
+      "HorizontalPodAutoscaler",
+      "RuntimeClass",
+      "LimitRange"
+    ],
+    "answer": "LimitRange"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "Apa yang dilakukan finalizer pada objek Kubernetes setelah penghapusan diminta?",
+    "options": [
+      "Segera menghapus setiap objek yang bergantung padanya",
+      "Mengubah objek menjadi Secret yang tidak dapat diubah",
+      "Menahan objek dalam status menunggu penghapusan sampai pembersihan yang diwajibkan menghapus finalizer",
+      "Mencegah semua pembaruan objek selanjutnya"
+    ],
+    "answer": "Menahan objek dalam status menunggu penghapusan sampai pembersihan yang diwajibkan menghapus finalizer"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "Kolom metadata mana yang menghubungkan objek dependen dengan pemiliknya untuk pembersihan otomatis?",
+    "options": [
+      "managedFields",
+      "ownerReferences",
+      "annotations",
+      "labels"
+    ],
+    "answer": "ownerReferences"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "Apa yang ditambahkan CustomResourceDefinition ke klaster?",
+    "options": [
+      "Jenis sumber daya khusus baru yang disediakan API Kubernetes",
+      "Pengontrol rekonsiliasi yang berjalan untuk jenis yang sudah ada",
+      "Pemberian izin RBAC kepada setiap akun layanan",
+      "Instans dari setiap jenis sumber daya bawaan"
+    ],
+    "answer": "Jenis sumber daya khusus baru yang disediakan API Kubernetes"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "Apa perbedaan operator Kubernetes dengan definisi sumber daya khusus saja?",
+    "options": [
+      "Operator hanya dapat menyimpan definisi skema",
+      "Operator menghilangkan kebutuhan server API",
+      "Operator hanya mengubah format keluaran kubectl",
+      "Operator juga menjalankan logika rekonsiliasi untuk mengelola aplikasi yang diwakilinya"
+    ],
+    "answer": "Operator juga menjalankan logika rekonsiliasi untuk mengelola aplikasi yang diwakilinya"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "Mekanisme mana yang dapat menolak atau mengubah permintaan API setelah autentikasi dan otorisasi, sebelum disimpan?",
+    "options": [
+      "Pengunduhan image kontainer",
+      "Perutean titik akhir Service",
+      "Kontrol penerimaan",
+      "Penjadwalan Pod"
+    ],
+    "answer": "Kontrol penerimaan"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "Apa yang terjadi jika tidak ada simpul yang memenuhi afinitas simpul wajib suatu Pod?",
+    "options": [
+      "Server API menjadwalkannya pada semua simpul",
+      "Pod tetap belum dijadwalkan sampai simpul yang sesuai tersedia atau batasan berubah",
+      "Penjadwal mengabaikan aturan setelah satu percobaan",
+      "Pod otomatis menjadi DaemonSet"
+    ],
+    "answer": "Pod tetap belum dijadwalkan sampai simpul yang sesuai tersedia atau batasan berubah"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "Apa yang dinyatakan afinitas simpul preferredDuringSchedulingIgnoredDuringExecution?",
+    "options": [
+      "Preferensi penempatan yang tidak menyingkirkan simpul tidak cocok yang memenuhi syarat lainnya",
+      "Persyaratan wajib yang mencegah penempatan pada simpul yang tidak cocok",
+      "Instruksi untuk mengeluarkan Pod jika label simpul berubah",
+      "Permintaan untuk sepenuhnya melewati penjadwal"
+    ],
+    "answer": "Preferensi penempatan yang tidak menyingkirkan simpul tidak cocok yang memenuhi syarat lainnya"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "Apa arti IgnoredDuringExecution jika label simpul tidak lagi cocok dengan aturan afinitas simpul Pod yang berjalan?",
+    "options": [
+      "Pod harus segera dihapus",
+      "Kontainer Pod otomatis dimulai ulang",
+      "Label simpul otomatis kembali ke nilai sebelumnya",
+      "Aturan itu sendiri tidak mengeluarkan Pod yang sedang berjalan"
+    ],
+    "answer": "Aturan itu sendiri tidak mengeluarkan Pod yang sedang berjalan"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "Apa yang terjadi ketika Pod menetapkan spec.nodeName secara eksplisit?",
+    "options": [
+      "Membuat simpul dengan nama tersebut",
+      "Mengganti nama simpul yang sedang menjalankan Pod",
+      "Melewati penjadwal dan ditugaskan ke simpul bernama tersebut",
+      "Meminta penjadwal mengurutkan semua label simpul yang cocok"
+    ],
+    "answer": "Melewati penjadwal dan ditugaskan ke simpul bernama tersebut"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "Apa tujuan batasan penyebaran topologi?",
+    "options": [
+      "Mengenkripsi lalu lintas antarkomponen bidang kontrol",
+      "Mengendalikan penyebaran Pod yang cocok di berbagai domain topologi",
+      "Menyalin berkas kontainer antarvolume persisten",
+      "Mengalokasikan satu IP publik untuk setiap ruang nama"
+    ],
+    "answer": "Mengendalikan penyebaran Pod yang cocok di berbagai domain topologi"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "Efek taint mana yang dapat mengeluarkan Pod yang sudah berjalan jika Pod tidak menoleransi taint tersebut?",
+    "options": [
+      "NoExecute",
+      "NoSchedule",
+      "PreferNoSchedule",
+      "None"
+    ],
+    "answer": "NoExecute"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "Pengaturan securityContext kontainer mana yang mewajibkan kontainer Linux berjalan sebagai pengguna non-root?",
+    "options": [
+      "readOnlyRootFilesystem: true",
+      "privileged: false",
+      "allowPrivilegeEscalation: false",
+      "runAsNonRoot: true"
+    ],
+    "answer": "runAsNonRoot: true"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "Pengaturan securityContext mana yang mencegah proses Linux memperoleh hak lebih tinggi daripada induknya?",
+    "options": [
+      "readOnlyRootFilesystem: true",
+      "privileged: false",
+      "allowPrivilegeEscalation: false",
+      "runAsNonRoot: true"
+    ],
+    "answer": "allowPrivilegeEscalation: false"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "Jenis kontainer mana yang dapat ditambahkan ke Pod yang sudah ada untuk pemecahan masalah tanpa mengubah kontainer aplikasinya?",
+    "options": [
+      "Kontainer init yang dapat dimulai ulang",
+      "Kontainer sementara",
+      "Kontainer init biasa",
+      "Kontainer aplikasi biasa"
+    ],
+    "answer": "Kontainer sementara"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "Sumber daya mana yang melacak titik akhir jaringan untuk Service dalam kelompok yang dapat diskalakan?",
+    "options": [
+      "EndpointSlice",
+      "IngressClass",
+      "NetworkPolicy",
+      "RuntimeClass"
+    ],
+    "answer": "EndpointSlice"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "Apa yang diperlukan agar sumber daya Ingress benar-benar mengonfigurasi perutean HTTP?",
+    "options": [
+      "ConfigMap bernama ingress dalam setiap ruang nama",
+      "PersistentVolume untuk setiap nama host",
+      "Job yang memulai ulang semua Pod terpilih",
+      "Pengontrol Ingress yang menerapkan aturannya"
+    ],
+    "answer": "Pengontrol Ingress yang menerapkan aturannya"
+  }
+]

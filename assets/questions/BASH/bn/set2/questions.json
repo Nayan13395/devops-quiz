@@ -1,0 +1,302 @@
+[
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "কোন সিনট্যাক্স date-এর আউটপুট now নামের ভেরিয়েবলে সংরক্ষণ করে?",
+    "options": [
+      "now=$(date)",
+      "now=date",
+      "now:=$(date)",
+      "date->now"
+    ],
+    "answer": "now=$(date)"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "কোন বিশেষ প্যারামিটার স্ক্রিপ্টের নাম নির্দেশ করে?",
+    "options": [
+      "$0",
+      "$1",
+      "$#",
+      "$@"
+    ],
+    "answer": "$0"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "কোন বিশেষ প্যারামিটার সর্বশেষ ব্যাকগ্রাউন্ড কমান্ডের প্রসেস ID-তে প্রসারিত হয়?",
+    "options": [
+      "$!",
+      "$$",
+      "$?",
+      "$#"
+    ],
+    "answer": "$!"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "কোন বিশেষ প্যারামিটার positional argument-এর সংখ্যা নির্দেশ করে?",
+    "options": [
+      "$#",
+      "$@",
+      "$*",
+      "$$"
+    ],
+    "answer": "$#"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "কোন বিশেষ প্যারামিটার সব positional argument আলাদা শব্দ হিসেবে প্রসারিত করে?",
+    "options": [
+      "$@",
+      "$*",
+      "$#",
+      "$0"
+    ],
+    "answer": "$@"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "কোন Bash বিল্টইন প্রথম positional parameter বাদ দিয়ে বাকিগুলোকে এক ধাপ নিচে সরিয়ে দেয়?",
+    "options": [
+      "shift",
+      "unshift",
+      "pop",
+      "rotate"
+    ],
+    "answer": "shift"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "কোন বিশেষ প্যারামিটার বর্তমান শেলের প্রসেস ID নির্দেশ করে?",
+    "options": [
+      "$$",
+      "$!",
+      "$?",
+      "$0"
+    ],
+    "answer": "$$"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "কোন বিশেষ প্যারামিটার সর্বশেষ কমান্ডের exit status নির্দেশ করে?",
+    "options": [
+      "$?",
+      "$!",
+      "$$",
+      "$#"
+    ],
+    "answer": "$?"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "var unset বা খালি হলে কোন এক্সপ্যানশন একটি ডিফল্ট মান ফেরত দেয়?",
+    "options": [
+      "${var:-default}",
+      "${var:=default}",
+      "${var:+default}",
+      "${var:?default}"
+    ],
+    "answer": "${var:-default}"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "কোন এক্সপ্যানশন var থেকে 3টি অক্ষর বের করে, offset 2 থেকে শুরু করে?",
+    "options": [
+      "${var:2:3}",
+      "${var:3:2}",
+      "${var[2,3]}",
+      "${var#2:3}"
+    ],
+    "answer": "${var:2:3}"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "কোন এক্সপ্যানশন var-এর মানের দৈর্ঘ্য ফেরত দেয়?",
+    "options": [
+      "${#var}",
+      "${len(var)}",
+      "${var:length}",
+      "${var#length}"
+    ],
+    "answer": "${#var}"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "কোন এক্সপ্যানশন var-এর মানকে বড় হাতের অক্ষরে (uppercase) রূপান্তর করে?",
+    "options": [
+      "${var^^}",
+      "${var,,}",
+      "${var!!}",
+      "${var##}"
+    ],
+    "answer": "${var^^}"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "কোন এক্সপ্যানশন var থেকে সবচেয়ে দীর্ঘ মিলে যাওয়া prefix pattern সরিয়ে দেয়?",
+    "options": [
+      "${var##pattern}",
+      "${var#pattern}",
+      "${var%%pattern}",
+      "${var%pattern}"
+    ],
+    "answer": "${var##pattern}"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "কোন এক্সপ্যানশন var-এ pattern-এর শুধু প্রথম মিলটি প্রতিস্থাপন করে?",
+    "options": [
+      "${var/pattern/replacement}",
+      "${var//pattern/replacement}",
+      "${var#pattern}",
+      "${var%pattern}"
+    ],
+    "answer": "${var/pattern/replacement}"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "var unset বা খালি হলে কোন এক্সপ্যানশন একটি ত্রুটি বার্তা প্রিন্ট করে এবং non-interactive স্ক্রিপ্ট বন্ধ করে দেয়?",
+    "options": [
+      "${var:?message}",
+      "${var:-message}",
+      "${var:+message}",
+      "${var:=message}"
+    ],
+    "answer": "${var:?message}"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "Bash-এ কোন সিনট্যাক্স গাণিতিক এক্সপ্যানশন সম্পাদন করে?",
+    "options": [
+      "$((5 + 3))",
+      "$(5 + 3)",
+      "${5 + 3}",
+      "$[5 + 3]"
+    ],
+    "answer": "$((5 + 3))"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "কোন কমান্ড count ভেরিয়েবলকে এক বাড়ায়?",
+    "options": [
+      "let count++",
+      "count++",
+      "increment count",
+      "add count"
+    ],
+    "answer": "let count++"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "কোন কমান্ড 8 প্রিন্ট করে, যখন 5 ও 3 যোগ করা হয়?",
+    "options": [
+      "expr 5 + 3",
+      "expr 5+3",
+      "expr5 + 3",
+      "expr add 5 3"
+    ],
+    "answer": "expr 5 + 3"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "কোন কমান্ড count-কে পূর্ণসংখ্যা (integer) ভেরিয়েবল হিসেবে ঘোষণা করে?",
+    "options": [
+      "declare -i count",
+      "declare int count",
+      "integer count",
+      "set count integer"
+    ],
+    "answer": "declare -i count"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "কোন কমান্ড একটি ভেরিয়েবলকে read-only করে?",
+    "options": [
+      "readonly var",
+      "lock var",
+      "const var",
+      "final var"
+    ],
+    "answer": "readonly var"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "কোন কমান্ড শেল এনভায়রনমেন্ট থেকে একটি ভেরিয়েবল সরিয়ে দেয়?",
+    "options": [
+      "unset var",
+      "delete var",
+      "remove var",
+      "clear var"
+    ],
+    "answer": "unset var"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "কোন কমান্ড একটি ভেরিয়েবলকে চাইল্ড প্রসেসের জন্য উপলব্ধ করে?",
+    "options": [
+      "export var",
+      "share var",
+      "env var",
+      "publish var"
+    ],
+    "answer": "export var"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "কোন অপশন আউটপুট রিডাইরেকশনকে বিদ্যমান ফাইল ওভাররাইট করা থেকে বিরত রাখে?",
+    "options": [
+      "set -o noclobber",
+      "set -o nooverwrite",
+      "set -o protect",
+      "set -o safe"
+    ],
+    "answer": "set -o noclobber"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "কোন Bash ভেরিয়েবল শেল শুরু হওয়ার পর থেকে অতিবাহিত সেকেন্ডের সংখ্যা ধারণ করে?",
+    "options": [
+      "$SECONDS",
+      "$RANDOM",
+      "$LINENO",
+      "$UID"
+    ],
+    "answer": "$SECONDS"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "কোন Bash এক্সপ্যানশন var সেট ও খালি না হলেই কেবল alt প্রতিস্থাপন করে?",
+    "options": [
+      "${var:+alt}",
+      "${var:-alt}",
+      "${var:=alt}",
+      "${var:?alt}"
+    ],
+    "answer": "${var:+alt}"
+  }
+]

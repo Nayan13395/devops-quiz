@@ -1,3 +1,4 @@
+import '../l10n/game_localizations.dart';
 import 'dart:math' as math;
 
 import 'package:flutter/material.dart';
@@ -10,6 +11,12 @@ const ludoPlayerColours = [
   Color(0xFF1E88E5),
 ];
 const ludoColourNames = ['Red', 'Green', 'Yellow', 'Blue'];
+List<String> localizedLudoColourNames(BuildContext context) => [
+  gameL10n(context).gameUiRed,
+  gameL10n(context).gameUiGreen,
+  gameL10n(context).gameUiYellow,
+  gameL10n(context).gameUiBlue,
+];
 const ludoInactiveSeatName = '__ludo_reserved_seat__';
 
 class LudoBoardView extends StatelessWidget {
@@ -74,7 +81,7 @@ class LudoBoardView extends StatelessWidget {
                                 ),
                                 const SizedBox(width: 4),
                                 Text(
-                                  '${state.players[player].name} · ${state.finishedCountOf(player)}/4',
+                                  '${gamePlayerName(context, state.players[player].name)} · ${state.finishedCountOf(player)}/4',
                                   style: TextStyle(
                                     fontWeight:
                                         player == state.currentPlayerIndex
@@ -94,19 +101,39 @@ class LudoBoardView extends StatelessWidget {
                           quarterTurns: 3,
                           child: LayoutBuilder(
                             builder: (context, constraints) =>
-                                _board(constraints.maxWidth, state),
+                                _board(context, constraints.maxWidth, state),
                           ),
                         ),
                       ),
                       const Spacer(),
                       Text(
                         state.isFinished
-                            ? '${state.players[winner!].name} wins!'
-                            : '${state.currentPlayer.name}${controller.isCurrentPlayerBot
-                                  ? ' is thinking'
-                                  : controller.canSelectPiece
-                                  ? ': choose a piece'
-                                  : ': roll the dice'}',
+                            ? gameL10n(context).gameUiWins(
+                                gamePlayerName(
+                                  context,
+                                  state.players[winner!].name,
+                                ),
+                              )
+                            : controller.isCurrentPlayerBot
+                            ? gameL10n(context).gameUiIsThinking(
+                                gamePlayerName(
+                                  context,
+                                  state.currentPlayer.name,
+                                ),
+                              )
+                            : controller.canSelectPiece
+                            ? gameL10n(context).gameUiChooseAPiece(
+                                gamePlayerName(
+                                  context,
+                                  state.currentPlayer.name,
+                                ),
+                              )
+                            : gameL10n(context).gameUiRollTheDice(
+                                gamePlayerName(
+                                  context,
+                                  state.currentPlayer.name,
+                                ),
+                              ),
                         textAlign: TextAlign.center,
                         style: Theme.of(context).textTheme.titleMedium,
                       ),
@@ -127,7 +154,7 @@ class LudoBoardView extends StatelessWidget {
                                 ),
                                 const SizedBox(width: 5),
                                 Text(
-                                  '${state.players[assignment.$2].name} · '
+                                  '${gamePlayerName(context, state.players[assignment.$2].name)} · '
                                   '${state.finishedCountOf(assignment.$2)}/4',
                                 ),
                               ],
@@ -139,7 +166,9 @@ class LudoBoardView extends StatelessWidget {
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           Semantics(
-                            label: 'Dice ${state.lastRoll ?? 1}',
+                            label: gameL10n(
+                              context,
+                            ).gameUiDice((state.lastRoll ?? 1).toString()),
                             child: SizedBox.square(
                               dimension: 52,
                               child: CustomPaint(
@@ -156,7 +185,7 @@ class LudoBoardView extends StatelessWidget {
                                   ? controller.rollDice
                                   : null,
                               icon: const Icon(Icons.casino_outlined),
-                              label: const Text('Roll dice'),
+                              label: Text(gameL10n(context).gameUiRollDice),
                             ),
                           ),
                         ],
@@ -172,7 +201,7 @@ class LudoBoardView extends StatelessWidget {
     },
   );
 
-  Widget _board(double size, LudoGameState state) {
+  Widget _board(BuildContext context, double size, LudoGameState state) {
     final cell = size / kBoardGridSize;
     final seatColors = _displaySeatColors(state.players);
     final legal = controller.canSelectPiece
@@ -207,7 +236,7 @@ class LudoBoardView extends StatelessWidget {
                 child: FittedBox(
                   fit: BoxFit.scaleDown,
                   child: Text(
-                    state.players[player].name,
+                    gamePlayerName(context, state.players[player].name),
                     style: const TextStyle(
                       color: Colors.white,
                       fontWeight: FontWeight.w700,
@@ -253,7 +282,7 @@ class LudoBoardView extends StatelessWidget {
             ),
           ),
         ),
-        for (final piece in pieces) _piece(piece, pieces, legal, cell),
+        for (final piece in pieces) _piece(context, piece, pieces, legal, cell),
       ],
     );
   }
@@ -277,6 +306,7 @@ class LudoBoardView extends StatelessWidget {
   }
 
   Widget _piece(
+    BuildContext context,
     LudoPiece piece,
     List<LudoPiece> pieces,
     Set<int> legal,
@@ -301,8 +331,13 @@ class LudoBoardView extends StatelessWidget {
       width: cell * pieceScale,
       height: cell * pieceScale,
       child: Semantics(
-        label:
-            '${controller.state.players[piece.playerIndex].name} piece ${piece.id % 4 + 1}',
+        label: gameL10n(context).gameUiPiece(
+          gamePlayerName(
+            context,
+            controller.state.players[piece.playerIndex].name,
+          ),
+          (piece.id % 4 + 1).toString(),
+        ),
         button: active,
         child: GestureDetector(
           onTap: active

@@ -1,0 +1,302 @@
+[
+  {
+    "category": "PowerShell",
+    "set": 3,
+    "question": "引数を許可される値の固定リストに制限するPowerShellのパラメーター属性はどれですか?",
+    "options": [
+      "[ValidateSet()]",
+      "[AllowNull()]",
+      "[Alias()]",
+      "[OutputType()]"
+    ],
+    "answer": "[ValidateSet()]"
+  },
+  {
+    "category": "PowerShell",
+    "set": 3,
+    "question": "高度な関数の先頭で一度だけ実行されるブロックはどれですか?",
+    "options": [
+      "begin",
+      "start",
+      "init",
+      "open"
+    ],
+    "answer": "begin"
+  },
+  {
+    "category": "PowerShell",
+    "set": 3,
+    "question": "各パイプライン入力オブジェクトを処理するブロックはどれですか?",
+    "options": [
+      "process",
+      "loop",
+      "foreach",
+      "handle"
+    ],
+    "answer": "process"
+  },
+  {
+    "category": "PowerShell",
+    "set": 3,
+    "question": "高度な関数の最後に一度だけ実行されるブロックはどれですか?",
+    "options": [
+      "end",
+      "finish",
+      "final",
+      "complete"
+    ],
+    "answer": "end"
+  },
+  {
+    "category": "PowerShell",
+    "set": 3,
+    "question": "現在のパイプラインオブジェクトを表す自動変数はどれですか?",
+    "options": [
+      "$_",
+      "$this",
+      "$item",
+      "$current"
+    ],
+    "answer": "$_"
+  },
+  {
+    "category": "PowerShell",
+    "set": 3,
+    "question": "すべてのパイプライン入力を含む自動変数はどれですか?",
+    "options": [
+      "$input",
+      "$args",
+      "$pipeline",
+      "$objects"
+    ],
+    "answer": "$input"
+  },
+  {
+    "category": "PowerShell",
+    "set": 3,
+    "question": "関数の未指定の引数を含む自動変数はどれですか?",
+    "options": [
+      "$args",
+      "$params",
+      "$arguments",
+      "$values"
+    ],
+    "answer": "$args"
+  },
+  {
+    "category": "PowerShell",
+    "set": 3,
+    "question": "高度な関数の機能を有効にする属性はどれですか?",
+    "options": [
+      "[CmdletBinding()]",
+      "[Function()]",
+      "[Advanced()]",
+      "[Parameter()]"
+    ],
+    "answer": "[CmdletBinding()]"
+  },
+  {
+    "category": "PowerShell",
+    "set": 3,
+    "question": "パラメーターを必須にするパラメーター属性はどれですか?",
+    "options": [
+      "Mandatory=$true",
+      "Required=$true",
+      "Must=$true",
+      "Force=$true"
+    ],
+    "answer": "Mandatory=$true"
+  },
+  {
+    "category": "PowerShell",
+    "set": 3,
+    "question": "PowerShellのcmdletに推奨される命名規則はどれですか?",
+    "options": [
+      "Verb-Noun",
+      "Noun-Verb",
+      "Verb_Noun",
+      "VerbNoun"
+    ],
+    "answer": "Verb-Noun"
+  },
+  {
+    "category": "PowerShell",
+    "set": 3,
+    "question": "PowerShellスクリプトに使用されるファイル拡張子はどれですか?",
+    "options": [
+      ".ps1",
+      ".psm1",
+      ".psd1",
+      ".bat"
+    ],
+    "answer": ".ps1"
+  },
+  {
+    "category": "PowerShell",
+    "set": 3,
+    "question": "PowerShellモジュールに使用されるファイル拡張子はどれですか?",
+    "options": [
+      ".psm1",
+      ".ps1",
+      ".psd1",
+      ".json"
+    ],
+    "answer": ".psm1"
+  },
+  {
+    "category": "PowerShell",
+    "set": 3,
+    "question": "モジュールマニフェストに使用されるファイル拡張子はどれですか?",
+    "options": [
+      ".psd1",
+      ".psm1",
+      ".ps1",
+      ".xml"
+    ],
+    "answer": ".psd1"
+  },
+  {
+    "category": "PowerShell",
+    "set": 3,
+    "question": "現在読み込まれていないモジュールを一覧表示するGet-Moduleのパラメーターはどれですか?",
+    "options": [
+      "-ListAvailable",
+      "-All",
+      "-Loaded",
+      "-Complete"
+    ],
+    "answer": "-ListAvailable"
+  },
+  {
+    "category": "PowerShell",
+    "set": 3,
+    "question": "モジュールを現在のセッションに読み込むcmdletはどれですか?",
+    "options": [
+      "Import-Module",
+      "Install-Module",
+      "Add-Module",
+      "Load-Module"
+    ],
+    "answer": "Import-Module"
+  },
+  {
+    "category": "PowerShell",
+    "set": 3,
+    "question": "モジュールを現在のセッションから削除するcmdletはどれですか?",
+    "options": [
+      "Remove-Module",
+      "Uninstall-Module",
+      "Delete-Module",
+      "Clear-Module"
+    ],
+    "answer": "Remove-Module"
+  },
+  {
+    "category": "PowerShell",
+    "set": 3,
+    "question": "モジュールでコマンドをフィルター処理するGet-Commandのパラメーターはどれですか?",
+    "options": [
+      "-Module",
+      "-FromModule",
+      "-ModuleName",
+      "-Source"
+    ],
+    "answer": "-Module"
+  },
+  {
+    "category": "PowerShell",
+    "set": 3,
+    "question": "対話型のリモートセッションを開始するcmdletはどれですか?",
+    "options": [
+      "Enter-PSSession",
+      "New-PSSession",
+      "Invoke-Command",
+      "Connect-Computer"
+    ],
+    "answer": "Enter-PSSession"
+  },
+  {
+    "category": "PowerShell",
+    "set": 3,
+    "question": "リモートコンピューターでコマンドを実行するcmdletはどれですか?",
+    "options": [
+      "Invoke-Command",
+      "Enter-PSSession",
+      "Remote-Command",
+      "Execute-Command"
+    ],
+    "answer": "Invoke-Command"
+  },
+  {
+    "category": "PowerShell",
+    "set": 3,
+    "question": "永続的なリモートセッションを作成するcmdletはどれですか?",
+    "options": [
+      "New-PSSession",
+      "Enter-PSSession",
+      "Start-Session",
+      "Open-PSSession"
+    ],
+    "answer": "New-PSSession"
+  },
+  {
+    "category": "PowerShell",
+    "set": 3,
+    "question": "リモートセッションを削除するcmdletはどれですか?",
+    "options": [
+      "Remove-PSSession",
+      "Delete-PSSession",
+      "Close-PSSession",
+      "End-PSSession"
+    ],
+    "answer": "Remove-PSSession"
+  },
+  {
+    "category": "PowerShell",
+    "set": 3,
+    "question": "PowerShellリモート処理で一般的に使用されるプロトコルはどれですか?",
+    "options": [
+      "WinRM",
+      "SSH",
+      "HTTP",
+      "FTP"
+    ],
+    "answer": "WinRM"
+  },
+  {
+    "category": "PowerShell",
+    "set": 3,
+    "question": "PowerShellリモート処理を有効にするcmdletはどれですか?",
+    "options": [
+      "Enable-PSRemoting",
+      "Start-PSRemoting",
+      "Enable-Remoting",
+      "Configure-Remoting"
+    ],
+    "answer": "Enable-PSRemoting"
+  },
+  {
+    "category": "PowerShell",
+    "set": 3,
+    "question": "PowerShellリモート処理を無効にするcmdletはどれですか?",
+    "options": [
+      "Disable-PSRemoting",
+      "Stop-PSRemoting",
+      "Disable-Remoting",
+      "Remove-Remoting"
+    ],
+    "answer": "Disable-PSRemoting"
+  },
+  {
+    "category": "PowerShell",
+    "set": 3,
+    "question": "CIMインスタンスを取得するcmdletはどれですか?",
+    "options": [
+      "Get-CimInstance",
+      "Get-WmiObject",
+      "Get-CimObject",
+      "Query-Cim"
+    ],
+    "answer": "Get-CimInstance"
+  }
+]

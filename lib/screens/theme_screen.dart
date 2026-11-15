@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import '../theme_provider.dart';
+import '../l10n/achievement_localizations.dart';
 import '../models/app_theme.dart';
 import '../services/point_service.dart';
 import '../services/theme_service.dart';
@@ -76,7 +77,9 @@ class _ThemeScreenState extends State<ThemeScreen> {
 
       ScaffoldMessenger.of(context).showSnackBar(
         SnackBar(
-          content: Text('${theme.emoji} ${theme.name} theme applied!'),
+          content: Text(
+            '${theme.emoji} ${themeDisplayName(context, theme)} theme applied!',
+          ),
           duration: const Duration(seconds: 2),
         ),
       );
@@ -101,7 +104,7 @@ class _ThemeScreenState extends State<ThemeScreen> {
           icon: const Icon(Icons.lock_outline, size: 42),
 
           title: Text(
-            '${theme.emoji} ${theme.name}',
+            '${theme.emoji} ${themeDisplayName(dialogContext, theme)}',
             textAlign: TextAlign.center,
           ),
 
@@ -283,7 +286,12 @@ class _ThemeScreenState extends State<ThemeScreen> {
                       final query = _searchController.text.trim().toLowerCase();
                       final themes = AppThemes.sortedByUnlock
                           .where(
-                            (theme) => theme.name.toLowerCase().contains(query),
+                            (theme) =>
+                                themeDisplayName(
+                                  context,
+                                  theme,
+                                ).toLowerCase().contains(query) ||
+                                theme.name.toLowerCase().contains(query),
                           )
                           .toList();
                       if (themes.isEmpty) {
@@ -359,7 +367,7 @@ class _ThemeScreenState extends State<ThemeScreen> {
   }
 
   Widget _buildThemeCard(AppThemeInfo theme, ThemeProvider provider) {
-    final freePeriod = AppThemes.freePeriodLabel(theme);
+    final freePeriod = themeFreePeriodText(context, theme);
     final freeNow = AppThemes.isFreeNow(theme);
     final bool unlocked = ThemeService.isThemeUnlocked(
       theme: theme,
@@ -471,7 +479,7 @@ class _ThemeScreenState extends State<ThemeScreen> {
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Text(
-                            theme.name,
+                            themeDisplayName(context, theme),
                             style: const TextStyle(
                               fontSize: 18,
                               fontWeight: FontWeight.bold,
@@ -546,24 +554,28 @@ class _ThemeScreenState extends State<ThemeScreen> {
 
                   const SizedBox(height: 7),
 
-                  Wrap(
-                    alignment: WrapAlignment.spaceBetween,
-                    runSpacing: 4,
-                    children: [
-                      Text(
-                        '${_formatPoints(totalPoints)} / '
-                        '${_formatPoints(theme.requiredPoints)}',
-                        style: const TextStyle(fontSize: 12),
-                      ),
-
-                      Text(
-                        '${_formatPoints(remaining)} more',
-                        style: const TextStyle(
-                          fontSize: 12,
-                          fontWeight: FontWeight.w600,
+                  SizedBox(
+                    width: double.infinity,
+                    child: Wrap(
+                      alignment: WrapAlignment.spaceBetween,
+                      spacing: 16,
+                      runSpacing: 8,
+                      children: [
+                        Text(
+                          '${_formatPoints(totalPoints)} / '
+                          '${_formatPoints(theme.requiredPoints)}',
+                          style: const TextStyle(fontSize: 12),
                         ),
-                      ),
-                    ],
+
+                        Text(
+                          '${_formatPoints(remaining)} more',
+                          style: const TextStyle(
+                            fontSize: 12,
+                            fontWeight: FontWeight.w600,
+                          ),
+                        ),
+                      ],
+                    ),
                   ),
                 ],
               ],

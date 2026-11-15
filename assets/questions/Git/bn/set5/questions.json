@@ -1,0 +1,302 @@
+[
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "বিদ্যমান release শাখার জন্য সংযুক্ত কাজের ট্রি যোগ করে কোন কমান্ড?",
+    "options": [
+      "git worktree prune",
+      "git worktree lock ..\\release",
+      "git worktree add ..\\release release",
+      "git worktree list"
+    ],
+    "answer": "git worktree add ..\\release release"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "মূল প্রকল্পের সংস্করণ-নিয়ন্ত্রিত সাবমডিউল পথ ও URL কোন ফাইলে থাকে?",
+    "options": [
+      ".gitmessage",
+      ".gitmodules",
+      ".gitignore",
+      ".gitattributes"
+    ],
+    "answer": ".gitmodules"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "নেস্টেডসহ নিবন্ধিত সাবমডিউল শুরু করে চেকআউট করে কোন কমান্ড?",
+    "options": [
+      "git submodule update --init --recursive",
+      "git submodule deinit --all",
+      "git submodule status",
+      "git submodule sync"
+    ],
+    "answer": "git submodule update --init --recursive"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "মূল প্রকল্প সাধারণত সাবমডিউলের জন্য কমিটে কী রাখে?",
+    "options": [
+      "সাবমডিউলের সম্পূর্ণ অবজেক্ট ডেটাবেস",
+      "কেবল সাবমডিউলের ডিফল্ট শাখার নাম",
+      "কেবল সাবমডিউলের কমিট না করা পরিবর্তন",
+      "সাবমডিউলের নির্দিষ্ট কমিটের রেফারেন্স"
+    ],
+    "answer": "সাবমডিউলের নির্দিষ্ট কমিটের রেফারেন্স"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "সব রেফারেন্স ও সেগুলো থেকে পৌঁছনো ইতিহাসসহ বহনযোগ্য বান্ডল বানায় কোন কমান্ড?",
+    "options": [
+      "git format-patch -1 HEAD",
+      "git diff --binary > backup.bundle",
+      "git bundle create backup.bundle --all",
+      "git archive --output=backup.bundle HEAD"
+    ],
+    "answer": "git bundle create backup.bundle --all"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "Git ইতিহাস ছাড়া HEAD-এর ট্র্যাক ফাইল ZIP-এ রপ্তানি করে কোন কমান্ড?",
+    "options": [
+      "git format-patch --stdout HEAD > source.zip",
+      "git archive --format=zip --output=source.zip HEAD",
+      "git bundle create source.zip --all",
+      "git clone --bare . source.zip"
+    ],
+    "answer": "git archive --format=zip --output=source.zip HEAD"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "শেষ কমিটকে ইমেল-ধাঁচের প্যাচ ফাইলে বদলায় কোন কমান্ড?",
+    "options": [
+      "git format-patch -1 HEAD",
+      "git diff HEAD",
+      "git show --stat HEAD",
+      "git log -1 --oneline"
+    ],
+    "answer": "git format-patch -1 HEAD"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "git format-patch-এর ইমেল প্যাচ প্রয়োগ করে কমিট বানায় কোন কমান্ড?",
+    "options": [
+      "git apply changes.patch",
+      "git diff changes.patch",
+      "git add changes.patch",
+      "git am changes.patch"
+    ],
+    "answer": "git am changes.patch"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "ফাইল না বদলে সাধারণ প্যাচ প্রয়োগ সম্ভব কি না দেখে কোন কমান্ড?",
+    "options": [
+      "git am changes.patch",
+      "git add changes.patch",
+      "git apply --check changes.patch",
+      "git apply changes.patch"
+    ],
+    "answer": "git apply --check changes.patch"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "ফাইলের নাম ছাড়া বিষয়বস্তু রাখে কোন Git অবজেক্ট ধরন?",
+    "options": [
+      "টীকাযুক্ত ট্যাগ",
+      "Blob",
+      "Tree",
+      "কমিট"
+    ],
+    "answer": "Blob"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "ফাইলের নাম ও blob বা সাবট্রির রেফারেন্স রাখে কোন Git অবজেক্ট ধরন?",
+    "options": [
+      "Tree",
+      "Blob",
+      "কমিট",
+      "টীকাযুক্ত ট্যাগ"
+    ],
+    "answer": "Tree"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "জানা অবজেক্ট ID-এর ধরন দেখায় কোন কমান্ড?",
+    "options": [
+      "git cat-file -s abc1234",
+      "git rev-parse abc1234",
+      "git log -1 abc1234",
+      "git cat-file -t abc1234"
+    ],
+    "answer": "git cat-file -t abc1234"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "HEAD-এর পূর্ণ অবজেক্ট ID দেখায় কোন কমান্ড?",
+    "options": [
+      "git status --short",
+      "git branch --show-current",
+      "git rev-parse HEAD",
+      "git symbolic-ref HEAD"
+    ],
+    "answer": "git rev-parse HEAD"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "feature থেকে পৌঁছানো যায়, কিন্তু main থেকে নয়—এমন কমিট বেছে নেয় কোন সীমা?",
+    "options": [
+      "main^",
+      "main..feature",
+      "feature..main",
+      "main...feature"
+    ],
+    "answer": "main..feature"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "শুধু মার্জ কমিট দেখানোর git log বিকল্প কোনটি?",
+    "options": [
+      "--merges",
+      "--no-merges",
+      "--first-parent",
+      "--reverse"
+    ],
+    "answer": "--merges"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "পরিবর্তিত পথ ও পরিবর্তনের অবস্থা-অক্ষর দেখায় কোন git diff বিকল্প?",
+    "options": [
+      "--name-only",
+      "--stat",
+      "--shortstat",
+      "--name-status"
+    ],
+    "answer": "--name-status"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "পথের টেক্সট স্বাভাবিকীকরণের মতো সংস্করণ-নিয়ন্ত্রিত বৈশিষ্ট্য কোন ফাইল নির্ধারণ করে?",
+    "options": [
+      ".gitmodules",
+      ".gitconfig",
+      ".gitattributes",
+      ".gitignore"
+    ],
+    "answer": ".gitattributes"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": ".gitattributes-এর '*.sh text eol=lf' মিল থাকা টেক্সট ফাইলের জন্য কী চায়?",
+    "options": [
+      "খালি লাইন স্বয়ংক্রিয়ভাবে মোছা",
+      "কাজের ট্রিতে LF লাইন-শেষ",
+      "কাজের ট্রিতে CRLF লাইন-শেষ",
+      "টেক্সট রূপান্তর ছাড়া বাইনারি হিসেবে ব্যবহার"
+    ],
+    "answer": "কাজের ট্রিতে LF লাইন-শেষ"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "প্রস্তাবিত কমিট বার্তার ফাইল দেখে কমিট নাকচ করতে পারে কোন হুক?",
+    "options": [
+      "commit-msg",
+      "post-commit",
+      "post-checkout",
+      "post-merge"
+    ],
+    "answer": "commit-msg"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "Git হুকের কাস্টম ডিরেক্টরি বেছে নেয় কোন সেটিং?",
+    "options": [
+      "core.worktree",
+      "core.excludesFile",
+      "core.attributesFile",
+      "core.hooksPath"
+    ],
+    "answer": "core.hooksPath"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "সবার .gitignore নিয়ম না বদলে একজন ডেভেলপারকে স্থানীয় ট্র্যাক না করা ফাইল উপেক্ষা করতে দেয় কোন ফাইল?",
+    "options": [
+      ".git\\description",
+      ".git\\packed-refs",
+      ".git\\info\\exclude",
+      ".git\\HEAD"
+    ],
+    "answer": ".git\\info\\exclude"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "bisect সেশন শেষ করে সাধারণত মূল শাখায় ফেরে কোন কমান্ড?",
+    "options": [
+      "git bisect log",
+      "git bisect reset",
+      "git bisect skip",
+      "git bisect good"
+    ],
+    "answer": "git bisect reset"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "প্যাচ সিরিজের দুই সংস্করণ তুলনা করে কোন কমান্ড?",
+    "options": [
+      "git range-diff main..old main..new",
+      "git diff old new",
+      "git log old..new",
+      "git merge-base old new"
+    ],
+    "answer": "git range-diff main..old main..new"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "কমিট বানানোর সময় Signed-off-by লাইন যোগ করে কোন কমান্ড?",
+    "options": [
+      "git commit --gpg-sign",
+      "git commit --amend",
+      "git commit --no-verify",
+      "git commit --signoff"
+    ],
+    "answer": "git commit --signoff"
+  },
+  {
+    "category": "Git",
+    "set": 5,
+    "question": "git log -S'old_name' ডিফল্টভাবে কী খোঁজে?",
+    "options": [
+      "বার্তায় old_name আছে এমন কমিট",
+      "নামে old_name আছে এমন শাখা",
+      "old_name-এর উপস্থিতির সংখ্যা বদলায় এমন কমিট",
+      "লেখকের নাম old_name এমন কমিট"
+    ],
+    "answer": "old_name-এর উপস্থিতির সংখ্যা বদলায় এমন কমিট"
+  }
+]

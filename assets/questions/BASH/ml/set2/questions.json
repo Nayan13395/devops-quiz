@@ -1,0 +1,302 @@
+[
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "date-ന്റെ ഔട്ട്പുട്ട് now എന്ന വേരിയബിളിൽ സംഭരിക്കുന്ന syntax ഏതാണ്?",
+    "options": [
+      "now=$(date)",
+      "now=date",
+      "now:=$(date)",
+      "date->now"
+    ],
+    "answer": "now=$(date)"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "സ്ക്രിപ്റ്റിന്റെ പേരിനെ പ്രതിനിധീകരിക്കുന്ന special parameter ഏതാണ്?",
+    "options": [
+      "$0",
+      "$1",
+      "$#",
+      "$@"
+    ],
+    "answer": "$0"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "ഏറ്റവും പുതിയ background കമാൻഡിന്റെ process ID ആയി expand ചെയ്യുന്ന special parameter ഏതാണ്?",
+    "options": [
+      "$!",
+      "$$",
+      "$?",
+      "$#"
+    ],
+    "answer": "$!"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "positional arguments-ന്റെ എണ്ണത്തെ പ്രതിനിധീകരിക്കുന്ന special parameter ഏതാണ്?",
+    "options": [
+      "$#",
+      "$@",
+      "$*",
+      "$$"
+    ],
+    "answer": "$#"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "എല്ലാ positional arguments-നെയും വെവ്വേറെ വാക്കുകളായി expand ചെയ്യുന്ന special parameter ഏതാണ്?",
+    "options": [
+      "$@",
+      "$*",
+      "$#",
+      "$0"
+    ],
+    "answer": "$@"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "ആദ്യത്തെ positional parameter ഒഴിവാക്കി ബാക്കിയുള്ളവയെ ഒന്ന് താഴേക്ക് മാറ്റുന്ന Bash builtin ഏതാണ്?",
+    "options": [
+      "shift",
+      "unshift",
+      "pop",
+      "rotate"
+    ],
+    "answer": "shift"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "നിലവിലെ ഷെല്ലിന്റെ process ID-യെ പ്രതിനിധീകരിക്കുന്ന special parameter ഏതാണ്?",
+    "options": [
+      "$$",
+      "$!",
+      "$?",
+      "$0"
+    ],
+    "answer": "$$"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "അവസാന കമാൻഡിന്റെ exit status-നെ പ്രതിനിധീകരിക്കുന്ന special parameter ഏതാണ്?",
+    "options": [
+      "$?",
+      "$!",
+      "$$",
+      "$#"
+    ],
+    "answer": "$?"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "var unset ആണെങ്കിലോ ശൂന്യമാണെങ്കിലോ default മൂല്യം നൽകുന്ന expansion ഏതാണ്?",
+    "options": [
+      "${var:-default}",
+      "${var:=default}",
+      "${var:+default}",
+      "${var:?default}"
+    ],
+    "answer": "${var:-default}"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "var-ൽ നിന്ന് 3 അക്ഷരങ്ങൾ offset 2 മുതൽ എടുക്കുന്ന expansion ഏതാണ്?",
+    "options": [
+      "${var:2:3}",
+      "${var:3:2}",
+      "${var[2,3]}",
+      "${var#2:3}"
+    ],
+    "answer": "${var:2:3}"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "var-ന്റെ മൂല്യത്തിന്റെ നീളം നൽകുന്ന expansion ഏതാണ്?",
+    "options": [
+      "${#var}",
+      "${len(var)}",
+      "${var:length}",
+      "${var#length}"
+    ],
+    "answer": "${#var}"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "var-ന്റെ മൂല്യത്തെ uppercase ആക്കി മാറ്റുന്ന expansion ഏതാണ്?",
+    "options": [
+      "${var^^}",
+      "${var,,}",
+      "${var!!}",
+      "${var##}"
+    ],
+    "answer": "${var^^}"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "var-ൽ നിന്ന് ഏറ്റവും നീളമുള്ള പൊരുത്തപ്പെടുന്ന prefix pattern നീക്കം ചെയ്യുന്ന expansion ഏതാണ്?",
+    "options": [
+      "${var##pattern}",
+      "${var#pattern}",
+      "${var%%pattern}",
+      "${var%pattern}"
+    ],
+    "answer": "${var##pattern}"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "var-ൽ pattern-ന്റെ ആദ്യ match മാത്രം മാറ്റിസ്ഥാപിക്കുന്ന expansion ഏതാണ്?",
+    "options": [
+      "${var/pattern/replacement}",
+      "${var//pattern/replacement}",
+      "${var#pattern}",
+      "${var%pattern}"
+    ],
+    "answer": "${var/pattern/replacement}"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "var unset ആണെങ്കിലോ ശൂന്യമാണെങ്കിലോ ഒരു പിശക് സന്ദേശം പ്രിന്റ് ചെയ്ത് non-interactive സ്ക്രിപ്റ്റ് നിർത്തുന്ന expansion ഏതാണ്?",
+    "options": [
+      "${var:?message}",
+      "${var:-message}",
+      "${var:+message}",
+      "${var:=message}"
+    ],
+    "answer": "${var:?message}"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "Bash-ൽ arithmetic expansion നടത്തുന്ന syntax ഏതാണ്?",
+    "options": [
+      "$((5 + 3))",
+      "$(5 + 3)",
+      "${5 + 3}",
+      "$[5 + 3]"
+    ],
+    "answer": "$((5 + 3))"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "count എന്ന വേരിയബിൾ ഒന്നു വർദ്ധിപ്പിക്കുന്ന കമാൻഡ് ഏതാണ്?",
+    "options": [
+      "let count++",
+      "count++",
+      "increment count",
+      "add count"
+    ],
+    "answer": "let count++"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "8 പ്രിന്റ് ചെയ്യാനായി 5-ഉം 3-ഉം കൂട്ടുന്ന കമാൻഡ് ഏതാണ്?",
+    "options": [
+      "expr 5 + 3",
+      "expr 5+3",
+      "expr5 + 3",
+      "expr add 5 3"
+    ],
+    "answer": "expr 5 + 3"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "count-നെ integer വേരിയബിളായി declare ചെയ്യുന്ന കമാൻഡ് ഏതാണ്?",
+    "options": [
+      "declare -i count",
+      "declare int count",
+      "integer count",
+      "set count integer"
+    ],
+    "answer": "declare -i count"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "ഒരു വേരിയബിളിനെ read-only ആക്കുന്ന കമാൻഡ് ഏതാണ്?",
+    "options": [
+      "readonly var",
+      "lock var",
+      "const var",
+      "final var"
+    ],
+    "answer": "readonly var"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "ഷെൽ environment-ൽ നിന്ന് ഒരു വേരിയബിൾ നീക്കം ചെയ്യുന്ന കമാൻഡ് ഏതാണ്?",
+    "options": [
+      "unset var",
+      "delete var",
+      "remove var",
+      "clear var"
+    ],
+    "answer": "unset var"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "ഒരു വേരിയബിളിനെ child processes-ന് ലഭ്യമാക്കുന്ന കമാൻഡ് ഏതാണ്?",
+    "options": [
+      "export var",
+      "share var",
+      "env var",
+      "publish var"
+    ],
+    "answer": "export var"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "നിലവിലുള്ള ഫയലിനെ output redirection overwrite ചെയ്യുന്നത് തടയുന്ന ഓപ്ഷൻ ഏതാണ്?",
+    "options": [
+      "set -o noclobber",
+      "set -o nooverwrite",
+      "set -o protect",
+      "set -o safe"
+    ],
+    "answer": "set -o noclobber"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "ഷെൽ ആരംഭിച്ചതിനു ശേഷമുള്ള സെക്കൻഡുകളുടെ എണ്ണം സൂക്ഷിക്കുന്ന Bash variable ഏതാണ്?",
+    "options": [
+      "$SECONDS",
+      "$RANDOM",
+      "$LINENO",
+      "$UID"
+    ],
+    "answer": "$SECONDS"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 2,
+    "question": "var set ആയിരിക്കുകയും ശൂന്യമല്ലാതിരിക്കുകയും ചെയ്താൽ മാത്രം alt പകരം നൽകുന്ന Bash expansion ഏതാണ്?",
+    "options": [
+      "${var:+alt}",
+      "${var:-alt}",
+      "${var:=alt}",
+      "${var:?alt}"
+    ],
+    "answer": "${var:+alt}"
+  }
+]

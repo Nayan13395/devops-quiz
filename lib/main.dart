@@ -6,10 +6,13 @@ import 'package:firebase_core/firebase_core.dart';
 
 import 'screens/welcome_screen.dart';
 import 'theme_provider.dart';
+import 'font_provider.dart';
 import 'language_provider.dart';
 import 'app_localization_delegates.dart';
 import 'services/notification_service.dart';
 import 'services/point_service.dart';
+import 'services/unlock_notice_service.dart';
+import 'widgets/unlock_notifications.dart';
 import 'services/update_service.dart';
 import 'package:devops_quiz/l10n/app_localizations.dart';
 import 'firebase_options.dart';
@@ -46,6 +49,11 @@ Future<void> main() async {
   // ============================================
 
   final int totalPoints = await PointService.getTotalPoints();
+  try {
+    await UnlockNoticeService.initialize();
+  } catch (error, stack) {
+    debugPrint('Unlock notice initialization failed: $error\n$stack');
+  }
 
   // ============================================
   // THEME PROVIDER
@@ -54,6 +62,14 @@ Future<void> main() async {
   final ThemeProvider themeProvider = ThemeProvider();
 
   await themeProvider.loadTheme(totalPoints: totalPoints);
+
+  // ============================================
+  // FONT PROVIDER
+  // ============================================
+
+  final FontProvider fontProvider = FontProvider();
+
+  await fontProvider.loadFont();
 
   // ============================================
   // SYSTEM UI
@@ -69,6 +85,8 @@ Future<void> main() async {
     MultiProvider(
       providers: [
         ChangeNotifierProvider<ThemeProvider>.value(value: themeProvider),
+
+        ChangeNotifierProvider<FontProvider>.value(value: fontProvider),
 
         ChangeNotifierProvider<LanguageProvider>(
           create: (_) => LanguageProvider(),
@@ -91,8 +109,22 @@ Future<void> main() async {
 // APP
 // ============================================================
 
-class MyApp extends StatelessWidget {
+class MyApp extends StatefulWidget {
   const MyApp({super.key});
+
+  @override
+  State<MyApp> createState() => _MyAppState();
+}
+
+class _MyAppState extends State<MyApp> {
+  final _navigatorKey = GlobalKey<NavigatorState>();
+  final _unlockObserver = UnlockRouteObserver();
+
+  @override
+  void dispose() {
+    _unlockObserver.topRoute.dispose();
+    super.dispose();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -102,6 +134,8 @@ class MyApp extends StatelessWidget {
 
     final themeProvider = context.watch<ThemeProvider>();
 
+    final fontProvider = context.watch<FontProvider>();
+
     // ============================================
     // WATCH LANGUAGE
     // ============================================
@@ -109,6 +143,13 @@ class MyApp extends StatelessWidget {
     final languageProvider = context.watch<LanguageProvider>();
 
     return MaterialApp(
+      navigatorKey: _navigatorKey,
+      navigatorObservers: [_unlockObserver],
+      builder: (context, child) => UnlockNotifications(
+        navigatorKey: _navigatorKey,
+        observer: _unlockObserver,
+        child: child!,
+      ),
       debugShowCheckedModeBanner: false,
 
       title: 'DevOps Quiz',
@@ -125,7 +166,12 @@ class MyApp extends StatelessWidget {
       // ==========================================
       // THEME
       // ==========================================
-      theme: themeProvider.themeData,
+      // Custom fonts cover Latin text; other scripts use the
+      // locale-aware fallback chain from FontService.
+      theme: fontProvider.applyTo(
+        themeProvider.themeData,
+        locale: languageProvider.locale,
+      ),
 
       themeMode: ThemeMode.light,
 

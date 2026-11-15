@@ -1,0 +1,99 @@
+{
+  "task": "Eight question banks and offline app regression suite",
+  "phase": "Blocked on qualified review for four languages; offline regression report available",
+  "status": "blocked",
+  "categories": {
+    "Ansible": {
+      "original_records": 60,
+      "target_records": 125,
+      "status": "complete: 25 per set"
+    },
+    "Git": {
+      "original_records": 59,
+      "target_records": 125,
+      "status": "complete: 25 per set"
+    },
+    "Networking": {
+      "original_records": 59,
+      "target_records": 125,
+      "status": "complete: 25 per set"
+    },
+    "Jenkins": {
+      "original_records": 58,
+      "target_records": 125,
+      "status": "complete: 25 per set"
+    },
+    "Terraform": {
+      "original_records": 59,
+      "target_records": 125,
+      "status": "complete: 25 per set"
+    },
+    "Docker": {
+      "original_records": 59,
+      "target_records": 125,
+      "status": "complete: 25 per set"
+    },
+    "Linux": {
+      "original_records": 59,
+      "target_records": 125,
+      "status": "complete: 25 per set"
+    },
+    "K8s": {
+      "original_records": 59,
+      "target_records": 125,
+      "status": "complete: 25 per set"
+    }
+  },
+  "translations": {
+    "status": "224 of 256 banks complete without Ollama. The remaining 32 banks require qualified Dogri, Maithili, Manipuri and Santali review; 5,070 response strings remain unfinished.",
+    "completed_files": 224,
+    "total_files": 256,
+    "languages": 32
+  },
+  "atf": {
+    "status": "FAILED (data-and-flutter)",
+    "passed": 1076,
+    "failed": 5
+  },
+  "tasks": [
+    {
+      "name": "Complete and audit eight English banks: five sets of 25",
+      "status": "done"
+    },
+    {
+      "name": "Migrate all categories to category/language/setN/questions.json",
+      "status": "done"
+    },
+    {
+      "name": "Align all translated banks to the final English questions",
+      "status": "blocked: 32 banks across Dogri, Maithili, Manipuri and Santali require qualified review"
+    },
+    {
+      "name": "Build and run offline app regression cases",
+      "status": "done: 248 Flutter tests pass; 52 data checks fail in the four blocked languages"
+    },
+    {
+      "name": "Produce results report and user run guide",
+      "status": "done: report and guide available; overall delivery remains blocked"
+    }
+  ],
+  "events": [
+    "Previous tracker tasks removed from the live view.",
+    "User-approved baseline contains 472 English records across eight banks.",
+    "User authorized adding missing questions: 328 additions in Sets 1-4 plus 200 new Set 5 questions.",
+    "Existing manual questions are backed up; generic filler generators will not be used.",
+    "Passing automated checks will not be represented as a guarantee of factual accuracy or untested native/online behavior.",
+    "All eight English banks completed: 528 questions added and 79 existing records corrected; 1,000 records total, exactly 25 in each set.",
+    "User requested category/language/setN/questions.json for every category and language; one JSON array of 25 questions per set.",
+    "No Ollama or external translation service will be used.",
+    "Migrated all 21 categories and 33 language folders (including English) into 3,465 set JSON files; each contains25 records.",
+    "Legacy files were backed up to build/question_layout_backup. Runtime loaders now use the new paths and do not silently substitute an unrelated English bank.",
+    "Offline ATF runner and docs/OFFLINE_ATF_GUIDE.md created. Reports show failures honestly; incomplete translations are not counted as successes.",
+    "Fixed a Connect Four small-screen legend overflow and updated stale fixture expectations for current game, locale, calendar and notification behavior.",
+    "Learning concept cards now resolve their text from the current language question bank rather than stale copied questions.",
+    "Question translations completed for 28 of 32 translation languages across the eight rebuilt categories: 224 of 256 banks applied. Four languages remain blocked on qualified review.",
+    "Latest full offline ATF: 889 passed, 52 failed, 0 skipped (94.47%). All 248 Flutter tests pass; failing data languages are doi, mai, mni and sat.",
+    "Final targeted analyzer found no issues, the Flutter web build succeeded, and the diff whitespace check completed without reported errors.",
+    "Independent learning command-card translations beyond English, Hindi and Marathi remain partial; native-language and real-device/online checks are not certified. No new changes have been committed or pushed."
+  ]
+}

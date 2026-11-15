@@ -1,0 +1,302 @@
+[
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "టాస్క్ స్థాయిలో వేరే సెట్టింగ్ ఇవ్వకపోతే, చెక్ మోడ్‌లో నడుపుతున్నప్పుడు ఆ మోడ్‌కు మద్దతు లేని మాడ్యూల్‌కు ఏమవుతుంది?",
+    "options": [
+      "మాడ్యూల్ ఎప్పుడూ తన సాధారణ మార్పులు చేస్తుంది",
+      "మాడ్యూల్ స్వయంచాలకంగా localhostలో నడుస్తుంది",
+      "చెక్ మోడ్‌కు మద్దతిచ్చే వరకు మాడ్యూల్‌ను మళ్లీ ప్రయత్నిస్తారు",
+      "మార్పులు చేయకుండా మాడ్యూల్‌ను దాటవేస్తారు"
+    ],
+    "answer": "మార్పులు చేయకుండా మాడ్యూల్‌ను దాటవేస్తారు"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "ప్లేబుక్‌ను --checkతో నడిపినా నిజమైన మార్పులు అనుమతించే టాస్క్ సెట్టింగ్ ఏది?",
+    "options": [
+      "changed_when: false",
+      "ignore_errors: true",
+      "check_mode: false",
+      "diff: false"
+    ],
+    "answer": "check_mode: false"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "ఇప్పటికే నోటిఫై చేసిన హ్యాండ్లర్‌లను వెంటనే నడిపే Ansible meta చర్య ఏది?",
+    "options": [
+      "reset_connection",
+      "flush_handlers",
+      "clear_facts",
+      "end_play"
+    ],
+    "answer": "flush_handlers"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "మార్పులు చేసిన రెండు టాస్క్‌లు ఒకే హ్యాండ్లర్‌ను దాని పెండింగ్ అమలుకు ముందు నోటిఫై చేస్తే, ఆ అమలు సమయంలో అది సాధారణంగా ఎన్నిసార్లు నడుస్తుంది?",
+    "options": [
+      "ఒకసారి",
+      "రెండుసార్లు",
+      "ప్రతి ఇన్వెంటరీ సమూహానికి ఒకసారి",
+      "నోటిఫికేషన్‌లు విరుద్ధంగా ఉండటంతో ఒక్కసారి కూడా కాదు"
+    ],
+    "answer": "ఒకసారి"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "ఒకే పెండింగ్ అమలు సమయంలో నడిచే నోటిఫై చేసిన హ్యాండ్లర్‌ల క్రమాన్ని ఏది నిర్ణయిస్తుంది?",
+    "options": [
+      "వాటి పేర్ల అక్షరక్రమం",
+      "notify జాబితాలోని పేర్ల క్రమం",
+      "నిర్వహణలో ఉన్న హోస్ట్‌లు కనెక్ట్ అయిన క్రమం",
+      "handlers విభాగంలో వాటి నిర్వచన క్రమం"
+    ],
+    "answer": "handlers విభాగంలో వాటి నిర్వచన క్రమం"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "సాధారణంగా ఏ వైఫల్యం బ్లాక్‌లోని rescue టాస్క్‌లను ప్రారంభిస్తుంది?",
+    "options": [
+      "ప్లేబుక్‌లో చెల్లని టాస్క్ నిర్వచనం ఉండటం",
+      "YAML పత్రాన్ని పార్స్ చేయలేకపోవడం",
+      "బ్లాక్‌లోని టాస్క్ విఫల ఫలితాన్ని ఇవ్వడం",
+      "టాస్క్ నడిచేలోపే హోస్ట్‌ను చేరుకోలేకపోవడం"
+    ],
+    "answer": "బ్లాక్‌లోని టాస్క్ విఫల ఫలితాన్ని ఇవ్వడం"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "సాధారణ టాస్క్‌లో ignore_errors ఏ లోపాన్ని అణచివేయదు?",
+    "options": [
+      "failed_when షరతు నిజం కావడం",
+      "నిర్వచించని వేరియబుల్ లోపం",
+      "కమాండ్ నివేదించిన సున్నా కాని నిష్క్రమణ స్థితి",
+      "స్పష్టంగా విఫలమైనదిగా గుర్తించిన మాడ్యూల్ ఫలితం"
+    ],
+    "answer": "నిర్వచించని వేరియబుల్ లోపం"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "నిర్వహించని టాస్క్ వైఫల్యం వచ్చినప్పుడు ప్రస్తుత బ్యాచ్ ఆ టాస్క్ ముగించాక అన్ని హోస్ట్‌లలో ప్లేను ఆపే కీవర్డ్ ఏది?",
+    "options": [
+      "any_errors_fatal",
+      "ignore_unreachable",
+      "max_fail_percentage: 100",
+      "force_handlers"
+    ],
+    "answer": "any_errors_fatal"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "చేరుకోగల హోస్ట్‌లో తరువాతి టాస్క్ విఫలమైతే force_handlers ప్రభావం ఏమిటి?",
+    "options": [
+      "నిర్వచించిన ప్రతి హ్యాండ్లర్ నోటిఫికేషన్ లేకుండానే నడుస్తుంది",
+      "విఫలమైన అన్ని టాస్క్‌లను స్వయంచాలకంగా మళ్లీ ప్రయత్నిస్తారు",
+      "సాధారణ టాస్క్‌లన్నిటికంటే ముందే హ్యాండ్లర్‌లు నడుస్తాయి",
+      "ముందుగా నోటిఫై చేసిన హ్యాండ్లర్‌లు ఆ హోస్ట్‌లో ఇంకా నడవగలవు"
+    ],
+    "answer": "ముందుగా నోటిఫై చేసిన హ్యాండ్లర్‌లు ఆ హోస్ట్‌లో ఇంకా నడవగలవు"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "సున్నితమైన టాస్క్ ఆర్గ్యుమెంట్‌లు, ఫలితాల సాధారణ లాగింగ్‌ను ఆపే సెట్టింగ్ ఏది?",
+    "options": [
+      "check_mode: true",
+      "changed_when: false",
+      "no_log: true",
+      "diff: true"
+    ],
+    "answer": "no_log: true"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "--diff ఆన్‌లో ఉన్నా ఫైల్ విషయాల తేడాలు చూపించకుండా చేసే టాస్క్ సెట్టింగ్ ఏది?",
+    "options": [
+      "ignore_errors: true",
+      "diff: false",
+      "no_log: false",
+      "check_mode: false"
+    ],
+    "answer": "diff: false"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "మరో ఇన్వెంటరీ హోస్ట్‌కు సంబంధించిన వేరియబుల్‌లను అందించే డిక్షనరీ ఏది?",
+    "options": [
+      "hostvars",
+      "ansible_facts",
+      "environment",
+      "ansible_loop"
+    ],
+    "answer": "hostvars"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "ప్రస్తుత హోస్ట్ ఇన్వెంటరీ పేరును కలిగి ఉండే ప్రత్యేక వేరియబుల్ ఏది?",
+    "options": [
+      "ansible_host",
+      "ansible_user",
+      "ansible_playbook_python",
+      "inventory_hostname"
+    ],
+    "answer": "inventory_hostname"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "హోస్ట్ సమూహం పంచుకునే వేరియబుల్‌ల కోసం సాధారణంగా ఇన్వెంటరీ పక్కన ఏ డైరెక్టరీ ఉంటుంది?",
+    "options": [
+      "roles",
+      "collections",
+      "group_vars",
+      "host_vars"
+    ],
+    "answer": "group_vars"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "ansible.builtin.file లుకప్ డిఫాల్ట్‌గా ఫైల్‌ను ఎక్కడ చదువుతుంది?",
+    "options": [
+      "become_user పేరు సూచించిన హోస్ట్‌లో",
+      "కంట్రోల్ నోడ్‌లో",
+      "నిర్వహణలో ఉన్న ప్రతి హోస్ట్‌లో",
+      "ప్లేలోని మొదటి హోస్ట్‌లో"
+    ],
+    "answer": "కంట్రోల్ నోడ్‌లో"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "YAML స్ట్రింగ్‌ను Ansible డేటా నిర్మాణంగా మార్చే ఫిల్టర్ ఏది?",
+    "options": [
+      "from_yaml",
+      "to_yaml",
+      "to_json",
+      "dict2items"
+    ],
+    "answer": "from_yaml"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "డిక్షనరీని కీ/విలువ డిక్షనరీల జాబితాగా మార్చే ఫిల్టర్ ఏది?",
+    "options": [
+      "items2dict",
+      "flatten",
+      "zip",
+      "dict2items"
+    ],
+    "answer": "dict2items"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "జాబితాలో పునరావృత అంశాలను తొలగించే ఫిల్టర్ ఏది?",
+    "options": [
+      "reverse",
+      "flatten",
+      "unique",
+      "sort"
+    ],
+    "answer": "unique"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "ఎక్స్‌ప్రెషన్‌లను తనిఖీ చేసి, పేర్కొన్న నిర్ధారణ షరతులు నెరవేరకపోతే విఫలమయ్యే మాడ్యూల్ ఏది?",
+    "options": [
+      "ansible.builtin.set_fact",
+      "ansible.builtin.assert",
+      "ansible.builtin.debug",
+      "ansible.builtin.pause"
+    ],
+    "answer": "ansible.builtin.assert"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "రెగ్యులర్ ఎక్స్‌ప్రెషన్‌తో టెక్స్ట్ ఫైల్‌లోని నిర్దిష్ట పంక్తిని నిర్వహించే మాడ్యూల్ ఏది?",
+    "options": [
+      "ansible.builtin.lineinfile",
+      "ansible.builtin.blockinfile",
+      "ansible.builtin.copy",
+      "ansible.builtin.slurp"
+    ],
+    "answer": "ansible.builtin.lineinfile"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "URLను అభ్యర్థించి ఆశించిన HTTP స్థితి కోడ్‌ను తనిఖీ చేయగల మాడ్యూల్ ఏది?",
+    "options": [
+      "ansible.builtin.get_url",
+      "ansible.builtin.fetch",
+      "ansible.builtin.wait_for",
+      "ansible.builtin.uri"
+    ],
+    "answer": "ansible.builtin.uri"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "TCP పోర్ట్ కోరిన స్థితికి చేరేవరకు వేచి ఉండే మాడ్యూల్ ఏది?",
+    "options": [
+      "ansible.builtin.async_status",
+      "ansible.builtin.ping",
+      "ansible.builtin.wait_for",
+      "ansible.builtin.pause"
+    ],
+    "answer": "ansible.builtin.wait_for"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "పేర్కొన్న పాత్ ఇప్పటికే ఉంటే ansible.builtin.command అమలును దాటవేయించే పారామీటర్ ఏది?",
+    "options": [
+      "stdin",
+      "creates",
+      "removes",
+      "chdir"
+    ],
+    "answer": "creates"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "సింబాలిక్ లింక్‌ను సృష్టించే file మాడ్యూల్ సెట్టింగ్ ఏది?",
+    "options": [
+      "state: link",
+      "state: directory",
+      "state: touch",
+      "state: hard"
+    ],
+    "answer": "state: link"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "తరువాతి ప్లేల కోసం మెమరీలోని ఇన్వెంటరీలో హోస్ట్‌ను జోడించగల మాడ్యూల్ ఏది?",
+    "options": [
+      "ansible.builtin.group_by",
+      "ansible.builtin.set_fact",
+      "ansible.builtin.meta",
+      "ansible.builtin.add_host"
+    ],
+    "answer": "ansible.builtin.add_host"
+  }
+]

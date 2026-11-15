@@ -1,0 +1,302 @@
+[
+  {
+    "category": "Docker",
+    "set": 1,
+    "question": "Hangi komut bir Docker imajı oluşturur?",
+    "options": [
+      "docker build",
+      "docker run",
+      "docker ps",
+      "docker pull"
+    ],
+    "answer": "docker build"
+  },
+  {
+    "category": "Docker",
+    "set": 1,
+    "question": "Hangi komut bir konteyneri arka plan (detached) modunda çalıştırır?",
+    "options": [
+      "docker run -d",
+      "docker run -b",
+      "docker run --bg",
+      "docker run --background"
+    ],
+    "answer": "docker run -d"
+  },
+  {
+    "category": "Docker",
+    "set": 1,
+    "question": "Yeni kapsayıcı için standart girdiyi açık tutup sözde TTY ayıran komut hangisidir?",
+    "options": [
+      "docker run -it",
+      "docker run -i",
+      "docker run -t",
+      "docker run --interactive"
+    ],
+    "answer": "docker run -it"
+  },
+  {
+    "category": "Docker",
+    "set": 1,
+    "question": "Hangi komut ara imajlar dahil tüm imajları listeler?",
+    "options": [
+      "docker images -a",
+      "docker images --digests",
+      "docker images -l",
+      "docker images -q"
+    ],
+    "answer": "docker images -a"
+  },
+  {
+    "category": "Docker",
+    "set": 1,
+    "question": "Hangi komut durdurulmuş tüm konteynerleri siler?",
+    "options": [
+      "docker container prune",
+      "docker rm -a",
+      "docker rm --all",
+      "docker clean"
+    ],
+    "answer": "docker container prune"
+  },
+  {
+    "category": "Docker",
+    "set": 1,
+    "question": "Hangi komut kullanılmayan tüm imajları siler?",
+    "options": [
+      "docker image prune -a",
+      "docker rmi -a",
+      "docker images --clean",
+      "docker image clean"
+    ],
+    "answer": "docker image prune -a"
+  },
+  {
+    "category": "Docker",
+    "set": 1,
+    "question": "Hangi komut konteyner kaynak kullanımını gösterir?",
+    "options": [
+      "docker stats",
+      "docker top",
+      "docker monitor",
+      "docker usage"
+    ],
+    "answer": "docker stats"
+  },
+  {
+    "category": "Docker",
+    "set": 1,
+    "question": "Hangi komut bir konteynerin içinde çalışan işlemleri gösterir?",
+    "options": [
+      "docker top",
+      "docker ps",
+      "docker stats",
+      "docker inspect"
+    ],
+    "answer": "docker top"
+  },
+  {
+    "category": "Docker",
+    "set": 1,
+    "question": "Hangi komut konteyner günlüklerini (loglarını) gösterir?",
+    "options": [
+      "docker logs",
+      "docker events",
+      "docker output",
+      "docker inspect"
+    ],
+    "answer": "docker logs"
+  },
+  {
+    "category": "Docker",
+    "set": 1,
+    "question": "Hangi komut bir konteyneri veya imajı inceler?",
+    "options": [
+      "docker inspect",
+      "docker details",
+      "docker info",
+      "docker config"
+    ],
+    "answer": "docker inspect"
+  },
+  {
+    "category": "Docker",
+    "set": 1,
+    "question": "Hangi komut bir Docker ağı oluşturur?",
+    "options": [
+      "docker network create",
+      "docker create network",
+      "docker net add",
+      "docker network build"
+    ],
+    "answer": "docker network create"
+  },
+  {
+    "category": "Docker",
+    "set": 1,
+    "question": "Hangi komut Docker ağlarını listeler?",
+    "options": [
+      "docker network ls",
+      "docker networks",
+      "docker net list",
+      "docker show networks"
+    ],
+    "answer": "docker network ls"
+  },
+  {
+    "category": "Docker",
+    "set": 1,
+    "question": "Hangi komut bir Docker birimi (volume) oluşturur?",
+    "options": [
+      "docker volume create",
+      "docker storage create",
+      "docker volume add",
+      "docker create volume"
+    ],
+    "answer": "docker volume create"
+  },
+  {
+    "category": "Docker",
+    "set": 1,
+    "question": "Hangi komut Docker birimlerini (volume) listeler?",
+    "options": [
+      "docker volume ls",
+      "docker volumes",
+      "docker volume show",
+      "docker storage ls"
+    ],
+    "answer": "docker volume ls"
+  },
+  {
+    "category": "Docker",
+    "set": 1,
+    "question": "Hangi komut Docker sistem bilgilerini gösterir?",
+    "options": [
+      "docker info",
+      "docker version",
+      "docker status",
+      "docker config"
+    ],
+    "answer": "docker info"
+  },
+  {
+    "category": "Docker",
+    "set": 1,
+    "question": "İmaj oluşturulurken komut çalıştıran Dockerfile yönergesi hangisidir?",
+    "options": [
+      "CMD",
+      "ENTRYPOINT",
+      "EXPOSE",
+      "RUN"
+    ],
+    "answer": "RUN"
+  },
+  {
+    "category": "Docker",
+    "set": 1,
+    "question": "Sonraki yönergelerin çalışma dizinini hangi Dockerfile yönergesi belirler?",
+    "options": [
+      "SHELL",
+      "LABEL",
+      "WORKDIR",
+      "USER"
+    ],
+    "answer": "WORKDIR"
+  },
+  {
+    "category": "Docker",
+    "set": 1,
+    "question": "ADD yönergesinin otomatik arşiv açmasını yapmadan yerel derleme bağlamı dosyalarını hangi Dockerfile yönergesi kopyalar?",
+    "options": [
+      "VOLUME",
+      "COPY",
+      "ADD",
+      "RUN"
+    ],
+    "answer": "COPY"
+  },
+  {
+    "category": "Docker",
+    "set": 1,
+    "question": "Dockerfile içinde tek başına kullanılan EXPOSE ne yapar?",
+    "options": [
+      "Kullanılması amaçlanan kapsayıcı bağlantı noktalarını belgeler",
+      "Bu bağlantı noktalarını ana makinede yayımlar",
+      "Bu bağlantı noktalarını ana makine güvenlik duvarında açar",
+      "Bu bağlantı noktalarında sunucu başlatır"
+    ],
+    "answer": "Kullanılması amaçlanan kapsayıcı bağlantı noktalarını belgeler"
+  },
+  {
+    "category": "Docker",
+    "set": 1,
+    "question": "Seçilen yolları Docker derleme bağlamından normalde hangi dosya dışlar?",
+    "options": [
+      ".gitignore",
+      "Dockerfile",
+      "compose.yaml",
+      ".dockerignore"
+    ],
+    "answer": ".dockerignore"
+  },
+  {
+    "category": "Docker",
+    "set": 1,
+    "question": "'docker build .' sonundaki nokta neyi belirtir?",
+    "options": [
+      "Kapsayıcının çalışma dizinini",
+      "Docker arka plan sürecinin konumunu",
+      "Derleme bağlamı olarak geçerli dizini",
+      "Ortaya çıkacak imajın kayıt deposunu"
+    ],
+    "answer": "Derleme bağlamı olarak geçerli dizini"
+  },
+  {
+    "category": "Docker",
+    "set": 1,
+    "question": "nginx başlatılırken yeni kapsayıcıya 'web' adını hangi komut verir?",
+    "options": [
+      "docker run --network web nginx",
+      "docker run --name web nginx",
+      "docker run --hostname web nginx",
+      "docker run --label web nginx"
+    ],
+    "answer": "docker run --name web nginx"
+  },
+  {
+    "category": "Docker",
+    "set": 1,
+    "question": "Ana makinenin TCP 8080 bağlantı noktasını kapsayıcının TCP 80 bağlantı noktasına hangi komut eşler?",
+    "options": [
+      "docker run -p 8080:80 nginx",
+      "docker run -p 80:8080 nginx",
+      "docker run --expose 8080 nginx",
+      "docker run --expose 80 nginx"
+    ],
+    "answer": "docker run -p 8080:80 nginx"
+  },
+  {
+    "category": "Docker",
+    "set": 1,
+    "question": "Kapsayıcı sona erdiğinde onu hangi docker run seçeneği otomatik kaldırır?",
+    "options": [
+      "--init",
+      "--read-only",
+      "--privileged",
+      "--rm"
+    ],
+    "answer": "--rm"
+  },
+  {
+    "category": "Docker",
+    "set": 1,
+    "question": "Kapsayıcı kaldırıldığında yazılabilir katmanındaki dosyalara normalde ne olur?",
+    "options": [
+      "Adlandırılmış birime dönüşürler",
+      "Kayıt deposuna yüklenirler",
+      "Kapsayıcıyla birlikte kaldırılırlar",
+      "Kaynak imajına birleştirilirler"
+    ],
+    "answer": "Kapsayıcıyla birlikte kaldırılırlar"
+  }
+]

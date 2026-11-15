@@ -1,0 +1,302 @@
+[
+  {
+    "category": "Ansible",
+    "set": 1,
+    "question": "Для чего в основном используется Ansible?",
+    "options": [
+      "Управление конфигурацией",
+      "Контейнеризация",
+      "Управление базами данных",
+      "Мониторинг"
+    ],
+    "answer": "Управление конфигурацией"
+  },
+  {
+    "category": "Ansible",
+    "set": 1,
+    "question": "На каком языке написан Ansible?",
+    "options": [
+      "Python",
+      "Java",
+      "Go",
+      "Ruby"
+    ],
+    "answer": "Python"
+  },
+  {
+    "category": "Ansible",
+    "set": 1,
+    "question": "Какой файл содержит управляемые хосты в Ansible?",
+    "options": [
+      "Файл инвентаря",
+      "Playbook",
+      "Роль",
+      "Модуль"
+    ],
+    "answer": "Файл инвентаря"
+  },
+  {
+    "category": "Ansible",
+    "set": 1,
+    "question": "Каково расположение файла инвентаря по умолчанию?",
+    "options": [
+      "/etc/ansible/hosts",
+      "/etc/hosts",
+      "/ansible/hosts",
+      "/usr/ansible/hosts"
+    ],
+    "answer": "/etc/ansible/hosts"
+  },
+  {
+    "category": "Ansible",
+    "set": 1,
+    "question": "Какая команда проверяет версию Ansible?",
+    "options": [
+      "ansible --version",
+      "ansible version",
+      "ansible -v",
+      "ansible check"
+    ],
+    "answer": "ansible --version"
+  },
+  {
+    "category": "Ansible",
+    "set": 1,
+    "question": "Какой протокол обычно использует стандартный плагин подключения Ansible для узлов Linux?",
+    "options": [
+      "SSH",
+      "FTP",
+      "Telnet",
+      "HTTP"
+    ],
+    "answer": "SSH"
+  },
+  {
+    "category": "Ansible",
+    "set": 1,
+    "question": "Что такое Ansible Playbook?",
+    "options": [
+      "YAML-файл с задачами автоматизации",
+      "Файл инвентаря",
+      "Скрипт Python",
+      "Файл конфигурации"
+    ],
+    "answer": "YAML-файл с задачами автоматизации"
+  },
+  {
+    "category": "Ansible",
+    "set": 1,
+    "question": "Какая команда запускает playbook Ansible?",
+    "options": [
+      "ansible-playbook",
+      "ansible-run",
+      "ansible-execute",
+      "ansible-start"
+    ],
+    "answer": "ansible-playbook"
+  },
+  {
+    "category": "Ansible",
+    "set": 1,
+    "question": "Какое ключевое слово определяет целевые хосты в playbook?",
+    "options": [
+      "hosts",
+      "servers",
+      "nodes",
+      "targets"
+    ],
+    "answer": "hosts"
+  },
+  {
+    "category": "Ansible",
+    "set": 1,
+    "question": "Какое ключевое слово определяет задачи в playbook?",
+    "options": [
+      "tasks",
+      "actions",
+      "jobs",
+      "steps"
+    ],
+    "answer": "tasks"
+  },
+  {
+    "category": "Ansible",
+    "set": 1,
+    "question": "Какой модуль копирует файлы на удалённые хосты?",
+    "options": [
+      "copy",
+      "fetch",
+      "file",
+      "transfer"
+    ],
+    "answer": "copy"
+  },
+  {
+    "category": "Ansible",
+    "set": 1,
+    "question": "Какой модуль управляет службами?",
+    "options": [
+      "service",
+      "systemctl",
+      "daemon",
+      "process"
+    ],
+    "answer": "service"
+  },
+  {
+    "category": "Ansible",
+    "set": 1,
+    "question": "Какая команда проверяет подключение Ansible и наличие пригодного Python на всех целевых узлах POSIX?",
+    "options": [
+      "ansible all -m ping",
+      "ansible ping",
+      "ansible test",
+      "ansible connect"
+    ],
+    "answer": "ansible all -m ping"
+  },
+  {
+    "category": "Ansible",
+    "set": 1,
+    "question": "Какой удобный для чтения формат обычно используют для написания плейбуков Ansible?",
+    "options": [
+      "YAML",
+      "JSON",
+      "XML",
+      "INI"
+    ],
+    "answer": "YAML"
+  },
+  {
+    "category": "Ansible",
+    "set": 1,
+    "question": "Какой файл настраивает параметры Ansible?",
+    "options": [
+      "ansible.cfg",
+      "ansible.conf",
+      "config.yml",
+      "ansible.ini"
+    ],
+    "answer": "ansible.cfg"
+  },
+  {
+    "category": "Ansible",
+    "set": 1,
+    "question": "Какой модуль Ansible собирает факты об управляемом узле?",
+    "options": [
+      "ansible.builtin.stat",
+      "ansible.builtin.debug",
+      "ansible.builtin.assert",
+      "ansible.builtin.setup"
+    ],
+    "answer": "ansible.builtin.setup"
+  },
+  {
+    "category": "Ansible",
+    "set": 1,
+    "question": "Какой параметр задачи включает повышение привилегий в Ansible?",
+    "options": [
+      "run_once: true",
+      "delegate_facts: true",
+      "become: true",
+      "check_mode: true"
+    ],
+    "answer": "become: true"
+  },
+  {
+    "category": "Ansible",
+    "set": 1,
+    "question": "Какая переменная инвентаря задаёт пользователя для входа на узел?",
+    "options": [
+      "ansible_connection",
+      "ansible_user",
+      "ansible_host",
+      "ansible_port"
+    ],
+    "answer": "ansible_user"
+  },
+  {
+    "category": "Ansible",
+    "set": 1,
+    "question": "Какая опция выбирает файл инвентаря при запуске ansible-playbook?",
+    "options": [
+      "-i inventory.ini",
+      "-e inventory.ini",
+      "--limit inventory.ini",
+      "--tags inventory.ini"
+    ],
+    "answer": "-i inventory.ini"
+  },
+  {
+    "category": "Ansible",
+    "set": 1,
+    "question": "Какой модуль обеспечивает наличие каталога на управляемом узле?",
+    "options": [
+      "ansible.builtin.fetch",
+      "ansible.builtin.slurp",
+      "ansible.builtin.template",
+      "ansible.builtin.file"
+    ],
+    "answer": "ansible.builtin.file"
+  },
+  {
+    "category": "Ansible",
+    "set": 1,
+    "question": "Какой модуль получает удалённый файл и сохраняет его на управляющем узле?",
+    "options": [
+      "ansible.builtin.get_url",
+      "ansible.builtin.unarchive",
+      "ansible.builtin.fetch",
+      "ansible.builtin.copy"
+    ],
+    "answer": "ansible.builtin.fetch"
+  },
+  {
+    "category": "Ansible",
+    "set": 1,
+    "question": "Какой модуль предоставляет общий интерфейс к менеджеру пакетов целевого узла?",
+    "options": [
+      "ansible.builtin.package_facts",
+      "ansible.builtin.package",
+      "ansible.builtin.service",
+      "ansible.builtin.command"
+    ],
+    "answer": "ansible.builtin.package"
+  },
+  {
+    "category": "Ansible",
+    "set": 1,
+    "question": "Какое утверждение описывает обычное безагентное управление узлами Linux через Ansible?",
+    "options": [
+      "На каждом управляемом узле не требуется устанавливать постоянный агент Ansible",
+      "На каждом управляемом узле должна работать служба планировщика Ansible",
+      "На каждом управляемом узле должен работать сервер Galaxy",
+      "Каждый управляемый узел должен подключаться к брокеру сообщений Ansible"
+    ],
+    "answer": "На каждом управляемом узле не требуется устанавливать постоянный агент Ansible"
+  },
+  {
+    "category": "Ansible",
+    "set": 1,
+    "question": "Какой модуль выполняет команду через удалённую оболочку, когда нужны операторы оболочки?",
+    "options": [
+      "ansible.builtin.command",
+      "ansible.builtin.script",
+      "ansible.builtin.debug",
+      "ansible.builtin.shell"
+    ],
+    "answer": "ansible.builtin.shell"
+  },
+  {
+    "category": "Ansible",
+    "set": 1,
+    "question": "Какая переменная инвентаря позволяет имени web1 подключаться к другому IP-адресу?",
+    "options": [
+      "ansible_user",
+      "ansible_port",
+      "ansible_host",
+      "inventory_hostname"
+    ],
+    "answer": "ansible_host"
+  }
+]

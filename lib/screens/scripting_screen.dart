@@ -30,36 +30,12 @@ class ScriptingScreen extends StatelessWidget {
         padding: const EdgeInsets.all(12),
         child: ListView(
           children: [
-            scriptingCard(
-              context,
-              title: "Bash Scripting",
-              category: "Bash",
-            ),
-            scriptingCard(
-              context,
-              title: "Python",
-              category: "Python",
-            ),
-            scriptingCard(
-              context,
-              title: "Perl",
-              category: "Perl",
-            ),
-            scriptingCard(
-              context,
-              title: "PowerShell",
-              category: "PowerShell",
-            ),
-            scriptingCard(
-              context,
-              title: "JavaScript",
-              category: "JavaScript",
-            ),
-            scriptingCard(
-              context,
-              title: "Ruby",
-              category: "Ruby",
-            ),
+            scriptingCard(context, title: "Bash Scripting", category: "Bash"),
+            scriptingCard(context, title: "Python", category: "Python"),
+            scriptingCard(context, title: "Perl", category: "Perl"),
+            scriptingCard(context, title: "PowerShell", category: "PowerShell"),
+            scriptingCard(context, title: "JavaScript", category: "JavaScript"),
+            scriptingCard(context, title: "Ruby", category: "Ruby"),
           ],
         ),
       ),

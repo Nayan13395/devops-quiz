@@ -1,0 +1,302 @@
+[
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "ఒకే Pipelineను ఒకేసారి నడపకుండా కొత్త అమలును క్యూలో ఉంచే Declarative ఆప్షన్ ఏది?",
+    "options": [
+      "parallelsAlwaysFailFast()",
+      "disableConcurrentBuilds()",
+      "disableResume()",
+      "skipDefaultCheckout()"
+    ],
+    "answer": "disableConcurrentBuilds()"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "పాత బిల్డ్ రికార్డులు, ఆర్టిఫాక్ట్‌ల నిల్వ నియమాలను నిర్దేశించే Declarative ఆప్షన్ ఏది?",
+    "options": [
+      "buildDiscarder(logRotator(numToKeepStr: '10'))",
+      "timeout(time: 10, unit: 'MINUTES')",
+      "retry(10)",
+      "quietPeriod(10)"
+    ],
+    "answer": "buildDiscarder(logRotator(numToKeepStr: '10'))"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "Jenkins cron ఎక్స్‌ప్రెషన్‌లో H గుర్తు ఏమి అందిస్తుంది?",
+    "options": [
+      "వినియోగదారు కంప్యూటర్‌లో ప్రస్తుత గంట",
+      "సెలవుల్లో మాత్రమే నడపమనే అభ్యర్థన",
+      "నోడ్ ఖాళీగా ఉన్నప్పుడు మాత్రమే నడపమనే అభ్యర్థన",
+      "షెడ్యూల్ లోడ్‌ను పంచడానికి పని పేరు ఆధారంగా స్థిర హ్యాష్"
+    ],
+    "answer": "షెడ్యూల్ లోడ్‌ను పంచడానికి పని పేరు ఆధారంగా స్థిర హ్యాష్"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "Jenkins ఐదు-ఫీల్డ్‌ల cron సింటాక్స్‌లో ఐదో ఫీల్డ్ దేనిని సూచిస్తుంది?",
+    "options": [
+      "రోజులో గంట",
+      "నెలలో రోజు",
+      "వారంలో రోజు",
+      "గంటలో నిమిషం"
+    ],
+    "answer": "వారంలో రోజు"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "మునుపటి బిల్డ్ విఫలమైనా అస్థిరంగా ఉన్నా తరువాతి బిల్డ్ విజయవంతమైతే నడిచే post షరతు ఏది?",
+    "options": [
+      "unsuccessful",
+      "fixed",
+      "changed",
+      "regression"
+    ],
+    "answer": "fixed"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "మిగిలిన post షరతులను మూల్యాంకనం చేసిన తరువాత నడిచే post షరతు ఏది?",
+    "options": [
+      "cleanup",
+      "always",
+      "changed",
+      "success"
+    ],
+    "answer": "cleanup"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "దశ ఏజెంట్‌ను కేటాయించే ముందు దాని షరతును మూల్యాంకనం చేసే when ఆప్షన్ ఏది?",
+    "options": [
+      "beforeInput false",
+      "beforeOptions false",
+      "branch 'main'",
+      "beforeAgent true"
+    ],
+    "answer": "beforeAgent true"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "Multibranch Pipelineలో పేరున్న బ్రాంచ్‌ను లక్ష్యంగా చేసుకునే when షరతు ఏది?",
+    "options": [
+      "buildingTag()",
+      "changeRequest()",
+      "branch 'main'",
+      "tag 'main'"
+    ],
+    "answer": "branch 'main'"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "ఆపరేటింగ్ సిస్టమ్, బ్రౌజర్ వంటి అక్షాల విలువల కలయికలను నడిపే Declarative నిర్మాణం ఏది?",
+    "options": [
+      "environment",
+      "matrix",
+      "parallel",
+      "steps"
+    ],
+    "answer": "matrix"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "Declarative మ్యాట్రిక్స్ నుంచి అవాంఛిత కలయికలను తొలగించే విభాగం ఏది?",
+    "options": [
+      "excludes",
+      "axes",
+      "stages",
+      "tools"
+    ],
+    "answer": "excludes"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "సమాంతర శాఖలున్న దశలో ఒకటి విఫలమైతే మిగిలిన శాఖలను ఆపే సెట్టింగ్ ఏది?",
+    "options": [
+      "beforeAgent true",
+      "reuseNode true",
+      "alwaysPull true",
+      "failFast true"
+    ],
+    "answer": "failFast true"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "బిల్డ్ అస్థిరం కాగానే తరువాతి దశలను దాటవేసే Declarative ఆప్షన్ ఏది?",
+    "options": [
+      "disableResume()",
+      "preserveStashes()",
+      "skipStagesAfterUnstable()",
+      "skipDefaultCheckout()"
+    ],
+    "answer": "skipStagesAfterUnstable()"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "వైఫల్యాన్ని నమోదు చేసి తన బ్లాక్ తరువాత అమలు కొనసాగనిచ్చే Pipeline స్టెప్ ఏది?",
+    "options": [
+      "input",
+      "catchError",
+      "error",
+      "timeout"
+    ],
+    "answer": "catchError"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "ప్రాసెస్ ముగిశాక sh(script: 'check.sh', returnStatus: true) ఏమి ఇస్తుంది?",
+    "options": [
+      "ప్రాసెస్ సంఖ్యా నిష్క్రమణ కోడ్",
+      "పూర్తి ప్రామాణిక అవుట్‌పుట్ టెక్స్ట్",
+      "షెల్ ప్రాసెస్ ID",
+      "Jenkins ప్రామాణీకరణ వివరాల ఆబ్జెక్ట్"
+    ],
+    "answer": "ప్రాసెస్ సంఖ్యా నిష్క్రమణ కోడ్"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "విజయవంతమైతే sh(script: 'echo ready', returnStdout: true) ఏమి ఇస్తుంది?",
+    "options": [
+      "సంఖ్యా బిల్డ్ నంబర్",
+      "మ్యాప్‌గా షెల్ ఎన్విరాన్‌మెంట్",
+      "ఏజెంట్ లేబుల్ జాబితా",
+      "సేకరించిన ప్రామాణిక అవుట్‌పుట్ స్ట్రింగ్"
+    ],
+    "answer": "సేకరించిన ప్రామాణిక అవుట్‌పుట్ స్ట్రింగ్"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "ప్రస్తుత వర్క్‌స్పేస్ డైరెక్టరీ విషయాలను ఉపస్థాయిలతో సహా తొలగించే Pipeline స్టెప్ ఏది?",
+    "options": [
+      "pwd",
+      "readFile",
+      "deleteDir",
+      "fileExists"
+    ],
+    "answer": "deleteDir"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "ప్రస్తుత వర్క్‌స్పేస్‌లో పాత్ ఉందో లేదో తనిఖీ చేసే Pipeline స్టెప్ ఏది?",
+    "options": [
+      "libraryResource",
+      "fileExists",
+      "readFile",
+      "writeFile"
+    ],
+    "answer": "fileExists"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "మరో Jenkins పని ప్రారంభించి బిల్డ్ పారామీటర్‌లను పంపగల Pipeline స్టెప్ ఏది?",
+    "options": [
+      "build",
+      "stage",
+      "node",
+      "checkout"
+    ],
+    "answer": "build"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "దశలు పునఃప్రారంభించడానికి పూర్తయిన బిల్డ్‌ల స్టాష్‌లను ఉంచే Declarative ఆప్షన్ ఏది?",
+    "options": [
+      "disableResume()",
+      "skipDefaultCheckout()",
+      "quietPeriod(5)",
+      "preserveStashes()"
+    ],
+    "answer": "preserveStashes()"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "vars/deploy.groovy నిర్వచించిన గ్లోబల్ deploy వేరియబుల్‌కు సహాయ టెక్స్ట్ ఇచ్చే Shared Library ఫైల్ ఏది?",
+    "options": [
+      "resources/deploy.txt",
+      "vars/main.groovy",
+      "vars/deploy.txt",
+      "src/deploy.groovy"
+    ],
+    "answer": "vars/deploy.txt"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "Jenkins Pipelineలో @NonCPSతో గుర్తించిన మెథడ్‌కు ప్రధాన పరిమితి ఏమిటి?",
+    "options": [
+      "అది Windows ఏజెంట్‌లో నడవాలి",
+      "అది CPS-మార్పిడి చేసిన Pipeline స్టెప్‌లను పిలవకూడదు",
+      "దానిలో stage నిర్దేశకం ఉండాలి",
+      "అది ఎల్లప్పుడూ స్ట్రింగ్ ఇవ్వాలి"
+    ],
+    "answer": "అది CPS-మార్పిడి చేసిన Pipeline స్టెప్‌లను పిలవకూడదు"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "ఆమోదించని శాండ్‌బాక్స్ Groovy కోడ్ కోరిన సిగ్నేచర్‌లను సమీక్షించే Jenkins సౌకర్యం ఏది?",
+    "options": [
+      "ప్రాసెస్‌లోపలి స్క్రిప్ట్ ఆమోదం",
+      "Credentials Store",
+      "Build Queue",
+      "SCM పోలింగ్ లాగ్"
+    ],
+    "answer": "ప్రాసెస్‌లోపలి స్క్రిప్ట్ ఆమోదం"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "బంధించిన రహస్య వేరియబుల్‌ను షెల్ విస్తరించనిచ్చే స్క్రిప్ట్‌కు ఏ Groovy కొటేషన్ పద్ధతి సిఫార్సు చేస్తారు?",
+    "options": [
+      "ఇంటర్‌పోలేషన్‌తో రహస్యాన్ని చేర్చిన డబుల్-కోటెడ్ Groovy స్ట్రింగ్",
+      "ఇంటర్‌పోలేషన్‌తో రహస్యాన్ని చేర్చిన ట్రిపుల్-డబుల్-కోటెడ్ Groovy స్ట్రింగ్",
+      "సాధారణ టెక్స్ట్ రహస్యాన్ని జోడించి చేసిన Groovy స్ట్రింగ్",
+      "సింగిల్-కోటెడ్ Groovy స్ట్రింగ్"
+    ],
+    "answer": "సింగిల్-కోటెడ్ Groovy స్ట్రింగ్"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "సంబంధిత వెబ్ అభ్యర్థనలకు Jenkins CSRF crumb ఉద్దేశం ఏమిటి?",
+    "options": [
+      "అప్‌లోడ్‌కు ముందు బిల్డ్ ఆర్టిఫాక్ట్‌ను గుప్తీకరించడం",
+      "బిల్డ్ నడిపే ఏజెంట్‌ను ఎంచుకోవడం",
+      "స్థితి మార్చే అభ్యర్థన ఏర్పడిన వినియోగదారు సెషన్‌కు చెందిందని నిర్ధారించడంలో సహాయపడటం",
+      "అన్ని పనుల అనుమతి తనిఖీల స్థానంలో ఉండటం"
+    ],
+    "answer": "స్థితి మార్చే అభ్యర్థన ఏర్పడిన వినియోగదారు సెషన్‌కు చెందిందని నిర్ధారించడంలో సహాయపడటం"
+  },
+  {
+    "category": "Jenkins",
+    "set": 5,
+    "question": "వేర్వేరు పనుల మధ్య ఉమ్మడి టెస్ట్ పరికరాన్ని ఒకేసారి ఒక పని మాత్రమే వాడేలా Pipeline ఏమి ఉపయోగించాలి?",
+    "options": [
+      "skipDefaultCheckout ఆప్షన్",
+      "Lockable Resources ప్లగిన్‌లోని lock స్టెప్",
+      "timestamps ఆప్షన్",
+      "buildDiscarder ఆప్షన్"
+    ],
+    "answer": "Lockable Resources ప్లగిన్‌లోని lock స్టెప్"
+  }
+]

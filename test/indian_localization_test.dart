@@ -147,9 +147,7 @@ void main() {
         final field = tester.element(find.byType(TextField));
         expect(
           Directionality.of(field),
-          {'sd', 'ur'}.contains(code)
-              ? TextDirection.rtl
-              : TextDirection.ltr,
+          {'sd', 'ur'}.contains(code) ? TextDirection.rtl : TextDirection.ltr,
           reason: code,
         );
         expect(MaterialLocalizations.of(field).okButtonLabel, isNotEmpty);

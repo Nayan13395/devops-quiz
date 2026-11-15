@@ -1,0 +1,302 @@
+[
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "टास्क-स्तरीय ओवरराइड बिना, check-mode रन मे जे मॉड्यूल check mode केँ सपोर्ट नहि करैत अछि ओकरा संग की होइत अछि?",
+    "options": [
+      "मॉड्यूल सदिखन अपन सामान्य परिवर्तन करैत अछि",
+      "मॉड्यूल स्वचालित रूप सँ localhost पर चलैत अछि",
+      "मॉड्यूल केँ तावत धरि पुनः प्रयास कएल जाइत अछि जावत ओ check mode सपोर्ट नहि करए",
+      "परिवर्तन करबाक बदला मॉड्यूल केँ छोड़ि देल जाइत अछि"
+    ],
+    "answer": "परिवर्तन करबाक बदला मॉड्यूल केँ छोड़ि देल जाइत अछि"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "जखन प्लेबुक --check सँ चलाओल जाए तखनो कोन टास्क सेटिंग वास्तविक परिवर्तनक अनुमति दैत अछि?",
+    "options": [
+      "changed_when: false",
+      "ignore_errors: true",
+      "check_mode: false",
+      "diff: false"
+    ],
+    "answer": "check_mode: false"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "कोन Ansible meta एक्शन पहिने सँ सूचित कएल गेल हैंडलर सभ केँ तुरंत चलबैत अछि?",
+    "options": [
+      "reset_connection",
+      "flush_handlers",
+      "clear_facts",
+      "end_play"
+    ],
+    "answer": "flush_handlers"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "यदि हैंडलर फ्लश हेबासँ पहिने दू टा changed टास्क एके हैंडलर केँ notify करैत अछि, तँ फ्लश बिंदु पर ओ हैंडलर सामान्यतया कतेक बेर चलैत अछि?",
+    "options": [
+      "एक बेर",
+      "दू बेर",
+      "प्रत्येक इन्वेंटरी समूहक लेल एक बेर",
+      "शून्य बेर, किएक तँ सूचना सभ मे टकराव होइत अछि"
+    ],
+    "answer": "एक बेर"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "एके फ्लश बिंदु पर सूचित कएल गेल हैंडलर सभक निष्पादन क्रम की निर्धारित करैत अछि?",
+    "options": [
+      "हुनकर नाम सभक वर्णानुक्रम",
+      "notify सूचीमे नाम सभक क्रम",
+      "प्रबंधित होस्ट सभ जाहि क्रम मे कनेक्ट भेल",
+      "handlers सेक्शन मे हुनकर परिभाषाक क्रम"
+    ],
+    "answer": "handlers सेक्शन मे हुनकर परिभाषाक क्रम"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "कोन विफलता सामान्यतया block केर rescue टास्क सभ केँ ट्रिगर करैत अछि?",
+    "options": [
+      "प्लेबुक मे अमान्य टास्क परिभाषा अछि",
+      "YAML दस्तावेज़ केँ पार्स नहि कएल जा सकैत अछि",
+      "block भीतरक कोनो टास्क विफल परिणाम दैत अछि",
+      "कोनो होस्ट अपन टास्क चलबासँ पहिने पहुँचसँ बाहर भ' जाइत अछि"
+    ],
+    "answer": "block भीतरक कोनो टास्क विफल परिणाम दैत अछि"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "सामान्य टास्क पर ignore_errors कोन त्रुटि केँ नहि दबबैत अछि?",
+    "options": [
+      "failed_when शर्त जे सत्य मूल्यांकित होइत अछि",
+      "अपरिभाषित-वेरिएबल त्रुटि",
+      "कोनो कमांडक रिपोर्ट कएल गेल गैर-शून्य एग्जिट स्टेटस",
+      "स्पष्ट रूप सँ विफल चिह्नित मॉड्यूल परिणाम"
+    ],
+    "answer": "अपरिभाषित-वेरिएबल त्रुटि"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "कोन कीवर्ड वर्तमान बैच ओहि टास्क केँ पूरा कएलाक बाद अनहैंडल्ड टास्क विफलता केँ सभ होस्ट पर प्ले केँ रोकबा दैत अछि?",
+    "options": [
+      "any_errors_fatal",
+      "ignore_unreachable",
+      "max_fail_percentage: 100",
+      "force_handlers"
+    ],
+    "answer": "any_errors_fatal"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "जखन कोनो पहुँचयोग्य होस्ट पर बादक टास्क विफल भ' जाइत अछि तखन force_handlers केर की प्रभाव होइत अछि?",
+    "options": [
+      "सूचना बिनु सेहो परिभाषित प्रत्येक हैंडलर चलैत अछि",
+      "सभ विफल टास्क स्वचालित रूप सँ पुनः प्रयास कएल जाइत अछि",
+      "हैंडलर सभ कोनो नियमित टास्क सँ पहिने चलैत अछि",
+      "पहिने सूचित कएल गेल हैंडलर सभ ओहि होस्ट पर तखनो चलि सकैत अछि"
+    ],
+    "answer": "पहिने सूचित कएल गेल हैंडलर सभ ओहि होस्ट पर तखनो चलि सकैत अछि"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "कोन टास्क सेटिंग संवेदनशील टास्क आर्गुमेंट आ परिणाम सभक सामान्य लॉगिंग केँ दबबैत अछि?",
+    "options": [
+      "check_mode: true",
+      "changed_when: false",
+      "no_log: true",
+      "diff: true"
+    ],
+    "answer": "no_log: true"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "--diff सक्षम रहलो पर कोन टास्क सेटिंग फाइल-सामग्रीक अंतर केँ दबबैत अछि?",
+    "options": [
+      "ignore_errors: true",
+      "diff: false",
+      "no_log: false",
+      "check_mode: false"
+    ],
+    "answer": "diff: false"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "कोन डिक्शनरी दोसर इन्वेंटरी होस्ट सँ संबद्ध वेरिएबल सभ धरि पहुँच प्रदान करैत अछि?",
+    "options": [
+      "hostvars",
+      "ansible_facts",
+      "environment",
+      "ansible_loop"
+    ],
+    "answer": "hostvars"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "कोन मैजिक वेरिएबल वर्तमान होस्टक इन्वेंटरी नाम रखैत अछि?",
+    "options": [
+      "ansible_host",
+      "ansible_user",
+      "ansible_playbook_python",
+      "inventory_hostname"
+    ],
+    "answer": "inventory_hostname"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "होस्ट समूह द्वारा साझा कएल गेल वेरिएबल सभक लेल परंपरागत रूप सँ कोन इन्वेंटरी-संलग्न डायरेक्टरी प्रयोग होइत अछि?",
+    "options": [
+      "roles",
+      "collections",
+      "group_vars",
+      "host_vars"
+    ],
+    "answer": "group_vars"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "ansible.builtin.file लुकअप डिफ़ॉल्ट रूप सँ फाइल कतय सँ पढ़ैत अछि?",
+    "options": [
+      "become_user द्वारा नामित होस्ट पर",
+      "कंट्रोल नोड पर",
+      "प्रत्येक प्रबंधित होस्ट पर",
+      "प्ले मे पहिल होस्ट पर"
+    ],
+    "answer": "कंट्रोल नोड पर"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "कोन फिल्टर YAML स्ट्रिंग केँ Ansible डेटा संरचना मे बदलैत अछि?",
+    "options": [
+      "from_yaml",
+      "to_yaml",
+      "to_json",
+      "dict2items"
+    ],
+    "answer": "from_yaml"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "कोन फिल्टर डिक्शनरी केँ key/value डिक्शनरी सभक सूची मे बदलैत अछि?",
+    "options": [
+      "items2dict",
+      "flatten",
+      "zip",
+      "dict2items"
+    ],
+    "answer": "dict2items"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "कोन फिल्टर सूची सँ दोहराओल गेल तत्व सभ हटबैत अछि?",
+    "options": [
+      "reverse",
+      "flatten",
+      "unique",
+      "sort"
+    ],
+    "answer": "unique"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "कोन मॉड्यूल एक्सप्रेशन सभक जाँच करैत अछि आ निर्दिष्ट एसर्शन पूरा नहि भेला पर विफल होइत अछि?",
+    "options": [
+      "ansible.builtin.set_fact",
+      "ansible.builtin.assert",
+      "ansible.builtin.debug",
+      "ansible.builtin.pause"
+    ],
+    "answer": "ansible.builtin.assert"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "कोन मॉड्यूल रेगुलर एक्सप्रेशन प्रयोग कए टेक्स्ट फाइलक कोनो विशेष लाइन केँ प्रबंधित करैत अछि?",
+    "options": [
+      "ansible.builtin.lineinfile",
+      "ansible.builtin.blockinfile",
+      "ansible.builtin.copy",
+      "ansible.builtin.slurp"
+    ],
+    "answer": "ansible.builtin.lineinfile"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "कोन मॉड्यूल URL केँ अनुरोध करैत अछि आ अपेक्षित HTTP स्टेटस कोड जाँचि सकैत अछि?",
+    "options": [
+      "ansible.builtin.get_url",
+      "ansible.builtin.fetch",
+      "ansible.builtin.wait_for",
+      "ansible.builtin.uri"
+    ],
+    "answer": "ansible.builtin.uri"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "कोन मॉड्यूल तावत धरि प्रतीक्षा करैत अछि जावत कोनो TCP पोर्ट अनुरोधित स्थिति मे नहि पहुँचि जाए?",
+    "options": [
+      "ansible.builtin.async_status",
+      "ansible.builtin.ping",
+      "ansible.builtin.wait_for",
+      "ansible.builtin.pause"
+    ],
+    "answer": "ansible.builtin.wait_for"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "कोन पैरामीटर ansible.builtin.command केँ तखन निष्पादन छोड़बाक लेल बनबैत अछि जखन कोनो निर्दिष्ट पाथ पहिने सँ अस्तित्व मे हो?",
+    "options": [
+      "stdin",
+      "creates",
+      "removes",
+      "chdir"
+    ],
+    "answer": "creates"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "file मॉड्यूलक कोन सेटिंग सिम्बोलिक लिंक बनबैत अछि?",
+    "options": [
+      "state: link",
+      "state: directory",
+      "state: touch",
+      "state: hard"
+    ],
+    "answer": "state: link"
+  },
+  {
+    "category": "Ansible",
+    "set": 5,
+    "question": "कोन मॉड्यूल बादक प्ले सभक लेल इन-मेमोरी इन्वेंटरी मे होस्ट जोड़ि सकैत अछि?",
+    "options": [
+      "ansible.builtin.group_by",
+      "ansible.builtin.set_fact",
+      "ansible.builtin.meta",
+      "ansible.builtin.add_host"
+    ],
+    "answer": "ansible.builtin.add_host"
+  }
+]

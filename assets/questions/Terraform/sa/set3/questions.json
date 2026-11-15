@@ -1,0 +1,302 @@
+[
+  {
+    "category": "Terraform",
+    "set": 3,
+    "question": "कः Terraform-विशेषता पुनरुपयोज्यान् इन्फ्रास्ट्रक्चर्-घटकान् अनुमन्यते?",
+    "options": [
+      "Modules",
+      "Providers",
+      "Variables",
+      "Outputs"
+    ],
+    "answer": "Modules"
+  },
+  {
+    "category": "Terraform",
+    "set": 3,
+    "question": "module आह्वातुं कः ब्लॉकः प्रयुज्यते?",
+    "options": [
+      "module",
+      "import",
+      "resource",
+      "provider"
+    ],
+    "answer": "module"
+  },
+  {
+    "category": "Terraform",
+    "set": 3,
+    "question": "कः argument module-स्य स्रोतस्थानं (source location) निर्दिशति?",
+    "options": [
+      "source",
+      "path",
+      "location",
+      "module_source"
+    ],
+    "answer": "source"
+  },
+  {
+    "category": "Terraform",
+    "set": 3,
+    "question": "कः Terraform Registry सार्वजनिकान् modules आश्रयति?",
+    "options": [
+      "Terraform Registry",
+      "Docker Hub",
+      "GitHub Packages",
+      "AWS Marketplace"
+    ],
+    "answer": "Terraform Registry"
+  },
+  {
+    "category": "Terraform",
+    "set": 3,
+    "question": "कः backend Terraform state Amazon S3 मध्ये संगृह्णाति?",
+    "options": [
+      "s3",
+      "aws",
+      "bucket",
+      "remote"
+    ],
+    "answer": "s3"
+  },
+  {
+    "category": "Terraform",
+    "set": 3,
+    "question": "S3 पृष्ठतन्त्रस्य इदानीं परित्याज्ये सारणी-आधारितस्थितितालने का AWS सेवा पूर्वं प्रयुक्ता?",
+    "options": [
+      "DynamoDB",
+      "RDS",
+      "EFS",
+      "Lambda"
+    ],
+    "answer": "DynamoDB"
+  },
+  {
+    "category": "Terraform",
+    "set": 3,
+    "question": "पूर्वं Terraform Cloud इति ज्ञाते HCP Terraform मध्ये स्थितिं रक्षितुं समर्थः पुरातनपृष्ठतन्त्रप्रकारः कः?",
+    "options": [
+      "remote",
+      "cloud",
+      "terraform",
+      "tfc"
+    ],
+    "answer": "remote"
+  },
+  {
+    "category": "Terraform",
+    "set": 3,
+    "question": "state locking-स्य उद्देश्यः कः?",
+    "options": [
+      "समकालिकपरिवर्तनानि निवारयितुम्",
+      "state सञ्चिकां गूढलिपीकर्तुम्",
+      "state प्रतिलिपिं (backup) कर्तुम्",
+      "state सङ्कोचयितुम्"
+    ],
+    "answer": "समकालिकपरिवर्तनानि निवारयितुम्"
+  },
+  {
+    "category": "Terraform",
+    "set": 3,
+    "question": "कः आदेशः दूरस्थं (remote) state स्थानीययन्त्रे आकर्षति?",
+    "options": [
+      "terraform state pull",
+      "terraform pull",
+      "terraform get-state",
+      "terraform state download"
+    ],
+    "answer": "terraform state pull"
+  },
+  {
+    "category": "Terraform",
+    "set": 3,
+    "question": "कः आदेशः state backend प्रति प्रेषयति?",
+    "options": [
+      "terraform state push",
+      "terraform push",
+      "terraform upload",
+      "terraform state upload"
+    ],
+    "answer": "terraform state push"
+  },
+  {
+    "category": "Terraform",
+    "set": 3,
+    "question": "कः backend-प्रकारः state स्थानीयडिस्के संगृह्णाति?",
+    "options": [
+      "local",
+      "file",
+      "disk",
+      "host"
+    ],
+    "answer": "local"
+  },
+  {
+    "category": "Terraform",
+    "set": 3,
+    "question": "कः आदेशः संसाधनं विनाशं विना state तः अपसारयति?",
+    "options": [
+      "terraform state rm",
+      "terraform rm",
+      "terraform destroy",
+      "terraform remove"
+    ],
+    "answer": "terraform state rm"
+  },
+  {
+    "category": "Terraform",
+    "set": 3,
+    "question": "कः आदेशः state अन्तः संसाधनानि स्थानान्तरयति?",
+    "options": [
+      "terraform state mv",
+      "terraform move",
+      "terraform mv",
+      "terraform state move"
+    ],
+    "answer": "terraform state mv"
+  },
+  {
+    "category": "Terraform",
+    "set": 3,
+    "question": "कः data source अन्यस्य state सञ्चिकायाः outputs पठति?",
+    "options": [
+      "terraform_remote_state",
+      "remote_state",
+      "state_data",
+      "terraform_state"
+    ],
+    "answer": "terraform_remote_state"
+  },
+  {
+    "category": "Terraform",
+    "set": 3,
+    "question": "का सञ्चिका provider-संस्करणानि स्थिरीकरोति (lock करोति)?",
+    "options": [
+      ".terraform.lock.hcl",
+      "terraform.lock",
+      "providers.lock",
+      "terraform.providers"
+    ],
+    "answer": ".terraform.lock.hcl"
+  },
+  {
+    "category": "Terraform",
+    "set": 3,
+    "question": "पञ्जीकरणस्थानात् संस्थापितस्य मॉड्यूल् इत्यस्य संस्करणं कः प्राचलः चिनोति?",
+    "options": [
+      "version",
+      "ref",
+      "revision",
+      "required_version"
+    ],
+    "answer": "version"
+  },
+  {
+    "category": "Terraform",
+    "set": 3,
+    "question": "network इति नामकस्य उपमॉड्यूल् इत्यस्य vpc_id निर्गमं कः व्यञ्जकः पठति?",
+    "options": [
+      "var.network.vpc_id",
+      "local.network.vpc_id",
+      "data.network.vpc_id",
+      "module.network.vpc_id"
+    ],
+    "answer": "module.network.vpc_id"
+  },
+  {
+    "category": "Terraform",
+    "set": 3,
+    "question": "अतिरिक्तप्रदायकविन्यासस्य नाम कः प्रदायकखण्डप्राचलः स्थापयति?",
+    "options": [
+      "version",
+      "count",
+      "alias",
+      "source"
+    ],
+    "answer": "alias"
+  },
+  {
+    "category": "Terraform",
+    "set": 3,
+    "question": "विशिष्टम् उपनामयुक्तप्रदायकविन्यासं कः संसाधनमेटा-प्राचलः चिनोति?",
+    "options": [
+      "for_each",
+      "provider",
+      "providers",
+      "depends_on"
+    ],
+    "answer": "provider"
+  },
+  {
+    "category": "Terraform",
+    "set": 3,
+    "question": "उपमॉड्यूल् कृते विशिष्टप्रदायकविन्यासान् कः मॉड्यूल्-आह्वानप्राचलः प्रयच्छति?",
+    "options": [
+      "providers",
+      "provider",
+      "required_providers",
+      "configuration_aliases"
+    ],
+    "answer": "providers"
+  },
+  {
+    "category": "Terraform",
+    "set": 3,
+    "question": "पृष्ठतन्त्रविन्यासपरिवर्तनानन्तरं विद्यमानस्थितिं स्थानान्तरयितुं कः terraform init विकल्पः प्रयतते?",
+    "options": [
+      "-reconfigure",
+      "-upgrade",
+      "-get=false",
+      "-migrate-state"
+    ],
+    "answer": "-migrate-state"
+  },
+  {
+    "category": "Terraform",
+    "set": 3,
+    "question": "स्थितिस्थानान्तरणप्रयत्नं विना पूर्वपृष्ठतन्त्रविन्यासं कः terraform init विकल्पः उपेक्षते?",
+    "options": [
+      "-upgrade",
+      "-lock=false",
+      "-reconfigure",
+      "-migrate-state"
+    ],
+    "answer": "-reconfigure"
+  },
+  {
+    "category": "Terraform",
+    "set": 3,
+    "question": "staging नामकं CLI कार्यक्षेत्रं सृष्ट्वा कः आदेशः चिनोति?",
+    "options": [
+      "terraform workspace list",
+      "terraform workspace new staging",
+      "terraform workspace select staging",
+      "terraform workspace show"
+    ],
+    "answer": "terraform workspace new staging"
+  },
+  {
+    "category": "Terraform",
+    "set": 3,
+    "question": "वर्तमानस्य CLI कार्यक्षेत्रस्य नाम कः आदेशः दर्शयति?",
+    "options": [
+      "terraform workspace show",
+      "terraform workspace list",
+      "terraform workspace select default",
+      "terraform state list"
+    ],
+    "answer": "terraform workspace show"
+  },
+  {
+    "category": "Terraform",
+    "set": 3,
+    "question": "S3 इत्यस्य स्वकीयतालसञ्चिका-आधारितस्थितितालनं कः S3 पृष्ठतन्त्रप्राचलः सक्रियं करोति?",
+    "options": [
+      "encrypt = true",
+      "workspace_key_prefix = \"env\"",
+      "skip_region_validation = true",
+      "use_lockfile = true"
+    ],
+    "answer": "use_lockfile = true"
+  }
+]

@@ -1,0 +1,302 @@
+[
+  {
+    "category": "Terraform",
+    "set": 4,
+    "question": "파일을 다시 쓰지 않고 Terraform 형식을 확인하는 명령은?",
+    "options": [
+      "terraform fmt -check",
+      "terraform validate",
+      "terraform fmt -write=true",
+      "terraform plan"
+    ],
+    "answer": "terraform fmt -check"
+  },
+  {
+    "category": "Terraform",
+    "set": 4,
+    "question": "변경 계획이나 원격 서비스 검증 없이 Terraform 설정의 내부 구문과 일관성을 확인하는 명령은?",
+    "options": [
+      "terraform validate",
+      "terraform plan",
+      "terraform check",
+      "terraform verify"
+    ],
+    "answer": "terraform validate"
+  },
+  {
+    "category": "Terraform",
+    "set": 4,
+    "question": "시각적 종속성 그래프를 생성하는 명령어는 무엇입니까?",
+    "options": [
+      "terraform graph",
+      "terraform map",
+      "terraform diagram",
+      "terraform tree"
+    ],
+    "answer": "terraform graph"
+  },
+  {
+    "category": "Terraform",
+    "set": 4,
+    "question": "구성 드리프트를 감지하는 데 도움이 되는 Terraform 기능은 무엇입니까?",
+    "options": [
+      "terraform plan",
+      "terraform fmt",
+      "terraform output",
+      "terraform console"
+    ],
+    "answer": "terraform plan"
+  },
+  {
+    "category": "Terraform",
+    "set": 4,
+    "question": "대화형 Terraform 콘솔을 여는 명령어는 무엇입니까?",
+    "options": [
+      "terraform console",
+      "terraform shell",
+      "terraform repl",
+      "terraform interactive"
+    ],
+    "answer": "terraform console"
+  },
+  {
+    "category": "Terraform",
+    "set": 4,
+    "question": "실제 인프라에서 상태를 갱신하며, 현재는 refresh-only plan/apply 흐름으로 대체가 권장되는 기존 명령은?",
+    "options": [
+      "terraform refresh",
+      "terraform sync",
+      "terraform update",
+      "terraform pull"
+    ],
+    "answer": "terraform refresh"
+  },
+  {
+    "category": "Terraform",
+    "set": 4,
+    "question": "Terraform 변수 정의에 사용되는 파일 확장자는 무엇입니까?",
+    "options": [
+      ".tfvars",
+      ".vars",
+      ".tfvar",
+      ".terraform"
+    ],
+    "answer": ".tfvars"
+  },
+  {
+    "category": "Terraform",
+    "set": 4,
+    "question": "특정 tfvars 파일의 값을 적용하는 명령어는 무엇입니까?",
+    "options": [
+      "terraform apply -var-file",
+      "terraform apply -vars",
+      "terraform apply -tfvars",
+      "terraform apply -file"
+    ],
+    "answer": "terraform apply -var-file"
+  },
+  {
+    "category": "Terraform",
+    "set": 4,
+    "question": "동적 블록을 만드는 데 도움이 되는 Terraform 기능은 무엇입니까?",
+    "options": [
+      "dynamic",
+      "foreach",
+      "loop",
+      "template"
+    ],
+    "answer": "dynamic"
+  },
+  {
+    "category": "Terraform",
+    "set": 4,
+    "question": "문자열을 목록으로 나누는 함수는?",
+    "options": [
+      "split",
+      "join",
+      "slice",
+      "parse"
+    ],
+    "answer": "split"
+  },
+  {
+    "category": "Terraform",
+    "set": 4,
+    "question": "여러 맵을 병합하는 함수는 무엇입니까?",
+    "options": [
+      "merge",
+      "concat",
+      "combine",
+      "append"
+    ],
+    "answer": "merge"
+  },
+  {
+    "category": "Terraform",
+    "set": 4,
+    "question": "조건부 리소스 생성을 가능하게 하는 Terraform 기능은 무엇입니까?",
+    "options": [
+      "count",
+      "depends_on",
+      "provider",
+      "workspace"
+    ],
+    "answer": "count"
+  },
+  {
+    "category": "Terraform",
+    "set": 4,
+    "question": "추가 인수 없이 최신 상태를 리소스 속성까지 포함한 읽기 쉬운 형식으로 보여 주는 명령은?",
+    "options": [
+      "terraform show",
+      "terraform state list",
+      "terraform state show",
+      "terraform output"
+    ],
+    "answer": "terraform show"
+  },
+  {
+    "category": "Terraform",
+    "set": 4,
+    "question": "리소스가 올바른 순서로 생성되도록 보장하는 Terraform 기능은 무엇입니까?",
+    "options": [
+      "종속성 그래프",
+      "Count",
+      "워크스페이스",
+      "출력"
+    ],
+    "answer": "종속성 그래프"
+  },
+  {
+    "category": "Terraform",
+    "set": 4,
+    "question": "구성에서 사용하는 공급자를 표시하는 명령어는 무엇입니까?",
+    "options": [
+      "terraform providers",
+      "terraform provider list",
+      "terraform show providers",
+      "terraform plugin list"
+    ],
+    "answer": "terraform providers"
+  },
+  {
+    "category": "Terraform",
+    "set": 4,
+    "question": "특정 관리 리소스 인스턴스의 교체를 요청하는 계획 옵션은?",
+    "options": [
+      "-destroy",
+      "-replace=aws_instance.web",
+      "-target=aws_instance.web",
+      "-refresh=false"
+    ],
+    "answer": "-replace=aws_instance.web"
+  },
+  {
+    "category": "Terraform",
+    "set": 4,
+    "question": "-detailed-exitcode를 사용할 때 성공한 terraform plan이 변경을 감지하면 반환하는 종료 코드는?",
+    "options": [
+      "2",
+      "0",
+      "1",
+      "3"
+    ],
+    "answer": "2"
+  },
+  {
+    "category": "Terraform",
+    "set": 4,
+    "question": "Terraform 밖에서 이미 수행된 변경에 맞춰 상태와 출력만 갱신하도록 제안하는 계획 모드는?",
+    "options": [
+      "-destroy",
+      "-refresh=false",
+      "-target=aws_instance.web",
+      "-refresh-only"
+    ],
+    "answer": "-refresh-only"
+  },
+  {
+    "category": "Terraform",
+    "set": 4,
+    "question": "기존 객체를 파괴하기 전에 대체 객체를 만들도록 하는 수명 주기 규칙은?",
+    "options": [
+      "ignore_changes",
+      "replace_triggered_by",
+      "create_before_destroy",
+      "prevent_destroy"
+    ],
+    "answer": "create_before_destroy"
+  },
+  {
+    "category": "Terraform",
+    "set": 4,
+    "question": "설정에 남아 있는 동안 리소스 파괴 계획을 거부하는 수명 주기 규칙은?",
+    "options": [
+      "replace_triggered_by",
+      "prevent_destroy",
+      "create_before_destroy",
+      "ignore_changes"
+    ],
+    "answer": "prevent_destroy"
+  },
+  {
+    "category": "Terraform",
+    "set": 4,
+    "question": "다른 시스템이 특정 속성을 관리하도록 Terraform이 그 속성의 갱신을 계획하지 않게 하는 수명 주기 규칙은?",
+    "options": [
+      "ignore_changes",
+      "prevent_destroy",
+      "create_before_destroy",
+      "replace_triggered_by"
+    ],
+    "answer": "ignore_changes"
+  },
+  {
+    "category": "Terraform",
+    "set": 4,
+    "question": "설정된 버전 제약 안에서 프로바이더 업그레이드를 허용하는 terraform init 옵션은?",
+    "options": [
+      "-reconfigure",
+      "-backend=false",
+      "-lockfile=readonly",
+      "-upgrade"
+    ],
+    "answer": "-upgrade"
+  },
+  {
+    "category": "Terraform",
+    "set": 4,
+    "question": "리소스 주소 aws_instance.web의 저장된 속성을 보여 주는 명령은?",
+    "options": [
+      "terraform import aws_instance.web i-1234567890abcdef0",
+      "terraform state rm aws_instance.web",
+      "terraform state show aws_instance.web",
+      "terraform state list aws_instance.web"
+    ],
+    "answer": "terraform state show aws_instance.web"
+  },
+  {
+    "category": "Terraform",
+    "set": 4,
+    "question": "Terraform 상세 진단 로그를 켜는 환경 변수는?",
+    "options": [
+      "TF_IN_AUTOMATION",
+      "TF_LOG",
+      "TF_INPUT",
+      "TF_WORKSPACE"
+    ],
+    "answer": "TF_LOG"
+  },
+  {
+    "category": "Terraform",
+    "set": 4,
+    "question": "동시 리소스 작업을 다섯 개로 제한하는 terraform apply 옵션은?",
+    "options": [
+      "-parallelism=5",
+      "-lock-timeout=5s",
+      "-refresh=false",
+      "-auto-approve"
+    ],
+    "answer": "-parallelism=5"
+  }
+]

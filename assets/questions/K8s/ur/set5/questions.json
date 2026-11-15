@@ -1,0 +1,302 @@
+[
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "Pod کی ٹریفک پر اثر ڈالنے کے لیے NetworkPolicy کو کیا درکار ہے؟",
+    "options": [
+      "ہر منتخب Pod کے لیے LoadBalancer Service",
+      "اسی نیم اسپیس میں PersistentVolumeClaim",
+      "ہر پالیسی کے لیے الگ API سرور",
+      "ایسا نیٹ ورک نفاذ جو NetworkPolicy نافذ کرے"
+    ],
+    "answer": "ایسا نیٹ ورک نفاذ جو NetworkPolicy نافذ کرے"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "ایک ہی Pod منتخب کرنے والی متعدد NetworkPolicies اپنی اجازت یافتہ آنے والی ٹریفک کیسے ملاتی ہیں؟",
+    "options": [
+      "سب سے پہلے بنی پالیسی تمام بعد کی پالیسیوں پر غالب آتی ہے",
+      "ہر پالیسی کو الگ سے ہر پیکٹ کی اجازت دینی ہوتی ہے",
+      "اجازت یافتہ ٹریفک ان کی آنے والی ٹریفک کی اجازتوں کا اتحاد ہوتی ہے",
+      "سب سے آخر میں بنی پالیسی تمام پچھلی پالیسیوں پر غالب آتی ہے"
+    ],
+    "answer": "اجازت یافتہ ٹریفک ان کی آنے والی ٹریفک کی اجازتوں کا اتحاد ہوتی ہے"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "کون سا RBAC آبجیکٹ نیم اسپیس کے اندر اجازتیں متعین کرتا ہے؟",
+    "options": [
+      "ResourceQuota",
+      "Role",
+      "RoleBinding",
+      "ServiceAccount"
+    ],
+    "answer": "Role"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "کون سا RBAC آبجیکٹ ایک نیم اسپیس میں Role یا ClusterRole کی اجازتیں دیتا ہے؟",
+    "options": [
+      "RoleBinding",
+      "ClusterRoleBinding",
+      "ServiceAccount",
+      "LimitRange"
+    ],
+    "answer": "RoleBinding"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "Kubernetes API تک رسائی کے لیے Pod میں چلنے والے پراسیسز کو عموماً کون سی شناخت دی جاتی ہے؟",
+    "options": [
+      "StorageClass",
+      "RuntimeClass",
+      "PriorityClass",
+      "ServiceAccount"
+    ],
+    "answer": "ServiceAccount"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "Secret کا ڈیٹا base64 سے انکوڈ کرنا اس شخص سے حفاظت کے لیے کافی کیوں نہیں جو آبجیکٹ پڑھ سکتا ہو؟",
+    "options": [
+      "Base64 خود بخود ڈیٹا DNS کے ذریعے شائع کرتا ہے",
+      "Base64 کو Pod میں محفوظ نجی کلید درکار ہوتی ہے",
+      "Base64 قابلِ واپسی انکوڈنگ ہے، رمزنگاری نہیں",
+      "Base64، Kubernetes کو ڈیٹا محفوظ کرنے سے روکتا ہے"
+    ],
+    "answer": "Base64 قابلِ واپسی انکوڈنگ ہے، رمزنگاری نہیں"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "کون سا خانہ Kubernetes کو Pod میں API اسناد خود بخود ماؤنٹ کرنے سے روک سکتا ہے؟",
+    "options": [
+      "shareProcessNamespace: false",
+      "automountServiceAccountToken: false",
+      "hostNetwork: false",
+      "enableServiceLinks: false"
+    ],
+    "answer": "automountServiceAccountToken: false"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "کون سا آبجیکٹ نیم اسپیس کے اندر وسائل کے مجموعی استعمال کی حد مقرر کرتا ہے؟",
+    "options": [
+      "ResourceQuota",
+      "LimitRange",
+      "PriorityClass",
+      "PodDisruptionBudget"
+    ],
+    "answer": "ResourceQuota"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "کون سا آبجیکٹ نیم اسپیس کے کنٹینروں کو وسائل کی طے شدہ درخواستیں اور حدیں دے سکتا ہے؟",
+    "options": [
+      "ResourceQuota",
+      "HorizontalPodAutoscaler",
+      "RuntimeClass",
+      "LimitRange"
+    ],
+    "answer": "LimitRange"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "حذف کرنے کی درخواست کے بعد Kubernetes آبجیکٹ کا finalizer کیا کرتا ہے؟",
+    "options": [
+      "فوراً ہر تابع آبجیکٹ حذف کرتا ہے",
+      "آبجیکٹ کو ناقابلِ تبدیلی Secret میں بدلتا ہے",
+      "ضروری صفائی کے ذریعے finalizer ہٹنے تک آبجیکٹ کا حذف ہونا زیرِ التوا رکھتا ہے",
+      "آبجیکٹ کی تمام آئندہ تازہ کاریاں روکتا ہے"
+    ],
+    "answer": "ضروری صفائی کے ذریعے finalizer ہٹنے تک آبجیکٹ کا حذف ہونا زیرِ التوا رکھتا ہے"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "میٹا ڈیٹا کا کون سا خانہ غیر ضروری آبجیکٹ ہٹانے کے لیے تابع آبجیکٹ کو ان کے مالکان سے جوڑتا ہے؟",
+    "options": [
+      "managedFields",
+      "ownerReferences",
+      "annotations",
+      "labels"
+    ],
+    "answer": "ownerReferences"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "CustomResourceDefinition کلسٹر میں کیا شامل کرتی ہے؟",
+    "options": [
+      "Kubernetes API کے ذریعے دستیاب نئی حسبِ ضرورت ریسورس قسم",
+      "موجودہ قسم کے لیے چلتا ہوا حالت کی مطابقت قائم کرنے والا کنٹرولر",
+      "ہر سروس اکاؤنٹ کو RBAC اجازت",
+      "ہر اندرونی ریسورس قسم کی ایک مثال"
+    ],
+    "answer": "Kubernetes API کے ذریعے دستیاب نئی حسبِ ضرورت ریسورس قسم"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "Kubernetes آپریٹر کو محض حسبِ ضرورت ریسورس کی تعریف سے کیا چیز ممتاز کرتی ہے؟",
+    "options": [
+      "آپریٹر صرف اسکیما کی تعریفیں محفوظ کر سکتا ہے",
+      "آپریٹر API سرور کی ضرورت ختم کرتا ہے",
+      "آپریٹر صرف kubectl کا آؤٹ پٹ فارمیٹ بدلتا ہے",
+      "آپریٹر نمائندگی کردہ ایپلی کیشن سنبھالنے کے لیے حالت کی مطابقت قائم کرنے کی منطق بھی چلاتا ہے"
+    ],
+    "answer": "آپریٹر نمائندگی کردہ ایپلی کیشن سنبھالنے کے لیے حالت کی مطابقت قائم کرنے کی منطق بھی چلاتا ہے"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "کون سا نظام توثیق اور اجازت کے بعد مگر محفوظ کرنے سے پہلے API درخواست مسترد یا تبدیل کر سکتا ہے؟",
+    "options": [
+      "کنٹینر امیج کھینچنا",
+      "Service کے اختتامی مقامات کی روٹنگ",
+      "داخلے کا کنٹرول",
+      "Pod کی شیڈولنگ"
+    ],
+    "answer": "داخلے کا کنٹرول"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "کوئی اہل نوڈ Pod کی لازمی نوڈ وابستگی پوری نہ کرے تو کیا ہوتا ہے؟",
+    "options": [
+      "API سرور اسے ہر نوڈ پر شیڈول کرتا ہے",
+      "موزوں نوڈ دستیاب ہونے یا پابندیاں بدلنے تک Pod بغیر تعیناتی رہتا ہے",
+      "شیڈولر ایک کوشش کے بعد قاعدہ نظرانداز کرتا ہے",
+      "Pod خود بخود DaemonSet بن جاتا ہے"
+    ],
+    "answer": "موزوں نوڈ دستیاب ہونے یا پابندیاں بدلنے تک Pod بغیر تعیناتی رہتا ہے"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "نوڈ وابستگی کی preferredDuringSchedulingIgnoredDuringExecution صورت کیا ظاہر کرتی ہے؟",
+    "options": [
+      "تعیناتی کی ترجیح جو بصورتِ دیگر اہل مگر غیر مماثل نوڈ کو خارج نہیں کرتی",
+      "لازمی شرط جو غیر مماثل نوڈ پر تعیناتی روکتی ہے",
+      "نوڈ کا لیبل بدلنے پر Pod نکالنے کی ہدایت",
+      "شیڈولر کو مکمل طور پر نظرانداز کرنے کی درخواست"
+    ],
+    "answer": "تعیناتی کی ترجیح جو بصورتِ دیگر اہل مگر غیر مماثل نوڈ کو خارج نہیں کرتی"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "نوڈ کے لیبل چلتے Pod کے نوڈ وابستگی قاعدے سے ملنا بند ہو جائیں تو IgnoredDuringExecution کا کیا مطلب ہے؟",
+    "options": [
+      "Pod فوراً حذف کرنا لازم ہے",
+      "Pod کے کنٹینر خود بخود دوبارہ شروع ہوتے ہیں",
+      "نوڈ کے لیبل خود بخود واپس پرانی حالت میں آتے ہیں",
+      "صرف اس قاعدے کی وجہ سے چلتا Pod نہیں نکالا جاتا"
+    ],
+    "answer": "صرف اس قاعدے کی وجہ سے چلتا Pod نہیں نکالا جاتا"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "Pod واضح طور پر spec.nodeName مقرر کرے تو کیا ہوتا ہے؟",
+    "options": [
+      "وہ اس نام کا نوڈ بناتا ہے",
+      "وہ اس نوڈ کا نام بدلتا ہے جس پر Pod چل رہا ہے",
+      "وہ شیڈولر سے گزرے بغیر اسی نام والے نوڈ کو تفویض ہوتا ہے",
+      "وہ شیڈولر سے تمام مماثل نوڈ لیبل کی درجہ بندی مانگتا ہے"
+    ],
+    "answer": "وہ شیڈولر سے گزرے بغیر اسی نام والے نوڈ کو تفویض ہوتا ہے"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "ٹوپولوجی میں پھیلاؤ کی پابندیوں کا کیا مقصد ہے؟",
+    "options": [
+      "کنٹرول پلین کے اجزا کے درمیان ٹریفک رمز کرنا",
+      "یہ طے کرنا کہ مماثل Pod ٹوپولوجی کے مختلف دائروں میں کیسے تقسیم ہوں",
+      "مستقل والیوموں کے درمیان کنٹینر فائلیں نقل کرنا",
+      "ہر نیم اسپیس کو ایک عوامی IP دینا"
+    ],
+    "answer": "یہ طے کرنا کہ مماثل Pod ٹوپولوجی کے مختلف دائروں میں کیسے تقسیم ہوں"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "taint کا کون سا اثر پہلے سے چلتے ایسے Pod نکال سکتا ہے جن میں اس taint کی toleration نہ ہو؟",
+    "options": [
+      "NoExecute",
+      "NoSchedule",
+      "PreferNoSchedule",
+      "None"
+    ],
+    "answer": "NoExecute"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "کنٹینر کے securityContext کی کون سی ترتیب Linux کنٹینر کے لیے غیر root صارف کے طور پر چلنا لازم کرتی ہے؟",
+    "options": [
+      "readOnlyRootFilesystem: true",
+      "privileged: false",
+      "allowPrivilegeEscalation: false",
+      "runAsNonRoot: true"
+    ],
+    "answer": "runAsNonRoot: true"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "کنٹینر کے securityContext کی کون سی ترتیب Linux پراسیس کو والد پراسیس سے زیادہ اختیارات حاصل کرنے سے روکتی ہے؟",
+    "options": [
+      "readOnlyRootFilesystem: true",
+      "privileged: false",
+      "allowPrivilegeEscalation: false",
+      "runAsNonRoot: true"
+    ],
+    "answer": "allowPrivilegeEscalation: false"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "خرابی تلاش کرنے کے لیے موجودہ Pod کے ایپلی کیشن کنٹینر بدلے بغیر کس قسم کا کنٹینر شامل کیا جا سکتا ہے؟",
+    "options": [
+      "دوبارہ شروع کیا جا سکنے والا ابتدائی کنٹینر",
+      "عارضی کنٹینر",
+      "عام ابتدائی کنٹینر",
+      "عام ایپلی کیشن کنٹینر"
+    ],
+    "answer": "عارضی کنٹینر"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "کون سا ریسورس Service کے نیٹ ورک اختتامی مقامات کا حساب قابلِ توسیع گروہوں میں رکھتا ہے؟",
+    "options": [
+      "EndpointSlice",
+      "IngressClass",
+      "NetworkPolicy",
+      "RuntimeClass"
+    ],
+    "answer": "EndpointSlice"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 5,
+    "question": "Ingress ریسورس کو واقعی HTTP روٹنگ ترتیب دینے کے لیے کیا درکار ہے؟",
+    "options": [
+      "ہر نیم اسپیس میں ingress نام کا ConfigMap",
+      "ہر میزبان نام کے لیے PersistentVolume",
+      "ایسا Job جو تمام منتخب Pod دوبارہ شروع کرے",
+      "ایسا Ingress کنٹرولر جو اس کے قواعد نافذ کرے"
+    ],
+    "answer": "ایسا Ingress کنٹرولر جو اس کے قواعد نافذ کرے"
+  }
+]

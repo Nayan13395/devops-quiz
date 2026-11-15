@@ -2,6 +2,8 @@ import 'package:flutter/foundation.dart' show kIsWeb;
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 
+import '../l10n/app_localizations.dart';
+
 class PlayStoreBadge extends StatelessWidget {
   const PlayStoreBadge({super.key, this.height = 50});
 
@@ -24,6 +26,7 @@ class PlayStoreBadge extends StatelessWidget {
     // Show only on web – hidden in the Android app
     if (!kIsWeb) return const SizedBox.shrink();
 
+    final l10n = AppLocalizations.of(context);
     return MouseRegion(
       cursor: SystemMouseCursors.click,
       child: InkWell(
@@ -44,7 +47,9 @@ class PlayStoreBadge extends StatelessWidget {
             'assets/images/google_play_badge.png',
             height: height,
             fit: BoxFit.contain,
-            semanticLabel: 'Get it on Google Play',
+            semanticLabel:
+                l10n?.accountWelcomeGetItOnGooglePlay ??
+                'Get it on Google Play',
           ),
         ),
       ),

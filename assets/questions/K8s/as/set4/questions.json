@@ -1,0 +1,302 @@
+[
+  {
+    "category": "Kubernetes",
+    "set": 4,
+    "question": "কোনটো কমাণ্ডে এটা ডিপ্লয়মেণ্ট স্কেল কৰে?",
+    "options": [
+      "kubectl scale deployment",
+      "kubectl resize deployment",
+      "kubectl expand deployment",
+      "kubectl increase deployment"
+    ],
+    "answer": "kubectl scale deployment"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 4,
+    "question": "কোনটো কমাণ্ডে এটা ডিপ্লয়মেণ্ট ৫টা ৰেপ্লিকালৈ স্কেল কৰে?",
+    "options": [
+      "kubectl scale deployment --replicas=5",
+      "kubectl replicas 5",
+      "kubectl expand deployment",
+      "kubectl set replicas"
+    ],
+    "answer": "kubectl scale deployment --replicas=5"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 4,
+    "question": "কোনটো কমাণ্ডে এটা ডিপ্লয়মেণ্ট ৰিষ্টাৰ্ট কৰে?",
+    "options": [
+      "kubectl rollout restart deployment",
+      "kubectl restart deployment",
+      "kubectl deployment restart",
+      "kubectl reload deployment"
+    ],
+    "answer": "kubectl rollout restart deployment"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 4,
+    "question": "কোনটো কমাণ্ডে এটা ডিপ্লয়মেণ্টৰ ৰোলআউট অৱস্থা পৰীক্ষা কৰে?",
+    "options": [
+      "kubectl rollout status",
+      "kubectl deployment status",
+      "kubectl rollout check",
+      "kubectl get rollout"
+    ],
+    "answer": "kubectl rollout status"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 4,
+    "question": "কোনটো কমাণ্ডে এটা ডিপ্লয়মেণ্ট ৰোলবেক কৰে?",
+    "options": [
+      "kubectl rollout undo",
+      "kubectl rollback",
+      "kubectl undo deployment",
+      "kubectl deployment rollback"
+    ],
+    "answer": "kubectl rollout undo"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 4,
+    "question": "কোনটো কমাণ্ডে ৰোলআউটৰ ইতিহাস দেখুৱায়?",
+    "options": [
+      "kubectl rollout history",
+      "kubectl history",
+      "kubectl deployment history",
+      "kubectl show rollout"
+    ],
+    "answer": "kubectl rollout history"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 4,
+    "question": "কোনটো কমাণ্ডে এটা ডিপ্লয়মেণ্ট ৰোলআউট পজ কৰে?",
+    "options": [
+      "kubectl rollout pause",
+      "kubectl pause deployment",
+      "kubectl stop rollout",
+      "kubectl hold deployment"
+    ],
+    "answer": "kubectl rollout pause"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 4,
+    "question": "কোনটো কমাণ্ডে পজ কৰা ডিপ্লয়মেণ্ট ৰোলআউট পুনৰ আৰম্ভ কৰে?",
+    "options": [
+      "kubectl rollout resume",
+      "kubectl resume deployment",
+      "kubectl continue rollout",
+      "kubectl restart rollout"
+    ],
+    "answer": "kubectl rollout resume"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 4,
+    "question": "বিদ্যমান Pod আঁতৰোৱাৰ চেষ্টা নকৰাকৈ নোডক নতুন Pod নিৰ্ধাৰণৰ অযোগ্য চিহ্নিত কৰা আদেশ কোনটো?",
+    "options": [
+      "kubectl cordon",
+      "kubectl uncordon",
+      "kubectl get node",
+      "kubectl describe node"
+    ],
+    "answer": "kubectl cordon"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 4,
+    "question": "কোনটো কমাণ্ডে নিৰাপদে এটা নোডৰ পৰা ৱাৰ্কলোডসমূহ আঁতৰাই দিয়ে?",
+    "options": [
+      "kubectl drain",
+      "kubectl cordon",
+      "kubectl delete node",
+      "kubectl migrate"
+    ],
+    "answer": "kubectl drain"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 4,
+    "question": "কোনটো কমাণ্ডে এটা নোডক পুনৰ শিডিউলযোগ্য কৰে?",
+    "options": [
+      "kubectl uncordon",
+      "kubectl enable",
+      "kubectl restart",
+      "kubectl activate"
+    ],
+    "answer": "kubectl uncordon"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 4,
+    "question": "কোনটো কমাণ্ডে নোডৰ বিতং তথ্য দেখুৱায়?",
+    "options": [
+      "kubectl describe node",
+      "kubectl inspect node",
+      "kubectl info node",
+      "kubectl node show"
+    ],
+    "answer": "kubectl describe node"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 4,
+    "question": "কোনটো কমাণ্ডে এটা স্থানীয় পৰ্টক পডলৈ ফৰৱাৰ্ড কৰে?",
+    "options": [
+      "kubectl port-forward",
+      "kubectl tunnel",
+      "kubectl expose",
+      "kubectl connect"
+    ],
+    "answer": "kubectl port-forward"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 4,
+    "question": "কোনটো কমাণ্ডে পডলৈ বা পডৰ পৰা ফাইল কপি কৰে?",
+    "options": [
+      "kubectl cp",
+      "kubectl copy",
+      "kubectl transfer",
+      "kubectl sync"
+    ],
+    "answer": "kubectl cp"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 4,
+    "question": "কোনটো কমাণ্ডে চলি থকা এটা পডৰ YAML সংজ্ঞা দেখুৱায়?",
+    "options": [
+      "kubectl get pod -o yaml",
+      "kubectl show pod yaml",
+      "kubectl export pod",
+      "kubectl pod yaml"
+    ],
+    "answer": "kubectl get pod -o yaml"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 4,
+    "question": "Deployment site-ৰ web কণ্টেইনাৰক nginx:1.27 ইমেজলৈ আপডেট কৰা আদেশ কোনটো?",
+    "options": [
+      "kubectl set image deployment/site web=nginx:1.27",
+      "kubectl set env deployment/site web=nginx:1.27",
+      "kubectl annotate deployment/site web=nginx:1.27",
+      "kubectl label deployment/site web=nginx:1.27"
+    ],
+    "answer": "kubectl set image deployment/site web=nginx:1.27"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 4,
+    "question": "পৰিৱৰ্তন প্ৰয়োগ নকৰাকৈ মেনিফেষ্ট আৰু চলি থকা বিন্যাস তুলনা কৰা আদেশ কোনটো?",
+    "options": [
+      "kubectl apply -f app.yaml",
+      "kubectl replace -f app.yaml",
+      "kubectl delete -f app.yaml",
+      "kubectl diff -f app.yaml"
+    ],
+    "answer": "kubectl diff -f app.yaml"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 4,
+    "question": "অনুৰোধৰ সম্পদ স্থায়ীভাৱে নাৰাখি API ছাৰ্ভাৰত পৰীক্ষামূলক চলনা কৰা kubectl বিকল্প কোনটো?",
+    "options": [
+      "--validate=false",
+      "--force",
+      "--dry-run=server",
+      "--dry-run=client"
+    ],
+    "answer": "--dry-run=server"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 4,
+    "question": "Pod api Ready হোৱালৈ সৰ্বাধিক 60 ছেকেণ্ড ৰোৱা আদেশ কোনটো?",
+    "options": [
+      "kubectl get pod api --request-timeout=60s",
+      "kubectl wait --for=condition=Ready pod/api --timeout=60s",
+      "kubectl wait --for=delete pod/api --timeout=60s",
+      "kubectl logs api --since=60s"
+    ],
+    "answer": "kubectl wait --for=condition=Ready pod/api --timeout=60s"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 4,
+    "question": "ৰোলিং আপডেটত অনুপলব্ধ প্ৰতিলিপিৰ সংখ্যা সীমিত কৰা Deployment ছেটিং কোনটো?",
+    "options": [
+      "maxUnavailable",
+      "maxSurge",
+      "revisionHistoryLimit",
+      "progressDeadlineSeconds"
+    ],
+    "answer": "maxUnavailable"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 4,
+    "question": "ৰোলিং আপডেটত বিচৰা প্ৰতিলিপিৰ সংখ্যাতকৈ বেছি সাময়িক Pod থাকিবলৈ দিয়া Deployment ছেটিং কোনটো?",
+    "options": [
+      "maxUnavailable",
+      "minReadySeconds",
+      "revisionHistoryLimit",
+      "maxSurge"
+    ],
+    "answer": "maxSurge"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 4,
+    "question": "নিৰ্বাচিত Pod গোটৰ একেলগে হোৱা স্বেচ্ছামূলক বিঘিনি সীমিত কৰা সম্পদ কোনটো?",
+    "options": [
+      "LimitRange",
+      "NetworkPolicy",
+      "PodDisruptionBudget",
+      "ResourceQuota"
+    ],
+    "answer": "PodDisruptionBudget"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 4,
+    "question": "পৰ্যবেক্ষণ কৰা মেট্ৰিক অনুসৰি ৱৰ্কলোডৰ প্ৰতিলিপি সংখ্যা সলনি কৰা কণ্ট্ৰ’লাৰ কোনটো?",
+    "options": [
+      "CronJob",
+      "HorizontalPodAutoscaler",
+      "ReplicaSet",
+      "DaemonSet"
+    ],
+    "answer": "HorizontalPodAutoscaler"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 4,
+    "question": "kubectl top-এ CPU আৰু মেমৰী ব্যৱহাৰ দেখুৱাবলৈ কি উপলব্ধ থাকিব লাগে?",
+    "options": [
+      "সম্পদৰ মেট্ৰিক API, সাধাৰণতে Metrics Server-এ যোগান ধৰে",
+      "প্ৰতিটো নেমস্পেচৰ বাবে Ingress কণ্ট্ৰ’লাৰ",
+      "ব্লক যন্ত্ৰ থকা ডিফল্ট StorageClass",
+      "প্ৰতিটো Pod-ৰ বাবে LoadBalancer Service"
+    ],
+    "answer": "সম্পদৰ মেট্ৰিক API, সাধাৰণতে Metrics Server-এ যোগান ধৰে"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 4,
+    "question": "সংযুক্ত ক্লাষ্টাৰে সমৰ্থন কৰা API সম্পদৰ ধৰণ দেখুওৱা আদেশ কোনটো?",
+    "options": [
+      "kubectl api-versions",
+      "kubectl cluster-info",
+      "kubectl config view",
+      "kubectl api-resources"
+    ],
+    "answer": "kubectl api-resources"
+  }
+]

@@ -1,0 +1,302 @@
+[
+  {
+    "category": "Kubernetes",
+    "set": 1,
+    "question": "कुन कमाण्डले pods सूचीबद्ध गर्छ?",
+    "options": [
+      "kubectl get pods",
+      "kubectl pods",
+      "kubectl list",
+      "kubectl show"
+    ],
+    "answer": "kubectl get pods"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 1,
+    "question": "कुन कमाण्डले सबै namespaces का pods सूचीबद्ध गर्छ?",
+    "options": [
+      "kubectl get pods -A",
+      "kubectl get pods --all",
+      "kubectl pods all",
+      "kubectl list pods"
+    ],
+    "answer": "kubectl get pods -A"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 1,
+    "question": "कुन कमाण्डले pod को विवरण देखाउँछ?",
+    "options": [
+      "kubectl describe pod",
+      "kubectl details pod",
+      "kubectl inspect pod",
+      "kubectl info pod"
+    ],
+    "answer": "kubectl describe pod"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 1,
+    "question": "कुन कमाण्डले pod को logs देखाउँछ?",
+    "options": [
+      "kubectl logs",
+      "kubectl get logs",
+      "kubectl show logs",
+      "kubectl pod logs"
+    ],
+    "answer": "kubectl logs"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 1,
+    "question": "कुन कमाण्डले pod को logs निरन्तर देखाउँछ?",
+    "options": [
+      "kubectl logs -f",
+      "kubectl logs --previous",
+      "kubectl follow logs",
+      "kubectl stream logs"
+    ],
+    "answer": "kubectl logs -f"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 1,
+    "question": "कुन कमाण्डले pod मेटाउँछ?",
+    "options": [
+      "kubectl delete pod",
+      "kubectl remove pod",
+      "kubectl erase pod",
+      "kubectl destroy pod"
+    ],
+    "answer": "kubectl delete pod"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 1,
+    "question": "कुन कमाण्डले deployment बनाउँछ?",
+    "options": [
+      "kubectl create deployment",
+      "kubectl add deployment",
+      "kubectl run deployment",
+      "kubectl deploy create"
+    ],
+    "answer": "kubectl create deployment"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 1,
+    "question": "कुन कमाण्डले deployments सूचीबद्ध गर्छ?",
+    "options": [
+      "kubectl get deployments",
+      "kubectl deployments",
+      "kubectl show deployments",
+      "kubectl list deploy"
+    ],
+    "answer": "kubectl get deployments"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 1,
+    "question": "कुन कमाण्डले services सूचीबद्ध गर्छ?",
+    "options": [
+      "kubectl get services",
+      "kubectl services",
+      "kubectl list svc",
+      "kubectl show services"
+    ],
+    "answer": "kubectl get services"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 1,
+    "question": "कुन कमाण्डले nodes सूचीबद्ध गर्छ?",
+    "options": [
+      "kubectl get nodes",
+      "kubectl nodes",
+      "kubectl list nodes",
+      "kubectl show nodes"
+    ],
+    "answer": "kubectl get nodes"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 1,
+    "question": "कुन कमाण्डले cluster को जानकारी देखाउँछ?",
+    "options": [
+      "kubectl cluster-info",
+      "kubectl get cluster",
+      "kubectl show cluster",
+      "kubectl info cluster"
+    ],
+    "answer": "kubectl cluster-info"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 1,
+    "question": "कुन कमाण्डले YAML फाइलबाट configuration लागू गर्छ?",
+    "options": [
+      "kubectl apply -f",
+      "kubectl create yaml",
+      "kubectl update -f",
+      "kubectl deploy -f"
+    ],
+    "answer": "kubectl apply -f"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 1,
+    "question": "कुन कमाण्डले YAML फाइलबाट resources बनाउँछ?",
+    "options": [
+      "kubectl create -f",
+      "kubectl run -f",
+      "kubectl deploy -f",
+      "kubectl start -f"
+    ],
+    "answer": "kubectl create -f"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 1,
+    "question": "कुन कमाण्डले YAML फाइलमा परिभाषित resources मेटाउँछ?",
+    "options": [
+      "kubectl delete -f",
+      "kubectl remove -f",
+      "kubectl destroy -f",
+      "kubectl erase -f"
+    ],
+    "answer": "kubectl delete -f"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 1,
+    "question": "कुन कमाण्डले चलिरहेको pod भित्र कमाण्ड चलाउँछ?",
+    "options": [
+      "kubectl exec",
+      "kubectl run inside",
+      "kubectl pod exec",
+      "kubectl connect"
+    ],
+    "answer": "kubectl exec"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 1,
+    "question": "अनुरोधका लागि payments नेमस्पेस छान्ने kubectl विकल्प कुन हो?",
+    "options": [
+      "-l payments",
+      "-o payments",
+      "--context payments",
+      "-n payments"
+    ],
+    "answer": "-n payments"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 1,
+    "question": "हालको kubeconfig कन्टेक्स्टको नाम देखाउने कमान्ड कुन हो?",
+    "options": [
+      "kubectl config get-users",
+      "kubectl cluster-info",
+      "kubectl config current-context",
+      "kubectl config get-clusters"
+    ],
+    "answer": "kubectl config current-context"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 1,
+    "question": "kubectl लाई staging नामको विद्यमान कन्टेक्स्टमा सार्ने कमान्ड कुन हो?",
+    "options": [
+      "kubectl config get-contexts staging",
+      "kubectl config use-context staging",
+      "kubectl config delete-context staging",
+      "kubectl config rename-context staging prod"
+    ],
+    "answer": "kubectl config use-context staging"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 1,
+    "question": "Pod स्पेसिफिकेसनका दस्तावेजीकृत क्षेत्र देखाउने कमान्ड कुन हो?",
+    "options": [
+      "kubectl explain pod.spec",
+      "kubectl describe pod spec",
+      "kubectl get pod spec",
+      "kubectl logs spec"
+    ],
+    "answer": "kubectl explain pod.spec"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 1,
+    "question": "app=web लेबल भएका Pod छान्ने कमान्ड कुन हो?",
+    "options": [
+      "kubectl get pods -n app=web",
+      "kubectl get pods -o app=web",
+      "kubectl get pods --context app=web",
+      "kubectl get pods -l app=web"
+    ],
+    "answer": "kubectl get pods -l app=web"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 1,
+    "question": "api नामको Pod मा team=payments लेबल थप्ने कमान्ड कुन हो?",
+    "options": [
+      "kubectl set env pod api team=payments",
+      "kubectl get pod api -l team=payments",
+      "kubectl label pod api team=payments",
+      "kubectl annotate pod api team=payments"
+    ],
+    "answer": "kubectl label pod api team=payments"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 1,
+    "question": "दस्तावेज URL जस्ता पहिचान नजनाउने जानकारीका लागि मेटाडेटाको कुन क्षेत्र हो?",
+    "options": [
+      "namespace",
+      "annotations",
+      "labels",
+      "name"
+    ],
+    "answer": "annotations"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 1,
+    "question": "हालको पहिचानले dev नेमस्पेसमा Deployments बनाउन पाउँछ कि पाउँदैन सोध्ने कमान्ड कुन हो?",
+    "options": [
+      "kubectl auth can-i create deployments -n dev",
+      "kubectl get deployments -n dev",
+      "kubectl describe namespace dev",
+      "kubectl config view"
+    ],
+    "answer": "kubectl auth can-i create deployments -n dev"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 1,
+    "question": "batch नामको बहु-कन्टेनर Pod को worker कन्टेनरबाट लग ल्याउने कमान्ड कुन हो?",
+    "options": [
+      "kubectl logs batch -n worker",
+      "kubectl logs batch --since=1h",
+      "kubectl logs batch --tail=10",
+      "kubectl logs batch -c worker"
+    ],
+    "answer": "kubectl logs batch -c worker"
+  },
+  {
+    "category": "Kubernetes",
+    "set": 1,
+    "question": "api Pod को एकमात्र कन्टेनरको अघिल्लो समाप्त इन्स्ट्यान्सका लग ल्याउने कमान्ड कुन हो?",
+    "options": [
+      "kubectl logs api --timestamps",
+      "kubectl logs api --tail=1",
+      "kubectl logs api --previous",
+      "kubectl logs api --follow"
+    ],
+    "answer": "kubectl logs api --previous"
+  }
+]

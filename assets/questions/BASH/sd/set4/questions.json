@@ -1,0 +1,302 @@
+[
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "ڪهڙو نحو هڪ سادي Bash فنڪشن بيان ڪري ٿو؟",
+    "options": [
+      "myfunc() { echo hi; }",
+      "def myfunc: echo hi",
+      "function = myfunc",
+      "myfunc -> echo hi"
+    ],
+    "answer": "myfunc() { echo hi; }"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "ڪهڙو ڪمانڊ myfunc نالي فنڪشن کي سڏي ٿو؟",
+    "options": [
+      "myfunc",
+      "call myfunc",
+      "run myfunc",
+      "execute myfunc"
+    ],
+    "answer": "myfunc"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "ڪهڙو ڪي ورڊ اهڙو ويريبل ڊڪليئر ڪري ٿو جيڪو صرف فنڪشن اندر نظر اچي؟",
+    "options": [
+      "local",
+      "private",
+      "internal",
+      "hidden"
+    ],
+    "answer": "local"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "ڪهڙو ڪمانڊ فنڪشن مان 0 جي ايگزٽ اسٽيٽس موٽائي ٿو؟",
+    "options": [
+      "return 0",
+      "exit function 0",
+      "stop 0",
+      "end 0"
+    ],
+    "answer": "return 0"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "فنڪشن اندر ڪهڙو پيراميٽر فنڪشن کي ڏنل آرگيومينٽس جو تعداد ڏئي ٿو؟",
+    "options": [
+      "$#",
+      "$@",
+      "$0",
+      "$1"
+    ],
+    "answer": "$#"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "ڪهڙو نحو ٽن عنصرن وارو indexed array ٺاهي ٿو؟",
+    "options": [
+      "arr=(one two three)",
+      "array arr one two three",
+      "arr[one two three]",
+      "set arr one two three"
+    ],
+    "answer": "arr=(one two three)"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "ڪهڙو نحو arr جي index 2 تي عنصر تائين رسائي ڏئي ٿو؟",
+    "options": [
+      "${arr[2]}",
+      "${arr:2}",
+      "$arr[2]",
+      "arr{2}"
+    ],
+    "answer": "${arr[2]}"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "ڪهڙو expansion arr ۾ عنصرن جو تعداد ڏئي ٿو؟",
+    "options": [
+      "${#arr[@]}",
+      "${#arr}",
+      "${arr:length}",
+      "${arr[@]#}"
+    ],
+    "answer": "${#arr[@]}"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "ڪهڙو نحو newitem کي arr ۾ شامل ڪري ٿو؟",
+    "options": [
+      "arr+=(newitem)",
+      "arr=newitem",
+      "arr.push(newitem)",
+      "add arr newitem"
+    ],
+    "answer": "arr+=(newitem)"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "ڪهڙو expansion arr جا سڀ عنصر موٽائي ٿو؟",
+    "options": [
+      "${arr[@]}",
+      "${arr[0]}",
+      "${arr[all]}",
+      "${arr}"
+    ],
+    "answer": "${arr[@]}"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "ڪهڙو ڪمانڊ associative array ڊڪليئر ڪري ٿو؟",
+    "options": [
+      "declare -A map",
+      "declare -a map",
+      "array -A map",
+      "assoc map"
+    ],
+    "answer": "declare -A map"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "ڪهڙو ريڊائريڪشن اسٽينڊرڊ آئوٽ پٽ ۽ اسٽينڊرڊ ايرر ٻنهي کي output.log ڏانهن موڪلي ٿو؟",
+    "options": [
+      "command &> output.log",
+      "command > output.log",
+      "command 2> output.log",
+      "command < output.log"
+    ],
+    "answer": "command &> output.log"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "ڪهڙو ريڊائريڪشن ڪمانڊ جي سڀ آئوٽ پٽ کي رد ڪري ٿو؟",
+    "options": [
+      "command > /dev/null",
+      "command > null",
+      "command > empty",
+      "command > discard"
+    ],
+    "answer": "command > /dev/null"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "ڪهڙو آپريٽر هڪ ڪمانڊ جي آئوٽ پٽ کي ٻئي ڪمانڊ ڏانهن ان پٽ طور موڪلي ٿو؟",
+    "options": [
+      "|",
+      ">",
+      "<",
+      "&"
+    ],
+    "answer": "|"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "ڪهڙي علامت ڪمانڊ کي پس منظر ۾ هلائي ٿي؟",
+    "options": [
+      "&",
+      "&&",
+      "|",
+      ";"
+    ],
+    "answer": "&"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "ڪهڙو بلٽ ان پس منظر جي ڪمن جي ختم ٿيڻ جو انتظار ڪري ٿو؟",
+    "options": [
+      "wait",
+      "hold",
+      "pause",
+      "sleep"
+    ],
+    "answer": "wait"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "ڪهڙو ڪمانڊ script.sh کي موجوده شيل environment ۾ هلائي ٿو؟",
+    "options": [
+      "source script.sh",
+      "bash script.sh",
+      "./script.sh",
+      "sh script.sh"
+    ],
+    "answer": "source script.sh"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "ڪهڙو آپريٽر here document شروع ڪري ٿو؟",
+    "options": [
+      "<<",
+      ">>",
+      "<",
+      ">"
+    ],
+    "answer": "<<"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "ڪهڙو ڪمانڊ محفوظ عارضي فائل ٺاهي ٿو؟",
+    "options": [
+      "mktemp",
+      "tempfile",
+      "touch tmp",
+      "newfile"
+    ],
+    "answer": "mktemp"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "جڏهن اسڪرپٽ کي SIGINT ملي ته ڪهڙو ڪمانڊ cleanup هلائي ٿو؟",
+    "options": [
+      "trap 'cleanup' SIGINT",
+      "handle SIGINT cleanup",
+      "signal SIGINT cleanup",
+      "catch SIGINT cleanup"
+    ],
+    "answer": "trap 'cleanup' SIGINT"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "جڏهن استعمال ڪندڙ Ctrl+C دٻائي ته عام طور ڪهڙو سگنل موڪليو ويندو آهي؟",
+    "options": [
+      "SIGINT",
+      "SIGTERM",
+      "SIGKILL",
+      "SIGHUP"
+    ],
+    "answer": "SIGINT"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "ڪهڙو آپشن اسڪرپٽ کي ڪنهن ڪمانڊ جي ناڪام ٿيڻ تي فوري طور ختم ڪري ٿو؟",
+    "options": [
+      "set -e",
+      "set -x",
+      "set -u",
+      "set -o pipefail"
+    ],
+    "answer": "set -e"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "ڪهڙو آپشن غير مقرر ويريبل جو حوالو ڏيڻ تي غلطي پيدا ڪري ٿو؟",
+    "options": [
+      "set -u",
+      "set -e",
+      "set -x",
+      "set -a"
+    ],
+    "answer": "set -u"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "ڪهڙو آپشن ڊيبگنگ لاءِ هر ڪمانڊ کي هلائڻ کان اڳ ڇپائي ٿو؟",
+    "options": [
+      "set -x",
+      "set -e",
+      "set -u",
+      "set -v"
+    ],
+    "answer": "set -x"
+  },
+  {
+    "category": "Bash Scripting",
+    "set": 4,
+    "question": "ڪهڙو ڪمانڊ هن وقت بيان ڪيل شيل فنڪشنز جي فهرست ڏئي ٿو؟",
+    "options": [
+      "declare -f",
+      "declare -A",
+      "functions",
+      "listfunc"
+    ],
+    "answer": "declare -f"
+  }
+]

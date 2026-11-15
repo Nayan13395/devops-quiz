@@ -1,0 +1,302 @@
+[
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "Quale blocco dichiarativo registra una modifica dell'indirizzo di una risorsa per consentire a Terraform di conservare l'oggetto esistente?",
+    "options": [
+      "removed",
+      "check",
+      "moved",
+      "import"
+    ],
+    "answer": "moved"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "In un blocco moved, quale argomento specifica il nuovo indirizzo della risorsa?",
+    "options": [
+      "provider",
+      "to",
+      "from",
+      "id"
+    ],
+    "answer": "to"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "Quale blocco dichiara un oggetto di infrastruttura esistente da importare durante un'operazione apply?",
+    "options": [
+      "import",
+      "moved",
+      "output",
+      "check"
+    ],
+    "answer": "import"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "Quale impostazione del blocco removed dimentica una risorsa senza distruggerne l'oggetto reale di infrastruttura?",
+    "options": [
+      "lifecycle { destroy = true }",
+      "lifecycle { create_before_destroy = true }",
+      "lifecycle { prevent_destroy = false }",
+      "lifecycle { destroy = false }"
+    ],
+    "answer": "lifecycle { destroy = false }"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "Quando una normale variabile di input è contrassegnata sensitive, che cosa accade al suo valore in un file di stato locale?",
+    "options": [
+      "Viene sempre escluso dallo stato",
+      "Viene sostituito dal nome della variabile prima del salvataggio",
+      "Può ancora essere memorizzato in chiaro, anche se il normale output CLI lo nasconde",
+      "Viene crittografato automaticamente dal flag sensitive"
+    ],
+    "answer": "Può ancora essere memorizzato in chiaro, anche se il normale output CLI lo nasconde"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "Quale formato del comando output può rivelare valori di output sensibili in forma leggibile da una macchina?",
+    "options": [
+      "terraform providers schema -json",
+      "terraform output -json",
+      "terraform output -help",
+      "terraform output -no-color"
+    ],
+    "answer": "terraform output -json"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "Quale funzione converte un valore Terraform in una stringa JSON?",
+    "options": [
+      "jsonencode",
+      "jsondecode",
+      "yamldecode",
+      "file"
+    ],
+    "answer": "jsonencode"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "Quale funzione analizza una stringa JSON per ottenere un valore Terraform?",
+    "options": [
+      "jsonencode",
+      "yamlencode",
+      "templatefile",
+      "jsondecode"
+    ],
+    "answer": "jsondecode"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "Quale funzione elabora un file modello usando una mappa di variabili fornita?",
+    "options": [
+      "fileset",
+      "filebase64",
+      "templatefile",
+      "file"
+    ],
+    "answer": "templatefile"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "Quale funzione restituisce il primo argomento valutato senza errori dinamici?",
+    "options": [
+      "lookup",
+      "try",
+      "can",
+      "coalesce"
+    ],
+    "answer": "try"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "Quale funzione indica se un'espressione può essere valutata senza errori dinamici?",
+    "options": [
+      "can",
+      "try",
+      "contains",
+      "length"
+    ],
+    "answer": "can"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "Se due mappe passate a merge contengono la stessa chiave, quale valore prevale?",
+    "options": [
+      "Il valore dell'argomento precedente",
+      "I valori vengono sempre combinati in un elenco",
+      "La chiave duplicata causa sempre un errore",
+      "Il valore dell'argomento successivo"
+    ],
+    "answer": "Il valore dell'argomento successivo"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "Quale vincolo di versione del provider consente le versioni 5.4.x ma non 5.5.0?",
+    "options": [
+      ">= 5.4.0",
+      ">= 5.0, < 6.0",
+      "~> 5.4.0",
+      "~> 5.4"
+    ],
+    "answer": "~> 5.4.0"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "Come tratta generalmente Terraform un argomento di risorsa impostato a null?",
+    "options": [
+      "Come una richiesta di eliminare l'intera risorsa",
+      "Come un argomento omesso, soggetto ai relativi valori predefiniti e requisiti",
+      "Come una stringa vuota in ogni provider",
+      "Come uno zero numerico in ogni provider"
+    ],
+    "answer": "Come un argomento omesso, soggetto ai relativi valori predefiniti e requisiti"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "Quale espressione identifica il percorso nel filesystem del modulo in cui è scritta?",
+    "options": [
+      "path.module",
+      "path.root",
+      "path.cwd",
+      "terraform.workspace"
+    ],
+    "answer": "path.module"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "Quale funzionalità del blocco terraform è consigliata per collegare una configurazione CLI a HCP Terraform?",
+    "options": [
+      "locals",
+      "moved",
+      "check",
+      "cloud"
+    ],
+    "answer": "cloud"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "Quali valori di primo livello espone direttamente terraform_remote_state dallo stato referenziato?",
+    "options": [
+      "Tutte le credenziali dei provider",
+      "Tutti i valori locali dei moduli figli",
+      "Gli output del modulo radice",
+      "Ogni attributo di risorsa come output di primo livello"
+    ],
+    "answer": "Gli output del modulo radice"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "Quale regola del ciclo di vita richiede una sostituzione quando cambia una risorsa gestita referenziata?",
+    "options": [
+      "create_before_destroy",
+      "replace_triggered_by",
+      "ignore_changes",
+      "prevent_destroy"
+    ],
+    "answer": "replace_triggered_by"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "Quale risorsa gestita integrata assegna a un normale valore di input un ciclo di vita di risorsa senza installare un provider separato?",
+    "options": [
+      "terraform_data",
+      "terraform_remote_state",
+      "local_file",
+      "random_id"
+    ],
+    "answer": "terraform_data"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "Che cosa accade quando un'asserzione in un blocco check fallisce durante un normale plan o apply?",
+    "options": [
+      "Terraform distrugge sempre l'oggetto controllato",
+      "Terraform rimuove silenziosamente il blocco check",
+      "Terraform termina sempre prima di aggiornare qualsiasi risorsa",
+      "Terraform segnala un avviso senza bloccare l'operazione per quel solo errore"
+    ],
+    "answer": "Terraform segnala un avviso senza bloccare l'operazione per quel solo errore"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "Che cosa accade quando una precondizione del ciclo di vita di una risorsa restituisce false?",
+    "options": [
+      "Terraform converte la risorsa in un'origine dati",
+      "Terraform sostituisce la precondizione con un semplice avviso",
+      "Terraform segnala un errore e impedisce l'operazione associata",
+      "Terraform ignora la precondizione fino all'esecuzione successiva"
+    ],
+    "answer": "Terraform segnala un errore e impedisce l'operazione associata"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "Quale comando esegue i file di test nativi di Terraform?",
+    "options": [
+      "terraform console",
+      "terraform test",
+      "terraform validate",
+      "terraform fmt"
+    ],
+    "answer": "terraform test"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "Quale impostazione fa eseguire un plan a un blocco run di un test Terraform invece dell'apply predefinito?",
+    "options": [
+      "command = plan",
+      "command = validate",
+      "command = refresh",
+      "command = console"
+    ],
+    "answer": "command = plan"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "Quale funzione restituisce la raccolta di percorsi relativi che corrispondono a un modello glob all'interno di una directory?",
+    "options": [
+      "file",
+      "dirname",
+      "basename",
+      "fileset"
+    ],
+    "answer": "fileset"
+  },
+  {
+    "category": "Terraform",
+    "set": 5,
+    "question": "Perché le sole aree di lavoro CLI possono non essere adatte a separare ambienti che richiedono controlli di accesso diversi?",
+    "options": [
+      "Impediscono di usare valori diversi delle variabili di input",
+      "Impongono gli stessi nomi di risorse in ogni ambiente",
+      "Condividono la stessa configurazione del backend e lo stesso contesto di autenticazione",
+      "Condividono sempre un'unica istantanea dello stato"
+    ],
+    "answer": "Condividono la stessa configurazione del backend e lo stesso contesto di autenticazione"
+  }
+]

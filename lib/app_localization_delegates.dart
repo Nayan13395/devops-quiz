@@ -16,7 +16,12 @@ const appLocalizationDelegates = <LocalizationsDelegate<dynamic>>[
 
 const _rightToLeftLanguages = {'ar', 'fa', 'he', 'ps', 'ur', 'sd'};
 
-Locale _controlLocale(Locale locale) =>
+/// Returns the documented framework-control fallback for [locale].
+///
+/// Flutter's native delegate is preferred whenever it supports the requested
+/// locale. Unsupported LTR locales use English, while unsupported RTL locales
+/// use Urdu so controls retain both readable labels and RTL directionality.
+Locale frameworkControlFallbackLocale(Locale locale) =>
     Locale(_rightToLeftLanguages.contains(locale.languageCode) ? 'ur' : 'en');
 
 class _MaterialFallbackDelegate
@@ -29,7 +34,9 @@ class _MaterialFallbackDelegate
 
   @override
   Future<MaterialLocalizations> load(Locale locale) =>
-      GlobalMaterialLocalizations.delegate.load(_controlLocale(locale));
+      GlobalMaterialLocalizations.delegate.load(
+        frameworkControlFallbackLocale(locale),
+      );
 
   @override
   bool shouldReload(_MaterialFallbackDelegate old) => false;
@@ -45,7 +52,9 @@ class _CupertinoFallbackDelegate
 
   @override
   Future<CupertinoLocalizations> load(Locale locale) =>
-      GlobalCupertinoLocalizations.delegate.load(_controlLocale(locale));
+      GlobalCupertinoLocalizations.delegate.load(
+        frameworkControlFallbackLocale(locale),
+      );
 
   @override
   bool shouldReload(_CupertinoFallbackDelegate old) => false;
@@ -57,12 +66,12 @@ class _WidgetsFallbackDelegate
 
   @override
   bool isSupported(Locale locale) =>
-      _rightToLeftLanguages.contains(locale.languageCode) ||
       !GlobalWidgetsLocalizations.delegate.isSupported(locale);
 
   @override
-  Future<WidgetsLocalizations> load(Locale locale) =>
-      GlobalWidgetsLocalizations.delegate.load(_controlLocale(locale));
+  Future<WidgetsLocalizations> load(Locale locale) => GlobalWidgetsLocalizations
+      .delegate
+      .load(frameworkControlFallbackLocale(locale));
 
   @override
   bool shouldReload(_WidgetsFallbackDelegate old) => false;

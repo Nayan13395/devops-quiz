@@ -1,0 +1,302 @@
+[
+  {
+    "category": "Docker",
+    "set": 2,
+    "question": "Docker का संस्करण बताने के लिए किस कमांड का उपयोग किया जाता है?",
+    "options": [
+      "docker --version",
+      "docker run",
+      "docker ps",
+      "docker pull"
+    ],
+    "answer": "docker --version"
+  },
+  {
+    "category": "Docker",
+    "set": 2,
+    "question": "Docker संस्करण को JSON फॉर्मेट में प्रदर्शित करने के लिए किस कमांड का उपयोग किया जाता है?",
+    "options": [
+      "docker version --format json",
+      "docker version -j",
+      "docker version --json",
+      "docker info --json"
+    ],
+    "answer": "docker version --format json"
+  },
+  {
+    "category": "Docker",
+    "set": 2,
+    "question": "केवल कंटेनर IDs को सूचीबद्ध करने के लिए किस कमांड का उपयोग किया जाता है?",
+    "options": [
+      "docker ps -q",
+      "docker ps --ids",
+      "docker ps -i",
+      "docker ps --size"
+    ],
+    "answer": "docker ps -q"
+  },
+  {
+    "category": "Docker",
+    "set": 2,
+    "question": "बंद सहित सभी कंटेनर को सूचीबद्ध करने के लिए किस कमांड का उपयोग किया जाता है?",
+    "options": [
+      "docker ps -a",
+      "docker ps --size",
+      "docker containers",
+      "docker list"
+    ],
+    "answer": "docker ps -a"
+  },
+  {
+    "category": "Docker",
+    "set": 2,
+    "question": "बिना शुरू किए कंटेनर बनाने के लिए किस कमांड का उपयोग किया जाता है?",
+    "options": [
+      "docker create",
+      "docker run",
+      "docker build",
+      "docker start"
+    ],
+    "answer": "docker create"
+  },
+  {
+    "category": "Docker",
+    "set": 2,
+    "question": "मौजूदा बंद कंटेनर को शुरू करने के लिए किस कमांड का उपयोग किया जाता है?",
+    "options": [
+      "docker start",
+      "docker run",
+      "docker create",
+      "docker exec"
+    ],
+    "answer": "docker start"
+  },
+  {
+    "category": "Docker",
+    "set": 2,
+    "question": "चल रहे कंटेनर को धीरे-धीरे रोकने के लिए किस कमांड का उपयोग किया जाता है?",
+    "options": [
+      "docker stop",
+      "docker kill",
+      "docker pause",
+      "docker halt"
+    ],
+    "answer": "docker stop"
+  },
+  {
+    "category": "Docker",
+    "set": 2,
+    "question": "कंटेनर को बलपूर्वक बंद करने के लिए किस कमांड का उपयोग किया जाता है?",
+    "options": [
+      "docker kill",
+      "docker stop",
+      "docker terminate",
+      "docker end"
+    ],
+    "answer": "docker kill"
+  },
+  {
+    "category": "Docker",
+    "set": 2,
+    "question": "कंटेनर को पुनः आरंभ करने के लिए किस कमांड का उपयोग किया जाता है?",
+    "options": [
+      "docker restart",
+      "docker reset",
+      "docker reload",
+      "docker rerun"
+    ],
+    "answer": "docker restart"
+  },
+  {
+    "category": "Docker",
+    "set": 2,
+    "question": "चल रहे कंटेनर को रोकने (pause) के लिए किस कमांड का उपयोग किया जाता है?",
+    "options": [
+      "docker pause",
+      "docker stop",
+      "docker hold",
+      "docker freeze"
+    ],
+    "answer": "docker pause"
+  },
+  {
+    "category": "Docker",
+    "set": 2,
+    "question": "रुके हुए (paused) कंटेनर को फिर से शुरू करने के लिए किस कमांड का उपयोग किया जाता है?",
+    "options": [
+      "docker unpause",
+      "docker resume",
+      "docker start",
+      "docker restart"
+    ],
+    "answer": "docker unpause"
+  },
+  {
+    "category": "Docker",
+    "set": 2,
+    "question": "कंटेनर को हटाने के लिए किस कमांड का उपयोग किया जाता है?",
+    "options": [
+      "docker rm",
+      "docker stop",
+      "docker delete",
+      "docker clear"
+    ],
+    "answer": "docker rm"
+  },
+  {
+    "category": "Docker",
+    "set": 2,
+    "question": "Docker इमेज को हटाने के लिए किस कमांड का उपयोग किया जाता है?",
+    "options": [
+      "docker rmi",
+      "docker rm",
+      "docker erase",
+      "docker clean"
+    ],
+    "answer": "docker rmi"
+  },
+  {
+    "category": "Docker",
+    "set": 2,
+    "question": "इमेज का इतिहास प्रदर्शित करने के लिए किस कमांड का उपयोग किया जाता है?",
+    "options": [
+      "docker history",
+      "docker layers",
+      "docker image show",
+      "docker inspect"
+    ],
+    "answer": "docker history"
+  },
+  {
+    "category": "Docker",
+    "set": 2,
+    "question": "पर्यावरण चर APP_ENV को prod कौन-सा docker run विकल्प सेट करता है?",
+    "options": [
+      "--name APP_ENV=prod",
+      "--hostname APP_ENV=prod",
+      "-e APP_ENV=prod",
+      "--label APP_ENV=prod"
+    ],
+    "answer": "-e APP_ENV=prod"
+  },
+  {
+    "category": "Docker",
+    "set": 2,
+    "question": "कंटेनर की मूल फ़ाइल प्रणाली केवल-पठनीय बनाने वाला विकल्प कौन-सा है?",
+    "options": [
+      "--init",
+      "--read-only",
+      "--privileged",
+      "--tty"
+    ],
+    "answer": "--read-only"
+  },
+  {
+    "category": "Docker",
+    "set": 2,
+    "question": "गैर-शून्य निकास पर कंटेनर पुनः शुरू करने, लेकिन सफल निकास पर नहीं करने वाली नीति कौन-सी है?",
+    "options": [
+      "on-failure",
+      "always",
+      "unless-stopped",
+      "no"
+    ],
+    "answer": "on-failure"
+  },
+  {
+    "category": "Docker",
+    "set": 2,
+    "question": "नए कंटेनर की मेमोरी 512 MiB तक कौन-सा कमांड सीमित करता है?",
+    "options": [
+      "docker run --memory-reservation 512m alpine",
+      "docker run --memory-swap 512m alpine",
+      "docker run --shm-size 512m alpine",
+      "docker run --memory 512m alpine"
+    ],
+    "answer": "docker run --memory 512m alpine"
+  },
+  {
+    "category": "Docker",
+    "set": 2,
+    "question": "कंटेनर का CPU कोटा आधे CPU जितना कौन-सा विकल्प करता है?",
+    "options": [
+      "--cpuset-cpus 0",
+      "--cpu-period 50000",
+      "--cpus 0.5",
+      "--cpu-shares 512"
+    ],
+    "answer": "--cpus 0.5"
+  },
+  {
+    "category": "Docker",
+    "set": 2,
+    "question": "होस्ट की खास निर्देशिका सीधे कंटेनर में दिखाने वाला माउंट प्रकार कौन-सा है?",
+    "options": [
+      "tmpfs माउंट",
+      "बाइंड माउंट",
+      "नामित वॉल्यूम",
+      "अनाम वॉल्यूम"
+    ],
+    "answer": "बाइंड माउंट"
+  },
+  {
+    "category": "Docker",
+    "set": 2,
+    "question": "Linux में साधारण स्थायी डिस्क फ़ाइलों के बजाय होस्ट मेमोरी में फ़ाइलें रखने वाला माउंट प्रकार कौन-सा है?",
+    "options": [
+      "tmpfs माउंट",
+      "बाइंड माउंट",
+      "नामित वॉल्यूम",
+      "अनाम वॉल्यूम"
+    ],
+    "answer": "tmpfs माउंट"
+  },
+  {
+    "category": "Docker",
+    "set": 2,
+    "question": "मौजूदा web कंटेनर को backend नेटवर्क से कौन-सा कमांड जोड़ता है?",
+    "options": [
+      "docker network disconnect backend web",
+      "docker network inspect backend web",
+      "docker network rm backend web",
+      "docker network connect backend web"
+    ],
+    "answer": "docker network connect backend web"
+  },
+  {
+    "category": "Docker",
+    "set": 2,
+    "question": "उपयोगकर्ता-निर्मित ब्रिज को Docker के डिफ़ॉल्ट ब्रिज से कौन-सी नेटवर्क सुविधा अलग करती है?",
+    "options": [
+      "बिना कॉन्फ़िगरेशन स्वचालित बहु-होस्ट रूटिंग",
+      "हर घोषित पोर्ट का स्वचालित प्रकाशन",
+      "कंटेनरों के बीच नाम से स्वचालित DNS समाधान",
+      "सभी कंटेनर ट्रैफ़िक का स्वचालित एन्क्रिप्शन"
+    ],
+    "answer": "कंटेनरों के बीच नाम से स्वचालित DNS समाधान"
+  },
+  {
+    "category": "Docker",
+    "set": 2,
+    "question": "कंटेनर का नाम oldweb से newweb कौन-सा कमांड बदलता है?",
+    "options": [
+      "docker network connect oldweb newweb",
+      "docker rename oldweb newweb",
+      "docker tag oldweb newweb",
+      "docker cp oldweb newweb"
+    ],
+    "answer": "docker rename oldweb newweb"
+  },
+  {
+    "category": "Docker",
+    "set": 2,
+    "question": "web कंटेनर रुकने की प्रतीक्षा करके निकास कोड कौन-सा कमांड दिखाता है?",
+    "options": [
+      "docker wait web",
+      "docker logs web",
+      "docker top web",
+      "docker attach web"
+    ],
+    "answer": "docker wait web"
+  }
+]
